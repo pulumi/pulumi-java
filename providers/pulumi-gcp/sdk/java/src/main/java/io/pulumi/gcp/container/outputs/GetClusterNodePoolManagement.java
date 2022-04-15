@@ -20,10 +20,10 @@ public final class GetClusterNodePoolManagement {
         this.autoUpgrade = autoUpgrade;
     }
 
-    public Boolean getAutoRepair() {
+    public Boolean autoRepair() {
         return this.autoRepair;
     }
-    public Boolean getAutoUpgrade() {
+    public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
 

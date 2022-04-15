@@ -19,7 +19,7 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -30,14 +30,14 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
     @Import(name="group", required=true)
       private final String group;
 
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
 
     @Import(name="memberKeys", required=true)
       private final List<GetGroupMembershipsMembershipMemberKey> memberKeys;
 
-    public List<GetGroupMembershipsMembershipMemberKey> getMemberKeys() {
+    public List<GetGroupMembershipsMembershipMemberKey> memberKeys() {
         return this.memberKeys;
     }
 
@@ -48,14 +48,14 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="preferredMemberKeys", required=true)
       private final List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys;
 
-    public List<GetGroupMembershipsMembershipPreferredMemberKey> getPreferredMemberKeys() {
+    public List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys() {
         return this.preferredMemberKeys;
     }
 
@@ -66,21 +66,21 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
     @Import(name="roles", required=true)
       private final List<GetGroupMembershipsMembershipRole> roles;
 
-    public List<GetGroupMembershipsMembershipRole> getRoles() {
+    public List<GetGroupMembershipsMembershipRole> roles() {
         return this.roles;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

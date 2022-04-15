@@ -163,7 +163,7 @@ public final class RegionBackendServiceBackend {
      * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
      * 
     */
-    public Optional<String> getBalancingMode() {
+    public Optional<String> balancingMode() {
         return Optional.ofNullable(this.balancingMode);
     }
     /**
@@ -177,7 +177,7 @@ public final class RegionBackendServiceBackend {
      * 0% of its available Capacity. Valid range is [0.0,1.0].
      * 
     */
-    public Optional<Double> getCapacityScaler() {
+    public Optional<Double> capacityScaler() {
         return Optional.ofNullable(this.capacityScaler);
     }
     /**
@@ -185,7 +185,7 @@ public final class RegionBackendServiceBackend {
      * Provide this property when you create the resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -193,7 +193,7 @@ public final class RegionBackendServiceBackend {
      * than one failover backend can be configured for a given RegionBackendService.
      * 
     */
-    public Optional<Boolean> getFailover() {
+    public Optional<Boolean> failover() {
         return Optional.ofNullable(this.failover);
     }
     /**
@@ -215,7 +215,7 @@ public final class RegionBackendServiceBackend {
      * partial URL.
      * 
     */
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
     /**
@@ -223,7 +223,7 @@ public final class RegionBackendServiceBackend {
      * Defaults to 1024.
      * 
     */
-    public Optional<Integer> getMaxConnections() {
+    public Optional<Integer> maxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
     /**
@@ -236,7 +236,7 @@ public final class RegionBackendServiceBackend {
      * maxConnectionsPerEndpoint must be set.
      * 
     */
-    public Optional<Integer> getMaxConnectionsPerEndpoint() {
+    public Optional<Integer> maxConnectionsPerEndpoint() {
         return Optional.ofNullable(this.maxConnectionsPerEndpoint);
     }
     /**
@@ -249,7 +249,7 @@ public final class RegionBackendServiceBackend {
      * maxConnectionsPerInstance must be set.
      * 
     */
-    public Optional<Integer> getMaxConnectionsPerInstance() {
+    public Optional<Integer> maxConnectionsPerInstance() {
         return Optional.ofNullable(this.maxConnectionsPerInstance);
     }
     /**
@@ -261,7 +261,7 @@ public final class RegionBackendServiceBackend {
      * group type, must be set.
      * 
     */
-    public Optional<Integer> getMaxRate() {
+    public Optional<Integer> maxRate() {
         return Optional.ofNullable(this.maxRate);
     }
     /**
@@ -272,7 +272,7 @@ public final class RegionBackendServiceBackend {
      * for INTERNAL backend services.
      * 
     */
-    public Optional<Double> getMaxRatePerEndpoint() {
+    public Optional<Double> maxRatePerEndpoint() {
         return Optional.ofNullable(this.maxRatePerEndpoint);
     }
     /**
@@ -283,7 +283,7 @@ public final class RegionBackendServiceBackend {
      * for INTERNAL backend services.
      * 
     */
-    public Optional<Double> getMaxRatePerInstance() {
+    public Optional<Double> maxRatePerInstance() {
         return Optional.ofNullable(this.maxRatePerInstance);
     }
     /**
@@ -292,7 +292,7 @@ public final class RegionBackendServiceBackend {
      * Cannot be set for INTERNAL backend services.
      * 
     */
-    public Optional<Double> getMaxUtilization() {
+    public Optional<Double> maxUtilization() {
         return Optional.ofNullable(this.maxUtilization);
     }
 

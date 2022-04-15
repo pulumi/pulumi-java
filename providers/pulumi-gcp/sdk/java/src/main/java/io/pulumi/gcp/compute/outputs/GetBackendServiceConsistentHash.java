@@ -26,13 +26,13 @@ public final class GetBackendServiceConsistentHash {
         this.minimumRingSize = minimumRingSize;
     }
 
-    public List<GetBackendServiceConsistentHashHttpCooky> getHttpCookies() {
+    public List<GetBackendServiceConsistentHashHttpCooky> httpCookies() {
         return this.httpCookies;
     }
-    public String getHttpHeaderName() {
+    public String httpHeaderName() {
         return this.httpHeaderName;
     }
-    public Integer getMinimumRingSize() {
+    public Integer minimumRingSize() {
         return this.minimumRingSize;
     }
 

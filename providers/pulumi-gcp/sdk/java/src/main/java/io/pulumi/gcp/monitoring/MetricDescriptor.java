@@ -49,7 +49,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * @return A human-readable description for the label.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -63,7 +63,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * @return A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count".
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -79,7 +79,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<MetricDescriptorLabel>> getLabels() {
+    public Output</* @Nullable */ List<MetricDescriptorLabel>> labels() {
         return this.labels;
     }
     /**
@@ -95,7 +95,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * Possible values are `LAUNCH_STAGE_UNSPECIFIED`, `UNIMPLEMENTED`, `PRELAUNCH`, `EARLY_ACCESS`, `ALPHA`, `BETA`, `GA`, and `DEPRECATED`.
      * 
      */
-    public Output</* @Nullable */ String> getLaunchStage() {
+    public Output</* @Nullable */ String> launchStage() {
         return this.launchStage;
     }
     /**
@@ -111,7 +111,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MetricDescriptorMetadata> getMetadata() {
+    public Output</* @Nullable */ MetricDescriptorMetadata> metadata() {
         return this.metadata;
     }
     /**
@@ -127,7 +127,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * Possible values are `METRIC_KIND_UNSPECIFIED`, `GAUGE`, `DELTA`, and `CUMULATIVE`.
      * 
      */
-    public Output<String> getMetricKind() {
+    public Output<String> metricKind() {
         return this.metricKind;
     }
     /**
@@ -147,7 +147,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * this list.
      * 
      */
-    public Output<List<String>> getMonitoredResourceTypes() {
+    public Output<List<String>> monitoredResourceTypes() {
         return this.monitoredResourceTypes;
     }
     /**
@@ -161,7 +161,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * @return The resource name of the metric descriptor.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -177,7 +177,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -191,7 +191,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * @return The metric type, including its DNS name prefix. The type is not URL-encoded. All service defined metrics must be prefixed with the service name, in the format of {service name}/{relative metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric name must have only upper and lower-case letters, digits, '/' and underscores '_' are allowed. Additionally, the maximum number of characters allowed for the relative_metric_name is 100. All user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or logging.googleapis.com/user/.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -237,7 +237,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors).
      * 
      */
-    public Output</* @Nullable */ String> getUnit() {
+    public Output</* @Nullable */ String> unit() {
         return this.unit;
     }
     /**
@@ -255,7 +255,7 @@ public class MetricDescriptor extends io.pulumi.resources.CustomResource {
      * Possible values are `STRING`, `BOOL`, and `INT64`.
      * 
      */
-    public Output<String> getValueType() {
+    public Output<String> valueType() {
         return this.valueType;
     }
 

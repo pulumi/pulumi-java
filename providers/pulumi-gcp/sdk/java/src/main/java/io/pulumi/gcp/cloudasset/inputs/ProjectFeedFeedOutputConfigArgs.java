@@ -22,7 +22,7 @@ public final class ProjectFeedFeedOutputConfigArgs extends io.pulumi.resources.R
     @Import(name="pubsubDestination", required=true)
       private final Output<ProjectFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 
-    public Output<ProjectFeedFeedOutputConfigPubsubDestinationArgs> getPubsubDestination() {
+    public Output<ProjectFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
 

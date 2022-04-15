@@ -26,7 +26,7 @@ public final class SecurityPolicyRuleMatchExpr {
      * The application context of the containing message determines which well-known feature set of CEL is supported.
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

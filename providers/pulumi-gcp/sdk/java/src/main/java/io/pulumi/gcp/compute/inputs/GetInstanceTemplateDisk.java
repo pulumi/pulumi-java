@@ -25,7 +25,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
 
@@ -36,7 +36,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="boot", required=true)
       private final Boolean boot;
 
-    public Boolean getBoot() {
+    public Boolean boot() {
         return this.boot;
     }
 
@@ -49,7 +49,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
@@ -60,7 +60,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="diskEncryptionKeys", required=true)
       private final List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
 
-    public List<GetInstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKeys() {
+    public List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys() {
         return this.diskEncryptionKeys;
     }
 
@@ -72,7 +72,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="diskName", required=true)
       private final String diskName;
 
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
 
@@ -85,7 +85,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -97,7 +97,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -111,7 +111,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 
@@ -123,7 +123,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -136,14 +136,14 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
     @Import(name="resourcePolicies", required=true)
       private final List<String> resourcePolicies;
 
-    public List<String> getResourcePolicies() {
+    public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
 
@@ -156,7 +156,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -173,7 +173,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="sourceImage", required=true)
       private final String sourceImage;
 
-    public String getSourceImage() {
+    public String sourceImage() {
         return this.sourceImage;
     }
 
@@ -184,7 +184,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -29,7 +29,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="minimalAction")
       private final @Nullable Output<String> minimalAction;
 
-    public Output<String> getMinimalAction() {
+    public Output<String> minimalAction() {
         return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
     }
 
@@ -45,7 +45,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="mostDisruptiveAllowedAction")
       private final @Nullable Output<String> mostDisruptiveAllowedAction;
 
-    public Output<String> getMostDisruptiveAllowedAction() {
+    public Output<String> mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
     }
 
@@ -56,7 +56,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="preservedState")
       private final @Nullable Output<RegionPerInstanceConfigPreservedStateArgs> preservedState;
 
-    public Output<RegionPerInstanceConfigPreservedStateArgs> getPreservedState() {
+    public Output<RegionPerInstanceConfigPreservedStateArgs> preservedState() {
         return this.preservedState == null ? Codegen.empty() : this.preservedState;
     }
 
@@ -80,7 +80,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -91,7 +91,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -102,7 +102,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="regionInstanceGroupManager", required=true)
       private final Output<String> regionInstanceGroupManager;
 
-    public Output<String> getRegionInstanceGroupManager() {
+    public Output<String> regionInstanceGroupManager() {
         return this.regionInstanceGroupManager;
     }
 
@@ -115,7 +115,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
     @Import(name="removeInstanceStateOnDestroy")
       private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
-    public Output<Boolean> getRemoveInstanceStateOnDestroy() {
+    public Output<Boolean> removeInstanceStateOnDestroy() {
         return this.removeInstanceStateOnDestroy == null ? Codegen.empty() : this.removeInstanceStateOnDestroy;
     }
 

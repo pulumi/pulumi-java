@@ -61,7 +61,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
      * 
      */
-    public Output<String> getBrand() {
+    public Output<String> brand() {
         return this.brand;
     }
     /**
@@ -75,7 +75,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * @return Output only. Unique identifier of the OAuth client.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -89,7 +89,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * @return Human-friendly name given to the OAuth client.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -103,7 +103,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * @return Output only. Client secret of the OAuth client.
      * 
      */
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 

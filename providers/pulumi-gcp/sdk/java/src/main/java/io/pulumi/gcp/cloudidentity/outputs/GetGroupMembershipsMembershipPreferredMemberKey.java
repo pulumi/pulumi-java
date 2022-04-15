@@ -39,7 +39,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
      * to the Identity Source's requirements.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -49,7 +49,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
      * If populated, the EntityKey represents an external-identity-mapped group.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 

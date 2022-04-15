@@ -21,7 +21,7 @@ public final class DeploymentTargetConfigGetArgs extends io.pulumi.resources.Res
     @Import(name="content", required=true)
       private final Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
 

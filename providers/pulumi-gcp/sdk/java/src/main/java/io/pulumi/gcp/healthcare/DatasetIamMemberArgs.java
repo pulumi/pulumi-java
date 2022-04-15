@@ -19,7 +19,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<DatasetIamMemberConditionArgs> condition;
 
-    public Output<DatasetIamMemberConditionArgs> getCondition() {
+    public Output<DatasetIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -33,14 +33,14 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -53,7 +53,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

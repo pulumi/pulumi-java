@@ -18,21 +18,21 @@ public final class InstanceFromTemplateSchedulingNodeAffinityGetArgs extends io.
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="operator", required=true)
       private final Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator;
     }
 
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 

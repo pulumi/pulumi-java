@@ -27,7 +27,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -51,7 +51,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="instanceFilter", required=true)
       private final Output<PatchDeploymentInstanceFilterArgs> instanceFilter;
 
-    public Output<PatchDeploymentInstanceFilterArgs> getInstanceFilter() {
+    public Output<PatchDeploymentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
 
@@ -63,7 +63,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="oneTimeSchedule")
       private final @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
 
-    public Output<PatchDeploymentOneTimeScheduleArgs> getOneTimeSchedule() {
+    public Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule() {
         return this.oneTimeSchedule == null ? Codegen.empty() : this.oneTimeSchedule;
     }
 
@@ -75,7 +75,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="patchConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig;
 
-    public Output<PatchDeploymentPatchConfigArgs> getPatchConfig() {
+    public Output<PatchDeploymentPatchConfigArgs> patchConfig() {
         return this.patchConfig == null ? Codegen.empty() : this.patchConfig;
     }
 
@@ -91,7 +91,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="patchDeploymentId", required=true)
       private final Output<String> patchDeploymentId;
 
-    public Output<String> getPatchDeploymentId() {
+    public Output<String> patchDeploymentId() {
         return this.patchDeploymentId;
     }
 
@@ -103,7 +103,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -115,7 +115,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="recurringSchedule")
       private final @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
 
-    public Output<PatchDeploymentRecurringScheduleArgs> getRecurringSchedule() {
+    public Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule() {
         return this.recurringSchedule == null ? Codegen.empty() : this.recurringSchedule;
     }
 
@@ -127,7 +127,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rollout")
       private final @Nullable Output<PatchDeploymentRolloutArgs> rollout;
 
-    public Output<PatchDeploymentRolloutArgs> getRollout() {
+    public Output<PatchDeploymentRolloutArgs> rollout() {
         return this.rollout == null ? Codegen.empty() : this.rollout;
     }
 

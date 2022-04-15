@@ -26,13 +26,13 @@ public final class GetResourcePolicySnapshotSchedulePolicy {
         this.snapshotProperties = snapshotProperties;
     }
 
-    public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicies() {
+    public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies() {
         return this.retentionPolicies;
     }
-    public List<GetResourcePolicySnapshotSchedulePolicySchedule> getSchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules() {
         return this.schedules;
     }
-    public List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> getSnapshotProperties() {
+    public List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties() {
         return this.snapshotProperties;
     }
 

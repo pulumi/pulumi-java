@@ -27,7 +27,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
 
-    public Output<Boolean> getLatestRevision() {
+    public Output<Boolean> latestRevision() {
         return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="percent", required=true)
       private final Output<Integer> percent;
 
-    public Output<Integer> getPercent() {
+    public Output<Integer> percent() {
         return this.percent;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
 
-    public Output<String> getRevisionName() {
+    public Output<String> revisionName() {
         return this.revisionName == null ? Codegen.empty() : this.revisionName;
     }
 

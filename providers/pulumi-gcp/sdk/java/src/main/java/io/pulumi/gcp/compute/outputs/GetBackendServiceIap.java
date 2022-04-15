@@ -23,13 +23,13 @@ public final class GetBackendServiceIap {
         this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
     }
 
-    public String getOauth2ClientId() {
+    public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
-    public String getOauth2ClientSecret() {
+    public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
-    public String getOauth2ClientSecretSha256() {
+    public String oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }
 

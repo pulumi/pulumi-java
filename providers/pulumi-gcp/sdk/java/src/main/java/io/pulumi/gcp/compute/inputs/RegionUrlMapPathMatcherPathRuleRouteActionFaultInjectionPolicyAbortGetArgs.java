@@ -23,7 +23,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     @Import(name="httpStatus", required=true)
       private final Output<Integer> httpStatus;
 
-    public Output<Integer> getHttpStatus() {
+    public Output<Integer> httpStatus() {
         return this.httpStatus;
     }
 
@@ -36,7 +36,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     @Import(name="percentage", required=true)
       private final Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage;
     }
 

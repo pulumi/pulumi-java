@@ -29,7 +29,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="contentOptions")
       private final @Nullable Output<List<String>> contentOptions;
 
-    public Output<List<String>> getContentOptions() {
+    public Output<List<String>> contentOptions() {
         return this.contentOptions == null ? Codegen.empty() : this.contentOptions;
     }
 
@@ -41,7 +41,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="customInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> getCustomInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes() {
         return this.customInfoTypes == null ? Codegen.empty() : this.customInfoTypes;
     }
 
@@ -53,7 +53,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="excludeInfoTypes")
       private final @Nullable Output<Boolean> excludeInfoTypes;
 
-    public Output<Boolean> getExcludeInfoTypes() {
+    public Output<Boolean> excludeInfoTypes() {
         return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
@@ -64,7 +64,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="includeQuote")
       private final @Nullable Output<Boolean> includeQuote;
 
-    public Output<Boolean> getIncludeQuote() {
+    public Output<Boolean> includeQuote() {
         return this.includeQuote == null ? Codegen.empty() : this.includeQuote;
     }
 
@@ -76,7 +76,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="infoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes() {
         return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
@@ -88,7 +88,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="limits")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigLimitsArgs> limits;
 
-    public Output<PreventionInspectTemplateInspectConfigLimitsArgs> getLimits() {
+    public Output<PreventionInspectTemplateInspectConfigLimitsArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -101,7 +101,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="minLikelihood")
       private final @Nullable Output<String> minLikelihood;
 
-    public Output<String> getMinLikelihood() {
+    public Output<String> minLikelihood() {
         return this.minLikelihood == null ? Codegen.empty() : this.minLikelihood;
     }
 
@@ -114,7 +114,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     @Import(name="ruleSets")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> getRuleSets() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets() {
         return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 

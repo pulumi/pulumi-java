@@ -42,21 +42,21 @@ public final class InstanceGroupManagerVersion {
      * - The full URL to an instance template from which all new instances of this version will be created.
      * 
     */
-    public String getInstanceTemplate() {
+    public String instanceTemplate() {
         return this.instanceTemplate;
     }
     /**
      * - Version name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
     */
-    public Optional<InstanceGroupManagerVersionTargetSize> getTargetSize() {
+    public Optional<InstanceGroupManagerVersionTargetSize> targetSize() {
         return Optional.ofNullable(this.targetSize);
     }
 

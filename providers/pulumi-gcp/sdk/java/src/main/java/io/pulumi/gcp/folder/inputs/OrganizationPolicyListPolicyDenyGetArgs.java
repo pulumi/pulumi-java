@@ -24,7 +24,7 @@ public final class OrganizationPolicyListPolicyDenyGetArgs extends io.pulumi.res
     @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
-    public Output<Boolean> getAll() {
+    public Output<Boolean> all() {
         return this.all == null ? Codegen.empty() : this.all;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationPolicyListPolicyDenyGetArgs extends io.pulumi.res
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

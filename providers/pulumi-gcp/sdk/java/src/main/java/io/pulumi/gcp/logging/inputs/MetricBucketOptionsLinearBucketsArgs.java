@@ -23,7 +23,7 @@ public final class MetricBucketOptionsLinearBucketsArgs extends io.pulumi.resour
     @Import(name="numFiniteBuckets")
       private final @Nullable Output<Integer> numFiniteBuckets;
 
-    public Output<Integer> getNumFiniteBuckets() {
+    public Output<Integer> numFiniteBuckets() {
         return this.numFiniteBuckets == null ? Codegen.empty() : this.numFiniteBuckets;
     }
 
@@ -34,7 +34,7 @@ public final class MetricBucketOptionsLinearBucketsArgs extends io.pulumi.resour
     @Import(name="offset")
       private final @Nullable Output<Double> offset;
 
-    public Output<Double> getOffset() {
+    public Output<Double> offset() {
         return this.offset == null ? Codegen.empty() : this.offset;
     }
 
@@ -45,7 +45,7 @@ public final class MetricBucketOptionsLinearBucketsArgs extends io.pulumi.resour
     @Import(name="width")
       private final @Nullable Output<Double> width;
 
-    public Output<Double> getWidth() {
+    public Output<Double> width() {
         return this.width == null ? Codegen.empty() : this.width;
     }
 

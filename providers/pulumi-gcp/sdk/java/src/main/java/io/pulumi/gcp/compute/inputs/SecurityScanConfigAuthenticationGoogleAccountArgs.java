@@ -23,7 +23,7 @@ public final class SecurityScanConfigAuthenticationGoogleAccountArgs extends io.
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityScanConfigAuthenticationGoogleAccountArgs extends io.
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

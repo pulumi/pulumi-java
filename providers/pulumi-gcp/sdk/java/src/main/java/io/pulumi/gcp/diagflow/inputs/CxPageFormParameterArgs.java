@@ -24,7 +24,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     @Import(name="entityType")
       private final @Nullable Output<String> entityType;
 
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType == null ? Codegen.empty() : this.entityType;
     }
 
@@ -48,7 +48,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     @Import(name="fillBehavior")
       private final @Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior;
 
-    public Output<CxPageFormParameterFillBehaviorArgs> getFillBehavior() {
+    public Output<CxPageFormParameterFillBehaviorArgs> fillBehavior() {
         return this.fillBehavior == null ? Codegen.empty() : this.fillBehavior;
     }
 
@@ -59,7 +59,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
+    public Output<Boolean> isList() {
         return this.isList == null ? Codegen.empty() : this.isList;
     }
 
@@ -71,7 +71,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
+    public Output<Boolean> redact() {
         return this.redact == null ? Codegen.empty() : this.redact;
     }
 
@@ -83,7 +83,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
+    public Output<Boolean> required() {
         return this.required == null ? Codegen.empty() : this.required;
     }
 

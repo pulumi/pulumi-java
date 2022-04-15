@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
     @Import(name="exclusionRule")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> getExclusionRule() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule() {
         return this.exclusionRule == null ? Codegen.empty() : this.exclusionRule;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
     @Import(name="hotwordRule")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> getHotwordRule() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule() {
         return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
     }
 

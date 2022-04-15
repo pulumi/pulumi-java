@@ -31,7 +31,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -44,7 +44,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="avatarUri")
       private final @Nullable Output<String> avatarUri;
 
-    public Output<String> getAvatarUri() {
+    public Output<String> avatarUri() {
         return this.avatarUri == null ? Codegen.empty() : this.avatarUri;
     }
 
@@ -56,7 +56,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="avatarUriBackend")
       private final @Nullable Output<String> avatarUriBackend;
 
-    public Output<String> getAvatarUriBackend() {
+    public Output<String> avatarUriBackend() {
         return this.avatarUriBackend == null ? Codegen.empty() : this.avatarUriBackend;
     }
 
@@ -71,7 +71,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> getClassificationThreshold() {
+    public Output<Double> classificationThreshold() {
         return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
     }
 
@@ -83,7 +83,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultLanguageCode")
       private final @Nullable Output<String> defaultLanguageCode;
 
-    public Output<String> getDefaultLanguageCode() {
+    public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode == null ? Codegen.empty() : this.defaultLanguageCode;
     }
 
@@ -94,7 +94,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -105,7 +105,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -116,7 +116,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> getEnableLogging() {
+    public Output<Boolean> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
@@ -132,7 +132,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchMode")
       private final @Nullable Output<String> matchMode;
 
-    public Output<String> getMatchMode() {
+    public Output<String> matchMode() {
         return this.matchMode == null ? Codegen.empty() : this.matchMode;
     }
 
@@ -144,7 +144,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -155,7 +155,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportedLanguageCodes")
       private final @Nullable Output<List<String>> supportedLanguageCodes;
 
-    public Output<List<String>> getSupportedLanguageCodes() {
+    public Output<List<String>> supportedLanguageCodes() {
         return this.supportedLanguageCodes == null ? Codegen.empty() : this.supportedLanguageCodes;
     }
 
@@ -171,7 +171,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 
@@ -183,7 +183,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

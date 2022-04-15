@@ -27,16 +27,16 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
         this.serviceAccount = serviceAccount;
     }
 
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 

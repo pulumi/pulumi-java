@@ -101,76 +101,76 @@ public final class NodePoolNodeConfig {
         this.workloadMetadataConfig = workloadMetadataConfig;
     }
 
-    public Optional<String> getBootDiskKmsKey() {
+    public Optional<String> bootDiskKmsKey() {
         return Optional.ofNullable(this.bootDiskKmsKey);
     }
-    public Optional<Integer> getDiskSizeGb() {
+    public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
-    public Optional<NodePoolNodeConfigEphemeralStorageConfig> getEphemeralStorageConfig() {
+    public Optional<NodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfig() {
         return Optional.ofNullable(this.ephemeralStorageConfig);
     }
-    public Optional<NodePoolNodeConfigGcfsConfig> getGcfsConfig() {
+    public Optional<NodePoolNodeConfigGcfsConfig> gcfsConfig() {
         return Optional.ofNullable(this.gcfsConfig);
     }
-    public List<NodePoolNodeConfigGuestAccelerator> getGuestAccelerators() {
+    public List<NodePoolNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
-    public Optional<String> getImageType() {
+    public Optional<String> imageType() {
         return Optional.ofNullable(this.imageType);
     }
-    public Optional<NodePoolNodeConfigKubeletConfig> getKubeletConfig() {
+    public Optional<NodePoolNodeConfigKubeletConfig> kubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
-    public Optional<NodePoolNodeConfigLinuxNodeConfig> getLinuxNodeConfig() {
+    public Optional<NodePoolNodeConfigLinuxNodeConfig> linuxNodeConfig() {
         return Optional.ofNullable(this.linuxNodeConfig);
     }
-    public Optional<Integer> getLocalSsdCount() {
+    public Optional<Integer> localSsdCount() {
         return Optional.ofNullable(this.localSsdCount);
     }
-    public Optional<String> getMachineType() {
+    public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
-    public Optional<String> getMinCpuPlatform() {
+    public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
-    public Optional<String> getNodeGroup() {
+    public Optional<String> nodeGroup() {
         return Optional.ofNullable(this.nodeGroup);
     }
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
-    public Optional<Boolean> getPreemptible() {
+    public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
-    public Optional<NodePoolNodeConfigSandboxConfig> getSandboxConfig() {
+    public Optional<NodePoolNodeConfigSandboxConfig> sandboxConfig() {
         return Optional.ofNullable(this.sandboxConfig);
     }
-    public Optional<String> getServiceAccount() {
+    public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
-    public Optional<NodePoolNodeConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Optional<NodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
-    public Optional<Boolean> getSpot() {
+    public Optional<Boolean> spot() {
         return Optional.ofNullable(this.spot);
     }
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<NodePoolNodeConfigTaint> getTaints() {
+    public List<NodePoolNodeConfigTaint> taints() {
         return this.taints == null ? List.of() : this.taints;
     }
-    public Optional<NodePoolNodeConfigWorkloadMetadataConfig> getWorkloadMetadataConfig() {
+    public Optional<NodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfig() {
         return Optional.ofNullable(this.workloadMetadataConfig);
     }
 

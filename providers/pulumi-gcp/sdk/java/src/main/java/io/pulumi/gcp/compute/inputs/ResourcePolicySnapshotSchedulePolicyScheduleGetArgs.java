@@ -25,7 +25,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends i
     @Import(name="dailySchedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> dailySchedule;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> getDailySchedule() {
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs> dailySchedule() {
         return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
     }
 
@@ -37,7 +37,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends i
     @Import(name="hourlySchedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> hourlySchedule;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> getHourlySchedule() {
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGetArgs> hourlySchedule() {
         return this.hourlySchedule == null ? Codegen.empty() : this.hourlySchedule;
     }
 
@@ -49,7 +49,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleGetArgs extends i
     @Import(name="weeklySchedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> weeklySchedule;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> getWeeklySchedule() {
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs> weeklySchedule() {
         return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
     }
 

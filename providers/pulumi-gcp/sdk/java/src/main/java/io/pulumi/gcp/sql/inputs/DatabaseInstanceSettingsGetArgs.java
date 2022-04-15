@@ -33,7 +33,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="activationPolicy")
       private final @Nullable Output<String> activationPolicy;
 
-    public Output<String> getActivationPolicy() {
+    public Output<String> activationPolicy() {
         return this.activationPolicy == null ? Codegen.empty() : this.activationPolicy;
     }
 
@@ -47,14 +47,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="availabilityType")
       private final @Nullable Output<String> availabilityType;
 
-    public Output<String> getAvailabilityType() {
+    public Output<String> availabilityType() {
         return this.availabilityType == null ? Codegen.empty() : this.availabilityType;
     }
 
     @Import(name="backupConfiguration")
       private final @Nullable Output<DatabaseInstanceSettingsBackupConfigurationGetArgs> backupConfiguration;
 
-    public Output<DatabaseInstanceSettingsBackupConfigurationGetArgs> getBackupConfiguration() {
+    public Output<DatabaseInstanceSettingsBackupConfigurationGetArgs> backupConfiguration() {
         return this.backupConfiguration == null ? Codegen.empty() : this.backupConfiguration;
     }
 
@@ -65,14 +65,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="collation")
       private final @Nullable Output<String> collation;
 
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation == null ? Codegen.empty() : this.collation;
     }
 
     @Import(name="databaseFlags")
       private final @Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> databaseFlags;
 
-    public Output<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> getDatabaseFlags() {
+    public Output<List<DatabaseInstanceSettingsDatabaseFlagGetArgs>> databaseFlags() {
         return this.databaseFlags == null ? Codegen.empty() : this.databaseFlags;
     }
 
@@ -83,14 +83,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="diskAutoresize")
       private final @Nullable Output<Boolean> diskAutoresize;
 
-    public Output<Boolean> getDiskAutoresize() {
+    public Output<Boolean> diskAutoresize() {
         return this.diskAutoresize == null ? Codegen.empty() : this.diskAutoresize;
     }
 
     @Import(name="diskAutoresizeLimit")
       private final @Nullable Output<Integer> diskAutoresizeLimit;
 
-    public Output<Integer> getDiskAutoresizeLimit() {
+    public Output<Integer> diskAutoresizeLimit() {
         return this.diskAutoresizeLimit == null ? Codegen.empty() : this.diskAutoresizeLimit;
     }
 
@@ -101,7 +101,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="diskSize")
       private final @Nullable Output<Integer> diskSize;
 
-    public Output<Integer> getDiskSize() {
+    public Output<Integer> diskSize() {
         return this.diskSize == null ? Codegen.empty() : this.diskSize;
     }
 
@@ -112,35 +112,35 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     @Import(name="insightsConfig")
       private final @Nullable Output<DatabaseInstanceSettingsInsightsConfigGetArgs> insightsConfig;
 
-    public Output<DatabaseInstanceSettingsInsightsConfigGetArgs> getInsightsConfig() {
+    public Output<DatabaseInstanceSettingsInsightsConfigGetArgs> insightsConfig() {
         return this.insightsConfig == null ? Codegen.empty() : this.insightsConfig;
     }
 
     @Import(name="ipConfiguration")
       private final @Nullable Output<DatabaseInstanceSettingsIpConfigurationGetArgs> ipConfiguration;
 
-    public Output<DatabaseInstanceSettingsIpConfigurationGetArgs> getIpConfiguration() {
+    public Output<DatabaseInstanceSettingsIpConfigurationGetArgs> ipConfiguration() {
         return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
     @Import(name="locationPreference")
       private final @Nullable Output<DatabaseInstanceSettingsLocationPreferenceGetArgs> locationPreference;
 
-    public Output<DatabaseInstanceSettingsLocationPreferenceGetArgs> getLocationPreference() {
+    public Output<DatabaseInstanceSettingsLocationPreferenceGetArgs> locationPreference() {
         return this.locationPreference == null ? Codegen.empty() : this.locationPreference;
     }
 
     @Import(name="maintenanceWindow")
       private final @Nullable Output<DatabaseInstanceSettingsMaintenanceWindowGetArgs> maintenanceWindow;
 
-    public Output<DatabaseInstanceSettingsMaintenanceWindowGetArgs> getMaintenanceWindow() {
+    public Output<DatabaseInstanceSettingsMaintenanceWindowGetArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -151,7 +151,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="pricingPlan")
       private final @Nullable Output<String> pricingPlan;
 
-    public Output<String> getPricingPlan() {
+    public Output<String> pricingPlan() {
         return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
@@ -164,7 +164,7 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="tier", required=true)
       private final Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
 
@@ -175,14 +175,14 @@ public final class DatabaseInstanceSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

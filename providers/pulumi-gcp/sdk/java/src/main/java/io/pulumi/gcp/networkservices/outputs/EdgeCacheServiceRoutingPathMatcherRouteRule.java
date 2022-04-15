@@ -83,7 +83,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * A human-readable description of the resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -91,7 +91,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction> getHeaderAction() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -100,7 +100,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> getMatchRules() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules() {
         return this.matchRules;
     }
     /**
@@ -108,7 +108,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * Only one of origin or urlRedirect can be set.
      * 
     */
-    public Optional<String> getOrigin() {
+    public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
     /**
@@ -118,7 +118,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
      * 
     */
-    public String getPriority() {
+    public String priority() {
         return this.priority;
     }
     /**
@@ -126,7 +126,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction> getRouteAction() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
@@ -134,7 +134,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect> getUrlRedirect() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
 

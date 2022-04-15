@@ -65,7 +65,7 @@ public final class ClusterIpAllocationPolicy {
      * pick a specific range to use.
      * 
     */
-    public Optional<String> getClusterIpv4CidrBlock() {
+    public Optional<String> clusterIpv4CidrBlock() {
         return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
     /**
@@ -74,7 +74,7 @@ public final class ClusterIpAllocationPolicy {
      * `cluster_ipv4_cidr_block` can be used to automatically create a GKE-managed one.
      * 
     */
-    public Optional<String> getClusterSecondaryRangeName() {
+    public Optional<String> clusterSecondaryRangeName() {
         return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
     /**
@@ -85,7 +85,7 @@ public final class ClusterIpAllocationPolicy {
      * pick a specific range to use.
      * 
     */
-    public Optional<String> getServicesIpv4CidrBlock() {
+    public Optional<String> servicesIpv4CidrBlock() {
         return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
     /**
@@ -95,7 +95,7 @@ public final class ClusterIpAllocationPolicy {
      * GKE-managed one.
      * 
     */
-    public Optional<String> getServicesSecondaryRangeName() {
+    public Optional<String> servicesSecondaryRangeName() {
         return Optional.ofNullable(this.servicesSecondaryRangeName);
     }
 

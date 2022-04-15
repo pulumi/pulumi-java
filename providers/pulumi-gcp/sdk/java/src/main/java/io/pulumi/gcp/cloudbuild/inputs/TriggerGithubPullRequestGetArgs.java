@@ -23,7 +23,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
     @Import(name="branch", required=true)
       private final Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch;
     }
 
@@ -35,7 +35,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
     @Import(name="commentControl")
       private final @Nullable Output<String> commentControl;
 
-    public Output<String> getCommentControl() {
+    public Output<String> commentControl() {
         return this.commentControl == null ? Codegen.empty() : this.commentControl;
     }
 
@@ -46,7 +46,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
+    public Output<Boolean> invertRegex() {
         return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 

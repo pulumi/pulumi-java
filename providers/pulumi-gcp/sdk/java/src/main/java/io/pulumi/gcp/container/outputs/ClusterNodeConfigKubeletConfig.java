@@ -49,7 +49,7 @@ public final class ClusterNodeConfigKubeletConfig {
      * containers that specify CPU limits.
      * 
     */
-    public Optional<Boolean> getCpuCfsQuota() {
+    public Optional<Boolean> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
     /**
@@ -59,7 +59,7 @@ public final class ClusterNodeConfigKubeletConfig {
      * "h". The value must be a positive duration.
      * 
     */
-    public Optional<String> getCpuCfsQuotaPeriod() {
+    public Optional<String> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
     /**
@@ -68,7 +68,7 @@ public final class ClusterNodeConfigKubeletConfig {
      * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
      * 
     */
-    public String getCpuManagerPolicy() {
+    public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 

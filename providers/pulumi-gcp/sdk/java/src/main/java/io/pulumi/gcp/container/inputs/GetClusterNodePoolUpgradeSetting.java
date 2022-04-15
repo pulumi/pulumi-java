@@ -15,14 +15,14 @@ public final class GetClusterNodePoolUpgradeSetting extends io.pulumi.resources.
     @Import(name="maxSurge", required=true)
       private final Integer maxSurge;
 
-    public Integer getMaxSurge() {
+    public Integer maxSurge() {
         return this.maxSurge;
     }
 
     @Import(name="maxUnavailable", required=true)
       private final Integer maxUnavailable;
 
-    public Integer getMaxUnavailable() {
+    public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
 

@@ -62,7 +62,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=GatewayIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ GatewayIamBindingCondition> condition;
 
-    public Output</* @Nullable */ GatewayIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ GatewayIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -76,19 +76,19 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="gateway", type=String.class, parameters={})
     private Output<String> gateway;
 
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -104,7 +104,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -124,7 +124,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * region is specified, it is taken from the provider configuration.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -142,7 +142,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

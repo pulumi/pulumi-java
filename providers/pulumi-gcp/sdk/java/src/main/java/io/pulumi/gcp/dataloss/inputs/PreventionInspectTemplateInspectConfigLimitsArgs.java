@@ -25,7 +25,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
     @Import(name="maxFindingsPerInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> getMaxFindingsPerInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes() {
         return this.maxFindingsPerInfoTypes == null ? Codegen.empty() : this.maxFindingsPerInfoTypes;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
     @Import(name="maxFindingsPerItem", required=true)
       private final Output<Integer> maxFindingsPerItem;
 
-    public Output<Integer> getMaxFindingsPerItem() {
+    public Output<Integer> maxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
 
@@ -47,7 +47,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
     @Import(name="maxFindingsPerRequest", required=true)
       private final Output<Integer> maxFindingsPerRequest;
 
-    public Output<Integer> getMaxFindingsPerRequest() {
+    public Output<Integer> maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 

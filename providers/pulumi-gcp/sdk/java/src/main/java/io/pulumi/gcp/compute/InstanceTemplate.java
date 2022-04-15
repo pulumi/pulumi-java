@@ -100,7 +100,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateAdvancedMachineFeatures> getAdvancedMachineFeatures() {
+    public Output</* @Nullable */ InstanceTemplateAdvancedMachineFeatures> advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
@@ -116,7 +116,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * packets with non-matching source or destination IPs. This defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCanIpForward() {
+    public Output</* @Nullable */ Boolean> canIpForward() {
         return this.canIpForward;
     }
     /**
@@ -130,7 +130,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
      */
-    public Output<InstanceTemplateConfidentialInstanceConfig> getConfidentialInstanceConfig() {
+    public Output<InstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
     /**
@@ -144,7 +144,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return A brief description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -162,7 +162,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * documented below.
      * 
      */
-    public Output<List<InstanceTemplateDisk>> getDisks() {
+    public Output<List<InstanceTemplateDisk>> disks() {
         return this.disks;
     }
     /**
@@ -178,7 +178,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDisplay() {
+    public Output</* @Nullable */ Boolean> enableDisplay() {
         return this.enableDisplay;
     }
     /**
@@ -192,7 +192,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return List of the type and count of accelerator cards attached to the instance. Structure documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceTemplateGuestAccelerator>> getGuestAccelerators() {
+    public Output</* @Nullable */ List<InstanceTemplateGuestAccelerator>> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
@@ -208,7 +208,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * created from this template.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceDescription() {
+    public Output</* @Nullable */ String> instanceDescription() {
         return this.instanceDescription;
     }
     /**
@@ -224,7 +224,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * this template
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -238,7 +238,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return The machine type to create.
      * 
      */
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
     /**
@@ -254,7 +254,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * within instances created from this template.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getMetadata() {
+    public Output</* @Nullable */ Map<String,Object>> metadata() {
         return this.metadata;
     }
     /**
@@ -268,7 +268,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the metadata.
      * 
      */
-    public Output<String> getMetadataFingerprint() {
+    public Output<String> metadataFingerprint() {
         return this.metadataFingerprint;
     }
     /**
@@ -288,7 +288,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * thus the two mechanisms are not allowed to be used simultaneously.
      * 
      */
-    public Output</* @Nullable */ String> getMetadataStartupScript() {
+    public Output</* @Nullable */ String> metadataStartupScript() {
         return this.metadataStartupScript;
     }
     /**
@@ -304,7 +304,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
      * 
      */
-    public Output</* @Nullable */ String> getMinCpuPlatform() {
+    public Output</* @Nullable */ String> minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
@@ -320,7 +320,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * this blank, the provider will auto-generate a unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -336,7 +336,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -354,7 +354,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceTemplateNetworkInterface>> getNetworkInterfaces() {
+    public Output</* @Nullable */ List<InstanceTemplateNetworkInterface>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -378,7 +378,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * in order for this setting to take effect.
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateNetworkPerformanceConfig> getNetworkPerformanceConfig() {
+    public Output</* @Nullable */ InstanceTemplateNetworkPerformanceConfig> networkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
     /**
@@ -394,7 +394,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -418,7 +418,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * Provider if no value is given.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -434,7 +434,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateReservationAffinity> getReservationAffinity() {
+    public Output</* @Nullable */ InstanceTemplateReservationAffinity> reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
@@ -450,7 +450,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * this configuration option are detailed below.
      * 
      */
-    public Output<InstanceTemplateScheduling> getScheduling() {
+    public Output<InstanceTemplateScheduling> scheduling() {
         return this.scheduling;
     }
     /**
@@ -464,7 +464,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -478,7 +478,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return Service account to attach to the instance. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceTemplateServiceAccount> getServiceAccount() {
+    public Output</* @Nullable */ InstanceTemplateServiceAccount> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -494,7 +494,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
      * 
      */
-    public Output<InstanceTemplateShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Output<InstanceTemplateShieldedInstanceConfig> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
@@ -508,7 +508,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return Tags to attach to the instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -522,7 +522,7 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the tags.
      * 
      */
-    public Output<String> getTagsFingerprint() {
+    public Output<String> tagsFingerprint() {
         return this.tagsFingerprint;
     }
 

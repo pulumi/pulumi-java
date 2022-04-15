@@ -23,7 +23,7 @@ public final class PreventionJobTriggerTriggerArgs extends io.pulumi.resources.R
     @Import(name="schedule")
       private final @Nullable Output<PreventionJobTriggerTriggerScheduleArgs> schedule;
 
-    public Output<PreventionJobTriggerTriggerScheduleArgs> getSchedule() {
+    public Output<PreventionJobTriggerTriggerScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 

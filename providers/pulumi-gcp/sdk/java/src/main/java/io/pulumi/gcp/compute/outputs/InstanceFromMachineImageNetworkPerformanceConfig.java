@@ -16,7 +16,7 @@ public final class InstanceFromMachineImageNetworkPerformanceConfig {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 
-    public String getTotalEgressBandwidthTier() {
+    public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

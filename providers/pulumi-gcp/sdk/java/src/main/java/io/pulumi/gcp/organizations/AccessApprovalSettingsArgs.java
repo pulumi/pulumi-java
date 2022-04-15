@@ -28,7 +28,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="enrolledServices", required=true)
       private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
-    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
     }
 
@@ -41,7 +41,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="notificationEmails")
       private final @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> getNotificationEmails() {
+    public Output<List<String>> notificationEmails() {
         return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
     }
 
@@ -52,7 +52,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

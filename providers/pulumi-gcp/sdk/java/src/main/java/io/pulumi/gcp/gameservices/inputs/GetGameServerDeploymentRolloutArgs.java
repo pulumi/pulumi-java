@@ -19,7 +19,7 @@ public final class GetGameServerDeploymentRolloutArgs extends io.pulumi.resource
     @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
 

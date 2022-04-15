@@ -22,10 +22,10 @@ public final class GetOrganizationPolicyListPolicyDeny {
         this.values = values;
     }
 
-    public Boolean getAll() {
+    public Boolean all() {
         return this.all;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

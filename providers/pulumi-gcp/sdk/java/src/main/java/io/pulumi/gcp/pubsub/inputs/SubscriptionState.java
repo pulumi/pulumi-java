@@ -43,7 +43,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ackDeadlineSeconds")
       private final @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Output<Integer> getAckDeadlineSeconds() {
+    public Output<Integer> ackDeadlineSeconds() {
         return this.ackDeadlineSeconds == null ? Codegen.empty() : this.ackDeadlineSeconds;
     }
 
@@ -61,7 +61,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterPolicy")
       private final @Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy;
 
-    public Output<SubscriptionDeadLetterPolicyGetArgs> getDeadLetterPolicy() {
+    public Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy() {
         return this.deadLetterPolicy == null ? Codegen.empty() : this.deadLetterPolicy;
     }
 
@@ -74,7 +74,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableMessageOrdering")
       private final @Nullable Output<Boolean> enableMessageOrdering;
 
-    public Output<Boolean> getEnableMessageOrdering() {
+    public Output<Boolean> enableMessageOrdering() {
         return this.enableMessageOrdering == null ? Codegen.empty() : this.enableMessageOrdering;
     }
 
@@ -92,7 +92,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationPolicy")
       private final @Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy;
 
-    public Output<SubscriptionExpirationPolicyGetArgs> getExpirationPolicy() {
+    public Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy() {
         return this.expirationPolicy == null ? Codegen.empty() : this.expirationPolicy;
     }
 
@@ -106,7 +106,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -117,7 +117,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -135,7 +135,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionDuration")
       private final @Nullable Output<String> messageRetentionDuration;
 
-    public Output<String> getMessageRetentionDuration() {
+    public Output<String> messageRetentionDuration() {
         return this.messageRetentionDuration == null ? Codegen.empty() : this.messageRetentionDuration;
     }
 
@@ -146,7 +146,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -158,7 +158,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -172,7 +172,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pushConfig")
       private final @Nullable Output<SubscriptionPushConfigGetArgs> pushConfig;
 
-    public Output<SubscriptionPushConfigGetArgs> getPushConfig() {
+    public Output<SubscriptionPushConfigGetArgs> pushConfig() {
         return this.pushConfig == null ? Codegen.empty() : this.pushConfig;
     }
 
@@ -186,7 +186,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retainAckedMessages")
       private final @Nullable Output<Boolean> retainAckedMessages;
 
-    public Output<Boolean> getRetainAckedMessages() {
+    public Output<Boolean> retainAckedMessages() {
         return this.retainAckedMessages == null ? Codegen.empty() : this.retainAckedMessages;
     }
 
@@ -200,7 +200,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryPolicy")
       private final @Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy;
 
-    public Output<SubscriptionRetryPolicyGetArgs> getRetryPolicy() {
+    public Output<SubscriptionRetryPolicyGetArgs> retryPolicy() {
         return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
@@ -211,7 +211,7 @@ public final class SubscriptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

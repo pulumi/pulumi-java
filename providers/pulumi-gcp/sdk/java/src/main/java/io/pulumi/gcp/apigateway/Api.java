@@ -55,7 +55,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Identifier to assign to the API. Must be unique within scope of the parent resource(project)
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -69,7 +69,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -83,7 +83,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return A user-visible name for the API.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -97,7 +97,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -113,7 +113,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * If not specified, a new Service will automatically be created in the same project as this API.
      * 
      */
-    public Output<String> getManagedService() {
+    public Output<String> managedService() {
         return this.managedService;
     }
     /**
@@ -127,7 +127,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return The resource name of the API. Format 'projects/{{project}}/locations/global/apis/{{apiId}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -143,7 +143,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

@@ -22,7 +22,7 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
     @Import(name="encryptionAlgorithm")
       private final @Nullable Output<String> encryptionAlgorithm;
 
-    public Output<String> getEncryptionAlgorithm() {
+    public Output<String> encryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
     }
 
@@ -33,7 +33,7 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
     @Import(name="encryptionKey", required=true)
       private final Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
 

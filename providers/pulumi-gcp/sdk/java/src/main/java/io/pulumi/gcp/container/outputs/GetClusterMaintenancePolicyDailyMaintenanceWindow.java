@@ -20,10 +20,10 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow {
         this.startTime = startTime;
     }
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

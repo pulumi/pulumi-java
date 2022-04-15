@@ -22,10 +22,10 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindow {
         this.startTime = startTime;
     }
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

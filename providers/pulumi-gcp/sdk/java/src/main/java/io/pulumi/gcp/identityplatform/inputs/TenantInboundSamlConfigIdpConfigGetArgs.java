@@ -26,7 +26,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
     @Import(name="idpCertificates", required=true)
       private final Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
 
-    public Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> getIdpCertificates() {
+    public Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates() {
         return this.idpCertificates;
     }
 
@@ -37,7 +37,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
     @Import(name="idpEntityId", required=true)
       private final Output<String> idpEntityId;
 
-    public Output<String> getIdpEntityId() {
+    public Output<String> idpEntityId() {
         return this.idpEntityId;
     }
 
@@ -48,7 +48,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
     @Import(name="signRequest")
       private final @Nullable Output<Boolean> signRequest;
 
-    public Output<Boolean> getSignRequest() {
+    public Output<Boolean> signRequest() {
         return this.signRequest == null ? Codegen.empty() : this.signRequest;
     }
 
@@ -59,7 +59,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends io.pulumi.res
     @Import(name="ssoUrl", required=true)
       private final Output<String> ssoUrl;
 
-    public Output<String> getSsoUrl() {
+    public Output<String> ssoUrl() {
         return this.ssoUrl;
     }
 

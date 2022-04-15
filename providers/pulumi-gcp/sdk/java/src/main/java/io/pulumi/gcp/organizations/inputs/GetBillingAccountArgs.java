@@ -22,7 +22,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="billingAccount")
       private final @Nullable String billingAccount;
 
-    public Optional<String> getBillingAccount() {
+    public Optional<String> billingAccount() {
         return this.billingAccount == null ? Optional.empty() : Optional.ofNullable(this.billingAccount);
     }
 
@@ -33,7 +33,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -44,7 +44,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="open")
       private final @Nullable Boolean open;
 
-    public Optional<Boolean> getOpen() {
+    public Optional<Boolean> open() {
         return this.open == null ? Optional.empty() : Optional.ofNullable(this.open);
     }
 

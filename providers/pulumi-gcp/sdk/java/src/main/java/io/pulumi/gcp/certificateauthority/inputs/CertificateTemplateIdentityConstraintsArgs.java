@@ -23,7 +23,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Output<Boolean> allowSubjectAltNamesPassthrough;
 
-    public Output<Boolean> getAllowSubjectAltNamesPassthrough() {
+    public Output<Boolean> allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
     @Import(name="allowSubjectPassthrough", required=true)
       private final Output<Boolean> allowSubjectPassthrough;
 
-    public Output<Boolean> getAllowSubjectPassthrough() {
+    public Output<Boolean> allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
 
@@ -45,7 +45,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
     @Import(name="celExpression")
       private final @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
 
-    public Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> getCelExpression() {
+    public Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression() {
         return this.celExpression == null ? Codegen.empty() : this.celExpression;
     }
 

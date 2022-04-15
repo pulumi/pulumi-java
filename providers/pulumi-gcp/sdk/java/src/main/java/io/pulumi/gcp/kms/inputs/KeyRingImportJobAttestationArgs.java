@@ -18,14 +18,14 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 

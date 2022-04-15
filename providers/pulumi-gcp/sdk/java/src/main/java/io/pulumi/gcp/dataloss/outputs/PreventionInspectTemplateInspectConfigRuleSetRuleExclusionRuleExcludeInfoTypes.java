@@ -27,7 +27,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> getInfoTypes() {
+    public List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> infoTypes() {
         return this.infoTypes;
     }
 

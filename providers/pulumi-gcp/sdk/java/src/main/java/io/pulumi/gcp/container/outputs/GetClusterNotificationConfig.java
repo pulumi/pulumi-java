@@ -17,7 +17,7 @@ public final class GetClusterNotificationConfig {
         this.pubsubs = pubsubs;
     }
 
-    public List<GetClusterNotificationConfigPubsub> getPubsubs() {
+    public List<GetClusterNotificationConfigPubsub> pubsubs() {
         return this.pubsubs;
     }
 

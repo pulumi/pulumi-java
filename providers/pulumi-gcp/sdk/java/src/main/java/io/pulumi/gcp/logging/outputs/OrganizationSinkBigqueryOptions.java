@@ -30,7 +30,7 @@ public final class OrganizationSinkBigqueryOptions {
      * has to be used instead. In both cases, tables are sharded based on UTC timezone.
      * 
     */
-    public Boolean getUsePartitionedTables() {
+    public Boolean usePartitionedTables() {
         return this.usePartitionedTables;
     }
 

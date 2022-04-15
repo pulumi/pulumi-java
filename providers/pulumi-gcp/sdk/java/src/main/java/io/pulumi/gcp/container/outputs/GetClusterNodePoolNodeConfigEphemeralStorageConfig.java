@@ -16,7 +16,7 @@ public final class GetClusterNodePoolNodeConfigEphemeralStorageConfig {
         this.localSsdCount = localSsdCount;
     }
 
-    public Integer getLocalSsdCount() {
+    public Integer localSsdCount() {
         return this.localSsdCount;
     }
 

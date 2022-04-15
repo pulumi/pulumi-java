@@ -78,14 +78,14 @@ public final class RuntimeSoftwareConfig {
      * If not specified, we'll automatically choose from official GPU drivers.
      * 
     */
-    public Optional<String> getCustomGpuDriverPath() {
+    public Optional<String> customGpuDriverPath() {
         return Optional.ofNullable(this.customGpuDriverPath);
     }
     /**
      * Verifies core internal services are running. Default: True.
      * 
     */
-    public Optional<Boolean> getEnableHealthMonitoring() {
+    public Optional<Boolean> enableHealthMonitoring() {
         return Optional.ofNullable(this.enableHealthMonitoring);
     }
     /**
@@ -93,7 +93,7 @@ public final class RuntimeSoftwareConfig {
      * Default: True
      * 
     */
-    public Optional<Boolean> getIdleShutdown() {
+    public Optional<Boolean> idleShutdown() {
         return Optional.ofNullable(this.idleShutdown);
     }
     /**
@@ -101,14 +101,14 @@ public final class RuntimeSoftwareConfig {
      * Default: 180 minutes
      * 
     */
-    public Optional<Integer> getIdleShutdownTimeout() {
+    public Optional<Integer> idleShutdownTimeout() {
         return Optional.ofNullable(this.idleShutdownTimeout);
     }
     /**
      * Install Nvidia Driver automatically.
      * 
     */
-    public Optional<Boolean> getInstallGpuDriver() {
+    public Optional<Boolean> installGpuDriver() {
         return Optional.ofNullable(this.installGpuDriver);
     }
     /**
@@ -116,7 +116,7 @@ public final class RuntimeSoftwareConfig {
      * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
     */
-    public Optional<String> getNotebookUpgradeSchedule() {
+    public Optional<String> notebookUpgradeSchedule() {
         return Optional.ofNullable(this.notebookUpgradeSchedule);
     }
     /**
@@ -125,7 +125,7 @@ public final class RuntimeSoftwareConfig {
      * Cloud Storage path (gs://path-to-file/file-name).
      * 
     */
-    public Optional<String> getPostStartupScript() {
+    public Optional<String> postStartupScript() {
         return Optional.ofNullable(this.postStartupScript);
     }
 

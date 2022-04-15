@@ -61,7 +61,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    public Output</* @Nullable */ RegionInstanceGroupManagerAutoHealingPolicies> getAutoHealingPolicies() {
+    public Output</* @Nullable */ RegionInstanceGroupManagerAutoHealingPolicies> autoHealingPolicies() {
         return this.autoHealingPolicies;
     }
     /**
@@ -85,7 +85,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * name.
      * 
      */
-    public Output<String> getBaseInstanceName() {
+    public Output<String> baseInstanceName() {
         return this.baseInstanceName;
     }
     /**
@@ -101,7 +101,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * group manager.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -115,7 +115,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
      * 
      */
-    public Output<String> getDistributionPolicyTargetShape() {
+    public Output<String> distributionPolicyTargetShape() {
         return this.distributionPolicyTargetShape;
     }
     /**
@@ -131,7 +131,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * group. You can specify one or more values. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones).
      * 
      */
-    public Output<List<String>> getDistributionPolicyZones() {
+    public Output<List<String>> distributionPolicyZones() {
         return this.distributionPolicyZones;
     }
     /**
@@ -145,7 +145,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The fingerprint of the instance group manager.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -159,7 +159,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The full URL of the instance group created by the manager.
      * 
      */
-    public Output<String> getInstanceGroup() {
+    public Output<String> instanceGroup() {
         return this.instanceGroup;
     }
     /**
@@ -173,7 +173,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return - Version name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -189,7 +189,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * for details on configuration.
      * 
      */
-    public Output</* @Nullable */ List<RegionInstanceGroupManagerNamedPort>> getNamedPorts() {
+    public Output</* @Nullable */ List<RegionInstanceGroupManagerNamedPort>> namedPorts() {
         return this.namedPorts;
     }
     /**
@@ -205,7 +205,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -219,7 +219,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The region where the managed instance group resides. If not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -233,7 +233,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The URL of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -247,7 +247,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
      * 
      */
-    public Output</* @Nullable */ List<RegionInstanceGroupManagerStatefulDisk>> getStatefulDisks() {
+    public Output</* @Nullable */ List<RegionInstanceGroupManagerStatefulDisk>> statefulDisks() {
         return this.statefulDisks;
     }
     /**
@@ -261,7 +261,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The status of this managed instance group.
      * 
      */
-    public Output<List<RegionInstanceGroupManagerStatus>> getStatuses() {
+    public Output<List<RegionInstanceGroupManagerStatus>> statuses() {
         return this.statuses;
     }
     /**
@@ -279,7 +279,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * not affect existing instances.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetPools() {
+    public Output</* @Nullable */ List<String>> targetPools() {
         return this.targetPools;
     }
     /**
@@ -293,7 +293,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
      */
-    public Output<Integer> getTargetSize() {
+    public Output<Integer> targetSize() {
         return this.targetSize;
     }
     /**
@@ -307,7 +307,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @return The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
      * 
      */
-    public Output<RegionInstanceGroupManagerUpdatePolicy> getUpdatePolicy() {
+    public Output<RegionInstanceGroupManagerUpdatePolicy> updatePolicy() {
         return this.updatePolicy;
     }
     /**
@@ -325,7 +325,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    public Output<List<RegionInstanceGroupManagerVersion>> getVersions() {
+    public Output<List<RegionInstanceGroupManagerVersion>> versions() {
         return this.versions;
     }
     /**
@@ -343,7 +343,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * continue trying until it times out.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForInstances() {
+    public Output</* @Nullable */ Boolean> waitForInstances() {
         return this.waitForInstances;
     }
     /**
@@ -363,7 +363,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    public Output</* @Nullable */ String> getWaitForInstancesStatus() {
+    public Output</* @Nullable */ String> waitForInstancesStatus() {
         return this.waitForInstancesStatus;
     }
 

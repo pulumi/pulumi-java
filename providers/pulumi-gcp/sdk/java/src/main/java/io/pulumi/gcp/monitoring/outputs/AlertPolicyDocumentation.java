@@ -41,7 +41,7 @@ public final class AlertPolicyDocumentation {
      * whichever is smaller.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
@@ -49,7 +49,7 @@ public final class AlertPolicyDocumentation {
      * "text/markdown" is supported.
      * 
     */
-    public Optional<String> getMimeType() {
+    public Optional<String> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
 

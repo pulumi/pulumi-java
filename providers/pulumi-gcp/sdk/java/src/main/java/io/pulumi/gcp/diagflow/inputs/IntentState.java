@@ -27,7 +27,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -40,7 +40,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultResponsePlatforms")
       private final @Nullable Output<List<String>> defaultResponsePlatforms;
 
-    public Output<List<String>> getDefaultResponsePlatforms() {
+    public Output<List<String>> defaultResponsePlatforms() {
         return this.defaultResponsePlatforms == null ? Codegen.empty() : this.defaultResponsePlatforms;
     }
 
@@ -51,7 +51,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -64,7 +64,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 
@@ -76,7 +76,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="followupIntentInfos")
       private final @Nullable Output<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos;
 
-    public Output<List<IntentFollowupIntentInfoGetArgs>> getFollowupIntentInfos() {
+    public Output<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos() {
         return this.followupIntentInfos == null ? Codegen.empty() : this.followupIntentInfos;
     }
 
@@ -88,7 +88,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputContextNames")
       private final @Nullable Output<List<String>> inputContextNames;
 
-    public Output<List<String>> getInputContextNames() {
+    public Output<List<String>> inputContextNames() {
         return this.inputContextNames == null ? Codegen.empty() : this.inputContextNames;
     }
 
@@ -99,7 +99,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
+    public Output<Boolean> isFallback() {
         return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
@@ -112,7 +112,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mlDisabled")
       private final @Nullable Output<Boolean> mlDisabled;
 
-    public Output<Boolean> getMlDisabled() {
+    public Output<Boolean> mlDisabled() {
         return this.mlDisabled == null ? Codegen.empty() : this.mlDisabled;
     }
 
@@ -123,7 +123,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -135,7 +135,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentFollowupIntentName")
       private final @Nullable Output<String> parentFollowupIntentName;
 
-    public Output<String> getParentFollowupIntentName() {
+    public Output<String> parentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
     }
 
@@ -149,7 +149,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -161,7 +161,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -172,7 +172,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resetContexts")
       private final @Nullable Output<Boolean> resetContexts;
 
-    public Output<Boolean> getResetContexts() {
+    public Output<Boolean> resetContexts() {
         return this.resetContexts == null ? Codegen.empty() : this.resetContexts;
     }
 
@@ -184,7 +184,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootFollowupIntentName")
       private final @Nullable Output<String> rootFollowupIntentName;
 
-    public Output<String> getRootFollowupIntentName() {
+    public Output<String> rootFollowupIntentName() {
         return this.rootFollowupIntentName == null ? Codegen.empty() : this.rootFollowupIntentName;
     }
 
@@ -199,7 +199,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookState")
       private final @Nullable Output<String> webhookState;
 
-    public Output<String> getWebhookState() {
+    public Output<String> webhookState() {
         return this.webhookState == null ? Codegen.empty() : this.webhookState;
     }
 

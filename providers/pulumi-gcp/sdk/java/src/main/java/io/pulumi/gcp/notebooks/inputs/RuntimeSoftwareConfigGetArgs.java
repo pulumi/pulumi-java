@@ -25,7 +25,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="customGpuDriverPath")
       private final @Nullable Output<String> customGpuDriverPath;
 
-    public Output<String> getCustomGpuDriverPath() {
+    public Output<String> customGpuDriverPath() {
         return this.customGpuDriverPath == null ? Codegen.empty() : this.customGpuDriverPath;
     }
 
@@ -36,7 +36,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="enableHealthMonitoring")
       private final @Nullable Output<Boolean> enableHealthMonitoring;
 
-    public Output<Boolean> getEnableHealthMonitoring() {
+    public Output<Boolean> enableHealthMonitoring() {
         return this.enableHealthMonitoring == null ? Codegen.empty() : this.enableHealthMonitoring;
     }
 
@@ -48,7 +48,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="idleShutdown")
       private final @Nullable Output<Boolean> idleShutdown;
 
-    public Output<Boolean> getIdleShutdown() {
+    public Output<Boolean> idleShutdown() {
         return this.idleShutdown == null ? Codegen.empty() : this.idleShutdown;
     }
 
@@ -60,7 +60,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="idleShutdownTimeout")
       private final @Nullable Output<Integer> idleShutdownTimeout;
 
-    public Output<Integer> getIdleShutdownTimeout() {
+    public Output<Integer> idleShutdownTimeout() {
         return this.idleShutdownTimeout == null ? Codegen.empty() : this.idleShutdownTimeout;
     }
 
@@ -71,7 +71,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="installGpuDriver")
       private final @Nullable Output<Boolean> installGpuDriver;
 
-    public Output<Boolean> getInstallGpuDriver() {
+    public Output<Boolean> installGpuDriver() {
         return this.installGpuDriver == null ? Codegen.empty() : this.installGpuDriver;
     }
 
@@ -83,7 +83,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="notebookUpgradeSchedule")
       private final @Nullable Output<String> notebookUpgradeSchedule;
 
-    public Output<String> getNotebookUpgradeSchedule() {
+    public Output<String> notebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule == null ? Codegen.empty() : this.notebookUpgradeSchedule;
     }
 
@@ -96,7 +96,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
-    public Output<String> getPostStartupScript() {
+    public Output<String> postStartupScript() {
         return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
     }
 

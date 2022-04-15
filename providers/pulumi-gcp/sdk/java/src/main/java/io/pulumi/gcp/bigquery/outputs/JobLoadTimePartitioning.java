@@ -44,7 +44,7 @@ public final class JobLoadTimePartitioning {
      * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
      * 
     */
-    public Optional<String> getExpirationMs() {
+    public Optional<String> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
     /**
@@ -53,7 +53,7 @@ public final class JobLoadTimePartitioning {
      * A wrapper is used here because an empty string is an invalid value.
      * 
     */
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
     /**
@@ -61,7 +61,7 @@ public final class JobLoadTimePartitioning {
      * but in OnePlatform the field will be treated as unset.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

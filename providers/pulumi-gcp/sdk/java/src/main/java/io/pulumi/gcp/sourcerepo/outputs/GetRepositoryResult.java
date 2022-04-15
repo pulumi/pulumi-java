@@ -45,22 +45,22 @@ public final class GetRepositoryResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetRepositoryPubsubConfig> getPubsubConfigs() {
+    public List<GetRepositoryPubsubConfig> pubsubConfigs() {
         return this.pubsubConfigs;
     }
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

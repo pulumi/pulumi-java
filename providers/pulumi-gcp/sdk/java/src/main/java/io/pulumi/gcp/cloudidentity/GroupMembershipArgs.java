@@ -26,7 +26,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -38,7 +38,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="memberKey")
       private final @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
 
-    public Output<GroupMembershipMemberKeyArgs> getMemberKey() {
+    public Output<GroupMembershipMemberKeyArgs> memberKey() {
         return this.memberKey == null ? Codegen.empty() : this.memberKey;
     }
 
@@ -50,7 +50,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="preferredMemberKey")
       private final @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
-    public Output<GroupMembershipPreferredMemberKeyArgs> getPreferredMemberKey() {
+    public Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey() {
         return this.preferredMemberKey == null ? Codegen.empty() : this.preferredMemberKey;
     }
 
@@ -63,7 +63,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="roles", required=true)
       private final Output<List<GroupMembershipRoleArgs>> roles;
 
-    public Output<List<GroupMembershipRoleArgs>> getRoles() {
+    public Output<List<GroupMembershipRoleArgs>> roles() {
         return this.roles;
     }
 

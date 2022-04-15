@@ -27,7 +27,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReceiveInterval")
       private final @Nullable Output<Integer> minReceiveInterval;
 
-    public Output<Integer> getMinReceiveInterval() {
+    public Output<Integer> minReceiveInterval() {
         return this.minReceiveInterval == null ? Codegen.empty() : this.minReceiveInterval;
     }
 
@@ -42,7 +42,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTransmitInterval")
       private final @Nullable Output<Integer> minTransmitInterval;
 
-    public Output<Integer> getMinTransmitInterval() {
+    public Output<Integer> minTransmitInterval() {
         return this.minTransmitInterval == null ? Codegen.empty() : this.minTransmitInterval;
     }
 
@@ -55,7 +55,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="multiplier")
       private final @Nullable Output<Integer> multiplier;
 
-    public Output<Integer> getMultiplier() {
+    public Output<Integer> multiplier() {
         return this.multiplier == null ? Codegen.empty() : this.multiplier;
     }
 
@@ -71,7 +71,7 @@ public final class RouterPeerBfdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionInitializationMode", required=true)
       private final Output<String> sessionInitializationMode;
 
-    public Output<String> getSessionInitializationMode() {
+    public Output<String> sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
 

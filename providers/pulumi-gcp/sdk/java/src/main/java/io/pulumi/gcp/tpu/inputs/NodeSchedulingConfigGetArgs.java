@@ -21,7 +21,7 @@ public final class NodeSchedulingConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="preemptible", required=true)
       private final Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible;
     }
 

@@ -24,7 +24,7 @@ public final class FlexibleAppVersionApiConfigGetArgs extends io.pulumi.resource
     @Import(name="authFailAction")
       private final @Nullable Output<String> authFailAction;
 
-    public Output<String> getAuthFailAction() {
+    public Output<String> authFailAction() {
         return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
@@ -37,7 +37,7 @@ public final class FlexibleAppVersionApiConfigGetArgs extends io.pulumi.resource
     @Import(name="login")
       private final @Nullable Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -48,7 +48,7 @@ public final class FlexibleAppVersionApiConfigGetArgs extends io.pulumi.resource
     @Import(name="script", required=true)
       private final Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script;
     }
 
@@ -60,7 +60,7 @@ public final class FlexibleAppVersionApiConfigGetArgs extends io.pulumi.resource
     @Import(name="securityLevel")
       private final @Nullable Output<String> securityLevel;
 
-    public Output<String> getSecurityLevel() {
+    public Output<String> securityLevel() {
         return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
@@ -71,7 +71,7 @@ public final class FlexibleAppVersionApiConfigGetArgs extends io.pulumi.resource
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

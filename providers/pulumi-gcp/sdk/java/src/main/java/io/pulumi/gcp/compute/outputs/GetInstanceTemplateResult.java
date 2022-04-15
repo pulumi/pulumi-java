@@ -248,7 +248,7 @@ public final class GetInstanceTemplateResult {
         this.tagsFingerprint = tagsFingerprint;
     }
 
-    public List<GetInstanceTemplateAdvancedMachineFeature> getAdvancedMachineFeatures() {
+    public List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
@@ -256,21 +256,21 @@ public final class GetInstanceTemplateResult {
      * packets with non-matching source or destination IPs. This defaults to false.
      * 
     */
-    public Boolean getCanIpForward() {
+    public Boolean canIpForward() {
         return this.canIpForward;
     }
     /**
      * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
     */
-    public List<GetInstanceTemplateConfidentialInstanceConfig> getConfidentialInstanceConfigs() {
+    public List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs() {
         return this.confidentialInstanceConfigs;
     }
     /**
      * A brief description of this resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
@@ -279,7 +279,7 @@ public final class GetInstanceTemplateResult {
      * documented below.
      * 
     */
-    public List<GetInstanceTemplateDisk> getDisks() {
+    public List<GetInstanceTemplateDisk> disks() {
         return this.disks;
     }
     /**
@@ -287,24 +287,24 @@ public final class GetInstanceTemplateResult {
      * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
      * 
     */
-    public Boolean getEnableDisplay() {
+    public Boolean enableDisplay() {
         return this.enableDisplay;
     }
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * List of the type and count of accelerator cards attached to the instance. Structure documented below.
      * 
     */
-    public List<GetInstanceTemplateGuestAccelerator> getGuestAccelerators() {
+    public List<GetInstanceTemplateGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -312,7 +312,7 @@ public final class GetInstanceTemplateResult {
      * created from this template.
      * 
     */
-    public String getInstanceDescription() {
+    public String instanceDescription() {
         return this.instanceDescription;
     }
     /**
@@ -320,14 +320,14 @@ public final class GetInstanceTemplateResult {
      * this template
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The machine type to create.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
@@ -335,14 +335,14 @@ public final class GetInstanceTemplateResult {
      * within instances created from this template.
      * 
     */
-    public Map<String,Object> getMetadata() {
+    public Map<String,Object> metadata() {
         return this.metadata;
     }
     /**
      * The unique fingerprint of the metadata.
      * 
     */
-    public String getMetadataFingerprint() {
+    public String metadataFingerprint() {
         return this.metadataFingerprint;
     }
     /**
@@ -352,7 +352,7 @@ public final class GetInstanceTemplateResult {
      * thus the two mechanisms are not allowed to be used simultaneously.
      * 
     */
-    public String getMetadataStartupScript() {
+    public String metadataStartupScript() {
         return this.metadataStartupScript;
     }
     /**
@@ -360,10 +360,10 @@ public final class GetInstanceTemplateResult {
      * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
      * 
     */
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
@@ -371,7 +371,7 @@ public final class GetInstanceTemplateResult {
      * this blank, the provider will auto-generate a unique name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -379,7 +379,7 @@ public final class GetInstanceTemplateResult {
      * prefix. Conflicts with `name`.
      * 
     */
-    public String getNamePrefix() {
+    public String namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -388,7 +388,7 @@ public final class GetInstanceTemplateResult {
      * Structure is documented below.
      * 
     */
-    public List<GetInstanceTemplateNetworkInterface> getNetworkInterfaces() {
+    public List<GetInstanceTemplateNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -396,7 +396,7 @@ public final class GetInstanceTemplateResult {
      * for the instance, if set. Structure is documented below.
      * 
     */
-    public List<GetInstanceTemplateNetworkPerformanceConfig> getNetworkPerformanceConfigs() {
+    public List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs() {
         return this.networkPerformanceConfigs;
     }
     /**
@@ -404,7 +404,7 @@ public final class GetInstanceTemplateResult {
      * is not provided, the provider project is used.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
@@ -416,10 +416,10 @@ public final class GetInstanceTemplateResult {
      * Provider if no value is given.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
-    public List<GetInstanceTemplateReservationAffinity> getReservationAffinities() {
+    public List<GetInstanceTemplateReservationAffinity> reservationAffinities() {
         return this.reservationAffinities;
     }
     /**
@@ -427,21 +427,21 @@ public final class GetInstanceTemplateResult {
      * this configuration option are detailed below.
      * 
     */
-    public List<GetInstanceTemplateScheduling> getSchedulings() {
+    public List<GetInstanceTemplateScheduling> schedulings() {
         return this.schedulings;
     }
     /**
      * The URI of the created resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Service account to attach to the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceTemplateServiceAccount> getServiceAccounts() {
+    public List<GetInstanceTemplateServiceAccount> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
@@ -449,21 +449,21 @@ public final class GetInstanceTemplateResult {
      * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
      * 
     */
-    public List<GetInstanceTemplateShieldedInstanceConfig> getShieldedInstanceConfigs() {
+    public List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
     /**
      * Tags to attach to the instance.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
     /**
      * The unique fingerprint of the tags.
      * 
     */
-    public String getTagsFingerprint() {
+    public String tagsFingerprint() {
         return this.tagsFingerprint;
     }
 

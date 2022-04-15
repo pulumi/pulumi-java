@@ -27,7 +27,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="connectMode")
       private final @Nullable Output<String> connectMode;
 
-    public Output<String> getConnectMode() {
+    public Output<String> connectMode() {
         return this.connectMode == null ? Codegen.empty() : this.connectMode;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
@@ -52,7 +52,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modes", required=true)
       private final Output<List<String>> modes;
 
-    public Output<List<String>> getModes() {
+    public Output<List<String>> modes() {
         return this.modes;
     }
 
@@ -64,7 +64,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="network", required=true)
       private final Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
 
@@ -76,7 +76,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 

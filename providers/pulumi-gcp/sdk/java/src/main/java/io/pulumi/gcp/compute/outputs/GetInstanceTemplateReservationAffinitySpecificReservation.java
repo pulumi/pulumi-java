@@ -29,10 +29,10 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation {
      * The key for the node affinity label.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

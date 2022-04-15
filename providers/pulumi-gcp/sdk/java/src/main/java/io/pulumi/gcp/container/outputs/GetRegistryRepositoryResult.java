@@ -36,16 +36,16 @@ public final class GetRegistryRepositoryResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public String getRepositoryUrl() {
+    public String repositoryUrl() {
         return this.repositoryUrl;
     }
 

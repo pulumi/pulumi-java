@@ -21,7 +21,7 @@ public final class GetInstanceTemplateServiceAccount extends io.pulumi.resources
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -34,7 +34,7 @@ public final class GetInstanceTemplateServiceAccount extends io.pulumi.resources
     @Import(name="scopes", required=true)
       private final List<String> scopes;
 
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 

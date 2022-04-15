@@ -23,7 +23,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     @Import(name="excludePrefixes")
       private final @Nullable Output<List<String>> excludePrefixes;
 
-    public Output<List<String>> getExcludePrefixes() {
+    public Output<List<String>> excludePrefixes() {
         return this.excludePrefixes == null ? Codegen.empty() : this.excludePrefixes;
     }
 
@@ -34,7 +34,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     @Import(name="includePrefixes")
       private final @Nullable Output<List<String>> includePrefixes;
 
-    public Output<List<String>> getIncludePrefixes() {
+    public Output<List<String>> includePrefixes() {
         return this.includePrefixes == null ? Codegen.empty() : this.includePrefixes;
     }
 
@@ -45,7 +45,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     @Import(name="maxTimeElapsedSinceLastModification")
       private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
-    public Output<String> getMaxTimeElapsedSinceLastModification() {
+    public Output<String> maxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification == null ? Codegen.empty() : this.maxTimeElapsedSinceLastModification;
     }
 
@@ -56,7 +56,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     @Import(name="minTimeElapsedSinceLastModification")
       private final @Nullable Output<String> minTimeElapsedSinceLastModification;
 
-    public Output<String> getMinTimeElapsedSinceLastModification() {
+    public Output<String> minTimeElapsedSinceLastModification() {
         return this.minTimeElapsedSinceLastModification == null ? Codegen.empty() : this.minTimeElapsedSinceLastModification;
     }
 

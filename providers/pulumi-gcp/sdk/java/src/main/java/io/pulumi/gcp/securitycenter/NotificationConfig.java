@@ -57,7 +57,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return This must be unique within the organization.
      * 
      */
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
     /**
@@ -71,7 +71,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The description of the notification config (max of 1024 characters).
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +87,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * Config lives in.
      * 
      */
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
     /**
@@ -119,7 +119,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * "projects/[project_id]/topics/[topic]".
      * 
      */
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
     /**
@@ -133,7 +133,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @return The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -149,7 +149,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<NotificationConfigStreamingConfig> getStreamingConfig() {
+    public Output<NotificationConfigStreamingConfig> streamingConfig() {
         return this.streamingConfig;
     }
 

@@ -24,7 +24,7 @@ public final class CxPageTransitionRouteArgs extends io.pulumi.resources.Resourc
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -36,7 +36,7 @@ public final class CxPageTransitionRouteArgs extends io.pulumi.resources.Resourc
     @Import(name="intent")
       private final @Nullable Output<String> intent;
 
-    public Output<String> getIntent() {
+    public Output<String> intent() {
         return this.intent == null ? Codegen.empty() : this.intent;
     }
 
@@ -48,7 +48,7 @@ public final class CxPageTransitionRouteArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class CxPageTransitionRouteArgs extends io.pulumi.resources.Resourc
     @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
-    public Output<String> getTargetFlow() {
+    public Output<String> targetFlow() {
         return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
@@ -72,7 +72,7 @@ public final class CxPageTransitionRouteArgs extends io.pulumi.resources.Resourc
     @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
-    public Output<String> getTargetPage() {
+    public Output<String> targetPage() {
         return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
@@ -84,7 +84,7 @@ public final class CxPageTransitionRouteArgs extends io.pulumi.resources.Resourc
     @Import(name="triggerFulfillment")
       private final @Nullable Output<CxPageTransitionRouteTriggerFulfillmentArgs> triggerFulfillment;
 
-    public Output<CxPageTransitionRouteTriggerFulfillmentArgs> getTriggerFulfillment() {
+    public Output<CxPageTransitionRouteTriggerFulfillmentArgs> triggerFulfillment() {
         return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 

@@ -23,7 +23,7 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends io.pulumi.reso
     @Import(name="initialPromptFulfillment")
       private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
 
-    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> getInitialPromptFulfillment() {
+    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment() {
         return this.initialPromptFulfillment == null ? Codegen.empty() : this.initialPromptFulfillment;
     }
 

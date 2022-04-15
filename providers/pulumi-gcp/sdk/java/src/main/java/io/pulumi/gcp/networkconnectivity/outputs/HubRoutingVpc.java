@@ -18,7 +18,7 @@ public final class HubRoutingVpc {
         this.uri = uri;
     }
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

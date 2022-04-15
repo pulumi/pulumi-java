@@ -56,7 +56,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The collection being indexed.
      * 
      */
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection;
     }
     /**
@@ -70,7 +70,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    public Output</* @Nullable */ String> getDatabase() {
+    public Output</* @Nullable */ String> database() {
         return this.database;
     }
     /**
@@ -96,7 +96,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<IndexField>> getFields() {
+    public Output<List<IndexField>> fields() {
         return this.fields;
     }
     /**
@@ -112,7 +112,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -146,7 +146,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Possible values are `COLLECTION` and `COLLECTION_GROUP`.
      * 
      */
-    public Output</* @Nullable */ String> getQueryScope() {
+    public Output</* @Nullable */ String> queryScope() {
         return this.queryScope;
     }
 

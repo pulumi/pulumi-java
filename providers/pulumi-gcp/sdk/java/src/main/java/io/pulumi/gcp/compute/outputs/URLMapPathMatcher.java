@@ -112,14 +112,14 @@ public final class URLMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherDefaultRouteAction> getDefaultRouteAction() {
+    public Optional<URLMapPathMatcherDefaultRouteAction> defaultRouteAction() {
         return Optional.ofNullable(this.defaultRouteAction);
     }
     /**
      * The backend service or backend bucket to use when none of the given paths match.
      * 
     */
-    public Optional<String> getDefaultService() {
+    public Optional<String> defaultService() {
         return Optional.ofNullable(this.defaultService);
     }
     /**
@@ -129,14 +129,14 @@ public final class URLMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherDefaultUrlRedirect> getDefaultUrlRedirect() {
+    public Optional<URLMapPathMatcherDefaultUrlRedirect> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
     /**
      * Description of this test case.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -147,7 +147,7 @@ public final class URLMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherHeaderAction> getHeaderAction() {
+    public Optional<URLMapPathMatcherHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -155,7 +155,7 @@ public final class URLMapPathMatcher {
      * request, in the absence of which the request match fails.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -168,7 +168,7 @@ public final class URLMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherPathRule> getPathRules() {
+    public List<URLMapPathMatcherPathRule> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
@@ -181,7 +181,7 @@ public final class URLMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public List<URLMapPathMatcherRouteRule> getRouteRules() {
+    public List<URLMapPathMatcherRouteRule> routeRules() {
         return this.routeRules == null ? List.of() : this.routeRules;
     }
 

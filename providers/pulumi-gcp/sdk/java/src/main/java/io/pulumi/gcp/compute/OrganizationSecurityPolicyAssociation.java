@@ -46,7 +46,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * @return The resource that the security policy is attached to.
      * 
      */
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
     /**
@@ -60,7 +60,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * @return The display name of the security policy of the association.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +74,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * @return The name for an association.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * @return The security policy ID of the association.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 

@@ -59,7 +59,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -77,7 +77,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * the URL's path portion.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultService() {
+    public Output</* @Nullable */ String> defaultService() {
         return this.defaultService;
     }
     /**
@@ -97,7 +97,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionUrlMapDefaultUrlRedirect> getDefaultUrlRedirect() {
+    public Output</* @Nullable */ RegionUrlMapDefaultUrlRedirect> defaultUrlRedirect() {
         return this.defaultUrlRedirect;
     }
     /**
@@ -111,7 +111,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * @return Description of this test case.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -125,7 +125,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -141,7 +141,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegionUrlMapHostRule>> getHostRules() {
+    public Output</* @Nullable */ List<RegionUrlMapHostRule>> hostRules() {
         return this.hostRules;
     }
     /**
@@ -155,7 +155,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getMapId() {
+    public Output<Integer> mapId() {
         return this.mapId;
     }
     /**
@@ -171,7 +171,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * request, in the absence of which the request match fails.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -187,7 +187,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * the URL if the hostRule matches the URL's host portion.
      * 
      */
-    public Output</* @Nullable */ List<RegionUrlMapPathMatcher>> getPathMatchers() {
+    public Output</* @Nullable */ List<RegionUrlMapPathMatcher>> pathMatchers() {
         return this.pathMatchers;
     }
     /**
@@ -203,7 +203,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -219,7 +219,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -233,7 +233,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -251,7 +251,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RegionUrlMapTest>> getTests() {
+    public Output</* @Nullable */ List<RegionUrlMapTest>> tests() {
         return this.tests;
     }
 

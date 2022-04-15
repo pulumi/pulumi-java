@@ -33,23 +33,23 @@ public final class GetClientResult {
         this.secret = secret;
     }
 
-    public String getBrand() {
+    public String brand() {
         return this.brand;
     }
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
 

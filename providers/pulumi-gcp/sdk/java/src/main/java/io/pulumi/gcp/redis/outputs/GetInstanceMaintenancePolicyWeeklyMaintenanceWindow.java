@@ -25,13 +25,13 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow {
         this.startTimes = startTimes;
     }
 
-    public String getDay() {
+    public String day() {
         return this.day;
     }
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
-    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> getStartTimes() {
+    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes() {
         return this.startTimes;
     }
 

@@ -22,7 +22,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKeyName")
       private final @Nullable Output<String> diskEncryptionKeyName;
 
-    public Output<String> getDiskEncryptionKeyName() {
+    public Output<String> diskEncryptionKeyName() {
         return this.diskEncryptionKeyName == null ? Codegen.empty() : this.diskEncryptionKeyName;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -62,7 +62,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
+    public Output<String> ipRange() {
         return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
@@ -75,7 +75,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -86,7 +86,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -98,7 +98,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -110,7 +110,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringCidrRange")
       private final @Nullable Output<String> peeringCidrRange;
 
-    public Output<String> getPeeringCidrRange() {
+    public Output<String> peeringCidrRange() {
         return this.peeringCidrRange == null ? Codegen.empty() : this.peeringCidrRange;
     }
 

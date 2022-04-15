@@ -65,24 +65,24 @@ public final class GetManagedZoneResult {
      * A textual description field.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The fully qualified DNS name of this zone, e.g. `example.io.`.
      * 
     */
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -91,10 +91,10 @@ public final class GetManagedZoneResult {
      * thus making Google Cloud DNS authoritative for this zone.
      * 
     */
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
@@ -102,7 +102,7 @@ public final class GetManagedZoneResult {
      * while private zones are visible only to Virtual Private Cloud resources.
      * 
     */
-    public String getVisibility() {
+    public String visibility() {
         return this.visibility;
     }
 

@@ -53,35 +53,35 @@ public final class GetServiceResult {
         this.traffics = traffics;
     }
 
-    public Boolean getAutogenerateRevisionName() {
+    public Boolean autogenerateRevisionName() {
         return this.autogenerateRevisionName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public List<GetServiceMetadata> getMetadatas() {
+    public List<GetServiceMetadata> metadatas() {
         return this.metadatas;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetServiceStatus> getStatuses() {
+    public List<GetServiceStatus> statuses() {
         return this.statuses;
     }
-    public List<GetServiceTemplate> getTemplates() {
+    public List<GetServiceTemplate> templates() {
         return this.templates;
     }
-    public List<GetServiceTraffic> getTraffics() {
+    public List<GetServiceTraffic> traffics() {
         return this.traffics;
     }
 

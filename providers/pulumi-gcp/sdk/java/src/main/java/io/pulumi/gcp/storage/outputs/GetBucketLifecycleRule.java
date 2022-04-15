@@ -22,10 +22,10 @@ public final class GetBucketLifecycleRule {
         this.conditions = conditions;
     }
 
-    public List<GetBucketLifecycleRuleAction> getActions() {
+    public List<GetBucketLifecycleRuleAction> actions() {
         return this.actions;
     }
-    public List<GetBucketLifecycleRuleCondition> getConditions() {
+    public List<GetBucketLifecycleRuleCondition> conditions() {
         return this.conditions;
     }
 

@@ -28,7 +28,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
 
-    public Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
+    public Output<List<CertificateConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions() {
         return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
@@ -40,7 +40,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
+    public Output<List<String>> aiaOcspServers() {
         return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
@@ -52,7 +52,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     @Import(name="caOptions")
       private final @Nullable Output<CertificateConfigX509ConfigCaOptionsArgs> caOptions;
 
-    public Output<CertificateConfigX509ConfigCaOptionsArgs> getCaOptions() {
+    public Output<CertificateConfigX509ConfigCaOptionsArgs> caOptions() {
         return this.caOptions == null ? Codegen.empty() : this.caOptions;
     }
 
@@ -64,7 +64,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     @Import(name="keyUsage", required=true)
       private final Output<CertificateConfigX509ConfigKeyUsageArgs> keyUsage;
 
-    public Output<CertificateConfigX509ConfigKeyUsageArgs> getKeyUsage() {
+    public Output<CertificateConfigX509ConfigKeyUsageArgs> keyUsage() {
         return this.keyUsage;
     }
 
@@ -76,7 +76,7 @@ public final class CertificateConfigX509ConfigArgs extends io.pulumi.resources.R
     @Import(name="policyIds")
       private final @Nullable Output<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds;
 
-    public Output<List<CertificateConfigX509ConfigPolicyIdArgs>> getPolicyIds() {
+    public Output<List<CertificateConfigX509ConfigPolicyIdArgs>> policyIds() {
         return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 

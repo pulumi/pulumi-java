@@ -27,7 +27,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="booleanPolicy")
       private final @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy;
 
-    public Output<PolicyBooleanPolicyGetArgs> getBooleanPolicy() {
+    public Output<PolicyBooleanPolicyGetArgs> booleanPolicy() {
         return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="constraint")
       private final @Nullable Output<String> constraint;
 
-    public Output<String> getConstraint() {
+    public Output<String> constraint() {
         return this.constraint == null ? Codegen.empty() : this.constraint;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -60,7 +60,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="listPolicy")
       private final @Nullable Output<PolicyListPolicyGetArgs> listPolicy;
 
-    public Output<PolicyListPolicyGetArgs> getListPolicy() {
+    public Output<PolicyListPolicyGetArgs> listPolicy() {
         return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
     }
 
@@ -71,7 +71,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
@@ -82,7 +82,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restorePolicy")
       private final @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy;
 
-    public Output<PolicyRestorePolicyGetArgs> getRestorePolicy() {
+    public Output<PolicyRestorePolicyGetArgs> restorePolicy() {
         return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
@@ -93,7 +93,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -104,7 +104,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -57,14 +57,14 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      * Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
      * 
     */
-    public Optional<String> getAlgorithm() {
+    public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
     /**
      * Length of the keys in bits
      * 
     */
-    public Optional<Integer> getKeyLength() {
+    public Optional<Integer> keyLength() {
         return Optional.ofNullable(this.keyLength);
     }
     /**
@@ -77,14 +77,14 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      * Possible values are `keySigning` and `zoneSigning`.
      * 
     */
-    public Optional<String> getKeyType() {
+    public Optional<String> keyType() {
         return Optional.ofNullable(this.keyType);
     }
     /**
      * Identifies what kind of resource this is
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
 

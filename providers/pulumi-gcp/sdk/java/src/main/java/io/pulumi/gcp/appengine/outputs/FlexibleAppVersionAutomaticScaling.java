@@ -118,7 +118,7 @@ public final class FlexibleAppVersionAutomaticScaling {
      * during which the collected usage would not be reliable. Default: 120s
      * 
     */
-    public Optional<String> getCoolDownPeriod() {
+    public Optional<String> coolDownPeriod() {
         return Optional.ofNullable(this.coolDownPeriod);
     }
     /**
@@ -126,7 +126,7 @@ public final class FlexibleAppVersionAutomaticScaling {
      * Structure is documented below.
      * 
     */
-    public FlexibleAppVersionAutomaticScalingCpuUtilization getCpuUtilization() {
+    public FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization() {
         return this.cpuUtilization;
     }
     /**
@@ -134,7 +134,7 @@ public final class FlexibleAppVersionAutomaticScaling {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionAutomaticScalingDiskUtilization> getDiskUtilization() {
+    public Optional<FlexibleAppVersionAutomaticScalingDiskUtilization> diskUtilization() {
         return Optional.ofNullable(this.diskUtilization);
     }
     /**
@@ -142,49 +142,49 @@ public final class FlexibleAppVersionAutomaticScaling {
      * Defaults to a runtime-specific value.
      * 
     */
-    public Optional<Integer> getMaxConcurrentRequests() {
+    public Optional<Integer> maxConcurrentRequests() {
         return Optional.ofNullable(this.maxConcurrentRequests);
     }
     /**
      * Maximum number of idle instances that should be maintained for this version.
      * 
     */
-    public Optional<Integer> getMaxIdleInstances() {
+    public Optional<Integer> maxIdleInstances() {
         return Optional.ofNullable(this.maxIdleInstances);
     }
     /**
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
     */
-    public Optional<String> getMaxPendingLatency() {
+    public Optional<String> maxPendingLatency() {
         return Optional.ofNullable(this.maxPendingLatency);
     }
     /**
      * Maximum number of instances that should be started to handle requests for this version. Default: 20
      * 
     */
-    public Optional<Integer> getMaxTotalInstances() {
+    public Optional<Integer> maxTotalInstances() {
         return Optional.ofNullable(this.maxTotalInstances);
     }
     /**
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
     */
-    public Optional<Integer> getMinIdleInstances() {
+    public Optional<Integer> minIdleInstances() {
         return Optional.ofNullable(this.minIdleInstances);
     }
     /**
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
     */
-    public Optional<String> getMinPendingLatency() {
+    public Optional<String> minPendingLatency() {
         return Optional.ofNullable(this.minPendingLatency);
     }
     /**
      * Minimum number of running instances that should be maintained for this version. Default: 2
      * 
     */
-    public Optional<Integer> getMinTotalInstances() {
+    public Optional<Integer> minTotalInstances() {
         return Optional.ofNullable(this.minTotalInstances);
     }
     /**
@@ -192,7 +192,7 @@ public final class FlexibleAppVersionAutomaticScaling {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionAutomaticScalingNetworkUtilization> getNetworkUtilization() {
+    public Optional<FlexibleAppVersionAutomaticScalingNetworkUtilization> networkUtilization() {
         return Optional.ofNullable(this.networkUtilization);
     }
     /**
@@ -200,7 +200,7 @@ public final class FlexibleAppVersionAutomaticScaling {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionAutomaticScalingRequestUtilization> getRequestUtilization() {
+    public Optional<FlexibleAppVersionAutomaticScalingRequestUtilization> requestUtilization() {
         return Optional.ofNullable(this.requestUtilization);
     }
 

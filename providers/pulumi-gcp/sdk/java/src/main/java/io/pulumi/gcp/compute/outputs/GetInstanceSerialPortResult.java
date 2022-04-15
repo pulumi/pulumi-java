@@ -45,26 +45,26 @@ public final class GetInstanceSerialPortResult {
      * The output of the serial port. Serial port output is available only when the VM instance is running, and logs are limited to the most recent 1 MB of output per port.
      * 
     */
-    public String getContents() {
+    public String contents() {
         return this.contents;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

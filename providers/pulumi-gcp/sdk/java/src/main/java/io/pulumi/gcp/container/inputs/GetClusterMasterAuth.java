@@ -17,28 +17,28 @@ public final class GetClusterMasterAuth extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
 
     @Import(name="clientCertificateConfigs", required=true)
       private final List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs;
 
-    public List<GetClusterMasterAuthClientCertificateConfig> getClientCertificateConfigs() {
+    public List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs() {
         return this.clientCertificateConfigs;
     }
 
     @Import(name="clientKey", required=true)
       private final String clientKey;
 
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
 
     @Import(name="clusterCaCertificate", required=true)
       private final String clusterCaCertificate;
 
-    public String getClusterCaCertificate() {
+    public String clusterCaCertificate() {
         return this.clusterCaCertificate;
     }
 

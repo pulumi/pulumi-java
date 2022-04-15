@@ -26,7 +26,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableDependentServices")
       private final @Nullable Output<Boolean> disableDependentServices;
 
-    public Output<Boolean> getDisableDependentServices() {
+    public Output<Boolean> disableDependentServices() {
         return this.disableDependentServices == null ? Codegen.empty() : this.disableDependentServices;
     }
 
@@ -37,7 +37,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableOnDestroy")
       private final @Nullable Output<Boolean> disableOnDestroy;
 
-    public Output<Boolean> getDisableOnDestroy() {
+    public Output<Boolean> disableOnDestroy() {
         return this.disableOnDestroy == null ? Codegen.empty() : this.disableOnDestroy;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -60,7 +60,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

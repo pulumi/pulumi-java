@@ -23,7 +23,7 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
     @Import(name="inUseCount")
       private final @Nullable Output<Integer> inUseCount;
 
-    public Output<Integer> getInUseCount() {
+    public Output<Integer> inUseCount() {
         return this.inUseCount == null ? Codegen.empty() : this.inUseCount;
     }
 
@@ -47,7 +47,7 @@ public final class ReservationSpecificReservationArgs extends io.pulumi.resource
     @Import(name="instanceProperties", required=true)
       private final Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties;
 
-    public Output<ReservationSpecificReservationInstancePropertiesArgs> getInstanceProperties() {
+    public Output<ReservationSpecificReservationInstancePropertiesArgs> instanceProperties() {
         return this.instanceProperties;
     }
 

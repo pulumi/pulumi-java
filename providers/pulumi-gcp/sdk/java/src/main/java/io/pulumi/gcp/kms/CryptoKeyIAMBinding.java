@@ -74,7 +74,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CryptoKeyIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ CryptoKeyIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -94,7 +94,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * the provider's project setting will be used as a fallback.
      * 
      */
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
     /**
@@ -108,13 +108,13 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -130,7 +130,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

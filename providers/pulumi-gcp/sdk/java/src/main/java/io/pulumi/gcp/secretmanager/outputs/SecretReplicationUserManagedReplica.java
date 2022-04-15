@@ -37,14 +37,14 @@ public final class SecretReplicationUserManagedReplica {
      * Structure is documented below.
      * 
     */
-    public Optional<SecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryption() {
+    public Optional<SecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryption() {
         return Optional.ofNullable(this.customerManagedEncryption);
     }
     /**
      * The canonical IDs of the location to replicate data. For example: "us-east1".
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

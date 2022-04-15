@@ -18,21 +18,21 @@ public final class DatabaseInstanceIpAddressGetArgs extends io.pulumi.resources.
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="timeToRetire")
       private final @Nullable Output<String> timeToRetire;
 
-    public Output<String> getTimeToRetire() {
+    public Output<String> timeToRetire() {
         return this.timeToRetire == null ? Codegen.empty() : this.timeToRetire;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -15,7 +15,7 @@ public final class GetOrganizationPolicyBooleanPolicy extends io.pulumi.resource
     @Import(name="enforced", required=true)
       private final Boolean enforced;
 
-    public Boolean getEnforced() {
+    public Boolean enforced() {
         return this.enforced;
     }
 

@@ -47,26 +47,26 @@ public final class GetAccountAccessTokenResult {
      * The `access_token` representing the new generated identity.
      * 
     */
-    public String getAccessToken() {
+    public String accessToken() {
         return this.accessToken;
     }
-    public List<String> getDelegates() {
+    public List<String> delegates() {
         return this.delegates == null ? List.of() : this.delegates;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getLifetime() {
+    public Optional<String> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
-    public String getTargetServiceAccount() {
+    public String targetServiceAccount() {
         return this.targetServiceAccount;
     }
 

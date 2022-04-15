@@ -23,7 +23,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="objectIdPaths")
       private final @Nullable Output<List<Integer>> objectIdPaths;
 
-    public Output<List<Integer>> getObjectIdPaths() {
+    public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths == null ? Codegen.empty() : this.objectIdPaths;
     }
 

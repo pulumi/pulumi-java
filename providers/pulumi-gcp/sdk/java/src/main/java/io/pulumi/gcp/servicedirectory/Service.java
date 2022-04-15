@@ -61,7 +61,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -75,7 +75,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The resource name of the namespace this service will belong to.
      * 
      */
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
     /**
@@ -105,7 +105,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * lowercase letters or the hyphen character.
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 

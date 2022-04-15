@@ -27,7 +27,7 @@ public final class ManagedSslCertificateManaged {
      * there can be up to 100 domains in this list.
      * 
     */
-    public List<String> getDomains() {
+    public List<String> domains() {
         return this.domains;
     }
 

@@ -71,14 +71,14 @@ public final class InstanceScheduling {
      * Defaults to true.
      * 
     */
-    public Optional<Boolean> getAutomaticRestart() {
+    public Optional<Boolean> automaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
     */
-    public Optional<Integer> getMinNodeCpus() {
+    public Optional<Integer> minNodeCpus() {
         return Optional.ofNullable(this.minNodeCpus);
     }
     /**
@@ -89,7 +89,7 @@ public final class InstanceScheduling {
      * Structure documented below.
      * 
     */
-    public List<InstanceSchedulingNodeAffinity> getNodeAffinities() {
+    public List<InstanceSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
     /**
@@ -98,7 +98,7 @@ public final class InstanceScheduling {
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
      * 
     */
-    public Optional<String> getOnHostMaintenance() {
+    public Optional<String> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
     /**
@@ -107,7 +107,7 @@ public final class InstanceScheduling {
      * set to false.  Defaults to false.
      * 
     */
-    public Optional<Boolean> getPreemptible() {
+    public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
 

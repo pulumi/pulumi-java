@@ -31,7 +31,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="acceleratorConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> getAcceleratorConfig() {
+    public Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig() {
         return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
     }
 
@@ -43,7 +43,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="containerImages")
       private final @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
 
-    public Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> getContainerImages() {
+    public Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages() {
         return this.containerImages == null ? Codegen.empty() : this.containerImages;
     }
 
@@ -55,7 +55,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="dataDisk", required=true)
       private final Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> getDataDisk() {
+    public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk() {
         return this.dataDisk;
     }
 
@@ -67,7 +67,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="encryptionConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> getEncryptionConfig() {
+    public Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -81,7 +81,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="guestAttributes")
       private final @Nullable Output<Map<String,String>> guestAttributes;
 
-    public Output<Map<String,String>> getGuestAttributes() {
+    public Output<Map<String,String>> guestAttributes() {
         return this.guestAttributes == null ? Codegen.empty() : this.guestAttributes;
     }
 
@@ -97,7 +97,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="internalIpOnly")
       private final @Nullable Output<Boolean> internalIpOnly;
 
-    public Output<Boolean> getInternalIpOnly() {
+    public Output<Boolean> internalIpOnly() {
         return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
@@ -110,7 +110,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -121,7 +121,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 
@@ -135,7 +135,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -159,7 +159,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -172,7 +172,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
-    public Output<String> getNicType() {
+    public Output<String> nicType() {
         return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
@@ -184,7 +184,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+    public Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
@@ -200,7 +200,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
+    public Output<String> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
@@ -213,7 +213,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -225,7 +225,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

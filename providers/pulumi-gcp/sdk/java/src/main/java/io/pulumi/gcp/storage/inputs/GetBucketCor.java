@@ -17,28 +17,28 @@ public final class GetBucketCor extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxAgeSeconds", required=true)
       private final Integer maxAgeSeconds;
 
-    public Integer getMaxAgeSeconds() {
+    public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
     }
 
     @Import(name="methods", required=true)
       private final List<String> methods;
 
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods;
     }
 
     @Import(name="origins", required=true)
       private final List<String> origins;
 
-    public List<String> getOrigins() {
+    public List<String> origins() {
         return this.origins;
     }
 
     @Import(name="responseHeaders", required=true)
       private final List<String> responseHeaders;
 
-    public List<String> getResponseHeaders() {
+    public List<String> responseHeaders() {
         return this.responseHeaders;
     }
 

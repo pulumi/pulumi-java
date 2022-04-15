@@ -27,7 +27,7 @@ public final class SecretReplicationUserManaged {
      * Structure is documented below.
      * 
     */
-    public List<SecretReplicationUserManagedReplica> getReplicas() {
+    public List<SecretReplicationUserManagedReplica> replicas() {
         return this.replicas;
     }
 

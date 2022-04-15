@@ -38,7 +38,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * this instance.
      * 
     */
-    public Integer getAcceleratorCount() {
+    public Integer acceleratorCount() {
         return this.acceleratorCount;
     }
     /**
@@ -48,7 +48,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * If you are creating an instance template, specify only the accelerator name.
      * 
     */
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 

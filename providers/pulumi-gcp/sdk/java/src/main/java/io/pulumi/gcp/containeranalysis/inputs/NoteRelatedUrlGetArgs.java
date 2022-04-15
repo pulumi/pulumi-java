@@ -22,7 +22,7 @@ public final class NoteRelatedUrlGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -33,7 +33,7 @@ public final class NoteRelatedUrlGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

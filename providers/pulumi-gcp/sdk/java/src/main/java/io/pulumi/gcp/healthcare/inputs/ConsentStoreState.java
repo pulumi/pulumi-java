@@ -25,7 +25,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -37,7 +37,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultConsentTtl")
       private final @Nullable Output<String> defaultConsentTtl;
 
-    public Output<String> getDefaultConsentTtl() {
+    public Output<String> defaultConsentTtl() {
         return this.defaultConsentTtl == null ? Codegen.empty() : this.defaultConsentTtl;
     }
 
@@ -48,7 +48,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableConsentCreateOnUpdate")
       private final @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
-    public Output<Boolean> getEnableConsentCreateOnUpdate() {
+    public Output<Boolean> enableConsentCreateOnUpdate() {
         return this.enableConsentCreateOnUpdate == null ? Codegen.empty() : this.enableConsentCreateOnUpdate;
     }
 
@@ -66,7 +66,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -78,7 +78,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

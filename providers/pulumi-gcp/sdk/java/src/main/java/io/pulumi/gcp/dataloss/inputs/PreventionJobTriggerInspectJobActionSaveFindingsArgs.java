@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
     @Import(name="outputConfig", required=true)
       private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig;
 
-    public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> getOutputConfig() {
+    public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 

@@ -22,7 +22,7 @@ public final class JobExtractSourceTableArgs extends io.pulumi.resources.Resourc
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
@@ -33,7 +33,7 @@ public final class JobExtractSourceTableArgs extends io.pulumi.resources.Resourc
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
@@ -45,7 +45,7 @@ public final class JobExtractSourceTableArgs extends io.pulumi.resources.Resourc
     @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 

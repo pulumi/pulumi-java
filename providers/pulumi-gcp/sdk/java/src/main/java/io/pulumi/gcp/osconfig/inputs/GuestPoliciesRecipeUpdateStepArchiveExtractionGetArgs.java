@@ -22,7 +22,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -33,7 +33,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs extends
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

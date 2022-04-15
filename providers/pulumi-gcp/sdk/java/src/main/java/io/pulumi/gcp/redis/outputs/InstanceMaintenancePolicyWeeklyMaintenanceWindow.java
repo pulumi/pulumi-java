@@ -67,7 +67,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
     */
-    public String getDay() {
+    public String day() {
         return this.day;
     }
     /**
@@ -78,7 +78,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
     /**
@@ -88,7 +88,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      * resolution and up to nine fractional digits.
      * 
     */
-    public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime getStartTime() {
+    public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime() {
         return this.startTime;
     }
 

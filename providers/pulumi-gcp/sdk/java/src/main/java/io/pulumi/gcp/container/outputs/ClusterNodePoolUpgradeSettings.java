@@ -20,10 +20,10 @@ public final class ClusterNodePoolUpgradeSettings {
         this.maxUnavailable = maxUnavailable;
     }
 
-    public Integer getMaxSurge() {
+    public Integer maxSurge() {
         return this.maxSurge;
     }
-    public Integer getMaxUnavailable() {
+    public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
 

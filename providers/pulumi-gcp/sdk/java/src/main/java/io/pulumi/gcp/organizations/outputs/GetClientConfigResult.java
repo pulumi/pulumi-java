@@ -53,35 +53,35 @@ public final class GetClientConfigResult {
      * The OAuth2 access token used by the client to authenticate against the Google Cloud API.
      * 
     */
-    public String getAccessToken() {
+    public String accessToken() {
         return this.accessToken;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ID of the project to apply any resources to.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The region to operate under.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * The zone to operate under.
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

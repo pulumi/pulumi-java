@@ -25,7 +25,7 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="condition")
       private final @Nullable Output<ImageIamBindingConditionArgs> condition;
 
-    public Output<ImageIamBindingConditionArgs> getCondition() {
+    public Output<ImageIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -36,14 +36,14 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -55,7 +55,7 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,7 +68,7 @@ public final class ImageIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

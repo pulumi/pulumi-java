@@ -57,7 +57,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> getRequestHeadersToAdds() {
+    public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? List.of() : this.requestHeadersToAdds;
     }
     /**
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * prior to forwarding the request to the backendService.
      * 
     */
-    public List<String> getRequestHeadersToRemoves() {
+    public List<String> requestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? List.of() : this.requestHeadersToRemoves;
     }
     /**
@@ -73,7 +73,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> getResponseHeadersToAdds() {
+    public List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? List.of() : this.responseHeadersToAdds;
     }
     /**
@@ -81,7 +81,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * prior to sending the response back to the client.
      * 
     */
-    public List<String> getResponseHeadersToRemoves() {
+    public List<String> responseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? List.of() : this.responseHeadersToRemoves;
     }
 

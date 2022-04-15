@@ -19,14 +19,14 @@ public final class AuthorityAccessUrlGetArgs extends io.pulumi.resources.Resourc
     @Import(name="caCertificateAccessUrl")
       private final @Nullable Output<String> caCertificateAccessUrl;
 
-    public Output<String> getCaCertificateAccessUrl() {
+    public Output<String> caCertificateAccessUrl() {
         return this.caCertificateAccessUrl == null ? Codegen.empty() : this.caCertificateAccessUrl;
     }
 
     @Import(name="crlAccessUrls")
       private final @Nullable Output<List<String>> crlAccessUrls;
 
-    public Output<List<String>> getCrlAccessUrls() {
+    public Output<List<String>> crlAccessUrls() {
         return this.crlAccessUrls == null ? Codegen.empty() : this.crlAccessUrls;
     }
 

@@ -23,7 +23,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -45,7 +45,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<PolicySpecArgs> spec;
 
-    public Output<PolicySpecArgs> getSpec() {
+    public Output<PolicySpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 

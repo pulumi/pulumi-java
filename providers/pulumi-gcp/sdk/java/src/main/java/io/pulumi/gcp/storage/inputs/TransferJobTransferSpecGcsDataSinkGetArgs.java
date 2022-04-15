@@ -22,7 +22,7 @@ public final class TransferJobTransferSpecGcsDataSinkGetArgs extends io.pulumi.r
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -33,7 +33,7 @@ public final class TransferJobTransferSpecGcsDataSinkGetArgs extends io.pulumi.r
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

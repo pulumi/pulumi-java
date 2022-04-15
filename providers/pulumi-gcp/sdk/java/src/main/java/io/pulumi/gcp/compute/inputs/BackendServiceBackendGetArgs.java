@@ -29,7 +29,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="balancingMode")
       private final @Nullable Output<String> balancingMode;
 
-    public Output<String> getBalancingMode() {
+    public Output<String> balancingMode() {
         return this.balancingMode == null ? Codegen.empty() : this.balancingMode;
     }
 
@@ -45,7 +45,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="capacityScaler")
       private final @Nullable Output<Double> capacityScaler;
 
-    public Output<Double> getCapacityScaler() {
+    public Output<Double> capacityScaler() {
         return this.capacityScaler == null ? Codegen.empty() : this.capacityScaler;
     }
 
@@ -57,7 +57,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -81,7 +81,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -93,7 +93,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxConnections")
       private final @Nullable Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
+    public Output<Integer> maxConnections() {
         return this.maxConnections == null ? Codegen.empty() : this.maxConnections;
     }
 
@@ -109,7 +109,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxConnectionsPerEndpoint")
       private final @Nullable Output<Integer> maxConnectionsPerEndpoint;
 
-    public Output<Integer> getMaxConnectionsPerEndpoint() {
+    public Output<Integer> maxConnectionsPerEndpoint() {
         return this.maxConnectionsPerEndpoint == null ? Codegen.empty() : this.maxConnectionsPerEndpoint;
     }
 
@@ -125,7 +125,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxConnectionsPerInstance")
       private final @Nullable Output<Integer> maxConnectionsPerInstance;
 
-    public Output<Integer> getMaxConnectionsPerInstance() {
+    public Output<Integer> maxConnectionsPerInstance() {
         return this.maxConnectionsPerInstance == null ? Codegen.empty() : this.maxConnectionsPerInstance;
     }
 
@@ -140,7 +140,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxRate")
       private final @Nullable Output<Integer> maxRate;
 
-    public Output<Integer> getMaxRate() {
+    public Output<Integer> maxRate() {
         return this.maxRate == null ? Codegen.empty() : this.maxRate;
     }
 
@@ -154,7 +154,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxRatePerEndpoint")
       private final @Nullable Output<Double> maxRatePerEndpoint;
 
-    public Output<Double> getMaxRatePerEndpoint() {
+    public Output<Double> maxRatePerEndpoint() {
         return this.maxRatePerEndpoint == null ? Codegen.empty() : this.maxRatePerEndpoint;
     }
 
@@ -168,7 +168,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxRatePerInstance")
       private final @Nullable Output<Double> maxRatePerInstance;
 
-    public Output<Double> getMaxRatePerInstance() {
+    public Output<Double> maxRatePerInstance() {
         return this.maxRatePerInstance == null ? Codegen.empty() : this.maxRatePerInstance;
     }
 
@@ -180,7 +180,7 @@ public final class BackendServiceBackendGetArgs extends io.pulumi.resources.Reso
     @Import(name="maxUtilization")
       private final @Nullable Output<Double> maxUtilization;
 
-    public Output<Double> getMaxUtilization() {
+    public Output<Double> maxUtilization() {
         return this.maxUtilization == null ? Codegen.empty() : this.maxUtilization;
     }
 

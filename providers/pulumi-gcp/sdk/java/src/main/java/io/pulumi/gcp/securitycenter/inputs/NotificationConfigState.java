@@ -23,7 +23,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="configId")
       private final @Nullable Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId == null ? Codegen.empty() : this.configId;
     }
 
@@ -34,7 +34,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization == null ? Codegen.empty() : this.organization;
     }
 
@@ -70,7 +70,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
     }
 
@@ -81,7 +81,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -93,7 +93,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     @Import(name="streamingConfig")
       private final @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig;
 
-    public Output<NotificationConfigStreamingConfigGetArgs> getStreamingConfig() {
+    public Output<NotificationConfigStreamingConfigGetArgs> streamingConfig() {
         return this.streamingConfig == null ? Codegen.empty() : this.streamingConfig;
     }
 

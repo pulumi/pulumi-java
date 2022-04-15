@@ -56,7 +56,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary> getDictionary() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
     /**
@@ -64,7 +64,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes> getExcludeInfoTypes() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes> excludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
     /**
@@ -72,7 +72,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
      * 
     */
-    public String getMatchingType() {
+    public String matchingType() {
         return this.matchingType;
     }
     /**
@@ -80,7 +80,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex> getRegex() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex> regex() {
         return Optional.ofNullable(this.regex);
     }
 

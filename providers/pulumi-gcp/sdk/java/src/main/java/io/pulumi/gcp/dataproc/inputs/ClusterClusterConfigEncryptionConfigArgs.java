@@ -22,7 +22,7 @@ public final class ClusterClusterConfigEncryptionConfigArgs extends io.pulumi.re
     @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 

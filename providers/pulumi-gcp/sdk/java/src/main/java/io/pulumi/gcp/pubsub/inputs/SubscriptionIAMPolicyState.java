@@ -22,7 +22,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -34,7 +34,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
@@ -46,7 +46,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -57,7 +57,7 @@ public final class SubscriptionIAMPolicyState extends io.pulumi.resources.Resour
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 

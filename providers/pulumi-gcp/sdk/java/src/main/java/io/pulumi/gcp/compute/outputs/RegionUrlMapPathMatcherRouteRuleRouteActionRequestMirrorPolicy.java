@@ -28,7 +28,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
      * headerActions specified as part of this backendServiceWeight.
      * 
     */
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
 

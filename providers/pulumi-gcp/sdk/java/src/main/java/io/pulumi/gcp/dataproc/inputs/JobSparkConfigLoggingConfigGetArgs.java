@@ -18,7 +18,7 @@ public final class JobSparkConfigLoggingConfigGetArgs extends io.pulumi.resource
     @Import(name="driverLogLevels", required=true)
       private final Output<Map<String,String>> driverLogLevels;
 
-    public Output<Map<String,String>> getDriverLogLevels() {
+    public Output<Map<String,String>> driverLogLevels() {
         return this.driverLogLevels;
     }
 

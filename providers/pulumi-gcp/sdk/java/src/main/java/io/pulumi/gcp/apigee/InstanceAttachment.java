@@ -50,7 +50,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the environment.
      * 
      */
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
     /**
@@ -66,7 +66,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -80,7 +80,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * @return The name of the newly created attachment (output parameter).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

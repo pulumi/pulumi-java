@@ -39,20 +39,20 @@ public final class GetNodeTypesResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of node types available in the given zone and project.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

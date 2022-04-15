@@ -18,21 +18,21 @@ public final class GetResourcePolicySnapshotSchedulePolicy extends io.pulumi.res
     @Import(name="retentionPolicies", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies;
 
-    public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicies() {
+    public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies() {
         return this.retentionPolicies;
     }
 
     @Import(name="schedules", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
 
-    public List<GetResourcePolicySnapshotSchedulePolicySchedule> getSchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules() {
         return this.schedules;
     }
 
     @Import(name="snapshotProperties", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
 
-    public List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> getSnapshotProperties() {
+    public List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties() {
         return this.snapshotProperties;
     }
 

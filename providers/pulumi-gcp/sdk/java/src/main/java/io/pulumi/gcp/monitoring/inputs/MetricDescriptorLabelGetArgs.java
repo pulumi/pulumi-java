@@ -22,7 +22,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -46,7 +46,7 @@ public final class MetricDescriptorLabelGetArgs extends io.pulumi.resources.Reso
     @Import(name="valueType")
       private final @Nullable Output<String> valueType;
 
-    public Output<String> getValueType() {
+    public Output<String> valueType() {
         return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 

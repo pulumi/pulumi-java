@@ -67,7 +67,7 @@ public final class JobAppEngineHttpTarget {
      * Structure is documented below.
      * 
     */
-    public Optional<JobAppEngineHttpTargetAppEngineRouting> getAppEngineRouting() {
+    public Optional<JobAppEngineHttpTargetAppEngineRouting> appEngineRouting() {
         return Optional.ofNullable(this.appEngineRouting);
     }
     /**
@@ -77,7 +77,7 @@ public final class JobAppEngineHttpTarget {
      * A base64-encoded string.
      * 
     */
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
@@ -85,14 +85,14 @@ public final class JobAppEngineHttpTarget {
      * Repeated headers are not supported, but a header value can contain commas.
      * 
     */
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * Which HTTP method to use for the request.
      * 
     */
-    public Optional<String> getHttpMethod() {
+    public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
@@ -103,7 +103,7 @@ public final class JobAppEngineHttpTarget {
      * No spaces are allowed, and the maximum length allowed is 2083 characters
      * 
     */
-    public String getRelativeUri() {
+    public String relativeUri() {
         return this.relativeUri;
     }
 

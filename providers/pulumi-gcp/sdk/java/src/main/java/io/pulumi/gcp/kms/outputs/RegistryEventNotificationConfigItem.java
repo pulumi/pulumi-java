@@ -22,10 +22,10 @@ public final class RegistryEventNotificationConfigItem {
         this.subfolderMatches = subfolderMatches;
     }
 
-    public String getPubsubTopicName() {
+    public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
-    public Optional<String> getSubfolderMatches() {
+    public Optional<String> subfolderMatches() {
         return Optional.ofNullable(this.subfolderMatches);
     }
 

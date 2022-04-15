@@ -17,21 +17,21 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="exclusionName", required=true)
       private final Output<String> exclusionName;
 
-    public Output<String> getExclusionName() {
+    public Output<String> exclusionName() {
         return this.exclusionName;
     }
 
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

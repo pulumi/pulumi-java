@@ -15,7 +15,7 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
@@ -26,14 +26,14 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork ex
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

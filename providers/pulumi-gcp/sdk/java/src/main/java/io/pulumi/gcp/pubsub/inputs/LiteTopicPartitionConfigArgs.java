@@ -24,7 +24,7 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
     @Import(name="capacity")
       private final @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
 
-    public Output<LiteTopicPartitionConfigCapacityArgs> getCapacity() {
+    public Output<LiteTopicPartitionConfigCapacityArgs> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -35,7 +35,7 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 

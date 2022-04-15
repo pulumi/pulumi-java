@@ -34,7 +34,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterings")
       private final @Nullable Output<List<String>> clusterings;
 
-    public Output<List<String>> getClusterings() {
+    public Output<List<String>> clusterings() {
         return this.clusterings == null ? Codegen.empty() : this.clusterings;
     }
 
@@ -46,7 +46,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -58,7 +58,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
@@ -69,7 +69,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<TableEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<TableEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<TableEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -96,7 +96,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<Integer> expirationTime;
 
-    public Output<Integer> getExpirationTime() {
+    public Output<Integer> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -110,7 +110,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalDataConfiguration")
       private final @Nullable Output<TableExternalDataConfigurationArgs> externalDataConfiguration;
 
-    public Output<TableExternalDataConfigurationArgs> getExternalDataConfiguration() {
+    public Output<TableExternalDataConfigurationArgs> externalDataConfiguration() {
         return this.externalDataConfiguration == null ? Codegen.empty() : this.externalDataConfiguration;
     }
 
@@ -121,7 +121,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -132,7 +132,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -144,7 +144,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="materializedView")
       private final @Nullable Output<TableMaterializedViewArgs> materializedView;
 
-    public Output<TableMaterializedViewArgs> getMaterializedView() {
+    public Output<TableMaterializedViewArgs> materializedView() {
         return this.materializedView == null ? Codegen.empty() : this.materializedView;
     }
 
@@ -156,7 +156,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -168,7 +168,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rangePartitioning")
       private final @Nullable Output<TableRangePartitioningArgs> rangePartitioning;
 
-    public Output<TableRangePartitioningArgs> getRangePartitioning() {
+    public Output<TableRangePartitioningArgs> rangePartitioning() {
         return this.rangePartitioning == null ? Codegen.empty() : this.rangePartitioning;
     }
 
@@ -189,7 +189,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -201,7 +201,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
@@ -213,7 +213,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timePartitioning")
       private final @Nullable Output<TableTimePartitioningArgs> timePartitioning;
 
-    public Output<TableTimePartitioningArgs> getTimePartitioning() {
+    public Output<TableTimePartitioningArgs> timePartitioning() {
         return this.timePartitioning == null ? Codegen.empty() : this.timePartitioning;
     }
 
@@ -225,7 +225,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="view")
       private final @Nullable Output<TableViewArgs> view;
 
-    public Output<TableViewArgs> getView() {
+    public Output<TableViewArgs> view() {
         return this.view == null ? Codegen.empty() : this.view;
     }
 

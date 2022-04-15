@@ -27,7 +27,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -45,7 +45,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -57,7 +57,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
 
-    public Output<DicomStoreNotificationConfigGetArgs> getNotificationConfig() {
+    public Output<DicomStoreNotificationConfigGetArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -80,7 +80,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -93,7 +93,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
       private final @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 
-    public Output<List<DicomStoreStreamConfigGetArgs>> getStreamConfigs() {
+    public Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs() {
         return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 

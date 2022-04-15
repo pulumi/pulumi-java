@@ -28,7 +28,7 @@ public final class RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization {
      * be a positive float value. If not defined, the default is 0.8.
      * 
     */
-    public Double getTarget() {
+    public Double target() {
         return this.target;
     }
 

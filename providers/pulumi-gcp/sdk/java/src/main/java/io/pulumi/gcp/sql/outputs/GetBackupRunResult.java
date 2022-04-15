@@ -56,27 +56,27 @@ public final class GetBackupRunResult {
         this.status = status;
     }
 
-    public Integer getBackupId() {
+    public Integer backupId() {
         return this.backupId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
     /**
      * Location of the backups.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
@@ -84,14 +84,14 @@ public final class GetBackupRunResult {
      * example 2012-11-15T16:19:00.094Z.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -75,49 +75,49 @@ public final class TransferJobTransferSpec {
      * An AWS S3 data source. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecAwsS3DataSource> getAwsS3DataSource() {
+    public Optional<TransferJobTransferSpecAwsS3DataSource> awsS3DataSource() {
         return Optional.ofNullable(this.awsS3DataSource);
     }
     /**
      * An Azure Blob Storage data source. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecAzureBlobStorageDataSource> getAzureBlobStorageDataSource() {
+    public Optional<TransferJobTransferSpecAzureBlobStorageDataSource> azureBlobStorageDataSource() {
         return Optional.ofNullable(this.azureBlobStorageDataSource);
     }
     /**
      * A Google Cloud Storage data sink. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecGcsDataSink> getGcsDataSink() {
+    public Optional<TransferJobTransferSpecGcsDataSink> gcsDataSink() {
         return Optional.ofNullable(this.gcsDataSink);
     }
     /**
      * A Google Cloud Storage data source. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecGcsDataSource> getGcsDataSource() {
+    public Optional<TransferJobTransferSpecGcsDataSource> gcsDataSource() {
         return Optional.ofNullable(this.gcsDataSource);
     }
     /**
      * A HTTP URL data source. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecHttpDataSource> getHttpDataSource() {
+    public Optional<TransferJobTransferSpecHttpDataSource> httpDataSource() {
         return Optional.ofNullable(this.httpDataSource);
     }
     /**
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecObjectConditions> getObjectConditions() {
+    public Optional<TransferJobTransferSpecObjectConditions> objectConditions() {
         return Optional.ofNullable(this.objectConditions);
     }
     /**
      * Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
      * 
     */
-    public Optional<TransferJobTransferSpecTransferOptions> getTransferOptions() {
+    public Optional<TransferJobTransferSpecTransferOptions> transferOptions() {
         return Optional.ofNullable(this.transferOptions);
     }
 

@@ -15,28 +15,28 @@ public final class GetServiceStatusCondition extends io.pulumi.resources.InvokeA
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

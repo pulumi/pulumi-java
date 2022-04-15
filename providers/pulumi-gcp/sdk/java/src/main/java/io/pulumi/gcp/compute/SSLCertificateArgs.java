@@ -25,7 +25,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
 
@@ -36,7 +36,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -77,7 +77,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 
@@ -89,7 +89,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

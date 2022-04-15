@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabelGetArgs extends
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

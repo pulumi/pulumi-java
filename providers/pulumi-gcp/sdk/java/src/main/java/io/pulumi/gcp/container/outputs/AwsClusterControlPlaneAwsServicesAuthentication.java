@@ -34,14 +34,14 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
      * Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
      * 
     */
-    public Optional<String> getRoleSessionName() {
+    public Optional<String> roleSessionName() {
         return Optional.ofNullable(this.roleSessionName);
     }
 

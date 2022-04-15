@@ -25,7 +25,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="config", required=true)
       private final Output<DeploymentTargetConfigArgs> config;
 
-    public Output<DeploymentTargetConfigArgs> getConfig() {
+    public Output<DeploymentTargetConfigArgs> config() {
         return this.config;
     }
 
@@ -39,7 +39,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imports")
       private final @Nullable Output<List<DeploymentTargetImportArgs>> imports;
 
-    public Output<List<DeploymentTargetImportArgs>> getImports() {
+    public Output<List<DeploymentTargetImportArgs>> imports() {
         return this.imports == null ? Codegen.empty() : this.imports;
     }
 

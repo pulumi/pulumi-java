@@ -78,7 +78,7 @@ public final class SubnetworkLogConfig {
      * Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
      * 
     */
-    public Optional<String> getAggregationInterval() {
+    public Optional<String> aggregationInterval() {
         return Optional.ofNullable(this.aggregationInterval);
     }
     /**
@@ -87,7 +87,7 @@ public final class SubnetworkLogConfig {
      * The default value is 'true', which evaluates to include everything.
      * 
     */
-    public Optional<String> getFilterExpr() {
+    public Optional<String> filterExpr() {
         return Optional.ofNullable(this.filterExpr);
     }
     /**
@@ -98,7 +98,7 @@ public final class SubnetworkLogConfig {
      * half of all collected logs are reported.
      * 
     */
-    public Optional<Double> getFlowSampling() {
+    public Optional<Double> flowSampling() {
         return Optional.ofNullable(this.flowSampling);
     }
     /**
@@ -109,7 +109,7 @@ public final class SubnetworkLogConfig {
      * Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
      * 
     */
-    public Optional<String> getMetadata() {
+    public Optional<String> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
@@ -117,7 +117,7 @@ public final class SubnetworkLogConfig {
      * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
      * 
     */
-    public List<String> getMetadataFields() {
+    public List<String> metadataFields() {
         return this.metadataFields == null ? List.of() : this.metadataFields;
     }
 

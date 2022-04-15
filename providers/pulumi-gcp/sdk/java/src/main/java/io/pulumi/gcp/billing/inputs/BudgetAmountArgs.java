@@ -26,7 +26,7 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastPeriodAmount")
       private final @Nullable Output<Boolean> lastPeriodAmount;
 
-    public Output<Boolean> getLastPeriodAmount() {
+    public Output<Boolean> lastPeriodAmount() {
         return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
     }
 
@@ -40,7 +40,7 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="specifiedAmount")
       private final @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 
-    public Output<BudgetAmountSpecifiedAmountArgs> getSpecifiedAmount() {
+    public Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount() {
         return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
     }
 

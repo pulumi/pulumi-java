@@ -28,7 +28,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoscalingPolicy", required=true)
       private final Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<RegionAutoscalerAutoscalingPolicyArgs> getAutoscalingPolicy() {
+    public Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -86,7 +86,7 @@ public final class RegionAutoscalerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="target", required=true)
       private final Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

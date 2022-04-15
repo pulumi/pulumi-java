@@ -37,7 +37,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy {
      * can be specified as values, and you cannot specify a status code more than once.
      * 
     */
-    public Optional<Integer> getCode() {
+    public Optional<Integer> code() {
         return Optional.ofNullable(this.code);
     }
     /**
@@ -45,7 +45,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy {
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
     */
-    public Optional<Integer> getTtl() {
+    public Optional<Integer> ttl() {
         return Optional.ofNullable(this.ttl);
     }
 

@@ -21,7 +21,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
     @Import(name="sasToken", required=true)
       private final Output<String> sasToken;
 
-    public Output<String> getSasToken() {
+    public Output<String> sasToken() {
         return this.sasToken;
     }
 

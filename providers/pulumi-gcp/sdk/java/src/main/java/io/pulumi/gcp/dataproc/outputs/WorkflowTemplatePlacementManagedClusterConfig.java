@@ -139,105 +139,105 @@ public final class WorkflowTemplatePlacementManagedClusterConfig {
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig> getAutoscalingConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig> autoscalingConfig() {
         return Optional.ofNullable(this.autoscalingConfig);
     }
     /**
      * Optional. Encryption settings for the cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig> getEncryptionConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
     /**
      * Optional. Port/endpoint configuration for this cluster
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigEndpointConfig> getEndpointConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigEndpointConfig> endpointConfig() {
         return Optional.ofNullable(this.endpointConfig);
     }
     /**
      * Optional. The shared Compute Engine config settings for all instances in a cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig> getGceClusterConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig> gceClusterConfig() {
         return Optional.ofNullable(this.gceClusterConfig);
     }
     /**
      * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig> getGkeClusterConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig> gkeClusterConfig() {
         return Optional.ofNullable(this.gkeClusterConfig);
     }
     /**
      * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
      * 
     */
-    public List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> getInitializationActions() {
+    public List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions() {
         return this.initializationActions == null ? List.of() : this.initializationActions;
     }
     /**
      * Optional. Lifecycle setting for the cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig> getLifecycleConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig> lifecycleConfig() {
         return Optional.ofNullable(this.lifecycleConfig);
     }
     /**
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigMasterConfig> getMasterConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigMasterConfig> masterConfig() {
         return Optional.ofNullable(this.masterConfig);
     }
     /**
      * Optional. Metastore configuration.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig> getMetastoreConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig> metastoreConfig() {
         return Optional.ofNullable(this.metastoreConfig);
     }
     /**
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig> getSecondaryWorkerConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig> secondaryWorkerConfig() {
         return Optional.ofNullable(this.secondaryWorkerConfig);
     }
     /**
      * Optional. Security settings for the cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigSecurityConfig> getSecurityConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigSecurityConfig> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
     /**
      * Optional. The config settings for software inside the cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig> getSoftwareConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
     /**
      * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
      * 
     */
-    public Optional<String> getStagingBucket() {
+    public Optional<String> stagingBucket() {
         return Optional.ofNullable(this.stagingBucket);
     }
     /**
      * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
      * 
     */
-    public Optional<String> getTempBucket() {
+    public Optional<String> tempBucket() {
         return Optional.ofNullable(this.tempBucket);
     }
     /**
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigWorkerConfig> getWorkerConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigWorkerConfig> workerConfig() {
         return Optional.ofNullable(this.workerConfig);
     }
 

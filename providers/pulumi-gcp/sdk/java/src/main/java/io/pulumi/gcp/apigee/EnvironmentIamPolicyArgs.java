@@ -21,14 +21,14 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="envId", required=true)
       private final Output<String> envId;
 
-    public Output<String> getEnvId() {
+    public Output<String> envId() {
         return this.envId;
     }
 
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -40,7 +40,7 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

@@ -19,14 +19,14 @@ public final class TagValueIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<TagValueIamMemberConditionArgs> condition;
 
-    public Output<TagValueIamMemberConditionArgs> getCondition() {
+    public Output<TagValueIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -39,7 +39,7 @@ public final class TagValueIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -50,7 +50,7 @@ public final class TagValueIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 

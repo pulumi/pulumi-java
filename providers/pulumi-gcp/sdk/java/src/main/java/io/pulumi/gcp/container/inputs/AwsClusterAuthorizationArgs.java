@@ -22,7 +22,7 @@ public final class AwsClusterAuthorizationArgs extends io.pulumi.resources.Resou
     @Import(name="adminUsers", required=true)
       private final Output<List<AwsClusterAuthorizationAdminUserArgs>> adminUsers;
 
-    public Output<List<AwsClusterAuthorizationAdminUserArgs>> getAdminUsers() {
+    public Output<List<AwsClusterAuthorizationAdminUserArgs>> adminUsers() {
         return this.adminUsers;
     }
 

@@ -27,7 +27,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="booleanPolicy")
       private final @Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy;
 
-    public Output<PolicyBooleanPolicyArgs> getBooleanPolicy() {
+    public Output<PolicyBooleanPolicyArgs> booleanPolicy() {
         return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="constraint", required=true)
       private final Output<String> constraint;
 
-    public Output<String> getConstraint() {
+    public Output<String> constraint() {
         return this.constraint;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="listPolicy")
       private final @Nullable Output<PolicyListPolicyArgs> listPolicy;
 
-    public Output<PolicyListPolicyArgs> getListPolicy() {
+    public Output<PolicyListPolicyArgs> listPolicy() {
         return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
     }
 
@@ -60,7 +60,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -71,7 +71,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restorePolicy")
       private final @Nullable Output<PolicyRestorePolicyArgs> restorePolicy;
 
-    public Output<PolicyRestorePolicyArgs> getRestorePolicy() {
+    public Output<PolicyRestorePolicyArgs> restorePolicy() {
         return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
@@ -82,7 +82,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

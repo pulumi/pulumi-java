@@ -22,10 +22,10 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef {
         this.optional = optional;
     }
 
-    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> getLocalObjectReferences() {
+    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences() {
         return this.localObjectReferences;
     }
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 

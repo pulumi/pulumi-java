@@ -24,7 +24,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthority")
       private final @Nullable Output<String> certificateAuthority;
 
-    public Output<String> getCertificateAuthority() {
+    public Output<String> certificateAuthority() {
         return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
     }
 
@@ -39,7 +39,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateTemplate")
       private final @Nullable Output<String> certificateTemplate;
 
-    public Output<String> getCertificateTemplate() {
+    public Output<String> certificateTemplate() {
         return this.certificateTemplate == null ? Codegen.empty() : this.certificateTemplate;
     }
 
@@ -51,7 +51,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<CertificateConfigArgs> config;
 
-    public Output<CertificateConfigArgs> getConfig() {
+    public Output<CertificateConfigArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -62,7 +62,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -75,7 +75,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
@@ -87,7 +87,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -98,7 +98,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -109,7 +109,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
 
-    public Output<String> getPemCsr() {
+    public Output<String> pemCsr() {
         return this.pemCsr == null ? Codegen.empty() : this.pemCsr;
     }
 
@@ -120,7 +120,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pool", required=true)
       private final Output<String> pool;
 
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool;
     }
 
@@ -132,7 +132,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -49,7 +49,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -63,7 +63,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The parent of the resource.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -77,7 +77,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Basic information about the Organization Policy.
      * 
      */
-    public Output</* @Nullable */ PolicySpec> getSpec() {
+    public Output</* @Nullable */ PolicySpec> spec() {
         return this.spec;
     }
 

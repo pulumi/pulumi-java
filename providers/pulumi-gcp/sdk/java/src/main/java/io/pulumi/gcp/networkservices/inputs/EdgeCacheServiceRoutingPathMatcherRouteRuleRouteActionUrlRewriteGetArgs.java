@@ -22,7 +22,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     @Import(name="hostRewrite")
       private final @Nullable Output<String> hostRewrite;
 
-    public Output<String> getHostRewrite() {
+    public Output<String> hostRewrite() {
         return this.hostRewrite == null ? Codegen.empty() : this.hostRewrite;
     }
 
@@ -33,7 +33,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     @Import(name="pathPrefixRewrite")
       private final @Nullable Output<String> pathPrefixRewrite;
 
-    public Output<String> getPathPrefixRewrite() {
+    public Output<String> pathPrefixRewrite() {
         return this.pathPrefixRewrite == null ? Codegen.empty() : this.pathPrefixRewrite;
     }
 
@@ -54,7 +54,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     @Import(name="pathTemplateRewrite")
       private final @Nullable Output<String> pathTemplateRewrite;
 
-    public Output<String> getPathTemplateRewrite() {
+    public Output<String> pathTemplateRewrite() {
         return this.pathTemplateRewrite == null ? Codegen.empty() : this.pathTemplateRewrite;
     }
 

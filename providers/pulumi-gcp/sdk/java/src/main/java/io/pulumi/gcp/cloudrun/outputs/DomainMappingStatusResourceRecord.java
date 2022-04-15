@@ -33,13 +33,13 @@ public final class DomainMappingStatusResourceRecord {
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRrdata() {
+    public Optional<String> rrdata() {
         return Optional.ofNullable(this.rrdata);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -16,21 +16,21 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow extends io.pulumi
     @Import(name="day", required=true)
       private final Integer day;
 
-    public Integer getDay() {
+    public Integer day() {
         return this.day;
     }
 
     @Import(name="hour", required=true)
       private final Integer hour;
 
-    public Integer getHour() {
+    public Integer hour() {
         return this.hour;
     }
 
     @Import(name="updateTrack", required=true)
       private final String updateTrack;
 
-    public String getUpdateTrack() {
+    public String updateTrack() {
         return this.updateTrack;
     }
 

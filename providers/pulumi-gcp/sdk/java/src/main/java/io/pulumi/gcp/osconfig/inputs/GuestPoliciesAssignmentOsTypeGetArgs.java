@@ -22,7 +22,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     @Import(name="osArchitecture")
       private final @Nullable Output<String> osArchitecture;
 
-    public Output<String> getOsArchitecture() {
+    public Output<String> osArchitecture() {
         return this.osArchitecture == null ? Codegen.empty() : this.osArchitecture;
     }
 
@@ -33,7 +33,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     @Import(name="osShortName")
       private final @Nullable Output<String> osShortName;
 
-    public Output<String> getOsShortName() {
+    public Output<String> osShortName() {
         return this.osShortName == null ? Codegen.empty() : this.osShortName;
     }
 
@@ -44,7 +44,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 

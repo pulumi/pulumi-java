@@ -61,7 +61,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The name of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -75,7 +75,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The domain associated with the entity.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -89,7 +89,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The email address associated with the entity.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -119,7 +119,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * * allAuthenticatedUsers
      * 
      */
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
     /**
@@ -133,7 +133,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The ID for the entity
      * 
      */
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId;
     }
     /**
@@ -147,7 +147,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The content generation of the object, if applied to an object.
      * 
      */
-    public Output<Integer> getGeneration() {
+    public Output<Integer> generation() {
         return this.generation;
     }
     /**
@@ -161,7 +161,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The name of the object, if applied to an object.
      * 
      */
-    public Output</* @Nullable */ String> getObject() {
+    public Output</* @Nullable */ String> object() {
         return this.object;
     }
     /**
@@ -175,7 +175,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * @return The project team associated with the entity
      * 
      */
-    public Output<List<DefaultObjectAccessControlProjectTeam>> getProjectTeams() {
+    public Output<List<DefaultObjectAccessControlProjectTeam>> projectTeams() {
         return this.projectTeams;
     }
     /**
@@ -191,7 +191,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * Possible values are `OWNER` and `READER`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

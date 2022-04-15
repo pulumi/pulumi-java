@@ -41,10 +41,10 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      * Disk Config
      * 
     */
-    public Optional<ClusterClusterConfigPreemptibleWorkerConfigDiskConfig> getDiskConfig() {
+    public Optional<ClusterClusterConfigPreemptibleWorkerConfigDiskConfig> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
-    public List<String> getInstanceNames() {
+    public List<String> instanceNames() {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
     /**
@@ -52,7 +52,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      * Defaults to 0.
      * 
     */
-    public Optional<Integer> getNumInstances() {
+    public Optional<Integer> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
 

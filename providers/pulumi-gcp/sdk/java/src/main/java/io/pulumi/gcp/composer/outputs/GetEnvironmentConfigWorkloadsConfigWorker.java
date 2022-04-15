@@ -30,19 +30,19 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker {
         this.storageGb = storageGb;
     }
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
-    public Integer getMinCount() {
+    public Integer minCount() {
         return this.minCount;
     }
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

@@ -26,7 +26,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
     @Import(name="capacityGb", required=true)
       private final Output<Integer> capacityGb;
 
-    public Output<Integer> getCapacityGb() {
+    public Output<Integer> capacityGb() {
         return this.capacityGb;
     }
 
@@ -37,7 +37,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
     @Import(name="nfsExportOptions")
       private final @Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
 
-    public Output<List<InstanceFileSharesNfsExportOptionGetArgs>> getNfsExportOptions() {
+    public Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions() {
         return this.nfsExportOptions == null ? Codegen.empty() : this.nfsExportOptions;
     }
 

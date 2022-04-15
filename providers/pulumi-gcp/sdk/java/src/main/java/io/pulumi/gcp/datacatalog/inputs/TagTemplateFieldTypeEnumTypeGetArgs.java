@@ -27,7 +27,7 @@ public final class TagTemplateFieldTypeEnumTypeGetArgs extends io.pulumi.resourc
     @Import(name="allowedValues", required=true)
       private final Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues;
 
-    public Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> getAllowedValues() {
+    public Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues() {
         return this.allowedValues;
     }
 

@@ -29,7 +29,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="admissionWhitelistPatterns")
       private final @Nullable Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns;
 
-    public Output<List<PolicyAdmissionWhitelistPatternGetArgs>> getAdmissionWhitelistPatterns() {
+    public Output<List<PolicyAdmissionWhitelistPatternGetArgs>> admissionWhitelistPatterns() {
         return this.admissionWhitelistPatterns == null ? Codegen.empty() : this.admissionWhitelistPatterns;
     }
 
@@ -44,7 +44,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterAdmissionRules")
       private final @Nullable Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules;
 
-    public Output<List<PolicyClusterAdmissionRuleGetArgs>> getClusterAdmissionRules() {
+    public Output<List<PolicyClusterAdmissionRuleGetArgs>> clusterAdmissionRules() {
         return this.clusterAdmissionRules == null ? Codegen.empty() : this.clusterAdmissionRules;
     }
 
@@ -57,7 +57,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAdmissionRule")
       private final @Nullable Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule;
 
-    public Output<PolicyDefaultAdmissionRuleGetArgs> getDefaultAdmissionRule() {
+    public Output<PolicyDefaultAdmissionRuleGetArgs> defaultAdmissionRule() {
         return this.defaultAdmissionRule == null ? Codegen.empty() : this.defaultAdmissionRule;
     }
 
@@ -68,7 +68,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalPolicyEvaluationMode")
       private final @Nullable Output<String> globalPolicyEvaluationMode;
 
-    public Output<String> getGlobalPolicyEvaluationMode() {
+    public Output<String> globalPolicyEvaluationMode() {
         return this.globalPolicyEvaluationMode == null ? Codegen.empty() : this.globalPolicyEvaluationMode;
     }
 
@@ -94,7 +94,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

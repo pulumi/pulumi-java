@@ -23,7 +23,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArg
     @Import(name="dayOfWeeks", required=true)
       private final Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks;
 
-    public Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> getDayOfWeeks() {
+    public Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs>> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 

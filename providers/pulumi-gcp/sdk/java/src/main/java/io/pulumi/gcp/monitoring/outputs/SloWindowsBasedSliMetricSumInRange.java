@@ -51,7 +51,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * Structure is documented below.
      * 
     */
-    public SloWindowsBasedSliMetricSumInRangeRange getRange() {
+    public SloWindowsBasedSliMetricSumInRangeRange range() {
         return this.range;
     }
     /**
@@ -64,7 +64,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * `range.min <= X <= range.max` for a good window.
      * 
     */
-    public String getTimeSeries() {
+    public String timeSeries() {
         return this.timeSeries;
     }
 

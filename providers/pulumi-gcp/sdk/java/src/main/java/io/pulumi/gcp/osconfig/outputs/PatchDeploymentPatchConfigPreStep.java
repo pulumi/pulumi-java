@@ -38,7 +38,7 @@ public final class PatchDeploymentPatchConfigPreStep {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigPreStepLinuxExecStepConfig> getLinuxExecStepConfig() {
+    public Optional<PatchDeploymentPatchConfigPreStepLinuxExecStepConfig> linuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
     /**
@@ -46,7 +46,7 @@ public final class PatchDeploymentPatchConfigPreStep {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigPreStepWindowsExecStepConfig> getWindowsExecStepConfig() {
+    public Optional<PatchDeploymentPatchConfigPreStepWindowsExecStepConfig> windowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }
 

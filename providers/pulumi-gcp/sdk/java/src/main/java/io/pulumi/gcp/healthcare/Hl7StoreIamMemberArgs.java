@@ -19,7 +19,7 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
 
-    public Output<Hl7StoreIamMemberConditionArgs> getCondition() {
+    public Output<Hl7StoreIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -33,14 +33,14 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hl7V2StoreId", required=true)
       private final Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -53,7 +53,7 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

@@ -26,7 +26,7 @@ public final class ClusterWorkloadIdentityConfig {
      * The workload pool to attach all Kubernetes service accounts to.
      * 
     */
-    public Optional<String> getWorkloadPool() {
+    public Optional<String> workloadPool() {
         return Optional.ofNullable(this.workloadPool);
     }
 

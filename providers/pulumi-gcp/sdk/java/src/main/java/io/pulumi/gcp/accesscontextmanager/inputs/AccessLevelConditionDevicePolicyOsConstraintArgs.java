@@ -24,7 +24,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintArgs extends io.p
     @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
 
-    public Output<String> getMinimumVersion() {
+    public Output<String> minimumVersion() {
         return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
     }
 
@@ -36,7 +36,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintArgs extends io.p
     @Import(name="osType", required=true)
       private final Output<String> osType;
 
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType;
     }
 

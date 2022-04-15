@@ -15,21 +15,21 @@ public final class GetInstanceMaintenanceSchedule extends io.pulumi.resources.In
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
     @Import(name="scheduleDeadlineTime", required=true)
       private final String scheduleDeadlineTime;
 
-    public String getScheduleDeadlineTime() {
+    public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

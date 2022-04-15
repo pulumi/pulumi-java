@@ -18,21 +18,21 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule extends io.pu
     @Import(name="dailySchedules", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
 
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> getDailySchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules() {
         return this.dailySchedules;
     }
 
     @Import(name="hourlySchedules", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
 
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> getHourlySchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules() {
         return this.hourlySchedules;
     }
 
     @Import(name="weeklySchedules", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
 
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> getWeeklySchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules() {
         return this.weeklySchedules;
     }
 

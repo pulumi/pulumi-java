@@ -18,7 +18,7 @@ public final class RegionInstanceGroupManagerStatusVersionTargetArgs extends io.
     @Import(name="isReached")
       private final @Nullable Output<Boolean> isReached;
 
-    public Output<Boolean> getIsReached() {
+    public Output<Boolean> isReached() {
         return this.isReached == null ? Codegen.empty() : this.isReached;
     }
 

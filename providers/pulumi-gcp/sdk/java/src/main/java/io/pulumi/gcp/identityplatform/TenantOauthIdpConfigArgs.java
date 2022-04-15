@@ -23,7 +23,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -34,7 +34,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -45,7 +45,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -56,7 +56,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -67,7 +67,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
@@ -78,7 +78,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -101,7 +101,7 @@ public final class TenantOauthIdpConfigArgs extends io.pulumi.resources.Resource
     @Import(name="tenant", required=true)
       private final Output<String> tenant;
 
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant;
     }
 

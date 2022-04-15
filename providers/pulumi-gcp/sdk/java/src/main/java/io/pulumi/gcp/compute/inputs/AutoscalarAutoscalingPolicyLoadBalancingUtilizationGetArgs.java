@@ -23,7 +23,7 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
     @Import(name="target", required=true)
       private final Output<Double> target;
 
-    public Output<Double> getTarget() {
+    public Output<Double> target() {
         return this.target;
     }
 

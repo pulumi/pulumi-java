@@ -37,7 +37,7 @@ public final class JobHttpTargetOidcToken {
      * the URI specified in target will be used.
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
@@ -45,7 +45,7 @@ public final class JobHttpTargetOidcToken {
      * The service account must be within the same project as the job.
      * 
     */
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

@@ -18,19 +18,19 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

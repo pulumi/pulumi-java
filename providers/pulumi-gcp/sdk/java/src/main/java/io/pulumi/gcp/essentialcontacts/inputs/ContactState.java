@@ -23,7 +23,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -34,7 +34,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageTag")
       private final @Nullable Output<String> languageTag;
 
-    public Output<String> getLanguageTag() {
+    public Output<String> languageTag() {
         return this.languageTag == null ? Codegen.empty() : this.languageTag;
     }
 
@@ -45,7 +45,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions")
       private final @Nullable Output<List<String>> notificationCategorySubscriptions;
 
-    public Output<List<String>> getNotificationCategorySubscriptions() {
+    public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
     }
 
@@ -67,7 +67,7 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 

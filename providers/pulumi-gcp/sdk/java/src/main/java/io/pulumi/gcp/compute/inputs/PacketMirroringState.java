@@ -31,7 +31,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="collectorIlb")
       private final @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
 
-    public Output<PacketMirroringCollectorIlbGetArgs> getCollectorIlb() {
+    public Output<PacketMirroringCollectorIlbGetArgs> collectorIlb() {
         return this.collectorIlb == null ? Codegen.empty() : this.collectorIlb;
     }
 
@@ -42,7 +42,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -54,7 +54,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="filter")
       private final @Nullable Output<PacketMirroringFilterGetArgs> filter;
 
-    public Output<PacketMirroringFilterGetArgs> getFilter() {
+    public Output<PacketMirroringFilterGetArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -66,7 +66,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="mirroredResources")
       private final @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
 
-    public Output<PacketMirroringMirroredResourcesGetArgs> getMirroredResources() {
+    public Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources() {
         return this.mirroredResources == null ? Codegen.empty() : this.mirroredResources;
     }
 
@@ -77,7 +77,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="network")
       private final @Nullable Output<PacketMirroringNetworkGetArgs> network;
 
-    public Output<PacketMirroringNetworkGetArgs> getNetwork() {
+    public Output<PacketMirroringNetworkGetArgs> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -104,7 +104,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -116,7 +116,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -128,7 +128,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

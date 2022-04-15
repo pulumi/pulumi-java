@@ -28,7 +28,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dagTimeout")
       private final @Nullable Output<String> dagTimeout;
 
-    public Output<String> getDagTimeout() {
+    public Output<String> dagTimeout() {
         return this.dagTimeout == null ? Codegen.empty() : this.dagTimeout;
     }
 
@@ -39,7 +39,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="jobs", required=true)
       private final Output<List<WorkflowTemplateJobArgs>> jobs;
 
-    public Output<List<WorkflowTemplateJobArgs>> getJobs() {
+    public Output<List<WorkflowTemplateJobArgs>> jobs() {
         return this.jobs;
     }
 
@@ -50,7 +50,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -61,7 +61,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -72,7 +72,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<List<WorkflowTemplateParameterArgs>> parameters;
 
-    public Output<List<WorkflowTemplateParameterArgs>> getParameters() {
+    public Output<List<WorkflowTemplateParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -94,7 +94,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="placement", required=true)
       private final Output<WorkflowTemplatePlacementArgs> placement;
 
-    public Output<WorkflowTemplatePlacementArgs> getPlacement() {
+    public Output<WorkflowTemplatePlacementArgs> placement() {
         return this.placement;
     }
 
@@ -105,7 +105,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -121,7 +121,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

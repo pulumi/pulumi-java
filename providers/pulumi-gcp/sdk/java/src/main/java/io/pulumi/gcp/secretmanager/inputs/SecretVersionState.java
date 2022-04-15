@@ -23,7 +23,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -34,7 +34,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destroyTime")
       private final @Nullable Output<String> destroyTime;
 
-    public Output<String> getDestroyTime() {
+    public Output<String> destroyTime() {
         return this.destroyTime == null ? Codegen.empty() : this.destroyTime;
     }
 
@@ -45,7 +45,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -56,7 +56,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -67,7 +67,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret == null ? Codegen.empty() : this.secret;
     }
 
@@ -79,7 +79,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretData")
       private final @Nullable Output<String> secretData;
 
-    public Output<String> getSecretData() {
+    public Output<String> secretData() {
         return this.secretData == null ? Codegen.empty() : this.secretData;
     }
 

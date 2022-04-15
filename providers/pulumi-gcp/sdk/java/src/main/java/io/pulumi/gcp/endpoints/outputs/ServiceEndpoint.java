@@ -22,10 +22,10 @@ public final class ServiceEndpoint {
         this.name = name;
     }
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

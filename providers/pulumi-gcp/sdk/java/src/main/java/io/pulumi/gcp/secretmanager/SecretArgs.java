@@ -28,7 +28,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
@@ -46,7 +46,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -58,7 +58,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -71,7 +71,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replication", required=true)
       private final Output<SecretReplicationArgs> replication;
 
-    public Output<SecretReplicationArgs> getReplication() {
+    public Output<SecretReplicationArgs> replication() {
         return this.replication;
     }
 
@@ -83,7 +83,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotation")
       private final @Nullable Output<SecretRotationArgs> rotation;
 
-    public Output<SecretRotationArgs> getRotation() {
+    public Output<SecretRotationArgs> rotation() {
         return this.rotation == null ? Codegen.empty() : this.rotation;
     }
 
@@ -94,7 +94,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -106,7 +106,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topics")
       private final @Nullable Output<List<SecretTopicArgs>> topics;
 
-    public Output<List<SecretTopicArgs>> getTopics() {
+    public Output<List<SecretTopicArgs>> topics() {
         return this.topics == null ? Codegen.empty() : this.topics;
     }
 
@@ -118,7 +118,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

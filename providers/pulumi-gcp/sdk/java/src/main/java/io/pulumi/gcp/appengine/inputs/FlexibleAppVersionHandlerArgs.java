@@ -26,7 +26,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="authFailAction")
       private final @Nullable Output<String> authFailAction;
 
-    public Output<String> getAuthFailAction() {
+    public Output<String> authFailAction() {
         return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
@@ -39,7 +39,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="login")
       private final @Nullable Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login == null ? Codegen.empty() : this.login;
     }
 
@@ -51,7 +51,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="redirectHttpResponseCode")
       private final @Nullable Output<String> redirectHttpResponseCode;
 
-    public Output<String> getRedirectHttpResponseCode() {
+    public Output<String> redirectHttpResponseCode() {
         return this.redirectHttpResponseCode == null ? Codegen.empty() : this.redirectHttpResponseCode;
     }
 
@@ -62,7 +62,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="script")
       private final @Nullable Output<FlexibleAppVersionHandlerScriptArgs> script;
 
-    public Output<FlexibleAppVersionHandlerScriptArgs> getScript() {
+    public Output<FlexibleAppVersionHandlerScriptArgs> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -74,7 +74,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="securityLevel")
       private final @Nullable Output<String> securityLevel;
 
-    public Output<String> getSecurityLevel() {
+    public Output<String> securityLevel() {
         return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
@@ -87,7 +87,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="staticFiles")
       private final @Nullable Output<FlexibleAppVersionHandlerStaticFilesArgs> staticFiles;
 
-    public Output<FlexibleAppVersionHandlerStaticFilesArgs> getStaticFiles() {
+    public Output<FlexibleAppVersionHandlerStaticFilesArgs> staticFiles() {
         return this.staticFiles == null ? Codegen.empty() : this.staticFiles;
     }
 
@@ -99,7 +99,7 @@ public final class FlexibleAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="urlRegex")
       private final @Nullable Output<String> urlRegex;
 
-    public Output<String> getUrlRegex() {
+    public Output<String> urlRegex() {
         return this.urlRegex == null ? Codegen.empty() : this.urlRegex;
     }
 

@@ -55,7 +55,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAnnotations() {
+    public Output</* @Nullable */ Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -69,7 +69,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. Autoscaler configuration for this node pool.
      * 
      */
-    public Output<AwsNodePoolAutoscaling> getAutoscaling() {
+    public Output<AwsNodePoolAutoscaling> autoscaling() {
         return this.autoscaling;
     }
     /**
@@ -83,7 +83,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return The awsCluster for the resource
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     /**
@@ -97,7 +97,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The configuration of the node pool.
      * 
      */
-    public Output<AwsNodePoolConfig> getConfig() {
+    public Output<AwsNodePoolConfig> config() {
         return this.config;
     }
     /**
@@ -111,7 +111,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this node pool was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -127,7 +127,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -141,7 +141,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -155,7 +155,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    public Output<AwsNodePoolMaxPodsConstraint> getMaxPodsConstraint() {
+    public Output<AwsNodePoolMaxPodsConstraint> maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
     /**
@@ -169,7 +169,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return The name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -183,7 +183,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -197,7 +197,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. If set, there are currently changes in flight to the node pool.
      * 
      */
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling;
     }
     /**
@@ -213,7 +213,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * RECONCILING, STOPPING, ERROR, DEGRADED
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -227,7 +227,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The subnet where the node pool node run.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -241,7 +241,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. A globally unique identifier for the node pool.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -255,7 +255,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this node pool was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -269,7 +269,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

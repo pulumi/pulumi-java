@@ -20,10 +20,10 @@ public final class GetDatabaseInstanceSettingLocationPreference {
         this.zone = zone;
     }
 
-    public String getFollowGaeApplication() {
+    public String followGaeApplication() {
         return this.followGaeApplication;
     }
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

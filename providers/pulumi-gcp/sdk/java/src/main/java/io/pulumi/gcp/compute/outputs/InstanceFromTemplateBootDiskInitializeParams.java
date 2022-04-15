@@ -31,16 +31,16 @@ public final class InstanceFromTemplateBootDiskInitializeParams {
         this.type = type;
     }
 
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
-    public Map<String,Object> getLabels() {
+    public Map<String,Object> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
-    public Optional<Integer> getSize() {
+    public Optional<Integer> size() {
         return Optional.ofNullable(this.size);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

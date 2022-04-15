@@ -31,7 +31,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="artifacts")
       private final @Nullable Output<TriggerBuildArtifactsGetArgs> artifacts;
 
-    public Output<TriggerBuildArtifactsGetArgs> getArtifacts() {
+    public Output<TriggerBuildArtifactsGetArgs> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -43,7 +43,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="availableSecrets")
       private final @Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
 
-    public Output<TriggerBuildAvailableSecretsGetArgs> getAvailableSecrets() {
+    public Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets() {
         return this.availableSecrets == null ? Codegen.empty() : this.availableSecrets;
     }
 
@@ -57,7 +57,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
-    public Output<List<String>> getImages() {
+    public Output<List<String>> images() {
         return this.images == null ? Codegen.empty() : this.images;
     }
 
@@ -69,7 +69,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="logsBucket")
       private final @Nullable Output<String> logsBucket;
 
-    public Output<String> getLogsBucket() {
+    public Output<String> logsBucket() {
         return this.logsBucket == null ? Codegen.empty() : this.logsBucket;
     }
 
@@ -81,7 +81,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="options")
       private final @Nullable Output<TriggerBuildOptionsGetArgs> options;
 
-    public Output<TriggerBuildOptionsGetArgs> getOptions() {
+    public Output<TriggerBuildOptionsGetArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -95,7 +95,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="queueTtl")
       private final @Nullable Output<String> queueTtl;
 
-    public Output<String> getQueueTtl() {
+    public Output<String> queueTtl() {
         return this.queueTtl == null ? Codegen.empty() : this.queueTtl;
     }
 
@@ -107,7 +107,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="secrets")
       private final @Nullable Output<List<TriggerBuildSecretGetArgs>> secrets;
 
-    public Output<List<TriggerBuildSecretGetArgs>> getSecrets() {
+    public Output<List<TriggerBuildSecretGetArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
@@ -120,7 +120,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="source")
       private final @Nullable Output<TriggerBuildSourceGetArgs> source;
 
-    public Output<TriggerBuildSourceGetArgs> getSource() {
+    public Output<TriggerBuildSourceGetArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -132,7 +132,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="steps", required=true)
       private final Output<List<TriggerBuildStepGetArgs>> steps;
 
-    public Output<List<TriggerBuildStepGetArgs>> getSteps() {
+    public Output<List<TriggerBuildStepGetArgs>> steps() {
         return this.steps;
     }
 
@@ -143,7 +143,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> getSubstitutions() {
+    public Output<Map<String,String>> substitutions() {
         return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
@@ -154,7 +154,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -168,7 +168,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

@@ -33,7 +33,7 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
     @Import(name="delegationServiceAccountEmail")
       private final @Nullable Output<String> delegationServiceAccountEmail;
 
-    public Output<String> getDelegationServiceAccountEmail() {
+    public Output<String> delegationServiceAccountEmail() {
         return this.delegationServiceAccountEmail == null ? Codegen.empty() : this.delegationServiceAccountEmail;
     }
 
@@ -50,7 +50,7 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
     @Import(name="noteReference", required=true)
       private final Output<String> noteReference;
 
-    public Output<String> getNoteReference() {
+    public Output<String> noteReference() {
         return this.noteReference;
     }
 
@@ -68,7 +68,7 @@ public final class AttestorAttestationAuthorityNoteArgs extends io.pulumi.resour
     @Import(name="publicKeys")
       private final @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyArgs>> publicKeys;
 
-    public Output<List<AttestorAttestationAuthorityNotePublicKeyArgs>> getPublicKeys() {
+    public Output<List<AttestorAttestationAuthorityNotePublicKeyArgs>> publicKeys() {
         return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 

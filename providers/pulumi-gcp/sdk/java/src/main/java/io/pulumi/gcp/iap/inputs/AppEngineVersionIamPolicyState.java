@@ -22,7 +22,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -33,7 +33,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -45,7 +45,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
@@ -57,7 +57,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,7 +68,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -79,7 +79,7 @@ public final class AppEngineVersionIamPolicyState extends io.pulumi.resources.Re
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

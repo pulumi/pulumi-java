@@ -50,7 +50,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
      * attached, it also contains the HDFS data blocks and Hadoop working directories.
      * 
     */
-    public Optional<Integer> getBootDiskSizeGb() {
+    public Optional<Integer> bootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
     /**
@@ -58,7 +58,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
      * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
      * 
     */
-    public Optional<String> getBootDiskType() {
+    public Optional<String> bootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
     /**
@@ -66,7 +66,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfig {
      * attached to each preemptible worker node. Defaults to 0.
      * 
     */
-    public Optional<Integer> getNumLocalSsds() {
+    public Optional<Integer> numLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }
 

@@ -24,7 +24,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
     @Import(name="abort")
       private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
 
-    public Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> getAbort() {
+    public Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort() {
         return this.abort == null ? Codegen.empty() : this.abort;
     }
 
@@ -36,7 +36,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
     @Import(name="delay")
       private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
 
-    public Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> getDelay() {
+    public Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 

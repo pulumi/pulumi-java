@@ -25,7 +25,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -36,7 +36,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -48,7 +48,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="idpConfig", required=true)
       private final Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
-    public Output<TenantInboundSamlConfigIdpConfigArgs> getIdpConfig() {
+    public Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig() {
         return this.idpConfig;
     }
 
@@ -61,7 +61,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -86,7 +86,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="spConfig", required=true)
       private final Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
-    public Output<TenantInboundSamlConfigSpConfigArgs> getSpConfig() {
+    public Output<TenantInboundSamlConfigSpConfigArgs> spConfig() {
         return this.spConfig;
     }
 
@@ -97,7 +97,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     @Import(name="tenant", required=true)
       private final Output<String> tenant;
 
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant;
     }
 

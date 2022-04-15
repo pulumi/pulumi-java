@@ -26,7 +26,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -37,7 +37,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inheritFromParent")
       private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> getInheritFromParent() {
+    public Output<Boolean> inheritFromParent() {
         return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
     }
 
@@ -48,7 +48,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reset")
       private final @Nullable Output<Boolean> reset;
 
-    public Output<Boolean> getReset() {
+    public Output<Boolean> reset() {
         return this.reset == null ? Codegen.empty() : this.reset;
     }
 
@@ -59,7 +59,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<PolicySpecRuleGetArgs>> rules;
 
-    public Output<List<PolicySpecRuleGetArgs>> getRules() {
+    public Output<List<PolicySpecRuleGetArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -71,7 +71,7 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

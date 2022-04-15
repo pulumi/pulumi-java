@@ -33,14 +33,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
      * The number of days between snapshots.
      * 
     */
-    public Integer getDaysInCycle() {
+    public Integer daysInCycle() {
         return this.daysInCycle;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

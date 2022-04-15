@@ -25,13 +25,13 @@ public final class AwsClusterWorkloadIdentityConfig {
         this.workloadPool = workloadPool;
     }
 
-    public Optional<String> getIdentityProvider() {
+    public Optional<String> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
-    public Optional<String> getIssuerUri() {
+    public Optional<String> issuerUri() {
         return Optional.ofNullable(this.issuerUri);
     }
-    public Optional<String> getWorkloadPool() {
+    public Optional<String> workloadPool() {
         return Optional.ofNullable(this.workloadPool);
     }
 

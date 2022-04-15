@@ -51,7 +51,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @return The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -65,7 +65,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @return The project ID where service accounts are created.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -85,7 +85,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
      * 
      */
-    public Output</* @Nullable */ String> getRestorePolicy() {
+    public Output</* @Nullable */ String> restorePolicy() {
         return this.restorePolicy;
     }
     /**
@@ -99,7 +99,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @return The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
      * 
      */
-    public Output<Map<String,Object>> getServiceAccounts() {
+    public Output<Map<String,Object>> serviceAccounts() {
         return this.serviceAccounts;
     }
 

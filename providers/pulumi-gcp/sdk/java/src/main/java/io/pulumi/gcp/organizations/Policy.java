@@ -56,7 +56,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * below.
      * 
      */
-    public Output</* @Nullable */ PolicyBooleanPolicy> getBooleanPolicy() {
+    public Output</* @Nullable */ PolicyBooleanPolicy> booleanPolicy() {
         return this.booleanPolicy;
     }
     /**
@@ -70,7 +70,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    public Output<String> getConstraint() {
+    public Output<String> constraint() {
         return this.constraint;
     }
     /**
@@ -84,7 +84,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -98,7 +98,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PolicyListPolicy> getListPolicy() {
+    public Output</* @Nullable */ PolicyListPolicy> listPolicy() {
         return this.listPolicy;
     }
     /**
@@ -112,7 +112,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization to set the policy for.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -126,7 +126,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PolicyRestorePolicy> getRestorePolicy() {
+    public Output</* @Nullable */ PolicyRestorePolicy> restorePolicy() {
         return this.restorePolicy;
     }
     /**
@@ -140,7 +140,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -154,7 +154,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Version of the Policy. Default version is 0.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

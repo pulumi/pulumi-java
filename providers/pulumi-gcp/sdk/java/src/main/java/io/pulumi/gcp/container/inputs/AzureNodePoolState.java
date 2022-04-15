@@ -27,7 +27,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -38,7 +38,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
       private final @Nullable Output<AzureNodePoolAutoscalingGetArgs> autoscaling;
 
-    public Output<AzureNodePoolAutoscalingGetArgs> getAutoscaling() {
+    public Output<AzureNodePoolAutoscalingGetArgs> autoscaling() {
         return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
@@ -49,7 +49,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureAvailabilityZone")
       private final @Nullable Output<String> azureAvailabilityZone;
 
-    public Output<String> getAzureAvailabilityZone() {
+    public Output<String> azureAvailabilityZone() {
         return this.azureAvailabilityZone == null ? Codegen.empty() : this.azureAvailabilityZone;
     }
 
@@ -60,7 +60,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -71,7 +71,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<AzureNodePoolConfigGetArgs> config;
 
-    public Output<AzureNodePoolConfigGetArgs> getConfig() {
+    public Output<AzureNodePoolConfigGetArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -82,7 +82,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -94,7 +94,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -105,7 +105,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -116,7 +116,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPodsConstraint")
       private final @Nullable Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
-    public Output<AzureNodePoolMaxPodsConstraintGetArgs> getMaxPodsConstraint() {
+    public Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint() {
         return this.maxPodsConstraint == null ? Codegen.empty() : this.maxPodsConstraint;
     }
 
@@ -127,7 +127,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -138,7 +138,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -149,7 +149,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling == null ? Codegen.empty() : this.reconciling;
     }
 
@@ -161,7 +161,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -172,7 +172,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -183,7 +183,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 
@@ -194,7 +194,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -205,7 +205,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

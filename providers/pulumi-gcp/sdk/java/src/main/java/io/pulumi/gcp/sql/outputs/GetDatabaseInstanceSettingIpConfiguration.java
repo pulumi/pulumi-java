@@ -32,19 +32,19 @@ public final class GetDatabaseInstanceSettingIpConfiguration {
         this.requireSsl = requireSsl;
     }
 
-    public String getAllocatedIpRange() {
+    public String allocatedIpRange() {
         return this.allocatedIpRange;
     }
-    public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> getAuthorizedNetworks() {
+    public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks() {
         return this.authorizedNetworks;
     }
-    public Boolean getIpv4Enabled() {
+    public Boolean ipv4Enabled() {
         return this.ipv4Enabled;
     }
-    public String getPrivateNetwork() {
+    public String privateNetwork() {
         return this.privateNetwork;
     }
-    public Boolean getRequireSsl() {
+    public Boolean requireSsl() {
         return this.requireSsl;
     }
 

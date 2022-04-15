@@ -21,7 +21,7 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
     @Import(name="azureAvailabilityZone", required=true)
       private final Output<String> azureAvailabilityZone;
 
-    public Output<String> getAzureAvailabilityZone() {
+    public Output<String> azureAvailabilityZone() {
         return this.azureAvailabilityZone;
     }
 
@@ -32,7 +32,7 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

@@ -62,41 +62,41 @@ public final class GetNetworkResult {
      * Description of this network.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The IP address of the gateway.
      * 
     */
-    public String getGatewayIpv4() {
+    public String gatewayIpv4() {
         return this.gatewayIpv4;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * The URI of the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * the list of subnetworks which belong to the network
      * 
     */
-    public List<String> getSubnetworksSelfLinks() {
+    public List<String> subnetworksSelfLinks() {
         return this.subnetworksSelfLinks;
     }
 

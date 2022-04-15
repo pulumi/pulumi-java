@@ -17,7 +17,7 @@ public final class GetTopicMessageStoragePolicy {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 
-    public List<String> getAllowedPersistenceRegions() {
+    public List<String> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 

@@ -66,7 +66,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * The default is false.
      * 
     */
-    public Optional<Boolean> getDisableConnectionDrainOnFailover() {
+    public Optional<Boolean> disableConnectionDrainOnFailover() {
         return Optional.ofNullable(this.disableConnectionDrainOnFailover);
     }
     /**
@@ -76,7 +76,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * The default is false.
      * 
     */
-    public Optional<Boolean> getDropTrafficIfUnhealthy() {
+    public Optional<Boolean> dropTrafficIfUnhealthy() {
         return Optional.ofNullable(this.dropTrafficIfUnhealthy);
     }
     /**
@@ -90,7 +90,7 @@ public final class RegionBackendServiceFailoverPolicy {
      * This field is only used with l4 load balancing.
      * 
     */
-    public Optional<Double> getFailoverRatio() {
+    public Optional<Double> failoverRatio() {
         return Optional.ofNullable(this.failoverRatio);
     }
 

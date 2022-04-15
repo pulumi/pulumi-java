@@ -15,7 +15,7 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
     @Import(name="mountPath", required=true)
       private final String mountPath;
 
-    public String getMountPath() {
+    public String mountPath() {
         return this.mountPath;
     }
 
@@ -26,7 +26,7 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

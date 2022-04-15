@@ -24,7 +24,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -38,7 +38,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyAlgorithm")
       private final @Nullable Output<String> keyAlgorithm;
 
-    public Output<String> getKeyAlgorithm() {
+    public Output<String> keyAlgorithm() {
         return this.keyAlgorithm == null ? Codegen.empty() : this.keyAlgorithm;
     }
 
@@ -49,7 +49,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateKeyType")
       private final @Nullable Output<String> privateKeyType;
 
-    public Output<String> getPrivateKeyType() {
+    public Output<String> privateKeyType() {
         return this.privateKeyType == null ? Codegen.empty() : this.privateKeyType;
     }
 
@@ -60,7 +60,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyData")
       private final @Nullable Output<String> publicKeyData;
 
-    public Output<String> getPublicKeyData() {
+    public Output<String> publicKeyData() {
         return this.publicKeyData == null ? Codegen.empty() : this.publicKeyData;
     }
 
@@ -71,7 +71,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeyType")
       private final @Nullable Output<String> publicKeyType;
 
-    public Output<String> getPublicKeyType() {
+    public Output<String> publicKeyType() {
         return this.publicKeyType == null ? Codegen.empty() : this.publicKeyType;
     }
 
@@ -84,7 +84,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 

@@ -24,7 +24,7 @@ public final class AccessLevelsAccessLevelCustomArgs extends io.pulumi.resources
     @Import(name="expr", required=true)
       private final Output<AccessLevelsAccessLevelCustomExprArgs> expr;
 
-    public Output<AccessLevelsAccessLevelCustomExprArgs> getExpr() {
+    public Output<AccessLevelsAccessLevelCustomExprArgs> expr() {
         return this.expr;
     }
 

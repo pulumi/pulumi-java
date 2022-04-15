@@ -24,7 +24,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
-    public Output<String> getAccessType() {
+    public Output<String> accessType() {
         return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
@@ -36,7 +36,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="proxyUri")
       private final @Nullable Output<String> proxyUri;
 
-    public Output<String> getProxyUri() {
+    public Output<String> proxyUri() {
         return this.proxyUri == null ? Codegen.empty() : this.proxyUri;
     }
 
@@ -48,7 +48,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="runtimeOwner")
       private final @Nullable Output<String> runtimeOwner;
 
-    public Output<String> getRuntimeOwner() {
+    public Output<String> runtimeOwner() {
         return this.runtimeOwner == null ? Codegen.empty() : this.runtimeOwner;
     }
 

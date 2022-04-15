@@ -24,7 +24,7 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
     @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> getClassificationThreshold() {
+    public Output<Double> classificationThreshold() {
         return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
     }
 
@@ -38,7 +38,7 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
     @Import(name="modelTrainingMode")
       private final @Nullable Output<String> modelTrainingMode;
 
-    public Output<String> getModelTrainingMode() {
+    public Output<String> modelTrainingMode() {
         return this.modelTrainingMode == null ? Codegen.empty() : this.modelTrainingMode;
     }
 
@@ -52,7 +52,7 @@ public final class CxFlowNluSettingsGetArgs extends io.pulumi.resources.Resource
     @Import(name="modelType")
       private final @Nullable Output<String> modelType;
 
-    public Output<String> getModelType() {
+    public Output<String> modelType() {
         return this.modelType == null ? Codegen.empty() : this.modelType;
     }
 

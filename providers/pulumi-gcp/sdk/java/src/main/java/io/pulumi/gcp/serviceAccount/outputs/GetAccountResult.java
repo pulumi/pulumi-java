@@ -59,14 +59,14 @@ public final class GetAccountResult {
         this.uniqueId = uniqueId;
     }
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * The display name for the service account.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
@@ -75,31 +75,31 @@ public final class GetAccountResult {
      * that would grant the service account privileges.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The fully-qualified name of the service account.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * The unique id of the service account.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
 

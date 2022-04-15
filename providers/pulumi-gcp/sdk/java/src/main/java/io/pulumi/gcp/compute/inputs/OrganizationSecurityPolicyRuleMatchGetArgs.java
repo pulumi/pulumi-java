@@ -24,7 +24,7 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
     @Import(name="config", required=true)
       private final Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
 
-    public Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> getConfig() {
+    public Output<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config() {
         return this.config;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
     @Import(name="versionedExpr")
       private final @Nullable Output<String> versionedExpr;
 
-    public Output<String> getVersionedExpr() {
+    public Output<String> versionedExpr() {
         return this.versionedExpr == null ? Codegen.empty() : this.versionedExpr;
     }
 

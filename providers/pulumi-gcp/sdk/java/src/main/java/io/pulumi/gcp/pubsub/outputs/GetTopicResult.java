@@ -52,28 +52,28 @@ public final class GetTopicResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getMessageRetentionDuration() {
+    public String messageRetentionDuration() {
         return this.messageRetentionDuration;
     }
-    public List<GetTopicMessageStoragePolicy> getMessageStoragePolicies() {
+    public List<GetTopicMessageStoragePolicy> messageStoragePolicies() {
         return this.messageStoragePolicies;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetTopicSchemaSetting> getSchemaSettings() {
+    public List<GetTopicSchemaSetting> schemaSettings() {
         return this.schemaSettings;
     }
 

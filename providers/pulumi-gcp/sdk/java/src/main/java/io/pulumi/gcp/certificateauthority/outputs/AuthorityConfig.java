@@ -36,7 +36,7 @@ public final class AuthorityConfig {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigSubjectConfig getSubjectConfig() {
+    public AuthorityConfigSubjectConfig subjectConfig() {
         return this.subjectConfig;
     }
     /**
@@ -44,7 +44,7 @@ public final class AuthorityConfig {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigX509Config getX509Config() {
+    public AuthorityConfigX509Config x509Config() {
         return this.x509Config;
     }
 

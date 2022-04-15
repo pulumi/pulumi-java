@@ -22,10 +22,10 @@ public final class DeviceState {
         this.updateTime = updateTime;
     }
 
-    public Optional<String> getBinaryData() {
+    public Optional<String> binaryData() {
         return Optional.ofNullable(this.binaryData);
     }
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
 

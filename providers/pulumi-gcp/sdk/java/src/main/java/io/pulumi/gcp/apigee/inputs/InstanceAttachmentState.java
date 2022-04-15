@@ -22,7 +22,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

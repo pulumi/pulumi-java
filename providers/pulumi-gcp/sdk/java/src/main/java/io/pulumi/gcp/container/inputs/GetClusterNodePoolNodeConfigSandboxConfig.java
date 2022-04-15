@@ -15,7 +15,7 @@ public final class GetClusterNodePoolNodeConfigSandboxConfig extends io.pulumi.r
     @Import(name="sandboxType", required=true)
       private final String sandboxType;
 
-    public String getSandboxType() {
+    public String sandboxType() {
         return this.sandboxType;
     }
 

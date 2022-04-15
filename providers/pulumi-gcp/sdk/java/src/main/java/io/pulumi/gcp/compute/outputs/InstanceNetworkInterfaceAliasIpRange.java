@@ -42,7 +42,7 @@ public final class InstanceNetworkInterfaceAliasIpRange {
      * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -51,7 +51,7 @@ public final class InstanceNetworkInterfaceAliasIpRange {
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
     */
-    public Optional<String> getSubnetworkRangeName() {
+    public Optional<String> subnetworkRangeName() {
         return Optional.ofNullable(this.subnetworkRangeName);
     }
 

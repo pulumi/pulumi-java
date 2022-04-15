@@ -35,7 +35,7 @@ public final class RouterBgpAdvertisedIpRange {
      * User-specified description for the IP range.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -43,7 +43,7 @@ public final class RouterBgpAdvertisedIpRange {
      * CIDR-formatted string.
      * 
     */
-    public String getRange() {
+    public String range() {
         return this.range;
     }
 

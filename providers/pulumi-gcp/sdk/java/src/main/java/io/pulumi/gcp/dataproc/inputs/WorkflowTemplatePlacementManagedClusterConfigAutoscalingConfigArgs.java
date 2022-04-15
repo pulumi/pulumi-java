@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

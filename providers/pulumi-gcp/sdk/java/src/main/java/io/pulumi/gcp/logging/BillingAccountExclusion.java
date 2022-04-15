@@ -37,7 +37,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return The billing account to create the exclusion for.
      * 
      */
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
     /**
@@ -51,7 +51,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return A human-readable description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -67,7 +67,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -85,7 +85,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * write a filter.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -99,7 +99,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * @return The name of the logging exclusion.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -28,7 +28,7 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     @Import(name="defaultKeySpecs")
       private final @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs;
 
-    public Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> getDefaultKeySpecs() {
+    public Output<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs() {
         return this.defaultKeySpecs == null ? Codegen.empty() : this.defaultKeySpecs;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     @Import(name="nonExistence")
       private final @Nullable Output<String> nonExistence;
 
-    public Output<String> getNonExistence() {
+    public Output<String> nonExistence() {
         return this.nonExistence == null ? Codegen.empty() : this.nonExistence;
     }
 
@@ -64,7 +64,7 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

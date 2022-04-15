@@ -34,14 +34,14 @@ public final class ReservationShareSettingsProjectMap {
      * The identifier for this object. Format specified above.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The project id/number, should be same as the key of this project config in the project map.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
 

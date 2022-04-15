@@ -26,7 +26,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="cacheKeyPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy;
 
-    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> getCacheKeyPolicy() {
+    public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy() {
         return this.cacheKeyPolicy == null ? Codegen.empty() : this.cacheKeyPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="cacheMode")
       private final @Nullable Output<String> cacheMode;
 
-    public Output<String> getCacheMode() {
+    public Output<String> cacheMode() {
         return this.cacheMode == null ? Codegen.empty() : this.cacheMode;
     }
 
@@ -56,7 +56,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="clientTtl")
       private final @Nullable Output<String> clientTtl;
 
-    public Output<String> getClientTtl() {
+    public Output<String> clientTtl() {
         return this.clientTtl == null ? Codegen.empty() : this.clientTtl;
     }
 
@@ -76,7 +76,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="defaultTtl")
       private final @Nullable Output<String> defaultTtl;
 
-    public Output<String> getDefaultTtl() {
+    public Output<String> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -95,7 +95,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="maxTtl")
       private final @Nullable Output<String> maxTtl;
 
-    public Output<String> getMaxTtl() {
+    public Output<String> maxTtl() {
         return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
@@ -111,7 +111,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="negativeCaching")
       private final @Nullable Output<Boolean> negativeCaching;
 
-    public Output<Boolean> getNegativeCaching() {
+    public Output<Boolean> negativeCaching() {
         return this.negativeCaching == null ? Codegen.empty() : this.negativeCaching;
     }
 
@@ -125,7 +125,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="negativeCachingPolicy")
       private final @Nullable Output<Map<String,String>> negativeCachingPolicy;
 
-    public Output<Map<String,String>> getNegativeCachingPolicy() {
+    public Output<Map<String,String>> negativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Codegen.empty() : this.negativeCachingPolicy;
     }
 
@@ -136,7 +136,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="signedRequestKeyset")
       private final @Nullable Output<String> signedRequestKeyset;
 
-    public Output<String> getSignedRequestKeyset() {
+    public Output<String> signedRequestKeyset() {
         return this.signedRequestKeyset == null ? Codegen.empty() : this.signedRequestKeyset;
     }
 
@@ -150,7 +150,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     @Import(name="signedRequestMode")
       private final @Nullable Output<String> signedRequestMode;
 
-    public Output<String> getSignedRequestMode() {
+    public Output<String> signedRequestMode() {
         return this.signedRequestMode == null ? Codegen.empty() : this.signedRequestMode;
     }
 

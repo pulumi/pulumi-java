@@ -241,7 +241,7 @@ public final class ClusterNodePoolNodeConfig {
      * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <https://cloud.google.com/compute/docs/disks/customer-managed-encryption>
      * 
     */
-    public Optional<String> getBootDiskKmsKey() {
+    public Optional<String> bootDiskKmsKey() {
         return Optional.ofNullable(this.bootDiskKmsKey);
     }
     /**
@@ -249,7 +249,7 @@ public final class ClusterNodePoolNodeConfig {
      * in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
      * 
     */
-    public Optional<Integer> getDiskSizeGb() {
+    public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
     /**
@@ -257,14 +257,14 @@ public final class ClusterNodePoolNodeConfig {
      * (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigEphemeralStorageConfig> getEphemeralStorageConfig() {
+    public Optional<ClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfig() {
         return Optional.ofNullable(this.ephemeralStorageConfig);
     }
     /**
@@ -276,7 +276,7 @@ public final class ClusterNodePoolNodeConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigGcfsConfig> getGcfsConfig() {
+    public Optional<ClusterNodePoolNodeConfigGcfsConfig> gcfsConfig() {
         return Optional.ofNullable(this.gcfsConfig);
     }
     /**
@@ -284,7 +284,7 @@ public final class ClusterNodePoolNodeConfig {
      * Structure documented below.
      * 
     */
-    public List<ClusterNodePoolNodeConfigGuestAccelerator> getGuestAccelerators() {
+    public List<ClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
     /**
@@ -292,7 +292,7 @@ public final class ClusterNodePoolNodeConfig {
      * will delete and recreate all nodes in the node pool.
      * 
     */
-    public Optional<String> getImageType() {
+    public Optional<String> imageType() {
         return Optional.ofNullable(this.imageType);
     }
     /**
@@ -300,7 +300,7 @@ public final class ClusterNodePoolNodeConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigKubeletConfig> getKubeletConfig() {
+    public Optional<ClusterNodePoolNodeConfigKubeletConfig> kubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
     /**
@@ -308,7 +308,7 @@ public final class ClusterNodePoolNodeConfig {
      * reserved by Kubernetes Core components and cannot be specified.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
@@ -317,14 +317,14 @@ public final class ClusterNodePoolNodeConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigLinuxNodeConfig> getLinuxNodeConfig() {
+    public Optional<ClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfig() {
         return Optional.ofNullable(this.linuxNodeConfig);
     }
     /**
      * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
      * 
     */
-    public Optional<Integer> getLocalSsdCount() {
+    public Optional<Integer> localSsdCount() {
         return Optional.ofNullable(this.localSsdCount);
     }
     /**
@@ -333,7 +333,7 @@ public final class ClusterNodePoolNodeConfig {
      * [here](https://cloud.google.com/compute/docs/reference/latest/instances#machineType).
      * 
     */
-    public Optional<String> getMachineType() {
+    public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
     /**
@@ -344,7 +344,7 @@ public final class ClusterNodePoolNodeConfig {
      * value in your config.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
@@ -355,14 +355,14 @@ public final class ClusterNodePoolNodeConfig {
      * for more information.
      * 
     */
-    public Optional<String> getMinCpuPlatform() {
+    public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
      * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
      * 
     */
-    public Optional<String> getNodeGroup() {
+    public Optional<String> nodeGroup() {
         return Optional.ofNullable(this.nodeGroup);
     }
     /**
@@ -371,7 +371,7 @@ public final class ClusterNodePoolNodeConfig {
      * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
     */
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
     /**
@@ -380,7 +380,7 @@ public final class ClusterNodePoolNodeConfig {
      * for more information. Defaults to false.
      * 
     */
-    public Optional<Boolean> getPreemptible() {
+    public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
     /**
@@ -388,7 +388,7 @@ public final class ClusterNodePoolNodeConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigSandboxConfig> getSandboxConfig() {
+    public Optional<ClusterNodePoolNodeConfigSandboxConfig> sandboxConfig() {
         return Optional.ofNullable(this.sandboxConfig);
     }
     /**
@@ -396,14 +396,14 @@ public final class ClusterNodePoolNodeConfig {
      * If not specified, the "default" service account is used.
      * 
     */
-    public Optional<String> getServiceAccount() {
+    public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
      * Shielded Instance options. Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Optional<ClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
     /**
@@ -412,7 +412,7 @@ public final class ClusterNodePoolNodeConfig {
      * for more information. Defaults to false.
      * 
     */
-    public Optional<Boolean> getSpot() {
+    public Optional<Boolean> spot() {
         return Optional.ofNullable(this.spot);
     }
     /**
@@ -420,7 +420,7 @@ public final class ClusterNodePoolNodeConfig {
      * valid sources or targets for network firewalls.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
@@ -434,7 +434,7 @@ public final class ClusterNodePoolNodeConfig {
      * recommended. Structure is documented below.
      * 
     */
-    public List<ClusterNodePoolNodeConfigTaint> getTaints() {
+    public List<ClusterNodePoolNodeConfigTaint> taints() {
         return this.taints == null ? List.of() : this.taints;
     }
     /**
@@ -442,7 +442,7 @@ public final class ClusterNodePoolNodeConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfigWorkloadMetadataConfig> getWorkloadMetadataConfig() {
+    public Optional<ClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfig() {
         return Optional.ofNullable(this.workloadMetadataConfig);
     }
 

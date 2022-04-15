@@ -15,7 +15,7 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling extends io.pul
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

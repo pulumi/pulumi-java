@@ -15,7 +15,7 @@ public final class GetWorkloadIdentityPoolProviderAw extends io.pulumi.resources
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 

@@ -22,7 +22,7 @@ public final class ClusterMonitoringConfigArgs extends io.pulumi.resources.Resou
     @Import(name="enableComponents", required=true)
       private final Output<List<String>> enableComponents;
 
-    public Output<List<String>> getEnableComponents() {
+    public Output<List<String>> enableComponents() {
         return this.enableComponents;
     }
 

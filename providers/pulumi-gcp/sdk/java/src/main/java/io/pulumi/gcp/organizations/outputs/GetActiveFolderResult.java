@@ -34,24 +34,24 @@ public final class GetActiveFolderResult {
         this.parent = parent;
     }
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name of the Folder. This uniquely identifies the folder.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
 

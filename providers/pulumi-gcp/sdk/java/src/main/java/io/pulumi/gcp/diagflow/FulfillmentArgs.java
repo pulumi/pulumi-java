@@ -26,7 +26,7 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -37,7 +37,7 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<FulfillmentFeatureArgs>> features;
 
-    public Output<List<FulfillmentFeatureArgs>> getFeatures() {
+    public Output<List<FulfillmentFeatureArgs>> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -61,7 +61,7 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
       private final @Nullable Output<FulfillmentGenericWebServiceArgs> genericWebService;
 
-    public Output<FulfillmentGenericWebServiceArgs> getGenericWebService() {
+    public Output<FulfillmentGenericWebServiceArgs> genericWebService() {
         return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
@@ -73,7 +73,7 @@ public final class FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

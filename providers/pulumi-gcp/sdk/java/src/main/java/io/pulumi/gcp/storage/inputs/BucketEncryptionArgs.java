@@ -17,7 +17,7 @@ public final class BucketEncryptionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="defaultKmsKeyName", required=true)
       private final Output<String> defaultKmsKeyName;
 
-    public Output<String> getDefaultKmsKeyName() {
+    public Output<String> defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 

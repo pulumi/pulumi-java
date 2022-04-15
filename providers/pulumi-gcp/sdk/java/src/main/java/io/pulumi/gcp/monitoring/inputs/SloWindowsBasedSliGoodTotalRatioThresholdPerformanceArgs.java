@@ -28,7 +28,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
     @Import(name="distributionCut")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> getDistributionCut() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut() {
         return this.distributionCut == null ? Codegen.empty() : this.distributionCut;
     }
 
@@ -44,7 +44,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
     @Import(name="goodTotalRatio")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> getGoodTotalRatio() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio() {
         return this.goodTotalRatio == null ? Codegen.empty() : this.goodTotalRatio;
     }
 

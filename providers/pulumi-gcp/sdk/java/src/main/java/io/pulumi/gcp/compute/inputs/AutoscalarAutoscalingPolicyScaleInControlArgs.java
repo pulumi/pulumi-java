@@ -24,7 +24,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends io.pulu
     @Import(name="maxScaledInReplicas")
       private final @Nullable Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
 
-    public Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> getMaxScaledInReplicas() {
+    public Output<AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas() {
         return this.maxScaledInReplicas == null ? Codegen.empty() : this.maxScaledInReplicas;
     }
 
@@ -36,7 +36,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlArgs extends io.pulu
     @Import(name="timeWindowSec")
       private final @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> getTimeWindowSec() {
+    public Output<Integer> timeWindowSec() {
         return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
     }
 

@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="cloudStoragePath")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> cloudStoragePath;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> getCloudStoragePath() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs> cloudStoragePath() {
         return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="wordList")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> wordList;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> getWordList() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs> wordList() {
         return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 

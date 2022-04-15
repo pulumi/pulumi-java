@@ -16,14 +16,14 @@ public final class GetClusterAddonsConfigCloudrunConfig extends io.pulumi.resour
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 
     @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;
 
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
 

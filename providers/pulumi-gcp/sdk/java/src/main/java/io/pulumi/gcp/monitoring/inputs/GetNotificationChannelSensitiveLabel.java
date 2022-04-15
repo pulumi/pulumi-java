@@ -15,21 +15,21 @@ public final class GetNotificationChannelSensitiveLabel extends io.pulumi.resour
     @Import(name="authToken", required=true)
       private final String authToken;
 
-    public String getAuthToken() {
+    public String authToken() {
         return this.authToken;
     }
 
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
     @Import(name="serviceKey", required=true)
       private final String serviceKey;
 
-    public String getServiceKey() {
+    public String serviceKey() {
         return this.serviceKey;
     }
 

@@ -54,7 +54,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
      * 
      */
-    public Output<String> getAppProfileId() {
+    public Output<String> appProfileId() {
         return this.appProfileId;
     }
     /**
@@ -68,7 +68,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return Long form description of the use case for this app profile.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +82,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return If true, ignore safety checks when deleting/updating the app profile.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreWarnings() {
+    public Output</* @Nullable */ Boolean> ignoreWarnings() {
         return this.ignoreWarnings;
     }
     /**
@@ -96,7 +96,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * @return The name of the instance to create the app profile within.
      * 
      */
-    public Output</* @Nullable */ String> getInstance() {
+    public Output</* @Nullable */ String> instance() {
         return this.instance;
     }
     /**
@@ -114,7 +114,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * consistency to improve availability.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMultiClusterRoutingUseAny() {
+    public Output</* @Nullable */ Boolean> multiClusterRoutingUseAny() {
         return this.multiClusterRoutingUseAny;
     }
     /**
@@ -130,7 +130,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -162,7 +162,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AppProfileSingleClusterRouting> getSingleClusterRouting() {
+    public Output</* @Nullable */ AppProfileSingleClusterRouting> singleClusterRouting() {
         return this.singleClusterRouting;
     }
 

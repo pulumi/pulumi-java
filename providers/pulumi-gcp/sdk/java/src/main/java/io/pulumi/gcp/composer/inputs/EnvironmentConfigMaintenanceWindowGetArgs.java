@@ -17,21 +17,21 @@ public final class EnvironmentConfigMaintenanceWindowGetArgs extends io.pulumi.r
     @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
 
     @Import(name="recurrence", required=true)
       private final Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
+    public Output<String> recurrence() {
         return this.recurrence;
     }
 
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

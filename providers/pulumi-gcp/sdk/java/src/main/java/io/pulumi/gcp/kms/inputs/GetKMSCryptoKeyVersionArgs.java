@@ -23,7 +23,7 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
     @Import(name="cryptoKey", required=true)
       private final String cryptoKey;
 
-    public String getCryptoKey() {
+    public String cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -34,7 +34,7 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
     @Import(name="version")
       private final @Nullable Integer version;
 
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

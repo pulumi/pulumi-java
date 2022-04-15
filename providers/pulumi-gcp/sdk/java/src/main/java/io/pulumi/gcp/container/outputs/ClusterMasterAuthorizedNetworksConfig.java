@@ -28,7 +28,7 @@ public final class ClusterMasterAuthorizedNetworksConfig {
      * Kubernetes cluster master through HTTPS.
      * 
     */
-    public List<ClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
+    public List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks() {
         return this.cidrBlocks == null ? List.of() : this.cidrBlocks;
     }
 

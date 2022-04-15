@@ -24,14 +24,14 @@ public final class GetFunctionSourceRepository {
         this.url = url;
     }
 
-    public String getDeployedUrl() {
+    public String deployedUrl() {
         return this.deployedUrl;
     }
     /**
      * The URL pointing to the hosted repository where the function is defined.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

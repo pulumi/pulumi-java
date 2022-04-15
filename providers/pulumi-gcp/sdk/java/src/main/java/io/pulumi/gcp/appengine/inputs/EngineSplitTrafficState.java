@@ -24,7 +24,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="migrateTraffic")
       private final @Nullable Output<Boolean> migrateTraffic;
 
-    public Output<Boolean> getMigrateTraffic() {
+    public Output<Boolean> migrateTraffic() {
         return this.migrateTraffic == null ? Codegen.empty() : this.migrateTraffic;
     }
 
@@ -36,7 +36,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -47,7 +47,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -59,7 +59,7 @@ public final class EngineSplitTrafficState extends io.pulumi.resources.ResourceA
     @Import(name="split")
       private final @Nullable Output<EngineSplitTrafficSplitGetArgs> split;
 
-    public Output<EngineSplitTrafficSplitGetArgs> getSplit() {
+    public Output<EngineSplitTrafficSplitGetArgs> split() {
         return this.split == null ? Codegen.empty() : this.split;
     }
 

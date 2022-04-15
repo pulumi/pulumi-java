@@ -49,7 +49,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
-    public Output</* @Nullable */ IAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ IAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -63,7 +63,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the folder's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -77,7 +77,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
      * 
      */
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -103,7 +103,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -121,7 +121,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

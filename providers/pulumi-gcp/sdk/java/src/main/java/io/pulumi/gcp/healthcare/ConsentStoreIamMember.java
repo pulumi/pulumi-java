@@ -61,7 +61,7 @@ public class ConsentStoreIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=ConsentStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ConsentStoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ ConsentStoreIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ ConsentStoreIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,7 +75,7 @@ public class ConsentStoreIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
     /**
@@ -93,7 +93,7 @@ public class ConsentStoreIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
     /**
@@ -107,13 +107,13 @@ public class ConsentStoreIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -131,7 +131,7 @@ public class ConsentStoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

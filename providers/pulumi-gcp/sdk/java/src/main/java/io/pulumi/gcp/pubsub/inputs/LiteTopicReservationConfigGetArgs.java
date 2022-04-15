@@ -22,7 +22,7 @@ public final class LiteTopicReservationConfigGetArgs extends io.pulumi.resources
     @Import(name="throughputReservation")
       private final @Nullable Output<String> throughputReservation;
 
-    public Output<String> getThroughputReservation() {
+    public Output<String> throughputReservation() {
         return this.throughputReservation == null ? Codegen.empty() : this.throughputReservation;
     }
 

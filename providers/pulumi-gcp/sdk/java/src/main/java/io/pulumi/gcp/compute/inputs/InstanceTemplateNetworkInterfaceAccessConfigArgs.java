@@ -23,7 +23,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends io.p
     @Import(name="natIp")
       private final @Nullable Output<String> natIp;
 
-    public Output<String> getNatIp() {
+    public Output<String> natIp() {
         return this.natIp == null ? Codegen.empty() : this.natIp;
     }
 
@@ -35,14 +35,14 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends io.p
     @Import(name="networkTier")
       private final @Nullable Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
     @Import(name="publicPtrDomainName")
       private final @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> getPublicPtrDomainName() {
+    public Output<String> publicPtrDomainName() {
         return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
     }
 

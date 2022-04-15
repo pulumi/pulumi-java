@@ -21,7 +21,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="projectId")
       private final @Nullable String projectId;
 
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return this.projectId == null ? Optional.empty() : Optional.ofNullable(this.projectId);
     }
 

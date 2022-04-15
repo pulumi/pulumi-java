@@ -25,7 +25,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="commitment")
       private final @Nullable Output<String> commitment;
 
-    public Output<String> getCommitment() {
+    public Output<String> commitment() {
         return this.commitment == null ? Codegen.empty() : this.commitment;
     }
 
@@ -36,7 +36,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -47,7 +47,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -64,7 +64,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -87,7 +87,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -99,7 +99,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
       private final @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
 
-    public Output<ReservationShareSettingsGetArgs> getShareSettings() {
+    public Output<ReservationShareSettingsGetArgs> shareSettings() {
         return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
     }
 
@@ -111,7 +111,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="specificReservation")
       private final @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
 
-    public Output<ReservationSpecificReservationGetArgs> getSpecificReservation() {
+    public Output<ReservationSpecificReservationGetArgs> specificReservation() {
         return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
@@ -124,7 +124,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="specificReservationRequired")
       private final @Nullable Output<Boolean> specificReservationRequired;
 
-    public Output<Boolean> getSpecificReservationRequired() {
+    public Output<Boolean> specificReservationRequired() {
         return this.specificReservationRequired == null ? Codegen.empty() : this.specificReservationRequired;
     }
 
@@ -135,7 +135,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -146,7 +146,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

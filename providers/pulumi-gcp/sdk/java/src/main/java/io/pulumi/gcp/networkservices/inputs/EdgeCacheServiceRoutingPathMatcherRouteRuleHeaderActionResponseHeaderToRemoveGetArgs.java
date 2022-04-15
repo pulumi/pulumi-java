@@ -22,7 +22,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 

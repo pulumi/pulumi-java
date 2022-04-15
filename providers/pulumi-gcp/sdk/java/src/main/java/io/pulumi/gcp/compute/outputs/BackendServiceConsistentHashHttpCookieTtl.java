@@ -39,7 +39,7 @@ public final class BackendServiceConsistentHashHttpCookieTtl {
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
     */
-    public Optional<Integer> getNanos() {
+    public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
@@ -47,7 +47,7 @@ public final class BackendServiceConsistentHashHttpCookieTtl {
      * inclusive.
      * 
     */
-    public Integer getSeconds() {
+    public Integer seconds() {
         return this.seconds;
     }
 

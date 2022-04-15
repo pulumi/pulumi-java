@@ -34,14 +34,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * Optional. A namespace within the GKE cluster to deploy into.
      * 
     */
-    public Optional<String> getClusterNamespace() {
+    public Optional<String> clusterNamespace() {
         return Optional.ofNullable(this.clusterNamespace);
     }
     /**
      * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
      * 
     */
-    public Optional<String> getTargetGkeCluster() {
+    public Optional<String> targetGkeCluster() {
         return Optional.ofNullable(this.targetGkeCluster);
     }
 

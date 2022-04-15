@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigGooArgs extends io.pulumi.resources
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

@@ -22,7 +22,7 @@ public final class ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs extends io
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

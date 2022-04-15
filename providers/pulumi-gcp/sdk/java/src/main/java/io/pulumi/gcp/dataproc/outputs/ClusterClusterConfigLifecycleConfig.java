@@ -42,7 +42,7 @@ public final class ClusterClusterConfigLifecycleConfig {
      * Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getAutoDeleteTime() {
+    public Optional<String> autoDeleteTime() {
         return Optional.ofNullable(this.autoDeleteTime);
     }
     /**
@@ -50,10 +50,10 @@ public final class ClusterClusterConfigLifecycleConfig {
      * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
      * 
     */
-    public Optional<String> getIdleDeleteTtl() {
+    public Optional<String> idleDeleteTtl() {
         return Optional.ofNullable(this.idleDeleteTtl);
     }
-    public Optional<String> getIdleStartTime() {
+    public Optional<String> idleStartTime() {
         return Optional.ofNullable(this.idleStartTime);
     }
 

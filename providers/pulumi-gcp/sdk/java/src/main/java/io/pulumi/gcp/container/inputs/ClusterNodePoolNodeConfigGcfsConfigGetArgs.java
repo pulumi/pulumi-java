@@ -22,7 +22,7 @@ public final class ClusterNodePoolNodeConfigGcfsConfigGetArgs extends io.pulumi.
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

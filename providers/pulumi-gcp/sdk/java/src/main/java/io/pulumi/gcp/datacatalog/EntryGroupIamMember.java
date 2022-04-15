@@ -61,7 +61,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=EntryGroupIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ EntryGroupIamMemberCondition> condition;
 
-    public Output</* @Nullable */ EntryGroupIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ EntryGroupIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,7 +75,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
     /**
@@ -89,13 +89,13 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -111,13 +111,13 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -135,7 +135,7 @@ public class EntryGroupIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

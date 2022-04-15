@@ -87,7 +87,7 @@ public final class InstanceBootDisk {
      * is deleted. Defaults to true.
      * 
     */
-    public Optional<Boolean> getAutoDelete() {
+    public Optional<Boolean> autoDelete() {
         return Optional.ofNullable(this.autoDelete);
     }
     /**
@@ -95,7 +95,7 @@ public final class InstanceBootDisk {
      * under `/dev/disk/by-id/google-*`
      * 
     */
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
@@ -105,10 +105,10 @@ public final class InstanceBootDisk {
      * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
      * 
     */
-    public Optional<String> getDiskEncryptionKeyRaw() {
+    public Optional<String> diskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
-    public Optional<String> getDiskEncryptionKeySha256() {
+    public Optional<String> diskEncryptionKeySha256() {
         return Optional.ofNullable(this.diskEncryptionKeySha256);
     }
     /**
@@ -117,7 +117,7 @@ public final class InstanceBootDisk {
      * Structure is documented below.
      * 
     */
-    public Optional<InstanceBootDiskInitializeParams> getInitializeParams() {
+    public Optional<InstanceBootDiskInitializeParams> initializeParams() {
         return Optional.ofNullable(this.initializeParams);
     }
     /**
@@ -126,7 +126,7 @@ public final class InstanceBootDisk {
      * and `disk_encryption_key_raw` may be set.
      * 
     */
-    public Optional<String> getKmsKeySelfLink() {
+    public Optional<String> kmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
     /**
@@ -136,14 +136,14 @@ public final class InstanceBootDisk {
      * attach it to one or more instances in read-only mode.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name or self_link of the disk to attach to this instance.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 

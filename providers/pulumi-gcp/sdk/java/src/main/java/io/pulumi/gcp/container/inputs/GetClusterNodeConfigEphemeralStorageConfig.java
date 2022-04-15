@@ -15,7 +15,7 @@ public final class GetClusterNodeConfigEphemeralStorageConfig extends io.pulumi.
     @Import(name="localSsdCount", required=true)
       private final Integer localSsdCount;
 
-    public Integer getLocalSsdCount() {
+    public Integer localSsdCount() {
         return this.localSsdCount;
     }
 

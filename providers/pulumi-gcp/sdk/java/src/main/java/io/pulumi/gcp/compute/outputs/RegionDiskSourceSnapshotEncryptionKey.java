@@ -44,7 +44,7 @@ public final class RegionDiskSourceSnapshotEncryptionKey {
      * The name of the encryption key that is stored in Google Cloud KMS.
      * 
     */
-    public Optional<String> getKmsKeyName() {
+    public Optional<String> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
     /**
@@ -52,7 +52,7 @@ public final class RegionDiskSourceSnapshotEncryptionKey {
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
     */
-    public Optional<String> getRawKey() {
+    public Optional<String> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
     /**
@@ -61,7 +61,7 @@ public final class RegionDiskSourceSnapshotEncryptionKey {
      * encryption key that protects this resource.
      * 
     */
-    public Optional<String> getSha256() {
+    public Optional<String> sha256() {
         return Optional.ofNullable(this.sha256);
     }
 

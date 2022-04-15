@@ -25,7 +25,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="admin")
       private final @Nullable Output<String> admin;
 
-    public Output<String> getAdmin() {
+    public Output<String> admin() {
         return this.admin == null ? Codegen.empty() : this.admin;
     }
 
@@ -37,7 +37,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetworks")
       private final @Nullable Output<List<String>> authorizedNetworks;
 
-    public Output<List<String>> getAuthorizedNetworks() {
+    public Output<List<String>> authorizedNetworks() {
         return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
     }
 
@@ -49,7 +49,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -61,7 +61,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -72,7 +72,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -84,7 +84,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
@@ -95,7 +95,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -119,7 +119,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 

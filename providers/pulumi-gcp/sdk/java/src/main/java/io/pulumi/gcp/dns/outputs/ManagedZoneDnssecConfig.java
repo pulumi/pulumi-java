@@ -61,14 +61,14 @@ public final class ManagedZoneDnssecConfig {
      * Structure is documented below.
      * 
     */
-    public List<ManagedZoneDnssecConfigDefaultKeySpec> getDefaultKeySpecs() {
+    public List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs() {
         return this.defaultKeySpecs == null ? List.of() : this.defaultKeySpecs;
     }
     /**
      * Identifies what kind of resource this is
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
@@ -77,7 +77,7 @@ public final class ManagedZoneDnssecConfig {
      * Possible values are `nsec` and `nsec3`.
      * 
     */
-    public Optional<String> getNonExistence() {
+    public Optional<String> nonExistence() {
         return Optional.ofNullable(this.nonExistence);
     }
     /**
@@ -85,7 +85,7 @@ public final class ManagedZoneDnssecConfig {
      * Possible values are `off`, `on`, and `transfer`.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

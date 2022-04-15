@@ -24,7 +24,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,7 +41,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
       private final Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
 
@@ -64,7 +64,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -75,7 +75,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -87,7 +87,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnInterfaces")
       private final @Nullable Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces;
 
-    public Output<List<HaVpnGatewayVpnInterfaceArgs>> getVpnInterfaces() {
+    public Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces() {
         return this.vpnInterfaces == null ? Codegen.empty() : this.vpnInterfaces;
     }
 

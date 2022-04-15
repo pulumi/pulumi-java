@@ -22,7 +22,7 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
     @Import(name="regexes", required=true)
       private final Output<List<String>> regexes;
 
-    public Output<List<String>> getRegexes() {
+    public Output<List<String>> regexes() {
         return this.regexes;
     }
 

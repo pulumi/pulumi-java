@@ -26,7 +26,7 @@ public final class ClusterAddonsConfigHttpLoadBalancing {
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

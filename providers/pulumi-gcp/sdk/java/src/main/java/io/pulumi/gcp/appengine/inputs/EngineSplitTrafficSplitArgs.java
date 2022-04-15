@@ -23,7 +23,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
     @Import(name="allocations", required=true)
       private final Output<Map<String,String>> allocations;
 
-    public Output<Map<String,String>> getAllocations() {
+    public Output<Map<String,String>> allocations() {
         return this.allocations;
     }
 
@@ -35,7 +35,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
     @Import(name="shardBy")
       private final @Nullable Output<String> shardBy;
 
-    public Output<String> getShardBy() {
+    public Output<String> shardBy() {
         return this.shardBy == null ? Codegen.empty() : this.shardBy;
     }
 

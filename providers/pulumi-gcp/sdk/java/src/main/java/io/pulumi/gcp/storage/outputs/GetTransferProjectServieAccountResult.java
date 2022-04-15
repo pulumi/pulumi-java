@@ -35,17 +35,17 @@ public final class GetTransferProjectServieAccountResult {
      * Email address of the default service account used by Storage Transfer Jobs running in this project
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

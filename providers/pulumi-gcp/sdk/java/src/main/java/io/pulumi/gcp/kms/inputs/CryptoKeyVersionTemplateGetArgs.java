@@ -23,7 +23,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
     @Import(name="algorithm", required=true)
       private final Output<String> algorithm;
 
-    public Output<String> getAlgorithm() {
+    public Output<String> algorithm() {
         return this.algorithm;
     }
 
@@ -34,7 +34,7 @@ public final class CryptoKeyVersionTemplateGetArgs extends io.pulumi.resources.R
     @Import(name="protectionLevel")
       private final @Nullable Output<String> protectionLevel;
 
-    public Output<String> getProtectionLevel() {
+    public Output<String> protectionLevel() {
         return this.protectionLevel == null ? Codegen.empty() : this.protectionLevel;
     }
 

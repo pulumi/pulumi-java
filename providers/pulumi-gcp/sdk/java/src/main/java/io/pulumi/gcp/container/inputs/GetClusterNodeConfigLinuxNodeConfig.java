@@ -16,7 +16,7 @@ public final class GetClusterNodeConfigLinuxNodeConfig extends io.pulumi.resourc
     @Import(name="sysctls", required=true)
       private final Map<String,String> sysctls;
 
-    public Map<String,String> getSysctls() {
+    public Map<String,String> sysctls() {
         return this.sysctls;
     }
 

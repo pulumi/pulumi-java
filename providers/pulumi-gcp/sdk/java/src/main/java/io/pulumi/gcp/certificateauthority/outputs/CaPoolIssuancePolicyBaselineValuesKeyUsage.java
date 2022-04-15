@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      * Structure is documented below.
      * 
     */
-    public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage getBaseKeyUsage() {
+    public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
@@ -55,7 +55,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      * Structure is documented below.
      * 
     */
-    public CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
+    public CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
@@ -63,7 +63,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      * Structure is documented below.
      * 
     */
-    public List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
+    public List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }
 

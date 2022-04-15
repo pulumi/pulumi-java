@@ -23,7 +23,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
     @Import(name="exportCustomRoutes")
       private final @Nullable Output<Boolean> exportCustomRoutes;
 
-    public Output<Boolean> getExportCustomRoutes() {
+    public Output<Boolean> exportCustomRoutes() {
         return this.exportCustomRoutes == null ? Codegen.empty() : this.exportCustomRoutes;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
     @Import(name="importCustomRoutes")
       private final @Nullable Output<Boolean> importCustomRoutes;
 
-    public Output<Boolean> getImportCustomRoutes() {
+    public Output<Boolean> importCustomRoutes() {
         return this.importCustomRoutes == null ? Codegen.empty() : this.importCustomRoutes;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
     @Import(name="peering")
       private final @Nullable Output<String> peering;
 
-    public Output<String> getPeering() {
+    public Output<String> peering() {
         return this.peering == null ? Codegen.empty() : this.peering;
     }
 
@@ -68,7 +68,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

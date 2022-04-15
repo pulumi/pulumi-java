@@ -48,7 +48,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Structure is documented below.
      * 
     */
-    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance> getBasicSliPerformance() {
+    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance> basicSliPerformance() {
         return Optional.ofNullable(this.basicSliPerformance);
     }
     /**
@@ -56,7 +56,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Structure is documented below.
      * 
     */
-    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformance> getPerformance() {
+    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformance> performance() {
         return Optional.ofNullable(this.performance);
     }
     /**
@@ -65,7 +65,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * this service that return in no more than threshold.
      * 
     */
-    public Optional<Double> getThreshold() {
+    public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
 

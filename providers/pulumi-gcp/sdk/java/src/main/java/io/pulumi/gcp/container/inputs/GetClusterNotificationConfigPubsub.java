@@ -16,14 +16,14 @@ public final class GetClusterNotificationConfigPubsub extends io.pulumi.resource
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

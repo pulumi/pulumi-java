@@ -26,7 +26,7 @@ public final class SecretTopic {
      * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

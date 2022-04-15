@@ -26,7 +26,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
      * Kerberos related configuration.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig> getKerberosConfig() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig> kerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
 

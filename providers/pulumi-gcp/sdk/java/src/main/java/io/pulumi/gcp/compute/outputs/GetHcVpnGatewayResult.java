@@ -46,32 +46,32 @@ public final class GetHcVpnGatewayResult {
         this.vpnInterfaces = vpnInterfaces;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public List<GetHcVpnGatewayVpnInterface> getVpnInterfaces() {
+    public List<GetHcVpnGatewayVpnInterface> vpnInterfaces() {
         return this.vpnInterfaces;
     }
 

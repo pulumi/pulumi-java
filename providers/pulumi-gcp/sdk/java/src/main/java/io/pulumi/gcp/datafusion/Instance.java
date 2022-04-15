@@ -61,7 +61,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -75,7 +75,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
      * 
      */
-    public Output</* @Nullable */ String> getDataprocServiceAccount() {
+    public Output</* @Nullable */ String> dataprocServiceAccount() {
         return this.dataprocServiceAccount;
     }
     /**
@@ -89,7 +89,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return An optional description of the instance.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +103,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Option to enable Stackdriver Logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableStackdriverLogging() {
+    public Output</* @Nullable */ Boolean> enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
     /**
@@ -117,7 +117,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Option to enable Stackdriver Monitoring.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableStackdriverMonitoring() {
+    public Output</* @Nullable */ Boolean> enableStackdriverMonitoring() {
         return this.enableStackdriverMonitoring;
     }
     /**
@@ -133,7 +133,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * such as Compute Engine VMs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -147,7 +147,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ID of the instance or a fully qualified identifier for the instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +163,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceNetworkConfig> getNetworkConfig() {
+    public Output</* @Nullable */ InstanceNetworkConfig> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -177,7 +177,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Map of additional options used to configure the behavior of Data Fusion instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getOptions() {
+    public Output</* @Nullable */ Map<String,String>> options() {
         return this.options;
     }
     /**
@@ -195,7 +195,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * able to access the public internet.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPrivateInstance() {
+    public Output</* @Nullable */ Boolean> privateInstance() {
         return this.privateInstance;
     }
     /**
@@ -211,7 +211,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -225,7 +225,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The region of the Data Fusion instance.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -239,7 +239,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Service account which will be used to access resources in the customer project.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -253,7 +253,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Endpoint on which the Data Fusion UI and REST APIs are accessible.
      * 
      */
-    public Output<String> getServiceEndpoint() {
+    public Output<String> serviceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
@@ -271,7 +271,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * being upgraded - RESTARTING: Instance is being restarted
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -285,7 +285,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Additional information about the current state of this Data Fusion instance if available.
      * 
      */
-    public Output<String> getStateMessage() {
+    public Output<String> stateMessage() {
         return this.stateMessage;
     }
     /**
@@ -319,7 +319,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -333,7 +333,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -347,7 +347,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Current version of the Data Fusion.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

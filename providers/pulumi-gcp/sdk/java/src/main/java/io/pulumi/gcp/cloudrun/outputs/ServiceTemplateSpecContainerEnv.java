@@ -50,7 +50,7 @@ public final class ServiceTemplateSpecContainerEnv {
      * Volume's name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -64,7 +64,7 @@ public final class ServiceTemplateSpecContainerEnv {
      * Defaults to "".
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
@@ -72,7 +72,7 @@ public final class ServiceTemplateSpecContainerEnv {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateSpecContainerEnvValueFrom> getValueFrom() {
+    public Optional<ServiceTemplateSpecContainerEnvValueFrom> valueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }
 

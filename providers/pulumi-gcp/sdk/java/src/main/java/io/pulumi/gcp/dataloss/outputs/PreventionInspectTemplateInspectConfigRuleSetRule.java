@@ -38,7 +38,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule> getExclusionRule() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule> exclusionRule() {
         return Optional.ofNullable(this.exclusionRule);
     }
     /**
@@ -46,7 +46,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule> getHotwordRule() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule> hotwordRule() {
         return Optional.ofNullable(this.hotwordRule);
     }
 

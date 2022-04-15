@@ -25,7 +25,7 @@ public final class PatchDeploymentInstanceFilterGroupLabel {
      * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

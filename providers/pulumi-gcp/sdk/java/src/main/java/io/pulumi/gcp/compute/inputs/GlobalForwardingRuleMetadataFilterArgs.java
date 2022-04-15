@@ -26,7 +26,7 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
     @Import(name="filterLabels", required=true)
       private final Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
-    public Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
+    public Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels() {
         return this.filterLabels;
     }
 
@@ -43,7 +43,7 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
     @Import(name="filterMatchCriteria", required=true)
       private final Output<String> filterMatchCriteria;
 
-    public Output<String> getFilterMatchCriteria() {
+    public Output<String> filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

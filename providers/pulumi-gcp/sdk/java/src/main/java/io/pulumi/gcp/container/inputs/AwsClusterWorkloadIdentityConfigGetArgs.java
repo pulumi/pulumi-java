@@ -18,21 +18,21 @@ public final class AwsClusterWorkloadIdentityConfigGetArgs extends io.pulumi.res
     @Import(name="identityProvider")
       private final @Nullable Output<String> identityProvider;
 
-    public Output<String> getIdentityProvider() {
+    public Output<String> identityProvider() {
         return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
     @Import(name="issuerUri")
       private final @Nullable Output<String> issuerUri;
 
-    public Output<String> getIssuerUri() {
+    public Output<String> issuerUri() {
         return this.issuerUri == null ? Codegen.empty() : this.issuerUri;
     }
 
     @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;
 
-    public Output<String> getWorkloadPool() {
+    public Output<String> workloadPool() {
         return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
     }
 

@@ -67,7 +67,7 @@ public final class GetInstanceBootDisk {
      * Whether the disk will be auto-deleted when the instance is deleted.
      * 
     */
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
@@ -75,13 +75,13 @@ public final class GetInstanceBootDisk {
      * under `/dev/disk/by-id/`
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
-    public String getDiskEncryptionKeyRaw() {
+    public String diskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw;
     }
-    public String getDiskEncryptionKeySha256() {
+    public String diskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256;
     }
     /**
@@ -89,24 +89,24 @@ public final class GetInstanceBootDisk {
      * Structure is documented below.
      * 
     */
-    public List<GetInstanceBootDiskInitializeParam> getInitializeParams() {
+    public List<GetInstanceBootDiskInitializeParam> initializeParams() {
         return this.initializeParams;
     }
-    public String getKmsKeySelfLink() {
+    public String kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
     /**
      * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
     /**
      * The name or self_link of the disk attached to this instance.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

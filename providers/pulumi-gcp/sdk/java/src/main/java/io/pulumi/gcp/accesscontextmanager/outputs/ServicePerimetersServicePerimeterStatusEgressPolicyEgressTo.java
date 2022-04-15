@@ -43,7 +43,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo {
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation> getOperations() {
+    public List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation> operations() {
         return this.operations == null ? List.of() : this.operations;
     }
     /**
@@ -54,7 +54,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo {
      * the perimeter.
      * 
     */
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
 

@@ -26,7 +26,7 @@ public final class ProjectFeedFeedOutputConfig {
      * Structure is documented below.
      * 
     */
-    public ProjectFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
+    public ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination() {
         return this.pubsubDestination;
     }
 

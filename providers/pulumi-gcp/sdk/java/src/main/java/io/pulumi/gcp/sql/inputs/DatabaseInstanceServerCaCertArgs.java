@@ -18,21 +18,21 @@ public final class DatabaseInstanceServerCaCertArgs extends io.pulumi.resources.
     @Import(name="cert")
       private final @Nullable Output<String> cert;
 
-    public Output<String> getCert() {
+    public Output<String> cert() {
         return this.cert == null ? Codegen.empty() : this.cert;
     }
 
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -44,14 +44,14 @@ public final class DatabaseInstanceServerCaCertArgs extends io.pulumi.resources.
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> getSha1Fingerprint() {
+    public Output<String> sha1Fingerprint() {
         return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
     }
 

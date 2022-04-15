@@ -25,7 +25,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -36,7 +36,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
     @Import(name="failurePolicy")
       private final @Nullable Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
 
-    public Output<FunctionEventTriggerFailurePolicyGetArgs> getFailurePolicy() {
+    public Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy() {
         return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
@@ -48,7 +48,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 

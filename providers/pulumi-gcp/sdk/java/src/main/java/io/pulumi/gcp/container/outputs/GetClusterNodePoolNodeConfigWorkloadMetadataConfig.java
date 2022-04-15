@@ -16,7 +16,7 @@ public final class GetClusterNodePoolNodeConfigWorkloadMetadataConfig {
         this.mode = mode;
     }
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

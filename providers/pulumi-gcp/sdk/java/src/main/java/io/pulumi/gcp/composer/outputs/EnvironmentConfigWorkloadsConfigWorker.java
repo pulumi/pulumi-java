@@ -32,19 +32,19 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
         this.storageGb = storageGb;
     }
 
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
-    public Optional<Integer> getMaxCount() {
+    public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
-    public Optional<Double> getMemoryGb() {
+    public Optional<Double> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
-    public Optional<Integer> getMinCount() {
+    public Optional<Integer> minCount() {
         return Optional.ofNullable(this.minCount);
     }
-    public Optional<Double> getStorageGb() {
+    public Optional<Double> storageGb() {
         return Optional.ofNullable(this.storageGb);
     }
 

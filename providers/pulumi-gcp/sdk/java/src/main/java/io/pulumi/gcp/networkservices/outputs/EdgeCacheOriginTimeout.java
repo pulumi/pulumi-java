@@ -45,7 +45,7 @@ public final class EdgeCacheOriginTimeout {
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
      * 
     */
-    public Optional<String> getConnectTimeout() {
+    public Optional<String> connectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
     /**
@@ -53,7 +53,7 @@ public final class EdgeCacheOriginTimeout {
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
      * 
     */
-    public Optional<String> getMaxAttemptsTimeout() {
+    public Optional<String> maxAttemptsTimeout() {
         return Optional.ofNullable(this.maxAttemptsTimeout);
     }
     /**
@@ -61,7 +61,7 @@ public final class EdgeCacheOriginTimeout {
      * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
      * 
     */
-    public Optional<String> getResponseTimeout() {
+    public Optional<String> responseTimeout() {
         return Optional.ofNullable(this.responseTimeout);
     }
 

@@ -70,7 +70,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * The host that will be used in the redirect response instead of the one that was supplied in the request.
      * 
     */
-    public Optional<String> getHostRedirect() {
+    public Optional<String> hostRedirect() {
         return Optional.ofNullable(this.hostRedirect);
     }
     /**
@@ -78,7 +78,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * This can only be set if there is at least one (1) edgeSslCertificate set on the service.
      * 
     */
-    public Optional<Boolean> getHttpsRedirect() {
+    public Optional<Boolean> httpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
     /**
@@ -87,7 +87,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * The path value must be between 1 and 1024 characters.
      * 
     */
-    public Optional<String> getPathRedirect() {
+    public Optional<String> pathRedirect() {
         return Optional.ofNullable(this.pathRedirect);
     }
     /**
@@ -95,7 +95,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
      * 
     */
-    public Optional<String> getPrefixRedirect() {
+    public Optional<String> prefixRedirect() {
         return Optional.ofNullable(this.prefixRedirect);
     }
     /**
@@ -105,14 +105,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      * - `FOUND`, which corresponds to 302.
      * 
     */
-    public Optional<String> getRedirectResponseCode() {
+    public Optional<String> redirectResponseCode() {
         return Optional.ofNullable(this.redirectResponseCode);
     }
     /**
      * If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
      * 
     */
-    public Optional<Boolean> getStripQuery() {
+    public Optional<Boolean> stripQuery() {
         return Optional.ofNullable(this.stripQuery);
     }
 

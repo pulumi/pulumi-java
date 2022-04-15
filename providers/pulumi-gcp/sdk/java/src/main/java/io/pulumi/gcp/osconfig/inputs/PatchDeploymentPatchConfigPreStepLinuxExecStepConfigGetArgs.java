@@ -25,7 +25,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs e
     @Import(name="allowedSuccessCodes")
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
-    public Output<List<Integer>> getAllowedSuccessCodes() {
+    public Output<List<Integer>> allowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? Codegen.empty() : this.allowedSuccessCodes;
     }
 
@@ -37,7 +37,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs e
     @Import(name="gcsObject")
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject;
 
-    public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs> getGcsObject() {
+    public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject() {
         return this.gcsObject == null ? Codegen.empty() : this.gcsObject;
     }
 
@@ -50,7 +50,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs e
     @Import(name="interpreter")
       private final @Nullable Output<String> interpreter;
 
-    public Output<String> getInterpreter() {
+    public Output<String> interpreter() {
         return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
@@ -61,7 +61,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs e
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 

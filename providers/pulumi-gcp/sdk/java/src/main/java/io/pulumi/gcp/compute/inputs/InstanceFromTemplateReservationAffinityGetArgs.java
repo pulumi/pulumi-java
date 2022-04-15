@@ -19,14 +19,14 @@ public final class InstanceFromTemplateReservationAffinityGetArgs extends io.pul
     @Import(name="specificReservation")
       private final @Nullable Output<InstanceFromTemplateReservationAffinitySpecificReservationGetArgs> specificReservation;
 
-    public Output<InstanceFromTemplateReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
+    public Output<InstanceFromTemplateReservationAffinitySpecificReservationGetArgs> specificReservation() {
         return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

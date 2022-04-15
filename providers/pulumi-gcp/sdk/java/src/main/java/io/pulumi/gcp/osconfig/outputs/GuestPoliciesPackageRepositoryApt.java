@@ -61,21 +61,21 @@ public final class GuestPoliciesPackageRepositoryApt {
      * Possible values are `DEB` and `DEB_SRC`.
      * 
     */
-    public Optional<String> getArchiveType() {
+    public Optional<String> archiveType() {
         return Optional.ofNullable(this.archiveType);
     }
     /**
      * List of components for this repository. Must contain at least one item.
      * 
     */
-    public List<String> getComponents() {
+    public List<String> components() {
         return this.components;
     }
     /**
      * Distribution of this repository.
      * 
     */
-    public String getDistribution() {
+    public String distribution() {
         return this.distribution;
     }
     /**
@@ -83,14 +83,14 @@ public final class GuestPoliciesPackageRepositoryApt {
      * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
      * 
     */
-    public Optional<String> getGpgKey() {
+    public Optional<String> gpgKey() {
         return Optional.ofNullable(this.gpgKey);
     }
     /**
      * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

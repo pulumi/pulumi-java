@@ -56,7 +56,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Time the AccessPolicy was created in UTC.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -70,7 +70,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name of the AccessPolicy. Format: {policy_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Format: organizations/{organization_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -100,7 +100,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Does not affect behavior.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -114,7 +114,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Time the AccessPolicy was updated in UTC.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

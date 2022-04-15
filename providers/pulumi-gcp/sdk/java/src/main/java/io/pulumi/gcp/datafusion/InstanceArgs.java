@@ -25,7 +25,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataprocServiceAccount")
       private final @Nullable Output<String> dataprocServiceAccount;
 
-    public Output<String> getDataprocServiceAccount() {
+    public Output<String> dataprocServiceAccount() {
         return this.dataprocServiceAccount == null ? Codegen.empty() : this.dataprocServiceAccount;
     }
 
@@ -36,7 +36,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> getEnableStackdriverLogging() {
+    public Output<Boolean> enableStackdriverLogging() {
         return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 
@@ -58,7 +58,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStackdriverMonitoring")
       private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
-    public Output<Boolean> getEnableStackdriverMonitoring() {
+    public Output<Boolean> enableStackdriverMonitoring() {
         return this.enableStackdriverMonitoring == null ? Codegen.empty() : this.enableStackdriverMonitoring;
     }
 
@@ -70,7 +70,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -81,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<InstanceNetworkConfigArgs> networkConfig;
 
-    public Output<InstanceNetworkConfigArgs> getNetworkConfig() {
+    public Output<InstanceNetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -104,7 +104,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> getOptions() {
+    public Output<Map<String,String>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -117,7 +117,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateInstance")
       private final @Nullable Output<Boolean> privateInstance;
 
-    public Output<Boolean> getPrivateInstance() {
+    public Output<Boolean> privateInstance() {
         return this.privateInstance == null ? Codegen.empty() : this.privateInstance;
     }
 
@@ -129,7 +129,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -140,7 +140,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -161,7 +161,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -172,7 +172,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

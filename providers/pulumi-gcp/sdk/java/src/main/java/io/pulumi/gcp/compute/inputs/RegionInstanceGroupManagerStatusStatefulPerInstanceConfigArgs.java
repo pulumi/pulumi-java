@@ -22,7 +22,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfigArgs
     @Import(name="allEffective")
       private final @Nullable Output<Boolean> allEffective;
 
-    public Output<Boolean> getAllEffective() {
+    public Output<Boolean> allEffective() {
         return this.allEffective == null ? Codegen.empty() : this.allEffective;
     }
 

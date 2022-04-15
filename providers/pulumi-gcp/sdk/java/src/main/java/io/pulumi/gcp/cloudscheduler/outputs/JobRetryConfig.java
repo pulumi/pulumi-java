@@ -66,7 +66,7 @@ public final class JobRetryConfig {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
     */
-    public Optional<String> getMaxBackoffDuration() {
+    public Optional<String> maxBackoffDuration() {
         return Optional.ofNullable(this.maxBackoffDuration);
     }
     /**
@@ -76,7 +76,7 @@ public final class JobRetryConfig {
      * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
      * 
     */
-    public Optional<Integer> getMaxDoublings() {
+    public Optional<Integer> maxDoublings() {
         return Optional.ofNullable(this.maxDoublings);
     }
     /**
@@ -85,7 +85,7 @@ public final class JobRetryConfig {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
     */
-    public Optional<String> getMaxRetryDuration() {
+    public Optional<String> maxRetryDuration() {
         return Optional.ofNullable(this.maxRetryDuration);
     }
     /**
@@ -93,7 +93,7 @@ public final class JobRetryConfig {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
     */
-    public Optional<String> getMinBackoffDuration() {
+    public Optional<String> minBackoffDuration() {
         return Optional.ofNullable(this.minBackoffDuration);
     }
     /**
@@ -102,7 +102,7 @@ public final class JobRetryConfig {
      * Values greater than 5 and negative values are not allowed.
      * 
     */
-    public Optional<Integer> getRetryCount() {
+    public Optional<Integer> retryCount() {
         return Optional.ofNullable(this.retryCount);
     }
 

@@ -24,7 +24,7 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
     @Import(name="keyUsages")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> getKeyUsages() {
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages() {
         return this.keyUsages == null ? Codegen.empty() : this.keyUsages;
     }
 

@@ -45,7 +45,7 @@ public final class CertificateConfig {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigPublicKey getPublicKey() {
+    public CertificateConfigPublicKey publicKey() {
         return this.publicKey;
     }
     /**
@@ -53,7 +53,7 @@ public final class CertificateConfig {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigSubjectConfig getSubjectConfig() {
+    public CertificateConfigSubjectConfig subjectConfig() {
         return this.subjectConfig;
     }
     /**
@@ -61,7 +61,7 @@ public final class CertificateConfig {
      * Structure is documented below.
      * 
     */
-    public CertificateConfigX509Config getX509Config() {
+    public CertificateConfigX509Config x509Config() {
         return this.x509Config;
     }
 

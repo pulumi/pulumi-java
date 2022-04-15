@@ -24,7 +24,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
     @Import(name="condition")
       private final @Nullable Output<MachineImageIamMemberConditionGetArgs> condition;
 
-    public Output<MachineImageIamMemberConditionGetArgs> getCondition() {
+    public Output<MachineImageIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -35,7 +35,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -46,14 +46,14 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
     @Import(name="machineImage")
       private final @Nullable Output<String> machineImage;
 
-    public Output<String> getMachineImage() {
+    public Output<String> machineImage() {
         return this.machineImage == null ? Codegen.empty() : this.machineImage;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -65,7 +65,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -78,7 +78,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

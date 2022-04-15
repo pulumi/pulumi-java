@@ -60,7 +60,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * ImportMethod is one with a protection level of HSM.
      * 
      */
-    public Output<List<KeyRingImportJobAttestation>> getAttestations() {
+    public Output<List<KeyRingImportJobAttestation>> attestations() {
         return this.attestations;
     }
     /**
@@ -74,7 +74,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * @return The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -88,7 +88,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * @return It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
      * 
      */
-    public Output<String> getImportJobId() {
+    public Output<String> importJobId() {
         return this.importJobId;
     }
     /**
@@ -104,7 +104,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
      * 
      */
-    public Output<String> getImportMethod() {
+    public Output<String> importMethod() {
         return this.importMethod;
     }
     /**
@@ -120,7 +120,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
      * 
      */
-    public Output<String> getKeyRing() {
+    public Output<String> keyRing() {
         return this.keyRing;
     }
     /**
@@ -134,7 +134,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * @return The resource name for this ImportJob in the format projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -152,7 +152,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
      * 
      */
-    public Output<String> getProtectionLevel() {
+    public Output<String> protectionLevel() {
         return this.protectionLevel;
     }
     /**
@@ -166,7 +166,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * @return The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
      * 
      */
-    public Output<List<KeyRingImportJobPublicKey>> getPublicKeys() {
+    public Output<List<KeyRingImportJobPublicKey>> publicKeys() {
         return this.publicKeys;
     }
     /**
@@ -180,7 +180,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * @return The current state of the ImportJob, indicating if it can be used.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

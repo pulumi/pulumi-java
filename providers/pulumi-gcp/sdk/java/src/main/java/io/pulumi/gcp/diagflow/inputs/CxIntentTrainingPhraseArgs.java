@@ -25,7 +25,7 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -43,7 +43,7 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
     @Import(name="parts", required=true)
       private final Output<List<CxIntentTrainingPhrasePartArgs>> parts;
 
-    public Output<List<CxIntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<CxIntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
     }
 
@@ -54,7 +54,7 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
     @Import(name="repeatCount")
       private final @Nullable Output<Integer> repeatCount;
 
-    public Output<Integer> getRepeatCount() {
+    public Output<Integer> repeatCount() {
         return this.repeatCount == null ? Codegen.empty() : this.repeatCount;
     }
 

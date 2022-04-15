@@ -61,7 +61,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
      * 
      */
-    public Output<String> getApiConfig() {
+    public Output<String> apiConfig() {
         return this.apiConfig;
     }
     /**
@@ -75,7 +75,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.
      * 
      */
-    public Output<String> getDefaultHostname() {
+    public Output<String> defaultHostname() {
         return this.defaultHostname;
     }
     /**
@@ -89,7 +89,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return A user-visible name for the API.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -103,7 +103,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
      * 
      */
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -117,7 +117,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -131,7 +131,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -161,7 +161,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The region of the gateway for the API.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

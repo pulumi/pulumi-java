@@ -26,7 +26,7 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     @Import(name="accelerators")
       private final @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators;
 
-    public Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> getAccelerators() {
+    public Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators() {
         return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     @Import(name="diskConfig")
       private final @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig;
 
-    public Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> getDiskConfig() {
+    public Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig() {
         return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
@@ -49,14 +49,14 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
     @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
-    public Output<List<String>> getInstanceNames() {
+    public Output<List<String>> instanceNames() {
         return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -83,7 +83,7 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -95,7 +95,7 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> getNumInstances() {
+    public Output<Integer> numInstances() {
         return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 

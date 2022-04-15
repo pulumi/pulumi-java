@@ -48,7 +48,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure defined below.
      * 
      */
-    public Output<ClusterClusterConfig> getClusterConfig() {
+    public Output<ClusterClusterConfig> clusterConfig() {
         return this.clusterConfig;
     }
     /**
@@ -64,7 +64,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * terraform apply
      * 
      */
-    public Output</* @Nullable */ String> getGracefulDecommissionTimeout() {
+    public Output</* @Nullable */ String> gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
     /**
@@ -82,7 +82,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * which is the name of the cluster.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -98,7 +98,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * zone.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -130,7 +130,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Defaults to `global`.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
 

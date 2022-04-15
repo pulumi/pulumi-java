@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
-    public Output<String> getExactMatch() {
+    public Output<String> exactMatch() {
         return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
@@ -34,7 +34,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> getPresentMatch() {
+    public Output<Boolean> presentMatch() {
         return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 

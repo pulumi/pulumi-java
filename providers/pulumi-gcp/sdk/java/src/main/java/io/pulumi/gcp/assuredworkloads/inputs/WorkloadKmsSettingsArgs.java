@@ -21,7 +21,7 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="nextRotationTime", required=true)
       private final Output<String> nextRotationTime;
 
-    public Output<String> getNextRotationTime() {
+    public Output<String> nextRotationTime() {
         return this.nextRotationTime;
     }
 
@@ -32,7 +32,7 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="rotationPeriod", required=true)
       private final Output<String> rotationPeriod;
 
-    public Output<String> getRotationPeriod() {
+    public Output<String> rotationPeriod() {
         return this.rotationPeriod;
     }
 

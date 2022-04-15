@@ -24,7 +24,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<BucketIAMBindingConditionArgs> condition;
 
-    public Output<BucketIAMBindingConditionArgs> getCondition() {
+    public Output<BucketIAMBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -57,7 +57,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -70,7 +70,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

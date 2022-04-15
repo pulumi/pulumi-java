@@ -23,7 +23,7 @@ public final class ServiceTemplateSpecContainerPortGetArgs extends io.pulumi.res
     @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceTemplateSpecContainerPortGetArgs extends io.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceTemplateSpecContainerPortGetArgs extends io.pulumi.res
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

@@ -40,7 +40,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
      * Bounds: [2m, 1d]. Default: 2m.
      * 
     */
-    public Optional<String> getCooldownPeriod() {
+    public Optional<String> cooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
     /**
@@ -48,7 +48,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
      * Structure is documented below.
      * 
     */
-    public AutoscalingPolicyBasicAlgorithmYarnConfig getYarnConfig() {
+    public AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig() {
         return this.yarnConfig;
     }
 

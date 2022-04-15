@@ -18,14 +18,14 @@ public final class Batching extends io.pulumi.resources.InvokeArgs {
     @Import(name="enableBatching")
       private final @Nullable Boolean enableBatching;
 
-    public Optional<Boolean> getEnableBatching() {
+    public Optional<Boolean> enableBatching() {
         return this.enableBatching == null ? Optional.empty() : Optional.ofNullable(this.enableBatching);
     }
 
     @Import(name="sendAfter")
       private final @Nullable String sendAfter;
 
-    public Optional<String> getSendAfter() {
+    public Optional<String> sendAfter() {
         return this.sendAfter == null ? Optional.empty() : Optional.ofNullable(this.sendAfter);
     }
 

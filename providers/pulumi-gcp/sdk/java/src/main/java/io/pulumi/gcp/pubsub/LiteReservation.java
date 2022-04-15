@@ -59,7 +59,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * @return Name of the reservation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -89,7 +89,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * @return The region of the pubsub lite reservation.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -107,7 +107,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * messages.
      * 
      */
-    public Output<Integer> getThroughputCapacity() {
+    public Output<Integer> throughputCapacity() {
         return this.throughputCapacity;
     }
 

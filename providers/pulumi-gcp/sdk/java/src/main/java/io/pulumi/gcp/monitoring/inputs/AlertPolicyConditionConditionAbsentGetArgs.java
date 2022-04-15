@@ -38,7 +38,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
     @Import(name="aggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> aggregations;
 
-    public Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> getAggregations() {
+    public Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> aggregations() {
         return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
@@ -63,7 +63,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -74,7 +74,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -93,7 +93,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
     @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> getTrigger() {
+    public Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

@@ -39,25 +39,25 @@ public final class GetDatabaseInstanceSettingBackupConfiguration {
         this.transactionLogRetentionDays = transactionLogRetentionDays;
     }
 
-    public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> getBackupRetentionSettings() {
+    public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings() {
         return this.backupRetentionSettings;
     }
-    public Boolean getBinaryLogEnabled() {
+    public Boolean binaryLogEnabled() {
         return this.binaryLogEnabled;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public Boolean getPointInTimeRecoveryEnabled() {
+    public Boolean pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
-    public Integer getTransactionLogRetentionDays() {
+    public Integer transactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
 

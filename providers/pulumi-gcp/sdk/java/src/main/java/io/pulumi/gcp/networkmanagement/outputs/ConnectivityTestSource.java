@@ -74,7 +74,7 @@ public final class ConnectivityTestSource {
      * A Compute Engine instance URI.
      * 
     */
-    public Optional<String> getInstance() {
+    public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
     /**
@@ -83,14 +83,14 @@ public final class ConnectivityTestSource {
      * destination is a global load balancer VIP.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * A Compute Engine network URI.
      * 
     */
-    public Optional<String> getNetwork() {
+    public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
     /**
@@ -98,7 +98,7 @@ public final class ConnectivityTestSource {
      * Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
      * 
     */
-    public Optional<String> getNetworkType() {
+    public Optional<String> networkType() {
         return Optional.ofNullable(this.networkType);
     }
     /**
@@ -106,7 +106,7 @@ public final class ConnectivityTestSource {
      * protocol is TCP or UDP.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
@@ -120,7 +120,7 @@ public final class ConnectivityTestSource {
      *    project.
      * 
     */
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
 

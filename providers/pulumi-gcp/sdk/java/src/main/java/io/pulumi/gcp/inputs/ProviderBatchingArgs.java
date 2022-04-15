@@ -19,14 +19,14 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enableBatching")
       private final @Nullable Output<Boolean> enableBatching;
 
-    public Output<Boolean> getEnableBatching() {
+    public Output<Boolean> enableBatching() {
         return this.enableBatching == null ? Codegen.empty() : this.enableBatching;
     }
 
     @Import(name="sendAfter")
       private final @Nullable Output<String> sendAfter;
 
-    public Output<String> getSendAfter() {
+    public Output<String> sendAfter() {
         return this.sendAfter == null ? Codegen.empty() : this.sendAfter;
     }
 

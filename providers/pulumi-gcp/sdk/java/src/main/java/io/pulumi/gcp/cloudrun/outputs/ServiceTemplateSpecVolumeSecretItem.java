@@ -50,7 +50,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      * Can be 'latest' for the latest value or an integer for a specific version.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -60,7 +60,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      * the result can be other mode bits set.
      * 
     */
-    public Optional<Integer> getMode() {
+    public Optional<Integer> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
@@ -70,7 +70,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      * May not start with the string '..'.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

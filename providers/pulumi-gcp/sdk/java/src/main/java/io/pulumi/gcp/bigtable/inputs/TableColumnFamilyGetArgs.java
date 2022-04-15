@@ -21,7 +21,7 @@ public final class TableColumnFamilyGetArgs extends io.pulumi.resources.Resource
     @Import(name="family", required=true)
       private final Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family;
     }
 

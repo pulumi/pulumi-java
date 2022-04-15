@@ -18,31 +18,31 @@ public class TagTemplateIamPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     @Export(name="tagTemplate", type=String.class, parameters={})
     private Output<String> tagTemplate;
 
-    public Output<String> getTagTemplate() {
+    public Output<String> tagTemplate() {
         return this.tagTemplate;
     }
 

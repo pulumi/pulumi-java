@@ -99,76 +99,76 @@ public final class GetClusterNodeConfig {
         this.workloadMetadataConfigs = workloadMetadataConfigs;
     }
 
-    public String getBootDiskKmsKey() {
+    public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
-    public List<GetClusterNodeConfigEphemeralStorageConfig> getEphemeralStorageConfigs() {
+    public List<GetClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs() {
         return this.ephemeralStorageConfigs;
     }
-    public List<GetClusterNodeConfigGcfsConfig> getGcfsConfigs() {
+    public List<GetClusterNodeConfigGcfsConfig> gcfsConfigs() {
         return this.gcfsConfigs;
     }
-    public List<GetClusterNodeConfigGuestAccelerator> getGuestAccelerators() {
+    public List<GetClusterNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
-    public List<GetClusterNodeConfigKubeletConfig> getKubeletConfigs() {
+    public List<GetClusterNodeConfigKubeletConfig> kubeletConfigs() {
         return this.kubeletConfigs;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public List<GetClusterNodeConfigLinuxNodeConfig> getLinuxNodeConfigs() {
+    public List<GetClusterNodeConfigLinuxNodeConfig> linuxNodeConfigs() {
         return this.linuxNodeConfigs;
     }
-    public Integer getLocalSsdCount() {
+    public Integer localSsdCount() {
         return this.localSsdCount;
     }
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
-    public String getNodeGroup() {
+    public String nodeGroup() {
         return this.nodeGroup;
     }
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
-    public List<GetClusterNodeConfigSandboxConfig> getSandboxConfigs() {
+    public List<GetClusterNodeConfigSandboxConfig> sandboxConfigs() {
         return this.sandboxConfigs;
     }
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
-    public List<GetClusterNodeConfigShieldedInstanceConfig> getShieldedInstanceConfigs() {
+    public List<GetClusterNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
-    public Boolean getSpot() {
+    public Boolean spot() {
         return this.spot;
     }
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
-    public List<GetClusterNodeConfigTaint> getTaints() {
+    public List<GetClusterNodeConfigTaint> taints() {
         return this.taints;
     }
-    public List<GetClusterNodeConfigWorkloadMetadataConfig> getWorkloadMetadataConfigs() {
+    public List<GetClusterNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs() {
         return this.workloadMetadataConfigs;
     }
 
