@@ -28,7 +28,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podExecutionRoleArn")
       private final @Nullable Output<String> podExecutionRoleArn;
 
-    public Output<String> getPodExecutionRoleArn() {
+    public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn == null ? Codegen.empty() : this.podExecutionRoleArn;
     }
 
@@ -39,7 +39,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectors")
       private final @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
 
-    public Output<List<FargateProfileSelectorArgs>> getSelectors() {
+    public Output<List<FargateProfileSelectorArgs>> selectors() {
         return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
@@ -50,7 +50,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
