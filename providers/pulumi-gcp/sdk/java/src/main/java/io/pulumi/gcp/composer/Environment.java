@@ -46,7 +46,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Configuration parameters for this environment.
      * 
      */
-    public Output<EnvironmentConfig> getConfig() {
+    public Output<EnvironmentConfig> config() {
         return this.config;
     }
     /**
@@ -68,7 +68,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * associated with a given environment. Both keys and values must be <= 128 bytes in size.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -82,7 +82,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Name of the environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -96,7 +96,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -110,7 +110,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The location or Compute Engine region for the environment.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
 

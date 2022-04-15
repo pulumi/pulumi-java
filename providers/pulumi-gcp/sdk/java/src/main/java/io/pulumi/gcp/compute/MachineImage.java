@@ -59,7 +59,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return A text description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    public Output</* @Nullable */ Boolean> getGuestFlush() {
+    public Output</* @Nullable */ Boolean> guestFlush() {
         return this.guestFlush;
     }
     /**
@@ -97,7 +97,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MachineImageMachineImageEncryptionKey> getMachineImageEncryptionKey() {
+    public Output</* @Nullable */ MachineImageMachineImageEncryptionKey> machineImageEncryptionKey() {
         return this.machineImageEncryptionKey;
     }
     /**
@@ -111,7 +111,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -141,7 +141,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -155,7 +155,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
      * 
      */
-    public Output<String> getSourceInstance() {
+    public Output<String> sourceInstance() {
         return this.sourceInstance;
     }
     /**
@@ -169,7 +169,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
      * 
      */
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations;
     }
 

@@ -52,7 +52,7 @@ public final class MachineImageMachineImageEncryptionKey {
      * The name of the encryption key that is stored in Google Cloud KMS.
      * 
     */
-    public Optional<String> getKmsKeyName() {
+    public Optional<String> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
     /**
@@ -60,7 +60,7 @@ public final class MachineImageMachineImageEncryptionKey {
      * If absent, the Compute Engine Service Agent service account is used.
      * 
     */
-    public Optional<String> getKmsKeyServiceAccount() {
+    public Optional<String> kmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
     /**
@@ -68,7 +68,7 @@ public final class MachineImageMachineImageEncryptionKey {
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
     */
-    public Optional<String> getRawKey() {
+    public Optional<String> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
     /**
@@ -77,7 +77,7 @@ public final class MachineImageMachineImageEncryptionKey {
      * customer-supplied encryption key that protects this resource.
      * 
     */
-    public Optional<String> getSha256() {
+    public Optional<String> sha256() {
         return Optional.ofNullable(this.sha256);
     }
 

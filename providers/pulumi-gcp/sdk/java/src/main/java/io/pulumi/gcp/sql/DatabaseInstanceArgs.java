@@ -29,7 +29,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clone")
       private final @Nullable Output<DatabaseInstanceCloneArgs> clone;
 
-    public Output<DatabaseInstanceCloneArgs> getClone() {
+    public Output<DatabaseInstanceCloneArgs> clone_() {
         return this.clone == null ? Codegen.empty() : this.clone;
     }
 
@@ -48,7 +48,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="databaseVersion", required=true)
       private final Output<String> databaseVersion;
 
-    public Output<String> getDatabaseVersion() {
+    public Output<String> databaseVersion() {
         return this.databaseVersion;
     }
 
@@ -60,7 +60,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
@@ -78,7 +78,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionKeyName")
       private final @Nullable Output<String> encryptionKeyName;
 
-    public Output<String> getEncryptionKeyName() {
+    public Output<String> encryptionKeyName() {
         return this.encryptionKeyName == null ? Codegen.empty() : this.encryptionKeyName;
     }
 
@@ -91,7 +91,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="masterInstanceName")
       private final @Nullable Output<String> masterInstanceName;
 
-    public Output<String> getMasterInstanceName() {
+    public Output<String> masterInstanceName() {
         return this.masterInstanceName == null ? Codegen.empty() : this.masterInstanceName;
     }
 
@@ -102,7 +102,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -113,7 +113,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -129,7 +129,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -141,7 +141,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="replicaConfiguration")
       private final @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
-    public Output<DatabaseInstanceReplicaConfigurationArgs> getReplicaConfiguration() {
+    public Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration() {
         return this.replicaConfiguration == null ? Codegen.empty() : this.replicaConfiguration;
     }
 
@@ -155,7 +155,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="restoreBackupContext")
       private final @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
-    public Output<DatabaseInstanceRestoreBackupContextArgs> getRestoreBackupContext() {
+    public Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext() {
         return this.restoreBackupContext == null ? Codegen.empty() : this.restoreBackupContext;
     }
 
@@ -166,7 +166,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
-    public Output<String> getRootPassword() {
+    public Output<String> rootPassword() {
         return this.rootPassword == null ? Codegen.empty() : this.rootPassword;
     }
 
@@ -178,7 +178,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="settings")
       private final @Nullable Output<DatabaseInstanceSettingsArgs> settings;
 
-    public Output<DatabaseInstanceSettingsArgs> getSettings() {
+    public Output<DatabaseInstanceSettingsArgs> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -266,11 +266,11 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.settings = defaults.settings;
         }
 
-        public Builder clone(@Nullable Output<DatabaseInstanceCloneArgs> clone) {
+        public Builder clone_(@Nullable Output<DatabaseInstanceCloneArgs> clone) {
             this.clone = clone;
             return this;
         }
-        public Builder clone(@Nullable DatabaseInstanceCloneArgs clone) {
+        public Builder clone_(@Nullable DatabaseInstanceCloneArgs clone) {
             this.clone = Codegen.ofNullable(clone);
             return this;
         }

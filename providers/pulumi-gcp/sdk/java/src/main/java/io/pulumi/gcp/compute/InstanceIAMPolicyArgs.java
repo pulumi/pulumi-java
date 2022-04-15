@@ -22,7 +22,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -59,7 +59,7 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

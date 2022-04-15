@@ -23,7 +23,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
     @Import(name="kind", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> getKind() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindGetArgs> kind() {
         return this.kind;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGe
     @Import(name="partitionId", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> getPartitionId() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdGetArgs> partitionId() {
         return this.partitionId;
     }
 

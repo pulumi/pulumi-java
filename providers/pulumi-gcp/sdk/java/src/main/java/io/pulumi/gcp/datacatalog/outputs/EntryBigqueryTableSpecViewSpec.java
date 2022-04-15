@@ -18,7 +18,7 @@ public final class EntryBigqueryTableSpecViewSpec {
         this.viewQuery = viewQuery;
     }
 
-    public Optional<String> getViewQuery() {
+    public Optional<String> viewQuery() {
         return Optional.ofNullable(this.viewQuery);
     }
 

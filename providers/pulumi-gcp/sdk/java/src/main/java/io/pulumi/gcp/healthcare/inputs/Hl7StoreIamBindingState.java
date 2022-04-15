@@ -20,7 +20,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<Hl7StoreIamBindingConditionGetArgs> condition;
 
-    public Output<Hl7StoreIamBindingConditionGetArgs> getCondition() {
+    public Output<Hl7StoreIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,7 +31,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -45,14 +45,14 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="hl7V2StoreId")
       private final @Nullable Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId == null ? Codegen.empty() : this.hl7V2StoreId;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -65,7 +65,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

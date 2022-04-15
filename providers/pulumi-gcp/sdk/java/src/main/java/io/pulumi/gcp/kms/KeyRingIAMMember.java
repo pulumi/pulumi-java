@@ -79,7 +79,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ KeyRingIAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ KeyRingIAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -93,7 +93,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -113,13 +113,13 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -137,7 +137,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

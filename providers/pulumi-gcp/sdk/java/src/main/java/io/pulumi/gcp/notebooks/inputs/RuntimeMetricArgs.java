@@ -19,7 +19,7 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemMetrics")
       private final @Nullable Output<Map<String,String>> systemMetrics;
 
-    public Output<Map<String,String>> getSystemMetrics() {
+    public Output<Map<String,String>> systemMetrics() {
         return this.systemMetrics == null ? Codegen.empty() : this.systemMetrics;
     }
 

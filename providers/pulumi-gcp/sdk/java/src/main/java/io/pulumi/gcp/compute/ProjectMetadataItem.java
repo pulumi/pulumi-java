@@ -43,7 +43,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * @return The metadata key to set.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -59,7 +59,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -73,7 +73,7 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
      * @return The value to set for the given metadata key.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

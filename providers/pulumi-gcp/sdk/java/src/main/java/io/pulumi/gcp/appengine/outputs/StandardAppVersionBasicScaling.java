@@ -37,14 +37,14 @@ public final class StandardAppVersionBasicScaling {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
      * 
     */
-    public Optional<String> getIdleTimeout() {
+    public Optional<String> idleTimeout() {
         return Optional.ofNullable(this.idleTimeout);
     }
     /**
      * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
     */
-    public Integer getMaxInstances() {
+    public Integer maxInstances() {
         return this.maxInstances;
     }
 

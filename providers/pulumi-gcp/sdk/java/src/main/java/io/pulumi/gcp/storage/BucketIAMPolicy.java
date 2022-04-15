@@ -72,7 +72,7 @@ public class BucketIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -86,7 +86,7 @@ public class BucketIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -102,7 +102,7 @@ public class BucketIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

@@ -46,7 +46,7 @@ public class SharedVPCHostProject extends io.pulumi.resources.CustomResource {
      * @return The ID of the project that will serve as a Shared VPC host project
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

@@ -15,7 +15,7 @@ public final class GetClusterResourceUsageExportConfigBigqueryDestination extend
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 

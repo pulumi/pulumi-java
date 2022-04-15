@@ -63,7 +63,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=DicomStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ DicomStoreIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ DicomStoreIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -83,7 +83,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
     /**
@@ -97,13 +97,13 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the DICOM store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -121,7 +121,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

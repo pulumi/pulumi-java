@@ -21,10 +21,10 @@ public final class InstanceFromMachineImageGuestAccelerator {
         this.type = type;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

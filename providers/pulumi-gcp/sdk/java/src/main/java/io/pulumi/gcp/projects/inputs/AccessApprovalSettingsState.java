@@ -26,7 +26,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     @Import(name="enrolledAncestor")
       private final @Nullable Output<Boolean> enrolledAncestor;
 
-    public Output<Boolean> getEnrolledAncestor() {
+    public Output<Boolean> enrolledAncestor() {
         return this.enrolledAncestor == null ? Codegen.empty() : this.enrolledAncestor;
     }
 
@@ -41,7 +41,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     @Import(name="enrolledServices")
       private final @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
-    public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices() {
         return this.enrolledServices == null ? Codegen.empty() : this.enrolledServices;
     }
 
@@ -52,7 +52,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     @Import(name="notificationEmails")
       private final @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> getNotificationEmails() {
+    public Output<List<String>> notificationEmails() {
         return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
     }
 
@@ -83,7 +83,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -94,7 +94,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 

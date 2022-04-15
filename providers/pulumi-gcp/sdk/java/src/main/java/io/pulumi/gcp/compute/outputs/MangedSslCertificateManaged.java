@@ -17,7 +17,7 @@ public final class MangedSslCertificateManaged {
         this.domains = domains;
     }
 
-    public List<String> getDomains() {
+    public List<String> domains() {
         return this.domains;
     }
 

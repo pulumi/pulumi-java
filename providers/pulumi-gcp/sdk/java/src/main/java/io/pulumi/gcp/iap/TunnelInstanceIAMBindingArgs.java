@@ -25,7 +25,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="condition")
       private final @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
 
-    public Output<TunnelInstanceIAMBindingConditionArgs> getCondition() {
+    public Output<TunnelInstanceIAMBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -36,14 +36,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -55,7 +55,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -68,14 +68,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs 
     @Import(name="pullDeps")
       private final @Nullable Output<Boolean> pullDeps;
 
-    public Output<Boolean> getPullDeps() {
+    public Output<Boolean> pullDeps() {
         return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
     }
 
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs 
     @Import(name="source", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGetArgs> source;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGetArgs> getSource() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGetArgs> source() {
         return this.source;
     }
 

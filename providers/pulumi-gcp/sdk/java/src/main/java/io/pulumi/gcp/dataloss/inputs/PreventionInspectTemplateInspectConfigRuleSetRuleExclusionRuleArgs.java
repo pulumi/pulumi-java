@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="dictionary")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> getDictionary() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -38,7 +38,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="excludeInfoTypes")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> getExcludeInfoTypes() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs> excludeInfoTypes() {
         return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="matchingType", required=true)
       private final Output<String> matchingType;
 
-    public Output<String> getMatchingType() {
+    public Output<String> matchingType() {
         return this.matchingType;
     }
 
@@ -62,7 +62,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="regex")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> getRegex() {
+    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 

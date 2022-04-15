@@ -22,7 +22,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 

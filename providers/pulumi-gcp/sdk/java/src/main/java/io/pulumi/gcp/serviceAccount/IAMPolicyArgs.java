@@ -22,7 +22,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -33,7 +33,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 

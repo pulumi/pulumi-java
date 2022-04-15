@@ -29,13 +29,13 @@ public final class DeviceLastErrorStatus {
         this.number = number;
     }
 
-    public List<Map<String,Object>> getDetails() {
+    public List<Map<String,Object>> details() {
         return this.details == null ? List.of() : this.details;
     }
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<Integer> getNumber() {
+    public Optional<Integer> number() {
         return Optional.ofNullable(this.number);
     }
 

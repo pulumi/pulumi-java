@@ -17,14 +17,14 @@ public final class ClusterNodePoolUpgradeSettingsGetArgs extends io.pulumi.resou
     @Import(name="maxSurge", required=true)
       private final Output<Integer> maxSurge;
 
-    public Output<Integer> getMaxSurge() {
+    public Output<Integer> maxSurge() {
         return this.maxSurge;
     }
 
     @Import(name="maxUnavailable", required=true)
       private final Output<Integer> maxUnavailable;
 
-    public Output<Integer> getMaxUnavailable() {
+    public Output<Integer> maxUnavailable() {
         return this.maxUnavailable;
     }
 

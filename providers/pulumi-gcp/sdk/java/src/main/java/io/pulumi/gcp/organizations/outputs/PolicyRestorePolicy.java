@@ -24,7 +24,7 @@ public final class PolicyRestorePolicy {
      * May only be set to true. If set, then the default Policy is restored.
      * 
     */
-    public Boolean getDefault_() {
+    public Boolean default_() {
         return this.default_;
     }
 

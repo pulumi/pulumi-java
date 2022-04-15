@@ -63,7 +63,7 @@ public class FhirStoreIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=FhirStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ FhirStoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ FhirStoreIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ FhirStoreIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -77,7 +77,7 @@ public class FhirStoreIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the FHIR store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -97,13 +97,13 @@ public class FhirStoreIamMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -121,7 +121,7 @@ public class FhirStoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

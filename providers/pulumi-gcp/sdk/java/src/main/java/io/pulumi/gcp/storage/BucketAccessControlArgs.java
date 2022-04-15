@@ -22,7 +22,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -47,7 +47,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="entity", required=true)
       private final Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
 
@@ -59,7 +59,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

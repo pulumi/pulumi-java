@@ -25,13 +25,13 @@ public final class DomainMappingResourceRecord {
         this.type = type;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRrdata() {
+    public Optional<String> rrdata() {
         return Optional.ofNullable(this.rrdata);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

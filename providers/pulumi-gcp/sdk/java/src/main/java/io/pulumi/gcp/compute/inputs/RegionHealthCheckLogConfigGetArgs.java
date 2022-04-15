@@ -23,7 +23,7 @@ public final class RegionHealthCheckLogConfigGetArgs extends io.pulumi.resources
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 

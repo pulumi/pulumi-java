@@ -49,7 +49,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The name of this entity type to be displayed on the console.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -63,7 +63,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableFuzzyExtraction() {
+    public Output</* @Nullable */ Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
@@ -79,7 +79,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<EntityTypeEntity>> getEntities() {
+    public Output</* @Nullable */ List<EntityTypeEntity>> entities() {
         return this.entities;
     }
     /**
@@ -103,7 +103,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -117,7 +117,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

@@ -49,7 +49,7 @@ public class SharedVPCServiceProject extends io.pulumi.resources.CustomResource 
      * @return The ID of a host project to associate.
      * 
      */
-    public Output<String> getHostProject() {
+    public Output<String> hostProject() {
         return this.hostProject;
     }
     /**
@@ -63,7 +63,7 @@ public class SharedVPCServiceProject extends io.pulumi.resources.CustomResource 
      * @return The ID of the project that will serve as a Shared VPC service project.
      * 
      */
-    public Output<String> getServiceProject() {
+    public Output<String> serviceProject() {
         return this.serviceProject;
     }
 

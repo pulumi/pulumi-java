@@ -64,7 +64,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatabaseIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatabaseIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ DatabaseIAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ DatabaseIAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -78,7 +78,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner database.
      * 
      */
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
     /**
@@ -92,7 +92,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the database's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -106,13 +106,13 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * @return The name of the Spanner instance the database belongs to.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -128,7 +128,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -146,7 +146,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

@@ -22,10 +22,10 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
         this.type = type;
     }
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

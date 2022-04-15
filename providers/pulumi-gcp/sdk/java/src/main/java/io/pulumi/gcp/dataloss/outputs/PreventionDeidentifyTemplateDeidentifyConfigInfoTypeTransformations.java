@@ -27,7 +27,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> getTransformations() {
+    public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> transformations() {
         return this.transformations;
     }
 

@@ -18,7 +18,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControl {
         this.allowedIpRanges = allowedIpRanges;
     }
 
-    public List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> getAllowedIpRanges() {
+    public List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges() {
         return this.allowedIpRanges == null ? List.of() : this.allowedIpRanges;
     }
 

@@ -29,7 +29,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     @Import(name="goodBadMetricFilter")
       private final @Nullable Output<String> goodBadMetricFilter;
 
-    public Output<String> getGoodBadMetricFilter() {
+    public Output<String> goodBadMetricFilter() {
         return this.goodBadMetricFilter == null ? Codegen.empty() : this.goodBadMetricFilter;
     }
 
@@ -44,7 +44,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     @Import(name="goodTotalRatioThreshold")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> getGoodTotalRatioThreshold() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold == null ? Codegen.empty() : this.goodTotalRatioThreshold;
     }
 
@@ -62,7 +62,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     @Import(name="metricMeanInRange")
       private final @Nullable Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange;
 
-    public Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> getMetricMeanInRange() {
+    public Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange() {
         return this.metricMeanInRange == null ? Codegen.empty() : this.metricMeanInRange;
     }
 
@@ -80,7 +80,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     @Import(name="metricSumInRange")
       private final @Nullable Output<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange;
 
-    public Output<SloWindowsBasedSliMetricSumInRangeGetArgs> getMetricSumInRange() {
+    public Output<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange() {
         return this.metricSumInRange == null ? Codegen.empty() : this.metricSumInRange;
     }
 
@@ -93,7 +93,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     @Import(name="windowPeriod")
       private final @Nullable Output<String> windowPeriod;
 
-    public Output<String> getWindowPeriod() {
+    public Output<String> windowPeriod() {
         return this.windowPeriod == null ? Codegen.empty() : this.windowPeriod;
     }
 

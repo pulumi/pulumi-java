@@ -26,7 +26,7 @@ public final class ClusterClusterConfigEncryptionConfig {
      * all instances in the cluster.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 

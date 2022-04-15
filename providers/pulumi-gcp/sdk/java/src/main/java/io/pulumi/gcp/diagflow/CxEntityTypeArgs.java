@@ -29,7 +29,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoExpansionMode")
       private final @Nullable Output<String> autoExpansionMode;
 
-    public Output<String> getAutoExpansionMode() {
+    public Output<String> autoExpansionMode() {
         return this.autoExpansionMode == null ? Codegen.empty() : this.autoExpansionMode;
     }
 
@@ -40,7 +40,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Output<Boolean> getEnableFuzzyExtraction() {
+    public Output<Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
@@ -63,7 +63,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entities", required=true)
       private final Output<List<CxEntityTypeEntityArgs>> entities;
 
-    public Output<List<CxEntityTypeEntityArgs>> getEntities() {
+    public Output<List<CxEntityTypeEntityArgs>> entities() {
         return this.entities;
     }
 
@@ -76,7 +76,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludedPhrases")
       private final @Nullable Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases;
 
-    public Output<List<CxEntityTypeExcludedPhraseArgs>> getExcludedPhrases() {
+    public Output<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases() {
         return this.excludedPhrases == null ? Codegen.empty() : this.excludedPhrases;
     }
 
@@ -91,7 +91,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -106,7 +106,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -118,7 +118,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -129,7 +129,7 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
+    public Output<Boolean> redact() {
         return this.redact == null ? Codegen.empty() : this.redact;
     }
 

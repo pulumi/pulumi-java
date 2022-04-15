@@ -22,7 +22,7 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -34,7 +34,7 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
@@ -45,7 +45,7 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyTag")
       private final @Nullable Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag == null ? Codegen.empty() : this.policyTag;
     }
 

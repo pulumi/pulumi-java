@@ -32,19 +32,19 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
         this.vmStopSchedules = vmStopSchedules;
     }
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
-    public List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> getVmStartSchedules() {
+    public List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules() {
         return this.vmStartSchedules;
     }
-    public List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> getVmStopSchedules() {
+    public List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules() {
         return this.vmStopSchedules;
     }
 

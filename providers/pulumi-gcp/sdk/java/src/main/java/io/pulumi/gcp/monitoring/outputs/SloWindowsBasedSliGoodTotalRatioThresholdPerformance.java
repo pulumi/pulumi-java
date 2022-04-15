@@ -50,7 +50,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      * Structure is documented below.
      * 
     */
-    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut> getDistributionCut() {
+    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut> distributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
     /**
@@ -62,7 +62,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      * Structure is documented below.
      * 
     */
-    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio> getGoodTotalRatio() {
+    public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio> goodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }
 

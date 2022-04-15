@@ -29,7 +29,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> getAutoDelete() {
+    public Output<Boolean> autoDelete() {
         return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
@@ -43,7 +43,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="boot")
       private final @Nullable Output<Boolean> boot;
 
-    public Output<Boolean> getBoot() {
+    public Output<Boolean> boot() {
         return this.boot == null ? Codegen.empty() : this.boot;
     }
 
@@ -63,7 +63,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -79,7 +79,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<String>> guestOsFeatures;
 
-    public Output<List<String>> getGuestOsFeatures() {
+    public Output<List<String>> guestOsFeatures() {
         return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
@@ -93,7 +93,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="index")
       private final @Nullable Output<Integer> index;
 
-    public Output<Integer> getIndex() {
+    public Output<Integer> index() {
         return this.index == null ? Codegen.empty() : this.index;
     }
 
@@ -110,7 +110,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="initializeParams")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs> initializeParams;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs> getInitializeParams() {
+    public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsArgs> initializeParams() {
         return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
@@ -126,7 +126,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="interface")
       private final @Nullable Output<String> interface_;
 
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
@@ -139,7 +139,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -151,7 +151,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
@@ -164,7 +164,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -176,7 +176,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -189,7 +189,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs extends
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

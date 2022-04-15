@@ -54,7 +54,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The GCP project display name
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -70,7 +70,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -84,7 +84,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The number of the google project that firebase is enabled on.
      * 
      */
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber;
     }
 

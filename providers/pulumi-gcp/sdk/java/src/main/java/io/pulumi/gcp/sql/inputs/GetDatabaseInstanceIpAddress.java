@@ -15,21 +15,21 @@ public final class GetDatabaseInstanceIpAddress extends io.pulumi.resources.Invo
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
     @Import(name="timeToRetire", required=true)
       private final String timeToRetire;
 
-    public String getTimeToRetire() {
+    public String timeToRetire() {
         return this.timeToRetire;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

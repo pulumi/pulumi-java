@@ -53,38 +53,38 @@ public final class GetBackendBucketResult {
         this.selfLink = selfLink;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public List<GetBackendBucketCdnPolicy> getCdnPolicies() {
+    public List<GetBackendBucketCdnPolicy> cdnPolicies() {
         return this.cdnPolicies;
     }
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
-    public List<String> getCustomResponseHeaders() {
+    public List<String> customResponseHeaders() {
         return this.customResponseHeaders;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public Boolean getEnableCdn() {
+    public Boolean enableCdn() {
         return this.enableCdn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

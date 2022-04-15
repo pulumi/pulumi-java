@@ -68,7 +68,7 @@ public class SecretIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -84,7 +84,7 @@ public class SecretIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -100,13 +100,13 @@ public class SecretIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="secretId", type=String.class, parameters={})
     private Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 

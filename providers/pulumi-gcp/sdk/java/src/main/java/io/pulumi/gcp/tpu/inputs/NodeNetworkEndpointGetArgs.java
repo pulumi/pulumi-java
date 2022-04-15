@@ -19,14 +19,14 @@ public final class NodeNetworkEndpointGetArgs extends io.pulumi.resources.Resour
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

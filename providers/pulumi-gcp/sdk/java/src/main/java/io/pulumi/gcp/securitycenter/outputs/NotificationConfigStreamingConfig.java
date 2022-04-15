@@ -60,7 +60,7 @@ public final class NotificationConfigStreamingConfig {
      *   for information on how to write a filter.
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 

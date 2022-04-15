@@ -22,28 +22,28 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     @Import(name="conditions")
       private final @Nullable Output<List<DomainMappingStatusConditionGetArgs>> conditions;
 
-    public Output<List<DomainMappingStatusConditionGetArgs>> getConditions() {
+    public Output<List<DomainMappingStatusConditionGetArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     @Import(name="mappedRouteName")
       private final @Nullable Output<String> mappedRouteName;
 
-    public Output<String> getMappedRouteName() {
+    public Output<String> mappedRouteName() {
         return this.mappedRouteName == null ? Codegen.empty() : this.mappedRouteName;
     }
 
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     @Import(name="resourceRecords")
       private final @Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
 
-    public Output<List<DomainMappingStatusResourceRecordGetArgs>> getResourceRecords() {
+    public Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords() {
         return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
     }
 

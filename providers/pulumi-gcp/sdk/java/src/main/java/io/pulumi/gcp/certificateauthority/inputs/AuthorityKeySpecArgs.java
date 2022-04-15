@@ -24,7 +24,7 @@ public final class AuthorityKeySpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="algorithm")
       private final @Nullable Output<String> algorithm;
 
-    public Output<String> getAlgorithm() {
+    public Output<String> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -36,7 +36,7 @@ public final class AuthorityKeySpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudKmsKeyVersion")
       private final @Nullable Output<String> cloudKmsKeyVersion;
 
-    public Output<String> getCloudKmsKeyVersion() {
+    public Output<String> cloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion == null ? Codegen.empty() : this.cloudKmsKeyVersion;
     }
 

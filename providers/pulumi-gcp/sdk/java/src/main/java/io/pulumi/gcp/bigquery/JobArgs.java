@@ -28,7 +28,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copy")
       private final @Nullable Output<JobCopyArgs> copy;
 
-    public Output<JobCopyArgs> getCopy() {
+    public Output<JobCopyArgs> copy() {
         return this.copy == null ? Codegen.empty() : this.copy;
     }
 
@@ -40,7 +40,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extract")
       private final @Nullable Output<JobExtractArgs> extract;
 
-    public Output<JobExtractArgs> getExtract() {
+    public Output<JobExtractArgs> extract() {
         return this.extract == null ? Codegen.empty() : this.extract;
     }
 
@@ -51,7 +51,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId", required=true)
       private final Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
 
@@ -62,7 +62,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> getJobTimeoutMs() {
+    public Output<String> jobTimeoutMs() {
         return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
     }
 
@@ -73,7 +73,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -85,7 +85,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="load")
       private final @Nullable Output<JobLoadArgs> load;
 
-    public Output<JobLoadArgs> getLoad() {
+    public Output<JobLoadArgs> load() {
         return this.load == null ? Codegen.empty() : this.load;
     }
 
@@ -96,7 +96,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -108,7 +108,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -120,7 +120,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<JobQueryArgs> query;
 
-    public Output<JobQueryArgs> getQuery() {
+    public Output<JobQueryArgs> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 

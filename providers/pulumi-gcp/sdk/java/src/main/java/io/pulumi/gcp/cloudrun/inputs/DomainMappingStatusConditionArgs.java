@@ -18,28 +18,28 @@ public final class DomainMappingStatusConditionArgs extends io.pulumi.resources.
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

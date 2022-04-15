@@ -60,7 +60,7 @@ public final class CxFlowEventHandler {
      * The name of the event to handle.
      * 
     */
-    public Optional<String> getEvent() {
+    public Optional<String> event() {
         return Optional.ofNullable(this.event);
     }
     /**
@@ -68,7 +68,7 @@ public final class CxFlowEventHandler {
      * The unique identifier of this event handler.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -76,7 +76,7 @@ public final class CxFlowEventHandler {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
     */
-    public Optional<String> getTargetFlow() {
+    public Optional<String> targetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
     /**
@@ -84,7 +84,7 @@ public final class CxFlowEventHandler {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
      * 
     */
-    public Optional<String> getTargetPage() {
+    public Optional<String> targetPage() {
         return Optional.ofNullable(this.targetPage);
     }
     /**
@@ -92,7 +92,7 @@ public final class CxFlowEventHandler {
      * Structure is documented below.
      * 
     */
-    public Optional<CxFlowEventHandlerTriggerFulfillment> getTriggerFulfillment() {
+    public Optional<CxFlowEventHandlerTriggerFulfillment> triggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }
 

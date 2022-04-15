@@ -41,7 +41,7 @@ public final class OccurenceAttestation {
      * more signatures. A base64-encoded string.
      * 
     */
-    public String getSerializedPayload() {
+    public String serializedPayload() {
         return this.serializedPayload;
     }
     /**
@@ -53,7 +53,7 @@ public final class OccurenceAttestation {
      * Structure is documented below.
      * 
     */
-    public List<OccurenceAttestationSignature> getSignatures() {
+    public List<OccurenceAttestationSignature> signatures() {
         return this.signatures;
     }
 

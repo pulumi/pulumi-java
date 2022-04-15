@@ -48,28 +48,28 @@ public final class URLMapTest {
      * Description of this test case.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Host portion of the URL.
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * Path portion of the URL.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The backend service or backend bucket link that should be matched by this test.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

@@ -24,7 +24,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="entityType", required=true)
       private final Output<String> entityType;
 
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType;
     }
 
@@ -35,7 +35,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -46,7 +46,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
+    public Output<Boolean> isList() {
         return this.isList == null ? Codegen.empty() : this.isList;
     }
 
@@ -58,7 +58,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
+    public Output<Boolean> redact() {
         return this.redact == null ? Codegen.empty() : this.redact;
     }
 

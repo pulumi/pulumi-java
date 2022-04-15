@@ -24,14 +24,14 @@ public final class AttestorIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="attestor")
       private final @Nullable Output<String> attestor;
 
-    public Output<String> getAttestor() {
+    public Output<String> attestor() {
         return this.attestor == null ? Codegen.empty() : this.attestor;
     }
 
     @Import(name="condition")
       private final @Nullable Output<AttestorIamBindingConditionGetArgs> condition;
 
-    public Output<AttestorIamBindingConditionGetArgs> getCondition() {
+    public Output<AttestorIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -42,14 +42,14 @@ public final class AttestorIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -61,7 +61,7 @@ public final class AttestorIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -74,7 +74,7 @@ public final class AttestorIamBindingState extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

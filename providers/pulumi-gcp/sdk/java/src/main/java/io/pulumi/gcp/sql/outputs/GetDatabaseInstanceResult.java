@@ -91,71 +91,71 @@ public final class GetDatabaseInstanceResult {
         this.settings = settings;
     }
 
-    public List<GetDatabaseInstanceClone> getClones() {
+    public List<GetDatabaseInstanceClone> clones() {
         return this.clones;
     }
-    public String getConnectionName() {
+    public String connectionName() {
         return this.connectionName;
     }
-    public String getDatabaseVersion() {
+    public String databaseVersion() {
         return this.databaseVersion;
     }
-    public Boolean getDeletionProtection() {
+    public Boolean deletionProtection() {
         return this.deletionProtection;
     }
-    public String getEncryptionKeyName() {
+    public String encryptionKeyName() {
         return this.encryptionKeyName;
     }
-    public String getFirstIpAddress() {
+    public String firstIpAddress() {
         return this.firstIpAddress;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetDatabaseInstanceIpAddress> getIpAddresses() {
+    public List<GetDatabaseInstanceIpAddress> ipAddresses() {
         return this.ipAddresses;
     }
-    public String getMasterInstanceName() {
+    public String masterInstanceName() {
         return this.masterInstanceName;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
-    public List<GetDatabaseInstanceReplicaConfiguration> getReplicaConfigurations() {
+    public List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations() {
         return this.replicaConfigurations;
     }
-    public List<GetDatabaseInstanceRestoreBackupContext> getRestoreBackupContexts() {
+    public List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts() {
         return this.restoreBackupContexts;
     }
-    public String getRootPassword() {
+    public String rootPassword() {
         return this.rootPassword;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public List<GetDatabaseInstanceServerCaCert> getServerCaCerts() {
+    public List<GetDatabaseInstanceServerCaCert> serverCaCerts() {
         return this.serverCaCerts;
     }
-    public String getServiceAccountEmailAddress() {
+    public String serviceAccountEmailAddress() {
         return this.serviceAccountEmailAddress;
     }
-    public List<GetDatabaseInstanceSetting> getSettings() {
+    public List<GetDatabaseInstanceSetting> settings() {
         return this.settings;
     }
 

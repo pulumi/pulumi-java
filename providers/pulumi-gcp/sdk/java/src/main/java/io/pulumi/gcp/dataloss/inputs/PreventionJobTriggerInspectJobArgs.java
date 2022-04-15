@@ -25,7 +25,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     @Import(name="actions", required=true)
       private final Output<List<PreventionJobTriggerInspectJobActionArgs>> actions;
 
-    public Output<List<PreventionJobTriggerInspectJobActionArgs>> getActions() {
+    public Output<List<PreventionJobTriggerInspectJobActionArgs>> actions() {
         return this.actions;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     @Import(name="inspectTemplateName", required=true)
       private final Output<String> inspectTemplateName;
 
-    public Output<String> getInspectTemplateName() {
+    public Output<String> inspectTemplateName() {
         return this.inspectTemplateName;
     }
 
@@ -48,7 +48,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     @Import(name="storageConfig", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigArgs> getStorageConfig() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig() {
         return this.storageConfig;
     }
 

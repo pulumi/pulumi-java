@@ -48,7 +48,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField> getBigQueryField() {
+    public Optional<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField> bigQueryField() {
         return Optional.ofNullable(this.bigQueryField);
     }
     /**
@@ -56,7 +56,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet> getCloudStorageFileSet() {
+    public Optional<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet> cloudStorageFileSet() {
         return Optional.ofNullable(this.cloudStorageFileSet);
     }
     /**
@@ -65,7 +65,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      * Structure is documented below.
      * 
     */
-    public PreventionStoredInfoTypeLargeCustomDictionaryOutputPath getOutputPath() {
+    public PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath() {
         return this.outputPath;
     }
 

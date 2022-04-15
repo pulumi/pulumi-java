@@ -55,7 +55,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ServiceNetworkSettingsNetworkSettings> getNetworkSettings() {
+    public Output<ServiceNetworkSettingsNetworkSettings> networkSettings() {
         return this.networkSettings;
     }
     /**
@@ -71,7 +71,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -85,7 +85,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * @return The name of the service these settings apply to.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

@@ -16,7 +16,7 @@ public final class GetHealthCheckLogConfig {
         this.enable = enable;
     }
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 

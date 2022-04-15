@@ -31,7 +31,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="asciiArmoredPgpPublicKey")
       private final @Nullable Output<String> asciiArmoredPgpPublicKey;
 
-    public Output<String> getAsciiArmoredPgpPublicKey() {
+    public Output<String> asciiArmoredPgpPublicKey() {
         return this.asciiArmoredPgpPublicKey == null ? Codegen.empty() : this.asciiArmoredPgpPublicKey;
     }
 
@@ -42,7 +42,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -58,7 +58,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -74,7 +74,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyArgs extends io.pulu
     @Import(name="pkixPublicKey")
       private final @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> pkixPublicKey;
 
-    public Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> getPkixPublicKey() {
+    public Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs> pkixPublicKey() {
         return this.pkixPublicKey == null ? Codegen.empty() : this.pkixPublicKey;
     }
 

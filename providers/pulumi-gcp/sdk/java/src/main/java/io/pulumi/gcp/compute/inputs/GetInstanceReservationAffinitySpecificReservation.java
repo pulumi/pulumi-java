@@ -16,14 +16,14 @@ public final class GetInstanceReservationAffinitySpecificReservation extends io.
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

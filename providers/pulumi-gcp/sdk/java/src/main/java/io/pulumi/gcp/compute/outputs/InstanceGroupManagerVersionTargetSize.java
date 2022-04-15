@@ -36,7 +36,7 @@ public final class InstanceGroupManagerVersionTargetSize {
      * , The number of instances which are managed for this version. Conflicts with `percent`.
      * 
     */
-    public Optional<Integer> getFixed() {
+    public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
@@ -45,7 +45,7 @@ public final class InstanceGroupManagerVersionTargetSize {
      * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
      * 
     */
-    public Optional<Integer> getPercent() {
+    public Optional<Integer> percent() {
         return Optional.ofNullable(this.percent);
     }
 

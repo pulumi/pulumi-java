@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     @Import(name="executableFile")
       private final @Nullable Output<String> executableFile;
 
-    public Output<String> getExecutableFile() {
+    public Output<String> executableFile() {
         return this.executableFile == null ? Codegen.empty() : this.executableFile;
     }
 
@@ -33,7 +33,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     @Import(name="executionTimeout")
       private final @Nullable Output<String> executionTimeout;
 
-    public Output<String> getExecutionTimeout() {
+    public Output<String> executionTimeout() {
         return this.executionTimeout == null ? Codegen.empty() : this.executionTimeout;
     }
 

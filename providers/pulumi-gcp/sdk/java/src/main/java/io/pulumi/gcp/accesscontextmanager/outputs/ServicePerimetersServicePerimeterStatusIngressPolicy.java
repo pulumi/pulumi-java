@@ -41,7 +41,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFrom> getIngressFrom() {
+    public Optional<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFrom> ingressFrom() {
         return Optional.ofNullable(this.ingressFrom);
     }
     /**
@@ -50,7 +50,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo> getIngressTo() {
+    public Optional<ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo> ingressTo() {
         return Optional.ofNullable(this.ingressTo);
     }
 

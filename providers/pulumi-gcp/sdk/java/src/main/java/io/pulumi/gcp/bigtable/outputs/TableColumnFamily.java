@@ -24,7 +24,7 @@ public final class TableColumnFamily {
      * The name of the column family.
      * 
     */
-    public String getFamily() {
+    public String family() {
         return this.family;
     }
 

@@ -25,7 +25,7 @@ public final class InstanceServiceAccountArgs extends io.pulumi.resources.Resour
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceServiceAccountArgs extends io.pulumi.resources.Resour
     @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
 

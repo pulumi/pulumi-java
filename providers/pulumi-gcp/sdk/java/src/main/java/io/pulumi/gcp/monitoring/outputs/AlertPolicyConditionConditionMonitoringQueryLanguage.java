@@ -78,14 +78,14 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * alerted on quickly.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * Monitoring Query Language query that outputs a boolean stream.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
@@ -100,7 +100,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionMonitoringQueryLanguageTrigger> getTrigger() {
+    public Optional<AlertPolicyConditionConditionMonitoringQueryLanguageTrigger> trigger() {
         return Optional.ofNullable(this.trigger);
     }
 

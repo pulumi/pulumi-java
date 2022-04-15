@@ -34,14 +34,14 @@ public final class OsPolicyAssignmentRolloutDisruptionBudget {
      * Specifies a fixed value.
      * 
     */
-    public Optional<Integer> getFixed() {
+    public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
      * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
     */
-    public Optional<Integer> getPercent() {
+    public Optional<Integer> percent() {
         return Optional.ofNullable(this.percent);
     }
 

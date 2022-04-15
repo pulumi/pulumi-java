@@ -26,7 +26,7 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
     @Import(name="instances")
       private final @Nullable Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances;
 
-    public Output<List<PacketMirroringMirroredResourcesInstanceArgs>> getInstances() {
+    public Output<List<PacketMirroringMirroredResourcesInstanceArgs>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -38,7 +38,7 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
     @Import(name="subnetworks")
       private final @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks;
 
-    public Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> getSubnetworks() {
+    public Output<List<PacketMirroringMirroredResourcesSubnetworkArgs>> subnetworks() {
         return this.subnetworks == null ? Codegen.empty() : this.subnetworks;
     }
 
@@ -49,7 +49,7 @@ public final class PacketMirroringMirroredResourcesArgs extends io.pulumi.resour
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

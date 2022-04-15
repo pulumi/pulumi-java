@@ -28,7 +28,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     @Import(name="conditionAbsent")
       private final @Nullable Output<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent;
 
-    public Output<AlertPolicyConditionConditionAbsentGetArgs> getConditionAbsent() {
+    public Output<AlertPolicyConditionConditionAbsentGetArgs> conditionAbsent() {
         return this.conditionAbsent == null ? Codegen.empty() : this.conditionAbsent;
     }
 
@@ -41,7 +41,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     @Import(name="conditionMatchedLog")
       private final @Nullable Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog;
 
-    public Output<AlertPolicyConditionConditionMatchedLogGetArgs> getConditionMatchedLog() {
+    public Output<AlertPolicyConditionConditionMatchedLogGetArgs> conditionMatchedLog() {
         return this.conditionMatchedLog == null ? Codegen.empty() : this.conditionMatchedLog;
     }
 
@@ -53,7 +53,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     @Import(name="conditionMonitoringQueryLanguage")
       private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage;
 
-    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> getConditionMonitoringQueryLanguage() {
+    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs> conditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage == null ? Codegen.empty() : this.conditionMonitoringQueryLanguage;
     }
 
@@ -66,7 +66,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     @Import(name="conditionThreshold")
       private final @Nullable Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold;
 
-    public Output<AlertPolicyConditionConditionThresholdGetArgs> getConditionThreshold() {
+    public Output<AlertPolicyConditionConditionThresholdGetArgs> conditionThreshold() {
         return this.conditionThreshold == null ? Codegen.empty() : this.conditionThreshold;
     }
 
@@ -81,7 +81,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -98,7 +98,7 @@ public final class AlertPolicyConditionGetArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

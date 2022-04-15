@@ -38,7 +38,7 @@ public final class SnapshotSourceDiskEncryptionKey {
      * If absent, the Compute Engine Service Agent service account is used.
      * 
     */
-    public Optional<String> getKmsKeyServiceAccount() {
+    public Optional<String> kmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
     /**
@@ -47,7 +47,7 @@ public final class SnapshotSourceDiskEncryptionKey {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public Optional<String> getRawKey() {
+    public Optional<String> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
 

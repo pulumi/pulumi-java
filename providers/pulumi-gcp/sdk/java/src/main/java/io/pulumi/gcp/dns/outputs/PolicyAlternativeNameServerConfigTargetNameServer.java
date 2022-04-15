@@ -40,14 +40,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
      * Possible values are `default` and `private`.
      * 
     */
-    public Optional<String> getForwardingPath() {
+    public Optional<String> forwardingPath() {
         return Optional.ofNullable(this.forwardingPath);
     }
     /**
      * IPv4 address to forward to.
      * 
     */
-    public String getIpv4Address() {
+    public String ipv4Address() {
         return this.ipv4Address;
     }
 

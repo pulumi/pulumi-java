@@ -47,7 +47,7 @@ public final class RuntimeAccessConfig {
      * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
      * 
     */
-    public Optional<String> getAccessType() {
+    public Optional<String> accessType() {
         return Optional.ofNullable(this.accessType);
     }
     /**
@@ -55,7 +55,7 @@ public final class RuntimeAccessConfig {
      * The proxy endpoint that is used to access the runtime.
      * 
     */
-    public Optional<String> getProxyUri() {
+    public Optional<String> proxyUri() {
         return Optional.ofNullable(this.proxyUri);
     }
     /**
@@ -63,7 +63,7 @@ public final class RuntimeAccessConfig {
      * Currently supports one owner only.
      * 
     */
-    public Optional<String> getRuntimeOwner() {
+    public Optional<String> runtimeOwner() {
         return Optional.ofNullable(this.runtimeOwner);
     }
 

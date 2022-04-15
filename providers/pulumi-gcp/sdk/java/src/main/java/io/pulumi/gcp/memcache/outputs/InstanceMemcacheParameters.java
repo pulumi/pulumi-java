@@ -37,14 +37,14 @@ public final class InstanceMemcacheParameters {
      * This is a unique ID associated with this set of parameters.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * User-defined set of parameters to use in the memcache process.
      * 
     */
-    public Map<String,String> getParams() {
+    public Map<String,String> params() {
         return this.params == null ? Map.of() : this.params;
     }
 

@@ -25,7 +25,7 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends io.pulumi.reso
     @Import(name="cooldownPeriod")
       private final @Nullable Output<String> cooldownPeriod;
 
-    public Output<String> getCooldownPeriod() {
+    public Output<String> cooldownPeriod() {
         return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
     }
 
@@ -37,7 +37,7 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends io.pulumi.reso
     @Import(name="yarnConfig", required=true)
       private final Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig;
 
-    public Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> getYarnConfig() {
+    public Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig() {
         return this.yarnConfig;
     }
 

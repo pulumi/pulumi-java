@@ -20,43 +20,43 @@ public class FunctionIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
+    public Output<String> cloudFunction() {
         return this.cloudFunction;
     }
     @Export(name="condition", type=FunctionIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ FunctionIamBindingCondition> condition;
 
-    public Output</* @Nullable */ FunctionIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ FunctionIamBindingCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

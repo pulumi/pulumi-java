@@ -44,30 +44,30 @@ public final class GetAccountIdTokenResult {
         this.targetServiceAccount = targetServiceAccount;
     }
 
-    public List<String> getDelegates() {
+    public List<String> delegates() {
         return this.delegates == null ? List.of() : this.delegates;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The `id_token` representing the new generated identity.
      * 
     */
-    public String getIdToken() {
+    public String idToken() {
         return this.idToken;
     }
-    public Optional<Boolean> getIncludeEmail() {
+    public Optional<Boolean> includeEmail() {
         return Optional.ofNullable(this.includeEmail);
     }
-    public String getTargetAudience() {
+    public String targetAudience() {
         return this.targetAudience;
     }
-    public Optional<String> getTargetServiceAccount() {
+    public Optional<String> targetServiceAccount() {
         return Optional.ofNullable(this.targetServiceAccount);
     }
 

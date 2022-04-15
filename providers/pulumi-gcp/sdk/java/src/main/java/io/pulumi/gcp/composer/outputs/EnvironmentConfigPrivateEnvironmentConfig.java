@@ -38,25 +38,25 @@ public final class EnvironmentConfigPrivateEnvironmentConfig {
         this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
     }
 
-    public Optional<String> getCloudComposerConnectionSubnetwork() {
+    public Optional<String> cloudComposerConnectionSubnetwork() {
         return Optional.ofNullable(this.cloudComposerConnectionSubnetwork);
     }
-    public Optional<String> getCloudComposerNetworkIpv4CidrBlock() {
+    public Optional<String> cloudComposerNetworkIpv4CidrBlock() {
         return Optional.ofNullable(this.cloudComposerNetworkIpv4CidrBlock);
     }
-    public Optional<String> getCloudSqlIpv4CidrBlock() {
+    public Optional<String> cloudSqlIpv4CidrBlock() {
         return Optional.ofNullable(this.cloudSqlIpv4CidrBlock);
     }
-    public Optional<Boolean> getEnablePrivateEndpoint() {
+    public Optional<Boolean> enablePrivateEndpoint() {
         return Optional.ofNullable(this.enablePrivateEndpoint);
     }
-    public Optional<Boolean> getEnablePrivatelyUsedPublicIps() {
+    public Optional<Boolean> enablePrivatelyUsedPublicIps() {
         return Optional.ofNullable(this.enablePrivatelyUsedPublicIps);
     }
-    public Optional<String> getMasterIpv4CidrBlock() {
+    public Optional<String> masterIpv4CidrBlock() {
         return Optional.ofNullable(this.masterIpv4CidrBlock);
     }
-    public Optional<String> getWebServerIpv4CidrBlock() {
+    public Optional<String> webServerIpv4CidrBlock() {
         return Optional.ofNullable(this.webServerIpv4CidrBlock);
     }
 

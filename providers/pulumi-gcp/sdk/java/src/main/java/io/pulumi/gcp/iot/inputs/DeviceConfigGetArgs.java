@@ -18,28 +18,28 @@ public final class DeviceConfigGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;
 
-    public Output<String> getBinaryData() {
+    public Output<String> binaryData() {
         return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 
     @Import(name="cloudUpdateTime")
       private final @Nullable Output<String> cloudUpdateTime;
 
-    public Output<String> getCloudUpdateTime() {
+    public Output<String> cloudUpdateTime() {
         return this.cloudUpdateTime == null ? Codegen.empty() : this.cloudUpdateTime;
     }
 
     @Import(name="deviceAckTime")
       private final @Nullable Output<String> deviceAckTime;
 
-    public Output<String> getDeviceAckTime() {
+    public Output<String> deviceAckTime() {
         return this.deviceAckTime == null ? Codegen.empty() : this.deviceAckTime;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

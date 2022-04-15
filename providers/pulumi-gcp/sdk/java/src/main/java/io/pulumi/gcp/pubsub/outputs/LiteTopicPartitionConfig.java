@@ -37,14 +37,14 @@ public final class LiteTopicPartitionConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<LiteTopicPartitionConfigCapacity> getCapacity() {
+    public Optional<LiteTopicPartitionConfigCapacity> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The number of partitions in the topic. Must be at least 1.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 

@@ -54,7 +54,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<TableColumnFamily>> getColumnFamilies() {
+    public Output</* @Nullable */ List<TableColumnFamily>> columnFamilies() {
         return this.columnFamilies;
     }
     /**
@@ -68,7 +68,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the Bigtable instance.
      * 
      */
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
     /**
@@ -82,7 +82,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the table.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -116,7 +116,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSplitKeys() {
+    public Output</* @Nullable */ List<String>> splitKeys() {
         return this.splitKeys;
     }
 

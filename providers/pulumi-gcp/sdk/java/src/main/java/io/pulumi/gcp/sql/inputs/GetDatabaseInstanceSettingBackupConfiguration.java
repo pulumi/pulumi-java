@@ -19,49 +19,49 @@ public final class GetDatabaseInstanceSettingBackupConfiguration extends io.pulu
     @Import(name="backupRetentionSettings", required=true)
       private final List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
 
-    public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> getBackupRetentionSettings() {
+    public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings() {
         return this.backupRetentionSettings;
     }
 
     @Import(name="binaryLogEnabled", required=true)
       private final Boolean binaryLogEnabled;
 
-    public Boolean getBinaryLogEnabled() {
+    public Boolean binaryLogEnabled() {
         return this.binaryLogEnabled;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="pointInTimeRecoveryEnabled", required=true)
       private final Boolean pointInTimeRecoveryEnabled;
 
-    public Boolean getPointInTimeRecoveryEnabled() {
+    public Boolean pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
     @Import(name="transactionLogRetentionDays", required=true)
       private final Integer transactionLogRetentionDays;
 
-    public Integer getTransactionLogRetentionDays() {
+    public Integer transactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
 

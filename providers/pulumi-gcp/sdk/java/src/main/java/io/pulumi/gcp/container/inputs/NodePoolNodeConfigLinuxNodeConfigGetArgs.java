@@ -18,7 +18,7 @@ public final class NodePoolNodeConfigLinuxNodeConfigGetArgs extends io.pulumi.re
     @Import(name="sysctls", required=true)
       private final Output<Map<String,String>> sysctls;
 
-    public Output<Map<String,String>> getSysctls() {
+    public Output<Map<String,String>> sysctls() {
         return this.sysctls;
     }
 

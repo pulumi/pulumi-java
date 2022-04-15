@@ -28,7 +28,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceGetArgs ext
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 

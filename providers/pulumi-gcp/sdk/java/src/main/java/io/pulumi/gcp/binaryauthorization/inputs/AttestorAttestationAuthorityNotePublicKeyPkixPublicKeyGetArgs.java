@@ -23,7 +23,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs
     @Import(name="publicKeyPem")
       private final @Nullable Output<String> publicKeyPem;
 
-    public Output<String> getPublicKeyPem() {
+    public Output<String> publicKeyPem() {
         return this.publicKeyPem == null ? Codegen.empty() : this.publicKeyPem;
     }
 
@@ -38,7 +38,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs
     @Import(name="signatureAlgorithm")
       private final @Nullable Output<String> signatureAlgorithm;
 
-    public Output<String> getSignatureAlgorithm() {
+    public Output<String> signatureAlgorithm() {
         return this.signatureAlgorithm == null ? Codegen.empty() : this.signatureAlgorithm;
     }
 

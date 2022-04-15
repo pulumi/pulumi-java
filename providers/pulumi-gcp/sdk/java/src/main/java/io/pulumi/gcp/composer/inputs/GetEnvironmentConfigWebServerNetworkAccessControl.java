@@ -16,7 +16,7 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControl extends io.
     @Import(name="allowedIpRanges", required=true)
       private final List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
 
-    public List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> getAllowedIpRanges() {
+    public List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges() {
         return this.allowedIpRanges;
     }
 

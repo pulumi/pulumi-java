@@ -22,7 +22,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends io.pulu
     @Import(name="layer7DdosDefenseConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> getLayer7DdosDefenseConfig() {
+    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig == null ? Codegen.empty() : this.layer7DdosDefenseConfig;
     }
 

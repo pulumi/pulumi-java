@@ -23,7 +23,7 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
     @Import(name="eventType", required=true)
       private final String eventType;
 
-    public String getEventType() {
+    public String eventType() {
         return this.eventType;
     }
 
@@ -34,7 +34,7 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
     @Import(name="failurePolicies", required=true)
       private final List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
 
-    public List<GetFunctionEventTriggerFailurePolicy> getFailurePolicies() {
+    public List<GetFunctionEventTriggerFailurePolicy> failurePolicies() {
         return this.failurePolicies;
     }
 
@@ -45,7 +45,7 @@ public final class GetFunctionEventTrigger extends io.pulumi.resources.InvokeArg
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

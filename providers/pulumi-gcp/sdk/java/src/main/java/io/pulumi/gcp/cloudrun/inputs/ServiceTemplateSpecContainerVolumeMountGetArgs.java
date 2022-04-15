@@ -22,7 +22,7 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends io.pul
     @Import(name="mountPath", required=true)
       private final Output<String> mountPath;
 
-    public Output<String> getMountPath() {
+    public Output<String> mountPath() {
         return this.mountPath;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecContainerVolumeMountGetArgs extends io.pul
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

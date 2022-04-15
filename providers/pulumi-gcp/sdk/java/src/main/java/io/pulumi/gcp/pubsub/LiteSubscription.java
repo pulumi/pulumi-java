@@ -62,7 +62,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteSubscriptionDeliveryConfig> getDeliveryConfig() {
+    public Output</* @Nullable */ LiteSubscriptionDeliveryConfig> deliveryConfig() {
         return this.deliveryConfig;
     }
     /**
@@ -76,7 +76,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * @return Name of the subscription.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -92,7 +92,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -106,7 +106,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * @return The region of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -120,7 +120,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * @return A reference to a Topic resource.
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
     /**
@@ -134,7 +134,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * @return The zone of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> getZone() {
+    public Output</* @Nullable */ String> zone() {
         return this.zone;
     }
 

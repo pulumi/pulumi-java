@@ -59,7 +59,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The time when the repository was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -73,7 +73,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The user-provided description of the repository.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +103,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * - HELM ([alpha](https://cloud.google.com/products#product-launch-stages))
      * 
      */
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
     /**
@@ -123,7 +123,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * This value may not be changed after the Repository has been created.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyName() {
+    public Output</* @Nullable */ String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -145,7 +145,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * and dashes.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -159,7 +159,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the location this repository is located in.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -173,7 +173,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -189,7 +189,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -205,7 +205,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * "repo1"
      * 
      */
-    public Output<String> getRepositoryId() {
+    public Output<String> repositoryId() {
         return this.repositoryId;
     }
     /**
@@ -219,7 +219,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The time when the repository was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

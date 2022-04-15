@@ -15,14 +15,14 @@ public final class GetBackendServiceConsistentHashHttpCookyTtl extends io.pulumi
     @Import(name="nanos", required=true)
       private final Integer nanos;
 
-    public Integer getNanos() {
+    public Integer nanos() {
         return this.nanos;
     }
 
     @Import(name="seconds", required=true)
       private final Integer seconds;
 
-    public Integer getSeconds() {
+    public Integer seconds() {
         return this.seconds;
     }
 

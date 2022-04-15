@@ -15,7 +15,7 @@ public final class GetEnvironmentConfigDatabaseConfig extends io.pulumi.resource
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 

@@ -72,7 +72,7 @@ public final class BackendServiceCircuitBreakers {
      * Structure is documented below.
      * 
     */
-    public Optional<BackendServiceCircuitBreakersConnectTimeout> getConnectTimeout() {
+    public Optional<BackendServiceCircuitBreakersConnectTimeout> connectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
     /**
@@ -80,7 +80,7 @@ public final class BackendServiceCircuitBreakers {
      * Defaults to 1024.
      * 
     */
-    public Optional<Integer> getMaxConnections() {
+    public Optional<Integer> maxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
     /**
@@ -88,7 +88,7 @@ public final class BackendServiceCircuitBreakers {
      * Defaults to 1024.
      * 
     */
-    public Optional<Integer> getMaxPendingRequests() {
+    public Optional<Integer> maxPendingRequests() {
         return Optional.ofNullable(this.maxPendingRequests);
     }
     /**
@@ -96,7 +96,7 @@ public final class BackendServiceCircuitBreakers {
      * Defaults to 1024.
      * 
     */
-    public Optional<Integer> getMaxRequests() {
+    public Optional<Integer> maxRequests() {
         return Optional.ofNullable(this.maxRequests);
     }
     /**
@@ -106,7 +106,7 @@ public final class BackendServiceCircuitBreakers {
      * will effectively disable keep alive.
      * 
     */
-    public Optional<Integer> getMaxRequestsPerConnection() {
+    public Optional<Integer> maxRequestsPerConnection() {
         return Optional.ofNullable(this.maxRequestsPerConnection);
     }
     /**
@@ -114,7 +114,7 @@ public final class BackendServiceCircuitBreakers {
      * Defaults to 3.
      * 
     */
-    public Optional<Integer> getMaxRetries() {
+    public Optional<Integer> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
 

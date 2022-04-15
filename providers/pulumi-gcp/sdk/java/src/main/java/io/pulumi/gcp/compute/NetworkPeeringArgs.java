@@ -23,7 +23,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportCustomRoutes")
       private final @Nullable Output<Boolean> exportCustomRoutes;
 
-    public Output<Boolean> getExportCustomRoutes() {
+    public Output<Boolean> exportCustomRoutes() {
         return this.exportCustomRoutes == null ? Codegen.empty() : this.exportCustomRoutes;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportSubnetRoutesWithPublicIp")
       private final @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp;
 
-    public Output<Boolean> getExportSubnetRoutesWithPublicIp() {
+    public Output<Boolean> exportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp == null ? Codegen.empty() : this.exportSubnetRoutesWithPublicIp;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importCustomRoutes")
       private final @Nullable Output<Boolean> importCustomRoutes;
 
-    public Output<Boolean> getImportCustomRoutes() {
+    public Output<Boolean> importCustomRoutes() {
         return this.importCustomRoutes == null ? Codegen.empty() : this.importCustomRoutes;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importSubnetRoutesWithPublicIp")
       private final @Nullable Output<Boolean> importSubnetRoutesWithPublicIp;
 
-    public Output<Boolean> getImportSubnetRoutesWithPublicIp() {
+    public Output<Boolean> importSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp == null ? Codegen.empty() : this.importSubnetRoutesWithPublicIp;
     }
 
@@ -67,7 +67,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
       private final Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
 
@@ -90,7 +90,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerNetwork", required=true)
       private final Output<String> peerNetwork;
 
-    public Output<String> getPeerNetwork() {
+    public Output<String> peerNetwork() {
         return this.peerNetwork;
     }
 

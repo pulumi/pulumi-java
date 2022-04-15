@@ -34,7 +34,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
      * {KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
      * 
     */
-    public Optional<String> getKmsKey() {
+    public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
 

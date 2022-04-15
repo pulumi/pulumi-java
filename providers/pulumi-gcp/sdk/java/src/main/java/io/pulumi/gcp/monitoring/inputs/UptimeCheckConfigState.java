@@ -29,7 +29,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="contentMatchers")
       private final @Nullable Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers;
 
-    public Output<List<UptimeCheckConfigContentMatcherGetArgs>> getContentMatchers() {
+    public Output<List<UptimeCheckConfigContentMatcherGetArgs>> contentMatchers() {
         return this.contentMatchers == null ? Codegen.empty() : this.contentMatchers;
     }
 
@@ -40,7 +40,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -52,7 +52,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="httpCheck")
       private final @Nullable Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck;
 
-    public Output<UptimeCheckConfigHttpCheckGetArgs> getHttpCheck() {
+    public Output<UptimeCheckConfigHttpCheckGetArgs> httpCheck() {
         return this.httpCheck == null ? Codegen.empty() : this.httpCheck;
     }
 
@@ -64,7 +64,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="monitoredResource")
       private final @Nullable Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource;
 
-    public Output<UptimeCheckConfigMonitoredResourceGetArgs> getMonitoredResource() {
+    public Output<UptimeCheckConfigMonitoredResourceGetArgs> monitoredResource() {
         return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
     }
 
@@ -76,7 +76,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -87,7 +87,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 
@@ -99,7 +99,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,7 +111,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroup")
       private final @Nullable Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup;
 
-    public Output<UptimeCheckConfigResourceGroupGetArgs> getResourceGroup() {
+    public Output<UptimeCheckConfigResourceGroupGetArgs> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
@@ -122,7 +122,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="selectedRegions")
       private final @Nullable Output<List<String>> selectedRegions;
 
-    public Output<List<String>> getSelectedRegions() {
+    public Output<List<String>> selectedRegions() {
         return this.selectedRegions == null ? Codegen.empty() : this.selectedRegions;
     }
 
@@ -134,7 +134,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="tcpCheck")
       private final @Nullable Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck;
 
-    public Output<UptimeCheckConfigTcpCheckGetArgs> getTcpCheck() {
+    public Output<UptimeCheckConfigTcpCheckGetArgs> tcpCheck() {
         return this.tcpCheck == null ? Codegen.empty() : this.tcpCheck;
     }
 
@@ -145,7 +145,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -156,7 +156,7 @@ public final class UptimeCheckConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="uptimeCheckId")
       private final @Nullable Output<String> uptimeCheckId;
 
-    public Output<String> getUptimeCheckId() {
+    public Output<String> uptimeCheckId() {
         return this.uptimeCheckId == null ? Codegen.empty() : this.uptimeCheckId;
     }
 

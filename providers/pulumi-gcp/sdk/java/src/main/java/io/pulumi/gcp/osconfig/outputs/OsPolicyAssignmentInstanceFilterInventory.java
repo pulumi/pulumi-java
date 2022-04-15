@@ -34,14 +34,14 @@ public final class OsPolicyAssignmentInstanceFilterInventory {
      * Required. The OS short name
      * 
     */
-    public String getOsShortName() {
+    public String osShortName() {
         return this.osShortName;
     }
     /**
      * The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
      * 
     */
-    public Optional<String> getOsVersion() {
+    public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
 

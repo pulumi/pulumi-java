@@ -23,7 +23,7 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends io.
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateCertificateDescriptionPublicKeyGetArgs extends io.
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

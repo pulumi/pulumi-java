@@ -37,7 +37,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * and 599 inclusive.
      * 
     */
-    public Integer getHttpStatus() {
+    public Integer httpStatus() {
         return this.httpStatus;
     }
     /**
@@ -46,7 +46,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 100.0 inclusive.
      * 
     */
-    public Double getPercentage() {
+    public Double percentage() {
         return this.percentage;
     }
 

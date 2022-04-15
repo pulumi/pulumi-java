@@ -24,7 +24,7 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
@@ -36,7 +36,7 @@ public final class KeyRingIAMPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

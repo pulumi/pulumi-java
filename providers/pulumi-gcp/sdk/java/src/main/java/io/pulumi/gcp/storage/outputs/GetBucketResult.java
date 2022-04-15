@@ -88,68 +88,68 @@ public final class GetBucketResult {
         this.websites = websites;
     }
 
-    public List<GetBucketCor> getCors() {
+    public List<GetBucketCor> cors() {
         return this.cors;
     }
-    public Boolean getDefaultEventBasedHold() {
+    public Boolean defaultEventBasedHold() {
         return this.defaultEventBasedHold;
     }
-    public List<GetBucketEncryption> getEncryptions() {
+    public List<GetBucketEncryption> encryptions() {
         return this.encryptions;
     }
-    public Boolean getForceDestroy() {
+    public Boolean forceDestroy() {
         return this.forceDestroy;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public List<GetBucketLifecycleRule> getLifecycleRules() {
+    public List<GetBucketLifecycleRule> lifecycleRules() {
         return this.lifecycleRules;
     }
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public List<GetBucketLogging> getLoggings() {
+    public List<GetBucketLogging> loggings() {
         return this.loggings;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getPublicAccessPrevention() {
+    public String publicAccessPrevention() {
         return this.publicAccessPrevention;
     }
-    public Boolean getRequesterPays() {
+    public Boolean requesterPays() {
         return this.requesterPays;
     }
-    public List<GetBucketRetentionPolicy> getRetentionPolicies() {
+    public List<GetBucketRetentionPolicy> retentionPolicies() {
         return this.retentionPolicies;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
-    public Boolean getUniformBucketLevelAccess() {
+    public Boolean uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
-    public List<GetBucketVersioning> getVersionings() {
+    public List<GetBucketVersioning> versionings() {
         return this.versionings;
     }
-    public List<GetBucketWebsite> getWebsites() {
+    public List<GetBucketWebsite> websites() {
         return this.websites;
     }
 

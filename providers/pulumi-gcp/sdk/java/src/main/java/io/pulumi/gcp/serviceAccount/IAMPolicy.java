@@ -76,7 +76,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the service account IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -92,7 +92,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -106,7 +106,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified name of the service account to apply policy to.
      * 
      */
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 

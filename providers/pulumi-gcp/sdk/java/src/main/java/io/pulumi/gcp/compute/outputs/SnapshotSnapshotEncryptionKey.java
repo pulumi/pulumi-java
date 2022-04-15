@@ -53,7 +53,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * The name of the encryption key that is stored in Google Cloud KMS.
      * 
     */
-    public Optional<String> getKmsKeySelfLink() {
+    public Optional<String> kmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
     /**
@@ -61,7 +61,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * If absent, the Compute Engine Service Agent service account is used.
      * 
     */
-    public Optional<String> getKmsKeyServiceAccount() {
+    public Optional<String> kmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
     /**
@@ -70,7 +70,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public Optional<String> getRawKey() {
+    public Optional<String> rawKey() {
         return Optional.ofNullable(this.rawKey);
     }
     /**
@@ -79,7 +79,7 @@ public final class SnapshotSnapshotEncryptionKey {
      * encryption key that protects this resource.
      * 
     */
-    public Optional<String> getSha256() {
+    public Optional<String> sha256() {
         return Optional.ofNullable(this.sha256);
     }
 

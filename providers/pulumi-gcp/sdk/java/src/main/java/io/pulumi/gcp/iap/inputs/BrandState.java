@@ -23,7 +23,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
 
-    public Output<String> getApplicationTitle() {
+    public Output<String> applicationTitle() {
         return this.applicationTitle == null ? Codegen.empty() : this.applicationTitle;
     }
 
@@ -35,7 +35,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgInternalOnly")
       private final @Nullable Output<Boolean> orgInternalOnly;
 
-    public Output<Boolean> getOrgInternalOnly() {
+    public Output<Boolean> orgInternalOnly() {
         return this.orgInternalOnly == null ? Codegen.empty() : this.orgInternalOnly;
     }
 
@@ -58,7 +58,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 

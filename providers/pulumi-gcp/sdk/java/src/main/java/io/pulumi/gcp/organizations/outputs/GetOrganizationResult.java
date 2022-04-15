@@ -68,48 +68,48 @@ public final class GetOrganizationResult {
      * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The Google for Work customer ID of the Organization.
      * 
     */
-    public String getDirectoryCustomerId() {
+    public String directoryCustomerId() {
         return this.directoryCustomerId;
     }
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Organization's current lifecycle state.
      * 
     */
-    public String getLifecycleState() {
+    public String lifecycleState() {
         return this.lifecycleState;
     }
     /**
      * The resource name of the Organization in the form `organizations/{organization_id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The Organization ID.
      * 
     */
-    public String getOrgId() {
+    public String orgId() {
         return this.orgId;
     }
-    public Optional<String> getOrganization() {
+    public Optional<String> organization() {
         return Optional.ofNullable(this.organization);
     }
 

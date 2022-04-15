@@ -25,14 +25,14 @@ public final class PolicyListPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="allow")
       private final @Nullable Output<PolicyListPolicyAllowArgs> allow;
 
-    public Output<PolicyListPolicyAllowArgs> getAllow() {
+    public Output<PolicyListPolicyAllowArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     @Import(name="deny")
       private final @Nullable Output<PolicyListPolicyDenyArgs> deny;
 
-    public Output<PolicyListPolicyDenyArgs> getDeny() {
+    public Output<PolicyListPolicyDenyArgs> deny() {
         return this.deny == null ? Codegen.empty() : this.deny;
     }
 
@@ -44,7 +44,7 @@ public final class PolicyListPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="inheritFromParent")
       private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> getInheritFromParent() {
+    public Output<Boolean> inheritFromParent() {
         return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
     }
 
@@ -55,7 +55,7 @@ public final class PolicyListPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="suggestedValue")
       private final @Nullable Output<String> suggestedValue;
 
-    public Output<String> getSuggestedValue() {
+    public Output<String> suggestedValue() {
         return this.suggestedValue == null ? Codegen.empty() : this.suggestedValue;
     }
 

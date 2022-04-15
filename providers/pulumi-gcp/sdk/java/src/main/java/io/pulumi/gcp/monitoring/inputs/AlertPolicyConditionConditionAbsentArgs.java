@@ -38,7 +38,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
     @Import(name="aggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations;
 
-    public Output<List<AlertPolicyConditionConditionAbsentAggregationArgs>> getAggregations() {
+    public Output<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations() {
         return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
@@ -63,7 +63,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -74,7 +74,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -93,7 +93,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
     @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionAbsentTriggerArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionAbsentTriggerArgs> getTrigger() {
+    public Output<AlertPolicyConditionConditionAbsentTriggerArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

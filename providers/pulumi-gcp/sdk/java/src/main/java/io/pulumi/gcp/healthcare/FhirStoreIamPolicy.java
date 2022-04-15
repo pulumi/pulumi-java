@@ -70,7 +70,7 @@ public class FhirStoreIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the FHIR store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +90,7 @@ public class FhirStoreIamPolicy extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
     /**
@@ -106,7 +106,7 @@ public class FhirStoreIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

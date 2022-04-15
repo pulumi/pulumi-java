@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeInstallStepDpkgInstallationArgs extends io
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 

@@ -23,7 +23,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="delegates")
       private final @Nullable List<String> delegates;
 
-    public List<String> getDelegates() {
+    public List<String> delegates() {
         return this.delegates == null ? List.of() : this.delegates;
     }
 
@@ -34,7 +34,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="includeEmail")
       private final @Nullable Boolean includeEmail;
 
-    public Optional<Boolean> getIncludeEmail() {
+    public Optional<Boolean> includeEmail() {
         return this.includeEmail == null ? Optional.empty() : Optional.ofNullable(this.includeEmail);
     }
 
@@ -45,7 +45,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="targetAudience", required=true)
       private final String targetAudience;
 
-    public String getTargetAudience() {
+    public String targetAudience() {
         return this.targetAudience;
     }
 
@@ -56,7 +56,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="targetServiceAccount")
       private final @Nullable String targetServiceAccount;
 
-    public Optional<String> getTargetServiceAccount() {
+    public Optional<String> targetServiceAccount() {
         return this.targetServiceAccount == null ? Optional.empty() : Optional.ofNullable(this.targetServiceAccount);
     }
 

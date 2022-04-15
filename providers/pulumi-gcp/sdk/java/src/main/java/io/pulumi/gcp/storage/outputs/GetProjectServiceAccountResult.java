@@ -42,20 +42,20 @@ public final class GetProjectServiceAccountResult {
      * in order to grant IAM permissions.
      * 
     */
-    public String getEmailAddress() {
+    public String emailAddress() {
         return this.emailAddress;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public Optional<String> getUserProject() {
+    public Optional<String> userProject() {
         return Optional.ofNullable(this.userProject);
     }
 

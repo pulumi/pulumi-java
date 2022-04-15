@@ -16,14 +16,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule
     @Import(name="hoursInCycle", required=true)
       private final Integer hoursInCycle;
 
-    public Integer getHoursInCycle() {
+    public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

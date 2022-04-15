@@ -71,49 +71,49 @@ public final class GetEnvironmentConfig {
         this.workloadsConfigs = workloadsConfigs;
     }
 
-    public String getAirflowUri() {
+    public String airflowUri() {
         return this.airflowUri;
     }
-    public String getDagGcsPrefix() {
+    public String dagGcsPrefix() {
         return this.dagGcsPrefix;
     }
-    public List<GetEnvironmentConfigDatabaseConfig> getDatabaseConfigs() {
+    public List<GetEnvironmentConfigDatabaseConfig> databaseConfigs() {
         return this.databaseConfigs;
     }
-    public List<GetEnvironmentConfigEncryptionConfig> getEncryptionConfigs() {
+    public List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs() {
         return this.encryptionConfigs;
     }
-    public String getEnvironmentSize() {
+    public String environmentSize() {
         return this.environmentSize;
     }
-    public String getGkeCluster() {
+    public String gkeCluster() {
         return this.gkeCluster;
     }
-    public List<GetEnvironmentConfigMaintenanceWindow> getMaintenanceWindows() {
+    public List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows() {
         return this.maintenanceWindows;
     }
-    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfigs() {
+    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs() {
         return this.masterAuthorizedNetworksConfigs;
     }
-    public List<GetEnvironmentConfigNodeConfig> getNodeConfigs() {
+    public List<GetEnvironmentConfigNodeConfig> nodeConfigs() {
         return this.nodeConfigs;
     }
-    public Integer getNodeCount() {
+    public Integer nodeCount() {
         return this.nodeCount;
     }
-    public List<GetEnvironmentConfigPrivateEnvironmentConfig> getPrivateEnvironmentConfigs() {
+    public List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs() {
         return this.privateEnvironmentConfigs;
     }
-    public List<GetEnvironmentConfigSoftwareConfig> getSoftwareConfigs() {
+    public List<GetEnvironmentConfigSoftwareConfig> softwareConfigs() {
         return this.softwareConfigs;
     }
-    public List<GetEnvironmentConfigWebServerConfig> getWebServerConfigs() {
+    public List<GetEnvironmentConfigWebServerConfig> webServerConfigs() {
         return this.webServerConfigs;
     }
-    public List<GetEnvironmentConfigWebServerNetworkAccessControl> getWebServerNetworkAccessControls() {
+    public List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls() {
         return this.webServerNetworkAccessControls;
     }
-    public List<GetEnvironmentConfigWorkloadsConfig> getWorkloadsConfigs() {
+    public List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs() {
         return this.workloadsConfigs;
     }
 

@@ -49,7 +49,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Required. Input only. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, 'billingAccounts/012345-567890-ABCDEF`.
      * 
      */
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
     /**
@@ -63,7 +63,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Required. Immutable. Compliance Regime associated with this workload. Possible values: COMPLIANCE_REGIME_UNSPECIFIED, IL4, CJIS, FEDRAMP_HIGH, FEDRAMP_MODERATE, US_REGIONAL_ACCESS
      * 
      */
-    public Output<String> getComplianceRegime() {
+    public Output<String> complianceRegime() {
         return this.complianceRegime;
     }
     /**
@@ -77,7 +77,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Output only. Immutable. The Workload creation timestamp.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -91,7 +91,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -105,7 +105,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
      * 
      */
-    public Output</* @Nullable */ WorkloadKmsSettings> getKmsSettings() {
+    public Output</* @Nullable */ WorkloadKmsSettings> kmsSettings() {
         return this.kmsSettings;
     }
     /**
@@ -119,7 +119,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Optional. Labels applied to the workload.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -133,7 +133,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -147,7 +147,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Output only. The resource name of the workload.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -161,7 +161,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return The organization for the resource
      * 
      */
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
     /**
@@ -175,7 +175,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id}
      * 
      */
-    public Output</* @Nullable */ String> getProvisionedResourcesParent() {
+    public Output</* @Nullable */ String> provisionedResourcesParent() {
         return this.provisionedResourcesParent;
     }
     /**
@@ -189,7 +189,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @return Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
      * 
      */
-    public Output</* @Nullable */ List<WorkloadResourceSetting>> getResourceSettings() {
+    public Output</* @Nullable */ List<WorkloadResourceSetting>> resourceSettings() {
         return this.resourceSettings;
     }
     /**
@@ -205,7 +205,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * any of the projects already exist, the workload creation will fail. Always read only.
      * 
      */
-    public Output<List<WorkloadResource>> getResources() {
+    public Output<List<WorkloadResource>> resources() {
         return this.resources;
     }
 

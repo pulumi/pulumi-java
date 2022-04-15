@@ -24,7 +24,7 @@ public final class BackendServiceCircuitBreakersArgs extends io.pulumi.resources
     @Import(name="connectTimeout")
       private final @Nullable Output<BackendServiceCircuitBreakersConnectTimeoutArgs> connectTimeout;
 
-    public Output<BackendServiceCircuitBreakersConnectTimeoutArgs> getConnectTimeout() {
+    public Output<BackendServiceCircuitBreakersConnectTimeoutArgs> connectTimeout() {
         return this.connectTimeout == null ? Codegen.empty() : this.connectTimeout;
     }
 
@@ -36,7 +36,7 @@ public final class BackendServiceCircuitBreakersArgs extends io.pulumi.resources
     @Import(name="maxConnections")
       private final @Nullable Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
+    public Output<Integer> maxConnections() {
         return this.maxConnections == null ? Codegen.empty() : this.maxConnections;
     }
 
@@ -48,7 +48,7 @@ public final class BackendServiceCircuitBreakersArgs extends io.pulumi.resources
     @Import(name="maxPendingRequests")
       private final @Nullable Output<Integer> maxPendingRequests;
 
-    public Output<Integer> getMaxPendingRequests() {
+    public Output<Integer> maxPendingRequests() {
         return this.maxPendingRequests == null ? Codegen.empty() : this.maxPendingRequests;
     }
 
@@ -60,7 +60,7 @@ public final class BackendServiceCircuitBreakersArgs extends io.pulumi.resources
     @Import(name="maxRequests")
       private final @Nullable Output<Integer> maxRequests;
 
-    public Output<Integer> getMaxRequests() {
+    public Output<Integer> maxRequests() {
         return this.maxRequests == null ? Codegen.empty() : this.maxRequests;
     }
 
@@ -74,7 +74,7 @@ public final class BackendServiceCircuitBreakersArgs extends io.pulumi.resources
     @Import(name="maxRequestsPerConnection")
       private final @Nullable Output<Integer> maxRequestsPerConnection;
 
-    public Output<Integer> getMaxRequestsPerConnection() {
+    public Output<Integer> maxRequestsPerConnection() {
         return this.maxRequestsPerConnection == null ? Codegen.empty() : this.maxRequestsPerConnection;
     }
 
@@ -86,7 +86,7 @@ public final class BackendServiceCircuitBreakersArgs extends io.pulumi.resources
     @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 

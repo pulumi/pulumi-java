@@ -37,7 +37,7 @@ public final class GetInstanceTemplateSchedulingNodeAffinity {
      * The key for the node affinity label.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -45,10 +45,10 @@ public final class GetInstanceTemplateSchedulingNodeAffinity {
      * or `NOT_IN` for anti-affinities.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

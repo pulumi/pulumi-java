@@ -21,7 +21,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs e
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -32,7 +32,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs e
     @Import(name="intervalSec", required=true)
       private final Output<Integer> intervalSec;
 
-    public Output<Integer> getIntervalSec() {
+    public Output<Integer> intervalSec() {
         return this.intervalSec;
     }
 

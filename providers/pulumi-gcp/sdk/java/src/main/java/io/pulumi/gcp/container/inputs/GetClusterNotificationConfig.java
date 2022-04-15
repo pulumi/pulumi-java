@@ -16,7 +16,7 @@ public final class GetClusterNotificationConfig extends io.pulumi.resources.Invo
     @Import(name="pubsubs", required=true)
       private final List<GetClusterNotificationConfigPubsub> pubsubs;
 
-    public List<GetClusterNotificationConfigPubsub> getPubsubs() {
+    public List<GetClusterNotificationConfigPubsub> pubsubs() {
         return this.pubsubs;
     }
 

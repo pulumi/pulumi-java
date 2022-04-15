@@ -25,7 +25,7 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     @Import(name="maxConcurrentRequests")
       private final @Nullable Output<Integer> maxConcurrentRequests;
 
-    public Output<Integer> getMaxConcurrentRequests() {
+    public Output<Integer> maxConcurrentRequests() {
         return this.maxConcurrentRequests == null ? Codegen.empty() : this.maxConcurrentRequests;
     }
 
@@ -36,7 +36,7 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     @Import(name="maxIdleInstances")
       private final @Nullable Output<Integer> maxIdleInstances;
 
-    public Output<Integer> getMaxIdleInstances() {
+    public Output<Integer> maxIdleInstances() {
         return this.maxIdleInstances == null ? Codegen.empty() : this.maxIdleInstances;
     }
 
@@ -48,7 +48,7 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     @Import(name="maxPendingLatency")
       private final @Nullable Output<String> maxPendingLatency;
 
-    public Output<String> getMaxPendingLatency() {
+    public Output<String> maxPendingLatency() {
         return this.maxPendingLatency == null ? Codegen.empty() : this.maxPendingLatency;
     }
 
@@ -59,7 +59,7 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     @Import(name="minIdleInstances")
       private final @Nullable Output<Integer> minIdleInstances;
 
-    public Output<Integer> getMinIdleInstances() {
+    public Output<Integer> minIdleInstances() {
         return this.minIdleInstances == null ? Codegen.empty() : this.minIdleInstances;
     }
 
@@ -71,7 +71,7 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     @Import(name="minPendingLatency")
       private final @Nullable Output<String> minPendingLatency;
 
-    public Output<String> getMinPendingLatency() {
+    public Output<String> minPendingLatency() {
         return this.minPendingLatency == null ? Codegen.empty() : this.minPendingLatency;
     }
 
@@ -83,7 +83,7 @@ public final class StandardAppVersionAutomaticScalingGetArgs extends io.pulumi.r
     @Import(name="standardSchedulerSettings")
       private final @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings;
 
-    public Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> getStandardSchedulerSettings() {
+    public Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsGetArgs> standardSchedulerSettings() {
         return this.standardSchedulerSettings == null ? Codegen.empty() : this.standardSchedulerSettings;
     }
 

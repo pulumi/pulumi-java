@@ -64,7 +64,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return A textual description field. Defaults to 'Managed by Pulumi'.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -78,7 +78,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The DNS name of this managed zone, for instance "example.com.".
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -94,7 +94,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZoneDnssecConfig> getDnssecConfig() {
+    public Output</* @Nullable */ ManagedZoneDnssecConfig> dnssecConfig() {
         return this.dnssecConfig;
     }
     /**
@@ -108,7 +108,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return Set this true to delete all records in the zone.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -128,7 +128,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZoneForwardingConfig> getForwardingConfig() {
+    public Output</* @Nullable */ ManagedZoneForwardingConfig> forwardingConfig() {
         return this.forwardingConfig;
     }
     /**
@@ -142,7 +142,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return A set of key/value label pairs to assign to this ManagedZone.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -158,7 +158,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Must be unique within the project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -172,7 +172,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return Delegate your managed_zone to these virtual name servers; defined by the server
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -190,7 +190,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZonePeeringConfig> getPeeringConfig() {
+    public Output</* @Nullable */ ManagedZonePeeringConfig> peeringConfig() {
         return this.peeringConfig;
     }
     /**
@@ -208,7 +208,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZonePrivateVisibilityConfig> getPrivateVisibilityConfig() {
+    public Output</* @Nullable */ ManagedZonePrivateVisibilityConfig> privateVisibilityConfig() {
         return this.privateVisibilityConfig;
     }
     /**
@@ -224,7 +224,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -242,7 +242,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * to networks listed under `private_visibility_config`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReverseLookup() {
+    public Output</* @Nullable */ Boolean> reverseLookup() {
         return this.reverseLookup;
     }
     /**
@@ -258,7 +258,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ManagedZoneServiceDirectoryConfig> getServiceDirectoryConfig() {
+    public Output</* @Nullable */ ManagedZoneServiceDirectoryConfig> serviceDirectoryConfig() {
         return this.serviceDirectoryConfig;
     }
     /**
@@ -278,7 +278,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Possible values are `private` and `public`.
      * 
      */
-    public Output</* @Nullable */ String> getVisibility() {
+    public Output</* @Nullable */ String> visibility() {
         return this.visibility;
     }
 

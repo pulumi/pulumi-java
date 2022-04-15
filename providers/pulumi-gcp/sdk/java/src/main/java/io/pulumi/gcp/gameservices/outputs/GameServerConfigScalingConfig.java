@@ -58,14 +58,14 @@ public final class GameServerConfigScalingConfig {
      * https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
     */
-    public String getFleetAutoscalerSpec() {
+    public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
     /**
      * The name of the ScalingConfig
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public final class GameServerConfigScalingConfig {
      * Structure is documented below.
      * 
     */
-    public List<GameServerConfigScalingConfigSchedule> getSchedules() {
+    public List<GameServerConfigScalingConfigSchedule> schedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
     /**
@@ -83,7 +83,7 @@ public final class GameServerConfigScalingConfig {
      * Structure is documented below.
      * 
     */
-    public List<GameServerConfigScalingConfigSelector> getSelectors() {
+    public List<GameServerConfigScalingConfigSelector> selectors() {
         return this.selectors == null ? List.of() : this.selectors;
     }
 

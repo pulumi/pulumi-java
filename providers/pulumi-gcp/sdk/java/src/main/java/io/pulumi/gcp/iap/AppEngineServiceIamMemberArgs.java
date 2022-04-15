@@ -23,7 +23,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -35,14 +35,14 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     @Import(name="condition")
       private final @Nullable Output<AppEngineServiceIamMemberConditionArgs> condition;
 
-    public Output<AppEngineServiceIamMemberConditionArgs> getCondition() {
+    public Output<AppEngineServiceIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -54,7 +54,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -67,7 +67,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -78,7 +78,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

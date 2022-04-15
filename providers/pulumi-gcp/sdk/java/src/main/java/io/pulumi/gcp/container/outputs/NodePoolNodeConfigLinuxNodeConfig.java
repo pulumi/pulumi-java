@@ -17,7 +17,7 @@ public final class NodePoolNodeConfigLinuxNodeConfig {
         this.sysctls = sysctls;
     }
 
-    public Map<String,String> getSysctls() {
+    public Map<String,String> sysctls() {
         return this.sysctls;
     }
 

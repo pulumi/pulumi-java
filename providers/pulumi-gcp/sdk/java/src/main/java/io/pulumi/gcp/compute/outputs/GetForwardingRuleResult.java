@@ -95,80 +95,80 @@ public final class GetForwardingRuleResult {
         this.target = target;
     }
 
-    public Boolean getAllPorts() {
+    public Boolean allPorts() {
         return this.allPorts;
     }
-    public Boolean getAllowGlobalAccess() {
+    public Boolean allowGlobalAccess() {
         return this.allowGlobalAccess;
     }
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
-    public String getIpProtocol() {
+    public String ipProtocol() {
         return this.ipProtocol;
     }
-    public Boolean getIsMirroringCollector() {
+    public Boolean isMirroringCollector() {
         return this.isMirroringCollector;
     }
-    public String getLabelFingerprint() {
+    public String labelFingerprint() {
         return this.labelFingerprint;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getLoadBalancingScheme() {
+    public String loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
-    public String getPortRange() {
+    public String portRange() {
         return this.portRange;
     }
-    public List<String> getPorts() {
+    public List<String> ports() {
         return this.ports;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getServiceLabel() {
+    public String serviceLabel() {
         return this.serviceLabel;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

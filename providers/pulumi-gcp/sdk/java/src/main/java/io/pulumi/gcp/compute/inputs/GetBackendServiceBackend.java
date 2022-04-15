@@ -17,14 +17,14 @@ public final class GetBackendServiceBackend extends io.pulumi.resources.InvokeAr
     @Import(name="balancingMode", required=true)
       private final String balancingMode;
 
-    public String getBalancingMode() {
+    public String balancingMode() {
         return this.balancingMode;
     }
 
     @Import(name="capacityScaler", required=true)
       private final Double capacityScaler;
 
-    public Double getCapacityScaler() {
+    public Double capacityScaler() {
         return this.capacityScaler;
     }
 
@@ -35,63 +35,63 @@ public final class GetBackendServiceBackend extends io.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="group", required=true)
       private final String group;
 
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
 
     @Import(name="maxConnections", required=true)
       private final Integer maxConnections;
 
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
 
     @Import(name="maxConnectionsPerEndpoint", required=true)
       private final Integer maxConnectionsPerEndpoint;
 
-    public Integer getMaxConnectionsPerEndpoint() {
+    public Integer maxConnectionsPerEndpoint() {
         return this.maxConnectionsPerEndpoint;
     }
 
     @Import(name="maxConnectionsPerInstance", required=true)
       private final Integer maxConnectionsPerInstance;
 
-    public Integer getMaxConnectionsPerInstance() {
+    public Integer maxConnectionsPerInstance() {
         return this.maxConnectionsPerInstance;
     }
 
     @Import(name="maxRate", required=true)
       private final Integer maxRate;
 
-    public Integer getMaxRate() {
+    public Integer maxRate() {
         return this.maxRate;
     }
 
     @Import(name="maxRatePerEndpoint", required=true)
       private final Double maxRatePerEndpoint;
 
-    public Double getMaxRatePerEndpoint() {
+    public Double maxRatePerEndpoint() {
         return this.maxRatePerEndpoint;
     }
 
     @Import(name="maxRatePerInstance", required=true)
       private final Double maxRatePerInstance;
 
-    public Double getMaxRatePerInstance() {
+    public Double maxRatePerInstance() {
         return this.maxRatePerInstance;
     }
 
     @Import(name="maxUtilization", required=true)
       private final Double maxUtilization;
 
-    public Double getMaxUtilization() {
+    public Double maxUtilization() {
         return this.maxUtilization;
     }
 

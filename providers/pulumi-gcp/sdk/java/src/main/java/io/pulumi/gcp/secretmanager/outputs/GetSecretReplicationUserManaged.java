@@ -17,7 +17,7 @@ public final class GetSecretReplicationUserManaged {
         this.replicas = replicas;
     }
 
-    public List<GetSecretReplicationUserManagedReplica> getReplicas() {
+    public List<GetSecretReplicationUserManagedReplica> replicas() {
         return this.replicas;
     }
 

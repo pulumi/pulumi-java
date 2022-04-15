@@ -23,7 +23,7 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
     @Import(name="allowedExitCodes")
       private final @Nullable Output<String> allowedExitCodes;
 
-    public Output<String> getAllowedExitCodes() {
+    public Output<String> allowedExitCodes() {
         return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
@@ -34,7 +34,7 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
     @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId == null ? Codegen.empty() : this.artifactId;
     }
 
@@ -56,7 +56,7 @@ public final class GuestPoliciesRecipeInstallStepFileExecArgs extends io.pulumi.
     @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
-    public Output<String> getLocalPath() {
+    public Output<String> localPath() {
         return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 

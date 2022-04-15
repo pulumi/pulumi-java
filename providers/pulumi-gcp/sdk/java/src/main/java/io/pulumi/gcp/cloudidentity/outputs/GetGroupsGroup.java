@@ -48,35 +48,35 @@ public final class GetGroupsGroup {
         this.updateTime = updateTime;
     }
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
-    public List<GetGroupsGroupGroupKey> getGroupKeys() {
+    public List<GetGroupsGroupGroupKey> groupKeys() {
         return this.groupKeys;
     }
-    public String getInitialGroupConfig() {
+    public String initialGroupConfig() {
         return this.initialGroupConfig;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
      * 
     */
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

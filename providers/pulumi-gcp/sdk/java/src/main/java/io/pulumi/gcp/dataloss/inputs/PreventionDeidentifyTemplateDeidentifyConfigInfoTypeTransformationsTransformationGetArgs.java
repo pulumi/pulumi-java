@@ -26,7 +26,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="infoTypes")
       private final @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs>> infoTypes;
 
-    public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs>> getInfoTypes() {
+    public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeGetArgs>> infoTypes() {
         return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
@@ -38,7 +38,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="primitiveTransformation", required=true)
       private final Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs> primitiveTransformation;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs> getPrimitiveTransformation() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs> primitiveTransformation() {
         return this.primitiveTransformation;
     }
 

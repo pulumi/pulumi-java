@@ -36,14 +36,14 @@ public final class JobQueryUserDefinedFunctionResource {
      * Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
      * 
     */
-    public Optional<String> getInlineCode() {
+    public Optional<String> inlineCode() {
         return Optional.ofNullable(this.inlineCode);
     }
     /**
      * A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
      * 
     */
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
 

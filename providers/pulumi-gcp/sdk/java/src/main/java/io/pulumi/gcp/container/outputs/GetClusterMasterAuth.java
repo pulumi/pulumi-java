@@ -28,16 +28,16 @@ public final class GetClusterMasterAuth {
         this.clusterCaCertificate = clusterCaCertificate;
     }
 
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
-    public List<GetClusterMasterAuthClientCertificateConfig> getClientCertificateConfigs() {
+    public List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs() {
         return this.clientCertificateConfigs;
     }
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
-    public String getClusterCaCertificate() {
+    public String clusterCaCertificate() {
         return this.clusterCaCertificate;
     }
 

@@ -22,7 +22,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     @Import(name="datasetUri", required=true)
       private final Output<String> datasetUri;
 
-    public Output<String> getDatasetUri() {
+    public Output<String> datasetUri() {
         return this.datasetUri;
     }
 
@@ -34,7 +34,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     @Import(name="schemaConfig", required=true)
       private final Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
-    public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> getSchemaConfig() {
+    public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig() {
         return this.schemaConfig;
     }
 

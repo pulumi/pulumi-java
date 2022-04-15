@@ -33,13 +33,13 @@ public final class GetServiceTemplateSpecContainerEnv {
      * The name of the Cloud Run Service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
-    public List<GetServiceTemplateSpecContainerEnvValueFrom> getValueFroms() {
+    public List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms() {
         return this.valueFroms;
     }
 

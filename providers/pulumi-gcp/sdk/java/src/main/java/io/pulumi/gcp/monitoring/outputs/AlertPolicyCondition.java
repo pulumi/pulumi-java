@@ -85,7 +85,7 @@ public final class AlertPolicyCondition {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionAbsent> getConditionAbsent() {
+    public Optional<AlertPolicyConditionConditionAbsent> conditionAbsent() {
         return Optional.ofNullable(this.conditionAbsent);
     }
     /**
@@ -94,7 +94,7 @@ public final class AlertPolicyCondition {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionMatchedLog> getConditionMatchedLog() {
+    public Optional<AlertPolicyConditionConditionMatchedLog> conditionMatchedLog() {
         return Optional.ofNullable(this.conditionMatchedLog);
     }
     /**
@@ -102,7 +102,7 @@ public final class AlertPolicyCondition {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionMonitoringQueryLanguage> getConditionMonitoringQueryLanguage() {
+    public Optional<AlertPolicyConditionConditionMonitoringQueryLanguage> conditionMonitoringQueryLanguage() {
         return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
     /**
@@ -111,7 +111,7 @@ public final class AlertPolicyCondition {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionThreshold> getConditionThreshold() {
+    public Optional<AlertPolicyConditionConditionThreshold> conditionThreshold() {
         return Optional.ofNullable(this.conditionThreshold);
     }
     /**
@@ -122,7 +122,7 @@ public final class AlertPolicyCondition {
      * policy.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
@@ -135,7 +135,7 @@ public final class AlertPolicyCondition {
      * policy.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

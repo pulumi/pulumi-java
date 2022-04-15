@@ -59,7 +59,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
      * must be set.
      * 
     */
-    public Optional<String> getExactMatch() {
+    public Optional<String> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
@@ -67,7 +67,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
      * request, in the absence of which the request match fails.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -76,7 +76,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
      * presentMatch, exactMatch and regexMatch must be set.
      * 
     */
-    public Optional<Boolean> getPresentMatch() {
+    public Optional<Boolean> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
     /**
@@ -86,7 +86,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
      * exactMatch and regexMatch must be set.
      * 
     */
-    public Optional<String> getRegexMatch() {
+    public Optional<String> regexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
 

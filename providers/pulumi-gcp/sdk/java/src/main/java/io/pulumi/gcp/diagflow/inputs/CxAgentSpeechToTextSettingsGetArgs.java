@@ -22,7 +22,7 @@ public final class CxAgentSpeechToTextSettingsGetArgs extends io.pulumi.resource
     @Import(name="enableSpeechAdaptation")
       private final @Nullable Output<Boolean> enableSpeechAdaptation;
 
-    public Output<Boolean> getEnableSpeechAdaptation() {
+    public Output<Boolean> enableSpeechAdaptation() {
         return this.enableSpeechAdaptation == null ? Codegen.empty() : this.enableSpeechAdaptation;
     }
 

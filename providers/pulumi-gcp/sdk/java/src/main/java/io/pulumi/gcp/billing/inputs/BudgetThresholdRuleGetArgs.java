@@ -26,7 +26,7 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
     @Import(name="spendBasis")
       private final @Nullable Output<String> spendBasis;
 
-    public Output<String> getSpendBasis() {
+    public Output<String> spendBasis() {
         return this.spendBasis == null ? Codegen.empty() : this.spendBasis;
     }
 
@@ -38,7 +38,7 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
     @Import(name="thresholdPercent", required=true)
       private final Output<Double> thresholdPercent;
 
-    public Output<Double> getThresholdPercent() {
+    public Output<Double> thresholdPercent() {
         return this.thresholdPercent;
     }
 

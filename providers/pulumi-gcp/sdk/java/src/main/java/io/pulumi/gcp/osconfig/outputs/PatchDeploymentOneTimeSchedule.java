@@ -26,7 +26,7 @@ public final class PatchDeploymentOneTimeSchedule {
      * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public String getExecuteTime() {
+    public String executeTime() {
         return this.executeTime;
     }
 

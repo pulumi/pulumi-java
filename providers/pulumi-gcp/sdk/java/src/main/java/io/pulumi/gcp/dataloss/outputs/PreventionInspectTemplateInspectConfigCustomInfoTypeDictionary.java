@@ -38,7 +38,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath> getCloudStoragePath() {
+    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
     /**
@@ -46,7 +46,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList> getWordList() {
+    public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList> wordList() {
         return Optional.ofNullable(this.wordList);
     }
 

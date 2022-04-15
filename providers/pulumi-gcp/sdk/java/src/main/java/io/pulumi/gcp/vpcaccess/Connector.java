@@ -60,7 +60,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
      */
-    public Output</* @Nullable */ String> getIpCidrRange() {
+    public Output</* @Nullable */ String> ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -74,7 +74,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Machine type of VM Instance underlying connector. Default is e2-micro
      * 
      */
-    public Output</* @Nullable */ String> getMachineType() {
+    public Output</* @Nullable */ String> machineType() {
         return this.machineType;
     }
     /**
@@ -88,7 +88,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Maximum value of instances in autoscaling group underlying the connector.
      * 
      */
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
     /**
@@ -102,7 +102,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxThroughput() {
+    public Output</* @Nullable */ Integer> maxThroughput() {
         return this.maxThroughput;
     }
     /**
@@ -116,7 +116,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Minimum value of instances in autoscaling group underlying the connector.
      * 
      */
-    public Output<Integer> getMinInstances() {
+    public Output<Integer> minInstances() {
         return this.minInstances;
     }
     /**
@@ -130,7 +130,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinThroughput() {
+    public Output</* @Nullable */ Integer> minThroughput() {
         return this.minThroughput;
     }
     /**
@@ -146,7 +146,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +160,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Name or self_link of the VPC network. Required if `ip_cidr_range` is set.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -176,7 +176,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -190,7 +190,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return Region where the VPC Access connector resides. If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -204,7 +204,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name of this VPC connector
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -218,7 +218,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @return State of the VPC access connector.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -234,7 +234,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ConnectorSubnet> getSubnet() {
+    public Output</* @Nullable */ ConnectorSubnet> subnet() {
         return this.subnet;
     }
 

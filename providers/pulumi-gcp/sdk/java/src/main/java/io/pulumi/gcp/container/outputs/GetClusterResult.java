@@ -229,188 +229,188 @@ public final class GetClusterResult {
         this.workloadIdentityConfigs = workloadIdentityConfigs;
     }
 
-    public List<GetClusterAddonsConfig> getAddonsConfigs() {
+    public List<GetClusterAddonsConfig> addonsConfigs() {
         return this.addonsConfigs;
     }
-    public List<GetClusterAuthenticatorGroupsConfig> getAuthenticatorGroupsConfigs() {
+    public List<GetClusterAuthenticatorGroupsConfig> authenticatorGroupsConfigs() {
         return this.authenticatorGroupsConfigs;
     }
-    public List<GetClusterClusterAutoscaling> getClusterAutoscalings() {
+    public List<GetClusterClusterAutoscaling> clusterAutoscalings() {
         return this.clusterAutoscalings;
     }
-    public String getClusterIpv4Cidr() {
+    public String clusterIpv4Cidr() {
         return this.clusterIpv4Cidr;
     }
-    public List<GetClusterClusterTelemetry> getClusterTelemetries() {
+    public List<GetClusterClusterTelemetry> clusterTelemetries() {
         return this.clusterTelemetries;
     }
-    public List<GetClusterConfidentialNode> getConfidentialNodes() {
+    public List<GetClusterConfidentialNode> confidentialNodes() {
         return this.confidentialNodes;
     }
-    public List<GetClusterDatabaseEncryption> getDatabaseEncryptions() {
+    public List<GetClusterDatabaseEncryption> databaseEncryptions() {
         return this.databaseEncryptions;
     }
-    public String getDatapathProvider() {
+    public String datapathProvider() {
         return this.datapathProvider;
     }
-    public Integer getDefaultMaxPodsPerNode() {
+    public Integer defaultMaxPodsPerNode() {
         return this.defaultMaxPodsPerNode;
     }
-    public List<GetClusterDefaultSnatStatus> getDefaultSnatStatuses() {
+    public List<GetClusterDefaultSnatStatus> defaultSnatStatuses() {
         return this.defaultSnatStatuses;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public List<GetClusterDnsConfig> getDnsConfigs() {
+    public List<GetClusterDnsConfig> dnsConfigs() {
         return this.dnsConfigs;
     }
-    public Boolean getEnableAutopilot() {
+    public Boolean enableAutopilot() {
         return this.enableAutopilot;
     }
-    public Boolean getEnableBinaryAuthorization() {
+    public Boolean enableBinaryAuthorization() {
         return this.enableBinaryAuthorization;
     }
-    public Boolean getEnableIntranodeVisibility() {
+    public Boolean enableIntranodeVisibility() {
         return this.enableIntranodeVisibility;
     }
-    public Boolean getEnableKubernetesAlpha() {
+    public Boolean enableKubernetesAlpha() {
         return this.enableKubernetesAlpha;
     }
-    public Boolean getEnableL4IlbSubsetting() {
+    public Boolean enableL4IlbSubsetting() {
         return this.enableL4IlbSubsetting;
     }
-    public Boolean getEnableLegacyAbac() {
+    public Boolean enableLegacyAbac() {
         return this.enableLegacyAbac;
     }
-    public Boolean getEnableShieldedNodes() {
+    public Boolean enableShieldedNodes() {
         return this.enableShieldedNodes;
     }
-    public Boolean getEnableTpu() {
+    public Boolean enableTpu() {
         return this.enableTpu;
     }
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetClusterIdentityServiceConfig> getIdentityServiceConfigs() {
+    public List<GetClusterIdentityServiceConfig> identityServiceConfigs() {
         return this.identityServiceConfigs;
     }
-    public Integer getInitialNodeCount() {
+    public Integer initialNodeCount() {
         return this.initialNodeCount;
     }
-    public List<GetClusterIpAllocationPolicy> getIpAllocationPolicies() {
+    public List<GetClusterIpAllocationPolicy> ipAllocationPolicies() {
         return this.ipAllocationPolicies;
     }
-    public String getLabelFingerprint() {
+    public String labelFingerprint() {
         return this.labelFingerprint;
     }
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
-    public List<GetClusterLoggingConfig> getLoggingConfigs() {
+    public List<GetClusterLoggingConfig> loggingConfigs() {
         return this.loggingConfigs;
     }
-    public String getLoggingService() {
+    public String loggingService() {
         return this.loggingService;
     }
-    public List<GetClusterMaintenancePolicy> getMaintenancePolicies() {
+    public List<GetClusterMaintenancePolicy> maintenancePolicies() {
         return this.maintenancePolicies;
     }
-    public List<GetClusterMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfigs() {
+    public List<GetClusterMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs() {
         return this.masterAuthorizedNetworksConfigs;
     }
-    public List<GetClusterMasterAuth> getMasterAuths() {
+    public List<GetClusterMasterAuth> masterAuths() {
         return this.masterAuths;
     }
-    public String getMasterVersion() {
+    public String masterVersion() {
         return this.masterVersion;
     }
-    public String getMinMasterVersion() {
+    public String minMasterVersion() {
         return this.minMasterVersion;
     }
-    public List<GetClusterMonitoringConfig> getMonitoringConfigs() {
+    public List<GetClusterMonitoringConfig> monitoringConfigs() {
         return this.monitoringConfigs;
     }
-    public String getMonitoringService() {
+    public String monitoringService() {
         return this.monitoringService;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public List<GetClusterNetworkPolicy> getNetworkPolicies() {
+    public List<GetClusterNetworkPolicy> networkPolicies() {
         return this.networkPolicies;
     }
-    public String getNetworkingMode() {
+    public String networkingMode() {
         return this.networkingMode;
     }
-    public List<GetClusterNodeConfig> getNodeConfigs() {
+    public List<GetClusterNodeConfig> nodeConfigs() {
         return this.nodeConfigs;
     }
-    public List<String> getNodeLocations() {
+    public List<String> nodeLocations() {
         return this.nodeLocations;
     }
-    public List<GetClusterNodePool> getNodePools() {
+    public List<GetClusterNodePool> nodePools() {
         return this.nodePools;
     }
-    public String getNodeVersion() {
+    public String nodeVersion() {
         return this.nodeVersion;
     }
-    public List<GetClusterNotificationConfig> getNotificationConfigs() {
+    public List<GetClusterNotificationConfig> notificationConfigs() {
         return this.notificationConfigs;
     }
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
-    public List<GetClusterPodSecurityPolicyConfig> getPodSecurityPolicyConfigs() {
+    public List<GetClusterPodSecurityPolicyConfig> podSecurityPolicyConfigs() {
         return this.podSecurityPolicyConfigs;
     }
-    public List<GetClusterPrivateClusterConfig> getPrivateClusterConfigs() {
+    public List<GetClusterPrivateClusterConfig> privateClusterConfigs() {
         return this.privateClusterConfigs;
     }
-    public String getPrivateIpv6GoogleAccess() {
+    public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetClusterReleaseChannel> getReleaseChannels() {
+    public List<GetClusterReleaseChannel> releaseChannels() {
         return this.releaseChannels;
     }
-    public Boolean getRemoveDefaultNodePool() {
+    public Boolean removeDefaultNodePool() {
         return this.removeDefaultNodePool;
     }
-    public Map<String,String> getResourceLabels() {
+    public Map<String,String> resourceLabels() {
         return this.resourceLabels;
     }
-    public List<GetClusterResourceUsageExportConfig> getResourceUsageExportConfigs() {
+    public List<GetClusterResourceUsageExportConfig> resourceUsageExportConfigs() {
         return this.resourceUsageExportConfigs;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getServicesIpv4Cidr() {
+    public String servicesIpv4Cidr() {
         return this.servicesIpv4Cidr;
     }
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
-    public String getTpuIpv4CidrBlock() {
+    public String tpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock;
     }
-    public List<GetClusterVerticalPodAutoscaling> getVerticalPodAutoscalings() {
+    public List<GetClusterVerticalPodAutoscaling> verticalPodAutoscalings() {
         return this.verticalPodAutoscalings;
     }
-    public List<GetClusterWorkloadIdentityConfig> getWorkloadIdentityConfigs() {
+    public List<GetClusterWorkloadIdentityConfig> workloadIdentityConfigs() {
         return this.workloadIdentityConfigs;
     }
 

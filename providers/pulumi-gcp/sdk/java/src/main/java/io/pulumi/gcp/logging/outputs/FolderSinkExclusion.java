@@ -50,14 +50,14 @@ public final class FolderSinkExclusion {
      * A description of this exclusion.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
     */
-    public Optional<Boolean> getDisabled() {
+    public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
@@ -65,14 +65,14 @@ public final class FolderSinkExclusion {
      * write a filter.
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
     /**
      * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

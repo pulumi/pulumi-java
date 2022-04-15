@@ -20,10 +20,10 @@ public final class GetClusterDatabaseEncryption {
         this.state = state;
     }
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

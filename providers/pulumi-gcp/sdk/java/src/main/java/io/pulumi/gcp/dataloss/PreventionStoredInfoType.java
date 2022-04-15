@@ -53,7 +53,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * @return A description of the info type.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +69,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionStoredInfoTypeDictionary> getDictionary() {
+    public Output</* @Nullable */ PreventionStoredInfoTypeDictionary> dictionary() {
         return this.dictionary;
     }
     /**
@@ -83,7 +83,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * @return User set display name of the info type.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -99,7 +99,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionStoredInfoTypeLargeCustomDictionary> getLargeCustomDictionary() {
+    public Output</* @Nullable */ PreventionStoredInfoTypeLargeCustomDictionary> largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
     /**
@@ -113,7 +113,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * @return Name describing the field.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -135,7 +135,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -151,7 +151,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionStoredInfoTypeRegex> getRegex() {
+    public Output</* @Nullable */ PreventionStoredInfoTypeRegex> regex() {
         return this.regex;
     }
 

@@ -24,7 +24,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
     @Import(name="specificReservation")
       private final @Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
 
-    public Output<InstanceReservationAffinitySpecificReservationArgs> getSpecificReservation() {
+    public Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation() {
         return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

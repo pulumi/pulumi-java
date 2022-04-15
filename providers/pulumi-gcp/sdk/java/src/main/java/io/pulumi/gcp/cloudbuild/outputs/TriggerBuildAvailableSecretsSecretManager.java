@@ -38,14 +38,14 @@ public final class TriggerBuildAvailableSecretsSecretManager {
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
     */
-    public String getEnv() {
+    public String env() {
         return this.env;
     }
     /**
      * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
      * 
     */
-    public String getVersionName() {
+    public String versionName() {
         return this.versionName;
     }
 

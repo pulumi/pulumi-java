@@ -64,47 +64,47 @@ public final class GetWorkloadIdentityPoolProviderResult {
         this.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
     }
 
-    public String getAttributeCondition() {
+    public String attributeCondition() {
         return this.attributeCondition;
     }
-    public Map<String,String> getAttributeMapping() {
+    public Map<String,String> attributeMapping() {
         return this.attributeMapping;
     }
-    public List<GetWorkloadIdentityPoolProviderAw> getAws() {
+    public List<GetWorkloadIdentityPoolProviderAw> aws() {
         return this.aws;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<GetWorkloadIdentityPoolProviderOidc> getOidcs() {
+    public List<GetWorkloadIdentityPoolProviderOidc> oidcs() {
         return this.oidcs;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public String getWorkloadIdentityPoolId() {
+    public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
-    public String getWorkloadIdentityPoolProviderId() {
+    public String workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
 

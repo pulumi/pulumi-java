@@ -22,7 +22,7 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
-    public Boolean getAutoDelete() {
+    public Boolean autoDelete() {
         return this.autoDelete;
     }
 
@@ -34,21 +34,21 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
       private final String deviceName;
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
 
     @Import(name="diskEncryptionKeyRaw", required=true)
       private final String diskEncryptionKeyRaw;
 
-    public String getDiskEncryptionKeyRaw() {
+    public String diskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw;
     }
 
     @Import(name="diskEncryptionKeySha256", required=true)
       private final String diskEncryptionKeySha256;
 
-    public String getDiskEncryptionKeySha256() {
+    public String diskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256;
     }
 
@@ -60,14 +60,14 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
     @Import(name="initializeParams", required=true)
       private final List<GetInstanceBootDiskInitializeParam> initializeParams;
 
-    public List<GetInstanceBootDiskInitializeParam> getInitializeParams() {
+    public List<GetInstanceBootDiskInitializeParam> initializeParams() {
         return this.initializeParams;
     }
 
     @Import(name="kmsKeySelfLink", required=true)
       private final String kmsKeySelfLink;
 
-    public String getKmsKeySelfLink() {
+    public String kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 
@@ -78,7 +78,7 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -89,7 +89,7 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

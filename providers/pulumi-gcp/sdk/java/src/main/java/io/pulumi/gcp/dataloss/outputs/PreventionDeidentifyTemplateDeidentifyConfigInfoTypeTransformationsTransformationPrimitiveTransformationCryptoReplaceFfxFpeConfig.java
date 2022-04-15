@@ -83,7 +83,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Possible values are `FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED`, `NUMERIC`, `HEXADECIMAL`, `UPPER_CASE_ALPHA_NUMERIC`, and `ALPHA_NUMERIC`.
      * 
     */
-    public Optional<String> getCommonAlphabet() {
+    public Optional<String> commonAlphabet() {
         return Optional.ofNullable(this.commonAlphabet);
     }
     /**
@@ -99,7 +99,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      *     Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext> getContext() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext> context() {
         return Optional.ofNullable(this.context);
     }
     /**
@@ -107,7 +107,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey> getCryptoKey() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey> cryptoKey() {
         return Optional.ofNullable(this.cryptoKey);
     }
     /**
@@ -115,14 +115,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * ``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&*()_-+={[}]|:;"'<,>.?/``
      * 
     */
-    public Optional<String> getCustomAlphabet() {
+    public Optional<String> customAlphabet() {
         return Optional.ofNullable(this.customAlphabet);
     }
     /**
      * The native way to select the alphabet. Must be in the range \[2, 95\].
      * 
     */
-    public Optional<Integer> getRadix() {
+    public Optional<Integer> radix() {
         return Optional.ofNullable(this.radix);
     }
     /**
@@ -133,7 +133,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType> getSurrogateInfoType() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType> surrogateInfoType() {
         return Optional.ofNullable(this.surrogateInfoType);
     }
 

@@ -27,7 +27,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
 
-    public Output<Boolean> getBlocked() {
+    public Output<Boolean> blocked() {
         return this.blocked == null ? Codegen.empty() : this.blocked;
     }
 
@@ -39,7 +39,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
-    public Output<List<DeviceCredentialArgs>> getCredentials() {
+    public Output<List<DeviceCredentialArgs>> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -51,7 +51,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
       private final @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
 
-    public Output<DeviceGatewayConfigArgs> getGatewayConfig() {
+    public Output<DeviceGatewayConfigArgs> gatewayConfig() {
         return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
     }
 
@@ -63,7 +63,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -74,7 +74,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -85,7 +85,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,7 +96,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registry", required=true)
       private final Output<String> registry;
 
-    public Output<String> getRegistry() {
+    public Output<String> registry() {
         return this.registry;
     }
 

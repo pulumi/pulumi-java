@@ -25,7 +25,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<CryptoKeyIAMBindingConditionGetArgs> condition;
 
-    public Output<CryptoKeyIAMBindingConditionGetArgs> getCondition() {
+    public Output<CryptoKeyIAMBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -39,7 +39,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
     @Import(name="cryptoKeyId")
       private final @Nullable Output<String> cryptoKeyId;
 
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId == null ? Codegen.empty() : this.cryptoKeyId;
     }
 
@@ -50,14 +50,14 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -69,7 +69,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

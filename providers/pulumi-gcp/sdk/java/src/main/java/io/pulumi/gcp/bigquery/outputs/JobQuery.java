@@ -182,7 +182,7 @@ public final class JobQuery {
      * However, you must still set destinationTable when result size exceeds the allowed maximum response size.
      * 
     */
-    public Optional<Boolean> getAllowLargeResults() {
+    public Optional<Boolean> allowLargeResults() {
         return Optional.ofNullable(this.allowLargeResults);
     }
     /**
@@ -194,7 +194,7 @@ public final class JobQuery {
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
     */
-    public Optional<String> getCreateDisposition() {
+    public Optional<String> createDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
     /**
@@ -202,7 +202,7 @@ public final class JobQuery {
      * Structure is documented below.
      * 
     */
-    public Optional<JobQueryDefaultDataset> getDefaultDataset() {
+    public Optional<JobQueryDefaultDataset> defaultDataset() {
         return Optional.ofNullable(this.defaultDataset);
     }
     /**
@@ -210,7 +210,7 @@ public final class JobQuery {
      * Structure is documented below.
      * 
     */
-    public Optional<JobQueryDestinationEncryptionConfiguration> getDestinationEncryptionConfiguration() {
+    public Optional<JobQueryDestinationEncryptionConfiguration> destinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
     /**
@@ -218,7 +218,7 @@ public final class JobQuery {
      * Structure is documented below.
      * 
     */
-    public Optional<JobQueryDestinationTable> getDestinationTable() {
+    public Optional<JobQueryDestinationTable> destinationTable() {
         return Optional.ofNullable(this.destinationTable);
     }
     /**
@@ -226,7 +226,7 @@ public final class JobQuery {
      * allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
      * 
     */
-    public Optional<Boolean> getFlattenResults() {
+    public Optional<Boolean> flattenResults() {
         return Optional.ofNullable(this.flattenResults);
     }
     /**
@@ -234,7 +234,7 @@ public final class JobQuery {
      * If unspecified, this will be set to your project default.
      * 
     */
-    public Optional<Integer> getMaximumBillingTier() {
+    public Optional<Integer> maximumBillingTier() {
         return Optional.ofNullable(this.maximumBillingTier);
     }
     /**
@@ -242,14 +242,14 @@ public final class JobQuery {
      * If unspecified, this will be set to your project default.
      * 
     */
-    public Optional<String> getMaximumBytesBilled() {
+    public Optional<String> maximumBytesBilled() {
         return Optional.ofNullable(this.maximumBytesBilled);
     }
     /**
      * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
      * 
     */
-    public Optional<String> getParameterMode() {
+    public Optional<String> parameterMode() {
         return Optional.ofNullable(this.parameterMode);
     }
     /**
@@ -258,7 +258,7 @@ public final class JobQuery {
      * Possible values are `INTERACTIVE` and `BATCH`.
      * 
     */
-    public Optional<String> getPriority() {
+    public Optional<String> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
@@ -266,7 +266,7 @@ public final class JobQuery {
      * Structure is documented below.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
@@ -278,7 +278,7 @@ public final class JobQuery {
      * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
     */
-    public List<String> getSchemaUpdateOptions() {
+    public List<String> schemaUpdateOptions() {
         return this.schemaUpdateOptions == null ? List.of() : this.schemaUpdateOptions;
     }
     /**
@@ -286,7 +286,7 @@ public final class JobQuery {
      * Structure is documented below.
      * 
     */
-    public Optional<JobQueryScriptOptions> getScriptOptions() {
+    public Optional<JobQueryScriptOptions> scriptOptions() {
         return Optional.ofNullable(this.scriptOptions);
     }
     /**
@@ -294,7 +294,7 @@ public final class JobQuery {
      * If set to false, the query will use BigQuery's standard SQL.
      * 
     */
-    public Optional<Boolean> getUseLegacySql() {
+    public Optional<Boolean> useLegacySql() {
         return Optional.ofNullable(this.useLegacySql);
     }
     /**
@@ -303,7 +303,7 @@ public final class JobQuery {
      * The default value is true.
      * 
     */
-    public Optional<Boolean> getUseQueryCache() {
+    public Optional<Boolean> useQueryCache() {
         return Optional.ofNullable(this.useQueryCache);
     }
     /**
@@ -311,7 +311,7 @@ public final class JobQuery {
      * Structure is documented below.
      * 
     */
-    public List<JobQueryUserDefinedFunctionResource> getUserDefinedFunctionResources() {
+    public List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources == null ? List.of() : this.userDefinedFunctionResources;
     }
     /**
@@ -325,7 +325,7 @@ public final class JobQuery {
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
     */
-    public Optional<String> getWriteDisposition() {
+    public Optional<String> writeDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }
 

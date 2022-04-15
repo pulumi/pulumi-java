@@ -21,7 +21,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalAuthenticatedData")
       private final @Nullable String additionalAuthenticatedData;
 
-    public Optional<String> getAdditionalAuthenticatedData() {
+    public Optional<String> additionalAuthenticatedData() {
         return this.additionalAuthenticatedData == null ? Optional.empty() : Optional.ofNullable(this.additionalAuthenticatedData);
     }
 
@@ -32,7 +32,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="ciphertext", required=true)
       private final String ciphertext;
 
-    public String getCiphertext() {
+    public String ciphertext() {
         return this.ciphertext;
     }
 
@@ -45,7 +45,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="cryptoKey", required=true)
       private final String cryptoKey;
 
-    public String getCryptoKey() {
+    public String cryptoKey() {
         return this.cryptoKey;
     }
 

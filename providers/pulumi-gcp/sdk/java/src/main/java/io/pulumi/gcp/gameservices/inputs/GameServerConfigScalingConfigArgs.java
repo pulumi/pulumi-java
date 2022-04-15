@@ -27,7 +27,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
     @Import(name="fleetAutoscalerSpec", required=true)
       private final Output<String> fleetAutoscalerSpec;
 
-    public Output<String> getFleetAutoscalerSpec() {
+    public Output<String> fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
 
@@ -38,7 +38,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
     @Import(name="schedules")
       private final @Nullable Output<List<GameServerConfigScalingConfigScheduleArgs>> schedules;
 
-    public Output<List<GameServerConfigScalingConfigScheduleArgs>> getSchedules() {
+    public Output<List<GameServerConfigScalingConfigScheduleArgs>> schedules() {
         return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
@@ -64,7 +64,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
     @Import(name="selectors")
       private final @Nullable Output<List<GameServerConfigScalingConfigSelectorArgs>> selectors;
 
-    public Output<List<GameServerConfigScalingConfigSelectorArgs>> getSelectors() {
+    public Output<List<GameServerConfigScalingConfigSelectorArgs>> selectors() {
         return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 

@@ -23,7 +23,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
     @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
 

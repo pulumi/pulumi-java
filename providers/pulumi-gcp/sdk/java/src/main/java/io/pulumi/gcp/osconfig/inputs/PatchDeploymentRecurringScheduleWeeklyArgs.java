@@ -22,7 +22,7 @@ public final class PatchDeploymentRecurringScheduleWeeklyArgs extends io.pulumi.
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 

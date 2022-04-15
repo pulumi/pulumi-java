@@ -133,7 +133,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
      * otherwise an error is returned.
      * 
     */
-    public Optional<String> getAlignmentPeriod() {
+    public Optional<String> alignmentPeriod() {
         return Optional.ofNullable(this.alignmentPeriod);
     }
     /**
@@ -157,7 +157,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
      * Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
      * 
     */
-    public Optional<String> getCrossSeriesReducer() {
+    public Optional<String> crossSeriesReducer() {
         return Optional.ofNullable(this.crossSeriesReducer);
     }
     /**
@@ -188,7 +188,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
      * ignored.
      * 
     */
-    public List<String> getGroupByFields() {
+    public List<String> groupByFields() {
         return this.groupByFields == null ? List.of() : this.groupByFields;
     }
     /**
@@ -212,7 +212,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
      * Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
      * 
     */
-    public Optional<String> getPerSeriesAligner() {
+    public Optional<String> perSeriesAligner() {
         return Optional.ofNullable(this.perSeriesAligner);
     }
 

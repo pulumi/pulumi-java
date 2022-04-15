@@ -26,7 +26,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * Optional. A target for the deployment.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget> getNamespacedGkeDeploymentTarget() {
+    public Optional<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget> namespacedGkeDeploymentTarget() {
         return Optional.ofNullable(this.namespacedGkeDeploymentTarget);
     }
 

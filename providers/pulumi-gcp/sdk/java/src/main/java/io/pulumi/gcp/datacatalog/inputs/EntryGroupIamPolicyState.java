@@ -22,7 +22,7 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
     @Import(name="entryGroup")
       private final @Nullable Output<String> entryGroup;
 
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup == null ? Codegen.empty() : this.entryGroup;
     }
 
@@ -33,7 +33,7 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -45,7 +45,7 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
@@ -57,14 +57,14 @@ public final class EntryGroupIamPolicyState extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

@@ -49,7 +49,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -60,7 +60,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -84,7 +84,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     @Import(name="singleInstanceAssignment")
       private final @Nullable Output<Double> singleInstanceAssignment;
 
-    public Output<Double> getSingleInstanceAssignment() {
+    public Output<Double> singleInstanceAssignment() {
         return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
     }
 
@@ -97,7 +97,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     @Import(name="target")
       private final @Nullable Output<Double> target;
 
-    public Output<Double> getTarget() {
+    public Output<Double> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -110,7 +110,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

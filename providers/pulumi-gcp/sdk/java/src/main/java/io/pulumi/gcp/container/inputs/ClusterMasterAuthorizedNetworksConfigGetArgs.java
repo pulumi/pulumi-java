@@ -24,7 +24,7 @@ public final class ClusterMasterAuthorizedNetworksConfigGetArgs extends io.pulum
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
-    public Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> getCidrBlocks() {
+    public Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks() {
         return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 

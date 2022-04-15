@@ -24,7 +24,7 @@ public final class GCPolicyMaxVersion {
      * Number of version before applying the GC policy.
      * 
     */
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
 

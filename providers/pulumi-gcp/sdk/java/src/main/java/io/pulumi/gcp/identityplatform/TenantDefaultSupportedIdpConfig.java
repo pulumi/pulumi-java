@@ -53,7 +53,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * @return OAuth client ID
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -67,7 +67,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * @return OAuth client secret
      * 
      */
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -81,7 +81,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * @return If this IDP allows the user to sign in
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -115,7 +115,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * * `yahoo.com`
      * 
      */
-    public Output<String> getIdpId() {
+    public Output<String> idpId() {
         return this.idpId;
     }
     /**
@@ -129,7 +129,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * @return The name of the default supported IDP config resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +145,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -159,7 +159,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * @return The name of the tenant where this DefaultSupportedIdpConfig resource exists
      * 
      */
-    public Output<String> getTenant() {
+    public Output<String> tenant() {
         return this.tenant;
     }
 

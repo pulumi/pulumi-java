@@ -34,7 +34,7 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
      * A name for this whitelist entry.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -43,7 +43,7 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
      * the whitelist to become active.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

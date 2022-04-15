@@ -17,77 +17,77 @@ public final class GetDatabaseInstanceReplicaConfiguration extends io.pulumi.res
     @Import(name="caCertificate", required=true)
       private final String caCertificate;
 
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
 
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
 
     @Import(name="clientKey", required=true)
       private final String clientKey;
 
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
 
     @Import(name="connectRetryInterval", required=true)
       private final Integer connectRetryInterval;
 
-    public Integer getConnectRetryInterval() {
+    public Integer connectRetryInterval() {
         return this.connectRetryInterval;
     }
 
     @Import(name="dumpFilePath", required=true)
       private final String dumpFilePath;
 
-    public String getDumpFilePath() {
+    public String dumpFilePath() {
         return this.dumpFilePath;
     }
 
     @Import(name="failoverTarget", required=true)
       private final Boolean failoverTarget;
 
-    public Boolean getFailoverTarget() {
+    public Boolean failoverTarget() {
         return this.failoverTarget;
     }
 
     @Import(name="masterHeartbeatPeriod", required=true)
       private final Integer masterHeartbeatPeriod;
 
-    public Integer getMasterHeartbeatPeriod() {
+    public Integer masterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
     }
 
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
     @Import(name="sslCipher", required=true)
       private final String sslCipher;
 
-    public String getSslCipher() {
+    public String sslCipher() {
         return this.sslCipher;
     }
 
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 
     @Import(name="verifyServerCertificate", required=true)
       private final Boolean verifyServerCertificate;
 
-    public Boolean getVerifyServerCertificate() {
+    public Boolean verifyServerCertificate() {
         return this.verifyServerCertificate;
     }
 

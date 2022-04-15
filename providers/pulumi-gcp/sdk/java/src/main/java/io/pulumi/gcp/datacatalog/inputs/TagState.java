@@ -27,7 +27,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="column")
       private final @Nullable Output<String> column;
 
-    public Output<String> getColumn() {
+    public Output<String> column() {
         return this.column == null ? Codegen.empty() : this.column;
     }
 
@@ -40,7 +40,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<TagFieldGetArgs>> fields;
 
-    public Output<List<TagFieldGetArgs>> getFields() {
+    public Output<List<TagFieldGetArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -54,7 +54,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -79,7 +79,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<String> template;
 
-    public Output<String> getTemplate() {
+    public Output<String> template() {
         return this.template == null ? Codegen.empty() : this.template;
     }
 
@@ -90,7 +90,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateDisplayname")
       private final @Nullable Output<String> templateDisplayname;
 
-    public Output<String> getTemplateDisplayname() {
+    public Output<String> templateDisplayname() {
         return this.templateDisplayname == null ? Codegen.empty() : this.templateDisplayname;
     }
 

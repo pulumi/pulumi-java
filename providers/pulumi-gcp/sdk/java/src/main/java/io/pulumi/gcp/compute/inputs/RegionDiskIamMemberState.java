@@ -19,7 +19,7 @@ public final class RegionDiskIamMemberState extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<RegionDiskIamMemberConditionGetArgs> condition;
 
-    public Output<RegionDiskIamMemberConditionGetArgs> getCondition() {
+    public Output<RegionDiskIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,14 +30,14 @@ public final class RegionDiskIamMemberState extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -48,7 +48,7 @@ public final class RegionDiskIamMemberState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,14 +60,14 @@ public final class RegionDiskIamMemberState extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -80,7 +80,7 @@ public final class RegionDiskIamMemberState extends io.pulumi.resources.Resource
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

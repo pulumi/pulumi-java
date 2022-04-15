@@ -22,7 +22,7 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
     @Import(name="deleteObjectsFromSourceAfterTransfer")
       private final @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
-    public Output<Boolean> getDeleteObjectsFromSourceAfterTransfer() {
+    public Output<Boolean> deleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer == null ? Codegen.empty() : this.deleteObjectsFromSourceAfterTransfer;
     }
 
@@ -34,7 +34,7 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
     @Import(name="deleteObjectsUniqueInSink")
       private final @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
-    public Output<Boolean> getDeleteObjectsUniqueInSink() {
+    public Output<Boolean> deleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink == null ? Codegen.empty() : this.deleteObjectsUniqueInSink;
     }
 
@@ -45,7 +45,7 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
     @Import(name="overwriteObjectsAlreadyExistingInSink")
       private final @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
-    public Output<Boolean> getOverwriteObjectsAlreadyExistingInSink() {
+    public Output<Boolean> overwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink == null ? Codegen.empty() : this.overwriteObjectsAlreadyExistingInSink;
     }
 

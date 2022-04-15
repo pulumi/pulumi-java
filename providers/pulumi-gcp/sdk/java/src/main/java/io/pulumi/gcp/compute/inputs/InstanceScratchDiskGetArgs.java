@@ -21,7 +21,7 @@ public final class InstanceScratchDiskGetArgs extends io.pulumi.resources.Resour
     @Import(name="interface", required=true)
       private final Output<String> interface_;
 
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_;
     }
 

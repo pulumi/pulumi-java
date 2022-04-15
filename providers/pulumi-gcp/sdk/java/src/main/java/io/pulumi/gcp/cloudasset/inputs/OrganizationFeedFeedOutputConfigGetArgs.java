@@ -22,7 +22,7 @@ public final class OrganizationFeedFeedOutputConfigGetArgs extends io.pulumi.res
     @Import(name="pubsubDestination", required=true)
       private final Output<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
-    public Output<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> getPubsubDestination() {
+    public Output<OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
 

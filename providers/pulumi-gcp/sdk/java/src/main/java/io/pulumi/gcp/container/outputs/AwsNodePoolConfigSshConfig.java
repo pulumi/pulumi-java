@@ -24,7 +24,7 @@ public final class AwsNodePoolConfigSshConfig {
      * Required. The name of the EC2 key pair used to login into cluster machines.
      * 
     */
-    public String getEc2KeyPair() {
+    public String ec2KeyPair() {
         return this.ec2KeyPair;
     }
 

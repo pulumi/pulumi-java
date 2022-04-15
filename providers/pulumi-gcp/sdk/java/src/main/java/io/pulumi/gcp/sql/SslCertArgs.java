@@ -23,7 +23,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commonName", required=true)
       private final Output<String> commonName;
 
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName;
     }
 
@@ -35,7 +35,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -47,7 +47,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

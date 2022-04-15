@@ -33,21 +33,21 @@ public final class GetProjectResult {
         this.projects = projects;
     }
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of projects matching the provided filter. Structure is defined below.
      * 
     */
-    public List<GetProjectProject> getProjects() {
+    public List<GetProjectProject> projects() {
         return this.projects;
     }
 

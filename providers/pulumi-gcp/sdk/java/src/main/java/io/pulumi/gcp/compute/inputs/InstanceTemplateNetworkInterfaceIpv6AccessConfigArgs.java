@@ -18,14 +18,14 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs extends 
     @Import(name="externalIpv6")
       private final @Nullable Output<String> externalIpv6;
 
-    public Output<String> getExternalIpv6() {
+    public Output<String> externalIpv6() {
         return this.externalIpv6 == null ? Codegen.empty() : this.externalIpv6;
     }
 
     @Import(name="externalIpv6PrefixLength")
       private final @Nullable Output<String> externalIpv6PrefixLength;
 
-    public Output<String> getExternalIpv6PrefixLength() {
+    public Output<String> externalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength == null ? Codegen.empty() : this.externalIpv6PrefixLength;
     }
 
@@ -37,14 +37,14 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfigArgs extends 
     @Import(name="networkTier", required=true)
       private final Output<String> networkTier;
 
-    public Output<String> getNetworkTier() {
+    public Output<String> networkTier() {
         return this.networkTier;
     }
 
     @Import(name="publicPtrDomainName")
       private final @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> getPublicPtrDomainName() {
+    public Output<String> publicPtrDomainName() {
         return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
     }
 

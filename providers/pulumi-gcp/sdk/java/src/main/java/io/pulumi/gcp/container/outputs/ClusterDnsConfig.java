@@ -41,21 +41,21 @@ public final class ClusterDnsConfig {
      * Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
      * 
     */
-    public Optional<String> getClusterDns() {
+    public Optional<String> clusterDns() {
         return Optional.ofNullable(this.clusterDns);
     }
     /**
      * The suffix used for all cluster service records.
      * 
     */
-    public Optional<String> getClusterDnsDomain() {
+    public Optional<String> clusterDnsDomain() {
         return Optional.ofNullable(this.clusterDnsDomain);
     }
     /**
      * The scope of access to cluster DNS records. `DNS_SCOPE_UNSPECIFIED` (default) or `CLUSTER_SCOPE` or `VPC_SCOPE`.
      * 
     */
-    public Optional<String> getClusterDnsScope() {
+    public Optional<String> clusterDnsScope() {
         return Optional.ofNullable(this.clusterDnsScope);
     }
 

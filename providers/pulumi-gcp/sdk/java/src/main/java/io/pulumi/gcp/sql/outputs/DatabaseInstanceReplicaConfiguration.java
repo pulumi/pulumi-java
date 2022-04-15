@@ -106,7 +106,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * certificate.
      * 
     */
-    public Optional<String> getCaCertificate() {
+    public Optional<String> caCertificate() {
         return Optional.ofNullable(this.caCertificate);
     }
     /**
@@ -114,7 +114,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * certificate.
      * 
     */
-    public Optional<String> getClientCertificate() {
+    public Optional<String> clientCertificate() {
         return Optional.ofNullable(this.clientCertificate);
     }
     /**
@@ -122,7 +122,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * corresponding public key in encoded in the `client_certificate`.
      * 
     */
-    public Optional<String> getClientKey() {
+    public Optional<String> clientKey() {
         return Optional.ofNullable(this.clientKey);
     }
     /**
@@ -130,7 +130,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * between connect retries.
      * 
     */
-    public Optional<Integer> getConnectRetryInterval() {
+    public Optional<Integer> connectRetryInterval() {
         return Optional.ofNullable(this.connectRetryInterval);
     }
     /**
@@ -138,7 +138,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * instances are created. Format is `gs://bucket/filename`.
      * 
     */
-    public Optional<String> getDumpFilePath() {
+    public Optional<String> dumpFilePath() {
         return Optional.ofNullable(this.dumpFilePath);
     }
     /**
@@ -148,7 +148,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * the new master instance.
      * 
     */
-    public Optional<Boolean> getFailoverTarget() {
+    public Optional<Boolean> failoverTarget() {
         return Optional.ofNullable(this.failoverTarget);
     }
     /**
@@ -156,24 +156,24 @@ public final class DatabaseInstanceReplicaConfiguration {
      * heartbeats.
      * 
     */
-    public Optional<Integer> getMasterHeartbeatPeriod() {
+    public Optional<Integer> masterHeartbeatPeriod() {
         return Optional.ofNullable(this.masterHeartbeatPeriod);
     }
     /**
      * Password for the replication connection.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
-    public Optional<String> getSslCipher() {
+    public Optional<String> sslCipher() {
         return Optional.ofNullable(this.sslCipher);
     }
     /**
      * Username for replication connection.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
     /**
@@ -181,7 +181,7 @@ public final class DatabaseInstanceReplicaConfiguration {
      * value is checked during the SSL handshake.
      * 
     */
-    public Optional<Boolean> getVerifyServerCertificate() {
+    public Optional<Boolean> verifyServerCertificate() {
         return Optional.ofNullable(this.verifyServerCertificate);
     }
 

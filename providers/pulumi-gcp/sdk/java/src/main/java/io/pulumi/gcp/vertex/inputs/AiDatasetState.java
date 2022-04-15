@@ -25,7 +25,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -36,7 +36,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSpec")
       private final @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
-    public Output<AiDatasetEncryptionSpecGetArgs> getEncryptionSpec() {
+    public Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec() {
         return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
     }
 
@@ -59,7 +59,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -70,7 +70,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadataSchemaUri")
       private final @Nullable Output<String> metadataSchemaUri;
 
-    public Output<String> getMetadataSchemaUri() {
+    public Output<String> metadataSchemaUri() {
         return this.metadataSchemaUri == null ? Codegen.empty() : this.metadataSchemaUri;
     }
 
@@ -81,7 +81,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -104,7 +104,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -116,7 +116,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

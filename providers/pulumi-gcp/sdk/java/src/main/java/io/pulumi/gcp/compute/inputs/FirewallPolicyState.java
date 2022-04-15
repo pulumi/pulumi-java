@@ -23,7 +23,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -34,7 +34,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -56,7 +56,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="firewallPolicyId")
       private final @Nullable Output<String> firewallPolicyId;
 
-    public Output<String> getFirewallPolicyId() {
+    public Output<String> firewallPolicyId() {
         return this.firewallPolicyId == null ? Codegen.empty() : this.firewallPolicyId;
     }
 
@@ -67,7 +67,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -89,7 +89,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="ruleTupleCount")
       private final @Nullable Output<Integer> ruleTupleCount;
 
-    public Output<Integer> getRuleTupleCount() {
+    public Output<Integer> ruleTupleCount() {
         return this.ruleTupleCount == null ? Codegen.empty() : this.ruleTupleCount;
     }
 
@@ -100,7 +100,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -111,7 +111,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="selfLinkWithId")
       private final @Nullable Output<String> selfLinkWithId;
 
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId == null ? Codegen.empty() : this.selfLinkWithId;
     }
 
@@ -122,7 +122,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 

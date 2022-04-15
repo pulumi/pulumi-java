@@ -25,7 +25,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="kmsWrapped")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs> kmsWrapped;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs> getKmsWrapped() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs> kmsWrapped() {
         return this.kmsWrapped == null ? Codegen.empty() : this.kmsWrapped;
     }
 
@@ -37,7 +37,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="transient")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> transient_;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> getTransient_() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientArgs> transient_() {
         return this.transient_ == null ? Codegen.empty() : this.transient_;
     }
 
@@ -49,7 +49,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="unwrapped")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedArgs> unwrapped;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedArgs> getUnwrapped() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedArgs> unwrapped() {
         return this.unwrapped == null ? Codegen.empty() : this.unwrapped;
     }
 

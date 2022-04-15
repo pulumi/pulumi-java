@@ -22,7 +22,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     @Import(name="text")
       private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text;
 
-    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> getText() {
+    public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

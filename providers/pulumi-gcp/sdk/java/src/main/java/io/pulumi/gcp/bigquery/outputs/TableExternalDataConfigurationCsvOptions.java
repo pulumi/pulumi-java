@@ -77,7 +77,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * that are missing trailing optional columns.
      * 
     */
-    public Optional<Boolean> getAllowJaggedRows() {
+    public Optional<Boolean> allowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
     /**
@@ -86,7 +86,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * The default value is false.
      * 
     */
-    public Optional<Boolean> getAllowQuotedNewlines() {
+    public Optional<Boolean> allowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
     /**
@@ -94,14 +94,14 @@ public final class TableExternalDataConfigurationCsvOptions {
      * values are UTF-8 or ISO-8859-1.
      * 
     */
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The separator for fields in a CSV file.
      * 
     */
-    public Optional<String> getFieldDelimiter() {
+    public Optional<String> fieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
     /**
@@ -114,7 +114,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * explicitly set.
      * 
     */
-    public String getQuote() {
+    public String quote() {
         return this.quote;
     }
     /**
@@ -123,7 +123,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * `skip_leading_rows` must be set.
      * 
     */
-    public Optional<Integer> getSkipLeadingRows() {
+    public Optional<Integer> skipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
 

@@ -26,7 +26,7 @@ public final class InstanceNetworkPerformanceConfig {
      * Possible values: TIER_1, DEFAULT
      * 
     */
-    public String getTotalEgressBandwidthTier() {
+    public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

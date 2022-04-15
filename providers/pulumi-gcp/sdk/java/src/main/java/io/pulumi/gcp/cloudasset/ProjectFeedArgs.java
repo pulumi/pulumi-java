@@ -28,7 +28,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> getAssetNames() {
+    public Output<List<String>> assetNames() {
         return this.assetNames == null ? Codegen.empty() : this.assetNames;
     }
 
@@ -43,7 +43,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> getAssetTypes() {
+    public Output<List<String>> assetTypes() {
         return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
     }
 
@@ -57,7 +57,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingProject")
       private final @Nullable Output<String> billingProject;
 
-    public Output<String> getBillingProject() {
+    public Output<String> billingProject() {
         return this.billingProject == null ? Codegen.empty() : this.billingProject;
     }
 
@@ -73,7 +73,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<ProjectFeedConditionArgs> condition;
 
-    public Output<ProjectFeedConditionArgs> getCondition() {
+    public Output<ProjectFeedConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -85,7 +85,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -96,7 +96,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedId", required=true)
       private final Output<String> feedId;
 
-    public Output<String> getFeedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
 
@@ -108,7 +108,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedOutputConfig", required=true)
       private final Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig;
 
-    public Output<ProjectFeedFeedOutputConfigArgs> getFeedOutputConfig() {
+    public Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig() {
         return this.feedOutputConfig;
     }
 
@@ -120,7 +120,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -27,7 +27,7 @@ public final class TriggerBuildAvailableSecrets {
      * Structure is documented below.
      * 
     */
-    public List<TriggerBuildAvailableSecretsSecretManager> getSecretManagers() {
+    public List<TriggerBuildAvailableSecretsSecretManager> secretManagers() {
         return this.secretManagers;
     }
 

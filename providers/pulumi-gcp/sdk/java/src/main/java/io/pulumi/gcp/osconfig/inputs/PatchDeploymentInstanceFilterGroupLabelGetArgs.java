@@ -22,7 +22,7 @@ public final class PatchDeploymentInstanceFilterGroupLabelGetArgs extends io.pul
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
 

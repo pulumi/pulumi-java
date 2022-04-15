@@ -19,7 +19,7 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey extends io.pulumi.re
     @Import(name="kmsKeySelfLink", required=true)
       private final String kmsKeySelfLink;
 
-    public String getKmsKeySelfLink() {
+    public String kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 

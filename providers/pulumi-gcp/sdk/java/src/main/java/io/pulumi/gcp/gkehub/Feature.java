@@ -48,7 +48,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return Output only. When the Feature resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +62,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return Output only. When the Feature resource was deleted.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -76,7 +76,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return GCP labels for this Feature.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -90,7 +90,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -104,7 +104,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return The full, unique name of this Feature resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -132,7 +132,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return State of the Feature resource itself.
      * 
      */
-    public Output<List<FeatureResourceState>> getResourceStates() {
+    public Output<List<FeatureResourceState>> resourceStates() {
         return this.resourceStates;
     }
     /**
@@ -146,7 +146,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    public Output</* @Nullable */ FeatureSpec> getSpec() {
+    public Output</* @Nullable */ FeatureSpec> spec() {
         return this.spec;
     }
     /**
@@ -160,7 +160,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return Output only. The Hub-wide Feature state
      * 
      */
-    public Output<List<FeatureState>> getStates() {
+    public Output<List<FeatureState>> states() {
         return this.states;
     }
     /**
@@ -174,7 +174,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return Output only. When the Feature resource was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

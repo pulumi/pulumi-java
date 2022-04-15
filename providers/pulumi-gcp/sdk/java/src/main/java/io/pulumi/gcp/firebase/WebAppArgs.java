@@ -22,7 +22,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class WebAppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

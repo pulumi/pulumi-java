@@ -23,7 +23,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
     @Import(name="targetConcurrentRequests")
       private final @Nullable Output<Double> targetConcurrentRequests;
 
-    public Output<Double> getTargetConcurrentRequests() {
+    public Output<Double> targetConcurrentRequests() {
         return this.targetConcurrentRequests == null ? Codegen.empty() : this.targetConcurrentRequests;
     }
 
@@ -34,7 +34,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
     @Import(name="targetRequestCountPerSecond")
       private final @Nullable Output<String> targetRequestCountPerSecond;
 
-    public Output<String> getTargetRequestCountPerSecond() {
+    public Output<String> targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond == null ? Codegen.empty() : this.targetRequestCountPerSecond;
     }
 

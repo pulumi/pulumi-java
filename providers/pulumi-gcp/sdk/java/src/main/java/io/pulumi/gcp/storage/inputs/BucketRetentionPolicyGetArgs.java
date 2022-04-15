@@ -23,7 +23,7 @@ public final class BucketRetentionPolicyGetArgs extends io.pulumi.resources.Reso
     @Import(name="isLocked")
       private final @Nullable Output<Boolean> isLocked;
 
-    public Output<Boolean> getIsLocked() {
+    public Output<Boolean> isLocked() {
         return this.isLocked == null ? Codegen.empty() : this.isLocked;
     }
 
@@ -34,7 +34,7 @@ public final class BucketRetentionPolicyGetArgs extends io.pulumi.resources.Reso
     @Import(name="retentionPeriod", required=true)
       private final Output<Integer> retentionPeriod;
 
-    public Output<Integer> getRetentionPeriod() {
+    public Output<Integer> retentionPeriod() {
         return this.retentionPeriod;
     }
 

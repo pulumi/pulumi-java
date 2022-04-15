@@ -23,7 +23,7 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -46,7 +46,7 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -57,7 +57,7 @@ public final class ProjectSinkExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

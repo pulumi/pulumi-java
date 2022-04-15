@@ -24,7 +24,7 @@ public final class BackendServiceOutlierDetectionIntervalGetArgs extends io.pulu
     @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
-    public Output<Integer> getNanos() {
+    public Output<Integer> nanos() {
         return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
@@ -36,7 +36,7 @@ public final class BackendServiceOutlierDetectionIntervalGetArgs extends io.pulu
     @Import(name="seconds", required=true)
       private final Output<Integer> seconds;
 
-    public Output<Integer> getSeconds() {
+    public Output<Integer> seconds() {
         return this.seconds;
     }
 

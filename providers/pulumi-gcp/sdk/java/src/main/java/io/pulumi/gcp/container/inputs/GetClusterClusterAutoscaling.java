@@ -19,28 +19,28 @@ public final class GetClusterClusterAutoscaling extends io.pulumi.resources.Invo
     @Import(name="autoProvisioningDefaults", required=true)
       private final List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults;
 
-    public List<GetClusterClusterAutoscalingAutoProvisioningDefault> getAutoProvisioningDefaults() {
+    public List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults() {
         return this.autoProvisioningDefaults;
     }
 
     @Import(name="autoscalingProfile", required=true)
       private final String autoscalingProfile;
 
-    public String getAutoscalingProfile() {
+    public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="resourceLimits", required=true)
       private final List<GetClusterClusterAutoscalingResourceLimit> resourceLimits;
 
-    public List<GetClusterClusterAutoscalingResourceLimit> getResourceLimits() {
+    public List<GetClusterClusterAutoscalingResourceLimit> resourceLimits() {
         return this.resourceLimits;
     }
 

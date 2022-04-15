@@ -140,7 +140,7 @@ public final class TriggerBuildStep {
      * remainder will be used as arguments.
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
@@ -155,7 +155,7 @@ public final class TriggerBuildStep {
      * for the step's execution.
      * 
     */
-    public Optional<String> getDir() {
+    public Optional<String> dir() {
         return Optional.ofNullable(this.dir);
     }
     /**
@@ -164,7 +164,7 @@ public final class TriggerBuildStep {
      * If unset, the image's default entrypoint is used
      * 
     */
-    public Optional<String> getEntrypoint() {
+    public Optional<String> entrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
     /**
@@ -174,7 +174,7 @@ public final class TriggerBuildStep {
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
     */
-    public List<String> getEnvs() {
+    public List<String> envs() {
         return this.envs == null ? List.of() : this.envs;
     }
     /**
@@ -182,7 +182,7 @@ public final class TriggerBuildStep {
      * reference this build step as a dependency.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -191,7 +191,7 @@ public final class TriggerBuildStep {
      * Each named volume must be used by at least two build steps.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -200,7 +200,7 @@ public final class TriggerBuildStep {
      * will be available to all build steps in this build.
      * 
     */
-    public List<String> getSecretEnvs() {
+    public List<String> secretEnvs() {
         return this.secretEnvs == null ? List.of() : this.secretEnvs;
     }
     /**
@@ -210,7 +210,7 @@ public final class TriggerBuildStep {
      * completes or the build itself times out.
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
@@ -219,7 +219,7 @@ public final class TriggerBuildStep {
      * Structure is documented below.
      * 
     */
-    public Optional<String> getTiming() {
+    public Optional<String> timing() {
         return Optional.ofNullable(this.timing);
     }
     /**
@@ -232,7 +232,7 @@ public final class TriggerBuildStep {
      * Structure is documented below.
      * 
     */
-    public List<TriggerBuildStepVolume> getVolumes() {
+    public List<TriggerBuildStepVolume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
     /**
@@ -243,7 +243,7 @@ public final class TriggerBuildStep {
      * have completed successfully.
      * 
     */
-    public List<String> getWaitFors() {
+    public List<String> waitFors() {
         return this.waitFors == null ? List.of() : this.waitFors;
     }
 

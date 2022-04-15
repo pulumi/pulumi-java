@@ -15,7 +15,7 @@ public final class GetClusterAddonsConfigGcpFilestoreCsiDriverConfig extends io.
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

@@ -25,7 +25,7 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -37,7 +37,7 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 

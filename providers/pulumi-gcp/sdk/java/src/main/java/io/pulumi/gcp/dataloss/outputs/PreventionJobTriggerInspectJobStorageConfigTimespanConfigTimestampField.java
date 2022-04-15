@@ -24,7 +24,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
      * The name of the Datastore kind.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

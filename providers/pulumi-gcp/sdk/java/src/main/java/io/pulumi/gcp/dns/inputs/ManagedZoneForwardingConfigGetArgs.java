@@ -25,7 +25,7 @@ public final class ManagedZoneForwardingConfigGetArgs extends io.pulumi.resource
     @Import(name="targetNameServers", required=true)
       private final Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
 
-    public Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> getTargetNameServers() {
+    public Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers() {
         return this.targetNameServers;
     }
 

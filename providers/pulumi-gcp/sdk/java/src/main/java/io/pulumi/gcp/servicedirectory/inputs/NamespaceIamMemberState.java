@@ -19,7 +19,7 @@ public final class NamespaceIamMemberState extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<NamespaceIamMemberConditionGetArgs> condition;
 
-    public Output<NamespaceIamMemberConditionGetArgs> getCondition() {
+    public Output<NamespaceIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,14 +30,14 @@ public final class NamespaceIamMemberState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -48,7 +48,7 @@ public final class NamespaceIamMemberState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class NamespaceIamMemberState extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

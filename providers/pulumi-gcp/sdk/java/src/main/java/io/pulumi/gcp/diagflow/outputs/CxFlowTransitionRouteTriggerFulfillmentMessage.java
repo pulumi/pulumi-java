@@ -26,7 +26,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
      * A collection of text responses.
      * 
     */
-    public Optional<CxFlowTransitionRouteTriggerFulfillmentMessageText> getText() {
+    public Optional<CxFlowTransitionRouteTriggerFulfillmentMessageText> text() {
         return Optional.ofNullable(this.text);
     }
 

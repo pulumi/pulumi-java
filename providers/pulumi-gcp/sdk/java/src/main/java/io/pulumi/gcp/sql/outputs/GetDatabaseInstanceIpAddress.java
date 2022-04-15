@@ -23,13 +23,13 @@ public final class GetDatabaseInstanceIpAddress {
         this.type = type;
     }
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
-    public String getTimeToRetire() {
+    public String timeToRetire() {
         return this.timeToRetire;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

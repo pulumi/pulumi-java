@@ -55,7 +55,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return A unique id for the deployment.
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -69,7 +69,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return Human readable description of the game server deployment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -99,7 +99,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @return Location of the Deployment.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -117,7 +117,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * 'projects/my-project/locations/{location}/gameServerDeployments/my-deployment'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

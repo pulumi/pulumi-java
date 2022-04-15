@@ -35,7 +35,7 @@ public final class DeploymentTargetImport {
      * The full contents of the template that you want to import.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
@@ -43,7 +43,7 @@ public final class DeploymentTargetImport {
      * configuration.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

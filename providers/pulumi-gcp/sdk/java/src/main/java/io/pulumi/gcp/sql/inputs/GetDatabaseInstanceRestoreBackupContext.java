@@ -16,14 +16,14 @@ public final class GetDatabaseInstanceRestoreBackupContext extends io.pulumi.res
     @Import(name="backupRunId", required=true)
       private final Integer backupRunId;
 
-    public Integer getBackupRunId() {
+    public Integer backupRunId() {
         return this.backupRunId;
     }
 
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -34,7 +34,7 @@ public final class GetDatabaseInstanceRestoreBackupContext extends io.pulumi.res
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

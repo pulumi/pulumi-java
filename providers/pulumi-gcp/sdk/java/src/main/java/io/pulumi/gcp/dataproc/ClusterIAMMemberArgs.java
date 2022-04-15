@@ -23,21 +23,21 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
     @Import(name="condition")
       private final @Nullable Output<ClusterIAMMemberConditionArgs> condition;
 
-    public Output<ClusterIAMMemberConditionArgs> getCondition() {
+    public Output<ClusterIAMMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -61,7 +61,7 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -74,7 +74,7 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

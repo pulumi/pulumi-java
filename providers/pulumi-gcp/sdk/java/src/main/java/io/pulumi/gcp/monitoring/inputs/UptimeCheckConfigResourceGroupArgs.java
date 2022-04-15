@@ -22,7 +22,7 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -34,7 +34,7 @@ public final class UptimeCheckConfigResourceGroupArgs extends io.pulumi.resource
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

@@ -22,7 +22,7 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="ipAllocation", required=true)
       private final Output<String> ipAllocation;
 
-    public Output<String> getIpAllocation() {
+    public Output<String> ipAllocation() {
         return this.ipAllocation;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
     @Import(name="network", required=true)
       private final Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
 

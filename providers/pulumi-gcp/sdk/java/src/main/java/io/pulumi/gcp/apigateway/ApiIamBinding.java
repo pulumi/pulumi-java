@@ -62,13 +62,13 @@ public class ApiIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="api", type=String.class, parameters={})
     private Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
     @Export(name="condition", type=ApiIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ApiIamBindingCondition> condition;
 
-    public Output</* @Nullable */ ApiIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ ApiIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -82,13 +82,13 @@ public class ApiIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -104,7 +104,7 @@ public class ApiIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -122,7 +122,7 @@ public class ApiIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

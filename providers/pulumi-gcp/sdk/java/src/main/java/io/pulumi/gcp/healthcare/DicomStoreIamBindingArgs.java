@@ -20,7 +20,7 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<DicomStoreIamBindingConditionArgs> condition;
 
-    public Output<DicomStoreIamBindingConditionArgs> getCondition() {
+    public Output<DicomStoreIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -34,14 +34,14 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="dicomStoreId", required=true)
       private final Output<String> dicomStoreId;
 
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -54,7 +54,7 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

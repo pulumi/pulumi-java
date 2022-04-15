@@ -22,7 +22,7 @@ public final class NamespaceIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class NamespaceIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

@@ -35,7 +35,7 @@ public final class GetSubnetworkSecondaryIpRange {
      * secondary range.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -43,7 +43,7 @@ public final class GetSubnetworkSecondaryIpRange {
      * when adding an alias IP range to a VM instance.
      * 
     */
-    public String getRangeName() {
+    public String rangeName() {
         return this.rangeName;
     }
 

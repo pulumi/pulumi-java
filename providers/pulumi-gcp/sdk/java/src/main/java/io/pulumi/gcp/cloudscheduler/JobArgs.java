@@ -29,7 +29,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appEngineHttpTarget")
       private final @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
 
-    public Output<JobAppEngineHttpTargetArgs> getAppEngineHttpTarget() {
+    public Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget() {
         return this.appEngineHttpTarget == null ? Codegen.empty() : this.appEngineHttpTarget;
     }
 
@@ -47,7 +47,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attemptDeadline")
       private final @Nullable Output<String> attemptDeadline;
 
-    public Output<String> getAttemptDeadline() {
+    public Output<String> attemptDeadline() {
         return this.attemptDeadline == null ? Codegen.empty() : this.attemptDeadline;
     }
 
@@ -59,7 +59,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpTarget")
       private final @Nullable Output<JobHttpTargetArgs> httpTarget;
 
-    public Output<JobHttpTargetArgs> getHttpTarget() {
+    public Output<JobHttpTargetArgs> httpTarget() {
         return this.httpTarget == null ? Codegen.empty() : this.httpTarget;
     }
 
@@ -84,7 +84,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,7 +96,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -110,7 +110,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubTarget")
       private final @Nullable Output<JobPubsubTargetArgs> pubsubTarget;
 
-    public Output<JobPubsubTargetArgs> getPubsubTarget() {
+    public Output<JobPubsubTargetArgs> pubsubTarget() {
         return this.pubsubTarget == null ? Codegen.empty() : this.pubsubTarget;
     }
 
@@ -121,7 +121,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -135,7 +135,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryConfig")
       private final @Nullable Output<JobRetryConfigArgs> retryConfig;
 
-    public Output<JobRetryConfigArgs> getRetryConfig() {
+    public Output<JobRetryConfigArgs> retryConfig() {
         return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
     }
 
@@ -146,7 +146,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -158,7 +158,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

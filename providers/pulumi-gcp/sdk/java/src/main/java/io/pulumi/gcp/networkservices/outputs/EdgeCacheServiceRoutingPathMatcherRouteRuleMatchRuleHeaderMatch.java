@@ -65,7 +65,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
      * 
     */
-    public Optional<String> getExactMatch() {
+    public Optional<String> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
@@ -73,7 +73,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
     /**
@@ -81,28 +81,28 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
      * 
     */
-    public Optional<Boolean> getInvertMatch() {
+    public Optional<Boolean> invertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
     /**
      * The value of the header must start with the contents of prefixMatch.
      * 
     */
-    public Optional<String> getPrefixMatch() {
+    public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
      * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
      * 
     */
-    public Optional<Boolean> getPresentMatch() {
+    public Optional<Boolean> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
     /**
      * The value of the header must end with the contents of suffixMatch.
      * 
     */
-    public Optional<String> getSuffixMatch() {
+    public Optional<String> suffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }
 

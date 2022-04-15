@@ -27,7 +27,7 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="banDurationSec")
       private final @Nullable Output<Integer> banDurationSec;
 
-    public Output<Integer> getBanDurationSec() {
+    public Output<Integer> banDurationSec() {
         return this.banDurationSec == null ? Codegen.empty() : this.banDurationSec;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="banThreshold")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs> banThreshold;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs> getBanThreshold() {
+    public Output<SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs> banThreshold() {
         return this.banThreshold == null ? Codegen.empty() : this.banThreshold;
     }
 
@@ -51,7 +51,7 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="conformAction", required=true)
       private final Output<String> conformAction;
 
-    public Output<String> getConformAction() {
+    public Output<String> conformAction() {
         return this.conformAction;
     }
 
@@ -63,7 +63,7 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="enforceOnKey")
       private final @Nullable Output<String> enforceOnKey;
 
-    public Output<String> getEnforceOnKey() {
+    public Output<String> enforceOnKey() {
         return this.enforceOnKey == null ? Codegen.empty() : this.enforceOnKey;
     }
 
@@ -74,7 +74,7 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="enforceOnKeyName")
       private final @Nullable Output<String> enforceOnKeyName;
 
-    public Output<String> getEnforceOnKeyName() {
+    public Output<String> enforceOnKeyName() {
         return this.enforceOnKeyName == null ? Codegen.empty() : this.enforceOnKeyName;
     }
 
@@ -86,14 +86,14 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="exceedAction", required=true)
       private final Output<String> exceedAction;
 
-    public Output<String> getExceedAction() {
+    public Output<String> exceedAction() {
         return this.exceedAction;
     }
 
     @Import(name="exceedRedirectOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs> exceedRedirectOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs> getExceedRedirectOptions() {
+    public Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsGetArgs> exceedRedirectOptions() {
         return this.exceedRedirectOptions == null ? Codegen.empty() : this.exceedRedirectOptions;
     }
 
@@ -104,7 +104,7 @@ public final class SecurityPolicyRuleRateLimitOptionsGetArgs extends io.pulumi.r
     @Import(name="rateLimitThreshold", required=true)
       private final Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs> rateLimitThreshold;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs> getRateLimitThreshold() {
+    public Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdGetArgs> rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 

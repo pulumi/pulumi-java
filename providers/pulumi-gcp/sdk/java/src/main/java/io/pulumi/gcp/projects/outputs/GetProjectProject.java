@@ -40,29 +40,29 @@ public final class GetProjectProject {
         this.projectId = projectId;
     }
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getLifecycleState() {
+    public String lifecycleState() {
         return this.lifecycleState;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNumber() {
+    public String number() {
         return this.number;
     }
-    public Map<String,String> getParent() {
+    public Map<String,String> parent() {
         return this.parent;
     }
     /**
      * The project id of the project.
      * 
     */
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
 

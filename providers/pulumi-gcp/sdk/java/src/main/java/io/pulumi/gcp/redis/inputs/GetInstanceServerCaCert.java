@@ -15,35 +15,35 @@ public final class GetInstanceServerCaCert extends io.pulumi.resources.InvokeArg
     @Import(name="cert", required=true)
       private final String cert;
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
 
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
     @Import(name="expireTime", required=true)
       private final String expireTime;
 
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
 
     @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
 
     @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

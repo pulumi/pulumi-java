@@ -23,7 +23,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     @Import(name="maxRetentionDays", required=true)
       private final Output<Integer> maxRetentionDays;
 
-    public Output<Integer> getMaxRetentionDays() {
+    public Output<Integer> maxRetentionDays() {
         return this.maxRetentionDays;
     }
 
@@ -37,7 +37,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     @Import(name="onSourceDiskDelete")
       private final @Nullable Output<String> onSourceDiskDelete;
 
-    public Output<String> getOnSourceDiskDelete() {
+    public Output<String> onSourceDiskDelete() {
         return this.onSourceDiskDelete == null ? Codegen.empty() : this.onSourceDiskDelete;
     }
 

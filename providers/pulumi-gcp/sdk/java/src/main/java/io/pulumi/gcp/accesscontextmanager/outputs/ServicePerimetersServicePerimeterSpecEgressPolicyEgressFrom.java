@@ -42,7 +42,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
      * represent individual user or service account only.
      * 
     */
-    public List<String> getIdentities() {
+    public List<String> identities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
@@ -52,7 +52,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
     */
-    public Optional<String> getIdentityType() {
+    public Optional<String> identityType() {
         return Optional.ofNullable(this.identityType);
     }
 

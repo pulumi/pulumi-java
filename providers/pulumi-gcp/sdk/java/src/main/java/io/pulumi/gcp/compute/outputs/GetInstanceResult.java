@@ -238,211 +238,211 @@ public final class GetInstanceResult {
         this.zone = zone;
     }
 
-    public List<GetInstanceAdvancedMachineFeature> getAdvancedMachineFeatures() {
+    public List<GetInstanceAdvancedMachineFeature> advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
-    public Boolean getAllowStoppingForUpdate() {
+    public Boolean allowStoppingForUpdate() {
         return this.allowStoppingForUpdate;
     }
     /**
      * List of disks attached to the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceAttachedDisk> getAttachedDisks() {
+    public List<GetInstanceAttachedDisk> attachedDisks() {
         return this.attachedDisks;
     }
     /**
      * The boot disk for the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceBootDisk> getBootDisks() {
+    public List<GetInstanceBootDisk> bootDisks() {
         return this.bootDisks;
     }
     /**
      * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
      * 
     */
-    public Boolean getCanIpForward() {
+    public Boolean canIpForward() {
         return this.canIpForward;
     }
-    public List<GetInstanceConfidentialInstanceConfig> getConfidentialInstanceConfigs() {
+    public List<GetInstanceConfidentialInstanceConfig> confidentialInstanceConfigs() {
         return this.confidentialInstanceConfigs;
     }
     /**
      * The CPU platform used by this instance.
      * 
     */
-    public String getCpuPlatform() {
+    public String cpuPlatform() {
         return this.cpuPlatform;
     }
-    public String getCurrentStatus() {
+    public String currentStatus() {
         return this.currentStatus;
     }
     /**
      * Whether deletion protection is enabled on this instance.
      * 
     */
-    public Boolean getDeletionProtection() {
+    public Boolean deletionProtection() {
         return this.deletionProtection;
     }
     /**
      * A brief description of the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getDesiredStatus() {
+    public String desiredStatus() {
         return this.desiredStatus;
     }
-    public Boolean getEnableDisplay() {
+    public Boolean enableDisplay() {
         return this.enableDisplay;
     }
     /**
      * List of the type and count of accelerator cards attached to the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceGuestAccelerator> getGuestAccelerators() {
+    public List<GetInstanceGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The server-assigned unique identifier of this instance.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * The unique fingerprint of the labels.
      * 
     */
-    public String getLabelFingerprint() {
+    public String labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
      * A set of key/value label pairs assigned to the instance.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The machine type to create.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
      * Metadata key/value pairs made available within the instance.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * The unique fingerprint of the metadata.
      * 
     */
-    public String getMetadataFingerprint() {
+    public String metadataFingerprint() {
         return this.metadataFingerprint;
     }
-    public String getMetadataStartupScript() {
+    public String metadataStartupScript() {
         return this.metadataStartupScript;
     }
     /**
      * The minimum CPU platform specified for the VM instance.
      * 
     */
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The networks attached to the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceNetworkInterface> getNetworkInterfaces() {
+    public List<GetInstanceNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * The network performance configuration setting for the instance, if set. Structure is documented below.
      * 
     */
-    public List<GetInstanceNetworkPerformanceConfig> getNetworkPerformanceConfigs() {
+    public List<GetInstanceNetworkPerformanceConfig> networkPerformanceConfigs() {
         return this.networkPerformanceConfigs;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetInstanceReservationAffinity> getReservationAffinities() {
+    public List<GetInstanceReservationAffinity> reservationAffinities() {
         return this.reservationAffinities;
     }
-    public List<String> getResourcePolicies() {
+    public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
      * The scheduling strategy being used by the instance. Structure is documented below
      * 
     */
-    public List<GetInstanceScheduling> getSchedulings() {
+    public List<GetInstanceScheduling> schedulings() {
         return this.schedulings;
     }
     /**
      * The scratch disks attached to the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceScratchDisk> getScratchDisks() {
+    public List<GetInstanceScratchDisk> scratchDisks() {
         return this.scratchDisks;
     }
     /**
      * The URI of the created resource.
      * 
     */
-    public Optional<String> getSelfLink() {
+    public Optional<String> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
     /**
      * The service account to attach to the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceServiceAccount> getServiceAccounts() {
+    public List<GetInstanceServiceAccount> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
      * The shielded vm config being used by the instance. Structure is documented below.
      * 
     */
-    public List<GetInstanceShieldedInstanceConfig> getShieldedInstanceConfigs() {
+    public List<GetInstanceShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
     /**
      * The list of tags attached to the instance.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
     /**
      * The unique fingerprint of the tags.
      * 
     */
-    public String getTagsFingerprint() {
+    public String tagsFingerprint() {
         return this.tagsFingerprint;
     }
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

@@ -21,7 +21,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="nodeGroup", required=true)
       private final Output<String> nodeGroup;
 
-    public Output<String> getNodeGroup() {
+    public Output<String> nodeGroup() {
         return this.nodeGroup;
     }
 

@@ -27,7 +27,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     @Import(name="containerConcurrency")
       private final @Nullable Output<Integer> containerConcurrency;
 
-    public Output<Integer> getContainerConcurrency() {
+    public Output<Integer> containerConcurrency() {
         return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
     }
 
@@ -43,7 +43,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     @Import(name="containers")
       private final @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
 
-    public Output<List<ServiceTemplateSpecContainerArgs>> getContainers() {
+    public Output<List<ServiceTemplateSpecContainerArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -57,7 +57,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
-    public Output<String> getServiceAccountName() {
+    public Output<String> serviceAccountName() {
         return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
@@ -77,7 +77,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> servingState;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<String> getServingState() {
+    public Output<String> servingState() {
         return this.servingState == null ? Codegen.empty() : this.servingState;
     }
 
@@ -88,7 +88,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
@@ -100,7 +100,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     @Import(name="volumes")
       private final @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
 
-    public Output<List<ServiceTemplateSpecVolumeArgs>> getVolumes() {
+    public Output<List<ServiceTemplateSpecVolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

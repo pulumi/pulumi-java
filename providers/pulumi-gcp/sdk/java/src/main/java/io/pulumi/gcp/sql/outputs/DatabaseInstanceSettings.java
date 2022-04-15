@@ -124,7 +124,7 @@ public final class DatabaseInstanceSettings {
      * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
      * 
     */
-    public Optional<String> getActivationPolicy() {
+    public Optional<String> activationPolicy() {
         return Optional.ofNullable(this.activationPolicy);
     }
     /**
@@ -134,63 +134,63 @@ public final class DatabaseInstanceSettings {
      * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
      * 
     */
-    public Optional<String> getAvailabilityType() {
+    public Optional<String> availabilityType() {
         return Optional.ofNullable(this.availabilityType);
     }
-    public Optional<DatabaseInstanceSettingsBackupConfiguration> getBackupConfiguration() {
+    public Optional<DatabaseInstanceSettingsBackupConfiguration> backupConfiguration() {
         return Optional.ofNullable(this.backupConfiguration);
     }
     /**
      * The name of server instance collation.
      * 
     */
-    public Optional<String> getCollation() {
+    public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
-    public List<DatabaseInstanceSettingsDatabaseFlag> getDatabaseFlags() {
+    public List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags() {
         return this.databaseFlags == null ? List.of() : this.databaseFlags;
     }
     /**
      * Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
      * 
     */
-    public Optional<Boolean> getDiskAutoresize() {
+    public Optional<Boolean> diskAutoresize() {
         return Optional.ofNullable(this.diskAutoresize);
     }
-    public Optional<Integer> getDiskAutoresizeLimit() {
+    public Optional<Integer> diskAutoresizeLimit() {
         return Optional.ofNullable(this.diskAutoresizeLimit);
     }
     /**
      * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
      * 
     */
-    public Optional<Integer> getDiskSize() {
+    public Optional<Integer> diskSize() {
         return Optional.ofNullable(this.diskSize);
     }
     /**
      * The type of data disk: PD_SSD or PD_HDD.
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
-    public Optional<DatabaseInstanceSettingsInsightsConfig> getInsightsConfig() {
+    public Optional<DatabaseInstanceSettingsInsightsConfig> insightsConfig() {
         return Optional.ofNullable(this.insightsConfig);
     }
-    public Optional<DatabaseInstanceSettingsIpConfiguration> getIpConfiguration() {
+    public Optional<DatabaseInstanceSettingsIpConfiguration> ipConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }
-    public Optional<DatabaseInstanceSettingsLocationPreference> getLocationPreference() {
+    public Optional<DatabaseInstanceSettingsLocationPreference> locationPreference() {
         return Optional.ofNullable(this.locationPreference);
     }
-    public Optional<DatabaseInstanceSettingsMaintenanceWindow> getMaintenanceWindow() {
+    public Optional<DatabaseInstanceSettingsMaintenanceWindow> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
      * Pricing plan for this instance, can only be `PER_USE`.
      * 
     */
-    public Optional<String> getPricingPlan() {
+    public Optional<String> pricingPlan() {
         return Optional.ofNullable(this.pricingPlan);
     }
     /**
@@ -199,17 +199,17 @@ public final class DatabaseInstanceSettings {
      * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
     /**
      * A set of key/value user label pairs to assign to the instance.
      * 
     */
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels == null ? Map.of() : this.userLabels;
     }
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
 

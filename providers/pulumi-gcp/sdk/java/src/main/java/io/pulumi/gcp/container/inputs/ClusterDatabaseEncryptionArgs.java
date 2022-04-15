@@ -22,7 +22,7 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="state", required=true)
       private final Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

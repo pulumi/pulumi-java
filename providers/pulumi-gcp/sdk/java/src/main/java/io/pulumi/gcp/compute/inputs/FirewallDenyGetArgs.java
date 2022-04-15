@@ -28,7 +28,7 @@ public final class FirewallDenyGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> getPorts() {
+    public Output<List<String>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -42,7 +42,7 @@ public final class FirewallDenyGetArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 

@@ -55,42 +55,42 @@ public final class GetObjectSignedUrlResult {
         this.signedUrl = signedUrl;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<String> getContentMd5() {
+    public Optional<String> contentMd5() {
         return Optional.ofNullable(this.contentMd5);
     }
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
-    public Map<String,String> getExtensionHeaders() {
+    public Map<String,String> extensionHeaders() {
         return this.extensionHeaders == null ? Map.of() : this.extensionHeaders;
     }
-    public Optional<String> getHttpMethod() {
+    public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The signed URL that can be used to access the storage object without authentication.
      * 
     */
-    public String getSignedUrl() {
+    public String signedUrl() {
         return this.signedUrl;
     }
 

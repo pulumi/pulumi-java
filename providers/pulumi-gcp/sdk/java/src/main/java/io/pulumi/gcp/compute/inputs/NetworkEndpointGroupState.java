@@ -24,7 +24,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="defaultPort")
       private final @Nullable Output<Integer> defaultPort;
 
-    public Output<Integer> getDefaultPort() {
+    public Output<Integer> defaultPort() {
         return this.defaultPort == null ? Codegen.empty() : this.defaultPort;
     }
 
@@ -36,7 +36,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -78,7 +78,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="networkEndpointType")
       private final @Nullable Output<String> networkEndpointType;
 
-    public Output<String> getNetworkEndpointType() {
+    public Output<String> networkEndpointType() {
         return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
     }
 
@@ -90,7 +90,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -101,7 +101,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -112,7 +112,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -123,7 +123,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -134,7 +134,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

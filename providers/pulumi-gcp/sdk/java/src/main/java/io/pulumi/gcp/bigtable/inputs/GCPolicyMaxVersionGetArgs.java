@@ -21,7 +21,7 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
     @Import(name="number", required=true)
       private final Output<Integer> number;
 
-    public Output<Integer> getNumber() {
+    public Output<Integer> number() {
         return this.number;
     }
 

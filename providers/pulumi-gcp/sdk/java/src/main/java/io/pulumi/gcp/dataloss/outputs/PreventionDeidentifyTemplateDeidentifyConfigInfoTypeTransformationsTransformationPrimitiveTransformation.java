@@ -67,7 +67,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig> getCharacterMaskConfig() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig> characterMaskConfig() {
         return Optional.ofNullable(this.characterMaskConfig);
     }
     /**
@@ -75,7 +75,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig> getCryptoDeterministicConfig() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig> cryptoDeterministicConfig() {
         return Optional.ofNullable(this.cryptoDeterministicConfig);
     }
     /**
@@ -84,7 +84,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig> getCryptoReplaceFfxFpeConfig() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig> cryptoReplaceFfxFpeConfig() {
         return Optional.ofNullable(this.cryptoReplaceFfxFpeConfig);
     }
     /**
@@ -92,14 +92,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig> getReplaceConfig() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig> replaceConfig() {
         return Optional.ofNullable(this.replaceConfig);
     }
     /**
      * Replace each matching finding with the name of the info type.
      * 
     */
-    public Optional<Boolean> getReplaceWithInfoTypeConfig() {
+    public Optional<Boolean> replaceWithInfoTypeConfig() {
         return Optional.ofNullable(this.replaceWithInfoTypeConfig);
     }
 

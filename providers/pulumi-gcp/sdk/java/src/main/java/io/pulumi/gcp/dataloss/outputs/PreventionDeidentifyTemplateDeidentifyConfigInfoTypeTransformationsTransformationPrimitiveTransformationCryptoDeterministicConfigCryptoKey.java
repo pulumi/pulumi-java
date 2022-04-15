@@ -47,7 +47,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped> getKmsWrapped() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped> kmsWrapped() {
         return Optional.ofNullable(this.kmsWrapped);
     }
     /**
@@ -55,7 +55,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient> getTransient_() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient> transient_() {
         return Optional.ofNullable(this.transient_);
     }
     /**
@@ -63,7 +63,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped> getUnwrapped() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped> unwrapped() {
         return Optional.ofNullable(this.unwrapped);
     }
 

@@ -27,7 +27,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="column")
       private final @Nullable Output<String> column;
 
-    public Output<String> getColumn() {
+    public Output<String> column() {
         return this.column == null ? Codegen.empty() : this.column;
     }
 
@@ -40,7 +40,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
       private final Output<List<TagFieldArgs>> fields;
 
-    public Output<List<TagFieldArgs>> getFields() {
+    public Output<List<TagFieldArgs>> fields() {
         return this.fields;
     }
 
@@ -52,7 +52,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -65,7 +65,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<String> template;
 
-    public Output<String> getTemplate() {
+    public Output<String> template() {
         return this.template;
     }
 

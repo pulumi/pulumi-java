@@ -28,7 +28,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -40,7 +40,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -51,7 +51,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -64,7 +64,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="oauthToken")
       private final @Nullable Output<JobHttpTargetOauthTokenGetArgs> oauthToken;
 
-    public Output<JobHttpTargetOauthTokenGetArgs> getOauthToken() {
+    public Output<JobHttpTargetOauthTokenGetArgs> oauthToken() {
         return this.oauthToken == null ? Codegen.empty() : this.oauthToken;
     }
 
@@ -77,7 +77,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="oidcToken")
       private final @Nullable Output<JobHttpTargetOidcTokenGetArgs> oidcToken;
 
-    public Output<JobHttpTargetOidcTokenGetArgs> getOidcToken() {
+    public Output<JobHttpTargetOidcTokenGetArgs> oidcToken() {
         return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
@@ -88,7 +88,7 @@ public final class JobHttpTargetGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

@@ -22,7 +22,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="accessLevels")
       private final @Nullable Output<String> accessLevels;
 
-    public Output<String> getAccessLevels() {
+    public Output<String> accessLevels() {
         return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
@@ -33,7 +33,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="groupKey")
       private final @Nullable Output<String> groupKey;
 
-    public Output<String> getGroupKey() {
+    public Output<String> groupKey() {
         return this.groupKey == null ? Codegen.empty() : this.groupKey;
     }
 
@@ -46,7 +46,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId == null ? Codegen.empty() : this.organizationId;
     }
 

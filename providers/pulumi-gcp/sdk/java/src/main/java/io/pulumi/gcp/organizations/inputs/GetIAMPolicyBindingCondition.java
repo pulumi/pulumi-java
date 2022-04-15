@@ -21,7 +21,7 @@ public final class GetIAMPolicyBindingCondition extends io.pulumi.resources.Invo
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -32,7 +32,7 @@ public final class GetIAMPolicyBindingCondition extends io.pulumi.resources.Invo
     @Import(name="expression", required=true)
       private final String expression;
 
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 
@@ -43,7 +43,7 @@ public final class GetIAMPolicyBindingCondition extends io.pulumi.resources.Invo
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

@@ -51,7 +51,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * @return Name used for UI elements listing this Service.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -65,7 +65,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * @return The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -81,7 +81,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -97,7 +97,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * service ID.
      * 
      */
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
     /**
@@ -113,7 +113,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CustomServiceTelemetry> getTelemetry() {
+    public Output</* @Nullable */ CustomServiceTelemetry> telemetry() {
         return this.telemetry;
     }
 

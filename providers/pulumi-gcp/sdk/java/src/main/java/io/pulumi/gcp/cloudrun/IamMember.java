@@ -61,7 +61,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=IamMemberCondition.class, parameters={})
     private Output</* @Nullable */ IamMemberCondition> condition;
 
-    public Output</* @Nullable */ IamMemberCondition> getCondition() {
+    public Output</* @Nullable */ IamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,7 +75,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -89,13 +89,13 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * @return The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -111,7 +111,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -129,7 +129,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -143,7 +143,7 @@ public class IamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

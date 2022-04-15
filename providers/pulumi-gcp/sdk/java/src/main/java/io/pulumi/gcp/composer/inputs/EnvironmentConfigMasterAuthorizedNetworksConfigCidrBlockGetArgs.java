@@ -18,14 +18,14 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetAr
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 

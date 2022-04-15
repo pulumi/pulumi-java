@@ -20,10 +20,10 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
         this.value = value;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

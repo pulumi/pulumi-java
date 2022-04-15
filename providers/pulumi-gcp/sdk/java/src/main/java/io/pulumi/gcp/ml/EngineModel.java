@@ -64,7 +64,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EngineModelDefaultVersion> getDefaultVersion() {
+    public Output</* @Nullable */ EngineModelDefaultVersion> defaultVersion() {
         return this.defaultVersion;
     }
     /**
@@ -78,7 +78,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * @return The description specified for the model when it was created.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -92,7 +92,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * @return One or more labels that you can add, to organize your models.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -106,7 +106,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * @return The name specified for the version when it was created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -120,7 +120,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * @return If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
      * 
      */
-    public Output</* @Nullable */ Boolean> getOnlinePredictionConsoleLogging() {
+    public Output</* @Nullable */ Boolean> onlinePredictionConsoleLogging() {
         return this.onlinePredictionConsoleLogging;
     }
     /**
@@ -134,7 +134,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * @return If true, online prediction access logs are sent to StackDriver Logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> getOnlinePredictionLogging() {
+    public Output</* @Nullable */ Boolean> onlinePredictionLogging() {
         return this.onlinePredictionLogging;
     }
     /**
@@ -150,7 +150,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -166,7 +166,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * Currently only one region per model is supported
      * 
      */
-    public Output</* @Nullable */ String> getRegions() {
+    public Output</* @Nullable */ String> regions() {
         return this.regions;
     }
 

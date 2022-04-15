@@ -19,7 +19,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<DiskIamMemberConditionGetArgs> condition;
 
-    public Output<DiskIamMemberConditionGetArgs> getCondition() {
+    public Output<DiskIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,14 +30,14 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -48,7 +48,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -86,7 +86,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

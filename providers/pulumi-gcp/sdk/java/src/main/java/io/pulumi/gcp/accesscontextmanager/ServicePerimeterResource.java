@@ -59,7 +59,7 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * @return The name of the Service Perimeter to add this resource to.
      * 
      */
-    public Output<String> getPerimeterName() {
+    public Output<String> perimeterName() {
         return this.perimeterName;
     }
     /**
@@ -77,7 +77,7 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * Format: projects/{project_number}
      * 
      */
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 

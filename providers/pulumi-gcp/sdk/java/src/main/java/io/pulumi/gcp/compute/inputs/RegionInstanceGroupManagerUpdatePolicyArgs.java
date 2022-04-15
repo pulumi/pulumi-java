@@ -23,7 +23,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="instanceRedistributionType")
       private final @Nullable Output<String> instanceRedistributionType;
 
-    public Output<String> getInstanceRedistributionType() {
+    public Output<String> instanceRedistributionType() {
         return this.instanceRedistributionType == null ? Codegen.empty() : this.instanceRedistributionType;
     }
 
@@ -34,7 +34,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="maxSurgeFixed")
       private final @Nullable Output<Integer> maxSurgeFixed;
 
-    public Output<Integer> getMaxSurgeFixed() {
+    public Output<Integer> maxSurgeFixed() {
         return this.maxSurgeFixed == null ? Codegen.empty() : this.maxSurgeFixed;
     }
 
@@ -45,7 +45,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="maxSurgePercent")
       private final @Nullable Output<Integer> maxSurgePercent;
 
-    public Output<Integer> getMaxSurgePercent() {
+    public Output<Integer> maxSurgePercent() {
         return this.maxSurgePercent == null ? Codegen.empty() : this.maxSurgePercent;
     }
 
@@ -56,7 +56,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="maxUnavailableFixed")
       private final @Nullable Output<Integer> maxUnavailableFixed;
 
-    public Output<Integer> getMaxUnavailableFixed() {
+    public Output<Integer> maxUnavailableFixed() {
         return this.maxUnavailableFixed == null ? Codegen.empty() : this.maxUnavailableFixed;
     }
 
@@ -67,7 +67,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="maxUnavailablePercent")
       private final @Nullable Output<Integer> maxUnavailablePercent;
 
-    public Output<Integer> getMaxUnavailablePercent() {
+    public Output<Integer> maxUnavailablePercent() {
         return this.maxUnavailablePercent == null ? Codegen.empty() : this.maxUnavailablePercent;
     }
 
@@ -78,7 +78,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="minReadySec")
       private final @Nullable Output<Integer> minReadySec;
 
-    public Output<Integer> getMinReadySec() {
+    public Output<Integer> minReadySec() {
         return this.minReadySec == null ? Codegen.empty() : this.minReadySec;
     }
 
@@ -89,7 +89,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="minimalAction", required=true)
       private final Output<String> minimalAction;
 
-    public Output<String> getMinimalAction() {
+    public Output<String> minimalAction() {
         return this.minimalAction;
     }
 
@@ -101,7 +101,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="replacementMethod")
       private final @Nullable Output<String> replacementMethod;
 
-    public Output<String> getReplacementMethod() {
+    public Output<String> replacementMethod() {
         return this.replacementMethod == null ? Codegen.empty() : this.replacementMethod;
     }
 
@@ -112,7 +112,7 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

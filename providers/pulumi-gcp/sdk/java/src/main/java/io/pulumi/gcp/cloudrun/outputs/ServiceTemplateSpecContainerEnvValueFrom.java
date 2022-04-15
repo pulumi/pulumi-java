@@ -26,7 +26,7 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
      * Structure is documented below.
      * 
     */
-    public ServiceTemplateSpecContainerEnvValueFromSecretKeyRef getSecretKeyRef() {
+    public ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef() {
         return this.secretKeyRef;
     }
 

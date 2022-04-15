@@ -20,10 +20,10 @@ public final class GetTopicSchemaSetting {
         this.schema = schema;
     }
 
-    public String getEncoding() {
+    public String encoding() {
         return this.encoding;
     }
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
 

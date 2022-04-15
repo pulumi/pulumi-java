@@ -21,10 +21,10 @@ public final class GetClusterNotificationConfigPubsub {
         this.topic = topic;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

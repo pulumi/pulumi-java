@@ -18,7 +18,7 @@ public final class AiMetadataStoreStateArgs extends io.pulumi.resources.Resource
     @Import(name="diskUtilizationBytes")
       private final @Nullable Output<String> diskUtilizationBytes;
 
-    public Output<String> getDiskUtilizationBytes() {
+    public Output<String> diskUtilizationBytes() {
         return this.diskUtilizationBytes == null ? Codegen.empty() : this.diskUtilizationBytes;
     }
 

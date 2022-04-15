@@ -19,7 +19,7 @@ public final class GetFunctionEventTriggerFailurePolicy extends io.pulumi.resour
     @Import(name="retry", required=true)
       private final Boolean retry;
 
-    public Boolean getRetry() {
+    public Boolean retry() {
         return this.retry;
     }
 

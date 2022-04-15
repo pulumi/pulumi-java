@@ -42,7 +42,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger a new key to be generated.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -62,7 +62,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * (only used on create)
      * 
      */
-    public Output</* @Nullable */ String> getKeyAlgorithm() {
+    public Output</* @Nullable */ String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
     /**
@@ -76,7 +76,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The name used for this key pair
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -92,7 +92,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * service account keys through the CLI or web console. This is only populated when creating a new key.
      * 
      */
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -106,7 +106,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateKeyType() {
+    public Output</* @Nullable */ String> privateKeyType() {
         return this.privateKeyType;
     }
     /**
@@ -120,7 +120,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The public key, base64 encoded
      * 
      */
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -134,7 +134,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
      * 
      */
-    public Output</* @Nullable */ String> getPublicKeyData() {
+    public Output</* @Nullable */ String> publicKeyData() {
         return this.publicKeyData;
     }
     /**
@@ -148,7 +148,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
      * 
      */
-    public Output</* @Nullable */ String> getPublicKeyType() {
+    public Output</* @Nullable */ String> publicKeyType() {
         return this.publicKeyType;
     }
     /**
@@ -166,7 +166,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
      * 
      */
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
     /**
@@ -180,7 +180,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getValidAfter() {
+    public Output<String> validAfter() {
         return this.validAfter;
     }
     /**
@@ -196,7 +196,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getValidBefore() {
+    public Output<String> validBefore() {
         return this.validBefore;
     }
 

@@ -38,7 +38,7 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort> getAbort() {
+    public Optional<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort> abort() {
         return Optional.ofNullable(this.abort);
     }
     /**
@@ -46,7 +46,7 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay> getDelay() {
+    public Optional<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay> delay() {
         return Optional.ofNullable(this.delay);
     }
 

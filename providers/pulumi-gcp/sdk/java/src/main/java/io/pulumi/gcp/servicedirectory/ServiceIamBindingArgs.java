@@ -20,14 +20,14 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<ServiceIamBindingConditionArgs> condition;
 
-    public Output<ServiceIamBindingConditionArgs> getCondition() {
+    public Output<ServiceIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -38,7 +38,7 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

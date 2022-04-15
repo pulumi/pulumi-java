@@ -39,7 +39,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * and 599 inclusive.
      * 
     */
-    public Optional<Integer> getHttpStatus() {
+    public Optional<Integer> httpStatus() {
         return Optional.ofNullable(this.httpStatus);
     }
     /**
@@ -48,7 +48,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * 100.0 inclusive.
      * 
     */
-    public Optional<Double> getPercentage() {
+    public Optional<Double> percentage() {
         return Optional.ofNullable(this.percentage);
     }
 

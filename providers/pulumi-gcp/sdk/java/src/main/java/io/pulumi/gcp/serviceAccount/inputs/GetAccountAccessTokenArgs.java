@@ -22,7 +22,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="delegates")
       private final @Nullable List<String> delegates;
 
-    public List<String> getDelegates() {
+    public List<String> delegates() {
         return this.delegates == null ? List.of() : this.delegates;
     }
 
@@ -33,7 +33,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="lifetime")
       private final @Nullable String lifetime;
 
-    public Optional<String> getLifetime() {
+    public Optional<String> lifetime() {
         return this.lifetime == null ? Optional.empty() : Optional.ofNullable(this.lifetime);
     }
 
@@ -44,7 +44,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="scopes", required=true)
       private final List<String> scopes;
 
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 
@@ -55,7 +55,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
     @Import(name="targetServiceAccount", required=true)
       private final String targetServiceAccount;
 
-    public String getTargetServiceAccount() {
+    public String targetServiceAccount() {
         return this.targetServiceAccount;
     }
 

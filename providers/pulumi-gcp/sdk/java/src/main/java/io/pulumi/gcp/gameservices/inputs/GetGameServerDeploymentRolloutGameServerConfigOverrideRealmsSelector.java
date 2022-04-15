@@ -16,7 +16,7 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
     @Import(name="realms", required=true)
       private final List<String> realms;
 
-    public List<String> getRealms() {
+    public List<String> realms() {
         return this.realms;
     }
 

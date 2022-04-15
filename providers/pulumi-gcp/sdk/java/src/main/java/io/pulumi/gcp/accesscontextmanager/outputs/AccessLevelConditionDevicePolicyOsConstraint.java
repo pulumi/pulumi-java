@@ -39,7 +39,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
      * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
      * 
     */
-    public Optional<String> getMinimumVersion() {
+    public Optional<String> minimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
     /**
@@ -47,7 +47,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
      * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 

@@ -19,7 +19,7 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<EntryGroupIamMemberConditionArgs> condition;
 
-    public Output<EntryGroupIamMemberConditionArgs> getCondition() {
+    public Output<EntryGroupIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,14 +30,14 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="entryGroup", required=true)
       private final Output<String> entryGroup;
 
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -49,14 +49,14 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -69,7 +69,7 @@ public final class EntryGroupIamMemberArgs extends io.pulumi.resources.ResourceA
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

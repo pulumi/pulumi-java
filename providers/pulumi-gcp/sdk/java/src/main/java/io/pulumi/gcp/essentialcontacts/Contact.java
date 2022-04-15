@@ -53,7 +53,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The email address to send notifications to. This does not need to be a Google account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -67,7 +67,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
      * 
      */
-    public Output<String> getLanguageTag() {
+    public Output<String> languageTag() {
         return this.languageTag;
     }
     /**
@@ -81,7 +81,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The identifier for the contact. Format: {resourceType}/{resource_id}/contacts/{contact_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +95,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The categories of notifications that the contact will receive communications for.
      * 
      */
-    public Output<List<String>> getNotificationCategorySubscriptions() {
+    public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
     /**
@@ -109,7 +109,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 

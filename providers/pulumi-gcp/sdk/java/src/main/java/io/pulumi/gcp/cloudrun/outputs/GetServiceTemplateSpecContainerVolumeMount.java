@@ -24,14 +24,14 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
         this.name = name;
     }
 
-    public String getMountPath() {
+    public String mountPath() {
         return this.mountPath;
     }
     /**
      * The name of the Cloud Run Service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

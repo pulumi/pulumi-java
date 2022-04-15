@@ -16,49 +16,49 @@ public final class GetHealthCheckHttpsHealthCheck extends io.pulumi.resources.In
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
     @Import(name="portName", required=true)
       private final String portName;
 
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
 
     @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
 
     @Import(name="proxyHeader", required=true)
       private final String proxyHeader;
 
-    public String getProxyHeader() {
+    public String proxyHeader() {
         return this.proxyHeader;
     }
 
     @Import(name="requestPath", required=true)
       private final String requestPath;
 
-    public String getRequestPath() {
+    public String requestPath() {
         return this.requestPath;
     }
 
     @Import(name="response", required=true)
       private final String response;
 
-    public String getResponse() {
+    public String response() {
         return this.response;
     }
 

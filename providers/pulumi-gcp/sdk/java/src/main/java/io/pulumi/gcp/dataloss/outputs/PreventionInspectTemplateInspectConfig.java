@@ -92,7 +92,7 @@ public final class PreventionInspectTemplateInspectConfig {
      * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
      * 
     */
-    public List<String> getContentOptions() {
+    public List<String> contentOptions() {
         return this.contentOptions == null ? List.of() : this.contentOptions;
     }
     /**
@@ -100,7 +100,7 @@ public final class PreventionInspectTemplateInspectConfig {
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigCustomInfoType> getCustomInfoTypes() {
+    public List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes() {
         return this.customInfoTypes == null ? List.of() : this.customInfoTypes;
     }
     /**
@@ -108,14 +108,14 @@ public final class PreventionInspectTemplateInspectConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<Boolean> getExcludeInfoTypes() {
+    public Optional<Boolean> excludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
     /**
      * When true, a contextual quote from the data that triggered a finding is included in the response.
      * 
     */
-    public Optional<Boolean> getIncludeQuote() {
+    public Optional<Boolean> includeQuote() {
         return Optional.ofNullable(this.includeQuote);
     }
     /**
@@ -123,7 +123,7 @@ public final class PreventionInspectTemplateInspectConfig {
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigInfoType> getInfoTypes() {
+    public List<PreventionInspectTemplateInspectConfigInfoType> infoTypes() {
         return this.infoTypes == null ? List.of() : this.infoTypes;
     }
     /**
@@ -131,7 +131,7 @@ public final class PreventionInspectTemplateInspectConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigLimits> getLimits() {
+    public Optional<PreventionInspectTemplateInspectConfigLimits> limits() {
         return Optional.ofNullable(this.limits);
     }
     /**
@@ -140,7 +140,7 @@ public final class PreventionInspectTemplateInspectConfig {
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
     */
-    public Optional<String> getMinLikelihood() {
+    public Optional<String> minLikelihood() {
         return Optional.ofNullable(this.minLikelihood);
     }
     /**
@@ -149,7 +149,7 @@ public final class PreventionInspectTemplateInspectConfig {
      * Structure is documented below.
      * 
     */
-    public List<PreventionInspectTemplateInspectConfigRuleSet> getRuleSets() {
+    public List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }
 

@@ -23,7 +23,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="brand", required=true)
       private final Output<String> brand;
 
-    public Output<String> getBrand() {
+    public Output<String> brand() {
         return this.brand;
     }
 
@@ -34,7 +34,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 

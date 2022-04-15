@@ -22,7 +22,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -34,7 +34,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
     @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> getKmsKeyServiceAccount() {
+    public Output<String> kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
     }
 
@@ -46,7 +46,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
     @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
-    public Output<String> getRawKey() {
+    public Output<String> rawKey() {
         return this.rawKey == null ? Codegen.empty() : this.rawKey;
     }
 
@@ -59,7 +59,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
     @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
-    public Output<String> getSha256() {
+    public Output<String> sha256() {
         return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 

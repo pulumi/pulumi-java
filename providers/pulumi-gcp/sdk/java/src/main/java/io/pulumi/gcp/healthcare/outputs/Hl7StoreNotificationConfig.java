@@ -34,7 +34,7 @@ public final class Hl7StoreNotificationConfig {
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
     */
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 

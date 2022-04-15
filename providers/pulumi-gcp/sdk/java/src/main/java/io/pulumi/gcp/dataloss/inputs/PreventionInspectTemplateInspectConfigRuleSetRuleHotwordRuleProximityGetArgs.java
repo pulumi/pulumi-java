@@ -22,7 +22,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     @Import(name="windowAfter")
       private final @Nullable Output<Integer> windowAfter;
 
-    public Output<Integer> getWindowAfter() {
+    public Output<Integer> windowAfter() {
         return this.windowAfter == null ? Codegen.empty() : this.windowAfter;
     }
 
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     @Import(name="windowBefore")
       private final @Nullable Output<Integer> windowBefore;
 
-    public Output<Integer> getWindowBefore() {
+    public Output<Integer> windowBefore() {
         return this.windowBefore == null ? Codegen.empty() : this.windowBefore;
     }
 

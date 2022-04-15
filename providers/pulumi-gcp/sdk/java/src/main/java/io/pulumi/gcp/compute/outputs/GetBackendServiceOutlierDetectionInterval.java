@@ -20,10 +20,10 @@ public final class GetBackendServiceOutlierDetectionInterval {
         this.seconds = seconds;
     }
 
-    public Integer getNanos() {
+    public Integer nanos() {
         return this.nanos;
     }
-    public Integer getSeconds() {
+    public Integer seconds() {
         return this.seconds;
     }
 

@@ -28,7 +28,7 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends io.pulumi.
     @Import(name="deleteRule")
       private final @Nullable Output<String> deleteRule;
 
-    public Output<String> getDeleteRule() {
+    public Output<String> deleteRule() {
         return this.deleteRule == null ? Codegen.empty() : this.deleteRule;
     }
 
@@ -39,7 +39,7 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends io.pulumi.
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -52,7 +52,7 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends io.pulumi.
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -64,7 +64,7 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends io.pulumi.
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 

@@ -25,7 +25,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
     @Import(name="numRetries")
       private final @Nullable Output<Integer> numRetries;
 
-    public Output<Integer> getNumRetries() {
+    public Output<Integer> numRetries() {
         return this.numRetries == null ? Codegen.empty() : this.numRetries;
     }
 
@@ -37,7 +37,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
     @Import(name="perTryTimeout")
       private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs> getPerTryTimeout() {
+    public Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout() {
         return this.perTryTimeout == null ? Codegen.empty() : this.perTryTimeout;
     }
 
@@ -68,7 +68,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs ext
     @Import(name="retryConditions")
       private final @Nullable Output<List<String>> retryConditions;
 
-    public Output<List<String>> getRetryConditions() {
+    public Output<List<String>> retryConditions() {
         return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
     }
 

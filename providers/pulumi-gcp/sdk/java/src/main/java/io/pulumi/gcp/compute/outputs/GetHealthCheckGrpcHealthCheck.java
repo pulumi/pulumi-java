@@ -27,16 +27,16 @@ public final class GetHealthCheckGrpcHealthCheck {
         this.portSpecification = portSpecification;
     }
 
-    public String getGrpcServiceName() {
+    public String grpcServiceName() {
         return this.grpcServiceName;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
 

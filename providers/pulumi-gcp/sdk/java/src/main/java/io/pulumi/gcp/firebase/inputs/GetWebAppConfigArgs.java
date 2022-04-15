@@ -22,7 +22,7 @@ public final class GetWebAppConfigArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -33,7 +33,7 @@ public final class GetWebAppConfigArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="webAppId", required=true)
       private final String webAppId;
 
-    public String getWebAppId() {
+    public String webAppId() {
         return this.webAppId;
     }
 

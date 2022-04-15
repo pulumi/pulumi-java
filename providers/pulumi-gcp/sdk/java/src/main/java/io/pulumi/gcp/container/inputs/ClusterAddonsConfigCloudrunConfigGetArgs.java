@@ -24,7 +24,7 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
     @Import(name="disabled", required=true)
       private final Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
 
@@ -36,7 +36,7 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
     @Import(name="loadBalancerType")
       private final @Nullable Output<String> loadBalancerType;
 
-    public Output<String> getLoadBalancerType() {
+    public Output<String> loadBalancerType() {
         return this.loadBalancerType == null ? Codegen.empty() : this.loadBalancerType;
     }
 

@@ -28,7 +28,7 @@ public final class SloRequestBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="distributionCut")
       private final @Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut;
 
-    public Output<SloRequestBasedSliDistributionCutArgs> getDistributionCut() {
+    public Output<SloRequestBasedSliDistributionCutArgs> distributionCut() {
         return this.distributionCut == null ? Codegen.empty() : this.distributionCut;
     }
 
@@ -44,7 +44,7 @@ public final class SloRequestBasedSliArgs extends io.pulumi.resources.ResourceAr
     @Import(name="goodTotalRatio")
       private final @Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio;
 
-    public Output<SloRequestBasedSliGoodTotalRatioArgs> getGoodTotalRatio() {
+    public Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio() {
         return this.goodTotalRatio == null ? Codegen.empty() : this.goodTotalRatio;
     }
 

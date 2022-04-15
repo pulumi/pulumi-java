@@ -52,7 +52,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output</* @Nullable */ String> getAdditionalAuthenticatedData() {
+    public Output</* @Nullable */ String> additionalAuthenticatedData() {
         return this.additionalAuthenticatedData;
     }
     /**
@@ -66,7 +66,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * @return Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
      */
-    public Output<String> getCiphertext() {
+    public Output<String> ciphertext() {
         return this.ciphertext;
     }
     /**
@@ -82,7 +82,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
      * 
      */
-    public Output<String> getCryptoKey() {
+    public Output<String> cryptoKey() {
         return this.cryptoKey;
     }
     /**
@@ -98,7 +98,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getPlaintext() {
+    public Output<String> plaintext() {
         return this.plaintext;
     }
 

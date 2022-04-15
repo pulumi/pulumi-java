@@ -27,7 +27,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="destination")
       private final @Nullable Output<ConnectivityTestDestinationGetArgs> destination;
 
-    public Output<ConnectivityTestDestinationGetArgs> getDestination() {
+    public Output<ConnectivityTestDestinationGetArgs> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -63,7 +63,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -74,7 +74,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -86,7 +86,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -97,7 +97,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -110,7 +110,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="relatedProjects")
       private final @Nullable Output<List<String>> relatedProjects;
 
-    public Output<List<String>> getRelatedProjects() {
+    public Output<List<String>> relatedProjects() {
         return this.relatedProjects == null ? Codegen.empty() : this.relatedProjects;
     }
 
@@ -139,7 +139,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     @Import(name="source")
       private final @Nullable Output<ConnectivityTestSourceGetArgs> source;
 
-    public Output<ConnectivityTestSourceGetArgs> getSource() {
+    public Output<ConnectivityTestSourceGetArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

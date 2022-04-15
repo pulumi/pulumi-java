@@ -22,7 +22,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -34,7 +34,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     @Import(name="labels")
       private final @Nullable Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
 
@@ -46,7 +46,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -57,7 +57,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -68,7 +68,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
     @Import(name="userLabels")
       private final @Nullable Map<String,String> userLabels;
 
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels == null ? Map.of() : this.userLabels;
     }
 

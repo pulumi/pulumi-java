@@ -44,7 +44,7 @@ public final class BackendServiceIap {
      * OAuth2 Client ID for IAP
      * 
     */
-    public String getOauth2ClientId() {
+    public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
     /**
@@ -52,7 +52,7 @@ public final class BackendServiceIap {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public String getOauth2ClientSecret() {
+    public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
     /**
@@ -61,7 +61,7 @@ public final class BackendServiceIap {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public Optional<String> getOauth2ClientSecretSha256() {
+    public Optional<String> oauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }
 

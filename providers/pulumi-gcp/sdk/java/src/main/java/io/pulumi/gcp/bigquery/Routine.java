@@ -59,7 +59,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RoutineArgument>> getArguments() {
+    public Output</* @Nullable */ List<RoutineArgument>> arguments() {
         return this.arguments;
     }
     /**
@@ -73,7 +73,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @return The time when this routine was created, in milliseconds since the epoch.
      * 
      */
-    public Output<Integer> getCreationTime() {
+    public Output<Integer> creationTime() {
         return this.creationTime;
     }
     /**
@@ -87,7 +87,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @return The ID of the dataset containing this routine
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -103,7 +103,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * If language=SQL, it is the substring inside (but excluding) the parentheses.
      * 
      */
-    public Output<String> getDefinitionBody() {
+    public Output<String> definitionBody() {
         return this.definitionBody;
     }
     /**
@@ -117,7 +117,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @return The description of the routine if defined.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -133,7 +133,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
      * 
      */
-    public Output</* @Nullable */ String> getDeterminismLevel() {
+    public Output</* @Nullable */ String> determinismLevel() {
         return this.determinismLevel;
     }
     /**
@@ -149,7 +149,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * imported JAVASCRIPT libraries.
      * 
      */
-    public Output</* @Nullable */ List<String>> getImportedLibraries() {
+    public Output</* @Nullable */ List<String>> importedLibraries() {
         return this.importedLibraries;
     }
     /**
@@ -165,7 +165,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Possible values are `SQL` and `JAVASCRIPT`.
      * 
      */
-    public Output</* @Nullable */ String> getLanguage() {
+    public Output</* @Nullable */ String> language() {
         return this.language;
     }
     /**
@@ -179,7 +179,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @return The time when this routine was modified, in milliseconds since the epoch.
      * 
      */
-    public Output<Integer> getLastModifiedTime() {
+    public Output<Integer> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -195,7 +195,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -215,7 +215,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * be cast to match the column types specificed in return table type, at query time.
      * 
      */
-    public Output</* @Nullable */ String> getReturnTableType() {
+    public Output</* @Nullable */ String> returnTableType() {
         return this.returnTableType;
     }
     /**
@@ -245,7 +245,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * the schema as returned by the API.
      * 
      */
-    public Output</* @Nullable */ String> getReturnType() {
+    public Output</* @Nullable */ String> returnType() {
         return this.returnType;
     }
     /**
@@ -259,7 +259,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * @return The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
      */
-    public Output<String> getRoutineId() {
+    public Output<String> routineId() {
         return this.routineId;
     }
     /**
@@ -275,7 +275,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
      * 
      */
-    public Output</* @Nullable */ String> getRoutineType() {
+    public Output</* @Nullable */ String> routineType() {
         return this.routineType;
     }
 

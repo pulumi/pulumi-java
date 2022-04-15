@@ -27,7 +27,7 @@ public final class RegionHealthCheckGrpcHealthCheckGetArgs extends io.pulumi.res
     @Import(name="grpcServiceName")
       private final @Nullable Output<String> grpcServiceName;
 
-    public Output<String> getGrpcServiceName() {
+    public Output<String> grpcServiceName() {
         return this.grpcServiceName == null ? Codegen.empty() : this.grpcServiceName;
     }
 
@@ -40,7 +40,7 @@ public final class RegionHealthCheckGrpcHealthCheckGetArgs extends io.pulumi.res
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -52,7 +52,7 @@ public final class RegionHealthCheckGrpcHealthCheckGetArgs extends io.pulumi.res
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName == null ? Codegen.empty() : this.portName;
     }
 
@@ -73,7 +73,7 @@ public final class RegionHealthCheckGrpcHealthCheckGetArgs extends io.pulumi.res
     @Import(name="portSpecification")
       private final @Nullable Output<String> portSpecification;
 
-    public Output<String> getPortSpecification() {
+    public Output<String> portSpecification() {
         return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 

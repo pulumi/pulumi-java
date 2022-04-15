@@ -53,7 +53,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * @return A description of the job trigger.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -67,7 +67,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * @return User set display name of the job trigger.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -83,7 +83,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PreventionJobTriggerInspectJob> getInspectJob() {
+    public Output</* @Nullable */ PreventionJobTriggerInspectJob> inspectJob() {
         return this.inspectJob;
     }
     /**
@@ -97,7 +97,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * @return The timestamp of the last time this trigger executed.
      * 
      */
-    public Output<String> getLastRunTime() {
+    public Output<String> lastRunTime() {
         return this.lastRunTime;
     }
     /**
@@ -111,7 +111,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * @return The name of the Datastore kind.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * or `projects/{{project}}/locations/{{location}}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -145,7 +145,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -161,7 +161,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<PreventionJobTriggerTrigger>> getTriggers() {
+    public Output<List<PreventionJobTriggerTrigger>> triggers() {
         return this.triggers;
     }
 

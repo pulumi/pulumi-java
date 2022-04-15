@@ -28,13 +28,13 @@ public final class JobStatus {
         this.state = state;
     }
 
-    public List<JobStatusErrorResult> getErrorResults() {
+    public List<JobStatusErrorResult> errorResults() {
         return this.errorResults == null ? List.of() : this.errorResults;
     }
-    public List<JobStatusError> getErrors() {
+    public List<JobStatusError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

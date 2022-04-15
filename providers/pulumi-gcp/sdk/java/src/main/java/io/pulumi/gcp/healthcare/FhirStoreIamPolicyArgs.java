@@ -24,7 +24,7 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fhirStoreId", required=true)
       private final Output<String> fhirStoreId;
 
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
 
@@ -36,7 +36,7 @@ public final class FhirStoreIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

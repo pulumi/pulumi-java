@@ -26,7 +26,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
@@ -37,7 +37,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
 
-    public Output<String> getCommitSha() {
+    public Output<String> commitSha() {
         return this.commitSha == null ? Codegen.empty() : this.commitSha;
     }
 
@@ -56,7 +56,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="dir")
       private final @Nullable Output<String> dir;
 
-    public Output<String> getDir() {
+    public Output<String> dir() {
         return this.dir == null ? Codegen.empty() : this.dir;
     }
 
@@ -67,7 +67,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
+    public Output<Boolean> invertRegex() {
         return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 
@@ -79,7 +79,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
@@ -90,7 +90,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="repoName", required=true)
       private final Output<String> repoName;
 
-    public Output<String> getRepoName() {
+    public Output<String> repoName() {
         return this.repoName;
     }
 
@@ -101,7 +101,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> getSubstitutions() {
+    public Output<Map<String,String>> substitutions() {
         return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
@@ -114,7 +114,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
     @Import(name="tagName")
       private final @Nullable Output<String> tagName;
 
-    public Output<String> getTagName() {
+    public Output<String> tagName() {
         return this.tagName == null ? Codegen.empty() : this.tagName;
     }
 

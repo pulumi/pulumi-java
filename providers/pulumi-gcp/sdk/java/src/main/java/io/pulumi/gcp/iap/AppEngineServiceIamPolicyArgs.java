@@ -22,7 +22,7 @@ public final class AppEngineServiceIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -34,7 +34,7 @@ public final class AppEngineServiceIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -46,7 +46,7 @@ public final class AppEngineServiceIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -57,7 +57,7 @@ public final class AppEngineServiceIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

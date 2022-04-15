@@ -17,28 +17,28 @@ public final class GetInstanceMaintenancePolicy extends io.pulumi.resources.Invo
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 
     @Import(name="weeklyMaintenanceWindows", required=true)
       private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
 
-    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> getWeeklyMaintenanceWindows() {
+    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows;
     }
 

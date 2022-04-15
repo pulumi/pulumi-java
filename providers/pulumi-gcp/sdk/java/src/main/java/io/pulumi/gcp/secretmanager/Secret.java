@@ -57,7 +57,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return The time at which the Secret was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -73,7 +73,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -101,7 +101,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -117,7 +117,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +133,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -151,7 +151,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<SecretReplication> getReplication() {
+    public Output<SecretReplication> replication() {
         return this.replication;
     }
     /**
@@ -167,7 +167,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecretRotation> getRotation() {
+    public Output</* @Nullable */ SecretRotation> rotation() {
         return this.rotation;
     }
     /**
@@ -181,7 +181,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * @return This must be unique within the project.
      * 
      */
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
     /**
@@ -197,7 +197,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<SecretTopic>> getTopics() {
+    public Output</* @Nullable */ List<SecretTopic>> topics() {
         return this.topics;
     }
     /**
@@ -213,7 +213,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    public Output</* @Nullable */ String> getTtl() {
+    public Output</* @Nullable */ String> ttl() {
         return this.ttl;
     }
 

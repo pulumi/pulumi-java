@@ -67,7 +67,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -85,7 +85,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * range).
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -99,7 +99,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return The network endpoint group this endpoint is part of.
      * 
      */
-    public Output<String> getNetworkEndpointGroup() {
+    public Output<String> networkEndpointGroup() {
         return this.networkEndpointGroup;
     }
     /**
@@ -113,7 +113,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return Port number of network endpoint.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -129,7 +129,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -143,7 +143,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return Zone where the containing network endpoint group is located.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

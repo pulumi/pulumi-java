@@ -34,14 +34,14 @@ public final class ClusterNodeConfigShieldedInstanceConfig {
      * Defines if the instance has integrity monitoring enabled.
      * 
     */
-    public Optional<Boolean> getEnableIntegrityMonitoring() {
+    public Optional<Boolean> enableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
     /**
      * Defines if the instance has Secure Boot enabled.
      * 
     */
-    public Optional<Boolean> getEnableSecureBoot() {
+    public Optional<Boolean> enableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
 

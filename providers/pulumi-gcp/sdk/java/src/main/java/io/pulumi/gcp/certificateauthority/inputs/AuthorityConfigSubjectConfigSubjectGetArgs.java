@@ -22,7 +22,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="commonName", required=true)
       private final Output<String> commonName;
 
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName;
     }
 
@@ -33,7 +33,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="countryCode")
       private final @Nullable Output<String> countryCode;
 
-    public Output<String> getCountryCode() {
+    public Output<String> countryCode() {
         return this.countryCode == null ? Codegen.empty() : this.countryCode;
     }
 
@@ -44,7 +44,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="locality")
       private final @Nullable Output<String> locality;
 
-    public Output<String> getLocality() {
+    public Output<String> locality() {
         return this.locality == null ? Codegen.empty() : this.locality;
     }
 
@@ -55,7 +55,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="organization", required=true)
       private final Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 
@@ -66,7 +66,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
-    public Output<String> getOrganizationalUnit() {
+    public Output<String> organizationalUnit() {
         return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
@@ -77,7 +77,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
+    public Output<String> postalCode() {
         return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
@@ -88,7 +88,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="province")
       private final @Nullable Output<String> province;
 
-    public Output<String> getProvince() {
+    public Output<String> province() {
         return this.province == null ? Codegen.empty() : this.province;
     }
 
@@ -99,7 +99,7 @@ public final class AuthorityConfigSubjectConfigSubjectGetArgs extends io.pulumi.
     @Import(name="streetAddress")
       private final @Nullable Output<String> streetAddress;
 
-    public Output<String> getStreetAddress() {
+    public Output<String> streetAddress() {
         return this.streetAddress == null ? Codegen.empty() : this.streetAddress;
     }
 

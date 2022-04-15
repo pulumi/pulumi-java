@@ -23,7 +23,7 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="maximumBackoff")
       private final @Nullable Output<String> maximumBackoff;
 
-    public Output<String> getMaximumBackoff() {
+    public Output<String> maximumBackoff() {
         return this.maximumBackoff == null ? Codegen.empty() : this.maximumBackoff;
     }
 
@@ -35,7 +35,7 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="minimumBackoff")
       private final @Nullable Output<String> minimumBackoff;
 
-    public Output<String> getMinimumBackoff() {
+    public Output<String> minimumBackoff() {
         return this.minimumBackoff == null ? Codegen.empty() : this.minimumBackoff;
     }
 

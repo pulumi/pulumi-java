@@ -26,7 +26,7 @@ public final class CertificateConfigX509ConfigKeyUsageGetArgs extends io.pulumi.
     @Import(name="baseKeyUsage", required=true)
       private final Output<CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
-    public Output<CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
+    public Output<CertificateConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage() {
         return this.baseKeyUsage;
     }
 
@@ -38,7 +38,7 @@ public final class CertificateConfigX509ConfigKeyUsageGetArgs extends io.pulumi.
     @Import(name="extendedKeyUsage", required=true)
       private final Output<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
-    public Output<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
+    public Output<CertificateConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
 
@@ -50,7 +50,7 @@ public final class CertificateConfigX509ConfigKeyUsageGetArgs extends io.pulumi.
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {
+    public Output<List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
     }
 

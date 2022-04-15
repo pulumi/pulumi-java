@@ -58,7 +58,7 @@ public final class ReservationSpecificReservationInstanceProperties {
      * Structure is documented below.
      * 
     */
-    public List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> getGuestAccelerators() {
+    public List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
     /**
@@ -67,14 +67,14 @@ public final class ReservationSpecificReservationInstanceProperties {
      * Structure is documented below.
      * 
     */
-    public List<ReservationSpecificReservationInstancePropertiesLocalSsd> getLocalSsds() {
+    public List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds() {
         return this.localSsds == null ? List.of() : this.localSsds;
     }
     /**
      * The name of the machine type to reserve.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
@@ -84,7 +84,7 @@ public final class ReservationSpecificReservationInstanceProperties {
      * for information on available CPU platforms.
      * 
     */
-    public Optional<String> getMinCpuPlatform() {
+    public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
 

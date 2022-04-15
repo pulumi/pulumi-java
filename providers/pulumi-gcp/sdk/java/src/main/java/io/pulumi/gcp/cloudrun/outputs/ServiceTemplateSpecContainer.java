@@ -143,7 +143,7 @@ public final class ServiceTemplateSpecContainer {
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
@@ -158,7 +158,7 @@ public final class ServiceTemplateSpecContainer {
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
-    public List<String> getCommands() {
+    public List<String> commands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
@@ -176,7 +176,7 @@ public final class ServiceTemplateSpecContainer {
      * 
     */
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public List<ServiceTemplateSpecContainerEnvFrom> getEnvFroms() {
+    public List<ServiceTemplateSpecContainerEnvFrom> envFroms() {
         return this.envFroms == null ? List.of() : this.envFroms;
     }
     /**
@@ -184,7 +184,7 @@ public final class ServiceTemplateSpecContainer {
      * Structure is documented below.
      * 
     */
-    public List<ServiceTemplateSpecContainerEnv> getEnvs() {
+    public List<ServiceTemplateSpecContainerEnv> envs() {
         return this.envs == null ? List.of() : this.envs;
     }
     /**
@@ -193,7 +193,7 @@ public final class ServiceTemplateSpecContainer {
      * More info: https://kubernetes.io/docs/concepts/containers/images
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
@@ -203,7 +203,7 @@ public final class ServiceTemplateSpecContainer {
      * Structure is documented below.
      * 
     */
-    public List<ServiceTemplateSpecContainerPort> getPorts() {
+    public List<ServiceTemplateSpecContainerPort> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
@@ -213,7 +213,7 @@ public final class ServiceTemplateSpecContainer {
      * Structure is documented below.
      * 
     */
-    public Optional<ServiceTemplateSpecContainerResources> getResources() {
+    public Optional<ServiceTemplateSpecContainerResources> resources() {
         return Optional.ofNullable(this.resources);
     }
     /**
@@ -222,7 +222,7 @@ public final class ServiceTemplateSpecContainer {
      * Structure is documented below.
      * 
     */
-    public List<ServiceTemplateSpecContainerVolumeMount> getVolumeMounts() {
+    public List<ServiceTemplateSpecContainerVolumeMount> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
     /**
@@ -237,7 +237,7 @@ public final class ServiceTemplateSpecContainer {
      * 
     */
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Optional<String> getWorkingDir() {
+    public Optional<String> workingDir() {
         return Optional.ofNullable(this.workingDir);
     }
 

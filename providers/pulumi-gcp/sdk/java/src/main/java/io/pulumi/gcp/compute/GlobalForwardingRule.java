@@ -59,7 +59,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -97,7 +97,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Google APIs, IP address must be provided.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -119,7 +119,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
      * 
      */
-    public Output<String> getIpProtocol() {
+    public Output<String> ipProtocol() {
         return this.ipProtocol;
     }
     /**
@@ -135,7 +135,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    public Output</* @Nullable */ String> getIpVersion() {
+    public Output</* @Nullable */ String> ipVersion() {
         return this.ipVersion;
     }
     /**
@@ -149,7 +149,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * @return Used internally during label updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -163,7 +163,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this forwarding rule.  A list of key->value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -199,7 +199,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> getLoadBalancingScheme() {
+    public Output</* @Nullable */ String> loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
     /**
@@ -241,7 +241,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GlobalForwardingRuleMetadataFilter>> getMetadataFilters() {
+    public Output</* @Nullable */ List<GlobalForwardingRuleMetadataFilter>> metadataFilters() {
         return this.metadataFilters;
     }
     /**
@@ -257,7 +257,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * 1 and 1024 characters, inclusive.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -279,7 +279,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * the default network will be used.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -323,7 +323,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    public Output</* @Nullable */ String> getPortRange() {
+    public Output</* @Nullable */ String> portRange() {
         return this.portRange;
     }
     /**
@@ -339,7 +339,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -353,7 +353,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -377,7 +377,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
      * 
      */
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

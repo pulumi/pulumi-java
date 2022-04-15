@@ -39,7 +39,7 @@ public final class ClusterClusterConfigInitializationAction {
      * The script must be a GCS file with a gs:// prefix.
      * 
     */
-    public String getScript() {
+    public String script() {
         return this.script;
     }
     /**
@@ -48,7 +48,7 @@ public final class ClusterClusterConfigInitializationAction {
      * computed value if not set (currently 300).
      * 
     */
-    public Optional<Integer> getTimeoutSec() {
+    public Optional<Integer> timeoutSec() {
         return Optional.ofNullable(this.timeoutSec);
     }
 

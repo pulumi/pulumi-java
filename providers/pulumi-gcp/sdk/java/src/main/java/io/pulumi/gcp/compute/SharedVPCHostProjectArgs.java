@@ -21,7 +21,7 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

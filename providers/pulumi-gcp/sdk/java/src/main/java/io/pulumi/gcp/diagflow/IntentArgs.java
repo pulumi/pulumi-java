@@ -26,7 +26,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -39,7 +39,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultResponsePlatforms")
       private final @Nullable Output<List<String>> defaultResponsePlatforms;
 
-    public Output<List<String>> getDefaultResponsePlatforms() {
+    public Output<List<String>> defaultResponsePlatforms() {
         return this.defaultResponsePlatforms == null ? Codegen.empty() : this.defaultResponsePlatforms;
     }
 
@@ -50,7 +50,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -63,7 +63,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events == null ? Codegen.empty() : this.events;
     }
 
@@ -75,7 +75,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputContextNames")
       private final @Nullable Output<List<String>> inputContextNames;
 
-    public Output<List<String>> getInputContextNames() {
+    public Output<List<String>> inputContextNames() {
         return this.inputContextNames == null ? Codegen.empty() : this.inputContextNames;
     }
 
@@ -86,7 +86,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
+    public Output<Boolean> isFallback() {
         return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
@@ -99,7 +99,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mlDisabled")
       private final @Nullable Output<Boolean> mlDisabled;
 
-    public Output<Boolean> getMlDisabled() {
+    public Output<Boolean> mlDisabled() {
         return this.mlDisabled == null ? Codegen.empty() : this.mlDisabled;
     }
 
@@ -111,7 +111,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentFollowupIntentName")
       private final @Nullable Output<String> parentFollowupIntentName;
 
-    public Output<String> getParentFollowupIntentName() {
+    public Output<String> parentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
     }
 
@@ -125,7 +125,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -137,7 +137,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -148,7 +148,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resetContexts")
       private final @Nullable Output<Boolean> resetContexts;
 
-    public Output<Boolean> getResetContexts() {
+    public Output<Boolean> resetContexts() {
         return this.resetContexts == null ? Codegen.empty() : this.resetContexts;
     }
 
@@ -163,7 +163,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookState")
       private final @Nullable Output<String> webhookState;
 
-    public Output<String> getWebhookState() {
+    public Output<String> webhookState() {
         return this.webhookState == null ? Codegen.empty() : this.webhookState;
     }
 

@@ -26,7 +26,7 @@ public final class URLMapPathMatcherHeaderActionGetArgs extends io.pulumi.resour
     @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<URLMapPathMatcherHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
-    public Output<List<URLMapPathMatcherHeaderActionRequestHeadersToAddGetArgs>> getRequestHeadersToAdds() {
+    public Output<List<URLMapPathMatcherHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
     }
 
@@ -38,7 +38,7 @@ public final class URLMapPathMatcherHeaderActionGetArgs extends io.pulumi.resour
     @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
-    public Output<List<String>> getRequestHeadersToRemoves() {
+    public Output<List<String>> requestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? Codegen.empty() : this.requestHeadersToRemoves;
     }
 
@@ -50,7 +50,7 @@ public final class URLMapPathMatcherHeaderActionGetArgs extends io.pulumi.resour
     @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<URLMapPathMatcherHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
-    public Output<List<URLMapPathMatcherHeaderActionResponseHeadersToAddGetArgs>> getResponseHeadersToAdds() {
+    public Output<List<URLMapPathMatcherHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? Codegen.empty() : this.responseHeadersToAdds;
     }
 
@@ -62,7 +62,7 @@ public final class URLMapPathMatcherHeaderActionGetArgs extends io.pulumi.resour
     @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
-    public Output<List<String>> getResponseHeadersToRemoves() {
+    public Output<List<String>> responseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? Codegen.empty() : this.responseHeadersToRemoves;
     }
 

@@ -15,14 +15,14 @@ public final class GetClusterNodePoolAutoscaling extends io.pulumi.resources.Inv
     @Import(name="maxNodeCount", required=true)
       private final Integer maxNodeCount;
 
-    public Integer getMaxNodeCount() {
+    public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
 
     @Import(name="minNodeCount", required=true)
       private final Integer minNodeCount;
 
-    public Integer getMinNodeCount() {
+    public Integer minNodeCount() {
         return this.minNodeCount;
     }
 

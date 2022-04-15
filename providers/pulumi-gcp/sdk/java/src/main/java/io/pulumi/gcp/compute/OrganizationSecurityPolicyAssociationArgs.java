@@ -22,7 +22,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     @Import(name="attachmentId", required=true)
       private final Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
 
@@ -33,7 +33,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
 

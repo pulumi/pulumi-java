@@ -58,7 +58,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=JobIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ JobIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ JobIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ JobIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -72,19 +72,19 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the jobs's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -100,7 +100,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -116,7 +116,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -134,7 +134,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

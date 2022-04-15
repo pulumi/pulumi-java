@@ -50,7 +50,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @return The generated id for the TagBinding. This is a string of the form: 'tagBindings/{full-resource-name}/{tag-value-name}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -64,7 +64,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @return The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -78,7 +78,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * @return The TagValue of the TagBinding. Must be of the form tagValues/456.
      * 
      */
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 

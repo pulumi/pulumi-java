@@ -27,7 +27,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="commonAlphabet")
       private final @Nullable Output<String> commonAlphabet;
 
-    public Output<String> getCommonAlphabet() {
+    public Output<String> commonAlphabet() {
         return this.commonAlphabet == null ? Codegen.empty() : this.commonAlphabet;
     }
 
@@ -47,7 +47,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="context")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> context;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> getContext() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -59,7 +59,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="cryptoKey")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> cryptoKey;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> getCryptoKey() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> cryptoKey() {
         return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
@@ -71,7 +71,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="customAlphabet")
       private final @Nullable Output<String> customAlphabet;
 
-    public Output<String> getCustomAlphabet() {
+    public Output<String> customAlphabet() {
         return this.customAlphabet == null ? Codegen.empty() : this.customAlphabet;
     }
 
@@ -82,7 +82,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="radix")
       private final @Nullable Output<Integer> radix;
 
-    public Output<Integer> getRadix() {
+    public Output<Integer> radix() {
         return this.radix == null ? Codegen.empty() : this.radix;
     }
 
@@ -97,7 +97,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="surrogateInfoType")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> surrogateInfoType;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> getSurrogateInfoType() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> surrogateInfoType() {
         return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 

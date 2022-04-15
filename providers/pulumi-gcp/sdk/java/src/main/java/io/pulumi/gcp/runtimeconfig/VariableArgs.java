@@ -23,7 +23,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -47,7 +47,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -61,14 +61,14 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

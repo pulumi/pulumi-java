@@ -50,37 +50,37 @@ public final class GetBackendServiceOutlierDetection {
         this.successRateStdevFactor = successRateStdevFactor;
     }
 
-    public List<GetBackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTimes() {
+    public List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes() {
         return this.baseEjectionTimes;
     }
-    public Integer getConsecutiveErrors() {
+    public Integer consecutiveErrors() {
         return this.consecutiveErrors;
     }
-    public Integer getConsecutiveGatewayFailure() {
+    public Integer consecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure;
     }
-    public Integer getEnforcingConsecutiveErrors() {
+    public Integer enforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors;
     }
-    public Integer getEnforcingConsecutiveGatewayFailure() {
+    public Integer enforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure;
     }
-    public Integer getEnforcingSuccessRate() {
+    public Integer enforcingSuccessRate() {
         return this.enforcingSuccessRate;
     }
-    public List<GetBackendServiceOutlierDetectionInterval> getIntervals() {
+    public List<GetBackendServiceOutlierDetectionInterval> intervals() {
         return this.intervals;
     }
-    public Integer getMaxEjectionPercent() {
+    public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
-    public Integer getSuccessRateMinimumHosts() {
+    public Integer successRateMinimumHosts() {
         return this.successRateMinimumHosts;
     }
-    public Integer getSuccessRateRequestVolume() {
+    public Integer successRateRequestVolume() {
         return this.successRateRequestVolume;
     }
-    public Integer getSuccessRateStdevFactor() {
+    public Integer successRateStdevFactor() {
         return this.successRateStdevFactor;
     }
 

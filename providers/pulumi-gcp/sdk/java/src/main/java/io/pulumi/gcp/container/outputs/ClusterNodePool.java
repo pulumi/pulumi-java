@@ -99,7 +99,7 @@ public final class ClusterNodePool {
         this.version = version;
     }
 
-    public Optional<ClusterNodePoolAutoscaling> getAutoscaling() {
+    public Optional<ClusterNodePoolAutoscaling> autoscaling() {
         return Optional.ofNullable(this.autoscaling);
     }
     /**
@@ -111,19 +111,19 @@ public final class ClusterNodePool {
      * `remove_default_node_pool` to `true`.
      * 
     */
-    public Optional<Integer> getInitialNodeCount() {
+    public Optional<Integer> initialNodeCount() {
         return Optional.ofNullable(this.initialNodeCount);
     }
-    public List<String> getInstanceGroupUrls() {
+    public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls == null ? List.of() : this.instanceGroupUrls;
     }
-    public List<String> getManagedInstanceGroupUrls() {
+    public List<String> managedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls == null ? List.of() : this.managedInstanceGroupUrls;
     }
-    public Optional<ClusterNodePoolManagement> getManagement() {
+    public Optional<ClusterNodePoolManagement> management() {
         return Optional.ofNullable(this.management);
     }
-    public Optional<Integer> getMaxPodsPerNode() {
+    public Optional<Integer> maxPodsPerNode() {
         return Optional.ofNullable(this.maxPodsPerNode);
     }
     /**
@@ -131,10 +131,10 @@ public final class ClusterNodePool {
      * location.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getNamePrefix() {
+    public Optional<String> namePrefix() {
         return Optional.ofNullable(this.namePrefix);
     }
     /**
@@ -142,7 +142,7 @@ public final class ClusterNodePool {
      * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
      * 
     */
-    public Optional<ClusterNodePoolNetworkConfig> getNetworkConfig() {
+    public Optional<ClusterNodePoolNetworkConfig> networkConfig() {
         return Optional.ofNullable(this.networkConfig);
     }
     /**
@@ -153,10 +153,10 @@ public final class ClusterNodePool {
      * Structure is documented below.
      * 
     */
-    public Optional<ClusterNodePoolNodeConfig> getNodeConfig() {
+    public Optional<ClusterNodePoolNodeConfig> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
-    public Optional<Integer> getNodeCount() {
+    public Optional<Integer> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
@@ -166,13 +166,13 @@ public final class ClusterNodePool {
      * a zonal cluster, omit the cluster's zone.
      * 
     */
-    public List<String> getNodeLocations() {
+    public List<String> nodeLocations() {
         return this.nodeLocations == null ? List.of() : this.nodeLocations;
     }
-    public Optional<ClusterNodePoolUpgradeSettings> getUpgradeSettings() {
+    public Optional<ClusterNodePoolUpgradeSettings> upgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

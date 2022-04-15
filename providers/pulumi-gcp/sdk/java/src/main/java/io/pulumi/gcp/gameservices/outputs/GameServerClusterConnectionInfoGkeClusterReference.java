@@ -38,7 +38,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      *   GKE cluster.
      * 
     */
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
 

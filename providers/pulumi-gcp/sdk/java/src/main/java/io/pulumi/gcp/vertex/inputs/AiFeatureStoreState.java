@@ -26,7 +26,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -37,7 +37,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -59,7 +59,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -70,7 +70,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="onlineServingConfig")
       private final @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
-    public Output<AiFeatureStoreOnlineServingConfigGetArgs> getOnlineServingConfig() {
+    public Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig() {
         return this.onlineServingConfig == null ? Codegen.empty() : this.onlineServingConfig;
     }
 
@@ -94,7 +94,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -105,7 +105,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -117,7 +117,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

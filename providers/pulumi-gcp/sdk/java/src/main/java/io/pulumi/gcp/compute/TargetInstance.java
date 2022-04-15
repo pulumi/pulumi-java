@@ -63,7 +63,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -77,7 +77,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -101,7 +101,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * provider-level project.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -127,7 +127,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * Possible values are `NO_NAT`.
      * 
      */
-    public Output</* @Nullable */ String> getNatPolicy() {
+    public Output</* @Nullable */ String> natPolicy() {
         return this.natPolicy;
     }
     /**
@@ -161,7 +161,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -177,7 +177,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -191,7 +191,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -205,7 +205,7 @@ public class TargetInstance extends io.pulumi.resources.CustomResource {
      * @return URL of the zone where the target instance resides.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

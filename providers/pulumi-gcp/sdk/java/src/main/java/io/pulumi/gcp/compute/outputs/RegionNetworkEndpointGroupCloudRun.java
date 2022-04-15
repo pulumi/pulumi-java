@@ -53,7 +53,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * Example value: "default", "my-service".
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -63,7 +63,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * Example value: "revision-0010".
      * 
     */
-    public Optional<String> getTag() {
+    public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
@@ -75,7 +75,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
     */
-    public Optional<String> getUrlMask() {
+    public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
 

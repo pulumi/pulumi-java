@@ -65,7 +65,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * a value of `UTF8` at creation time.
      * 
      */
-    public Output<String> getCharset() {
+    public Output<String> charset() {
         return this.charset;
     }
     /**
@@ -87,7 +87,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * a value of `en_US.UTF8` at creation time.
      * 
      */
-    public Output<String> getCollation() {
+    public Output<String> collation() {
         return this.collation;
     }
     /**
@@ -103,7 +103,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * ID.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -119,7 +119,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * This does not include the project ID or instance name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -135,7 +135,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -149,7 +149,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

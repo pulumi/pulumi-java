@@ -45,7 +45,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
     */
-    public String getDistributionFilter() {
+    public String distributionFilter() {
         return this.distributionFilter;
     }
     /**
@@ -58,7 +58,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * Structure is documented below.
      * 
     */
-    public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange getRange() {
+    public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range() {
         return this.range;
     }
 

@@ -28,7 +28,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
 
-    public Output<AutoscalerAutoscalingPolicyGetArgs> getAutoscalingPolicy() {
+    public Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy() {
         return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
@@ -39,7 +39,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -50,7 +50,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -84,7 +84,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -97,7 +97,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -108,7 +108,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

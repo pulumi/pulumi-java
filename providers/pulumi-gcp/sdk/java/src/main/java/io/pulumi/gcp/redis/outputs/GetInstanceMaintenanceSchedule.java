@@ -23,13 +23,13 @@ public final class GetInstanceMaintenanceSchedule {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
-    public String getScheduleDeadlineTime() {
+    public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

@@ -29,7 +29,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="contentOptions")
       private final @Nullable Output<List<String>> contentOptions;
 
-    public Output<List<String>> getContentOptions() {
+    public Output<List<String>> contentOptions() {
         return this.contentOptions == null ? Codegen.empty() : this.contentOptions;
     }
 
@@ -41,7 +41,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="customInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> getCustomInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes() {
         return this.customInfoTypes == null ? Codegen.empty() : this.customInfoTypes;
     }
 
@@ -53,7 +53,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="excludeInfoTypes")
       private final @Nullable Output<Boolean> excludeInfoTypes;
 
-    public Output<Boolean> getExcludeInfoTypes() {
+    public Output<Boolean> excludeInfoTypes() {
         return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
@@ -64,7 +64,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="includeQuote")
       private final @Nullable Output<Boolean> includeQuote;
 
-    public Output<Boolean> getIncludeQuote() {
+    public Output<Boolean> includeQuote() {
         return this.includeQuote == null ? Codegen.empty() : this.includeQuote;
     }
 
@@ -76,7 +76,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="infoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes() {
         return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
@@ -88,7 +88,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="limits")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
 
-    public Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> getLimits() {
+    public Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -101,7 +101,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="minLikelihood")
       private final @Nullable Output<String> minLikelihood;
 
-    public Output<String> getMinLikelihood() {
+    public Output<String> minLikelihood() {
         return this.minLikelihood == null ? Codegen.empty() : this.minLikelihood;
     }
 
@@ -114,7 +114,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
     @Import(name="ruleSets")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> getRuleSets() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets() {
         return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 

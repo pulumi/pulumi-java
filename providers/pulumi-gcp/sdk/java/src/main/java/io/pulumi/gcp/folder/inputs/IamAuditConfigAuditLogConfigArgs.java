@@ -19,14 +19,14 @@ public final class IamAuditConfigAuditLogConfigArgs extends io.pulumi.resources.
     @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> getExemptedMembers() {
+    public Output<List<String>> exemptedMembers() {
         return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 

@@ -24,21 +24,21 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
     @Import(name="automaticRestart", required=true)
       private final Boolean automaticRestart;
 
-    public Boolean getAutomaticRestart() {
+    public Boolean automaticRestart() {
         return this.automaticRestart;
     }
 
     @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
 
-    public Integer getMinNodeCpus() {
+    public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
 
     @Import(name="nodeAffinities", required=true)
       private final List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
 
-    public List<GetInstanceSchedulingNodeAffinity> getNodeAffinities() {
+    public List<GetInstanceSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities;
     }
 
@@ -51,7 +51,7 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
     @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
 
@@ -62,7 +62,7 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 

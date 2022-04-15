@@ -43,7 +43,7 @@ public final class TriggerGithubPullRequest {
      * Regex of branches to match.  Specify only one of branch or tag.
      * 
     */
-    public String getBranch() {
+    public String branch() {
         return this.branch;
     }
     /**
@@ -51,14 +51,14 @@ public final class TriggerGithubPullRequest {
      * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
      * 
     */
-    public Optional<String> getCommentControl() {
+    public Optional<String> commentControl() {
         return Optional.ofNullable(this.commentControl);
     }
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
     */
-    public Optional<Boolean> getInvertRegex() {
+    public Optional<Boolean> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
 

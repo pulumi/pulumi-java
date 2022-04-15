@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatusVersionTarget {
         this.isReached = isReached;
     }
 
-    public Optional<Boolean> getIsReached() {
+    public Optional<Boolean> isReached() {
         return Optional.ofNullable(this.isReached);
     }
 

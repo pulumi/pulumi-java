@@ -26,7 +26,7 @@ public final class FlexibleAppVersionDeploymentContainer {
      * Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 

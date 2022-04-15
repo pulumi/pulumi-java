@@ -85,7 +85,7 @@ public final class ServiceTemplateSpec {
      * requests per container of the Revision. Values are:
      * 
     */
-    public Optional<Integer> getContainerConcurrency() {
+    public Optional<Integer> containerConcurrency() {
         return Optional.ofNullable(this.containerConcurrency);
     }
     /**
@@ -97,7 +97,7 @@ public final class ServiceTemplateSpec {
      * Structure is documented below.
      * 
     */
-    public List<ServiceTemplateSpecContainer> getContainers() {
+    public List<ServiceTemplateSpecContainer> containers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
@@ -107,7 +107,7 @@ public final class ServiceTemplateSpec {
      * will use the project's default service account.
      * 
     */
-    public Optional<String> getServiceAccountName() {
+    public Optional<String> serviceAccountName() {
         return Optional.ofNullable(this.serviceAccountName);
     }
     /**
@@ -122,14 +122,14 @@ public final class ServiceTemplateSpec {
      * 
     */
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Optional<String> getServingState() {
+    public Optional<String> servingState() {
         return Optional.ofNullable(this.servingState);
     }
     /**
      * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
      * 
     */
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
     /**
@@ -137,7 +137,7 @@ public final class ServiceTemplateSpec {
      * Structure is documented below.
      * 
     */
-    public List<ServiceTemplateSpecVolume> getVolumes() {
+    public List<ServiceTemplateSpecVolume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

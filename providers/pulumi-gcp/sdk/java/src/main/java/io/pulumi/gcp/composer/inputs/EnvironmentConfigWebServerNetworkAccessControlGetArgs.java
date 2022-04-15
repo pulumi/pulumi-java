@@ -19,7 +19,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
     @Import(name="allowedIpRanges")
       private final @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
 
-    public Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> getAllowedIpRanges() {
+    public Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges() {
         return this.allowedIpRanges == null ? Codegen.empty() : this.allowedIpRanges;
     }
 

@@ -34,7 +34,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignment")
       private final @Nullable Output<GuestPoliciesAssignmentGetArgs> assignment;
 
-    public Output<GuestPoliciesAssignmentGetArgs> getAssignment() {
+    public Output<GuestPoliciesAssignmentGetArgs> assignment() {
         return this.assignment == null ? Codegen.empty() : this.assignment;
     }
 
@@ -46,7 +46,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -57,7 +57,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -84,7 +84,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestPolicyId")
       private final @Nullable Output<String> guestPolicyId;
 
-    public Output<String> getGuestPolicyId() {
+    public Output<String> guestPolicyId() {
         return this.guestPolicyId == null ? Codegen.empty() : this.guestPolicyId;
     }
 
@@ -98,7 +98,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -112,7 +112,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageRepositories")
       private final @Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories;
 
-    public Output<List<GuestPoliciesPackageRepositoryGetArgs>> getPackageRepositories() {
+    public Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories() {
         return this.packageRepositories == null ? Codegen.empty() : this.packageRepositories;
     }
 
@@ -124,7 +124,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="packages")
       private final @Nullable Output<List<GuestPoliciesPackageGetArgs>> packages;
 
-    public Output<List<GuestPoliciesPackageGetArgs>> getPackages() {
+    public Output<List<GuestPoliciesPackageGetArgs>> packages() {
         return this.packages == null ? Codegen.empty() : this.packages;
     }
 
@@ -136,7 +136,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -148,7 +148,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="recipes")
       private final @Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes;
 
-    public Output<List<GuestPoliciesRecipeGetArgs>> getRecipes() {
+    public Output<List<GuestPoliciesRecipeGetArgs>> recipes() {
         return this.recipes == null ? Codegen.empty() : this.recipes;
     }
 
@@ -160,7 +160,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

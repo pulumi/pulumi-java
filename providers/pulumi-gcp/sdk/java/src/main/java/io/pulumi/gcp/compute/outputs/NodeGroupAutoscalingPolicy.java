@@ -51,7 +51,7 @@ public final class NodeGroupAutoscalingPolicy {
      * to 100 and greater than or equal to min-nodes.
      * 
     */
-    public Optional<Integer> getMaxNodes() {
+    public Optional<Integer> maxNodes() {
         return Optional.ofNullable(this.maxNodes);
     }
     /**
@@ -59,7 +59,7 @@ public final class NodeGroupAutoscalingPolicy {
      * than or equal to max-nodes. The default value is 0.
      * 
     */
-    public Optional<Integer> getMinNodes() {
+    public Optional<Integer> minNodes() {
         return Optional.ofNullable(this.minNodes);
     }
     /**
@@ -72,7 +72,7 @@ public final class NodeGroupAutoscalingPolicy {
      *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
 

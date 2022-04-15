@@ -35,7 +35,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getCertificateId() {
+    public Output<Integer> certificateId() {
         return this.certificateId;
     }
     /**
@@ -49,7 +49,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -63,7 +63,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -77,7 +77,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Expire time of the certificate.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -93,7 +93,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * of 'MANAGED' in 'type').
      * 
      */
-    public Output</* @Nullable */ MangedSslCertificateManaged> getManaged() {
+    public Output</* @Nullable */ MangedSslCertificateManaged> managed() {
         return this.managed;
     }
     /**
@@ -115,19 +115,19 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * namespace as the managed SSL certificates.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -141,7 +141,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Domains associated with the certificate via Subject Alternative Name.
      * 
      */
-    public Output<List<String>> getSubjectAlternativeNames() {
+    public Output<List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
@@ -157,7 +157,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * Possible values: ["MANAGED"]
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

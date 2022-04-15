@@ -23,7 +23,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -41,7 +41,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
     @Import(name="valueFrom")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom;
 
-    public Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> getValueFrom() {
+    public Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom() {
         return this.valueFrom == null ? Codegen.empty() : this.valueFrom;
     }
 

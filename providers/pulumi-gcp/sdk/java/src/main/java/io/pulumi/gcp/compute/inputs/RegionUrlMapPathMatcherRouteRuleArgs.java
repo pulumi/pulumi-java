@@ -31,7 +31,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
     @Import(name="headerAction")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
+    public Output<RegionUrlMapPathMatcherRouteRuleHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -43,7 +43,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
     @Import(name="matchRules")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
+    public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleArgs>> matchRules() {
         return this.matchRules == null ? Codegen.empty() : this.matchRules;
     }
 
@@ -66,7 +66,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -83,7 +83,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
     @Import(name="routeAction")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionArgs> routeAction;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionArgs> routeAction() {
         return this.routeAction == null ? Codegen.empty() : this.routeAction;
     }
 
@@ -94,7 +94,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -108,7 +108,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
     @Import(name="urlRedirect")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {
+    public Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect() {
         return this.urlRedirect == null ? Codegen.empty() : this.urlRedirect;
     }
 

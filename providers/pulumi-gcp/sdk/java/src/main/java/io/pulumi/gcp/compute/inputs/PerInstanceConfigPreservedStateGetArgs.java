@@ -26,7 +26,7 @@ public final class PerInstanceConfigPreservedStateGetArgs extends io.pulumi.reso
     @Import(name="disks")
       private final @Nullable Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks;
 
-    public Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> getDisks() {
+    public Output<List<PerInstanceConfigPreservedStateDiskGetArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -37,7 +37,7 @@ public final class PerInstanceConfigPreservedStateGetArgs extends io.pulumi.reso
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 

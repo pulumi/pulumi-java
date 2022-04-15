@@ -32,7 +32,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
     @Import(name="cloudProduct", required=true)
       private final Output<String> cloudProduct;
 
-    public Output<String> getCloudProduct() {
+    public Output<String> cloudProduct() {
         return this.cloudProduct;
     }
 
@@ -45,7 +45,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
     @Import(name="enrollmentLevel")
       private final @Nullable Output<String> enrollmentLevel;
 
-    public Output<String> getEnrollmentLevel() {
+    public Output<String> enrollmentLevel() {
         return this.enrollmentLevel == null ? Codegen.empty() : this.enrollmentLevel;
     }
 

@@ -17,14 +17,14 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef extends io
     @Import(name="localObjectReferences", required=true)
       private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
 
-    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> getLocalObjectReferences() {
+    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences() {
         return this.localObjectReferences;
     }
 
     @Import(name="optional", required=true)
       private final Boolean optional;
 
-    public Boolean getOptional() {
+    public Boolean optional() {
         return this.optional;
     }
 
