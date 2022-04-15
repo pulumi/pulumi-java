@@ -52,7 +52,27 @@ func TestValidIdent(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {
 			if got := Ident(tt.input).String(); got != tt.expected {
-				t.Errorf("makeValidIdentifier() = %v, want %v", got, tt.expected)
+				t.Errorf("Ident.String() = %v, want %v", got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestProperty_Getter(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected string
+	}{
+		{"JSONPath", "JSONPath"},
+		{"notify", "notify_"},
+		{"wait", "wait_"},
+		{"builder", "builder_"},
+		{"getResourceName", "getResourceName_"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.input, func(t *testing.T) {
+			if got := Ident(tt.input).AsProperty().Getter(); got != tt.expected {
+				t.Errorf("Ident.AsProperty().Getter() = %v, want %v", got, tt.expected)
 			}
 		})
 	}
