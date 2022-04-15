@@ -30,7 +30,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowVolumeExpansion")
       private final @Nullable Output<Boolean> allowVolumeExpansion;
 
-    public Output<Boolean> getAllowVolumeExpansion() {
+    public Output<Boolean> allowVolumeExpansion() {
         return this.allowVolumeExpansion == null ? Codegen.empty() : this.allowVolumeExpansion;
     }
 
@@ -45,7 +45,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="default")
       private final @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> getDefault_() {
+    public Output<Boolean> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
@@ -56,7 +56,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -67,7 +67,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iopsPerGb")
       private final @Nullable Output<Integer> iopsPerGb;
 
-    public Output<Integer> getIopsPerGb() {
+    public Output<Integer> iopsPerGb() {
         return this.iopsPerGb == null ? Codegen.empty() : this.iopsPerGb;
     }
 
@@ -78,7 +78,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -89,7 +89,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -100,7 +100,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> getMountOptions() {
+    public Output<List<String>> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
@@ -111,7 +111,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reclaimPolicy")
       private final @Nullable Output<String> reclaimPolicy;
 
-    public Output<String> getReclaimPolicy() {
+    public Output<String> reclaimPolicy() {
         return this.reclaimPolicy == null ? Codegen.empty() : this.reclaimPolicy;
     }
 
@@ -122,7 +122,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -133,7 +133,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeBindingMode")
       private final @Nullable Output<String> volumeBindingMode;
 
-    public Output<String> getVolumeBindingMode() {
+    public Output<String> volumeBindingMode() {
         return this.volumeBindingMode == null ? Codegen.empty() : this.volumeBindingMode;
     }
 
@@ -144,7 +144,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
+    public Output<List<String>> zones() {
         return this.zones == null ? Codegen.empty() : this.zones;
     }
 

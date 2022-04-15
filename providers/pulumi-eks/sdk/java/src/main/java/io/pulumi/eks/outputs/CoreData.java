@@ -90,64 +90,64 @@ public final class CoreData {
         this.vpcId = vpcId;
     }
 
-    public Optional<Provider> getAwsProvider() {
+    public Optional<Provider> awsProvider() {
         return Optional.ofNullable(this.awsProvider);
     }
-    public Cluster getCluster() {
+    public Cluster cluster() {
         return this.cluster;
     }
-    public SecurityGroup getClusterSecurityGroup() {
+    public SecurityGroup clusterSecurityGroup() {
         return this.clusterSecurityGroup;
     }
-    public Optional<ConfigMap> getEksNodeAccess() {
+    public Optional<ConfigMap> eksNodeAccess() {
         return Optional.ofNullable(this.eksNodeAccess);
     }
-    public Optional<ClusterEncryptionConfig> getEncryptionConfig() {
+    public Optional<ClusterEncryptionConfig> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
-    public Optional<FargateProfile> getFargateProfile() {
+    public Optional<FargateProfile> fargateProfile() {
         return Optional.ofNullable(this.fargateProfile);
     }
-    public List<Role> getInstanceRoles() {
+    public List<Role> instanceRoles() {
         return this.instanceRoles;
     }
-    public Optional<Object> getKubeconfig() {
+    public Optional<Object> kubeconfig() {
         return Optional.ofNullable(this.kubeconfig);
     }
-    public ClusterNodeGroupOptions getNodeGroupOptions() {
+    public ClusterNodeGroupOptions nodeGroupOptions() {
         return this.nodeGroupOptions;
     }
-    public Map<String,String> getNodeSecurityGroupTags() {
+    public Map<String,String> nodeSecurityGroupTags() {
         return this.nodeSecurityGroupTags == null ? Map.of() : this.nodeSecurityGroupTags;
     }
-    public Optional<OpenIdConnectProvider> getOidcProvider() {
+    public Optional<OpenIdConnectProvider> oidcProvider() {
         return Optional.ofNullable(this.oidcProvider);
     }
-    public List<String> getPrivateSubnetIds() {
+    public List<String> privateSubnetIds() {
         return this.privateSubnetIds == null ? List.of() : this.privateSubnetIds;
     }
-    public io.pulumi.kubernetes.Provider getProvider() {
+    public io.pulumi.kubernetes.Provider provider() {
         return this.provider;
     }
-    public List<String> getPublicSubnetIds() {
+    public List<String> publicSubnetIds() {
         return this.publicSubnetIds == null ? List.of() : this.publicSubnetIds;
     }
-    public Map<String,StorageClass> getStorageClasses() {
+    public Map<String,StorageClass> storageClasses() {
         return this.storageClasses == null ? Map.of() : this.storageClasses;
     }
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
-    public Optional<VpcCni> getVpcCni() {
+    public Optional<VpcCni> vpcCni() {
         return Optional.ofNullable(this.vpcCni);
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 
