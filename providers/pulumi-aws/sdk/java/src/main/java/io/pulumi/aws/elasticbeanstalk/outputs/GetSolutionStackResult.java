@@ -41,20 +41,20 @@ public final class GetSolutionStackResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * The name of the solution stack.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getNameRegex() {
+    public String nameRegex() {
         return this.nameRegex;
     }
 

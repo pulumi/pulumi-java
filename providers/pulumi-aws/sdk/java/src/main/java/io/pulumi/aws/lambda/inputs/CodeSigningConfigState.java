@@ -24,7 +24,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="allowedPublishers")
       private final @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
 
-    public Output<CodeSigningConfigAllowedPublishersGetArgs> getAllowedPublishers() {
+    public Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers() {
         return this.allowedPublishers == null ? Codegen.empty() : this.allowedPublishers;
     }
 
@@ -35,7 +35,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="configId")
       private final @Nullable Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId == null ? Codegen.empty() : this.configId;
     }
 
@@ -57,7 +57,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -68,7 +68,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
@@ -79,7 +79,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     @Import(name="policies")
       private final @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
 
-    public Output<CodeSigningConfigPoliciesGetArgs> getPolicies() {
+    public Output<CodeSigningConfigPoliciesGetArgs> policies() {
         return this.policies == null ? Codegen.empty() : this.policies;
     }
 

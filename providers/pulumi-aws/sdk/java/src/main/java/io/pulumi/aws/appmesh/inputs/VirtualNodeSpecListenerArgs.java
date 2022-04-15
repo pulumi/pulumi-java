@@ -27,7 +27,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     @Import(name="connectionPool")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool;
 
-    public Output<VirtualNodeSpecListenerConnectionPoolArgs> getConnectionPool() {
+    public Output<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool() {
         return this.connectionPool == null ? Codegen.empty() : this.connectionPool;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     @Import(name="healthCheck")
       private final @Nullable Output<VirtualNodeSpecListenerHealthCheckArgs> healthCheck;
 
-    public Output<VirtualNodeSpecListenerHealthCheckArgs> getHealthCheck() {
+    public Output<VirtualNodeSpecListenerHealthCheckArgs> healthCheck() {
         return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     @Import(name="outlierDetection")
       private final @Nullable Output<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionArgs> getOutlierDetection() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection() {
         return this.outlierDetection == null ? Codegen.empty() : this.outlierDetection;
     }
 
@@ -60,7 +60,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     @Import(name="portMapping", required=true)
       private final Output<VirtualNodeSpecListenerPortMappingArgs> portMapping;
 
-    public Output<VirtualNodeSpecListenerPortMappingArgs> getPortMapping() {
+    public Output<VirtualNodeSpecListenerPortMappingArgs> portMapping() {
         return this.portMapping;
     }
 
@@ -71,7 +71,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     @Import(name="timeout")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutArgs> timeout;
 
-    public Output<VirtualNodeSpecListenerTimeoutArgs> getTimeout() {
+    public Output<VirtualNodeSpecListenerTimeoutArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -82,7 +82,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
     @Import(name="tls")
       private final @Nullable Output<VirtualNodeSpecListenerTlsArgs> tls;
 
-    public Output<VirtualNodeSpecListenerTlsArgs> getTls() {
+    public Output<VirtualNodeSpecListenerTlsArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

@@ -32,7 +32,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The name of the policy to attach.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -46,7 +46,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * @return The identity to which the policy is attached.
      * 
      */
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target;
     }
 

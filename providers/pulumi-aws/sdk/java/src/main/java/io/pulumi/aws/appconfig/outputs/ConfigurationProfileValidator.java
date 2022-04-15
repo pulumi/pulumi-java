@@ -34,14 +34,14 @@ public final class ConfigurationProfileValidator {
      * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The type of validator. Valid values: `JSON_SCHEMA` and `LAMBDA`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

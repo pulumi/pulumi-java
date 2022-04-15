@@ -23,7 +23,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code", required=true)
       private final Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -45,7 +45,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publish")
       private final @Nullable Output<Boolean> publish;
 
-    public Output<Boolean> getPublish() {
+    public Output<Boolean> publish() {
         return this.publish == null ? Codegen.empty() : this.publish;
     }
 
@@ -67,7 +67,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
 

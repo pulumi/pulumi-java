@@ -23,7 +23,7 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -45,7 +45,7 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     @Import(name="rules", required=true)
       private final Output<List<BucketReplicationConfigRuleArgs>> rules;
 
-    public Output<List<BucketReplicationConfigRuleArgs>> getRules() {
+    public Output<List<BucketReplicationConfigRuleArgs>> rules() {
         return this.rules;
     }
 

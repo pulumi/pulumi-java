@@ -45,21 +45,21 @@ public final class ClusterParameterGroupParameter {
      * specify "pending-reboot" here.
      * 
     */
-    public Optional<String> getApplyMethod() {
+    public Optional<String> applyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * The name of the DB parameter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The value of the DB parameter.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

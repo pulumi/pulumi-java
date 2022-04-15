@@ -34,14 +34,14 @@ public final class FleetResourceCreationLimitPolicy {
      * Maximum number of game sessions that an individual can create during the policy period.
      * 
     */
-    public Optional<Integer> getNewGameSessionsPerCreator() {
+    public Optional<Integer> newGameSessionsPerCreator() {
         return Optional.ofNullable(this.newGameSessionsPerCreator);
     }
     /**
      * Time span used in evaluating the resource creation limit policy.
      * 
     */
-    public Optional<Integer> getPolicyPeriodInMinutes() {
+    public Optional<Integer> policyPeriodInMinutes() {
         return Optional.ofNullable(this.policyPeriodInMinutes);
     }
 

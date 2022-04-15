@@ -21,7 +21,7 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frequency", required=true)
       private final Output<String> frequency;
 
-    public Output<String> getFrequency() {
+    public Output<String> frequency() {
         return this.frequency;
     }
 

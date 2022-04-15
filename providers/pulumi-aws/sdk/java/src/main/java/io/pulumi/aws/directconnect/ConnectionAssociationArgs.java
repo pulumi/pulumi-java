@@ -21,7 +21,7 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -32,7 +32,7 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="lagId", required=true)
       private final Output<String> lagId;
 
-    public Output<String> getLagId() {
+    public Output<String> lagId() {
         return this.lagId;
     }
 

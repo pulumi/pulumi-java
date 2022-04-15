@@ -65,45 +65,45 @@ public final class GetVpcLinkResult {
      * The description of the VPC link.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Set to the ID of the found API Gateway VPC Link.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The status of the VPC link.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The status message of the VPC link.
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
     /**
      * Key-value map of resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
      * 
     */
-    public List<String> getTargetArns() {
+    public List<String> targetArns() {
         return this.targetArns;
     }
 

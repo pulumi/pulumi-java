@@ -22,7 +22,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -33,7 +33,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -44,7 +44,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -55,7 +55,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="principalType", required=true)
       private final Output<String> principalType;
 
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType;
     }
 
@@ -66,7 +66,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
 
@@ -77,7 +77,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 

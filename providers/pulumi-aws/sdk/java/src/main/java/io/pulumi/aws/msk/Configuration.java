@@ -42,7 +42,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Description of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return List of Apache Kafka versions which can use this configuration.
      * 
      */
-    public Output</* @Nullable */ List<String>> getKafkaVersions() {
+    public Output</* @Nullable */ List<String>> kafkaVersions() {
         return this.kafkaVersions;
     }
     /**
@@ -84,7 +84,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Latest revision of the configuration.
      * 
      */
-    public Output<Integer> getLatestRevision() {
+    public Output<Integer> latestRevision() {
         return this.latestRevision;
     }
     /**
@@ -98,7 +98,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Name of the configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
      * 
      */
-    public Output<String> getServerProperties() {
+    public Output<String> serverProperties() {
         return this.serverProperties;
     }
 

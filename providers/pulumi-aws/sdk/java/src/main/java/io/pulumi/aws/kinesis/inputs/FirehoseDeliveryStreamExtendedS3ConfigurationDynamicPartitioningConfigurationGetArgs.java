@@ -23,7 +23,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
-    public Output<Integer> getRetryDuration() {
+    public Output<Integer> retryDuration() {
         return this.retryDuration == null ? Codegen.empty() : this.retryDuration;
     }
 

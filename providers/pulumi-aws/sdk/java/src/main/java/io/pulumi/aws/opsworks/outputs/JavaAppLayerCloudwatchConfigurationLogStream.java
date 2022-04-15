@@ -50,37 +50,37 @@ public final class JavaAppLayerCloudwatchConfigurationLogStream {
         this.timeZone = timeZone;
     }
 
-    public Optional<Integer> getBatchCount() {
+    public Optional<Integer> batchCount() {
         return Optional.ofNullable(this.batchCount);
     }
-    public Optional<Integer> getBatchSize() {
+    public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
-    public Optional<Integer> getBufferDuration() {
+    public Optional<Integer> bufferDuration() {
         return Optional.ofNullable(this.bufferDuration);
     }
-    public Optional<String> getDatetimeFormat() {
+    public Optional<String> datetimeFormat() {
         return Optional.ofNullable(this.datetimeFormat);
     }
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
-    public String getFile() {
+    public String file() {
         return this.file;
     }
-    public Optional<String> getFileFingerprintLines() {
+    public Optional<String> fileFingerprintLines() {
         return Optional.ofNullable(this.fileFingerprintLines);
     }
-    public Optional<String> getInitialPosition() {
+    public Optional<String> initialPosition() {
         return Optional.ofNullable(this.initialPosition);
     }
-    public String getLogGroupName() {
+    public String logGroupName() {
         return this.logGroupName;
     }
-    public Optional<String> getMultilineStartPattern() {
+    public Optional<String> multilineStartPattern() {
         return Optional.ofNullable(this.multilineStartPattern);
     }
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

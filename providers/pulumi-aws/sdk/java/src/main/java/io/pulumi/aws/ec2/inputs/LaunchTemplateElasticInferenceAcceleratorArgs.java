@@ -21,7 +21,7 @@ public final class LaunchTemplateElasticInferenceAcceleratorArgs extends io.pulu
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

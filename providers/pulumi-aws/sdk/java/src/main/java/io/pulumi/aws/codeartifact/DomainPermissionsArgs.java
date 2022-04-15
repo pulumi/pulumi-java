@@ -22,7 +22,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -33,7 +33,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
@@ -44,7 +44,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyDocument", required=true)
       private final Output<String> policyDocument;
 
-    public Output<String> getPolicyDocument() {
+    public Output<String> policyDocument() {
         return this.policyDocument;
     }
 
@@ -55,7 +55,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyRevision")
       private final @Nullable Output<String> policyRevision;
 
-    public Output<String> getPolicyRevision() {
+    public Output<String> policyRevision() {
         return this.policyRevision == null ? Codegen.empty() : this.policyRevision;
     }
 

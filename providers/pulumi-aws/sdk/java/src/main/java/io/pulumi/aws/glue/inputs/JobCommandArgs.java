@@ -22,7 +22,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -33,7 +33,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
-    public Output<String> getPythonVersion() {
+    public Output<String> pythonVersion() {
         return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
     }
 
@@ -44,7 +44,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptLocation", required=true)
       private final Output<String> scriptLocation;
 
-    public Output<String> getScriptLocation() {
+    public Output<String> scriptLocation() {
         return this.scriptLocation;
     }
 

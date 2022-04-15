@@ -33,14 +33,14 @@ public final class VirtualNodeSpecListenerPortMapping {
      * The port used for the port mapping.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

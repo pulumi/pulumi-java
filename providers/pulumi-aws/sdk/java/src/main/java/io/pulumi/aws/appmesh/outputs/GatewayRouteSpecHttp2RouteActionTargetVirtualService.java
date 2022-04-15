@@ -24,7 +24,7 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualService {
      * The name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.
      * 
     */
-    public String getVirtualServiceName() {
+    public String virtualServiceName() {
         return this.virtualServiceName;
     }
 

@@ -31,7 +31,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -42,7 +42,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactConfig")
       private final @Nullable Output<CanaryArtifactConfigGetArgs> artifactConfig;
 
-    public Output<CanaryArtifactConfigGetArgs> getArtifactConfig() {
+    public Output<CanaryArtifactConfigGetArgs> artifactConfig() {
         return this.artifactConfig == null ? Codegen.empty() : this.artifactConfig;
     }
 
@@ -53,7 +53,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactS3Location")
       private final @Nullable Output<String> artifactS3Location;
 
-    public Output<String> getArtifactS3Location() {
+    public Output<String> artifactS3Location() {
         return this.artifactS3Location == null ? Codegen.empty() : this.artifactS3Location;
     }
 
@@ -64,7 +64,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineArn")
       private final @Nullable Output<String> engineArn;
 
-    public Output<String> getEngineArn() {
+    public Output<String> engineArn() {
         return this.engineArn == null ? Codegen.empty() : this.engineArn;
     }
 
@@ -75,7 +75,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -86,7 +86,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="failureRetentionPeriod")
       private final @Nullable Output<Integer> failureRetentionPeriod;
 
-    public Output<Integer> getFailureRetentionPeriod() {
+    public Output<Integer> failureRetentionPeriod() {
         return this.failureRetentionPeriod == null ? Codegen.empty() : this.failureRetentionPeriod;
     }
 
@@ -97,7 +97,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="handler")
       private final @Nullable Output<String> handler;
 
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler == null ? Codegen.empty() : this.handler;
     }
 
@@ -108,7 +108,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -119,7 +119,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runConfig")
       private final @Nullable Output<CanaryRunConfigGetArgs> runConfig;
 
-    public Output<CanaryRunConfigGetArgs> getRunConfig() {
+    public Output<CanaryRunConfigGetArgs> runConfig() {
         return this.runConfig == null ? Codegen.empty() : this.runConfig;
     }
 
@@ -130,7 +130,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
@@ -141,7 +141,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -152,7 +152,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
@@ -163,7 +163,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Version")
       private final @Nullable Output<String> s3Version;
 
-    public Output<String> getS3Version() {
+    public Output<String> s3Version() {
         return this.s3Version == null ? Codegen.empty() : this.s3Version;
     }
 
@@ -174,7 +174,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<CanaryScheduleGetArgs> schedule;
 
-    public Output<CanaryScheduleGetArgs> getSchedule() {
+    public Output<CanaryScheduleGetArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -185,7 +185,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn")
       private final @Nullable Output<String> sourceLocationArn;
 
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn == null ? Codegen.empty() : this.sourceLocationArn;
     }
 
@@ -196,7 +196,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="startCanary")
       private final @Nullable Output<Boolean> startCanary;
 
-    public Output<Boolean> getStartCanary() {
+    public Output<Boolean> startCanary() {
         return this.startCanary == null ? Codegen.empty() : this.startCanary;
     }
 
@@ -207,7 +207,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -218,7 +218,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="successRetentionPeriod")
       private final @Nullable Output<Integer> successRetentionPeriod;
 
-    public Output<Integer> getSuccessRetentionPeriod() {
+    public Output<Integer> successRetentionPeriod() {
         return this.successRetentionPeriod == null ? Codegen.empty() : this.successRetentionPeriod;
     }
 
@@ -229,7 +229,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -240,7 +240,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -251,7 +251,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timelines")
       private final @Nullable Output<List<CanaryTimelineGetArgs>> timelines;
 
-    public Output<List<CanaryTimelineGetArgs>> getTimelines() {
+    public Output<List<CanaryTimelineGetArgs>> timelines() {
         return this.timelines == null ? Codegen.empty() : this.timelines;
     }
 
@@ -262,7 +262,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<CanaryVpcConfigGetArgs> vpcConfig;
 
-    public Output<CanaryVpcConfigGetArgs> getVpcConfig() {
+    public Output<CanaryVpcConfigGetArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
@@ -273,7 +273,7 @@ public final class CanaryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zipFile")
       private final @Nullable Output<String> zipFile;
 
-    public Output<String> getZipFile() {
+    public Output<String> zipFile() {
         return this.zipFile == null ? Codegen.empty() : this.zipFile;
     }
 

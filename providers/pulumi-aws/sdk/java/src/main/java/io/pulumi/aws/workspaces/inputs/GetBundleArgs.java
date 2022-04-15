@@ -21,7 +21,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="bundleId")
       private final @Nullable String bundleId;
 
-    public Optional<String> getBundleId() {
+    public Optional<String> bundleId() {
         return this.bundleId == null ? Optional.empty() : Optional.ofNullable(this.bundleId);
     }
 
@@ -32,7 +32,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -43,7 +43,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="owner")
       private final @Nullable String owner;
 
-    public Optional<String> getOwner() {
+    public Optional<String> owner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
     }
 

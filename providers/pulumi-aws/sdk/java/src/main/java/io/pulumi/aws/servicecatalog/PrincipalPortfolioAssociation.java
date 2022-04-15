@@ -40,7 +40,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -54,7 +54,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Portfolio identifier.
      * 
      */
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
     /**
@@ -68,7 +68,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Principal ARN.
      * 
      */
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn;
     }
     /**
@@ -82,7 +82,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * @return Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
-    public Output</* @Nullable */ String> getPrincipalType() {
+    public Output</* @Nullable */ String> principalType() {
         return this.principalType;
     }
 

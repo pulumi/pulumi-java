@@ -23,7 +23,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3Destination", required=true)
       private final Output<ResourceDataSyncS3DestinationArgs> s3Destination;
 
-    public Output<ResourceDataSyncS3DestinationArgs> getS3Destination() {
+    public Output<ResourceDataSyncS3DestinationArgs> s3Destination() {
         return this.s3Destination;
     }
 

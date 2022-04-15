@@ -22,7 +22,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -33,7 +33,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="encryptionOption")
       private final @Nullable Output<String> encryptionOption;
 
-    public Output<String> getEncryptionOption() {
+    public Output<String> encryptionOption() {
         return this.encryptionOption == null ? Codegen.empty() : this.encryptionOption;
     }
 
@@ -44,7 +44,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -55,7 +55,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> getObjectKeyPrefix() {
+    public Output<String> objectKeyPrefix() {
         return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
     }
 

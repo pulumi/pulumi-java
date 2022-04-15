@@ -19,7 +19,7 @@ public final class GetSelectionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="planId", required=true)
       private final String planId;
 
-    public String getPlanId() {
+    public String planId() {
         return this.planId;
     }
 
@@ -30,7 +30,7 @@ public final class GetSelectionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="selectionId", required=true)
       private final String selectionId;
 
-    public String getSelectionId() {
+    public String selectionId() {
         return this.selectionId;
     }
 

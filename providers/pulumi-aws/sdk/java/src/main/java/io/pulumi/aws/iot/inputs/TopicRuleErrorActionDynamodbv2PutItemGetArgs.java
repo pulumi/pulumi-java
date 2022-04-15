@@ -21,7 +21,7 @@ public final class TopicRuleErrorActionDynamodbv2PutItemGetArgs extends io.pulum
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

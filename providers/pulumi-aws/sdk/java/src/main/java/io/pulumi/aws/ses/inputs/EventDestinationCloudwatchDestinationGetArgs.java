@@ -21,7 +21,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue;
     }
 
@@ -32,7 +32,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     @Import(name="dimensionName", required=true)
       private final Output<String> dimensionName;
 
-    public Output<String> getDimensionName() {
+    public Output<String> dimensionName() {
         return this.dimensionName;
     }
 
@@ -43,7 +43,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
     @Import(name="valueSource", required=true)
       private final Output<String> valueSource;
 
-    public Output<String> getValueSource() {
+    public Output<String> valueSource() {
         return this.valueSource;
     }
 

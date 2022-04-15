@@ -18,14 +18,14 @@ public final class EnvironmentLastUpdatedErrorArgs extends io.pulumi.resources.R
     @Import(name="errorCode")
       private final @Nullable Output<String> errorCode;
 
-    public Output<String> getErrorCode() {
+    public Output<String> errorCode() {
         return this.errorCode == null ? Codegen.empty() : this.errorCode;
     }
 
     @Import(name="errorMessage")
       private final @Nullable Output<String> errorMessage;
 
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage == null ? Codegen.empty() : this.errorMessage;
     }
 

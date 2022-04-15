@@ -22,7 +22,7 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
     @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
@@ -33,7 +33,7 @@ public final class VpnGatewayRoutePropagationState extends io.pulumi.resources.R
     @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 

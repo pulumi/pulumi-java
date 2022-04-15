@@ -29,7 +29,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -40,7 +40,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="containers")
       private final @Nullable Output<List<ModelContainerGetArgs>> containers;
 
-    public Output<List<ModelContainerGetArgs>> getContainers() {
+    public Output<List<ModelContainerGetArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -51,7 +51,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Output<Boolean> getEnableNetworkIsolation() {
+    public Output<Boolean> enableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
     }
 
@@ -62,7 +62,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -73,7 +73,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="inferenceExecutionConfig")
       private final @Nullable Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
 
-    public Output<ModelInferenceExecutionConfigGetArgs> getInferenceExecutionConfig() {
+    public Output<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig() {
         return this.inferenceExecutionConfig == null ? Codegen.empty() : this.inferenceExecutionConfig;
     }
 
@@ -84,7 +84,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -95,7 +95,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryContainer")
       private final @Nullable Output<ModelPrimaryContainerGetArgs> primaryContainer;
 
-    public Output<ModelPrimaryContainerGetArgs> getPrimaryContainer() {
+    public Output<ModelPrimaryContainerGetArgs> primaryContainer() {
         return this.primaryContainer == null ? Codegen.empty() : this.primaryContainer;
     }
 
@@ -106,7 +106,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -117,7 +117,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -128,7 +128,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<ModelVpcConfigGetArgs> vpcConfig;
 
-    public Output<ModelVpcConfigGetArgs> getVpcConfig() {
+    public Output<ModelVpcConfigGetArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

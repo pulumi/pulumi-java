@@ -54,7 +54,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
      * 
      */
-    public Output</* @Nullable */ String> getCidrBlock() {
+    public Output</* @Nullable */ String> cidrBlock() {
         return this.cidrBlock;
     }
     /**
@@ -68,7 +68,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEgress() {
+    public Output</* @Nullable */ Boolean> egress() {
         return this.egress;
     }
     /**
@@ -82,7 +82,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The from port to match.
      * 
      */
-    public Output</* @Nullable */ Integer> getFromPort() {
+    public Output</* @Nullable */ Integer> fromPort() {
         return this.fromPort;
     }
     /**
@@ -96,7 +96,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Output</* @Nullable */ String> getIcmpCode() {
+    public Output</* @Nullable */ String> icmpCode() {
         return this.icmpCode;
     }
     /**
@@ -110,7 +110,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Output</* @Nullable */ String> getIcmpType() {
+    public Output</* @Nullable */ String> icmpType() {
         return this.icmpType;
     }
     /**
@@ -124,7 +124,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The IPv6 CIDR block to allow or deny.
      * 
      */
-    public Output</* @Nullable */ String> getIpv6CidrBlock() {
+    public Output</* @Nullable */ String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     /**
@@ -138,7 +138,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The ID of the network ACL.
      * 
      */
-    public Output<String> getNetworkAclId() {
+    public Output<String> networkAclId() {
         return this.networkAclId;
     }
     /**
@@ -152,7 +152,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The protocol. A value of -1 means all protocols.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -166,7 +166,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
      * 
      */
-    public Output<String> getRuleAction() {
+    public Output<String> ruleAction() {
         return this.ruleAction;
     }
     /**
@@ -180,7 +180,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
      * 
      */
-    public Output<Integer> getRuleNumber() {
+    public Output<Integer> ruleNumber() {
         return this.ruleNumber;
     }
     /**
@@ -194,7 +194,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @return The to port to match.
      * 
      */
-    public Output</* @Nullable */ Integer> getToPort() {
+    public Output</* @Nullable */ Integer> toPort() {
         return this.toPort;
     }
 

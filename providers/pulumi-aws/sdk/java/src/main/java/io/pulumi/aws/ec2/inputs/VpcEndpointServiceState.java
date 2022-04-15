@@ -26,7 +26,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="acceptanceRequired")
       private final @Nullable Output<Boolean> acceptanceRequired;
 
-    public Output<Boolean> getAcceptanceRequired() {
+    public Output<Boolean> acceptanceRequired() {
         return this.acceptanceRequired == null ? Codegen.empty() : this.acceptanceRequired;
     }
 
@@ -37,7 +37,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="allowedPrincipals")
       private final @Nullable Output<List<String>> allowedPrincipals;
 
-    public Output<List<String>> getAllowedPrincipals() {
+    public Output<List<String>> allowedPrincipals() {
         return this.allowedPrincipals == null ? Codegen.empty() : this.allowedPrincipals;
     }
 
@@ -48,7 +48,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -59,7 +59,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -70,7 +70,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="baseEndpointDnsNames")
       private final @Nullable Output<List<String>> baseEndpointDnsNames;
 
-    public Output<List<String>> getBaseEndpointDnsNames() {
+    public Output<List<String>> baseEndpointDnsNames() {
         return this.baseEndpointDnsNames == null ? Codegen.empty() : this.baseEndpointDnsNames;
     }
 
@@ -81,7 +81,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="gatewayLoadBalancerArns")
       private final @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
-    public Output<List<String>> getGatewayLoadBalancerArns() {
+    public Output<List<String>> gatewayLoadBalancerArns() {
         return this.gatewayLoadBalancerArns == null ? Codegen.empty() : this.gatewayLoadBalancerArns;
     }
 
@@ -92,7 +92,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="managesVpcEndpoints")
       private final @Nullable Output<Boolean> managesVpcEndpoints;
 
-    public Output<Boolean> getManagesVpcEndpoints() {
+    public Output<Boolean> managesVpcEndpoints() {
         return this.managesVpcEndpoints == null ? Codegen.empty() : this.managesVpcEndpoints;
     }
 
@@ -103,7 +103,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="networkLoadBalancerArns")
       private final @Nullable Output<List<String>> networkLoadBalancerArns;
 
-    public Output<List<String>> getNetworkLoadBalancerArns() {
+    public Output<List<String>> networkLoadBalancerArns() {
         return this.networkLoadBalancerArns == null ? Codegen.empty() : this.networkLoadBalancerArns;
     }
 
@@ -114,7 +114,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="privateDnsName")
       private final @Nullable Output<String> privateDnsName;
 
-    public Output<String> getPrivateDnsName() {
+    public Output<String> privateDnsName() {
         return this.privateDnsName == null ? Codegen.empty() : this.privateDnsName;
     }
 
@@ -125,7 +125,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="privateDnsNameConfigurations")
       private final @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
 
-    public Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> getPrivateDnsNameConfigurations() {
+    public Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations() {
         return this.privateDnsNameConfigurations == null ? Codegen.empty() : this.privateDnsNameConfigurations;
     }
 
@@ -136,7 +136,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
@@ -147,7 +147,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="serviceType")
       private final @Nullable Output<String> serviceType;
 
-    public Output<String> getServiceType() {
+    public Output<String> serviceType() {
         return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
@@ -158,7 +158,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -169,7 +169,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -180,7 +180,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

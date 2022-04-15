@@ -46,7 +46,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Elastictranscoder pipeline.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
      * 
      */
-    public Output</* @Nullable */ String> getAwsKmsKeyArn() {
+    public Output</* @Nullable */ String> awsKmsKeyArn() {
         return this.awsKmsKeyArn;
     }
     /**
@@ -74,7 +74,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
      * 
      */
-    public Output<PipelineContentConfig> getContentConfig() {
+    public Output<PipelineContentConfig> contentConfig() {
         return this.contentConfig;
     }
     /**
@@ -88,7 +88,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The permissions for the `content_config` object. (documented below)
      * 
      */
-    public Output</* @Nullable */ List<PipelineContentConfigPermission>> getContentConfigPermissions() {
+    public Output</* @Nullable */ List<PipelineContentConfigPermission>> contentConfigPermissions() {
         return this.contentConfigPermissions;
     }
     /**
@@ -102,7 +102,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
      * 
      */
-    public Output<String> getInputBucket() {
+    public Output<String> inputBucket() {
         return this.inputBucket;
     }
     /**
@@ -116,7 +116,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The name of the pipeline. Maximum 40 characters
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
      * 
      */
-    public Output</* @Nullable */ PipelineNotifications> getNotifications() {
+    public Output</* @Nullable */ PipelineNotifications> notifications() {
         return this.notifications;
     }
     /**
@@ -144,7 +144,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
      * 
      */
-    public Output<String> getOutputBucket() {
+    public Output<String> outputBucket() {
         return this.outputBucket;
     }
     /**
@@ -158,7 +158,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -172,7 +172,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
      * 
      */
-    public Output<PipelineThumbnailConfig> getThumbnailConfig() {
+    public Output<PipelineThumbnailConfig> thumbnailConfig() {
         return this.thumbnailConfig;
     }
     /**
@@ -186,7 +186,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * @return The permissions for the `thumbnail_config` object. (documented below)
      * 
      */
-    public Output</* @Nullable */ List<PipelineThumbnailConfigPermission>> getThumbnailConfigPermissions() {
+    public Output</* @Nullable */ List<PipelineThumbnailConfigPermission>> thumbnailConfigPermissions() {
         return this.thumbnailConfigPermissions;
     }
 

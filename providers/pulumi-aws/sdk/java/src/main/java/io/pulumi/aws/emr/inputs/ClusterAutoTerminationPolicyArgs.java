@@ -22,7 +22,7 @@ public final class ClusterAutoTerminationPolicyArgs extends io.pulumi.resources.
     @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> getIdleTimeout() {
+    public Output<Integer> idleTimeout() {
         return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 

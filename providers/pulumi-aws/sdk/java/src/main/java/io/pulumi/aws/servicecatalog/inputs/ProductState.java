@@ -25,7 +25,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -36,7 +36,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -58,7 +58,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -69,7 +69,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributor")
       private final @Nullable Output<String> distributor;
 
-    public Output<String> getDistributor() {
+    public Output<String> distributor() {
         return this.distributor == null ? Codegen.empty() : this.distributor;
     }
 
@@ -80,7 +80,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hasDefaultPath")
       private final @Nullable Output<Boolean> hasDefaultPath;
 
-    public Output<Boolean> getHasDefaultPath() {
+    public Output<Boolean> hasDefaultPath() {
         return this.hasDefaultPath == null ? Codegen.empty() : this.hasDefaultPath;
     }
 
@@ -91,7 +91,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -102,7 +102,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -113,7 +113,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningArtifactParameters")
       private final @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
 
-    public Output<ProductProvisioningArtifactParametersGetArgs> getProvisioningArtifactParameters() {
+    public Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters() {
         return this.provisioningArtifactParameters == null ? Codegen.empty() : this.provisioningArtifactParameters;
     }
 
@@ -124,7 +124,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -135,7 +135,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportDescription")
       private final @Nullable Output<String> supportDescription;
 
-    public Output<String> getSupportDescription() {
+    public Output<String> supportDescription() {
         return this.supportDescription == null ? Codegen.empty() : this.supportDescription;
     }
 
@@ -146,7 +146,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 
@@ -157,7 +157,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
 
-    public Output<String> getSupportUrl() {
+    public Output<String> supportUrl() {
         return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
     }
 
@@ -168,7 +168,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -179,7 +179,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -190,7 +190,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

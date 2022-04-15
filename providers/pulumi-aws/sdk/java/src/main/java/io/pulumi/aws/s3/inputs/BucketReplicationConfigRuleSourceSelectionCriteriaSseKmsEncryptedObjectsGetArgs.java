@@ -21,7 +21,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncry
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

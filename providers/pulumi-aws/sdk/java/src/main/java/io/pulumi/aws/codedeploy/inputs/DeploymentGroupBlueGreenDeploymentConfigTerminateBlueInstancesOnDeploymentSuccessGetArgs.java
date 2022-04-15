@@ -25,7 +25,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -36,7 +36,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     @Import(name="terminationWaitTimeInMinutes")
       private final @Nullable Output<Integer> terminationWaitTimeInMinutes;
 
-    public Output<Integer> getTerminationWaitTimeInMinutes() {
+    public Output<Integer> terminationWaitTimeInMinutes() {
         return this.terminationWaitTimeInMinutes == null ? Codegen.empty() : this.terminationWaitTimeInMinutes;
     }
 

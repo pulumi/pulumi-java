@@ -22,7 +22,7 @@ public final class DataSourceParametersSparkGetArgs extends io.pulumi.resources.
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourceParametersSparkGetArgs extends io.pulumi.resources.
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 

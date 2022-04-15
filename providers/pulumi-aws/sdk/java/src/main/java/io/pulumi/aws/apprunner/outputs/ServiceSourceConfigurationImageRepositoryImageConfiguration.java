@@ -42,21 +42,21 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfiguration {
      * The port that your application listens to in the container. Defaults to `"8080"`.
      * 
     */
-    public Optional<String> getPort() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren't valid.
      * 
     */
-    public Map<String,String> getRuntimeEnvironmentVariables() {
+    public Map<String,String> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Map.of() : this.runtimeEnvironmentVariables;
     }
     /**
      * A command App Runner runs to start the application in the source image. If specified, this command overrides the Docker image’s default start command.
      * 
     */
-    public Optional<String> getStartCommand() {
+    public Optional<String> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
 

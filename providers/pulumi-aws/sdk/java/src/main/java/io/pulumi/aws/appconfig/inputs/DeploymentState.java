@@ -24,7 +24,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationProfileId")
       private final @Nullable Output<String> configurationProfileId;
 
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId == null ? Codegen.empty() : this.configurationProfileId;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationVersion")
       private final @Nullable Output<String> configurationVersion;
 
-    public Output<String> getConfigurationVersion() {
+    public Output<String> configurationVersion() {
         return this.configurationVersion == null ? Codegen.empty() : this.configurationVersion;
     }
 
@@ -68,7 +68,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentNumber")
       private final @Nullable Output<Integer> deploymentNumber;
 
-    public Output<Integer> getDeploymentNumber() {
+    public Output<Integer> deploymentNumber() {
         return this.deploymentNumber == null ? Codegen.empty() : this.deploymentNumber;
     }
 
@@ -79,7 +79,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentStrategyId")
       private final @Nullable Output<String> deploymentStrategyId;
 
-    public Output<String> getDeploymentStrategyId() {
+    public Output<String> deploymentStrategyId() {
         return this.deploymentStrategyId == null ? Codegen.empty() : this.deploymentStrategyId;
     }
 
@@ -90,7 +90,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -101,7 +101,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
@@ -112,7 +112,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -123,7 +123,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -134,7 +134,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

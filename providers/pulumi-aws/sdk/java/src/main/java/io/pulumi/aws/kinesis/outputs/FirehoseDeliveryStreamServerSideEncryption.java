@@ -42,21 +42,21 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
      * Whether to enable encryption at rest. Default is `false`.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
      * 
     */
-    public Optional<String> getKeyArn() {
+    public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
     /**
      * Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
      * 
     */
-    public Optional<String> getKeyType() {
+    public Optional<String> keyType() {
         return Optional.ofNullable(this.keyType);
     }
 

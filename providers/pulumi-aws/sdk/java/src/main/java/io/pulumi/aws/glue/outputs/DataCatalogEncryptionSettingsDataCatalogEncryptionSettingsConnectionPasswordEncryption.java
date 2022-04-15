@@ -35,14 +35,14 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      * A KMS key ARN that is used to encrypt the connection password. If connection password protection is enabled, the caller of CreateConnection and UpdateConnection needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog.
      * 
     */
-    public Optional<String> getAwsKmsKeyId() {
+    public Optional<String> awsKmsKeyId() {
         return Optional.ofNullable(this.awsKmsKeyId);
     }
     /**
      * When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
      * 
     */
-    public Boolean getReturnConnectionPasswordEncrypted() {
+    public Boolean returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }
 

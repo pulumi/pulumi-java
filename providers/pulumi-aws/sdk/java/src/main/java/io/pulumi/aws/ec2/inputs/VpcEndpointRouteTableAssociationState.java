@@ -22,7 +22,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
     @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
@@ -33,7 +33,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 

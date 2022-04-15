@@ -24,7 +24,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 

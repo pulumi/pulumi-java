@@ -23,7 +23,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="invitationArn")
       private final @Nullable Output<String> invitationArn;
 
-    public Output<String> getInvitationArn() {
+    public Output<String> invitationArn() {
         return this.invitationArn == null ? Codegen.empty() : this.invitationArn;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="receiverAccountId")
       private final @Nullable Output<String> receiverAccountId;
 
-    public Output<String> getReceiverAccountId() {
+    public Output<String> receiverAccountId() {
         return this.receiverAccountId == null ? Codegen.empty() : this.receiverAccountId;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -56,7 +56,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="senderAccountId")
       private final @Nullable Output<String> senderAccountId;
 
-    public Output<String> getSenderAccountId() {
+    public Output<String> senderAccountId() {
         return this.senderAccountId == null ? Codegen.empty() : this.senderAccountId;
     }
 
@@ -67,7 +67,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="shareArn")
       private final @Nullable Output<String> shareArn;
 
-    public Output<String> getShareArn() {
+    public Output<String> shareArn() {
         return this.shareArn == null ? Codegen.empty() : this.shareArn;
     }
 
@@ -78,7 +78,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="shareId")
       private final @Nullable Output<String> shareId;
 
-    public Output<String> getShareId() {
+    public Output<String> shareId() {
         return this.shareId == null ? Codegen.empty() : this.shareId;
     }
 
@@ -89,7 +89,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
@@ -100,7 +100,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

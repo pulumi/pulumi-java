@@ -36,14 +36,14 @@ public final class TableReplica {
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * Region name of the replica.
      * 
     */
-    public String getRegionName() {
+    public String regionName() {
         return this.regionName;
     }
 

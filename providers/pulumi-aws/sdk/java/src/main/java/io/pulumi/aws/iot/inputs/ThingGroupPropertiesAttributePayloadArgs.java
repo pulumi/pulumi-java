@@ -23,7 +23,7 @@ public final class ThingGroupPropertiesAttributePayloadArgs extends io.pulumi.re
     @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 

@@ -17,7 +17,7 @@ public final class FilterFindingCriteria {
         this.criterions = criterions;
     }
 
-    public List<FilterFindingCriteriaCriterion> getCriterions() {
+    public List<FilterFindingCriteriaCriterion> criterions() {
         return this.criterions;
     }
 

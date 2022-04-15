@@ -23,7 +23,7 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="durationInSeconds")
       private final @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> getDurationInSeconds() {
+    public Output<Integer> durationInSeconds() {
         return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
     }
 
@@ -34,7 +34,7 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 

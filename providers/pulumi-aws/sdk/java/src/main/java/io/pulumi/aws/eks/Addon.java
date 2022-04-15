@@ -48,7 +48,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
      * 
      */
-    public Output<String> getAddonName() {
+    public Output<String> addonName() {
         return this.addonName;
     }
     /**
@@ -64,7 +64,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * match one of the versions returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
      * 
      */
-    public Output<String> getAddonVersion() {
+    public Output<String> addonVersion() {
         return this.addonVersion;
     }
     /**
@@ -78,7 +78,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the EKS add-on.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -92,7 +92,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -106,7 +106,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -120,7 +120,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
      * 
      */
-    public Output<String> getModifiedAt() {
+    public Output<String> modifiedAt() {
         return this.modifiedAt;
     }
     /**
@@ -138,7 +138,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * version updates to the add-on. Valid values are `NONE` and `OVERWRITE`.
      * 
      */
-    public Output</* @Nullable */ String> getResolveConflicts() {
+    public Output</* @Nullable */ String> resolveConflicts() {
         return this.resolveConflicts;
     }
     /**
@@ -162,7 +162,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * in the Amazon EKS User Guide.
      * 
      */
-    public Output</* @Nullable */ String> getServiceAccountRoleArn() {
+    public Output</* @Nullable */ String> serviceAccountRoleArn() {
         return this.serviceAccountRoleArn;
     }
     /**
@@ -176,7 +176,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -190,7 +190,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return (Optional) Key-value map of resource tags, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

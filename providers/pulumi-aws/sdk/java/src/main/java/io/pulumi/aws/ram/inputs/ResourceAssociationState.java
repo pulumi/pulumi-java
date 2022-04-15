@@ -22,7 +22,7 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
     @Import(name="resourceShareArn")
       private final @Nullable Output<String> resourceShareArn;
 
-    public Output<String> getResourceShareArn() {
+    public Output<String> resourceShareArn() {
         return this.resourceShareArn == null ? Codegen.empty() : this.resourceShareArn;
     }
 

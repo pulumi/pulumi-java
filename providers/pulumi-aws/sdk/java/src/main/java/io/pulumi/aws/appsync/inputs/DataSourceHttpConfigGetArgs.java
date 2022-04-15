@@ -23,7 +23,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="authorizationConfig")
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
 
-    public Output<DataSourceHttpConfigAuthorizationConfigGetArgs> getAuthorizationConfig() {
+    public Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig() {
         return this.authorizationConfig == null ? Codegen.empty() : this.authorizationConfig;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 

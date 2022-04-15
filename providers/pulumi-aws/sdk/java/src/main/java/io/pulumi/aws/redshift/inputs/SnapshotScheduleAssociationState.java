@@ -22,7 +22,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
     @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
     }
 
@@ -33,7 +33,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
     @Import(name="scheduleIdentifier")
       private final @Nullable Output<String> scheduleIdentifier;
 
-    public Output<String> getScheduleIdentifier() {
+    public Output<String> scheduleIdentifier() {
         return this.scheduleIdentifier == null ? Codegen.empty() : this.scheduleIdentifier;
     }
 

@@ -24,7 +24,7 @@ public final class AccessPointVpcConfiguration {
      * This access point will only allow connections from the specified VPC ID.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

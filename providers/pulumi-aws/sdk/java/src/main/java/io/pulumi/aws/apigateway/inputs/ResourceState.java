@@ -22,7 +22,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathPart")
       private final @Nullable Output<String> pathPart;
 
-    public Output<String> getPathPart() {
+    public Output<String> pathPart() {
         return this.pathPart == null ? Codegen.empty() : this.pathPart;
     }
 
@@ -55,7 +55,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 

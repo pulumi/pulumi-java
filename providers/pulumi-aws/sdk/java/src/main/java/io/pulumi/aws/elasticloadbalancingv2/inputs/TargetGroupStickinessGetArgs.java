@@ -24,7 +24,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     @Import(name="cookieDuration")
       private final @Nullable Output<Integer> cookieDuration;
 
-    public Output<Integer> getCookieDuration() {
+    public Output<Integer> cookieDuration() {
         return this.cookieDuration == null ? Codegen.empty() : this.cookieDuration;
     }
 
@@ -35,7 +35,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     @Import(name="cookieName")
       private final @Nullable Output<String> cookieName;
 
-    public Output<String> getCookieName() {
+    public Output<String> cookieName() {
         return this.cookieName == null ? Codegen.empty() : this.cookieName;
     }
 
@@ -46,7 +46,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -57,7 +57,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -22,7 +22,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aspectRatio")
       private final @Nullable Output<String> aspectRatio;
 
-    public Output<String> getAspectRatio() {
+    public Output<String> aspectRatio() {
         return this.aspectRatio == null ? Codegen.empty() : this.aspectRatio;
     }
 
@@ -33,7 +33,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bitRate")
       private final @Nullable Output<String> bitRate;
 
-    public Output<String> getBitRate() {
+    public Output<String> bitRate() {
         return this.bitRate == null ? Codegen.empty() : this.bitRate;
     }
 
@@ -44,7 +44,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codec")
       private final @Nullable Output<String> codec;
 
-    public Output<String> getCodec() {
+    public Output<String> codec() {
         return this.codec == null ? Codegen.empty() : this.codec;
     }
 
@@ -55,7 +55,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayAspectRatio")
       private final @Nullable Output<String> displayAspectRatio;
 
-    public Output<String> getDisplayAspectRatio() {
+    public Output<String> displayAspectRatio() {
         return this.displayAspectRatio == null ? Codegen.empty() : this.displayAspectRatio;
     }
 
@@ -66,7 +66,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedGop")
       private final @Nullable Output<String> fixedGop;
 
-    public Output<String> getFixedGop() {
+    public Output<String> fixedGop() {
         return this.fixedGop == null ? Codegen.empty() : this.fixedGop;
     }
 
@@ -77,7 +77,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
 
-    public Output<String> getFrameRate() {
+    public Output<String> frameRate() {
         return this.frameRate == null ? Codegen.empty() : this.frameRate;
     }
 
@@ -88,7 +88,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyframesMaxDist")
       private final @Nullable Output<String> keyframesMaxDist;
 
-    public Output<String> getKeyframesMaxDist() {
+    public Output<String> keyframesMaxDist() {
         return this.keyframesMaxDist == null ? Codegen.empty() : this.keyframesMaxDist;
     }
 
@@ -99,7 +99,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxFrameRate")
       private final @Nullable Output<String> maxFrameRate;
 
-    public Output<String> getMaxFrameRate() {
+    public Output<String> maxFrameRate() {
         return this.maxFrameRate == null ? Codegen.empty() : this.maxFrameRate;
     }
 
@@ -110,7 +110,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxHeight")
       private final @Nullable Output<String> maxHeight;
 
-    public Output<String> getMaxHeight() {
+    public Output<String> maxHeight() {
         return this.maxHeight == null ? Codegen.empty() : this.maxHeight;
     }
 
@@ -121,7 +121,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxWidth")
       private final @Nullable Output<String> maxWidth;
 
-    public Output<String> getMaxWidth() {
+    public Output<String> maxWidth() {
         return this.maxWidth == null ? Codegen.empty() : this.maxWidth;
     }
 
@@ -132,7 +132,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paddingPolicy")
       private final @Nullable Output<String> paddingPolicy;
 
-    public Output<String> getPaddingPolicy() {
+    public Output<String> paddingPolicy() {
         return this.paddingPolicy == null ? Codegen.empty() : this.paddingPolicy;
     }
 
@@ -143,7 +143,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolution")
       private final @Nullable Output<String> resolution;
 
-    public Output<String> getResolution() {
+    public Output<String> resolution() {
         return this.resolution == null ? Codegen.empty() : this.resolution;
     }
 
@@ -154,7 +154,7 @@ public final class PresetVideoGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizingPolicy")
       private final @Nullable Output<String> sizingPolicy;
 
-    public Output<String> getSizingPolicy() {
+    public Output<String> sizingPolicy() {
         return this.sizingPolicy == null ? Codegen.empty() : this.sizingPolicy;
     }
 

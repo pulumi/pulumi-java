@@ -33,14 +33,14 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission {
      * List of permissions granted to the principal.
      * 
     */
-    public List<String> getPermissions() {
+    public List<String> permissions() {
         return this.permissions;
     }
     /**
      * Principal who is granted permissions.
      * 
     */
-    public String getPrincipal() {
+    public String principal() {
         return this.principal;
     }
 

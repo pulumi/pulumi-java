@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
      * The criteria for determining a SAN's match.
      * 
     */
-    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch getMatch() {
+    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match() {
         return this.match;
     }
 

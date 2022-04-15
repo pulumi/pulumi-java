@@ -25,7 +25,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
 
-    public Output<Boolean> getActionsEnabled() {
+    public Output<Boolean> actionsEnabled() {
         return this.actionsEnabled == null ? Codegen.empty() : this.actionsEnabled;
     }
 
@@ -36,7 +36,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
 
-    public Output<List<String>> getAlarmActions() {
+    public Output<List<String>> alarmActions() {
         return this.alarmActions == null ? Codegen.empty() : this.alarmActions;
     }
 
@@ -47,7 +47,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
 
-    public Output<String> getAlarmDescription() {
+    public Output<String> alarmDescription() {
         return this.alarmDescription == null ? Codegen.empty() : this.alarmDescription;
     }
 
@@ -58,7 +58,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="alarmName")
       private final @Nullable Output<String> alarmName;
 
-    public Output<String> getAlarmName() {
+    public Output<String> alarmName() {
         return this.alarmName == null ? Codegen.empty() : this.alarmName;
     }
 
@@ -69,7 +69,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="alarmRule")
       private final @Nullable Output<String> alarmRule;
 
-    public Output<String> getAlarmRule() {
+    public Output<String> alarmRule() {
         return this.alarmRule == null ? Codegen.empty() : this.alarmRule;
     }
 
@@ -80,7 +80,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -91,7 +91,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
 
-    public Output<List<String>> getInsufficientDataActions() {
+    public Output<List<String>> insufficientDataActions() {
         return this.insufficientDataActions == null ? Codegen.empty() : this.insufficientDataActions;
     }
 
@@ -102,7 +102,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="okActions")
       private final @Nullable Output<List<String>> okActions;
 
-    public Output<List<String>> getOkActions() {
+    public Output<List<String>> okActions() {
         return this.okActions == null ? Codegen.empty() : this.okActions;
     }
 
@@ -113,7 +113,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

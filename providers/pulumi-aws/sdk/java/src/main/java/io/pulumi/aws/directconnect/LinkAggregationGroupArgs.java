@@ -24,7 +24,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
@@ -35,7 +35,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="connectionsBandwidth", required=true)
       private final Output<String> connectionsBandwidth;
 
-    public Output<String> getConnectionsBandwidth() {
+    public Output<String> connectionsBandwidth() {
         return this.connectionsBandwidth;
     }
 
@@ -46,7 +46,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -57,7 +57,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -68,7 +68,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
@@ -90,7 +90,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

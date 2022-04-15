@@ -24,7 +24,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetSizeBytes")
       private final @Nullable Output<Integer> assetSizeBytes;
 
-    public Output<Integer> getAssetSizeBytes() {
+    public Output<Integer> assetSizeBytes() {
         return this.assetSizeBytes == null ? Codegen.empty() : this.assetSizeBytes;
     }
 
@@ -46,7 +46,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -57,7 +57,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -68,7 +68,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -79,7 +79,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -90,7 +90,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryCount")
       private final @Nullable Output<Integer> repositoryCount;
 
-    public Output<Integer> getRepositoryCount() {
+    public Output<Integer> repositoryCount() {
         return this.repositoryCount == null ? Codegen.empty() : this.repositoryCount;
     }
 
@@ -101,7 +101,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -112,7 +112,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

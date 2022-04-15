@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="flags", required=true)
       private final Output<List<String>> flags;
 
-    public Output<List<String>> getFlags() {
+    public Output<List<String>> flags() {
         return this.flags;
     }
 
@@ -36,7 +36,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     @Import(name="masks")
       private final @Nullable Output<List<String>> masks;
 
-    public Output<List<String>> getMasks() {
+    public Output<List<String>> masks() {
         return this.masks == null ? Codegen.empty() : this.masks;
     }
 

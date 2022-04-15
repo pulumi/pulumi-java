@@ -23,7 +23,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> getBlockPublicPolicy() {
+    public Output<Boolean> blockPublicPolicy() {
         return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
     }
 
@@ -34,7 +34,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -45,7 +45,7 @@ public final class SecretPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 

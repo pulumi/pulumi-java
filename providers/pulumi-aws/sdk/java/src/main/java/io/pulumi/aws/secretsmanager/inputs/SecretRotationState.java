@@ -25,7 +25,7 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="rotationEnabled")
       private final @Nullable Output<Boolean> rotationEnabled;
 
-    public Output<Boolean> getRotationEnabled() {
+    public Output<Boolean> rotationEnabled() {
         return this.rotationEnabled == null ? Codegen.empty() : this.rotationEnabled;
     }
 
@@ -36,7 +36,7 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="rotationLambdaArn")
       private final @Nullable Output<String> rotationLambdaArn;
 
-    public Output<String> getRotationLambdaArn() {
+    public Output<String> rotationLambdaArn() {
         return this.rotationLambdaArn == null ? Codegen.empty() : this.rotationLambdaArn;
     }
 
@@ -47,7 +47,7 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="rotationRules")
       private final @Nullable Output<SecretRotationRotationRulesGetArgs> rotationRules;
 
-    public Output<SecretRotationRotationRulesGetArgs> getRotationRules() {
+    public Output<SecretRotationRotationRulesGetArgs> rotationRules() {
         return this.rotationRules == null ? Codegen.empty() : this.rotationRules;
     }
 
@@ -58,14 +58,14 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId == null ? Codegen.empty() : this.secretId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

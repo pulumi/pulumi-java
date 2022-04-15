@@ -27,7 +27,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auths", required=true)
       private final Output<List<ProxyAuthArgs>> auths;
 
-    public Output<List<ProxyAuthArgs>> getAuths() {
+    public Output<List<ProxyAuthArgs>> auths() {
         return this.auths;
     }
 
@@ -38,7 +38,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="debugLogging")
       private final @Nullable Output<Boolean> debugLogging;
 
-    public Output<Boolean> getDebugLogging() {
+    public Output<Boolean> debugLogging() {
         return this.debugLogging == null ? Codegen.empty() : this.debugLogging;
     }
 
@@ -49,7 +49,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineFamily", required=true)
       private final Output<String> engineFamily;
 
-    public Output<String> getEngineFamily() {
+    public Output<String> engineFamily() {
         return this.engineFamily;
     }
 
@@ -60,7 +60,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleClientTimeout")
       private final @Nullable Output<Integer> idleClientTimeout;
 
-    public Output<Integer> getIdleClientTimeout() {
+    public Output<Integer> idleClientTimeout() {
         return this.idleClientTimeout == null ? Codegen.empty() : this.idleClientTimeout;
     }
 
@@ -71,7 +71,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireTls")
       private final @Nullable Output<Boolean> requireTls;
 
-    public Output<Boolean> getRequireTls() {
+    public Output<Boolean> requireTls() {
         return this.requireTls == null ? Codegen.empty() : this.requireTls;
     }
 
@@ -93,7 +93,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -104,7 +104,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
@@ -126,7 +126,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 

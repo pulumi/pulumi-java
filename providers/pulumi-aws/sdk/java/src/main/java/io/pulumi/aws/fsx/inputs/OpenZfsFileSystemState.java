@@ -28,7 +28,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -39,7 +39,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="automaticBackupRetentionDays")
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
-    public Output<Integer> getAutomaticBackupRetentionDays() {
+    public Output<Integer> automaticBackupRetentionDays() {
         return this.automaticBackupRetentionDays == null ? Codegen.empty() : this.automaticBackupRetentionDays;
     }
 
@@ -50,7 +50,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
@@ -61,7 +61,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="copyTagsToBackups")
       private final @Nullable Output<Boolean> copyTagsToBackups;
 
-    public Output<Boolean> getCopyTagsToBackups() {
+    public Output<Boolean> copyTagsToBackups() {
         return this.copyTagsToBackups == null ? Codegen.empty() : this.copyTagsToBackups;
     }
 
@@ -72,7 +72,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="copyTagsToVolumes")
       private final @Nullable Output<Boolean> copyTagsToVolumes;
 
-    public Output<Boolean> getCopyTagsToVolumes() {
+    public Output<Boolean> copyTagsToVolumes() {
         return this.copyTagsToVolumes == null ? Codegen.empty() : this.copyTagsToVolumes;
     }
 
@@ -83,7 +83,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="dailyAutomaticBackupStartTime")
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
-    public Output<String> getDailyAutomaticBackupStartTime() {
+    public Output<String> dailyAutomaticBackupStartTime() {
         return this.dailyAutomaticBackupStartTime == null ? Codegen.empty() : this.dailyAutomaticBackupStartTime;
     }
 
@@ -94,7 +94,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
-    public Output<String> getDeploymentType() {
+    public Output<String> deploymentType() {
         return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
@@ -105,7 +105,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="diskIopsConfiguration")
       private final @Nullable Output<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
 
-    public Output<OpenZfsFileSystemDiskIopsConfigurationGetArgs> getDiskIopsConfiguration() {
+    public Output<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration() {
         return this.diskIopsConfiguration == null ? Codegen.empty() : this.diskIopsConfiguration;
     }
 
@@ -116,7 +116,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
@@ -127,7 +127,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -138,7 +138,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="networkInterfaceIds")
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
-    public Output<List<String>> getNetworkInterfaceIds() {
+    public Output<List<String>> networkInterfaceIds() {
         return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
     }
 
@@ -149,7 +149,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -160,7 +160,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="rootVolumeConfiguration")
       private final @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration;
 
-    public Output<OpenZfsFileSystemRootVolumeConfigurationGetArgs> getRootVolumeConfiguration() {
+    public Output<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration() {
         return this.rootVolumeConfiguration == null ? Codegen.empty() : this.rootVolumeConfiguration;
     }
 
@@ -171,7 +171,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="rootVolumeId")
       private final @Nullable Output<String> rootVolumeId;
 
-    public Output<String> getRootVolumeId() {
+    public Output<String> rootVolumeId() {
         return this.rootVolumeId == null ? Codegen.empty() : this.rootVolumeId;
     }
 
@@ -182,7 +182,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -193,7 +193,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="storageCapacity")
       private final @Nullable Output<Integer> storageCapacity;
 
-    public Output<Integer> getStorageCapacity() {
+    public Output<Integer> storageCapacity() {
         return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
     }
 
@@ -204,7 +204,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
@@ -215,7 +215,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="subnetIds")
       private final @Nullable Output<String> subnetIds;
 
-    public Output<String> getSubnetIds() {
+    public Output<String> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -226,7 +226,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -237,7 +237,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -248,7 +248,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
-    public Output<Integer> getThroughputCapacity() {
+    public Output<Integer> throughputCapacity() {
         return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
     }
 
@@ -259,7 +259,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
@@ -270,7 +270,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
     @Import(name="weeklyMaintenanceStartTime")
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
-    public Output<String> getWeeklyMaintenanceStartTime() {
+    public Output<String> weeklyMaintenanceStartTime() {
         return this.weeklyMaintenanceStartTime == null ? Codegen.empty() : this.weeklyMaintenanceStartTime;
     }
 

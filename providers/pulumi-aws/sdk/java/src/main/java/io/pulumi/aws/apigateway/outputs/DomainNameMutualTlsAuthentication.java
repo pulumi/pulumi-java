@@ -36,14 +36,14 @@ public final class DomainNameMutualTlsAuthentication {
      * The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
      * 
     */
-    public String getTruststoreUri() {
+    public String truststoreUri() {
         return this.truststoreUri;
     }
     /**
      * The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
      * 
     */
-    public Optional<String> getTruststoreVersion() {
+    public Optional<String> truststoreVersion() {
         return Optional.ofNullable(this.truststoreVersion);
     }
 

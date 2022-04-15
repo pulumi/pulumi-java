@@ -23,13 +23,13 @@ public final class GetSigningProfileRevocationRecord {
         this.revokedBy = revokedBy;
     }
 
-    public String getRevocationEffectiveFrom() {
+    public String revocationEffectiveFrom() {
         return this.revocationEffectiveFrom;
     }
-    public String getRevokedAt() {
+    public String revokedAt() {
         return this.revokedAt;
     }
-    public String getRevokedBy() {
+    public String revokedBy() {
         return this.revokedBy;
     }
 

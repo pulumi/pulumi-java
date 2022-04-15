@@ -23,7 +23,7 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
     @Import(name="enforceHttps")
       private final @Nullable Output<Boolean> enforceHttps;
 
-    public Output<Boolean> getEnforceHttps() {
+    public Output<Boolean> enforceHttps() {
         return this.enforceHttps == null ? Codegen.empty() : this.enforceHttps;
     }
 
@@ -34,7 +34,7 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
     @Import(name="tlsSecurityPolicy")
       private final @Nullable Output<String> tlsSecurityPolicy;
 
-    public Output<String> getTlsSecurityPolicy() {
+    public Output<String> tlsSecurityPolicy() {
         return this.tlsSecurityPolicy == null ? Codegen.empty() : this.tlsSecurityPolicy;
     }
 

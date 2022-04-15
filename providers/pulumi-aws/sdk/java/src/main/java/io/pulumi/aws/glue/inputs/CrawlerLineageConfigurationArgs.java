@@ -22,7 +22,7 @@ public final class CrawlerLineageConfigurationArgs extends io.pulumi.resources.R
     @Import(name="crawlerLineageSettings")
       private final @Nullable Output<String> crawlerLineageSettings;
 
-    public Output<String> getCrawlerLineageSettings() {
+    public Output<String> crawlerLineageSettings() {
         return this.crawlerLineageSettings == null ? Codegen.empty() : this.crawlerLineageSettings;
     }
 

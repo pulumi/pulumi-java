@@ -25,7 +25,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -39,7 +39,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
@@ -51,7 +51,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
-    public Output<Integer> getDeletionWindowInDays() {
+    public Output<Integer> deletionWindowInDays() {
         return this.deletionWindowInDays == null ? Codegen.empty() : this.deletionWindowInDays;
     }
 
@@ -62,7 +62,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -84,7 +84,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="expirationModel")
       private final @Nullable Output<String> expirationModel;
 
-    public Output<String> getExpirationModel() {
+    public Output<String> expirationModel() {
         return this.expirationModel == null ? Codegen.empty() : this.expirationModel;
     }
 
@@ -95,7 +95,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
@@ -106,7 +106,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="keyMaterialBase64")
       private final @Nullable Output<String> keyMaterialBase64;
 
-    public Output<String> getKeyMaterialBase64() {
+    public Output<String> keyMaterialBase64() {
         return this.keyMaterialBase64 == null ? Codegen.empty() : this.keyMaterialBase64;
     }
 
@@ -117,7 +117,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="keyState")
       private final @Nullable Output<String> keyState;
 
-    public Output<String> getKeyState() {
+    public Output<String> keyState() {
         return this.keyState == null ? Codegen.empty() : this.keyState;
     }
 
@@ -128,14 +128,14 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="keyUsage")
       private final @Nullable Output<String> keyUsage;
 
-    public Output<String> getKeyUsage() {
+    public Output<String> keyUsage() {
         return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -146,7 +146,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="primaryKeyArn")
       private final @Nullable Output<String> primaryKeyArn;
 
-    public Output<String> getPrimaryKeyArn() {
+    public Output<String> primaryKeyArn() {
         return this.primaryKeyArn == null ? Codegen.empty() : this.primaryKeyArn;
     }
 
@@ -157,7 +157,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -168,7 +168,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -179,7 +179,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
     @Import(name="validTo")
       private final @Nullable Output<String> validTo;
 
-    public Output<String> getValidTo() {
+    public Output<String> validTo() {
         return this.validTo == null ? Codegen.empty() : this.validTo;
     }
 

@@ -20,7 +20,7 @@ public final class GetSecretsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="secrets", required=true)
       private final List<GetSecretsSecret> secrets;
 
-    public List<GetSecretsSecret> getSecrets() {
+    public List<GetSecretsSecret> secrets() {
         return this.secrets;
     }
 

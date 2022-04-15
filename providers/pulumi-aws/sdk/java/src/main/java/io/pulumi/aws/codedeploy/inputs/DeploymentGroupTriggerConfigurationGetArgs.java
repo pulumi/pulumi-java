@@ -22,7 +22,7 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
     @Import(name="triggerEvents", required=true)
       private final Output<List<String>> triggerEvents;
 
-    public Output<List<String>> getTriggerEvents() {
+    public Output<List<String>> triggerEvents() {
         return this.triggerEvents;
     }
 
@@ -33,7 +33,7 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
     @Import(name="triggerName", required=true)
       private final Output<String> triggerName;
 
-    public Output<String> getTriggerName() {
+    public Output<String> triggerName() {
         return this.triggerName;
     }
 
@@ -44,7 +44,7 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
     @Import(name="triggerTargetArn", required=true)
       private final Output<String> triggerTargetArn;
 
-    public Output<String> getTriggerTargetArn() {
+    public Output<String> triggerTargetArn() {
         return this.triggerTargetArn;
     }
 

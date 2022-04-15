@@ -27,7 +27,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<TriggerActionArgs>> actions;
 
-    public Output<List<TriggerActionArgs>> getActions() {
+    public Output<List<TriggerActionArgs>> actions() {
         return this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -60,7 +60,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predicate")
       private final @Nullable Output<TriggerPredicateArgs> predicate;
 
-    public Output<TriggerPredicateArgs> getPredicate() {
+    public Output<TriggerPredicateArgs> predicate() {
         return this.predicate == null ? Codegen.empty() : this.predicate;
     }
 
@@ -82,7 +82,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -93,7 +93,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startOnCreation")
       private final @Nullable Output<Boolean> startOnCreation;
 
-    public Output<Boolean> getStartOnCreation() {
+    public Output<Boolean> startOnCreation() {
         return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
     }
 
@@ -104,7 +104,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -126,7 +126,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workflowName")
       private final @Nullable Output<String> workflowName;
 
-    public Output<String> getWorkflowName() {
+    public Output<String> workflowName() {
         return this.workflowName == null ? Codegen.empty() : this.workflowName;
     }
 

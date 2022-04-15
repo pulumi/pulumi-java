@@ -47,7 +47,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return The gateway ID to create an association. Conflicts with `subnet_id`.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayId() {
+    public Output</* @Nullable */ String> gatewayId() {
         return this.gatewayId;
     }
     /**
@@ -61,7 +61,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the routing table to associate with.
      * 
      */
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
     /**
@@ -75,7 +75,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * @return The subnet ID to create an association. Conflicts with `gateway_id`.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
 

@@ -44,13 +44,13 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return If set to `"LATEST"`, OpsWorks will automatically install the latest version.
      * 
      */
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +64,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return If `manage_berkshelf` is enabled, the version of Berkshelf to use.
      * 
      */
-    public Output</* @Nullable */ String> getBerkshelfVersion() {
+    public Output</* @Nullable */ String> berkshelfVersion() {
         return this.berkshelfVersion;
     }
     /**
@@ -78,7 +78,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Color to paint next to the stack's resources in the OpsWorks console.
      * 
      */
-    public Output</* @Nullable */ String> getColor() {
+    public Output</* @Nullable */ String> color() {
         return this.color;
     }
     /**
@@ -92,7 +92,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Name of the configuration manager to use. Defaults to "Chef".
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationManagerName() {
+    public Output</* @Nullable */ String> configurationManagerName() {
         return this.configurationManagerName;
     }
     /**
@@ -106,7 +106,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Version of the configuration manager to use. Defaults to "11.4".
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationManagerVersion() {
+    public Output</* @Nullable */ String> configurationManagerVersion() {
         return this.configurationManagerVersion;
     }
     /**
@@ -122,7 +122,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * described below.
      * 
      */
-    public Output<List<StackCustomCookbooksSource>> getCustomCookbooksSources() {
+    public Output<List<StackCustomCookbooksSource>> customCookbooksSources() {
         return this.customCookbooksSources;
     }
     /**
@@ -136,7 +136,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Custom JSON attributes to apply to the entire stack.
      * 
      */
-    public Output</* @Nullable */ String> getCustomJson() {
+    public Output</* @Nullable */ String> customJson() {
         return this.customJson;
     }
     /**
@@ -152,7 +152,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * by default. This is required unless you set `vpc_id`.
      * 
      */
-    public Output<String> getDefaultAvailabilityZone() {
+    public Output<String> defaultAvailabilityZone() {
         return this.defaultAvailabilityZone;
     }
     /**
@@ -168,7 +168,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * will have by default.
      * 
      */
-    public Output<String> getDefaultInstanceProfileArn() {
+    public Output<String> defaultInstanceProfileArn() {
         return this.defaultInstanceProfileArn;
     }
     /**
@@ -182,7 +182,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Name of OS that will be installed on instances by default.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultOs() {
+    public Output</* @Nullable */ String> defaultOs() {
         return this.defaultOs;
     }
     /**
@@ -196,7 +196,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Name of the type of root device instances will have by default.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultRootDeviceType() {
+    public Output</* @Nullable */ String> defaultRootDeviceType() {
         return this.defaultRootDeviceType;
     }
     /**
@@ -210,7 +210,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Name of the SSH keypair that instances will have by default.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultSshKeyName() {
+    public Output</* @Nullable */ String> defaultSshKeyName() {
         return this.defaultSshKeyName;
     }
     /**
@@ -226,7 +226,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * if `vpc_id` is set, and forbidden if it isn't.
      * 
      */
-    public Output<String> getDefaultSubnetId() {
+    public Output<String> defaultSubnetId() {
         return this.defaultSubnetId;
     }
     /**
@@ -242,7 +242,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * within this stack.
      * 
      */
-    public Output</* @Nullable */ String> getHostnameTheme() {
+    public Output</* @Nullable */ String> hostnameTheme() {
         return this.hostnameTheme;
     }
     /**
@@ -256,7 +256,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Boolean value controlling whether Opsworks will run Berkshelf for this stack.
      * 
      */
-    public Output</* @Nullable */ Boolean> getManageBerkshelf() {
+    public Output</* @Nullable */ Boolean> manageBerkshelf() {
         return this.manageBerkshelf;
     }
     /**
@@ -270,7 +270,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return The name of the stack.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -284,7 +284,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return The name of the region where the stack will exist.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -298,13 +298,13 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return The ARN of an IAM role that the OpsWorks service will act as.
      * 
      */
-    public Output<String> getServiceRoleArn() {
+    public Output<String> serviceRoleArn() {
         return this.serviceRoleArn;
     }
     @Export(name="stackEndpoint", type=String.class, parameters={})
     private Output<String> stackEndpoint;
 
-    public Output<String> getStackEndpoint() {
+    public Output<String> stackEndpoint() {
         return this.stackEndpoint;
     }
     /**
@@ -318,7 +318,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -332,7 +332,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -348,7 +348,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseCustomCookbooks() {
+    public Output</* @Nullable */ Boolean> useCustomCookbooks() {
         return this.useCustomCookbooks;
     }
     /**
@@ -364,7 +364,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * security groups apply to created instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseOpsworksSecurityGroups() {
+    public Output</* @Nullable */ Boolean> useOpsworksSecurityGroups() {
         return this.useOpsworksSecurityGroups;
     }
     /**
@@ -378,7 +378,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return The id of the VPC that this stack belongs to.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

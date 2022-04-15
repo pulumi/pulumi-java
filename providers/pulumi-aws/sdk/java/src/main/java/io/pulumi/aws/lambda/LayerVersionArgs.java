@@ -25,7 +25,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<Archive> code;
 
-    public Output<Archive> getCode() {
+    public Output<Archive> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -36,7 +36,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibleArchitectures")
       private final @Nullable Output<List<String>> compatibleArchitectures;
 
-    public Output<List<String>> getCompatibleArchitectures() {
+    public Output<List<String>> compatibleArchitectures() {
         return this.compatibleArchitectures == null ? Codegen.empty() : this.compatibleArchitectures;
     }
 
@@ -47,7 +47,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibleRuntimes")
       private final @Nullable Output<List<String>> compatibleRuntimes;
 
-    public Output<List<String>> getCompatibleRuntimes() {
+    public Output<List<String>> compatibleRuntimes() {
         return this.compatibleRuntimes == null ? Codegen.empty() : this.compatibleRuntimes;
     }
 
@@ -58,7 +58,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -69,7 +69,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layerName", required=true)
       private final Output<String> layerName;
 
-    public Output<String> getLayerName() {
+    public Output<String> layerName() {
         return this.layerName;
     }
 
@@ -80,7 +80,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseInfo")
       private final @Nullable Output<String> licenseInfo;
 
-    public Output<String> getLicenseInfo() {
+    public Output<String> licenseInfo() {
         return this.licenseInfo == null ? Codegen.empty() : this.licenseInfo;
     }
 
@@ -91,7 +91,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -102,7 +102,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
@@ -113,7 +113,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> getS3ObjectVersion() {
+    public Output<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
@@ -124,14 +124,14 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipDestroy")
       private final @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> getSkipDestroy() {
+    public Output<Boolean> skipDestroy() {
         return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
     }
 
     @Import(name="sourceCodeHash")
       private final @Nullable Output<String> sourceCodeHash;
 
-    public Output<String> getSourceCodeHash() {
+    public Output<String> sourceCodeHash() {
         return this.sourceCodeHash == null ? Codegen.empty() : this.sourceCodeHash;
     }
 

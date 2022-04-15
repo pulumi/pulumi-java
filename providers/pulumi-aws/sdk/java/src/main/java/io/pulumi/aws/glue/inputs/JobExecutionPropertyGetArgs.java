@@ -22,7 +22,7 @@ public final class JobExecutionPropertyGetArgs extends io.pulumi.resources.Resou
     @Import(name="maxConcurrentRuns")
       private final @Nullable Output<Integer> maxConcurrentRuns;
 
-    public Output<Integer> getMaxConcurrentRuns() {
+    public Output<Integer> maxConcurrentRuns() {
         return this.maxConcurrentRuns == null ? Codegen.empty() : this.maxConcurrentRuns;
     }
 

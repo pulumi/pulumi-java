@@ -19,7 +19,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -30,7 +30,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="delegationEnabledDate", required=true)
       private final String delegationEnabledDate;
 
-    public String getDelegationEnabledDate() {
+    public String delegationEnabledDate() {
         return this.delegationEnabledDate;
     }
 
@@ -41,7 +41,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -52,7 +52,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -63,7 +63,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="joinedMethod", required=true)
       private final String joinedMethod;
 
-    public String getJoinedMethod() {
+    public String joinedMethod() {
         return this.joinedMethod;
     }
 
@@ -74,7 +74,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="joinedTimestamp", required=true)
       private final String joinedTimestamp;
 
-    public String getJoinedTimestamp() {
+    public String joinedTimestamp() {
         return this.joinedTimestamp;
     }
 
@@ -85,7 +85,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -96,7 +96,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

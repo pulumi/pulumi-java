@@ -24,7 +24,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="broker", required=true)
       private final Output<String> broker;
 
-    public Output<String> getBroker() {
+    public Output<String> broker() {
         return this.broker;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="includeControlDetails")
       private final @Nullable Output<Boolean> includeControlDetails;
 
-    public Output<Boolean> getIncludeControlDetails() {
+    public Output<Boolean> includeControlDetails() {
         return this.includeControlDetails == null ? Codegen.empty() : this.includeControlDetails;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="includeNullAndEmpty")
       private final @Nullable Output<Boolean> includeNullAndEmpty;
 
-    public Output<Boolean> getIncludeNullAndEmpty() {
+    public Output<Boolean> includeNullAndEmpty() {
         return this.includeNullAndEmpty == null ? Codegen.empty() : this.includeNullAndEmpty;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="includePartitionValue")
       private final @Nullable Output<Boolean> includePartitionValue;
 
-    public Output<Boolean> getIncludePartitionValue() {
+    public Output<Boolean> includePartitionValue() {
         return this.includePartitionValue == null ? Codegen.empty() : this.includePartitionValue;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="includeTableAlterOperations")
       private final @Nullable Output<Boolean> includeTableAlterOperations;
 
-    public Output<Boolean> getIncludeTableAlterOperations() {
+    public Output<Boolean> includeTableAlterOperations() {
         return this.includeTableAlterOperations == null ? Codegen.empty() : this.includeTableAlterOperations;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="includeTransactionDetails")
       private final @Nullable Output<Boolean> includeTransactionDetails;
 
-    public Output<Boolean> getIncludeTransactionDetails() {
+    public Output<Boolean> includeTransactionDetails() {
         return this.includeTransactionDetails == null ? Codegen.empty() : this.includeTransactionDetails;
     }
 
@@ -90,7 +90,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
+    public Output<String> messageFormat() {
         return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
@@ -101,7 +101,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="messageMaxBytes")
       private final @Nullable Output<Integer> messageMaxBytes;
 
-    public Output<Integer> getMessageMaxBytes() {
+    public Output<Integer> messageMaxBytes() {
         return this.messageMaxBytes == null ? Codegen.empty() : this.messageMaxBytes;
     }
 
@@ -112,7 +112,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="noHexPrefix")
       private final @Nullable Output<Boolean> noHexPrefix;
 
-    public Output<Boolean> getNoHexPrefix() {
+    public Output<Boolean> noHexPrefix() {
         return this.noHexPrefix == null ? Codegen.empty() : this.noHexPrefix;
     }
 
@@ -123,7 +123,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="partitionIncludeSchemaTable")
       private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
-    public Output<Boolean> getPartitionIncludeSchemaTable() {
+    public Output<Boolean> partitionIncludeSchemaTable() {
         return this.partitionIncludeSchemaTable == null ? Codegen.empty() : this.partitionIncludeSchemaTable;
     }
 
@@ -134,7 +134,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="saslPassword")
       private final @Nullable Output<String> saslPassword;
 
-    public Output<String> getSaslPassword() {
+    public Output<String> saslPassword() {
         return this.saslPassword == null ? Codegen.empty() : this.saslPassword;
     }
 
@@ -145,7 +145,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="saslUsername")
       private final @Nullable Output<String> saslUsername;
 
-    public Output<String> getSaslUsername() {
+    public Output<String> saslUsername() {
         return this.saslUsername == null ? Codegen.empty() : this.saslUsername;
     }
 
@@ -156,7 +156,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="securityProtocol")
       private final @Nullable Output<String> securityProtocol;
 
-    public Output<String> getSecurityProtocol() {
+    public Output<String> securityProtocol() {
         return this.securityProtocol == null ? Codegen.empty() : this.securityProtocol;
     }
 
@@ -167,7 +167,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="sslCaCertificateArn")
       private final @Nullable Output<String> sslCaCertificateArn;
 
-    public Output<String> getSslCaCertificateArn() {
+    public Output<String> sslCaCertificateArn() {
         return this.sslCaCertificateArn == null ? Codegen.empty() : this.sslCaCertificateArn;
     }
 
@@ -178,7 +178,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="sslClientCertificateArn")
       private final @Nullable Output<String> sslClientCertificateArn;
 
-    public Output<String> getSslClientCertificateArn() {
+    public Output<String> sslClientCertificateArn() {
         return this.sslClientCertificateArn == null ? Codegen.empty() : this.sslClientCertificateArn;
     }
 
@@ -189,7 +189,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="sslClientKeyArn")
       private final @Nullable Output<String> sslClientKeyArn;
 
-    public Output<String> getSslClientKeyArn() {
+    public Output<String> sslClientKeyArn() {
         return this.sslClientKeyArn == null ? Codegen.empty() : this.sslClientKeyArn;
     }
 
@@ -200,7 +200,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="sslClientKeyPassword")
       private final @Nullable Output<String> sslClientKeyPassword;
 
-    public Output<String> getSslClientKeyPassword() {
+    public Output<String> sslClientKeyPassword() {
         return this.sslClientKeyPassword == null ? Codegen.empty() : this.sslClientKeyPassword;
     }
 
@@ -211,7 +211,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

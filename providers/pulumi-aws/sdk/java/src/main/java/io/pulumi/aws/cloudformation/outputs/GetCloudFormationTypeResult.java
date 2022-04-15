@@ -118,103 +118,103 @@ public final class GetCloudFormationTypeResult {
         this.visibility = visibility;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Identifier of the CloudFormation Type default version.
      * 
     */
-    public String getDefaultVersionId() {
+    public String defaultVersionId() {
         return this.defaultVersionId;
     }
     /**
      * Deprecation status of the CloudFormation Type.
      * 
     */
-    public String getDeprecatedStatus() {
+    public String deprecatedStatus() {
         return this.deprecatedStatus;
     }
     /**
      * Description of the CloudFormation Type.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * URL of the documentation for the CloudFormation Type.
      * 
     */
-    public String getDocumentationUrl() {
+    public String documentationUrl() {
         return this.documentationUrl;
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role used to register the CloudFormation Type.
      * 
     */
-    public String getExecutionRoleArn() {
+    public String executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Whether the CloudFormation Type version is the default version.
      * 
     */
-    public Boolean getIsDefaultVersion() {
+    public Boolean isDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
      * List of objects containing logging configuration.
      * 
     */
-    public List<GetCloudFormationTypeLoggingConfig> getLoggingConfigs() {
+    public List<GetCloudFormationTypeLoggingConfig> loggingConfigs() {
         return this.loggingConfigs;
     }
     /**
      * Provisioning behavior of the CloudFormation Type.
      * 
     */
-    public String getProvisioningType() {
+    public String provisioningType() {
         return this.provisioningType;
     }
     /**
      * JSON document of the CloudFormation Type schema.
      * 
     */
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
     /**
      * URL of the source code for the CloudFormation Type.
      * 
     */
-    public String getSourceUrl() {
+    public String sourceUrl() {
         return this.sourceUrl;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public String getTypeArn() {
+    public String typeArn() {
         return this.typeArn;
     }
-    public String getTypeName() {
+    public String typeName() {
         return this.typeName;
     }
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return Optional.ofNullable(this.versionId);
     }
     /**
      * Scope of the CloudFormation Type.
      * 
     */
-    public String getVisibility() {
+    public String visibility() {
         return this.visibility;
     }
 

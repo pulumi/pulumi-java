@@ -22,7 +22,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -33,7 +33,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationStreamArn")
       private final @Nullable Output<String> destinationStreamArn;
 
-    public Output<String> getDestinationStreamArn() {
+    public Output<String> destinationStreamArn() {
         return this.destinationStreamArn == null ? Codegen.empty() : this.destinationStreamArn;
     }
 
@@ -44,7 +44,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

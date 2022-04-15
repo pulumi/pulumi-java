@@ -52,38 +52,38 @@ public final class GetInstanceTypeOfferingsResult {
         this.locations = locations;
     }
 
-    public List<GetInstanceTypeOfferingsFilter> getFilters() {
+    public List<GetInstanceTypeOfferingsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of EC2 Instance Types.
      * 
     */
-    public List<String> getInstanceTypes() {
+    public List<String> instanceTypes() {
         return this.instanceTypes;
     }
-    public Optional<String> getLocationType() {
+    public Optional<String> locationType() {
         return Optional.ofNullable(this.locationType);
     }
     /**
      * List of location types.
      * 
     */
-    public List<String> getLocationTypes() {
+    public List<String> locationTypes() {
         return this.locationTypes;
     }
     /**
      * List of locations.
      * 
     */
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations;
     }
 

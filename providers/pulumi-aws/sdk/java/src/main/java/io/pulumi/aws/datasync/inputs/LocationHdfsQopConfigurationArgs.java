@@ -22,7 +22,7 @@ public final class LocationHdfsQopConfigurationArgs extends io.pulumi.resources.
     @Import(name="dataTransferProtection")
       private final @Nullable Output<String> dataTransferProtection;
 
-    public Output<String> getDataTransferProtection() {
+    public Output<String> dataTransferProtection() {
         return this.dataTransferProtection == null ? Codegen.empty() : this.dataTransferProtection;
     }
 
@@ -33,7 +33,7 @@ public final class LocationHdfsQopConfigurationArgs extends io.pulumi.resources.
     @Import(name="rpcProtection")
       private final @Nullable Output<String> rpcProtection;
 
-    public Output<String> getRpcProtection() {
+    public Output<String> rpcProtection() {
         return this.rpcProtection == null ? Codegen.empty() : this.rpcProtection;
     }
 

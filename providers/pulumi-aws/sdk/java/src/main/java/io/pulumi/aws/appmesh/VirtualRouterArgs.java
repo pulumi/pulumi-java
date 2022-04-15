@@ -24,7 +24,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshName", required=true)
       private final Output<String> meshName;
 
-    public Output<String> getMeshName() {
+    public Output<String> meshName() {
         return this.meshName;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
-    public Output<String> getMeshOwner() {
+    public Output<String> meshOwner() {
         return this.meshOwner == null ? Codegen.empty() : this.meshOwner;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec", required=true)
       private final Output<VirtualRouterSpecArgs> spec;
 
-    public Output<VirtualRouterSpecArgs> getSpec() {
+    public Output<VirtualRouterSpecArgs> spec() {
         return this.spec;
     }
 
@@ -68,7 +68,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

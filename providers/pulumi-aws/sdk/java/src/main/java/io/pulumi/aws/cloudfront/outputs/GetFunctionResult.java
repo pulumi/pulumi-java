@@ -80,62 +80,62 @@ public final class GetFunctionResult {
      * Amazon Resource Name (ARN) identifying your CloudFront Function.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Source code of the function
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Comment.
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
      * ETag hash of the function
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * When this resource was last modified.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Identifier of the function's runtime.
      * 
     */
-    public String getRuntime() {
+    public String runtime() {
         return this.runtime;
     }
-    public String getStage() {
+    public String stage() {
         return this.stage;
     }
     /**
      * Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

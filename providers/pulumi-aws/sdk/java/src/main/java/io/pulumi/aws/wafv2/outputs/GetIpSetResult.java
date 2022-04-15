@@ -60,41 +60,41 @@ public final class GetIpSetResult {
      * An array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation.
      * 
     */
-    public List<String> getAddresses() {
+    public List<String> addresses() {
         return this.addresses;
     }
     /**
      * The Amazon Resource Name (ARN) of the entity.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The description of the set that helps with identification.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The IP address version of the set.
      * 
     */
-    public String getIpAddressVersion() {
+    public String ipAddressVersion() {
         return this.ipAddressVersion;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

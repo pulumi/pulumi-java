@@ -22,7 +22,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -33,7 +33,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -44,7 +44,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

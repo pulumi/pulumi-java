@@ -23,7 +23,7 @@ public final class RouteSpecHttpRouteActionArgs extends io.pulumi.resources.Reso
     @Import(name="weightedTargets", required=true)
       private final Output<List<RouteSpecHttpRouteActionWeightedTargetArgs>> weightedTargets;
 
-    public Output<List<RouteSpecHttpRouteActionWeightedTargetArgs>> getWeightedTargets() {
+    public Output<List<RouteSpecHttpRouteActionWeightedTargetArgs>> weightedTargets() {
         return this.weightedTargets;
     }
 

@@ -22,7 +22,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
     @Import(name="signingRegion")
       private final @Nullable Output<String> signingRegion;
 
-    public Output<String> getSigningRegion() {
+    public Output<String> signingRegion() {
         return this.signingRegion == null ? Codegen.empty() : this.signingRegion;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
     @Import(name="signingServiceName")
       private final @Nullable Output<String> signingServiceName;
 
-    public Output<String> getSigningServiceName() {
+    public Output<String> signingServiceName() {
         return this.signingServiceName == null ? Codegen.empty() : this.signingServiceName;
     }
 

@@ -24,7 +24,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
     @Import(name="deleteSourceFromS3")
       private final @Nullable Output<Boolean> deleteSourceFromS3;
 
-    public Output<Boolean> getDeleteSourceFromS3() {
+    public Output<Boolean> deleteSourceFromS3() {
         return this.deleteSourceFromS3 == null ? Codegen.empty() : this.deleteSourceFromS3;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
     @Import(name="maxAgeInDays")
       private final @Nullable Output<Integer> maxAgeInDays;
 
-    public Output<Integer> getMaxAgeInDays() {
+    public Output<Integer> maxAgeInDays() {
         return this.maxAgeInDays == null ? Codegen.empty() : this.maxAgeInDays;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> getMaxCount() {
+    public Output<Integer> maxCount() {
         return this.maxCount == null ? Codegen.empty() : this.maxCount;
     }
 
@@ -57,7 +57,7 @@ public final class ApplicationAppversionLifecycleGetArgs extends io.pulumi.resou
     @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
 

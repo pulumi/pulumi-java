@@ -22,7 +22,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
     @Import(name="hoursOfOperationId")
       private final @Nullable String hoursOfOperationId;
 
-    public Optional<String> getHoursOfOperationId() {
+    public Optional<String> hoursOfOperationId() {
         return this.hoursOfOperationId == null ? Optional.empty() : Optional.ofNullable(this.hoursOfOperationId);
     }
 
@@ -33,7 +33,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -44,7 +44,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -55,7 +55,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

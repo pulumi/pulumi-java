@@ -21,7 +21,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="documentFormat")
       private final @Nullable String documentFormat;
 
-    public Optional<String> getDocumentFormat() {
+    public Optional<String> documentFormat() {
         return this.documentFormat == null ? Optional.empty() : Optional.ofNullable(this.documentFormat);
     }
 
@@ -32,7 +32,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="documentVersion")
       private final @Nullable String documentVersion;
 
-    public Optional<String> getDocumentVersion() {
+    public Optional<String> documentVersion() {
         return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
     }
 
@@ -43,7 +43,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

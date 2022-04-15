@@ -66,7 +66,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * this distribution.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAliases() {
+    public Output</* @Nullable */ List<String>> aliases() {
         return this.aliases;
     }
     /**
@@ -80,7 +80,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -96,7 +96,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * updates to the distribution configuration.
      * 
      */
-    public Output<String> getCallerReference() {
+    public Output<String> callerReference() {
         return this.callerReference;
     }
     /**
@@ -112,7 +112,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * distribution.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -126,7 +126,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return One or more custom error response elements (multiples allowed).
      * 
      */
-    public Output</* @Nullable */ List<DistributionCustomErrorResponse>> getCustomErrorResponses() {
+    public Output</* @Nullable */ List<DistributionCustomErrorResponse>> customErrorResponses() {
         return this.customErrorResponses;
     }
     /**
@@ -142,7 +142,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * one).
      * 
      */
-    public Output<DistributionDefaultCacheBehavior> getDefaultCacheBehavior() {
+    public Output<DistributionDefaultCacheBehavior> defaultCacheBehavior() {
         return this.defaultCacheBehavior;
     }
     /**
@@ -158,7 +158,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * return (for example, index.html) when an end user requests the root URL.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultRootObject() {
+    public Output</* @Nullable */ String> defaultRootObject() {
         return this.defaultRootObject;
     }
     /**
@@ -174,7 +174,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * web site of your custom origin.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -188,7 +188,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return A flag that specifies whether Origin Shield is enabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -204,7 +204,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * `E2QWRUHAPOMQZL`.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -222,7 +222,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * alias for the zone ID `Z2FDTNDATAQYW2`.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -240,7 +240,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * `http2`.
      * 
      */
-    public Output</* @Nullable */ String> getHttpVersion() {
+    public Output</* @Nullable */ String> httpVersion() {
         return this.httpVersion;
     }
     /**
@@ -256,7 +256,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * currently in progress.
      * 
      */
-    public Output<Integer> getInProgressValidationBatches() {
+    public Output<Integer> inProgressValidationBatches() {
         return this.inProgressValidationBatches;
     }
     /**
@@ -270,7 +270,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return Whether the IPv6 is enabled for the distribution.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsIpv6Enabled() {
+    public Output</* @Nullable */ Boolean> isIpv6Enabled() {
         return this.isIpv6Enabled;
     }
     /**
@@ -284,7 +284,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return The date and time the distribution was last modified.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -302,7 +302,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * to your distribution (maximum one).
      * 
      */
-    public Output</* @Nullable */ DistributionLoggingConfig> getLoggingConfig() {
+    public Output</* @Nullable */ DistributionLoggingConfig> loggingConfig() {
         return this.loggingConfig;
     }
     /**
@@ -320,7 +320,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * in order of precedence. The topmost cache behavior will have precedence 0.
      * 
      */
-    public Output</* @Nullable */ List<DistributionOrderedCacheBehavior>> getOrderedCacheBehaviors() {
+    public Output</* @Nullable */ List<DistributionOrderedCacheBehavior>> orderedCacheBehaviors() {
         return this.orderedCacheBehaviors;
     }
     /**
@@ -336,7 +336,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * distribution (multiples allowed).
      * 
      */
-    public Output</* @Nullable */ List<DistributionOriginGroup>> getOriginGroups() {
+    public Output</* @Nullable */ List<DistributionOriginGroup>> originGroups() {
         return this.originGroups;
     }
     /**
@@ -352,7 +352,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * distribution (multiples allowed).
      * 
      */
-    public Output<List<DistributionOrigin>> getOrigins() {
+    public Output<List<DistributionOrigin>> origins() {
         return this.origins;
     }
     /**
@@ -368,7 +368,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
      * 
      */
-    public Output</* @Nullable */ String> getPriceClass() {
+    public Output</* @Nullable */ String> priceClass() {
         return this.priceClass;
     }
     /**
@@ -384,7 +384,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * configuration for this distribution (maximum one).
      * 
      */
-    public Output<DistributionRestrictions> getRestrictions() {
+    public Output<DistributionRestrictions> restrictions() {
         return this.restrictions;
     }
     /**
@@ -402,7 +402,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * the distribution needs to be deleted manually afterwards. Default: `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRetainOnDelete() {
+    public Output</* @Nullable */ Boolean> retainOnDelete() {
         return this.retainOnDelete;
     }
     /**
@@ -420,7 +420,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * CloudFront system.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -434,7 +434,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -448,7 +448,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -464,7 +464,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    public Output<List<DistributionTrustedKeyGroup>> getTrustedKeyGroups() {
+    public Output<List<DistributionTrustedKeyGroup>> trustedKeyGroups() {
         return this.trustedKeyGroups;
     }
     /**
@@ -480,7 +480,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    public Output<List<DistributionTrustedSigner>> getTrustedSigners() {
+    public Output<List<DistributionTrustedSigner>> trustedSigners() {
         return this.trustedSigners;
     }
     /**
@@ -498,7 +498,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * one).
      * 
      */
-    public Output<DistributionViewerCertificate> getViewerCertificate() {
+    public Output<DistributionViewerCertificate> viewerCertificate() {
         return this.viewerCertificate;
     }
     /**
@@ -516,7 +516,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * this to`false` will skip the process. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForDeployment() {
+    public Output</* @Nullable */ Boolean> waitForDeployment() {
         return this.waitForDeployment;
     }
     /**
@@ -542,7 +542,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
      * 
      */
-    public Output</* @Nullable */ String> getWebAclId() {
+    public Output</* @Nullable */ String> webAclId() {
         return this.webAclId;
     }
 

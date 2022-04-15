@@ -32,14 +32,14 @@ public final class EventConnectionAuthParametersOauthClientParameters {
      * The client ID for the credentials to use for authorization. Created and stored in AWS Secrets Manager.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * The client secret for the credentials to use for authorization. Created and stored in AWS Secrets Manager.
      * 
     */
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
 

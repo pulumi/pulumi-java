@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
     @Import(name="actionCondition")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> getActionCondition() {
+    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition() {
         return this.actionCondition == null ? Codegen.empty() : this.actionCondition;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
     @Import(name="labelNameCondition")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> getLabelNameCondition() {
+    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition() {
         return this.labelNameCondition == null ? Codegen.empty() : this.labelNameCondition;
     }
 

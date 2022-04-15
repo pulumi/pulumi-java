@@ -24,7 +24,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="filter")
       private final @Nullable Output<AnalyticsConfigurationFilterArgs> filter;
 
-    public Output<AnalyticsConfigurationFilterArgs> getFilter() {
+    public Output<AnalyticsConfigurationFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -46,7 +46,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="storageClassAnalysis")
       private final @Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
 
-    public Output<AnalyticsConfigurationStorageClassAnalysisArgs> getStorageClassAnalysis() {
+    public Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis() {
         return this.storageClassAnalysis == null ? Codegen.empty() : this.storageClassAnalysis;
     }
 

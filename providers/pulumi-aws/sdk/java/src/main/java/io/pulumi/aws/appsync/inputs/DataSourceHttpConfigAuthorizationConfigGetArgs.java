@@ -23,7 +23,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
     @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
     @Import(name="awsIamConfig")
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig;
 
-    public Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> getAwsIamConfig() {
+    public Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig() {
         return this.awsIamConfig == null ? Codegen.empty() : this.awsIamConfig;
     }
 

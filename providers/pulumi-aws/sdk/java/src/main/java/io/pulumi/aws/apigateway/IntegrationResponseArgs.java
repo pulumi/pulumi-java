@@ -23,7 +23,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="contentHandling")
       private final @Nullable Output<String> contentHandling;
 
-    public Output<String> getContentHandling() {
+    public Output<String> contentHandling() {
         return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
     }
 
@@ -34,7 +34,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -45,7 +45,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -57,7 +57,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="responseParameters")
       private final @Nullable Output<Map<String,String>> responseParameters;
 
-    public Output<Map<String,String>> getResponseParameters() {
+    public Output<Map<String,String>> responseParameters() {
         return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
@@ -68,7 +68,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> getResponseTemplates() {
+    public Output<Map<String,String>> responseTemplates() {
         return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
@@ -79,7 +79,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -93,7 +93,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="selectionPattern")
       private final @Nullable Output<String> selectionPattern;
 
-    public Output<String> getSelectionPattern() {
+    public Output<String> selectionPattern() {
         return this.selectionPattern == null ? Codegen.empty() : this.selectionPattern;
     }
 
@@ -104,7 +104,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

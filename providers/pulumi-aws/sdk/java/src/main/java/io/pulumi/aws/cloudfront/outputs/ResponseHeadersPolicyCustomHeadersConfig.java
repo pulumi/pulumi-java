@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfig {
         this.items = items;
     }
 
-    public List<ResponseHeadersPolicyCustomHeadersConfigItem> getItems() {
+    public List<ResponseHeadersPolicyCustomHeadersConfigItem> items() {
         return this.items == null ? List.of() : this.items;
     }
 

@@ -40,7 +40,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The ID of the parent API resource
      * 
      */
-    public Output<String> getParentId() {
+    public Output<String> parentId() {
         return this.parentId;
     }
     /**
@@ -54,7 +54,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The complete path for this API resource, including all parent paths.
      * 
      */
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
     /**
@@ -68,7 +68,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The last path segment of this API resource.
      * 
      */
-    public Output<String> getPathPart() {
+    public Output<String> pathPart() {
         return this.pathPart;
     }
     /**
@@ -82,7 +82,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 

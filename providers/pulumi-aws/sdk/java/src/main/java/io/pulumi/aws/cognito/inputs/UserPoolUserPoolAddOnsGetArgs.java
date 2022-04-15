@@ -21,7 +21,7 @@ public final class UserPoolUserPoolAddOnsGetArgs extends io.pulumi.resources.Res
     @Import(name="advancedSecurityMode", required=true)
       private final Output<String> advancedSecurityMode;
 
-    public Output<String> getAdvancedSecurityMode() {
+    public Output<String> advancedSecurityMode() {
         return this.advancedSecurityMode;
     }
 

@@ -25,7 +25,7 @@ public final class VirtualGatewaySpecListenerGetArgs extends io.pulumi.resources
     @Import(name="connectionPool")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolGetArgs> connectionPool;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolGetArgs> getConnectionPool() {
+    public Output<VirtualGatewaySpecListenerConnectionPoolGetArgs> connectionPool() {
         return this.connectionPool == null ? Codegen.empty() : this.connectionPool;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualGatewaySpecListenerGetArgs extends io.pulumi.resources
     @Import(name="healthCheck")
       private final @Nullable Output<VirtualGatewaySpecListenerHealthCheckGetArgs> healthCheck;
 
-    public Output<VirtualGatewaySpecListenerHealthCheckGetArgs> getHealthCheck() {
+    public Output<VirtualGatewaySpecListenerHealthCheckGetArgs> healthCheck() {
         return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualGatewaySpecListenerGetArgs extends io.pulumi.resources
     @Import(name="portMapping", required=true)
       private final Output<VirtualGatewaySpecListenerPortMappingGetArgs> portMapping;
 
-    public Output<VirtualGatewaySpecListenerPortMappingGetArgs> getPortMapping() {
+    public Output<VirtualGatewaySpecListenerPortMappingGetArgs> portMapping() {
         return this.portMapping;
     }
 
@@ -58,7 +58,7 @@ public final class VirtualGatewaySpecListenerGetArgs extends io.pulumi.resources
     @Import(name="tls")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsGetArgs> tls;
 
-    public Output<VirtualGatewaySpecListenerTlsGetArgs> getTls() {
+    public Output<VirtualGatewaySpecListenerTlsGetArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

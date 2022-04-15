@@ -44,34 +44,34 @@ public final class GetStreamConsumerResult {
         this.streamArn = streamArn;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current status of the stream consumer.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
-    public String getStreamArn() {
+    public String streamArn() {
         return this.streamArn;
     }
 

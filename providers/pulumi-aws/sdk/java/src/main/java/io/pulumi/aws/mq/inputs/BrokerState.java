@@ -32,7 +32,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
@@ -43,7 +43,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -54,7 +54,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationStrategy")
       private final @Nullable Output<String> authenticationStrategy;
 
-    public Output<String> getAuthenticationStrategy() {
+    public Output<String> authenticationStrategy() {
         return this.authenticationStrategy == null ? Codegen.empty() : this.authenticationStrategy;
     }
 
@@ -65,7 +65,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> getAutoMinorVersionUpgrade() {
+    public Output<Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
@@ -76,7 +76,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="brokerName")
       private final @Nullable Output<String> brokerName;
 
-    public Output<String> getBrokerName() {
+    public Output<String> brokerName() {
         return this.brokerName == null ? Codegen.empty() : this.brokerName;
     }
 
@@ -87,7 +87,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
       private final @Nullable Output<BrokerConfigurationGetArgs> configuration;
 
-    public Output<BrokerConfigurationGetArgs> getConfiguration() {
+    public Output<BrokerConfigurationGetArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -98,7 +98,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMode")
       private final @Nullable Output<String> deploymentMode;
 
-    public Output<String> getDeploymentMode() {
+    public Output<String> deploymentMode() {
         return this.deploymentMode == null ? Codegen.empty() : this.deploymentMode;
     }
 
@@ -109,7 +109,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionOptions")
       private final @Nullable Output<BrokerEncryptionOptionsGetArgs> encryptionOptions;
 
-    public Output<BrokerEncryptionOptionsGetArgs> getEncryptionOptions() {
+    public Output<BrokerEncryptionOptionsGetArgs> encryptionOptions() {
         return this.encryptionOptions == null ? Codegen.empty() : this.encryptionOptions;
     }
 
@@ -120,7 +120,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineType")
       private final @Nullable Output<String> engineType;
 
-    public Output<String> getEngineType() {
+    public Output<String> engineType() {
         return this.engineType == null ? Codegen.empty() : this.engineType;
     }
 
@@ -131,7 +131,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
@@ -142,7 +142,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostInstanceType")
       private final @Nullable Output<String> hostInstanceType;
 
-    public Output<String> getHostInstanceType() {
+    public Output<String> hostInstanceType() {
         return this.hostInstanceType == null ? Codegen.empty() : this.hostInstanceType;
     }
 
@@ -164,7 +164,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<BrokerInstanceGetArgs>> instances;
 
-    public Output<List<BrokerInstanceGetArgs>> getInstances() {
+    public Output<List<BrokerInstanceGetArgs>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -175,7 +175,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ldapServerMetadata")
       private final @Nullable Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata;
 
-    public Output<BrokerLdapServerMetadataGetArgs> getLdapServerMetadata() {
+    public Output<BrokerLdapServerMetadataGetArgs> ldapServerMetadata() {
         return this.ldapServerMetadata == null ? Codegen.empty() : this.ldapServerMetadata;
     }
 
@@ -186,7 +186,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logs")
       private final @Nullable Output<BrokerLogsGetArgs> logs;
 
-    public Output<BrokerLogsGetArgs> getLogs() {
+    public Output<BrokerLogsGetArgs> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -197,7 +197,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindowStartTime")
       private final @Nullable Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime;
 
-    public Output<BrokerMaintenanceWindowStartTimeGetArgs> getMaintenanceWindowStartTime() {
+    public Output<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime() {
         return this.maintenanceWindowStartTime == null ? Codegen.empty() : this.maintenanceWindowStartTime;
     }
 
@@ -208,7 +208,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> getPubliclyAccessible() {
+    public Output<Boolean> publiclyAccessible() {
         return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
     }
 
@@ -219,7 +219,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -230,7 +230,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
@@ -241,7 +241,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -252,7 +252,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -263,7 +263,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -274,7 +274,7 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="users")
       private final @Nullable Output<List<BrokerUserGetArgs>> users;
 
-    public Output<List<BrokerUserGetArgs>> getUsers() {
+    public Output<List<BrokerUserGetArgs>> users() {
         return this.users == null ? Codegen.empty() : this.users;
     }
 

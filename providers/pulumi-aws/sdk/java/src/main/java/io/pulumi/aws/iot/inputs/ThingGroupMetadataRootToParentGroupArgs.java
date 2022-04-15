@@ -18,14 +18,14 @@ public final class ThingGroupMetadataRootToParentGroupArgs extends io.pulumi.res
     @Import(name="groupArn")
       private final @Nullable Output<String> groupArn;
 
-    public Output<String> getGroupArn() {
+    public Output<String> groupArn() {
         return this.groupArn == null ? Codegen.empty() : this.groupArn;
     }
 
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 

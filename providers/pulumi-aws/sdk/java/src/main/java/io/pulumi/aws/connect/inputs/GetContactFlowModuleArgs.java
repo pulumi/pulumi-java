@@ -22,7 +22,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
     @Import(name="contactFlowModuleId")
       private final @Nullable String contactFlowModuleId;
 
-    public Optional<String> getContactFlowModuleId() {
+    public Optional<String> contactFlowModuleId() {
         return this.contactFlowModuleId == null ? Optional.empty() : Optional.ofNullable(this.contactFlowModuleId);
     }
 
@@ -33,7 +33,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -44,7 +44,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -55,7 +55,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

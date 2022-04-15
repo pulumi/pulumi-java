@@ -42,21 +42,21 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsCustomImage {
      * The name of the App Image Config.
      * 
     */
-    public String getAppImageConfigName() {
+    public String appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
      * The name of the Custom Image.
      * 
     */
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
     /**
      * The version number of the Custom Image.
      * 
     */
-    public Optional<Integer> getImageVersionNumber() {
+    public Optional<Integer> imageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }
 

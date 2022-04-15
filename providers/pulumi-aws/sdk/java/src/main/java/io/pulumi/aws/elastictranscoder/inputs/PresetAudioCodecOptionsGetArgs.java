@@ -22,7 +22,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="bitDepth")
       private final @Nullable Output<String> bitDepth;
 
-    public Output<String> getBitDepth() {
+    public Output<String> bitDepth() {
         return this.bitDepth == null ? Codegen.empty() : this.bitDepth;
     }
 
@@ -33,7 +33,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="bitOrder")
       private final @Nullable Output<String> bitOrder;
 
-    public Output<String> getBitOrder() {
+    public Output<String> bitOrder() {
         return this.bitOrder == null ? Codegen.empty() : this.bitOrder;
     }
 
@@ -44,7 +44,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
+    public Output<String> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -55,7 +55,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     @Import(name="signed")
       private final @Nullable Output<String> signed;
 
-    public Output<String> getSigned() {
+    public Output<String> signed() {
         return this.signed == null ? Codegen.empty() : this.signed;
     }
 

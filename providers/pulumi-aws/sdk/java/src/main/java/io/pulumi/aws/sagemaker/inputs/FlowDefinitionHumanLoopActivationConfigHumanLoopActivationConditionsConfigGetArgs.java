@@ -21,7 +21,7 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
     @Import(name="humanLoopActivationConditions", required=true)
       private final Output<String> humanLoopActivationConditions;
 
-    public Output<String> getHumanLoopActivationConditions() {
+    public Output<String> humanLoopActivationConditions() {
         return this.humanLoopActivationConditions;
     }
 

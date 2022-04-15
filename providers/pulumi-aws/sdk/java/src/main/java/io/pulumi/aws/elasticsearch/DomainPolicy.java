@@ -32,7 +32,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * @return IAM policy document specifying the access policies for the domain
      * 
      */
-    public Output<String> getAccessPolicies() {
+    public Output<String> accessPolicies() {
         return this.accessPolicies;
     }
     /**
@@ -46,7 +46,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 

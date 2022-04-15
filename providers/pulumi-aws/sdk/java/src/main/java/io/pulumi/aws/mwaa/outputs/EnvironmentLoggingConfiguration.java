@@ -59,35 +59,35 @@ public final class EnvironmentLoggingConfiguration {
      * (Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
      * 
     */
-    public Optional<EnvironmentLoggingConfigurationDagProcessingLogs> getDagProcessingLogs() {
+    public Optional<EnvironmentLoggingConfigurationDagProcessingLogs> dagProcessingLogs() {
         return Optional.ofNullable(this.dagProcessingLogs);
     }
     /**
      * Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
      * 
     */
-    public Optional<EnvironmentLoggingConfigurationSchedulerLogs> getSchedulerLogs() {
+    public Optional<EnvironmentLoggingConfigurationSchedulerLogs> schedulerLogs() {
         return Optional.ofNullable(this.schedulerLogs);
     }
     /**
      * Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
      * 
     */
-    public Optional<EnvironmentLoggingConfigurationTaskLogs> getTaskLogs() {
+    public Optional<EnvironmentLoggingConfigurationTaskLogs> taskLogs() {
         return Optional.ofNullable(this.taskLogs);
     }
     /**
      * Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
      * 
     */
-    public Optional<EnvironmentLoggingConfigurationWebserverLogs> getWebserverLogs() {
+    public Optional<EnvironmentLoggingConfigurationWebserverLogs> webserverLogs() {
         return Optional.ofNullable(this.webserverLogs);
     }
     /**
      * Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
      * 
     */
-    public Optional<EnvironmentLoggingConfigurationWorkerLogs> getWorkerLogs() {
+    public Optional<EnvironmentLoggingConfigurationWorkerLogs> workerLogs() {
         return Optional.ofNullable(this.workerLogs);
     }
 

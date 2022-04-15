@@ -22,7 +22,7 @@ public final class VirtualNodeSpecLoggingAccessLogGetArgs extends io.pulumi.reso
     @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecLoggingAccessLogFileGetArgs> file;
 
-    public Output<VirtualNodeSpecLoggingAccessLogFileGetArgs> getFile() {
+    public Output<VirtualNodeSpecLoggingAccessLogFileGetArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 

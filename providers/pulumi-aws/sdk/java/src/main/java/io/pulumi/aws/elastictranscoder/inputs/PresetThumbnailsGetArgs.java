@@ -22,7 +22,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="aspectRatio")
       private final @Nullable Output<String> aspectRatio;
 
-    public Output<String> getAspectRatio() {
+    public Output<String> aspectRatio() {
         return this.aspectRatio == null ? Codegen.empty() : this.aspectRatio;
     }
 
@@ -33,7 +33,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -44,7 +44,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -55,7 +55,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="maxHeight")
       private final @Nullable Output<String> maxHeight;
 
-    public Output<String> getMaxHeight() {
+    public Output<String> maxHeight() {
         return this.maxHeight == null ? Codegen.empty() : this.maxHeight;
     }
 
@@ -66,7 +66,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="maxWidth")
       private final @Nullable Output<String> maxWidth;
 
-    public Output<String> getMaxWidth() {
+    public Output<String> maxWidth() {
         return this.maxWidth == null ? Codegen.empty() : this.maxWidth;
     }
 
@@ -77,7 +77,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="paddingPolicy")
       private final @Nullable Output<String> paddingPolicy;
 
-    public Output<String> getPaddingPolicy() {
+    public Output<String> paddingPolicy() {
         return this.paddingPolicy == null ? Codegen.empty() : this.paddingPolicy;
     }
 
@@ -88,7 +88,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="resolution")
       private final @Nullable Output<String> resolution;
 
-    public Output<String> getResolution() {
+    public Output<String> resolution() {
         return this.resolution == null ? Codegen.empty() : this.resolution;
     }
 
@@ -99,7 +99,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="sizingPolicy")
       private final @Nullable Output<String> sizingPolicy;
 
-    public Output<String> getSizingPolicy() {
+    public Output<String> sizingPolicy() {
         return this.sizingPolicy == null ? Codegen.empty() : this.sizingPolicy;
     }
 

@@ -49,28 +49,28 @@ public final class InstancePublicPortsPortInfo {
      * Set of CIDR blocks.
      * 
     */
-    public List<String> getCidrs() {
+    public List<String> cidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
     /**
      * First port in a range of open ports on an instance.
      * 
     */
-    public Integer getFromPort() {
+    public Integer fromPort() {
         return this.fromPort;
     }
     /**
      * IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * Last port in a range of open ports on an instance.
      * 
     */
-    public Integer getToPort() {
+    public Integer toPort() {
         return this.toPort;
     }
 

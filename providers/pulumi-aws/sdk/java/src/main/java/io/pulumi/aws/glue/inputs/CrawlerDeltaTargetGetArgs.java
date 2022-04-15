@@ -23,7 +23,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
 
@@ -34,7 +34,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     @Import(name="deltaTables", required=true)
       private final Output<List<String>> deltaTables;
 
-    public Output<List<String>> getDeltaTables() {
+    public Output<List<String>> deltaTables() {
         return this.deltaTables;
     }
 
@@ -45,7 +45,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
     @Import(name="writeManifest", required=true)
       private final Output<Boolean> writeManifest;
 
-    public Output<Boolean> getWriteManifest() {
+    public Output<Boolean> writeManifest() {
         return this.writeManifest;
     }
 

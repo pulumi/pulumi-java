@@ -19,7 +19,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     @Import(name="items")
       private final @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items;
 
-    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> getItems() {
+    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

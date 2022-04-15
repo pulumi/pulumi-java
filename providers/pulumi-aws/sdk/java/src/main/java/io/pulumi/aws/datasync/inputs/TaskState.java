@@ -26,7 +26,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
@@ -48,7 +48,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationLocationArn")
       private final @Nullable Output<String> destinationLocationArn;
 
-    public Output<String> getDestinationLocationArn() {
+    public Output<String> destinationLocationArn() {
         return this.destinationLocationArn == null ? Codegen.empty() : this.destinationLocationArn;
     }
 
@@ -59,7 +59,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludes")
       private final @Nullable Output<TaskExcludesGetArgs> excludes;
 
-    public Output<TaskExcludesGetArgs> getExcludes() {
+    public Output<TaskExcludesGetArgs> excludes() {
         return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
@@ -70,7 +70,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<TaskOptionsGetArgs> options;
 
-    public Output<TaskOptionsGetArgs> getOptions() {
+    public Output<TaskOptionsGetArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -92,7 +92,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<TaskScheduleGetArgs> schedule;
 
-    public Output<TaskScheduleGetArgs> getSchedule() {
+    public Output<TaskScheduleGetArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -103,7 +103,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceLocationArn")
       private final @Nullable Output<String> sourceLocationArn;
 
-    public Output<String> getSourceLocationArn() {
+    public Output<String> sourceLocationArn() {
         return this.sourceLocationArn == null ? Codegen.empty() : this.sourceLocationArn;
     }
 
@@ -114,7 +114,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -125,7 +125,7 @@ public final class TaskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -25,7 +25,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
-    public Output<String> getBidPrice() {
+    public Output<String> bidPrice() {
         return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
@@ -36,7 +36,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="ebsConfigs")
       private final @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> ebsConfigs;
 
-    public Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> getEbsConfigs() {
+    public Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> ebsConfigs() {
         return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -58,7 +58,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
@@ -69,7 +69,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -80,7 +80,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

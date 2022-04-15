@@ -72,48 +72,48 @@ public final class ClusterMasterInstanceFleet {
      * ID of the cluster.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Configuration block for instance fleet.
      * 
     */
-    public List<ClusterMasterInstanceFleetInstanceTypeConfig> getInstanceTypeConfigs() {
+    public List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs() {
         return this.instanceTypeConfigs == null ? List.of() : this.instanceTypeConfigs;
     }
     /**
      * Configuration block for launch specification.
      * 
     */
-    public Optional<ClusterMasterInstanceFleetLaunchSpecifications> getLaunchSpecifications() {
+    public Optional<ClusterMasterInstanceFleetLaunchSpecifications> launchSpecifications() {
         return Optional.ofNullable(this.launchSpecifications);
     }
     /**
      * Name of the step.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<Integer> getProvisionedOnDemandCapacity() {
+    public Optional<Integer> provisionedOnDemandCapacity() {
         return Optional.ofNullable(this.provisionedOnDemandCapacity);
     }
-    public Optional<Integer> getProvisionedSpotCapacity() {
+    public Optional<Integer> provisionedSpotCapacity() {
         return Optional.ofNullable(this.provisionedSpotCapacity);
     }
     /**
      * Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
     */
-    public Optional<Integer> getTargetOnDemandCapacity() {
+    public Optional<Integer> targetOnDemandCapacity() {
         return Optional.ofNullable(this.targetOnDemandCapacity);
     }
     /**
      * Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
     */
-    public Optional<Integer> getTargetSpotCapacity() {
+    public Optional<Integer> targetSpotCapacity() {
         return Optional.ofNullable(this.targetSpotCapacity);
     }
 

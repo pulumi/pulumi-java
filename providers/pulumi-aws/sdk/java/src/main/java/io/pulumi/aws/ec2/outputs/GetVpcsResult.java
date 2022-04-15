@@ -38,24 +38,24 @@ public final class GetVpcsResult {
         this.tags = tags;
     }
 
-    public List<GetVpcsFilter> getFilters() {
+    public List<GetVpcsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of all the VPC Ids found. This data source will fail if none are found.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

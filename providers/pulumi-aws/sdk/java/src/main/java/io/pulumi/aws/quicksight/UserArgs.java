@@ -22,7 +22,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
@@ -33,7 +33,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -44,7 +44,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamArn")
       private final @Nullable Output<String> iamArn;
 
-    public Output<String> getIamArn() {
+    public Output<String> iamArn() {
         return this.iamArn == null ? Codegen.empty() : this.iamArn;
     }
 
@@ -55,7 +55,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityType", required=true)
       private final Output<String> identityType;
 
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType;
     }
 
@@ -66,7 +66,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -77,7 +77,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
 
-    public Output<String> getSessionName() {
+    public Output<String> sessionName() {
         return this.sessionName == null ? Codegen.empty() : this.sessionName;
     }
 
@@ -88,7 +88,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 
@@ -99,7 +99,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userRole", required=true)
       private final Output<String> userRole;
 
-    public Output<String> getUserRole() {
+    public Output<String> userRole() {
         return this.userRole;
     }
 

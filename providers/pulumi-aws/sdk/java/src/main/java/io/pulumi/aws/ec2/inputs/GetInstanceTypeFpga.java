@@ -16,14 +16,14 @@ public final class GetInstanceTypeFpga extends io.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
     @Import(name="manufacturer", required=true)
       private final String manufacturer;
 
-    public String getManufacturer() {
+    public String manufacturer() {
         return this.manufacturer;
     }
 
@@ -34,14 +34,14 @@ public final class GetInstanceTypeFpga extends io.pulumi.resources.InvokeArgs {
     @Import(name="memorySize", required=true)
       private final Integer memorySize;
 
-    public Integer getMemorySize() {
+    public Integer memorySize() {
         return this.memorySize;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -41,21 +41,21 @@ public final class AliasRoutingStrategy {
      * ID of the Gamelift Fleet to point the alias to.
      * 
     */
-    public Optional<String> getFleetId() {
+    public Optional<String> fleetId() {
         return Optional.ofNullable(this.fleetId);
     }
     /**
      * Message text to be used with the `TERMINAL` routing strategy.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

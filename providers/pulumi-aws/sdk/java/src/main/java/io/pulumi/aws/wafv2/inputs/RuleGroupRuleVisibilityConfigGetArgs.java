@@ -22,7 +22,7 @@ public final class RuleGroupRuleVisibilityConfigGetArgs extends io.pulumi.resour
     @Import(name="cloudwatchMetricsEnabled", required=true)
       private final Output<Boolean> cloudwatchMetricsEnabled;
 
-    public Output<Boolean> getCloudwatchMetricsEnabled() {
+    public Output<Boolean> cloudwatchMetricsEnabled() {
         return this.cloudwatchMetricsEnabled;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleVisibilityConfigGetArgs extends io.pulumi.resour
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -44,7 +44,7 @@ public final class RuleGroupRuleVisibilityConfigGetArgs extends io.pulumi.resour
     @Import(name="sampledRequestsEnabled", required=true)
       private final Output<Boolean> sampledRequestsEnabled;
 
-    public Output<Boolean> getSampledRequestsEnabled() {
+    public Output<Boolean> sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 

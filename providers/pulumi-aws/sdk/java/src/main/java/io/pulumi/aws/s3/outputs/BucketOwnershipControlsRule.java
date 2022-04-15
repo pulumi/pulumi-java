@@ -24,7 +24,7 @@ public final class BucketOwnershipControlsRule {
      * Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
      * 
     */
-    public String getObjectOwnership() {
+    public String objectOwnership() {
         return this.objectOwnership;
     }
 

@@ -41,13 +41,13 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
      * @return Identifier of the AWS account that owns the EC2 TGW peering.
      * 
      */
-    public Output<String> getPeerAccountId() {
+    public Output<String> peerAccountId() {
         return this.peerAccountId;
     }
     @Export(name="peerRegion", type=String.class, parameters={})
     private Output<String> peerRegion;
 
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion;
     }
     /**
@@ -61,7 +61,7 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
      * @return Identifier of EC2 Transit Gateway to peer with.
      * 
      */
-    public Output<String> getPeerTransitGatewayId() {
+    public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
     /**
@@ -75,7 +75,7 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
      * @return Key-value tags for the EC2 Transit Gateway Peering Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -89,7 +89,7 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -103,7 +103,7 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
      * @return The ID of the EC2 Transit Gateway Peering Attachment to manage.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -117,7 +117,7 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
      * @return Identifier of EC2 Transit Gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 

@@ -42,21 +42,21 @@ public final class StateMachineLoggingConfiguration {
      * Determines whether execution data is included in your log. When set to `false`, data is excluded.
      * 
     */
-    public Optional<Boolean> getIncludeExecutionData() {
+    public Optional<Boolean> includeExecutionData() {
         return Optional.ofNullable(this.includeExecutionData);
     }
     /**
      * Defines which category of execution history events are logged. Valid values: `ALL`, `ERROR`, `FATAL`, `OFF`
      * 
     */
-    public Optional<String> getLevel() {
+    public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
      * Amazon Resource Name (ARN) of a CloudWatch log group. Make sure the State Machine has the correct IAM policies for logging. The ARN must end with `:*`
      * 
     */
-    public Optional<String> getLogDestination() {
+    public Optional<String> logDestination() {
         return Optional.ofNullable(this.logDestination);
     }
 

@@ -42,21 +42,21 @@ public final class GetPipelineDefinitionPipelineObject {
      * Key-value pairs that define the properties of the object. See below
      * 
     */
-    public List<GetPipelineDefinitionPipelineObjectField> getFields() {
+    public List<GetPipelineDefinitionPipelineObjectField> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
      * ID of the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * ARN of the storage connector.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

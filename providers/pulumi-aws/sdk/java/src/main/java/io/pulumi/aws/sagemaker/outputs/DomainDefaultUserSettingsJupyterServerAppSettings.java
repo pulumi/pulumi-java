@@ -36,14 +36,14 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettings {
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
     */
-    public Optional<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec> getDefaultResourceSpec() {
+    public Optional<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
     /**
      * The Amazon Resource Name (ARN) of the Lifecycle Configurations.
      * 
     */
-    public List<String> getLifecycleConfigArns() {
+    public List<String> lifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? List.of() : this.lifecycleConfigArns;
     }
 

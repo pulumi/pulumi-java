@@ -20,7 +20,7 @@ public final class CustomLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -31,7 +31,7 @@ public final class CustomLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
     @Import(name="logStreams")
       private final @Nullable Output<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Output<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
+    public Output<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

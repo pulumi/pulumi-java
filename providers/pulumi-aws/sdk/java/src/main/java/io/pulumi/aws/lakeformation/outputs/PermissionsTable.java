@@ -45,24 +45,24 @@ public final class PermissionsTable {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
     */
-    public Optional<String> getCatalogId() {
+    public Optional<String> catalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
     */
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
     /**
      * Name of the table resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<Boolean> getWildcard() {
+    public Optional<Boolean> wildcard() {
         return Optional.ofNullable(this.wildcard);
     }
 

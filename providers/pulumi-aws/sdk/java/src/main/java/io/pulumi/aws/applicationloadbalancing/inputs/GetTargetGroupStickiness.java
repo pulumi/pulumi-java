@@ -17,28 +17,28 @@ public final class GetTargetGroupStickiness extends io.pulumi.resources.InvokeAr
     @Import(name="cookieDuration", required=true)
       private final Integer cookieDuration;
 
-    public Integer getCookieDuration() {
+    public Integer cookieDuration() {
         return this.cookieDuration;
     }
 
     @Import(name="cookieName", required=true)
       private final String cookieName;
 
-    public String getCookieName() {
+    public String cookieName() {
         return this.cookieName;
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

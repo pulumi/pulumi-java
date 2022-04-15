@@ -22,7 +22,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends io
     @Import(name="masterUserArn")
       private final @Nullable Output<String> masterUserArn;
 
-    public Output<String> getMasterUserArn() {
+    public Output<String> masterUserArn() {
         return this.masterUserArn == null ? Codegen.empty() : this.masterUserArn;
     }
 
@@ -33,7 +33,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends io
     @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
-    public Output<String> getMasterUserName() {
+    public Output<String> masterUserName() {
         return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
     }
 
@@ -44,7 +44,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends io
     @Import(name="masterUserPassword")
       private final @Nullable Output<String> masterUserPassword;
 
-    public Output<String> getMasterUserPassword() {
+    public Output<String> masterUserPassword() {
         return this.masterUserPassword == null ? Codegen.empty() : this.masterUserPassword;
     }
 

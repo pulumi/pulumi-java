@@ -19,7 +19,7 @@ public final class GetCloudFormationTypeLoggingConfig extends io.pulumi.resource
     @Import(name="logGroupName", required=true)
       private final String logGroupName;
 
-    public String getLogGroupName() {
+    public String logGroupName() {
         return this.logGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCloudFormationTypeLoggingConfig extends io.pulumi.resource
     @Import(name="logRoleArn", required=true)
       private final String logRoleArn;
 
-    public String getLogRoleArn() {
+    public String logRoleArn() {
         return this.logRoleArn;
     }
 

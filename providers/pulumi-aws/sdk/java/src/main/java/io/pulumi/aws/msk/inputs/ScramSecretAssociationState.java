@@ -23,7 +23,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
     }
 
@@ -34,7 +34,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
     @Import(name="secretArnLists")
       private final @Nullable Output<List<String>> secretArnLists;
 
-    public Output<List<String>> getSecretArnLists() {
+    public Output<List<String>> secretArnLists() {
         return this.secretArnLists == null ? Codegen.empty() : this.secretArnLists;
     }
 

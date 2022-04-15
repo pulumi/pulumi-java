@@ -22,7 +22,7 @@ public final class InsightFiltersCreatedAtDateRangeGetArgs extends io.pulumi.res
     @Import(name="unit", required=true)
       private final Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit;
     }
 
@@ -33,7 +33,7 @@ public final class InsightFiltersCreatedAtDateRangeGetArgs extends io.pulumi.res
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 

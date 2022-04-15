@@ -28,7 +28,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -39,7 +39,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
-    public Output<Boolean> getAssociatePublicIpAddress() {
+    public Output<Boolean> associatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
@@ -51,7 +51,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
-    public Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
+    public Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
@@ -62,7 +62,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
@@ -73,7 +73,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="enableMonitoring")
       private final @Nullable Output<Boolean> enableMonitoring;
 
-    public Output<Boolean> getEnableMonitoring() {
+    public Output<Boolean> enableMonitoring() {
         return this.enableMonitoring == null ? Codegen.empty() : this.enableMonitoring;
     }
 
@@ -85,7 +85,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
-    public Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
+    public Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
@@ -97,7 +97,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
+    public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
@@ -108,7 +108,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 
@@ -119,7 +119,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -130,7 +130,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -141,7 +141,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="metadataOptions")
       private final @Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions;
 
-    public Output<LaunchConfigurationMetadataOptionsGetArgs> getMetadataOptions() {
+    public Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions() {
         return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
@@ -153,7 +153,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -165,7 +165,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -178,7 +178,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
 
-    public Output<String> getPlacementTenancy() {
+    public Output<String> placementTenancy() {
         return this.placementTenancy == null ? Codegen.empty() : this.placementTenancy;
     }
 
@@ -190,7 +190,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="rootBlockDevice")
       private final @Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice;
 
-    public Output<LaunchConfigurationRootBlockDeviceGetArgs> getRootBlockDevice() {
+    public Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice() {
         return this.rootBlockDevice == null ? Codegen.empty() : this.rootBlockDevice;
     }
 
@@ -201,7 +201,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -212,7 +212,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
-    public Output<String> getSpotPrice() {
+    public Output<String> spotPrice() {
         return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
@@ -223,7 +223,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 
@@ -234,7 +234,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="userDataBase64")
       private final @Nullable Output<String> userDataBase64;
 
-    public Output<String> getUserDataBase64() {
+    public Output<String> userDataBase64() {
         return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
     }
 
@@ -245,7 +245,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="vpcClassicLinkId")
       private final @Nullable Output<String> vpcClassicLinkId;
 
-    public Output<String> getVpcClassicLinkId() {
+    public Output<String> vpcClassicLinkId() {
         return this.vpcClassicLinkId == null ? Codegen.empty() : this.vpcClassicLinkId;
     }
 
@@ -256,7 +256,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
     @Import(name="vpcClassicLinkSecurityGroups")
       private final @Nullable Output<List<String>> vpcClassicLinkSecurityGroups;
 
-    public Output<List<String>> getVpcClassicLinkSecurityGroups() {
+    public Output<List<String>> vpcClassicLinkSecurityGroups() {
         return this.vpcClassicLinkSecurityGroups == null ? Codegen.empty() : this.vpcClassicLinkSecurityGroups;
     }
 

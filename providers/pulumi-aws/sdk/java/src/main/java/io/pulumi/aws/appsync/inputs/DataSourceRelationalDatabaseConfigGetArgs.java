@@ -23,7 +23,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
     @Import(name="httpEndpointConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
 
-    public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> getHttpEndpointConfig() {
+    public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig() {
         return this.httpEndpointConfig == null ? Codegen.empty() : this.httpEndpointConfig;
     }
 
@@ -34,7 +34,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
     @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 

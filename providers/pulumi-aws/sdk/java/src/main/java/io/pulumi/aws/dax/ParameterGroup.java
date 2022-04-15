@@ -42,7 +42,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return A description of the parameter group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +56,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * @return The parameters of the parameter group.
      * 
      */
-    public Output<List<ParameterGroupParameter>> getParameters() {
+    public Output<List<ParameterGroupParameter>> parameters() {
         return this.parameters;
     }
 

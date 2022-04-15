@@ -24,7 +24,7 @@ public final class FirewallSubnetMapping {
      * The unique identifier for the subnet.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

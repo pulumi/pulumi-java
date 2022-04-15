@@ -44,7 +44,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return Amazon Resource Name (ARN) of the organization conformance pack.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return Amazon S3 bucket where AWS Config stores conformance pack templates. Delivery bucket must begin with `awsconfigconforms` prefix. Maximum length of 63.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3Bucket() {
+    public Output</* @Nullable */ String> deliveryS3Bucket() {
         return this.deliveryS3Bucket;
     }
     /**
@@ -72,7 +72,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return The prefix for the Amazon S3 bucket. Maximum length of 1024.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryS3KeyPrefix() {
+    public Output</* @Nullable */ String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix;
     }
     /**
@@ -86,7 +86,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return Set of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack. Maximum of 1000 accounts.
      * 
      */
-    public Output</* @Nullable */ List<String>> getExcludedAccounts() {
+    public Output</* @Nullable */ List<String>> excludedAccounts() {
         return this.excludedAccounts;
     }
     /**
@@ -100,7 +100,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the `template_body` or in the template stored in Amazon S3 if using `template_s3_uri`.
      * 
      */
-    public Output</* @Nullable */ List<OrganizationConformancePackInputParameter>> getInputParameters() {
+    public Output</* @Nullable */ List<OrganizationConformancePackInputParameter>> inputParameters() {
         return this.inputParameters;
     }
     /**
@@ -114,7 +114,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return The name of the organization conformance pack. Must begin with a letter and contain from 1 to 128 alphanumeric characters and hyphens.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return A string containing full conformance pack template body. Maximum length of 51200. Drift detection is not possible with this argument.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateBody() {
+    public Output</* @Nullable */ String> templateBody() {
         return this.templateBody;
     }
     /**
@@ -142,7 +142,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @return Location of file, e.g., `s3://bucketname/prefix`, containing the template body. The uri must point to the conformance pack template that is located in an Amazon S3 bucket in the same region as the conformance pack. Maximum length of 1024. Drift detection is not possible with this argument.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateS3Uri() {
+    public Output</* @Nullable */ String> templateS3Uri() {
         return this.templateS3Uri;
     }
 

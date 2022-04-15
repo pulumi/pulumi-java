@@ -20,7 +20,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -31,14 +31,14 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
       private final Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -49,7 +49,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userGroupId", required=true)
       private final Output<String> userGroupId;
 
-    public Output<String> getUserGroupId() {
+    public Output<String> userGroupId() {
         return this.userGroupId;
     }
 
@@ -60,7 +60,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> getUserIds() {
+    public Output<List<String>> userIds() {
         return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 

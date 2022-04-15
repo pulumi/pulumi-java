@@ -40,21 +40,21 @@ public final class QueueReservationPlanSettings {
      * The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
      * 
     */
-    public String getCommitment() {
+    public String commitment() {
         return this.commitment;
     }
     /**
      * Specifies whether the term of your reserved queue pricing plan. Valid values are `AUTO_RENEW` or `EXPIRE`.
      * 
     */
-    public String getRenewalType() {
+    public String renewalType() {
         return this.renewalType;
     }
     /**
      * Specifies the number of reserved transcode slots (RTS) for queue.
      * 
     */
-    public Integer getReservedSlots() {
+    public Integer reservedSlots() {
         return this.reservedSlots;
     }
 

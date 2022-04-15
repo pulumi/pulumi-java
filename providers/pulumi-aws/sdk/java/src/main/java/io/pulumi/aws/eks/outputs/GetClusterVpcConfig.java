@@ -69,49 +69,49 @@ public final class GetClusterVpcConfig {
      * The cluster security group that was created by Amazon EKS for the cluster.
      * 
     */
-    public String getClusterSecurityGroupId() {
+    public String clusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
     /**
      * Indicates whether or not the Amazon EKS private API server endpoint is enabled.
      * 
     */
-    public Boolean getEndpointPrivateAccess() {
+    public Boolean endpointPrivateAccess() {
         return this.endpointPrivateAccess;
     }
     /**
      * Indicates whether or not the Amazon EKS public API server endpoint is enabled.
      * 
     */
-    public Boolean getEndpointPublicAccess() {
+    public Boolean endpointPublicAccess() {
         return this.endpointPublicAccess;
     }
     /**
      * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
      * 
     */
-    public List<String> getPublicAccessCidrs() {
+    public List<String> publicAccessCidrs() {
         return this.publicAccessCidrs;
     }
     /**
      * List of security group IDs
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * List of subnet IDs
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
      * The VPC associated with your cluster.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

@@ -71,48 +71,48 @@ public final class GetCachePolicyResult {
      * A comment to describe the cache policy.
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
      * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
     */
-    public Integer getDefaultTtl() {
+    public Integer defaultTtl() {
         return this.defaultTtl;
     }
     /**
      * The current version of the cache policy.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
     */
-    public Integer getMaxTtl() {
+    public Integer maxTtl() {
         return this.maxTtl;
     }
     /**
      * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
     */
-    public Integer getMinTtl() {
+    public Integer minTtl() {
         return this.minTtl;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
      * 
     */
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> getParametersInCacheKeyAndForwardedToOrigins() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins() {
         return this.parametersInCacheKeyAndForwardedToOrigins;
     }
 

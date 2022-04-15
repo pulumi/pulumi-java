@@ -42,7 +42,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * @return Caching behavior. Valid values are `FULL_REQUEST_CACHING` and `PER_RESOLVER_CACHING`.
      * 
      */
-    public Output<String> getApiCachingBehavior() {
+    public Output<String> apiCachingBehavior() {
         return this.apiCachingBehavior;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * @return The GraphQL API ID.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * @return At-rest encryption flag for cache. You cannot update this setting after creation.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAtRestEncryptionEnabled() {
+    public Output</* @Nullable */ Boolean> atRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * @return Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTransitEncryptionEnabled() {
+    public Output</* @Nullable */ Boolean> transitEncryptionEnabled() {
         return this.transitEncryptionEnabled;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * @return TTL in seconds for cache entries.
      * 
      */
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl;
     }
     /**
@@ -112,7 +112,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * @return The cache instance type. Valid values are `SMALL`, `MEDIUM`, `LARGE`, `XLARGE`, `LARGE_2X`, `LARGE_4X`, `LARGE_8X`, `LARGE_12X`, `T2_SMALL`, `T2_MEDIUM`, `R4_LARGE`, `R4_XLARGE`, `R4_2XLARGE`, `R4_4XLARGE`, `R4_8XLARGE`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

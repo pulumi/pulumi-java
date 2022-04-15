@@ -23,7 +23,7 @@ public final class PlanRuleCopyActionGetArgs extends io.pulumi.resources.Resourc
     @Import(name="destinationVaultArn", required=true)
       private final Output<String> destinationVaultArn;
 
-    public Output<String> getDestinationVaultArn() {
+    public Output<String> destinationVaultArn() {
         return this.destinationVaultArn;
     }
 
@@ -34,7 +34,7 @@ public final class PlanRuleCopyActionGetArgs extends io.pulumi.resources.Resourc
     @Import(name="lifecycle")
       private final @Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle;
 
-    public Output<PlanRuleCopyActionLifecycleGetArgs> getLifecycle() {
+    public Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle() {
         return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 

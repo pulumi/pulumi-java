@@ -27,7 +27,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
+    public Output<String> dateCreated() {
         return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
@@ -49,7 +49,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> getDistributionConfigurationArn() {
+    public Output<String> distributionConfigurationArn() {
         return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
     }
 
@@ -60,7 +60,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> getEnhancedImageMetadataEnabled() {
+    public Output<Boolean> enhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
     }
 
@@ -71,7 +71,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
 
-    public Output<String> getImageRecipeArn() {
+    public Output<String> imageRecipeArn() {
         return this.imageRecipeArn == null ? Codegen.empty() : this.imageRecipeArn;
     }
 
@@ -82,7 +82,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
-    public Output<ImageImageTestsConfigurationGetArgs> getImageTestsConfiguration() {
+    public Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration() {
         return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
     }
 
@@ -93,7 +93,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Output<String> getInfrastructureConfigurationArn() {
+    public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn == null ? Codegen.empty() : this.infrastructureConfigurationArn;
     }
 
@@ -104,7 +104,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 
@@ -126,7 +126,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputResources")
       private final @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
 
-    public Output<List<ImageOutputResourceGetArgs>> getOutputResources() {
+    public Output<List<ImageOutputResourceGetArgs>> outputResources() {
         return this.outputResources == null ? Codegen.empty() : this.outputResources;
     }
 
@@ -137,7 +137,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -148,7 +148,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -159,7 +159,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -170,7 +170,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

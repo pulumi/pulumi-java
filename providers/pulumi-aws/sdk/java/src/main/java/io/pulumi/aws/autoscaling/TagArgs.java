@@ -22,7 +22,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName", required=true)
       private final Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag", required=true)
       private final Output<TagTagArgs> tag;
 
-    public Output<TagTagArgs> getTag() {
+    public Output<TagTagArgs> tag() {
         return this.tag;
     }
 

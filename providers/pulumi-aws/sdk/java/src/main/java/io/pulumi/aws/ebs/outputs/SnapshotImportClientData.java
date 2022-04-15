@@ -49,28 +49,28 @@ public final class SnapshotImportClientData {
      * A user-defined comment about the disk upload.
      * 
     */
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * The time that the disk upload ends.
      * 
     */
-    public Optional<String> getUploadEnd() {
+    public Optional<String> uploadEnd() {
         return Optional.ofNullable(this.uploadEnd);
     }
     /**
      * The size of the uploaded disk image, in GiB.
      * 
     */
-    public Optional<Double> getUploadSize() {
+    public Optional<Double> uploadSize() {
         return Optional.ofNullable(this.uploadSize);
     }
     /**
      * The time that the disk upload starts.
      * 
     */
-    public Optional<String> getUploadStart() {
+    public Optional<String> uploadStart() {
         return Optional.ofNullable(this.uploadStart);
     }
 

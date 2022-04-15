@@ -57,35 +57,35 @@ public final class TaskDefinitionVolumeDockerVolumeConfiguration {
      * If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
      * 
     */
-    public Optional<Boolean> getAutoprovision() {
+    public Optional<Boolean> autoprovision() {
         return Optional.ofNullable(this.autoprovision);
     }
     /**
      * Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
      * 
     */
-    public Optional<String> getDriver() {
+    public Optional<String> driver() {
         return Optional.ofNullable(this.driver);
     }
     /**
      * Map of Docker driver specific options.
      * 
     */
-    public Map<String,String> getDriverOpts() {
+    public Map<String,String> driverOpts() {
         return this.driverOpts == null ? Map.of() : this.driverOpts;
     }
     /**
      * Map of custom metadata to add to your Docker volume.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * Scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
      * 
     */
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
 

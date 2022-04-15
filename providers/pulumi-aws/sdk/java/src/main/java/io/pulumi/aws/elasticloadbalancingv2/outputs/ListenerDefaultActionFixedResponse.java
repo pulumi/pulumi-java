@@ -41,21 +41,21 @@ public final class ListenerDefaultActionFixedResponse {
      * Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * Message body.
      * 
     */
-    public Optional<String> getMessageBody() {
+    public Optional<String> messageBody() {
         return Optional.ofNullable(this.messageBody);
     }
     /**
      * HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
      * 
     */
-    public Optional<String> getStatusCode() {
+    public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
 

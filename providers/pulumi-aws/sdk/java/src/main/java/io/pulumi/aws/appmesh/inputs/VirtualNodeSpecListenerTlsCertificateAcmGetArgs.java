@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsCertificateAcmGetArgs extends io.pu
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 

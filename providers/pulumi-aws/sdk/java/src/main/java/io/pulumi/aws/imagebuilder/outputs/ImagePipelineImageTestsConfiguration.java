@@ -35,14 +35,14 @@ public final class ImagePipelineImageTestsConfiguration {
      * Whether image tests are enabled. Defaults to `true`.
      * 
     */
-    public Optional<Boolean> getImageTestsEnabled() {
+    public Optional<Boolean> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
     /**
      * Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
      * 
     */
-    public Optional<Integer> getTimeoutMinutes() {
+    public Optional<Integer> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }
 

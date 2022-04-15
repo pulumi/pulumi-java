@@ -17,14 +17,14 @@ public final class OpenZfsVolumeOriginSnapshotGetArgs extends io.pulumi.resource
     @Import(name="copyStrategy", required=true)
       private final Output<String> copyStrategy;
 
-    public Output<String> getCopyStrategy() {
+    public Output<String> copyStrategy() {
         return this.copyStrategy;
     }
 
     @Import(name="snapshotArn", required=true)
       private final Output<String> snapshotArn;
 
-    public Output<String> getSnapshotArn() {
+    public Output<String> snapshotArn() {
         return this.snapshotArn;
     }
 

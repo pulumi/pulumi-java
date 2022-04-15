@@ -23,7 +23,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
     @Import(name="runtimeEnvironmentVariables")
       private final @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
 
-    public Output<Map<String,String>> getRuntimeEnvironmentVariables() {
+    public Output<Map<String,String>> runtimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Codegen.empty() : this.runtimeEnvironmentVariables;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
     @Import(name="startCommand")
       private final @Nullable Output<String> startCommand;
 
-    public Output<String> getStartCommand() {
+    public Output<String> startCommand() {
         return this.startCommand == null ? Codegen.empty() : this.startCommand;
     }
 

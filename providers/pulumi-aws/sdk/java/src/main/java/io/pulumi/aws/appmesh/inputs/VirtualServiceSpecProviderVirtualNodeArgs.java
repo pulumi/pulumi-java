@@ -21,7 +21,7 @@ public final class VirtualServiceSpecProviderVirtualNodeArgs extends io.pulumi.r
     @Import(name="virtualNodeName", required=true)
       private final Output<String> virtualNodeName;
 
-    public Output<String> getVirtualNodeName() {
+    public Output<String> virtualNodeName() {
         return this.virtualNodeName;
     }
 

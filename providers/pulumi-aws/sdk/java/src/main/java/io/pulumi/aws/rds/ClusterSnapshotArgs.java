@@ -23,7 +23,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dbClusterSnapshotIdentifier", required=true)
       private final Output<String> dbClusterSnapshotIdentifier;
 
-    public Output<String> getDbClusterSnapshotIdentifier() {
+    public Output<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

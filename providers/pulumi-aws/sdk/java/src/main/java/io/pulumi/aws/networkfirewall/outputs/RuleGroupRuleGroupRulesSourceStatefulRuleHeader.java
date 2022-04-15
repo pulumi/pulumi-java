@@ -60,42 +60,42 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
      * The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
      * 
     */
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
     /**
      * The destination port to inspect for. To match with any address, specify `ANY`.
      * 
     */
-    public String getDestinationPort() {
+    public String destinationPort() {
         return this.destinationPort;
     }
     /**
      * The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * The source port to inspect for. To match with any address, specify `ANY`.
      * 
     */
-    public String getSourcePort() {
+    public String sourcePort() {
         return this.sourcePort;
     }
 

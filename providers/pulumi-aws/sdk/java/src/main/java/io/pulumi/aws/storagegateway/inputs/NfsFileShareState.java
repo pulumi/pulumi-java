@@ -27,7 +27,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> getAuditDestinationArn() {
+    public Output<String> auditDestinationArn() {
         return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
     }
 
@@ -49,7 +49,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheAttributes")
       private final @Nullable Output<NfsFileShareCacheAttributesGetArgs> cacheAttributes;
 
-    public Output<NfsFileShareCacheAttributesGetArgs> getCacheAttributes() {
+    public Output<NfsFileShareCacheAttributesGetArgs> cacheAttributes() {
         return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
     }
 
@@ -60,7 +60,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientLists")
       private final @Nullable Output<List<String>> clientLists;
 
-    public Output<List<String>> getClientLists() {
+    public Output<List<String>> clientLists() {
         return this.clientLists == null ? Codegen.empty() : this.clientLists;
     }
 
@@ -71,7 +71,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultStorageClass")
       private final @Nullable Output<String> defaultStorageClass;
 
-    public Output<String> getDefaultStorageClass() {
+    public Output<String> defaultStorageClass() {
         return this.defaultStorageClass == null ? Codegen.empty() : this.defaultStorageClass;
     }
 
@@ -82,7 +82,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileShareName")
       private final @Nullable Output<String> fileShareName;
 
-    public Output<String> getFileShareName() {
+    public Output<String> fileShareName() {
         return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
     }
 
@@ -93,7 +93,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileshareId")
       private final @Nullable Output<String> fileshareId;
 
-    public Output<String> getFileshareId() {
+    public Output<String> fileshareId() {
         return this.fileshareId == null ? Codegen.empty() : this.fileshareId;
     }
 
@@ -104,7 +104,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayArn")
       private final @Nullable Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
     }
 
@@ -115,7 +115,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="guessMimeTypeEnabled")
       private final @Nullable Output<Boolean> guessMimeTypeEnabled;
 
-    public Output<Boolean> getGuessMimeTypeEnabled() {
+    public Output<Boolean> guessMimeTypeEnabled() {
         return this.guessMimeTypeEnabled == null ? Codegen.empty() : this.guessMimeTypeEnabled;
     }
 
@@ -126,7 +126,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsEncrypted")
       private final @Nullable Output<Boolean> kmsEncrypted;
 
-    public Output<Boolean> getKmsEncrypted() {
+    public Output<Boolean> kmsEncrypted() {
         return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
     }
 
@@ -137,7 +137,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -148,7 +148,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationArn")
       private final @Nullable Output<String> locationArn;
 
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn == null ? Codegen.empty() : this.locationArn;
     }
 
@@ -159,7 +159,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nfsFileShareDefaults")
       private final @Nullable Output<NfsFileShareNfsFileShareDefaultsGetArgs> nfsFileShareDefaults;
 
-    public Output<NfsFileShareNfsFileShareDefaultsGetArgs> getNfsFileShareDefaults() {
+    public Output<NfsFileShareNfsFileShareDefaultsGetArgs> nfsFileShareDefaults() {
         return this.nfsFileShareDefaults == null ? Codegen.empty() : this.nfsFileShareDefaults;
     }
 
@@ -170,7 +170,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationPolicy")
       private final @Nullable Output<String> notificationPolicy;
 
-    public Output<String> getNotificationPolicy() {
+    public Output<String> notificationPolicy() {
         return this.notificationPolicy == null ? Codegen.empty() : this.notificationPolicy;
     }
 
@@ -181,7 +181,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectAcl")
       private final @Nullable Output<String> objectAcl;
 
-    public Output<String> getObjectAcl() {
+    public Output<String> objectAcl() {
         return this.objectAcl == null ? Codegen.empty() : this.objectAcl;
     }
 
@@ -192,7 +192,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -203,7 +203,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -214,7 +214,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;
 
-    public Output<Boolean> getRequesterPays() {
+    public Output<Boolean> requesterPays() {
         return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
     }
 
@@ -225,7 +225,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -236,7 +236,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="squash")
       private final @Nullable Output<String> squash;
 
-    public Output<String> getSquash() {
+    public Output<String> squash() {
         return this.squash == null ? Codegen.empty() : this.squash;
     }
 
@@ -247,7 +247,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -258,7 +258,7 @@ public final class NfsFileShareState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -21,7 +21,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
     @Import(name="resolverQueryLogConfigId", required=true)
       private final Output<String> resolverQueryLogConfigId;
 
-    public Output<String> getResolverQueryLogConfigId() {
+    public Output<String> resolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
     }
 
@@ -32,7 +32,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 

@@ -27,7 +27,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -38,7 +38,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="eventbridge")
       private final @Nullable Output<Boolean> eventbridge;
 
-    public Output<Boolean> getEventbridge() {
+    public Output<Boolean> eventbridge() {
         return this.eventbridge == null ? Codegen.empty() : this.eventbridge;
     }
 
@@ -49,7 +49,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="lambdaFunctions")
       private final @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
 
-    public Output<List<BucketNotificationLambdaFunctionArgs>> getLambdaFunctions() {
+    public Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions() {
         return this.lambdaFunctions == null ? Codegen.empty() : this.lambdaFunctions;
     }
 
@@ -60,7 +60,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queues")
       private final @Nullable Output<List<BucketNotificationQueueArgs>> queues;
 
-    public Output<List<BucketNotificationQueueArgs>> getQueues() {
+    public Output<List<BucketNotificationQueueArgs>> queues() {
         return this.queues == null ? Codegen.empty() : this.queues;
     }
 
@@ -71,7 +71,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="topics")
       private final @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
-    public Output<List<BucketNotificationTopicArgs>> getTopics() {
+    public Output<List<BucketNotificationTopicArgs>> topics() {
         return this.topics == null ? Codegen.empty() : this.topics;
     }
 

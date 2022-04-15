@@ -24,7 +24,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="aggregation")
       private final @Nullable Output<String> aggregation;
 
-    public Output<String> getAggregation() {
+    public Output<String> aggregation() {
         return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
@@ -35,7 +35,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -46,7 +46,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
@@ -57,7 +57,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="protectionGroupArn")
       private final @Nullable Output<String> protectionGroupArn;
 
-    public Output<String> getProtectionGroupArn() {
+    public Output<String> protectionGroupArn() {
         return this.protectionGroupArn == null ? Codegen.empty() : this.protectionGroupArn;
     }
 
@@ -68,7 +68,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="protectionGroupId")
       private final @Nullable Output<String> protectionGroupId;
 
-    public Output<String> getProtectionGroupId() {
+    public Output<String> protectionGroupId() {
         return this.protectionGroupId == null ? Codegen.empty() : this.protectionGroupId;
     }
 
@@ -79,7 +79,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -90,7 +90,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

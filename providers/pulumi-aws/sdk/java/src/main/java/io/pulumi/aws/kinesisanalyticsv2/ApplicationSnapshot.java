@@ -42,7 +42,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
      * 
      */
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
     /**
@@ -56,7 +56,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The current application version ID when the snapshot was created.
      * 
      */
-    public Output<Integer> getApplicationVersionId() {
+    public Output<Integer> applicationVersionId() {
         return this.applicationVersionId;
     }
     /**
@@ -70,7 +70,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The timestamp of the application snapshot.
      * 
      */
-    public Output<String> getSnapshotCreationTimestamp() {
+    public Output<String> snapshotCreationTimestamp() {
         return this.snapshotCreationTimestamp;
     }
     /**
@@ -84,7 +84,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @return The name of the application snapshot.
      * 
      */
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName;
     }
 

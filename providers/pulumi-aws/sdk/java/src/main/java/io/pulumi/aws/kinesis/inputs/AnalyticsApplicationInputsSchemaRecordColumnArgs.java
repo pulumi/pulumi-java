@@ -22,7 +22,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     @Import(name="mapping")
       private final @Nullable Output<String> mapping;
 
-    public Output<String> getMapping() {
+    public Output<String> mapping() {
         return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 
@@ -33,7 +33,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,7 +44,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     @Import(name="sqlType", required=true)
       private final Output<String> sqlType;
 
-    public Output<String> getSqlType() {
+    public Output<String> sqlType() {
         return this.sqlType;
     }
 

@@ -23,7 +23,7 @@ public final class EventSourceMappingFilterCriteriaArgs extends io.pulumi.resour
     @Import(name="filters")
       private final @Nullable Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters;
 
-    public Output<List<EventSourceMappingFilterCriteriaFilterArgs>> getFilters() {
+    public Output<List<EventSourceMappingFilterCriteriaFilterArgs>> filters() {
         return this.filters == null ? Codegen.empty() : this.filters;
     }
 

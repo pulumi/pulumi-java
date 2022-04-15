@@ -19,7 +19,7 @@ public final class GetSecretRotationArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="secretId", required=true)
       private final String secretId;
 
-    public String getSecretId() {
+    public String secretId() {
         return this.secretId;
     }
 

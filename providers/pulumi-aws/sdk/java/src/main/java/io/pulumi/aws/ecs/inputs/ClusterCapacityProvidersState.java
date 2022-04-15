@@ -24,7 +24,7 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
     @Import(name="capacityProviders")
       private final @Nullable Output<List<String>> capacityProviders;
 
-    public Output<List<String>> getCapacityProviders() {
+    public Output<List<String>> capacityProviders() {
         return this.capacityProviders == null ? Codegen.empty() : this.capacityProviders;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
     @Import(name="defaultCapacityProviderStrategies")
       private final @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
 
-    public Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> getDefaultCapacityProviderStrategies() {
+    public Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies == null ? Codegen.empty() : this.defaultCapacityProviderStrategies;
     }
 

@@ -24,7 +24,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerFunctionArn", required=true)
       private final Output<String> authorizerFunctionArn;
 
-    public Output<String> getAuthorizerFunctionArn() {
+    public Output<String> authorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
 
@@ -35,7 +35,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signingDisabled")
       private final @Nullable Output<Boolean> signingDisabled;
 
-    public Output<Boolean> getSigningDisabled() {
+    public Output<Boolean> signingDisabled() {
         return this.signingDisabled == null ? Codegen.empty() : this.signingDisabled;
     }
 
@@ -57,7 +57,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -68,7 +68,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenKeyName")
       private final @Nullable Output<String> tokenKeyName;
 
-    public Output<String> getTokenKeyName() {
+    public Output<String> tokenKeyName() {
         return this.tokenKeyName == null ? Codegen.empty() : this.tokenKeyName;
     }
 
@@ -79,7 +79,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenSigningPublicKeys")
       private final @Nullable Output<Map<String,String>> tokenSigningPublicKeys;
 
-    public Output<Map<String,String>> getTokenSigningPublicKeys() {
+    public Output<Map<String,String>> tokenSigningPublicKeys() {
         return this.tokenSigningPublicKeys == null ? Codegen.empty() : this.tokenSigningPublicKeys;
     }
 

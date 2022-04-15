@@ -54,32 +54,32 @@ public final class GetOrderableDbInstanceResult {
      * Availability zones where the instance is available.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public Optional<String> getEngine() {
+    public Optional<String> engine() {
         return Optional.ofNullable(this.engine);
     }
-    public String getEngineVersion() {
+    public String engineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getInstanceClass() {
+    public String instanceClass() {
         return this.instanceClass;
     }
-    public Optional<String> getLicenseModel() {
+    public Optional<String> licenseModel() {
         return Optional.ofNullable(this.licenseModel);
     }
-    public List<String> getPreferredInstanceClasses() {
+    public List<String> preferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
     }
-    public Boolean getVpc() {
+    public Boolean vpc() {
         return this.vpc;
     }
 

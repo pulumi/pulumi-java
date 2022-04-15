@@ -24,7 +24,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementGetArgs extends
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementGetArgs extends
     @Import(name="excludedRules")
       private final @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs>> excludedRules;
 
-    public Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs>> getExcludedRules() {
+    public Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs>> excludedRules() {
         return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
     }
 

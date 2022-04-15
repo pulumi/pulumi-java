@@ -27,7 +27,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="egress")
       private final @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
 
-    public Output<List<DefaultSecurityGroupEgressArgs>> getEgress() {
+    public Output<List<DefaultSecurityGroupEgressArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -38,14 +38,14 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="ingress")
       private final @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
 
-    public Output<List<DefaultSecurityGroupIngressArgs>> getIngress() {
+    public Output<List<DefaultSecurityGroupIngressArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     @Import(name="revokeRulesOnDelete")
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
-    public Output<Boolean> getRevokeRulesOnDelete() {
+    public Output<Boolean> revokeRulesOnDelete() {
         return this.revokeRulesOnDelete == null ? Codegen.empty() : this.revokeRulesOnDelete;
     }
 
@@ -56,7 +56,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

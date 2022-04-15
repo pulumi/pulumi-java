@@ -23,7 +23,7 @@ public final class VirtualNodeSpecServiceDiscoveryGetArgs extends io.pulumi.reso
     @Import(name="awsCloudMap")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap;
 
-    public Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> getAwsCloudMap() {
+    public Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap() {
         return this.awsCloudMap == null ? Codegen.empty() : this.awsCloudMap;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecServiceDiscoveryGetArgs extends io.pulumi.reso
     @Import(name="dns")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns;
 
-    public Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> getDns() {
+    public Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns() {
         return this.dns == null ? Codegen.empty() : this.dns;
     }
 

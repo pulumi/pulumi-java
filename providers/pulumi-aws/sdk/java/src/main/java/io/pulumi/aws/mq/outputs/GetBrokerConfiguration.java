@@ -21,10 +21,10 @@ public final class GetBrokerConfiguration {
         this.revision = revision;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Integer getRevision() {
+    public Integer revision() {
         return this.revision;
     }
 

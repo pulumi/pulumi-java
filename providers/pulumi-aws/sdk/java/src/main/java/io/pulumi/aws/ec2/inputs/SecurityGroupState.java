@@ -27,7 +27,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="egress")
       private final @Nullable Output<List<SecurityGroupEgressGetArgs>> egress;
 
-    public Output<List<SecurityGroupEgressGetArgs>> getEgress() {
+    public Output<List<SecurityGroupEgressGetArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -60,7 +60,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
       private final @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
-    public Output<List<SecurityGroupIngressGetArgs>> getIngress() {
+    public Output<List<SecurityGroupIngressGetArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -71,7 +71,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -93,7 +93,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -104,7 +104,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="revokeRulesOnDelete")
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
-    public Output<Boolean> getRevokeRulesOnDelete() {
+    public Output<Boolean> revokeRulesOnDelete() {
         return this.revokeRulesOnDelete == null ? Codegen.empty() : this.revokeRulesOnDelete;
     }
 
@@ -115,7 +115,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -126,7 +126,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -137,7 +137,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

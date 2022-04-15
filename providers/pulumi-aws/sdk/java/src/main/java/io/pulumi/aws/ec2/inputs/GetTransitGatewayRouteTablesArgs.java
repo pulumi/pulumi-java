@@ -24,7 +24,7 @@ public final class GetTransitGatewayRouteTablesArgs extends io.pulumi.resources.
     @Import(name="filters")
       private final @Nullable List<GetTransitGatewayRouteTablesFilter> filters;
 
-    public List<GetTransitGatewayRouteTablesFilter> getFilters() {
+    public List<GetTransitGatewayRouteTablesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -36,7 +36,7 @@ public final class GetTransitGatewayRouteTablesArgs extends io.pulumi.resources.
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

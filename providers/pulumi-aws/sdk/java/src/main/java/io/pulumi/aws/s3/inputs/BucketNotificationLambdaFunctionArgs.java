@@ -23,7 +23,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     @Import(name="events", required=true)
       private final Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events;
     }
 
@@ -34,7 +34,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     @Import(name="filterPrefix")
       private final @Nullable Output<String> filterPrefix;
 
-    public Output<String> getFilterPrefix() {
+    public Output<String> filterPrefix() {
         return this.filterPrefix == null ? Codegen.empty() : this.filterPrefix;
     }
 
@@ -45,7 +45,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     @Import(name="filterSuffix")
       private final @Nullable Output<String> filterSuffix;
 
-    public Output<String> getFilterSuffix() {
+    public Output<String> filterSuffix() {
         return this.filterSuffix == null ? Codegen.empty() : this.filterSuffix;
     }
 
@@ -56,7 +56,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -67,7 +67,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     @Import(name="lambdaFunctionArn")
       private final @Nullable Output<String> lambdaFunctionArn;
 
-    public Output<String> getLambdaFunctionArn() {
+    public Output<String> lambdaFunctionArn() {
         return this.lambdaFunctionArn == null ? Codegen.empty() : this.lambdaFunctionArn;
     }
 

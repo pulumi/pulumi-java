@@ -25,7 +25,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
-    public Output<String> getInputParameters() {
+    public Output<String> inputParameters() {
         return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
@@ -58,7 +58,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
+    public Output<String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
@@ -69,7 +69,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
@@ -91,7 +91,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<RuleScopeGetArgs> scope;
 
-    public Output<RuleScopeGetArgs> getScope() {
+    public Output<RuleScopeGetArgs> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -102,7 +102,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<RuleSourceGetArgs> source;
 
-    public Output<RuleSourceGetArgs> getSource() {
+    public Output<RuleSourceGetArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -113,7 +113,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -124,7 +124,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

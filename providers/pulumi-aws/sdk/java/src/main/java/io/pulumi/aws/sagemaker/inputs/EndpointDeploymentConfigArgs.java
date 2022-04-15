@@ -23,7 +23,7 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="autoRollbackConfiguration")
       private final @Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> autoRollbackConfiguration;
 
-    public Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> getAutoRollbackConfiguration() {
+    public Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> autoRollbackConfiguration() {
         return this.autoRollbackConfiguration == null ? Codegen.empty() : this.autoRollbackConfiguration;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
     @Import(name="blueGreenUpdatePolicy", required=true)
       private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyArgs> blueGreenUpdatePolicy;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyArgs> getBlueGreenUpdatePolicy() {
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyArgs> blueGreenUpdatePolicy() {
         return this.blueGreenUpdatePolicy;
     }
 

@@ -40,7 +40,7 @@ public class OrganizationAdminAccount extends io.pulumi.resources.CustomResource
      * @return The AWS account ID for the account to designate as the delegated Amazon Macie administrator account for the organization.
      * 
      */
-    public Output<String> getAdminAccountId() {
+    public Output<String> adminAccountId() {
         return this.adminAccountId;
     }
 

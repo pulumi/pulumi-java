@@ -42,21 +42,21 @@ public final class ClusterSnapshotCopy {
      * The destination region that you want to copy snapshots to.
      * 
     */
-    public String getDestinationRegion() {
+    public String destinationRegion() {
         return this.destinationRegion;
     }
     /**
      * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
      * 
     */
-    public Optional<String> getGrantName() {
+    public Optional<String> grantName() {
         return Optional.ofNullable(this.grantName);
     }
     /**
      * The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to `7`.
      * 
     */
-    public Optional<Integer> getRetentionPeriod() {
+    public Optional<Integer> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
 

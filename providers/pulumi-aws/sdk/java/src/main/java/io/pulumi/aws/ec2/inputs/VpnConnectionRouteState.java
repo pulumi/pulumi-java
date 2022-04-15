@@ -22,7 +22,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -33,7 +33,7 @@ public final class VpnConnectionRouteState extends io.pulumi.resources.ResourceA
     @Import(name="vpnConnectionId")
       private final @Nullable Output<String> vpnConnectionId;
 
-    public Output<String> getVpnConnectionId() {
+    public Output<String> vpnConnectionId() {
         return this.vpnConnectionId == null ? Codegen.empty() : this.vpnConnectionId;
     }
 

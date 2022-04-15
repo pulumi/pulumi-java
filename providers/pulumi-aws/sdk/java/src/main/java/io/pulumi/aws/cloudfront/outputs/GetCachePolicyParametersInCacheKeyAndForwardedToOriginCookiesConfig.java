@@ -34,14 +34,14 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
      * 
     */
-    public String getCookieBehavior() {
+    public String cookieBehavior() {
         return this.cookieBehavior;
     }
     /**
      * Object that contains a list of cookie names. See Items for more information.
      * 
     */
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> getCookies() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies() {
         return this.cookies;
     }
 

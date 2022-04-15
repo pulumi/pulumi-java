@@ -24,7 +24,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     @Import(name="destinations", required=true)
       private final Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations;
 
-    public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> getDestinations() {
+    public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationArgs>> destinations() {
         return this.destinations;
     }
 
@@ -35,7 +35,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleArgs exte
     @Import(name="repositoryFilters")
       private final @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
 
-    public Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> getRepositoryFilters() {
+    public Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterArgs>> repositoryFilters() {
         return this.repositoryFilters == null ? Codegen.empty() : this.repositoryFilters;
     }
 

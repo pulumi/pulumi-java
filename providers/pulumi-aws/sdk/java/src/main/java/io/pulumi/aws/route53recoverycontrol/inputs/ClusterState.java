@@ -24,7 +24,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterEndpoints")
       private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
-    public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
+    public Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints() {
         return this.clusterEndpoints == null ? Codegen.empty() : this.clusterEndpoints;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

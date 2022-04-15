@@ -21,7 +21,7 @@ public final class ApprovalRuleTemplateAssociationArgs extends io.pulumi.resourc
     @Import(name="approvalRuleTemplateName", required=true)
       private final Output<String> approvalRuleTemplateName;
 
-    public Output<String> getApprovalRuleTemplateName() {
+    public Output<String> approvalRuleTemplateName() {
         return this.approvalRuleTemplateName;
     }
 
@@ -32,7 +32,7 @@ public final class ApprovalRuleTemplateAssociationArgs extends io.pulumi.resourc
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 

@@ -22,7 +22,7 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
     @Import(name="maxLength")
       private final @Nullable Output<String> maxLength;
 
-    public Output<String> getMaxLength() {
+    public Output<String> maxLength() {
         return this.maxLength == null ? Codegen.empty() : this.maxLength;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
     @Import(name="minLength")
       private final @Nullable Output<String> minLength;
 
-    public Output<String> getMinLength() {
+    public Output<String> minLength() {
         return this.minLength == null ? Codegen.empty() : this.minLength;
     }
 

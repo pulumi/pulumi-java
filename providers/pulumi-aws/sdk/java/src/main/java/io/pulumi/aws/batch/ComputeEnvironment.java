@@ -50,7 +50,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the compute environment.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -64,7 +64,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getComputeEnvironmentName() {
+    public Output<String> computeEnvironmentName() {
         return this.computeEnvironmentName;
     }
     /**
@@ -78,7 +78,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
      * 
      */
-    public Output<String> getComputeEnvironmentNamePrefix() {
+    public Output<String> computeEnvironmentNamePrefix() {
         return this.computeEnvironmentNamePrefix;
     }
     /**
@@ -92,7 +92,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
      * 
      */
-    public Output</* @Nullable */ ComputeEnvironmentComputeResources> getComputeResources() {
+    public Output</* @Nullable */ ComputeEnvironmentComputeResources> computeResources() {
         return this.computeResources;
     }
     /**
@@ -106,7 +106,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
      * 
      */
-    public Output<String> getEcsClusterArn() {
+    public Output<String> ecsClusterArn() {
         return this.ecsClusterArn;
     }
     /**
@@ -120,7 +120,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
      * 
      */
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
     /**
@@ -134,7 +134,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -148,7 +148,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The current status of the compute environment (for example, CREATING or VALID).
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -162,7 +162,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return A short, human-readable string to provide additional details about the current status of the compute environment.
      * 
      */
-    public Output<String> getStatusReason() {
+    public Output<String> statusReason() {
         return this.statusReason;
     }
     /**
@@ -176,7 +176,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -190,7 +190,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -204,7 +204,7 @@ public class ComputeEnvironment extends io.pulumi.resources.CustomResource {
      * @return The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

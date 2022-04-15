@@ -32,14 +32,14 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
     */
-    public String getRepositoryName() {
+    public String repositoryName() {
         return this.repositoryName;
     }
     /**
      * The service in which this image is registered. Valid values: `ECR`.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

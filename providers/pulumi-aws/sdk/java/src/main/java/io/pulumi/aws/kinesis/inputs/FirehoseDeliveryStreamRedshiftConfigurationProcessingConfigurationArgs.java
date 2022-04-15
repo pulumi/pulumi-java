@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     @Import(name="processors")
       private final @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
+    public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs>> processors() {
         return this.processors == null ? Codegen.empty() : this.processors;
     }
 

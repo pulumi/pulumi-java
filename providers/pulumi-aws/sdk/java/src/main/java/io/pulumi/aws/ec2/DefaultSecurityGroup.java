@@ -58,7 +58,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return ARN of the security group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +72,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Description of this rule.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -86,7 +86,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output<List<DefaultSecurityGroupEgress>> getEgress() {
+    public Output<List<DefaultSecurityGroupEgress>> egress() {
         return this.egress;
     }
     /**
@@ -100,7 +100,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output<List<DefaultSecurityGroupIngress>> getIngress() {
+    public Output<List<DefaultSecurityGroupIngress>> ingress() {
         return this.ingress;
     }
     /**
@@ -114,7 +114,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Name of the security group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,13 +128,13 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Owner ID.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     @Export(name="revokeRulesOnDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> revokeRulesOnDelete;
 
-    public Output</* @Nullable */ Boolean> getRevokeRulesOnDelete() {
+    public Output</* @Nullable */ Boolean> revokeRulesOnDelete() {
         return this.revokeRulesOnDelete;
     }
     /**
@@ -148,7 +148,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -162,7 +162,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -176,7 +176,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * @return VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

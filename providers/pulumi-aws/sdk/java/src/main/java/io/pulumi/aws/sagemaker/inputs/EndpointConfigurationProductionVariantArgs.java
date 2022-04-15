@@ -24,7 +24,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     @Import(name="initialInstanceCount", required=true)
       private final Output<Integer> initialInstanceCount;
 
-    public Output<Integer> getInitialInstanceCount() {
+    public Output<Integer> initialInstanceCount() {
         return this.initialInstanceCount;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     @Import(name="initialVariantWeight")
       private final @Nullable Output<Double> initialVariantWeight;
 
-    public Output<Double> getInitialVariantWeight() {
+    public Output<Double> initialVariantWeight() {
         return this.initialVariantWeight == null ? Codegen.empty() : this.initialVariantWeight;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     @Import(name="modelName", required=true)
       private final Output<String> modelName;
 
-    public Output<String> getModelName() {
+    public Output<String> modelName() {
         return this.modelName;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
     @Import(name="variantName")
       private final @Nullable Output<String> variantName;
 
-    public Output<String> getVariantName() {
+    public Output<String> variantName() {
         return this.variantName == null ? Codegen.empty() : this.variantName;
     }
 

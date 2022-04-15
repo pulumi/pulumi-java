@@ -18,35 +18,35 @@ public final class ClusterClusterCertificateArgs extends io.pulumi.resources.Res
     @Import(name="awsHardwareCertificate")
       private final @Nullable Output<String> awsHardwareCertificate;
 
-    public Output<String> getAwsHardwareCertificate() {
+    public Output<String> awsHardwareCertificate() {
         return this.awsHardwareCertificate == null ? Codegen.empty() : this.awsHardwareCertificate;
     }
 
     @Import(name="clusterCertificate")
       private final @Nullable Output<String> clusterCertificate;
 
-    public Output<String> getClusterCertificate() {
+    public Output<String> clusterCertificate() {
         return this.clusterCertificate == null ? Codegen.empty() : this.clusterCertificate;
     }
 
     @Import(name="clusterCsr")
       private final @Nullable Output<String> clusterCsr;
 
-    public Output<String> getClusterCsr() {
+    public Output<String> clusterCsr() {
         return this.clusterCsr == null ? Codegen.empty() : this.clusterCsr;
     }
 
     @Import(name="hsmCertificate")
       private final @Nullable Output<String> hsmCertificate;
 
-    public Output<String> getHsmCertificate() {
+    public Output<String> hsmCertificate() {
         return this.hsmCertificate == null ? Codegen.empty() : this.hsmCertificate;
     }
 
     @Import(name="manufacturerHardwareCertificate")
       private final @Nullable Output<String> manufacturerHardwareCertificate;
 
-    public Output<String> getManufacturerHardwareCertificate() {
+    public Output<String> manufacturerHardwareCertificate() {
         return this.manufacturerHardwareCertificate == null ? Codegen.empty() : this.manufacturerHardwareCertificate;
     }
 

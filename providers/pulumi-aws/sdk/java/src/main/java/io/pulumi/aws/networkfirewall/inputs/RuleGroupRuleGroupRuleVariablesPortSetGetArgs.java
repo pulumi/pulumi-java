@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
     @Import(name="portSet", required=true)
       private final Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
 
-    public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> getPortSet() {
+    public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet() {
         return this.portSet;
     }
 

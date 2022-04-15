@@ -24,7 +24,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceleratorArn")
       private final @Nullable Output<String> acceleratorArn;
 
-    public Output<String> getAcceleratorArn() {
+    public Output<String> acceleratorArn() {
         return this.acceleratorArn == null ? Codegen.empty() : this.acceleratorArn;
     }
 
@@ -35,7 +35,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAffinity")
       private final @Nullable Output<String> clientAffinity;
 
-    public Output<String> getClientAffinity() {
+    public Output<String> clientAffinity() {
         return this.clientAffinity == null ? Codegen.empty() : this.clientAffinity;
     }
 
@@ -46,7 +46,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="portRanges")
       private final @Nullable Output<List<ListenerPortRangeGetArgs>> portRanges;
 
-    public Output<List<ListenerPortRangeGetArgs>> getPortRanges() {
+    public Output<List<ListenerPortRangeGetArgs>> portRanges() {
         return this.portRanges == null ? Codegen.empty() : this.portRanges;
     }
 
@@ -57,7 +57,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

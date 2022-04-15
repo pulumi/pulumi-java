@@ -23,7 +23,7 @@ public final class ListenerDefaultActionForwardStickinessGetArgs extends io.pulu
     @Import(name="duration", required=true)
       private final Output<Integer> duration;
 
-    public Output<Integer> getDuration() {
+    public Output<Integer> duration() {
         return this.duration;
     }
 
@@ -34,7 +34,7 @@ public final class ListenerDefaultActionForwardStickinessGetArgs extends io.pulu
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

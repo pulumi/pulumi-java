@@ -21,7 +21,7 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -32,7 +32,7 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
     @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId;
     }
 

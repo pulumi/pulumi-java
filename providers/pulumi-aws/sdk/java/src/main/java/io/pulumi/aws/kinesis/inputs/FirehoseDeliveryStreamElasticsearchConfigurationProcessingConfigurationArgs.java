@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     @Import(name="processors")
       private final @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
+    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs>> processors() {
         return this.processors == null ? Codegen.empty() : this.processors;
     }
 

@@ -25,7 +25,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="input")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> getInput() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input() {
         return this.input == null ? Codegen.empty() : this.input;
     }
 
@@ -36,7 +36,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="outputs")
       private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs;
 
-    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> getOutputs() {
+    public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs() {
         return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
@@ -47,7 +47,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="referenceDataSource")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> getReferenceDataSource() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource() {
         return this.referenceDataSource == null ? Codegen.empty() : this.referenceDataSource;
     }
 

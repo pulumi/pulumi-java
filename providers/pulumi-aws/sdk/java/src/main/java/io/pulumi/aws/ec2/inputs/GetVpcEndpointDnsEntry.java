@@ -19,7 +19,7 @@ public final class GetVpcEndpointDnsEntry extends io.pulumi.resources.InvokeArgs
     @Import(name="dnsName", required=true)
       private final String dnsName;
 
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVpcEndpointDnsEntry extends io.pulumi.resources.InvokeArgs
     @Import(name="hostedZoneId", required=true)
       private final String hostedZoneId;
 
-    public String getHostedZoneId() {
+    public String hostedZoneId() {
         return this.hostedZoneId;
     }
 

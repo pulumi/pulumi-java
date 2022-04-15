@@ -20,14 +20,14 @@ public final class MysqlLayerCloudwatchConfigurationArgs extends io.pulumi.resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<MysqlLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
-    public Output<List<MysqlLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {
+    public Output<List<MysqlLayerCloudwatchConfigurationLogStreamArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

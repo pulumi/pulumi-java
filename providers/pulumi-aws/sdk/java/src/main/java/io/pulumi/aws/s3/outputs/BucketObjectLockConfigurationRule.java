@@ -24,7 +24,7 @@ public final class BucketObjectLockConfigurationRule {
      * The default retention period that you want to apply to new objects placed in this bucket.
      * 
     */
-    public BucketObjectLockConfigurationRuleDefaultRetention getDefaultRetention() {
+    public BucketObjectLockConfigurationRuleDefaultRetention defaultRetention() {
         return this.defaultRetention;
     }
 

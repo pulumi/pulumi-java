@@ -92,21 +92,21 @@ public final class GetSlotTypeResult {
      * not included as an argument because the resource will add it automatically when updating the slot type.
      * 
     */
-    public String getChecksum() {
+    public String checksum() {
         return this.checksum;
     }
     /**
      * The date when the slot type version was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * A description of the slot type.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
@@ -115,28 +115,28 @@ public final class GetSlotTypeResult {
      * train the machine learning model about the values that it resolves for a slot.
      * 
     */
-    public List<GetSlotTypeEnumerationValue> getEnumerationValues() {
+    public List<GetSlotTypeEnumerationValue> enumerationValues() {
         return this.enumerationValues;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The date when the $LATEST version of this slot type was updated.
      * 
     */
-    public String getLastUpdatedDate() {
+    public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
      * The name of the slot type. The name is not case sensitive.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -146,14 +146,14 @@ public final class GetSlotTypeResult {
      * if there is a resolution list for the slot, otherwise null is returned.
      * 
     */
-    public String getValueSelectionStrategy() {
+    public String valueSelectionStrategy() {
         return this.valueSelectionStrategy;
     }
     /**
      * The version of the slot type.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

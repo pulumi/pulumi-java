@@ -22,7 +22,7 @@ public final class AppResourceSpecGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -33,7 +33,7 @@ public final class AppResourceSpecGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="lifecycleConfigArn")
       private final @Nullable Output<String> lifecycleConfigArn;
 
-    public Output<String> getLifecycleConfigArn() {
+    public Output<String> lifecycleConfigArn() {
         return this.lifecycleConfigArn == null ? Codegen.empty() : this.lifecycleConfigArn;
     }
 
@@ -44,7 +44,7 @@ public final class AppResourceSpecGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sagemakerImageArn")
       private final @Nullable Output<String> sagemakerImageArn;
 
-    public Output<String> getSagemakerImageArn() {
+    public Output<String> sagemakerImageArn() {
         return this.sagemakerImageArn == null ? Codegen.empty() : this.sagemakerImageArn;
     }
 
@@ -55,7 +55,7 @@ public final class AppResourceSpecGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sagemakerImageVersionArn")
       private final @Nullable Output<String> sagemakerImageVersionArn;
 
-    public Output<String> getSagemakerImageVersionArn() {
+    public Output<String> sagemakerImageVersionArn() {
         return this.sagemakerImageVersionArn == null ? Codegen.empty() : this.sagemakerImageVersionArn;
     }
 

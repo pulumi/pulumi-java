@@ -29,19 +29,19 @@ public final class GetClusterClusterCertificates {
         this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
     }
 
-    public String getAwsHardwareCertificate() {
+    public String awsHardwareCertificate() {
         return this.awsHardwareCertificate;
     }
-    public String getClusterCertificate() {
+    public String clusterCertificate() {
         return this.clusterCertificate;
     }
-    public String getClusterCsr() {
+    public String clusterCsr() {
         return this.clusterCsr;
     }
-    public String getHsmCertificate() {
+    public String hsmCertificate() {
         return this.hsmCertificate;
     }
-    public String getManufacturerHardwareCertificate() {
+    public String manufacturerHardwareCertificate() {
         return this.manufacturerHardwareCertificate;
     }
 

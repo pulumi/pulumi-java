@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backendDefaults")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
 
-    public Output<VirtualGatewaySpecBackendDefaultsArgs> getBackendDefaults() {
+    public Output<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults() {
         return this.backendDefaults == null ? Codegen.empty() : this.backendDefaults;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="listener", required=true)
       private final Output<VirtualGatewaySpecListenerArgs> listener;
 
-    public Output<VirtualGatewaySpecListenerArgs> getListener() {
+    public Output<VirtualGatewaySpecListenerArgs> listener() {
         return this.listener;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logging")
       private final @Nullable Output<VirtualGatewaySpecLoggingArgs> logging;
 
-    public Output<VirtualGatewaySpecLoggingArgs> getLogging() {
+    public Output<VirtualGatewaySpecLoggingArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 

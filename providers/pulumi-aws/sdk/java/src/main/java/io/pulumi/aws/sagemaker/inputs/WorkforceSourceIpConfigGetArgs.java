@@ -22,7 +22,7 @@ public final class WorkforceSourceIpConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="cidrs", required=true)
       private final Output<List<String>> cidrs;
 
-    public Output<List<String>> getCidrs() {
+    public Output<List<String>> cidrs() {
         return this.cidrs;
     }
 

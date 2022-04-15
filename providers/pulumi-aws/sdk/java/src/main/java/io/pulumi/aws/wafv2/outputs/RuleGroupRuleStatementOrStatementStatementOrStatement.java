@@ -25,7 +25,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatement {
      * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
     */
-    public List<RuleGroupRuleStatementOrStatementStatementOrStatementStatement> getStatements() {
+    public List<RuleGroupRuleStatementOrStatementStatementOrStatementStatement> statements() {
         return this.statements;
     }
 

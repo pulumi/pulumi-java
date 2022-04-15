@@ -55,41 +55,41 @@ public final class GetInstancesResult {
         this.publicIps = publicIps;
     }
 
-    public List<GetInstancesFilter> getFilters() {
+    public List<GetInstancesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * IDs of instances found through the filter
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public List<String> getInstanceStateNames() {
+    public List<String> instanceStateNames() {
         return this.instanceStateNames == null ? List.of() : this.instanceStateNames;
     }
-    public Map<String,String> getInstanceTags() {
+    public Map<String,String> instanceTags() {
         return this.instanceTags;
     }
     /**
      * Private IP addresses of instances found through the filter
      * 
     */
-    public List<String> getPrivateIps() {
+    public List<String> privateIps() {
         return this.privateIps;
     }
     /**
      * Public IP addresses of instances found through the filter
      * 
     */
-    public List<String> getPublicIps() {
+    public List<String> publicIps() {
         return this.publicIps;
     }
 

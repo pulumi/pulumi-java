@@ -57,35 +57,35 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin {
      * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
     */
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> getCookiesConfigs() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs() {
         return this.cookiesConfigs;
     }
     /**
      * A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
      * 
     */
-    public Boolean getEnableAcceptEncodingBrotli() {
+    public Boolean enableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli;
     }
     /**
      * A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
      * 
     */
-    public Boolean getEnableAcceptEncodingGzip() {
+    public Boolean enableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
     /**
      * Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
     */
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> getHeadersConfigs() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs() {
         return this.headersConfigs;
     }
     /**
      * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
     */
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> getQueryStringsConfigs() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs() {
         return this.queryStringsConfigs;
     }
 

@@ -22,7 +22,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hashKey", required=true)
       private final Output<String> hashKey;
 
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey;
     }
 
@@ -34,7 +34,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="item", required=true)
       private final Output<String> item;
 
-    public Output<String> getItem() {
+    public Output<String> item() {
         return this.item;
     }
 
@@ -45,7 +45,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
-    public Output<String> getRangeKey() {
+    public Output<String> rangeKey() {
         return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
     }
 
@@ -56,7 +56,7 @@ public final class TableItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

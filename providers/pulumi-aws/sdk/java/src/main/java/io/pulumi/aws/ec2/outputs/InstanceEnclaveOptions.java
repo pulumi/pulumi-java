@@ -26,7 +26,7 @@ public final class InstanceEnclaveOptions {
      * Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

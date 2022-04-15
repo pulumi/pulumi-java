@@ -23,7 +23,7 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
     @Import(name="fileFormat")
       private final @Nullable Output<String> fileFormat;
 
-    public Output<String> getFileFormat() {
+    public Output<String> fileFormat() {
         return this.fileFormat == null ? Codegen.empty() : this.fileFormat;
     }
 
@@ -34,7 +34,7 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
     @Import(name="hiveCompatiblePartitions")
       private final @Nullable Output<Boolean> hiveCompatiblePartitions;
 
-    public Output<Boolean> getHiveCompatiblePartitions() {
+    public Output<Boolean> hiveCompatiblePartitions() {
         return this.hiveCompatiblePartitions == null ? Codegen.empty() : this.hiveCompatiblePartitions;
     }
 
@@ -45,7 +45,7 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
     @Import(name="perHourPartition")
       private final @Nullable Output<Boolean> perHourPartition;
 
-    public Output<Boolean> getPerHourPartition() {
+    public Output<Boolean> perHourPartition() {
         return this.perHourPartition == null ? Codegen.empty() : this.perHourPartition;
     }
 

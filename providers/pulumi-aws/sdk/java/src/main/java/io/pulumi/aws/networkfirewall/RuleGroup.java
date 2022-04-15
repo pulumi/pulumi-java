@@ -43,7 +43,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) that identifies the rule group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
      * 
      */
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity;
     }
     /**
@@ -71,7 +71,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A friendly description of the rule group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A friendly name of the rule group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +99,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
      * 
      */
-    public Output<RuleGroupRuleGroup> getRuleGroup() {
+    public Output<RuleGroupRuleGroup> ruleGroup() {
         return this.ruleGroup;
     }
     /**
@@ -113,7 +113,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
      * 
      */
-    public Output</* @Nullable */ String> getRules() {
+    public Output</* @Nullable */ String> rules() {
         return this.rules;
     }
     /**
@@ -127,7 +127,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +141,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -155,7 +155,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -169,7 +169,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * @return A string token used when updating the rule group.
      * 
      */
-    public Output<String> getUpdateToken() {
+    public Output<String> updateToken() {
         return this.updateToken;
     }
 

@@ -22,7 +22,7 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -33,7 +33,7 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 

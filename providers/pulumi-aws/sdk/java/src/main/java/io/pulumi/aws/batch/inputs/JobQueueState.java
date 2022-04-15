@@ -25,7 +25,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeEnvironments")
       private final @Nullable Output<List<String>> computeEnvironments;
 
-    public Output<List<String>> getComputeEnvironments() {
+    public Output<List<String>> computeEnvironments() {
         return this.computeEnvironments == null ? Codegen.empty() : this.computeEnvironments;
     }
 
@@ -49,7 +49,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -72,7 +72,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingPolicyArn")
       private final @Nullable Output<String> schedulingPolicyArn;
 
-    public Output<String> getSchedulingPolicyArn() {
+    public Output<String> schedulingPolicyArn() {
         return this.schedulingPolicyArn == null ? Codegen.empty() : this.schedulingPolicyArn;
     }
 
@@ -83,7 +83,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -94,7 +94,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -105,7 +105,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

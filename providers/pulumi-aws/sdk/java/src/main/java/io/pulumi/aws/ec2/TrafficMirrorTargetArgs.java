@@ -23,7 +23,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
@@ -45,7 +45,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
     @Import(name="networkLoadBalancerArn")
       private final @Nullable Output<String> networkLoadBalancerArn;
 
-    public Output<String> getNetworkLoadBalancerArn() {
+    public Output<String> networkLoadBalancerArn() {
         return this.networkLoadBalancerArn == null ? Codegen.empty() : this.networkLoadBalancerArn;
     }
 
@@ -56,7 +56,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

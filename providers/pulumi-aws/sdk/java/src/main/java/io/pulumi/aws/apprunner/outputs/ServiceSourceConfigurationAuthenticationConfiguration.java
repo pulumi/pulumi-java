@@ -34,14 +34,14 @@ public final class ServiceSourceConfigurationAuthenticationConfiguration {
      * ARN of the IAM role that grants the App Runner service access to a source repository. Required for ECR image repositories (but not for ECR Public)
      * 
     */
-    public Optional<String> getAccessRoleArn() {
+    public Optional<String> accessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
     /**
      * ARN of the App Runner connection that enables the App Runner service to connect to a source repository. Required for GitHub code repositories.
      * 
     */
-    public Optional<String> getConnectionArn() {
+    public Optional<String> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
 

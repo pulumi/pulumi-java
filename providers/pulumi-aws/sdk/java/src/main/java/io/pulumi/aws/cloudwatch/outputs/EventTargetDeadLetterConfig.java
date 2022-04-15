@@ -26,7 +26,7 @@ public final class EventTargetDeadLetterConfig {
      * - ARN of the SQS queue specified as the target for the dead-letter queue.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
 

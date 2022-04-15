@@ -22,7 +22,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterArn", required=true)
       private final Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
 
@@ -33,7 +33,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

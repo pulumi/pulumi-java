@@ -24,7 +24,7 @@ public final class SigningJobSource {
      * A configuration block describing the S3 Destination object: See S3 Destination below for details.
      * 
     */
-    public SigningJobSourceS3 getS3() {
+    public SigningJobSourceS3 s3() {
         return this.s3;
     }
 

@@ -44,7 +44,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Full ARN of the repository.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Encryption configuration for the repository. See below for schema.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryEncryptionConfiguration>> getEncryptionConfigurations() {
+    public Output</* @Nullable */ List<RepositoryEncryptionConfiguration>> encryptionConfigurations() {
         return this.encryptionConfigurations;
     }
     /**
@@ -72,7 +72,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
      * 
      */
-    public Output</* @Nullable */ RepositoryImageScanningConfiguration> getImageScanningConfiguration() {
+    public Output</* @Nullable */ RepositoryImageScanningConfiguration> imageScanningConfiguration() {
         return this.imageScanningConfiguration;
     }
     /**
@@ -86,7 +86,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
      * 
      */
-    public Output</* @Nullable */ String> getImageTagMutability() {
+    public Output</* @Nullable */ String> imageTagMutability() {
         return this.imageTagMutability;
     }
     /**
@@ -100,7 +100,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Name of the repository.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +114,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -128,7 +128,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
      * 
      */
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
@@ -142,7 +142,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +156,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

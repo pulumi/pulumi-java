@@ -22,7 +22,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -55,7 +55,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -66,7 +66,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     @Import(name="syncFormat")
       private final @Nullable Output<String> syncFormat;
 
-    public Output<String> getSyncFormat() {
+    public Output<String> syncFormat() {
         return this.syncFormat == null ? Codegen.empty() : this.syncFormat;
     }
 

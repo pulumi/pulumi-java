@@ -22,7 +22,7 @@ public final class EventTargetDeadLetterConfigGetArgs extends io.pulumi.resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 

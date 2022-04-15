@@ -21,7 +21,7 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterId", required=true)
       private final Output<String> masterId;
 
-    public Output<String> getMasterId() {
+    public Output<String> masterId() {
         return this.masterId;
     }
 

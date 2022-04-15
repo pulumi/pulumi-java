@@ -28,16 +28,16 @@ public final class GetLaunchTemplateBlockDeviceMapping {
         this.virtualName = virtualName;
     }
 
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
-    public List<GetLaunchTemplateBlockDeviceMappingEb> getEbs() {
+    public List<GetLaunchTemplateBlockDeviceMappingEb> ebs() {
         return this.ebs;
     }
-    public String getNoDevice() {
+    public String noDevice() {
         return this.noDevice;
     }
-    public String getVirtualName() {
+    public String virtualName() {
         return this.virtualName;
     }
 

@@ -25,7 +25,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -36,7 +36,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="predicates")
       private final @Nullable Output<List<RulePredicateArgs>> predicates;
 
-    public Output<List<RulePredicateArgs>> getPredicates() {
+    public Output<List<RulePredicateArgs>> predicates() {
         return this.predicates == null ? Codegen.empty() : this.predicates;
     }
 
@@ -58,7 +58,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

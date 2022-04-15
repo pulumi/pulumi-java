@@ -22,7 +22,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -33,7 +33,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     @Import(name="portfolioId", required=true)
       private final Output<String> portfolioId;
 
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
 
@@ -44,7 +44,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     @Import(name="principalArn", required=true)
       private final Output<String> principalArn;
 
-    public Output<String> getPrincipalArn() {
+    public Output<String> principalArn() {
         return this.principalArn;
     }
 
@@ -55,7 +55,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     @Import(name="principalType")
       private final @Nullable Output<String> principalType;
 
-    public Output<String> getPrincipalType() {
+    public Output<String> principalType() {
         return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 

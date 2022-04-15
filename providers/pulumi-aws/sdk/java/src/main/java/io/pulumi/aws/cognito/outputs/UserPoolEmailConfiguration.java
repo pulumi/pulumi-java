@@ -55,35 +55,35 @@ public final class UserPoolEmailConfiguration {
      * Email configuration set name from SES.
      * 
     */
-    public Optional<String> getConfigurationSet() {
+    public Optional<String> configurationSet() {
         return Optional.ofNullable(this.configurationSet);
     }
     /**
      * Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
      * 
     */
-    public Optional<String> getEmailSendingAccount() {
+    public Optional<String> emailSendingAccount() {
         return Optional.ofNullable(this.emailSendingAccount);
     }
     /**
      * Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
      * 
     */
-    public Optional<String> getFromEmailAddress() {
+    public Optional<String> fromEmailAddress() {
         return Optional.ofNullable(this.fromEmailAddress);
     }
     /**
      * REPLY-TO email address.
      * 
     */
-    public Optional<String> getReplyToEmailAddress() {
+    public Optional<String> replyToEmailAddress() {
         return Optional.ofNullable(this.replyToEmailAddress);
     }
     /**
      * ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
      * 
     */
-    public Optional<String> getSourceArn() {
+    public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
 

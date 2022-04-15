@@ -24,7 +24,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
     @Import(name="filters")
       private final @Nullable List<GetVpcEndpointServiceFilter> filters;
 
-    public List<GetVpcEndpointServiceFilter> getFilters() {
+    public List<GetVpcEndpointServiceFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
     @Import(name="service")
       private final @Nullable String service;
 
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
     }
 
@@ -46,7 +46,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
     @Import(name="serviceName")
       private final @Nullable String serviceName;
 
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
     }
 
@@ -57,7 +57,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
     @Import(name="serviceType")
       private final @Nullable String serviceType;
 
-    public Optional<String> getServiceType() {
+    public Optional<String> serviceType() {
         return this.serviceType == null ? Optional.empty() : Optional.ofNullable(this.serviceType);
     }
 
@@ -68,7 +68,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

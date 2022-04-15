@@ -35,14 +35,14 @@ public final class LaunchTemplateInstanceMarketOptions {
      * The market type. Can be `spot`.
      * 
     */
-    public Optional<String> getMarketType() {
+    public Optional<String> marketType() {
         return Optional.ofNullable(this.marketType);
     }
     /**
      * The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
      * 
     */
-    public Optional<LaunchTemplateInstanceMarketOptionsSpotOptions> getSpotOptions() {
+    public Optional<LaunchTemplateInstanceMarketOptionsSpotOptions> spotOptions() {
         return Optional.ofNullable(this.spotOptions);
     }
 

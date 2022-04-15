@@ -22,7 +22,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
     @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
-    public Output<String> getMessageFormat() {
+    public Output<String> messageFormat() {
         return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
@@ -33,7 +33,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -44,7 +44,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
     @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 

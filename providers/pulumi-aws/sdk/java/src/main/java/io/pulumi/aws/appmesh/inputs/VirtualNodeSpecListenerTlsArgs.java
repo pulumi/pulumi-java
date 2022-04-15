@@ -24,7 +24,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends io.pulumi.resources.Re
     @Import(name="certificate", required=true)
       private final Output<VirtualNodeSpecListenerTlsCertificateArgs> certificate;
 
-    public Output<VirtualNodeSpecListenerTlsCertificateArgs> getCertificate() {
+    public Output<VirtualNodeSpecListenerTlsCertificateArgs> certificate() {
         return this.certificate;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends io.pulumi.resources.Re
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends io.pulumi.resources.Re
     @Import(name="validation")
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationArgs> validation;
 
-    public Output<VirtualNodeSpecListenerTlsValidationArgs> getValidation() {
+    public Output<VirtualNodeSpecListenerTlsValidationArgs> validation() {
         return this.validation == null ? Codegen.empty() : this.validation;
     }
 

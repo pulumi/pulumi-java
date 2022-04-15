@@ -57,35 +57,35 @@ public final class GetPolicyDocumentResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Standard JSON policy document rendered based on the arguments above.
      * 
     */
-    public String getJson() {
+    public String json() {
         return this.json;
     }
-    public Optional<String> getOverrideJson() {
+    public Optional<String> overrideJson() {
         return Optional.ofNullable(this.overrideJson);
     }
-    public List<String> getOverridePolicyDocuments() {
+    public List<String> overridePolicyDocuments() {
         return this.overridePolicyDocuments == null ? List.of() : this.overridePolicyDocuments;
     }
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
-    public Optional<String> getSourceJson() {
+    public Optional<String> sourceJson() {
         return Optional.ofNullable(this.sourceJson);
     }
-    public List<String> getSourcePolicyDocuments() {
+    public List<String> sourcePolicyDocuments() {
         return this.sourcePolicyDocuments == null ? List.of() : this.sourcePolicyDocuments;
     }
-    public List<GetPolicyDocumentStatement> getStatements() {
+    public List<GetPolicyDocumentStatement> statements() {
         return this.statements == null ? List.of() : this.statements;
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 
