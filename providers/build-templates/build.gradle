@@ -32,7 +32,7 @@ dependencies {
 
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
-    implementation("io.pulumi:pulumi:0.0.1-SNAPSHOT")
+    implementation("com.pulumi:pulumi:0.0.1-SNAPSHOT")
 
     def junitVersion = "5.7.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
