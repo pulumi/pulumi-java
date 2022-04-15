@@ -26,7 +26,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gcePdKmsKeyName")
       private final @Nullable Output<String> gcePdKmsKeyName;
 
-    public Output<String> getGcePdKmsKeyName() {
+    public Output<String> gcePdKmsKeyName() {
         return this.gcePdKmsKeyName == null ? Codegen.empty() : this.gcePdKmsKeyName;
     }
 

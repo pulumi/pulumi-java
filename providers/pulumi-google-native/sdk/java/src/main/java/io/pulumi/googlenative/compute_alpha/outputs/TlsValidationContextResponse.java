@@ -40,21 +40,21 @@ public final class TlsValidationContextResponse {
      * The path to the file holding the CA certificate to validate the client or server certificate.
      * 
     */
-    public String getCertificatePath() {
+    public String certificatePath() {
         return this.certificatePath;
     }
     /**
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
      * 
     */
-    public SdsConfigResponse getSdsConfig() {
+    public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
     /**
      * Defines how TLS certificates are obtained.
      * 
     */
-    public String getValidationSource() {
+    public String validationSource() {
         return this.validationSource;
     }
 

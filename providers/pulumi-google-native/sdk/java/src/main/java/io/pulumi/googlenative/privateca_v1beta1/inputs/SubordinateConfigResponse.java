@@ -24,7 +24,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="certificateAuthority", required=true)
       private final String certificateAuthority;
 
-    public String getCertificateAuthority() {
+    public String certificateAuthority() {
         return this.certificateAuthority;
     }
 
@@ -35,7 +35,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="pemIssuerChain", required=true)
       private final SubordinateConfigChainResponse pemIssuerChain;
 
-    public SubordinateConfigChainResponse getPemIssuerChain() {
+    public SubordinateConfigChainResponse pemIssuerChain() {
         return this.pemIssuerChain;
     }
 

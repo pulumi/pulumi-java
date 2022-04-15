@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
-    public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
+    public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="columnProperties", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties;
 
-    public List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> getColumnProperties() {
+    public List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties() {
         return this.columnProperties;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="rows", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows;
 
-    public List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> getRows() {
+    public List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows() {
         return this.rows;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="subtitle", required=true)
       private final String subtitle;
 
-    public String getSubtitle() {
+    public String subtitle() {
         return this.subtitle;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse extends
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

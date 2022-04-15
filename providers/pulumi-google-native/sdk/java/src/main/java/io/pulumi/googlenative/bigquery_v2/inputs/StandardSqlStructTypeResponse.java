@@ -16,7 +16,7 @@ public final class StandardSqlStructTypeResponse extends io.pulumi.resources.Inv
     @Import(name="fields", required=true)
       private final List<StandardSqlFieldResponse> fields;
 
-    public List<StandardSqlFieldResponse> getFields() {
+    public List<StandardSqlFieldResponse> fields() {
         return this.fields;
     }
 

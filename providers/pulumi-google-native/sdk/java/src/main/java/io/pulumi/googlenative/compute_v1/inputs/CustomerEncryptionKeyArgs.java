@@ -22,7 +22,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -33,7 +33,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> getKmsKeyServiceAccount() {
+    public Output<String> kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
     }
 
@@ -44,7 +44,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
-    public Output<String> getRawKey() {
+    public Output<String> rawKey() {
         return this.rawKey == null ? Codegen.empty() : this.rawKey;
     }
 
@@ -55,7 +55,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
     @Import(name="rsaEncryptedKey")
       private final @Nullable Output<String> rsaEncryptedKey;
 
-    public Output<String> getRsaEncryptedKey() {
+    public Output<String> rsaEncryptedKey() {
         return this.rsaEncryptedKey == null ? Codegen.empty() : this.rsaEncryptedKey;
     }
 

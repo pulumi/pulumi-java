@@ -62,42 +62,42 @@ public final class CloneJobResponse {
      * Details of the target VM in Compute Engine.
      * 
     */
-    public ComputeEngineTargetDetailsResponse getComputeEngineTargetDetails() {
+    public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
     /**
      * The time the clone job was created (as an API call, not when it was actually created in the target).
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Provides details for the errors that led to the Clone Job's state.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The name of the clone.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the clone job.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The time the state was last updated.
      * 
     */
-    public String getStateTime() {
+    public String stateTime() {
         return this.stateTime;
     }
 

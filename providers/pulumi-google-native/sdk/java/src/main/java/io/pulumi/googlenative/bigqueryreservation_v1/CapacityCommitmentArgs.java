@@ -20,21 +20,21 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="capacityCommitmentId")
       private final @Nullable Output<String> capacityCommitmentId;
 
-    public Output<String> getCapacityCommitmentId() {
+    public Output<String> capacityCommitmentId() {
         return this.capacityCommitmentId == null ? Codegen.empty() : this.capacityCommitmentId;
     }
 
     @Import(name="enforceSingleAdminProjectPerOrg")
       private final @Nullable Output<String> enforceSingleAdminProjectPerOrg;
 
-    public Output<String> getEnforceSingleAdminProjectPerOrg() {
+    public Output<String> enforceSingleAdminProjectPerOrg() {
         return this.enforceSingleAdminProjectPerOrg == null ? Codegen.empty() : this.enforceSingleAdminProjectPerOrg;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -45,14 +45,14 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="plan")
       private final @Nullable Output<CapacityCommitmentPlan> plan;
 
-    public Output<CapacityCommitmentPlan> getPlan() {
+    public Output<CapacityCommitmentPlan> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="renewalPlan")
       private final @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
 
-    public Output<CapacityCommitmentRenewalPlan> getRenewalPlan() {
+    public Output<CapacityCommitmentRenewalPlan> renewalPlan() {
         return this.renewalPlan == null ? Codegen.empty() : this.renewalPlan;
     }
 
@@ -74,7 +74,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="slotCount")
       private final @Nullable Output<String> slotCount;
 
-    public Output<String> getSlotCount() {
+    public Output<String> slotCount() {
         return this.slotCount == null ? Codegen.empty() : this.slotCount;
     }
 

@@ -24,7 +24,7 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -35,7 +35,7 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

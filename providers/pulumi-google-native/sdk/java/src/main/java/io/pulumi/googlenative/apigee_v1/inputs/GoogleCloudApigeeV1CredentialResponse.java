@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="apiProducts", required=true)
       private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
 
-    public List<GoogleCloudApigeeV1ApiProductRefResponse> getApiProducts() {
+    public List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts() {
         return this.apiProducts;
     }
 
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
 
@@ -44,7 +44,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="consumerKey", required=true)
       private final String consumerKey;
 
-    public String getConsumerKey() {
+    public String consumerKey() {
         return this.consumerKey;
     }
 
@@ -55,7 +55,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="consumerSecret", required=true)
       private final String consumerSecret;
 
-    public String getConsumerSecret() {
+    public String consumerSecret() {
         return this.consumerSecret;
     }
 
@@ -66,7 +66,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="expiresAt", required=true)
       private final String expiresAt;
 
-    public String getExpiresAt() {
+    public String expiresAt() {
         return this.expiresAt;
     }
 
@@ -77,7 +77,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="issuedAt", required=true)
       private final String issuedAt;
 
-    public String getIssuedAt() {
+    public String issuedAt() {
         return this.issuedAt;
     }
 
@@ -88,7 +88,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="scopes", required=true)
       private final List<String> scopes;
 
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 
@@ -99,7 +99,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

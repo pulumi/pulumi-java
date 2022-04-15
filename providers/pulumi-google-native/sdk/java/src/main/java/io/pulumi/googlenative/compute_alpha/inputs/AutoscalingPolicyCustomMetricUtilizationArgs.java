@@ -28,7 +28,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -39,7 +39,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     @Import(name="metric")
       private final @Nullable Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric == null ? Codegen.empty() : this.metric;
     }
 
@@ -50,7 +50,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     @Import(name="singleInstanceAssignment")
       private final @Nullable Output<Double> singleInstanceAssignment;
 
-    public Output<Double> getSingleInstanceAssignment() {
+    public Output<Double> singleInstanceAssignment() {
         return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
     }
 
@@ -61,7 +61,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     @Import(name="utilizationTarget")
       private final @Nullable Output<Double> utilizationTarget;
 
-    public Output<Double> getUtilizationTarget() {
+    public Output<Double> utilizationTarget() {
         return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
     }
 
@@ -72,7 +72,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     @Import(name="utilizationTargetType")
       private final @Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
 
-    public Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> getUtilizationTargetType() {
+    public Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType() {
         return this.utilizationTargetType == null ? Codegen.empty() : this.utilizationTargetType;
     }
 

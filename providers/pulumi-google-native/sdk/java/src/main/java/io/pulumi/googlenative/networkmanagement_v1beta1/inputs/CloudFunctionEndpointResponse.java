@@ -23,7 +23,7 @@ public final class CloudFunctionEndpointResponse extends io.pulumi.resources.Inv
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

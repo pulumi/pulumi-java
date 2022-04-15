@@ -30,7 +30,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
 
-    public Output<Boolean> getContinueOnFailure() {
+    public Output<Boolean> continueOnFailure() {
         return this.continueOnFailure == null ? Codegen.empty() : this.continueOnFailure;
     }
 
@@ -41,7 +41,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> getJarFileUris() {
+    public Output<List<String>> jarFileUris() {
         return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
@@ -52,7 +52,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -63,7 +63,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
-    public Output<String> getQueryFileUri() {
+    public Output<String> queryFileUri() {
         return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
@@ -74,7 +74,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
 
-    public Output<QueryListArgs> getQueryList() {
+    public Output<QueryListArgs> queryList() {
         return this.queryList == null ? Codegen.empty() : this.queryList;
     }
 
@@ -85,7 +85,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
-    public Output<Map<String,String>> getScriptVariables() {
+    public Output<Map<String,String>> scriptVariables() {
         return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
     }
 

@@ -17,7 +17,7 @@ public final class ArtifactRuleResponse {
         this.artifactRule = artifactRule;
     }
 
-    public List<String> getArtifactRule() {
+    public List<String> artifactRule() {
         return this.artifactRule;
     }
 

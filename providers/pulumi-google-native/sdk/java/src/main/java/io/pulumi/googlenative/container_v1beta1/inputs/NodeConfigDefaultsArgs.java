@@ -26,7 +26,7 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gcfsConfig")
       private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
-    public Output<GcfsConfigArgs> getGcfsConfig() {
+    public Output<GcfsConfigArgs> gcfsConfig() {
         return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
     }
 

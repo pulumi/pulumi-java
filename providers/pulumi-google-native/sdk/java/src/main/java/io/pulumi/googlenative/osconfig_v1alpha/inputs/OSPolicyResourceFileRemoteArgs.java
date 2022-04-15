@@ -26,7 +26,7 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
-    public Output<String> getSha256Checksum() {
+    public Output<String> sha256Checksum() {
         return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

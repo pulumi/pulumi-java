@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse {
      * Text in this cell.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

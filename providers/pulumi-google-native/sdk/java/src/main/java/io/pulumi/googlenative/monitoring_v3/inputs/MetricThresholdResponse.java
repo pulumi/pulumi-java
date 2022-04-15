@@ -27,7 +27,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="aggregations", required=true)
       private final List<AggregationResponse> aggregations;
 
-    public List<AggregationResponse> getAggregations() {
+    public List<AggregationResponse> aggregations() {
         return this.aggregations;
     }
 
@@ -38,7 +38,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="comparison", required=true)
       private final String comparison;
 
-    public String getComparison() {
+    public String comparison() {
         return this.comparison;
     }
 
@@ -49,7 +49,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="denominatorAggregations", required=true)
       private final List<AggregationResponse> denominatorAggregations;
 
-    public List<AggregationResponse> getDenominatorAggregations() {
+    public List<AggregationResponse> denominatorAggregations() {
         return this.denominatorAggregations;
     }
 
@@ -60,7 +60,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="denominatorFilter", required=true)
       private final String denominatorFilter;
 
-    public String getDenominatorFilter() {
+    public String denominatorFilter() {
         return this.denominatorFilter;
     }
 
@@ -71,7 +71,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -82,7 +82,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -93,7 +93,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="thresholdValue", required=true)
       private final Double thresholdValue;
 
-    public Double getThresholdValue() {
+    public Double thresholdValue() {
         return this.thresholdValue;
     }
 
@@ -104,7 +104,7 @@ public final class MetricThresholdResponse extends io.pulumi.resources.InvokeArg
     @Import(name="trigger", required=true)
       private final TriggerResponse trigger;
 
-    public TriggerResponse getTrigger() {
+    public TriggerResponse trigger() {
         return this.trigger;
     }
 

@@ -27,7 +27,7 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
     @Import(name="hoursInCycle")
       private final @Nullable Output<Integer> hoursInCycle;
 
-    public Output<Integer> getHoursInCycle() {
+    public Output<Integer> hoursInCycle() {
         return this.hoursInCycle == null ? Codegen.empty() : this.hoursInCycle;
     }
 
@@ -38,7 +38,7 @@ public final class ResourcePolicyHourlyCycleArgs extends io.pulumi.resources.Res
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

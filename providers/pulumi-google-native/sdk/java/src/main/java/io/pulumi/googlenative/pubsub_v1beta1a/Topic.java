@@ -29,7 +29,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Name of the topic.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

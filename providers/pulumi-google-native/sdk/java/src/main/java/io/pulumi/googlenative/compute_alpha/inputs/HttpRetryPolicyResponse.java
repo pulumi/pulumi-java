@@ -26,7 +26,7 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
     @Import(name="numRetries", required=true)
       private final Integer numRetries;
 
-    public Integer getNumRetries() {
+    public Integer numRetries() {
         return this.numRetries;
     }
 
@@ -37,7 +37,7 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
     @Import(name="perTryTimeout", required=true)
       private final DurationResponse perTryTimeout;
 
-    public DurationResponse getPerTryTimeout() {
+    public DurationResponse perTryTimeout() {
         return this.perTryTimeout;
     }
 
@@ -48,7 +48,7 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
     @Import(name="retryConditions", required=true)
       private final List<String> retryConditions;
 
-    public List<String> getRetryConditions() {
+    public List<String> retryConditions() {
         return this.retryConditions;
     }
 

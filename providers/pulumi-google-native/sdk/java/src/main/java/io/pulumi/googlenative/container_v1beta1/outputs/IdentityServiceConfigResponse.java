@@ -24,7 +24,7 @@ public final class IdentityServiceConfigResponse {
      * Whether to enable the Identity Service component
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

@@ -23,7 +23,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
     @Import(name="clientAuth", required=true)
       private final Boolean clientAuth;
 
-    public Boolean getClientAuth() {
+    public Boolean clientAuth() {
         return this.clientAuth;
     }
 
@@ -34,7 +34,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
     @Import(name="codeSigning", required=true)
       private final Boolean codeSigning;
 
-    public Boolean getCodeSigning() {
+    public Boolean codeSigning() {
         return this.codeSigning;
     }
 
@@ -45,7 +45,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
     @Import(name="emailProtection", required=true)
       private final Boolean emailProtection;
 
-    public Boolean getEmailProtection() {
+    public Boolean emailProtection() {
         return this.emailProtection;
     }
 
@@ -56,7 +56,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
     @Import(name="ocspSigning", required=true)
       private final Boolean ocspSigning;
 
-    public Boolean getOcspSigning() {
+    public Boolean ocspSigning() {
         return this.ocspSigning;
     }
 
@@ -67,7 +67,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
     @Import(name="serverAuth", required=true)
       private final Boolean serverAuth;
 
-    public Boolean getServerAuth() {
+    public Boolean serverAuth() {
         return this.serverAuth;
     }
 
@@ -78,7 +78,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
     @Import(name="timeStamping", required=true)
       private final Boolean timeStamping;
 
-    public Boolean getTimeStamping() {
+    public Boolean timeStamping() {
         return this.timeStamping;
     }
 

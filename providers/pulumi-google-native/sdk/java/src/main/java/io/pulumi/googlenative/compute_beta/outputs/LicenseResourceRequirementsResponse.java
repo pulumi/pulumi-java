@@ -32,14 +32,14 @@ public final class LicenseResourceRequirementsResponse {
      * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
      * 
     */
-    public Integer getMinGuestCpuCount() {
+    public Integer minGuestCpuCount() {
         return this.minGuestCpuCount;
     }
     /**
      * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
      * 
     */
-    public Integer getMinMemoryMb() {
+    public Integer minMemoryMb() {
         return this.minMemoryMb;
     }
 

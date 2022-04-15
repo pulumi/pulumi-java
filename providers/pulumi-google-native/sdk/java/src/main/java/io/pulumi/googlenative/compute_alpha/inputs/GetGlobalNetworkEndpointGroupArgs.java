@@ -17,14 +17,14 @@ public final class GetGlobalNetworkEndpointGroupArgs extends io.pulumi.resources
     @Import(name="networkEndpointGroup", required=true)
       private final String networkEndpointGroup;
 
-    public String getNetworkEndpointGroup() {
+    public String networkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

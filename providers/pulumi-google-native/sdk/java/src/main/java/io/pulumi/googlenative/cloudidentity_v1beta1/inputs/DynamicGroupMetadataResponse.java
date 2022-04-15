@@ -25,7 +25,7 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
     @Import(name="queries", required=true)
       private final List<DynamicGroupQueryResponse> queries;
 
-    public List<DynamicGroupQueryResponse> getQueries() {
+    public List<DynamicGroupQueryResponse> queries() {
         return this.queries;
     }
 
@@ -36,7 +36,7 @@ public final class DynamicGroupMetadataResponse extends io.pulumi.resources.Invo
     @Import(name="status", required=true)
       private final DynamicGroupStatusResponse status;
 
-    public DynamicGroupStatusResponse getStatus() {
+    public DynamicGroupStatusResponse status() {
         return this.status;
     }
 

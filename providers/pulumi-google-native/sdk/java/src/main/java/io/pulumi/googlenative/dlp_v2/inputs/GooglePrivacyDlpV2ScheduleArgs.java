@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
     @Import(name="recurrencePeriodDuration")
       private final @Nullable Output<String> recurrencePeriodDuration;
 
-    public Output<String> getRecurrencePeriodDuration() {
+    public Output<String> recurrencePeriodDuration() {
         return this.recurrencePeriodDuration == null ? Codegen.empty() : this.recurrencePeriodDuration;
     }
 

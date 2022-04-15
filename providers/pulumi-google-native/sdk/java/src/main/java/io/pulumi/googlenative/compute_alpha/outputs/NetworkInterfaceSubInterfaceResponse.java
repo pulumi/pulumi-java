@@ -43,24 +43,24 @@ public final class NetworkInterfaceSubInterfaceResponse {
      * An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
-    public String getIpAllocationMode() {
+    public String ipAllocationMode() {
         return this.ipAllocationMode;
     }
     /**
      * If specified, this subnetwork must belong to the same network as that of the network interface. If not specified the subnet of network interface will be used. If you specify this property, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
     /**
      * VLAN tag. Should match the VLAN(s) supported by the subnetwork to which this subinterface is connecting.
      * 
     */
-    public Integer getVlan() {
+    public Integer vlan() {
         return this.vlan;
     }
 

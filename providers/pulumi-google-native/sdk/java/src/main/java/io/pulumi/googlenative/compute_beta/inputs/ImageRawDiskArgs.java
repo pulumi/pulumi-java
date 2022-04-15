@@ -27,7 +27,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerType")
       private final @Nullable Output<ImageRawDiskContainerType> containerType;
 
-    public Output<ImageRawDiskContainerType> getContainerType() {
+    public Output<ImageRawDiskContainerType> containerType() {
         return this.containerType == null ? Codegen.empty() : this.containerType;
     }
 
@@ -38,7 +38,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

@@ -35,7 +35,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return The time the test was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -49,7 +49,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return The user-supplied description of the Connectivity Test. Maximum of 512 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -63,7 +63,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Destination specification of the Connectivity Test. You can use a combination of destination IP address, Compute Engine VM instance, or VPC network to uniquely identify the destination location. Even if the destination IP address is not unique, the source IP location is unique. Usually, the analysis can infer the destination endpoint from route information. If the destination you specify is a VM instance and the instance has multiple network interfaces, then you must also specify either a destination IP address or VPC network to identify the destination interface. A reachability analysis proceeds even if the destination location is ambiguous. However, the result can include endpoints that you don't intend to test.
      * 
      */
-    public Output<EndpointResponse> getDestination() {
+    public Output<EndpointResponse> destination() {
         return this.destination;
     }
     /**
@@ -77,7 +77,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return The display name of a Connectivity Test.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -91,7 +91,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -105,7 +105,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Unique name of the resource using the form: `projects/{project_id}/locations/global/connectivityTests/{test}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return The probing details of this test from the latest run, present for applicable tests only. The details are updated when creating a new test, updating an existing test, or triggering a one-time rerun of an existing test.
      * 
      */
-    public Output<ProbingDetailsResponse> getProbingDetails() {
+    public Output<ProbingDetailsResponse> probingDetails() {
         return this.probingDetails;
     }
     /**
@@ -133,7 +133,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return IP Protocol of the test. When not provided, "TCP" is assumed.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -147,7 +147,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return The reachability details of this test from the latest run. The details are updated when creating a new test, updating an existing test, or triggering a one-time rerun of an existing test.
      * 
      */
-    public Output<ReachabilityDetailsResponse> getReachabilityDetails() {
+    public Output<ReachabilityDetailsResponse> reachabilityDetails() {
         return this.reachabilityDetails;
     }
     /**
@@ -161,7 +161,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Other projects that may be relevant for reachability analysis. This is applicable to scenarios where a test can cross project boundaries.
      * 
      */
-    public Output<List<String>> getRelatedProjects() {
+    public Output<List<String>> relatedProjects() {
         return this.relatedProjects;
     }
     /**
@@ -175,7 +175,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return Source specification of the Connectivity Test. You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. If the source of the test is within an on-premises network, then you must provide the destination VPC network. If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test.
      * 
      */
-    public Output<EndpointResponse> getSource() {
+    public Output<EndpointResponse> source() {
         return this.source;
     }
     /**
@@ -189,7 +189,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @return The time the test's configuration was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

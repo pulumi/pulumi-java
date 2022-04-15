@@ -28,7 +28,7 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> getIdentities() {
+    public Output<List<String>> identities() {
         return this.identities == null ? Codegen.empty() : this.identities;
     }
 
@@ -39,7 +39,7 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityType")
       private final @Nullable Output<EgressFromIdentityType> identityType;
 
-    public Output<EgressFromIdentityType> getIdentityType() {
+    public Output<EgressFromIdentityType> identityType() {
         return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 

@@ -25,7 +25,7 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceFiles", required=true)
       private final List<Map<String,String>> sourceFiles;
 
-    public List<Map<String,String>> getSourceFiles() {
+    public List<Map<String,String>> sourceFiles() {
         return this.sourceFiles;
     }
 

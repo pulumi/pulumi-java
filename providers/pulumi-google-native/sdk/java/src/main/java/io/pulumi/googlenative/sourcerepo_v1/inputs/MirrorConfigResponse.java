@@ -23,7 +23,7 @@ public final class MirrorConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deployKeyId", required=true)
       private final String deployKeyId;
 
-    public String getDeployKeyId() {
+    public String deployKeyId() {
         return this.deployKeyId;
     }
 
@@ -34,7 +34,7 @@ public final class MirrorConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 
@@ -45,7 +45,7 @@ public final class MirrorConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="webhookId", required=true)
       private final String webhookId;
 
-    public String getWebhookId() {
+    public String webhookId() {
         return this.webhookId;
     }
 

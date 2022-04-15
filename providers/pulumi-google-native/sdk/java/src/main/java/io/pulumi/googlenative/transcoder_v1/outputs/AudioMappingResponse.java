@@ -62,42 +62,42 @@ public final class AudioMappingResponse {
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
      * 
     */
-    public String getAtomKey() {
+    public String atomKey() {
         return this.atomKey;
     }
     /**
      * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
      * 
     */
-    public Double getGainDb() {
+    public Double gainDb() {
         return this.gainDb;
     }
     /**
      * The zero-based index of the channel in the input audio stream.
      * 
     */
-    public Integer getInputChannel() {
+    public Integer inputChannel() {
         return this.inputChannel;
     }
     /**
      * The `Input.key` that identifies the input file.
      * 
     */
-    public String getInputKey() {
+    public String inputKey() {
         return this.inputKey;
     }
     /**
      * The zero-based index of the track in the input file.
      * 
     */
-    public Integer getInputTrack() {
+    public Integer inputTrack() {
         return this.inputTrack;
     }
     /**
      * The zero-based index of the channel in the output audio stream.
      * 
     */
-    public Integer getOutputChannel() {
+    public Integer outputChannel() {
         return this.outputChannel;
     }
 

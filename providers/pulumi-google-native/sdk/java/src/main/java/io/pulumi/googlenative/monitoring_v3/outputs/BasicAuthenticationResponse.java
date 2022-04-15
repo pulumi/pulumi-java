@@ -32,14 +32,14 @@ public final class BasicAuthenticationResponse {
      * The password to use when authenticating with the HTTP server.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The username to use when authenticating with the HTTP server.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

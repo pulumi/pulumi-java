@@ -24,7 +24,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
 
-    public Integer getProgressPercent() {
+    public Integer progressPercent() {
         return this.progressPercent;
     }
 
@@ -35,7 +35,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

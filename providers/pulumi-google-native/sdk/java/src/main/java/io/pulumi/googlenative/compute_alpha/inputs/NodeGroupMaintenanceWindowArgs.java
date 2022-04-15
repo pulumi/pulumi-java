@@ -26,7 +26,7 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

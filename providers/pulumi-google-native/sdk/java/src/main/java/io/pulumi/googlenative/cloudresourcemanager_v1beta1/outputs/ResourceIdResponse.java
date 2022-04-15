@@ -24,7 +24,7 @@ public final class ResourceIdResponse {
      * Required field representing the resource type this id is for. At present, the valid types are "project", "folder", and "organization".
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

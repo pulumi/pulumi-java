@@ -26,7 +26,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
     @Import(name="enableMl")
       private final @Nullable Output<Boolean> enableMl;
 
-    public Output<Boolean> getEnableMl() {
+    public Output<Boolean> enableMl() {
         return this.enableMl == null ? Codegen.empty() : this.enableMl;
     }
 

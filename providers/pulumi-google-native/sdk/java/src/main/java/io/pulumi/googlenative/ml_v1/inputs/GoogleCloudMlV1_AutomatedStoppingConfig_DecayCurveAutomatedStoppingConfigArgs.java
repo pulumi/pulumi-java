@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
     @Import(name="useElapsedTime")
       private final @Nullable Output<Boolean> useElapsedTime;
 
-    public Output<Boolean> getUseElapsedTime() {
+    public Output<Boolean> useElapsedTime() {
         return this.useElapsedTime == null ? Codegen.empty() : this.useElapsedTime;
     }
 

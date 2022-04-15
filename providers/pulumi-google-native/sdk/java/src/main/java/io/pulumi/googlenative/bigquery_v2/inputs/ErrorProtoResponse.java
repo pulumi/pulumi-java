@@ -19,7 +19,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="debugInfo", required=true)
       private final String debugInfo;
 
-    public String getDebugInfo() {
+    public String debugInfo() {
         return this.debugInfo;
     }
 
@@ -30,7 +30,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -41,7 +41,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -52,7 +52,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 

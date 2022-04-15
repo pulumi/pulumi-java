@@ -24,7 +24,7 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateMap")
       private final @Nullable Output<String> certificateMap;
 
-    public Output<String> getCertificateMap() {
+    public Output<String> certificateMap() {
         return this.certificateMap == null ? Codegen.empty() : this.certificateMap;
     }
 
@@ -35,7 +35,7 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,14 +46,14 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -64,14 +64,14 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxyHeader")
       private final @Nullable Output<TargetSslProxyProxyHeader> proxyHeader;
 
-    public Output<TargetSslProxyProxyHeader> getProxyHeader() {
+    public Output<TargetSslProxyProxyHeader> proxyHeader() {
         return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -82,7 +82,7 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -93,7 +93,7 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslCertificates")
       private final @Nullable Output<List<String>> sslCertificates;
 
-    public Output<List<String>> getSslCertificates() {
+    public Output<List<String>> sslCertificates() {
         return this.sslCertificates == null ? Codegen.empty() : this.sslCertificates;
     }
 
@@ -104,7 +104,7 @@ public final class TargetSslProxyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 

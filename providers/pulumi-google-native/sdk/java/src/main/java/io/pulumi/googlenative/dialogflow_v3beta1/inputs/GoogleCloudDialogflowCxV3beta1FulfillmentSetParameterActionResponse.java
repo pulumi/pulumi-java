@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
     @Import(name="parameter", required=true)
       private final String parameter;
 
-    public String getParameter() {
+    public String parameter() {
         return this.parameter;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionRe
     @Import(name="value", required=true)
       private final Object value;
 
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

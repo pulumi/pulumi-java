@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
     @Import(name="imageDisplayOptions")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions() {
         return this.imageDisplayOptions == null ? Codegen.empty() : this.imageDisplayOptions;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
     @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items() {
         return this.items;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse {
      * Format: projects//locations//agents//flows//versions/.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

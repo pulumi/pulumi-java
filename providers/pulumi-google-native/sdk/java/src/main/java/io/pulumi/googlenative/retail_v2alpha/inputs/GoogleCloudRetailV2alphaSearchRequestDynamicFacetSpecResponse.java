@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

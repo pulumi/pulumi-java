@@ -34,7 +34,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
      * 
      */
-    public Output<KeyOperationAttestationResponse> getAttestation() {
+    public Output<KeyOperationAttestationResponse> attestation() {
         return this.attestation;
     }
     /**
@@ -48,7 +48,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The time at which this ImportJob was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +62,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The time this ImportJob expired. Only present if state is EXPIRED.
      * 
      */
-    public Output<String> getExpireEventTime() {
+    public Output<String> expireEventTime() {
         return this.expireEventTime;
     }
     /**
@@ -76,7 +76,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The time at which this ImportJob is scheduled for expiration and can no longer be used to import key material.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -90,7 +90,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The time this ImportJob's key material was generated.
      * 
      */
-    public Output<String> getGenerateTime() {
+    public Output<String> generateTime() {
         return this.generateTime;
     }
     /**
@@ -104,7 +104,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return Immutable. The wrapping method to be used for incoming key material.
      * 
      */
-    public Output<String> getImportMethod() {
+    public Output<String> importMethod() {
         return this.importMethod;
     }
     /**
@@ -118,7 +118,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +132,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
      * 
      */
-    public Output<String> getProtectionLevel() {
+    public Output<String> protectionLevel() {
         return this.protectionLevel;
     }
     /**
@@ -146,7 +146,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The public key with which to wrap key material prior to import. Only returned if state is ACTIVE.
      * 
      */
-    public Output<WrappingPublicKeyResponse> getPublicKey() {
+    public Output<WrappingPublicKeyResponse> publicKey() {
         return this.publicKey;
     }
     /**
@@ -160,7 +160,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * @return The current state of the ImportJob, indicating if it can be used.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

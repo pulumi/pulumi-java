@@ -34,14 +34,14 @@ public final class MysqlTableResponse {
      * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
      * 
     */
-    public List<MysqlColumnResponse> getMysqlColumns() {
+    public List<MysqlColumnResponse> mysqlColumns() {
         return this.mysqlColumns;
     }
     /**
      * Table name.
      * 
     */
-    public String getTable() {
+    public String table() {
         return this.table;
     }
 

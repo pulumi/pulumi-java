@@ -23,7 +23,7 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -34,7 +34,7 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -45,7 +45,7 @@ public final class BigTableIODetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="tableId", required=true)
       private final String tableId;
 
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

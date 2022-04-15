@@ -41,21 +41,21 @@ public final class SubjectConfigResponse {
      * Optional. The "common name" of the distinguished name.
      * 
     */
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
     /**
      * Contains distinguished name fields such as the location and organization.
      * 
     */
-    public SubjectResponse getSubject() {
+    public SubjectResponse subject() {
         return this.subject;
     }
     /**
      * Optional. The subject alternative name fields.
      * 
     */
-    public SubjectAltNamesResponse getSubjectAltName() {
+    public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
     @Import(name="leaveUntransformed", required=true)
       private final GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
 
-    public GooglePrivacyDlpV2LeaveUntransformedResponse getLeaveUntransformed() {
+    public GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed() {
         return this.leaveUntransformed;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
     @Import(name="throwError", required=true)
       private final GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
-    public GooglePrivacyDlpV2ThrowErrorResponse getThrowError() {
+    public GooglePrivacyDlpV2ThrowErrorResponse throwError() {
         return this.throwError;
     }
 

@@ -29,7 +29,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
 
-    public Output<DiscoveryOccurrenceAnalysisStatus> getAnalysisStatus() {
+    public Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus() {
         return this.analysisStatus == null ? Codegen.empty() : this.analysisStatus;
     }
 
@@ -40,7 +40,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
 
-    public Output<StatusArgs> getAnalysisStatusError() {
+    public Output<StatusArgs> analysisStatusError() {
         return this.analysisStatusError == null ? Codegen.empty() : this.analysisStatusError;
     }
 
@@ -51,7 +51,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
 
-    public Output<DiscoveryOccurrenceContinuousAnalysis> getContinuousAnalysis() {
+    public Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis() {
         return this.continuousAnalysis == null ? Codegen.empty() : this.continuousAnalysis;
     }
 
@@ -62,7 +62,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="cpe")
       private final @Nullable Output<String> cpe;
 
-    public Output<String> getCpe() {
+    public Output<String> cpe() {
         return this.cpe == null ? Codegen.empty() : this.cpe;
     }
 
@@ -73,7 +73,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="lastScanTime")
       private final @Nullable Output<String> lastScanTime;
 
-    public Output<String> getLastScanTime() {
+    public Output<String> lastScanTime() {
         return this.lastScanTime == null ? Codegen.empty() : this.lastScanTime;
     }
 

@@ -23,7 +23,7 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="actionType", required=true)
       private final String actionType;
 
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
 
@@ -34,7 +34,7 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="inputText", required=true)
       private final String inputText;
 
-    public String getInputText() {
+    public String inputText() {
         return this.inputText;
     }
 
@@ -45,7 +45,7 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

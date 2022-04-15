@@ -36,7 +36,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="approval", required=true)
       private final BuildApprovalResponse approval;
 
-    public BuildApprovalResponse getApproval() {
+    public BuildApprovalResponse approval() {
         return this.approval;
     }
 
@@ -47,7 +47,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifacts", required=true)
       private final ArtifactsResponse artifacts;
 
-    public ArtifactsResponse getArtifacts() {
+    public ArtifactsResponse artifacts() {
         return this.artifacts;
     }
 
@@ -58,7 +58,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="availableSecrets", required=true)
       private final SecretsResponse availableSecrets;
 
-    public SecretsResponse getAvailableSecrets() {
+    public SecretsResponse availableSecrets() {
         return this.availableSecrets;
     }
 
@@ -69,7 +69,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="buildTriggerId", required=true)
       private final String buildTriggerId;
 
-    public String getBuildTriggerId() {
+    public String buildTriggerId() {
         return this.buildTriggerId;
     }
 
@@ -80,7 +80,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -91,7 +91,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="failureInfo", required=true)
       private final FailureInfoResponse failureInfo;
 
-    public FailureInfoResponse getFailureInfo() {
+    public FailureInfoResponse failureInfo() {
         return this.failureInfo;
     }
 
@@ -102,7 +102,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="finishTime", required=true)
       private final String finishTime;
 
-    public String getFinishTime() {
+    public String finishTime() {
         return this.finishTime;
     }
 
@@ -113,7 +113,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="images", required=true)
       private final List<String> images;
 
-    public List<String> getImages() {
+    public List<String> images() {
         return this.images;
     }
 
@@ -124,7 +124,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logUrl", required=true)
       private final String logUrl;
 
-    public String getLogUrl() {
+    public String logUrl() {
         return this.logUrl;
     }
 
@@ -135,7 +135,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logsBucket", required=true)
       private final String logsBucket;
 
-    public String getLogsBucket() {
+    public String logsBucket() {
         return this.logsBucket;
     }
 
@@ -146,7 +146,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -157,7 +157,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
       private final BuildOptionsResponse options;
 
-    public BuildOptionsResponse getOptions() {
+    public BuildOptionsResponse options() {
         return this.options;
     }
 
@@ -168,7 +168,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -179,7 +179,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="queueTtl", required=true)
       private final String queueTtl;
 
-    public String getQueueTtl() {
+    public String queueTtl() {
         return this.queueTtl;
     }
 
@@ -190,7 +190,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="results", required=true)
       private final ResultsResponse results;
 
-    public ResultsResponse getResults() {
+    public ResultsResponse results() {
         return this.results;
     }
 
@@ -201,7 +201,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="secrets", required=true)
       private final List<SecretResponse> secrets;
 
-    public List<SecretResponse> getSecrets() {
+    public List<SecretResponse> secrets() {
         return this.secrets;
     }
 
@@ -212,7 +212,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -223,7 +223,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final SourceResponse source;
 
-    public SourceResponse getSource() {
+    public SourceResponse source() {
         return this.source;
     }
 
@@ -234,7 +234,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceProvenance", required=true)
       private final SourceProvenanceResponse sourceProvenance;
 
-    public SourceProvenanceResponse getSourceProvenance() {
+    public SourceProvenanceResponse sourceProvenance() {
         return this.sourceProvenance;
     }
 
@@ -245,7 +245,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -256,7 +256,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -267,7 +267,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="statusDetail", required=true)
       private final String statusDetail;
 
-    public String getStatusDetail() {
+    public String statusDetail() {
         return this.statusDetail;
     }
 
@@ -278,7 +278,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="steps", required=true)
       private final List<BuildStepResponse> steps;
 
-    public List<BuildStepResponse> getSteps() {
+    public List<BuildStepResponse> steps() {
         return this.steps;
     }
 
@@ -289,7 +289,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="substitutions", required=true)
       private final Map<String,String> substitutions;
 
-    public Map<String,String> getSubstitutions() {
+    public Map<String,String> substitutions() {
         return this.substitutions;
     }
 
@@ -300,7 +300,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
@@ -311,7 +311,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeout", required=true)
       private final String timeout;
 
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
 
@@ -322,7 +322,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timing", required=true)
       private final Map<String,String> timing;
 
-    public Map<String,String> getTiming() {
+    public Map<String,String> timing() {
         return this.timing;
     }
 
@@ -333,7 +333,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="warnings", required=true)
       private final List<WarningResponse> warnings;
 
-    public List<WarningResponse> getWarnings() {
+    public List<WarningResponse> warnings() {
         return this.warnings;
     }
 

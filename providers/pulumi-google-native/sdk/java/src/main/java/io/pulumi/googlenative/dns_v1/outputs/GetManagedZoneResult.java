@@ -127,108 +127,108 @@ public final class GetManagedZoneResult {
         this.visibility = visibility;
     }
 
-    public ManagedZoneCloudLoggingConfigResponse getCloudLoggingConfig() {
+    public ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig() {
         return this.cloudLoggingConfig;
     }
     /**
      * The time that this resource was created on the server. This is in RFC3339 text format. Output only.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The DNS name of this managed zone, for instance "example.com.".
      * 
     */
-    public String getDnsName() {
+    public String dnsName() {
         return this.dnsName;
     }
     /**
      * DNSSEC configuration.
      * 
     */
-    public ManagedZoneDnsSecConfigResponse getDnssecConfig() {
+    public ManagedZoneDnsSecConfigResponse dnssecConfig() {
         return this.dnssecConfig;
     }
     /**
      * The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.
      * 
     */
-    public ManagedZoneForwardingConfigResponse getForwardingConfig() {
+    public ManagedZoneForwardingConfigResponse forwardingConfig() {
         return this.forwardingConfig;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * User labels.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.
      * 
     */
-    public String getNameServerSet() {
+    public String nameServerSet() {
         return this.nameServerSet;
     }
     /**
      * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
      * 
     */
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
     /**
      * The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.
      * 
     */
-    public ManagedZonePeeringConfigResponse getPeeringConfig() {
+    public ManagedZonePeeringConfigResponse peeringConfig() {
         return this.peeringConfig;
     }
     /**
      * For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
      * 
     */
-    public ManagedZonePrivateVisibilityConfigResponse getPrivateVisibilityConfig() {
+    public ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig() {
         return this.privateVisibilityConfig;
     }
     /**
      * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.
      * 
     */
-    public ManagedZoneReverseLookupConfigResponse getReverseLookupConfig() {
+    public ManagedZoneReverseLookupConfigResponse reverseLookupConfig() {
         return this.reverseLookupConfig;
     }
     /**
      * This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.
      * 
     */
-    public ManagedZoneServiceDirectoryConfigResponse getServiceDirectoryConfig() {
+    public ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig() {
         return this.serviceDirectoryConfig;
     }
     /**
      * The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
      * 
     */
-    public String getVisibility() {
+    public String visibility() {
         return this.visibility;
     }
 

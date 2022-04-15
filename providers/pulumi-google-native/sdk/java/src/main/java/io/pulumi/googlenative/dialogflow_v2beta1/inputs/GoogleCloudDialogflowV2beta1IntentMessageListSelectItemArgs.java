@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     @Import(name="info", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> getInfo() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info() {
         return this.info;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

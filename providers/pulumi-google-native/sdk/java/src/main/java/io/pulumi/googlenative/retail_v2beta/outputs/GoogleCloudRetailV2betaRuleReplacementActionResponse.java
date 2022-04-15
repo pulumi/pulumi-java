@@ -40,21 +40,21 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
      * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
      * 
     */
-    public List<String> getQueryTerms() {
+    public List<String> queryTerms() {
         return this.queryTerms;
     }
     /**
      * Term that will be used for replacement.
      * 
     */
-    public String getReplacementTerm() {
+    public String replacementTerm() {
         return this.replacementTerm;
     }
     /**
      * Will be [deprecated = true] post migration;
      * 
     */
-    public String getTerm() {
+    public String term() {
         return this.term;
     }
 

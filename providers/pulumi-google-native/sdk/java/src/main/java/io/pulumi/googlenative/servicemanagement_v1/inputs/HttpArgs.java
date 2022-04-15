@@ -28,7 +28,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fullyDecodeReservedExpansion")
       private final @Nullable Output<Boolean> fullyDecodeReservedExpansion;
 
-    public Output<Boolean> getFullyDecodeReservedExpansion() {
+    public Output<Boolean> fullyDecodeReservedExpansion() {
         return this.fullyDecodeReservedExpansion == null ? Codegen.empty() : this.fullyDecodeReservedExpansion;
     }
 
@@ -39,7 +39,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<HttpRuleArgs>> rules;
 
-    public Output<List<HttpRuleArgs>> getRules() {
+    public Output<List<HttpRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

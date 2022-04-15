@@ -29,14 +29,14 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> getExemptedMembers() {
+    public Output<List<String>> exemptedMembers() {
         return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
     @Import(name="ignoreChildExemptions")
       private final @Nullable Output<Boolean> ignoreChildExemptions;
 
-    public Output<Boolean> getIgnoreChildExemptions() {
+    public Output<Boolean> ignoreChildExemptions() {
         return this.ignoreChildExemptions == null ? Codegen.empty() : this.ignoreChildExemptions;
     }
 
@@ -47,7 +47,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logType")
       private final @Nullable Output<AuditLogConfigLogType> logType;
 
-    public Output<AuditLogConfigLogType> getLogType() {
+    public Output<AuditLogConfigLogType> logType() {
         return this.logType == null ? Codegen.empty() : this.logType;
     }
 

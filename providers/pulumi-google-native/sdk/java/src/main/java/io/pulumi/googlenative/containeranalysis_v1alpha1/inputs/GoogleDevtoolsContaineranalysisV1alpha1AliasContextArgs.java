@@ -27,7 +27,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
     @Import(name="kind")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> getKind() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

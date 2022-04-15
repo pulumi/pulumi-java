@@ -29,7 +29,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableOnpremGcsTransferLogs")
       private final @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
 
-    public Output<Boolean> getEnableOnpremGcsTransferLogs() {
+    public Output<Boolean> enableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs == null ? Codegen.empty() : this.enableOnpremGcsTransferLogs;
     }
 
@@ -40,7 +40,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logActionStates")
       private final @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
-    public Output<List<LoggingConfigLogActionStatesItem>> getLogActionStates() {
+    public Output<List<LoggingConfigLogActionStatesItem>> logActionStates() {
         return this.logActionStates == null ? Codegen.empty() : this.logActionStates;
     }
 
@@ -51,7 +51,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logActions")
       private final @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
-    public Output<List<LoggingConfigLogActionsItem>> getLogActions() {
+    public Output<List<LoggingConfigLogActionsItem>> logActions() {
         return this.logActions == null ? Codegen.empty() : this.logActions;
     }
 

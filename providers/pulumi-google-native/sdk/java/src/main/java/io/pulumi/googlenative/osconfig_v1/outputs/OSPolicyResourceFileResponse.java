@@ -49,28 +49,28 @@ public final class OSPolicyResourceFileResponse {
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
     */
-    public Boolean getAllowInsecure() {
+    public Boolean allowInsecure() {
         return this.allowInsecure;
     }
     /**
      * A Cloud Storage object.
      * 
     */
-    public OSPolicyResourceFileGcsResponse getGcs() {
+    public OSPolicyResourceFileGcsResponse gcs() {
         return this.gcs;
     }
     /**
      * A local path within the VM to use.
      * 
     */
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
     /**
      * A generic remote file.
      * 
     */
-    public OSPolicyResourceFileRemoteResponse getRemote() {
+    public OSPolicyResourceFileRemoteResponse remote() {
         return this.remote;
     }
 

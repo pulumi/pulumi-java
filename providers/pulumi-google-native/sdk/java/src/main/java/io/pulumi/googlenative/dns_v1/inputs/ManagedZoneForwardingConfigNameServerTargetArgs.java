@@ -23,7 +23,7 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
     @Import(name="forwardingPath")
       private final @Nullable Output<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath;
 
-    public Output<ManagedZoneForwardingConfigNameServerTargetForwardingPath> getForwardingPath() {
+    public Output<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath() {
         return this.forwardingPath == null ? Codegen.empty() : this.forwardingPath;
     }
 
@@ -34,14 +34,14 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
+    public Output<String> ipv4Address() {
         return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

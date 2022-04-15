@@ -27,7 +27,7 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
     @Import(name="enableComponents")
       private final @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 
-    public Output<List<LoggingComponentConfigEnableComponentsItem>> getEnableComponents() {
+    public Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents() {
         return this.enableComponents == null ? Codegen.empty() : this.enableComponents;
     }
 

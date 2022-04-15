@@ -34,14 +34,14 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
      * List of infoTypes this rule set is applied to.
      * 
     */
-    public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
+    public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
     /**
      * Set of rules to be applied to infoTypes. The rules are applied in order.
      * 
     */
-    public List<GooglePrivacyDlpV2InspectionRuleResponse> getRules() {
+    public List<GooglePrivacyDlpV2InspectionRuleResponse> rules() {
         return this.rules;
     }
 

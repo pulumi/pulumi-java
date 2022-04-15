@@ -24,7 +24,7 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
     @Import(name="allowTransactionalWrites", required=true)
       private final Boolean allowTransactionalWrites;
 
-    public Boolean getAllowTransactionalWrites() {
+    public Boolean allowTransactionalWrites() {
         return this.allowTransactionalWrites;
     }
 
@@ -35,7 +35,7 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 

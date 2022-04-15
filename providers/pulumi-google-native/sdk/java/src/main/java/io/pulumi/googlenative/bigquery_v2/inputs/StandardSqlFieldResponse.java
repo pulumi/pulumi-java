@@ -24,7 +24,7 @@ public final class StandardSqlFieldResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class StandardSqlFieldResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final StandardSqlDataTypeResponse type;
 
-    public StandardSqlDataTypeResponse getType() {
+    public StandardSqlDataTypeResponse type() {
         return this.type;
     }
 

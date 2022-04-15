@@ -26,7 +26,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="allowedSuccessCodes", required=true)
       private final List<Integer> allowedSuccessCodes;
 
-    public List<Integer> getAllowedSuccessCodes() {
+    public List<Integer> allowedSuccessCodes() {
         return this.allowedSuccessCodes;
     }
 
@@ -37,7 +37,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="gcsObject", required=true)
       private final GcsObjectResponse gcsObject;
 
-    public GcsObjectResponse getGcsObject() {
+    public GcsObjectResponse gcsObject() {
         return this.gcsObject;
     }
 
@@ -48,7 +48,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="interpreter", required=true)
       private final String interpreter;
 
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
 
@@ -59,7 +59,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="localPath", required=true)
       private final String localPath;
 
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
 

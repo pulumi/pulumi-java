@@ -25,7 +25,7 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="proxyTlsContext", required=true)
       private final TlsContextResponse proxyTlsContext;
 
-    public TlsContextResponse getProxyTlsContext() {
+    public TlsContextResponse proxyTlsContext() {
         return this.proxyTlsContext;
     }
 
@@ -36,7 +36,7 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="subjectAltNames", required=true)
       private final List<String> subjectAltNames;
 
-    public List<String> getSubjectAltNames() {
+    public List<String> subjectAltNames() {
         return this.subjectAltNames;
     }
 
@@ -47,7 +47,7 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="tlsMode", required=true)
       private final String tlsMode;
 
-    public String getTlsMode() {
+    public String tlsMode() {
         return this.tlsMode;
     }
 

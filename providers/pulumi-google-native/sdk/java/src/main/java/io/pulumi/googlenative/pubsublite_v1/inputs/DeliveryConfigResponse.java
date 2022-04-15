@@ -23,7 +23,7 @@ public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="deliveryRequirement", required=true)
       private final String deliveryRequirement;
 
-    public String getDeliveryRequirement() {
+    public String deliveryRequirement() {
         return this.deliveryRequirement;
     }
 

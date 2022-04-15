@@ -17,14 +17,14 @@ public final class GetExternalVpnGatewayArgs extends io.pulumi.resources.InvokeA
     @Import(name="externalVpnGateway", required=true)
       private final String externalVpnGateway;
 
-    public String getExternalVpnGateway() {
+    public String externalVpnGateway() {
         return this.externalVpnGateway;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

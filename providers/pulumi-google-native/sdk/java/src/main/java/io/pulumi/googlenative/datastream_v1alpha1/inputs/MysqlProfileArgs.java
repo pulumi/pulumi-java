@@ -28,7 +28,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -39,7 +39,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -50,7 +50,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -61,7 +61,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslConfig")
       private final @Nullable Output<MysqlSslConfigArgs> sslConfig;
 
-    public Output<MysqlSslConfigArgs> getSslConfig() {
+    public Output<MysqlSslConfigArgs> sslConfig() {
         return this.sslConfig == null ? Codegen.empty() : this.sslConfig;
     }
 
@@ -72,7 +72,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

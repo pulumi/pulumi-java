@@ -28,7 +28,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="annotatedDatasetDescription")
       private final @Nullable Output<String> annotatedDatasetDescription;
 
-    public Output<String> getAnnotatedDatasetDescription() {
+    public Output<String> annotatedDatasetDescription() {
         return this.annotatedDatasetDescription == null ? Codegen.empty() : this.annotatedDatasetDescription;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="annotatedDatasetDisplayName", required=true)
       private final Output<String> annotatedDatasetDisplayName;
 
-    public Output<String> getAnnotatedDatasetDisplayName() {
+    public Output<String> annotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="contributorEmails")
       private final @Nullable Output<List<String>> contributorEmails;
 
-    public Output<List<String>> getContributorEmails() {
+    public Output<List<String>> contributorEmails() {
         return this.contributorEmails == null ? Codegen.empty() : this.contributorEmails;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="instruction", required=true)
       private final Output<String> instruction;
 
-    public Output<String> getInstruction() {
+    public Output<String> instruction() {
         return this.instruction;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="labelGroup")
       private final @Nullable Output<String> labelGroup;
 
-    public Output<String> getLabelGroup() {
+    public Output<String> labelGroup() {
         return this.labelGroup == null ? Codegen.empty() : this.labelGroup;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -94,7 +94,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="questionDuration")
       private final @Nullable Output<String> questionDuration;
 
-    public Output<String> getQuestionDuration() {
+    public Output<String> questionDuration() {
         return this.questionDuration == null ? Codegen.empty() : this.questionDuration;
     }
 
@@ -105,7 +105,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
@@ -116,7 +116,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     @Import(name="userEmailAddress")
       private final @Nullable Output<String> userEmailAddress;
 
-    public Output<String> getUserEmailAddress() {
+    public Output<String> userEmailAddress() {
         return this.userEmailAddress == null ? Codegen.empty() : this.userEmailAddress;
     }
 

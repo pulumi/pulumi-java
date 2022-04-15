@@ -33,14 +33,14 @@ public final class PrivatePoolV1ConfigResponse {
      * Network configuration for the pool.
      * 
     */
-    public NetworkConfigResponse getNetworkConfig() {
+    public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
     /**
      * Machine configuration for the workers in the pool.
      * 
     */
-    public WorkerConfigResponse getWorkerConfig() {
+    public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
 

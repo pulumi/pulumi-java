@@ -26,7 +26,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
 
-    public Output<String> getGcsUri() {
+    public Output<String> gcsUri() {
         return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
     }
 
@@ -37,7 +37,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawBytes")
       private final @Nullable Output<String> rawBytes;
 
-    public Output<String> getRawBytes() {
+    public Output<String> rawBytes() {
         return this.rawBytes == null ? Codegen.empty() : this.rawBytes;
     }
 

@@ -26,7 +26,7 @@ public final class HttpLoadBalancingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 

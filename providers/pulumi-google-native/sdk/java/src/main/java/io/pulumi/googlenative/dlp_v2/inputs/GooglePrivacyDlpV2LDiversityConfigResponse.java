@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
     @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
-    public List<GooglePrivacyDlpV2FieldIdResponse> getQuasiIds() {
+    public List<GooglePrivacyDlpV2FieldIdResponse> quasiIds() {
         return this.quasiIds;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
     @Import(name="sensitiveAttribute", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 
-    public GooglePrivacyDlpV2FieldIdResponse getSensitiveAttribute() {
+    public GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute() {
         return this.sensitiveAttribute;
     }
 

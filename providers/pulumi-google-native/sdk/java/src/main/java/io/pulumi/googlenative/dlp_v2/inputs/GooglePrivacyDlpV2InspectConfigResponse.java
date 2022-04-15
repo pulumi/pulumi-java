@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="customInfoTypes", required=true)
       private final List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
 
-    public List<GooglePrivacyDlpV2CustomInfoTypeResponse> getCustomInfoTypes() {
+    public List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes() {
         return this.customInfoTypes;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="excludeInfoTypes", required=true)
       private final Boolean excludeInfoTypes;
 
-    public Boolean getExcludeInfoTypes() {
+    public Boolean excludeInfoTypes() {
         return this.excludeInfoTypes;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="includeQuote", required=true)
       private final Boolean includeQuote;
 
-    public Boolean getIncludeQuote() {
+    public Boolean includeQuote() {
         return this.includeQuote;
     }
 
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="infoTypes", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
-    public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
+    public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
 
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="limits", required=true)
       private final GooglePrivacyDlpV2FindingLimitsResponse limits;
 
-    public GooglePrivacyDlpV2FindingLimitsResponse getLimits() {
+    public GooglePrivacyDlpV2FindingLimitsResponse limits() {
         return this.limits;
     }
 
@@ -84,7 +84,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="minLikelihood", required=true)
       private final String minLikelihood;
 
-    public String getMinLikelihood() {
+    public String minLikelihood() {
         return this.minLikelihood;
     }
 
@@ -95,7 +95,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends io.pulumi.res
     @Import(name="ruleSet", required=true)
       private final List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
 
-    public List<GooglePrivacyDlpV2InspectionRuleSetResponse> getRuleSet() {
+    public List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet() {
         return this.ruleSet;
     }
 

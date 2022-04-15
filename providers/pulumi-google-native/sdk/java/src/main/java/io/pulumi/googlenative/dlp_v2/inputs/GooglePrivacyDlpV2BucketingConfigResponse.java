@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse extends io.pulumi.r
     @Import(name="buckets", required=true)
       private final List<GooglePrivacyDlpV2BucketResponse> buckets;
 
-    public List<GooglePrivacyDlpV2BucketResponse> getBuckets() {
+    public List<GooglePrivacyDlpV2BucketResponse> buckets() {
         return this.buckets;
     }
 

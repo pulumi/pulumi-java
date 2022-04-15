@@ -33,14 +33,14 @@ public final class DestinationConfigResponse {
      * Destination connection profile identifier.
      * 
     */
-    public String getDestinationConnectionProfileName() {
+    public String destinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
     }
     /**
      * GCS destination configuration.
      * 
     */
-    public GcsDestinationConfigResponse getGcsDestinationConfig() {
+    public GcsDestinationConfigResponse gcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }
 

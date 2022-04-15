@@ -48,28 +48,28 @@ public final class LogDescriptorResponse {
      * A human-readable description of this log. This information appears in the documentation and can contain details.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The human-readable name for this log. This information appears on the user interface and should be concise.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
      * 
     */
-    public List<LabelDescriptorResponse> getLabels() {
+    public List<LabelDescriptorResponse> labels() {
         return this.labels;
     }
     /**
      * The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

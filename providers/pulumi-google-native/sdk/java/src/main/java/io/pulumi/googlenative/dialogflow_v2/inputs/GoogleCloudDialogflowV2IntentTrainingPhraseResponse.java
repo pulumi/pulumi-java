@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
     @Import(name="parts", required=true)
       private final List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts;
 
-    public List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> getParts() {
+    public List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts() {
         return this.parts;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
     @Import(name="timesAddedCount", required=true)
       private final Integer timesAddedCount;
 
-    public Integer getTimesAddedCount() {
+    public Integer timesAddedCount() {
         return this.timesAddedCount;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

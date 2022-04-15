@@ -26,7 +26,7 @@ public final class ConnectivityTestIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="auditConfigs")
       private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+    public Output<List<AuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -37,14 +37,14 @@ public final class ConnectivityTestIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="connectivityTestId", required=true)
       private final Output<String> connectivityTestId;
 
-    public Output<String> getConnectivityTestId() {
+    public Output<String> connectivityTestId() {
         return this.connectivityTestId;
     }
 
@@ -55,14 +55,14 @@ public final class ConnectivityTestIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class ConnectivityTestIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
+    public Output<String> updateMask() {
         return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
@@ -84,7 +84,7 @@ public final class ConnectivityTestIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

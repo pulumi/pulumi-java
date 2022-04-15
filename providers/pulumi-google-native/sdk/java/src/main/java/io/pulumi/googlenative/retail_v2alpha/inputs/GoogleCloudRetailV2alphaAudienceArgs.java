@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaAudienceArgs extends io.pulumi.resour
     @Import(name="ageGroups")
       private final @Nullable Output<List<String>> ageGroups;
 
-    public Output<List<String>> getAgeGroups() {
+    public Output<List<String>> ageGroups() {
         return this.ageGroups == null ? Codegen.empty() : this.ageGroups;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaAudienceArgs extends io.pulumi.resour
     @Import(name="genders")
       private final @Nullable Output<List<String>> genders;
 
-    public Output<List<String>> getGenders() {
+    public Output<List<String>> genders() {
         return this.genders == null ? Codegen.empty() : this.genders;
     }
 

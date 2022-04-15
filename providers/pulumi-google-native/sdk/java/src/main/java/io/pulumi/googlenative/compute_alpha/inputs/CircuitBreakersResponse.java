@@ -24,7 +24,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     @Import(name="connectTimeout", required=true)
       private final DurationResponse connectTimeout;
 
-    public DurationResponse getConnectTimeout() {
+    public DurationResponse connectTimeout() {
         return this.connectTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxConnections", required=true)
       private final Integer maxConnections;
 
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
 
@@ -46,7 +46,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxPendingRequests", required=true)
       private final Integer maxPendingRequests;
 
-    public Integer getMaxPendingRequests() {
+    public Integer maxPendingRequests() {
         return this.maxPendingRequests;
     }
 
@@ -57,7 +57,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxRequests", required=true)
       private final Integer maxRequests;
 
-    public Integer getMaxRequests() {
+    public Integer maxRequests() {
         return this.maxRequests;
     }
 
@@ -68,7 +68,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxRequestsPerConnection", required=true)
       private final Integer maxRequestsPerConnection;
 
-    public Integer getMaxRequestsPerConnection() {
+    public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
 
@@ -79,7 +79,7 @@ public final class CircuitBreakersResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxRetries", required=true)
       private final Integer maxRetries;
 
-    public Integer getMaxRetries() {
+    public Integer maxRetries() {
         return this.maxRetries;
     }
 

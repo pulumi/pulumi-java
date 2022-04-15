@@ -23,7 +23,7 @@ public final class PullMessageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="payload", required=true)
       private final String payload;
 
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 
@@ -34,7 +34,7 @@ public final class PullMessageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 

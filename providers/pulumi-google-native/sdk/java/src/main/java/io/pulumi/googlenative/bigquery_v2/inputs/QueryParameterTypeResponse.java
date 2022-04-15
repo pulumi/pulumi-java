@@ -21,7 +21,7 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
     @Import(name="arrayType", required=true)
       private final QueryParameterTypeResponse arrayType;
 
-    public QueryParameterTypeResponse getArrayType() {
+    public QueryParameterTypeResponse arrayType() {
         return this.arrayType;
     }
 
@@ -32,7 +32,7 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
     @Import(name="structTypes", required=true)
       private final List<QueryParameterTypeStructTypesItemResponse> structTypes;
 
-    public List<QueryParameterTypeStructTypesItemResponse> getStructTypes() {
+    public List<QueryParameterTypeStructTypesItemResponse> structTypes() {
         return this.structTypes;
     }
 
@@ -43,7 +43,7 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class RolloutPolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="defaultRolloutTime", required=true)
       private final String defaultRolloutTime;
 
-    public String getDefaultRolloutTime() {
+    public String defaultRolloutTime() {
         return this.defaultRolloutTime;
     }
 
@@ -35,7 +35,7 @@ public final class RolloutPolicyResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="locationRolloutPolicies", required=true)
       private final Map<String,String> locationRolloutPolicies;
 
-    public Map<String,String> getLocationRolloutPolicies() {
+    public Map<String,String> locationRolloutPolicies() {
         return this.locationRolloutPolicies;
     }
 

@@ -55,35 +55,35 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
      * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with "subject alt name". For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
      * 
     */
-    public List<String> getAllowedCaCerts() {
+    public List<String> allowedCaCerts() {
         return this.allowedCaCerts;
     }
     /**
      * The password for HTTP Basic authentication.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The HTTP request headers to send together with webhook requests.
      * 
     */
-    public Map<String,String> getRequestHeaders() {
+    public Map<String,String> requestHeaders() {
         return this.requestHeaders;
     }
     /**
      * The webhook URI for receiving POST requests. It must use https protocol.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
     /**
      * The user name for HTTP Basic authentication.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

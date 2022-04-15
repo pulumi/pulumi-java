@@ -26,7 +26,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -37,7 +37,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
@@ -48,7 +48,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subject")
       private final @Nullable Output<String> subject;
 
-    public Output<String> getSubject() {
+    public Output<String> subject() {
         return this.subject == null ? Codegen.empty() : this.subject;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse extends
     @Import(name="enableSpeechAdaptation", required=true)
       private final Boolean enableSpeechAdaptation;
 
-    public Boolean getEnableSpeechAdaptation() {
+    public Boolean enableSpeechAdaptation() {
         return this.enableSpeechAdaptation;
     }
 

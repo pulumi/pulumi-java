@@ -17,14 +17,14 @@ public final class GetTargetTcpProxyArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="targetTcpProxy", required=true)
       private final String targetTcpProxy;
 
-    public String getTargetTcpProxy() {
+    public String targetTcpProxy() {
         return this.targetTcpProxy;
     }
 

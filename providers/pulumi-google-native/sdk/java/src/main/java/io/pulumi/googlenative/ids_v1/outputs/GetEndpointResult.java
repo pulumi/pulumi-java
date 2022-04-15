@@ -97,77 +97,77 @@ public final class GetEndpointResult {
      * The create time timestamp.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the endpoint
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The fully qualified URL of the endpoint's ILB Forwarding Rule.
      * 
     */
-    public String getEndpointForwardingRule() {
+    public String endpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
      * The IP address of the IDS Endpoint's ILB.
      * 
     */
-    public String getEndpointIp() {
+    public String endpointIp() {
         return this.endpointIp;
     }
     /**
      * The labels of the endpoint.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The name of the endpoint.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The fully qualified URL of the network to which the IDS Endpoint is attached.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * Lowest threat severity that this endpoint will alert on.
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * Current state of the endpoint.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Whether the endpoint should report traffic logs in addition to threat logs.
      * 
     */
-    public Boolean getTrafficLogs() {
+    public Boolean trafficLogs() {
         return this.trafficLogs;
     }
     /**
      * The update time timestamp.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

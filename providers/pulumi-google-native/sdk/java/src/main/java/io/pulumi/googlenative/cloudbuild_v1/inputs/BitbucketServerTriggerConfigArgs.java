@@ -28,7 +28,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     @Import(name="bitbucketServerConfigResource", required=true)
       private final Output<String> bitbucketServerConfigResource;
 
-    public Output<String> getBitbucketServerConfigResource() {
+    public Output<String> bitbucketServerConfigResource() {
         return this.bitbucketServerConfigResource;
     }
 
@@ -39,7 +39,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     @Import(name="projectKey", required=true)
       private final Output<String> projectKey;
 
-    public Output<String> getProjectKey() {
+    public Output<String> projectKey() {
         return this.projectKey;
     }
 
@@ -50,7 +50,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     @Import(name="pullRequest")
       private final @Nullable Output<PullRequestFilterArgs> pullRequest;
 
-    public Output<PullRequestFilterArgs> getPullRequest() {
+    public Output<PullRequestFilterArgs> pullRequest() {
         return this.pullRequest == null ? Codegen.empty() : this.pullRequest;
     }
 
@@ -61,7 +61,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     @Import(name="push")
       private final @Nullable Output<PushFilterArgs> push;
 
-    public Output<PushFilterArgs> getPush() {
+    public Output<PushFilterArgs> push() {
         return this.push == null ? Codegen.empty() : this.push;
     }
 
@@ -72,7 +72,7 @@ public final class BitbucketServerTriggerConfigArgs extends io.pulumi.resources.
     @Import(name="repoSlug", required=true)
       private final Output<String> repoSlug;
 
-    public Output<String> getRepoSlug() {
+    public Output<String> repoSlug() {
         return this.repoSlug;
     }
 

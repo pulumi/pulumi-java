@@ -25,7 +25,7 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
     @Import(name="accessLevels", required=true)
       private final List<String> accessLevels;
 
-    public List<String> getAccessLevels() {
+    public List<String> accessLevels() {
         return this.accessLevels;
     }
 
@@ -36,7 +36,7 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
     @Import(name="resources", required=true)
       private final List<String> resources;
 
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources;
     }
 
@@ -47,7 +47,7 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
     @Import(name="restrictedServices", required=true)
       private final List<String> restrictedServices;
 
-    public List<String> getRestrictedServices() {
+    public List<String> restrictedServices() {
         return this.restrictedServices;
     }
 
@@ -58,7 +58,7 @@ public final class ServicePerimeterConfigResponse extends io.pulumi.resources.In
     @Import(name="vpcAccessibleServices", required=true)
       private final VpcAccessibleServicesResponse vpcAccessibleServices;
 
-    public VpcAccessibleServicesResponse getVpcAccessibleServices() {
+    public VpcAccessibleServicesResponse vpcAccessibleServices() {
         return this.vpcAccessibleServices;
     }
 

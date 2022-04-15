@@ -19,7 +19,7 @@ public final class ConfigFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 

@@ -26,7 +26,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableFreshness")
       private final @Nullable Output<Boolean> disableFreshness;
 
-    public Output<Boolean> getDisableFreshness() {
+    public Output<Boolean> disableFreshness() {
         return this.disableFreshness == null ? Codegen.empty() : this.disableFreshness;
     }
 
@@ -37,7 +37,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disablePersonalization")
       private final @Nullable Output<Boolean> disablePersonalization;
 
-    public Output<Boolean> getDisablePersonalization() {
+    public Output<Boolean> disablePersonalization() {
         return this.disablePersonalization == null ? Codegen.empty() : this.disablePersonalization;
     }
 

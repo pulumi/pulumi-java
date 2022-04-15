@@ -32,7 +32,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerAction")
       private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Output<HttpHeaderActionArgs> getHeaderAction() {
+    public Output<HttpHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -54,7 +54,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchRules")
       private final @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules;
 
-    public Output<List<HttpRouteRuleMatchArgs>> getMatchRules() {
+    public Output<List<HttpRouteRuleMatchArgs>> matchRules() {
         return this.matchRules == null ? Codegen.empty() : this.matchRules;
     }
 
@@ -65,7 +65,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -76,7 +76,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routeAction")
       private final @Nullable Output<HttpRouteActionArgs> routeAction;
 
-    public Output<HttpRouteActionArgs> getRouteAction() {
+    public Output<HttpRouteActionArgs> routeAction() {
         return this.routeAction == null ? Codegen.empty() : this.routeAction;
     }
 
@@ -87,7 +87,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -98,7 +98,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlRedirect")
       private final @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
-    public Output<HttpRedirectActionArgs> getUrlRedirect() {
+    public Output<HttpRedirectActionArgs> urlRedirect() {
         return this.urlRedirect == null ? Codegen.empty() : this.urlRedirect;
     }
 

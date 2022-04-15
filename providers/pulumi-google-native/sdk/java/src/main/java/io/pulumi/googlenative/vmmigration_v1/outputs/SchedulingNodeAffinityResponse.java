@@ -40,21 +40,21 @@ public final class SchedulingNodeAffinityResponse {
      * The label key of Node resource to reference.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The operator to use for the node resources specified in the `values` parameter.
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * Corresponds to the label values of Node resource.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

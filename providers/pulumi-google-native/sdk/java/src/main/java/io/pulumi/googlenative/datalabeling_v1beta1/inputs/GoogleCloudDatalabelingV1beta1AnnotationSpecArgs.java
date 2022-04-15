@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 

@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     @Import(name="confidenceInterval")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> getConfidenceInterval() {
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval() {
         return this.confidenceInterval == null ? Codegen.empty() : this.confidenceInterval;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     @Import(name="count")
       private final @Nullable Output<Double> count;
 
-    public Output<Double> getCount() {
+    public Output<Double> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     @Import(name="countType")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> getCountType() {
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType() {
         return this.countType == null ? Codegen.empty() : this.countType;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     @Import(name="ratio")
       private final @Nullable Output<Double> ratio;
 
-    public Output<Double> getRatio() {
+    public Output<Double> ratio() {
         return this.ratio == null ? Codegen.empty() : this.ratio;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> getType() {
+    public Output<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

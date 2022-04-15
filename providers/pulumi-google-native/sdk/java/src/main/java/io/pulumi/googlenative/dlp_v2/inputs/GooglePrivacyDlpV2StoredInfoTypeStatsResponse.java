@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulu
     @Import(name="largeCustomDictionary", required=true)
       private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
-    public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse getLargeCustomDictionary() {
+    public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
 

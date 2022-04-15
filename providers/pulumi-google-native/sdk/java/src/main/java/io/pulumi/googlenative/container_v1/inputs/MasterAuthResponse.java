@@ -24,7 +24,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
 
@@ -35,7 +35,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificateConfig", required=true)
       private final ClientCertificateConfigResponse clientCertificateConfig;
 
-    public ClientCertificateConfigResponse getClientCertificateConfig() {
+    public ClientCertificateConfigResponse clientCertificateConfig() {
         return this.clientCertificateConfig;
     }
 
@@ -46,7 +46,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientKey", required=true)
       private final String clientKey;
 
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
 
@@ -57,7 +57,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterCaCertificate", required=true)
       private final String clusterCaCertificate;
 
-    public String getClusterCaCertificate() {
+    public String clusterCaCertificate() {
         return this.clusterCaCertificate;
     }
 
@@ -68,7 +68,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -79,7 +79,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

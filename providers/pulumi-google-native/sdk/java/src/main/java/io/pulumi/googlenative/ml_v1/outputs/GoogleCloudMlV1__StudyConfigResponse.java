@@ -50,28 +50,28 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
      * The search algorithm specified for the study.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
     /**
      * Configuration for automated stopping of unpromising Trials.
      * 
     */
-    public GoogleCloudMlV1__AutomatedStoppingConfigResponse getAutomatedStoppingConfig() {
+    public GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig() {
         return this.automatedStoppingConfig;
     }
     /**
      * Metric specs for the study.
      * 
     */
-    public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> getMetrics() {
+    public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics() {
         return this.metrics;
     }
     /**
      * The set of parameters to tune.
      * 
     */
-    public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getParameters() {
+    public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters() {
         return this.parameters;
     }
 

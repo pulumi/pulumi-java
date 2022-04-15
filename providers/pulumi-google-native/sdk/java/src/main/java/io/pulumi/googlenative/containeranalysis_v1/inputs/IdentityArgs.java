@@ -27,7 +27,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -38,7 +38,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateId")
       private final @Nullable Output<String> updateId;
 
-    public Output<String> getUpdateId() {
+    public Output<String> updateId() {
         return this.updateId == null ? Codegen.empty() : this.updateId;
     }
 

@@ -23,7 +23,7 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
     @Import(name="ingestDelay", required=true)
       private final String ingestDelay;
 
-    public String getIngestDelay() {
+    public String ingestDelay() {
         return this.ingestDelay;
     }
 
@@ -34,7 +34,7 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
     @Import(name="samplePeriod", required=true)
       private final String samplePeriod;
 
-    public String getSamplePeriod() {
+    public String samplePeriod() {
         return this.samplePeriod;
     }
 

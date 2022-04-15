@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputResponse {
      * Name of the event.
      * 
     */
-    public String getEvent() {
+    public String event() {
         return this.event;
     }
 

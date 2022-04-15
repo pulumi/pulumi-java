@@ -17,21 +17,21 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accessId", required=true)
       private final String accessId;
 
-    public String getAccessId() {
+    public String accessId() {
         return this.accessId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="userProject")
       private final @Nullable String userProject;
 
-    public Optional<String> getUserProject() {
+    public Optional<String> userProject() {
         return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
     }
 

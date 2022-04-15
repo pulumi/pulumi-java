@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
     @Import(name="count", required=true)
       private final String count;
 
-    public String getCount() {
+    public String count() {
         return this.count;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
     @Import(name="infoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
+    public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
     }
 

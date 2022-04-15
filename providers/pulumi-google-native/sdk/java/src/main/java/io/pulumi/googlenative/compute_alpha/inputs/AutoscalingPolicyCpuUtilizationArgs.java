@@ -27,7 +27,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
     @Import(name="predictiveMethod")
       private final @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
 
-    public Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> getPredictiveMethod() {
+    public Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod() {
         return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
     @Import(name="utilizationTarget")
       private final @Nullable Output<Double> utilizationTarget;
 
-    public Output<Double> getUtilizationTarget() {
+    public Output<Double> utilizationTarget() {
         return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
     }
 

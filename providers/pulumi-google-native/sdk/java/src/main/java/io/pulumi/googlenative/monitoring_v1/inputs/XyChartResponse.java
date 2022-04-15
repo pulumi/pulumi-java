@@ -28,7 +28,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="chartOptions", required=true)
       private final ChartOptionsResponse chartOptions;
 
-    public ChartOptionsResponse getChartOptions() {
+    public ChartOptionsResponse chartOptions() {
         return this.chartOptions;
     }
 
@@ -39,7 +39,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataSets", required=true)
       private final List<DataSetResponse> dataSets;
 
-    public List<DataSetResponse> getDataSets() {
+    public List<DataSetResponse> dataSets() {
         return this.dataSets;
     }
 
@@ -50,7 +50,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="thresholds", required=true)
       private final List<ThresholdResponse> thresholds;
 
-    public List<ThresholdResponse> getThresholds() {
+    public List<ThresholdResponse> thresholds() {
         return this.thresholds;
     }
 
@@ -61,7 +61,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeshiftDuration", required=true)
       private final String timeshiftDuration;
 
-    public String getTimeshiftDuration() {
+    public String timeshiftDuration() {
         return this.timeshiftDuration;
     }
 
@@ -72,7 +72,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xAxis", required=true)
       private final AxisResponse xAxis;
 
-    public AxisResponse getXAxis() {
+    public AxisResponse xAxis() {
         return this.xAxis;
     }
 
@@ -83,7 +83,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="y2Axis", required=true)
       private final AxisResponse y2Axis;
 
-    public AxisResponse getY2Axis() {
+    public AxisResponse y2Axis() {
         return this.y2Axis;
     }
 
@@ -94,7 +94,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="yAxis", required=true)
       private final AxisResponse yAxis;
 
-    public AxisResponse getYAxis() {
+    public AxisResponse yAxis() {
         return this.yAxis;
     }
 

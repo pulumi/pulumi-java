@@ -32,7 +32,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="allowLargeResults", required=true)
       private final Boolean allowLargeResults;
 
-    public Boolean getAllowLargeResults() {
+    public Boolean allowLargeResults() {
         return this.allowLargeResults;
     }
 
@@ -43,7 +43,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="clustering", required=true)
       private final ClusteringResponse clustering;
 
-    public ClusteringResponse getClustering() {
+    public ClusteringResponse clustering() {
         return this.clustering;
     }
 
@@ -54,7 +54,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="connectionProperties", required=true)
       private final List<ConnectionPropertyResponse> connectionProperties;
 
-    public List<ConnectionPropertyResponse> getConnectionProperties() {
+    public List<ConnectionPropertyResponse> connectionProperties() {
         return this.connectionProperties;
     }
 
@@ -65,7 +65,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="createDisposition", required=true)
       private final String createDisposition;
 
-    public String getCreateDisposition() {
+    public String createDisposition() {
         return this.createDisposition;
     }
 
@@ -76,7 +76,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="createSession", required=true)
       private final Boolean createSession;
 
-    public Boolean getCreateSession() {
+    public Boolean createSession() {
         return this.createSession;
     }
 
@@ -87,7 +87,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="defaultDataset", required=true)
       private final DatasetReferenceResponse defaultDataset;
 
-    public DatasetReferenceResponse getDefaultDataset() {
+    public DatasetReferenceResponse defaultDataset() {
         return this.defaultDataset;
     }
 
@@ -98,7 +98,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="destinationEncryptionConfiguration", required=true)
       private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
-    public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
+    public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
     }
 
@@ -109,7 +109,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="destinationTable", required=true)
       private final TableReferenceResponse destinationTable;
 
-    public TableReferenceResponse getDestinationTable() {
+    public TableReferenceResponse destinationTable() {
         return this.destinationTable;
     }
 
@@ -120,7 +120,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="flattenResults", required=true)
       private final Boolean flattenResults;
 
-    public Boolean getFlattenResults() {
+    public Boolean flattenResults() {
         return this.flattenResults;
     }
 
@@ -131,7 +131,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="maximumBillingTier", required=true)
       private final Integer maximumBillingTier;
 
-    public Integer getMaximumBillingTier() {
+    public Integer maximumBillingTier() {
         return this.maximumBillingTier;
     }
 
@@ -142,7 +142,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="maximumBytesBilled", required=true)
       private final String maximumBytesBilled;
 
-    public String getMaximumBytesBilled() {
+    public String maximumBytesBilled() {
         return this.maximumBytesBilled;
     }
 
@@ -153,7 +153,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="parameterMode", required=true)
       private final String parameterMode;
 
-    public String getParameterMode() {
+    public String parameterMode() {
         return this.parameterMode;
     }
 
@@ -164,7 +164,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="priority", required=true)
       private final String priority;
 
-    public String getPriority() {
+    public String priority() {
         return this.priority;
     }
 
@@ -175,7 +175,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -186,7 +186,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="queryParameters", required=true)
       private final List<QueryParameterResponse> queryParameters;
 
-    public List<QueryParameterResponse> getQueryParameters() {
+    public List<QueryParameterResponse> queryParameters() {
         return this.queryParameters;
     }
 
@@ -197,7 +197,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="rangePartitioning", required=true)
       private final RangePartitioningResponse rangePartitioning;
 
-    public RangePartitioningResponse getRangePartitioning() {
+    public RangePartitioningResponse rangePartitioning() {
         return this.rangePartitioning;
     }
 
@@ -208,7 +208,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="schemaUpdateOptions", required=true)
       private final List<String> schemaUpdateOptions;
 
-    public List<String> getSchemaUpdateOptions() {
+    public List<String> schemaUpdateOptions() {
         return this.schemaUpdateOptions;
     }
 
@@ -219,7 +219,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="tableDefinitions", required=true)
       private final Map<String,String> tableDefinitions;
 
-    public Map<String,String> getTableDefinitions() {
+    public Map<String,String> tableDefinitions() {
         return this.tableDefinitions;
     }
 
@@ -230,7 +230,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="timePartitioning", required=true)
       private final TimePartitioningResponse timePartitioning;
 
-    public TimePartitioningResponse getTimePartitioning() {
+    public TimePartitioningResponse timePartitioning() {
         return this.timePartitioning;
     }
 
@@ -241,7 +241,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="useLegacySql", required=true)
       private final Boolean useLegacySql;
 
-    public Boolean getUseLegacySql() {
+    public Boolean useLegacySql() {
         return this.useLegacySql;
     }
 
@@ -252,7 +252,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="useQueryCache", required=true)
       private final Boolean useQueryCache;
 
-    public Boolean getUseQueryCache() {
+    public Boolean useQueryCache() {
         return this.useQueryCache;
     }
 
@@ -263,7 +263,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="userDefinedFunctionResources", required=true)
       private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
-    public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {
+    public List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
     }
 
@@ -274,7 +274,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
     @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
-    public String getWriteDisposition() {
+    public String writeDisposition() {
         return this.writeDisposition;
     }
 

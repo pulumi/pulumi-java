@@ -15,21 +15,21 @@ public final class GetWorkloadArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="workloadId", required=true)
       private final String workloadId;
 
-    public String getWorkloadId() {
+    public String workloadId() {
         return this.workloadId;
     }
 

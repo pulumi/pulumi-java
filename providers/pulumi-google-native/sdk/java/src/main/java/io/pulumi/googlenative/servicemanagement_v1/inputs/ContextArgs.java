@@ -27,7 +27,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<ContextRuleArgs>> rules;
 
-    public Output<List<ContextRuleArgs>> getRules() {
+    public Output<List<ContextRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

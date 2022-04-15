@@ -25,7 +25,7 @@ public final class ValidationConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="disableFhirpathValidation", required=true)
       private final Boolean disableFhirpathValidation;
 
-    public Boolean getDisableFhirpathValidation() {
+    public Boolean disableFhirpathValidation() {
         return this.disableFhirpathValidation;
     }
 
@@ -36,7 +36,7 @@ public final class ValidationConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="disableProfileValidation", required=true)
       private final Boolean disableProfileValidation;
 
-    public Boolean getDisableProfileValidation() {
+    public Boolean disableProfileValidation() {
         return this.disableProfileValidation;
     }
 
@@ -47,7 +47,7 @@ public final class ValidationConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="disableReferenceTypeValidation", required=true)
       private final Boolean disableReferenceTypeValidation;
 
-    public Boolean getDisableReferenceTypeValidation() {
+    public Boolean disableReferenceTypeValidation() {
         return this.disableReferenceTypeValidation;
     }
 
@@ -58,7 +58,7 @@ public final class ValidationConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="disableRequiredFieldValidation", required=true)
       private final Boolean disableRequiredFieldValidation;
 
-    public Boolean getDisableRequiredFieldValidation() {
+    public Boolean disableRequiredFieldValidation() {
         return this.disableRequiredFieldValidation;
     }
 
@@ -69,7 +69,7 @@ public final class ValidationConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="enabledImplementationGuides", required=true)
       private final List<String> enabledImplementationGuides;
 
-    public List<String> getEnabledImplementationGuides() {
+    public List<String> enabledImplementationGuides() {
         return this.enabledImplementationGuides;
     }
 

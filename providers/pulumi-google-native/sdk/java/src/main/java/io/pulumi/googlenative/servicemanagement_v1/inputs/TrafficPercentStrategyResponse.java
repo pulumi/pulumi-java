@@ -24,7 +24,7 @@ public final class TrafficPercentStrategyResponse extends io.pulumi.resources.In
     @Import(name="percentages", required=true)
       private final Map<String,String> percentages;
 
-    public Map<String,String> getPercentages() {
+    public Map<String,String> percentages() {
         return this.percentages;
     }
 

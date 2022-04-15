@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
     @Import(name="condition", required=true)
       private final String condition;
 
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
     @Import(name="intent", required=true)
       private final String intent;
 
-    public String getIntent() {
+    public String intent() {
         return this.intent;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
     @Import(name="targetFlow", required=true)
       private final String targetFlow;
 
-    public String getTargetFlow() {
+    public String targetFlow() {
         return this.targetFlow;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
     @Import(name="targetPage", required=true)
       private final String targetPage;
 
-    public String getTargetPage() {
+    public String targetPage() {
         return this.targetPage;
     }
 
@@ -79,7 +79,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
     @Import(name="triggerFulfillment", required=true)
       private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
-    public GoogleCloudDialogflowCxV3FulfillmentResponse getTriggerFulfillment() {
+    public GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }
 

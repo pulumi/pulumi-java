@@ -39,21 +39,21 @@ public final class NonCompliantFileResponse {
      * Command to display the non-compliant files.
      * 
     */
-    public String getDisplayCommand() {
+    public String displayCommand() {
         return this.displayCommand;
     }
     /**
      * display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using 'path'. Empty if `display_command` is set.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * Explains why a file is non compliant for a CIS check.
      * 
     */
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 

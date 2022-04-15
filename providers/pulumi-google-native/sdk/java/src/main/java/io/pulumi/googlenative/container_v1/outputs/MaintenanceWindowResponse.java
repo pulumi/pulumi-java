@@ -42,21 +42,21 @@ public final class MaintenanceWindowResponse {
      * DailyMaintenanceWindow specifies a daily maintenance operation window.
      * 
     */
-    public DailyMaintenanceWindowResponse getDailyMaintenanceWindow() {
+    public DailyMaintenanceWindowResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
     /**
      * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
      * 
     */
-    public Map<String,String> getMaintenanceExclusions() {
+    public Map<String,String> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
     /**
      * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
      * 
     */
-    public RecurringTimeWindowResponse getRecurringWindow() {
+    public RecurringTimeWindowResponse recurringWindow() {
         return this.recurringWindow;
     }
 

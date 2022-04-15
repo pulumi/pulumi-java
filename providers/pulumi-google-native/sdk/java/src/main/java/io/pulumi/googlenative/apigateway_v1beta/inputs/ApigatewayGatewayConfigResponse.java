@@ -23,7 +23,7 @@ public final class ApigatewayGatewayConfigResponse extends io.pulumi.resources.I
     @Import(name="backendConfig", required=true)
       private final ApigatewayBackendConfigResponse backendConfig;
 
-    public ApigatewayBackendConfigResponse getBackendConfig() {
+    public ApigatewayBackendConfigResponse backendConfig() {
         return this.backendConfig;
     }
 

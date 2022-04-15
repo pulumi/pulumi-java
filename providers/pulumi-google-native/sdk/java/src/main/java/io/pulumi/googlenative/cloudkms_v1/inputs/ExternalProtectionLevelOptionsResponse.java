@@ -23,7 +23,7 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
     @Import(name="ekmConnectionKeyPath", required=true)
       private final String ekmConnectionKeyPath;
 
-    public String getEkmConnectionKeyPath() {
+    public String ekmConnectionKeyPath() {
         return this.ekmConnectionKeyPath;
     }
 
@@ -34,7 +34,7 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
     @Import(name="externalKeyUri", required=true)
       private final String externalKeyUri;
 
-    public String getExternalKeyUri() {
+    public String externalKeyUri() {
         return this.externalKeyUri;
     }
 

@@ -24,7 +24,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="progress", required=true)
       private final Double progress;
 
-    public Double getProgress() {
+    public Double progress() {
         return this.progress;
     }
 
@@ -46,7 +46,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -57,7 +57,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="trackingUrl", required=true)
       private final String trackingUrl;
 
-    public String getTrackingUrl() {
+    public String trackingUrl() {
         return this.trackingUrl;
     }
 

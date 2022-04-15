@@ -32,7 +32,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return The names of any related resources that are blocking changes to the instruction.
      * 
      */
-    public Output<List<String>> getBlockingResources() {
+    public Output<List<String>> blockingResources() {
         return this.blockingResources;
     }
     /**
@@ -46,7 +46,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return Creation time of instruction.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +60,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return The data type of this instruction.
      * 
      */
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType;
     }
     /**
@@ -74,7 +74,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return The display name of the instruction. Maximum of 64 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -102,7 +102,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
      * 
      */
-    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> getPdfInstruction() {
+    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> pdfInstruction() {
         return this.pdfInstruction;
     }
     /**
@@ -130,7 +130,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * @return Last update time of instruction.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -23,7 +23,7 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="rangeEnd", required=true)
       private final String rangeEnd;
 
-    public String getRangeEnd() {
+    public String rangeEnd() {
         return this.rangeEnd;
     }
 
@@ -34,7 +34,7 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
     @Import(name="rangeStart", required=true)
       private final String rangeStart;
 
-    public String getRangeStart() {
+    public String rangeStart() {
         return this.rangeStart;
     }
 

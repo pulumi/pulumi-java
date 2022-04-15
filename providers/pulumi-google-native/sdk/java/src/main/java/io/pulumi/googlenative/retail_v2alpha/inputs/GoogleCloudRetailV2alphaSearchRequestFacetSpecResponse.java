@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
     @Import(name="enableDynamicPosition", required=true)
       private final Boolean enableDynamicPosition;
 
-    public Boolean getEnableDynamicPosition() {
+    public Boolean enableDynamicPosition() {
         return this.enableDynamicPosition;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
     @Import(name="excludedFilterKeys", required=true)
       private final List<String> excludedFilterKeys;
 
-    public List<String> getExcludedFilterKeys() {
+    public List<String> excludedFilterKeys() {
         return this.excludedFilterKeys;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
     @Import(name="facetKey", required=true)
       private final GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey;
 
-    public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse getFacetKey() {
+    public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey() {
         return this.facetKey;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse extend
     @Import(name="limit", required=true)
       private final Integer limit;
 
-    public Integer getLimit() {
+    public Integer limit() {
         return this.limit;
     }
 

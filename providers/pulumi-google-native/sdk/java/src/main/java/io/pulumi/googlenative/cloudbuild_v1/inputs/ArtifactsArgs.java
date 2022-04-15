@@ -28,7 +28,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
-    public Output<List<String>> getImages() {
+    public Output<List<String>> images() {
         return this.images == null ? Codegen.empty() : this.images;
     }
 
@@ -39,7 +39,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objects")
       private final @Nullable Output<ArtifactObjectsArgs> objects;
 
-    public Output<ArtifactObjectsArgs> getObjects() {
+    public Output<ArtifactObjectsArgs> objects() {
         return this.objects == null ? Codegen.empty() : this.objects;
     }
 

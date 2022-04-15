@@ -17,14 +17,14 @@ public final class GetCompanyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="companyId", required=true)
       private final String companyId;
 
-    public String getCompanyId() {
+    public String companyId() {
         return this.companyId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

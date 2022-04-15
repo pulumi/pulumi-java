@@ -26,7 +26,7 @@ public final class ClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="auditConfigs")
       private final @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
 
-    public Output<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
+    public Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -37,14 +37,14 @@ public final class ClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="bindings")
       private final @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
 
-    public Output<List<GoogleIamV1BindingArgs>> getBindings() {
+    public Output<List<GoogleIamV1BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="clientTlsPolicyId", required=true)
       private final Output<String> clientTlsPolicyId;
 
-    public Output<String> getClientTlsPolicyId() {
+    public Output<String> clientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
 
@@ -55,21 +55,21 @@ public final class ClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -80,7 +80,7 @@ public final class ClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
+    public Output<String> updateMask() {
         return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
@@ -91,7 +91,7 @@ public final class ClientTlsPolicyIamPolicyArgs extends io.pulumi.resources.Reso
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

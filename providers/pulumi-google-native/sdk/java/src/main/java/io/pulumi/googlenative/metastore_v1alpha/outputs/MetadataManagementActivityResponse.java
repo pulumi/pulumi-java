@@ -34,14 +34,14 @@ public final class MetadataManagementActivityResponse {
      * The latest metadata exports of the metastore service.
      * 
     */
-    public List<MetadataExportResponse> getMetadataExports() {
+    public List<MetadataExportResponse> metadataExports() {
         return this.metadataExports;
     }
     /**
      * The latest restores of the metastore service.
      * 
     */
-    public List<RestoreResponse> getRestores() {
+    public List<RestoreResponse> restores() {
         return this.restores;
     }
 

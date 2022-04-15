@@ -26,7 +26,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caCertificate", required=true)
       private final Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate;
     }
 
@@ -37,7 +37,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
+    public Output<String> clientCertificate() {
         return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
@@ -48,7 +48,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
+    public Output<String> clientKey() {
         return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 

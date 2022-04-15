@@ -15,7 +15,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
     @Import(name="ddosProtection", required=true)
       private final String ddosProtection;
 
-    public String getDdosProtection() {
+    public String ddosProtection() {
         return this.ddosProtection;
     }
 

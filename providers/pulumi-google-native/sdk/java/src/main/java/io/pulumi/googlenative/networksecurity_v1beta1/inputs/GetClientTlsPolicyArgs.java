@@ -17,21 +17,21 @@ public final class GetClientTlsPolicyArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="clientTlsPolicyId", required=true)
       private final String clientTlsPolicyId;
 
-    public String getClientTlsPolicyId() {
+    public String clientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

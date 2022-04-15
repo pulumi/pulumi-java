@@ -28,7 +28,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
@@ -39,7 +39,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elementaryStreams")
       private final @Nullable Output<List<String>> elementaryStreams;
 
-    public Output<List<String>> getElementaryStreams() {
+    public Output<List<String>> elementaryStreams() {
         return this.elementaryStreams == null ? Codegen.empty() : this.elementaryStreams;
     }
 
@@ -50,7 +50,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
@@ -61,7 +61,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -72,7 +72,7 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="segmentSettings")
       private final @Nullable Output<SegmentSettingsArgs> segmentSettings;
 
-    public Output<SegmentSettingsArgs> getSegmentSettings() {
+    public Output<SegmentSettingsArgs> segmentSettings() {
         return this.segmentSettings == null ? Codegen.empty() : this.segmentSettings;
     }
 

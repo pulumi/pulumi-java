@@ -30,7 +30,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveSizeBytes")
       private final @Nullable Output<String> archiveSizeBytes;
 
-    public Output<String> getArchiveSizeBytes() {
+    public Output<String> archiveSizeBytes() {
         return this.archiveSizeBytes == null ? Codegen.empty() : this.archiveSizeBytes;
     }
 
@@ -41,7 +41,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecated")
       private final @Nullable Output<DeprecationStatusArgs> deprecated;
 
-    public Output<DeprecationStatusArgs> getDeprecated() {
+    public Output<DeprecationStatusArgs> deprecated() {
         return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
@@ -52,7 +52,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -74,14 +74,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
     @Import(name="forceCreate")
       private final @Nullable Output<String> forceCreate;
 
-    public Output<String> getForceCreate() {
+    public Output<String> forceCreate() {
         return this.forceCreate == null ? Codegen.empty() : this.forceCreate;
     }
 
@@ -92,7 +92,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+    public Output<List<GuestOsFeatureArgs>> guestOsFeatures() {
         return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
@@ -103,7 +103,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getImageEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> imageEncryptionKey() {
         return this.imageEncryptionKey == null ? Codegen.empty() : this.imageEncryptionKey;
     }
 
@@ -114,7 +114,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -125,7 +125,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseCodes")
       private final @Nullable Output<List<String>> licenseCodes;
 
-    public Output<List<String>> getLicenseCodes() {
+    public Output<List<String>> licenseCodes() {
         return this.licenseCodes == null ? Codegen.empty() : this.licenseCodes;
     }
 
@@ -136,7 +136,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
@@ -147,14 +147,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -165,14 +165,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawDisk")
       private final @Nullable Output<ImageRawDiskArgs> rawDisk;
 
-    public Output<ImageRawDiskArgs> getRawDisk() {
+    public Output<ImageRawDiskArgs> rawDisk() {
         return this.rawDisk == null ? Codegen.empty() : this.rawDisk;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -183,7 +183,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shieldedInstanceInitialState")
       private final @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
 
-    public Output<InitialStateConfigArgs> getShieldedInstanceInitialState() {
+    public Output<InitialStateConfigArgs> shieldedInstanceInitialState() {
         return this.shieldedInstanceInitialState == null ? Codegen.empty() : this.shieldedInstanceInitialState;
     }
 
@@ -194,7 +194,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
@@ -205,7 +205,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
     }
 
@@ -216,7 +216,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
-    public Output<String> getSourceImage() {
+    public Output<String> sourceImage() {
         return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
@@ -227,7 +227,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
     }
 
@@ -238,7 +238,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> getSourceSnapshot() {
+    public Output<String> sourceSnapshot() {
         return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
     }
 
@@ -249,7 +249,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
     }
 
@@ -260,7 +260,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
       private final @Nullable Output<ImageSourceType> sourceType;
 
-    public Output<ImageSourceType> getSourceType() {
+    public Output<ImageSourceType> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
@@ -271,7 +271,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 

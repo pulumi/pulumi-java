@@ -24,7 +24,7 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="aggregation", required=true)
       private final AggregationResponse aggregation;
 
-    public AggregationResponse getAggregation() {
+    public AggregationResponse aggregation() {
         return this.aggregation;
     }
 
@@ -35,7 +35,7 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 

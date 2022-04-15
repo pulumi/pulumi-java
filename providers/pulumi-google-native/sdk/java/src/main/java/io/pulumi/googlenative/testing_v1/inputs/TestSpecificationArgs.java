@@ -34,7 +34,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="androidInstrumentationTest")
       private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
-    public Output<AndroidInstrumentationTestArgs> getAndroidInstrumentationTest() {
+    public Output<AndroidInstrumentationTestArgs> androidInstrumentationTest() {
         return this.androidInstrumentationTest == null ? Codegen.empty() : this.androidInstrumentationTest;
     }
 
@@ -45,7 +45,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="androidRoboTest")
       private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
-    public Output<AndroidRoboTestArgs> getAndroidRoboTest() {
+    public Output<AndroidRoboTestArgs> androidRoboTest() {
         return this.androidRoboTest == null ? Codegen.empty() : this.androidRoboTest;
     }
 
@@ -56,7 +56,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="androidTestLoop")
       private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
-    public Output<AndroidTestLoopArgs> getAndroidTestLoop() {
+    public Output<AndroidTestLoopArgs> androidTestLoop() {
         return this.androidTestLoop == null ? Codegen.empty() : this.androidTestLoop;
     }
 
@@ -67,7 +67,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disablePerformanceMetrics")
       private final @Nullable Output<Boolean> disablePerformanceMetrics;
 
-    public Output<Boolean> getDisablePerformanceMetrics() {
+    public Output<Boolean> disablePerformanceMetrics() {
         return this.disablePerformanceMetrics == null ? Codegen.empty() : this.disablePerformanceMetrics;
     }
 
@@ -78,7 +78,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="disableVideoRecording")
       private final @Nullable Output<Boolean> disableVideoRecording;
 
-    public Output<Boolean> getDisableVideoRecording() {
+    public Output<Boolean> disableVideoRecording() {
         return this.disableVideoRecording == null ? Codegen.empty() : this.disableVideoRecording;
     }
 
@@ -89,7 +89,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iosTestLoop")
       private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
-    public Output<IosTestLoopArgs> getIosTestLoop() {
+    public Output<IosTestLoopArgs> iosTestLoop() {
         return this.iosTestLoop == null ? Codegen.empty() : this.iosTestLoop;
     }
 
@@ -100,7 +100,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iosTestSetup")
       private final @Nullable Output<IosTestSetupArgs> iosTestSetup;
 
-    public Output<IosTestSetupArgs> getIosTestSetup() {
+    public Output<IosTestSetupArgs> iosTestSetup() {
         return this.iosTestSetup == null ? Codegen.empty() : this.iosTestSetup;
     }
 
@@ -111,7 +111,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iosXcTest")
       private final @Nullable Output<IosXcTestArgs> iosXcTest;
 
-    public Output<IosXcTestArgs> getIosXcTest() {
+    public Output<IosXcTestArgs> iosXcTest() {
         return this.iosXcTest == null ? Codegen.empty() : this.iosXcTest;
     }
 
@@ -122,7 +122,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="testSetup")
       private final @Nullable Output<TestSetupArgs> testSetup;
 
-    public Output<TestSetupArgs> getTestSetup() {
+    public Output<TestSetupArgs> testSetup() {
         return this.testSetup == null ? Codegen.empty() : this.testSetup;
     }
 
@@ -133,7 +133,7 @@ public final class TestSpecificationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="testTimeout")
       private final @Nullable Output<String> testTimeout;
 
-    public Output<String> getTestTimeout() {
+    public Output<String> testTimeout() {
         return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
     }
 

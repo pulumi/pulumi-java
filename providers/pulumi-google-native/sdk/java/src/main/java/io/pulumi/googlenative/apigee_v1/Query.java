@@ -33,7 +33,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Creation time of the query.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -47,7 +47,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Hostname is available only when query is executed at host level.
      * 
      */
-    public Output<String> getEnvgroupHostname() {
+    public Output<String> envgroupHostname() {
         return this.envgroupHostname;
     }
     /**
@@ -61,7 +61,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Error is set when query fails.
      * 
      */
-    public Output<String> getError() {
+    public Output<String> error() {
         return this.error;
     }
     /**
@@ -75,7 +75,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return ExecutionTime is available only after the query is completed.
      * 
      */
-    public Output<String> getExecutionTime() {
+    public Output<String> executionTime() {
         return this.executionTime;
     }
     /**
@@ -89,7 +89,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Asynchronous Query Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Contains information like metrics, dimenstions etc of the AsyncQuery.
      * 
      */
-    public Output<GoogleCloudApigeeV1QueryMetadataResponse> getQueryParams() {
+    public Output<GoogleCloudApigeeV1QueryMetadataResponse> queryParams() {
         return this.queryParams;
     }
     /**
@@ -117,7 +117,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Asynchronous Report ID.
      * 
      */
-    public Output<String> getReportDefinitionId() {
+    public Output<String> reportDefinitionId() {
         return this.reportDefinitionId;
     }
     /**
@@ -131,7 +131,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Result is available only after the query is completed.
      * 
      */
-    public Output<GoogleCloudApigeeV1AsyncQueryResultResponse> getResult() {
+    public Output<GoogleCloudApigeeV1AsyncQueryResultResponse> result() {
         return this.result;
     }
     /**
@@ -145,7 +145,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return ResultFileSize is available only after the query is completed.
      * 
      */
-    public Output<String> getResultFileSize() {
+    public Output<String> resultFileSize() {
         return this.resultFileSize;
     }
     /**
@@ -159,7 +159,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return ResultRows is available only after the query is completed.
      * 
      */
-    public Output<String> getResultRows() {
+    public Output<String> resultRows() {
         return this.resultRows;
     }
     /**
@@ -173,7 +173,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
      */
-    public Output<String> getSelf() {
+    public Output<String> self() {
         return this.self;
     }
     /**
@@ -187,7 +187,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Query state could be "enqueued", "running", "completed", "failed".
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -201,7 +201,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * @return Last updated timestamp for the query.
      * 
      */
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated;
     }
 

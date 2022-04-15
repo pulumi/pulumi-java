@@ -19,7 +19,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse e
     @Import(name="concurrencyLimit", required=true)
       private final Integer concurrencyLimit;
 
-    public Integer getConcurrencyLimit() {
+    public Integer concurrencyLimit() {
         return this.concurrencyLimit;
     }
 

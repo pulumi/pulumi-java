@@ -27,7 +27,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -38,7 +38,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
+    public Output<String> filename() {
         return this.filename == null ? Codegen.empty() : this.filename;
     }
 
@@ -49,7 +49,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -60,7 +60,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Output<LicenseArgs> getLicenseConcluded() {
+    public Output<LicenseArgs> licenseConcluded() {
         return this.licenseConcluded == null ? Codegen.empty() : this.licenseConcluded;
     }
 
@@ -71,7 +71,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     @Import(name="sourceInfo")
       private final @Nullable Output<String> sourceInfo;
 
-    public Output<String> getSourceInfo() {
+    public Output<String> sourceInfo() {
         return this.sourceInfo == null ? Codegen.empty() : this.sourceInfo;
     }
 

@@ -20,7 +20,7 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
     @Import(name="action", required=true)
       private final BucketLifecycleRuleItemActionResponse action;
 
-    public BucketLifecycleRuleItemActionResponse getAction() {
+    public BucketLifecycleRuleItemActionResponse action() {
         return this.action;
     }
 
@@ -31,7 +31,7 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
     @Import(name="condition", required=true)
       private final BucketLifecycleRuleItemConditionResponse condition;
 
-    public BucketLifecycleRuleItemConditionResponse getCondition() {
+    public BucketLifecycleRuleItemConditionResponse condition() {
         return this.condition;
     }
 

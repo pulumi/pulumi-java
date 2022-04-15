@@ -104,84 +104,84 @@ public final class GetBackupResult {
      * Capacity of the source file share when the backup was created.
      * 
     */
-    public String getCapacityGb() {
+    public String capacityGb() {
         return this.capacityGb;
     }
     /**
      * The time when the backup was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Amount of bytes that will be downloaded if the backup is restored. This may be different than storage bytes, since sequential backups of the same disk will share storage.
      * 
     */
-    public String getDownloadBytes() {
+    public String downloadBytes() {
         return this.downloadBytes;
     }
     /**
      * Resource labels to represent user provided metadata.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Reserved for future use.
      * 
     */
-    public Boolean getSatisfiesPzs() {
+    public Boolean satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
      * Name of the file share in the source Cloud Filestore instance that the backup is created from.
      * 
     */
-    public String getSourceFileShare() {
+    public String sourceFileShare() {
         return this.sourceFileShare;
     }
     /**
      * The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
      * 
     */
-    public String getSourceInstance() {
+    public String sourceInstance() {
         return this.sourceInstance;
     }
     /**
      * The service tier of the source Cloud Filestore instance that this backup is created from.
      * 
     */
-    public String getSourceInstanceTier() {
+    public String sourceInstanceTier() {
         return this.sourceInstanceTier;
     }
     /**
      * The backup state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The size of the storage used by the backup. As backups share storage, this number is expected to change with backup creation/deletion.
      * 
     */
-    public String getStorageBytes() {
+    public String storageBytes() {
         return this.storageBytes;
     }
 

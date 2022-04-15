@@ -15,21 +15,21 @@ public final class GetKeystoreArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="keystoreId", required=true)
       private final String keystoreId;
 
-    public String getKeystoreId() {
+    public String keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

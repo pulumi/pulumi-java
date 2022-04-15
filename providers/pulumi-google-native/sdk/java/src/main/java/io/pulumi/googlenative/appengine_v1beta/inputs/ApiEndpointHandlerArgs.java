@@ -26,7 +26,7 @@ public final class ApiEndpointHandlerArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scriptPath")
       private final @Nullable Output<String> scriptPath;
 
-    public Output<String> getScriptPath() {
+    public Output<String> scriptPath() {
         return this.scriptPath == null ? Codegen.empty() : this.scriptPath;
     }
 

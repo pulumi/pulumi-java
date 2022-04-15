@@ -81,63 +81,63 @@ public final class VpnTunnelInfoResponse {
      * Name of a VPN tunnel.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * URI of a Compute Engine network where the VPN tunnel is configured.
      * 
     */
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
     /**
      * Name of a Google Cloud region where this VPN tunnel is configured.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * URI of a VPN gateway at remote end of the tunnel.
      * 
     */
-    public String getRemoteGateway() {
+    public String remoteGateway() {
         return this.remoteGateway;
     }
     /**
      * Remote VPN gateway's IP address.
      * 
     */
-    public String getRemoteGatewayIp() {
+    public String remoteGatewayIp() {
         return this.remoteGatewayIp;
     }
     /**
      * Type of the routing policy.
      * 
     */
-    public String getRoutingType() {
+    public String routingType() {
         return this.routingType;
     }
     /**
      * URI of the VPN gateway at local end of the tunnel.
      * 
     */
-    public String getSourceGateway() {
+    public String sourceGateway() {
         return this.sourceGateway;
     }
     /**
      * Local VPN gateway's IP address.
      * 
     */
-    public String getSourceGatewayIp() {
+    public String sourceGatewayIp() {
         return this.sourceGatewayIp;
     }
     /**
      * URI of a VPN tunnel.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

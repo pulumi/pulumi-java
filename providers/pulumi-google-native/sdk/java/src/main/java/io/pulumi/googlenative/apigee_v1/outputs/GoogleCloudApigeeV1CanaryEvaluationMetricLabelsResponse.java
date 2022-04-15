@@ -39,21 +39,21 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
      * The environment ID associated with the metrics.
      * 
     */
-    public String getEnv() {
+    public String env() {
         return this.env;
     }
     /**
      * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * The location associated with the metrics.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

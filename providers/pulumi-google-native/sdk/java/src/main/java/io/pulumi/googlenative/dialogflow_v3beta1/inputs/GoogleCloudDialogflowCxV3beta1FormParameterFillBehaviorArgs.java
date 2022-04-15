@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
     @Import(name="initialPromptFulfillment", required=true)
       private final Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
 
-    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getInitialPromptFulfillment() {
+    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment() {
         return this.initialPromptFulfillment;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
     @Import(name="repromptEventHandlers")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> getRepromptEventHandlers() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers() {
         return this.repromptEventHandlers == null ? Codegen.empty() : this.repromptEventHandlers;
     }
 

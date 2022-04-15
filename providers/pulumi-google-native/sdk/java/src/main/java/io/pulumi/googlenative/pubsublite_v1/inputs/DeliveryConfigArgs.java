@@ -26,7 +26,7 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryRequirement")
       private final @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
-    public Output<DeliveryConfigDeliveryRequirement> getDeliveryRequirement() {
+    public Output<DeliveryConfigDeliveryRequirement> deliveryRequirement() {
         return this.deliveryRequirement == null ? Codegen.empty() : this.deliveryRequirement;
     }
 

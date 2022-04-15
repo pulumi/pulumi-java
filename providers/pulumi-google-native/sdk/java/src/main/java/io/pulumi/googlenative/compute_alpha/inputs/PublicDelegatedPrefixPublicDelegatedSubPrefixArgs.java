@@ -27,7 +27,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     @Import(name="delegateeProject")
       private final @Nullable Output<String> delegateeProject;
 
-    public Output<String> getDelegateeProject() {
+    public Output<String> delegateeProject() {
         return this.delegateeProject == null ? Codegen.empty() : this.delegateeProject;
     }
 
@@ -38,7 +38,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
     }
 
@@ -60,7 +60,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     @Import(name="isAddress")
       private final @Nullable Output<Boolean> isAddress;
 
-    public Output<Boolean> getIsAddress() {
+    public Output<Boolean> isAddress() {
         return this.isAddress == null ? Codegen.empty() : this.isAddress;
     }
 
@@ -71,7 +71,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

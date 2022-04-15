@@ -24,7 +24,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="archiveUris", required=true)
       private final List<String> archiveUris;
 
-    public List<String> getArchiveUris() {
+    public List<String> archiveUris() {
         return this.archiveUris;
     }
 
@@ -35,7 +35,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -46,7 +46,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileUris", required=true)
       private final List<String> fileUris;
 
-    public List<String> getFileUris() {
+    public List<String> fileUris() {
         return this.fileUris;
     }
 
@@ -57,7 +57,7 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mainRFileUri", required=true)
       private final String mainRFileUri;
 
-    public String getMainRFileUri() {
+    public String mainRFileUri() {
         return this.mainRFileUri;
     }
 

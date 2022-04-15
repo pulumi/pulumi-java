@@ -157,133 +157,133 @@ public final class GetMigrationJobResult {
      * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The resource name (URI) of the destination connection profile.
      * 
     */
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
     /**
      * The database engine type and provider of the destination.
      * 
     */
-    public DatabaseTypeResponse getDestinationDatabase() {
+    public DatabaseTypeResponse destinationDatabase() {
         return this.destinationDatabase;
     }
     /**
      * The migration job display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
      * 
     */
-    public String getDumpPath() {
+    public String dumpPath() {
         return this.dumpPath;
     }
     /**
      * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * If the migration job is completed, the time when it was completed.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The error details in case of state FAILED.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current migration job phase.
      * 
     */
-    public String getPhase() {
+    public String phase() {
         return this.phase;
     }
     /**
      * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
      * 
     */
-    public ReverseSshConnectivityResponse getReverseSshConnectivity() {
+    public ReverseSshConnectivityResponse reverseSshConnectivity() {
         return this.reverseSshConnectivity;
     }
     /**
      * The resource name (URI) of the source connection profile.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
      * The database engine type and provider of the source.
      * 
     */
-    public DatabaseTypeResponse getSourceDatabase() {
+    public DatabaseTypeResponse sourceDatabase() {
         return this.sourceDatabase;
     }
     /**
      * The current migration job state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * static ip connectivity data (default, no additional details needed).
      * 
     */
-    public StaticIpConnectivityResponse getStaticIpConnectivity() {
+    public StaticIpConnectivityResponse staticIpConnectivity() {
         return this.staticIpConnectivity;
     }
     /**
      * The migration job type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * The details of the VPC network that the source database is located in.
      * 
     */
-    public VpcPeeringConnectivityResponse getVpcPeeringConnectivity() {
+    public VpcPeeringConnectivityResponse vpcPeeringConnectivity() {
         return this.vpcPeeringConnectivity;
     }
 

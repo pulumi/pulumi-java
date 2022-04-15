@@ -41,21 +41,21 @@ public final class MembershipRoleResponse {
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
      * 
     */
-    public ExpiryDetailResponse getExpiryDetail() {
+    public ExpiryDetailResponse expiryDetail() {
         return this.expiryDetail;
     }
     /**
      * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Evaluations of restrictions applied to parent group on this membership.
      * 
     */
-    public RestrictionEvaluationsResponse getRestrictionEvaluations() {
+    public RestrictionEvaluationsResponse restrictionEvaluations() {
         return this.restrictionEvaluations;
     }
 

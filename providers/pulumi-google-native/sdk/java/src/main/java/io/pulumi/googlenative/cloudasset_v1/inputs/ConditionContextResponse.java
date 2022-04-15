@@ -23,7 +23,7 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
     @Import(name="accessTime", required=true)
       private final String accessTime;
 
-    public String getAccessTime() {
+    public String accessTime() {
         return this.accessTime;
     }
 

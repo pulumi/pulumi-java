@@ -34,14 +34,14 @@ public final class DynamicGroupMetadataResponse {
      * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
      * 
     */
-    public List<DynamicGroupQueryResponse> getQueries() {
+    public List<DynamicGroupQueryResponse> queries() {
         return this.queries;
     }
     /**
      * Status of the dynamic group.
      * 
     */
-    public DynamicGroupStatusResponse getStatus() {
+    public DynamicGroupStatusResponse status() {
         return this.status;
     }
 

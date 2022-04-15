@@ -15,14 +15,14 @@ public final class Uint128Response extends io.pulumi.resources.InvokeArgs {
     @Import(name="high", required=true)
       private final String high;
 
-    public String getHigh() {
+    public String high() {
         return this.high;
     }
 
     @Import(name="low", required=true)
       private final String low;
 
-    public String getLow() {
+    public String low() {
         return this.low;
     }
 

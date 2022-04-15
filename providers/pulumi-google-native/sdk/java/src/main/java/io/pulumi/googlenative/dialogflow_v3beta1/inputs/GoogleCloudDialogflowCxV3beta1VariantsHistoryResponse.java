@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse extends
     @Import(name="versionVariants", required=true)
       private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
-    public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse getVersionVariants() {
+    public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
 

@@ -26,7 +26,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="componentConfig")
       private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
-    public Output<MonitoringComponentConfigArgs> getComponentConfig() {
+    public Output<MonitoringComponentConfigArgs> componentConfig() {
         return this.componentConfig == null ? Codegen.empty() : this.componentConfig;
     }
 

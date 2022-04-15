@@ -46,28 +46,28 @@ public final class GetReleaseResult {
      * Time the release was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Format: `projects/{project_id}/releases/{release_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
     */
-    public String getRulesetName() {
+    public String rulesetName() {
         return this.rulesetName;
     }
     /**
      * Time the release was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

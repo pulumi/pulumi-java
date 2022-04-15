@@ -22,7 +22,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="privateConnectionName")
       private final @Nullable Output<String> privateConnectionName;
 
-    public Output<String> getPrivateConnectionName() {
+    public Output<String> privateConnectionName() {
         return this.privateConnectionName == null ? Codegen.empty() : this.privateConnectionName;
     }
 

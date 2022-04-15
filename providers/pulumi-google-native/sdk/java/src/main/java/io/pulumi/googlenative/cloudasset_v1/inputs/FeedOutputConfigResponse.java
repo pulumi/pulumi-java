@@ -23,7 +23,7 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="pubsubDestination", required=true)
       private final PubsubDestinationResponse pubsubDestination;
 
-    public PubsubDestinationResponse getPubsubDestination() {
+    public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
 

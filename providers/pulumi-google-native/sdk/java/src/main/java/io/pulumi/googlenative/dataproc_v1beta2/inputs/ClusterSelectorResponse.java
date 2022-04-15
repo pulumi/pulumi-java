@@ -24,7 +24,7 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="clusterLabels", required=true)
       private final Map<String,String> clusterLabels;
 
-    public Map<String,String> getClusterLabels() {
+    public Map<String,String> clusterLabels() {
         return this.clusterLabels;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterSelectorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

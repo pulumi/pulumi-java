@@ -54,35 +54,35 @@ public final class FieldResponse {
      * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
      * 
     */
-    public Integer getMaxOccurs() {
+    public Integer maxOccurs() {
         return this.maxOccurs;
     }
     /**
      * The minimum number of times this field must be present/repeated.
      * 
     */
-    public Integer getMinOccurs() {
+    public Integer minOccurs() {
         return this.minOccurs;
     }
     /**
      * The name of the field. For example, "PID-1" or just "1".
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
      * 
     */
-    public String getTable() {
+    public String table() {
         return this.table;
     }
     /**
      * The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

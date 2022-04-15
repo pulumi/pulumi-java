@@ -27,7 +27,7 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sysctls")
       private final @Nullable Output<Map<String,String>> sysctls;
 
-    public Output<Map<String,String>> getSysctls() {
+    public Output<Map<String,String>> sysctls() {
         return this.sysctls == null ? Codegen.empty() : this.sysctls;
     }
 

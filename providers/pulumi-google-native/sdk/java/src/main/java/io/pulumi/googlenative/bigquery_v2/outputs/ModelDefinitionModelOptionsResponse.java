@@ -24,13 +24,13 @@ public final class ModelDefinitionModelOptionsResponse {
         this.modelType = modelType;
     }
 
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels;
     }
-    public String getLossType() {
+    public String lossType() {
         return this.lossType;
     }
-    public String getModelType() {
+    public String modelType() {
         return this.modelType;
     }
 

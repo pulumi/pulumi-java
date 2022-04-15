@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse extends io.pu
     @Import(name="digits", required=true)
       private final String digits;
 
-    public String getDigits() {
+    public String digits() {
         return this.digits;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse extends io.pu
     @Import(name="finishDigit", required=true)
       private final String finishDigit;
 
-    public String getFinishDigit() {
+    public String finishDigit() {
         return this.finishDigit;
     }
 

@@ -82,63 +82,63 @@ public final class GetKeyResult {
      * A timestamp identifying the time this key was originally created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A timestamp when this key was deleted. If the resource is not deleted, this must be empty.
      * 
     */
-    public String getDeleteTime() {
+    public String deleteTime() {
         return this.deleteTime;
     }
     /**
      * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * A checksum computed by the server based on the current value of the Key resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding. See https://google.aip.dev/154.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * An encrypted and signed value held by this key. This field can be accessed only through the `GetKeyString` method.
      * 
     */
-    public String getKeyString() {
+    public String keyString() {
         return this.keyString;
     }
     /**
      * The resource name of the key. The `name` has the form: `projects//locations/global/keys/`. For example: `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Key restrictions.
      * 
     */
-    public V2RestrictionsResponse getRestrictions() {
+    public V2RestrictionsResponse restrictions() {
         return this.restrictions;
     }
     /**
      * Unique id in UUID4 format.
      * 
     */
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
     /**
      * A timestamp identifying the time this key was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

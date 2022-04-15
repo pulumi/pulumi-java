@@ -15,14 +15,14 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobId", required=true)
       private final String jobId;
 
-    public String getJobId() {
+    public String jobId() {
         return this.jobId;
     }
 
     @Import(name="namespaceId", required=true)
       private final String namespaceId;
 
-    public String getNamespaceId() {
+    public String namespaceId() {
         return this.namespaceId;
     }
 

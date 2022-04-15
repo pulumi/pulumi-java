@@ -78,56 +78,56 @@ public final class SchedulingResponse {
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
      * 
     */
-    public Boolean getAutomaticRestart() {
+    public Boolean automaticRestart() {
         return this.automaticRestart;
     }
     /**
      * Specifies the termination action for the instance.
      * 
     */
-    public String getInstanceTerminationAction() {
+    public String instanceTerminationAction() {
         return this.instanceTerminationAction;
     }
     /**
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
      * 
     */
-    public String getLocationHint() {
+    public String locationHint() {
         return this.locationHint;
     }
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
     */
-    public Integer getMinNodeCpus() {
+    public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
     /**
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
      * 
     */
-    public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
+    public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
     /**
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
      * 
     */
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
      * 
     */
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
     /**
      * Specifies the provisioning model of the instance.
      * 
     */
-    public String getProvisioningModel() {
+    public String provisioningModel() {
         return this.provisioningModel;
     }
 

@@ -24,7 +24,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="externalIp", required=true)
       private final String externalIp;
 
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 
@@ -57,7 +57,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="internalIp", required=true)
       private final String internalIp;
 
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
 
@@ -68,7 +68,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkTags", required=true)
       private final List<String> networkTags;
 
-    public List<String> getNetworkTags() {
+    public List<String> networkTags() {
         return this.networkTags;
     }
 
@@ -79,7 +79,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkUri", required=true)
       private final String networkUri;
 
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
 
@@ -90,7 +90,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -101,7 +101,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

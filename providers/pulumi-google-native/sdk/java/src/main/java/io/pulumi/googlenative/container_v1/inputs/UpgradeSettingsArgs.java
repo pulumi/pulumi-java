@@ -26,7 +26,7 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxSurge")
       private final @Nullable Output<Integer> maxSurge;
 
-    public Output<Integer> getMaxSurge() {
+    public Output<Integer> maxSurge() {
         return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
     }
 
@@ -37,7 +37,7 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxUnavailable")
       private final @Nullable Output<Integer> maxUnavailable;
 
-    public Output<Integer> getMaxUnavailable() {
+    public Output<Integer> maxUnavailable() {
         return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 

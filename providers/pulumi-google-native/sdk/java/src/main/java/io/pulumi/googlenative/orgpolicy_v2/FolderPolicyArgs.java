@@ -19,7 +19,7 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderId", required=true)
       private final Output<String> folderId;
 
-    public Output<String> getFolderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
 
@@ -30,7 +30,7 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -41,7 +41,7 @@ public final class FolderPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
+    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 

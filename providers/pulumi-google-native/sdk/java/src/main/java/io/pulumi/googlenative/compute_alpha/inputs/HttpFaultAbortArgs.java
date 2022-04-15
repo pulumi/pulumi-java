@@ -27,7 +27,7 @@ public final class HttpFaultAbortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpStatus")
       private final @Nullable Output<Integer> httpStatus;
 
-    public Output<Integer> getHttpStatus() {
+    public Output<Integer> httpStatus() {
         return this.httpStatus == null ? Codegen.empty() : this.httpStatus;
     }
 
@@ -38,7 +38,7 @@ public final class HttpFaultAbortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
-    public Output<Double> getPercentage() {
+    public Output<Double> percentage() {
         return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 

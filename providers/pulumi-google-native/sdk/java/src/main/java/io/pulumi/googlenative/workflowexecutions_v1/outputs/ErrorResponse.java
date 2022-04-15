@@ -40,21 +40,21 @@ public final class ErrorResponse {
      * Human-readable stack trace string.
      * 
     */
-    public String getContext() {
+    public String context() {
         return this.context;
     }
     /**
      * Error message and data returned represented as a JSON string.
      * 
     */
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
     /**
      * Stack trace with detailed information of where error was generated.
      * 
     */
-    public StackTraceResponse getStackTrace() {
+    public StackTraceResponse stackTrace() {
         return this.stackTrace;
     }
 

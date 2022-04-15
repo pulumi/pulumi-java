@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse {
      * Update time of the variants.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * The flow versions as the variants.
      * 
     */
-    public GoogleCloudDialogflowCxV3VersionVariantsResponse getVersionVariants() {
+    public GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
 

@@ -24,7 +24,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="dispatchTime", required=true)
       private final String dispatchTime;
 
-    public String getDispatchTime() {
+    public String dispatchTime() {
         return this.dispatchTime;
     }
 
@@ -35,7 +35,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="responseStatus", required=true)
       private final StatusResponse responseStatus;
 
-    public StatusResponse getResponseStatus() {
+    public StatusResponse responseStatus() {
         return this.responseStatus;
     }
 
@@ -46,7 +46,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="responseTime", required=true)
       private final String responseTime;
 
-    public String getResponseTime() {
+    public String responseTime() {
         return this.responseTime;
     }
 
@@ -57,7 +57,7 @@ public final class AttemptStatusResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="scheduleTime", required=true)
       private final String scheduleTime;
 
-    public String getScheduleTime() {
+    public String scheduleTime() {
         return this.scheduleTime;
     }
 

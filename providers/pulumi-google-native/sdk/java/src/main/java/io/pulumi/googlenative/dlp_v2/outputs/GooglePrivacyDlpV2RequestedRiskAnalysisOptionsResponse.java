@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
      * The job config for the risk job.
      * 
     */
-    public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse getJobConfig() {
+    public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig() {
         return this.jobConfig;
     }
 

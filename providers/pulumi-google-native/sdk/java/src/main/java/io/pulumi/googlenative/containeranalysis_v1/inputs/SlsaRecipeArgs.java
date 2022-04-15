@@ -27,7 +27,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<Map<String,String>> arguments;
 
-    public Output<Map<String,String>> getArguments() {
+    public Output<Map<String,String>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -38,7 +38,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definedInMaterial")
       private final @Nullable Output<String> definedInMaterial;
 
-    public Output<String> getDefinedInMaterial() {
+    public Output<String> definedInMaterial() {
         return this.definedInMaterial == null ? Codegen.empty() : this.definedInMaterial;
     }
 
@@ -49,7 +49,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryPoint")
       private final @Nullable Output<String> entryPoint;
 
-    public Output<String> getEntryPoint() {
+    public Output<String> entryPoint() {
         return this.entryPoint == null ? Codegen.empty() : this.entryPoint;
     }
 
@@ -60,7 +60,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<Map<String,String>> environment;
 
-    public Output<Map<String,String>> getEnvironment() {
+    public Output<Map<String,String>> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -71,7 +71,7 @@ public final class SlsaRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

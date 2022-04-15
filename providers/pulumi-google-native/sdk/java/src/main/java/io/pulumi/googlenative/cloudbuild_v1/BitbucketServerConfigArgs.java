@@ -23,14 +23,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 
     @Import(name="bitbucketServerConfigId")
       private final @Nullable Output<String> bitbucketServerConfigId;
 
-    public Output<String> getBitbucketServerConfigId() {
+    public Output<String> bitbucketServerConfigId() {
         return this.bitbucketServerConfigId == null ? Codegen.empty() : this.bitbucketServerConfigId;
     }
 
@@ -41,7 +41,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -52,14 +52,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="hostUri", required=true)
       private final Output<String> hostUri;
 
-    public Output<String> getHostUri() {
+    public Output<String> hostUri() {
         return this.hostUri;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -70,7 +70,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,14 +81,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="peeredNetwork")
       private final @Nullable Output<String> peeredNetwork;
 
-    public Output<String> getPeeredNetwork() {
+    public Output<String> peeredNetwork() {
         return this.peeredNetwork == null ? Codegen.empty() : this.peeredNetwork;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -99,7 +99,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="secrets", required=true)
       private final Output<BitbucketServerSecretsArgs> secrets;
 
-    public Output<BitbucketServerSecretsArgs> getSecrets() {
+    public Output<BitbucketServerSecretsArgs> secrets() {
         return this.secrets;
     }
 
@@ -110,7 +110,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="sslCa")
       private final @Nullable Output<String> sslCa;
 
-    public Output<String> getSslCa() {
+    public Output<String> sslCa() {
         return this.sslCa == null ? Codegen.empty() : this.sslCa;
     }
 
@@ -121,7 +121,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

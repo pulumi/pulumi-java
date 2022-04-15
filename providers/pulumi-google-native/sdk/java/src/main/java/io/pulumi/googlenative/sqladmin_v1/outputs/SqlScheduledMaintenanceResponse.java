@@ -39,28 +39,28 @@ public final class SqlScheduledMaintenanceResponse {
         this.startTime = startTime;
     }
 
-    public Boolean getCanDefer() {
+    public Boolean canDefer() {
         return this.canDefer;
     }
     /**
      * If the scheduled maintenance can be rescheduled.
      * 
     */
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
     /**
      * Maintenance cannot be rescheduled to start beyond this deadline.
      * 
     */
-    public String getScheduleDeadlineTime() {
+    public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

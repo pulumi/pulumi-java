@@ -24,7 +24,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="appStartTimeout", required=true)
       private final String appStartTimeout;
 
-    public String getAppStartTimeout() {
+    public String appStartTimeout() {
         return this.appStartTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="checkInterval", required=true)
       private final String checkInterval;
 
-    public String getCheckInterval() {
+    public String checkInterval() {
         return this.checkInterval;
     }
 
@@ -46,7 +46,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="failureThreshold", required=true)
       private final Integer failureThreshold;
 
-    public Integer getFailureThreshold() {
+    public Integer failureThreshold() {
         return this.failureThreshold;
     }
 
@@ -57,7 +57,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -68,7 +68,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -79,7 +79,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="successThreshold", required=true)
       private final Integer successThreshold;
 
-    public Integer getSuccessThreshold() {
+    public Integer successThreshold() {
         return this.successThreshold;
     }
 
@@ -90,7 +90,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="timeout", required=true)
       private final String timeout;
 
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
 

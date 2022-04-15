@@ -24,7 +24,7 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="androidTest", required=true)
       private final AndroidTestResponse androidTest;
 
-    public AndroidTestResponse getAndroidTest() {
+    public AndroidTestResponse androidTest() {
         return this.androidTest;
     }
 
@@ -35,7 +35,7 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="iosTest", required=true)
       private final IosTestResponse iosTest;
 
-    public IosTestResponse getIosTest() {
+    public IosTestResponse iosTest() {
         return this.iosTest;
     }
 

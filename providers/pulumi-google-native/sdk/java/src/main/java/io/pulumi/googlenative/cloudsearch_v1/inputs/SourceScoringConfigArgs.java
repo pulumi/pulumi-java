@@ -26,7 +26,7 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceImportance")
       private final @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
 
-    public Output<SourceScoringConfigSourceImportance> getSourceImportance() {
+    public Output<SourceScoringConfigSourceImportance> sourceImportance() {
         return this.sourceImportance == null ? Codegen.empty() : this.sourceImportance;
     }
 

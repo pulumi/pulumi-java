@@ -27,7 +27,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="creationRecord")
       private final @Nullable Output<MutationRecordArgs> creationRecord;
 
-    public Output<MutationRecordArgs> getCreationRecord() {
+    public Output<MutationRecordArgs> creationRecord() {
         return this.creationRecord == null ? Codegen.empty() : this.creationRecord;
     }
 
@@ -38,7 +38,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -71,7 +71,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -82,7 +82,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="mutationRecords")
       private final @Nullable Output<List<MutationRecordArgs>> mutationRecords;
 
-    public Output<List<MutationRecordArgs>> getMutationRecords() {
+    public Output<List<MutationRecordArgs>> mutationRecords() {
         return this.mutationRecords == null ? Codegen.empty() : this.mutationRecords;
     }
 
@@ -93,14 +93,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,7 +111,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -122,7 +122,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
@@ -133,7 +133,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="verificationStatus")
       private final @Nullable Output<NotificationChannelVerificationStatus> verificationStatus;
 
-    public Output<NotificationChannelVerificationStatus> getVerificationStatus() {
+    public Output<NotificationChannelVerificationStatus> verificationStatus() {
         return this.verificationStatus == null ? Codegen.empty() : this.verificationStatus;
     }
 

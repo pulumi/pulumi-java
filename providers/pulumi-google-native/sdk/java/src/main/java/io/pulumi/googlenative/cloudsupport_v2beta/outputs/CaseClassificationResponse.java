@@ -24,7 +24,7 @@ public final class CaseClassificationResponse {
      * The display name of the classification.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 

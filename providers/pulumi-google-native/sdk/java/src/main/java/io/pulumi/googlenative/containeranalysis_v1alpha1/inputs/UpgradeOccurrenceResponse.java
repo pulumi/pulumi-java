@@ -25,7 +25,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="distribution", required=true)
       private final UpgradeDistributionResponse distribution;
 
-    public UpgradeDistributionResponse getDistribution() {
+    public UpgradeDistributionResponse distribution() {
         return this.distribution;
     }
 
@@ -36,7 +36,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="package", required=true)
       private final String package_;
 
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
 
@@ -47,7 +47,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
     @Import(name="parsedVersion", required=true)
       private final VersionResponse parsedVersion;
 
-    public VersionResponse getParsedVersion() {
+    public VersionResponse parsedVersion() {
         return this.parsedVersion;
     }
 

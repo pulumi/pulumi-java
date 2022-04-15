@@ -39,21 +39,21 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
      * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
      * 
     */
-    public String getInterconnectName() {
+    public String interconnectName() {
         return this.interconnectName;
     }
     /**
      * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
      * 
     */
-    public String getPartnerName() {
+    public String partnerName() {
         return this.partnerName;
     }
     /**
      * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
     */
-    public String getPortalUrl() {
+    public String portalUrl() {
         return this.portalUrl;
     }
 

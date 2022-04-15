@@ -28,7 +28,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
 
-    public Output<List<String>> getDestIpRanges() {
+    public Output<List<String>> destIpRanges() {
         return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
     }
 
@@ -39,7 +39,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     @Import(name="layer4Configs")
       private final @Nullable Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs;
 
-    public Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> getLayer4Configs() {
+    public Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs() {
         return this.layer4Configs == null ? Codegen.empty() : this.layer4Configs;
     }
 
@@ -50,7 +50,7 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> getSrcIpRanges() {
+    public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 

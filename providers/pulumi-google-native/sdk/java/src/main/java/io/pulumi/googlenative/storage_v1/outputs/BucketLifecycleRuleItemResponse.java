@@ -33,14 +33,14 @@ public final class BucketLifecycleRuleItemResponse {
      * The action to take.
      * 
     */
-    public BucketLifecycleRuleItemActionResponse getAction() {
+    public BucketLifecycleRuleItemActionResponse action() {
         return this.action;
     }
     /**
      * The condition(s) under which the action will be taken.
      * 
     */
-    public BucketLifecycleRuleItemConditionResponse getCondition() {
+    public BucketLifecycleRuleItemConditionResponse condition() {
         return this.condition;
     }
 

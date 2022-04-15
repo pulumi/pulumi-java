@@ -26,7 +26,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="distributions", required=true)
       private final List<UpgradeDistributionResponse> distributions;
 
-    public List<UpgradeDistributionResponse> getDistributions() {
+    public List<UpgradeDistributionResponse> distributions() {
         return this.distributions;
     }
 
@@ -37,7 +37,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="package", required=true)
       private final String package_;
 
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
 
@@ -48,7 +48,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final VersionResponse version;
 
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
 

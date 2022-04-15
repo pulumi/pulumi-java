@@ -24,7 +24,7 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="archiveUris", required=true)
       private final List<String> archiveUris;
 
-    public List<String> getArchiveUris() {
+    public List<String> archiveUris() {
         return this.archiveUris;
     }
 
@@ -35,7 +35,7 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -46,7 +46,7 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileUris", required=true)
       private final List<String> fileUris;
 
-    public List<String> getFileUris() {
+    public List<String> fileUris() {
         return this.fileUris;
     }
 
@@ -57,7 +57,7 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
 
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris;
     }
 
@@ -68,7 +68,7 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mainPythonFileUri", required=true)
       private final String mainPythonFileUri;
 
-    public String getMainPythonFileUri() {
+    public String mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
 
@@ -79,7 +79,7 @@ public final class PySparkBatchResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pythonFileUris", required=true)
       private final List<String> pythonFileUris;
 
-    public List<String> getPythonFileUris() {
+    public List<String> pythonFileUris() {
         return this.pythonFileUris;
     }
 

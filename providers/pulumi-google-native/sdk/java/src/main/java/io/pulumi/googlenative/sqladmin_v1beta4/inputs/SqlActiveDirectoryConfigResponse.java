@@ -23,7 +23,7 @@ public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -34,7 +34,7 @@ public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

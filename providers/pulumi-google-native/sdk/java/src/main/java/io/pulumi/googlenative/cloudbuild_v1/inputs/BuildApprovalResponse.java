@@ -25,7 +25,7 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="config", required=true)
       private final ApprovalConfigResponse config;
 
-    public ApprovalConfigResponse getConfig() {
+    public ApprovalConfigResponse config() {
         return this.config;
     }
 
@@ -36,7 +36,7 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="result", required=true)
       private final ApprovalResultResponse result;
 
-    public ApprovalResultResponse getResult() {
+    public ApprovalResultResponse result() {
         return this.result;
     }
 
@@ -47,7 +47,7 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

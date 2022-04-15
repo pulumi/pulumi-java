@@ -24,7 +24,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
     @Import(name="fileDescriptorSet", required=true)
       private final ApigatewayApiConfigFileResponse fileDescriptorSet;
 
-    public ApigatewayApiConfigFileResponse getFileDescriptorSet() {
+    public ApigatewayApiConfigFileResponse fileDescriptorSet() {
         return this.fileDescriptorSet;
     }
 
@@ -35,7 +35,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
     @Import(name="source", required=true)
       private final List<ApigatewayApiConfigFileResponse> source;
 
-    public List<ApigatewayApiConfigFileResponse> getSource() {
+    public List<ApigatewayApiConfigFileResponse> source() {
         return this.source;
     }
 

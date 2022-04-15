@@ -18,7 +18,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="envgroupId", required=true)
       private final Output<String> envgroupId;
 
-    public Output<String> getEnvgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
 
@@ -29,7 +29,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment", required=true)
       private final Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
 
@@ -40,14 +40,14 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

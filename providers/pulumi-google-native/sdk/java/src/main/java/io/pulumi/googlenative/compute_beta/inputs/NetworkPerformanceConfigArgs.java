@@ -18,7 +18,7 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
     @Import(name="totalEgressBandwidthTier")
       private final @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> getTotalEgressBandwidthTier() {
+    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier == null ? Codegen.empty() : this.totalEgressBandwidthTier;
     }
 

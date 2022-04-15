@@ -48,28 +48,28 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
      * Parameter to launch a job from a Flex Template.
      * 
     */
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse getLaunchParameter() {
+    public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter() {
         return this.launchParameter;
     }
     /**
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The ID of the Cloud Platform project that the job belongs to.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * If true, the request is validated but not actually executed. Defaults to false.
      * 
     */
-    public Boolean getValidateOnly() {
+    public Boolean validateOnly() {
         return this.validateOnly;
     }
 

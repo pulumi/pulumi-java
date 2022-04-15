@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 

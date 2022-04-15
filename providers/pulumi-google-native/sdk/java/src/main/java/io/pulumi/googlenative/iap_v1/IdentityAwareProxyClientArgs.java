@@ -18,7 +18,7 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     @Import(name="brandId", required=true)
       private final Output<String> brandId;
 
-    public Output<String> getBrandId() {
+    public Output<String> brandId() {
         return this.brandId;
     }
 
@@ -29,14 +29,14 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

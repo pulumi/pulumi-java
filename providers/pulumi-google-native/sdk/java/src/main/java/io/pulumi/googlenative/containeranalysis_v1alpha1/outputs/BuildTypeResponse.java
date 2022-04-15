@@ -33,14 +33,14 @@ public final class BuildTypeResponse {
      * Version of the builder which produced this Note.
      * 
     */
-    public String getBuilderVersion() {
+    public String builderVersion() {
         return this.builderVersion;
     }
     /**
      * Signature of the build in Occurrences pointing to the Note containing this `BuilderDetails`.
      * 
     */
-    public BuildSignatureResponse getSignature() {
+    public BuildSignatureResponse signature() {
         return this.signature;
     }
 

@@ -23,7 +23,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="minReceiveInterval")
       private final @Nullable Output<Integer> minReceiveInterval;
 
-    public Output<Integer> getMinReceiveInterval() {
+    public Output<Integer> minReceiveInterval() {
         return this.minReceiveInterval == null ? Codegen.empty() : this.minReceiveInterval;
     }
 
@@ -34,7 +34,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="minTransmitInterval")
       private final @Nullable Output<Integer> minTransmitInterval;
 
-    public Output<Integer> getMinTransmitInterval() {
+    public Output<Integer> minTransmitInterval() {
         return this.minTransmitInterval == null ? Codegen.empty() : this.minTransmitInterval;
     }
 
@@ -45,7 +45,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="multiplier")
       private final @Nullable Output<Integer> multiplier;
 
-    public Output<Integer> getMultiplier() {
+    public Output<Integer> multiplier() {
         return this.multiplier == null ? Codegen.empty() : this.multiplier;
     }
 
@@ -56,7 +56,7 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sessionInitializationMode")
       private final @Nullable Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode;
 
-    public Output<RouterBgpPeerBfdSessionInitializationMode> getSessionInitializationMode() {
+    public Output<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode() {
         return this.sessionInitializationMode == null ? Codegen.empty() : this.sessionInitializationMode;
     }
 

@@ -27,7 +27,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dayOfWeek", required=true)
       private final Output<WeekDayOfMonthDayOfWeek> dayOfWeek;
 
-    public Output<WeekDayOfMonthDayOfWeek> getDayOfWeek() {
+    public Output<WeekDayOfMonthDayOfWeek> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -38,7 +38,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dayOffset")
       private final @Nullable Output<Integer> dayOffset;
 
-    public Output<Integer> getDayOffset() {
+    public Output<Integer> dayOffset() {
         return this.dayOffset == null ? Codegen.empty() : this.dayOffset;
     }
 
@@ -49,7 +49,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weekOrdinal", required=true)
       private final Output<Integer> weekOrdinal;
 
-    public Output<Integer> getWeekOrdinal() {
+    public Output<Integer> weekOrdinal() {
         return this.weekOrdinal;
     }
 

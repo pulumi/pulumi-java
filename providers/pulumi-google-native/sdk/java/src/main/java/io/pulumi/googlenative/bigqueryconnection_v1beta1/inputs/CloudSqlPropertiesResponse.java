@@ -24,7 +24,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="credential", required=true)
       private final CloudSqlCredentialResponse credential;
 
-    public CloudSqlCredentialResponse getCredential() {
+    public CloudSqlCredentialResponse credential() {
         return this.credential;
     }
 
@@ -35,7 +35,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="database", required=true)
       private final String database;
 
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
 
@@ -46,7 +46,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -57,7 +57,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

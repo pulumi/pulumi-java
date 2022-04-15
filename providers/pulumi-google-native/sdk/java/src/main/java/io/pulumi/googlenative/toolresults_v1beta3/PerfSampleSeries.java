@@ -33,7 +33,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return Basic series represented by a line chart
      * 
      */
-    public Output<BasicPerfSampleSeriesResponse> getBasicPerfSampleSeries() {
+    public Output<BasicPerfSampleSeriesResponse> basicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
@@ -47,7 +47,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A tool results execution ID.
      * 
      */
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
     /**
@@ -61,7 +61,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A tool results history ID.
      * 
      */
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
     /**
@@ -75,7 +75,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return The cloud project
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -89,7 +89,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A sample series id
      * 
      */
-    public Output<String> getSampleSeriesId() {
+    public Output<String> sampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
@@ -103,7 +103,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * @return A tool results step ID.
      * 
      */
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 

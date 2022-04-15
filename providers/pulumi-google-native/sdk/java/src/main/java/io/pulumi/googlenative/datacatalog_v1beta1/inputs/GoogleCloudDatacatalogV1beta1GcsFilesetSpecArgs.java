@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs extends io.pu
     @Import(name="filePatterns", required=true)
       private final Output<List<String>> filePatterns;
 
-    public Output<List<String>> getFilePatterns() {
+    public Output<List<String>> filePatterns() {
         return this.filePatterns;
     }
 

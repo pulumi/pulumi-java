@@ -29,7 +29,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> getAllowInsecure() {
+    public Output<Boolean> allowInsecure() {
         return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
@@ -40,7 +40,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="gcs")
       private final @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs;
 
-    public Output<SoftwareRecipeArtifactGcsArgs> getGcs() {
+    public Output<SoftwareRecipeArtifactGcsArgs> gcs() {
         return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
@@ -51,7 +51,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -62,7 +62,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="remote")
       private final @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote;
 
-    public Output<SoftwareRecipeArtifactRemoteArgs> getRemote() {
+    public Output<SoftwareRecipeArtifactRemoteArgs> remote() {
         return this.remote == null ? Codegen.empty() : this.remote;
     }
 

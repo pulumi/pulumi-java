@@ -27,7 +27,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stages")
       private final @Nullable Output<List<StageArgs>> stages;
 
-    public Output<List<StageArgs>> getStages() {
+    public Output<List<StageArgs>> stages() {
         return this.stages == null ? Codegen.empty() : this.stages;
     }
 

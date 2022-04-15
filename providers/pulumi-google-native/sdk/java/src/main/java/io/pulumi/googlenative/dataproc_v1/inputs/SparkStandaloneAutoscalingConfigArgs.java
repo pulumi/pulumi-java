@@ -27,7 +27,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
     @Import(name="gracefulDecommissionTimeout", required=true)
       private final Output<String> gracefulDecommissionTimeout;
 
-    public Output<String> getGracefulDecommissionTimeout() {
+    public Output<String> gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
 
@@ -38,7 +38,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
     @Import(name="scaleDownFactor", required=true)
       private final Output<Double> scaleDownFactor;
 
-    public Output<Double> getScaleDownFactor() {
+    public Output<Double> scaleDownFactor() {
         return this.scaleDownFactor;
     }
 
@@ -49,7 +49,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
     @Import(name="scaleDownMinWorkerFraction")
       private final @Nullable Output<Double> scaleDownMinWorkerFraction;
 
-    public Output<Double> getScaleDownMinWorkerFraction() {
+    public Output<Double> scaleDownMinWorkerFraction() {
         return this.scaleDownMinWorkerFraction == null ? Codegen.empty() : this.scaleDownMinWorkerFraction;
     }
 
@@ -60,7 +60,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
     @Import(name="scaleUpFactor", required=true)
       private final Output<Double> scaleUpFactor;
 
-    public Output<Double> getScaleUpFactor() {
+    public Output<Double> scaleUpFactor() {
         return this.scaleUpFactor;
     }
 
@@ -71,7 +71,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
     @Import(name="scaleUpMinWorkerFraction")
       private final @Nullable Output<Double> scaleUpMinWorkerFraction;
 
-    public Output<Double> getScaleUpMinWorkerFraction() {
+    public Output<Double> scaleUpMinWorkerFraction() {
         return this.scaleUpMinWorkerFraction == null ? Codegen.empty() : this.scaleUpMinWorkerFraction;
     }
 

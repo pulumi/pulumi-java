@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse extends io.p
     @Import(name="variants", required=true)
       private final List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
 
-    public List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> getVariants() {
+    public List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants() {
         return this.variants;
     }
 

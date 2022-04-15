@@ -32,14 +32,14 @@ public final class BucketLifecycleRuleItemActionResponse {
      * Target storage class. Required iff the type of the action is SetStorageClass.
      * 
     */
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
     /**
      * Type of the action. Currently, only Delete and SetStorageClass are supported.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

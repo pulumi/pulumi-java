@@ -24,7 +24,7 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
     @Import(name="pipelineReadyCondition", required=true)
       private final PipelineReadyConditionResponse pipelineReadyCondition;
 
-    public PipelineReadyConditionResponse getPipelineReadyCondition() {
+    public PipelineReadyConditionResponse pipelineReadyCondition() {
         return this.pipelineReadyCondition;
     }
 
@@ -35,7 +35,7 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
     @Import(name="targetsPresentCondition", required=true)
       private final TargetsPresentConditionResponse targetsPresentCondition;
 
-    public TargetsPresentConditionResponse getTargetsPresentCondition() {
+    public TargetsPresentConditionResponse targetsPresentCondition() {
         return this.targetsPresentCondition;
     }
 

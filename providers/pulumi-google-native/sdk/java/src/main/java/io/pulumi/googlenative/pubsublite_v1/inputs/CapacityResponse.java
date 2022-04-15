@@ -23,7 +23,7 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publishMibPerSec", required=true)
       private final Integer publishMibPerSec;
 
-    public Integer getPublishMibPerSec() {
+    public Integer publishMibPerSec() {
         return this.publishMibPerSec;
     }
 
@@ -34,7 +34,7 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subscribeMibPerSec", required=true)
       private final Integer subscribeMibPerSec;
 
-    public Integer getSubscribeMibPerSec() {
+    public Integer subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 

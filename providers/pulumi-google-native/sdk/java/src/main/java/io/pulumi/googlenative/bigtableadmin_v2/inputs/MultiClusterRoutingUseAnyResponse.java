@@ -24,7 +24,7 @@ public final class MultiClusterRoutingUseAnyResponse extends io.pulumi.resources
     @Import(name="clusterIds", required=true)
       private final List<String> clusterIds;
 
-    public List<String> getClusterIds() {
+    public List<String> clusterIds() {
         return this.clusterIds;
     }
 

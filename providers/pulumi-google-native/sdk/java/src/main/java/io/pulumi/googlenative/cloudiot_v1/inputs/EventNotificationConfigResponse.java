@@ -23,7 +23,7 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
     @Import(name="pubsubTopicName", required=true)
       private final String pubsubTopicName;
 
-    public String getPubsubTopicName() {
+    public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
 
@@ -34,7 +34,7 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
     @Import(name="subfolderMatches", required=true)
       private final String subfolderMatches;
 
-    public String getSubfolderMatches() {
+    public String subfolderMatches() {
         return this.subfolderMatches;
     }
 

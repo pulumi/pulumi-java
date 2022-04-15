@@ -28,7 +28,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
-    public Output<Integer> getPercent() {
+    public Output<Integer> percent() {
         return this.percent == null ? Codegen.empty() : this.percent;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     @Import(name="revision")
       private final @Nullable Output<String> revision;
 
-    public Output<String> getRevision() {
+    public Output<String> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     @Import(name="type")
       private final @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type;
 
-    public Output<GoogleCloudRunOpV2TrafficTargetType> getType() {
+    public Output<GoogleCloudRunOpV2TrafficTargetType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

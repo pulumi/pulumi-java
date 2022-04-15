@@ -26,7 +26,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="adminContact", required=true)
       private final Output<ContactArgs> adminContact;
 
-    public Output<ContactArgs> getAdminContact() {
+    public Output<ContactArgs> adminContact() {
         return this.adminContact;
     }
 
@@ -37,7 +37,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privacy", required=true)
       private final Output<ContactSettingsPrivacy> privacy;
 
-    public Output<ContactSettingsPrivacy> getPrivacy() {
+    public Output<ContactSettingsPrivacy> privacy() {
         return this.privacy;
     }
 
@@ -48,7 +48,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="registrantContact", required=true)
       private final Output<ContactArgs> registrantContact;
 
-    public Output<ContactArgs> getRegistrantContact() {
+    public Output<ContactArgs> registrantContact() {
         return this.registrantContact;
     }
 
@@ -59,7 +59,7 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="technicalContact", required=true)
       private final Output<ContactArgs> technicalContact;
 
-    public Output<ContactArgs> getTechnicalContact() {
+    public Output<ContactArgs> technicalContact() {
         return this.technicalContact;
     }
 

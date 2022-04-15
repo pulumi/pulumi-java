@@ -24,7 +24,7 @@ public final class TableFieldSchemaCategoriesResponse extends io.pulumi.resource
     @Import(name="names", required=true)
       private final List<String> names;
 
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 

@@ -32,14 +32,14 @@ public final class TimeSpanResponse {
      * End of time span.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Start of time span.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

@@ -26,7 +26,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -37,7 +37,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     @Import(name="virtualMachine")
       private final @Nullable Output<String> virtualMachine;
 
-    public Output<String> getVirtualMachine() {
+    public Output<String> virtualMachine() {
         return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 

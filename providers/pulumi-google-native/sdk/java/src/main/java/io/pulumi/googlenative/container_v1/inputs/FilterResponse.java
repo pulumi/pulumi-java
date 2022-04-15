@@ -24,7 +24,7 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="eventType", required=true)
       private final List<String> eventType;
 
-    public List<String> getEventType() {
+    public List<String> eventType() {
         return this.eventType;
     }
 

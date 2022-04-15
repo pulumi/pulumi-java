@@ -24,7 +24,7 @@ public final class MoneyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="currencyCode", required=true)
       private final String currencyCode;
 
-    public String getCurrencyCode() {
+    public String currencyCode() {
         return this.currencyCode;
     }
 
@@ -35,7 +35,7 @@ public final class MoneyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nanos", required=true)
       private final Integer nanos;
 
-    public Integer getNanos() {
+    public Integer nanos() {
         return this.nanos;
     }
 
@@ -46,7 +46,7 @@ public final class MoneyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="units", required=true)
       private final String units;
 
-    public String getUnits() {
+    public String units() {
         return this.units;
     }
 

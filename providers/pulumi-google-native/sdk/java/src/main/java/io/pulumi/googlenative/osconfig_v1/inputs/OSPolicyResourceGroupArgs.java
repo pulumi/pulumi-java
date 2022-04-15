@@ -28,7 +28,7 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="inventoryFilters")
       private final @Nullable Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters;
 
-    public Output<List<OSPolicyInventoryFilterArgs>> getInventoryFilters() {
+    public Output<List<OSPolicyInventoryFilterArgs>> inventoryFilters() {
         return this.inventoryFilters == null ? Codegen.empty() : this.inventoryFilters;
     }
 
@@ -39,7 +39,7 @@ public final class OSPolicyResourceGroupArgs extends io.pulumi.resources.Resourc
     @Import(name="resources", required=true)
       private final Output<List<OSPolicyResourceArgs>> resources;
 
-    public Output<List<OSPolicyResourceArgs>> getResources() {
+    public Output<List<OSPolicyResourceArgs>> resources() {
         return this.resources;
     }
 

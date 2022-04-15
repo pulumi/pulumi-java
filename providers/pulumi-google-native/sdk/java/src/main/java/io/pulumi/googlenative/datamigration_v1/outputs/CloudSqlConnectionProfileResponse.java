@@ -47,28 +47,28 @@ public final class CloudSqlConnectionProfileResponse {
      * The Cloud SQL instance ID that this connection profile is associated with.
      * 
     */
-    public String getCloudSqlId() {
+    public String cloudSqlId() {
         return this.cloudSqlId;
     }
     /**
      * The Cloud SQL database instance's private IP.
      * 
     */
-    public String getPrivateIp() {
+    public String privateIp() {
         return this.privateIp;
     }
     /**
      * The Cloud SQL database instance's public IP.
      * 
     */
-    public String getPublicIp() {
+    public String publicIp() {
         return this.publicIp;
     }
     /**
      * Immutable. Metadata used to create the destination Cloud SQL database.
      * 
     */
-    public CloudSqlSettingsResponse getSettings() {
+    public CloudSqlSettingsResponse settings() {
         return this.settings;
     }
 

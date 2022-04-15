@@ -23,7 +23,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="publicKeyId", required=true)
       private final String publicKeyId;
 
-    public String getPublicKeyId() {
+    public String publicKeyId() {
         return this.publicKeyId;
     }
 
@@ -34,7 +34,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="signature", required=true)
       private final String signature;
 
-    public String getSignature() {
+    public String signature() {
         return this.signature;
     }
 

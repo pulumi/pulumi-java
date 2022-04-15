@@ -23,7 +23,7 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="originalTransformOrCollection", required=true)
       private final String originalTransformOrCollection;
 
-    public String getOriginalTransformOrCollection() {
+    public String originalTransformOrCollection() {
         return this.originalTransformOrCollection;
     }
 
@@ -45,7 +45,7 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

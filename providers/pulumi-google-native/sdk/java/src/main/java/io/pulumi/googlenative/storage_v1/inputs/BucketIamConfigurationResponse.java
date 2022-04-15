@@ -25,7 +25,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
     @Import(name="bucketPolicyOnly", required=true)
       private final BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
 
-    public BucketIamConfigurationBucketPolicyOnlyResponse getBucketPolicyOnly() {
+    public BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly() {
         return this.bucketPolicyOnly;
     }
 
@@ -36,7 +36,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
     @Import(name="publicAccessPrevention", required=true)
       private final String publicAccessPrevention;
 
-    public String getPublicAccessPrevention() {
+    public String publicAccessPrevention() {
         return this.publicAccessPrevention;
     }
 
@@ -47,7 +47,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
     @Import(name="uniformBucketLevelAccess", required=true)
       private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
-    public BucketIamConfigurationUniformBucketLevelAccessResponse getUniformBucketLevelAccess() {
+    public BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }
 

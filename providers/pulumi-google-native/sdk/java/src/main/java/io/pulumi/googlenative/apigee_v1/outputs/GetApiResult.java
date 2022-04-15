@@ -56,35 +56,35 @@ public final class GetApiResult {
      * User labels applied to this API Proxy.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The id of the most recently created revision for this api proxy.
      * 
     */
-    public String getLatestRevisionId() {
+    public String latestRevisionId() {
         return this.latestRevisionId;
     }
     /**
      * Metadata describing the API proxy.
      * 
     */
-    public GoogleCloudApigeeV1EntityMetadataResponse getMetaData() {
+    public GoogleCloudApigeeV1EntityMetadataResponse metaData() {
         return this.metaData;
     }
     /**
      * Name of the API proxy.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of revisons defined for the API proxy.
      * 
     */
-    public List<String> getRevision() {
+    public List<String> revision() {
         return this.revision;
     }
 

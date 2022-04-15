@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3EventInputArgs extends io.pulumi.res
     @Import(name="event")
       private final @Nullable Output<String> event;
 
-    public Output<String> getEvent() {
+    public Output<String> event() {
         return this.event == null ? Codegen.empty() : this.event;
     }
 

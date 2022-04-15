@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
     @Import(name="allowPlaybackInterruption", required=true)
       private final Boolean allowPlaybackInterruption;
 
-    public Boolean getAllowPlaybackInterruption() {
+    public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
     @Import(name="audioUri", required=true)
       private final String audioUri;
 
-    public String getAudioUri() {
+    public String audioUri() {
         return this.audioUri;
     }
 

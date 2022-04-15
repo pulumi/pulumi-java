@@ -24,7 +24,7 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class DeblockResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="strength", required=true)
       private final Double strength;
 
-    public Double getStrength() {
+    public Double strength() {
         return this.strength;
     }
 

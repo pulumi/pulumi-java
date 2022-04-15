@@ -28,7 +28,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
-    public Output<String> getAuthDomain() {
+    public Output<String> authDomain() {
         return this.authDomain == null ? Codegen.empty() : this.authDomain;
     }
 
@@ -39,7 +39,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<AppDatabaseType> databaseType;
 
-    public Output<AppDatabaseType> getDatabaseType() {
+    public Output<AppDatabaseType> databaseType() {
         return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
@@ -50,7 +50,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultCookieExpiration")
       private final @Nullable Output<String> defaultCookieExpiration;
 
-    public Output<String> getDefaultCookieExpiration() {
+    public Output<String> defaultCookieExpiration() {
         return this.defaultCookieExpiration == null ? Codegen.empty() : this.defaultCookieExpiration;
     }
 
@@ -61,7 +61,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dispatchRules")
       private final @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
 
-    public Output<List<UrlDispatchRuleArgs>> getDispatchRules() {
+    public Output<List<UrlDispatchRuleArgs>> dispatchRules() {
         return this.dispatchRules == null ? Codegen.empty() : this.dispatchRules;
     }
 
@@ -72,7 +72,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureSettings")
       private final @Nullable Output<FeatureSettingsArgs> featureSettings;
 
-    public Output<FeatureSettingsArgs> getFeatureSettings() {
+    public Output<FeatureSettingsArgs> featureSettings() {
         return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
     }
 
@@ -83,14 +83,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcrDomain")
       private final @Nullable Output<String> gcrDomain;
 
-    public Output<String> getGcrDomain() {
+    public Output<String> gcrDomain() {
         return this.gcrDomain == null ? Codegen.empty() : this.gcrDomain;
     }
 
     @Import(name="iap")
       private final @Nullable Output<IdentityAwareProxyArgs> iap;
 
-    public Output<IdentityAwareProxyArgs> getIap() {
+    public Output<IdentityAwareProxyArgs> iap() {
         return this.iap == null ? Codegen.empty() : this.iap;
     }
 
@@ -101,7 +101,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -112,7 +112,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -123,7 +123,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -134,7 +134,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servingStatus")
       private final @Nullable Output<AppServingStatus> servingStatus;
 
-    public Output<AppServingStatus> getServingStatus() {
+    public Output<AppServingStatus> servingStatus() {
         return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
     }
 

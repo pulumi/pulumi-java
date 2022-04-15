@@ -114,91 +114,91 @@ public final class GetJobResult {
      * When the job was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * When the job processing was completed.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The details of a failure or a cancellation.
      * 
     */
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
     /**
      * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The user-specified id of the job.
      * 
     */
-    public String getJobId() {
+    public String jobId() {
         return this.jobId;
     }
     /**
      * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
      * 
     */
-    public String getJobPosition() {
+    public String jobPosition() {
         return this.jobPosition;
     }
     /**
      * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Input parameters to create a prediction job.
      * 
     */
-    public GoogleCloudMlV1__PredictionInputResponse getPredictionInput() {
+    public GoogleCloudMlV1__PredictionInputResponse predictionInput() {
         return this.predictionInput;
     }
     /**
      * The current prediction job result.
      * 
     */
-    public GoogleCloudMlV1__PredictionOutputResponse getPredictionOutput() {
+    public GoogleCloudMlV1__PredictionOutputResponse predictionOutput() {
         return this.predictionOutput;
     }
     /**
      * When the job processing was started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The detailed state of a job.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Input parameters to create a training job.
      * 
     */
-    public GoogleCloudMlV1__TrainingInputResponse getTrainingInput() {
+    public GoogleCloudMlV1__TrainingInputResponse trainingInput() {
         return this.trainingInput;
     }
     /**
      * The current training job result.
      * 
     */
-    public GoogleCloudMlV1__TrainingOutputResponse getTrainingOutput() {
+    public GoogleCloudMlV1__TrainingOutputResponse trainingOutput() {
         return this.trainingOutput;
     }
 

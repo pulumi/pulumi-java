@@ -28,7 +28,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alpha")
       private final @Nullable Output<Double> alpha;
 
-    public Output<Double> getAlpha() {
+    public Output<Double> alpha() {
         return this.alpha == null ? Codegen.empty() : this.alpha;
     }
 
@@ -39,7 +39,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolution")
       private final @Nullable Output<NormalizedCoordinateArgs> resolution;
 
-    public Output<NormalizedCoordinateArgs> getResolution() {
+    public Output<NormalizedCoordinateArgs> resolution() {
         return this.resolution == null ? Codegen.empty() : this.resolution;
     }
 
@@ -50,7 +50,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

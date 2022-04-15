@@ -20,7 +20,7 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -31,7 +31,7 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     @Import(name="targetNameServers")
       private final @Nullable Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers;
 
-    public Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> getTargetNameServers() {
+    public Output<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers() {
         return this.targetNameServers == null ? Codegen.empty() : this.targetNameServers;
     }
 

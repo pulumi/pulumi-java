@@ -24,7 +24,7 @@ public final class CloudFunctionEndpointResponse {
      * A [Cloud function](https://cloud.google.com/functions) name.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

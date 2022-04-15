@@ -147,119 +147,119 @@ public final class JobStatisticsResponse {
      * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
      * 
     */
-    public Double getCompletionRatio() {
+    public Double completionRatio() {
         return this.completionRatio;
     }
     /**
      * Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Statistics for an extract job.
      * 
     */
-    public JobStatistics4Response getExtract() {
+    public JobStatistics4Response extract() {
         return this.extract;
     }
     /**
      * Statistics for a load job.
      * 
     */
-    public JobStatistics3Response getLoad() {
+    public JobStatistics3Response load() {
         return this.load;
     }
     /**
      * Number of child jobs executed.
      * 
     */
-    public String getNumChildJobs() {
+    public String numChildJobs() {
         return this.numChildJobs;
     }
     /**
      * If this is a child job, the id of the parent.
      * 
     */
-    public String getParentJobId() {
+    public String parentJobId() {
         return this.parentJobId;
     }
     /**
      * Statistics for a query job.
      * 
     */
-    public JobStatistics2Response getQuery() {
+    public JobStatistics2Response query() {
         return this.query;
     }
     /**
      * Quotas which delayed this job's start time.
      * 
     */
-    public List<String> getQuotaDeferments() {
+    public List<String> quotaDeferments() {
         return this.quotaDeferments;
     }
     /**
      * Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
      * 
     */
-    public String getReservationId() {
+    public String reservationId() {
         return this.reservationId;
     }
     /**
      * Job resource usage breakdown by reservation.
      * 
     */
-    public List<JobStatisticsReservationUsageItemResponse> getReservationUsage() {
+    public List<JobStatisticsReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
     /**
      * [Preview] Statistics for row-level security. Present only for query and extract jobs.
      * 
     */
-    public RowLevelSecurityStatisticsResponse getRowLevelSecurityStatistics() {
+    public RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics() {
         return this.rowLevelSecurityStatistics;
     }
     /**
      * Statistics for a child job of a script.
      * 
     */
-    public ScriptStatisticsResponse getScriptStatistics() {
+    public ScriptStatisticsResponse scriptStatistics() {
         return this.scriptStatistics;
     }
     /**
      * [Preview] Information of the session if this job is part of one.
      * 
     */
-    public SessionInfoResponse getSessionInfo() {
+    public SessionInfoResponse sessionInfo() {
         return this.sessionInfo;
     }
     /**
      * Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Slot-milliseconds for the job.
      * 
     */
-    public String getTotalSlotMs() {
+    public String totalSlotMs() {
         return this.totalSlotMs;
     }
     /**
      * [Alpha] Information of the multi-statement transaction if this job is part of one.
      * 
     */
-    public TransactionInfoResponse getTransactionInfo() {
+    public TransactionInfoResponse transactionInfo() {
         return this.transactionInfo;
     }
 

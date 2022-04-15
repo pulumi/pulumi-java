@@ -25,7 +25,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mountPoint", required=true)
       private final String mountPoint;
 
-    public String getMountPoint() {
+    public String mountPoint() {
         return this.mountPoint;
     }
 
@@ -36,7 +36,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="readOnly", required=true)
       private final Boolean readOnly;
 
-    public Boolean getReadOnly() {
+    public Boolean readOnly() {
         return this.readOnly;
     }
 
@@ -58,7 +58,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sizeGb", required=true)
       private final Integer sizeGb;
 
-    public Integer getSizeGb() {
+    public Integer sizeGb() {
         return this.sizeGb;
     }
 
@@ -69,7 +69,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -80,7 +80,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

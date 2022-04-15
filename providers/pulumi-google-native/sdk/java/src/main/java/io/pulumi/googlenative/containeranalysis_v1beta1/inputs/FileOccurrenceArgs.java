@@ -28,7 +28,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributions")
       private final @Nullable Output<List<String>> attributions;
 
-    public Output<List<String>> getAttributions() {
+    public Output<List<String>> attributions() {
         return this.attributions == null ? Codegen.empty() : this.attributions;
     }
 
@@ -39,7 +39,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -50,7 +50,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contributors")
       private final @Nullable Output<List<String>> contributors;
 
-    public Output<List<String>> getContributors() {
+    public Output<List<String>> contributors() {
         return this.contributors == null ? Codegen.empty() : this.contributors;
     }
 
@@ -61,7 +61,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="copyright")
       private final @Nullable Output<String> copyright;
 
-    public Output<String> getCopyright() {
+    public Output<String> copyright() {
         return this.copyright == null ? Codegen.empty() : this.copyright;
     }
 
@@ -72,7 +72,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Output<List<String>> getFilesLicenseInfo() {
+    public Output<List<String>> filesLicenseInfo() {
         return this.filesLicenseInfo == null ? Codegen.empty() : this.filesLicenseInfo;
     }
 
@@ -83,7 +83,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -94,7 +94,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
 
-    public Output<LicenseArgs> getLicenseConcluded() {
+    public Output<LicenseArgs> licenseConcluded() {
         return this.licenseConcluded == null ? Codegen.empty() : this.licenseConcluded;
     }
 
@@ -105,7 +105,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notice")
       private final @Nullable Output<String> notice;
 
-    public Output<String> getNotice() {
+    public Output<String> notice() {
         return this.notice == null ? Codegen.empty() : this.notice;
     }
 

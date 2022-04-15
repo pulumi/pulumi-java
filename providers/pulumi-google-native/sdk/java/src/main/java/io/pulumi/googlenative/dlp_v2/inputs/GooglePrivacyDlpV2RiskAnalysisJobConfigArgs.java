@@ -29,7 +29,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
     @Import(name="actions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
-    public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
+    public Output<List<GooglePrivacyDlpV2ActionArgs>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
     @Import(name="privacyMetric")
       private final @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
 
-    public Output<GooglePrivacyDlpV2PrivacyMetricArgs> getPrivacyMetric() {
+    public Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric() {
         return this.privacyMetric == null ? Codegen.empty() : this.privacyMetric;
     }
 
@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
     @Import(name="sourceTable")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> getSourceTable() {
+    public Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable() {
         return this.sourceTable == null ? Codegen.empty() : this.sourceTable;
     }
 

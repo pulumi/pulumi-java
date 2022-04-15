@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

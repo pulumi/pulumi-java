@@ -32,14 +32,14 @@ public final class GetServiceResult {
      * ID of the project that produces and owns this service.
      * 
     */
-    public String getProducerProjectId() {
+    public String producerProjectId() {
         return this.producerProjectId;
     }
     /**
      * The name of the service. See the [overview](/service-management/overview) for naming requirements.
      * 
     */
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

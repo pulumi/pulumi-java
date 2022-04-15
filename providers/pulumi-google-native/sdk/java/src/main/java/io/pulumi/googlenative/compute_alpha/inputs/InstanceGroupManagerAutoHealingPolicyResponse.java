@@ -22,7 +22,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     @Import(name="autoHealingTriggers", required=true)
       private final InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers;
 
-    public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse getAutoHealingTriggers() {
+    public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers() {
         return this.autoHealingTriggers;
     }
 
@@ -33,7 +33,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     @Import(name="healthCheck", required=true)
       private final String healthCheck;
 
-    public String getHealthCheck() {
+    public String healthCheck() {
         return this.healthCheck;
     }
 
@@ -44,7 +44,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     @Import(name="initialDelaySec", required=true)
       private final Integer initialDelaySec;
 
-    public Integer getInitialDelaySec() {
+    public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 
@@ -55,14 +55,14 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     @Import(name="maxUnavailable", required=true)
       private final FixedOrPercentResponse maxUnavailable;
 
-    public FixedOrPercentResponse getMaxUnavailable() {
+    public FixedOrPercentResponse maxUnavailable() {
         return this.maxUnavailable;
     }
 
     @Import(name="updateInstances", required=true)
       private final String updateInstances;
 
-    public String getUpdateInstances() {
+    public String updateInstances() {
         return this.updateInstances;
     }
 

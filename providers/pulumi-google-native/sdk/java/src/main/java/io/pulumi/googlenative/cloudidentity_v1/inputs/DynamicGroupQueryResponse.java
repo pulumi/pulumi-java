@@ -23,7 +23,7 @@ public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeA
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -34,7 +34,7 @@ public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

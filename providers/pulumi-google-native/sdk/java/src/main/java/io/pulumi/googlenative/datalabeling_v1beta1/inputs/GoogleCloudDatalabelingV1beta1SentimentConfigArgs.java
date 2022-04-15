@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigArgs extends io.
     @Import(name="enableLabelSentimentSelection")
       private final @Nullable Output<Boolean> enableLabelSentimentSelection;
 
-    public Output<Boolean> getEnableLabelSentimentSelection() {
+    public Output<Boolean> enableLabelSentimentSelection() {
         return this.enableLabelSentimentSelection == null ? Codegen.empty() : this.enableLabelSentimentSelection;
     }
 

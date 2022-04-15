@@ -40,21 +40,21 @@ public final class ShardResponse {
      * The total number of shards.
      * 
     */
-    public Integer getNumShards() {
+    public Integer numShards() {
         return this.numShards;
     }
     /**
      * The index of the shard among all the shards.
      * 
     */
-    public Integer getShardIndex() {
+    public Integer shardIndex() {
         return this.shardIndex;
     }
     /**
      * Test targets for each shard.
      * 
     */
-    public TestTargetsForShardResponse getTestTargetsForShard() {
+    public TestTargetsForShardResponse testTargetsForShard() {
         return this.testTargetsForShard;
     }
 

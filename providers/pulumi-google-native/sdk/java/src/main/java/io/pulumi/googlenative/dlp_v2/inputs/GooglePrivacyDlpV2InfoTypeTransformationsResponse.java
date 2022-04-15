@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse extends io.
     @Import(name="transformations", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
-    public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> getTransformations() {
+    public List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations() {
         return this.transformations;
     }
 

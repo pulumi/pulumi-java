@@ -28,7 +28,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -39,7 +39,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vertices")
       private final @Nullable Output<List<VertexArgs>> vertices;
 
-    public Output<List<VertexArgs>> getVertices() {
+    public Output<List<VertexArgs>> vertices() {
         return this.vertices == null ? Codegen.empty() : this.vertices;
     }
 

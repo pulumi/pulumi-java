@@ -40,21 +40,21 @@ public final class LocationResponse {
      * The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
     */
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
     /**
      * The path from which we gathered that this package/version is installed.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The version installed at this location.
      * 
     */
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
 

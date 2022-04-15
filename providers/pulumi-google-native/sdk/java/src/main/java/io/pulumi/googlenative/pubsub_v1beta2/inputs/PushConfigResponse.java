@@ -25,7 +25,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attributes", required=true)
       private final Map<String,String> attributes;
 
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oidcToken", required=true)
       private final OidcTokenResponse oidcToken;
 
-    public OidcTokenResponse getOidcToken() {
+    public OidcTokenResponse oidcToken() {
         return this.oidcToken;
     }
 
@@ -47,7 +47,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pushEndpoint", required=true)
       private final String pushEndpoint;
 
-    public String getPushEndpoint() {
+    public String pushEndpoint() {
         return this.pushEndpoint;
     }
 

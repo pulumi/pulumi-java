@@ -25,7 +25,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -36,14 +36,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -54,7 +54,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<ModelStateArgs> state;
 
-    public Output<ModelStateArgs> getState() {
+    public Output<ModelStateArgs> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -65,7 +65,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -76,7 +76,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tfliteModel")
       private final @Nullable Output<TfLiteModelArgs> tfliteModel;
 
-    public Output<TfLiteModelArgs> getTfliteModel() {
+    public Output<TfLiteModelArgs> tfliteModel() {
         return this.tfliteModel == null ? Codegen.empty() : this.tfliteModel;
     }
 

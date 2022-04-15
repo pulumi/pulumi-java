@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
     @Import(name="issueModel", required=true)
       private final String issueModel;
 
-    public String getIssueModel() {
+    public String issueModel() {
         return this.issueModel;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
     @Import(name="issues", required=true)
       private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
-    public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> getIssues() {
+    public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues() {
         return this.issues;
     }
 

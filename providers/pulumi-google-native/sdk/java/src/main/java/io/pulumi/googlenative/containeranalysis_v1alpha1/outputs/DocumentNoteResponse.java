@@ -32,14 +32,14 @@ public final class DocumentNoteResponse {
      * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
      * 
     */
-    public String getDataLicence() {
+    public String dataLicence() {
         return this.dataLicence;
     }
     /**
      * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
      * 
     */
-    public String getSpdxVersion() {
+    public String spdxVersion() {
         return this.spdxVersion;
     }
 

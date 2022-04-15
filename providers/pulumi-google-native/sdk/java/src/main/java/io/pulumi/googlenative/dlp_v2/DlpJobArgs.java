@@ -24,7 +24,7 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inspectJob")
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
-    public Output<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
+    public Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob() {
         return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
     }
 
@@ -35,21 +35,21 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -60,7 +60,7 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="riskJob")
       private final @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
 
-    public Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> getRiskJob() {
+    public Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob() {
         return this.riskJob == null ? Codegen.empty() : this.riskJob;
     }
 

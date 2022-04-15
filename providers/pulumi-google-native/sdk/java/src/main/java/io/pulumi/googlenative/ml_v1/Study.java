@@ -31,7 +31,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * @return Time at which the study was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +45,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * @return A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
      * 
      */
-    public Output<String> getInactiveReason() {
+    public Output<String> inactiveReason() {
         return this.inactiveReason;
     }
     /**
@@ -59,7 +59,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * @return The name of a study.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * @return The detailed state of a study.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -87,7 +87,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * @return Configuration of the study.
      * 
      */
-    public Output<GoogleCloudMlV1__StudyConfigResponse> getStudyConfig() {
+    public Output<GoogleCloudMlV1__StudyConfigResponse> studyConfig() {
         return this.studyConfig;
     }
 

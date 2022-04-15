@@ -31,7 +31,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="artifactGcsUri", required=true)
       private final String artifactGcsUri;
 
-    public String getArtifactGcsUri() {
+    public String artifactGcsUri() {
         return this.artifactGcsUri;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="databaseType", required=true)
       private final String databaseType;
 
-    public String getDatabaseType() {
+    public String databaseType() {
         return this.databaseType;
     }
 
@@ -64,7 +64,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
 
@@ -75,7 +75,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endpointUri", required=true)
       private final String endpointUri;
 
-    public String getEndpointUri() {
+    public String endpointUri() {
         return this.endpointUri;
     }
 
@@ -86,7 +86,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hiveMetastoreConfig", required=true)
       private final HiveMetastoreConfigResponse hiveMetastoreConfig;
 
-    public HiveMetastoreConfigResponse getHiveMetastoreConfig() {
+    public HiveMetastoreConfigResponse hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
     }
 
@@ -97,7 +97,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -108,7 +108,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceWindow", required=true)
       private final MaintenanceWindowResponse maintenanceWindow;
 
-    public MaintenanceWindowResponse getMaintenanceWindow() {
+    public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
 
@@ -119,7 +119,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metadataIntegration", required=true)
       private final MetadataIntegrationResponse metadataIntegration;
 
-    public MetadataIntegrationResponse getMetadataIntegration() {
+    public MetadataIntegrationResponse metadataIntegration() {
         return this.metadataIntegration;
     }
 
@@ -130,7 +130,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metadataManagementActivity", required=true)
       private final MetadataManagementActivityResponse metadataManagementActivity;
 
-    public MetadataManagementActivityResponse getMetadataManagementActivity() {
+    public MetadataManagementActivityResponse metadataManagementActivity() {
         return this.metadataManagementActivity;
     }
 
@@ -141,7 +141,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -152,7 +152,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -163,7 +163,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkConfig", required=true)
       private final NetworkConfigResponse networkConfig;
 
-    public NetworkConfigResponse getNetworkConfig() {
+    public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
 
@@ -174,7 +174,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -185,7 +185,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="releaseChannel", required=true)
       private final String releaseChannel;
 
-    public String getReleaseChannel() {
+    public String releaseChannel() {
         return this.releaseChannel;
     }
 
@@ -196,7 +196,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -207,7 +207,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateMessage", required=true)
       private final String stateMessage;
 
-    public String getStateMessage() {
+    public String stateMessage() {
         return this.stateMessage;
     }
 
@@ -218,7 +218,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 
@@ -229,7 +229,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 
@@ -240,7 +240,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

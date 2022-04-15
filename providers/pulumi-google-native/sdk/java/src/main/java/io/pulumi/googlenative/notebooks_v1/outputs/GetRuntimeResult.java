@@ -85,63 +85,63 @@ public final class GetRuntimeResult {
      * The config settings for accessing runtime.
      * 
     */
-    public RuntimeAccessConfigResponse getAccessConfig() {
+    public RuntimeAccessConfigResponse accessConfig() {
         return this.accessConfig;
     }
     /**
      * Runtime creation time.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Runtime health_state.
      * 
     */
-    public String getHealthState() {
+    public String healthState() {
         return this.healthState;
     }
     /**
      * Contains Runtime daemon metrics such as Service status and JupyterLab stats.
      * 
     */
-    public RuntimeMetricsResponse getMetrics() {
+    public RuntimeMetricsResponse metrics() {
         return this.metrics;
     }
     /**
      * The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The config settings for software inside the runtime.
      * 
     */
-    public RuntimeSoftwareConfigResponse getSoftwareConfig() {
+    public RuntimeSoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
     }
     /**
      * Runtime state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Runtime update time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Use a Compute Engine VM image to start the managed notebook instance.
      * 
     */
-    public VirtualMachineResponse getVirtualMachine() {
+    public VirtualMachineResponse virtualMachine() {
         return this.virtualMachine;
     }
 

@@ -24,7 +24,7 @@ public final class InstanceParamsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceManagerTags", required=true)
       private final Map<String,String> resourceManagerTags;
 
-    public Map<String,String> getResourceManagerTags() {
+    public Map<String,String> resourceManagerTags() {
         return this.resourceManagerTags;
     }
 

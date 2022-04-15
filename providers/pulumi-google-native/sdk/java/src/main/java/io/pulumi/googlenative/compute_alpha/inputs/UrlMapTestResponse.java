@@ -26,7 +26,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="backendServiceWeight", required=true)
       private final Integer backendServiceWeight;
 
-    public Integer getBackendServiceWeight() {
+    public Integer backendServiceWeight() {
         return this.backendServiceWeight;
     }
 
@@ -37,7 +37,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expectedOutputUrl", required=true)
       private final String expectedOutputUrl;
 
-    public String getExpectedOutputUrl() {
+    public String expectedOutputUrl() {
         return this.expectedOutputUrl;
     }
 
@@ -59,7 +59,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expectedRedirectResponseCode", required=true)
       private final Integer expectedRedirectResponseCode;
 
-    public Integer getExpectedRedirectResponseCode() {
+    public Integer expectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode;
     }
 
@@ -70,7 +70,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headers", required=true)
       private final List<UrlMapTestHeaderResponse> headers;
 
-    public List<UrlMapTestHeaderResponse> getHeaders() {
+    public List<UrlMapTestHeaderResponse> headers() {
         return this.headers;
     }
 
@@ -81,7 +81,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -92,7 +92,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -103,7 +103,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

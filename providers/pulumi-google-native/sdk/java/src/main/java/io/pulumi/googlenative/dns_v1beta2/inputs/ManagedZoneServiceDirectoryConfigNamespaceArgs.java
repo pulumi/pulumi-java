@@ -22,14 +22,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     @Import(name="deletionTime")
       private final @Nullable Output<String> deletionTime;
 
-    public Output<String> getDeletionTime() {
+    public Output<String> deletionTime() {
         return this.deletionTime == null ? Codegen.empty() : this.deletionTime;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -40,7 +40,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     @Import(name="namespaceUrl")
       private final @Nullable Output<String> namespaceUrl;
 
-    public Output<String> getNamespaceUrl() {
+    public Output<String> namespaceUrl() {
         return this.namespaceUrl == null ? Codegen.empty() : this.namespaceUrl;
     }
 

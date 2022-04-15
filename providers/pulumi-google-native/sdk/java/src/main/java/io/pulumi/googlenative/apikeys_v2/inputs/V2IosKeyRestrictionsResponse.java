@@ -24,7 +24,7 @@ public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.Invo
     @Import(name="allowedBundleIds", required=true)
       private final List<String> allowedBundleIds;
 
-    public List<String> getAllowedBundleIds() {
+    public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
 

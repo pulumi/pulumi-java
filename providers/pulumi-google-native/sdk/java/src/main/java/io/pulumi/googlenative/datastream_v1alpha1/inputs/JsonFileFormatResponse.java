@@ -23,7 +23,7 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="compression", required=true)
       private final String compression;
 
-    public String getCompression() {
+    public String compression() {
         return this.compression;
     }
 
@@ -34,7 +34,7 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="schemaFileFormat", required=true)
       private final String schemaFileFormat;
 
-    public String getSchemaFileFormat() {
+    public String schemaFileFormat() {
         return this.schemaFileFormat;
     }
 

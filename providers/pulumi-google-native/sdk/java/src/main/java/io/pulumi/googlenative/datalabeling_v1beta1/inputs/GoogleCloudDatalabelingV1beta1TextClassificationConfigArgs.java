@@ -28,7 +28,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="allowMultiLabel")
       private final @Nullable Output<Boolean> allowMultiLabel;
 
-    public Output<Boolean> getAllowMultiLabel() {
+    public Output<Boolean> allowMultiLabel() {
         return this.allowMultiLabel == null ? Codegen.empty() : this.allowMultiLabel;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     @Import(name="sentimentConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> getSentimentConfig() {
+    public Output<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig() {
         return this.sentimentConfig == null ? Codegen.empty() : this.sentimentConfig;
     }
 

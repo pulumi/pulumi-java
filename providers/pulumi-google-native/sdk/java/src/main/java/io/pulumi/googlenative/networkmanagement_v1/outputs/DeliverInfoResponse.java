@@ -32,14 +32,14 @@ public final class DeliverInfoResponse {
      * URI of the resource that the packet is delivered to.
      * 
     */
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
     /**
      * Target type where the packet is delivered to.
      * 
     */
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

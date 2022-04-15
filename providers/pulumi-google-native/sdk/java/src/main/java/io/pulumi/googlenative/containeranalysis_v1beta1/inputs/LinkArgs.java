@@ -30,7 +30,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="byproducts")
       private final @Nullable Output<ByProductsArgs> byproducts;
 
-    public Output<ByProductsArgs> getByproducts() {
+    public Output<ByProductsArgs> byproducts() {
         return this.byproducts == null ? Codegen.empty() : this.byproducts;
     }
 
@@ -41,7 +41,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -52,7 +52,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<EnvironmentArgs> environment;
 
-    public Output<EnvironmentArgs> getEnvironment() {
+    public Output<EnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -63,7 +63,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="materials")
       private final @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
 
-    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> getMaterials() {
+    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials() {
         return this.materials == null ? Codegen.empty() : this.materials;
     }
 
@@ -74,7 +74,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="products")
       private final @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products;
 
-    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> getProducts() {
+    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> products() {
         return this.products == null ? Codegen.empty() : this.products;
     }
 

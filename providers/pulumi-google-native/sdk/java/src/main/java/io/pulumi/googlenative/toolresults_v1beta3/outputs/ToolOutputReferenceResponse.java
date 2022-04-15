@@ -41,21 +41,21 @@ public final class ToolOutputReferenceResponse {
      * The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
      * 
     */
-    public TimestampResponse getCreationTime() {
+    public TimestampResponse creationTime() {
         return this.creationTime;
     }
     /**
      * A FileReference to an output file. - In response: always set - In create/update request: always set
      * 
     */
-    public FileReferenceResponse getOutput() {
+    public FileReferenceResponse output() {
         return this.output;
     }
     /**
      * The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
      * 
     */
-    public TestCaseReferenceResponse getTestCase() {
+    public TestCaseReferenceResponse testCase() {
         return this.testCase;
     }
 

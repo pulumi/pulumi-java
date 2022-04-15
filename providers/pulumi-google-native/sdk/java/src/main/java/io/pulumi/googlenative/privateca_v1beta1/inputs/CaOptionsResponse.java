@@ -24,7 +24,7 @@ public final class CaOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isCa", required=true)
       private final Boolean isCa;
 
-    public Boolean getIsCa() {
+    public Boolean isCa() {
         return this.isCa;
     }
 
@@ -35,7 +35,7 @@ public final class CaOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxIssuerPathLength", required=true)
       private final Integer maxIssuerPathLength;
 
-    public Integer getMaxIssuerPathLength() {
+    public Integer maxIssuerPathLength() {
         return this.maxIssuerPathLength;
     }
 

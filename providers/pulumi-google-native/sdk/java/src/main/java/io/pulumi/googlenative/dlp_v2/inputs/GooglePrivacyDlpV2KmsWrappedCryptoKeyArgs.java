@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends io.pulumi.r
     @Import(name="cryptoKeyName", required=true)
       private final Output<String> cryptoKeyName;
 
-    public Output<String> getCryptoKeyName() {
+    public Output<String> cryptoKeyName() {
         return this.cryptoKeyName;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends io.pulumi.r
     @Import(name="wrappedKey", required=true)
       private final Output<String> wrappedKey;
 
-    public Output<String> getWrappedKey() {
+    public Output<String> wrappedKey() {
         return this.wrappedKey;
     }
 

@@ -26,7 +26,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
     @Import(name="apt", required=true)
       private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
 
-    public OSPolicyResourceRepositoryResourceAptRepositoryResponse getApt() {
+    public OSPolicyResourceRepositoryResourceAptRepositoryResponse apt() {
         return this.apt;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
     @Import(name="goo", required=true)
       private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
 
-    public OSPolicyResourceRepositoryResourceGooRepositoryResponse getGoo() {
+    public OSPolicyResourceRepositoryResourceGooRepositoryResponse goo() {
         return this.goo;
     }
 
@@ -48,7 +48,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
     @Import(name="yum", required=true)
       private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
 
-    public OSPolicyResourceRepositoryResourceYumRepositoryResponse getYum() {
+    public OSPolicyResourceRepositoryResourceYumRepositoryResponse yum() {
         return this.yum;
     }
 
@@ -59,7 +59,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
     @Import(name="zypper", required=true)
       private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
-    public OSPolicyResourceRepositoryResourceZypperRepositoryResponse getZypper() {
+    public OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper() {
         return this.zypper;
     }
 

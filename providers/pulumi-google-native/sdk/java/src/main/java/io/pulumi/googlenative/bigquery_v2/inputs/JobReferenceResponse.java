@@ -19,7 +19,7 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobId", required=true)
       private final String jobId;
 
-    public String getJobId() {
+    public String jobId() {
         return this.jobId;
     }
 
@@ -30,7 +30,7 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -41,7 +41,7 @@ public final class JobReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

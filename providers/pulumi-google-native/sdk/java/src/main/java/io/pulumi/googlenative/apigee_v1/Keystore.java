@@ -30,7 +30,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * @return Aliases in this keystore.
      * 
      */
-    public Output<List<String>> getAliases() {
+    public Output<List<String>> aliases() {
         return this.aliases;
     }
     /**
@@ -44,7 +44,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * @return Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

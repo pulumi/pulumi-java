@@ -26,7 +26,7 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyReference")
       private final @Nullable Output<String> keyReference;
 
-    public Output<String> getKeyReference() {
+    public Output<String> keyReference() {
         return this.keyReference == null ? Codegen.empty() : this.keyReference;
     }
 

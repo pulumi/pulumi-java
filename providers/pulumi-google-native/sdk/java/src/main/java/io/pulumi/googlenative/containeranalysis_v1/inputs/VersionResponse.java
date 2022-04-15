@@ -25,7 +25,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="epoch", required=true)
       private final Integer epoch;
 
-    public Integer getEpoch() {
+    public Integer epoch() {
         return this.epoch;
     }
 
@@ -36,7 +36,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fullName", required=true)
       private final String fullName;
 
-    public String getFullName() {
+    public String fullName() {
         return this.fullName;
     }
 
@@ -47,7 +47,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inclusive", required=true)
       private final Boolean inclusive;
 
-    public Boolean getInclusive() {
+    public Boolean inclusive() {
         return this.inclusive;
     }
 
@@ -58,7 +58,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -69,7 +69,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -80,7 +80,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="revision", required=true)
       private final String revision;
 
-    public String getRevision() {
+    public String revision() {
         return this.revision;
     }
 

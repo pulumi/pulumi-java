@@ -17,28 +17,28 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="collectionGroupId", required=true)
       private final String collectionGroupId;
 
-    public String getCollectionGroupId() {
+    public String collectionGroupId() {
         return this.collectionGroupId;
     }
 
     @Import(name="databaseId", required=true)
       private final String databaseId;
 
-    public String getDatabaseId() {
+    public String databaseId() {
         return this.databaseId;
     }
 
     @Import(name="indexId", required=true)
       private final String indexId;
 
-    public String getIndexId() {
+    public String indexId() {
         return this.indexId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

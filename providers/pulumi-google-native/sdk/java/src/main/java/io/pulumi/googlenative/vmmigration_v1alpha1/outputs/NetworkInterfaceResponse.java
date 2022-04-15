@@ -46,28 +46,28 @@ public final class NetworkInterfaceResponse {
      * The external IP to define in the NIC.
      * 
     */
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
     /**
      * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
      * 
     */
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
     /**
      * The network to connect the NIC to.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * The subnetwork to connect the NIC to.
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

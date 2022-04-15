@@ -26,7 +26,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="followGaeApplication")
       private final @Nullable Output<String> followGaeApplication;
 
-    public Output<String> getFollowGaeApplication() {
+    public Output<String> followGaeApplication() {
         return this.followGaeApplication == null ? Codegen.empty() : this.followGaeApplication;
     }
 
@@ -37,7 +37,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="secondaryZone")
       private final @Nullable Output<String> secondaryZone;
 
-    public Output<String> getSecondaryZone() {
+    public Output<String> secondaryZone() {
         return this.secondaryZone == null ? Codegen.empty() : this.secondaryZone;
     }
 
@@ -59,7 +59,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

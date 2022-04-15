@@ -32,7 +32,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="archiveExtraction")
       private final @Nullable Output<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction;
 
-    public Output<SoftwareRecipeStepExtractArchiveArgs> getArchiveExtraction() {
+    public Output<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction() {
         return this.archiveExtraction == null ? Codegen.empty() : this.archiveExtraction;
     }
 
@@ -43,7 +43,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dpkgInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation;
 
-    public Output<SoftwareRecipeStepInstallDpkgArgs> getDpkgInstallation() {
+    public Output<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation() {
         return this.dpkgInstallation == null ? Codegen.empty() : this.dpkgInstallation;
     }
 
@@ -54,7 +54,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fileCopy")
       private final @Nullable Output<SoftwareRecipeStepCopyFileArgs> fileCopy;
 
-    public Output<SoftwareRecipeStepCopyFileArgs> getFileCopy() {
+    public Output<SoftwareRecipeStepCopyFileArgs> fileCopy() {
         return this.fileCopy == null ? Codegen.empty() : this.fileCopy;
     }
 
@@ -65,7 +65,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fileExec")
       private final @Nullable Output<SoftwareRecipeStepExecFileArgs> fileExec;
 
-    public Output<SoftwareRecipeStepExecFileArgs> getFileExec() {
+    public Output<SoftwareRecipeStepExecFileArgs> fileExec() {
         return this.fileExec == null ? Codegen.empty() : this.fileExec;
     }
 
@@ -76,7 +76,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="msiInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallMsiArgs> msiInstallation;
 
-    public Output<SoftwareRecipeStepInstallMsiArgs> getMsiInstallation() {
+    public Output<SoftwareRecipeStepInstallMsiArgs> msiInstallation() {
         return this.msiInstallation == null ? Codegen.empty() : this.msiInstallation;
     }
 
@@ -87,7 +87,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rpmInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallRpmArgs> rpmInstallation;
 
-    public Output<SoftwareRecipeStepInstallRpmArgs> getRpmInstallation() {
+    public Output<SoftwareRecipeStepInstallRpmArgs> rpmInstallation() {
         return this.rpmInstallation == null ? Codegen.empty() : this.rpmInstallation;
     }
 
@@ -98,7 +98,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scriptRun")
       private final @Nullable Output<SoftwareRecipeStepRunScriptArgs> scriptRun;
 
-    public Output<SoftwareRecipeStepRunScriptArgs> getScriptRun() {
+    public Output<SoftwareRecipeStepRunScriptArgs> scriptRun() {
         return this.scriptRun == null ? Codegen.empty() : this.scriptRun;
     }
 

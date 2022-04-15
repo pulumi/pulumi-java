@@ -25,7 +25,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="availableFeatures", required=true)
       private final List<String> availableFeatures;
 
-    public List<String> getAvailableFeatures() {
+    public List<String> availableFeatures() {
         return this.availableFeatures;
     }
 
@@ -36,7 +36,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultVersion", required=true)
       private final Boolean defaultVersion;
 
-    public Boolean getDefaultVersion() {
+    public Boolean defaultVersion() {
         return this.defaultVersion;
     }
 
@@ -47,7 +47,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -58,7 +58,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="versionNumber", required=true)
       private final String versionNumber;
 
-    public String getVersionNumber() {
+    public String versionNumber() {
         return this.versionNumber;
     }
 

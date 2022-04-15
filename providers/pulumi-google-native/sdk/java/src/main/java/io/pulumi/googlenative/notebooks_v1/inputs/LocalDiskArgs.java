@@ -27,7 +27,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initializeParams")
       private final @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
 
-    public Output<LocalDiskInitializeParamsArgs> getInitializeParams() {
+    public Output<LocalDiskInitializeParamsArgs> initializeParams() {
         return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
@@ -38,7 +38,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interface")
       private final @Nullable Output<String> interface_;
 
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
@@ -49,7 +49,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -60,7 +60,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -71,7 +71,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

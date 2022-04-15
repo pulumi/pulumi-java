@@ -24,7 +24,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
     @Import(name="azureCredentials", required=true)
       private final AzureCredentialsResponse azureCredentials;
 
-    public AzureCredentialsResponse getAzureCredentials() {
+    public AzureCredentialsResponse azureCredentials() {
         return this.azureCredentials;
     }
 
@@ -35,7 +35,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
     @Import(name="container", required=true)
       private final String container;
 
-    public String getContainer() {
+    public String container() {
         return this.container;
     }
 
@@ -46,7 +46,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -57,7 +57,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
     @Import(name="storageAccount", required=true)
       private final String storageAccount;
 
-    public String getStorageAccount() {
+    public String storageAccount() {
         return this.storageAccount;
     }
 

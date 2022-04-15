@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
     @Import(name="cloudStoragePath")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
 
-    public Output<GooglePrivacyDlpV2CloudStoragePathArgs> getCloudStoragePath() {
+    public Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath() {
         return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
     @Import(name="wordList")
       private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
-    public Output<GooglePrivacyDlpV2WordListArgs> getWordList() {
+    public Output<GooglePrivacyDlpV2WordListArgs> wordList() {
         return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 

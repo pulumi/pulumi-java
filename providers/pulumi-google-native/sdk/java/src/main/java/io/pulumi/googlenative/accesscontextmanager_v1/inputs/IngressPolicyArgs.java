@@ -27,7 +27,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingressFrom")
       private final @Nullable Output<IngressFromArgs> ingressFrom;
 
-    public Output<IngressFromArgs> getIngressFrom() {
+    public Output<IngressFromArgs> ingressFrom() {
         return this.ingressFrom == null ? Codegen.empty() : this.ingressFrom;
     }
 
@@ -38,7 +38,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingressTo")
       private final @Nullable Output<IngressToArgs> ingressTo;
 
-    public Output<IngressToArgs> getIngressTo() {
+    public Output<IngressToArgs> ingressTo() {
         return this.ingressTo == null ? Codegen.empty() : this.ingressTo;
     }
 

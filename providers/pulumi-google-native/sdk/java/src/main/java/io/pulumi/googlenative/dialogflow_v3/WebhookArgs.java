@@ -21,7 +21,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
 
@@ -32,7 +32,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -43,7 +43,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -54,14 +54,14 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
-    public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> getGenericWebService() {
+    public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService() {
         return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -72,14 +72,14 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -90,7 +90,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceDirectory")
       private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
-    public Output<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> getServiceDirectory() {
+    public Output<GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs> serviceDirectory() {
         return this.serviceDirectory == null ? Codegen.empty() : this.serviceDirectory;
     }
 
@@ -101,7 +101,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

@@ -33,14 +33,14 @@ public final class ParameterValidationResponse {
      * Validation based on regular expressions.
      * 
     */
-    public RegexValidationResponse getRegex() {
+    public RegexValidationResponse regex() {
         return this.regex;
     }
     /**
      * Validation based on a list of allowed values.
      * 
     */
-    public ValueValidationResponse getValues() {
+    public ValueValidationResponse values() {
         return this.values;
     }
 

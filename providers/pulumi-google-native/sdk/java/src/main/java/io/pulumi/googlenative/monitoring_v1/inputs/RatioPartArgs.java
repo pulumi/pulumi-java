@@ -27,7 +27,7 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregation")
       private final @Nullable Output<AggregationArgs> aggregation;
 
-    public Output<AggregationArgs> getAggregation() {
+    public Output<AggregationArgs> aggregation() {
         return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
@@ -38,7 +38,7 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 

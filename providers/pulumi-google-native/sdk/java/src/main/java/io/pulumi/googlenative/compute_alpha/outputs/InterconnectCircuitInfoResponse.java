@@ -39,21 +39,21 @@ public final class InterconnectCircuitInfoResponse {
      * Customer-side demarc ID for this circuit.
      * 
     */
-    public String getCustomerDemarcId() {
+    public String customerDemarcId() {
         return this.customerDemarcId;
     }
     /**
      * Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
      * 
     */
-    public String getGoogleCircuitId() {
+    public String googleCircuitId() {
         return this.googleCircuitId;
     }
     /**
      * Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
      * 
     */
-    public String getGoogleDemarcId() {
+    public String googleDemarcId() {
         return this.googleDemarcId;
     }
 

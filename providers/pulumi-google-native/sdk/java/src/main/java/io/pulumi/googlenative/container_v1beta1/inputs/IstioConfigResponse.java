@@ -24,7 +24,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="auth", required=true)
       private final String auth;
 
-    public String getAuth() {
+    public String auth() {
         return this.auth;
     }
 
@@ -35,7 +35,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

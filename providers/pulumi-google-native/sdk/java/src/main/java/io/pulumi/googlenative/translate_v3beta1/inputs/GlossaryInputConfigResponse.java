@@ -23,7 +23,7 @@ public final class GlossaryInputConfigResponse extends io.pulumi.resources.Invok
     @Import(name="gcsSource", required=true)
       private final GcsSourceResponse gcsSource;
 
-    public GcsSourceResponse getGcsSource() {
+    public GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
 

@@ -24,7 +24,7 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
     @Import(name="regex", required=true)
       private final RegexValidationResponse regex;
 
-    public RegexValidationResponse getRegex() {
+    public RegexValidationResponse regex() {
         return this.regex;
     }
 
@@ -35,7 +35,7 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
     @Import(name="values", required=true)
       private final ValueValidationResponse values;
 
-    public ValueValidationResponse getValues() {
+    public ValueValidationResponse values() {
         return this.values;
     }
 

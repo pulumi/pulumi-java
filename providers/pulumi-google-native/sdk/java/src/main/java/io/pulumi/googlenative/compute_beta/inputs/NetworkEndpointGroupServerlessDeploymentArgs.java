@@ -26,7 +26,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     @Import(name="urlMask")
       private final @Nullable Output<String> urlMask;
 
-    public Output<String> getUrlMask() {
+    public Output<String> urlMask() {
         return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 
@@ -59,7 +59,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -39,21 +39,21 @@ public final class RuntimeAccessConfigResponse {
      * The type of access mode this instance.
      * 
     */
-    public String getAccessType() {
+    public String accessType() {
         return this.accessType;
     }
     /**
      * The proxy endpoint that is used to access the runtime.
      * 
     */
-    public String getProxyUri() {
+    public String proxyUri() {
         return this.proxyUri;
     }
     /**
      * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
      * 
     */
-    public String getRuntimeOwner() {
+    public String runtimeOwner() {
         return this.runtimeOwner;
     }
 

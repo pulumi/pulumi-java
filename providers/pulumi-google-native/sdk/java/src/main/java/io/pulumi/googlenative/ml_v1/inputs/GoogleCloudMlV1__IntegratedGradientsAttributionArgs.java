@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends i
     @Import(name="numIntegralSteps")
       private final @Nullable Output<Integer> numIntegralSteps;
 
-    public Output<Integer> getNumIntegralSteps() {
+    public Output<Integer> numIntegralSteps() {
         return this.numIntegralSteps == null ? Codegen.empty() : this.numIntegralSteps;
     }
 

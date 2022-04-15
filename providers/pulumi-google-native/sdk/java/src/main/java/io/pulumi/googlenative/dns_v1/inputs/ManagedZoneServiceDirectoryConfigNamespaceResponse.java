@@ -19,14 +19,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
     @Import(name="deletionTime", required=true)
       private final String deletionTime;
 
-    public String getDeletionTime() {
+    public String deletionTime() {
         return this.deletionTime;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -37,7 +37,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
     @Import(name="namespaceUrl", required=true)
       private final String namespaceUrl;
 
-    public String getNamespaceUrl() {
+    public String namespaceUrl() {
         return this.namespaceUrl;
     }
 

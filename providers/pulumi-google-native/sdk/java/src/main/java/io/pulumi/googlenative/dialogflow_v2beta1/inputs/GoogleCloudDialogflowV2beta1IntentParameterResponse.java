@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="defaultValue", required=true)
       private final String defaultValue;
 
-    public String getDefaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="entityTypeDisplayName", required=true)
       private final String entityTypeDisplayName;
 
-    public String getEntityTypeDisplayName() {
+    public String entityTypeDisplayName() {
         return this.entityTypeDisplayName;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="isList", required=true)
       private final Boolean isList;
 
-    public Boolean getIsList() {
+    public Boolean isList() {
         return this.isList;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="mandatory", required=true)
       private final Boolean mandatory;
 
-    public Boolean getMandatory() {
+    public Boolean mandatory() {
         return this.mandatory;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="prompts", required=true)
       private final List<String> prompts;
 
-    public List<String> getPrompts() {
+    public List<String> prompts() {
         return this.prompts;
     }
 
@@ -102,7 +102,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends i
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

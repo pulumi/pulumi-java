@@ -77,56 +77,56 @@ public final class TestSuiteOverviewResponse {
      * Elapsed time of test suite.
      * 
     */
-    public DurationResponse getElapsedTime() {
+    public DurationResponse elapsedTime() {
         return this.elapsedTime;
     }
     /**
      * Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
      * 
     */
-    public Integer getErrorCount() {
+    public Integer errorCount() {
         return this.errorCount;
     }
     /**
      * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
      * 
     */
-    public Integer getFailureCount() {
+    public Integer failureCount() {
         return this.failureCount;
     }
     /**
      * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
      * 
     */
-    public Integer getFlakyCount() {
+    public Integer flakyCount() {
         return this.flakyCount;
     }
     /**
      * The name of the test suite. - In create/response: always set - In update request: never
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
      * 
     */
-    public Integer getSkippedCount() {
+    public Integer skippedCount() {
         return this.skippedCount;
     }
     /**
      * Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
      * 
     */
-    public Integer getTotalCount() {
+    public Integer totalCount() {
         return this.totalCount;
     }
     /**
      * If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
      * 
     */
-    public FileReferenceResponse getXmlSource() {
+    public FileReferenceResponse xmlSource() {
         return this.xmlSource;
     }
 

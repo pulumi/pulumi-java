@@ -54,35 +54,35 @@ public final class GetEnvgroupResult {
      * The time at which the environment group was created as milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Host names for this environment group.
      * 
     */
-    public List<String> getHostnames() {
+    public List<String> hostnames() {
         return this.hostnames;
     }
     /**
      * The time at which the environment group was last updated as milliseconds since epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * ID of the environment group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

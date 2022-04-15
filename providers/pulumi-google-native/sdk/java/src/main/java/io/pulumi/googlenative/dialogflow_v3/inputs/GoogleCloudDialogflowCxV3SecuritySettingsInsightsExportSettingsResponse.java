@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
     @Import(name="enableInsightsExport", required=true)
       private final Boolean enableInsightsExport;
 
-    public Boolean getEnableInsightsExport() {
+    public Boolean enableInsightsExport() {
         return this.enableInsightsExport;
     }
 

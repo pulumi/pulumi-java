@@ -26,7 +26,7 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channel")
       private final @Nullable Output<ReleaseChannelChannel> channel;
 
-    public Output<ReleaseChannelChannel> getChannel() {
+    public Output<ReleaseChannelChannel> channel() {
         return this.channel == null ? Codegen.empty() : this.channel;
     }
 

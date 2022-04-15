@@ -26,7 +26,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -48,7 +48,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -59,28 +59,28 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -91,7 +91,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackType")
       private final @Nullable Output<VpnGatewayStackType> stackType;
 
-    public Output<VpnGatewayStackType> getStackType() {
+    public Output<VpnGatewayStackType> stackType() {
         return this.stackType == null ? Codegen.empty() : this.stackType;
     }
 
@@ -102,7 +102,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnInterfaces")
       private final @Nullable Output<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces;
 
-    public Output<List<VpnGatewayVpnGatewayInterfaceArgs>> getVpnInterfaces() {
+    public Output<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces() {
         return this.vpnInterfaces == null ? Codegen.empty() : this.vpnInterfaces;
     }
 

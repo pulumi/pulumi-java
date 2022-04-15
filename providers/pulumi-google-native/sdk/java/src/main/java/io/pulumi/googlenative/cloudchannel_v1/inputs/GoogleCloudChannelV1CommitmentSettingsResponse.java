@@ -24,7 +24,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
     @Import(name="renewalSettings", required=true)
       private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
 
-    public GoogleCloudChannelV1RenewalSettingsResponse getRenewalSettings() {
+    public GoogleCloudChannelV1RenewalSettingsResponse renewalSettings() {
         return this.renewalSettings;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

@@ -32,14 +32,14 @@ public final class RouterMd5AuthenticationKeyResponse {
      * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Name used to identify the key. Must be unique within a router. Must be referenced by at least one bgpPeer. Must comply with RFC1035.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

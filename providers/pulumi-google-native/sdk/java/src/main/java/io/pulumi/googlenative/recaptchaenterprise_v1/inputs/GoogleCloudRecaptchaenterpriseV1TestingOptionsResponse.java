@@ -24,7 +24,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
     @Import(name="testingChallenge", required=true)
       private final String testingChallenge;
 
-    public String getTestingChallenge() {
+    public String testingChallenge() {
         return this.testingChallenge;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
     @Import(name="testingScore", required=true)
       private final Double testingScore;
 
-    public Double getTestingScore() {
+    public Double testingScore() {
         return this.testingScore;
     }
 

@@ -24,7 +24,7 @@ public final class HttpFaultDelayResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="fixedDelay", required=true)
       private final DurationResponse fixedDelay;
 
-    public DurationResponse getFixedDelay() {
+    public DurationResponse fixedDelay() {
         return this.fixedDelay;
     }
 
@@ -35,7 +35,7 @@ public final class HttpFaultDelayResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="percentage", required=true)
       private final Double percentage;
 
-    public Double getPercentage() {
+    public Double percentage() {
         return this.percentage;
     }
 

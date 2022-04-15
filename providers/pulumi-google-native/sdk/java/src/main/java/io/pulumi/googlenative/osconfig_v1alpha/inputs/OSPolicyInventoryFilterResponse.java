@@ -23,7 +23,7 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
     @Import(name="osShortName", required=true)
       private final String osShortName;
 
-    public String getOsShortName() {
+    public String osShortName() {
         return this.osShortName;
     }
 
@@ -34,7 +34,7 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
     @Import(name="osVersion", required=true)
       private final String osVersion;
 
-    public String getOsVersion() {
+    public String osVersion() {
         return this.osVersion;
     }
 

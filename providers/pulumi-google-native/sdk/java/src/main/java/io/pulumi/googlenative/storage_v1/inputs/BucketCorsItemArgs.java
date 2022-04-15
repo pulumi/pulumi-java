@@ -24,7 +24,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxAgeSeconds")
       private final @Nullable Output<Integer> maxAgeSeconds;
 
-    public Output<Integer> getMaxAgeSeconds() {
+    public Output<Integer> maxAgeSeconds() {
         return this.maxAgeSeconds == null ? Codegen.empty() : this.maxAgeSeconds;
     }
 
@@ -35,7 +35,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method")
       private final @Nullable Output<List<String>> method;
 
-    public Output<List<String>> getMethod() {
+    public Output<List<String>> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -46,7 +46,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="origin")
       private final @Nullable Output<List<String>> origin;
 
-    public Output<List<String>> getOrigin() {
+    public Output<List<String>> origin() {
         return this.origin == null ? Codegen.empty() : this.origin;
     }
 
@@ -57,7 +57,7 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseHeader")
       private final @Nullable Output<List<String>> responseHeader;
 
-    public Output<List<String>> getResponseHeader() {
+    public Output<List<String>> responseHeader() {
         return this.responseHeader == null ? Codegen.empty() : this.responseHeader;
     }
 

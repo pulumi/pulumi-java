@@ -17,14 +17,14 @@ public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.Invok
     @Import(name="forwardingRule", required=true)
       private final String forwardingRule;
 
-    public String getForwardingRule() {
+    public String forwardingRule() {
         return this.forwardingRule;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
     @Import(name="siteId", required=true)
       private final String siteId;
 
-    public String getSiteId() {
+    public String siteId() {
         return this.siteId;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

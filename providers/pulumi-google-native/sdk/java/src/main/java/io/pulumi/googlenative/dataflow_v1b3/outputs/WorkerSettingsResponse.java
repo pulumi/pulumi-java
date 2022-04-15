@@ -61,42 +61,42 @@ public final class WorkerSettingsResponse {
      * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
      * 
     */
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
     /**
      * Whether to send work progress updates to the service.
      * 
     */
-    public Boolean getReportingEnabled() {
+    public Boolean reportingEnabled() {
         return this.reportingEnabled;
     }
     /**
      * The Cloud Dataflow service path relative to the root URL, for example, "dataflow/v1b3/projects".
      * 
     */
-    public String getServicePath() {
+    public String servicePath() {
         return this.servicePath;
     }
     /**
      * The Shuffle service path relative to the root URL, for example, "shuffle/v1beta1".
      * 
     */
-    public String getShuffleServicePath() {
+    public String shuffleServicePath() {
         return this.shuffleServicePath;
     }
     /**
      * The prefix of the resources the system should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
      * 
     */
-    public String getTempStoragePrefix() {
+    public String tempStoragePrefix() {
         return this.tempStoragePrefix;
     }
     /**
      * The ID of the worker running this pipeline.
      * 
     */
-    public String getWorkerId() {
+    public String workerId() {
         return this.workerId;
     }
 

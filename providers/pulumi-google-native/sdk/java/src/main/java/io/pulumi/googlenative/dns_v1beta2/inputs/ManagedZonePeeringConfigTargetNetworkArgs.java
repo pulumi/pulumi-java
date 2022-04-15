@@ -22,14 +22,14 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     @Import(name="deactivateTime")
       private final @Nullable Output<String> deactivateTime;
 
-    public Output<String> getDeactivateTime() {
+    public Output<String> deactivateTime() {
         return this.deactivateTime == null ? Codegen.empty() : this.deactivateTime;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -40,7 +40,7 @@ public final class ManagedZonePeeringConfigTargetNetworkArgs extends io.pulumi.r
     @Import(name="networkUrl")
       private final @Nullable Output<String> networkUrl;
 
-    public Output<String> getNetworkUrl() {
+    public Output<String> networkUrl() {
         return this.networkUrl == null ? Codegen.empty() : this.networkUrl;
     }
 

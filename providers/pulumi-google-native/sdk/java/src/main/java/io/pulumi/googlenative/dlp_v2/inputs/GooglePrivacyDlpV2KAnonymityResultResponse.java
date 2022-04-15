@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse extends io.pulumi.
     @Import(name="equivalenceClassHistogramBuckets", required=true)
       private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
-    public List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> getEquivalenceClassHistogramBuckets() {
+    public List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets() {
         return this.equivalenceClassHistogramBuckets;
     }
 

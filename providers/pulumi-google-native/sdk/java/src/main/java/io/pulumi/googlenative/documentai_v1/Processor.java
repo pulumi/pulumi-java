@@ -30,7 +30,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The time the processor was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +44,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The default processor version.
      * 
      */
-    public Output<String> getDefaultProcessorVersion() {
+    public Output<String> defaultProcessorVersion() {
         return this.defaultProcessorVersion;
     }
     /**
@@ -58,7 +58,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The display name of the processor.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -72,7 +72,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -86,7 +86,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return Immutable. The http endpoint that can be called to invoke processing.
      * 
      */
-    public Output<String> getProcessEndpoint() {
+    public Output<String> processEndpoint() {
         return this.processEndpoint;
     }
     /**
@@ -114,7 +114,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The state of the processor.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -128,7 +128,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

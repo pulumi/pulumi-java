@@ -29,7 +29,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
      */
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
     /**
@@ -43,7 +43,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The type of the schema definition.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

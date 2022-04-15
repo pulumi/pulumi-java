@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
     @Import(name="overview")
       private final @Nullable Output<String> overview;
 
-    public Output<String> getOverview() {
+    public Output<String> overview() {
         return this.overview == null ? Codegen.empty() : this.overview;
     }
 

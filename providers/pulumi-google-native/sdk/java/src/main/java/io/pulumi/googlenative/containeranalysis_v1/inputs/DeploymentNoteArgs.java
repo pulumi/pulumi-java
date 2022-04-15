@@ -26,7 +26,7 @@ public final class DeploymentNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
       private final Output<List<String>> resourceUri;
 
-    public Output<List<String>> getResourceUri() {
+    public Output<List<String>> resourceUri() {
         return this.resourceUri;
     }
 

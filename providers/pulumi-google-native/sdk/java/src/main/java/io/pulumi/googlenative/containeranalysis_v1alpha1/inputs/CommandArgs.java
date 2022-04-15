@@ -27,7 +27,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -38,7 +38,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dir")
       private final @Nullable Output<String> dir;
 
-    public Output<String> getDir() {
+    public Output<String> dir() {
         return this.dir == null ? Codegen.empty() : this.dir;
     }
 
@@ -49,7 +49,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<String>> env;
 
-    public Output<List<String>> getEnv() {
+    public Output<List<String>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -60,7 +60,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -71,7 +71,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitFor")
       private final @Nullable Output<List<String>> waitFor;
 
-    public Output<List<String>> getWaitFor() {
+    public Output<List<String>> waitFor() {
         return this.waitFor == null ? Codegen.empty() : this.waitFor;
     }
 

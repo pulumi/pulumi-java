@@ -28,7 +28,7 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
     @Import(name="noteReference", required=true)
       private final Output<String> noteReference;
 
-    public Output<String> getNoteReference() {
+    public Output<String> noteReference() {
         return this.noteReference;
     }
 
@@ -39,7 +39,7 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
     @Import(name="publicKeys")
       private final @Nullable Output<List<AttestorPublicKeyArgs>> publicKeys;
 
-    public Output<List<AttestorPublicKeyArgs>> getPublicKeys() {
+    public Output<List<AttestorPublicKeyArgs>> publicKeys() {
         return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 

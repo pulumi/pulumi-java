@@ -17,14 +17,14 @@ public final class GetTypeProviderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="typeProvider", required=true)
       private final String typeProvider;
 
-    public String getTypeProvider() {
+    public String typeProvider() {
         return this.typeProvider;
     }
 

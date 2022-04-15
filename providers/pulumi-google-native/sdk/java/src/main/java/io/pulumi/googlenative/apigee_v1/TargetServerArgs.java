@@ -26,14 +26,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -44,7 +44,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -55,7 +55,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -66,14 +66,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -84,7 +84,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -95,7 +95,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<TargetServerProtocol> protocol;
 
-    public Output<TargetServerProtocol> getProtocol() {
+    public Output<TargetServerProtocol> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -106,7 +106,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sSLInfo")
       private final @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 
-    public Output<GoogleCloudApigeeV1TlsInfoArgs> getSSLInfo() {
+    public Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo() {
         return this.sSLInfo == null ? Codegen.empty() : this.sSLInfo;
     }
 

@@ -24,7 +24,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
-    public Boolean getEnablePrivateEndpoint() {
+    public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
@@ -35,7 +35,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
-    public String getMasterIpv4CidrBlock() {
+    public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
@@ -46,7 +46,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
     @Import(name="masterIpv4ReservedRange", required=true)
       private final String masterIpv4ReservedRange;
 
-    public String getMasterIpv4ReservedRange() {
+    public String masterIpv4ReservedRange() {
         return this.masterIpv4ReservedRange;
     }
 

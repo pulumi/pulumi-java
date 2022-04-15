@@ -25,7 +25,7 @@ public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="jobCategories", required=true)
       private final List<String> jobCategories;
 
-    public List<String> getJobCategories() {
+    public List<String> jobCategories() {
         return this.jobCategories;
     }
 
@@ -36,7 +36,7 @@ public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="locations", required=true)
       private final List<LocationResponse> locations;
 
-    public List<LocationResponse> getLocations() {
+    public List<LocationResponse> locations() {
         return this.locations;
     }
 

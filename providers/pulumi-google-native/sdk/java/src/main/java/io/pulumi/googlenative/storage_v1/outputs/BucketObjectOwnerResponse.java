@@ -32,14 +32,14 @@ public final class BucketObjectOwnerResponse {
      * The entity, in the form user-userId.
      * 
     */
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
     /**
      * The ID for the entity.
      * 
     */
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
 

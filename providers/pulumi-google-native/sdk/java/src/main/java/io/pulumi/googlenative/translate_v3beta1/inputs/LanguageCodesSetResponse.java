@@ -24,7 +24,7 @@ public final class LanguageCodesSetResponse extends io.pulumi.resources.InvokeAr
     @Import(name="languageCodes", required=true)
       private final List<String> languageCodes;
 
-    public List<String> getLanguageCodes() {
+    public List<String> languageCodes() {
         return this.languageCodes;
     }
 

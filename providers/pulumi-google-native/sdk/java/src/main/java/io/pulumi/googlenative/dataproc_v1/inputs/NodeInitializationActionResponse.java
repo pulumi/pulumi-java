@@ -23,7 +23,7 @@ public final class NodeInitializationActionResponse extends io.pulumi.resources.
     @Import(name="executableFile", required=true)
       private final String executableFile;
 
-    public String getExecutableFile() {
+    public String executableFile() {
         return this.executableFile;
     }
 
@@ -34,7 +34,7 @@ public final class NodeInitializationActionResponse extends io.pulumi.resources.
     @Import(name="executionTimeout", required=true)
       private final String executionTimeout;
 
-    public String getExecutionTimeout() {
+    public String executionTimeout() {
         return this.executionTimeout;
     }
 

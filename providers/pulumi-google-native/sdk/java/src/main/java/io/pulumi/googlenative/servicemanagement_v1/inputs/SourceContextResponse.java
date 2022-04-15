@@ -23,7 +23,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="fileName", required=true)
       private final String fileName;
 
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 

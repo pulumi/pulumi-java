@@ -27,7 +27,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri")
       private final @Nullable Output<List<String>> resourceUri;
 
-    public Output<List<String>> getResourceUri() {
+    public Output<List<String>> resourceUri() {
         return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 

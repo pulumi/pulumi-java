@@ -19,14 +19,14 @@ public final class GrafeasV1beta1IntotoSignatureResponse extends io.pulumi.resou
     @Import(name="keyid", required=true)
       private final String keyid;
 
-    public String getKeyid() {
+    public String keyid() {
         return this.keyid;
     }
 
     @Import(name="sig", required=true)
       private final String sig;
 
-    public String getSig() {
+    public String sig() {
         return this.sig;
     }
 

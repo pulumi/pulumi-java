@@ -33,14 +33,14 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
      * Flag that specifies whether the Connectors Platform add-on is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
      * 
     */
-    public String getExpiresAt() {
+    public String expiresAt() {
         return this.expiresAt;
     }
 

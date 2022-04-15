@@ -62,42 +62,42 @@ public final class ReleaseResponse {
      * The deploy description when the release was created. The value can be up to 512 characters.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The time at which the version is set to be public.
      * 
     */
-    public String getReleaseTime() {
+    public String releaseTime() {
         return this.releaseTime;
     }
     /**
      * Identifies the user who created the release.
      * 
     */
-    public ActingUserResponse getReleaseUser() {
+    public ActingUserResponse releaseUser() {
         return this.releaseUser;
     }
     /**
      * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The configuration and content that was released.
      * 
     */
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
 

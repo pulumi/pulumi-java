@@ -26,7 +26,7 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
     @Import(name="configMembership")
       private final @Nullable Output<String> configMembership;
 
-    public Output<String> getConfigMembership() {
+    public Output<String> configMembership() {
         return this.configMembership == null ? Codegen.empty() : this.configMembership;
     }
 

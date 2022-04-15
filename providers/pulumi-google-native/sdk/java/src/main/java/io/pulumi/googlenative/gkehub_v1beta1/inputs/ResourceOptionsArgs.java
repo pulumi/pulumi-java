@@ -27,7 +27,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="connectVersion")
       private final @Nullable Output<String> connectVersion;
 
-    public Output<String> getConnectVersion() {
+    public Output<String> connectVersion() {
         return this.connectVersion == null ? Codegen.empty() : this.connectVersion;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="k8sVersion")
       private final @Nullable Output<String> k8sVersion;
 
-    public Output<String> getK8sVersion() {
+    public Output<String> k8sVersion() {
         return this.k8sVersion == null ? Codegen.empty() : this.k8sVersion;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="v1beta1Crd")
       private final @Nullable Output<Boolean> v1beta1Crd;
 
-    public Output<Boolean> getV1beta1Crd() {
+    public Output<Boolean> v1beta1Crd() {
         return this.v1beta1Crd == null ? Codegen.empty() : this.v1beta1Crd;
     }
 

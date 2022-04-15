@@ -24,7 +24,7 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
       private final Map<String,String> fields;
 
-    public Map<String,String> getFields() {
+    public Map<String,String> fields() {
         return this.fields;
     }
 
@@ -35,7 +35,7 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="segmentId", required=true)
       private final String segmentId;
 
-    public String getSegmentId() {
+    public String segmentId() {
         return this.segmentId;
     }
 
@@ -46,7 +46,7 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="setId", required=true)
       private final String setId;
 
-    public String getSetId() {
+    public String setId() {
         return this.setId;
     }
 

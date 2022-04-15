@@ -32,14 +32,14 @@ public final class GetKeyRingResult {
      * The time at which this KeyRing was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

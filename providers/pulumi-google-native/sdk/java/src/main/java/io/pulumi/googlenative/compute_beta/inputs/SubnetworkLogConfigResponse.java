@@ -26,7 +26,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     @Import(name="aggregationInterval", required=true)
       private final String aggregationInterval;
 
-    public String getAggregationInterval() {
+    public String aggregationInterval() {
         return this.aggregationInterval;
     }
 
@@ -37,7 +37,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     @Import(name="enable", required=true)
       private final Boolean enable;
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 
@@ -48,7 +48,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     @Import(name="filterExpr", required=true)
       private final String filterExpr;
 
-    public String getFilterExpr() {
+    public String filterExpr() {
         return this.filterExpr;
     }
 
@@ -59,7 +59,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     @Import(name="flowSampling", required=true)
       private final Double flowSampling;
 
-    public Double getFlowSampling() {
+    public Double flowSampling() {
         return this.flowSampling;
     }
 
@@ -70,7 +70,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     @Import(name="metadata", required=true)
       private final String metadata;
 
-    public String getMetadata() {
+    public String metadata() {
         return this.metadata;
     }
 
@@ -81,7 +81,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     @Import(name="metadataFields", required=true)
       private final List<String> metadataFields;
 
-    public List<String> getMetadataFields() {
+    public List<String> metadataFields() {
         return this.metadataFields;
     }
 

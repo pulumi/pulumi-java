@@ -21,7 +21,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorResult", required=true)
       private final ErrorProtoResponse errorResult;
 
-    public ErrorProtoResponse getErrorResult() {
+    public ErrorProtoResponse errorResult() {
         return this.errorResult;
     }
 
@@ -32,7 +32,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errors", required=true)
       private final List<ErrorProtoResponse> errors;
 
-    public List<ErrorProtoResponse> getErrors() {
+    public List<ErrorProtoResponse> errors() {
         return this.errors;
     }
 
@@ -43,7 +43,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

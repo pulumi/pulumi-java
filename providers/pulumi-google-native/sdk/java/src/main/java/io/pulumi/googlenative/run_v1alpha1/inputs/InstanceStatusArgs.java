@@ -28,7 +28,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completionTime")
       private final @Nullable Output<String> completionTime;
 
-    public Output<String> getCompletionTime() {
+    public Output<String> completionTime() {
         return this.completionTime == null ? Codegen.empty() : this.completionTime;
     }
 
@@ -39,7 +39,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failed")
       private final @Nullable Output<Integer> failed;
 
-    public Output<Integer> getFailed() {
+    public Output<Integer> failed() {
         return this.failed == null ? Codegen.empty() : this.failed;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="index", required=true)
       private final Output<Integer> index;
 
-    public Output<Integer> getIndex() {
+    public Output<Integer> index() {
         return this.index;
     }
 
@@ -61,7 +61,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastAttemptResult")
       private final @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
 
-    public Output<InstanceAttemptResultArgs> getLastAttemptResult() {
+    public Output<InstanceAttemptResultArgs> lastAttemptResult() {
         return this.lastAttemptResult == null ? Codegen.empty() : this.lastAttemptResult;
     }
 
@@ -72,7 +72,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastExitCode")
       private final @Nullable Output<Integer> lastExitCode;
 
-    public Output<Integer> getLastExitCode() {
+    public Output<Integer> lastExitCode() {
         return this.lastExitCode == null ? Codegen.empty() : this.lastExitCode;
     }
 
@@ -83,7 +83,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restarted")
       private final @Nullable Output<Integer> restarted;
 
-    public Output<Integer> getRestarted() {
+    public Output<Integer> restarted() {
         return this.restarted == null ? Codegen.empty() : this.restarted;
     }
 
@@ -94,7 +94,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -105,7 +105,7 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="succeeded")
       private final @Nullable Output<Integer> succeeded;
 
-    public Output<Integer> getSucceeded() {
+    public Output<Integer> succeeded() {
         return this.succeeded == null ? Codegen.empty() : this.succeeded;
     }
 

@@ -22,14 +22,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="dicomStoreId")
       private final @Nullable Output<String> dicomStoreId;
 
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId == null ? Codegen.empty() : this.dicomStoreId;
     }
 
@@ -40,14 +40,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -58,7 +58,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,14 +69,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> getNotificationConfig() {
+    public Output<NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -87,7 +87,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
       private final @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 
-    public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> getStreamConfigs() {
+    public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs() {
         return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 

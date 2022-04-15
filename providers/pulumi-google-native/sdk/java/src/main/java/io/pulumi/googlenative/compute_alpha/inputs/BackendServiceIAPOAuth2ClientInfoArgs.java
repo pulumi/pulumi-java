@@ -22,7 +22,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -33,7 +33,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     @Import(name="clientName")
       private final @Nullable Output<String> clientName;
 
-    public Output<String> getClientName() {
+    public Output<String> clientName() {
         return this.clientName == null ? Codegen.empty() : this.clientName;
     }
 
@@ -44,7 +44,7 @@ public final class BackendServiceIAPOAuth2ClientInfoArgs extends io.pulumi.resou
     @Import(name="developerEmailAddress")
       private final @Nullable Output<String> developerEmailAddress;
 
-    public Output<String> getDeveloperEmailAddress() {
+    public Output<String> developerEmailAddress() {
         return this.developerEmailAddress == null ? Codegen.empty() : this.developerEmailAddress;
     }
 

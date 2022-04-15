@@ -24,7 +24,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
     @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
 
@@ -35,7 +35,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -46,7 +46,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
     @Import(name="timeZone", required=true)
       private final String timeZone;
 
-    public String getTimeZone() {
+    public String timeZone() {
         return this.timeZone;
     }
 
@@ -57,7 +57,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
     @Import(name="vmStartSchedule", required=true)
       private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
 
-    public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStartSchedule() {
+    public ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule() {
         return this.vmStartSchedule;
     }
 
@@ -68,7 +68,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
     @Import(name="vmStopSchedule", required=true)
       private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
 
-    public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStopSchedule() {
+    public ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule() {
         return this.vmStopSchedule;
     }
 

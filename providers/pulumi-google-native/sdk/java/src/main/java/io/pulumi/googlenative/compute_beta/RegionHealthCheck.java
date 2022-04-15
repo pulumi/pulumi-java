@@ -37,7 +37,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
      */
-    public Output<Integer> getCheckIntervalSec() {
+    public Output<Integer> checkIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
@@ -51,7 +51,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in 3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -65,13 +65,13 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     @Export(name="grpcHealthCheck", type=GRPCHealthCheckResponse.class, parameters={})
     private Output<GRPCHealthCheckResponse> grpcHealthCheck;
 
-    public Output<GRPCHealthCheckResponse> getGrpcHealthCheck() {
+    public Output<GRPCHealthCheckResponse> grpcHealthCheck() {
         return this.grpcHealthCheck;
     }
     /**
@@ -85,25 +85,25 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
      */
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
     @Export(name="http2HealthCheck", type=HTTP2HealthCheckResponse.class, parameters={})
     private Output<HTTP2HealthCheckResponse> http2HealthCheck;
 
-    public Output<HTTP2HealthCheckResponse> getHttp2HealthCheck() {
+    public Output<HTTP2HealthCheckResponse> http2HealthCheck() {
         return this.http2HealthCheck;
     }
     @Export(name="httpHealthCheck", type=HTTPHealthCheckResponse.class, parameters={})
     private Output<HTTPHealthCheckResponse> httpHealthCheck;
 
-    public Output<HTTPHealthCheckResponse> getHttpHealthCheck() {
+    public Output<HTTPHealthCheckResponse> httpHealthCheck() {
         return this.httpHealthCheck;
     }
     @Export(name="httpsHealthCheck", type=HTTPSHealthCheckResponse.class, parameters={})
     private Output<HTTPSHealthCheckResponse> httpsHealthCheck;
 
-    public Output<HTTPSHealthCheckResponse> getHttpsHealthCheck() {
+    public Output<HTTPSHealthCheckResponse> httpsHealthCheck() {
         return this.httpsHealthCheck;
     }
     /**
@@ -117,7 +117,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -131,7 +131,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Configure logging on this health check.
      * 
      */
-    public Output<HealthCheckLogConfigResponse> getLogConfig() {
+    public Output<HealthCheckLogConfigResponse> logConfig() {
         return this.logConfig;
     }
     /**
@@ -145,7 +145,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +159,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Region where the health check resides. Not applicable to global health checks.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -173,19 +173,19 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     @Export(name="sslHealthCheck", type=SSLHealthCheckResponse.class, parameters={})
     private Output<SSLHealthCheckResponse> sslHealthCheck;
 
-    public Output<SSLHealthCheckResponse> getSslHealthCheck() {
+    public Output<SSLHealthCheckResponse> sslHealthCheck() {
         return this.sslHealthCheck;
     }
     @Export(name="tcpHealthCheck", type=TCPHealthCheckResponse.class, parameters={})
     private Output<TCPHealthCheckResponse> tcpHealthCheck;
 
-    public Output<TCPHealthCheckResponse> getTcpHealthCheck() {
+    public Output<TCPHealthCheckResponse> tcpHealthCheck() {
         return this.tcpHealthCheck;
     }
     /**
@@ -199,7 +199,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
      * 
      */
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec;
     }
     /**
@@ -213,7 +213,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -227,7 +227,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * @return A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
      */
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

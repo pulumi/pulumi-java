@@ -26,7 +26,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analysisKind")
       private final @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
-    public Output<DiscoveryAnalysisKind> getAnalysisKind() {
+    public Output<DiscoveryAnalysisKind> analysisKind() {
         return this.analysisKind == null ? Codegen.empty() : this.analysisKind;
     }
 

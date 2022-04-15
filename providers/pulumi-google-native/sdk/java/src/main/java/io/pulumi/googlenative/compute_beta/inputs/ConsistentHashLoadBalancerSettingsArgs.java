@@ -27,7 +27,7 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
     @Import(name="httpCookie")
       private final @Nullable Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
 
-    public Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> getHttpCookie() {
+    public Output<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie() {
         return this.httpCookie == null ? Codegen.empty() : this.httpCookie;
     }
 
@@ -38,7 +38,7 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
     @Import(name="httpHeaderName")
       private final @Nullable Output<String> httpHeaderName;
 
-    public Output<String> getHttpHeaderName() {
+    public Output<String> httpHeaderName() {
         return this.httpHeaderName == null ? Codegen.empty() : this.httpHeaderName;
     }
 
@@ -49,7 +49,7 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
     @Import(name="minimumRingSize")
       private final @Nullable Output<String> minimumRingSize;
 
-    public Output<String> getMinimumRingSize() {
+    public Output<String> minimumRingSize() {
         return this.minimumRingSize == null ? Codegen.empty() : this.minimumRingSize;
     }
 

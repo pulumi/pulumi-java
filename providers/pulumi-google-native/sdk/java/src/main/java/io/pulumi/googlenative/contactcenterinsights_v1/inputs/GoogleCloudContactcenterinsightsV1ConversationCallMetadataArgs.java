@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     @Import(name="agentChannel")
       private final @Nullable Output<Integer> agentChannel;
 
-    public Output<Integer> getAgentChannel() {
+    public Output<Integer> agentChannel() {
         return this.agentChannel == null ? Codegen.empty() : this.agentChannel;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     @Import(name="customerChannel")
       private final @Nullable Output<Integer> customerChannel;
 
-    public Output<Integer> getCustomerChannel() {
+    public Output<Integer> customerChannel() {
         return this.customerChannel == null ? Codegen.empty() : this.customerChannel;
     }
 

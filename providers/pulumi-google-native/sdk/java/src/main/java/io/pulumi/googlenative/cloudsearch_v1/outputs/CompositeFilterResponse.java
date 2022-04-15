@@ -34,14 +34,14 @@ public final class CompositeFilterResponse {
      * The logic operator of the sub filter.
      * 
     */
-    public String getLogicOperator() {
+    public String logicOperator() {
         return this.logicOperator;
     }
     /**
      * Sub filters.
      * 
     */
-    public List<FilterResponse> getSubFilters() {
+    public List<FilterResponse> subFilters() {
         return this.subFilters;
     }
 

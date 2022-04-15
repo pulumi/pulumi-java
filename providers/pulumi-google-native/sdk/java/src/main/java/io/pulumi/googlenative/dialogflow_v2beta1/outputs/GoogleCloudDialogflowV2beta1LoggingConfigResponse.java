@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse {
      * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
      * 
     */
-    public Boolean getEnableStackdriverLogging() {
+    public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
 

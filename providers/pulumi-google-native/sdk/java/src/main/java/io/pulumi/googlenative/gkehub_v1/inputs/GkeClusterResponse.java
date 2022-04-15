@@ -24,7 +24,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterMissing", required=true)
       private final Boolean clusterMissing;
 
-    public Boolean getClusterMissing() {
+    public Boolean clusterMissing() {
         return this.clusterMissing;
     }
 
@@ -35,7 +35,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceLink", required=true)
       private final String resourceLink;
 
-    public String getResourceLink() {
+    public String resourceLink() {
         return this.resourceLink;
     }
 

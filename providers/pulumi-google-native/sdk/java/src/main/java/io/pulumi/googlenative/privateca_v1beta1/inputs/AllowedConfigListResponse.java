@@ -20,7 +20,7 @@ public final class AllowedConfigListResponse extends io.pulumi.resources.InvokeA
     @Import(name="allowedConfigValues", required=true)
       private final List<ReusableConfigWrapperResponse> allowedConfigValues;
 
-    public List<ReusableConfigWrapperResponse> getAllowedConfigValues() {
+    public List<ReusableConfigWrapperResponse> allowedConfigValues() {
         return this.allowedConfigValues;
     }
 

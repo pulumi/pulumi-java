@@ -39,21 +39,21 @@ public final class FileResponse {
      * Textual Content.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * Fingerprint (e.g. github sha) associated with the `File`.
      * 
     */
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
     /**
      * File name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

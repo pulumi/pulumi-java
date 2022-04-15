@@ -27,7 +27,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="cloudRepo", required=true)
       private final CloudRepoSourceContextResponse cloudRepo;
 
-    public CloudRepoSourceContextResponse getCloudRepo() {
+    public CloudRepoSourceContextResponse cloudRepo() {
         return this.cloudRepo;
     }
 
@@ -38,7 +38,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gerrit", required=true)
       private final GerritSourceContextResponse gerrit;
 
-    public GerritSourceContextResponse getGerrit() {
+    public GerritSourceContextResponse gerrit() {
         return this.gerrit;
     }
 
@@ -49,7 +49,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="git", required=true)
       private final GitSourceContextResponse git;
 
-    public GitSourceContextResponse getGit() {
+    public GitSourceContextResponse git() {
         return this.git;
     }
 
@@ -60,7 +60,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

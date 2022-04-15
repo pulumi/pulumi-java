@@ -19,7 +19,7 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
     @Import(name="tagKey", required=true)
       private final String tagKey;
 
-    public String getTagKey() {
+    public String tagKey() {
         return this.tagKey;
     }
 
@@ -30,7 +30,7 @@ public final class DatasetTagsItemResponse extends io.pulumi.resources.InvokeArg
     @Import(name="tagValue", required=true)
       private final String tagValue;
 
-    public String getTagValue() {
+    public String tagValue() {
         return this.tagValue;
     }
 

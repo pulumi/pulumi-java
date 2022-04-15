@@ -32,14 +32,14 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
      * 
     */
-    public Integer getTranscriptIndex() {
+    public Integer transcriptIndex() {
         return this.transcriptIndex;
     }
     /**
      * The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
      * 
     */
-    public Integer getWordIndex() {
+    public Integer wordIndex() {
         return this.wordIndex;
     }
 

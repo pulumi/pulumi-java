@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse extends io.pul
     @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 

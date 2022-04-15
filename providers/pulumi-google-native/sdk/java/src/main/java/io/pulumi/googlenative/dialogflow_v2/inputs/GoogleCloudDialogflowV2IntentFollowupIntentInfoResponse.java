@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
     @Import(name="followupIntentName", required=true)
       private final String followupIntentName;
 
-    public String getFollowupIntentName() {
+    public String followupIntentName() {
         return this.followupIntentName;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse exten
     @Import(name="parentFollowupIntentName", required=true)
       private final String parentFollowupIntentName;
 
-    public String getParentFollowupIntentName() {
+    public String parentFollowupIntentName() {
         return this.parentFollowupIntentName;
     }
 

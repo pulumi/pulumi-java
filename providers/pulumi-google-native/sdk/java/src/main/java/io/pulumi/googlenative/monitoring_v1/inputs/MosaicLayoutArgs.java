@@ -28,7 +28,7 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columns")
       private final @Nullable Output<Integer> columns;
 
-    public Output<Integer> getColumns() {
+    public Output<Integer> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 
@@ -39,7 +39,7 @@ public final class MosaicLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tiles")
       private final @Nullable Output<List<TileArgs>> tiles;
 
-    public Output<List<TileArgs>> getTiles() {
+    public Output<List<TileArgs>> tiles() {
         return this.tiles == null ? Codegen.empty() : this.tiles;
     }
 

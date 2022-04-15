@@ -28,7 +28,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="scheduler")
       private final @Nullable Output<SchedulerResourceArgs> scheduler;
 
-    public Output<SchedulerResourceArgs> getScheduler() {
+    public Output<SchedulerResourceArgs> scheduler() {
         return this.scheduler == null ? Codegen.empty() : this.scheduler;
     }
 
@@ -39,7 +39,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="webServer")
       private final @Nullable Output<WebServerResourceArgs> webServer;
 
-    public Output<WebServerResourceArgs> getWebServer() {
+    public Output<WebServerResourceArgs> webServer() {
         return this.webServer == null ? Codegen.empty() : this.webServer;
     }
 
@@ -50,7 +50,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="worker")
       private final @Nullable Output<WorkerResourceArgs> worker;
 
-    public Output<WorkerResourceArgs> getWorker() {
+    public Output<WorkerResourceArgs> worker() {
         return this.worker == null ? Codegen.empty() : this.worker;
     }
 

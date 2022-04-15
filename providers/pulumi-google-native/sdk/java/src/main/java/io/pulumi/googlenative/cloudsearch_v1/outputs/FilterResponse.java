@@ -21,10 +21,10 @@ public final class FilterResponse {
         this.valueFilter = valueFilter;
     }
 
-    public CompositeFilterResponse getCompositeFilter() {
+    public CompositeFilterResponse compositeFilter() {
         return this.compositeFilter;
     }
-    public ValueFilterResponse getValueFilter() {
+    public ValueFilterResponse valueFilter() {
         return this.valueFilter;
     }
 

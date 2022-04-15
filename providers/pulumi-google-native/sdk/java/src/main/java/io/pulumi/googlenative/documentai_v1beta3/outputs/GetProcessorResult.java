@@ -74,56 +74,56 @@ public final class GetProcessorResult {
      * The time the processor was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The default processor version.
      * 
     */
-    public String getDefaultProcessorVersion() {
+    public String defaultProcessorVersion() {
         return this.defaultProcessorVersion;
     }
     /**
      * The display name of the processor.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The http endpoint that can be called to invoke processing.
      * 
     */
-    public String getProcessEndpoint() {
+    public String processEndpoint() {
         return this.processEndpoint;
     }
     /**
      * The state of the processor.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

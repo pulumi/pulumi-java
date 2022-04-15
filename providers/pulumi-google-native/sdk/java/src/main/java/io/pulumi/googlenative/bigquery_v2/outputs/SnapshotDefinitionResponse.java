@@ -33,14 +33,14 @@ public final class SnapshotDefinitionResponse {
      * [Required] Reference describing the ID of the table that was snapshot.
      * 
     */
-    public TableReferenceResponse getBaseTableReference() {
+    public TableReferenceResponse baseTableReference() {
         return this.baseTableReference;
     }
     /**
      * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
      * 
     */
-    public String getSnapshotTime() {
+    public String snapshotTime() {
         return this.snapshotTime;
     }
 

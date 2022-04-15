@@ -55,35 +55,35 @@ public final class GetRepoResult {
      * How this repository mirrors a repository managed by another service. Read-only field.
      * 
     */
-    public MirrorConfigResponse getMirrorConfig() {
+    public MirrorConfigResponse mirrorConfig() {
         return this.mirrorConfig;
     }
     /**
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
     */
-    public Map<String,String> getPubsubConfigs() {
+    public Map<String,String> pubsubConfigs() {
         return this.pubsubConfigs;
     }
     /**
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
     */
-    public String getSize() {
+    public String size() {
         return this.size;
     }
     /**
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -26,7 +26,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateSubnetworks")
       private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Output<Boolean> getAutoCreateSubnetworks() {
+    public Output<Boolean> autoCreateSubnetworks() {
         return this.autoCreateSubnetworks == null ? Codegen.empty() : this.autoCreateSubnetworks;
     }
 
@@ -37,7 +37,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableUlaInternalIpv6")
       private final @Nullable Output<Boolean> enableUlaInternalIpv6;
 
-    public Output<Boolean> getEnableUlaInternalIpv6() {
+    public Output<Boolean> enableUlaInternalIpv6() {
         return this.enableUlaInternalIpv6 == null ? Codegen.empty() : this.enableUlaInternalIpv6;
     }
 
@@ -59,7 +59,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="internalIpv6Range")
       private final @Nullable Output<String> internalIpv6Range;
 
-    public Output<String> getInternalIpv6Range() {
+    public Output<String> internalIpv6Range() {
         return this.internalIpv6Range == null ? Codegen.empty() : this.internalIpv6Range;
     }
 
@@ -70,7 +70,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
@@ -81,35 +81,35 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="networkFirewallPolicyEnforcementOrder")
       private final @Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
 
-    public Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> getNetworkFirewallPolicyEnforcementOrder() {
+    public Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder() {
         return this.networkFirewallPolicyEnforcementOrder == null ? Codegen.empty() : this.networkFirewallPolicyEnforcementOrder;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -120,7 +120,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
-    public Output<NetworkRoutingConfigArgs> getRoutingConfig() {
+    public Output<NetworkRoutingConfigArgs> routingConfig() {
         return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 

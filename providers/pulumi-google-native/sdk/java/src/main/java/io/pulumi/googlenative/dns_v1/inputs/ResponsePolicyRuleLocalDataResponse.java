@@ -20,7 +20,7 @@ public final class ResponsePolicyRuleLocalDataResponse extends io.pulumi.resourc
     @Import(name="localDatas", required=true)
       private final List<ResourceRecordSetResponse> localDatas;
 
-    public List<ResourceRecordSetResponse> getLocalDatas() {
+    public List<ResourceRecordSetResponse> localDatas() {
         return this.localDatas;
     }
 

@@ -24,7 +24,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     @Import(name="condition")
       private final @Nullable Output<ExprArgs> condition;
 
-    public Output<ExprArgs> getCondition() {
+    public Output<ExprArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -44,7 +44,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -65,7 +65,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

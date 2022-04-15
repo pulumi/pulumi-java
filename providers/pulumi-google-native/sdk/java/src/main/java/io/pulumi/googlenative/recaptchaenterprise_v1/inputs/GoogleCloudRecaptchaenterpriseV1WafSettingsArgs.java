@@ -26,7 +26,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
     @Import(name="wafFeature", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> getWafFeature() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature() {
         return this.wafFeature;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
     @Import(name="wafService", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> getWafService() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService() {
         return this.wafService;
     }
 

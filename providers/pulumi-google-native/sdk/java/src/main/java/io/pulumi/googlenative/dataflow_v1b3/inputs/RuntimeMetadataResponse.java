@@ -25,7 +25,7 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
     @Import(name="parameters", required=true)
       private final List<ParameterMetadataResponse> parameters;
 
-    public List<ParameterMetadataResponse> getParameters() {
+    public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
 
@@ -36,7 +36,7 @@ public final class RuntimeMetadataResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sdkInfo", required=true)
       private final SDKInfoResponse sdkInfo;
 
-    public SDKInfoResponse getSdkInfo() {
+    public SDKInfoResponse sdkInfo() {
         return this.sdkInfo;
     }
 

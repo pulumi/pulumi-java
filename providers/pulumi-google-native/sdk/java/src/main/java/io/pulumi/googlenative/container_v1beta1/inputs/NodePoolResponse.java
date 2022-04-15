@@ -33,7 +33,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="autoscaling", required=true)
       private final NodePoolAutoscalingResponse autoscaling;
 
-    public NodePoolAutoscalingResponse getAutoscaling() {
+    public NodePoolAutoscalingResponse autoscaling() {
         return this.autoscaling;
     }
 
@@ -44,7 +44,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<StatusConditionResponse> conditions;
 
-    public List<StatusConditionResponse> getConditions() {
+    public List<StatusConditionResponse> conditions() {
         return this.conditions;
     }
 
@@ -55,7 +55,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="config", required=true)
       private final NodeConfigResponse config;
 
-    public NodeConfigResponse getConfig() {
+    public NodeConfigResponse config() {
         return this.config;
     }
 
@@ -66,7 +66,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="initialNodeCount", required=true)
       private final Integer initialNodeCount;
 
-    public Integer getInitialNodeCount() {
+    public Integer initialNodeCount() {
         return this.initialNodeCount;
     }
 
@@ -77,7 +77,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceGroupUrls", required=true)
       private final List<String> instanceGroupUrls;
 
-    public List<String> getInstanceGroupUrls() {
+    public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
 
@@ -88,7 +88,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locations", required=true)
       private final List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations;
     }
 
@@ -99,7 +99,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="management", required=true)
       private final NodeManagementResponse management;
 
-    public NodeManagementResponse getManagement() {
+    public NodeManagementResponse management() {
         return this.management;
     }
 
@@ -110,7 +110,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxPodsConstraint", required=true)
       private final MaxPodsConstraintResponse maxPodsConstraint;
 
-    public MaxPodsConstraintResponse getMaxPodsConstraint() {
+    public MaxPodsConstraintResponse maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
 
@@ -121,7 +121,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -132,7 +132,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="networkConfig", required=true)
       private final NodeNetworkConfigResponse networkConfig;
 
-    public NodeNetworkConfigResponse getNetworkConfig() {
+    public NodeNetworkConfigResponse networkConfig() {
         return this.networkConfig;
     }
 
@@ -143,7 +143,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="placementPolicy", required=true)
       private final PlacementPolicyResponse placementPolicy;
 
-    public PlacementPolicyResponse getPlacementPolicy() {
+    public PlacementPolicyResponse placementPolicy() {
         return this.placementPolicy;
     }
 
@@ -154,7 +154,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="podIpv4CidrSize", required=true)
       private final Integer podIpv4CidrSize;
 
-    public Integer getPodIpv4CidrSize() {
+    public Integer podIpv4CidrSize() {
         return this.podIpv4CidrSize;
     }
 
@@ -165,7 +165,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 
@@ -176,7 +176,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -187,7 +187,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="upgradeSettings", required=true)
       private final UpgradeSettingsResponse upgradeSettings;
 
-    public UpgradeSettingsResponse getUpgradeSettings() {
+    public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
 
@@ -198,7 +198,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

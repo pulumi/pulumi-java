@@ -92,70 +92,70 @@ public final class GetFeatureResult {
      * When the Feature resource was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * When the Feature resource was deleted.
      * 
     */
-    public String getDeleteTime() {
+    public String deleteTime() {
         return this.deleteTime;
     }
     /**
      * GCP labels for this Feature.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
      * 
     */
-    public Map<String,String> getMembershipSpecs() {
+    public Map<String,String> membershipSpecs() {
         return this.membershipSpecs;
     }
     /**
      * Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.
      * 
     */
-    public Map<String,String> getMembershipStates() {
+    public Map<String,String> membershipStates() {
         return this.membershipStates;
     }
     /**
      * The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the Feature resource itself.
      * 
     */
-    public FeatureResourceStateResponse getResourceState() {
+    public FeatureResourceStateResponse resourceState() {
         return this.resourceState;
     }
     /**
      * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
     */
-    public CommonFeatureSpecResponse getSpec() {
+    public CommonFeatureSpecResponse spec() {
         return this.spec;
     }
     /**
      * The Hub-wide Feature state.
      * 
     */
-    public CommonFeatureStateResponse getState() {
+    public CommonFeatureStateResponse state() {
         return this.state;
     }
     /**
      * When the Feature resource was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

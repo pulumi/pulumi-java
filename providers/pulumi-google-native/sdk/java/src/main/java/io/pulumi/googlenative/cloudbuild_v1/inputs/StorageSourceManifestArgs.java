@@ -26,7 +26,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -37,7 +37,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
     @Import(name="generation")
       private final @Nullable Output<String> generation;
 
-    public Output<String> getGeneration() {
+    public Output<String> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -48,7 +48,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
     @Import(name="object")
       private final @Nullable Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object == null ? Codegen.empty() : this.object;
     }
 

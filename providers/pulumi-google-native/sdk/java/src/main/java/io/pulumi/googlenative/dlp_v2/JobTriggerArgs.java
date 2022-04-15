@@ -26,7 +26,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,14 +48,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inspectJob")
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
-    public Output<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
+    public Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob() {
         return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -66,14 +66,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -84,7 +84,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<JobTriggerStatus> status;
 
-    public Output<JobTriggerStatus> getStatus() {
+    public Output<JobTriggerStatus> status() {
         return this.status;
     }
 
@@ -95,7 +95,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerId")
       private final @Nullable Output<String> triggerId;
 
-    public Output<String> getTriggerId() {
+    public Output<String> triggerId() {
         return this.triggerId == null ? Codegen.empty() : this.triggerId;
     }
 
@@ -106,7 +106,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
 
-    public Output<List<GooglePrivacyDlpV2TriggerArgs>> getTriggers() {
+    public Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

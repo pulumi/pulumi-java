@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="currentPage", required=true)
       private final GoogleCloudDialogflowCxV3PageResponse currentPage;
 
-    public GoogleCloudDialogflowCxV3PageResponse getCurrentPage() {
+    public GoogleCloudDialogflowCxV3PageResponse currentPage() {
         return this.currentPage;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="diagnosticInfo", required=true)
       private final Map<String,String> diagnosticInfo;
 
-    public Map<String,String> getDiagnosticInfo() {
+    public Map<String,String> diagnosticInfo() {
         return this.diagnosticInfo;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="differences", required=true)
       private final List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences;
 
-    public List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> getDifferences() {
+    public List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences() {
         return this.differences;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="sessionParameters", required=true)
       private final Map<String,String> sessionParameters;
 
-    public Map<String,String> getSessionParameters() {
+    public Map<String,String> sessionParameters() {
         return this.sessionParameters;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="status", required=true)
       private final GoogleRpcStatusResponse status;
 
-    public GoogleRpcStatusResponse getStatus() {
+    public GoogleRpcStatusResponse status() {
         return this.status;
     }
 
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="textResponses", required=true)
       private final List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses;
 
-    public List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> getTextResponses() {
+    public List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses() {
         return this.textResponses;
     }
 
@@ -96,7 +96,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
     @Import(name="triggeredIntent", required=true)
       private final GoogleCloudDialogflowCxV3IntentResponse triggeredIntent;
 
-    public GoogleCloudDialogflowCxV3IntentResponse getTriggeredIntent() {
+    public GoogleCloudDialogflowCxV3IntentResponse triggeredIntent() {
         return this.triggeredIntent;
     }
 

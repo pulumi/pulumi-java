@@ -20,7 +20,7 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
     @Import(name="destinationUriFileCounts", required=true)
       private final List<String> destinationUriFileCounts;
 
-    public List<String> getDestinationUriFileCounts() {
+    public List<String> destinationUriFileCounts() {
         return this.destinationUriFileCounts;
     }
 
@@ -31,7 +31,7 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
     @Import(name="inputBytes", required=true)
       private final String inputBytes;
 
-    public String getInputBytes() {
+    public String inputBytes() {
         return this.inputBytes;
     }
 

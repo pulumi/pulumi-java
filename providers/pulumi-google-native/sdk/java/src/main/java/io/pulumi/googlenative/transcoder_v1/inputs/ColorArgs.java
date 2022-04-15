@@ -26,7 +26,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="brightness")
       private final @Nullable Output<Double> brightness;
 
-    public Output<Double> getBrightness() {
+    public Output<Double> brightness() {
         return this.brightness == null ? Codegen.empty() : this.brightness;
     }
 
@@ -37,7 +37,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contrast")
       private final @Nullable Output<Double> contrast;
 
-    public Output<Double> getContrast() {
+    public Output<Double> contrast() {
         return this.contrast == null ? Codegen.empty() : this.contrast;
     }
 
@@ -48,7 +48,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="saturation")
       private final @Nullable Output<Double> saturation;
 
-    public Output<Double> getSaturation() {
+    public Output<Double> saturation() {
         return this.saturation == null ? Codegen.empty() : this.saturation;
     }
 

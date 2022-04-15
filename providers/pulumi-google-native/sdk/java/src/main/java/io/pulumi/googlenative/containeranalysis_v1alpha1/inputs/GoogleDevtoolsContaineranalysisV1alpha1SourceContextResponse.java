@@ -27,7 +27,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="cloudRepo", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
 
-    public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse getCloudRepo() {
+    public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo() {
         return this.cloudRepo;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="gerrit", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
 
-    public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse getGerrit() {
+    public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit() {
         return this.gerrit;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="git", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
 
-    public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse getGit() {
+    public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git() {
         return this.git;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

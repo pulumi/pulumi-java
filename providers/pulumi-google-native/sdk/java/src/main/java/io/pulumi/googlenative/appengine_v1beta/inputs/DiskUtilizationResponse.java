@@ -23,7 +23,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="targetReadBytesPerSecond", required=true)
       private final Integer targetReadBytesPerSecond;
 
-    public Integer getTargetReadBytesPerSecond() {
+    public Integer targetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
     }
 
@@ -34,7 +34,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="targetReadOpsPerSecond", required=true)
       private final Integer targetReadOpsPerSecond;
 
-    public Integer getTargetReadOpsPerSecond() {
+    public Integer targetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
     }
 
@@ -45,7 +45,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="targetWriteBytesPerSecond", required=true)
       private final Integer targetWriteBytesPerSecond;
 
-    public Integer getTargetWriteBytesPerSecond() {
+    public Integer targetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
     }
 
@@ -56,7 +56,7 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="targetWriteOpsPerSecond", required=true)
       private final Integer targetWriteOpsPerSecond;
 
-    public Integer getTargetWriteOpsPerSecond() {
+    public Integer targetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;
     }
 

@@ -26,7 +26,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="docker")
       private final @Nullable Output<DockerExecutorArgs> docker;
 
-    public Output<DockerExecutorArgs> getDocker() {
+    public Output<DockerExecutorArgs> docker() {
         return this.docker == null ? Codegen.empty() : this.docker;
     }
 
@@ -48,7 +48,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputParameters")
       private final @Nullable Output<List<PipelineParameterArgs>> inputParameters;
 
-    public Output<List<PipelineParameterArgs>> getInputParameters() {
+    public Output<List<PipelineParameterArgs>> inputParameters() {
         return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
@@ -59,7 +59,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputParameters")
       private final @Nullable Output<List<PipelineParameterArgs>> outputParameters;
 
-    public Output<List<PipelineParameterArgs>> getOutputParameters() {
+    public Output<List<PipelineParameterArgs>> outputParameters() {
         return this.outputParameters == null ? Codegen.empty() : this.outputParameters;
     }
 
@@ -81,7 +81,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pipelineId")
       private final @Nullable Output<String> pipelineId;
 
-    public Output<String> getPipelineId() {
+    public Output<String> pipelineId() {
         return this.pipelineId == null ? Codegen.empty() : this.pipelineId;
     }
 
@@ -92,7 +92,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -103,7 +103,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources", required=true)
       private final Output<PipelineResourcesArgs> resources;
 
-    public Output<PipelineResourcesArgs> getResources() {
+    public Output<PipelineResourcesArgs> resources() {
         return this.resources;
     }
 

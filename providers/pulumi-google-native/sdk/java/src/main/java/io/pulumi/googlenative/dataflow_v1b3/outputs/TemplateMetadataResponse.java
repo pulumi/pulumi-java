@@ -41,21 +41,21 @@ public final class TemplateMetadataResponse {
      * Optional. A description of the template.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The name of the template.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The parameters for the template.
      * 
     */
-    public List<ParameterMetadataResponse> getParameters() {
+    public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
 

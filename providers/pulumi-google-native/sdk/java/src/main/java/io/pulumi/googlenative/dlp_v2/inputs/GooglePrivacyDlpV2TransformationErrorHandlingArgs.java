@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
     @Import(name="leaveUntransformed")
       private final @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
-    public Output<GooglePrivacyDlpV2LeaveUntransformedArgs> getLeaveUntransformed() {
+    public Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed() {
         return this.leaveUntransformed == null ? Codegen.empty() : this.leaveUntransformed;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
     @Import(name="throwError")
       private final @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
-    public Output<GooglePrivacyDlpV2ThrowErrorArgs> getThrowError() {
+    public Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError() {
         return this.throwError == null ? Codegen.empty() : this.throwError;
     }
 

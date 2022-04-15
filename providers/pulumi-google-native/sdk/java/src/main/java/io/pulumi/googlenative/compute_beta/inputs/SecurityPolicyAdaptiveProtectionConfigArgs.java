@@ -26,7 +26,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
     @Import(name="layer7DdosDefenseConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> getLayer7DdosDefenseConfig() {
+    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig == null ? Codegen.empty() : this.layer7DdosDefenseConfig;
     }
 

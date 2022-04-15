@@ -26,7 +26,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -37,7 +37,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -48,7 +48,7 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

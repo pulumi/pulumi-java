@@ -26,7 +26,7 @@ public final class NetworkEndpointGroupAppEngineArgs extends io.pulumi.resources
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkEndpointGroupAppEngineArgs extends io.pulumi.resources
     @Import(name="urlMask")
       private final @Nullable Output<String> urlMask;
 
-    public Output<String> getUrlMask() {
+    public Output<String> urlMask() {
         return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkEndpointGroupAppEngineArgs extends io.pulumi.resources
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

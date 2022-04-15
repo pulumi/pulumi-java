@@ -24,7 +24,7 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="distributionCut", required=true)
       private final DistributionCutResponse distributionCut;
 
-    public DistributionCutResponse getDistributionCut() {
+    public DistributionCutResponse distributionCut() {
         return this.distributionCut;
     }
 
@@ -35,7 +35,7 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
     @Import(name="goodTotalRatio", required=true)
       private final TimeSeriesRatioResponse goodTotalRatio;
 
-    public TimeSeriesRatioResponse getGoodTotalRatio() {
+    public TimeSeriesRatioResponse goodTotalRatio() {
         return this.goodTotalRatio;
     }
 

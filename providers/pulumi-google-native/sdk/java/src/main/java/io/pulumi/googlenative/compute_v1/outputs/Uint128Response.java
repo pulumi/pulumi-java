@@ -20,10 +20,10 @@ public final class Uint128Response {
         this.low = low;
     }
 
-    public String getHigh() {
+    public String high() {
         return this.high;
     }
-    public String getLow() {
+    public String low() {
         return this.low;
     }
 

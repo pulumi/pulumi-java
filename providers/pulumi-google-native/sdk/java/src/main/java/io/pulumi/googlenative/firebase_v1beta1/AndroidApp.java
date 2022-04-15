@@ -31,7 +31,7 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -45,7 +45,7 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
      * @return The user-assigned display name for the `AndroidApp`.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -59,7 +59,7 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
      * @return The resource name of the AndroidApp, in the format: projects/ PROJECT_IDENTIFIER/androidApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. The canonical package name of the Android app as would appear in the Google Play Developer Console.
      * 
      */
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
     /**
@@ -87,7 +87,7 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `AndroidApp`.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

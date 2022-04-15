@@ -24,7 +24,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attributes", required=true)
       private final Map<String,String> attributes;
 
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes;
     }
 
@@ -35,7 +35,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="data", required=true)
       private final String data;
 
-    public String getData() {
+    public String data() {
         return this.data;
     }
 
@@ -46,7 +46,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="topicName", required=true)
       private final String topicName;
 
-    public String getTopicName() {
+    public String topicName() {
         return this.topicName;
     }
 

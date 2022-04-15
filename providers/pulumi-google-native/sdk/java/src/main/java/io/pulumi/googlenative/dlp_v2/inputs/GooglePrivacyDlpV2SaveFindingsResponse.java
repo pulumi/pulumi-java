@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
     @Import(name="outputConfig", required=true)
       private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
-    public GooglePrivacyDlpV2OutputStorageConfigResponse getOutputConfig() {
+    public GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig() {
         return this.outputConfig;
     }
 

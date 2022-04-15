@@ -26,7 +26,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
@@ -37,7 +37,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="xcodeVersion")
       private final @Nullable Output<String> xcodeVersion;
 
-    public Output<String> getXcodeVersion() {
+    public Output<String> xcodeVersion() {
         return this.xcodeVersion == null ? Codegen.empty() : this.xcodeVersion;
     }
 

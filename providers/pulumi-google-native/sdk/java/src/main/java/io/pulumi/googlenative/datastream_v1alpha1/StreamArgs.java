@@ -28,7 +28,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backfillAll")
       private final @Nullable Output<BackfillAllStrategyArgs> backfillAll;
 
-    public Output<BackfillAllStrategyArgs> getBackfillAll() {
+    public Output<BackfillAllStrategyArgs> backfillAll() {
         return this.backfillAll == null ? Codegen.empty() : this.backfillAll;
     }
 
@@ -39,7 +39,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backfillNone")
       private final @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
 
-    public Output<BackfillNoneStrategyArgs> getBackfillNone() {
+    public Output<BackfillNoneStrategyArgs> backfillNone() {
         return this.backfillNone == null ? Codegen.empty() : this.backfillNone;
     }
 
@@ -50,7 +50,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryptionKey")
       private final @Nullable Output<String> customerManagedEncryptionKey;
 
-    public Output<String> getCustomerManagedEncryptionKey() {
+    public Output<String> customerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey == null ? Codegen.empty() : this.customerManagedEncryptionKey;
     }
 
@@ -61,7 +61,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationConfig", required=true)
       private final Output<DestinationConfigArgs> destinationConfig;
 
-    public Output<DestinationConfigArgs> getDestinationConfig() {
+    public Output<DestinationConfigArgs> destinationConfig() {
         return this.destinationConfig;
     }
 
@@ -72,14 +72,14 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="force")
       private final @Nullable Output<String> force;
 
-    public Output<String> getForce() {
+    public Output<String> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -90,28 +90,28 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -122,7 +122,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceConfig", required=true)
       private final Output<SourceConfigArgs> sourceConfig;
 
-    public Output<SourceConfigArgs> getSourceConfig() {
+    public Output<SourceConfigArgs> sourceConfig() {
         return this.sourceConfig;
     }
 
@@ -133,21 +133,21 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<StreamState> state;
 
-    public Output<StreamState> getState() {
+    public Output<StreamState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="streamId", required=true)
       private final Output<String> streamId;
 
-    public Output<String> getStreamId() {
+    public Output<String> streamId() {
         return this.streamId;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

@@ -24,7 +24,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="glob", required=true)
       private final String glob;
 
-    public String getGlob() {
+    public String glob() {
         return this.glob;
     }
 
@@ -35,7 +35,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -46,7 +46,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="regex", required=true)
       private final String regex;
 
-    public String getRegex() {
+    public String regex() {
         return this.regex;
     }
 
@@ -57,7 +57,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="statusCode", required=true)
       private final Integer statusCode;
 
-    public Integer getStatusCode() {
+    public Integer statusCode() {
         return this.statusCode;
     }
 

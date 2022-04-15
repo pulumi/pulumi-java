@@ -30,7 +30,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commandLineArguments")
       private final @Nullable Output<List<String>> commandLineArguments;
 
-    public Output<List<String>> getCommandLineArguments() {
+    public Output<List<String>> commandLineArguments() {
         return this.commandLineArguments == null ? Codegen.empty() : this.commandLineArguments;
     }
 
@@ -41,7 +41,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exitCode")
       private final @Nullable Output<ToolExitCodeArgs> exitCode;
 
-    public Output<ToolExitCodeArgs> getExitCode() {
+    public Output<ToolExitCodeArgs> exitCode() {
         return this.exitCode == null ? Codegen.empty() : this.exitCode;
     }
 
@@ -52,7 +52,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toolLogs")
       private final @Nullable Output<List<FileReferenceArgs>> toolLogs;
 
-    public Output<List<FileReferenceArgs>> getToolLogs() {
+    public Output<List<FileReferenceArgs>> toolLogs() {
         return this.toolLogs == null ? Codegen.empty() : this.toolLogs;
     }
 
@@ -63,7 +63,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="toolOutputs")
       private final @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs;
 
-    public Output<List<ToolOutputReferenceArgs>> getToolOutputs() {
+    public Output<List<ToolOutputReferenceArgs>> toolOutputs() {
         return this.toolOutputs == null ? Codegen.empty() : this.toolOutputs;
     }
 

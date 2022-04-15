@@ -26,7 +26,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="chainName", required=true)
       private final String chainName;
 
-    public String getChainName() {
+    public String chainName() {
         return this.chainName;
     }
 
@@ -37,7 +37,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="guestFlush", required=true)
       private final Boolean guestFlush;
 
-    public Boolean getGuestFlush() {
+    public Boolean guestFlush() {
         return this.guestFlush;
     }
 
@@ -48,7 +48,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -59,7 +59,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
     @Import(name="storageLocations", required=true)
       private final List<String> storageLocations;
 
-    public List<String> getStorageLocations() {
+    public List<String> storageLocations() {
         return this.storageLocations;
     }
 

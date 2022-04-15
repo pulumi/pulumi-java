@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
-    public Output<Boolean> getIsFallback() {
+    public Output<Boolean> isFallback() {
         return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
@@ -65,7 +65,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -87,7 +87,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> getParameters() {
+    public Output<List<GoogleCloudDialogflowCxV3IntentParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -98,7 +98,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -109,7 +109,7 @@ public final class GoogleCloudDialogflowCxV3IntentArgs extends io.pulumi.resourc
     @Import(name="trainingPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases;
 
-    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> getTrainingPhrases() {
+    public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs>> trainingPhrases() {
         return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
     }
 

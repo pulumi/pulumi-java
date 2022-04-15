@@ -27,7 +27,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="componentSource", required=true)
       private final List<ComponentSourceResponse> componentSource;
 
-    public List<ComponentSourceResponse> getComponentSource() {
+    public List<ComponentSourceResponse> componentSource() {
         return this.componentSource;
     }
 
@@ -38,7 +38,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="componentTransform", required=true)
       private final List<ComponentTransformResponse> componentTransform;
 
-    public List<ComponentTransformResponse> getComponentTransform() {
+    public List<ComponentTransformResponse> componentTransform() {
         return this.componentTransform;
     }
 
@@ -49,7 +49,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="inputSource", required=true)
       private final List<StageSourceResponse> inputSource;
 
-    public List<StageSourceResponse> getInputSource() {
+    public List<StageSourceResponse> inputSource() {
         return this.inputSource;
     }
 
@@ -60,7 +60,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -71,7 +71,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -82,7 +82,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="outputSource", required=true)
       private final List<StageSourceResponse> outputSource;
 
-    public List<StageSourceResponse> getOutputSource() {
+    public List<StageSourceResponse> outputSource() {
         return this.outputSource;
     }
 
@@ -93,7 +93,7 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     @Import(name="prerequisiteStage", required=true)
       private final List<String> prerequisiteStage;
 
-    public List<String> getPrerequisiteStage() {
+    public List<String> prerequisiteStage() {
         return this.prerequisiteStage;
     }
 

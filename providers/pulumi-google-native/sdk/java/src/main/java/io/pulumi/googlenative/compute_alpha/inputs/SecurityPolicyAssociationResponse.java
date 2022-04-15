@@ -19,7 +19,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="attachmentId", required=true)
       private final String attachmentId;
 
-    public String getAttachmentId() {
+    public String attachmentId() {
         return this.attachmentId;
     }
 
@@ -30,7 +30,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -41,7 +41,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -52,7 +52,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="securityPolicyId", required=true)
       private final String securityPolicyId;
 
-    public String getSecurityPolicyId() {
+    public String securityPolicyId() {
         return this.securityPolicyId;
     }
 

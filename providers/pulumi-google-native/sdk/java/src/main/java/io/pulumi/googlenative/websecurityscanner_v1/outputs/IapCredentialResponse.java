@@ -24,7 +24,7 @@ public final class IapCredentialResponse {
      * Authentication configuration when Web-Security-Scanner service account is added in Identity-Aware-Proxy (IAP) access policies.
      * 
     */
-    public IapTestServiceAccountInfoResponse getIapTestServiceAccountInfo() {
+    public IapTestServiceAccountInfoResponse iapTestServiceAccountInfo() {
         return this.iapTestServiceAccountInfo;
     }
 

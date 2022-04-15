@@ -26,7 +26,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
     @Import(name="samplingRatio")
       private final @Nullable Output<Double> samplingRatio;
 
-    public Output<Double> getSamplingRatio() {
+    public Output<Double> samplingRatio() {
         return this.samplingRatio == null ? Codegen.empty() : this.samplingRatio;
     }
 

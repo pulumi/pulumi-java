@@ -19,7 +19,7 @@ public final class DataAccessOptionsResponse extends io.pulumi.resources.InvokeA
     @Import(name="logMode", required=true)
       private final String logMode;
 
-    public String getLogMode() {
+    public String logMode() {
         return this.logMode;
     }
 

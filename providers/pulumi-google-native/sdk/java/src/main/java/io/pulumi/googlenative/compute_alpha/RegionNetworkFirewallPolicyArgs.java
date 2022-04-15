@@ -26,7 +26,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="associations")
       private final @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
-    public Output<List<FirewallPolicyAssociationArgs>> getAssociations() {
+    public Output<List<FirewallPolicyAssociationArgs>> associations() {
         return this.associations == null ? Codegen.empty() : this.associations;
     }
 
@@ -37,28 +37,28 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -69,7 +69,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="rules")
       private final @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
-    public Output<List<FirewallPolicyRuleArgs>> getRules() {
+    public Output<List<FirewallPolicyRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -80,7 +80,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
@@ -91,7 +91,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="vpcNetworkScope")
       private final @Nullable Output<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
 
-    public Output<RegionNetworkFirewallPolicyVpcNetworkScope> getVpcNetworkScope() {
+    public Output<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope() {
         return this.vpcNetworkScope == null ? Codegen.empty() : this.vpcNetworkScope;
     }
 

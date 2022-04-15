@@ -28,7 +28,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
+    public Output<String> authority() {
         return this.authority == null ? Codegen.empty() : this.authority;
     }
 
@@ -39,7 +39,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
@@ -50,7 +50,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="payloadName")
       private final @Nullable Output<String> payloadName;
 
-    public Output<String> getPayloadName() {
+    public Output<String> payloadName() {
         return this.payloadName == null ? Codegen.empty() : this.payloadName;
     }
 
@@ -61,7 +61,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="resendInterval")
       private final @Nullable Output<DurationArgs> resendInterval;
 
-    public Output<DurationArgs> getResendInterval() {
+    public Output<DurationArgs> resendInterval() {
         return this.resendInterval == null ? Codegen.empty() : this.resendInterval;
     }
 
@@ -72,7 +72,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     @Import(name="retryDurationSec")
       private final @Nullable Output<Integer> retryDurationSec;
 
-    public Output<Integer> getRetryDurationSec() {
+    public Output<Integer> retryDurationSec() {
         return this.retryDurationSec == null ? Codegen.empty() : this.retryDurationSec;
     }
 

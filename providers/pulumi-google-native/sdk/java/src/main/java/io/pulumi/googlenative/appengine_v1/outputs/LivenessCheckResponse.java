@@ -68,49 +68,49 @@ public final class LivenessCheckResponse {
      * Interval between health checks.
      * 
     */
-    public String getCheckInterval() {
+    public String checkInterval() {
         return this.checkInterval;
     }
     /**
      * Number of consecutive failed checks required before considering the VM unhealthy.
      * 
     */
-    public Integer getFailureThreshold() {
+    public Integer failureThreshold() {
         return this.failureThreshold;
     }
     /**
      * Host header to send when performing a HTTP Liveness check. Example: "myapp.appspot.com"
      * 
     */
-    public String getHost() {
+    public String host() {
         return this.host;
     }
     /**
      * The initial delay before starting to execute the checks.
      * 
     */
-    public String getInitialDelay() {
+    public String initialDelay() {
         return this.initialDelay;
     }
     /**
      * The request path.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * Number of consecutive successful checks required before considering the VM healthy.
      * 
     */
-    public Integer getSuccessThreshold() {
+    public Integer successThreshold() {
         return this.successThreshold;
     }
     /**
      * Time before the check is considered failed.
      * 
     */
-    public String getTimeout() {
+    public String timeout() {
         return this.timeout;
     }
 

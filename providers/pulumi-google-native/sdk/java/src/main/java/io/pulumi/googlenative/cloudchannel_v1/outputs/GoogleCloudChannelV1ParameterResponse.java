@@ -41,21 +41,21 @@ public final class GoogleCloudChannelV1ParameterResponse {
      * Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
      * 
     */
-    public Boolean getEditable() {
+    public Boolean editable() {
         return this.editable;
     }
     /**
      * Name of the parameter.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Value of the parameter.
      * 
     */
-    public GoogleCloudChannelV1ValueResponse getValue() {
+    public GoogleCloudChannelV1ValueResponse value() {
         return this.value;
     }
 

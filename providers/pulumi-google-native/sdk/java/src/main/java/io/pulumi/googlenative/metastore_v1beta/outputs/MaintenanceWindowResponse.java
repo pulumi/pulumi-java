@@ -33,14 +33,14 @@ public final class MaintenanceWindowResponse {
      * The day of week, when the window starts.
      * 
     */
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * The hour of day (0-23) when the window starts.
      * 
     */
-    public Integer getHourOfDay() {
+    public Integer hourOfDay() {
         return this.hourOfDay;
     }
 

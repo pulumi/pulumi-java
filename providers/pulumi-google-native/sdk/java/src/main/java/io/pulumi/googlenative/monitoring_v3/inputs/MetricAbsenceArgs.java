@@ -29,7 +29,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aggregations")
       private final @Nullable Output<List<AggregationArgs>> aggregations;
 
-    public Output<List<AggregationArgs>> getAggregations() {
+    public Output<List<AggregationArgs>> aggregations() {
         return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
@@ -40,7 +40,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -51,7 +51,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -62,7 +62,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trigger")
       private final @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> getTrigger() {
+    public Output<TriggerArgs> trigger() {
         return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 

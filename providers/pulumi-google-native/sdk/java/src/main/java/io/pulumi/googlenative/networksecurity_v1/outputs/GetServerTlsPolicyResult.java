@@ -78,56 +78,56 @@ public final class GetServerTlsPolicyResult {
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
     */
-    public Boolean getAllowOpen() {
+    public Boolean allowOpen() {
         return this.allowOpen;
     }
     /**
      * The timestamp when the resource was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Free-text description of the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Set of label tags associated with the resource.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
     */
-    public MTLSPolicyResponse getMtlsPolicy() {
+    public MTLSPolicyResponse mtlsPolicy() {
         return this.mtlsPolicy;
     }
     /**
      * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
     */
-    public GoogleCloudNetworksecurityV1CertificateProviderResponse getServerCertificate() {
+    public GoogleCloudNetworksecurityV1CertificateProviderResponse serverCertificate() {
         return this.serverCertificate;
     }
     /**
      * The timestamp when the resource was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

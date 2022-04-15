@@ -17,14 +17,14 @@ public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="muteConfigId", required=true)
       private final String muteConfigId;
 
-    public String getMuteConfigId() {
+    public String muteConfigId() {
         return this.muteConfigId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

@@ -36,7 +36,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adBreaks")
       private final @Nullable Output<List<AdBreakArgs>> adBreaks;
 
-    public Output<List<AdBreakArgs>> getAdBreaks() {
+    public Output<List<AdBreakArgs>> adBreaks() {
         return this.adBreaks == null ? Codegen.empty() : this.adBreaks;
     }
 
@@ -47,7 +47,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="editList")
       private final @Nullable Output<List<EditAtomArgs>> editList;
 
-    public Output<List<EditAtomArgs>> getEditList() {
+    public Output<List<EditAtomArgs>> editList() {
         return this.editList == null ? Codegen.empty() : this.editList;
     }
 
@@ -58,7 +58,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elementaryStreams")
       private final @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
 
-    public Output<List<ElementaryStreamArgs>> getElementaryStreams() {
+    public Output<List<ElementaryStreamArgs>> elementaryStreams() {
         return this.elementaryStreams == null ? Codegen.empty() : this.elementaryStreams;
     }
 
@@ -69,7 +69,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<InputArgs>> inputs;
 
-    public Output<List<InputArgs>> getInputs() {
+    public Output<List<InputArgs>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -80,7 +80,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manifests")
       private final @Nullable Output<List<ManifestArgs>> manifests;
 
-    public Output<List<ManifestArgs>> getManifests() {
+    public Output<List<ManifestArgs>> manifests() {
         return this.manifests == null ? Codegen.empty() : this.manifests;
     }
 
@@ -91,7 +91,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="muxStreams")
       private final @Nullable Output<List<MuxStreamArgs>> muxStreams;
 
-    public Output<List<MuxStreamArgs>> getMuxStreams() {
+    public Output<List<MuxStreamArgs>> muxStreams() {
         return this.muxStreams == null ? Codegen.empty() : this.muxStreams;
     }
 
@@ -102,7 +102,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="output")
       private final @Nullable Output<OutputArgs> output;
 
-    public Output<OutputArgs> getOutput() {
+    public Output<OutputArgs> output() {
         return this.output == null ? Codegen.empty() : this.output;
     }
 
@@ -113,7 +113,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overlays")
       private final @Nullable Output<List<OverlayArgs>> overlays;
 
-    public Output<List<OverlayArgs>> getOverlays() {
+    public Output<List<OverlayArgs>> overlays() {
         return this.overlays == null ? Codegen.empty() : this.overlays;
     }
 
@@ -124,7 +124,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubDestination")
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
-    public Output<PubsubDestinationArgs> getPubsubDestination() {
+    public Output<PubsubDestinationArgs> pubsubDestination() {
         return this.pubsubDestination == null ? Codegen.empty() : this.pubsubDestination;
     }
 
@@ -135,7 +135,7 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spriteSheets")
       private final @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
 
-    public Output<List<SpriteSheetArgs>> getSpriteSheets() {
+    public Output<List<SpriteSheetArgs>> spriteSheets() {
         return this.spriteSheets == null ? Codegen.empty() : this.spriteSheets;
     }
 

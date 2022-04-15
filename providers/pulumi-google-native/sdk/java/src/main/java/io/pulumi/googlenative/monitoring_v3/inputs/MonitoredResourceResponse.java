@@ -24,7 +24,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -35,7 +35,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

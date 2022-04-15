@@ -28,7 +28,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
@@ -39,7 +39,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
-    public Output<String> getClientCertificate() {
+    public Output<String> clientCertificate() {
         return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
@@ -50,7 +50,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
-    public Output<String> getClientKey() {
+    public Output<String> clientKey() {
         return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
@@ -61,7 +61,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="connectRetryInterval")
       private final @Nullable Output<Integer> connectRetryInterval;
 
-    public Output<Integer> getConnectRetryInterval() {
+    public Output<Integer> connectRetryInterval() {
         return this.connectRetryInterval == null ? Codegen.empty() : this.connectRetryInterval;
     }
 
@@ -72,7 +72,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
-    public Output<String> getDumpFilePath() {
+    public Output<String> dumpFilePath() {
         return this.dumpFilePath == null ? Codegen.empty() : this.dumpFilePath;
     }
 
@@ -83,7 +83,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -94,7 +94,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="masterHeartbeatPeriod")
       private final @Nullable Output<String> masterHeartbeatPeriod;
 
-    public Output<String> getMasterHeartbeatPeriod() {
+    public Output<String> masterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod == null ? Codegen.empty() : this.masterHeartbeatPeriod;
     }
 
@@ -105,7 +105,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -116,7 +116,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="sslCipher")
       private final @Nullable Output<String> sslCipher;
 
-    public Output<String> getSslCipher() {
+    public Output<String> sslCipher() {
         return this.sslCipher == null ? Codegen.empty() : this.sslCipher;
     }
 
@@ -127,7 +127,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 
@@ -138,7 +138,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="verifyServerCertificate")
       private final @Nullable Output<Boolean> verifyServerCertificate;
 
-    public Output<Boolean> getVerifyServerCertificate() {
+    public Output<Boolean> verifyServerCertificate() {
         return this.verifyServerCertificate == null ? Codegen.empty() : this.verifyServerCertificate;
     }
 

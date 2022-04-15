@@ -24,7 +24,7 @@ public final class BigQueryDestinationResponse {
      * The ID of a BigQuery Dataset.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 

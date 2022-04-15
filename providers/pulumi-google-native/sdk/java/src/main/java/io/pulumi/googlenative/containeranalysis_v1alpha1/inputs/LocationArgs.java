@@ -27,7 +27,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
@@ -38,7 +38,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -49,7 +49,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<VersionArgs> version;
 
-    public Output<VersionArgs> getVersion() {
+    public Output<VersionArgs> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

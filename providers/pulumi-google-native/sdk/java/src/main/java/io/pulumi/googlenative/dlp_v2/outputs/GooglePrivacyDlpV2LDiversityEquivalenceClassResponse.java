@@ -49,28 +49,28 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
      * Size of the k-anonymity equivalence class.
      * 
     */
-    public String getEquivalenceClassSize() {
+    public String equivalenceClassSize() {
         return this.equivalenceClassSize;
     }
     /**
      * Number of distinct sensitive values in this equivalence class.
      * 
     */
-    public String getNumDistinctSensitiveValues() {
+    public String numDistinctSensitiveValues() {
         return this.numDistinctSensitiveValues;
     }
     /**
      * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
      * 
     */
-    public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
     /**
      * Estimated frequencies of top sensitive values.
      * 
     */
-    public List<GooglePrivacyDlpV2ValueFrequencyResponse> getTopSensitiveValues() {
+    public List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues() {
         return this.topSensitiveValues;
     }
 

@@ -32,14 +32,14 @@ public final class CertificateTemplateResponse {
      * The Major version of the template. Example: 100.
      * 
     */
-    public Integer getMajorVersion() {
+    public Integer majorVersion() {
         return this.majorVersion;
     }
     /**
      * The minor version of the template. Example: 12.
      * 
     */
-    public Integer getMinorVersion() {
+    public Integer minorVersion() {
         return this.minorVersion;
     }
 

@@ -22,7 +22,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
     @Import(name="columns", required=true)
       private final List<BigtableColumnResponse> columns;
 
-    public List<BigtableColumnResponse> getColumns() {
+    public List<BigtableColumnResponse> columns() {
         return this.columns;
     }
 
@@ -33,7 +33,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
     @Import(name="encoding", required=true)
       private final String encoding;
 
-    public String getEncoding() {
+    public String encoding() {
         return this.encoding;
     }
 
@@ -44,7 +44,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
     @Import(name="familyId", required=true)
       private final String familyId;
 
-    public String getFamilyId() {
+    public String familyId() {
         return this.familyId;
     }
 
@@ -55,7 +55,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
     @Import(name="onlyReadLatest", required=true)
       private final Boolean onlyReadLatest;
 
-    public Boolean getOnlyReadLatest() {
+    public Boolean onlyReadLatest() {
         return this.onlyReadLatest;
     }
 
@@ -66,7 +66,7 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

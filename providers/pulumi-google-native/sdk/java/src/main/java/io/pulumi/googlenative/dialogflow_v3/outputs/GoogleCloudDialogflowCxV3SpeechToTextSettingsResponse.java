@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse {
      * Whether to use speech adaptation for speech recognition.
      * 
     */
-    public Boolean getEnableSpeechAdaptation() {
+    public Boolean enableSpeechAdaptation() {
         return this.enableSpeechAdaptation;
     }
 

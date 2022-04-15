@@ -32,7 +32,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Use a container image to start the notebook instance.
      * 
      */
-    public Output<ContainerImageResponse> getContainerImage() {
+    public Output<ContainerImageResponse> containerImage() {
         return this.containerImage;
     }
     /**
@@ -46,7 +46,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The time at which this environment was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +60,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return A brief description of this environment.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Display name of this environment for the UI.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +88,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
      * 
      */
-    public Output<String> getPostStartupScript() {
+    public Output<String> postStartupScript() {
         return this.postStartupScript;
     }
     /**
@@ -116,7 +116,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Use a Compute Engine VM image to start the notebook instance.
      * 
      */
-    public Output<VmImageResponse> getVmImage() {
+    public Output<VmImageResponse> vmImage() {
         return this.vmImage;
     }
 

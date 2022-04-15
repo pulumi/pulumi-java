@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
     @Import(name="hotwordRegex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex;
 
-    public Output<GooglePrivacyDlpV2RegexArgs> getHotwordRegex() {
+    public Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex() {
         return this.hotwordRegex == null ? Codegen.empty() : this.hotwordRegex;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
     @Import(name="likelihoodAdjustment")
       private final @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment;
 
-    public Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> getLikelihoodAdjustment() {
+    public Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment() {
         return this.likelihoodAdjustment == null ? Codegen.empty() : this.likelihoodAdjustment;
     }
 
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
     @Import(name="proximity")
       private final @Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity;
 
-    public Output<GooglePrivacyDlpV2ProximityArgs> getProximity() {
+    public Output<GooglePrivacyDlpV2ProximityArgs> proximity() {
         return this.proximity == null ? Codegen.empty() : this.proximity;
     }
 

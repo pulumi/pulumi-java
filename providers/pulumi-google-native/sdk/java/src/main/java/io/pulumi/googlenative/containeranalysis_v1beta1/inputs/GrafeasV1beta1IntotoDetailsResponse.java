@@ -21,14 +21,14 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends io.pulumi.resourc
     @Import(name="signatures", required=true)
       private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
 
-    public List<GrafeasV1beta1IntotoSignatureResponse> getSignatures() {
+    public List<GrafeasV1beta1IntotoSignatureResponse> signatures() {
         return this.signatures;
     }
 
     @Import(name="signed", required=true)
       private final LinkResponse signed;
 
-    public LinkResponse getSigned() {
+    public LinkResponse signed() {
         return this.signed;
     }
 

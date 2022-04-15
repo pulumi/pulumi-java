@@ -23,7 +23,7 @@ public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeAr
     @Import(name="x", required=true)
       private final Double x;
 
-    public Double getX() {
+    public Double x() {
         return this.x;
     }
 
@@ -34,7 +34,7 @@ public final class NormalizedVertexResponse extends io.pulumi.resources.InvokeAr
     @Import(name="y", required=true)
       private final Double y;
 
-    public Double getY() {
+    public Double y() {
         return this.y;
     }
 

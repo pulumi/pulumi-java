@@ -27,7 +27,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
     @Import(name="testingChallenge")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> getTestingChallenge() {
+    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge() {
         return this.testingChallenge == null ? Codegen.empty() : this.testingChallenge;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
     @Import(name="testingScore")
       private final @Nullable Output<Double> testingScore;
 
-    public Output<Double> getTestingScore() {
+    public Output<Double> testingScore() {
         return this.testingScore == null ? Codegen.empty() : this.testingScore;
     }
 

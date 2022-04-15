@@ -28,7 +28,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
+    public Output<Boolean> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     @Import(name="tableUri")
       private final @Nullable Output<String> tableUri;
 
-    public Output<String> getTableUri() {
+    public Output<String> tableUri() {
         return this.tableUri == null ? Codegen.empty() : this.tableUri;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     @Import(name="writeDisposition")
       private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
-    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> getWriteDisposition() {
+    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition() {
         return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
     }
 

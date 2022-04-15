@@ -26,7 +26,7 @@ public final class VpcPeeringConnectivityArgs extends io.pulumi.resources.Resour
     @Import(name="vpc")
       private final @Nullable Output<String> vpc;
 
-    public Output<String> getVpc() {
+    public Output<String> vpc() {
         return this.vpc == null ? Codegen.empty() : this.vpc;
     }
 

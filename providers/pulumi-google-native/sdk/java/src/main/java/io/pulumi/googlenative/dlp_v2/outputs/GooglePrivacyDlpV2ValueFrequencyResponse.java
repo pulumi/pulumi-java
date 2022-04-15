@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
      * How many times the value is contained in the field.
      * 
     */
-    public String getCount() {
+    public String count() {
         return this.count;
     }
     /**
      * A value contained in the field in question.
      * 
     */
-    public GooglePrivacyDlpV2ValueResponse getValue() {
+    public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
 

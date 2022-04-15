@@ -24,7 +24,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="eventTypes", required=true)
       private final List<String> eventTypes;
 
-    public List<String> getEventTypes() {
+    public List<String> eventTypes() {
         return this.eventTypes;
     }
 
@@ -35,7 +35,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="payloadFormat", required=true)
       private final String payloadFormat;
 
-    public String getPayloadFormat() {
+    public String payloadFormat() {
         return this.payloadFormat;
     }
 
@@ -46,7 +46,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="pubsubTopic", required=true)
       private final String pubsubTopic;
 
-    public String getPubsubTopic() {
+    public String pubsubTopic() {
         return this.pubsubTopic;
     }
 

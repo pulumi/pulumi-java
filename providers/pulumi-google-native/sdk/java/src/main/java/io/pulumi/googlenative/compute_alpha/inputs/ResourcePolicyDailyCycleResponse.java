@@ -24,7 +24,7 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
     @Import(name="daysInCycle", required=true)
       private final Integer daysInCycle;
 
-    public Integer getDaysInCycle() {
+    public Integer daysInCycle() {
         return this.daysInCycle;
     }
 
@@ -35,7 +35,7 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -46,7 +46,7 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

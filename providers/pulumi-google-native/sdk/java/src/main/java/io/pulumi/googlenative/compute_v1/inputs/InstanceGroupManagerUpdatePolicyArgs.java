@@ -27,7 +27,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="instanceRedistributionType")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
 
-    public Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> getInstanceRedistributionType() {
+    public Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType() {
         return this.instanceRedistributionType == null ? Codegen.empty() : this.instanceRedistributionType;
     }
 
@@ -38,7 +38,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="maxSurge")
       private final @Nullable Output<FixedOrPercentArgs> maxSurge;
 
-    public Output<FixedOrPercentArgs> getMaxSurge() {
+    public Output<FixedOrPercentArgs> maxSurge() {
         return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="maxUnavailable")
       private final @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
-    public Output<FixedOrPercentArgs> getMaxUnavailable() {
+    public Output<FixedOrPercentArgs> maxUnavailable() {
         return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
@@ -60,7 +60,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="minimalAction")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
 
-    public Output<InstanceGroupManagerUpdatePolicyMinimalAction> getMinimalAction() {
+    public Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction() {
         return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="mostDisruptiveAllowedAction")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
 
-    public Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> getMostDisruptiveAllowedAction() {
+    public Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
     }
 
@@ -82,7 +82,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="replacementMethod")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
 
-    public Output<InstanceGroupManagerUpdatePolicyReplacementMethod> getReplacementMethod() {
+    public Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod() {
         return this.replacementMethod == null ? Codegen.empty() : this.replacementMethod;
     }
 
@@ -93,7 +93,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     @Import(name="type")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyType> type;
 
-    public Output<InstanceGroupManagerUpdatePolicyType> getType() {
+    public Output<InstanceGroupManagerUpdatePolicyType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

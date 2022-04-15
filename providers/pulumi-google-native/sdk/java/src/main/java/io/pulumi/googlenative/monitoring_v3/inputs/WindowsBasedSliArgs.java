@@ -28,7 +28,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="goodBadMetricFilter")
       private final @Nullable Output<String> goodBadMetricFilter;
 
-    public Output<String> getGoodBadMetricFilter() {
+    public Output<String> goodBadMetricFilter() {
         return this.goodBadMetricFilter == null ? Codegen.empty() : this.goodBadMetricFilter;
     }
 
@@ -39,7 +39,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="goodTotalRatioThreshold")
       private final @Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold;
 
-    public Output<PerformanceThresholdArgs> getGoodTotalRatioThreshold() {
+    public Output<PerformanceThresholdArgs> goodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold == null ? Codegen.empty() : this.goodTotalRatioThreshold;
     }
 
@@ -50,7 +50,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metricMeanInRange")
       private final @Nullable Output<MetricRangeArgs> metricMeanInRange;
 
-    public Output<MetricRangeArgs> getMetricMeanInRange() {
+    public Output<MetricRangeArgs> metricMeanInRange() {
         return this.metricMeanInRange == null ? Codegen.empty() : this.metricMeanInRange;
     }
 
@@ -61,7 +61,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metricSumInRange")
       private final @Nullable Output<MetricRangeArgs> metricSumInRange;
 
-    public Output<MetricRangeArgs> getMetricSumInRange() {
+    public Output<MetricRangeArgs> metricSumInRange() {
         return this.metricSumInRange == null ? Codegen.empty() : this.metricSumInRange;
     }
 
@@ -72,7 +72,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="windowPeriod")
       private final @Nullable Output<String> windowPeriod;
 
-    public Output<String> getWindowPeriod() {
+    public Output<String> windowPeriod() {
         return this.windowPeriod == null ? Codegen.empty() : this.windowPeriod;
     }
 

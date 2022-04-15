@@ -27,7 +27,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strength")
       private final @Nullable Output<Double> strength;
 
-    public Output<Double> getStrength() {
+    public Output<Double> strength() {
         return this.strength == null ? Codegen.empty() : this.strength;
     }
 

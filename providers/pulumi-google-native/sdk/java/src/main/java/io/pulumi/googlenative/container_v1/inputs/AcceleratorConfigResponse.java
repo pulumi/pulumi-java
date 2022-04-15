@@ -23,7 +23,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorCount", required=true)
       private final String acceleratorCount;
 
-    public String getAcceleratorCount() {
+    public String acceleratorCount() {
         return this.acceleratorCount;
     }
 
@@ -34,7 +34,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -45,7 +45,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="gpuPartitionSize", required=true)
       private final String gpuPartitionSize;
 
-    public String getGpuPartitionSize() {
+    public String gpuPartitionSize() {
         return this.gpuPartitionSize;
     }
 

@@ -20,10 +20,10 @@ public final class EnvelopeSignatureResponse {
         this.sig = sig;
     }
 
-    public String getKeyid() {
+    public String keyid() {
         return this.keyid;
     }
-    public String getSig() {
+    public String sig() {
         return this.sig;
     }
 

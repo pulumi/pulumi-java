@@ -26,7 +26,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     @Import(name="direction", required=true)
       private final Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
 
-    public Output<GoogleDatastoreAdminV1IndexedPropertyDirection> getDirection() {
+    public Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction() {
         return this.direction;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

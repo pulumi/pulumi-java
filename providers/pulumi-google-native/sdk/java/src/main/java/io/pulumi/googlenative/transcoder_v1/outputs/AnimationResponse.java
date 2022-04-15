@@ -41,21 +41,21 @@ public final class AnimationResponse {
      * End previous animation.
      * 
     */
-    public AnimationEndResponse getAnimationEnd() {
+    public AnimationEndResponse animationEnd() {
         return this.animationEnd;
     }
     /**
      * Display overlay object with fade animation.
      * 
     */
-    public AnimationFadeResponse getAnimationFade() {
+    public AnimationFadeResponse animationFade() {
         return this.animationFade;
     }
     /**
      * Display static overlay object.
      * 
     */
-    public AnimationStaticResponse getAnimationStatic() {
+    public AnimationStaticResponse animationStatic() {
         return this.animationStatic;
     }
 

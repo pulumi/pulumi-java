@@ -28,7 +28,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="environment", required=true)
       private final EnvironmentResponse environment;
 
-    public EnvironmentResponse getEnvironment() {
+    public EnvironmentResponse environment() {
         return this.environment;
     }
 
@@ -39,7 +39,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="matrixId", required=true)
       private final String matrixId;
 
-    public String getMatrixId() {
+    public String matrixId() {
         return this.matrixId;
     }
 
@@ -50,7 +50,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -61,7 +61,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="shard", required=true)
       private final ShardResponse shard;
 
-    public ShardResponse getShard() {
+    public ShardResponse shard() {
         return this.shard;
     }
 
@@ -72,7 +72,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -83,7 +83,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="testDetails", required=true)
       private final TestDetailsResponse testDetails;
 
-    public TestDetailsResponse getTestDetails() {
+    public TestDetailsResponse testDetails() {
         return this.testDetails;
     }
 
@@ -94,7 +94,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="testSpecification", required=true)
       private final TestSpecificationResponse testSpecification;
 
-    public TestSpecificationResponse getTestSpecification() {
+    public TestSpecificationResponse testSpecification() {
         return this.testSpecification;
     }
 
@@ -105,7 +105,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timestamp", required=true)
       private final String timestamp;
 
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 
@@ -116,7 +116,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="toolResultsStep", required=true)
       private final ToolResultsStepResponse toolResultsStep;
 
-    public ToolResultsStepResponse getToolResultsStep() {
+    public ToolResultsStepResponse toolResultsStep() {
         return this.toolResultsStep;
     }
 

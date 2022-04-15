@@ -17,28 +17,28 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="agentId", required=true)
       private final String agentId;
 
-    public String getAgentId() {
+    public String agentId() {
         return this.agentId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="webhookId", required=true)
       private final String webhookId;
 
-    public String getWebhookId() {
+    public String webhookId() {
         return this.webhookId;
     }
 

@@ -56,35 +56,35 @@ public final class CycleStepResponse {
      * The time the cycle step has ended.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Initializing replication step.
      * 
     */
-    public InitializingReplicationStepResponse getInitializingReplication() {
+    public InitializingReplicationStepResponse initializingReplication() {
         return this.initializingReplication;
     }
     /**
      * Post processing step.
      * 
     */
-    public PostProcessingStepResponse getPostProcessing() {
+    public PostProcessingStepResponse postProcessing() {
         return this.postProcessing;
     }
     /**
      * Replicating step.
      * 
     */
-    public ReplicatingStepResponse getReplicating() {
+    public ReplicatingStepResponse replicating() {
         return this.replicating;
     }
     /**
      * The time the cycle step has started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
      * Maximum value appearing in the column.
      * 
     */
-    public GooglePrivacyDlpV2ValueResponse getMaxValue() {
+    public GooglePrivacyDlpV2ValueResponse maxValue() {
         return this.maxValue;
     }
     /**
      * Minimum value appearing in the column.
      * 
     */
-    public GooglePrivacyDlpV2ValueResponse getMinValue() {
+    public GooglePrivacyDlpV2ValueResponse minValue() {
         return this.minValue;
     }
     /**
      * List of 99 values that partition the set of field values into 100 equal sized buckets.
      * 
     */
-    public List<GooglePrivacyDlpV2ValueResponse> getQuantileValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quantileValues() {
         return this.quantileValues;
     }
 

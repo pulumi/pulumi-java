@@ -17,28 +17,28 @@ public final class GetProviderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="providerId", required=true)
       private final String providerId;
 
-    public String getProviderId() {
+    public String providerId() {
         return this.providerId;
     }
 
     @Import(name="workloadIdentityPoolId", required=true)
       private final String workloadIdentityPoolId;
 
-    public String getWorkloadIdentityPoolId() {
+    public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 

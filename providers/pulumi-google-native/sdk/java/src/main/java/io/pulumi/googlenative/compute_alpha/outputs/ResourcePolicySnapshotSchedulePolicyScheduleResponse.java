@@ -25,13 +25,13 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
         this.weeklySchedule = weeklySchedule;
     }
 
-    public ResourcePolicyDailyCycleResponse getDailySchedule() {
+    public ResourcePolicyDailyCycleResponse dailySchedule() {
         return this.dailySchedule;
     }
-    public ResourcePolicyHourlyCycleResponse getHourlySchedule() {
+    public ResourcePolicyHourlyCycleResponse hourlySchedule() {
         return this.hourlySchedule;
     }
-    public ResourcePolicyWeeklyCycleResponse getWeeklySchedule() {
+    public ResourcePolicyWeeklyCycleResponse weeklySchedule() {
         return this.weeklySchedule;
     }
 

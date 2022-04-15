@@ -25,7 +25,7 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
     @Import(name="metadataExports", required=true)
       private final List<MetadataExportResponse> metadataExports;
 
-    public List<MetadataExportResponse> getMetadataExports() {
+    public List<MetadataExportResponse> metadataExports() {
         return this.metadataExports;
     }
 
@@ -36,7 +36,7 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
     @Import(name="restores", required=true)
       private final List<RestoreResponse> restores;
 
-    public List<RestoreResponse> getRestores() {
+    public List<RestoreResponse> restores() {
         return this.restores;
     }
 

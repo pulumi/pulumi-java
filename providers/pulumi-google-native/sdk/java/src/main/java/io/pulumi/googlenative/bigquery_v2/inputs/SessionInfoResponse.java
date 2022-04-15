@@ -19,7 +19,7 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sessionId", required=true)
       private final String sessionId;
 
-    public String getSessionId() {
+    public String sessionId() {
         return this.sessionId;
     }
 

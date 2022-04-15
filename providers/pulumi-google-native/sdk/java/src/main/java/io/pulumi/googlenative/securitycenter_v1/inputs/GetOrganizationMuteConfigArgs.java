@@ -15,14 +15,14 @@ public final class GetOrganizationMuteConfigArgs extends io.pulumi.resources.Inv
     @Import(name="muteConfigId", required=true)
       private final String muteConfigId;
 
-    public String getMuteConfigId() {
+    public String muteConfigId() {
         return this.muteConfigId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

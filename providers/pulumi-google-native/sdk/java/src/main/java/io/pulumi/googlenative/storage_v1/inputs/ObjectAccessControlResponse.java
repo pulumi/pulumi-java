@@ -24,7 +24,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -46,7 +46,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -68,7 +68,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="entity", required=true)
       private final String entity;
 
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
 
@@ -79,7 +79,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="entityId", required=true)
       private final String entityId;
 
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
 
@@ -90,7 +90,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -101,7 +101,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="generation", required=true)
       private final String generation;
 
-    public String getGeneration() {
+    public String generation() {
         return this.generation;
     }
 
@@ -112,7 +112,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -123,7 +123,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="object", required=true)
       private final String object;
 
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 
@@ -134,7 +134,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="projectTeam", required=true)
       private final ObjectAccessControlProjectTeamResponse projectTeam;
 
-    public ObjectAccessControlProjectTeamResponse getProjectTeam() {
+    public ObjectAccessControlProjectTeamResponse projectTeam() {
         return this.projectTeam;
     }
 
@@ -145,7 +145,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 
@@ -156,7 +156,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

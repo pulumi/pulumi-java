@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends io.
     @Import(name="text")
       private final @Nullable Output<List<String>> text;
 
-    public Output<List<String>> getText() {
+    public Output<List<String>> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

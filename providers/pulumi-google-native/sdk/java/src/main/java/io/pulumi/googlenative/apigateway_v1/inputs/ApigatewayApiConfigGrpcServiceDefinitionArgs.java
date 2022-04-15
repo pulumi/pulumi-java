@@ -27,7 +27,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
     @Import(name="fileDescriptorSet")
       private final @Nullable Output<ApigatewayApiConfigFileArgs> fileDescriptorSet;
 
-    public Output<ApigatewayApiConfigFileArgs> getFileDescriptorSet() {
+    public Output<ApigatewayApiConfigFileArgs> fileDescriptorSet() {
         return this.fileDescriptorSet == null ? Codegen.empty() : this.fileDescriptorSet;
     }
 
@@ -38,7 +38,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
     @Import(name="source")
       private final @Nullable Output<List<ApigatewayApiConfigFileArgs>> source;
 
-    public Output<List<ApigatewayApiConfigFileArgs>> getSource() {
+    public Output<List<ApigatewayApiConfigFileArgs>> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

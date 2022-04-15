@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     @Import(name="parts", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> parts;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     @Import(name="timesAddedCount")
       private final @Nullable Output<Integer> timesAddedCount;
 
-    public Output<Integer> getTimesAddedCount() {
+    public Output<Integer> timesAddedCount() {
         return this.timesAddedCount == null ? Codegen.empty() : this.timesAddedCount;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     @Import(name="type", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> getType() {
+    public Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type() {
         return this.type;
     }
 

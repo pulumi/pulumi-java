@@ -33,14 +33,14 @@ public final class CloudAuditOptionsResponse {
      * Information used by the Cloud Audit Logging pipeline.
      * 
     */
-    public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
+    public AuthorizationLoggingOptionsResponse authorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
     /**
      * The log_name to populate in the Cloud Audit Record.
      * 
     */
-    public String getLogName() {
+    public String logName() {
         return this.logName;
     }
 

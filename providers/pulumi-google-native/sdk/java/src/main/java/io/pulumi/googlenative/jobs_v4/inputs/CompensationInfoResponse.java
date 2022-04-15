@@ -25,7 +25,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="annualizedBaseCompensationRange", required=true)
       private final CompensationRangeResponse annualizedBaseCompensationRange;
 
-    public CompensationRangeResponse getAnnualizedBaseCompensationRange() {
+    public CompensationRangeResponse annualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
     }
 
@@ -36,7 +36,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="annualizedTotalCompensationRange", required=true)
       private final CompensationRangeResponse annualizedTotalCompensationRange;
 
-    public CompensationRangeResponse getAnnualizedTotalCompensationRange() {
+    public CompensationRangeResponse annualizedTotalCompensationRange() {
         return this.annualizedTotalCompensationRange;
     }
 
@@ -47,7 +47,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
     @Import(name="entries", required=true)
       private final List<CompensationEntryResponse> entries;
 
-    public List<CompensationEntryResponse> getEntries() {
+    public List<CompensationEntryResponse> entries() {
         return this.entries;
     }
 

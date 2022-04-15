@@ -24,7 +24,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
     @Import(name="position", required=true)
       private final PositionResponse position;
 
-    public PositionResponse getPosition() {
+    public PositionResponse position() {
         return this.position;
     }
 
@@ -35,7 +35,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
     @Import(name="routine", required=true)
       private final String routine;
 
-    public String getRoutine() {
+    public String routine() {
         return this.routine;
     }
 
@@ -46,7 +46,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
     @Import(name="step", required=true)
       private final String step;
 
-    public String getStep() {
+    public String step() {
         return this.step;
     }
 

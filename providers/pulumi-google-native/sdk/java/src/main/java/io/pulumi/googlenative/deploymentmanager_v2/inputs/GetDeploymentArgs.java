@@ -17,14 +17,14 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="deployment", required=true)
       private final String deployment;
 
-    public String getDeployment() {
+    public String deployment() {
         return this.deployment;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

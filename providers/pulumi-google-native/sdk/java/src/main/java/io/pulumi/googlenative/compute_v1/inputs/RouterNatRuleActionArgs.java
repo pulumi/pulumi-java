@@ -23,7 +23,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceNatActiveIps")
       private final @Nullable Output<List<String>> sourceNatActiveIps;
 
-    public Output<List<String>> getSourceNatActiveIps() {
+    public Output<List<String>> sourceNatActiveIps() {
         return this.sourceNatActiveIps == null ? Codegen.empty() : this.sourceNatActiveIps;
     }
 
@@ -34,7 +34,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceNatDrainIps")
       private final @Nullable Output<List<String>> sourceNatDrainIps;
 
-    public Output<List<String>> getSourceNatDrainIps() {
+    public Output<List<String>> sourceNatDrainIps() {
         return this.sourceNatDrainIps == null ? Codegen.empty() : this.sourceNatDrainIps;
     }
 

@@ -25,7 +25,7 @@ public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="critical", required=true)
       private final Boolean critical;
 
-    public Boolean getCritical() {
+    public Boolean critical() {
         return this.critical;
     }
 
@@ -36,7 +36,7 @@ public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="objectId", required=true)
       private final ObjectIdResponse objectId;
 
-    public ObjectIdResponse getObjectId() {
+    public ObjectIdResponse objectId() {
         return this.objectId;
     }
 
@@ -47,7 +47,7 @@ public final class X509ExtensionResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

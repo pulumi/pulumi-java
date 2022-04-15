@@ -23,7 +23,7 @@ public final class NodePoolDefaultsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="nodeConfigDefaults", required=true)
       private final NodeConfigDefaultsResponse nodeConfigDefaults;
 
-    public NodeConfigDefaultsResponse getNodeConfigDefaults() {
+    public NodeConfigDefaultsResponse nodeConfigDefaults() {
         return this.nodeConfigDefaults;
     }
 

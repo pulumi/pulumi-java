@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
     @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> getButtons() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons() {
         return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
     @Import(name="formattedText")
       private final @Nullable Output<String> formattedText;
 
-    public Output<String> getFormattedText() {
+    public Output<String> formattedText() {
         return this.formattedText == null ? Codegen.empty() : this.formattedText;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
+    public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

@@ -25,7 +25,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableModifications")
       private final @Nullable Output<Boolean> disableModifications;
 
-    public Output<Boolean> getDisableModifications() {
+    public Output<Boolean> disableModifications() {
         return this.disableModifications == null ? Codegen.empty() : this.disableModifications;
     }
 
@@ -36,7 +36,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableServing")
       private final @Nullable Output<Boolean> disableServing;
 
-    public Output<Boolean> getDisableServing() {
+    public Output<Boolean> disableServing() {
         return this.disableServing == null ? Codegen.empty() : this.disableServing;
     }
 
@@ -47,7 +47,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexingServiceAccounts")
       private final @Nullable Output<List<String>> indexingServiceAccounts;
 
-    public Output<List<String>> getIndexingServiceAccounts() {
+    public Output<List<String>> indexingServiceAccounts() {
         return this.indexingServiceAccounts == null ? Codegen.empty() : this.indexingServiceAccounts;
     }
 
@@ -69,7 +69,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="itemsVisibility")
       private final @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
 
-    public Output<List<GSuitePrincipalArgs>> getItemsVisibility() {
+    public Output<List<GSuitePrincipalArgs>> itemsVisibility() {
         return this.itemsVisibility == null ? Codegen.empty() : this.itemsVisibility;
     }
 
@@ -80,7 +80,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationIds")
       private final @Nullable Output<List<String>> operationIds;
 
-    public Output<List<String>> getOperationIds() {
+    public Output<List<String>> operationIds() {
         return this.operationIds == null ? Codegen.empty() : this.operationIds;
     }
 
@@ -102,7 +102,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="returnThumbnailUrls")
       private final @Nullable Output<Boolean> returnThumbnailUrls;
 
-    public Output<Boolean> getReturnThumbnailUrls() {
+    public Output<Boolean> returnThumbnailUrls() {
         return this.returnThumbnailUrls == null ? Codegen.empty() : this.returnThumbnailUrls;
     }
 
@@ -113,7 +113,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 

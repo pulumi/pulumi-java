@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
     @Import(name="maxRunningTime", required=true)
       private final String maxRunningTime;
 
-    public String getMaxRunningTime() {
+    public String maxRunningTime() {
         return this.maxRunningTime;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
     @Import(name="maxWaitTime", required=true)
       private final String maxWaitTime;
 
-    public String getMaxWaitTime() {
+    public String maxWaitTime() {
         return this.maxWaitTime;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 

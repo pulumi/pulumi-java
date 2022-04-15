@@ -25,7 +25,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
 
@@ -36,7 +36,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
     @Import(name="startTimeWindow", required=true)
       private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
 
-    public UpcomingMaintenanceTimeWindowResponse getStartTimeWindow() {
+    public UpcomingMaintenanceTimeWindowResponse startTimeWindow() {
         return this.startTimeWindow;
     }
 
@@ -47,7 +47,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

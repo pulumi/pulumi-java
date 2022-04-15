@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
     @Import(name="projectRepoId", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
 
-    public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse getProjectRepoId() {
+    public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId() {
         return this.projectRepoId;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

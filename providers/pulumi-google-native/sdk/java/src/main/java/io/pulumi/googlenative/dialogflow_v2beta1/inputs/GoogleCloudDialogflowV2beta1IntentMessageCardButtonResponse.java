@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse e
     @Import(name="postback", required=true)
       private final String postback;
 
-    public String getPostback() {
+    public String postback() {
         return this.postback;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse e
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

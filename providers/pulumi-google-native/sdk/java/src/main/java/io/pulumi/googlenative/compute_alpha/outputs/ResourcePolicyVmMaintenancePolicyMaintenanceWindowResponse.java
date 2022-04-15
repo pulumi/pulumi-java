@@ -16,7 +16,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
     }
 
-    public ResourcePolicyDailyCycleResponse getDailyMaintenanceWindow() {
+    public ResourcePolicyDailyCycleResponse dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }
 

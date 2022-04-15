@@ -27,7 +27,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
     @Import(name="currentStateTime")
       private final @Nullable Output<String> currentStateTime;
 
-    public Output<String> getCurrentStateTime() {
+    public Output<String> currentStateTime() {
         return this.currentStateTime == null ? Codegen.empty() : this.currentStateTime;
     }
 
@@ -38,7 +38,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
     @Import(name="executionStageName")
       private final @Nullable Output<String> executionStageName;
 
-    public Output<String> getExecutionStageName() {
+    public Output<String> executionStageName() {
         return this.executionStageName == null ? Codegen.empty() : this.executionStageName;
     }
 
@@ -49,7 +49,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
     @Import(name="executionStageState")
       private final @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
-    public Output<ExecutionStageStateExecutionStageState> getExecutionStageState() {
+    public Output<ExecutionStageStateExecutionStageState> executionStageState() {
         return this.executionStageState == null ? Codegen.empty() : this.executionStageState;
     }
 

@@ -33,14 +33,14 @@ public final class DistributionCutResponse {
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
     */
-    public String getDistributionFilter() {
+    public String distributionFilter() {
         return this.distributionFilter;
     }
     /**
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
      * 
     */
-    public GoogleMonitoringV3RangeResponse getRange() {
+    public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
 

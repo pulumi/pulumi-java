@@ -31,7 +31,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The communication channel between the datacenter connector and GCP.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -45,7 +45,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The time the connector was created (as an API call, not when it was actually installed).
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +59,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return Provides details on the state of the Datacenter Connector in case of an error.
      * 
      */
-    public Output<StatusResponse> getError() {
+    public Output<StatusResponse> error() {
         return this.error;
     }
     /**
@@ -73,7 +73,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The connector's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
      * 
      */
-    public Output<String> getRegistrationId() {
+    public Output<String> registrationId() {
         return this.registrationId;
     }
     /**
@@ -101,7 +101,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The service account to use in the connector when communicating with the cloud.
      * 
      */
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -115,7 +115,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return State of the DatacenterConnector, as determined by the health checks.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -129,7 +129,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The time the state was last set.
      * 
      */
-    public Output<String> getStateTime() {
+    public Output<String> stateTime() {
         return this.stateTime;
     }
     /**
@@ -143,7 +143,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The last time the connector was updated with an API call.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -157,7 +157,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * @return The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

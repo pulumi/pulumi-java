@@ -24,7 +24,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
     @Import(name="vm", required=true)
       private final String vm;
 
-    public String getVm() {
+    public String vm() {
         return this.vm;
     }
 
@@ -35,7 +35,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
     @Import(name="vmIp", required=true)
       private final String vmIp;
 
-    public String getVmIp() {
+    public String vmIp() {
         return this.vmIp;
     }
 
@@ -46,7 +46,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
     @Import(name="vmPort", required=true)
       private final Integer vmPort;
 
-    public Integer getVmPort() {
+    public Integer vmPort() {
         return this.vmPort;
     }
 
@@ -57,7 +57,7 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
     @Import(name="vpc", required=true)
       private final String vpc;
 
-    public String getVpc() {
+    public String vpc() {
         return this.vpc;
     }
 

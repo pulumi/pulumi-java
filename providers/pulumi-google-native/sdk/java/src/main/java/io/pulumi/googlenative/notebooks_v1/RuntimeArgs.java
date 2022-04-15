@@ -25,28 +25,28 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
-    public Output<RuntimeAccessConfigArgs> getAccessConfig() {
+    public Output<RuntimeAccessConfigArgs> accessConfig() {
         return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="runtimeId", required=true)
       private final Output<String> runtimeId;
 
-    public Output<String> getRuntimeId() {
+    public Output<String> runtimeId() {
         return this.runtimeId;
     }
 
@@ -57,7 +57,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
-    public Output<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
+    public Output<RuntimeSoftwareConfigArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -68,7 +68,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachine")
       private final @Nullable Output<VirtualMachineArgs> virtualMachine;
 
-    public Output<VirtualMachineArgs> getVirtualMachine() {
+    public Output<VirtualMachineArgs> virtualMachine() {
         return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 

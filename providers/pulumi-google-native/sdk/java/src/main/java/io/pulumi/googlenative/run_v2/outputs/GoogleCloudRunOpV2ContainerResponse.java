@@ -79,56 +79,56 @@ public final class GoogleCloudRunOpV2ContainerResponse {
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
     /**
      * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
     */
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command;
     }
     /**
      * List of environment variables to set in the container.
      * 
     */
-    public List<GoogleCloudRunOpV2EnvVarResponse> getEnv() {
+    public List<GoogleCloudRunOpV2EnvVarResponse> env() {
         return this.env;
     }
     /**
      * URL of the Container image in Google Container Registry or Docker More info: https://kubernetes.io/docs/concepts/containers/images
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
      * Name of the container specified as a DNS_LABEL.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
      * 
     */
-    public List<GoogleCloudRunOpV2ContainerPortResponse> getPorts() {
+    public List<GoogleCloudRunOpV2ContainerPortResponse> ports() {
         return this.ports;
     }
     /**
      * Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
     */
-    public GoogleCloudRunOpV2ResourceRequirementsResponse getResources() {
+    public GoogleCloudRunOpV2ResourceRequirementsResponse resources() {
         return this.resources;
     }
     /**
      * Volume to mount into the container's filesystem.
      * 
     */
-    public List<GoogleCloudRunOpV2VolumeMountResponse> getVolumeMounts() {
+    public List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts() {
         return this.volumeMounts;
     }
 

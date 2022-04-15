@@ -56,35 +56,35 @@ public final class GcsDestinationConfigResponse {
      * AVRO file format configuration.
      * 
     */
-    public AvroFileFormatResponse getAvroFileFormat() {
+    public AvroFileFormatResponse avroFileFormat() {
         return this.avroFileFormat;
     }
     /**
      * The maximum duration for which new events are added before a file is closed and a new file is created.
      * 
     */
-    public String getFileRotationInterval() {
+    public String fileRotationInterval() {
         return this.fileRotationInterval;
     }
     /**
      * The maximum file size to be saved in the bucket.
      * 
     */
-    public Integer getFileRotationMb() {
+    public Integer fileRotationMb() {
         return this.fileRotationMb;
     }
     /**
      * JSON file format configuration.
      * 
     */
-    public JsonFileFormatResponse getJsonFileFormat() {
+    public JsonFileFormatResponse jsonFileFormat() {
         return this.jsonFileFormat;
     }
     /**
      * Path inside the Cloud Storage bucket to write data to.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

@@ -21,14 +21,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="caPoolId", required=true)
       private final Output<String> caPoolId;
 
-    public Output<String> getCaPoolId() {
+    public Output<String> caPoolId() {
         return this.caPoolId;
     }
 
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
+    public Output<String> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -39,7 +39,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateTemplate")
       private final @Nullable Output<String> certificateTemplate;
 
-    public Output<String> getCertificateTemplate() {
+    public Output<String> certificateTemplate() {
         return this.certificateTemplate == null ? Codegen.empty() : this.certificateTemplate;
     }
 
@@ -50,14 +50,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<CertificateConfigArgs> config;
 
-    public Output<CertificateConfigArgs> getConfig() {
+    public Output<CertificateConfigArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
     @Import(name="issuingCertificateAuthorityId")
       private final @Nullable Output<String> issuingCertificateAuthorityId;
 
-    public Output<String> getIssuingCertificateAuthorityId() {
+    public Output<String> issuingCertificateAuthorityId() {
         return this.issuingCertificateAuthorityId == null ? Codegen.empty() : this.issuingCertificateAuthorityId;
     }
 
@@ -68,7 +68,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -79,14 +79,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifetime", required=true)
       private final Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -97,21 +97,21 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
 
-    public Output<String> getPemCsr() {
+    public Output<String> pemCsr() {
         return this.pemCsr == null ? Codegen.empty() : this.pemCsr;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -122,14 +122,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subjectMode")
       private final @Nullable Output<CertificateSubjectMode> subjectMode;
 
-    public Output<CertificateSubjectMode> getSubjectMode() {
+    public Output<CertificateSubjectMode> subjectMode() {
         return this.subjectMode == null ? Codegen.empty() : this.subjectMode;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 

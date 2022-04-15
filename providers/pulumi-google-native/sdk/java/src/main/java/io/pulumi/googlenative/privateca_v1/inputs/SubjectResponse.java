@@ -23,7 +23,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="commonName", required=true)
       private final String commonName;
 
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
 
@@ -34,7 +34,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="countryCode", required=true)
       private final String countryCode;
 
-    public String getCountryCode() {
+    public String countryCode() {
         return this.countryCode;
     }
 
@@ -45,7 +45,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locality", required=true)
       private final String locality;
 
-    public String getLocality() {
+    public String locality() {
         return this.locality;
     }
 
@@ -56,7 +56,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="organization", required=true)
       private final String organization;
 
-    public String getOrganization() {
+    public String organization() {
         return this.organization;
     }
 
@@ -67,7 +67,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="organizationalUnit", required=true)
       private final String organizationalUnit;
 
-    public String getOrganizationalUnit() {
+    public String organizationalUnit() {
         return this.organizationalUnit;
     }
 
@@ -78,7 +78,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="postalCode", required=true)
       private final String postalCode;
 
-    public String getPostalCode() {
+    public String postalCode() {
         return this.postalCode;
     }
 
@@ -89,7 +89,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="province", required=true)
       private final String province;
 
-    public String getProvince() {
+    public String province() {
         return this.province;
     }
 
@@ -100,7 +100,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="streetAddress", required=true)
       private final String streetAddress;
 
-    public String getStreetAddress() {
+    public String streetAddress() {
         return this.streetAddress;
     }
 

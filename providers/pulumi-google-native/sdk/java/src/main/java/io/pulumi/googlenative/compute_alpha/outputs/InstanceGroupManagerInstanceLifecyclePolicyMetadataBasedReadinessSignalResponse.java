@@ -24,7 +24,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * The number of seconds to wait for a readiness signal during initialization before timing out.
      * 
     */
-    public Integer getTimeoutSec() {
+    public Integer timeoutSec() {
         return this.timeoutSec;
     }
 

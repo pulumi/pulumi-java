@@ -28,7 +28,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limits")
       private final @Nullable Output<List<QuotaLimitArgs>> limits;
 
-    public Output<List<QuotaLimitArgs>> getLimits() {
+    public Output<List<QuotaLimitArgs>> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -39,7 +39,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricRules")
       private final @Nullable Output<List<MetricRuleArgs>> metricRules;
 
-    public Output<List<MetricRuleArgs>> getMetricRules() {
+    public Output<List<MetricRuleArgs>> metricRules() {
         return this.metricRules == null ? Codegen.empty() : this.metricRules;
     }
 

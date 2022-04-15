@@ -27,7 +27,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricCosts")
       private final @Nullable Output<Map<String,String>> metricCosts;
 
-    public Output<Map<String,String>> getMetricCosts() {
+    public Output<Map<String,String>> metricCosts() {
         return this.metricCosts == null ? Codegen.empty() : this.metricCosts;
     }
 
@@ -38,7 +38,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

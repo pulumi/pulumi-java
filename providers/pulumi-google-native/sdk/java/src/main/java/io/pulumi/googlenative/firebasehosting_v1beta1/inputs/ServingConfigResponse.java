@@ -29,7 +29,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="appAssociation", required=true)
       private final String appAssociation;
 
-    public String getAppAssociation() {
+    public String appAssociation() {
         return this.appAssociation;
     }
 
@@ -40,7 +40,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="cleanUrls", required=true)
       private final Boolean cleanUrls;
 
-    public Boolean getCleanUrls() {
+    public Boolean cleanUrls() {
         return this.cleanUrls;
     }
 
@@ -51,7 +51,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="headers", required=true)
       private final List<HeaderResponse> headers;
 
-    public List<HeaderResponse> getHeaders() {
+    public List<HeaderResponse> headers() {
         return this.headers;
     }
 
@@ -62,7 +62,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="i18n", required=true)
       private final I18nConfigResponse i18n;
 
-    public I18nConfigResponse getI18n() {
+    public I18nConfigResponse i18n() {
         return this.i18n;
     }
 
@@ -73,7 +73,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="redirects", required=true)
       private final List<RedirectResponse> redirects;
 
-    public List<RedirectResponse> getRedirects() {
+    public List<RedirectResponse> redirects() {
         return this.redirects;
     }
 
@@ -84,7 +84,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="rewrites", required=true)
       private final List<RewriteResponse> rewrites;
 
-    public List<RewriteResponse> getRewrites() {
+    public List<RewriteResponse> rewrites() {
         return this.rewrites;
     }
 
@@ -95,7 +95,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="trailingSlashBehavior", required=true)
       private final String trailingSlashBehavior;
 
-    public String getTrailingSlashBehavior() {
+    public String trailingSlashBehavior() {
         return this.trailingSlashBehavior;
     }
 

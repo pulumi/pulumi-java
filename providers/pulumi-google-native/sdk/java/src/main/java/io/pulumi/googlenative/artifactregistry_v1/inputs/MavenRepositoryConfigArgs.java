@@ -27,7 +27,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="allowSnapshotOverwrites")
       private final @Nullable Output<Boolean> allowSnapshotOverwrites;
 
-    public Output<Boolean> getAllowSnapshotOverwrites() {
+    public Output<Boolean> allowSnapshotOverwrites() {
         return this.allowSnapshotOverwrites == null ? Codegen.empty() : this.allowSnapshotOverwrites;
     }
 
@@ -38,7 +38,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="versionPolicy")
       private final @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
-    public Output<MavenRepositoryConfigVersionPolicy> getVersionPolicy() {
+    public Output<MavenRepositoryConfigVersionPolicy> versionPolicy() {
         return this.versionPolicy == null ? Codegen.empty() : this.versionPolicy;
     }
 

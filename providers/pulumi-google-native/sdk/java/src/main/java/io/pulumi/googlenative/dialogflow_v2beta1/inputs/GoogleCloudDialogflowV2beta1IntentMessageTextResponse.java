@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse extends
     @Import(name="text", required=true)
       private final List<String> text;
 
-    public List<String> getText() {
+    public List<String> text() {
         return this.text;
     }
 

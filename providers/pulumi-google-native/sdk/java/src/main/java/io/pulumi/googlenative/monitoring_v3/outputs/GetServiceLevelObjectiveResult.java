@@ -70,49 +70,49 @@ public final class GetServiceLevelObjectiveResult {
      * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
     */
-    public String getCalendarPeriod() {
+    public String calendarPeriod() {
         return this.calendarPeriod;
     }
     /**
      * Name used for UI elements listing this SLO.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
      * 
     */
-    public Double getGoal() {
+    public Double goal() {
         return this.goal;
     }
     /**
      * Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
      * 
     */
-    public String getRollingPeriod() {
+    public String rollingPeriod() {
         return this.rollingPeriod;
     }
     /**
      * The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
      * 
     */
-    public ServiceLevelIndicatorResponse getServiceLevelIndicator() {
+    public ServiceLevelIndicatorResponse serviceLevelIndicator() {
         return this.serviceLevelIndicator;
     }
     /**
      * Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
     */
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels;
     }
 

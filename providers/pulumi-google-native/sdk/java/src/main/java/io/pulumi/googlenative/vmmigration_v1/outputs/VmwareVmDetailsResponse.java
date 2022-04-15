@@ -103,84 +103,84 @@ public final class VmwareVmDetailsResponse {
      * The VM Boot Option.
      * 
     */
-    public String getBootOption() {
+    public String bootOption() {
         return this.bootOption;
     }
     /**
      * The total size of the storage allocated to the VM in MB.
      * 
     */
-    public String getCommittedStorageMb() {
+    public String committedStorageMb() {
         return this.committedStorageMb;
     }
     /**
      * The number of cpus in the VM.
      * 
     */
-    public Integer getCpuCount() {
+    public Integer cpuCount() {
         return this.cpuCount;
     }
     /**
      * The descriptive name of the vCenter's datacenter this VM is contained in.
      * 
     */
-    public String getDatacenterDescription() {
+    public String datacenterDescription() {
         return this.datacenterDescription;
     }
     /**
      * The id of the vCenter's datacenter this VM is contained in.
      * 
     */
-    public String getDatacenterId() {
+    public String datacenterId() {
         return this.datacenterId;
     }
     /**
      * The number of disks the VM has.
      * 
     */
-    public Integer getDiskCount() {
+    public Integer diskCount() {
         return this.diskCount;
     }
     /**
      * The display name of the VM. Note that this is not necessarily unique.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
     */
-    public String getGuestDescription() {
+    public String guestDescription() {
         return this.guestDescription;
     }
     /**
      * The size of the memory of the VM in MB.
      * 
     */
-    public Integer getMemoryMb() {
+    public Integer memoryMb() {
         return this.memoryMb;
     }
     /**
      * The power state of the VM at the moment list was taken.
      * 
     */
-    public String getPowerState() {
+    public String powerState() {
         return this.powerState;
     }
     /**
      * The unique identifier of the VM in vCenter.
      * 
     */
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
     /**
      * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
      * 
     */
-    public String getVmId() {
+    public String vmId() {
         return this.vmId;
     }
 

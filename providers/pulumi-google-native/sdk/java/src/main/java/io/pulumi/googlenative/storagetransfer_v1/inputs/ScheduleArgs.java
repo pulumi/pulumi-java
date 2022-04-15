@@ -28,7 +28,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTimeOfDay")
       private final @Nullable Output<TimeOfDayArgs> endTimeOfDay;
 
-    public Output<TimeOfDayArgs> getEndTimeOfDay() {
+    public Output<TimeOfDayArgs> endTimeOfDay() {
         return this.endTimeOfDay == null ? Codegen.empty() : this.endTimeOfDay;
     }
 
@@ -39,7 +39,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repeatInterval")
       private final @Nullable Output<String> repeatInterval;
 
-    public Output<String> getRepeatInterval() {
+    public Output<String> repeatInterval() {
         return this.repeatInterval == null ? Codegen.empty() : this.repeatInterval;
     }
 
@@ -50,7 +50,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleEndDate")
       private final @Nullable Output<DateArgs> scheduleEndDate;
 
-    public Output<DateArgs> getScheduleEndDate() {
+    public Output<DateArgs> scheduleEndDate() {
         return this.scheduleEndDate == null ? Codegen.empty() : this.scheduleEndDate;
     }
 
@@ -61,7 +61,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleStartDate", required=true)
       private final Output<DateArgs> scheduleStartDate;
 
-    public Output<DateArgs> getScheduleStartDate() {
+    public Output<DateArgs> scheduleStartDate() {
         return this.scheduleStartDate;
     }
 
@@ -72,7 +72,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTimeOfDay")
       private final @Nullable Output<TimeOfDayArgs> startTimeOfDay;
 
-    public Output<TimeOfDayArgs> getStartTimeOfDay() {
+    public Output<TimeOfDayArgs> startTimeOfDay() {
         return this.startTimeOfDay == null ? Codegen.empty() : this.startTimeOfDay;
     }
 

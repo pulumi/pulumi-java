@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="defaultValue", required=true)
       private final Object defaultValue;
 
-    public Object getDefaultValue() {
+    public Object defaultValue() {
         return this.defaultValue;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="entityType", required=true)
       private final String entityType;
 
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="fillBehavior", required=true)
       private final GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior;
 
-    public GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse getFillBehavior() {
+    public GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior() {
         return this.fillBehavior;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="isList", required=true)
       private final Boolean isList;
 
-    public Boolean getIsList() {
+    public Boolean isList() {
         return this.isList;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="redact", required=true)
       private final Boolean redact;
 
-    public Boolean getRedact() {
+    public Boolean redact() {
         return this.redact;
     }
 
@@ -92,7 +92,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
     @Import(name="required", required=true)
       private final Boolean required;
 
-    public Boolean getRequired() {
+    public Boolean required() {
         return this.required;
     }
 

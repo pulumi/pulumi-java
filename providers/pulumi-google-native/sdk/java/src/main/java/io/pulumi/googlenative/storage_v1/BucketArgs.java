@@ -39,7 +39,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<List<BucketAccessControlArgs>> acl;
 
-    public Output<List<BucketAccessControlArgs>> getAcl() {
+    public Output<List<BucketAccessControlArgs>> acl() {
         return this.acl == null ? Codegen.empty() : this.acl;
     }
 
@@ -50,7 +50,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoclass")
       private final @Nullable Output<BucketAutoclassArgs> autoclass;
 
-    public Output<BucketAutoclassArgs> getAutoclass() {
+    public Output<BucketAutoclassArgs> autoclass() {
         return this.autoclass == null ? Codegen.empty() : this.autoclass;
     }
 
@@ -61,7 +61,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billing")
       private final @Nullable Output<BucketBillingArgs> billing;
 
-    public Output<BucketBillingArgs> getBilling() {
+    public Output<BucketBillingArgs> billing() {
         return this.billing == null ? Codegen.empty() : this.billing;
     }
 
@@ -72,7 +72,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cors")
       private final @Nullable Output<List<BucketCorsItemArgs>> cors;
 
-    public Output<List<BucketCorsItemArgs>> getCors() {
+    public Output<List<BucketCorsItemArgs>> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -83,7 +83,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customPlacementConfig")
       private final @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
 
-    public Output<BucketCustomPlacementConfigArgs> getCustomPlacementConfig() {
+    public Output<BucketCustomPlacementConfigArgs> customPlacementConfig() {
         return this.customPlacementConfig == null ? Codegen.empty() : this.customPlacementConfig;
     }
 
@@ -94,7 +94,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultEventBasedHold")
       private final @Nullable Output<Boolean> defaultEventBasedHold;
 
-    public Output<Boolean> getDefaultEventBasedHold() {
+    public Output<Boolean> defaultEventBasedHold() {
         return this.defaultEventBasedHold == null ? Codegen.empty() : this.defaultEventBasedHold;
     }
 
@@ -105,7 +105,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultObjectAcl")
       private final @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
 
-    public Output<List<ObjectAccessControlArgs>> getDefaultObjectAcl() {
+    public Output<List<ObjectAccessControlArgs>> defaultObjectAcl() {
         return this.defaultObjectAcl == null ? Codegen.empty() : this.defaultObjectAcl;
     }
 
@@ -116,7 +116,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<BucketEncryptionArgs> encryption;
 
-    public Output<BucketEncryptionArgs> getEncryption() {
+    public Output<BucketEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -127,7 +127,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -138,7 +138,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamConfiguration")
       private final @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
 
-    public Output<BucketIamConfigurationArgs> getIamConfiguration() {
+    public Output<BucketIamConfigurationArgs> iamConfiguration() {
         return this.iamConfiguration == null ? Codegen.empty() : this.iamConfiguration;
     }
 
@@ -149,7 +149,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -160,7 +160,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -171,7 +171,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -182,7 +182,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycle")
       private final @Nullable Output<BucketLifecycleArgs> lifecycle;
 
-    public Output<BucketLifecycleArgs> getLifecycle() {
+    public Output<BucketLifecycleArgs> lifecycle() {
         return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
@@ -193,7 +193,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -204,7 +204,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationType")
       private final @Nullable Output<String> locationType;
 
-    public Output<String> getLocationType() {
+    public Output<String> locationType() {
         return this.locationType == null ? Codegen.empty() : this.locationType;
     }
 
@@ -215,7 +215,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logging")
       private final @Nullable Output<BucketLoggingArgs> logging;
 
-    public Output<BucketLoggingArgs> getLogging() {
+    public Output<BucketLoggingArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -226,7 +226,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metageneration")
       private final @Nullable Output<String> metageneration;
 
-    public Output<String> getMetageneration() {
+    public Output<String> metageneration() {
         return this.metageneration == null ? Codegen.empty() : this.metageneration;
     }
 
@@ -237,7 +237,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -248,28 +248,28 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<BucketOwnerArgs> owner;
 
-    public Output<BucketOwnerArgs> getOwner() {
+    public Output<BucketOwnerArgs> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
-    public Output<String> getPredefinedAcl() {
+    public Output<String> predefinedAcl() {
         return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
     }
 
     @Import(name="predefinedDefaultObjectAcl")
       private final @Nullable Output<String> predefinedDefaultObjectAcl;
 
-    public Output<String> getPredefinedDefaultObjectAcl() {
+    public Output<String> predefinedDefaultObjectAcl() {
         return this.predefinedDefaultObjectAcl == null ? Codegen.empty() : this.predefinedDefaultObjectAcl;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -280,21 +280,21 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
     @Import(name="projection")
       private final @Nullable Output<String> projection;
 
-    public Output<String> getProjection() {
+    public Output<String> projection() {
         return this.projection == null ? Codegen.empty() : this.projection;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> getProvisionalUserProject() {
+    public Output<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
@@ -305,7 +305,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
-    public Output<BucketRetentionPolicyArgs> getRetentionPolicy() {
+    public Output<BucketRetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -316,7 +316,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rpo")
       private final @Nullable Output<String> rpo;
 
-    public Output<String> getRpo() {
+    public Output<String> rpo() {
         return this.rpo == null ? Codegen.empty() : this.rpo;
     }
 
@@ -327,7 +327,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPZS")
       private final @Nullable Output<Boolean> satisfiesPZS;
 
-    public Output<Boolean> getSatisfiesPZS() {
+    public Output<Boolean> satisfiesPZS() {
         return this.satisfiesPZS == null ? Codegen.empty() : this.satisfiesPZS;
     }
 
@@ -338,7 +338,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -349,7 +349,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
@@ -360,7 +360,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
     }
 
@@ -371,14 +371,14 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updated")
       private final @Nullable Output<String> updated;
 
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
-    public Output<String> getUserProject() {
+    public Output<String> userProject() {
         return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 
@@ -389,7 +389,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versioning")
       private final @Nullable Output<BucketVersioningArgs> versioning;
 
-    public Output<BucketVersioningArgs> getVersioning() {
+    public Output<BucketVersioningArgs> versioning() {
         return this.versioning == null ? Codegen.empty() : this.versioning;
     }
 
@@ -400,7 +400,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="website")
       private final @Nullable Output<BucketWebsiteArgs> website;
 
-    public Output<BucketWebsiteArgs> getWebsite() {
+    public Output<BucketWebsiteArgs> website() {
         return this.website == null ? Codegen.empty() : this.website;
     }
 

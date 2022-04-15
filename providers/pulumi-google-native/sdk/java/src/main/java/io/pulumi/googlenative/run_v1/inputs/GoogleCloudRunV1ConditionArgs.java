@@ -26,7 +26,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
-    public Output<String> getLastTransitionTime() {
+    public Output<String> lastTransitionTime() {
         return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
     @Import(name="severity")
       private final @Nullable Output<String> severity;
 
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

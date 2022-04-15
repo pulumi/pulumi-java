@@ -23,7 +23,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="matchedPortRange", required=true)
       private final String matchedPortRange;
 
-    public String getMatchedPortRange() {
+    public String matchedPortRange() {
         return this.matchedPortRange;
     }
 
@@ -45,7 +45,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="matchedProtocol", required=true)
       private final String matchedProtocol;
 
-    public String getMatchedProtocol() {
+    public String matchedProtocol() {
         return this.matchedProtocol;
     }
 
@@ -56,7 +56,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="networkUri", required=true)
       private final String networkUri;
 
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
 
@@ -67,7 +67,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 
@@ -78,7 +78,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -89,7 +89,7 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="vip", required=true)
       private final String vip;
 
-    public String getVip() {
+    public String vip() {
         return this.vip;
     }
 

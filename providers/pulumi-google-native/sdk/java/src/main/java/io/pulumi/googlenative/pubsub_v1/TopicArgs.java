@@ -26,7 +26,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -37,7 +37,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -48,7 +48,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageRetentionDuration")
       private final @Nullable Output<String> messageRetentionDuration;
 
-    public Output<String> getMessageRetentionDuration() {
+    public Output<String> messageRetentionDuration() {
         return this.messageRetentionDuration == null ? Codegen.empty() : this.messageRetentionDuration;
     }
 
@@ -59,7 +59,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="messageStoragePolicy")
       private final @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
 
-    public Output<MessageStoragePolicyArgs> getMessageStoragePolicy() {
+    public Output<MessageStoragePolicyArgs> messageStoragePolicy() {
         return this.messageStoragePolicy == null ? Codegen.empty() : this.messageStoragePolicy;
     }
 
@@ -70,14 +70,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -88,7 +88,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="satisfiesPzs")
       private final @Nullable Output<Boolean> satisfiesPzs;
 
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs == null ? Codegen.empty() : this.satisfiesPzs;
     }
 
@@ -99,14 +99,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaSettings")
       private final @Nullable Output<SchemaSettingsArgs> schemaSettings;
 
-    public Output<SchemaSettingsArgs> getSchemaSettings() {
+    public Output<SchemaSettingsArgs> schemaSettings() {
         return this.schemaSettings == null ? Codegen.empty() : this.schemaSettings;
     }
 
     @Import(name="topicId", required=true)
       private final Output<String> topicId;
 
-    public Output<String> getTopicId() {
+    public Output<String> topicId() {
         return this.topicId;
     }
 

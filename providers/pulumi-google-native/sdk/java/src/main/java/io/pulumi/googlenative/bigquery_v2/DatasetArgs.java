@@ -29,7 +29,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="access")
       private final @Nullable Output<List<DatasetAccessItemArgs>> access;
 
-    public Output<List<DatasetAccessItemArgs>> getAccess() {
+    public Output<List<DatasetAccessItemArgs>> access() {
         return this.access == null ? Codegen.empty() : this.access;
     }
 
@@ -40,14 +40,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetReference")
       private final @Nullable Output<DatasetReferenceArgs> datasetReference;
 
-    public Output<DatasetReferenceArgs> getDatasetReference() {
+    public Output<DatasetReferenceArgs> datasetReference() {
         return this.datasetReference == null ? Codegen.empty() : this.datasetReference;
     }
 
     @Import(name="defaultEncryptionConfiguration")
       private final @Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
-    public Output<EncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
+    public Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration == null ? Codegen.empty() : this.defaultEncryptionConfiguration;
     }
 
@@ -58,7 +58,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultPartitionExpirationMs")
       private final @Nullable Output<String> defaultPartitionExpirationMs;
 
-    public Output<String> getDefaultPartitionExpirationMs() {
+    public Output<String> defaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs == null ? Codegen.empty() : this.defaultPartitionExpirationMs;
     }
 
@@ -69,7 +69,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTableExpirationMs")
       private final @Nullable Output<String> defaultTableExpirationMs;
 
-    public Output<String> getDefaultTableExpirationMs() {
+    public Output<String> defaultTableExpirationMs() {
         return this.defaultTableExpirationMs == null ? Codegen.empty() : this.defaultTableExpirationMs;
     }
 
@@ -80,7 +80,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -91,7 +91,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -102,7 +102,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isCaseInsensitive")
       private final @Nullable Output<Boolean> isCaseInsensitive;
 
-    public Output<Boolean> getIsCaseInsensitive() {
+    public Output<Boolean> isCaseInsensitive() {
         return this.isCaseInsensitive == null ? Codegen.empty() : this.isCaseInsensitive;
     }
 
@@ -113,7 +113,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -124,14 +124,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -142,7 +142,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DatasetTagsItemArgs>> tags;
 
-    public Output<List<DatasetTagsItemArgs>> getTags() {
+    public Output<List<DatasetTagsItemArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -23,7 +23,7 @@ public final class ToolExecutionStepResponse extends io.pulumi.resources.InvokeA
     @Import(name="toolExecution", required=true)
       private final ToolExecutionResponse toolExecution;
 
-    public ToolExecutionResponse getToolExecution() {
+    public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
 

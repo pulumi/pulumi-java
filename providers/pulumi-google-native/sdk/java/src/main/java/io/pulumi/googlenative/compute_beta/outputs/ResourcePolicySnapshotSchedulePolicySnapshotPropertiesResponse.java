@@ -49,28 +49,28 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * Chain name that the snapshot is created in.
      * 
     */
-    public String getChainName() {
+    public String chainName() {
         return this.chainName;
     }
     /**
      * Indication to perform a 'guest aware' snapshot.
      * 
     */
-    public Boolean getGuestFlush() {
+    public Boolean guestFlush() {
         return this.guestFlush;
     }
     /**
      * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
      * 
     */
-    public List<String> getStorageLocations() {
+    public List<String> storageLocations() {
         return this.storageLocations;
     }
 

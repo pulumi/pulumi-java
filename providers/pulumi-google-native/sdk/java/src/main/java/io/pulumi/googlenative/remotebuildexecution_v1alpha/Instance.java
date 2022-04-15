@@ -32,7 +32,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The policy to define whether or not RBE features can be used or how they can be used.
      * 
      */
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse> getFeaturePolicy() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse> featurePolicy() {
         return this.featurePolicy;
     }
     /**
@@ -46,7 +46,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The location is a GCP region. Currently only `us-central1` is supported.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -60,7 +60,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Whether stack driver logging is enabled for the instance.
      * 
      */
-    public Output<Boolean> getLoggingEnabled() {
+    public Output<Boolean> loggingEnabled() {
         return this.loggingEnabled;
     }
     /**
@@ -74,7 +74,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return State of the instance.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

@@ -23,7 +23,7 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="maximum", required=true)
       private final String maximum;
 
-    public String getMaximum() {
+    public String maximum() {
         return this.maximum;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="minimum", required=true)
       private final String minimum;
 
-    public String getMinimum() {
+    public String minimum() {
         return this.minimum;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

@@ -24,7 +24,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="connectMode", required=true)
       private final String connectMode;
 
-    public String getConnectMode() {
+    public String connectMode() {
         return this.connectMode;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="modes", required=true)
       private final List<String> modes;
 
-    public List<String> getModes() {
+    public List<String> modes() {
         return this.modes;
     }
 
@@ -57,7 +57,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -68,7 +68,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="reservedIpRange", required=true)
       private final String reservedIpRange;
 
-    public String getReservedIpRange() {
+    public String reservedIpRange() {
         return this.reservedIpRange;
     }
 

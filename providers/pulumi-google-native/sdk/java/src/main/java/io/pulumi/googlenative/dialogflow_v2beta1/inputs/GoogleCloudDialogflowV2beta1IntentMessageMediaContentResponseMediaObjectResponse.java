@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="contentUrl", required=true)
       private final String contentUrl;
 
-    public String getContentUrl() {
+    public String contentUrl() {
         return this.contentUrl;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="icon", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getIcon() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon() {
         return this.icon;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="largeImage", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage;
 
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getLargeImage() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage() {
         return this.largeImage;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

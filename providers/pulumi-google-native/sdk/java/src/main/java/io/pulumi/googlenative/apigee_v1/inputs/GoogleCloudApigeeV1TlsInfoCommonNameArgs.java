@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
     @Import(name="wildcardMatch")
       private final @Nullable Output<Boolean> wildcardMatch;
 
-    public Output<Boolean> getWildcardMatch() {
+    public Output<Boolean> wildcardMatch() {
         return this.wildcardMatch == null ? Codegen.empty() : this.wildcardMatch;
     }
 

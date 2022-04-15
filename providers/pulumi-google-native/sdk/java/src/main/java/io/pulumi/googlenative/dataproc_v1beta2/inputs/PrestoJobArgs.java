@@ -31,7 +31,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientTags")
       private final @Nullable Output<List<String>> clientTags;
 
-    public Output<List<String>> getClientTags() {
+    public Output<List<String>> clientTags() {
         return this.clientTags == null ? Codegen.empty() : this.clientTags;
     }
 
@@ -42,7 +42,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
 
-    public Output<Boolean> getContinueOnFailure() {
+    public Output<Boolean> continueOnFailure() {
         return this.continueOnFailure == null ? Codegen.empty() : this.continueOnFailure;
     }
 
@@ -53,7 +53,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Output<LoggingConfigArgs> getLoggingConfig() {
+    public Output<LoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -64,7 +64,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
@@ -75,7 +75,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -86,7 +86,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
-    public Output<String> getQueryFileUri() {
+    public Output<String> queryFileUri() {
         return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
@@ -97,7 +97,7 @@ public final class PrestoJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
 
-    public Output<QueryListArgs> getQueryList() {
+    public Output<QueryListArgs> queryList() {
         return this.queryList == null ? Codegen.empty() : this.queryList;
     }
 

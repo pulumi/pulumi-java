@@ -28,7 +28,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fields", required=true)
       private final Output<List<String>> fields;
 
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields;
     }
 
@@ -50,7 +50,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="validation")
       private final @Nullable Output<ParameterValidationArgs> validation;
 
-    public Output<ParameterValidationArgs> getValidation() {
+    public Output<ParameterValidationArgs> validation() {
         return this.validation == null ? Codegen.empty() : this.validation;
     }
 

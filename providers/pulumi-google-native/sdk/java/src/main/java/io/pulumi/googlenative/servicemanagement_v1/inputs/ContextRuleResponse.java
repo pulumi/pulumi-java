@@ -24,7 +24,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowedRequestExtensions", required=true)
       private final List<String> allowedRequestExtensions;
 
-    public List<String> getAllowedRequestExtensions() {
+    public List<String> allowedRequestExtensions() {
         return this.allowedRequestExtensions;
     }
 
@@ -35,7 +35,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowedResponseExtensions", required=true)
       private final List<String> allowedResponseExtensions;
 
-    public List<String> getAllowedResponseExtensions() {
+    public List<String> allowedResponseExtensions() {
         return this.allowedResponseExtensions;
     }
 
@@ -46,7 +46,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provided", required=true)
       private final List<String> provided;
 
-    public List<String> getProvided() {
+    public List<String> provided() {
         return this.provided;
     }
 
@@ -57,7 +57,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requested", required=true)
       private final List<String> requested;
 
-    public List<String> getRequested() {
+    public List<String> requested() {
         return this.requested;
     }
 
@@ -68,7 +68,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

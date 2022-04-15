@@ -22,7 +22,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow;
 
-    public Output<ResourcePolicyDailyCycleArgs> getDailyMaintenanceWindow() {
+    public Output<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
     }
 

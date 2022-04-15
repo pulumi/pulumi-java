@@ -20,7 +20,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="policy", required=true)
       private final String policy;
 
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
 
@@ -31,7 +31,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subsetSize", required=true)
       private final Integer subsetSize;
 
-    public Integer getSubsetSize() {
+    public Integer subsetSize() {
         return this.subsetSize;
     }
 

@@ -24,7 +24,7 @@ public final class ChartOptionsResponse {
      * The chart mode.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
-    public Output<Double> getFloatValue() {
+    public Output<Double> floatValue() {
         return this.floatValue == null ? Codegen.empty() : this.floatValue;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="intValue")
       private final @Nullable Output<String> intValue;
 
-    public Output<String> getIntValue() {
+    public Output<String> intValue() {
         return this.intValue == null ? Codegen.empty() : this.intValue;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
-    public Output<String> getParameter() {
+    public Output<String> parameter() {
         return this.parameter == null ? Codegen.empty() : this.parameter;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 

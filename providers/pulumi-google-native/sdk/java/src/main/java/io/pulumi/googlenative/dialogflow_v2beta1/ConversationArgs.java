@@ -19,7 +19,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationId")
       private final @Nullable Output<String> conversationId;
 
-    public Output<String> getConversationId() {
+    public Output<String> conversationId() {
         return this.conversationId == null ? Codegen.empty() : this.conversationId;
     }
 
@@ -30,7 +30,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationProfile", required=true)
       private final Output<String> conversationProfile;
 
-    public Output<String> getConversationProfile() {
+    public Output<String> conversationProfile() {
         return this.conversationProfile;
     }
 
@@ -41,21 +41,21 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationStage")
       private final @Nullable Output<ConversationConversationStage> conversationStage;
 
-    public Output<ConversationConversationStage> getConversationStage() {
+    public Output<ConversationConversationStage> conversationStage() {
         return this.conversationStage == null ? Codegen.empty() : this.conversationStage;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -23,7 +23,7 @@ public final class DeliverInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 
@@ -34,7 +34,7 @@ public final class DeliverInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

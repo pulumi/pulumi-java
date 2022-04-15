@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
     @Import(name="doNotAssociateTerms", required=true)
       private final List<String> doNotAssociateTerms;
 
-    public List<String> getDoNotAssociateTerms() {
+    public List<String> doNotAssociateTerms() {
         return this.doNotAssociateTerms;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
     @Import(name="queryTerms", required=true)
       private final List<String> queryTerms;
 
-    public List<String> getQueryTerms() {
+    public List<String> queryTerms() {
         return this.queryTerms;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
     @Import(name="terms", required=true)
       private final List<String> terms;
 
-    public List<String> getTerms() {
+    public List<String> terms() {
         return this.terms;
     }
 

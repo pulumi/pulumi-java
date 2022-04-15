@@ -24,7 +24,7 @@ public final class GkeClusterResponse {
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
      * 
     */
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
 

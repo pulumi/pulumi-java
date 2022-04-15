@@ -26,7 +26,7 @@ public final class ReservationConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="throughputReservation")
       private final @Nullable Output<String> throughputReservation;
 
-    public Output<String> getThroughputReservation() {
+    public Output<String> throughputReservation() {
         return this.throughputReservation == null ? Codegen.empty() : this.throughputReservation;
     }
 

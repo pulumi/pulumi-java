@@ -23,7 +23,7 @@ public final class AutoscalingLimitsResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxServeNodes", required=true)
       private final Integer maxServeNodes;
 
-    public Integer getMaxServeNodes() {
+    public Integer maxServeNodes() {
         return this.maxServeNodes;
     }
 
@@ -34,7 +34,7 @@ public final class AutoscalingLimitsResponse extends io.pulumi.resources.InvokeA
     @Import(name="minServeNodes", required=true)
       private final Integer minServeNodes;
 
-    public Integer getMinServeNodes() {
+    public Integer minServeNodes() {
         return this.minServeNodes;
     }
 

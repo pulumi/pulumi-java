@@ -23,7 +23,7 @@ public final class AnnotationSourceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="cloudHealthcareSource", required=true)
       private final CloudHealthcareSourceResponse cloudHealthcareSource;
 
-    public CloudHealthcareSourceResponse getCloudHealthcareSource() {
+    public CloudHealthcareSourceResponse cloudHealthcareSource() {
         return this.cloudHealthcareSource;
     }
 

@@ -27,7 +27,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -38,7 +38,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoType")
       private final @Nullable Output<GitFileSourceRepoType> repoType;
 
-    public Output<GitFileSourceRepoType> getRepoType() {
+    public Output<GitFileSourceRepoType> repoType() {
         return this.repoType == null ? Codegen.empty() : this.repoType;
     }
 
@@ -49,7 +49,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revision")
       private final @Nullable Output<String> revision;
 
-    public Output<String> getRevision() {
+    public Output<String> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -60,7 +60,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

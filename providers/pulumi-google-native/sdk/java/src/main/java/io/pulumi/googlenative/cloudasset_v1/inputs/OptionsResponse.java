@@ -23,7 +23,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="analyzeServiceAccountImpersonation", required=true)
       private final Boolean analyzeServiceAccountImpersonation;
 
-    public Boolean getAnalyzeServiceAccountImpersonation() {
+    public Boolean analyzeServiceAccountImpersonation() {
         return this.analyzeServiceAccountImpersonation;
     }
 
@@ -34,7 +34,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expandGroups", required=true)
       private final Boolean expandGroups;
 
-    public Boolean getExpandGroups() {
+    public Boolean expandGroups() {
         return this.expandGroups;
     }
 
@@ -45,7 +45,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expandResources", required=true)
       private final Boolean expandResources;
 
-    public Boolean getExpandResources() {
+    public Boolean expandResources() {
         return this.expandResources;
     }
 
@@ -56,7 +56,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="expandRoles", required=true)
       private final Boolean expandRoles;
 
-    public Boolean getExpandRoles() {
+    public Boolean expandRoles() {
         return this.expandRoles;
     }
 
@@ -67,7 +67,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputGroupEdges", required=true)
       private final Boolean outputGroupEdges;
 
-    public Boolean getOutputGroupEdges() {
+    public Boolean outputGroupEdges() {
         return this.outputGroupEdges;
     }
 
@@ -78,7 +78,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputResourceEdges", required=true)
       private final Boolean outputResourceEdges;
 
-    public Boolean getOutputResourceEdges() {
+    public Boolean outputResourceEdges() {
         return this.outputResourceEdges;
     }
 

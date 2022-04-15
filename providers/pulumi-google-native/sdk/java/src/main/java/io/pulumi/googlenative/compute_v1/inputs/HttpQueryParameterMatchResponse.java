@@ -24,7 +24,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
     @Import(name="exactMatch", required=true)
       private final String exactMatch;
 
-    public String getExactMatch() {
+    public String exactMatch() {
         return this.exactMatch;
     }
 
@@ -35,7 +35,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
     @Import(name="presentMatch", required=true)
       private final Boolean presentMatch;
 
-    public Boolean getPresentMatch() {
+    public Boolean presentMatch() {
         return this.presentMatch;
     }
 
@@ -57,7 +57,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
     @Import(name="regexMatch", required=true)
       private final String regexMatch;
 
-    public String getRegexMatch() {
+    public String regexMatch() {
         return this.regexMatch;
     }
 

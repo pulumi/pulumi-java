@@ -24,7 +24,7 @@ public final class BasicYarnAutoscalingConfigResponse extends io.pulumi.resource
     @Import(name="gracefulDecommissionTimeout", required=true)
       private final String gracefulDecommissionTimeout;
 
-    public String getGracefulDecommissionTimeout() {
+    public String gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
 
@@ -35,7 +35,7 @@ public final class BasicYarnAutoscalingConfigResponse extends io.pulumi.resource
     @Import(name="scaleDownFactor", required=true)
       private final Double scaleDownFactor;
 
-    public Double getScaleDownFactor() {
+    public Double scaleDownFactor() {
         return this.scaleDownFactor;
     }
 
@@ -46,7 +46,7 @@ public final class BasicYarnAutoscalingConfigResponse extends io.pulumi.resource
     @Import(name="scaleDownMinWorkerFraction", required=true)
       private final Double scaleDownMinWorkerFraction;
 
-    public Double getScaleDownMinWorkerFraction() {
+    public Double scaleDownMinWorkerFraction() {
         return this.scaleDownMinWorkerFraction;
     }
 
@@ -57,7 +57,7 @@ public final class BasicYarnAutoscalingConfigResponse extends io.pulumi.resource
     @Import(name="scaleUpFactor", required=true)
       private final Double scaleUpFactor;
 
-    public Double getScaleUpFactor() {
+    public Double scaleUpFactor() {
         return this.scaleUpFactor;
     }
 
@@ -68,7 +68,7 @@ public final class BasicYarnAutoscalingConfigResponse extends io.pulumi.resource
     @Import(name="scaleUpMinWorkerFraction", required=true)
       private final Double scaleUpMinWorkerFraction;
 
-    public Double getScaleUpMinWorkerFraction() {
+    public Double scaleUpMinWorkerFraction() {
         return this.scaleUpMinWorkerFraction;
     }
 

@@ -17,14 +17,14 @@ public final class GetSslCertificateArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="sslCertificate", required=true)
       private final String sslCertificate;
 
-    public String getSslCertificate() {
+    public String sslCertificate() {
         return this.sslCertificate;
     }
 

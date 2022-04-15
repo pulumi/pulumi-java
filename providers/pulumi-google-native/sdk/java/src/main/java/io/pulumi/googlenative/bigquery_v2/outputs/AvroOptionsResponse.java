@@ -24,7 +24,7 @@ public final class AvroOptionsResponse {
      * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
      * 
     */
-    public Boolean getUseAvroLogicalTypes() {
+    public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
 

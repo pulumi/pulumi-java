@@ -21,7 +21,7 @@ public final class OperationWarningsItemResponse extends io.pulumi.resources.Inv
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -32,7 +32,7 @@ public final class OperationWarningsItemResponse extends io.pulumi.resources.Inv
     @Import(name="data", required=true)
       private final List<OperationWarningsItemDataItemResponse> data;
 
-    public List<OperationWarningsItemDataItemResponse> getData() {
+    public List<OperationWarningsItemDataItemResponse> data() {
         return this.data;
     }
 
@@ -43,7 +43,7 @@ public final class OperationWarningsItemResponse extends io.pulumi.resources.Inv
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

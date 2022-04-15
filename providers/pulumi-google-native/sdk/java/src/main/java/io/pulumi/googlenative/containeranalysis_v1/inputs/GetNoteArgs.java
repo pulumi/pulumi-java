@@ -17,14 +17,14 @@ public final class GetNoteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="noteId", required=true)
       private final String noteId;
 
-    public String getNoteId() {
+    public String noteId() {
         return this.noteId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

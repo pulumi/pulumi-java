@@ -24,14 +24,14 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
     @Import(name="envelope", required=true)
       private final EnvelopeResponse envelope;
 
-    public EnvelopeResponse getEnvelope() {
+    public EnvelopeResponse envelope() {
         return this.envelope;
     }
 
     @Import(name="statement", required=true)
       private final InTotoStatementResponse statement;
 
-    public InTotoStatementResponse getStatement() {
+    public InTotoStatementResponse statement() {
         return this.statement;
     }
 

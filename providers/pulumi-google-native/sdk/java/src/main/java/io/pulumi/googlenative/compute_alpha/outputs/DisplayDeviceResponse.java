@@ -24,7 +24,7 @@ public final class DisplayDeviceResponse {
      * Defines whether the instance has Display enabled.
      * 
     */
-    public Boolean getEnableDisplay() {
+    public Boolean enableDisplay() {
         return this.enableDisplay;
     }
 

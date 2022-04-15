@@ -28,7 +28,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payload")
       private final @Nullable Output<String> payload;
 
-    public Output<String> getPayload() {
+    public Output<String> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -39,7 +39,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadType")
       private final @Nullable Output<String> payloadType;
 
-    public Output<String> getPayloadType() {
+    public Output<String> payloadType() {
         return this.payloadType == null ? Codegen.empty() : this.payloadType;
     }
 
@@ -50,7 +50,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatures")
       private final @Nullable Output<List<EnvelopeSignatureArgs>> signatures;
 
-    public Output<List<EnvelopeSignatureArgs>> getSignatures() {
+    public Output<List<EnvelopeSignatureArgs>> signatures() {
         return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 

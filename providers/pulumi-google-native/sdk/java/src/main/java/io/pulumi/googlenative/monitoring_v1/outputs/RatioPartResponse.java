@@ -33,14 +33,14 @@ public final class RatioPartResponse {
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
      * 
     */
-    public AggregationResponse getAggregation() {
+    public AggregationResponse aggregation() {
         return this.aggregation;
     }
     /**
      * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
      * 
     */
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 

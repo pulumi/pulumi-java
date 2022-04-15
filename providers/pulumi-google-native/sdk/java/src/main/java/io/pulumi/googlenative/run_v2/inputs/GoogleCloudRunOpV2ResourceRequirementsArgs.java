@@ -28,7 +28,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
     @Import(name="cpuIdle")
       private final @Nullable Output<Boolean> cpuIdle;
 
-    public Output<Boolean> getCpuIdle() {
+    public Output<Boolean> cpuIdle() {
         return this.cpuIdle == null ? Codegen.empty() : this.cpuIdle;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
     @Import(name="limits")
       private final @Nullable Output<Map<String,String>> limits;
 
-    public Output<Map<String,String>> getLimits() {
+    public Output<Map<String,String>> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 

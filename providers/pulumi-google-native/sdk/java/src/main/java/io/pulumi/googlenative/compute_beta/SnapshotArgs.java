@@ -26,7 +26,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chainName")
       private final @Nullable Output<String> chainName;
 
-    public Output<String> getChainName() {
+    public Output<String> chainName() {
         return this.chainName == null ? Codegen.empty() : this.chainName;
     }
 
@@ -37,7 +37,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> getGuestFlush() {
+    public Output<Boolean> guestFlush() {
         return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
     }
 
@@ -59,7 +59,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -70,7 +70,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
-    public Output<String> getLocationHint() {
+    public Output<String> locationHint() {
         return this.locationHint == null ? Codegen.empty() : this.locationHint;
     }
 
@@ -81,21 +81,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -106,7 +106,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSnapshotEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey() {
         return this.snapshotEncryptionKey == null ? Codegen.empty() : this.snapshotEncryptionKey;
     }
 
@@ -117,7 +117,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
@@ -128,7 +128,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
     }
 
@@ -139,7 +139,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
     @Import(name="transcriptSegments", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
-    public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> getTranscriptSegments() {
+    public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments() {
         return this.transcriptSegments;
     }
 

@@ -23,7 +23,7 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends io.pulumi.res
     @Import(name="deployment", required=true)
       private final DeploymentResponse deployment;
 
-    public DeploymentResponse getDeployment() {
+    public DeploymentResponse deployment() {
         return this.deployment;
     }
 

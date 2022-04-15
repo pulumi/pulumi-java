@@ -23,7 +23,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="clusterNetworkUri", required=true)
       private final String clusterNetworkUri;
 
-    public String getClusterNetworkUri() {
+    public String clusterNetworkUri() {
         return this.clusterNetworkUri;
     }
 
@@ -34,7 +34,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="clusterUri", required=true)
       private final String clusterUri;
 
-    public String getClusterUri() {
+    public String clusterUri() {
         return this.clusterUri;
     }
 
@@ -45,7 +45,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="externalIp", required=true)
       private final String externalIp;
 
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
 
@@ -56,7 +56,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="internalIp", required=true)
       private final String internalIp;
 
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
 

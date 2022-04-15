@@ -32,14 +32,14 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse {
      * Unique identifier for the subnetwork; defined by the server.
      * 
     */
-    public String getCanonicalUrl() {
+    public String canonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

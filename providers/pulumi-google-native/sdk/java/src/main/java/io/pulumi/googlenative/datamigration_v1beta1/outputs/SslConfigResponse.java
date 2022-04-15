@@ -46,28 +46,28 @@ public final class SslConfigResponse {
      * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.
      * 
     */
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
     /**
      * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.
      * 
     */
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
      * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.
      * 
     */
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
     /**
      * The ssl config type according to 'client_key', 'client_certificate' and 'ca_certificate'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

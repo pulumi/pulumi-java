@@ -33,14 +33,14 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
      * Contact people for the entry.
      * 
     */
-    public GoogleCloudDatacatalogV1ContactsResponse getContacts() {
+    public GoogleCloudDatacatalogV1ContactsResponse contacts() {
         return this.contacts;
     }
     /**
      * Entry overview fields for rich text descriptions of entries.
      * 
     */
-    public GoogleCloudDatacatalogV1EntryOverviewResponse getEntryOverview() {
+    public GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview() {
         return this.entryOverview;
     }
 

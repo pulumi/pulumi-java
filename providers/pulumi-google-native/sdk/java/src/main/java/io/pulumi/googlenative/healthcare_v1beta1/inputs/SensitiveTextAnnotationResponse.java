@@ -24,7 +24,7 @@ public final class SensitiveTextAnnotationResponse extends io.pulumi.resources.I
     @Import(name="details", required=true)
       private final Map<String,String> details;
 
-    public Map<String,String> getDetails() {
+    public Map<String,String> details() {
         return this.details;
     }
 

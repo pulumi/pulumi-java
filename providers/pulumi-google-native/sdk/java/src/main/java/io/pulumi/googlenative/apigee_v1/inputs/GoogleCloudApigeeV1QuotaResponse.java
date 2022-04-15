@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
     @Import(name="interval", required=true)
       private final String interval;
 
-    public String getInterval() {
+    public String interval() {
         return this.interval;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
     @Import(name="limit", required=true)
       private final String limit;
 
-    public String getLimit() {
+    public String limit() {
         return this.limit;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
     @Import(name="timeUnit", required=true)
       private final String timeUnit;
 
-    public String getTimeUnit() {
+    public String timeUnit() {
         return this.timeUnit;
     }
 

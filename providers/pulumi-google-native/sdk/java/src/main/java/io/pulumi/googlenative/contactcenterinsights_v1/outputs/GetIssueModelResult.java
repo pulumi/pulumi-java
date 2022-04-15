@@ -69,49 +69,49 @@ public final class GetIssueModelResult {
      * The time at which this issue model was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The representative name for the issue model.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Configs for the input data that used to create the issue model.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse getInputDataConfig() {
+    public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig() {
         return this.inputDataConfig;
     }
     /**
      * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the model.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Immutable. The issue model's label statistics on its training data.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse getTrainingStats() {
+    public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats() {
         return this.trainingStats;
     }
     /**
      * The most recent time at which the issue model was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

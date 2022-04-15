@@ -27,7 +27,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<AttachedDiskMode> mode;
 
-    public Output<AttachedDiskMode> getMode() {
+    public Output<AttachedDiskMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -38,7 +38,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 

@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
     @Import(name="features")
       private final @Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features;
 
-    public Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> getFeatures() {
+    public Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
     @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService;
 
-    public Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> getGenericWebService() {
+    public Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService() {
         return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -23,7 +23,7 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="method", required=true)
       private final String method;
 
-    public String getMethod() {
+    public String method() {
         return this.method;
     }
 
@@ -34,7 +34,7 @@ public final class MethodSelectorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="permission", required=true)
       private final String permission;
 
-    public String getPermission() {
+    public String permission() {
         return this.permission;
     }
 

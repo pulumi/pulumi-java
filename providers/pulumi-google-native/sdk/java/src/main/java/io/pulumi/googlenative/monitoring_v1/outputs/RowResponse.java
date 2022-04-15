@@ -34,14 +34,14 @@ public final class RowResponse {
      * The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
      * 
     */
-    public String getWeight() {
+    public String weight() {
         return this.weight;
     }
     /**
      * The display widgets arranged horizontally in this row.
      * 
     */
-    public List<WidgetResponse> getWidgets() {
+    public List<WidgetResponse> widgets() {
         return this.widgets;
     }
 

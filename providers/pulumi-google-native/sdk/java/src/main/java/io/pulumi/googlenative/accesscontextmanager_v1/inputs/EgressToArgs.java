@@ -28,7 +28,7 @@ public final class EgressToArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operations")
       private final @Nullable Output<List<ApiOperationArgs>> operations;
 
-    public Output<List<ApiOperationArgs>> getOperations() {
+    public Output<List<ApiOperationArgs>> operations() {
         return this.operations == null ? Codegen.empty() : this.operations;
     }
 
@@ -39,7 +39,7 @@ public final class EgressToArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 

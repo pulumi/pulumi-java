@@ -23,7 +23,7 @@ public final class RetentionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="perPartitionBytes", required=true)
       private final String perPartitionBytes;
 
-    public String getPerPartitionBytes() {
+    public String perPartitionBytes() {
         return this.perPartitionBytes;
     }
 
@@ -34,7 +34,7 @@ public final class RetentionConfigResponse extends io.pulumi.resources.InvokeArg
     @Import(name="period", required=true)
       private final String period;
 
-    public String getPeriod() {
+    public String period() {
         return this.period;
     }
 

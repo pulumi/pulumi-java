@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
     @Import(name="requestedOptions", required=true)
       private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
 
-    public GooglePrivacyDlpV2RequestedOptionsResponse getRequestedOptions() {
+    public GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions() {
         return this.requestedOptions;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
     @Import(name="result", required=true)
       private final GooglePrivacyDlpV2ResultResponse result;
 
-    public GooglePrivacyDlpV2ResultResponse getResult() {
+    public GooglePrivacyDlpV2ResultResponse result() {
         return this.result;
     }
 

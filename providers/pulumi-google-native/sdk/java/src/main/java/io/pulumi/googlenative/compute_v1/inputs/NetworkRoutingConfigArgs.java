@@ -26,7 +26,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
     @Import(name="routingMode")
       private final @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
-    public Output<NetworkRoutingConfigRoutingMode> getRoutingMode() {
+    public Output<NetworkRoutingConfigRoutingMode> routingMode() {
         return this.routingMode == null ? Codegen.empty() : this.routingMode;
     }
 

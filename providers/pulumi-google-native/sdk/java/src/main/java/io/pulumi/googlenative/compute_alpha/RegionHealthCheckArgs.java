@@ -32,7 +32,7 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
 
-    public Output<Integer> getCheckIntervalSec() {
+    public Output<Integer> checkIntervalSec() {
         return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
     }
 
@@ -43,14 +43,14 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="grpcHealthCheck")
       private final @Nullable Output<GRPCHealthCheckArgs> grpcHealthCheck;
 
-    public Output<GRPCHealthCheckArgs> getGrpcHealthCheck() {
+    public Output<GRPCHealthCheckArgs> grpcHealthCheck() {
         return this.grpcHealthCheck == null ? Codegen.empty() : this.grpcHealthCheck;
     }
 
@@ -61,28 +61,28 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     @Import(name="http2HealthCheck")
       private final @Nullable Output<HTTP2HealthCheckArgs> http2HealthCheck;
 
-    public Output<HTTP2HealthCheckArgs> getHttp2HealthCheck() {
+    public Output<HTTP2HealthCheckArgs> http2HealthCheck() {
         return this.http2HealthCheck == null ? Codegen.empty() : this.http2HealthCheck;
     }
 
     @Import(name="httpHealthCheck")
       private final @Nullable Output<HTTPHealthCheckArgs> httpHealthCheck;
 
-    public Output<HTTPHealthCheckArgs> getHttpHealthCheck() {
+    public Output<HTTPHealthCheckArgs> httpHealthCheck() {
         return this.httpHealthCheck == null ? Codegen.empty() : this.httpHealthCheck;
     }
 
     @Import(name="httpsHealthCheck")
       private final @Nullable Output<HTTPSHealthCheckArgs> httpsHealthCheck;
 
-    public Output<HTTPSHealthCheckArgs> getHttpsHealthCheck() {
+    public Output<HTTPSHealthCheckArgs> httpsHealthCheck() {
         return this.httpsHealthCheck == null ? Codegen.empty() : this.httpsHealthCheck;
     }
 
@@ -93,7 +93,7 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -104,7 +104,7 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logConfig")
       private final @Nullable Output<HealthCheckLogConfigArgs> logConfig;
 
-    public Output<HealthCheckLogConfigArgs> getLogConfig() {
+    public Output<HealthCheckLogConfigArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -115,42 +115,42 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="sslHealthCheck")
       private final @Nullable Output<SSLHealthCheckArgs> sslHealthCheck;
 
-    public Output<SSLHealthCheckArgs> getSslHealthCheck() {
+    public Output<SSLHealthCheckArgs> sslHealthCheck() {
         return this.sslHealthCheck == null ? Codegen.empty() : this.sslHealthCheck;
     }
 
     @Import(name="tcpHealthCheck")
       private final @Nullable Output<TCPHealthCheckArgs> tcpHealthCheck;
 
-    public Output<TCPHealthCheckArgs> getTcpHealthCheck() {
+    public Output<TCPHealthCheckArgs> tcpHealthCheck() {
         return this.tcpHealthCheck == null ? Codegen.empty() : this.tcpHealthCheck;
     }
 
@@ -161,7 +161,7 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
@@ -172,14 +172,14 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<RegionHealthCheckType> type;
 
-    public Output<RegionHealthCheckType> getType() {
+    public Output<RegionHealthCheckType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="udpHealthCheck")
       private final @Nullable Output<UDPHealthCheckArgs> udpHealthCheck;
 
-    public Output<UDPHealthCheckArgs> getUdpHealthCheck() {
+    public Output<UDPHealthCheckArgs> udpHealthCheck() {
         return this.udpHealthCheck == null ? Codegen.empty() : this.udpHealthCheck;
     }
 
@@ -190,7 +190,7 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 

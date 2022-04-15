@@ -18,7 +18,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
@@ -29,21 +29,21 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
     @Import(name="encryptionConfigEncryptionType", required=true)
       private final Output<String> encryptionConfigEncryptionType;
 
-    public Output<String> getEncryptionConfigEncryptionType() {
+    public Output<String> encryptionConfigEncryptionType() {
         return this.encryptionConfigEncryptionType;
     }
 
     @Import(name="encryptionConfigKmsKeyName")
       private final @Nullable Output<String> encryptionConfigKmsKeyName;
 
-    public Output<String> getEncryptionConfigKmsKeyName() {
+    public Output<String> encryptionConfigKmsKeyName() {
         return this.encryptionConfigKmsKeyName == null ? Codegen.empty() : this.encryptionConfigKmsKeyName;
     }
 
@@ -54,14 +54,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -72,14 +72,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -90,7 +90,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionTime")
       private final @Nullable Output<String> versionTime;
 
-    public Output<String> getVersionTime() {
+    public Output<String> versionTime() {
         return this.versionTime == null ? Codegen.empty() : this.versionTime;
     }
 

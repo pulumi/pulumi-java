@@ -26,7 +26,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publicKeyCertificate")
       private final @Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate;
 
-    public Output<PublicKeyCertificateArgs> getPublicKeyCertificate() {
+    public Output<PublicKeyCertificateArgs> publicKeyCertificate() {
         return this.publicKeyCertificate == null ? Codegen.empty() : this.publicKeyCertificate;
     }
 

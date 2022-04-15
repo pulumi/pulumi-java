@@ -23,7 +23,7 @@ public final class RequestMirrorPolicyResponse extends io.pulumi.resources.Invok
     @Import(name="backendService", required=true)
       private final String backendService;
 
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
 

@@ -46,28 +46,28 @@ public final class BackupInfoResponse {
      * Name of the backup.
      * 
     */
-    public String getBackup() {
+    public String backup() {
         return this.backup;
     }
     /**
      * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Name of the table the backup was created from.
      * 
     */
-    public String getSourceTable() {
+    public String sourceTable() {
         return this.sourceTable;
     }
     /**
      * The time that the backup was started. Row data in the backup will be no older than this timestamp.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

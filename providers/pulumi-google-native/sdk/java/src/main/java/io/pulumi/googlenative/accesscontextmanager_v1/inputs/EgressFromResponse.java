@@ -24,7 +24,7 @@ public final class EgressFromResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="identities", required=true)
       private final List<String> identities;
 
-    public List<String> getIdentities() {
+    public List<String> identities() {
         return this.identities;
     }
 
@@ -35,7 +35,7 @@ public final class EgressFromResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="identityType", required=true)
       private final String identityType;
 
-    public String getIdentityType() {
+    public String identityType() {
         return this.identityType;
     }
 

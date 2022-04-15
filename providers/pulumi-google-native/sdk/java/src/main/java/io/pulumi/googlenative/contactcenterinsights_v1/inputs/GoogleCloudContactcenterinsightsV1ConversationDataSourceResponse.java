@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     @Import(name="dialogflowSource", required=true)
       private final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource;
 
-    public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse getDialogflowSource() {
+    public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource() {
         return this.dialogflowSource;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     @Import(name="gcsSource", required=true)
       private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
-    public GoogleCloudContactcenterinsightsV1GcsSourceResponse getGcsSource() {
+    public GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource() {
         return this.gcsSource;
     }
 

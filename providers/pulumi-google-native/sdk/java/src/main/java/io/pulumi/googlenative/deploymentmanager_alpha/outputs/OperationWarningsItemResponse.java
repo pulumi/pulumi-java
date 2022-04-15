@@ -41,21 +41,21 @@ public final class OperationWarningsItemResponse {
      * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
      * 
     */
-    public List<OperationWarningsItemDataItemResponse> getData() {
+    public List<OperationWarningsItemDataItemResponse> data() {
         return this.data;
     }
     /**
      * A human-readable description of the warning code.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

@@ -32,7 +32,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The domain name of the association.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -46,7 +46,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return If set, the domain should redirect with the provided parameters.
      * 
      */
-    public Output<DomainRedirectResponse> getDomainRedirect() {
+    public Output<DomainRedirectResponse> domainRedirect() {
         return this.domainRedirect;
     }
     /**
@@ -60,7 +60,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Information about the provisioning of certificates and the health of the DNS resolution for the domain.
      * 
      */
-    public Output<DomainProvisioningResponse> getProvisioning() {
+    public Output<DomainProvisioningResponse> provisioning() {
         return this.provisioning;
     }
     /**
@@ -74,7 +74,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The site name of the association.
      * 
      */
-    public Output<String> getSite() {
+    public Output<String> site() {
         return this.site;
     }
     /**
@@ -88,7 +88,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return Additional status of the domain association.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -102,7 +102,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The time at which the domain was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

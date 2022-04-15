@@ -42,21 +42,21 @@ public final class UpgradeNoteResponse {
      * Metadata about the upgrade for each specific operating system.
      * 
     */
-    public List<UpgradeDistributionResponse> getDistributions() {
+    public List<UpgradeDistributionResponse> distributions() {
         return this.distributions;
     }
     /**
      * Required - The package this Upgrade is for.
      * 
     */
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
     /**
      * Required - The version of the package in machine + human readable form.
      * 
     */
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
 

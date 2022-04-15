@@ -39,21 +39,21 @@ public final class BigTableIODetailsResponse {
      * InstanceId accessed in the connection.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
     /**
      * ProjectId accessed in the connection.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * TableId accessed in the connection.
      * 
     */
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

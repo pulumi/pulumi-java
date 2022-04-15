@@ -19,7 +19,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
     @Import(name="apiproduct", required=true)
       private final String apiproduct;
 
-    public String getApiproduct() {
+    public String apiproduct() {
         return this.apiproduct;
     }
 
@@ -30,7 +30,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

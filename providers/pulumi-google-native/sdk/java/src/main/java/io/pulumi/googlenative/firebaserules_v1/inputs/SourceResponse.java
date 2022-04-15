@@ -24,7 +24,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="files", required=true)
       private final List<FileResponse> files;
 
-    public List<FileResponse> getFiles() {
+    public List<FileResponse> files() {
         return this.files;
     }
 

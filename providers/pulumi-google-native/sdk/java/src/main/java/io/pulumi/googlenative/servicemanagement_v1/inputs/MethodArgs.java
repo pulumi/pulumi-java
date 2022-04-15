@@ -30,7 +30,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -41,7 +41,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> getOptions() {
+    public Output<List<OptionArgs>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -52,7 +52,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestStreaming")
       private final @Nullable Output<Boolean> requestStreaming;
 
-    public Output<Boolean> getRequestStreaming() {
+    public Output<Boolean> requestStreaming() {
         return this.requestStreaming == null ? Codegen.empty() : this.requestStreaming;
     }
 
@@ -63,7 +63,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestTypeUrl")
       private final @Nullable Output<String> requestTypeUrl;
 
-    public Output<String> getRequestTypeUrl() {
+    public Output<String> requestTypeUrl() {
         return this.requestTypeUrl == null ? Codegen.empty() : this.requestTypeUrl;
     }
 
@@ -74,7 +74,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseStreaming")
       private final @Nullable Output<Boolean> responseStreaming;
 
-    public Output<Boolean> getResponseStreaming() {
+    public Output<Boolean> responseStreaming() {
         return this.responseStreaming == null ? Codegen.empty() : this.responseStreaming;
     }
 
@@ -85,7 +85,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseTypeUrl")
       private final @Nullable Output<String> responseTypeUrl;
 
-    public Output<String> getResponseTypeUrl() {
+    public Output<String> responseTypeUrl() {
         return this.responseTypeUrl == null ? Codegen.empty() : this.responseTypeUrl;
     }
 
@@ -96,7 +96,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
       private final @Nullable Output<MethodSyntax> syntax;
 
-    public Output<MethodSyntax> getSyntax() {
+    public Output<MethodSyntax> syntax() {
         return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 

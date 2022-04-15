@@ -26,7 +26,7 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 

@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="featureConfigs")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs;
 
-    public Output<List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> getFeatureConfigs() {
+    public Output<List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs() {
         return this.featureConfigs == null ? Codegen.empty() : this.featureConfigs;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="groupSuggestionResponses")
       private final @Nullable Output<Boolean> groupSuggestionResponses;
 
-    public Output<Boolean> getGroupSuggestionResponses() {
+    public Output<Boolean> groupSuggestionResponses() {
         return this.groupSuggestionResponses == null ? Codegen.empty() : this.groupSuggestionResponses;
     }
 

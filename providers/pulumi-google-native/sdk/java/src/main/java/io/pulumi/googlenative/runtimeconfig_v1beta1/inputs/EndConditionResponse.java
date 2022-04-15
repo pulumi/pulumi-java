@@ -23,7 +23,7 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cardinality", required=true)
       private final CardinalityResponse cardinality;
 
-    public CardinalityResponse getCardinality() {
+    public CardinalityResponse cardinality() {
         return this.cardinality;
     }
 

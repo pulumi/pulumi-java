@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
      * Start time of the current step.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Display name of the current auto rollout step.
      * 
     */
-    public String getStep() {
+    public String step() {
         return this.step;
     }
     /**
      * Index of the current step in the auto rollout steps list.
      * 
     */
-    public Integer getStepIndex() {
+    public Integer stepIndex() {
         return this.stepIndex;
     }
 

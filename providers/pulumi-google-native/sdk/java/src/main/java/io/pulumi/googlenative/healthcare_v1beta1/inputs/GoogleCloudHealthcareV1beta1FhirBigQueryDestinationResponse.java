@@ -25,7 +25,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
     @Import(name="datasetUri", required=true)
       private final String datasetUri;
 
-    public String getDatasetUri() {
+    public String datasetUri() {
         return this.datasetUri;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
     @Import(name="force", required=true)
       private final Boolean force;
 
-    public Boolean getForce() {
+    public Boolean force() {
         return this.force;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
     @Import(name="schemaConfig", required=true)
       private final SchemaConfigResponse schemaConfig;
 
-    public SchemaConfigResponse getSchemaConfig() {
+    public SchemaConfigResponse schemaConfig() {
         return this.schemaConfig;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
     @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
-    public String getWriteDisposition() {
+    public String writeDisposition() {
         return this.writeDisposition;
     }
 

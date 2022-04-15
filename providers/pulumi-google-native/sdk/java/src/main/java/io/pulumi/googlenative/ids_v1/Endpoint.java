@@ -32,7 +32,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The create time timestamp.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +46,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return User-provided description of the endpoint
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The fully qualified URL of the endpoint's ILB Forwarding Rule.
      * 
      */
-    public Output<String> getEndpointForwardingRule() {
+    public Output<String> endpointForwardingRule() {
         return this.endpointForwardingRule;
     }
     /**
@@ -74,7 +74,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The IP address of the IDS Endpoint's ILB.
      * 
      */
-    public Output<String> getEndpointIp() {
+    public Output<String> endpointIp() {
         return this.endpointIp;
     }
     /**
@@ -88,7 +88,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The labels of the endpoint.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -102,7 +102,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the endpoint.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The fully qualified URL of the network to which the IDS Endpoint is attached.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -130,7 +130,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Lowest threat severity that this endpoint will alert on.
      * 
      */
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity;
     }
     /**
@@ -144,7 +144,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Current state of the endpoint.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -158,7 +158,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return Whether the endpoint should report traffic logs in addition to threat logs.
      * 
      */
-    public Output<Boolean> getTrafficLogs() {
+    public Output<Boolean> trafficLogs() {
         return this.trafficLogs;
     }
     /**
@@ -172,7 +172,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The update time timestamp.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

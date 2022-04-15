@@ -29,7 +29,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="elapsedTime")
       private final @Nullable Output<DurationArgs> elapsedTime;
 
-    public Output<DurationArgs> getElapsedTime() {
+    public Output<DurationArgs> elapsedTime() {
         return this.elapsedTime == null ? Codegen.empty() : this.elapsedTime;
     }
 
@@ -40,7 +40,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="errorCount")
       private final @Nullable Output<Integer> errorCount;
 
-    public Output<Integer> getErrorCount() {
+    public Output<Integer> errorCount() {
         return this.errorCount == null ? Codegen.empty() : this.errorCount;
     }
 
@@ -51,7 +51,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="failureCount")
       private final @Nullable Output<Integer> failureCount;
 
-    public Output<Integer> getFailureCount() {
+    public Output<Integer> failureCount() {
         return this.failureCount == null ? Codegen.empty() : this.failureCount;
     }
 
@@ -62,7 +62,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="flakyCount")
       private final @Nullable Output<Integer> flakyCount;
 
-    public Output<Integer> getFlakyCount() {
+    public Output<Integer> flakyCount() {
         return this.flakyCount == null ? Codegen.empty() : this.flakyCount;
     }
 
@@ -73,7 +73,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="skippedCount")
       private final @Nullable Output<Integer> skippedCount;
 
-    public Output<Integer> getSkippedCount() {
+    public Output<Integer> skippedCount() {
         return this.skippedCount == null ? Codegen.empty() : this.skippedCount;
     }
 
@@ -95,7 +95,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="totalCount")
       private final @Nullable Output<Integer> totalCount;
 
-    public Output<Integer> getTotalCount() {
+    public Output<Integer> totalCount() {
         return this.totalCount == null ? Codegen.empty() : this.totalCount;
     }
 
@@ -106,7 +106,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     @Import(name="xmlSource")
       private final @Nullable Output<FileReferenceArgs> xmlSource;
 
-    public Output<FileReferenceArgs> getXmlSource() {
+    public Output<FileReferenceArgs> xmlSource() {
         return this.xmlSource == null ? Codegen.empty() : this.xmlSource;
     }
 

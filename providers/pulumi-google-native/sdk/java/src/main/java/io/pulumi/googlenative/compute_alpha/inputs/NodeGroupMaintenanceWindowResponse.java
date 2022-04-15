@@ -24,7 +24,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -35,7 +35,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
     @Import(name="maintenanceDuration", required=true)
       private final DurationResponse maintenanceDuration;
 
-    public DurationResponse getMaintenanceDuration() {
+    public DurationResponse maintenanceDuration() {
         return this.maintenanceDuration;
     }
 
@@ -46,7 +46,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

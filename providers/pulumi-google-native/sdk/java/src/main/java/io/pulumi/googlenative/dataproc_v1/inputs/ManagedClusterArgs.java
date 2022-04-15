@@ -28,7 +28,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config", required=true)
       private final Output<ClusterConfigArgs> config;
 
-    public Output<ClusterConfigArgs> getConfig() {
+    public Output<ClusterConfigArgs> config() {
         return this.config;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

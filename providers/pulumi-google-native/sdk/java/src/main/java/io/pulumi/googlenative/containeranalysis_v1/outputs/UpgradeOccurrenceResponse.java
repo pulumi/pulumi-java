@@ -49,28 +49,28 @@ public final class UpgradeOccurrenceResponse {
      * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
     */
-    public UpgradeDistributionResponse getDistribution() {
+    public UpgradeDistributionResponse distribution() {
         return this.distribution;
     }
     /**
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
     */
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
     /**
      * Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
     */
-    public VersionResponse getParsedVersion() {
+    public VersionResponse parsedVersion() {
         return this.parsedVersion;
     }
     /**
      * Required for Windows OS. Represents the metadata about the Windows update.
      * 
     */
-    public WindowsUpdateResponse getWindowsUpdate() {
+    public WindowsUpdateResponse windowsUpdate() {
         return this.windowsUpdate;
     }
 

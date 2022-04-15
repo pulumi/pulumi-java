@@ -17,28 +17,28 @@ public final class GetImportJobArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="importJobId", required=true)
       private final String importJobId;
 
-    public String getImportJobId() {
+    public String importJobId() {
         return this.importJobId;
     }
 
     @Import(name="keyRingId", required=true)
       private final String keyRingId;
 
-    public String getKeyRingId() {
+    public String keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

@@ -40,21 +40,21 @@ public final class LocalDiskResponse {
      * Specifies the number of such disks.
      * 
     */
-    public Integer getDiskCount() {
+    public Integer diskCount() {
         return this.diskCount;
     }
     /**
      * Specifies the size of the disk in base-2 GB.
      * 
     */
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
      * 
     */
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 

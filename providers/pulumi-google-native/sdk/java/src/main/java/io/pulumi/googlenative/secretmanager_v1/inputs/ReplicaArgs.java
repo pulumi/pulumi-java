@@ -27,7 +27,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerManagedEncryption")
       private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
+    public Output<CustomerManagedEncryptionArgs> customerManagedEncryption() {
         return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 
@@ -38,7 +38,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 

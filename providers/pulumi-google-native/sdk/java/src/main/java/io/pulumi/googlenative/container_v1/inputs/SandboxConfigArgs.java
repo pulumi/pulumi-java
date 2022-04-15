@@ -26,7 +26,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<SandboxConfigType> type;
 
-    public Output<SandboxConfigType> getType() {
+    public Output<SandboxConfigType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

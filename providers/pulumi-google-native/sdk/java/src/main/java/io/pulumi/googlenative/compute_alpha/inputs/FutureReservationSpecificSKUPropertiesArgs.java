@@ -23,7 +23,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
     @Import(name="instanceProperties")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
-    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
+    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties() {
         return this.instanceProperties == null ? Codegen.empty() : this.instanceProperties;
     }
 
@@ -34,7 +34,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
     @Import(name="totalCount")
       private final @Nullable Output<String> totalCount;
 
-    public Output<String> getTotalCount() {
+    public Output<String> totalCount() {
         return this.totalCount == null ? Codegen.empty() : this.totalCount;
     }
 

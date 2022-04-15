@@ -46,28 +46,28 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      * Live Agent chat button ID.
      * 
     */
-    public String getButtonId() {
+    public String buttonId() {
         return this.buttonId;
     }
     /**
      * Live Agent deployment ID.
      * 
     */
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
     /**
      * Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
      * 
     */
-    public String getEndpointDomain() {
+    public String endpointDomain() {
         return this.endpointDomain;
     }
     /**
      * The organization ID of the Salesforce account.
      * 
     */
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

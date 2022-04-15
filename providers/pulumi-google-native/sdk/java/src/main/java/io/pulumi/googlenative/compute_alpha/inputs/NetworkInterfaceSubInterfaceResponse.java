@@ -20,14 +20,14 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
     @Import(name="ipAllocationMode", required=true)
       private final String ipAllocationMode;
 
-    public String getIpAllocationMode() {
+    public String ipAllocationMode() {
         return this.ipAllocationMode;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
     @Import(name="vlan", required=true)
       private final Integer vlan;
 
-    public Integer getVlan() {
+    public Integer vlan() {
         return this.vlan;
     }
 

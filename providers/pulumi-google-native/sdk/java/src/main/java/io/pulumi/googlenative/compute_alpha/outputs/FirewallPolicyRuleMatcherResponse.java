@@ -91,70 +91,70 @@ public final class FirewallPolicyRuleMatcherResponse {
      * Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
      * 
     */
-    public List<String> getDestAddressGroups() {
+    public List<String> destAddressGroups() {
         return this.destAddressGroups;
     }
     /**
      * Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 1000.
      * 
     */
-    public List<String> getDestFqdns() {
+    public List<String> destFqdns() {
         return this.destFqdns;
     }
     /**
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
      * 
     */
-    public List<String> getDestIpRanges() {
+    public List<String> destIpRanges() {
         return this.destIpRanges;
     }
     /**
      * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
      * 
     */
-    public List<String> getDestRegionCodes() {
+    public List<String> destRegionCodes() {
         return this.destRegionCodes;
     }
     /**
      * Pairs of IP protocols and ports that the rule should match.
      * 
     */
-    public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> getLayer4Configs() {
+    public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
     /**
      * Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
      * 
     */
-    public List<String> getSrcAddressGroups() {
+    public List<String> srcAddressGroups() {
         return this.srcAddressGroups;
     }
     /**
      * Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 1000.
      * 
     */
-    public List<String> getSrcFqdns() {
+    public List<String> srcFqdns() {
         return this.srcFqdns;
     }
     /**
      * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
      * 
     */
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
     /**
      * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
      * 
     */
-    public List<String> getSrcRegionCodes() {
+    public List<String> srcRegionCodes() {
         return this.srcRegionCodes;
     }
     /**
      * List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
      * 
     */
-    public List<FirewallPolicyRuleSecureTagResponse> getSrcSecureTags() {
+    public List<FirewallPolicyRuleSecureTagResponse> srcSecureTags() {
         return this.srcSecureTags;
     }
 

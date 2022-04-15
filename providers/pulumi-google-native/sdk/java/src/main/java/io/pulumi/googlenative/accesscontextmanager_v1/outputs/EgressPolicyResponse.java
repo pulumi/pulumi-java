@@ -33,14 +33,14 @@ public final class EgressPolicyResponse {
      * Defines conditions on the source of a request causing this EgressPolicy to apply.
      * 
     */
-    public EgressFromResponse getEgressFrom() {
+    public EgressFromResponse egressFrom() {
         return this.egressFrom;
     }
     /**
      * Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
      * 
     */
-    public EgressToResponse getEgressTo() {
+    public EgressToResponse egressTo() {
         return this.egressTo;
     }
 

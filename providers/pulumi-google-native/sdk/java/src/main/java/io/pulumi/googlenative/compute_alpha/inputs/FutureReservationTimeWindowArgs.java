@@ -19,14 +19,14 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
     @Import(name="duration")
       private final @Nullable Output<DurationArgs> duration;
 
-    public Output<DurationArgs> getDuration() {
+    public Output<DurationArgs> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -37,7 +37,7 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

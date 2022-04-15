@@ -23,7 +23,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -45,7 +45,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

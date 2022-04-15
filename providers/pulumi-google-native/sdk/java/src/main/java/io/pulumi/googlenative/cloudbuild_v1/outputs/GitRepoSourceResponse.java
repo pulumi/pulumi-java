@@ -39,21 +39,21 @@ public final class GitRepoSourceResponse {
      * The branch or tag to use. Must start with "refs/" (required).
      * 
     */
-    public String getRef() {
+    public String ref() {
         return this.ref;
     }
     /**
      * See RepoType below.
      * 
     */
-    public String getRepoType() {
+    public String repoType() {
         return this.repoType;
     }
     /**
      * The URI of the repo (required).
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

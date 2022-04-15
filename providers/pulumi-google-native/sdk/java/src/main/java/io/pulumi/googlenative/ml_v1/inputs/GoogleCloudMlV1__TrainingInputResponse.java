@@ -29,7 +29,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="enableWebAccess", required=true)
       private final Boolean enableWebAccess;
 
-    public Boolean getEnableWebAccess() {
+    public Boolean enableWebAccess() {
         return this.enableWebAccess;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="encryptionConfig", required=true)
       private final GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig;
 
-    public GoogleCloudMlV1__EncryptionConfigResponse getEncryptionConfig() {
+    public GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="evaluatorConfig", required=true)
       private final GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig;
 
-    public GoogleCloudMlV1__ReplicaConfigResponse getEvaluatorConfig() {
+    public GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig() {
         return this.evaluatorConfig;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="evaluatorCount", required=true)
       private final String evaluatorCount;
 
-    public String getEvaluatorCount() {
+    public String evaluatorCount() {
         return this.evaluatorCount;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="evaluatorType", required=true)
       private final String evaluatorType;
 
-    public String getEvaluatorType() {
+    public String evaluatorType() {
         return this.evaluatorType;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="hyperparameters", required=true)
       private final GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters;
 
-    public GoogleCloudMlV1__HyperparameterSpecResponse getHyperparameters() {
+    public GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters() {
         return this.hyperparameters;
     }
 
@@ -106,7 +106,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="jobDir", required=true)
       private final String jobDir;
 
-    public String getJobDir() {
+    public String jobDir() {
         return this.jobDir;
     }
 
@@ -117,7 +117,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="masterConfig", required=true)
       private final GoogleCloudMlV1__ReplicaConfigResponse masterConfig;
 
-    public GoogleCloudMlV1__ReplicaConfigResponse getMasterConfig() {
+    public GoogleCloudMlV1__ReplicaConfigResponse masterConfig() {
         return this.masterConfig;
     }
 
@@ -128,7 +128,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="masterType", required=true)
       private final String masterType;
 
-    public String getMasterType() {
+    public String masterType() {
         return this.masterType;
     }
 
@@ -139,7 +139,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -150,7 +150,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="packageUris", required=true)
       private final List<String> packageUris;
 
-    public List<String> getPackageUris() {
+    public List<String> packageUris() {
         return this.packageUris;
     }
 
@@ -161,7 +161,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="parameterServerConfig", required=true)
       private final GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig;
 
-    public GoogleCloudMlV1__ReplicaConfigResponse getParameterServerConfig() {
+    public GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig() {
         return this.parameterServerConfig;
     }
 
@@ -172,7 +172,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="parameterServerCount", required=true)
       private final String parameterServerCount;
 
-    public String getParameterServerCount() {
+    public String parameterServerCount() {
         return this.parameterServerCount;
     }
 
@@ -183,7 +183,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="parameterServerType", required=true)
       private final String parameterServerType;
 
-    public String getParameterServerType() {
+    public String parameterServerType() {
         return this.parameterServerType;
     }
 
@@ -194,7 +194,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="pythonModule", required=true)
       private final String pythonModule;
 
-    public String getPythonModule() {
+    public String pythonModule() {
         return this.pythonModule;
     }
 
@@ -205,7 +205,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="pythonVersion", required=true)
       private final String pythonVersion;
 
-    public String getPythonVersion() {
+    public String pythonVersion() {
         return this.pythonVersion;
     }
 
@@ -216,7 +216,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -227,7 +227,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="runtimeVersion", required=true)
       private final String runtimeVersion;
 
-    public String getRuntimeVersion() {
+    public String runtimeVersion() {
         return this.runtimeVersion;
     }
 
@@ -238,7 +238,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="scaleTier", required=true)
       private final String scaleTier;
 
-    public String getScaleTier() {
+    public String scaleTier() {
         return this.scaleTier;
     }
 
@@ -249,7 +249,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="scheduling", required=true)
       private final GoogleCloudMlV1__SchedulingResponse scheduling;
 
-    public GoogleCloudMlV1__SchedulingResponse getScheduling() {
+    public GoogleCloudMlV1__SchedulingResponse scheduling() {
         return this.scheduling;
     }
 
@@ -260,7 +260,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -271,7 +271,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="useChiefInTfConfig", required=true)
       private final Boolean useChiefInTfConfig;
 
-    public Boolean getUseChiefInTfConfig() {
+    public Boolean useChiefInTfConfig() {
         return this.useChiefInTfConfig;
     }
 
@@ -282,7 +282,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="workerConfig", required=true)
       private final GoogleCloudMlV1__ReplicaConfigResponse workerConfig;
 
-    public GoogleCloudMlV1__ReplicaConfigResponse getWorkerConfig() {
+    public GoogleCloudMlV1__ReplicaConfigResponse workerConfig() {
         return this.workerConfig;
     }
 
@@ -293,7 +293,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="workerCount", required=true)
       private final String workerCount;
 
-    public String getWorkerCount() {
+    public String workerCount() {
         return this.workerCount;
     }
 
@@ -304,7 +304,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends io.pulumi.reso
     @Import(name="workerType", required=true)
       private final String workerType;
 
-    public String getWorkerType() {
+    public String workerType() {
         return this.workerType;
     }
 

@@ -24,7 +24,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields", required=true)
       private final Output<Map<String,String>> fields;
 
-    public Output<Map<String,String>> getFields() {
+    public Output<Map<String,String>> fields() {
         return this.fields;
     }
 
@@ -46,14 +46,14 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isPubliclyReadable")
       private final @Nullable Output<Boolean> isPubliclyReadable;
 
-    public Output<Boolean> getIsPubliclyReadable() {
+    public Output<Boolean> isPubliclyReadable() {
         return this.isPubliclyReadable == null ? Codegen.empty() : this.isPubliclyReadable;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -64,21 +64,21 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="tagTemplateId", required=true)
       private final Output<String> tagTemplateId;
 
-    public Output<String> getTagTemplateId() {
+    public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
 

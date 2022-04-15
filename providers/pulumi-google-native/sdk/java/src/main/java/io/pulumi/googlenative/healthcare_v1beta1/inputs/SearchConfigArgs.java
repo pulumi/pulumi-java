@@ -27,7 +27,7 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="searchParameters")
       private final @Nullable Output<List<SearchParameterArgs>> searchParameters;
 
-    public Output<List<SearchParameterArgs>> getSearchParameters() {
+    public Output<List<SearchParameterArgs>> searchParameters() {
         return this.searchParameters == null ? Codegen.empty() : this.searchParameters;
     }
 

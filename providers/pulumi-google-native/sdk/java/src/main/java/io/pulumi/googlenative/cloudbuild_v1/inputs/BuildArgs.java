@@ -34,7 +34,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
       private final @Nullable Output<ArtifactsArgs> artifacts;
 
-    public Output<ArtifactsArgs> getArtifacts() {
+    public Output<ArtifactsArgs> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -45,7 +45,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availableSecrets")
       private final @Nullable Output<SecretsArgs> availableSecrets;
 
-    public Output<SecretsArgs> getAvailableSecrets() {
+    public Output<SecretsArgs> availableSecrets() {
         return this.availableSecrets == null ? Codegen.empty() : this.availableSecrets;
     }
 
@@ -56,7 +56,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
-    public Output<List<String>> getImages() {
+    public Output<List<String>> images() {
         return this.images == null ? Codegen.empty() : this.images;
     }
 
@@ -67,7 +67,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logsBucket")
       private final @Nullable Output<String> logsBucket;
 
-    public Output<String> getLogsBucket() {
+    public Output<String> logsBucket() {
         return this.logsBucket == null ? Codegen.empty() : this.logsBucket;
     }
 
@@ -78,7 +78,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<BuildOptionsArgs> options;
 
-    public Output<BuildOptionsArgs> getOptions() {
+    public Output<BuildOptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -89,7 +89,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queueTtl")
       private final @Nullable Output<String> queueTtl;
 
-    public Output<String> getQueueTtl() {
+    public Output<String> queueTtl() {
         return this.queueTtl == null ? Codegen.empty() : this.queueTtl;
     }
 
@@ -100,7 +100,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<SecretArgs>> secrets;
 
-    public Output<List<SecretArgs>> getSecrets() {
+    public Output<List<SecretArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
@@ -111,7 +111,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -122,7 +122,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
+    public Output<SourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -133,7 +133,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="steps", required=true)
       private final Output<List<BuildStepArgs>> steps;
 
-    public Output<List<BuildStepArgs>> getSteps() {
+    public Output<List<BuildStepArgs>> steps() {
         return this.steps;
     }
 
@@ -144,7 +144,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> getSubstitutions() {
+    public Output<Map<String,String>> substitutions() {
         return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
@@ -155,7 +155,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -166,7 +166,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

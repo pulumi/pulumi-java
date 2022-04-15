@@ -46,28 +46,28 @@ public final class DiskUtilizationResponse {
      * Target bytes read per second.
      * 
     */
-    public Integer getTargetReadBytesPerSecond() {
+    public Integer targetReadBytesPerSecond() {
         return this.targetReadBytesPerSecond;
     }
     /**
      * Target ops read per seconds.
      * 
     */
-    public Integer getTargetReadOpsPerSecond() {
+    public Integer targetReadOpsPerSecond() {
         return this.targetReadOpsPerSecond;
     }
     /**
      * Target bytes written per second.
      * 
     */
-    public Integer getTargetWriteBytesPerSecond() {
+    public Integer targetWriteBytesPerSecond() {
         return this.targetWriteBytesPerSecond;
     }
     /**
      * Target ops written per second.
      * 
     */
-    public Integer getTargetWriteOpsPerSecond() {
+    public Integer targetWriteOpsPerSecond() {
         return this.targetWriteOpsPerSecond;
     }
 

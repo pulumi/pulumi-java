@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
     @Import(name="infoTypes", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
-    public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
+    public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse extends io.pulumi
     @Import(name="rules", required=true)
       private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
-    public List<GooglePrivacyDlpV2InspectionRuleResponse> getRules() {
+    public List<GooglePrivacyDlpV2InspectionRuleResponse> rules() {
         return this.rules;
     }
 

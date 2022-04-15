@@ -27,7 +27,7 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

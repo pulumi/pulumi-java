@@ -26,7 +26,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxCompensation")
       private final @Nullable Output<MoneyArgs> maxCompensation;
 
-    public Output<MoneyArgs> getMaxCompensation() {
+    public Output<MoneyArgs> maxCompensation() {
         return this.maxCompensation == null ? Codegen.empty() : this.maxCompensation;
     }
 
@@ -37,7 +37,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minCompensation")
       private final @Nullable Output<MoneyArgs> minCompensation;
 
-    public Output<MoneyArgs> getMinCompensation() {
+    public Output<MoneyArgs> minCompensation() {
         return this.minCompensation == null ? Codegen.empty() : this.minCompensation;
     }
 

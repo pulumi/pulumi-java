@@ -25,7 +25,7 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
 
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris;
     }
 
@@ -36,7 +36,7 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="queryFileUri", required=true)
       private final String queryFileUri;
 
-    public String getQueryFileUri() {
+    public String queryFileUri() {
         return this.queryFileUri;
     }
 
@@ -47,7 +47,7 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="queryVariables", required=true)
       private final Map<String,String> queryVariables;
 
-    public Map<String,String> getQueryVariables() {
+    public Map<String,String> queryVariables() {
         return this.queryVariables;
     }
 

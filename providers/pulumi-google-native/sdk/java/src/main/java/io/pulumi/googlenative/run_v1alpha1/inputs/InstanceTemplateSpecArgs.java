@@ -26,7 +26,7 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
     @Import(name="spec")
       private final @Nullable Output<InstanceSpecArgs> spec;
 
-    public Output<InstanceSpecArgs> getSpec() {
+    public Output<InstanceSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 

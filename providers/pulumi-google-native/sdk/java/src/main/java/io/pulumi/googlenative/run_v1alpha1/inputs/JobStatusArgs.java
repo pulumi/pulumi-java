@@ -30,7 +30,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<Integer> active;
 
-    public Output<Integer> getActive() {
+    public Output<Integer> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -41,7 +41,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completionTime")
       private final @Nullable Output<String> completionTime;
 
-    public Output<String> getCompletionTime() {
+    public Output<String> completionTime() {
         return this.completionTime == null ? Codegen.empty() : this.completionTime;
     }
 
@@ -52,7 +52,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<JobConditionArgs>> conditions;
 
-    public Output<List<JobConditionArgs>> getConditions() {
+    public Output<List<JobConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -63,7 +63,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failed")
       private final @Nullable Output<Integer> failed;
 
-    public Output<Integer> getFailed() {
+    public Output<Integer> failed() {
         return this.failed == null ? Codegen.empty() : this.failed;
     }
 
@@ -74,7 +74,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageDigest")
       private final @Nullable Output<String> imageDigest;
 
-    public Output<String> getImageDigest() {
+    public Output<String> imageDigest() {
         return this.imageDigest == null ? Codegen.empty() : this.imageDigest;
     }
 
@@ -85,7 +85,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<InstanceStatusArgs>> instances;
 
-    public Output<List<InstanceStatusArgs>> getInstances() {
+    public Output<List<InstanceStatusArgs>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -96,7 +96,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -107,7 +107,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -118,7 +118,7 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="succeeded")
       private final @Nullable Output<Integer> succeeded;
 
-    public Output<Integer> getSucceeded() {
+    public Output<Integer> succeeded() {
         return this.succeeded == null ? Codegen.empty() : this.succeeded;
     }
 

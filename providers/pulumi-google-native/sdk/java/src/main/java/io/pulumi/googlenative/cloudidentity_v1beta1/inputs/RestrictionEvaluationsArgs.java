@@ -26,7 +26,7 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
     @Import(name="memberRestrictionEvaluation")
       private final @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
-    public Output<MembershipRoleRestrictionEvaluationArgs> getMemberRestrictionEvaluation() {
+    public Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation == null ? Codegen.empty() : this.memberRestrictionEvaluation;
     }
 

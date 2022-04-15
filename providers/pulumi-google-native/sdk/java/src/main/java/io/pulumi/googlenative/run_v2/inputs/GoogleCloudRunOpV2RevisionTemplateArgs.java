@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="confidential")
       private final @Nullable Output<Boolean> confidential;
 
-    public Output<Boolean> getConfidential() {
+    public Output<Boolean> confidential() {
         return this.confidential == null ? Codegen.empty() : this.confidential;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="containerConcurrency")
       private final @Nullable Output<Integer> containerConcurrency;
 
-    public Output<Integer> getContainerConcurrency() {
+    public Output<Integer> containerConcurrency() {
         return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="containers")
       private final @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers;
 
-    public Output<List<GoogleCloudRunOpV2ContainerArgs>> getContainers() {
+    public Output<List<GoogleCloudRunOpV2ContainerArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -79,7 +79,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -90,7 +90,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="executionEnvironment")
       private final @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
 
-    public Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> getExecutionEnvironment() {
+    public Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment() {
         return this.executionEnvironment == null ? Codegen.empty() : this.executionEnvironment;
     }
 
@@ -101,7 +101,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -112,7 +112,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="revision")
       private final @Nullable Output<String> revision;
 
-    public Output<String> getRevision() {
+    public Output<String> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -123,7 +123,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="scaling")
       private final @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
 
-    public Output<GoogleCloudRunOpV2RevisionScalingArgs> getScaling() {
+    public Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling() {
         return this.scaling == null ? Codegen.empty() : this.scaling;
     }
 
@@ -134,7 +134,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -145,7 +145,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -156,7 +156,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="volumes")
       private final @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
 
-    public Output<List<GoogleCloudRunOpV2VolumeArgs>> getVolumes() {
+    public Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
@@ -167,7 +167,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     @Import(name="vpcAccess")
       private final @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
 
-    public Output<GoogleCloudRunOpV2VpcAccessArgs> getVpcAccess() {
+    public Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess() {
         return this.vpcAccess == null ? Codegen.empty() : this.vpcAccess;
     }
 

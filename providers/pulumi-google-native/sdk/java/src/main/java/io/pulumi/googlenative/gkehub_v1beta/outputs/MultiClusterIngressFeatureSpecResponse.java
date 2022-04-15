@@ -24,7 +24,7 @@ public final class MultiClusterIngressFeatureSpecResponse {
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
      * 
     */
-    public String getConfigMembership() {
+    public String configMembership() {
         return this.configMembership;
     }
 

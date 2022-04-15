@@ -20,14 +20,14 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="scheduling", required=true)
       private final ResourceStatusSchedulingResponse scheduling;
 
-    public ResourceStatusSchedulingResponse getScheduling() {
+    public ResourceStatusSchedulingResponse scheduling() {
         return this.scheduling;
     }
 
     @Import(name="upcomingMaintenance", required=true)
       private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
-    public ResourceStatusUpcomingMaintenanceResponse getUpcomingMaintenance() {
+    public ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance() {
         return this.upcomingMaintenance;
     }
 
