@@ -22,8 +22,6 @@ public class Stack extends ComponentResource {
      */
     private Output<Map<String, Output<?>>> outputs = Output.of(Map.of());
 
-    private final StackInternal internal = new StackInternal(this);
-
     /**
      * Create a Stack with stack resources defined in derived class constructor.
      * Also @see {@link #Stack(StackOptions)}
@@ -102,7 +100,7 @@ public class Stack extends ComponentResource {
         }
 
         public static StackInternal from(Stack r) {
-            return r.internal;
+            return new StackInternal(r);
         }
 
         @InternalUse

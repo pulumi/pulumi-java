@@ -73,8 +73,6 @@ public abstract class Resource {
     @Nullable
     private final String version;
 
-    private final ResourceInternal internal = new ResourceInternal(this);
-
     /**
      * @see Resource#Resource(String, String, boolean, ResourceArgs, ResourceOptions, boolean, boolean)
      */
@@ -427,7 +425,7 @@ public abstract class Resource {
         }
 
         public static ResourceInternal from(Resource r) {
-            return r.internal;
+            return new ResourceInternal(r);
         }
 
         /**

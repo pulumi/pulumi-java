@@ -13,8 +13,6 @@ public abstract class AssetOrArchive {
     protected final String propName;
     protected final Object value;
 
-    protected final AssetOrArchiveInternal internal = new AssetOrArchiveInternal(this);
-
     protected AssetOrArchive(String sigKey, String propName, Object value) {
         this.sigKey = requireNonNull(sigKey);
         this.propName = requireNonNull(propName);
@@ -30,7 +28,7 @@ public abstract class AssetOrArchive {
         }
 
         public static AssetOrArchiveInternal from(AssetOrArchive assetOrArchive) {
-            return assetOrArchive.internal;
+            return new AssetOrArchiveInternal(assetOrArchive);
         }
 
         @InternalUse
