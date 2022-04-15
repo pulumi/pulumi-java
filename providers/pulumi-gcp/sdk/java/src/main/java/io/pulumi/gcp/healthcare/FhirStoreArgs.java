@@ -28,7 +28,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
@@ -44,7 +44,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableReferentialIntegrity")
       private final @Nullable Output<Boolean> disableReferentialIntegrity;
 
-    public Output<Boolean> getDisableReferentialIntegrity() {
+    public Output<Boolean> disableReferentialIntegrity() {
         return this.disableReferentialIntegrity == null ? Codegen.empty() : this.disableReferentialIntegrity;
     }
 
@@ -60,7 +60,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableResourceVersioning")
       private final @Nullable Output<Boolean> disableResourceVersioning;
 
-    public Output<Boolean> getDisableResourceVersioning() {
+    public Output<Boolean> disableResourceVersioning() {
         return this.disableResourceVersioning == null ? Codegen.empty() : this.disableResourceVersioning;
     }
 
@@ -76,7 +76,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableHistoryImport")
       private final @Nullable Output<Boolean> enableHistoryImport;
 
-    public Output<Boolean> getEnableHistoryImport() {
+    public Output<Boolean> enableHistoryImport() {
         return this.enableHistoryImport == null ? Codegen.empty() : this.enableHistoryImport;
     }
 
@@ -92,7 +92,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableUpdateCreate")
       private final @Nullable Output<Boolean> enableUpdateCreate;
 
-    public Output<Boolean> getEnableUpdateCreate() {
+    public Output<Boolean> enableUpdateCreate() {
         return this.enableUpdateCreate == null ? Codegen.empty() : this.enableUpdateCreate;
     }
 
@@ -110,7 +110,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -122,7 +122,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -134,7 +134,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig;
 
-    public Output<FhirStoreNotificationConfigArgs> getNotificationConfig() {
+    public Output<FhirStoreNotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -151,7 +151,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
       private final @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs;
 
-    public Output<List<FhirStoreStreamConfigArgs>> getStreamConfigs() {
+    public Output<List<FhirStoreStreamConfigArgs>> streamConfigs() {
         return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 
@@ -164,7 +164,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

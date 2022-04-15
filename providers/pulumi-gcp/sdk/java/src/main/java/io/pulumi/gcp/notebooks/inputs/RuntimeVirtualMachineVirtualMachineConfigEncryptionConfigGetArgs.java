@@ -26,7 +26,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 

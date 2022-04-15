@@ -16,35 +16,35 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker extends io.pulumi.r
     @Import(name="cpu", required=true)
       private final Double cpu;
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
 
     @Import(name="maxCount", required=true)
       private final Integer maxCount;
 
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
 
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
 
     @Import(name="minCount", required=true)
       private final Integer minCount;
 
-    public Integer getMinCount() {
+    public Integer minCount() {
         return this.minCount;
     }
 
     @Import(name="storageGb", required=true)
       private final Double storageGb;
 
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

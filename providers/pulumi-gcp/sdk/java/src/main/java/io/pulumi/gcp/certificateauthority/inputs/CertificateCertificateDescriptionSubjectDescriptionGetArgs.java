@@ -21,7 +21,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="hexSerialNumber")
       private final @Nullable Output<String> hexSerialNumber;
 
-    public Output<String> getHexSerialNumber() {
+    public Output<String> hexSerialNumber() {
         return this.hexSerialNumber == null ? Codegen.empty() : this.hexSerialNumber;
     }
 
@@ -34,21 +34,21 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
     @Import(name="notAfterTime")
       private final @Nullable Output<String> notAfterTime;
 
-    public Output<String> getNotAfterTime() {
+    public Output<String> notAfterTime() {
         return this.notAfterTime == null ? Codegen.empty() : this.notAfterTime;
     }
 
     @Import(name="notBeforeTime")
       private final @Nullable Output<String> notBeforeTime;
 
-    public Output<String> getNotBeforeTime() {
+    public Output<String> notBeforeTime() {
         return this.notBeforeTime == null ? Codegen.empty() : this.notBeforeTime;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="subjectAltNames")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames;
 
-    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> getSubjectAltNames() {
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames() {
         return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
     }
 
@@ -72,7 +72,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
     @Import(name="subjects")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects;
 
-    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> getSubjects() {
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects() {
         return this.subjects == null ? Codegen.empty() : this.subjects;
     }
 

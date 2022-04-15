@@ -31,7 +31,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createDisposition")
       private final @Nullable Output<String> createDisposition;
 
-    public Output<String> getCreateDisposition() {
+    public Output<String> createDisposition() {
         return this.createDisposition == null ? Codegen.empty() : this.createDisposition;
     }
 
@@ -43,7 +43,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationEncryptionConfiguration")
       private final @Nullable Output<JobCopyDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
-    public Output<JobCopyDestinationEncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
+    public Output<JobCopyDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration == null ? Codegen.empty() : this.destinationEncryptionConfiguration;
     }
 
@@ -55,7 +55,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationTable")
       private final @Nullable Output<JobCopyDestinationTableArgs> destinationTable;
 
-    public Output<JobCopyDestinationTableArgs> getDestinationTable() {
+    public Output<JobCopyDestinationTableArgs> destinationTable() {
         return this.destinationTable == null ? Codegen.empty() : this.destinationTable;
     }
 
@@ -67,7 +67,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceTables", required=true)
       private final Output<List<JobCopySourceTableArgs>> sourceTables;
 
-    public Output<List<JobCopySourceTableArgs>> getSourceTables() {
+    public Output<List<JobCopySourceTableArgs>> sourceTables() {
         return this.sourceTables;
     }
 
@@ -85,7 +85,7 @@ public final class JobCopyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeDisposition")
       private final @Nullable Output<String> writeDisposition;
 
-    public Output<String> getWriteDisposition() {
+    public Output<String> writeDisposition() {
         return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
     }
 

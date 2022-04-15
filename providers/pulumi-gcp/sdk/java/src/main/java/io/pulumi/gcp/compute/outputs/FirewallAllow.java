@@ -47,7 +47,7 @@ public final class FirewallAllow {
      * ["12345-12349"].
      * 
     */
-    public List<String> getPorts() {
+    public List<String> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
     /**
@@ -57,7 +57,7 @@ public final class FirewallAllow {
      * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

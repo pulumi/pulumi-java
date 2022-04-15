@@ -20,10 +20,10 @@ public final class GetBucketLifecycleRuleAction {
         this.type = type;
     }
 
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

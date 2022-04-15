@@ -61,7 +61,7 @@ public class TagKeyIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagKeyIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TagKeyIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TagKeyIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ TagKeyIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -75,13 +75,13 @@ public class TagKeyIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -99,7 +99,7 @@ public class TagKeyIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -113,7 +113,7 @@ public class TagKeyIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey;
     }
 

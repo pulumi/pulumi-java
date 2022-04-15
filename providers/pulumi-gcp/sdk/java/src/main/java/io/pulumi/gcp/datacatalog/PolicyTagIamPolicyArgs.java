@@ -22,7 +22,7 @@ public final class PolicyTagIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -33,7 +33,7 @@ public final class PolicyTagIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyTag", required=true)
       private final Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag;
     }
 

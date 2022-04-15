@@ -96,7 +96,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleHeaderAction> getHeaderAction() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -104,7 +104,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherRouteRuleMatchRule> getMatchRules() {
+    public List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules() {
         return this.matchRules == null ? List.of() : this.matchRules;
     }
     /**
@@ -123,7 +123,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * future without any impact on existing rules.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
@@ -136,14 +136,14 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleRouteAction> getRouteAction() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleRouteAction> routeAction() {
         return Optional.ofNullable(this.routeAction);
     }
     /**
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
     */
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
     /**
@@ -153,7 +153,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleUrlRedirect> getUrlRedirect() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleUrlRedirect> urlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }
 

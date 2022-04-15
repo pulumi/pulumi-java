@@ -68,7 +68,7 @@ public final class CxPageFormParameter {
      * The human-readable name of the parameter, unique within the form.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
@@ -76,7 +76,7 @@ public final class CxPageFormParameter {
      * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
      * 
     */
-    public Optional<String> getEntityType() {
+    public Optional<String> entityType() {
         return Optional.ofNullable(this.entityType);
     }
     /**
@@ -84,14 +84,14 @@ public final class CxPageFormParameter {
      * Structure is documented below.
      * 
     */
-    public Optional<CxPageFormParameterFillBehavior> getFillBehavior() {
+    public Optional<CxPageFormParameterFillBehavior> fillBehavior() {
         return Optional.ofNullable(this.fillBehavior);
     }
     /**
      * Indicates whether the parameter represents a list of values.
      * 
     */
-    public Optional<Boolean> getIsList() {
+    public Optional<Boolean> isList() {
         return Optional.ofNullable(this.isList);
     }
     /**
@@ -99,7 +99,7 @@ public final class CxPageFormParameter {
      * If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
     */
-    public Optional<Boolean> getRedact() {
+    public Optional<Boolean> redact() {
         return Optional.ofNullable(this.redact);
     }
     /**
@@ -107,7 +107,7 @@ public final class CxPageFormParameter {
      * Required parameters must be filled before form filling concludes.
      * 
     */
-    public Optional<Boolean> getRequired() {
+    public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
 

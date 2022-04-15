@@ -26,14 +26,14 @@ public final class FunctionSourceRepository {
         this.url = url;
     }
 
-    public Optional<String> getDeployedUrl() {
+    public Optional<String> deployedUrl() {
         return Optional.ofNullable(this.deployedUrl);
     }
     /**
      * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

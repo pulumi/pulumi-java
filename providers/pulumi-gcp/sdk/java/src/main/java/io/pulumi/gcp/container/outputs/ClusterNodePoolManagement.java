@@ -22,10 +22,10 @@ public final class ClusterNodePoolManagement {
         this.autoUpgrade = autoUpgrade;
     }
 
-    public Optional<Boolean> getAutoRepair() {
+    public Optional<Boolean> autoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
-    public Optional<Boolean> getAutoUpgrade() {
+    public Optional<Boolean> autoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }
 

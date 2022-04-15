@@ -24,7 +24,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -35,7 +35,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -50,7 +50,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -62,7 +62,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRange")
       private final @Nullable Output<String> sourceRange;
 
-    public Output<String> getSourceRange() {
+    public Output<String> sourceRange() {
         return this.sourceRange == null ? Codegen.empty() : this.sourceRange;
     }
 

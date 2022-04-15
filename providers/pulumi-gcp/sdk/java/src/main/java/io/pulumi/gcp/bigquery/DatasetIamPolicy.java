@@ -82,7 +82,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * @return The dataset ID.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -96,7 +96,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -112,7 +112,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -128,7 +128,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

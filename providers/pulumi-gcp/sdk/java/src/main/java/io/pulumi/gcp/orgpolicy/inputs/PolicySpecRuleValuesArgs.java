@@ -23,7 +23,7 @@ public final class PolicySpecRuleValuesArgs extends io.pulumi.resources.Resource
     @Import(name="allowedValues")
       private final @Nullable Output<List<String>> allowedValues;
 
-    public Output<List<String>> getAllowedValues() {
+    public Output<List<String>> allowedValues() {
         return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
@@ -34,7 +34,7 @@ public final class PolicySpecRuleValuesArgs extends io.pulumi.resources.Resource
     @Import(name="deniedValues")
       private final @Nullable Output<List<String>> deniedValues;
 
-    public Output<List<String>> getDeniedValues() {
+    public Output<List<String>> deniedValues() {
         return this.deniedValues == null ? Codegen.empty() : this.deniedValues;
     }
 

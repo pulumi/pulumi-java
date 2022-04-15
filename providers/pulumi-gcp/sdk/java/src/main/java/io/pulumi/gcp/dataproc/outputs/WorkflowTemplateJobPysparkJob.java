@@ -79,56 +79,56 @@ public final class WorkflowTemplateJobPysparkJob {
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
     */
-    public List<String> getArchiveUris() {
+    public List<String> archiveUris() {
         return this.archiveUris == null ? List.of() : this.archiveUris;
     }
     /**
      * Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
      * 
     */
-    public List<String> getFileUris() {
+    public List<String> fileUris() {
         return this.fileUris == null ? List.of() : this.fileUris;
     }
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
     */
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
     */
-    public Optional<WorkflowTemplateJobPysparkJobLoggingConfig> getLoggingConfig() {
+    public Optional<WorkflowTemplateJobPysparkJobLoggingConfig> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
      * Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.
      * 
     */
-    public String getMainPythonFileUri() {
+    public String mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
     /**
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
      * 
     */
-    public List<String> getPythonFileUris() {
+    public List<String> pythonFileUris() {
         return this.pythonFileUris == null ? List.of() : this.pythonFileUris;
     }
 

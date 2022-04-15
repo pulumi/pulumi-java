@@ -22,7 +22,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
     @Import(name="canonicalService", required=true)
       private final String canonicalService;
 
-    public String getCanonicalService() {
+    public String canonicalService() {
         return this.canonicalService;
     }
 
@@ -34,7 +34,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
     @Import(name="canonicalServiceNamespace", required=true)
       private final String canonicalServiceNamespace;
 
-    public String getCanonicalServiceNamespace() {
+    public String canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
 
@@ -46,7 +46,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
     @Import(name="meshUid", required=true)
       private final String meshUid;
 
-    public String getMeshUid() {
+    public String meshUid() {
         return this.meshUid;
     }
 
@@ -58,7 +58,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

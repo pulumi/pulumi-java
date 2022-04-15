@@ -21,7 +21,7 @@ public final class PacketMirroringCollectorIlbGetArgs extends io.pulumi.resource
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

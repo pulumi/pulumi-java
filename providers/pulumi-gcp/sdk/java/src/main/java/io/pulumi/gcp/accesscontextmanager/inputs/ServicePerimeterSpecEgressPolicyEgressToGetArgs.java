@@ -26,7 +26,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToGetArgs extends io.pu
     @Import(name="operations")
       private final @Nullable Output<List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs>> operations;
 
-    public Output<List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs>> getOperations() {
+    public Output<List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs>> operations() {
         return this.operations == null ? Codegen.empty() : this.operations;
     }
 
@@ -41,7 +41,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToGetArgs extends io.pu
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 

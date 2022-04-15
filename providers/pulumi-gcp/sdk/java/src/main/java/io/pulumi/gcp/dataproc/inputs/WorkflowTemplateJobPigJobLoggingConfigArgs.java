@@ -23,7 +23,7 @@ public final class WorkflowTemplateJobPigJobLoggingConfigArgs extends io.pulumi.
     @Import(name="driverLogLevels")
       private final @Nullable Output<Map<String,String>> driverLogLevels;
 
-    public Output<Map<String,String>> getDriverLogLevels() {
+    public Output<Map<String,String>> driverLogLevels() {
         return this.driverLogLevels == null ? Codegen.empty() : this.driverLogLevels;
     }
 

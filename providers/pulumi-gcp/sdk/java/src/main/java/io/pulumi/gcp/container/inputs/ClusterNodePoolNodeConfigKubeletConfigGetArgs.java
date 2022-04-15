@@ -24,7 +24,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfigGetArgs extends io.pulu
     @Import(name="cpuCfsQuota")
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
-    public Output<Boolean> getCpuCfsQuota() {
+    public Output<Boolean> cpuCfsQuota() {
         return this.cpuCfsQuota == null ? Codegen.empty() : this.cpuCfsQuota;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfigGetArgs extends io.pulu
     @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
-    public Output<String> getCpuCfsQuotaPeriod() {
+    public Output<String> cpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Codegen.empty() : this.cpuCfsQuotaPeriod;
     }
 
@@ -51,7 +51,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfigGetArgs extends io.pulu
     @Import(name="cpuManagerPolicy", required=true)
       private final Output<String> cpuManagerPolicy;
 
-    public Output<String> getCpuManagerPolicy() {
+    public Output<String> cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 

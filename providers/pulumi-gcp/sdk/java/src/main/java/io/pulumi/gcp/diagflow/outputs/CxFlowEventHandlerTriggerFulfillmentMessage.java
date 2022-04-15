@@ -26,7 +26,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
      * A collection of text responses.
      * 
     */
-    public Optional<CxFlowEventHandlerTriggerFulfillmentMessageText> getText() {
+    public Optional<CxFlowEventHandlerTriggerFulfillmentMessageText> text() {
         return Optional.ofNullable(this.text);
     }
 

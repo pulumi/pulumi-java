@@ -35,14 +35,14 @@ public final class WorkflowTemplatePlacement {
      * Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.
      * 
     */
-    public Optional<WorkflowTemplatePlacementClusterSelector> getClusterSelector() {
+    public Optional<WorkflowTemplatePlacementClusterSelector> clusterSelector() {
         return Optional.ofNullable(this.clusterSelector);
     }
     /**
      * A cluster that is managed by the workflow.
      * 
     */
-    public Optional<WorkflowTemplatePlacementManagedCluster> getManagedCluster() {
+    public Optional<WorkflowTemplatePlacementManagedCluster> managedCluster() {
         return Optional.ofNullable(this.managedCluster);
     }
 

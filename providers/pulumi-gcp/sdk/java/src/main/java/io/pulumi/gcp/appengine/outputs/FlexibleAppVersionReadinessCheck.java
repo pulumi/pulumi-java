@@ -73,28 +73,28 @@ public final class FlexibleAppVersionReadinessCheck {
      * replies to a healthcheck until it is ready to serve traffic. Default: "300s"
      * 
     */
-    public Optional<String> getAppStartTimeout() {
+    public Optional<String> appStartTimeout() {
         return Optional.ofNullable(this.appStartTimeout);
     }
     /**
      * Interval between health checks.
      * 
     */
-    public Optional<String> getCheckInterval() {
+    public Optional<String> checkInterval() {
         return Optional.ofNullable(this.checkInterval);
     }
     /**
      * Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
      * 
     */
-    public Optional<Double> getFailureThreshold() {
+    public Optional<Double> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
@@ -102,21 +102,21 @@ public final class FlexibleAppVersionReadinessCheck {
      * The path can refer to text matched in groupings in the URL pattern.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * Number of consecutive successful checks required before considering the VM healthy. Default: 2.
      * 
     */
-    public Optional<Double> getSuccessThreshold() {
+    public Optional<Double> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * Time before the check is considered failed. Default: "4s"
      * 
     */
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

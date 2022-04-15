@@ -25,7 +25,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<List<RoutineArgumentArgs>> arguments;
 
-    public Output<List<RoutineArgumentArgs>> getArguments() {
+    public Output<List<RoutineArgumentArgs>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -36,7 +36,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -48,7 +48,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definitionBody", required=true)
       private final Output<String> definitionBody;
 
-    public Output<String> getDefinitionBody() {
+    public Output<String> definitionBody() {
         return this.definitionBody;
     }
 
@@ -59,7 +59,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="determinismLevel")
       private final @Nullable Output<String> determinismLevel;
 
-    public Output<String> getDeterminismLevel() {
+    public Output<String> determinismLevel() {
         return this.determinismLevel == null ? Codegen.empty() : this.determinismLevel;
     }
 
@@ -83,7 +83,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importedLibraries")
       private final @Nullable Output<List<String>> importedLibraries;
 
-    public Output<List<String>> getImportedLibraries() {
+    public Output<List<String>> importedLibraries() {
         return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
     }
 
@@ -95,7 +95,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
+    public Output<String> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -107,7 +107,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -121,7 +121,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="returnTableType")
       private final @Nullable Output<String> returnTableType;
 
-    public Output<String> getReturnTableType() {
+    public Output<String> returnTableType() {
         return this.returnTableType == null ? Codegen.empty() : this.returnTableType;
     }
 
@@ -140,7 +140,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="returnType")
       private final @Nullable Output<String> returnType;
 
-    public Output<String> getReturnType() {
+    public Output<String> returnType() {
         return this.returnType == null ? Codegen.empty() : this.returnType;
     }
 
@@ -151,7 +151,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routineId", required=true)
       private final Output<String> routineId;
 
-    public Output<String> getRoutineId() {
+    public Output<String> routineId() {
         return this.routineId;
     }
 
@@ -163,7 +163,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routineType")
       private final @Nullable Output<String> routineType;
 
-    public Output<String> getRoutineType() {
+    public Output<String> routineType() {
         return this.routineType == null ? Codegen.empty() : this.routineType;
     }
 

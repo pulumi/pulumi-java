@@ -17,7 +17,7 @@ public final class JobSparksqlConfigLoggingConfig {
         this.driverLogLevels = driverLogLevels;
     }
 
-    public Map<String,String> getDriverLogLevels() {
+    public Map<String,String> driverLogLevels() {
         return this.driverLogLevels;
     }
 

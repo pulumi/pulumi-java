@@ -62,7 +62,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -76,7 +76,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * @return Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -92,7 +92,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
-    public Output</* @Nullable */ String> getDuration() {
+    public Output</* @Nullable */ String> duration() {
         return this.duration;
     }
     /**
@@ -108,7 +108,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<PatchDeploymentInstanceFilter> getInstanceFilter() {
+    public Output<PatchDeploymentInstanceFilter> instanceFilter() {
         return this.instanceFilter;
     }
     /**
@@ -126,7 +126,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getLastExecuteTime() {
+    public Output<String> lastExecuteTime() {
         return this.lastExecuteTime;
     }
     /**
@@ -142,7 +142,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * projects/{project_id}/patchDeployments/{patchDeploymentId}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +158,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentOneTimeSchedule> getOneTimeSchedule() {
+    public Output</* @Nullable */ PatchDeploymentOneTimeSchedule> oneTimeSchedule() {
         return this.oneTimeSchedule;
     }
     /**
@@ -174,7 +174,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentPatchConfig> getPatchConfig() {
+    public Output</* @Nullable */ PatchDeploymentPatchConfig> patchConfig() {
         return this.patchConfig;
     }
     /**
@@ -198,7 +198,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * * Must be unique within the project.
      * 
      */
-    public Output<String> getPatchDeploymentId() {
+    public Output<String> patchDeploymentId() {
         return this.patchDeploymentId;
     }
     /**
@@ -214,7 +214,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -230,7 +230,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentRecurringSchedule> getRecurringSchedule() {
+    public Output</* @Nullable */ PatchDeploymentRecurringSchedule> recurringSchedule() {
         return this.recurringSchedule;
     }
     /**
@@ -246,7 +246,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PatchDeploymentRollout> getRollout() {
+    public Output</* @Nullable */ PatchDeploymentRollout> rollout() {
         return this.rollout;
     }
     /**
@@ -262,7 +262,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

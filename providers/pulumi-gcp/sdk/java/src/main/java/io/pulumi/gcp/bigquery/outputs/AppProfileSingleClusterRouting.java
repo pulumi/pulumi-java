@@ -37,14 +37,14 @@ public final class AppProfileSingleClusterRouting {
      * It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
     */
-    public Optional<Boolean> getAllowTransactionalWrites() {
+    public Optional<Boolean> allowTransactionalWrites() {
         return Optional.ofNullable(this.allowTransactionalWrites);
     }
     /**
      * The cluster to which read/write requests should be routed.
      * 
     */
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 

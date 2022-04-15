@@ -49,20 +49,20 @@ public final class RouterStatusResult {
         this.region = region;
     }
 
-    public List<RouterStatusBestRoute> getBestRoutes() {
+    public List<RouterStatusBestRoute> bestRoutes() {
         return this.bestRoutes;
     }
-    public List<RouterStatusBestRoutesForRouter> getBestRoutesForRouters() {
+    public List<RouterStatusBestRoutesForRouter> bestRoutesForRouters() {
         return this.bestRoutesForRouters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -70,13 +70,13 @@ public final class RouterStatusResult {
      * network of this subnetwork.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

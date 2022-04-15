@@ -77,7 +77,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<NoteAttestationAuthority> getAttestationAuthority() {
+    public Output<NoteAttestationAuthority> attestationAuthority() {
         return this.attestationAuthority;
     }
     /**
@@ -91,7 +91,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The time this note was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -105,7 +105,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return Time of expiration for this note. Leave empty if note does not expire.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationTime() {
+    public Output</* @Nullable */ String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -119,7 +119,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The type of analysis this note describes
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -133,7 +133,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A detailed description of the note
      * 
      */
-    public Output</* @Nullable */ String> getLongDescription() {
+    public Output</* @Nullable */ String> longDescription() {
         return this.longDescription;
     }
     /**
@@ -147,7 +147,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The name of the note.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +163,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -177,7 +177,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return Names of other notes related to this note.
      * 
      */
-    public Output</* @Nullable */ List<String>> getRelatedNoteNames() {
+    public Output</* @Nullable */ List<String>> relatedNoteNames() {
         return this.relatedNoteNames;
     }
     /**
@@ -193,7 +193,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<NoteRelatedUrl>> getRelatedUrls() {
+    public Output</* @Nullable */ List<NoteRelatedUrl>> relatedUrls() {
         return this.relatedUrls;
     }
     /**
@@ -207,7 +207,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return A one sentence description of the note.
      * 
      */
-    public Output</* @Nullable */ String> getShortDescription() {
+    public Output</* @Nullable */ String> shortDescription() {
         return this.shortDescription;
     }
     /**
@@ -221,7 +221,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * @return The time this note was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

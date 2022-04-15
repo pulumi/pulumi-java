@@ -62,7 +62,7 @@ public final class GuestPoliciesPackage {
      * Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
      * 
     */
-    public Optional<String> getDesiredState() {
+    public Optional<String> desiredState() {
         return Optional.ofNullable(this.desiredState);
     }
     /**
@@ -75,7 +75,7 @@ public final class GuestPoliciesPackage {
      * Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
      * 
     */
-    public Optional<String> getManager() {
+    public Optional<String> manager() {
         return Optional.ofNullable(this.manager);
     }
     /**
@@ -85,7 +85,7 @@ public final class GuestPoliciesPackage {
      * could potentially have conflicting assignments.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

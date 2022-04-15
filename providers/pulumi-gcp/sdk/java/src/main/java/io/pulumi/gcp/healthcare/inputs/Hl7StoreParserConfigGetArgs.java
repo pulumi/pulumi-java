@@ -23,7 +23,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="allowNullHeader")
       private final @Nullable Output<Boolean> allowNullHeader;
 
-    public Output<Boolean> getAllowNullHeader() {
+    public Output<Boolean> allowNullHeader() {
         return this.allowNullHeader == null ? Codegen.empty() : this.allowNullHeader;
     }
 
@@ -35,7 +35,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -47,7 +47,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="segmentTerminator")
       private final @Nullable Output<String> segmentTerminator;
 
-    public Output<String> getSegmentTerminator() {
+    public Output<String> segmentTerminator() {
         return this.segmentTerminator == null ? Codegen.empty() : this.segmentTerminator;
     }
 
@@ -60,7 +60,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

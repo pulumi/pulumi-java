@@ -47,7 +47,7 @@ public final class TriggerBuildArtifacts {
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
     */
-    public List<String> getImages() {
+    public List<String> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
@@ -59,7 +59,7 @@ public final class TriggerBuildArtifacts {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildArtifactsObjects> getObjects() {
+    public Optional<TriggerBuildArtifactsObjects> objects() {
         return Optional.ofNullable(this.objects);
     }
 

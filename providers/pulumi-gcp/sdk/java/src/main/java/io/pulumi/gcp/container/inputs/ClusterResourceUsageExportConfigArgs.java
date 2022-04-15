@@ -23,7 +23,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
     @Import(name="bigqueryDestination", required=true)
       private final Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
 
-    public Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> getBigqueryDestination() {
+    public Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
     @Import(name="enableNetworkEgressMetering")
       private final @Nullable Output<Boolean> enableNetworkEgressMetering;
 
-    public Output<Boolean> getEnableNetworkEgressMetering() {
+    public Output<Boolean> enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering == null ? Codegen.empty() : this.enableNetworkEgressMetering;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
     @Import(name="enableResourceConsumptionMetering")
       private final @Nullable Output<Boolean> enableResourceConsumptionMetering;
 
-    public Output<Boolean> getEnableResourceConsumptionMetering() {
+    public Output<Boolean> enableResourceConsumptionMetering() {
         return this.enableResourceConsumptionMetering == null ? Codegen.empty() : this.enableResourceConsumptionMetering;
     }
 

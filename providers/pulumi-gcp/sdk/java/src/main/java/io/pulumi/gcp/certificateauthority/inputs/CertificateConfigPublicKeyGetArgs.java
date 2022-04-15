@@ -23,7 +23,7 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateConfigPublicKeyGetArgs extends io.pulumi.resources
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

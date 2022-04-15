@@ -37,17 +37,17 @@ public final class GetDefaultServiceAccountResult {
      * in order to grant IAM permissions.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

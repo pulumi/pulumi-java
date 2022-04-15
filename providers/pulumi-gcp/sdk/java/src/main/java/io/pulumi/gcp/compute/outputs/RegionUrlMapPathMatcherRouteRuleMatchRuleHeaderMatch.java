@@ -102,14 +102,14 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * must be set.
      * 
     */
-    public Optional<String> getExactMatch() {
+    public Optional<String> exactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
      * The name of the header.
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
     /**
@@ -118,7 +118,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * match criteria above are NOT met. Defaults to false.
      * 
     */
-    public Optional<Boolean> getInvertMatch() {
+    public Optional<Boolean> invertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
     /**
@@ -127,7 +127,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * must be set.
      * 
     */
-    public Optional<String> getPrefixMatch() {
+    public Optional<String> prefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
     /**
@@ -136,7 +136,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * presentMatch, exactMatch and regexMatch must be set.
      * 
     */
-    public Optional<Boolean> getPresentMatch() {
+    public Optional<Boolean> presentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
     /**
@@ -152,7 +152,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      *   Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch> getRangeMatch() {
+    public Optional<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch> rangeMatch() {
         return Optional.ofNullable(this.rangeMatch);
     }
     /**
@@ -162,7 +162,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * exactMatch and regexMatch must be set.
      * 
     */
-    public Optional<String> getRegexMatch() {
+    public Optional<String> regexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
     /**
@@ -171,7 +171,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * must be set.
      * 
     */
-    public Optional<String> getSuffixMatch() {
+    public Optional<String> suffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }
 

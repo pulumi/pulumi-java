@@ -47,7 +47,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> getBaseKeyUsages() {
+    public List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages() {
         return this.baseKeyUsages == null ? List.of() : this.baseKeyUsages;
     }
     /**
@@ -55,7 +55,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> getExtendedKeyUsages() {
+    public List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages() {
         return this.extendedKeyUsages == null ? List.of() : this.extendedKeyUsages;
     }
     /**
@@ -63,7 +63,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
+    public List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }
 

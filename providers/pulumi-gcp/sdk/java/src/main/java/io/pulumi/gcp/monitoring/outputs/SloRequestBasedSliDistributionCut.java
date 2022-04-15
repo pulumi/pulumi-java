@@ -45,7 +45,7 @@ public final class SloRequestBasedSliDistributionCut {
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
     */
-    public String getDistributionFilter() {
+    public String distributionFilter() {
         return this.distributionFilter;
     }
     /**
@@ -58,7 +58,7 @@ public final class SloRequestBasedSliDistributionCut {
      * Structure is documented below.
      * 
     */
-    public SloRequestBasedSliDistributionCutRange getRange() {
+    public SloRequestBasedSliDistributionCutRange range() {
         return this.range;
     }
 

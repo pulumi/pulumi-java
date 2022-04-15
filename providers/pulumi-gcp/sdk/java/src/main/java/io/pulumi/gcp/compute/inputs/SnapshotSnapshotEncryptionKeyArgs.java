@@ -22,7 +22,7 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
     @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
-    public Output<String> getKmsKeySelfLink() {
+    public Output<String> kmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
     }
 
@@ -34,7 +34,7 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
     @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
-    public Output<String> getKmsKeyServiceAccount() {
+    public Output<String> kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
     }
 
@@ -47,7 +47,7 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
     @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
-    public Output<String> getRawKey() {
+    public Output<String> rawKey() {
         return this.rawKey == null ? Codegen.empty() : this.rawKey;
     }
 
@@ -60,7 +60,7 @@ public final class SnapshotSnapshotEncryptionKeyArgs extends io.pulumi.resources
     @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
-    public Output<String> getSha256() {
+    public Output<String> sha256() {
         return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 

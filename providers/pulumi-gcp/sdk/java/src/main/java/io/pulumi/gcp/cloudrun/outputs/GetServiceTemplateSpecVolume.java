@@ -30,10 +30,10 @@ public final class GetServiceTemplateSpecVolume {
      * The name of the Cloud Run Service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<GetServiceTemplateSpecVolumeSecret> getSecrets() {
+    public List<GetServiceTemplateSpecVolumeSecret> secrets() {
         return this.secrets;
     }
 

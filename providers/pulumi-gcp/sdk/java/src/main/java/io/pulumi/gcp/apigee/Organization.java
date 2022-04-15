@@ -50,7 +50,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    public Output</* @Nullable */ String> getAnalyticsRegion() {
+    public Output</* @Nullable */ String> analyticsRegion() {
         return this.analyticsRegion;
     }
     /**
@@ -68,7 +68,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizedNetwork() {
+    public Output</* @Nullable */ String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
@@ -84,7 +84,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * is CLOUD. A base64-encoded string.
      * 
      */
-    public Output<String> getCaCertificate() {
+    public Output<String> caCertificate() {
         return this.caCertificate;
     }
     /**
@@ -98,7 +98,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Description of the Apigee organization.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -112,7 +112,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return The display name of the Apigee organization.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -126,7 +126,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return Output only. Name of the Apigee organization.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -140,7 +140,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @return The project ID associated with the Apigee organization.
      * 
      */
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
     /**
@@ -160,7 +160,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
      * 
      */
-    public Output</* @Nullable */ String> getRuntimeDatabaseEncryptionKeyName() {
+    public Output</* @Nullable */ String> runtimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName;
     }
     /**
@@ -178,7 +178,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Possible values are `CLOUD` and `HYBRID`.
      * 
      */
-    public Output</* @Nullable */ String> getRuntimeType() {
+    public Output</* @Nullable */ String> runtimeType() {
         return this.runtimeType;
     }
     /**
@@ -194,7 +194,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * purposes only) or paid (full subscription has been purchased).
      * 
      */
-    public Output<String> getSubscriptionType() {
+    public Output<String> subscriptionType() {
         return this.subscriptionType;
     }
 

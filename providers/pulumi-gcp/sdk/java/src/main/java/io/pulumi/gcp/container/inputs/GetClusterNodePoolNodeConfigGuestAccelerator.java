@@ -16,21 +16,21 @@ public final class GetClusterNodePoolNodeConfigGuestAccelerator extends io.pulum
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
     @Import(name="gpuPartitionSize", required=true)
       private final String gpuPartitionSize;
 
-    public String getGpuPartitionSize() {
+    public String gpuPartitionSize() {
         return this.gpuPartitionSize;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
     @Import(name="exec")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> exec;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> getExec() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> exec() {
         return this.exec == null ? Codegen.empty() : this.exec;
     }
 
@@ -37,7 +37,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
     @Import(name="file")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> getFile() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -48,7 +48,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -59,7 +59,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
     @Import(name="pkg")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> pkg;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> getPkg() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> pkg() {
         return this.pkg == null ? Codegen.empty() : this.pkg;
     }
 
@@ -70,7 +70,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
     @Import(name="repository")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> getRepository() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 

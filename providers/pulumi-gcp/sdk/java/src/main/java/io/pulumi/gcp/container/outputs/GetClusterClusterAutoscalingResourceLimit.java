@@ -24,13 +24,13 @@ public final class GetClusterClusterAutoscalingResourceLimit {
         this.resourceType = resourceType;
     }
 
-    public Integer getMaximum() {
+    public Integer maximum() {
         return this.maximum;
     }
-    public Integer getMinimum() {
+    public Integer minimum() {
         return this.minimum;
     }
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

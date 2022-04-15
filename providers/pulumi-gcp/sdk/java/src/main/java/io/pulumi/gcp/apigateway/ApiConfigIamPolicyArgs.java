@@ -23,14 +23,14 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="api", required=true)
       private final Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
 
     @Import(name="apiConfig", required=true)
       private final Output<String> apiConfig;
 
-    public Output<String> getApiConfig() {
+    public Output<String> apiConfig() {
         return this.apiConfig;
     }
 
@@ -42,7 +42,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -54,7 +54,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

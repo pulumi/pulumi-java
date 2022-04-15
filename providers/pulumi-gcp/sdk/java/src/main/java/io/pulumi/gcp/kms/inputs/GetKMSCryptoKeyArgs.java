@@ -19,7 +19,7 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyRing", required=true)
       private final String keyRing;
 
-    public String getKeyRing() {
+    public String keyRing() {
         return this.keyRing;
     }
 
@@ -31,7 +31,7 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

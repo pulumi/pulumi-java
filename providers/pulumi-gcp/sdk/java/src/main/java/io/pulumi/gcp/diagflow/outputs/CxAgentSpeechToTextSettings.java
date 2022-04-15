@@ -26,7 +26,7 @@ public final class CxAgentSpeechToTextSettings {
      * Whether to use speech adaptation for speech recognition.
      * 
     */
-    public Optional<Boolean> getEnableSpeechAdaptation() {
+    public Optional<Boolean> enableSpeechAdaptation() {
         return Optional.ofNullable(this.enableSpeechAdaptation);
     }
 

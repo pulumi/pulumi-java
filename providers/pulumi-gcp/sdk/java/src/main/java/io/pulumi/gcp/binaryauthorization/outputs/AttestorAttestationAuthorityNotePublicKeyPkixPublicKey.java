@@ -40,7 +40,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
      * `https://tools.ietf.org/html/rfc7468#section-13`
      * 
     */
-    public Optional<String> getPublicKeyPem() {
+    public Optional<String> publicKeyPem() {
         return Optional.ofNullable(this.publicKeyPem);
     }
     /**
@@ -51,7 +51,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
      * public key).
      * 
     */
-    public Optional<String> getSignatureAlgorithm() {
+    public Optional<String> signatureAlgorithm() {
         return Optional.ofNullable(this.signatureAlgorithm);
     }
 

@@ -16,7 +16,7 @@ public final class GetClusterAuthenticatorGroupsConfig {
         this.securityGroup = securityGroup;
     }
 
-    public String getSecurityGroup() {
+    public String securityGroup() {
         return this.securityGroup;
     }
 

@@ -23,7 +23,7 @@ public final class GetNodeTypesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
@@ -35,7 +35,7 @@ public final class GetNodeTypesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone")
       private final @Nullable String zone;
 
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
     }
 

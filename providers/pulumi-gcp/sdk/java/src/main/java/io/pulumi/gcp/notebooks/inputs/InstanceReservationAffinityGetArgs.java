@@ -24,7 +24,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     @Import(name="consumeReservationType", required=true)
       private final Output<String> consumeReservationType;
 
-    public Output<String> getConsumeReservationType() {
+    public Output<String> consumeReservationType() {
         return this.consumeReservationType;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceReservationAffinityGetArgs extends io.pulumi.resource
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

@@ -45,7 +45,7 @@ public final class InboundSamlConfigSpConfig {
      * Callback URI where responses from IDP are handled. Must start with `https://`.
      * 
     */
-    public Optional<String> getCallbackUri() {
+    public Optional<String> callbackUri() {
         return Optional.ofNullable(this.callbackUri);
     }
     /**
@@ -54,14 +54,14 @@ public final class InboundSamlConfigSpConfig {
      * Structure is documented below.
      * 
     */
-    public List<InboundSamlConfigSpConfigSpCertificate> getSpCertificates() {
+    public List<InboundSamlConfigSpConfigSpCertificate> spCertificates() {
         return this.spCertificates == null ? List.of() : this.spCertificates;
     }
     /**
      * Unique identifier for all SAML entities.
      * 
     */
-    public Optional<String> getSpEntityId() {
+    public Optional<String> spEntityId() {
         return Optional.ofNullable(this.spEntityId);
     }
 

@@ -61,7 +61,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -85,7 +85,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ URLMapDefaultRouteAction> getDefaultRouteAction() {
+    public Output</* @Nullable */ URLMapDefaultRouteAction> defaultRouteAction() {
         return this.defaultRouteAction;
     }
     /**
@@ -99,7 +99,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * @return The backend service or backend bucket to use when none of the given paths match.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultService() {
+    public Output</* @Nullable */ String> defaultService() {
         return this.defaultService;
     }
     /**
@@ -119,7 +119,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ URLMapDefaultUrlRedirect> getDefaultUrlRedirect() {
+    public Output</* @Nullable */ URLMapDefaultUrlRedirect> defaultUrlRedirect() {
         return this.defaultUrlRedirect;
     }
     /**
@@ -133,7 +133,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * @return Description of this test case.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -147,7 +147,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -169,7 +169,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ URLMapHeaderAction> getHeaderAction() {
+    public Output</* @Nullable */ URLMapHeaderAction> headerAction() {
         return this.headerAction;
     }
     /**
@@ -185,7 +185,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<URLMapHostRule>> getHostRules() {
+    public Output</* @Nullable */ List<URLMapHostRule>> hostRules() {
         return this.hostRules;
     }
     /**
@@ -199,7 +199,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getMapId() {
+    public Output<Integer> mapId() {
         return this.mapId;
     }
     /**
@@ -215,7 +215,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * request, in the absence of which the request match fails.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -231,7 +231,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * hostRule matches the URL's host portion.
      * 
      */
-    public Output</* @Nullable */ List<URLMapPathMatcher>> getPathMatchers() {
+    public Output</* @Nullable */ List<URLMapPathMatcher>> pathMatchers() {
         return this.pathMatchers;
     }
     /**
@@ -247,7 +247,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -261,7 +261,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -281,7 +281,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<URLMapTest>> getTests() {
+    public Output</* @Nullable */ List<URLMapTest>> tests() {
         return this.tests;
     }
 

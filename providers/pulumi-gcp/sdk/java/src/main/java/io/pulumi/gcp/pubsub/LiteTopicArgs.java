@@ -25,7 +25,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionConfig")
       private final @Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig;
 
-    public Output<LiteTopicPartitionConfigArgs> getPartitionConfig() {
+    public Output<LiteTopicPartitionConfigArgs> partitionConfig() {
         return this.partitionConfig == null ? Codegen.empty() : this.partitionConfig;
     }
 
@@ -49,7 +49,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -60,7 +60,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -72,7 +72,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationConfig")
       private final @Nullable Output<LiteTopicReservationConfigArgs> reservationConfig;
 
-    public Output<LiteTopicReservationConfigArgs> getReservationConfig() {
+    public Output<LiteTopicReservationConfigArgs> reservationConfig() {
         return this.reservationConfig == null ? Codegen.empty() : this.reservationConfig;
     }
 
@@ -84,7 +84,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionConfig")
       private final @Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig;
 
-    public Output<LiteTopicRetentionConfigArgs> getRetentionConfig() {
+    public Output<LiteTopicRetentionConfigArgs> retentionConfig() {
         return this.retentionConfig == null ? Codegen.empty() : this.retentionConfig;
     }
 
@@ -95,7 +95,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

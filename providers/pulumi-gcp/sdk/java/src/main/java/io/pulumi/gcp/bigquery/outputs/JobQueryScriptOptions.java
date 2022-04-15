@@ -45,21 +45,21 @@ public final class JobQueryScriptOptions {
      * Possible values are `LAST` and `FIRST_SELECT`.
      * 
     */
-    public Optional<String> getKeyResultStatement() {
+    public Optional<String> keyResultStatement() {
         return Optional.ofNullable(this.keyResultStatement);
     }
     /**
      * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
      * 
     */
-    public Optional<String> getStatementByteBudget() {
+    public Optional<String> statementByteBudget() {
         return Optional.ofNullable(this.statementByteBudget);
     }
     /**
      * Timeout period for each statement in a script.
      * 
     */
-    public Optional<String> getStatementTimeoutMs() {
+    public Optional<String> statementTimeoutMs() {
         return Optional.ofNullable(this.statementTimeoutMs);
     }
 

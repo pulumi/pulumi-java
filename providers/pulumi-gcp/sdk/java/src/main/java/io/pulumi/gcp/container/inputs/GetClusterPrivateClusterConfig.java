@@ -18,49 +18,49 @@ public final class GetClusterPrivateClusterConfig extends io.pulumi.resources.In
     @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
-    public Boolean getEnablePrivateEndpoint() {
+    public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
     @Import(name="enablePrivateNodes", required=true)
       private final Boolean enablePrivateNodes;
 
-    public Boolean getEnablePrivateNodes() {
+    public Boolean enablePrivateNodes() {
         return this.enablePrivateNodes;
     }
 
     @Import(name="masterGlobalAccessConfigs", required=true)
       private final List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs;
 
-    public List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> getMasterGlobalAccessConfigs() {
+    public List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs() {
         return this.masterGlobalAccessConfigs;
     }
 
     @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
-    public String getMasterIpv4CidrBlock() {
+    public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
     @Import(name="peeringName", required=true)
       private final String peeringName;
 
-    public String getPeeringName() {
+    public String peeringName() {
         return this.peeringName;
     }
 
     @Import(name="privateEndpoint", required=true)
       private final String privateEndpoint;
 
-    public String getPrivateEndpoint() {
+    public String privateEndpoint() {
         return this.privateEndpoint;
     }
 
     @Import(name="publicEndpoint", required=true)
       private final String publicEndpoint;
 
-    public String getPublicEndpoint() {
+    public String publicEndpoint() {
         return this.publicEndpoint;
     }
 

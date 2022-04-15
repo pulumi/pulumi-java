@@ -53,7 +53,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return If a device is blocked, connections or requests from this device will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBlocked() {
+    public Output</* @Nullable */ Boolean> blocked() {
         return this.blocked;
     }
     /**
@@ -67,7 +67,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
      * 
      */
-    public Output<List<DeviceConfig>> getConfigs() {
+    public Output<List<DeviceConfig>> configs() {
         return this.configs;
     }
     /**
@@ -83,7 +83,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DeviceCredential>> getCredentials() {
+    public Output</* @Nullable */ List<DeviceCredential>> credentials() {
         return this.credentials;
     }
     /**
@@ -99,7 +99,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DeviceGatewayConfig> getGatewayConfig() {
+    public Output</* @Nullable */ DeviceGatewayConfig> gatewayConfig() {
         return this.gatewayConfig;
     }
     /**
@@ -113,7 +113,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The last time a cloud-to-device config version acknowledgment was received from the device.
      * 
      */
-    public Output<String> getLastConfigAckTime() {
+    public Output<String> lastConfigAckTime() {
         return this.lastConfigAckTime;
     }
     /**
@@ -127,7 +127,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The last time a cloud-to-device config version was sent to the device.
      * 
      */
-    public Output<String> getLastConfigSendTime() {
+    public Output<String> lastConfigSendTime() {
         return this.lastConfigSendTime;
     }
     /**
@@ -141,7 +141,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    public Output<List<DeviceLastErrorStatus>> getLastErrorStatuses() {
+    public Output<List<DeviceLastErrorStatus>> lastErrorStatuses() {
         return this.lastErrorStatuses;
     }
     /**
@@ -155,7 +155,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    public Output<String> getLastErrorTime() {
+    public Output<String> lastErrorTime() {
         return this.lastErrorTime;
     }
     /**
@@ -169,7 +169,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The last time a telemetry event was received.
      * 
      */
-    public Output<String> getLastEventTime() {
+    public Output<String> lastEventTime() {
         return this.lastEventTime;
     }
     /**
@@ -183,7 +183,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The last time an MQTT PINGREQ was received.
      * 
      */
-    public Output<String> getLastHeartbeatTime() {
+    public Output<String> lastHeartbeatTime() {
         return this.lastHeartbeatTime;
     }
     /**
@@ -197,7 +197,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The last time a state event was received.
      * 
      */
-    public Output<String> getLastStateTime() {
+    public Output<String> lastStateTime() {
         return this.lastStateTime;
     }
     /**
@@ -213,7 +213,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    public Output</* @Nullable */ String> getLogLevel() {
+    public Output</* @Nullable */ String> logLevel() {
         return this.logLevel;
     }
     /**
@@ -227,7 +227,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The metadata key-value pairs assigned to the device.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -241,7 +241,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return A unique name for the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -257,7 +257,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * unique.
      * 
      */
-    public Output<String> getNumId() {
+    public Output<String> numId() {
         return this.numId;
     }
     /**
@@ -271,7 +271,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The name of the device registry where this device should be created.
      * 
      */
-    public Output<String> getRegistry() {
+    public Output<String> registry() {
         return this.registry;
     }
     /**
@@ -285,7 +285,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The state most recently received from the device.
      * 
      */
-    public Output<List<DeviceState>> getStates() {
+    public Output<List<DeviceState>> states() {
         return this.states;
     }
 

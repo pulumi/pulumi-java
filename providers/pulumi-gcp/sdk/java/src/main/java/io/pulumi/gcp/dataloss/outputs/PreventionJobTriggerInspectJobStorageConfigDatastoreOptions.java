@@ -37,7 +37,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      * Structure is documented below.
      * 
     */
-    public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind getKind() {
+    public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind() {
         return this.kind;
     }
     /**
@@ -46,7 +46,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      * Structure is documented below.
      * 
     */
-    public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId getPartitionId() {
+    public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId() {
         return this.partitionId;
     }
 

@@ -29,7 +29,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="archiveExtraction")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> archiveExtraction;
 
-    public Output<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> getArchiveExtraction() {
+    public Output<GuestPoliciesRecipeInstallStepArchiveExtractionGetArgs> archiveExtraction() {
         return this.archiveExtraction == null ? Codegen.empty() : this.archiveExtraction;
     }
 
@@ -41,7 +41,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="dpkgInstallation")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> dpkgInstallation;
 
-    public Output<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> getDpkgInstallation() {
+    public Output<GuestPoliciesRecipeInstallStepDpkgInstallationGetArgs> dpkgInstallation() {
         return this.dpkgInstallation == null ? Codegen.empty() : this.dpkgInstallation;
     }
 
@@ -53,7 +53,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="fileCopy")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepFileCopyGetArgs> fileCopy;
 
-    public Output<GuestPoliciesRecipeInstallStepFileCopyGetArgs> getFileCopy() {
+    public Output<GuestPoliciesRecipeInstallStepFileCopyGetArgs> fileCopy() {
         return this.fileCopy == null ? Codegen.empty() : this.fileCopy;
     }
 
@@ -65,7 +65,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="fileExec")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepFileExecGetArgs> fileExec;
 
-    public Output<GuestPoliciesRecipeInstallStepFileExecGetArgs> getFileExec() {
+    public Output<GuestPoliciesRecipeInstallStepFileExecGetArgs> fileExec() {
         return this.fileExec == null ? Codegen.empty() : this.fileExec;
     }
 
@@ -77,7 +77,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="msiInstallation")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> msiInstallation;
 
-    public Output<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> getMsiInstallation() {
+    public Output<GuestPoliciesRecipeInstallStepMsiInstallationGetArgs> msiInstallation() {
         return this.msiInstallation == null ? Codegen.empty() : this.msiInstallation;
     }
 
@@ -89,7 +89,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="rpmInstallation")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> rpmInstallation;
 
-    public Output<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> getRpmInstallation() {
+    public Output<GuestPoliciesRecipeInstallStepRpmInstallationGetArgs> rpmInstallation() {
         return this.rpmInstallation == null ? Codegen.empty() : this.rpmInstallation;
     }
 
@@ -101,7 +101,7 @@ public final class GuestPoliciesRecipeInstallStepGetArgs extends io.pulumi.resou
     @Import(name="scriptRun")
       private final @Nullable Output<GuestPoliciesRecipeInstallStepScriptRunGetArgs> scriptRun;
 
-    public Output<GuestPoliciesRecipeInstallStepScriptRunGetArgs> getScriptRun() {
+    public Output<GuestPoliciesRecipeInstallStepScriptRunGetArgs> scriptRun() {
         return this.scriptRun == null ? Codegen.empty() : this.scriptRun;
     }
 

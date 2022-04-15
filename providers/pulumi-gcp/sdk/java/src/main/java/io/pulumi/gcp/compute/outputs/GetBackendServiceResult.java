@@ -159,136 +159,136 @@ public final class GetBackendServiceResult {
         this.timeoutSec = timeoutSec;
     }
 
-    public Integer getAffinityCookieTtlSec() {
+    public Integer affinityCookieTtlSec() {
         return this.affinityCookieTtlSec;
     }
     /**
      * The set of backends that serve this Backend Service.
      * 
     */
-    public List<GetBackendServiceBackend> getBackends() {
+    public List<GetBackendServiceBackend> backends() {
         return this.backends;
     }
-    public List<GetBackendServiceCdnPolicy> getCdnPolicies() {
+    public List<GetBackendServiceCdnPolicy> cdnPolicies() {
         return this.cdnPolicies;
     }
-    public List<GetBackendServiceCircuitBreaker> getCircuitBreakers() {
+    public List<GetBackendServiceCircuitBreaker> circuitBreakers() {
         return this.circuitBreakers;
     }
     /**
      * Time for which instance will be drained (not accept new connections, but still work to finish started ones).
      * 
     */
-    public Integer getConnectionDrainingTimeoutSec() {
+    public Integer connectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec;
     }
-    public List<GetBackendServiceConsistentHash> getConsistentHash() {
+    public List<GetBackendServiceConsistentHash> consistentHash() {
         return this.consistentHash;
     }
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
-    public List<String> getCustomRequestHeaders() {
+    public List<String> customRequestHeaders() {
         return this.customRequestHeaders;
     }
-    public List<String> getCustomResponseHeaders() {
+    public List<String> customResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
      * Textual description for the Backend Service.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Whether or not Cloud CDN is enabled on the Backend Service.
      * 
     */
-    public Boolean getEnableCdn() {
+    public Boolean enableCdn() {
         return this.enableCdn;
     }
     /**
      * The fingerprint of the Backend Service.
      * 
     */
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
     /**
      * The set of HTTP/HTTPS health checks used by the Backend Service.
      * 
     */
-    public List<String> getHealthChecks() {
+    public List<String> healthChecks() {
         return this.healthChecks;
     }
-    public List<GetBackendServiceIap> getIaps() {
+    public List<GetBackendServiceIap> iaps() {
         return this.iaps;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLoadBalancingScheme() {
+    public String loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
-    public String getLocalityLbPolicy() {
+    public String localityLbPolicy() {
         return this.localityLbPolicy;
     }
-    public List<GetBackendServiceLogConfig> getLogConfigs() {
+    public List<GetBackendServiceLogConfig> logConfigs() {
         return this.logConfigs;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<GetBackendServiceOutlierDetection> getOutlierDetections() {
+    public List<GetBackendServiceOutlierDetection> outlierDetections() {
         return this.outlierDetections;
     }
     /**
      * The name of a service that has been added to an instance group in this backend.
      * 
     */
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
     /**
      * The protocol for incoming requests.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
-    public String getSecurityPolicy() {
+    public String securityPolicy() {
         return this.securityPolicy;
     }
-    public List<GetBackendServiceSecuritySetting> getSecuritySettings() {
+    public List<GetBackendServiceSecuritySetting> securitySettings() {
         return this.securitySettings;
     }
     /**
      * The URI of the Backend Service.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The Backend Service session stickiness configuration.
      * 
     */
-    public String getSessionAffinity() {
+    public String sessionAffinity() {
         return this.sessionAffinity;
     }
     /**
      * The number of seconds to wait for a backend to respond to a request before considering the request failed.
      * 
     */
-    public Integer getTimeoutSec() {
+    public Integer timeoutSec() {
         return this.timeoutSec;
     }
 

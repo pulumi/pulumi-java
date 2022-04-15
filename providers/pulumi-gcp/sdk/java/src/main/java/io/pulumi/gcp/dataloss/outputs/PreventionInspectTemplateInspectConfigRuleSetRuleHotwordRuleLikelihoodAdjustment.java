@@ -42,7 +42,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
     */
-    public Optional<String> getFixedLikelihood() {
+    public Optional<String> fixedLikelihood() {
         return Optional.ofNullable(this.fixedLikelihood);
     }
     /**
@@ -54,7 +54,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
      * 
     */
-    public Optional<Integer> getRelativeLikelihood() {
+    public Optional<Integer> relativeLikelihood() {
         return Optional.ofNullable(this.relativeLikelihood);
     }
 

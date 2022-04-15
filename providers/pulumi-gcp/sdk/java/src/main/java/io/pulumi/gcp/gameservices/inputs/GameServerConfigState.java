@@ -26,7 +26,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="configId")
       private final @Nullable Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId == null ? Codegen.empty() : this.configId;
     }
 
@@ -37,7 +37,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId == null ? Codegen.empty() : this.deploymentId;
     }
 
@@ -48,7 +48,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="fleetConfigs")
       private final @Nullable Output<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs;
 
-    public Output<List<GameServerConfigFleetConfigGetArgs>> getFleetConfigs() {
+    public Output<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs() {
         return this.fleetConfigs == null ? Codegen.empty() : this.fleetConfigs;
     }
 
@@ -72,7 +72,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -83,7 +83,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -94,7 +94,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -106,7 +106,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -118,7 +118,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="scalingConfigs")
       private final @Nullable Output<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs;
 
-    public Output<List<GameServerConfigScalingConfigGetArgs>> getScalingConfigs() {
+    public Output<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs() {
         return this.scalingConfigs == null ? Codegen.empty() : this.scalingConfigs;
     }
 

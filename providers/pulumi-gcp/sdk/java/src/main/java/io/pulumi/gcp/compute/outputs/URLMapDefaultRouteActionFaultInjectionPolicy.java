@@ -38,7 +38,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionFaultInjectionPolicyAbort> getAbort() {
+    public Optional<URLMapDefaultRouteActionFaultInjectionPolicyAbort> abort() {
         return Optional.ofNullable(this.abort);
     }
     /**
@@ -46,7 +46,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelay> getDelay() {
+    public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelay> delay() {
         return Optional.ofNullable(this.delay);
     }
 

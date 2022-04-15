@@ -62,7 +62,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * network endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultPort() {
+    public Output</* @Nullable */ Integer> defaultPort() {
         return this.defaultPort;
     }
     /**
@@ -78,7 +78,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +104,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -120,7 +120,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Possible values are `INTERNET_IP_PORT` and `INTERNET_FQDN_PORT`.
      * 
      */
-    public Output<String> getNetworkEndpointType() {
+    public Output<String> networkEndpointType() {
         return this.networkEndpointType;
     }
     /**
@@ -136,7 +136,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -150,7 +150,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

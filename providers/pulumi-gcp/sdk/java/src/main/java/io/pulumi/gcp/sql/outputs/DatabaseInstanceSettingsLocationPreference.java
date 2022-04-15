@@ -37,7 +37,7 @@ public final class DatabaseInstanceSettingsLocationPreference {
      * in. Must be in the same region as this instance.
      * 
     */
-    public Optional<String> getFollowGaeApplication() {
+    public Optional<String> followGaeApplication() {
         return Optional.ofNullable(this.followGaeApplication);
     }
     /**
@@ -45,7 +45,7 @@ public final class DatabaseInstanceSettingsLocationPreference {
      * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
      * 
     */
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

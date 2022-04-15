@@ -25,7 +25,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     @Import(name="dispatchRules", required=true)
       private final Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
-    public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> getDispatchRules() {
+    public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules() {
         return this.dispatchRules;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

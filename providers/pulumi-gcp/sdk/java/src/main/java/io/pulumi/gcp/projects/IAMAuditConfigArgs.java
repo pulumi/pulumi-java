@@ -23,7 +23,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditLogConfigs", required=true)
       private final Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<IAMAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
@@ -35,7 +35,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -46,7 +46,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

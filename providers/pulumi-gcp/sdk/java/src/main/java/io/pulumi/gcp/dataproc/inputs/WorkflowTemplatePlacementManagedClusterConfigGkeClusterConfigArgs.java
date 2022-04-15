@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     @Import(name="namespacedGkeDeploymentTarget")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget == null ? Codegen.empty() : this.namespacedGkeDeploymentTarget;
     }
 

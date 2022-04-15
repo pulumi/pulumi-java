@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -41,7 +41,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="match", required=true)
       private final Output<SecurityPolicyRuleMatchArgs> match;
 
-    public Output<SecurityPolicyRuleMatchArgs> getMatch() {
+    public Output<SecurityPolicyRuleMatchArgs> match() {
         return this.match;
     }
 
@@ -65,7 +65,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
+    public Output<Boolean> preview() {
         return this.preview == null ? Codegen.empty() : this.preview;
     }
 
@@ -77,7 +77,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -89,7 +89,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
+    public Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions() {
         return this.rateLimitOptions == null ? Codegen.empty() : this.rateLimitOptions;
     }
 

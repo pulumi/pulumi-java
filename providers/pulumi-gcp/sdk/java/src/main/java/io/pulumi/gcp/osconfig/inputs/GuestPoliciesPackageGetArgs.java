@@ -28,7 +28,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
@@ -45,7 +45,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     @Import(name="manager")
       private final @Nullable Output<String> manager;
 
-    public Output<String> getManager() {
+    public Output<String> manager() {
         return this.manager == null ? Codegen.empty() : this.manager;
     }
 
@@ -59,7 +59,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

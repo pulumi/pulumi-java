@@ -22,7 +22,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -33,7 +33,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     @Import(name="metricsScope")
       private final @Nullable Output<String> metricsScope;
 
-    public Output<String> getMetricsScope() {
+    public Output<String> metricsScope() {
         return this.metricsScope == null ? Codegen.empty() : this.metricsScope;
     }
 
@@ -44,7 +44,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

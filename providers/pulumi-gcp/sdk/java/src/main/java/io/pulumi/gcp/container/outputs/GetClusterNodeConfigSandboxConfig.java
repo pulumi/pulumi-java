@@ -16,7 +16,7 @@ public final class GetClusterNodeConfigSandboxConfig {
         this.sandboxType = sandboxType;
     }
 
-    public String getSandboxType() {
+    public String sandboxType() {
         return this.sandboxType;
     }
 

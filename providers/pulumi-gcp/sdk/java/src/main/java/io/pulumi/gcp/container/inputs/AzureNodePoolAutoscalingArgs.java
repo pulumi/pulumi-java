@@ -21,7 +21,7 @@ public final class AzureNodePoolAutoscalingArgs extends io.pulumi.resources.Reso
     @Import(name="maxNodeCount", required=true)
       private final Output<Integer> maxNodeCount;
 
-    public Output<Integer> getMaxNodeCount() {
+    public Output<Integer> maxNodeCount() {
         return this.maxNodeCount;
     }
 
@@ -32,7 +32,7 @@ public final class AzureNodePoolAutoscalingArgs extends io.pulumi.resources.Reso
     @Import(name="minNodeCount", required=true)
       private final Output<Integer> minNodeCount;
 
-    public Output<Integer> getMinNodeCount() {
+    public Output<Integer> minNodeCount() {
         return this.minNodeCount;
     }
 

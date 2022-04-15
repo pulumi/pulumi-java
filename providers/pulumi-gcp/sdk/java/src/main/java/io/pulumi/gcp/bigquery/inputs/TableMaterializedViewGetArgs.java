@@ -25,7 +25,7 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
     @Import(name="enableRefresh")
       private final @Nullable Output<Boolean> enableRefresh;
 
-    public Output<Boolean> getEnableRefresh() {
+    public Output<Boolean> enableRefresh() {
         return this.enableRefresh == null ? Codegen.empty() : this.enableRefresh;
     }
 
@@ -36,7 +36,7 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -48,7 +48,7 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
     @Import(name="refreshIntervalMs")
       private final @Nullable Output<Integer> refreshIntervalMs;
 
-    public Output<Integer> getRefreshIntervalMs() {
+    public Output<Integer> refreshIntervalMs() {
         return this.refreshIntervalMs == null ? Codegen.empty() : this.refreshIntervalMs;
     }
 

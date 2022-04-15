@@ -23,7 +23,7 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -34,7 +34,7 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
+    public Output<Boolean> invertRegex() {
         return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 
@@ -45,7 +45,7 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

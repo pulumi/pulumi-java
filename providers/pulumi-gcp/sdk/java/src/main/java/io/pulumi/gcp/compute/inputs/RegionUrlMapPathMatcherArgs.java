@@ -28,7 +28,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
-    public Output<String> getDefaultService() {
+    public Output<String> defaultService() {
         return this.defaultService == null ? Codegen.empty() : this.defaultService;
     }
 
@@ -42,7 +42,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     @Import(name="defaultUrlRedirect")
       private final @Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect;
 
-    public Output<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
+    public Output<RegionUrlMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
     }
 
@@ -53,7 +53,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -82,7 +82,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     @Import(name="pathRules")
       private final @Nullable Output<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules;
 
-    public Output<List<RegionUrlMapPathMatcherPathRuleArgs>> getPathRules() {
+    public Output<List<RegionUrlMapPathMatcherPathRuleArgs>> pathRules() {
         return this.pathRules == null ? Codegen.empty() : this.pathRules;
     }
 
@@ -99,7 +99,7 @@ public final class RegionUrlMapPathMatcherArgs extends io.pulumi.resources.Resou
     @Import(name="routeRules")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules;
 
-    public Output<List<RegionUrlMapPathMatcherRouteRuleArgs>> getRouteRules() {
+    public Output<List<RegionUrlMapPathMatcherRouteRuleArgs>> routeRules() {
         return this.routeRules == null ? Codegen.empty() : this.routeRules;
     }
 

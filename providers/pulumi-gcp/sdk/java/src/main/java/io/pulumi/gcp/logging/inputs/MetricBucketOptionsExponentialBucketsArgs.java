@@ -23,7 +23,7 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends io.pulumi.r
     @Import(name="growthFactor")
       private final @Nullable Output<Double> growthFactor;
 
-    public Output<Double> getGrowthFactor() {
+    public Output<Double> growthFactor() {
         return this.growthFactor == null ? Codegen.empty() : this.growthFactor;
     }
 
@@ -34,7 +34,7 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends io.pulumi.r
     @Import(name="numFiniteBuckets")
       private final @Nullable Output<Integer> numFiniteBuckets;
 
-    public Output<Integer> getNumFiniteBuckets() {
+    public Output<Integer> numFiniteBuckets() {
         return this.numFiniteBuckets == null ? Codegen.empty() : this.numFiniteBuckets;
     }
 
@@ -45,7 +45,7 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends io.pulumi.r
     @Import(name="scale")
       private final @Nullable Output<Double> scale;
 
-    public Output<Double> getScale() {
+    public Output<Double> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 

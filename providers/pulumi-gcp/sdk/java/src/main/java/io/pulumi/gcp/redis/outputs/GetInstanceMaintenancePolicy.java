@@ -28,16 +28,16 @@ public final class GetInstanceMaintenancePolicy {
         this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
     }
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
-    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> getWeeklyMaintenanceWindows() {
+    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows;
     }
 

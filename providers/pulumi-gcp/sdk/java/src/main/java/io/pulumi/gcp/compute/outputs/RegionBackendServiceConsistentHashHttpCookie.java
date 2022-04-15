@@ -43,14 +43,14 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
      * Name of the cookie.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path to set for the cookie.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
@@ -58,7 +58,7 @@ public final class RegionBackendServiceConsistentHashHttpCookie {
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
     */
-    public Optional<RegionBackendServiceConsistentHashHttpCookieTtl> getTtl() {
+    public Optional<RegionBackendServiceConsistentHashHttpCookieTtl> ttl() {
         return Optional.ofNullable(this.ttl);
     }
 

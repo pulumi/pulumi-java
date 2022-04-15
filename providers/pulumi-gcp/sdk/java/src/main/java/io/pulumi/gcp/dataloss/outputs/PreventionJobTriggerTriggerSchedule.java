@@ -32,7 +32,7 @@ public final class PreventionJobTriggerTriggerSchedule {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getRecurrencePeriodDuration() {
+    public Optional<String> recurrencePeriodDuration() {
         return Optional.ofNullable(this.recurrencePeriodDuration);
     }
 

@@ -24,7 +24,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
+    public Output<Map<String,String>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -36,7 +36,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
+    public Output<Boolean> force() {
         return this.force == null ? Codegen.empty() : this.force;
     }
 
@@ -47,7 +47,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="limit", required=true)
       private final Output<String> limit;
 
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit;
     }
 
@@ -58,7 +58,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="metric", required=true)
       private final Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
 
@@ -69,7 +69,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="overrideValue", required=true)
       private final Output<String> overrideValue;
 
-    public Output<String> getOverrideValue() {
+    public Output<String> overrideValue() {
         return this.overrideValue;
     }
 
@@ -81,7 +81,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -92,7 +92,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

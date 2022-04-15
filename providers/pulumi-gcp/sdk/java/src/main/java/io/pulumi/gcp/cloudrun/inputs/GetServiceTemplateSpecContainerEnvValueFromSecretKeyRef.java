@@ -15,7 +15,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -26,7 +26,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

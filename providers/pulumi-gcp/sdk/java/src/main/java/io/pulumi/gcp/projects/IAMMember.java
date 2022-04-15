@@ -103,7 +103,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IAMMemberCondition> getCondition() {
+    public Output</* @Nullable */ IAMMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -117,13 +117,13 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -139,7 +139,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * inferred from the provider.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -157,7 +157,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

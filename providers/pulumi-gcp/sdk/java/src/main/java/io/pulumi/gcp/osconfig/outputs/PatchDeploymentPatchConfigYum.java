@@ -52,7 +52,7 @@ public final class PatchDeploymentPatchConfigYum {
      * List of KBs to exclude from update.
      * 
     */
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
     /**
@@ -61,21 +61,21 @@ public final class PatchDeploymentPatchConfigYum {
      * any other patch configuration fields.
      * 
     */
-    public List<String> getExclusivePackages() {
+    public List<String> exclusivePackages() {
         return this.exclusivePackages == null ? List.of() : this.exclusivePackages;
     }
     /**
      * Will cause patch to run yum update-minimal instead.
      * 
     */
-    public Optional<Boolean> getMinimal() {
+    public Optional<Boolean> minimal() {
         return Optional.ofNullable(this.minimal);
     }
     /**
      * Adds the --security flag to yum update. Not supported on all platforms.
      * 
     */
-    public Optional<Boolean> getSecurity() {
+    public Optional<Boolean> security() {
         return Optional.ofNullable(this.security);
     }
 

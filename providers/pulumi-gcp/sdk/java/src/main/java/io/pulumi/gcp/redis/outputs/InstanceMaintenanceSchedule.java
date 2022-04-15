@@ -54,7 +54,7 @@ public final class InstanceMaintenanceSchedule {
      * resolution and up to nine fractional digits.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
@@ -65,7 +65,7 @@ public final class InstanceMaintenanceSchedule {
      * resolution and up to nine fractional digits.
      * 
     */
-    public Optional<String> getScheduleDeadlineTime() {
+    public Optional<String> scheduleDeadlineTime() {
         return Optional.ofNullable(this.scheduleDeadlineTime);
     }
     /**
@@ -75,7 +75,7 @@ public final class InstanceMaintenanceSchedule {
      * resolution and up to nine fractional digits.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

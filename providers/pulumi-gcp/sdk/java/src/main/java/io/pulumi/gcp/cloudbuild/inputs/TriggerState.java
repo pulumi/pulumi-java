@@ -31,7 +31,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="build")
       private final @Nullable Output<TriggerBuildGetArgs> build;
 
-    public Output<TriggerBuildGetArgs> getBuild() {
+    public Output<TriggerBuildGetArgs> build() {
         return this.build == null ? Codegen.empty() : this.build;
     }
 
@@ -42,7 +42,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -53,7 +53,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -64,7 +64,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -75,7 +75,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filename")
       private final @Nullable Output<String> filename;
 
-    public Output<String> getFilename() {
+    public Output<String> filename() {
         return this.filename == null ? Codegen.empty() : this.filename;
     }
 
@@ -88,7 +88,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="github")
       private final @Nullable Output<TriggerGithubGetArgs> github;
 
-    public Output<TriggerGithubGetArgs> getGithub() {
+    public Output<TriggerGithubGetArgs> github() {
         return this.github == null ? Codegen.empty() : this.github;
     }
 
@@ -105,7 +105,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoredFiles")
       private final @Nullable Output<List<String>> ignoredFiles;
 
-    public Output<List<String>> getIgnoredFiles() {
+    public Output<List<String>> ignoredFiles() {
         return this.ignoredFiles == null ? Codegen.empty() : this.ignoredFiles;
     }
 
@@ -124,7 +124,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="includedFiles")
       private final @Nullable Output<List<String>> includedFiles;
 
-    public Output<List<String>> getIncludedFiles() {
+    public Output<List<String>> includedFiles() {
         return this.includedFiles == null ? Codegen.empty() : this.includedFiles;
     }
 
@@ -137,7 +137,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -149,7 +149,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -163,7 +163,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubConfig")
       private final @Nullable Output<TriggerPubsubConfigGetArgs> pubsubConfig;
 
-    public Output<TriggerPubsubConfigGetArgs> getPubsubConfig() {
+    public Output<TriggerPubsubConfigGetArgs> pubsubConfig() {
         return this.pubsubConfig == null ? Codegen.empty() : this.pubsubConfig;
     }
 
@@ -178,7 +178,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -189,7 +189,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> getSubstitutions() {
+    public Output<Map<String,String>> substitutions() {
         return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
@@ -200,7 +200,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -211,7 +211,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerId")
       private final @Nullable Output<String> triggerId;
 
-    public Output<String> getTriggerId() {
+    public Output<String> triggerId() {
         return this.triggerId == null ? Codegen.empty() : this.triggerId;
     }
 
@@ -227,7 +227,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerTemplate")
       private final @Nullable Output<TriggerTriggerTemplateGetArgs> triggerTemplate;
 
-    public Output<TriggerTriggerTemplateGetArgs> getTriggerTemplate() {
+    public Output<TriggerTriggerTemplateGetArgs> triggerTemplate() {
         return this.triggerTemplate == null ? Codegen.empty() : this.triggerTemplate;
     }
 
@@ -241,7 +241,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookConfig")
       private final @Nullable Output<TriggerWebhookConfigGetArgs> webhookConfig;
 
-    public Output<TriggerWebhookConfigGetArgs> getWebhookConfig() {
+    public Output<TriggerWebhookConfigGetArgs> webhookConfig() {
         return this.webhookConfig == null ? Codegen.empty() : this.webhookConfig;
     }
 

@@ -16,49 +16,49 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig extends io.pulum
     @Import(name="cloudComposerConnectionSubnetwork", required=true)
       private final String cloudComposerConnectionSubnetwork;
 
-    public String getCloudComposerConnectionSubnetwork() {
+    public String cloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork;
     }
 
     @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
       private final String cloudComposerNetworkIpv4CidrBlock;
 
-    public String getCloudComposerNetworkIpv4CidrBlock() {
+    public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
 
     @Import(name="cloudSqlIpv4CidrBlock", required=true)
       private final String cloudSqlIpv4CidrBlock;
 
-    public String getCloudSqlIpv4CidrBlock() {
+    public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
 
     @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
-    public Boolean getEnablePrivateEndpoint() {
+    public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
     @Import(name="enablePrivatelyUsedPublicIps", required=true)
       private final Boolean enablePrivatelyUsedPublicIps;
 
-    public Boolean getEnablePrivatelyUsedPublicIps() {
+    public Boolean enablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps;
     }
 
     @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
-    public String getMasterIpv4CidrBlock() {
+    public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
     @Import(name="webServerIpv4CidrBlock", required=true)
       private final String webServerIpv4CidrBlock;
 
-    public String getWebServerIpv4CidrBlock() {
+    public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
     }
 

@@ -22,7 +22,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     @Import(name="enableHierarchicalResourceQuota")
       private final @Nullable Output<Boolean> enableHierarchicalResourceQuota;
 
-    public Output<Boolean> getEnableHierarchicalResourceQuota() {
+    public Output<Boolean> enableHierarchicalResourceQuota() {
         return this.enableHierarchicalResourceQuota == null ? Codegen.empty() : this.enableHierarchicalResourceQuota;
     }
 
@@ -33,7 +33,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     @Import(name="enablePodTreeLabels")
       private final @Nullable Output<Boolean> enablePodTreeLabels;
 
-    public Output<Boolean> getEnablePodTreeLabels() {
+    public Output<Boolean> enablePodTreeLabels() {
         return this.enablePodTreeLabels == null ? Codegen.empty() : this.enablePodTreeLabels;
     }
 
@@ -44,7 +44,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

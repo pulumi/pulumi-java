@@ -21,7 +21,7 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
     @Import(name="effect", required=true)
       private final Output<String> effect;
 
-    public Output<String> getEffect() {
+    public Output<String> effect() {
         return this.effect;
     }
 
@@ -32,7 +32,7 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -43,7 +43,7 @@ public final class AwsNodePoolConfigTaintGetArgs extends io.pulumi.resources.Res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

@@ -25,7 +25,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPool")
       private final @Nullable Output<String> backupPool;
 
-    public Output<String> getBackupPool() {
+    public Output<String> backupPool() {
         return this.backupPool == null ? Codegen.empty() : this.backupPool;
     }
 
@@ -36,7 +36,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failoverRatio")
       private final @Nullable Output<Double> failoverRatio;
 
-    public Output<Double> getFailoverRatio() {
+    public Output<Double> failoverRatio() {
         return this.failoverRatio == null ? Codegen.empty() : this.failoverRatio;
     }
 
@@ -60,7 +60,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthChecks")
       private final @Nullable Output<String> healthChecks;
 
-    public Output<String> getHealthChecks() {
+    public Output<String> healthChecks() {
         return this.healthChecks == null ? Codegen.empty() : this.healthChecks;
     }
 
@@ -75,7 +75,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 
@@ -87,7 +87,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -99,7 +99,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -111,7 +111,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -124,7 +124,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinity")
       private final @Nullable Output<String> sessionAffinity;
 
-    public Output<String> getSessionAffinity() {
+    public Output<String> sessionAffinity() {
         return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 

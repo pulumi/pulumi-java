@@ -44,7 +44,7 @@ public final class BudgetAmount {
      * use the `specified_amount` block.
      * 
     */
-    public Optional<Boolean> getLastPeriodAmount() {
+    public Optional<Boolean> lastPeriodAmount() {
         return Optional.ofNullable(this.lastPeriodAmount);
     }
     /**
@@ -54,7 +54,7 @@ public final class BudgetAmount {
      * Structure is documented below.
      * 
     */
-    public Optional<BudgetAmountSpecifiedAmount> getSpecifiedAmount() {
+    public Optional<BudgetAmountSpecifiedAmount> specifiedAmount() {
         return Optional.ofNullable(this.specifiedAmount);
     }
 

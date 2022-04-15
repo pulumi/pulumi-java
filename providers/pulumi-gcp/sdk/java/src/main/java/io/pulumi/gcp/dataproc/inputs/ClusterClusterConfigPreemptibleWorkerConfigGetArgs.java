@@ -25,14 +25,14 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
     @Import(name="diskConfig")
       private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
 
-    public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> getDiskConfig() {
+    public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig() {
         return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
     @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
-    public Output<List<String>> getInstanceNames() {
+    public Output<List<String>> instanceNames() {
         return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
     }
 
@@ -44,7 +44,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
     @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> getNumInstances() {
+    public Output<Integer> numInstances() {
         return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 

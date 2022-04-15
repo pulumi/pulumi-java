@@ -26,7 +26,7 @@ public final class FirewallLogConfig {
      * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
      * 
     */
-    public String getMetadata() {
+    public String metadata() {
         return this.metadata;
     }
 

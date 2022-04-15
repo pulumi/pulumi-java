@@ -20,10 +20,10 @@ public final class GetBucketLogging {
         this.logObjectPrefix = logObjectPrefix;
     }
 
-    public String getLogBucket() {
+    public String logBucket() {
         return this.logBucket;
     }
-    public String getLogObjectPrefix() {
+    public String logObjectPrefix() {
         return this.logObjectPrefix;
     }
 

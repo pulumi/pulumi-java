@@ -25,7 +25,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressFromArgs extends io.pul
     @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> getIdentities() {
+    public Output<List<String>> identities() {
         return this.identities == null ? Codegen.empty() : this.identities;
     }
 
@@ -39,7 +39,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressFromArgs extends io.pul
     @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 

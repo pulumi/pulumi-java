@@ -70,7 +70,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
      * 
     */
-    public Optional<String> getImageVersion() {
+    public Optional<String> imageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
     /**
@@ -89,7 +89,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * * ZOOKEEPER
      * 
     */
-    public List<String> getOptionalComponents() {
+    public List<String> optionalComponents() {
         return this.optionalComponents == null ? List.of() : this.optionalComponents;
     }
     /**
@@ -99,10 +99,10 @@ public final class ClusterClusterConfigSoftwareConfig {
      * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
      * 
     */
-    public Map<String,String> getOverrideProperties() {
+    public Map<String,String> overrideProperties() {
         return this.overrideProperties == null ? Map.of() : this.overrideProperties;
     }
-    public Map<String,Object> getProperties() {
+    public Map<String,Object> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 

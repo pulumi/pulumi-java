@@ -18,7 +18,7 @@ public final class KeyRingImportJobPublicKey {
         this.pem = pem;
     }
 
-    public Optional<String> getPem() {
+    public Optional<String> pem() {
         return Optional.ofNullable(this.pem);
     }
 

@@ -19,14 +19,14 @@ public final class FeatureResourceStateGetArgs extends io.pulumi.resources.Resou
     @Import(name="hasResources")
       private final @Nullable Output<Boolean> hasResources;
 
-    public Output<Boolean> getHasResources() {
+    public Output<Boolean> hasResources() {
         return this.hasResources == null ? Codegen.empty() : this.hasResources;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

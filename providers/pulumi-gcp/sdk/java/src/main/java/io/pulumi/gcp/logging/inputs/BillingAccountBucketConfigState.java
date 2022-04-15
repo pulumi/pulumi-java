@@ -23,7 +23,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
@@ -34,7 +34,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="bucketId")
       private final @Nullable Output<String> bucketId;
 
-    public Output<String> getBucketId() {
+    public Output<String> bucketId() {
         return this.bucketId == null ? Codegen.empty() : this.bucketId;
     }
 
@@ -45,7 +45,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="lifecycleState")
       private final @Nullable Output<String> lifecycleState;
 
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
     }
 
@@ -67,7 +67,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -78,7 +78,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class BillingAccountBucketConfigState extends io.pulumi.resources.R
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
+    public Output<Integer> retentionDays() {
         return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 

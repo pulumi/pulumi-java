@@ -21,7 +21,7 @@ public final class LiteTopicPartitionConfigCapacityArgs extends io.pulumi.resour
     @Import(name="publishMibPerSec", required=true)
       private final Output<Integer> publishMibPerSec;
 
-    public Output<Integer> getPublishMibPerSec() {
+    public Output<Integer> publishMibPerSec() {
         return this.publishMibPerSec;
     }
 
@@ -32,7 +32,7 @@ public final class LiteTopicPartitionConfigCapacityArgs extends io.pulumi.resour
     @Import(name="subscribeMibPerSec", required=true)
       private final Output<Integer> subscribeMibPerSec;
 
-    public Output<Integer> getSubscribeMibPerSec() {
+    public Output<Integer> subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 

@@ -46,14 +46,14 @@ public final class WorkloadIdentityPoolProviderOidc {
      * For example:
      * 
     */
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
     /**
      * The OIDC issuer URL.
      * 
     */
-    public String getIssuerUri() {
+    public String issuerUri() {
         return this.issuerUri;
     }
 

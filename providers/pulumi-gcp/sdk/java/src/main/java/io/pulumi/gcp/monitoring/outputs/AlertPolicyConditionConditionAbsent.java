@@ -99,7 +99,7 @@ public final class AlertPolicyConditionConditionAbsent {
      * Structure is documented below.
      * 
     */
-    public List<AlertPolicyConditionConditionAbsentAggregation> getAggregations() {
+    public List<AlertPolicyConditionConditionAbsentAggregation> aggregations() {
         return this.aggregations == null ? List.of() : this.aggregations;
     }
     /**
@@ -120,14 +120,14 @@ public final class AlertPolicyConditionConditionAbsent {
      * alerted on quickly.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * A logs-based filter.
      * 
     */
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
@@ -142,7 +142,7 @@ public final class AlertPolicyConditionConditionAbsent {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyConditionConditionAbsentTrigger> getTrigger() {
+    public Optional<AlertPolicyConditionConditionAbsentTrigger> trigger() {
         return Optional.ofNullable(this.trigger);
     }
 

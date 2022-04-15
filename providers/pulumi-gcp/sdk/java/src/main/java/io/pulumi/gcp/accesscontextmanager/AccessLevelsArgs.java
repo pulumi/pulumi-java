@@ -25,7 +25,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessLevels")
       private final @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
-    public Output<List<AccessLevelsAccessLevelArgs>> getAccessLevels() {
+    public Output<List<AccessLevelsAccessLevelArgs>> accessLevels() {
         return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
@@ -37,7 +37,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 

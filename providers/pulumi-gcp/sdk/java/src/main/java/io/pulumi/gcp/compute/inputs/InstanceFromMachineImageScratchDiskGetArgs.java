@@ -17,7 +17,7 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends io.pulumi.
     @Import(name="interface", required=true)
       private final Output<String> interface_;
 
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_;
     }
 

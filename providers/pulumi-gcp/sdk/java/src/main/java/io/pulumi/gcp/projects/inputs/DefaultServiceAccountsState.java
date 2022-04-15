@@ -24,7 +24,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -35,7 +35,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -49,7 +49,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     @Import(name="restorePolicy")
       private final @Nullable Output<String> restorePolicy;
 
-    public Output<String> getRestorePolicy() {
+    public Output<String> restorePolicy() {
         return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
@@ -60,7 +60,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
     @Import(name="serviceAccounts")
       private final @Nullable Output<Map<String,Object>> serviceAccounts;
 
-    public Output<Map<String,Object>> getServiceAccounts() {
+    public Output<Map<String,Object>> serviceAccounts() {
         return this.serviceAccounts == null ? Codegen.empty() : this.serviceAccounts;
     }
 

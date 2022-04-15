@@ -20,7 +20,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<DatasetIamBindingConditionArgs> condition;
 
-    public Output<DatasetIamBindingConditionArgs> getCondition() {
+    public Output<DatasetIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -34,14 +34,14 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -54,7 +54,7 @@ public final class DatasetIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

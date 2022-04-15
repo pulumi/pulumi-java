@@ -36,7 +36,7 @@ public final class TriggerBuildSecret {
      * Cloud KMS key name to use to decrypt these envs.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -45,7 +45,7 @@ public final class TriggerBuildSecret {
      * will be available to all build steps in this build.
      * 
     */
-    public Map<String,String> getSecretEnv() {
+    public Map<String,String> secretEnv() {
         return this.secretEnv == null ? Map.of() : this.secretEnv;
     }
 

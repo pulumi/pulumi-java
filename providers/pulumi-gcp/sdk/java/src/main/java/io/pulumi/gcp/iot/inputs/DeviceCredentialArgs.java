@@ -23,7 +23,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -35,7 +35,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="publicKey", required=true)
       private final Output<DeviceCredentialPublicKeyArgs> publicKey;
 
-    public Output<DeviceCredentialPublicKeyArgs> getPublicKey() {
+    public Output<DeviceCredentialPublicKeyArgs> publicKey() {
         return this.publicKey;
     }
 

@@ -21,7 +21,7 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -32,7 +32,7 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
     @Import(name="content")
       private final @Nullable String content;
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -43,7 +43,7 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

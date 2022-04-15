@@ -16,7 +16,7 @@ public final class GetMeshIstioServiceTelemetry {
         this.resourceName = resourceName;
     }
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

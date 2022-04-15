@@ -50,7 +50,7 @@ public final class RepositoryPubsubConfig {
      *   Possible values are `PROTOBUF` and `JSON`.
      * 
     */
-    public String getMessageFormat() {
+    public String messageFormat() {
         return this.messageFormat;
     }
     /**
@@ -60,14 +60,14 @@ public final class RepositoryPubsubConfig {
      * If unspecified, it defaults to the compute engine default service account.
      * 
     */
-    public Optional<String> getServiceAccountEmail() {
+    public Optional<String> serviceAccountEmail() {
         return Optional.ofNullable(this.serviceAccountEmail);
     }
     /**
      * The identifier for this object. Format specified above.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

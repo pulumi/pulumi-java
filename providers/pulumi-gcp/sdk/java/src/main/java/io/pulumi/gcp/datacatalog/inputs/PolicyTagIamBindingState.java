@@ -20,7 +20,7 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<PolicyTagIamBindingConditionGetArgs> condition;
 
-    public Output<PolicyTagIamBindingConditionGetArgs> getCondition() {
+    public Output<PolicyTagIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,14 +31,14 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
     @Import(name="policyTag")
       private final @Nullable Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag == null ? Codegen.empty() : this.policyTag;
     }
 
@@ -62,7 +62,7 @@ public final class PolicyTagIamBindingState extends io.pulumi.resources.Resource
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

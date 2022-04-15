@@ -24,7 +24,7 @@ public final class ClusterNetworkPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterNetworkPolicyArgs extends io.pulumi.resources.Resource
     @Import(name="provider")
       private final @Nullable Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider == null ? Codegen.empty() : this.provider;
     }
 

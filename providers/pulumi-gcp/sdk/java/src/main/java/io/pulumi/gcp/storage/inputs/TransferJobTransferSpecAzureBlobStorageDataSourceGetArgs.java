@@ -23,7 +23,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     @Import(name="azureCredentials", required=true)
       private final Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
 
-    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> getAzureCredentials() {
+    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials() {
         return this.azureCredentials;
     }
 
@@ -34,7 +34,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -45,7 +45,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -56,7 +56,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     @Import(name="storageAccount", required=true)
       private final Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
+    public Output<String> storageAccount() {
         return this.storageAccount;
     }
 

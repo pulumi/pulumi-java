@@ -32,14 +32,14 @@ public final class GetClientOpenIdUserInfoResult {
      * The email of the account used by the provider to authenticate with GCP.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

@@ -22,7 +22,7 @@ public final class WorkflowTemplateJobSchedulingArgs extends io.pulumi.resources
     @Import(name="maxFailuresPerHour")
       private final @Nullable Output<Integer> maxFailuresPerHour;
 
-    public Output<Integer> getMaxFailuresPerHour() {
+    public Output<Integer> maxFailuresPerHour() {
         return this.maxFailuresPerHour == null ? Codegen.empty() : this.maxFailuresPerHour;
     }
 
@@ -33,7 +33,7 @@ public final class WorkflowTemplateJobSchedulingArgs extends io.pulumi.resources
     @Import(name="maxFailuresTotal")
       private final @Nullable Output<Integer> maxFailuresTotal;
 
-    public Output<Integer> getMaxFailuresTotal() {
+    public Output<Integer> maxFailuresTotal() {
         return this.maxFailuresTotal == null ? Codegen.empty() : this.maxFailuresTotal;
     }
 

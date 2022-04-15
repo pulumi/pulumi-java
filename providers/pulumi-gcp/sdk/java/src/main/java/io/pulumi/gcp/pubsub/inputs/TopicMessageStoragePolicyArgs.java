@@ -27,7 +27,7 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
     @Import(name="allowedPersistenceRegions", required=true)
       private final Output<List<String>> allowedPersistenceRegions;
 
-    public Output<List<String>> getAllowedPersistenceRegions() {
+    public Output<List<String>> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 

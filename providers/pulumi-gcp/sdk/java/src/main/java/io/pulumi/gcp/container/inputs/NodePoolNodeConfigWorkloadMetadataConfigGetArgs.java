@@ -17,7 +17,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigGetArgs extends io.pu
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 

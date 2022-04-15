@@ -76,7 +76,7 @@ public final class JobHttpTarget {
      * A base64-encoded string.
      * 
     */
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
@@ -84,14 +84,14 @@ public final class JobHttpTarget {
      * Repeated headers are not supported, but a header value can contain commas.
      * 
     */
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * Which HTTP method to use for the request.
      * 
     */
-    public Optional<String> getHttpMethod() {
+    public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
     /**
@@ -100,7 +100,7 @@ public final class JobHttpTarget {
      * Structure is documented below.
      * 
     */
-    public Optional<JobHttpTargetOauthToken> getOauthToken() {
+    public Optional<JobHttpTargetOauthToken> oauthToken() {
         return Optional.ofNullable(this.oauthToken);
     }
     /**
@@ -109,14 +109,14 @@ public final class JobHttpTarget {
      * Structure is documented below.
      * 
     */
-    public Optional<JobHttpTargetOidcToken> getOidcToken() {
+    public Optional<JobHttpTargetOidcToken> oidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
     /**
      * The full URI path that the request will be sent to.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

@@ -46,7 +46,7 @@ public final class NodeTemplateServerBinding {
      * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,22 +34,22 @@ public final class GetBackendServiceCircuitBreaker {
         this.maxRetries = maxRetries;
     }
 
-    public List<GetBackendServiceCircuitBreakerConnectTimeout> getConnectTimeouts() {
+    public List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts() {
         return this.connectTimeouts;
     }
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
-    public Integer getMaxPendingRequests() {
+    public Integer maxPendingRequests() {
         return this.maxPendingRequests;
     }
-    public Integer getMaxRequests() {
+    public Integer maxRequests() {
         return this.maxRequests;
     }
-    public Integer getMaxRequestsPerConnection() {
+    public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
-    public Integer getMaxRetries() {
+    public Integer maxRetries() {
         return this.maxRetries;
     }
 

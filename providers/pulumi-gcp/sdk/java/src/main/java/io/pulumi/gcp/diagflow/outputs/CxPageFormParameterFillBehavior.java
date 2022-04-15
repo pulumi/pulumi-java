@@ -28,7 +28,7 @@ public final class CxPageFormParameterFillBehavior {
      * Structure is documented below.
      * 
     */
-    public Optional<CxPageFormParameterFillBehaviorInitialPromptFulfillment> getInitialPromptFulfillment() {
+    public Optional<CxPageFormParameterFillBehaviorInitialPromptFulfillment> initialPromptFulfillment() {
         return Optional.ofNullable(this.initialPromptFulfillment);
     }
 

@@ -28,7 +28,7 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
     @Import(name="defaultMode")
       private final @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> getDefaultMode() {
+    public Output<Integer> defaultMode() {
         return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
     }
 
@@ -44,7 +44,7 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
     @Import(name="items")
       private final @Nullable Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items;
 
-    public Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> getItems() {
+    public Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
@@ -63,7 +63,7 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 

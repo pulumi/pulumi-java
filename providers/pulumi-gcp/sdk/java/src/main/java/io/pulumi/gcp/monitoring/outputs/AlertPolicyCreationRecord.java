@@ -22,10 +22,10 @@ public final class AlertPolicyCreationRecord {
         this.mutatedBy = mutatedBy;
     }
 
-    public Optional<String> getMutateTime() {
+    public Optional<String> mutateTime() {
         return Optional.ofNullable(this.mutateTime);
     }
-    public Optional<String> getMutatedBy() {
+    public Optional<String> mutatedBy() {
         return Optional.ofNullable(this.mutatedBy);
     }
 

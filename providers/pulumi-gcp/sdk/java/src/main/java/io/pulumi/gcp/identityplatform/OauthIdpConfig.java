@@ -53,7 +53,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The client id of an OAuth client.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -67,7 +67,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The client secret of the OAuth client, to enable OIDC code flow.
      * 
      */
-    public Output</* @Nullable */ String> getClientSecret() {
+    public Output</* @Nullable */ String> clientSecret() {
         return this.clientSecret;
     }
     /**
@@ -81,7 +81,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return Human friendly display name.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -95,7 +95,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return If this config allows users to sign in with the provider.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -109,7 +109,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return For OIDC Idps, the issuer identifier.
      * 
      */
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
     /**
@@ -123,7 +123,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the OauthIdpConfig. Must start with `oidc.`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -139,7 +139,7 @@ public class OauthIdpConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

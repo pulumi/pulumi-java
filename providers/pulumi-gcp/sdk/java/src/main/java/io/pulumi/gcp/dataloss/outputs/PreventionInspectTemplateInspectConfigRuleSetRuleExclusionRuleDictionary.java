@@ -38,7 +38,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath> getCloudStoragePath() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
     /**
@@ -46,7 +46,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList> getWordList() {
+    public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList> wordList() {
         return Optional.ofNullable(this.wordList);
     }
 

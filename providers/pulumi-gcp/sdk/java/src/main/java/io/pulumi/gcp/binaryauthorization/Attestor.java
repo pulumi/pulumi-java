@@ -57,7 +57,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<AttestorAttestationAuthorityNote> getAttestationAuthorityNote() {
+    public Output<AttestorAttestationAuthorityNote> attestationAuthorityNote() {
         return this.attestationAuthorityNote;
     }
     /**
@@ -73,7 +73,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * displayed in chooser dialogs.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +87,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +103,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

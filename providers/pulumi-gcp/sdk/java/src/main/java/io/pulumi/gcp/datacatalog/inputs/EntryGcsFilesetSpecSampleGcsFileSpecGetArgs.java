@@ -24,7 +24,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
@@ -36,7 +36,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecGetArgs extends io.pulumi
     @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> getSizeBytes() {
+    public Output<Integer> sizeBytes() {
         return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 

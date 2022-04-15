@@ -24,7 +24,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     @Import(name="git")
       private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git;
 
-    public Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> getGit() {
+    public Output<FeatureMembershipConfigmanagementConfigSyncGitArgs> git() {
         return this.git == null ? Codegen.empty() : this.git;
     }
 
@@ -35,7 +35,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     @Import(name="sourceFormat")
       private final @Nullable Output<String> sourceFormat;
 
-    public Output<String> getSourceFormat() {
+    public Output<String> sourceFormat() {
         return this.sourceFormat == null ? Codegen.empty() : this.sourceFormat;
     }
 

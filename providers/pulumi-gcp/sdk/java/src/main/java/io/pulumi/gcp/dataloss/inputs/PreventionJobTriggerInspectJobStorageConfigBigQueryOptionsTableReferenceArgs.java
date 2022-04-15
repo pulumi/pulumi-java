@@ -21,7 +21,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -32,7 +32,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -44,7 +44,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 

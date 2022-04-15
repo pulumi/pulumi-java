@@ -45,7 +45,7 @@ public final class NotificationChannelSensitiveLabels {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public Optional<String> getAuthToken() {
+    public Optional<String> authToken() {
         return Optional.ofNullable(this.authToken);
     }
     /**
@@ -53,7 +53,7 @@ public final class NotificationChannelSensitiveLabels {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
@@ -61,7 +61,7 @@ public final class NotificationChannelSensitiveLabels {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public Optional<String> getServiceKey() {
+    public Optional<String> serviceKey() {
         return Optional.ofNullable(this.serviceKey);
     }
 

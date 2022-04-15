@@ -52,7 +52,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The representation of an existing dashboard can be found by using the [API Explorer](https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get)
      * 
      */
-    public Output<String> getDashboardJson() {
+    public Output<String> dashboardJson() {
         return this.dashboardJson;
     }
     /**
@@ -68,7 +68,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

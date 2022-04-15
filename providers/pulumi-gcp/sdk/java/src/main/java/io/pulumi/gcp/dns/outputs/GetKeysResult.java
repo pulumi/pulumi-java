@@ -48,27 +48,27 @@ public final class GetKeysResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
      * 
     */
-    public List<GetKeysKeySigningKey> getKeySigningKeys() {
+    public List<GetKeysKeySigningKey> keySigningKeys() {
         return this.keySigningKeys;
     }
-    public String getManagedZone() {
+    public String managedZone() {
         return this.managedZone;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * A list of Zone-signing key (ZSK) records. Structure is documented below.
      * 
     */
-    public List<GetKeysZoneSigningKey> getZoneSigningKeys() {
+    public List<GetKeysZoneSigningKey> zoneSigningKeys() {
         return this.zoneSigningKeys;
     }
 

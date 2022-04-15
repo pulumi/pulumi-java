@@ -24,7 +24,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="dicomStoreId", required=true)
       private final Output<String> dicomStoreId;
 
-    public Output<String> getDicomStoreId() {
+    public Output<String> dicomStoreId() {
         return this.dicomStoreId;
     }
 
@@ -36,7 +36,7 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

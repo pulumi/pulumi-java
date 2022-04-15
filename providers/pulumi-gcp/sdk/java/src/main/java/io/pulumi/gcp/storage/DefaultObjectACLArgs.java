@@ -23,7 +23,7 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="roleEntities")
       private final @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> getRoleEntities() {
+    public Output<List<String>> roleEntities() {
         return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
     }
 

@@ -26,7 +26,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="failoverOrigin")
       private final @Nullable Output<String> failoverOrigin;
 
-    public Output<String> getFailoverOrigin() {
+    public Output<String> failoverOrigin() {
         return this.failoverOrigin == null ? Codegen.empty() : this.failoverOrigin;
     }
 
@@ -51,7 +51,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -69,7 +69,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="maxAttempts")
       private final @Nullable Output<Integer> maxAttempts;
 
-    public Output<Integer> getMaxAttempts() {
+    public Output<Integer> maxAttempts() {
         return this.maxAttempts == null ? Codegen.empty() : this.maxAttempts;
     }
 
@@ -82,7 +82,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,7 +96,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="originAddress")
       private final @Nullable Output<String> originAddress;
 
-    public Output<String> getOriginAddress() {
+    public Output<String> originAddress() {
         return this.originAddress == null ? Codegen.empty() : this.originAddress;
     }
 
@@ -108,7 +108,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -120,7 +120,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -133,7 +133,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -156,7 +156,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="retryConditions")
       private final @Nullable Output<List<String>> retryConditions;
 
-    public Output<List<String>> getRetryConditions() {
+    public Output<List<String>> retryConditions() {
         return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
     }
 
@@ -168,7 +168,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
     @Import(name="timeout")
       private final @Nullable Output<EdgeCacheOriginTimeoutGetArgs> timeout;
 
-    public Output<EdgeCacheOriginTimeoutGetArgs> getTimeout() {
+    public Output<EdgeCacheOriginTimeoutGetArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

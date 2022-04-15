@@ -44,21 +44,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
     */
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
     /**
      * The value of the header to add.
      * 
     */
-    public String getHeaderValue() {
+    public String headerValue() {
         return this.headerValue;
     }
     /**
      * Whether to replace all existing headers with the same name.
      * 
     */
-    public Optional<Boolean> getReplace() {
+    public Optional<Boolean> replace() {
         return Optional.ofNullable(this.replace);
     }
 

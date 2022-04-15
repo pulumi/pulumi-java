@@ -23,7 +23,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -34,7 +34,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     @Import(name="weekOrdinal", required=true)
       private final Output<Integer> weekOrdinal;
 
-    public Output<Integer> getWeekOrdinal() {
+    public Output<Integer> weekOrdinal() {
         return this.weekOrdinal;
     }
 

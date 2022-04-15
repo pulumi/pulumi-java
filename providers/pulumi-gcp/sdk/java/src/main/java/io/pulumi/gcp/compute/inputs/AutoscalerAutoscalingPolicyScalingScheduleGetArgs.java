@@ -24,7 +24,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -46,7 +46,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="durationSec", required=true)
       private final Output<Integer> durationSec;
 
-    public Output<Integer> getDurationSec() {
+    public Output<Integer> durationSec() {
         return this.durationSec;
     }
 
@@ -57,7 +57,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="minRequiredReplicas", required=true)
       private final Output<Integer> minRequiredReplicas;
 
-    public Output<Integer> getMinRequiredReplicas() {
+    public Output<Integer> minRequiredReplicas() {
         return this.minRequiredReplicas;
     }
 
@@ -68,7 +68,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 
@@ -90,7 +90,7 @@ public final class AutoscalerAutoscalingPolicyScalingScheduleGetArgs extends io.
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

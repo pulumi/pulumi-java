@@ -23,7 +23,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
     @Import(name="followGaeApplication")
       private final @Nullable Output<String> followGaeApplication;
 
-    public Output<String> getFollowGaeApplication() {
+    public Output<String> followGaeApplication() {
         return this.followGaeApplication == null ? Codegen.empty() : this.followGaeApplication;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

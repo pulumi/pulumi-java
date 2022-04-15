@@ -27,7 +27,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidSettings")
       private final @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
 
-    public Output<EnterpriseKeyAndroidSettingsGetArgs> getAndroidSettings() {
+    public Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings() {
         return this.androidSettings == null ? Codegen.empty() : this.androidSettings;
     }
 
@@ -38,7 +38,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -49,7 +49,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosSettings")
       private final @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
 
-    public Output<EnterpriseKeyIosSettingsGetArgs> getIosSettings() {
+    public Output<EnterpriseKeyIosSettingsGetArgs> iosSettings() {
         return this.iosSettings == null ? Codegen.empty() : this.iosSettings;
     }
 
@@ -71,7 +71,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -82,7 +82,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -104,7 +104,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="testingOptions")
       private final @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
 
-    public Output<EnterpriseKeyTestingOptionsGetArgs> getTestingOptions() {
+    public Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions() {
         return this.testingOptions == null ? Codegen.empty() : this.testingOptions;
     }
 
@@ -115,7 +115,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="webSettings")
       private final @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
-    public Output<EnterpriseKeyWebSettingsGetArgs> getWebSettings() {
+    public Output<EnterpriseKeyWebSettingsGetArgs> webSettings() {
         return this.webSettings == null ? Codegen.empty() : this.webSettings;
     }
 

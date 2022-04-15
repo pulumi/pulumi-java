@@ -22,7 +22,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
     @Import(name="oauth2ClientId", required=true)
       private final Output<String> oauth2ClientId;
 
-    public Output<String> getOauth2ClientId() {
+    public Output<String> oauth2ClientId() {
         return this.oauth2ClientId;
     }
 
@@ -34,7 +34,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
     @Import(name="oauth2ClientSecret", required=true)
       private final Output<String> oauth2ClientSecret;
 
-    public Output<String> getOauth2ClientSecret() {
+    public Output<String> oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
@@ -47,7 +47,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
     @Import(name="oauth2ClientSecretSha256")
       private final @Nullable Output<String> oauth2ClientSecretSha256;
 
-    public Output<String> getOauth2ClientSecretSha256() {
+    public Output<String> oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256 == null ? Codegen.empty() : this.oauth2ClientSecretSha256;
     }
 

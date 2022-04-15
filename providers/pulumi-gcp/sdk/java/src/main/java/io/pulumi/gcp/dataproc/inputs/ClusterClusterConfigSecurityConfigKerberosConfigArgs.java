@@ -25,7 +25,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="crossRealmTrustAdminServer")
       private final @Nullable Output<String> crossRealmTrustAdminServer;
 
-    public Output<String> getCrossRealmTrustAdminServer() {
+    public Output<String> crossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer == null ? Codegen.empty() : this.crossRealmTrustAdminServer;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="crossRealmTrustKdc")
       private final @Nullable Output<String> crossRealmTrustKdc;
 
-    public Output<String> getCrossRealmTrustKdc() {
+    public Output<String> crossRealmTrustKdc() {
         return this.crossRealmTrustKdc == null ? Codegen.empty() : this.crossRealmTrustKdc;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="crossRealmTrustRealm")
       private final @Nullable Output<String> crossRealmTrustRealm;
 
-    public Output<String> getCrossRealmTrustRealm() {
+    public Output<String> crossRealmTrustRealm() {
         return this.crossRealmTrustRealm == null ? Codegen.empty() : this.crossRealmTrustRealm;
     }
 
@@ -62,7 +62,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="crossRealmTrustSharedPasswordUri")
       private final @Nullable Output<String> crossRealmTrustSharedPasswordUri;
 
-    public Output<String> getCrossRealmTrustSharedPasswordUri() {
+    public Output<String> crossRealmTrustSharedPasswordUri() {
         return this.crossRealmTrustSharedPasswordUri == null ? Codegen.empty() : this.crossRealmTrustSharedPasswordUri;
     }
 
@@ -73,7 +73,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="enableKerberos")
       private final @Nullable Output<Boolean> enableKerberos;
 
-    public Output<Boolean> getEnableKerberos() {
+    public Output<Boolean> enableKerberos() {
         return this.enableKerberos == null ? Codegen.empty() : this.enableKerberos;
     }
 
@@ -85,7 +85,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="kdcDbKeyUri")
       private final @Nullable Output<String> kdcDbKeyUri;
 
-    public Output<String> getKdcDbKeyUri() {
+    public Output<String> kdcDbKeyUri() {
         return this.kdcDbKeyUri == null ? Codegen.empty() : this.kdcDbKeyUri;
     }
 
@@ -98,7 +98,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="keyPasswordUri")
       private final @Nullable Output<String> keyPasswordUri;
 
-    public Output<String> getKeyPasswordUri() {
+    public Output<String> keyPasswordUri() {
         return this.keyPasswordUri == null ? Codegen.empty() : this.keyPasswordUri;
     }
 
@@ -111,7 +111,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="keystorePasswordUri")
       private final @Nullable Output<String> keystorePasswordUri;
 
-    public Output<String> getKeystorePasswordUri() {
+    public Output<String> keystorePasswordUri() {
         return this.keystorePasswordUri == null ? Codegen.empty() : this.keystorePasswordUri;
     }
 
@@ -123,7 +123,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="keystoreUri")
       private final @Nullable Output<String> keystoreUri;
 
-    public Output<String> getKeystoreUri() {
+    public Output<String> keystoreUri() {
         return this.keystoreUri == null ? Codegen.empty() : this.keystoreUri;
     }
 
@@ -134,7 +134,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="kmsKeyUri", required=true)
       private final Output<String> kmsKeyUri;
 
-    public Output<String> getKmsKeyUri() {
+    public Output<String> kmsKeyUri() {
         return this.kmsKeyUri;
     }
 
@@ -146,7 +146,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="realm")
       private final @Nullable Output<String> realm;
 
-    public Output<String> getRealm() {
+    public Output<String> realm() {
         return this.realm == null ? Codegen.empty() : this.realm;
     }
 
@@ -158,7 +158,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="rootPrincipalPasswordUri", required=true)
       private final Output<String> rootPrincipalPasswordUri;
 
-    public Output<String> getRootPrincipalPasswordUri() {
+    public Output<String> rootPrincipalPasswordUri() {
         return this.rootPrincipalPasswordUri;
     }
 
@@ -169,7 +169,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="tgtLifetimeHours")
       private final @Nullable Output<Integer> tgtLifetimeHours;
 
-    public Output<Integer> getTgtLifetimeHours() {
+    public Output<Integer> tgtLifetimeHours() {
         return this.tgtLifetimeHours == null ? Codegen.empty() : this.tgtLifetimeHours;
     }
 
@@ -182,7 +182,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="truststorePasswordUri")
       private final @Nullable Output<String> truststorePasswordUri;
 
-    public Output<String> getTruststorePasswordUri() {
+    public Output<String> truststorePasswordUri() {
         return this.truststorePasswordUri == null ? Codegen.empty() : this.truststorePasswordUri;
     }
 
@@ -194,7 +194,7 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfigArgs extends 
     @Import(name="truststoreUri")
       private final @Nullable Output<String> truststoreUri;
 
-    public Output<String> getTruststoreUri() {
+    public Output<String> truststoreUri() {
         return this.truststoreUri == null ? Codegen.empty() : this.truststoreUri;
     }
 

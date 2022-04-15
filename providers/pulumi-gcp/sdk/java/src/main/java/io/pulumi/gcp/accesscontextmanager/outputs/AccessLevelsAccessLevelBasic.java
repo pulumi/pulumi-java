@@ -49,7 +49,7 @@ public final class AccessLevelsAccessLevelBasic {
      * Possible values are `AND` and `OR`.
      * 
     */
-    public Optional<String> getCombiningFunction() {
+    public Optional<String> combiningFunction() {
         return Optional.ofNullable(this.combiningFunction);
     }
     /**
@@ -57,7 +57,7 @@ public final class AccessLevelsAccessLevelBasic {
      * Structure is documented below.
      * 
     */
-    public List<AccessLevelsAccessLevelBasicCondition> getConditions() {
+    public List<AccessLevelsAccessLevelBasicCondition> conditions() {
         return this.conditions;
     }
 

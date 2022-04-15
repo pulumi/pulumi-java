@@ -65,7 +65,7 @@ public final class CaPoolIssuancePolicyBaselineValues {
      * Structure is documented below.
      * 
     */
-    public List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> getAdditionalExtensions() {
+    public List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
@@ -73,7 +73,7 @@ public final class CaPoolIssuancePolicyBaselineValues {
      * "Authority Information Access" extension in the certificate.
      * 
     */
-    public List<String> getAiaOcspServers() {
+    public List<String> aiaOcspServers() {
         return this.aiaOcspServers == null ? List.of() : this.aiaOcspServers;
     }
     /**
@@ -81,7 +81,7 @@ public final class CaPoolIssuancePolicyBaselineValues {
      * Structure is documented below.
      * 
     */
-    public CaPoolIssuancePolicyBaselineValuesCaOptions getCaOptions() {
+    public CaPoolIssuancePolicyBaselineValuesCaOptions caOptions() {
         return this.caOptions;
     }
     /**
@@ -89,7 +89,7 @@ public final class CaPoolIssuancePolicyBaselineValues {
      * Structure is documented below.
      * 
     */
-    public CaPoolIssuancePolicyBaselineValuesKeyUsage getKeyUsage() {
+    public CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage() {
         return this.keyUsage;
     }
     /**
@@ -97,7 +97,7 @@ public final class CaPoolIssuancePolicyBaselineValues {
      * Structure is documented below.
      * 
     */
-    public List<CaPoolIssuancePolicyBaselineValuesPolicyId> getPolicyIds() {
+    public List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds() {
         return this.policyIds == null ? List.of() : this.policyIds;
     }
 

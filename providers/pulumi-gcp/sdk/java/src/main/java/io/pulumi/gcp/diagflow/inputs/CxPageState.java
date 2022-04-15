@@ -27,7 +27,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -39,7 +39,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryFulfillment")
       private final @Nullable Output<CxPageEntryFulfillmentGetArgs> entryFulfillment;
 
-    public Output<CxPageEntryFulfillmentGetArgs> getEntryFulfillment() {
+    public Output<CxPageEntryFulfillmentGetArgs> entryFulfillment() {
         return this.entryFulfillment == null ? Codegen.empty() : this.entryFulfillment;
     }
 
@@ -51,7 +51,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHandlers")
       private final @Nullable Output<List<CxPageEventHandlerGetArgs>> eventHandlers;
 
-    public Output<List<CxPageEventHandlerGetArgs>> getEventHandlers() {
+    public Output<List<CxPageEventHandlerGetArgs>> eventHandlers() {
         return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
     }
 
@@ -63,7 +63,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="form")
       private final @Nullable Output<CxPageFormGetArgs> form;
 
-    public Output<CxPageFormGetArgs> getForm() {
+    public Output<CxPageFormGetArgs> form() {
         return this.form == null ? Codegen.empty() : this.form;
     }
 
@@ -85,7 +85,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -97,7 +97,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -109,7 +109,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -123,7 +123,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitionRouteGroups")
       private final @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Output<List<String>> getTransitionRouteGroups() {
+    public Output<List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups == null ? Codegen.empty() : this.transitionRouteGroups;
     }
 
@@ -142,7 +142,7 @@ public final class CxPageState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitionRoutes")
       private final @Nullable Output<List<CxPageTransitionRouteGetArgs>> transitionRoutes;
 
-    public Output<List<CxPageTransitionRouteGetArgs>> getTransitionRoutes() {
+    public Output<List<CxPageTransitionRouteGetArgs>> transitionRoutes() {
         return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
     }
 

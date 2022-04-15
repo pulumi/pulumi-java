@@ -21,7 +21,7 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
     @Import(name="hostProject", required=true)
       private final Output<String> hostProject;
 
-    public Output<String> getHostProject() {
+    public Output<String> hostProject() {
         return this.hostProject;
     }
 
@@ -32,7 +32,7 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
     @Import(name="serviceProject", required=true)
       private final Output<String> serviceProject;
 
-    public Output<String> getServiceProject() {
+    public Output<String> serviceProject() {
         return this.serviceProject;
     }
 

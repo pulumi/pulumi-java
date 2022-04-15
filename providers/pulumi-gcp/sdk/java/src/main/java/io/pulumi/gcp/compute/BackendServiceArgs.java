@@ -37,7 +37,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affinityCookieTtlSec")
       private final @Nullable Output<Integer> affinityCookieTtlSec;
 
-    public Output<Integer> getAffinityCookieTtlSec() {
+    public Output<Integer> affinityCookieTtlSec() {
         return this.affinityCookieTtlSec == null ? Codegen.empty() : this.affinityCookieTtlSec;
     }
 
@@ -49,7 +49,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backends")
       private final @Nullable Output<List<BackendServiceBackendArgs>> backends;
 
-    public Output<List<BackendServiceBackendArgs>> getBackends() {
+    public Output<List<BackendServiceBackendArgs>> backends() {
         return this.backends == null ? Codegen.empty() : this.backends;
     }
 
@@ -61,7 +61,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cdnPolicy")
       private final @Nullable Output<BackendServiceCdnPolicyArgs> cdnPolicy;
 
-    public Output<BackendServiceCdnPolicyArgs> getCdnPolicy() {
+    public Output<BackendServiceCdnPolicyArgs> cdnPolicy() {
         return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
     }
 
@@ -74,7 +74,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="circuitBreakers")
       private final @Nullable Output<BackendServiceCircuitBreakersArgs> circuitBreakers;
 
-    public Output<BackendServiceCircuitBreakersArgs> getCircuitBreakers() {
+    public Output<BackendServiceCircuitBreakersArgs> circuitBreakers() {
         return this.circuitBreakers == null ? Codegen.empty() : this.circuitBreakers;
     }
 
@@ -86,7 +86,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionDrainingTimeoutSec")
       private final @Nullable Output<Integer> connectionDrainingTimeoutSec;
 
-    public Output<Integer> getConnectionDrainingTimeoutSec() {
+    public Output<Integer> connectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec == null ? Codegen.empty() : this.connectionDrainingTimeoutSec;
     }
 
@@ -105,7 +105,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consistentHash")
       private final @Nullable Output<BackendServiceConsistentHashArgs> consistentHash;
 
-    public Output<BackendServiceConsistentHashArgs> getConsistentHash() {
+    public Output<BackendServiceConsistentHashArgs> consistentHash() {
         return this.consistentHash == null ? Codegen.empty() : this.consistentHash;
     }
 
@@ -117,7 +117,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customRequestHeaders")
       private final @Nullable Output<List<String>> customRequestHeaders;
 
-    public Output<List<String>> getCustomRequestHeaders() {
+    public Output<List<String>> customRequestHeaders() {
         return this.customRequestHeaders == null ? Codegen.empty() : this.customRequestHeaders;
     }
 
@@ -129,7 +129,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
 
-    public Output<List<String>> getCustomResponseHeaders() {
+    public Output<List<String>> customResponseHeaders() {
         return this.customResponseHeaders == null ? Codegen.empty() : this.customResponseHeaders;
     }
 
@@ -141,7 +141,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -152,7 +152,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableCdn")
       private final @Nullable Output<Boolean> enableCdn;
 
-    public Output<Boolean> getEnableCdn() {
+    public Output<Boolean> enableCdn() {
         return this.enableCdn == null ? Codegen.empty() : this.enableCdn;
     }
 
@@ -168,7 +168,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthChecks")
       private final @Nullable Output<String> healthChecks;
 
-    public Output<String> getHealthChecks() {
+    public Output<String> healthChecks() {
         return this.healthChecks == null ? Codegen.empty() : this.healthChecks;
     }
 
@@ -180,7 +180,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iap")
       private final @Nullable Output<BackendServiceIapArgs> iap;
 
-    public Output<BackendServiceIapArgs> getIap() {
+    public Output<BackendServiceIapArgs> iap() {
         return this.iap == null ? Codegen.empty() : this.iap;
     }
 
@@ -196,7 +196,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingScheme")
       private final @Nullable Output<String> loadBalancingScheme;
 
-    public Output<String> getLoadBalancingScheme() {
+    public Output<String> loadBalancingScheme() {
         return this.loadBalancingScheme == null ? Codegen.empty() : this.loadBalancingScheme;
     }
 
@@ -226,7 +226,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localityLbPolicy")
       private final @Nullable Output<String> localityLbPolicy;
 
-    public Output<String> getLocalityLbPolicy() {
+    public Output<String> localityLbPolicy() {
         return this.localityLbPolicy == null ? Codegen.empty() : this.localityLbPolicy;
     }
 
@@ -239,7 +239,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<BackendServiceLogConfigArgs> logConfig;
 
-    public Output<BackendServiceLogConfigArgs> getLogConfig() {
+    public Output<BackendServiceLogConfigArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -250,7 +250,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -264,7 +264,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outlierDetection")
       private final @Nullable Output<BackendServiceOutlierDetectionArgs> outlierDetection;
 
-    public Output<BackendServiceOutlierDetectionArgs> getOutlierDetection() {
+    public Output<BackendServiceOutlierDetectionArgs> outlierDetection() {
         return this.outlierDetection == null ? Codegen.empty() : this.outlierDetection;
     }
 
@@ -277,7 +277,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portName")
       private final @Nullable Output<String> portName;
 
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName == null ? Codegen.empty() : this.portName;
     }
 
@@ -289,7 +289,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -303,7 +303,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
@@ -314,7 +314,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
-    public Output<String> getSecurityPolicy() {
+    public Output<String> securityPolicy() {
         return this.securityPolicy == null ? Codegen.empty() : this.securityPolicy;
     }
 
@@ -329,7 +329,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securitySettings")
       private final @Nullable Output<BackendServiceSecuritySettingsArgs> securitySettings;
 
-    public Output<BackendServiceSecuritySettingsArgs> getSecuritySettings() {
+    public Output<BackendServiceSecuritySettingsArgs> securitySettings() {
         return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
     }
 
@@ -342,7 +342,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinity")
       private final @Nullable Output<String> sessionAffinity;
 
-    public Output<String> getSessionAffinity() {
+    public Output<String> sessionAffinity() {
         return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
@@ -354,7 +354,7 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 

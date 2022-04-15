@@ -16,7 +16,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestination {
         this.datasetId = datasetId;
     }
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 

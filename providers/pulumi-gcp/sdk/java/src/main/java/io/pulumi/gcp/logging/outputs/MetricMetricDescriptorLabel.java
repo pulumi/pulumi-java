@@ -45,14 +45,14 @@ public final class MetricMetricDescriptorLabel {
      * description is 8000 characters.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The label key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
@@ -61,7 +61,7 @@ public final class MetricMetricDescriptorLabel {
      * Possible values are `BOOL`, `INT64`, and `STRING`.
      * 
     */
-    public Optional<String> getValueType() {
+    public Optional<String> valueType() {
         return Optional.ofNullable(this.valueType);
     }
 

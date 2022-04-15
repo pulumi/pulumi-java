@@ -24,7 +24,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlArgs extends i
     @Import(name="maxScaledInReplicas")
       private final @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
 
-    public Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> getMaxScaledInReplicas() {
+    public Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas() {
         return this.maxScaledInReplicas == null ? Codegen.empty() : this.maxScaledInReplicas;
     }
 
@@ -36,7 +36,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlArgs extends i
     @Import(name="timeWindowSec")
       private final @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> getTimeWindowSec() {
+    public Output<Integer> timeWindowSec() {
         return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
     }
 

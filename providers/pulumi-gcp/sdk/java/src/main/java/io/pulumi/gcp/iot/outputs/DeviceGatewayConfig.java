@@ -54,7 +54,7 @@ public final class DeviceGatewayConfig {
      * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
      * 
     */
-    public Optional<String> getGatewayAuthMethod() {
+    public Optional<String> gatewayAuthMethod() {
         return Optional.ofNullable(this.gatewayAuthMethod);
     }
     /**
@@ -63,7 +63,7 @@ public final class DeviceGatewayConfig {
      * Possible values are `GATEWAY` and `NON_GATEWAY`.
      * 
     */
-    public Optional<String> getGatewayType() {
+    public Optional<String> gatewayType() {
         return Optional.ofNullable(this.gatewayType);
     }
     /**
@@ -71,7 +71,7 @@ public final class DeviceGatewayConfig {
      * The ID of the gateway the device accessed most recently.
      * 
     */
-    public Optional<String> getLastAccessedGatewayId() {
+    public Optional<String> lastAccessedGatewayId() {
         return Optional.ofNullable(this.lastAccessedGatewayId);
     }
     /**
@@ -79,7 +79,7 @@ public final class DeviceGatewayConfig {
      * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
      * 
     */
-    public Optional<String> getLastAccessedGatewayTime() {
+    public Optional<String> lastAccessedGatewayTime() {
         return Optional.ofNullable(this.lastAccessedGatewayTime);
     }
 

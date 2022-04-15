@@ -82,7 +82,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -98,7 +98,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -130,7 +130,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DiskDiskEncryptionKey> getDiskEncryptionKey() {
+    public Output</* @Nullable */ DiskDiskEncryptionKey> diskEncryptionKey() {
         return this.diskEncryptionKey;
     }
     /**
@@ -160,7 +160,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * These images can be referred by family name here.
      * 
      */
-    public Output</* @Nullable */ String> getImage() {
+    public Output</* @Nullable */ String> image() {
         return this.image;
     }
     /**
@@ -178,7 +178,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
      */
-    public Output</* @Nullable */ String> getInterface_() {
+    public Output</* @Nullable */ String> interface_() {
         return this.interface_;
     }
     /**
@@ -192,7 +192,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -206,7 +206,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this disk.  A list of key->value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -220,7 +220,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Last attach timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getLastAttachTimestamp() {
+    public Output<String> lastAttachTimestamp() {
         return this.lastAttachTimestamp;
     }
     /**
@@ -234,7 +234,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Last detach timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getLastDetachTimestamp() {
+    public Output<String> lastDetachTimestamp() {
         return this.lastDetachTimestamp;
     }
     /**
@@ -248,7 +248,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Indicates whether or not the disk can be read/write attached to more than one instance.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMultiWriter() {
+    public Output</* @Nullable */ Boolean> multiWriter() {
         return this.multiWriter;
     }
     /**
@@ -274,7 +274,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -296,7 +296,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * the supported values for the caller's project.
      * 
      */
-    public Output<Integer> getPhysicalBlockSizeBytes() {
+    public Output<Integer> physicalBlockSizeBytes() {
         return this.physicalBlockSizeBytes;
     }
     /**
@@ -312,7 +312,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -326,7 +326,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Indicates how many IOPS must be provisioned for the disk.
      * 
      */
-    public Output</* @Nullable */ Integer> getProvisionedIops() {
+    public Output</* @Nullable */ Integer> provisionedIops() {
         return this.provisionedIops;
     }
     /**
@@ -350,7 +350,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * to allow for updating the resource policy attached to the disk.
      * 
      */
-    public Output<List<String>> getResourcePolicies() {
+    public Output<List<String>> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
@@ -364,7 +364,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -398,7 +398,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * and recreating.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -426,7 +426,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * * `snapshot`
      * 
      */
-    public Output</* @Nullable */ String> getSnapshot() {
+    public Output</* @Nullable */ String> snapshot() {
         return this.snapshot;
     }
     /**
@@ -444,7 +444,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DiskSourceImageEncryptionKey> getSourceImageEncryptionKey() {
+    public Output</* @Nullable */ DiskSourceImageEncryptionKey> sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey;
     }
     /**
@@ -462,7 +462,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * under the same name, the source image ID would identify the exact version of the image that was used.
      * 
      */
-    public Output<String> getSourceImageId() {
+    public Output<String> sourceImageId() {
         return this.sourceImageId;
     }
     /**
@@ -482,7 +482,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DiskSourceSnapshotEncryptionKey> getSourceSnapshotEncryptionKey() {
+    public Output</* @Nullable */ DiskSourceSnapshotEncryptionKey> sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey;
     }
     /**
@@ -500,7 +500,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
      * 
      */
-    public Output<String> getSourceSnapshotId() {
+    public Output<String> sourceSnapshotId() {
         return this.sourceSnapshotId;
     }
     /**
@@ -516,7 +516,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * create the disk. Provide this when creating the disk.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -530,7 +530,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
      * 
      */
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users;
     }
     /**
@@ -544,7 +544,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the disk resides.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

@@ -57,41 +57,41 @@ public final class GetNotificationChannelResult {
         this.verificationStatus = verificationStatus;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetNotificationChannelSensitiveLabel> getSensitiveLabels() {
+    public List<GetNotificationChannelSensitiveLabel> sensitiveLabels() {
         return this.sensitiveLabels;
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
-    public Map<String,String> getUserLabels() {
+    public Map<String,String> userLabels() {
         return this.userLabels == null ? Map.of() : this.userLabels;
     }
-    public String getVerificationStatus() {
+    public String verificationStatus() {
         return this.verificationStatus;
     }
 

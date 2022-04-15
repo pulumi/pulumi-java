@@ -83,62 +83,62 @@ public final class GetHealthCheckResult {
         this.unhealthyThreshold = unhealthyThreshold;
     }
 
-    public Integer getCheckIntervalSec() {
+    public Integer checkIntervalSec() {
         return this.checkIntervalSec;
     }
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public List<GetHealthCheckGrpcHealthCheck> getGrpcHealthChecks() {
+    public List<GetHealthCheckGrpcHealthCheck> grpcHealthChecks() {
         return this.grpcHealthChecks;
     }
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
-    public List<GetHealthCheckHttp2HealthCheck> getHttp2HealthChecks() {
+    public List<GetHealthCheckHttp2HealthCheck> http2HealthChecks() {
         return this.http2HealthChecks;
     }
-    public List<GetHealthCheckHttpHealthCheck> getHttpHealthChecks() {
+    public List<GetHealthCheckHttpHealthCheck> httpHealthChecks() {
         return this.httpHealthChecks;
     }
-    public List<GetHealthCheckHttpsHealthCheck> getHttpsHealthChecks() {
+    public List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks() {
         return this.httpsHealthChecks;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetHealthCheckLogConfig> getLogConfigs() {
+    public List<GetHealthCheckLogConfig> logConfigs() {
         return this.logConfigs;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public List<GetHealthCheckSslHealthCheck> getSslHealthChecks() {
+    public List<GetHealthCheckSslHealthCheck> sslHealthChecks() {
         return this.sslHealthChecks;
     }
-    public List<GetHealthCheckTcpHealthCheck> getTcpHealthChecks() {
+    public List<GetHealthCheckTcpHealthCheck> tcpHealthChecks() {
         return this.tcpHealthChecks;
     }
-    public Integer getTimeoutSec() {
+    public Integer timeoutSec() {
         return this.timeoutSec;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

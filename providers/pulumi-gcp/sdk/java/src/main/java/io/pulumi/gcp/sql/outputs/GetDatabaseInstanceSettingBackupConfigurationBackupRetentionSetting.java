@@ -21,10 +21,10 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
         this.retentionUnit = retentionUnit;
     }
 
-    public Integer getRetainedBackups() {
+    public Integer retainedBackups() {
         return this.retainedBackups;
     }
-    public String getRetentionUnit() {
+    public String retentionUnit() {
         return this.retentionUnit;
     }
 

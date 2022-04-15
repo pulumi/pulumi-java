@@ -30,7 +30,7 @@ public final class PolicyAdmissionWhitelistPattern {
      * part.
      * 
     */
-    public String getNamePattern() {
+    public String namePattern() {
         return this.namePattern;
     }
 

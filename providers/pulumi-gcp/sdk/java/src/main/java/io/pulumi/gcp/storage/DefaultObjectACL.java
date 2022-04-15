@@ -49,7 +49,7 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket it applies to.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -67,7 +67,7 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
      * Omitting the field is the same as providing an empty list.
      * 
      */
-    public Output<List<String>> getRoleEntities() {
+    public Output<List<String>> roleEntities() {
         return this.roleEntities;
     }
 

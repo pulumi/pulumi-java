@@ -25,7 +25,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     @Import(name="allowJaggedRows")
       private final @Nullable Output<Boolean> allowJaggedRows;
 
-    public Output<Boolean> getAllowJaggedRows() {
+    public Output<Boolean> allowJaggedRows() {
         return this.allowJaggedRows == null ? Codegen.empty() : this.allowJaggedRows;
     }
 
@@ -38,7 +38,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     @Import(name="allowQuotedNewlines")
       private final @Nullable Output<Boolean> allowQuotedNewlines;
 
-    public Output<Boolean> getAllowQuotedNewlines() {
+    public Output<Boolean> allowQuotedNewlines() {
         return this.allowQuotedNewlines == null ? Codegen.empty() : this.allowQuotedNewlines;
     }
 
@@ -50,7 +50,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -61,7 +61,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> getFieldDelimiter() {
+    public Output<String> fieldDelimiter() {
         return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
     }
 
@@ -78,7 +78,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     @Import(name="quote", required=true)
       private final Output<String> quote;
 
-    public Output<String> getQuote() {
+    public Output<String> quote() {
         return this.quote;
     }
 
@@ -91,7 +91,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     @Import(name="skipLeadingRows")
       private final @Nullable Output<Integer> skipLeadingRows;
 
-    public Output<Integer> getSkipLeadingRows() {
+    public Output<Integer> skipLeadingRows() {
         return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
     }
 

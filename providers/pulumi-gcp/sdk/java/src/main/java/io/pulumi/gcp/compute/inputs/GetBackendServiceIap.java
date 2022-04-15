@@ -15,21 +15,21 @@ public final class GetBackendServiceIap extends io.pulumi.resources.InvokeArgs {
     @Import(name="oauth2ClientId", required=true)
       private final String oauth2ClientId;
 
-    public String getOauth2ClientId() {
+    public String oauth2ClientId() {
         return this.oauth2ClientId;
     }
 
     @Import(name="oauth2ClientSecret", required=true)
       private final String oauth2ClientSecret;
 
-    public String getOauth2ClientSecret() {
+    public String oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
     @Import(name="oauth2ClientSecretSha256", required=true)
       private final String oauth2ClientSecretSha256;
 
-    public String getOauth2ClientSecretSha256() {
+    public String oauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }
 

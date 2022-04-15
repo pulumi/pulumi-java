@@ -63,7 +63,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Cloud Storage bucket name.
      * 
      */
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -79,7 +79,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<BackendBucketCdnPolicy> getCdnPolicy() {
+    public Output<BackendBucketCdnPolicy> cdnPolicy() {
         return this.cdnPolicy;
     }
     /**
@@ -93,7 +93,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -107,7 +107,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return Headers that the HTTP/S load balancer should add to proxied responses.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomResponseHeaders() {
+    public Output</* @Nullable */ List<String>> customResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
@@ -123,7 +123,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * client when the resource is created.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -137,7 +137,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this BackendBucket.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableCdn() {
+    public Output</* @Nullable */ Boolean> enableCdn() {
         return this.enableCdn;
     }
     /**
@@ -163,7 +163,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -179,7 +179,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -193,7 +193,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

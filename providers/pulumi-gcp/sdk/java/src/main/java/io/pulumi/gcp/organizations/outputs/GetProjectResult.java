@@ -56,42 +56,42 @@ public final class GetProjectResult {
         this.skipDelete = skipDelete;
     }
 
-    public Boolean getAutoCreateNetwork() {
+    public Boolean autoCreateNetwork() {
         return this.autoCreateNetwork;
     }
-    public String getBillingAccount() {
+    public String billingAccount() {
         return this.billingAccount;
     }
-    public String getFolderId() {
+    public String folderId() {
         return this.folderId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The numeric identifier of the project.
      * 
     */
-    public String getNumber() {
+    public String number() {
         return this.number;
     }
-    public String getOrgId() {
+    public String orgId() {
         return this.orgId;
     }
-    public Optional<String> getProjectId() {
+    public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
-    public Boolean getSkipDelete() {
+    public Boolean skipDelete() {
         return this.skipDelete;
     }
 

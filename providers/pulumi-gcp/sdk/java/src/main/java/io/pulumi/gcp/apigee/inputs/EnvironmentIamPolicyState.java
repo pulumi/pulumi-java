@@ -22,7 +22,7 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     @Import(name="envId")
       private final @Nullable Output<String> envId;
 
-    public Output<String> getEnvId() {
+    public Output<String> envId() {
         return this.envId == null ? Codegen.empty() : this.envId;
     }
 
@@ -33,14 +33,14 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
@@ -52,7 +52,7 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 

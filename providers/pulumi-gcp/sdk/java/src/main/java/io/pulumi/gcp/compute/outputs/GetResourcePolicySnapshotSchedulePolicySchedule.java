@@ -26,13 +26,13 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule {
         this.weeklySchedules = weeklySchedules;
     }
 
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> getDailySchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules() {
         return this.dailySchedules;
     }
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> getHourlySchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules() {
         return this.hourlySchedules;
     }
-    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> getWeeklySchedules() {
+    public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules() {
         return this.weeklySchedules;
     }
 

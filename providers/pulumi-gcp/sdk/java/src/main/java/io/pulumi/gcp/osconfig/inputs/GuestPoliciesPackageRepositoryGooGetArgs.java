@@ -24,7 +24,7 @@ public final class GuestPoliciesPackageRepositoryGooGetArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,7 +35,7 @@ public final class GuestPoliciesPackageRepositoryGooGetArgs extends io.pulumi.re
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

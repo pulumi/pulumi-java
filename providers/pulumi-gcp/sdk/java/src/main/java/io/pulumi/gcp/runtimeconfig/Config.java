@@ -44,7 +44,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * config.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The name of the runtime config.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

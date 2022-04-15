@@ -45,25 +45,25 @@ public final class GetVariableResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getText() {
+    public String text() {
         return this.text;
     }
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

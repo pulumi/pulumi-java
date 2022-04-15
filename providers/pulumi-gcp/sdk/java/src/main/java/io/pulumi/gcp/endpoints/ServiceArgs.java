@@ -23,7 +23,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcConfig")
       private final @Nullable Output<String> grpcConfig;
 
-    public Output<String> getGrpcConfig() {
+    public Output<String> grpcConfig() {
         return this.grpcConfig == null ? Codegen.empty() : this.grpcConfig;
     }
 
@@ -35,7 +35,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="openapiConfig")
       private final @Nullable Output<String> openapiConfig;
 
-    public Output<String> getOpenapiConfig() {
+    public Output<String> openapiConfig() {
         return this.openapiConfig == null ? Codegen.empty() : this.openapiConfig;
     }
 
@@ -46,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -58,7 +58,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocOutputBase64")
       private final @Nullable Output<String> protocOutputBase64;
 
-    public Output<String> getProtocOutputBase64() {
+    public Output<String> protocOutputBase64() {
         return this.protocOutputBase64 == null ? Codegen.empty() : this.protocOutputBase64;
     }
 
@@ -69,7 +69,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

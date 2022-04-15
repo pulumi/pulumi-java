@@ -17,7 +17,7 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 

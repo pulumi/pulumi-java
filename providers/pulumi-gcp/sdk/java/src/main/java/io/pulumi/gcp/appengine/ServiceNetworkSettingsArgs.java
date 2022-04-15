@@ -24,7 +24,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="networkSettings", required=true)
       private final Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings;
 
-    public Output<ServiceNetworkSettingsNetworkSettingsArgs> getNetworkSettings() {
+    public Output<ServiceNetworkSettingsNetworkSettingsArgs> networkSettings() {
         return this.networkSettings;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

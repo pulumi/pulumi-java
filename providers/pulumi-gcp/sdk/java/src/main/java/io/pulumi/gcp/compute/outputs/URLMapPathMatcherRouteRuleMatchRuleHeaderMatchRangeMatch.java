@@ -32,14 +32,14 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
      * The end of the range (exclusive).
      * 
     */
-    public Integer getRangeEnd() {
+    public Integer rangeEnd() {
         return this.rangeEnd;
     }
     /**
      * The start of the range (inclusive).
      * 
     */
-    public Integer getRangeStart() {
+    public Integer rangeStart() {
         return this.rangeStart;
     }
 

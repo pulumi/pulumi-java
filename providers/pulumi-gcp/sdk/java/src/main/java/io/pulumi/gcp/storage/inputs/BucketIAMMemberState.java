@@ -23,7 +23,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<BucketIAMMemberConditionGetArgs> condition;
 
-    public Output<BucketIAMMemberConditionGetArgs> getCondition() {
+    public Output<BucketIAMMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -46,14 +46,14 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -66,7 +66,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

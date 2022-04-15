@@ -21,7 +21,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
     @Import(name="tableUri", required=true)
       private final Output<String> tableUri;
 
-    public Output<String> getTableUri() {
+    public Output<String> tableUri() {
         return this.tableUri;
     }
 

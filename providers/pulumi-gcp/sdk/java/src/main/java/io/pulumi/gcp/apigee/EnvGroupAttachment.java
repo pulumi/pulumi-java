@@ -52,7 +52,7 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
      * 
      */
-    public Output<String> getEnvgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
     /**
@@ -66,7 +66,7 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the environment.
      * 
      */
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
     /**
@@ -80,7 +80,7 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The name of the newly created attachment (output parameter).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -24,7 +24,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> getCustomAttributes() {
+    public Output<Map<String,String>> customAttributes() {
         return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
     }
 
@@ -46,7 +46,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
 
-    public Output<List<String>> getEventTypes() {
+    public Output<List<String>> eventTypes() {
         return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
     }
 
@@ -57,7 +57,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
 
-    public Output<String> getObjectNamePrefix() {
+    public Output<String> objectNamePrefix() {
         return this.objectNamePrefix == null ? Codegen.empty() : this.objectNamePrefix;
     }
 
@@ -68,7 +68,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormat", required=true)
       private final Output<String> payloadFormat;
 
-    public Output<String> getPayloadFormat() {
+    public Output<String> payloadFormat() {
         return this.payloadFormat;
     }
 
@@ -82,7 +82,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

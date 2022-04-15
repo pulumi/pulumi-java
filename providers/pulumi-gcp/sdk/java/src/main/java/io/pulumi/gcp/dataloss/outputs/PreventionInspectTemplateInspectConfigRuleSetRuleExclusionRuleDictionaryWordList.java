@@ -27,7 +27,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * phrase and every phrase must contain at least 2 characters that are letters or digits.
      * 
     */
-    public List<String> getWords() {
+    public List<String> words() {
         return this.words;
     }
 

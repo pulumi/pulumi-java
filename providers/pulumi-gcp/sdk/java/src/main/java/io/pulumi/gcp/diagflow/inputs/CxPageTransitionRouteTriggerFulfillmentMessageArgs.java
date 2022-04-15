@@ -22,7 +22,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageArgs extends io
     @Import(name="text")
       private final @Nullable Output<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> text;
 
-    public Output<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> getText() {
+    public Output<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

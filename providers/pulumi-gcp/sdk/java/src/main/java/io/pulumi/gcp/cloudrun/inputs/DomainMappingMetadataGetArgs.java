@@ -29,7 +29,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
-    public Output<Integer> getGeneration() {
+    public Output<Integer> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -55,7 +55,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -67,7 +67,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace;
     }
 
@@ -85,7 +85,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
@@ -97,7 +97,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -111,7 +111,7 @@ public final class DomainMappingMetadataGetArgs extends io.pulumi.resources.Reso
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

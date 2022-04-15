@@ -24,7 +24,7 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="argumentKind")
       private final @Nullable Output<String> argumentKind;
 
-    public Output<String> getArgumentKind() {
+    public Output<String> argumentKind() {
         return this.argumentKind == null ? Codegen.empty() : this.argumentKind;
     }
 
@@ -41,7 +41,7 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -53,7 +53,7 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -64,7 +64,7 @@ public final class RoutineArgumentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

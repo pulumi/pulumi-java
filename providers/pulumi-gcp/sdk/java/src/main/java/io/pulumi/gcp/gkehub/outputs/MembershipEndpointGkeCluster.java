@@ -16,7 +16,7 @@ public final class MembershipEndpointGkeCluster {
         this.resourceLink = resourceLink;
     }
 
-    public String getResourceLink() {
+    public String resourceLink() {
         return this.resourceLink;
     }
 

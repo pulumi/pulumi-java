@@ -28,7 +28,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
@@ -46,7 +46,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -58,7 +58,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,7 +77,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Hl7StoreNotificationConfigArgs> notificationConfig;
 
     @Deprecated /* This field has been replaced by notificationConfigs */
-    public Output<Hl7StoreNotificationConfigArgs> getNotificationConfig() {
+    public Output<Hl7StoreNotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -91,7 +91,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfigs")
       private final @Nullable Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs;
 
-    public Output<List<Hl7StoreNotificationConfigsArgs>> getNotificationConfigs() {
+    public Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs() {
         return this.notificationConfigs == null ? Codegen.empty() : this.notificationConfigs;
     }
 
@@ -103,7 +103,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parserConfig")
       private final @Nullable Output<Hl7StoreParserConfigArgs> parserConfig;
 
-    public Output<Hl7StoreParserConfigArgs> getParserConfig() {
+    public Output<Hl7StoreParserConfigArgs> parserConfig() {
         return this.parserConfig == null ? Codegen.empty() : this.parserConfig;
     }
 

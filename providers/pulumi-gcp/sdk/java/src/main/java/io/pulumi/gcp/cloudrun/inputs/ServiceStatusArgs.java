@@ -21,35 +21,35 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<ServiceStatusConditionArgs>> conditions;
 
-    public Output<List<ServiceStatusConditionArgs>> getConditions() {
+    public Output<List<ServiceStatusConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     @Import(name="latestCreatedRevisionName")
       private final @Nullable Output<String> latestCreatedRevisionName;
 
-    public Output<String> getLatestCreatedRevisionName() {
+    public Output<String> latestCreatedRevisionName() {
         return this.latestCreatedRevisionName == null ? Codegen.empty() : this.latestCreatedRevisionName;
     }
 
     @Import(name="latestReadyRevisionName")
       private final @Nullable Output<String> latestReadyRevisionName;
 
-    public Output<String> getLatestReadyRevisionName() {
+    public Output<String> latestReadyRevisionName() {
         return this.latestReadyRevisionName == null ? Codegen.empty() : this.latestReadyRevisionName;
     }
 
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

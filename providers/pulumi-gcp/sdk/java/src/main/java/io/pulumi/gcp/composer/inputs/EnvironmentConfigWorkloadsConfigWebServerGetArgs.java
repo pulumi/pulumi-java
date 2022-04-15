@@ -18,21 +18,21 @@ public final class EnvironmentConfigWorkloadsConfigWebServerGetArgs extends io.p
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
+    public Output<Double> memoryGb() {
         return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
     @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
-    public Output<Double> getStorageGb() {
+    public Output<Double> storageGb() {
         return this.storageGb == null ? Codegen.empty() : this.storageGb;
     }
 

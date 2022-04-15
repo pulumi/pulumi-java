@@ -22,10 +22,10 @@ public final class ServiceAttachmentConnectedEndpoint {
         this.status = status;
     }
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

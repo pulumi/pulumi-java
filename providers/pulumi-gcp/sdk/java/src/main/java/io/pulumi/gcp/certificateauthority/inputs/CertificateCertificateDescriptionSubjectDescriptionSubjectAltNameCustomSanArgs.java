@@ -26,14 +26,14 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical == null ? Codegen.empty() : this.critical;
     }
 
     @Import(name="obectIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds;
 
-    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> getObectIds() {
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs>> obectIds() {
         return this.obectIds == null ? Codegen.empty() : this.obectIds;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

@@ -25,7 +25,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="inspectJob")
       private final @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
-    public Output<PreventionJobTriggerInspectJobGetArgs> getInspectJob() {
+    public Output<PreventionJobTriggerInspectJobGetArgs> inspectJob() {
         return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
     }
 
@@ -59,7 +59,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="lastRunTime")
       private final @Nullable Output<String> lastRunTime;
 
-    public Output<String> getLastRunTime() {
+    public Output<String> lastRunTime() {
         return this.lastRunTime == null ? Codegen.empty() : this.lastRunTime;
     }
 
@@ -70,7 +70,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -95,7 +95,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -107,7 +107,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     @Import(name="triggers")
       private final @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
-    public Output<List<PreventionJobTriggerTriggerGetArgs>> getTriggers() {
+    public Output<List<PreventionJobTriggerTriggerGetArgs>> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

@@ -25,7 +25,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
     @Import(name="retentionPolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> getRetentionPolicy() {
+    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
     @Import(name="schedule", required=true)
       private final Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> getSchedule() {
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule() {
         return this.schedule;
     }
 
@@ -48,7 +48,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
     @Import(name="snapshotProperties")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
 
-    public Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> getSnapshotProperties() {
+    public Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties() {
         return this.snapshotProperties == null ? Codegen.empty() : this.snapshotProperties;
     }
 

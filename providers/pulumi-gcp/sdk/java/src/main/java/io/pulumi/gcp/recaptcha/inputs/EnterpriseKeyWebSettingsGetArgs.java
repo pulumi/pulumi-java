@@ -24,7 +24,7 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="allowAllDomains")
       private final @Nullable Output<Boolean> allowAllDomains;
 
-    public Output<Boolean> getAllowAllDomains() {
+    public Output<Boolean> allowAllDomains() {
         return this.allowAllDomains == null ? Codegen.empty() : this.allowAllDomains;
     }
 
@@ -35,7 +35,7 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="allowAmpTraffic")
       private final @Nullable Output<Boolean> allowAmpTraffic;
 
-    public Output<Boolean> getAllowAmpTraffic() {
+    public Output<Boolean> allowAmpTraffic() {
         return this.allowAmpTraffic == null ? Codegen.empty() : this.allowAmpTraffic;
     }
 
@@ -46,7 +46,7 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="allowedDomains")
       private final @Nullable Output<List<String>> allowedDomains;
 
-    public Output<List<String>> getAllowedDomains() {
+    public Output<List<String>> allowedDomains() {
         return this.allowedDomains == null ? Codegen.empty() : this.allowedDomains;
     }
 
@@ -57,7 +57,7 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="challengeSecurityPreference")
       private final @Nullable Output<String> challengeSecurityPreference;
 
-    public Output<String> getChallengeSecurityPreference() {
+    public Output<String> challengeSecurityPreference() {
         return this.challengeSecurityPreference == null ? Codegen.empty() : this.challengeSecurityPreference;
     }
 
@@ -68,7 +68,7 @@ public final class EnterpriseKeyWebSettingsGetArgs extends io.pulumi.resources.R
     @Import(name="integrationType", required=true)
       private final Output<String> integrationType;
 
-    public Output<String> getIntegrationType() {
+    public Output<String> integrationType() {
         return this.integrationType;
     }
 

@@ -30,16 +30,16 @@ public final class GetClusterClusterAutoscaling {
         this.resourceLimits = resourceLimits;
     }
 
-    public List<GetClusterClusterAutoscalingAutoProvisioningDefault> getAutoProvisioningDefaults() {
+    public List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults() {
         return this.autoProvisioningDefaults;
     }
-    public String getAutoscalingProfile() {
+    public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public List<GetClusterClusterAutoscalingResourceLimit> getResourceLimits() {
+    public List<GetClusterClusterAutoscalingResourceLimit> resourceLimits() {
         return this.resourceLimits;
     }
 

@@ -24,7 +24,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     @Import(name="customerManagedEncryption")
       private final @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
 
-    public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> getCustomerManagedEncryption() {
+    public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption() {
         return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 
@@ -35,7 +35,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 

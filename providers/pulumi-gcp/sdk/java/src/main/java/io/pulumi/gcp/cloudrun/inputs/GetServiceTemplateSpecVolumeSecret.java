@@ -18,21 +18,21 @@ public final class GetServiceTemplateSpecVolumeSecret extends io.pulumi.resource
     @Import(name="defaultMode", required=true)
       private final Integer defaultMode;
 
-    public Integer getDefaultMode() {
+    public Integer defaultMode() {
         return this.defaultMode;
     }
 
     @Import(name="items", required=true)
       private final List<GetServiceTemplateSpecVolumeSecretItem> items;
 
-    public List<GetServiceTemplateSpecVolumeSecretItem> getItems() {
+    public List<GetServiceTemplateSpecVolumeSecretItem> items() {
         return this.items;
     }
 
     @Import(name="secretName", required=true)
       private final String secretName;
 
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 

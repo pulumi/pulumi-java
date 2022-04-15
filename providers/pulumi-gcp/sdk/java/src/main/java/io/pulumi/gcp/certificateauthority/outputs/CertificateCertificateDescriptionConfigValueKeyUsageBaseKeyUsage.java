@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
         this.keyUsageOptions = keyUsageOptions;
     }
 
-    public List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> getKeyUsageOptions() {
+    public List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions() {
         return this.keyUsageOptions == null ? List.of() : this.keyUsageOptions;
     }
 

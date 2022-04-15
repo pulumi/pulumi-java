@@ -21,7 +21,7 @@ public final class AwsClusterControlPlaneSshConfigArgs extends io.pulumi.resourc
     @Import(name="ec2KeyPair", required=true)
       private final Output<String> ec2KeyPair;
 
-    public Output<String> getEc2KeyPair() {
+    public Output<String> ec2KeyPair() {
         return this.ec2KeyPair;
     }
 

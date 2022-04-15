@@ -26,7 +26,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
-    public Output<RuntimeAccessConfigArgs> getAccessConfig() {
+    public Output<RuntimeAccessConfigArgs> accessConfig() {
         return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
     }
 
@@ -37,7 +37,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -48,7 +48,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -72,7 +72,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
-    public Output<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
+    public Output<RuntimeSoftwareConfigArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -84,7 +84,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachine")
       private final @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
 
-    public Output<RuntimeVirtualMachineArgs> getVirtualMachine() {
+    public Output<RuntimeVirtualMachineArgs> virtualMachine() {
         return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 

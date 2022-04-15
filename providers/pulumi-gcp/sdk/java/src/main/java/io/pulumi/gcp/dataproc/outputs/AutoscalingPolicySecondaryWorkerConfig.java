@@ -56,14 +56,14 @@ public final class AutoscalingPolicySecondaryWorkerConfig {
      * Bounds: [minInstances, ). Defaults to 0.
      * 
     */
-    public Optional<Integer> getMaxInstances() {
+    public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
      * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
      * 
     */
-    public Optional<Integer> getMinInstances() {
+    public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
@@ -81,7 +81,7 @@ public final class AutoscalingPolicySecondaryWorkerConfig {
      * only on primary workers, the cluster will use primary workers only and no secondary workers.
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

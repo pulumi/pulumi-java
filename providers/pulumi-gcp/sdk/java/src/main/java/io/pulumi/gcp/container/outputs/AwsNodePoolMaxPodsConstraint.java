@@ -24,7 +24,7 @@ public final class AwsNodePoolMaxPodsConstraint {
      * Required. The maximum number of pods to schedule on a single node.
      * 
     */
-    public Integer getMaxPodsPerNode() {
+    public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 

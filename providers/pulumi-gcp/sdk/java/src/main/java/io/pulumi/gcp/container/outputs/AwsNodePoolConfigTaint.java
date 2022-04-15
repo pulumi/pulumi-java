@@ -39,21 +39,21 @@ public final class AwsNodePoolConfigTaint {
      * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
      * 
     */
-    public String getEffect() {
+    public String effect() {
         return this.effect;
     }
     /**
      * Required. Key for the taint.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Required. Value for the taint.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

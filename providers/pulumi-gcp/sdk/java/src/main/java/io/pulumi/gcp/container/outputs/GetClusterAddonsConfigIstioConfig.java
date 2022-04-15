@@ -21,10 +21,10 @@ public final class GetClusterAddonsConfigIstioConfig {
         this.disabled = disabled;
     }
 
-    public String getAuth() {
+    public String auth() {
         return this.auth;
     }
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

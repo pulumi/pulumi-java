@@ -22,7 +22,7 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -33,7 +33,7 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -44,7 +44,7 @@ public final class TriggerDestinationCloudRunServiceGetArgs extends io.pulumi.re
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

@@ -50,38 +50,38 @@ public final class GetWebAppConfigResult {
         this.webAppId = webAppId;
     }
 
-    public String getApiKey() {
+    public String apiKey() {
         return this.apiKey;
     }
-    public String getAuthDomain() {
+    public String authDomain() {
         return this.authDomain;
     }
-    public String getDatabaseUrl() {
+    public String databaseUrl() {
         return this.databaseUrl;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLocationId() {
+    public String locationId() {
         return this.locationId;
     }
-    public String getMeasurementId() {
+    public String measurementId() {
         return this.measurementId;
     }
-    public String getMessagingSenderId() {
+    public String messagingSenderId() {
         return this.messagingSenderId;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getStorageBucket() {
+    public String storageBucket() {
         return this.storageBucket;
     }
-    public String getWebAppId() {
+    public String webAppId() {
         return this.webAppId;
     }
 

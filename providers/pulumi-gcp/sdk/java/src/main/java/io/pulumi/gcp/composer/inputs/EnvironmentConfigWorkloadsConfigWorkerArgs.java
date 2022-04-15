@@ -19,35 +19,35 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
     @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> getMaxCount() {
+    public Output<Integer> maxCount() {
         return this.maxCount == null ? Codegen.empty() : this.maxCount;
     }
 
     @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
-    public Output<Double> getMemoryGb() {
+    public Output<Double> memoryGb() {
         return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
     @Import(name="minCount")
       private final @Nullable Output<Integer> minCount;
 
-    public Output<Integer> getMinCount() {
+    public Output<Integer> minCount() {
         return this.minCount == null ? Codegen.empty() : this.minCount;
     }
 
     @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
-    public Output<Double> getStorageGb() {
+    public Output<Double> storageGb() {
         return this.storageGb == null ? Codegen.empty() : this.storageGb;
     }
 

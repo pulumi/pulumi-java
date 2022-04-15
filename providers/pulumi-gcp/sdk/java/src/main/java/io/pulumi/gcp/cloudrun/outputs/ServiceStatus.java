@@ -34,19 +34,19 @@ public final class ServiceStatus {
         this.url = url;
     }
 
-    public List<ServiceStatusCondition> getConditions() {
+    public List<ServiceStatusCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
-    public Optional<String> getLatestCreatedRevisionName() {
+    public Optional<String> latestCreatedRevisionName() {
         return Optional.ofNullable(this.latestCreatedRevisionName);
     }
-    public Optional<String> getLatestReadyRevisionName() {
+    public Optional<String> latestReadyRevisionName() {
         return Optional.ofNullable(this.latestReadyRevisionName);
     }
-    public Optional<Integer> getObservedGeneration() {
+    public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 

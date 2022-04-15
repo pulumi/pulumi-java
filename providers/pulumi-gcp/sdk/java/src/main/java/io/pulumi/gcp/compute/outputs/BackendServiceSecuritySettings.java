@@ -39,7 +39,7 @@ public final class BackendServiceSecuritySettings {
      * configuration unless it is attached to a backend service resource.
      * 
     */
-    public String getClientTlsPolicy() {
+    public String clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
     /**
@@ -48,7 +48,7 @@ public final class BackendServiceSecuritySettings {
      * alt name matches one of the specified values.
      * 
     */
-    public List<String> getSubjectAltNames() {
+    public List<String> subjectAltNames() {
         return this.subjectAltNames;
     }
 

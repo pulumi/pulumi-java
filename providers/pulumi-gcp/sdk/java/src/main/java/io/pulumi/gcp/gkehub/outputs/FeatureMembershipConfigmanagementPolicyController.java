@@ -64,42 +64,42 @@ public final class FeatureMembershipConfigmanagementPolicyController {
      * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
      * 
     */
-    public Optional<String> getAuditIntervalSeconds() {
+    public Optional<String> auditIntervalSeconds() {
         return Optional.ofNullable(this.auditIntervalSeconds);
     }
     /**
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
      * 
     */
-    public List<String> getExemptableNamespaces() {
+    public List<String> exemptableNamespaces() {
         return this.exemptableNamespaces == null ? List.of() : this.exemptableNamespaces;
     }
     /**
      * Logs all denies and dry run failures.
      * 
     */
-    public Optional<Boolean> getLogDeniesEnabled() {
+    public Optional<Boolean> logDeniesEnabled() {
         return Optional.ofNullable(this.logDeniesEnabled);
     }
     /**
      * Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
      * 
     */
-    public Optional<Boolean> getReferentialRulesEnabled() {
+    public Optional<Boolean> referentialRulesEnabled() {
         return Optional.ofNullable(this.referentialRulesEnabled);
     }
     /**
      * Installs the default template library along with Policy Controller.
      * 
     */
-    public Optional<Boolean> getTemplateLibraryInstalled() {
+    public Optional<Boolean> templateLibraryInstalled() {
         return Optional.ofNullable(this.templateLibraryInstalled);
     }
 

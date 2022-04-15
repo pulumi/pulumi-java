@@ -20,10 +20,10 @@ public final class GetRouterBgpAdvertisedIpRange {
         this.range = range;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getRange() {
+    public String range() {
         return this.range;
     }
 

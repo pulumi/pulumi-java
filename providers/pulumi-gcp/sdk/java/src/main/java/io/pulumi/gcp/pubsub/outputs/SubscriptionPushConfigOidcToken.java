@@ -47,7 +47,7 @@ public final class SubscriptionPushConfigOidcToken {
      * Note: if not specified, the Push endpoint URL will be used.
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
@@ -57,7 +57,7 @@ public final class SubscriptionPushConfigOidcToken {
      * iam.serviceAccounts.actAs permission for the service account.
      * 
     */
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

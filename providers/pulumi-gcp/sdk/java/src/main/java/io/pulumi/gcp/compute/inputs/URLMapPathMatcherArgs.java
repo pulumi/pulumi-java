@@ -33,7 +33,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultRouteAction")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionArgs> defaultRouteAction;
 
-    public Output<URLMapPathMatcherDefaultRouteActionArgs> getDefaultRouteAction() {
+    public Output<URLMapPathMatcherDefaultRouteActionArgs> defaultRouteAction() {
         return this.defaultRouteAction == null ? Codegen.empty() : this.defaultRouteAction;
     }
 
@@ -44,7 +44,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
-    public Output<String> getDefaultService() {
+    public Output<String> defaultService() {
         return this.defaultService == null ? Codegen.empty() : this.defaultService;
     }
 
@@ -58,7 +58,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultUrlRedirect")
       private final @Nullable Output<URLMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect;
 
-    public Output<URLMapPathMatcherDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
+    public Output<URLMapPathMatcherDefaultUrlRedirectArgs> defaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
     }
 
@@ -69,7 +69,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -84,7 +84,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="headerAction")
       private final @Nullable Output<URLMapPathMatcherHeaderActionArgs> headerAction;
 
-    public Output<URLMapPathMatcherHeaderActionArgs> getHeaderAction() {
+    public Output<URLMapPathMatcherHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -96,7 +96,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -113,7 +113,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pathRules")
       private final @Nullable Output<List<URLMapPathMatcherPathRuleArgs>> pathRules;
 
-    public Output<List<URLMapPathMatcherPathRuleArgs>> getPathRules() {
+    public Output<List<URLMapPathMatcherPathRuleArgs>> pathRules() {
         return this.pathRules == null ? Codegen.empty() : this.pathRules;
     }
 
@@ -130,7 +130,7 @@ public final class URLMapPathMatcherArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routeRules")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleArgs>> routeRules;
 
-    public Output<List<URLMapPathMatcherRouteRuleArgs>> getRouteRules() {
+    public Output<List<URLMapPathMatcherRouteRuleArgs>> routeRules() {
         return this.routeRules == null ? Codegen.empty() : this.routeRules;
     }
 

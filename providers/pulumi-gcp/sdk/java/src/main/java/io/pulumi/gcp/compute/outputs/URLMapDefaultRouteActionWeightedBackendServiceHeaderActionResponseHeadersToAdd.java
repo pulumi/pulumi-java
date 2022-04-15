@@ -43,14 +43,14 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
      * The name of the header to add.
      * 
     */
-    public Optional<String> getHeaderName() {
+    public Optional<String> headerName() {
         return Optional.ofNullable(this.headerName);
     }
     /**
      * The value of the header to add.
      * 
     */
-    public Optional<String> getHeaderValue() {
+    public Optional<String> headerValue() {
         return Optional.ofNullable(this.headerValue);
     }
     /**
@@ -58,7 +58,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRes
      * If true, headerValue is set for the header, discarding any values that were set for that header.
      * 
     */
-    public Optional<Boolean> getReplace() {
+    public Optional<Boolean> replace() {
         return Optional.ofNullable(this.replace);
     }
 

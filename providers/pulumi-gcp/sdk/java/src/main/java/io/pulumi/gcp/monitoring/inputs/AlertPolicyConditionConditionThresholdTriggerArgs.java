@@ -25,7 +25,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class AlertPolicyConditionConditionThresholdTriggerArgs extends io.
     @Import(name="percent")
       private final @Nullable Output<Double> percent;
 
-    public Output<Double> getPercent() {
+    public Output<Double> percent() {
         return this.percent == null ? Codegen.empty() : this.percent;
     }
 

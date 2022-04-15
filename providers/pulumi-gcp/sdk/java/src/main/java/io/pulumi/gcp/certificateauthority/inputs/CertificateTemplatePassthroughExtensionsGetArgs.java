@@ -24,7 +24,7 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> getAdditionalExtensions() {
+    public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions() {
         return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
     @Import(name="knownExtensions")
       private final @Nullable Output<List<String>> knownExtensions;
 
-    public Output<List<String>> getKnownExtensions() {
+    public Output<List<String>> knownExtensions() {
         return this.knownExtensions == null ? Codegen.empty() : this.knownExtensions;
     }
 

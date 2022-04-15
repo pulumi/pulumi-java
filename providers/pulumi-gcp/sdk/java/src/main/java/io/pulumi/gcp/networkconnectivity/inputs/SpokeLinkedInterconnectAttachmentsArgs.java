@@ -23,7 +23,7 @@ public final class SpokeLinkedInterconnectAttachmentsArgs extends io.pulumi.reso
     @Import(name="siteToSiteDataTransfer", required=true)
       private final Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> getSiteToSiteDataTransfer() {
+    public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }
 
@@ -34,7 +34,7 @@ public final class SpokeLinkedInterconnectAttachmentsArgs extends io.pulumi.reso
     @Import(name="uris", required=true)
       private final Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
+    public Output<List<String>> uris() {
         return this.uris;
     }
 

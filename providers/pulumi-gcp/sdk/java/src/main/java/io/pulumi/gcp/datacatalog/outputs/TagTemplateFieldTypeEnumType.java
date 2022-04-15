@@ -35,7 +35,7 @@ public final class TagTemplateFieldTypeEnumType {
      * Structure is documented below.
      * 
     */
-    public List<TagTemplateFieldTypeEnumTypeAllowedValue> getAllowedValues() {
+    public List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues() {
         return this.allowedValues;
     }
 

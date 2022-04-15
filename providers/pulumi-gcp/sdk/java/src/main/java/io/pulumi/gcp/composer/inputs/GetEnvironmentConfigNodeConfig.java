@@ -19,77 +19,77 @@ public final class GetEnvironmentConfigNodeConfig extends io.pulumi.resources.In
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
     @Import(name="enableIpMasqAgent", required=true)
       private final Boolean enableIpMasqAgent;
 
-    public Boolean getEnableIpMasqAgent() {
+    public Boolean enableIpMasqAgent() {
         return this.enableIpMasqAgent;
     }
 
     @Import(name="ipAllocationPolicies", required=true)
       private final List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies;
 
-    public List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> getIpAllocationPolicies() {
+    public List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies() {
         return this.ipAllocationPolicies;
     }
 
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
     @Import(name="maxPodsPerNode", required=true)
       private final Integer maxPodsPerNode;
 
-    public Integer getMaxPodsPerNode() {
+    public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

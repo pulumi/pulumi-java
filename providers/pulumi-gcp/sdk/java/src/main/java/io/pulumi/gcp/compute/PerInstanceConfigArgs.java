@@ -24,7 +24,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceGroupManager", required=true)
       private final Output<String> instanceGroupManager;
 
-    public Output<String> getInstanceGroupManager() {
+    public Output<String> instanceGroupManager() {
         return this.instanceGroupManager;
     }
 
@@ -40,7 +40,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minimalAction")
       private final @Nullable Output<String> minimalAction;
 
-    public Output<String> getMinimalAction() {
+    public Output<String> minimalAction() {
         return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
     }
 
@@ -56,7 +56,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mostDisruptiveAllowedAction")
       private final @Nullable Output<String> mostDisruptiveAllowedAction;
 
-    public Output<String> getMostDisruptiveAllowedAction() {
+    public Output<String> mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
     }
 
@@ -67,7 +67,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="preservedState")
       private final @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState;
 
-    public Output<PerInstanceConfigPreservedStateArgs> getPreservedState() {
+    public Output<PerInstanceConfigPreservedStateArgs> preservedState() {
         return this.preservedState == null ? Codegen.empty() : this.preservedState;
     }
 
@@ -91,7 +91,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -104,7 +104,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="removeInstanceStateOnDestroy")
       private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
-    public Output<Boolean> getRemoveInstanceStateOnDestroy() {
+    public Output<Boolean> removeInstanceStateOnDestroy() {
         return this.removeInstanceStateOnDestroy == null ? Codegen.empty() : this.removeInstanceStateOnDestroy;
     }
 
@@ -115,7 +115,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

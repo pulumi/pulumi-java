@@ -35,7 +35,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
+    public Output<Boolean> forceDelete() {
         return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
@@ -46,7 +46,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hadoopConfig")
       private final @Nullable Output<JobHadoopConfigArgs> hadoopConfig;
 
-    public Output<JobHadoopConfigArgs> getHadoopConfig() {
+    public Output<JobHadoopConfigArgs> hadoopConfig() {
         return this.hadoopConfig == null ? Codegen.empty() : this.hadoopConfig;
     }
 
@@ -57,7 +57,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hiveConfig")
       private final @Nullable Output<JobHiveConfigArgs> hiveConfig;
 
-    public Output<JobHiveConfigArgs> getHiveConfig() {
+    public Output<JobHiveConfigArgs> hiveConfig() {
         return this.hiveConfig == null ? Codegen.empty() : this.hiveConfig;
     }
 
@@ -68,7 +68,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -79,7 +79,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pigConfig")
       private final @Nullable Output<JobPigConfigArgs> pigConfig;
 
-    public Output<JobPigConfigArgs> getPigConfig() {
+    public Output<JobPigConfigArgs> pigConfig() {
         return this.pigConfig == null ? Codegen.empty() : this.pigConfig;
     }
 
@@ -90,7 +90,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="placement", required=true)
       private final Output<JobPlacementArgs> placement;
 
-    public Output<JobPlacementArgs> getPlacement() {
+    public Output<JobPlacementArgs> placement() {
         return this.placement;
     }
 
@@ -102,7 +102,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -113,7 +113,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pysparkConfig")
       private final @Nullable Output<JobPysparkConfigArgs> pysparkConfig;
 
-    public Output<JobPysparkConfigArgs> getPysparkConfig() {
+    public Output<JobPysparkConfigArgs> pysparkConfig() {
         return this.pysparkConfig == null ? Codegen.empty() : this.pysparkConfig;
     }
 
@@ -124,7 +124,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reference")
       private final @Nullable Output<JobReferenceArgs> reference;
 
-    public Output<JobReferenceArgs> getReference() {
+    public Output<JobReferenceArgs> reference() {
         return this.reference == null ? Codegen.empty() : this.reference;
     }
 
@@ -136,7 +136,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -147,7 +147,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
       private final @Nullable Output<JobSchedulingArgs> scheduling;
 
-    public Output<JobSchedulingArgs> getScheduling() {
+    public Output<JobSchedulingArgs> scheduling() {
         return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
@@ -158,7 +158,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkConfig")
       private final @Nullable Output<JobSparkConfigArgs> sparkConfig;
 
-    public Output<JobSparkConfigArgs> getSparkConfig() {
+    public Output<JobSparkConfigArgs> sparkConfig() {
         return this.sparkConfig == null ? Codegen.empty() : this.sparkConfig;
     }
 
@@ -169,7 +169,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparksqlConfig")
       private final @Nullable Output<JobSparksqlConfigArgs> sparksqlConfig;
 
-    public Output<JobSparksqlConfigArgs> getSparksqlConfig() {
+    public Output<JobSparksqlConfigArgs> sparksqlConfig() {
         return this.sparksqlConfig == null ? Codegen.empty() : this.sparksqlConfig;
     }
 

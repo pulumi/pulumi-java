@@ -39,21 +39,21 @@ public final class JobExtractSourceModel {
      * The ID of the dataset containing this model.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * The ID of the model.
      * 
     */
-    public String getModelId() {
+    public String modelId() {
         return this.modelId;
     }
     /**
      * The ID of the project containing this model.
      * 
     */
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
 

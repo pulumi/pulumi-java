@@ -23,7 +23,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccountId")
       private final @Nullable Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
     }
 
@@ -36,7 +36,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
-    public Output<String> getDeletionPolicy() {
+    public Output<String> deletionPolicy() {
         return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
     }
 
@@ -47,7 +47,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterBillingAccount")
       private final @Nullable Output<String> masterBillingAccount;
 
-    public Output<String> getMasterBillingAccount() {
+    public Output<String> masterBillingAccount() {
         return this.masterBillingAccount == null ? Codegen.empty() : this.masterBillingAccount;
     }
 
@@ -70,7 +70,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="open")
       private final @Nullable Output<Boolean> open;
 
-    public Output<Boolean> getOpen() {
+    public Output<Boolean> open() {
         return this.open == null ? Codegen.empty() : this.open;
     }
 

@@ -25,7 +25,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destRange")
       private final @Nullable Output<String> destRange;
 
-    public Output<String> getDestRange() {
+    public Output<String> destRange() {
         return this.destRange == null ? Codegen.empty() : this.destRange;
     }
 
@@ -54,7 +54,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -65,7 +65,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -82,7 +82,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopGateway")
       private final @Nullable Output<String> nextHopGateway;
 
-    public Output<String> getNextHopGateway() {
+    public Output<String> nextHopGateway() {
         return this.nextHopGateway == null ? Codegen.empty() : this.nextHopGateway;
     }
 
@@ -105,7 +105,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIlb")
       private final @Nullable Output<String> nextHopIlb;
 
-    public Output<String> getNextHopIlb() {
+    public Output<String> nextHopIlb() {
         return this.nextHopIlb == null ? Codegen.empty() : this.nextHopIlb;
     }
 
@@ -121,7 +121,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopInstance")
       private final @Nullable Output<String> nextHopInstance;
 
-    public Output<String> getNextHopInstance() {
+    public Output<String> nextHopInstance() {
         return this.nextHopInstance == null ? Codegen.empty() : this.nextHopInstance;
     }
 
@@ -135,7 +135,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopInstanceZone")
       private final @Nullable Output<String> nextHopInstanceZone;
 
-    public Output<String> getNextHopInstanceZone() {
+    public Output<String> nextHopInstanceZone() {
         return this.nextHopInstanceZone == null ? Codegen.empty() : this.nextHopInstanceZone;
     }
 
@@ -146,7 +146,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIp")
       private final @Nullable Output<String> nextHopIp;
 
-    public Output<String> getNextHopIp() {
+    public Output<String> nextHopIp() {
         return this.nextHopIp == null ? Codegen.empty() : this.nextHopIp;
     }
 
@@ -157,7 +157,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopNetwork")
       private final @Nullable Output<String> nextHopNetwork;
 
-    public Output<String> getNextHopNetwork() {
+    public Output<String> nextHopNetwork() {
         return this.nextHopNetwork == null ? Codegen.empty() : this.nextHopNetwork;
     }
 
@@ -168,7 +168,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopVpnTunnel")
       private final @Nullable Output<String> nextHopVpnTunnel;
 
-    public Output<String> getNextHopVpnTunnel() {
+    public Output<String> nextHopVpnTunnel() {
         return this.nextHopVpnTunnel == null ? Codegen.empty() : this.nextHopVpnTunnel;
     }
 
@@ -183,7 +183,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -195,7 +195,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -206,7 +206,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -217,7 +217,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -20,10 +20,10 @@ public final class GetClusterNodePoolAutoscaling {
         this.minNodeCount = minNodeCount;
     }
 
-    public Integer getMaxNodeCount() {
+    public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
-    public Integer getMinNodeCount() {
+    public Integer minNodeCount() {
         return this.minNodeCount;
     }
 

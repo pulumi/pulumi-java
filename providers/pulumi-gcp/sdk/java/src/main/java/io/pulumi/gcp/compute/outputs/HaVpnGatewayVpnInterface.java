@@ -48,7 +48,7 @@ public final class HaVpnGatewayVpnInterface {
      * The numeric ID of this VPN gateway interface.
      * 
     */
-    public Optional<Integer> getId() {
+    public Optional<Integer> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -60,7 +60,7 @@ public final class HaVpnGatewayVpnInterface {
      * Not currently available publicly.
      * 
     */
-    public Optional<String> getInterconnectAttachment() {
+    public Optional<String> interconnectAttachment() {
         return Optional.ofNullable(this.interconnectAttachment);
     }
     /**
@@ -68,7 +68,7 @@ public final class HaVpnGatewayVpnInterface {
      * The external IP address for this VPN gateway interface.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
 

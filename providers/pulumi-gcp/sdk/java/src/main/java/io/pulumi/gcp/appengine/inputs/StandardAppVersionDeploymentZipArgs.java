@@ -23,7 +23,7 @@ public final class StandardAppVersionDeploymentZipArgs extends io.pulumi.resourc
     @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
 
-    public Output<Integer> getFilesCount() {
+    public Output<Integer> filesCount() {
         return this.filesCount == null ? Codegen.empty() : this.filesCount;
     }
 
@@ -34,7 +34,7 @@ public final class StandardAppVersionDeploymentZipArgs extends io.pulumi.resourc
     @Import(name="sourceUrl", required=true)
       private final Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
 

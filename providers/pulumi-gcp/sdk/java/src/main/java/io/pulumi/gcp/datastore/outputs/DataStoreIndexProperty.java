@@ -34,14 +34,14 @@ public final class DataStoreIndexProperty {
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * The property name to index.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

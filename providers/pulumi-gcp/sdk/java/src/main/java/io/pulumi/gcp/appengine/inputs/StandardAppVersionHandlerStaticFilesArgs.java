@@ -26,7 +26,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="applicationReadable")
       private final @Nullable Output<Boolean> applicationReadable;
 
-    public Output<Boolean> getApplicationReadable() {
+    public Output<Boolean> applicationReadable() {
         return this.applicationReadable == null ? Codegen.empty() : this.applicationReadable;
     }
 
@@ -38,7 +38,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -50,7 +50,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="httpHeaders")
       private final @Nullable Output<Map<String,String>> httpHeaders;
 
-    public Output<Map<String,String>> getHttpHeaders() {
+    public Output<Map<String,String>> httpHeaders() {
         return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
     }
 
@@ -62,7 +62,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
@@ -73,7 +73,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -84,7 +84,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="requireMatchingFile")
       private final @Nullable Output<Boolean> requireMatchingFile;
 
-    public Output<Boolean> getRequireMatchingFile() {
+    public Output<Boolean> requireMatchingFile() {
         return this.requireMatchingFile == null ? Codegen.empty() : this.requireMatchingFile;
     }
 
@@ -95,7 +95,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     @Import(name="uploadPathRegex")
       private final @Nullable Output<String> uploadPathRegex;
 
-    public Output<String> getUploadPathRegex() {
+    public Output<String> uploadPathRegex() {
         return this.uploadPathRegex == null ? Codegen.empty() : this.uploadPathRegex;
     }
 

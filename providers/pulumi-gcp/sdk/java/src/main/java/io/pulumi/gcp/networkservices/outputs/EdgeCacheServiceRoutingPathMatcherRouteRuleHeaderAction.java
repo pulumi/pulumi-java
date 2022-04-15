@@ -57,7 +57,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd> getRequestHeaderToAdds() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd> requestHeaderToAdds() {
         return this.requestHeaderToAdds == null ? List.of() : this.requestHeaderToAdds;
     }
     /**
@@ -65,7 +65,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove> getRequestHeaderToRemoves() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove> requestHeaderToRemoves() {
         return this.requestHeaderToRemoves == null ? List.of() : this.requestHeaderToRemoves;
     }
     /**
@@ -74,7 +74,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd> getResponseHeaderToAdds() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd> responseHeaderToAdds() {
         return this.responseHeaderToAdds == null ? List.of() : this.responseHeaderToAdds;
     }
     /**
@@ -82,7 +82,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove> getResponseHeaderToRemoves() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove> responseHeaderToRemoves() {
         return this.responseHeaderToRemoves == null ? List.of() : this.responseHeaderToRemoves;
     }
 

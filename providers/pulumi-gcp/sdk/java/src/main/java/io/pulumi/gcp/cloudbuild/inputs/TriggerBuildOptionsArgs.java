@@ -30,7 +30,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -42,7 +42,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="dynamicSubstitutions")
       private final @Nullable Output<Boolean> dynamicSubstitutions;
 
-    public Output<Boolean> getDynamicSubstitutions() {
+    public Output<Boolean> dynamicSubstitutions() {
         return this.dynamicSubstitutions == null ? Codegen.empty() : this.dynamicSubstitutions;
     }
 
@@ -56,7 +56,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> getEnvs() {
+    public Output<List<String>> envs() {
         return this.envs == null ? Codegen.empty() : this.envs;
     }
 
@@ -68,7 +68,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="logStreamingOption")
       private final @Nullable Output<String> logStreamingOption;
 
-    public Output<String> getLogStreamingOption() {
+    public Output<String> logStreamingOption() {
         return this.logStreamingOption == null ? Codegen.empty() : this.logStreamingOption;
     }
 
@@ -80,7 +80,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="logging")
       private final @Nullable Output<String> logging;
 
-    public Output<String> getLogging() {
+    public Output<String> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -92,7 +92,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -104,7 +104,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="requestedVerifyOption")
       private final @Nullable Output<String> requestedVerifyOption;
 
-    public Output<String> getRequestedVerifyOption() {
+    public Output<String> requestedVerifyOption() {
         return this.requestedVerifyOption == null ? Codegen.empty() : this.requestedVerifyOption;
     }
 
@@ -117,7 +117,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="secretEnvs")
       private final @Nullable Output<List<String>> secretEnvs;
 
-    public Output<List<String>> getSecretEnvs() {
+    public Output<List<String>> secretEnvs() {
         return this.secretEnvs == null ? Codegen.empty() : this.secretEnvs;
     }
 
@@ -129,7 +129,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceProvenanceHashes")
       private final @Nullable Output<List<String>> sourceProvenanceHashes;
 
-    public Output<List<String>> getSourceProvenanceHashes() {
+    public Output<List<String>> sourceProvenanceHashes() {
         return this.sourceProvenanceHashes == null ? Codegen.empty() : this.sourceProvenanceHashes;
     }
 
@@ -143,7 +143,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="substitutionOption")
       private final @Nullable Output<String> substitutionOption;
 
-    public Output<String> getSubstitutionOption() {
+    public Output<String> substitutionOption() {
         return this.substitutionOption == null ? Codegen.empty() : this.substitutionOption;
     }
 
@@ -160,7 +160,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="volumes")
       private final @Nullable Output<List<TriggerBuildOptionsVolumeArgs>> volumes;
 
-    public Output<List<TriggerBuildOptionsVolumeArgs>> getVolumes() {
+    public Output<List<TriggerBuildOptionsVolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
@@ -172,7 +172,7 @@ public final class TriggerBuildOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;
 
-    public Output<String> getWorkerPool() {
+    public Output<String> workerPool() {
         return this.workerPool == null ? Codegen.empty() : this.workerPool;
     }
 

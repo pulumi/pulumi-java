@@ -18,35 +18,35 @@ public final class GetDatabaseInstanceSettingIpConfiguration extends io.pulumi.r
     @Import(name="allocatedIpRange", required=true)
       private final String allocatedIpRange;
 
-    public String getAllocatedIpRange() {
+    public String allocatedIpRange() {
         return this.allocatedIpRange;
     }
 
     @Import(name="authorizedNetworks", required=true)
       private final List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
 
-    public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> getAuthorizedNetworks() {
+    public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks() {
         return this.authorizedNetworks;
     }
 
     @Import(name="ipv4Enabled", required=true)
       private final Boolean ipv4Enabled;
 
-    public Boolean getIpv4Enabled() {
+    public Boolean ipv4Enabled() {
         return this.ipv4Enabled;
     }
 
     @Import(name="privateNetwork", required=true)
       private final String privateNetwork;
 
-    public String getPrivateNetwork() {
+    public String privateNetwork() {
         return this.privateNetwork;
     }
 
     @Import(name="requireSsl", required=true)
       private final Boolean requireSsl;
 
-    public Boolean getRequireSsl() {
+    public Boolean requireSsl() {
         return this.requireSsl;
     }
 

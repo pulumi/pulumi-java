@@ -18,14 +18,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     @Import(name="instanceGroupManagerName")
       private final @Nullable Output<String> instanceGroupManagerName;
 
-    public Output<String> getInstanceGroupManagerName() {
+    public Output<String> instanceGroupManagerName() {
         return this.instanceGroupManagerName == null ? Codegen.empty() : this.instanceGroupManagerName;
     }
 
     @Import(name="instanceTemplateName")
       private final @Nullable Output<String> instanceTemplateName;
 
-    public Output<String> getInstanceTemplateName() {
+    public Output<String> instanceTemplateName() {
         return this.instanceTemplateName == null ? Codegen.empty() : this.instanceTemplateName;
     }
 

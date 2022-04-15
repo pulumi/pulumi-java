@@ -58,7 +58,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @return A unique id for the deployment config.
      * 
      */
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
     /**
@@ -72,7 +72,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @return A unique id for the deployment.
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -86,7 +86,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @return The description of the game server config.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +104,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<GameServerConfigFleetConfig>> getFleetConfigs() {
+    public Output<List<GameServerConfigFleetConfig>> fleetConfigs() {
         return this.fleetConfigs;
     }
     /**
@@ -118,7 +118,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @return Set of labels to group by.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -132,7 +132,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @return Location of the Deployment.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -146,7 +146,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the ScalingConfig
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -162,7 +162,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -178,7 +178,7 @@ public class GameServerConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GameServerConfigScalingConfig>> getScalingConfigs() {
+    public Output</* @Nullable */ List<GameServerConfigScalingConfig>> scalingConfigs() {
         return this.scalingConfigs;
     }
 

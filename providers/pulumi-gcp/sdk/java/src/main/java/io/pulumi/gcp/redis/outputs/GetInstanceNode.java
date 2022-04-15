@@ -20,10 +20,10 @@ public final class GetInstanceNode {
         this.zone = zone;
     }
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

@@ -29,7 +29,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="apt")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> apt;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> getApt() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> apt() {
         return this.apt == null ? Codegen.empty() : this.apt;
     }
 
@@ -40,7 +40,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="deb")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> deb;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> getDeb() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> deb() {
         return this.deb == null ? Codegen.empty() : this.deb;
     }
 
@@ -51,7 +51,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState;
     }
 
@@ -62,7 +62,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="googet")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> googet;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> getGooget() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> googet() {
         return this.googet == null ? Codegen.empty() : this.googet;
     }
 
@@ -73,7 +73,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="msi")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> msi;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> getMsi() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> msi() {
         return this.msi == null ? Codegen.empty() : this.msi;
     }
 
@@ -84,7 +84,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="rpm")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> rpm;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> getRpm() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> rpm() {
         return this.rpm == null ? Codegen.empty() : this.rpm;
     }
 
@@ -95,7 +95,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="yum")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> yum;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> getYum() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> yum() {
         return this.yum == null ? Codegen.empty() : this.yum;
     }
 
@@ -106,7 +106,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
     @Import(name="zypper")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> zypper;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> getZypper() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> zypper() {
         return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 

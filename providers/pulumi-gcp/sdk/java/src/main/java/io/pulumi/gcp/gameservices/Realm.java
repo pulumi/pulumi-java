@@ -55,7 +55,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return Human readable description of the realm.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +69,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return ETag of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -83,7 +83,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this realm. Each label is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -97,7 +97,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return Location of the Realm.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -113,7 +113,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * 'projects/my-project/locations/{location}/realms/my-realm'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -143,7 +143,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * @return GCP region of the Realm.
      * 
      */
-    public Output<String> getRealmId() {
+    public Output<String> realmId() {
         return this.realmId;
     }
     /**
@@ -161,7 +161,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * https://www.iana.org/time-zones.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

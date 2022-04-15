@@ -24,7 +24,7 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -35,7 +35,7 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -47,7 +47,7 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 
@@ -59,7 +59,7 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
     @Import(name="vmStartSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> getVmStartSchedule() {
+    public Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule() {
         return this.vmStartSchedule == null ? Codegen.empty() : this.vmStartSchedule;
     }
 
@@ -71,7 +71,7 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
     @Import(name="vmStopSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> getVmStopSchedule() {
+    public Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule() {
         return this.vmStopSchedule == null ? Codegen.empty() : this.vmStopSchedule;
     }
 

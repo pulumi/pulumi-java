@@ -26,7 +26,7 @@ public final class FolderFeedFeedOutputConfig {
      * Structure is documented below.
      * 
     */
-    public FolderFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
+    public FolderFeedFeedOutputConfigPubsubDestination pubsubDestination() {
         return this.pubsubDestination;
     }
 

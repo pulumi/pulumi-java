@@ -22,7 +22,7 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="envgroupId", required=true)
       private final Output<String> envgroupId;
 
-    public Output<String> getEnvgroupId() {
+    public Output<String> envgroupId() {
         return this.envgroupId;
     }
 
@@ -33,7 +33,7 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment", required=true)
       private final Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
 

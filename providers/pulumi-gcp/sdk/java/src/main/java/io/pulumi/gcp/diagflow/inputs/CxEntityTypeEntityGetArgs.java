@@ -24,7 +24,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
+    public Output<List<String>> synonyms() {
         return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 
@@ -35,7 +35,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

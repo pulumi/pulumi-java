@@ -23,7 +23,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
     @Import(name="queryInsightsEnabled")
       private final @Nullable Output<Boolean> queryInsightsEnabled;
 
-    public Output<Boolean> getQueryInsightsEnabled() {
+    public Output<Boolean> queryInsightsEnabled() {
         return this.queryInsightsEnabled == null ? Codegen.empty() : this.queryInsightsEnabled;
     }
 
@@ -34,7 +34,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
     @Import(name="queryStringLength")
       private final @Nullable Output<Integer> queryStringLength;
 
-    public Output<Integer> getQueryStringLength() {
+    public Output<Integer> queryStringLength() {
         return this.queryStringLength == null ? Codegen.empty() : this.queryStringLength;
     }
 
@@ -45,7 +45,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
     @Import(name="recordApplicationTags")
       private final @Nullable Output<Boolean> recordApplicationTags;
 
-    public Output<Boolean> getRecordApplicationTags() {
+    public Output<Boolean> recordApplicationTags() {
         return this.recordApplicationTags == null ? Codegen.empty() : this.recordApplicationTags;
     }
 
@@ -56,7 +56,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
     @Import(name="recordClientAddress")
       private final @Nullable Output<Boolean> recordClientAddress;
 
-    public Output<Boolean> getRecordClientAddress() {
+    public Output<Boolean> recordClientAddress() {
         return this.recordClientAddress == null ? Codegen.empty() : this.recordClientAddress;
     }
 

@@ -24,7 +24,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs 
     @Import(name="abort")
       private final @Nullable Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs> abort;
 
-    public Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs> getAbort() {
+    public Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs> abort() {
         return this.abort == null ? Codegen.empty() : this.abort;
     }
 
@@ -36,7 +36,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs 
     @Import(name="delay")
       private final @Nullable Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs> delay;
 
-    public Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs> getDelay() {
+    public Output<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 

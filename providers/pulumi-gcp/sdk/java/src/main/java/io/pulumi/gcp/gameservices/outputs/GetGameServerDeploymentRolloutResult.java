@@ -43,23 +43,23 @@ public final class GetGameServerDeploymentRolloutResult {
         this.project = project;
     }
 
-    public String getDefaultGameServerConfig() {
+    public String defaultGameServerConfig() {
         return this.defaultGameServerConfig;
     }
-    public String getDeploymentId() {
+    public String deploymentId() {
         return this.deploymentId;
     }
-    public List<GetGameServerDeploymentRolloutGameServerConfigOverride> getGameServerConfigOverrides() {
+    public List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides() {
         return this.gameServerConfigOverrides;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -67,7 +67,7 @@ public final class GetGameServerDeploymentRolloutResult {
      * If it is not provided, the provider project is used.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

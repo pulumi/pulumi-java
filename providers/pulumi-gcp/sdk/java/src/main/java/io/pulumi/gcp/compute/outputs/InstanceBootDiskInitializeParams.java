@@ -68,14 +68,14 @@ public final class InstanceBootDiskInitializeParams {
      * These images can be referred by family name here.
      * 
     */
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
     /**
      * A map of key/value label pairs to assign to the instance.
      * 
     */
-    public Map<String,Object> getLabels() {
+    public Map<String,Object> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
@@ -83,14 +83,14 @@ public final class InstanceBootDiskInitializeParams {
      * will inherit the size of its base image.
      * 
     */
-    public Optional<Integer> getSize() {
+    public Optional<Integer> size() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

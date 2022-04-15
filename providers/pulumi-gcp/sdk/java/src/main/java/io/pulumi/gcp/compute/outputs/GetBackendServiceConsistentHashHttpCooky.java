@@ -33,13 +33,13 @@ public final class GetBackendServiceConsistentHashHttpCooky {
      * The name of the Backend Service.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
-    public List<GetBackendServiceConsistentHashHttpCookyTtl> getTtls() {
+    public List<GetBackendServiceConsistentHashHttpCookyTtl> ttls() {
         return this.ttls;
     }
 

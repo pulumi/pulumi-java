@@ -25,7 +25,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs extend
     @Import(name="allowPlaybackInterruption")
       private final @Nullable Output<Boolean> allowPlaybackInterruption;
 
-    public Output<Boolean> getAllowPlaybackInterruption() {
+    public Output<Boolean> allowPlaybackInterruption() {
         return this.allowPlaybackInterruption == null ? Codegen.empty() : this.allowPlaybackInterruption;
     }
 
@@ -36,7 +36,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs extend
     @Import(name="texts")
       private final @Nullable Output<List<String>> texts;
 
-    public Output<List<String>> getTexts() {
+    public Output<List<String>> texts() {
         return this.texts == null ? Codegen.empty() : this.texts;
     }
 

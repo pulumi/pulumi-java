@@ -22,7 +22,7 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
     @Import(name="pubsubTopicName", required=true)
       private final Output<String> pubsubTopicName;
 
-    public Output<String> getPubsubTopicName() {
+    public Output<String> pubsubTopicName() {
         return this.pubsubTopicName;
     }
 
@@ -37,7 +37,7 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
     @Import(name="subfolderMatches")
       private final @Nullable Output<String> subfolderMatches;
 
-    public Output<String> getSubfolderMatches() {
+    public Output<String> subfolderMatches() {
         return this.subfolderMatches == null ? Codegen.empty() : this.subfolderMatches;
     }
 

@@ -23,7 +23,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="ruleVisibility")
       private final @Nullable Output<String> ruleVisibility;
 
-    public Output<String> getRuleVisibility() {
+    public Output<String> ruleVisibility() {
         return this.ruleVisibility == null ? Codegen.empty() : this.ruleVisibility;
     }
 

@@ -48,7 +48,7 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      * Otherwise, the requested SubjectAltNames will be discarded.
      * 
     */
-    public Boolean getAllowSubjectAltNamesPassthrough() {
+    public Boolean allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
     }
     /**
@@ -56,7 +56,7 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      * Otherwise, the requested Subject will be discarded.
      * 
     */
-    public Boolean getAllowSubjectPassthrough() {
+    public Boolean allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
     }
     /**
@@ -66,7 +66,7 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      * Structure is documented below.
      * 
     */
-    public Optional<CaPoolIssuancePolicyIdentityConstraintsCelExpression> getCelExpression() {
+    public Optional<CaPoolIssuancePolicyIdentityConstraintsCelExpression> celExpression() {
         return Optional.ofNullable(this.celExpression);
     }
 

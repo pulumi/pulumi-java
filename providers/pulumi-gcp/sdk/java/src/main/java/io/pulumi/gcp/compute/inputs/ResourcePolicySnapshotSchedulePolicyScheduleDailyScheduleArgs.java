@@ -22,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
     @Import(name="daysInCycle", required=true)
       private final Output<Integer> daysInCycle;
 
-    public Output<Integer> getDaysInCycle() {
+    public Output<Integer> daysInCycle() {
         return this.daysInCycle;
     }
 
@@ -33,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

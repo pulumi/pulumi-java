@@ -22,10 +22,10 @@ public final class GetServiceTemplate {
         this.specs = specs;
     }
 
-    public List<GetServiceTemplateMetadata> getMetadatas() {
+    public List<GetServiceTemplateMetadata> metadatas() {
         return this.metadatas;
     }
-    public List<GetServiceTemplateSpec> getSpecs() {
+    public List<GetServiceTemplateSpec> specs() {
         return this.specs;
     }
 

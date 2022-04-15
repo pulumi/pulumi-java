@@ -83,63 +83,63 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
      * The key may be used to sign certificates.
      * 
     */
-    public Optional<Boolean> getCertSign() {
+    public Optional<Boolean> certSign() {
         return Optional.ofNullable(this.certSign);
     }
     /**
      * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
      * 
     */
-    public Optional<Boolean> getContentCommitment() {
+    public Optional<Boolean> contentCommitment() {
         return Optional.ofNullable(this.contentCommitment);
     }
     /**
      * The key may be used sign certificate revocation lists.
      * 
     */
-    public Optional<Boolean> getCrlSign() {
+    public Optional<Boolean> crlSign() {
         return Optional.ofNullable(this.crlSign);
     }
     /**
      * The key may be used to encipher data.
      * 
     */
-    public Optional<Boolean> getDataEncipherment() {
+    public Optional<Boolean> dataEncipherment() {
         return Optional.ofNullable(this.dataEncipherment);
     }
     /**
      * The key may be used to decipher only.
      * 
     */
-    public Optional<Boolean> getDecipherOnly() {
+    public Optional<Boolean> decipherOnly() {
         return Optional.ofNullable(this.decipherOnly);
     }
     /**
      * The key may be used for digital signatures.
      * 
     */
-    public Optional<Boolean> getDigitalSignature() {
+    public Optional<Boolean> digitalSignature() {
         return Optional.ofNullable(this.digitalSignature);
     }
     /**
      * The key may be used to encipher only.
      * 
     */
-    public Optional<Boolean> getEncipherOnly() {
+    public Optional<Boolean> encipherOnly() {
         return Optional.ofNullable(this.encipherOnly);
     }
     /**
      * The key may be used in a key agreement protocol.
      * 
     */
-    public Optional<Boolean> getKeyAgreement() {
+    public Optional<Boolean> keyAgreement() {
         return Optional.ofNullable(this.keyAgreement);
     }
     /**
      * The key may be used to encipher other keys.
      * 
     */
-    public Optional<Boolean> getKeyEncipherment() {
+    public Optional<Boolean> keyEncipherment() {
         return Optional.ofNullable(this.keyEncipherment);
     }
 

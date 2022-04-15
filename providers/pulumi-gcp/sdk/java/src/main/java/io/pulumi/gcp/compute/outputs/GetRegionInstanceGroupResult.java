@@ -58,37 +58,37 @@ public final class GetRegionInstanceGroupResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of instances in the group, as a list of resources, each containing:
      * 
     */
-    public List<GetRegionInstanceGroupInstance> getInstances() {
+    public List<GetRegionInstanceGroupInstance> instances() {
         return this.instances;
     }
     /**
      * String port name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The number of instances in the group.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
 

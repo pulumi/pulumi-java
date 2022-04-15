@@ -57,35 +57,35 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
      * Optional arguments to pass to the source during execution.
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * A remote or local source.
      * 
     */
-    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile> getFile() {
+    public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
      * Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
      * 
     */
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
     /**
      * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
      * 
     */
-    public Optional<String> getOutputFilePath() {
+    public Optional<String> outputFilePath() {
         return Optional.ofNullable(this.outputFilePath);
     }
     /**
      * An inline script. The size of the script is limited to 1024 characters.
      * 
     */
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
 

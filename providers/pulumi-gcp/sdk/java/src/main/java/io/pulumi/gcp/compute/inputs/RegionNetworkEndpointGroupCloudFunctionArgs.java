@@ -24,7 +24,7 @@ public final class RegionNetworkEndpointGroupCloudFunctionArgs extends io.pulumi
     @Import(name="function")
       private final @Nullable Output<String> function;
 
-    public Output<String> getFunction() {
+    public Output<String> function() {
         return this.function == null ? Codegen.empty() : this.function;
     }
 
@@ -40,7 +40,7 @@ public final class RegionNetworkEndpointGroupCloudFunctionArgs extends io.pulumi
     @Import(name="urlMask")
       private final @Nullable Output<String> urlMask;
 
-    public Output<String> getUrlMask() {
+    public Output<String> urlMask() {
         return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 

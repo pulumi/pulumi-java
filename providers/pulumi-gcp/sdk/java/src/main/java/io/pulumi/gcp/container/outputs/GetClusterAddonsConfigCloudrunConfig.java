@@ -21,10 +21,10 @@ public final class GetClusterAddonsConfigCloudrunConfig {
         this.loadBalancerType = loadBalancerType;
     }
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
 

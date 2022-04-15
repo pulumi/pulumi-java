@@ -30,7 +30,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
 
-    public Output<Boolean> getBlocked() {
+    public Output<Boolean> blocked() {
         return this.blocked == null ? Codegen.empty() : this.blocked;
     }
 
@@ -41,7 +41,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configs")
       private final @Nullable Output<List<DeviceConfigGetArgs>> configs;
 
-    public Output<List<DeviceConfigGetArgs>> getConfigs() {
+    public Output<List<DeviceConfigGetArgs>> configs() {
         return this.configs == null ? Codegen.empty() : this.configs;
     }
 
@@ -53,7 +53,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
 
-    public Output<List<DeviceCredentialGetArgs>> getCredentials() {
+    public Output<List<DeviceCredentialGetArgs>> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -65,7 +65,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
       private final @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
 
-    public Output<DeviceGatewayConfigGetArgs> getGatewayConfig() {
+    public Output<DeviceGatewayConfigGetArgs> gatewayConfig() {
         return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
     }
 
@@ -76,7 +76,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastConfigAckTime")
       private final @Nullable Output<String> lastConfigAckTime;
 
-    public Output<String> getLastConfigAckTime() {
+    public Output<String> lastConfigAckTime() {
         return this.lastConfigAckTime == null ? Codegen.empty() : this.lastConfigAckTime;
     }
 
@@ -87,7 +87,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastConfigSendTime")
       private final @Nullable Output<String> lastConfigSendTime;
 
-    public Output<String> getLastConfigSendTime() {
+    public Output<String> lastConfigSendTime() {
         return this.lastConfigSendTime == null ? Codegen.empty() : this.lastConfigSendTime;
     }
 
@@ -98,7 +98,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastErrorStatuses")
       private final @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
-    public Output<List<DeviceLastErrorStatusGetArgs>> getLastErrorStatuses() {
+    public Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses() {
         return this.lastErrorStatuses == null ? Codegen.empty() : this.lastErrorStatuses;
     }
 
@@ -109,7 +109,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastErrorTime")
       private final @Nullable Output<String> lastErrorTime;
 
-    public Output<String> getLastErrorTime() {
+    public Output<String> lastErrorTime() {
         return this.lastErrorTime == null ? Codegen.empty() : this.lastErrorTime;
     }
 
@@ -120,7 +120,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastEventTime")
       private final @Nullable Output<String> lastEventTime;
 
-    public Output<String> getLastEventTime() {
+    public Output<String> lastEventTime() {
         return this.lastEventTime == null ? Codegen.empty() : this.lastEventTime;
     }
 
@@ -131,7 +131,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastHeartbeatTime")
       private final @Nullable Output<String> lastHeartbeatTime;
 
-    public Output<String> getLastHeartbeatTime() {
+    public Output<String> lastHeartbeatTime() {
         return this.lastHeartbeatTime == null ? Codegen.empty() : this.lastHeartbeatTime;
     }
 
@@ -142,7 +142,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastStateTime")
       private final @Nullable Output<String> lastStateTime;
 
-    public Output<String> getLastStateTime() {
+    public Output<String> lastStateTime() {
         return this.lastStateTime == null ? Codegen.empty() : this.lastStateTime;
     }
 
@@ -154,7 +154,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -165,7 +165,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -176,7 +176,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -188,7 +188,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numId")
       private final @Nullable Output<String> numId;
 
-    public Output<String> getNumId() {
+    public Output<String> numId() {
         return this.numId == null ? Codegen.empty() : this.numId;
     }
 
@@ -199,7 +199,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registry")
       private final @Nullable Output<String> registry;
 
-    public Output<String> getRegistry() {
+    public Output<String> registry() {
         return this.registry == null ? Codegen.empty() : this.registry;
     }
 
@@ -210,7 +210,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="states")
       private final @Nullable Output<List<DeviceStateGetArgs>> states;
 
-    public Output<List<DeviceStateGetArgs>> getStates() {
+    public Output<List<DeviceStateGetArgs>> states() {
         return this.states == null ? Codegen.empty() : this.states;
     }
 

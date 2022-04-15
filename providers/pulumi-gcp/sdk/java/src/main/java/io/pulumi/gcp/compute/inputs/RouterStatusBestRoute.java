@@ -17,14 +17,14 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="destRange", required=true)
       private final String destRange;
 
-    public String getDestRange() {
+    public String destRange() {
         return this.destRange;
     }
 
@@ -35,7 +35,7 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,63 +47,63 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
     @Import(name="nextHopGateway", required=true)
       private final String nextHopGateway;
 
-    public String getNextHopGateway() {
+    public String nextHopGateway() {
         return this.nextHopGateway;
     }
 
     @Import(name="nextHopIlb", required=true)
       private final String nextHopIlb;
 
-    public String getNextHopIlb() {
+    public String nextHopIlb() {
         return this.nextHopIlb;
     }
 
     @Import(name="nextHopInstance", required=true)
       private final String nextHopInstance;
 
-    public String getNextHopInstance() {
+    public String nextHopInstance() {
         return this.nextHopInstance;
     }
 
     @Import(name="nextHopInstanceZone", required=true)
       private final String nextHopInstanceZone;
 
-    public String getNextHopInstanceZone() {
+    public String nextHopInstanceZone() {
         return this.nextHopInstanceZone;
     }
 
     @Import(name="nextHopIp", required=true)
       private final String nextHopIp;
 
-    public String getNextHopIp() {
+    public String nextHopIp() {
         return this.nextHopIp;
     }
 
     @Import(name="nextHopNetwork", required=true)
       private final String nextHopNetwork;
 
-    public String getNextHopNetwork() {
+    public String nextHopNetwork() {
         return this.nextHopNetwork;
     }
 
     @Import(name="nextHopVpnTunnel", required=true)
       private final String nextHopVpnTunnel;
 
-    public String getNextHopVpnTunnel() {
+    public String nextHopVpnTunnel() {
         return this.nextHopVpnTunnel;
     }
 
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -115,21 +115,21 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 

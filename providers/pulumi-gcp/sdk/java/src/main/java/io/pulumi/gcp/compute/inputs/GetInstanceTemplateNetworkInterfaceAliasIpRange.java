@@ -23,7 +23,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends io.pu
     @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -36,7 +36,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends io.pu
     @Import(name="subnetworkRangeName", required=true)
       private final String subnetworkRangeName;
 
-    public String getSubnetworkRangeName() {
+    public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
 

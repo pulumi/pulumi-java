@@ -47,7 +47,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * @return A human-readable description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -63,7 +63,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -81,7 +81,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -95,7 +95,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * @return The name of the logging exclusion.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +109,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * @return The organization to create the exclusion in.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 

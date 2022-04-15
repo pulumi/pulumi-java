@@ -38,7 +38,7 @@ public final class TriggerBuildSource {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildSourceRepoSource> getRepoSource() {
+    public Optional<TriggerBuildSourceRepoSource> repoSource() {
         return Optional.ofNullable(this.repoSource);
     }
     /**
@@ -46,7 +46,7 @@ public final class TriggerBuildSource {
      * Structure is documented below.
      * 
     */
-    public Optional<TriggerBuildSourceStorageSource> getStorageSource() {
+    public Optional<TriggerBuildSourceStorageSource> storageSource() {
         return Optional.ofNullable(this.storageSource);
     }
 

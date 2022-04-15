@@ -22,7 +22,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
@@ -33,7 +33,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -44,7 +44,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 

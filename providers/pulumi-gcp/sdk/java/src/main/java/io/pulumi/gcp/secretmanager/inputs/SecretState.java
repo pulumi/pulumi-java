@@ -27,7 +27,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -39,7 +39,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
@@ -57,7 +57,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -69,7 +69,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -94,7 +94,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="replication")
       private final @Nullable Output<SecretReplicationGetArgs> replication;
 
-    public Output<SecretReplicationGetArgs> getReplication() {
+    public Output<SecretReplicationGetArgs> replication() {
         return this.replication == null ? Codegen.empty() : this.replication;
     }
 
@@ -106,7 +106,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rotation")
       private final @Nullable Output<SecretRotationGetArgs> rotation;
 
-    public Output<SecretRotationGetArgs> getRotation() {
+    public Output<SecretRotationGetArgs> rotation() {
         return this.rotation == null ? Codegen.empty() : this.rotation;
     }
 
@@ -117,7 +117,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId == null ? Codegen.empty() : this.secretId;
     }
 
@@ -129,7 +129,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="topics")
       private final @Nullable Output<List<SecretTopicGetArgs>> topics;
 
-    public Output<List<SecretTopicGetArgs>> getTopics() {
+    public Output<List<SecretTopicGetArgs>> topics() {
         return this.topics == null ? Codegen.empty() : this.topics;
     }
 
@@ -141,7 +141,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

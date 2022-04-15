@@ -22,10 +22,10 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange 
         this.value = value;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

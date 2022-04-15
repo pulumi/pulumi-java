@@ -26,7 +26,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     @Import(name="binauthz")
       private final @Nullable Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz;
 
-    public Output<FeatureMembershipConfigmanagementBinauthzArgs> getBinauthz() {
+    public Output<FeatureMembershipConfigmanagementBinauthzArgs> binauthz() {
         return this.binauthz == null ? Codegen.empty() : this.binauthz;
     }
 
@@ -37,7 +37,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     @Import(name="configSync")
       private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync;
 
-    public Output<FeatureMembershipConfigmanagementConfigSyncArgs> getConfigSync() {
+    public Output<FeatureMembershipConfigmanagementConfigSyncArgs> configSync() {
         return this.configSync == null ? Codegen.empty() : this.configSync;
     }
 
@@ -48,7 +48,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     @Import(name="hierarchyController")
       private final @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController;
 
-    public Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> getHierarchyController() {
+    public Output<FeatureMembershipConfigmanagementHierarchyControllerArgs> hierarchyController() {
         return this.hierarchyController == null ? Codegen.empty() : this.hierarchyController;
     }
 
@@ -59,7 +59,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     @Import(name="policyController")
       private final @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController;
 
-    public Output<FeatureMembershipConfigmanagementPolicyControllerArgs> getPolicyController() {
+    public Output<FeatureMembershipConfigmanagementPolicyControllerArgs> policyController() {
         return this.policyController == null ? Codegen.empty() : this.policyController;
     }
 
@@ -70,7 +70,7 @@ public final class FeatureMembershipConfigmanagementArgs extends io.pulumi.resou
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

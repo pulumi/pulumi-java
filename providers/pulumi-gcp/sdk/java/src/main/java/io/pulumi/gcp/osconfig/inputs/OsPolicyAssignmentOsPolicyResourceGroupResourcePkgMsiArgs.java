@@ -24,7 +24,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     @Import(name="properties")
       private final @Nullable Output<List<String>> properties;
 
-    public Output<List<String>> getProperties() {
+    public Output<List<String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -35,7 +35,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     @Import(name="source", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> getSource() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source() {
         return this.source;
     }
 

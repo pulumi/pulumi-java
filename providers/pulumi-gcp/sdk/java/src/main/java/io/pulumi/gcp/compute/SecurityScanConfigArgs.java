@@ -28,7 +28,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="authentication")
       private final @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
 
-    public Output<SecurityScanConfigAuthenticationArgs> getAuthentication() {
+    public Output<SecurityScanConfigAuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="blacklistPatterns")
       private final @Nullable Output<List<String>> blacklistPatterns;
 
-    public Output<List<String>> getBlacklistPatterns() {
+    public Output<List<String>> blacklistPatterns() {
         return this.blacklistPatterns == null ? Codegen.empty() : this.blacklistPatterns;
     }
 
@@ -51,7 +51,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -64,7 +64,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="exportToSecurityCommandCenter")
       private final @Nullable Output<String> exportToSecurityCommandCenter;
 
-    public Output<String> getExportToSecurityCommandCenter() {
+    public Output<String> exportToSecurityCommandCenter() {
         return this.exportToSecurityCommandCenter == null ? Codegen.empty() : this.exportToSecurityCommandCenter;
     }
 
@@ -76,7 +76,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maxQps")
       private final @Nullable Output<Integer> maxQps;
 
-    public Output<Integer> getMaxQps() {
+    public Output<Integer> maxQps() {
         return this.maxQps == null ? Codegen.empty() : this.maxQps;
     }
 
@@ -88,7 +88,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -100,7 +100,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="schedule")
       private final @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
 
-    public Output<SecurityScanConfigScheduleArgs> getSchedule() {
+    public Output<SecurityScanConfigScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -111,7 +111,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="startingUrls", required=true)
       private final Output<List<String>> startingUrls;
 
-    public Output<List<String>> getStartingUrls() {
+    public Output<List<String>> startingUrls() {
         return this.startingUrls;
     }
 
@@ -123,7 +123,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetPlatforms")
       private final @Nullable Output<List<String>> targetPlatforms;
 
-    public Output<List<String>> getTargetPlatforms() {
+    public Output<List<String>> targetPlatforms() {
         return this.targetPlatforms == null ? Codegen.empty() : this.targetPlatforms;
     }
 
@@ -136,7 +136,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="userAgent")
       private final @Nullable Output<String> userAgent;
 
-    public Output<String> getUserAgent() {
+    public Output<String> userAgent() {
         return this.userAgent == null ? Codegen.empty() : this.userAgent;
     }
 

@@ -16,7 +16,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom extends io.pulumi
     @Import(name="secretKeyReves", required=true)
       private final List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
 
-    public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> getSecretKeyReves() {
+    public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves() {
         return this.secretKeyReves;
     }
 

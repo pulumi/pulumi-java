@@ -29,7 +29,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="coolDownPeriod")
       private final @Nullable Output<String> coolDownPeriod;
 
-    public Output<String> getCoolDownPeriod() {
+    public Output<String> coolDownPeriod() {
         return this.coolDownPeriod == null ? Codegen.empty() : this.coolDownPeriod;
     }
 
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="cpuUtilization", required=true)
       private final Output<FlexibleAppVersionAutomaticScalingCpuUtilizationArgs> cpuUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingCpuUtilizationArgs> getCpuUtilization() {
+    public Output<FlexibleAppVersionAutomaticScalingCpuUtilizationArgs> cpuUtilization() {
         return this.cpuUtilization;
     }
 
@@ -53,7 +53,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="diskUtilization")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationArgs> diskUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingDiskUtilizationArgs> getDiskUtilization() {
+    public Output<FlexibleAppVersionAutomaticScalingDiskUtilizationArgs> diskUtilization() {
         return this.diskUtilization == null ? Codegen.empty() : this.diskUtilization;
     }
 
@@ -65,7 +65,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="maxConcurrentRequests")
       private final @Nullable Output<Integer> maxConcurrentRequests;
 
-    public Output<Integer> getMaxConcurrentRequests() {
+    public Output<Integer> maxConcurrentRequests() {
         return this.maxConcurrentRequests == null ? Codegen.empty() : this.maxConcurrentRequests;
     }
 
@@ -76,7 +76,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="maxIdleInstances")
       private final @Nullable Output<Integer> maxIdleInstances;
 
-    public Output<Integer> getMaxIdleInstances() {
+    public Output<Integer> maxIdleInstances() {
         return this.maxIdleInstances == null ? Codegen.empty() : this.maxIdleInstances;
     }
 
@@ -87,7 +87,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="maxPendingLatency")
       private final @Nullable Output<String> maxPendingLatency;
 
-    public Output<String> getMaxPendingLatency() {
+    public Output<String> maxPendingLatency() {
         return this.maxPendingLatency == null ? Codegen.empty() : this.maxPendingLatency;
     }
 
@@ -98,7 +98,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="maxTotalInstances")
       private final @Nullable Output<Integer> maxTotalInstances;
 
-    public Output<Integer> getMaxTotalInstances() {
+    public Output<Integer> maxTotalInstances() {
         return this.maxTotalInstances == null ? Codegen.empty() : this.maxTotalInstances;
     }
 
@@ -109,7 +109,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="minIdleInstances")
       private final @Nullable Output<Integer> minIdleInstances;
 
-    public Output<Integer> getMinIdleInstances() {
+    public Output<Integer> minIdleInstances() {
         return this.minIdleInstances == null ? Codegen.empty() : this.minIdleInstances;
     }
 
@@ -120,7 +120,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="minPendingLatency")
       private final @Nullable Output<String> minPendingLatency;
 
-    public Output<String> getMinPendingLatency() {
+    public Output<String> minPendingLatency() {
         return this.minPendingLatency == null ? Codegen.empty() : this.minPendingLatency;
     }
 
@@ -131,7 +131,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="minTotalInstances")
       private final @Nullable Output<Integer> minTotalInstances;
 
-    public Output<Integer> getMinTotalInstances() {
+    public Output<Integer> minTotalInstances() {
         return this.minTotalInstances == null ? Codegen.empty() : this.minTotalInstances;
     }
 
@@ -143,7 +143,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="networkUtilization")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs> networkUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs> getNetworkUtilization() {
+    public Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs> networkUtilization() {
         return this.networkUtilization == null ? Codegen.empty() : this.networkUtilization;
     }
 
@@ -155,7 +155,7 @@ public final class FlexibleAppVersionAutomaticScalingArgs extends io.pulumi.reso
     @Import(name="requestUtilization")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationArgs> requestUtilization;
 
-    public Output<FlexibleAppVersionAutomaticScalingRequestUtilizationArgs> getRequestUtilization() {
+    public Output<FlexibleAppVersionAutomaticScalingRequestUtilizationArgs> requestUtilization() {
         return this.requestUtilization == null ? Codegen.empty() : this.requestUtilization;
     }
 

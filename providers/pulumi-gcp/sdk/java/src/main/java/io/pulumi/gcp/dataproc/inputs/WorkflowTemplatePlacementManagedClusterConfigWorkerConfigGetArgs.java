@@ -28,7 +28,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="accelerators")
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators;
 
-    public Output<List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorGetArgs>> getAccelerators() {
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators() {
         return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
@@ -39,7 +39,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="diskConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigGetArgs> getDiskConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig() {
         return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
@@ -50,7 +50,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -62,7 +62,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
-    public Output<List<String>> getInstanceNames() {
+    public Output<List<String>> instanceNames() {
         return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
     }
 
@@ -74,7 +74,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="isPreemptible")
       private final @Nullable Output<Boolean> isPreemptible;
 
-    public Output<Boolean> getIsPreemptible() {
+    public Output<Boolean> isPreemptible() {
         return this.isPreemptible == null ? Codegen.empty() : this.isPreemptible;
     }
 
@@ -85,7 +85,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -97,7 +97,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="managedGroupConfigs")
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigGetArgs>> managedGroupConfigs;
 
-    public Output<List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigGetArgs>> getManagedGroupConfigs() {
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigGetArgs>> managedGroupConfigs() {
         return this.managedGroupConfigs == null ? Codegen.empty() : this.managedGroupConfigs;
     }
 
@@ -108,7 +108,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -119,7 +119,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> getNumInstances() {
+    public Output<Integer> numInstances() {
         return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 
@@ -130,7 +130,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetA
     @Import(name="preemptibility")
       private final @Nullable Output<String> preemptibility;
 
-    public Output<String> getPreemptibility() {
+    public Output<String> preemptibility() {
         return this.preemptibility == null ? Codegen.empty() : this.preemptibility;
     }
 

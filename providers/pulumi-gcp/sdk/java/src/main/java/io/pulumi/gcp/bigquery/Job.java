@@ -76,7 +76,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobCopy> getCopy() {
+    public Output</* @Nullable */ JobCopy> copy() {
         return this.copy;
     }
     /**
@@ -92,7 +92,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobExtract> getExtract() {
+    public Output</* @Nullable */ JobExtract> extract() {
         return this.extract;
     }
     /**
@@ -106,7 +106,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
      */
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
     /**
@@ -120,7 +120,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
      */
-    public Output</* @Nullable */ String> getJobTimeoutMs() {
+    public Output</* @Nullable */ String> jobTimeoutMs() {
         return this.jobTimeoutMs;
     }
     /**
@@ -134,7 +134,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The type of the job.
      * 
      */
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType;
     }
     /**
@@ -148,7 +148,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this job. You can use these to organize and group your jobs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -164,7 +164,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobLoad> getLoad() {
+    public Output</* @Nullable */ JobLoad> load() {
         return this.load;
     }
     /**
@@ -178,7 +178,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The geographic location of the job. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -194,7 +194,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -210,7 +210,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ JobQuery> getQuery() {
+    public Output</* @Nullable */ JobQuery> query() {
         return this.query;
     }
     /**
@@ -224,7 +224,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
      */
-    public Output<List<JobStatus>> getStatuses() {
+    public Output<List<JobStatus>> statuses() {
         return this.statuses;
     }
     /**
@@ -238,7 +238,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Email address of the user who ran the job.
      * 
      */
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail;
     }
 

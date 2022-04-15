@@ -30,7 +30,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -46,7 +46,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
     @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 

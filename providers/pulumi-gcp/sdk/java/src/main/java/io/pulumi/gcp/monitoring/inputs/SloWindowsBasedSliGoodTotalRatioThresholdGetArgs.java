@@ -25,7 +25,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
     @Import(name="basicSliPerformance")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> getBasicSliPerformance() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance() {
         return this.basicSliPerformance == null ? Codegen.empty() : this.basicSliPerformance;
     }
 
@@ -37,7 +37,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
     @Import(name="performance")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> getPerformance() {
+    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance() {
         return this.performance == null ? Codegen.empty() : this.performance;
     }
 
@@ -50,7 +50,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
     @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
-    public Output<Double> getThreshold() {
+    public Output<Double> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 

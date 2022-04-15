@@ -53,7 +53,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The description of the source (max of 1024 characters).
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * and underscores, and can be no longer than 32 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -89,7 +89,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +105,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * lives in.
      * 
      */
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 

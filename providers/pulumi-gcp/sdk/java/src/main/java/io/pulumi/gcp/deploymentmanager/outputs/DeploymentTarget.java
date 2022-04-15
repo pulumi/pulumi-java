@@ -40,7 +40,7 @@ public final class DeploymentTarget {
      * Structure is documented below.
      * 
     */
-    public DeploymentTargetConfig getConfig() {
+    public DeploymentTargetConfig config() {
         return this.config;
     }
     /**
@@ -50,7 +50,7 @@ public final class DeploymentTarget {
      * Structure is documented below.
      * 
     */
-    public List<DeploymentTargetImport> getImports() {
+    public List<DeploymentTargetImport> imports() {
         return this.imports == null ? List.of() : this.imports;
     }
 

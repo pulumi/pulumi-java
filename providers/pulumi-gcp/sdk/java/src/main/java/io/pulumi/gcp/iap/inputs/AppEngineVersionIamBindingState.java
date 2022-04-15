@@ -24,7 +24,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -36,7 +36,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="condition")
       private final @Nullable Output<AppEngineVersionIamBindingConditionGetArgs> condition;
 
-    public Output<AppEngineVersionIamBindingConditionGetArgs> getCondition() {
+    public Output<AppEngineVersionIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -47,14 +47,14 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -66,7 +66,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -79,7 +79,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -90,7 +90,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -101,7 +101,7 @@ public final class AppEngineVersionIamBindingState extends io.pulumi.resources.R
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

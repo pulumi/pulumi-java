@@ -15,14 +15,14 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

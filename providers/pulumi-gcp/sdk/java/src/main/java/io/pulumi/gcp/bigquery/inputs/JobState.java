@@ -30,7 +30,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="copy")
       private final @Nullable Output<JobCopyGetArgs> copy;
 
-    public Output<JobCopyGetArgs> getCopy() {
+    public Output<JobCopyGetArgs> copy() {
         return this.copy == null ? Codegen.empty() : this.copy;
     }
 
@@ -42,7 +42,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="extract")
       private final @Nullable Output<JobExtractGetArgs> extract;
 
-    public Output<JobExtractGetArgs> getExtract() {
+    public Output<JobExtractGetArgs> extract() {
         return this.extract == null ? Codegen.empty() : this.extract;
     }
 
@@ -53,7 +53,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
@@ -64,7 +64,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> getJobTimeoutMs() {
+    public Output<String> jobTimeoutMs() {
         return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
     }
 
@@ -75,7 +75,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobType")
       private final @Nullable Output<String> jobType;
 
-    public Output<String> getJobType() {
+    public Output<String> jobType() {
         return this.jobType == null ? Codegen.empty() : this.jobType;
     }
 
@@ -86,7 +86,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -98,7 +98,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="load")
       private final @Nullable Output<JobLoadGetArgs> load;
 
-    public Output<JobLoadGetArgs> getLoad() {
+    public Output<JobLoadGetArgs> load() {
         return this.load == null ? Codegen.empty() : this.load;
     }
 
@@ -109,7 +109,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -121,7 +121,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -133,7 +133,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<JobQueryGetArgs> query;
 
-    public Output<JobQueryGetArgs> getQuery() {
+    public Output<JobQueryGetArgs> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -144,7 +144,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="statuses")
       private final @Nullable Output<List<JobStatusGetArgs>> statuses;
 
-    public Output<List<JobStatusGetArgs>> getStatuses() {
+    public Output<List<JobStatusGetArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
@@ -155,7 +155,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userEmail")
       private final @Nullable Output<String> userEmail;
 
-    public Output<String> getUserEmail() {
+    public Output<String> userEmail() {
         return this.userEmail == null ? Codegen.empty() : this.userEmail;
     }
 

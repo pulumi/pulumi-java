@@ -29,7 +29,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
     @Import(name="badServiceFilter")
       private final @Nullable Output<String> badServiceFilter;
 
-    public Output<String> getBadServiceFilter() {
+    public Output<String> badServiceFilter() {
         return this.badServiceFilter == null ? Codegen.empty() : this.badServiceFilter;
     }
 
@@ -45,7 +45,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
     @Import(name="goodServiceFilter")
       private final @Nullable Output<String> goodServiceFilter;
 
-    public Output<String> getGoodServiceFilter() {
+    public Output<String> goodServiceFilter() {
         return this.goodServiceFilter == null ? Codegen.empty() : this.goodServiceFilter;
     }
 
@@ -61,7 +61,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
     @Import(name="totalServiceFilter")
       private final @Nullable Output<String> totalServiceFilter;
 
-    public Output<String> getTotalServiceFilter() {
+    public Output<String> totalServiceFilter() {
         return this.totalServiceFilter == null ? Codegen.empty() : this.totalServiceFilter;
     }
 

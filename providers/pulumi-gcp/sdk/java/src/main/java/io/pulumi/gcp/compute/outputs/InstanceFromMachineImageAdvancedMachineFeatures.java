@@ -23,10 +23,10 @@ public final class InstanceFromMachineImageAdvancedMachineFeatures {
         this.threadsPerCore = threadsPerCore;
     }
 
-    public Optional<Boolean> getEnableNestedVirtualization() {
+    public Optional<Boolean> enableNestedVirtualization() {
         return Optional.ofNullable(this.enableNestedVirtualization);
     }
-    public Optional<Integer> getThreadsPerCore() {
+    public Optional<Integer> threadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }
 

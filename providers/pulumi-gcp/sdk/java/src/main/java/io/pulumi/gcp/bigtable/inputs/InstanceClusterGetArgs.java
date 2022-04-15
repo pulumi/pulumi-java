@@ -23,7 +23,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -47,7 +47,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> getNumNodes() {
+    public Output<Integer> numNodes() {
         return this.numNodes == null ? Codegen.empty() : this.numNodes;
     }
 
@@ -59,7 +59,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
+    public Output<String> storageType() {
         return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
@@ -72,7 +72,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

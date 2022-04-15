@@ -72,49 +72,49 @@ public final class EnvironmentConfig {
         this.workloadsConfig = workloadsConfig;
     }
 
-    public Optional<String> getAirflowUri() {
+    public Optional<String> airflowUri() {
         return Optional.ofNullable(this.airflowUri);
     }
-    public Optional<String> getDagGcsPrefix() {
+    public Optional<String> dagGcsPrefix() {
         return Optional.ofNullable(this.dagGcsPrefix);
     }
-    public Optional<EnvironmentConfigDatabaseConfig> getDatabaseConfig() {
+    public Optional<EnvironmentConfigDatabaseConfig> databaseConfig() {
         return Optional.ofNullable(this.databaseConfig);
     }
-    public Optional<EnvironmentConfigEncryptionConfig> getEncryptionConfig() {
+    public Optional<EnvironmentConfigEncryptionConfig> encryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
-    public Optional<String> getEnvironmentSize() {
+    public Optional<String> environmentSize() {
         return Optional.ofNullable(this.environmentSize);
     }
-    public Optional<String> getGkeCluster() {
+    public Optional<String> gkeCluster() {
         return Optional.ofNullable(this.gkeCluster);
     }
-    public Optional<EnvironmentConfigMaintenanceWindow> getMaintenanceWindow() {
+    public Optional<EnvironmentConfigMaintenanceWindow> maintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
-    public Optional<EnvironmentConfigMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfig() {
+    public Optional<EnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfig() {
         return Optional.ofNullable(this.masterAuthorizedNetworksConfig);
     }
-    public Optional<EnvironmentConfigNodeConfig> getNodeConfig() {
+    public Optional<EnvironmentConfigNodeConfig> nodeConfig() {
         return Optional.ofNullable(this.nodeConfig);
     }
-    public Optional<Integer> getNodeCount() {
+    public Optional<Integer> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
-    public Optional<EnvironmentConfigPrivateEnvironmentConfig> getPrivateEnvironmentConfig() {
+    public Optional<EnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfig() {
         return Optional.ofNullable(this.privateEnvironmentConfig);
     }
-    public Optional<EnvironmentConfigSoftwareConfig> getSoftwareConfig() {
+    public Optional<EnvironmentConfigSoftwareConfig> softwareConfig() {
         return Optional.ofNullable(this.softwareConfig);
     }
-    public Optional<EnvironmentConfigWebServerConfig> getWebServerConfig() {
+    public Optional<EnvironmentConfigWebServerConfig> webServerConfig() {
         return Optional.ofNullable(this.webServerConfig);
     }
-    public Optional<EnvironmentConfigWebServerNetworkAccessControl> getWebServerNetworkAccessControl() {
+    public Optional<EnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControl() {
         return Optional.ofNullable(this.webServerNetworkAccessControl);
     }
-    public Optional<EnvironmentConfigWorkloadsConfig> getWorkloadsConfig() {
+    public Optional<EnvironmentConfigWorkloadsConfig> workloadsConfig() {
         return Optional.ofNullable(this.workloadsConfig);
     }
 

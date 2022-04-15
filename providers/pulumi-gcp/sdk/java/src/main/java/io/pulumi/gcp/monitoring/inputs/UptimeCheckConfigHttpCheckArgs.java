@@ -27,7 +27,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="authInfo")
       private final @Nullable Output<UptimeCheckConfigHttpCheckAuthInfoArgs> authInfo;
 
-    public Output<UptimeCheckConfigHttpCheckAuthInfoArgs> getAuthInfo() {
+    public Output<UptimeCheckConfigHttpCheckAuthInfoArgs> authInfo() {
         return this.authInfo == null ? Codegen.empty() : this.authInfo;
     }
 
@@ -38,7 +38,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -61,7 +61,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -72,7 +72,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="maskHeaders")
       private final @Nullable Output<Boolean> maskHeaders;
 
-    public Output<Boolean> getMaskHeaders() {
+    public Output<Boolean> maskHeaders() {
         return this.maskHeaders == null ? Codegen.empty() : this.maskHeaders;
     }
 
@@ -83,7 +83,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -94,7 +94,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -107,7 +107,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="requestMethod")
       private final @Nullable Output<String> requestMethod;
 
-    public Output<String> getRequestMethod() {
+    public Output<String> requestMethod() {
         return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
@@ -118,7 +118,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="useSsl")
       private final @Nullable Output<Boolean> useSsl;
 
-    public Output<Boolean> getUseSsl() {
+    public Output<Boolean> useSsl() {
         return this.useSsl == null ? Codegen.empty() : this.useSsl;
     }
 
@@ -129,7 +129,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends io.pulumi.resources.Re
     @Import(name="validateSsl")
       private final @Nullable Output<Boolean> validateSsl;
 
-    public Output<Boolean> getValidateSsl() {
+    public Output<Boolean> validateSsl() {
         return this.validateSsl == null ? Codegen.empty() : this.validateSsl;
     }
 

@@ -15,7 +15,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule extend
     @Import(name="schedule", required=true)
       private final String schedule;
 
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
 

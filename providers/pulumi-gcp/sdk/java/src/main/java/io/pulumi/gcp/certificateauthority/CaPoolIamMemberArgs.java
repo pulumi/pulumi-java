@@ -23,14 +23,14 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="caPool", required=true)
       private final Output<String> caPool;
 
-    public Output<String> getCaPool() {
+    public Output<String> caPool() {
         return this.caPool;
     }
 
     @Import(name="condition")
       private final @Nullable Output<CaPoolIamMemberConditionArgs> condition;
 
-    public Output<CaPoolIamMemberConditionArgs> getCondition() {
+    public Output<CaPoolIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -43,14 +43,14 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -62,7 +62,7 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -75,7 +75,7 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

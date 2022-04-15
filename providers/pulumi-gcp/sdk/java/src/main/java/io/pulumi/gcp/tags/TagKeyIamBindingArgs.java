@@ -20,14 +20,14 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="condition")
       private final @Nullable Output<TagKeyIamBindingConditionArgs> condition;
 
-    public Output<TagKeyIamBindingConditionArgs> getCondition() {
+    public Output<TagKeyIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -40,7 +40,7 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -51,7 +51,7 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tagKey", required=true)
       private final Output<String> tagKey;
 
-    public Output<String> getTagKey() {
+    public Output<String> tagKey() {
         return this.tagKey;
     }
 

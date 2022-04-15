@@ -81,58 +81,58 @@ public final class GetInstanceGroupResult {
      * Textual description of the instance group.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of instances in the group.
      * 
     */
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * List of named ports in the group.
      * 
     */
-    public List<GetInstanceGroupNamedPort> getNamedPorts() {
+    public List<GetInstanceGroupNamedPort> namedPorts() {
         return this.namedPorts;
     }
     /**
      * The URL of the network the instance group is in.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The URI of the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The number of instances in the group.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

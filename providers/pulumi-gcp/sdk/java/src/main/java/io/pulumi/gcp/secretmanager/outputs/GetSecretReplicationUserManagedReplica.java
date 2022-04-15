@@ -22,10 +22,10 @@ public final class GetSecretReplicationUserManagedReplica {
         this.location = location;
     }
 
-    public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryptions() {
+    public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions() {
         return this.customerManagedEncryptions;
     }
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

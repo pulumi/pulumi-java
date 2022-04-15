@@ -19,7 +19,7 @@ public final class GetFoldersArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parentId", required=true)
       private final String parentId;
 
-    public String getParentId() {
+    public String parentId() {
         return this.parentId;
     }
 

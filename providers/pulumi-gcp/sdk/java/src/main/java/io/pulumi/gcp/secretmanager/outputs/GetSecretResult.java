@@ -58,41 +58,41 @@ public final class GetSecretResult {
         this.ttl = ttl;
     }
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public List<GetSecretReplication> getReplications() {
+    public List<GetSecretReplication> replications() {
         return this.replications;
     }
-    public List<GetSecretRotation> getRotations() {
+    public List<GetSecretRotation> rotations() {
         return this.rotations;
     }
-    public String getSecretId() {
+    public String secretId() {
         return this.secretId;
     }
-    public List<GetSecretTopic> getTopics() {
+    public List<GetSecretTopic> topics() {
         return this.topics;
     }
-    public String getTtl() {
+    public String ttl() {
         return this.ttl;
     }
 

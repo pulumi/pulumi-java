@@ -17,14 +17,14 @@ public final class GetGlobalForwardingRuleMetadataFilter extends io.pulumi.resou
     @Import(name="filterLabels", required=true)
       private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
 
-    public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {
+    public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
 
     @Import(name="filterMatchCriteria", required=true)
       private final String filterMatchCriteria;
 
-    public String getFilterMatchCriteria() {
+    public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

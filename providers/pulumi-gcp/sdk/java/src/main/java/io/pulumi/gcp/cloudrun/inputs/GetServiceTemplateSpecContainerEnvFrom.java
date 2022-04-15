@@ -18,21 +18,21 @@ public final class GetServiceTemplateSpecContainerEnvFrom extends io.pulumi.reso
     @Import(name="configMapReves", required=true)
       private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
 
-    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapReves() {
+    public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves() {
         return this.configMapReves;
     }
 
     @Import(name="prefix", required=true)
       private final String prefix;
 
-    public String getPrefix() {
+    public String prefix() {
         return this.prefix;
     }
 
     @Import(name="secretReves", required=true)
       private final List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
 
-    public List<GetServiceTemplateSpecContainerEnvFromSecretRef> getSecretReves() {
+    public List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves() {
         return this.secretReves;
     }
 

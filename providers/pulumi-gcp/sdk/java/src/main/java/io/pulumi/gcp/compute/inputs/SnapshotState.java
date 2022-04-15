@@ -27,7 +27,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -38,7 +38,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -60,7 +60,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
@@ -71,7 +71,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -84,7 +84,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
@@ -101,7 +101,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -113,7 +113,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -124,7 +124,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -137,7 +137,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
 
-    public Output<SnapshotSnapshotEncryptionKeyGetArgs> getSnapshotEncryptionKey() {
+    public Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey() {
         return this.snapshotEncryptionKey == null ? Codegen.empty() : this.snapshotEncryptionKey;
     }
 
@@ -148,7 +148,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotId")
       private final @Nullable Output<Integer> snapshotId;
 
-    public Output<Integer> getSnapshotId() {
+    public Output<Integer> snapshotId() {
         return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
@@ -159,7 +159,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
@@ -173,7 +173,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
 
-    public Output<SnapshotSourceDiskEncryptionKeyGetArgs> getSourceDiskEncryptionKey() {
+    public Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
     }
 
@@ -185,7 +185,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageBytes")
       private final @Nullable Output<Integer> storageBytes;
 
-    public Output<Integer> getStorageBytes() {
+    public Output<Integer> storageBytes() {
         return this.storageBytes == null ? Codegen.empty() : this.storageBytes;
     }
 
@@ -196,7 +196,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 
@@ -207,7 +207,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

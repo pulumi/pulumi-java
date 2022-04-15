@@ -22,7 +22,7 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -33,7 +33,7 @@ public final class JobQueryDefaultDatasetGetArgs extends io.pulumi.resources.Res
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 

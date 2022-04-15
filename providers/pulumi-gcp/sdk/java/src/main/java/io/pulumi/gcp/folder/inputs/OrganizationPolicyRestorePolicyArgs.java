@@ -21,7 +21,7 @@ public final class OrganizationPolicyRestorePolicyArgs extends io.pulumi.resourc
     @Import(name="default", required=true)
       private final Output<Boolean> default_;
 
-    public Output<Boolean> getDefault_() {
+    public Output<Boolean> default_() {
         return this.default_;
     }
 

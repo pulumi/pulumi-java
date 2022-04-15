@@ -22,7 +22,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
     @Import(name="healthCheck", required=true)
       private final Output<String> healthCheck;
 
-    public Output<String> getHealthCheck() {
+    public Output<String> healthCheck() {
         return this.healthCheck;
     }
 
@@ -34,7 +34,7 @@ public final class RegionInstanceGroupManagerAutoHealingPoliciesGetArgs extends 
     @Import(name="initialDelaySec", required=true)
       private final Output<Integer> initialDelaySec;
 
-    public Output<Integer> getInitialDelaySec() {
+    public Output<Integer> initialDelaySec() {
         return this.initialDelaySec;
     }
 

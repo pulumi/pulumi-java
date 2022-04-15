@@ -26,7 +26,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount", required=true)
       private final Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
 
@@ -37,7 +37,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="complianceRegime", required=true)
       private final Output<String> complianceRegime;
 
-    public Output<String> getComplianceRegime() {
+    public Output<String> complianceRegime() {
         return this.complianceRegime;
     }
 
@@ -48,7 +48,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsSettings")
       private final @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
 
-    public Output<WorkloadKmsSettingsArgs> getKmsSettings() {
+    public Output<WorkloadKmsSettingsArgs> kmsSettings() {
         return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
     }
 
@@ -70,7 +70,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -81,7 +81,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -92,7 +92,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization", required=true)
       private final Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
 
@@ -103,7 +103,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionedResourcesParent")
       private final @Nullable Output<String> provisionedResourcesParent;
 
-    public Output<String> getProvisionedResourcesParent() {
+    public Output<String> provisionedResourcesParent() {
         return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
     }
 
@@ -114,7 +114,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettings")
       private final @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
-    public Output<List<WorkloadResourceSettingArgs>> getResourceSettings() {
+    public Output<List<WorkloadResourceSettingArgs>> resourceSettings() {
         return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 

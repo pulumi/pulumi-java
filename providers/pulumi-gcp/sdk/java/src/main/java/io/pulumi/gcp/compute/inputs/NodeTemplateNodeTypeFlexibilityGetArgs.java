@@ -22,7 +22,7 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     @Import(name="cpus")
       private final @Nullable Output<String> cpus;
 
-    public Output<String> getCpus() {
+    public Output<String> cpus() {
         return this.cpus == null ? Codegen.empty() : this.cpus;
     }
 
@@ -34,7 +34,7 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     @Import(name="localSsd")
       private final @Nullable Output<String> localSsd;
 
-    public Output<String> getLocalSsd() {
+    public Output<String> localSsd() {
         return this.localSsd == null ? Codegen.empty() : this.localSsd;
     }
 
@@ -45,7 +45,7 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
+    public Output<String> memory() {
         return this.memory == null ? Codegen.empty() : this.memory;
     }
 

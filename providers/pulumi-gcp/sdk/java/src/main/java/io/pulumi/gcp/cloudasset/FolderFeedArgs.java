@@ -28,7 +28,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> getAssetNames() {
+    public Output<List<String>> assetNames() {
         return this.assetNames == null ? Codegen.empty() : this.assetNames;
     }
 
@@ -43,7 +43,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> getAssetTypes() {
+    public Output<List<String>> assetTypes() {
         return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
     }
 
@@ -56,7 +56,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingProject", required=true)
       private final Output<String> billingProject;
 
-    public Output<String> getBillingProject() {
+    public Output<String> billingProject() {
         return this.billingProject;
     }
 
@@ -72,7 +72,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<FolderFeedConditionArgs> condition;
 
-    public Output<FolderFeedConditionArgs> getCondition() {
+    public Output<FolderFeedConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -84,7 +84,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -95,7 +95,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedId", required=true)
       private final Output<String> feedId;
 
-    public Output<String> getFeedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
 
@@ -107,7 +107,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedOutputConfig", required=true)
       private final Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
 
-    public Output<FolderFeedFeedOutputConfigArgs> getFeedOutputConfig() {
+    public Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig() {
         return this.feedOutputConfig;
     }
 
@@ -118,7 +118,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 

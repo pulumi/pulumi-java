@@ -38,7 +38,7 @@ public final class AuthorityConfigSubjectConfig {
      * Structure is documented below.
      * 
     */
-    public AuthorityConfigSubjectConfigSubject getSubject() {
+    public AuthorityConfigSubjectConfigSubject subject() {
         return this.subject;
     }
     /**
@@ -46,7 +46,7 @@ public final class AuthorityConfigSubjectConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<AuthorityConfigSubjectConfigSubjectAltName> getSubjectAltName() {
+    public Optional<AuthorityConfigSubjectConfigSubjectAltName> subjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }
 

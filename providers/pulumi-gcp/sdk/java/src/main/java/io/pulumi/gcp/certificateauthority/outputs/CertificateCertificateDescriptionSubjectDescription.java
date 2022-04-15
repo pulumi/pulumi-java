@@ -53,7 +53,7 @@ public final class CertificateCertificateDescriptionSubjectDescription {
         this.subjects = subjects;
     }
 
-    public Optional<String> getHexSerialNumber() {
+    public Optional<String> hexSerialNumber() {
         return Optional.ofNullable(this.hexSerialNumber);
     }
     /**
@@ -62,13 +62,13 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public Optional<String> getLifetime() {
+    public Optional<String> lifetime() {
         return Optional.ofNullable(this.lifetime);
     }
-    public Optional<String> getNotAfterTime() {
+    public Optional<String> notAfterTime() {
         return Optional.ofNullable(this.notAfterTime);
     }
-    public Optional<String> getNotBeforeTime() {
+    public Optional<String> notBeforeTime() {
         return Optional.ofNullable(this.notBeforeTime);
     }
     /**
@@ -76,7 +76,7 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> getSubjectAltNames() {
+    public List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames() {
         return this.subjectAltNames == null ? List.of() : this.subjectAltNames;
     }
     /**
@@ -84,7 +84,7 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionSubjectDescriptionSubject> getSubjects() {
+    public List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects() {
         return this.subjects == null ? List.of() : this.subjects;
     }
 

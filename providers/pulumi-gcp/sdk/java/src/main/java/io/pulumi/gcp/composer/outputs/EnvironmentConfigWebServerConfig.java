@@ -16,7 +16,7 @@ public final class EnvironmentConfigWebServerConfig {
         this.machineType = machineType;
     }
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 

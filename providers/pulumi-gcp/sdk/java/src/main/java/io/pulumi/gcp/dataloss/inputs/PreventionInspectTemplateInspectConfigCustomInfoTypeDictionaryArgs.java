@@ -24,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     @Import(name="cloudStoragePath")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath() {
         return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     @Import(name="wordList")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> getWordList() {
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList() {
         return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 

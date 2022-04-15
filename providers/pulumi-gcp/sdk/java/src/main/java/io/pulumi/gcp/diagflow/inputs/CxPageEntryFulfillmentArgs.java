@@ -26,7 +26,7 @@ public final class CxPageEntryFulfillmentArgs extends io.pulumi.resources.Resour
     @Import(name="messages")
       private final @Nullable Output<List<CxPageEntryFulfillmentMessageArgs>> messages;
 
-    public Output<List<CxPageEntryFulfillmentMessageArgs>> getMessages() {
+    public Output<List<CxPageEntryFulfillmentMessageArgs>> messages() {
         return this.messages == null ? Codegen.empty() : this.messages;
     }
 
@@ -37,7 +37,7 @@ public final class CxPageEntryFulfillmentArgs extends io.pulumi.resources.Resour
     @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> getReturnPartialResponses() {
+    public Output<Boolean> returnPartialResponses() {
         return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
     }
 
@@ -48,7 +48,7 @@ public final class CxPageEntryFulfillmentArgs extends io.pulumi.resources.Resour
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 
@@ -59,7 +59,7 @@ public final class CxPageEntryFulfillmentArgs extends io.pulumi.resources.Resour
     @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
-    public Output<String> getWebhook() {
+    public Output<String> webhook() {
         return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 

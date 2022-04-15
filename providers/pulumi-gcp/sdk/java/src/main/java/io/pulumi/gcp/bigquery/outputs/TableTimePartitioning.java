@@ -56,7 +56,7 @@ public final class TableTimePartitioning {
      * storage for a partition.
      * 
     */
-    public Optional<Integer> getExpirationMs() {
+    public Optional<Integer> expirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
     /**
@@ -64,7 +64,7 @@ public final class TableTimePartitioning {
      * partition.
      * 
     */
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return Optional.ofNullable(this.field);
     }
     /**
@@ -73,7 +73,7 @@ public final class TableTimePartitioning {
      * specified.
      * 
     */
-    public Optional<Boolean> getRequirePartitionFilter() {
+    public Optional<Boolean> requirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
     /**
@@ -81,7 +81,7 @@ public final class TableTimePartitioning {
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

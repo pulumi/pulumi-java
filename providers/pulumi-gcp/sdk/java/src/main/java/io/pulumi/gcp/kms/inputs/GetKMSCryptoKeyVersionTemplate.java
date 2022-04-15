@@ -15,14 +15,14 @@ public final class GetKMSCryptoKeyVersionTemplate extends io.pulumi.resources.In
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
     @Import(name="protectionLevel", required=true)
       private final String protectionLevel;
 
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
 

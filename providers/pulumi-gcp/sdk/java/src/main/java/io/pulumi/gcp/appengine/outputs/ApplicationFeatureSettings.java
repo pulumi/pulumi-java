@@ -26,7 +26,7 @@ public final class ApplicationFeatureSettings {
      * and liveness checks.
      * 
     */
-    public Boolean getSplitHealthChecks() {
+    public Boolean splitHealthChecks() {
         return this.splitHealthChecks;
     }
 

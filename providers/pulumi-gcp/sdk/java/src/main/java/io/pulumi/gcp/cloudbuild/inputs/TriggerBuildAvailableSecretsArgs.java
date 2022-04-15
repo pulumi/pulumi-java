@@ -23,7 +23,7 @@ public final class TriggerBuildAvailableSecretsArgs extends io.pulumi.resources.
     @Import(name="secretManagers", required=true)
       private final Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers;
 
-    public Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> getSecretManagers() {
+    public Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers() {
         return this.secretManagers;
     }
 

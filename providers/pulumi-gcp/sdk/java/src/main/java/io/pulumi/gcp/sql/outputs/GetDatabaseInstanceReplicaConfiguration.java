@@ -49,37 +49,37 @@ public final class GetDatabaseInstanceReplicaConfiguration {
         this.verifyServerCertificate = verifyServerCertificate;
     }
 
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
-    public Integer getConnectRetryInterval() {
+    public Integer connectRetryInterval() {
         return this.connectRetryInterval;
     }
-    public String getDumpFilePath() {
+    public String dumpFilePath() {
         return this.dumpFilePath;
     }
-    public Boolean getFailoverTarget() {
+    public Boolean failoverTarget() {
         return this.failoverTarget;
     }
-    public Integer getMasterHeartbeatPeriod() {
+    public Integer masterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
     }
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
-    public String getSslCipher() {
+    public String sslCipher() {
         return this.sslCipher;
     }
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
-    public Boolean getVerifyServerCertificate() {
+    public Boolean verifyServerCertificate() {
         return this.verifyServerCertificate;
     }
 

@@ -23,7 +23,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
     @Import(name="day")
       private final @Nullable Output<Integer> day;
 
-    public Output<Integer> getDay() {
+    public Output<Integer> day() {
         return this.day == null ? Codegen.empty() : this.day;
     }
 
@@ -34,7 +34,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
     @Import(name="hour")
       private final @Nullable Output<Integer> hour;
 
-    public Output<Integer> getHour() {
+    public Output<Integer> hour() {
         return this.hour == null ? Codegen.empty() : this.hour;
     }
 
@@ -46,7 +46,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
     @Import(name="updateTrack")
       private final @Nullable Output<String> updateTrack;
 
-    public Output<String> getUpdateTrack() {
+    public Output<String> updateTrack() {
         return this.updateTrack == null ? Codegen.empty() : this.updateTrack;
     }
 

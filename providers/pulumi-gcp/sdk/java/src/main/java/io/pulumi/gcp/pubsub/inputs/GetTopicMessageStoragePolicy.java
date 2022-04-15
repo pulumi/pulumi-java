@@ -16,7 +16,7 @@ public final class GetTopicMessageStoragePolicy extends io.pulumi.resources.Invo
     @Import(name="allowedPersistenceRegions", required=true)
       private final List<String> allowedPersistenceRegions;
 
-    public List<String> getAllowedPersistenceRegions() {
+    public List<String> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 

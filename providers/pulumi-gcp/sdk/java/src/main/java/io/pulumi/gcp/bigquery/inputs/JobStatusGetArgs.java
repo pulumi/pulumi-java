@@ -21,21 +21,21 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorResults")
       private final @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults;
 
-    public Output<List<JobStatusErrorResultGetArgs>> getErrorResults() {
+    public Output<List<JobStatusErrorResultGetArgs>> errorResults() {
         return this.errorResults == null ? Codegen.empty() : this.errorResults;
     }
 
     @Import(name="errors")
       private final @Nullable Output<List<JobStatusErrorGetArgs>> errors;
 
-    public Output<List<JobStatusErrorGetArgs>> getErrors() {
+    public Output<List<JobStatusErrorGetArgs>> errors() {
         return this.errors == null ? Codegen.empty() : this.errors;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

@@ -44,7 +44,7 @@ public final class PatchDeploymentRollout {
      * Structure is documented below.
      * 
     */
-    public PatchDeploymentRolloutDisruptionBudget getDisruptionBudget() {
+    public PatchDeploymentRolloutDisruptionBudget disruptionBudget() {
         return this.disruptionBudget;
     }
     /**
@@ -52,7 +52,7 @@ public final class PatchDeploymentRollout {
      * Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

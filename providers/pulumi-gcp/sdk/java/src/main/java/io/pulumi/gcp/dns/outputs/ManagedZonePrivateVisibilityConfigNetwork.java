@@ -28,7 +28,7 @@ public final class ManagedZonePrivateVisibilityConfigNetwork {
      * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
      * 
     */
-    public String getNetworkUrl() {
+    public String networkUrl() {
         return this.networkUrl;
     }
 

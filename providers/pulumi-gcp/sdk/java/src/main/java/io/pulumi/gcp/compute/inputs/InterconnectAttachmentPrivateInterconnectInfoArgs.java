@@ -18,7 +18,7 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends io.
     @Import(name="tag8021q")
       private final @Nullable Output<Integer> tag8021q;
 
-    public Output<Integer> getTag8021q() {
+    public Output<Integer> tag8021q() {
         return this.tag8021q == null ? Codegen.empty() : this.tag8021q;
     }
 

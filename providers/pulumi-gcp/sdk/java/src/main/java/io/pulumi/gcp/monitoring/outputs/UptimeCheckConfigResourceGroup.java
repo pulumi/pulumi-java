@@ -35,7 +35,7 @@ public final class UptimeCheckConfigResourceGroup {
      * The group of resources being monitored. Should be the `name` of a group
      * 
     */
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
@@ -43,7 +43,7 @@ public final class UptimeCheckConfigResourceGroup {
      * Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
      * 
     */
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
 

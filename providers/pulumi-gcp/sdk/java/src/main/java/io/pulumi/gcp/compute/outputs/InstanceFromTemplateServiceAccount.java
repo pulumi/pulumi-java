@@ -23,10 +23,10 @@ public final class InstanceFromTemplateServiceAccount {
         this.scopes = scopes;
     }
 
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 

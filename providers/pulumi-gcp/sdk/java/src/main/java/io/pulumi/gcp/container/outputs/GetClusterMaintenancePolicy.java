@@ -26,13 +26,13 @@ public final class GetClusterMaintenancePolicy {
         this.recurringWindows = recurringWindows;
     }
 
-    public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> getDailyMaintenanceWindows() {
+    public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows() {
         return this.dailyMaintenanceWindows;
     }
-    public List<GetClusterMaintenancePolicyMaintenanceExclusion> getMaintenanceExclusions() {
+    public List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions() {
         return this.maintenanceExclusions;
     }
-    public List<GetClusterMaintenancePolicyRecurringWindow> getRecurringWindows() {
+    public List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows() {
         return this.recurringWindows;
     }
 

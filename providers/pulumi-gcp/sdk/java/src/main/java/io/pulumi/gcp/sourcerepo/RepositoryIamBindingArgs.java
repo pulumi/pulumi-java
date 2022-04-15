@@ -20,14 +20,14 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<RepositoryIamBindingConditionArgs> condition;
 
-    public Output<RepositoryIamBindingConditionArgs> getCondition() {
+    public Output<RepositoryIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -39,14 +39,14 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

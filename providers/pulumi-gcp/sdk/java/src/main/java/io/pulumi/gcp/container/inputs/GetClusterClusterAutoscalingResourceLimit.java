@@ -16,21 +16,21 @@ public final class GetClusterClusterAutoscalingResourceLimit extends io.pulumi.r
     @Import(name="maximum", required=true)
       private final Integer maximum;
 
-    public Integer getMaximum() {
+    public Integer maximum() {
         return this.maximum;
     }
 
     @Import(name="minimum", required=true)
       private final Integer minimum;
 
-    public Integer getMinimum() {
+    public Integer minimum() {
         return this.minimum;
     }
 
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

@@ -53,41 +53,41 @@ public final class GetBackendServiceBackend {
         this.maxUtilization = maxUtilization;
     }
 
-    public String getBalancingMode() {
+    public String balancingMode() {
         return this.balancingMode;
     }
-    public Double getCapacityScaler() {
+    public Double capacityScaler() {
         return this.capacityScaler;
     }
     /**
      * Textual description for the Backend Service.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
-    public Integer getMaxConnections() {
+    public Integer maxConnections() {
         return this.maxConnections;
     }
-    public Integer getMaxConnectionsPerEndpoint() {
+    public Integer maxConnectionsPerEndpoint() {
         return this.maxConnectionsPerEndpoint;
     }
-    public Integer getMaxConnectionsPerInstance() {
+    public Integer maxConnectionsPerInstance() {
         return this.maxConnectionsPerInstance;
     }
-    public Integer getMaxRate() {
+    public Integer maxRate() {
         return this.maxRate;
     }
-    public Double getMaxRatePerEndpoint() {
+    public Double maxRatePerEndpoint() {
         return this.maxRatePerEndpoint;
     }
-    public Double getMaxRatePerInstance() {
+    public Double maxRatePerInstance() {
         return this.maxRatePerInstance;
     }
-    public Double getMaxUtilization() {
+    public Double maxUtilization() {
         return this.maxUtilization;
     }
 

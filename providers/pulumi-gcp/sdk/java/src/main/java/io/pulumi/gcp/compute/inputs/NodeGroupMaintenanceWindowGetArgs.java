@@ -21,7 +21,7 @@ public final class NodeGroupMaintenanceWindowGetArgs extends io.pulumi.resources
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

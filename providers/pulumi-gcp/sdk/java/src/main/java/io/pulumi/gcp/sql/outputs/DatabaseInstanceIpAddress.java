@@ -25,13 +25,13 @@ public final class DatabaseInstanceIpAddress {
         this.type = type;
     }
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
-    public Optional<String> getTimeToRetire() {
+    public Optional<String> timeToRetire() {
         return Optional.ofNullable(this.timeToRetire);
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

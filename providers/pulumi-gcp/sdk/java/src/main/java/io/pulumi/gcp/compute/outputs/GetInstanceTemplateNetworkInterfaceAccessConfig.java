@@ -39,7 +39,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
      * network ip. If not given, one will be generated.
      * 
     */
-    public String getNatIp() {
+    public String natIp() {
         return this.natIp;
     }
     /**
@@ -48,10 +48,10 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
     */
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
-    public String getPublicPtrDomainName() {
+    public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 

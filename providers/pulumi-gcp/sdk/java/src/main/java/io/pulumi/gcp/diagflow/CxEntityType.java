@@ -61,7 +61,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
      * 
      */
-    public Output</* @Nullable */ String> getAutoExpansionMode() {
+    public Output</* @Nullable */ String> autoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
@@ -75,7 +75,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the entity type, unique within the agent.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -89,7 +89,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * @return Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableFuzzyExtraction() {
+    public Output</* @Nullable */ Boolean> enableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
@@ -105,7 +105,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<CxEntityTypeEntity>> getEntities() {
+    public Output<List<CxEntityTypeEntity>> entities() {
         return this.entities;
     }
     /**
@@ -123,7 +123,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxEntityTypeExcludedPhrase>> getExcludedPhrases() {
+    public Output</* @Nullable */ List<CxEntityTypeExcludedPhrase>> excludedPhrases() {
         return this.excludedPhrases;
     }
     /**
@@ -145,7 +145,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -167,7 +167,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> getLanguageCode() {
+    public Output</* @Nullable */ String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -183,7 +183,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * ID>/entityTypes/<Entity Type ID>.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -199,7 +199,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    public Output</* @Nullable */ String> getParent() {
+    public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
@@ -213,7 +213,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRedact() {
+    public Output</* @Nullable */ Boolean> redact() {
         return this.redact;
     }
 

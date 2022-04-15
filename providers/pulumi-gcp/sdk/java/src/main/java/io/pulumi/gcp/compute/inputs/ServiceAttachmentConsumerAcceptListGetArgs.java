@@ -23,7 +23,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
     @Import(name="connectionLimit", required=true)
       private final Output<Integer> connectionLimit;
 
-    public Output<Integer> getConnectionLimit() {
+    public Output<Integer> connectionLimit() {
         return this.connectionLimit;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
     @Import(name="projectIdOrNum", required=true)
       private final Output<String> projectIdOrNum;
 
-    public Output<String> getProjectIdOrNum() {
+    public Output<String> projectIdOrNum() {
         return this.projectIdOrNum;
     }
 

@@ -23,7 +23,7 @@ public final class StandardAppVersionManualScalingGetArgs extends io.pulumi.reso
     @Import(name="instances", required=true)
       private final Output<Integer> instances;
 
-    public Output<Integer> getInstances() {
+    public Output<Integer> instances() {
         return this.instances;
     }
 

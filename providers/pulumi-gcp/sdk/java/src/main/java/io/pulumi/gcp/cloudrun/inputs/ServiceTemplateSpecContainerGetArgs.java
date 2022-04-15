@@ -36,7 +36,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -55,7 +55,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> getCommands() {
+    public Output<List<String>> commands() {
         return this.commands == null ? Codegen.empty() : this.commands;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
       private final @Nullable Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> getEnvFroms() {
+    public Output<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms() {
         return this.envFroms == null ? Codegen.empty() : this.envFroms;
     }
 
@@ -90,7 +90,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="envs")
       private final @Nullable Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs;
 
-    public Output<List<ServiceTemplateSpecContainerEnvGetArgs>> getEnvs() {
+    public Output<List<ServiceTemplateSpecContainerEnvGetArgs>> envs() {
         return this.envs == null ? Codegen.empty() : this.envs;
     }
 
@@ -103,7 +103,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -117,7 +117,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="ports")
       private final @Nullable Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports;
 
-    public Output<List<ServiceTemplateSpecContainerPortGetArgs>> getPorts() {
+    public Output<List<ServiceTemplateSpecContainerPortGetArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -131,7 +131,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="resources")
       private final @Nullable Output<ServiceTemplateSpecContainerResourcesGetArgs> resources;
 
-    public Output<ServiceTemplateSpecContainerResourcesGetArgs> getResources() {
+    public Output<ServiceTemplateSpecContainerResourcesGetArgs> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -144,7 +144,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     @Import(name="volumeMounts")
       private final @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts;
 
-    public Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> getVolumeMounts() {
+    public Output<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts() {
         return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 
@@ -164,7 +164,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Output<String> getWorkingDir() {
+    public Output<String> workingDir() {
         return this.workingDir == null ? Codegen.empty() : this.workingDir;
     }
 

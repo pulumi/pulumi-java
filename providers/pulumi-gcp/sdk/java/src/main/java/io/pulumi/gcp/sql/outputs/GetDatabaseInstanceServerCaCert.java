@@ -29,19 +29,19 @@ public final class GetDatabaseInstanceServerCaCert {
         this.sha1Fingerprint = sha1Fingerprint;
     }
 
-    public String getCert() {
+    public String cert() {
         return this.cert;
     }
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
-    public String getExpirationTime() {
+    public String expirationTime() {
         return this.expirationTime;
     }
-    public String getSha1Fingerprint() {
+    public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

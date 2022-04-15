@@ -23,7 +23,7 @@ public final class TriggerTransportGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="pubsubs")
       private final @Nullable Output<List<TriggerTransportPubsubGetArgs>> pubsubs;
 
-    public Output<List<TriggerTransportPubsubGetArgs>> getPubsubs() {
+    public Output<List<TriggerTransportPubsubGetArgs>> pubsubs() {
         return this.pubsubs == null ? Codegen.empty() : this.pubsubs;
     }
 

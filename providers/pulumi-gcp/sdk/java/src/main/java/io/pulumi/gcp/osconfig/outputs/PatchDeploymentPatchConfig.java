@@ -92,7 +92,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigApt> getApt() {
+    public Optional<PatchDeploymentPatchConfigApt> apt() {
         return Optional.ofNullable(this.apt);
     }
     /**
@@ -100,7 +100,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigGoo> getGoo() {
+    public Optional<PatchDeploymentPatchConfigGoo> goo() {
         return Optional.ofNullable(this.goo);
     }
     /**
@@ -108,7 +108,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigPostStep> getPostStep() {
+    public Optional<PatchDeploymentPatchConfigPostStep> postStep() {
         return Optional.ofNullable(this.postStep);
     }
     /**
@@ -116,7 +116,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigPreStep> getPreStep() {
+    public Optional<PatchDeploymentPatchConfigPreStep> preStep() {
         return Optional.ofNullable(this.preStep);
     }
     /**
@@ -124,7 +124,7 @@ public final class PatchDeploymentPatchConfig {
      * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
      * 
     */
-    public Optional<String> getRebootConfig() {
+    public Optional<String> rebootConfig() {
         return Optional.ofNullable(this.rebootConfig);
     }
     /**
@@ -132,7 +132,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigWindowsUpdate> getWindowsUpdate() {
+    public Optional<PatchDeploymentPatchConfigWindowsUpdate> windowsUpdate() {
         return Optional.ofNullable(this.windowsUpdate);
     }
     /**
@@ -140,7 +140,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigYum> getYum() {
+    public Optional<PatchDeploymentPatchConfigYum> yum() {
         return Optional.ofNullable(this.yum);
     }
     /**
@@ -148,7 +148,7 @@ public final class PatchDeploymentPatchConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<PatchDeploymentPatchConfigZypper> getZypper() {
+    public Optional<PatchDeploymentPatchConfigZypper> zypper() {
         return Optional.ofNullable(this.zypper);
     }
 

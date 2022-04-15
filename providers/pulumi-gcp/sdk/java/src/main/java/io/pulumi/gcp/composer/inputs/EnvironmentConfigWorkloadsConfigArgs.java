@@ -20,21 +20,21 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
     @Import(name="scheduler")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
 
-    public Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> getScheduler() {
+    public Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler() {
         return this.scheduler == null ? Codegen.empty() : this.scheduler;
     }
 
     @Import(name="webServer")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
 
-    public Output<EnvironmentConfigWorkloadsConfigWebServerArgs> getWebServer() {
+    public Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer() {
         return this.webServer == null ? Codegen.empty() : this.webServer;
     }
 
     @Import(name="worker")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
 
-    public Output<EnvironmentConfigWorkloadsConfigWorkerArgs> getWorker() {
+    public Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker() {
         return this.worker == null ? Codegen.empty() : this.worker;
     }
 

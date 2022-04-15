@@ -25,7 +25,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -47,7 +47,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -66,7 +66,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="entity")
       private final @Nullable Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity == null ? Codegen.empty() : this.entity;
     }
 
@@ -77,7 +77,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 
@@ -88,7 +88,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
-    public Output<Integer> getGeneration() {
+    public Output<Integer> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -99,7 +99,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="object")
       private final @Nullable Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object == null ? Codegen.empty() : this.object;
     }
 
@@ -110,7 +110,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="projectTeams")
       private final @Nullable Output<List<DefaultObjectAccessControlProjectTeamGetArgs>> projectTeams;
 
-    public Output<List<DefaultObjectAccessControlProjectTeamGetArgs>> getProjectTeams() {
+    public Output<List<DefaultObjectAccessControlProjectTeamGetArgs>> projectTeams() {
         return this.projectTeams == null ? Codegen.empty() : this.projectTeams;
     }
 
@@ -122,7 +122,7 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

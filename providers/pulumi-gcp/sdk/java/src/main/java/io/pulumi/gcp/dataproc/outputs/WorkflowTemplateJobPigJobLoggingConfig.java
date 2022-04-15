@@ -26,7 +26,7 @@ public final class WorkflowTemplateJobPigJobLoggingConfig {
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
      * 
     */
-    public Map<String,String> getDriverLogLevels() {
+    public Map<String,String> driverLogLevels() {
         return this.driverLogLevels == null ? Map.of() : this.driverLogLevels;
     }
 
