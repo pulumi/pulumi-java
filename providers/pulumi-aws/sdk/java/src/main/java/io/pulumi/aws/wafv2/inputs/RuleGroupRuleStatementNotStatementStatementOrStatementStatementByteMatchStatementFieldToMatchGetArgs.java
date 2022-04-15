@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> getBody() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> getMethod() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> getQueryString() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> getUriPath() {
+    public Output<RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

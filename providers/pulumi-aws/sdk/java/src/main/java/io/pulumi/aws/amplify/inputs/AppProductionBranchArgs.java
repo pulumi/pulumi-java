@@ -22,7 +22,7 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
-    public Output<String> getBranchName() {
+    public Output<String> branchName() {
         return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
@@ -33,7 +33,7 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     @Import(name="lastDeployTime")
       private final @Nullable Output<String> lastDeployTime;
 
-    public Output<String> getLastDeployTime() {
+    public Output<String> lastDeployTime() {
         return this.lastDeployTime == null ? Codegen.empty() : this.lastDeployTime;
     }
 
@@ -44,7 +44,7 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -55,7 +55,7 @@ public final class AppProductionBranchArgs extends io.pulumi.resources.ResourceA
     @Import(name="thumbnailUrl")
       private final @Nullable Output<String> thumbnailUrl;
 
-    public Output<String> getThumbnailUrl() {
+    public Output<String> thumbnailUrl() {
         return this.thumbnailUrl == null ? Codegen.empty() : this.thumbnailUrl;
     }
 

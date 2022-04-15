@@ -23,7 +23,7 @@ public final class WorkgroupConfigurationResultConfigurationGetArgs extends io.p
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
+    public Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -34,7 +34,7 @@ public final class WorkgroupConfigurationResultConfigurationGetArgs extends io.p
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
-    public Output<String> getOutputLocation() {
+    public Output<String> outputLocation() {
         return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 

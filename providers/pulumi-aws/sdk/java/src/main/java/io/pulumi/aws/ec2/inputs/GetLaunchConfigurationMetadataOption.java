@@ -20,7 +20,7 @@ public final class GetLaunchConfigurationMetadataOption extends io.pulumi.resour
     @Import(name="httpEndpoint", required=true)
       private final String httpEndpoint;
 
-    public String getHttpEndpoint() {
+    public String httpEndpoint() {
         return this.httpEndpoint;
     }
 
@@ -31,7 +31,7 @@ public final class GetLaunchConfigurationMetadataOption extends io.pulumi.resour
     @Import(name="httpPutResponseHopLimit", required=true)
       private final Integer httpPutResponseHopLimit;
 
-    public Integer getHttpPutResponseHopLimit() {
+    public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
 
@@ -42,7 +42,7 @@ public final class GetLaunchConfigurationMetadataOption extends io.pulumi.resour
     @Import(name="httpTokens", required=true)
       private final String httpTokens;
 
-    public String getHttpTokens() {
+    public String httpTokens() {
         return this.httpTokens;
     }
 

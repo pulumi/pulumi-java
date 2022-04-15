@@ -28,7 +28,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> body;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> getBody() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> method;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> getMethod() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> getQueryString() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> getUriPath() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

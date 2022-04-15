@@ -43,7 +43,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Glue Connection.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.
      * 
      */
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -71,7 +71,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A map of key-value pairs used as parameters for this connection.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getConnectionProperties() {
+    public Output</* @Nullable */ Map<String,String>> connectionProperties() {
         return this.connectionProperties;
     }
     /**
@@ -85,7 +85,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionType() {
+    public Output</* @Nullable */ String> connectionType() {
         return this.connectionType;
     }
     /**
@@ -99,7 +99,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Description of the connection.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -113,7 +113,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A list of criteria that can be used in selecting this connection.
      * 
      */
-    public Output</* @Nullable */ List<String>> getMatchCriterias() {
+    public Output</* @Nullable */ List<String>> matchCriterias() {
         return this.matchCriterias;
     }
     /**
@@ -127,7 +127,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The name of the connection.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +141,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
      * 
      */
-    public Output</* @Nullable */ ConnectionPhysicalConnectionRequirements> getPhysicalConnectionRequirements() {
+    public Output</* @Nullable */ ConnectionPhysicalConnectionRequirements> physicalConnectionRequirements() {
         return this.physicalConnectionRequirements;
     }
     /**
@@ -155,7 +155,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +169,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

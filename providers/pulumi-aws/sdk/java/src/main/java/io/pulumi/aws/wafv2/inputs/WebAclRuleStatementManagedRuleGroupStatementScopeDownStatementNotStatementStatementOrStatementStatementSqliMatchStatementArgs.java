@@ -24,7 +24,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

@@ -24,7 +24,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -35,7 +35,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
+    public Output<Integer> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -46,7 +46,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
+    public Output<Integer> maxTtl() {
         return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
@@ -57,7 +57,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> getMinTtl() {
+    public Output<Integer> minTtl() {
         return this.minTtl == null ? Codegen.empty() : this.minTtl;
     }
 
@@ -68,7 +68,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 

@@ -27,7 +27,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="architecture")
       private final @Nullable Output<String> architecture;
 
-    public Output<String> getArchitecture() {
+    public Output<String> architecture() {
         return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
@@ -38,7 +38,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -49,7 +49,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -61,7 +61,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationOutpostArn")
       private final @Nullable Output<String> destinationOutpostArn;
 
-    public Output<String> getDestinationOutpostArn() {
+    public Output<String> destinationOutpostArn() {
         return this.destinationOutpostArn == null ? Codegen.empty() : this.destinationOutpostArn;
     }
 
@@ -73,7 +73,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiCopyEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
-    public Output<List<AmiCopyEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
+    public Output<List<AmiCopyEbsBlockDeviceGetArgs>> ebsBlockDevices() {
         return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
@@ -84,7 +84,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enaSupport")
       private final @Nullable Output<Boolean> enaSupport;
 
-    public Output<Boolean> getEnaSupport() {
+    public Output<Boolean> enaSupport() {
         return this.enaSupport == null ? Codegen.empty() : this.enaSupport;
     }
 
@@ -95,7 +95,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
@@ -107,14 +107,14 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiCopyEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
-    public Output<List<AmiCopyEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
+    public Output<List<AmiCopyEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
     @Import(name="hypervisor")
       private final @Nullable Output<String> hypervisor;
 
-    public Output<String> getHypervisor() {
+    public Output<String> hypervisor() {
         return this.hypervisor == null ? Codegen.empty() : this.hypervisor;
     }
 
@@ -126,21 +126,21 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageLocation")
       private final @Nullable Output<String> imageLocation;
 
-    public Output<String> getImageLocation() {
+    public Output<String> imageLocation() {
         return this.imageLocation == null ? Codegen.empty() : this.imageLocation;
     }
 
     @Import(name="imageOwnerAlias")
       private final @Nullable Output<String> imageOwnerAlias;
 
-    public Output<String> getImageOwnerAlias() {
+    public Output<String> imageOwnerAlias() {
         return this.imageOwnerAlias == null ? Codegen.empty() : this.imageOwnerAlias;
     }
 
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
@@ -152,7 +152,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
-    public Output<String> getKernelId() {
+    public Output<String> kernelId() {
         return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
@@ -165,14 +165,14 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="manageEbsSnapshots")
       private final @Nullable Output<Boolean> manageEbsSnapshots;
 
-    public Output<Boolean> getManageEbsSnapshots() {
+    public Output<Boolean> manageEbsSnapshots() {
         return this.manageEbsSnapshots == null ? Codegen.empty() : this.manageEbsSnapshots;
     }
 
@@ -183,35 +183,35 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     @Import(name="platformDetails")
       private final @Nullable Output<String> platformDetails;
 
-    public Output<String> getPlatformDetails() {
+    public Output<String> platformDetails() {
         return this.platformDetails == null ? Codegen.empty() : this.platformDetails;
     }
 
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> getPublic_() {
+    public Output<Boolean> public_() {
         return this.public_ == null ? Codegen.empty() : this.public_;
     }
 
@@ -223,7 +223,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
-    public Output<String> getRamdiskId() {
+    public Output<String> ramdiskId() {
         return this.ramdiskId == null ? Codegen.empty() : this.ramdiskId;
     }
 
@@ -234,14 +234,14 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rootDeviceName")
       private final @Nullable Output<String> rootDeviceName;
 
-    public Output<String> getRootDeviceName() {
+    public Output<String> rootDeviceName() {
         return this.rootDeviceName == null ? Codegen.empty() : this.rootDeviceName;
     }
 
     @Import(name="rootSnapshotId")
       private final @Nullable Output<String> rootSnapshotId;
 
-    public Output<String> getRootSnapshotId() {
+    public Output<String> rootSnapshotId() {
         return this.rootSnapshotId == null ? Codegen.empty() : this.rootSnapshotId;
     }
 
@@ -253,7 +253,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAmiId")
       private final @Nullable Output<String> sourceAmiId;
 
-    public Output<String> getSourceAmiId() {
+    public Output<String> sourceAmiId() {
         return this.sourceAmiId == null ? Codegen.empty() : this.sourceAmiId;
     }
 
@@ -265,7 +265,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAmiRegion")
       private final @Nullable Output<String> sourceAmiRegion;
 
-    public Output<String> getSourceAmiRegion() {
+    public Output<String> sourceAmiRegion() {
         return this.sourceAmiRegion == null ? Codegen.empty() : this.sourceAmiRegion;
     }
 
@@ -277,7 +277,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sriovNetSupport")
       private final @Nullable Output<String> sriovNetSupport;
 
-    public Output<String> getSriovNetSupport() {
+    public Output<String> sriovNetSupport() {
         return this.sriovNetSupport == null ? Codegen.empty() : this.sriovNetSupport;
     }
 
@@ -288,21 +288,21 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="usageOperation")
       private final @Nullable Output<String> usageOperation;
 
-    public Output<String> getUsageOperation() {
+    public Output<String> usageOperation() {
         return this.usageOperation == null ? Codegen.empty() : this.usageOperation;
     }
 
@@ -315,7 +315,7 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualizationType")
       private final @Nullable Output<String> virtualizationType;
 
-    public Output<String> getVirtualizationType() {
+    public Output<String> virtualizationType() {
         return this.virtualizationType == null ? Codegen.empty() : this.virtualizationType;
     }
 

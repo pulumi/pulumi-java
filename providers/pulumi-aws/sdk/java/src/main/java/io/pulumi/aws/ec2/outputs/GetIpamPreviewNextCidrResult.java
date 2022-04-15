@@ -45,23 +45,23 @@ public final class GetIpamPreviewNextCidrResult {
      * The previewed CIDR from the pool.
      * 
     */
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
-    public List<String> getDisallowedCidrs() {
+    public List<String> disallowedCidrs() {
         return this.disallowedCidrs == null ? List.of() : this.disallowedCidrs;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIpamPoolId() {
+    public String ipamPoolId() {
         return this.ipamPoolId;
     }
-    public Optional<Integer> getNetmaskLength() {
+    public Optional<Integer> netmaskLength() {
         return Optional.ofNullable(this.netmaskLength);
     }
 

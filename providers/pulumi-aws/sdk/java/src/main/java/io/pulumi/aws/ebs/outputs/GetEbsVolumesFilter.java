@@ -38,7 +38,7 @@ public final class GetEbsVolumesFilter {
      * For example, if matching against the `size` filter, use:
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -46,7 +46,7 @@ public final class GetEbsVolumesFilter {
      * EBS Volume IDs will be selected if any one of the given values match.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

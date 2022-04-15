@@ -22,14 +22,14 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
     @Import(name="modelPackageGroupName")
       private final @Nullable Output<String> modelPackageGroupName;
 
-    public Output<String> getModelPackageGroupName() {
+    public Output<String> modelPackageGroupName() {
         return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
     }
 
     @Import(name="resourcePolicy")
       private final @Nullable Output<String> resourcePolicy;
 
-    public Output<String> getResourcePolicy() {
+    public Output<String> resourcePolicy() {
         return this.resourcePolicy == null ? Codegen.empty() : this.resourcePolicy;
     }
 

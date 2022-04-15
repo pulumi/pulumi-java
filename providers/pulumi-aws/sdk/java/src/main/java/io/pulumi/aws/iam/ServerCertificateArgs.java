@@ -24,7 +24,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="certificateBody", required=true)
       private final Output<String> certificateBody;
 
-    public Output<String> getCertificateBody() {
+    public Output<String> certificateBody() {
         return this.certificateBody;
     }
 
@@ -37,7 +37,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
+    public Output<String> certificateChain() {
         return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
@@ -49,7 +49,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -75,7 +75,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -86,7 +86,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 
@@ -97,7 +97,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

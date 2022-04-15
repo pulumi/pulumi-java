@@ -33,14 +33,14 @@ public final class GatewayRouteSpecHttpRoute {
      * The action to take if a match is determined.
      * 
     */
-    public GatewayRouteSpecHttpRouteAction getAction() {
+    public GatewayRouteSpecHttpRouteAction action() {
         return this.action;
     }
     /**
      * The criteria for determining a request match.
      * 
     */
-    public GatewayRouteSpecHttpRouteMatch getMatch() {
+    public GatewayRouteSpecHttpRouteMatch match() {
         return this.match;
     }
 

@@ -24,7 +24,7 @@ public final class RegionSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceTypeManagementPreference")
       private final @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference;
 
-    public Output<Map<String,Boolean>> getResourceTypeManagementPreference() {
+    public Output<Map<String,Boolean>> resourceTypeManagementPreference() {
         return this.resourceTypeManagementPreference == null ? Codegen.empty() : this.resourceTypeManagementPreference;
     }
 
@@ -35,7 +35,7 @@ public final class RegionSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceTypeOptInPreference", required=true)
       private final Output<Map<String,Boolean>> resourceTypeOptInPreference;
 
-    public Output<Map<String,Boolean>> getResourceTypeOptInPreference() {
+    public Output<Map<String,Boolean>> resourceTypeOptInPreference() {
         return this.resourceTypeOptInPreference;
     }
 

@@ -17,77 +17,77 @@ public final class GetListenerDefaultActionAuthenticateOidc extends io.pulumi.re
     @Import(name="authenticationRequestExtraParams", required=true)
       private final Map<String,String> authenticationRequestExtraParams;
 
-    public Map<String,String> getAuthenticationRequestExtraParams() {
+    public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
 
     @Import(name="authorizationEndpoint", required=true)
       private final String authorizationEndpoint;
 
-    public String getAuthorizationEndpoint() {
+    public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
     @Import(name="clientSecret", required=true)
       private final String clientSecret;
 
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
 
     @Import(name="issuer", required=true)
       private final String issuer;
 
-    public String getIssuer() {
+    public String issuer() {
         return this.issuer;
     }
 
     @Import(name="onUnauthenticatedRequest", required=true)
       private final String onUnauthenticatedRequest;
 
-    public String getOnUnauthenticatedRequest() {
+    public String onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
     @Import(name="sessionCookieName", required=true)
       private final String sessionCookieName;
 
-    public String getSessionCookieName() {
+    public String sessionCookieName() {
         return this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout", required=true)
       private final Integer sessionTimeout;
 
-    public Integer getSessionTimeout() {
+    public Integer sessionTimeout() {
         return this.sessionTimeout;
     }
 
     @Import(name="tokenEndpoint", required=true)
       private final String tokenEndpoint;
 
-    public String getTokenEndpoint() {
+    public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
     @Import(name="userInfoEndpoint", required=true)
       private final String userInfoEndpoint;
 
-    public String getUserInfoEndpoint() {
+    public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

@@ -22,7 +22,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -33,7 +33,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
     @Import(name="time", required=true)
       private final Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time;
 
-    public Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> getTime() {
+    public Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time() {
         return this.time;
     }
 

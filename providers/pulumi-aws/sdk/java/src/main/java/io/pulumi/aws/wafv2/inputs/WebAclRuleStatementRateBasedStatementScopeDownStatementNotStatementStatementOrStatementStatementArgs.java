@@ -29,7 +29,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="byteMatchStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementByteMatchStatementArgs> byteMatchStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementByteMatchStatementArgs> getByteMatchStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementByteMatchStatementArgs> byteMatchStatement() {
         return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
@@ -40,7 +40,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="geoMatchStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementGeoMatchStatementArgs> geoMatchStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementGeoMatchStatementArgs> getGeoMatchStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementGeoMatchStatementArgs> geoMatchStatement() {
         return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
@@ -51,7 +51,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementArgs> getIpSetReferenceStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
     }
 
@@ -62,7 +62,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="labelMatchStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementLabelMatchStatementArgs> labelMatchStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementLabelMatchStatementArgs> getLabelMatchStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementLabelMatchStatementArgs> labelMatchStatement() {
         return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
@@ -73,7 +73,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
@@ -84,7 +84,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="sizeConstraintStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementSizeConstraintStatementArgs> getSizeConstraintStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
@@ -95,7 +95,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="sqliMatchStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementArgs> sqliMatchStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementArgs> getSqliMatchStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementSqliMatchStatementArgs> sqliMatchStatement() {
         return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
@@ -106,7 +106,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="xssMatchStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementXssMatchStatementArgs> xssMatchStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementXssMatchStatementArgs> getXssMatchStatement() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementXssMatchStatementArgs> xssMatchStatement() {
         return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 

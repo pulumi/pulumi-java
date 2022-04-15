@@ -26,7 +26,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="egress")
       private final @Nullable Output<List<NetworkAclEgressArgs>> egress;
 
-    public Output<List<NetworkAclEgressArgs>> getEgress() {
+    public Output<List<NetworkAclEgressArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
       private final @Nullable Output<List<NetworkAclIngressArgs>> ingress;
 
-    public Output<List<NetworkAclIngressArgs>> getIngress() {
+    public Output<List<NetworkAclIngressArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -59,7 +59,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -70,7 +70,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

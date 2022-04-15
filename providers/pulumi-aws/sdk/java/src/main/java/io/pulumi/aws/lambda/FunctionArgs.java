@@ -35,7 +35,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="architectures")
       private final @Nullable Output<List<String>> architectures;
 
-    public Output<List<String>> getArchitectures() {
+    public Output<List<String>> architectures() {
         return this.architectures == null ? Codegen.empty() : this.architectures;
     }
 
@@ -46,7 +46,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<Archive> code;
 
-    public Output<Archive> getCode() {
+    public Output<Archive> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -57,7 +57,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="codeSigningConfigArn")
       private final @Nullable Output<String> codeSigningConfigArn;
 
-    public Output<String> getCodeSigningConfigArn() {
+    public Output<String> codeSigningConfigArn() {
         return this.codeSigningConfigArn == null ? Codegen.empty() : this.codeSigningConfigArn;
     }
 
@@ -68,7 +68,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterConfig")
       private final @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
-    public Output<FunctionDeadLetterConfigArgs> getDeadLetterConfig() {
+    public Output<FunctionDeadLetterConfigArgs> deadLetterConfig() {
         return this.deadLetterConfig == null ? Codegen.empty() : this.deadLetterConfig;
     }
 
@@ -79,7 +79,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -90,7 +90,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<FunctionEnvironmentArgs> environment;
 
-    public Output<FunctionEnvironmentArgs> getEnvironment() {
+    public Output<FunctionEnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -101,7 +101,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemConfig")
       private final @Nullable Output<FunctionFileSystemConfigArgs> fileSystemConfig;
 
-    public Output<FunctionFileSystemConfigArgs> getFileSystemConfig() {
+    public Output<FunctionFileSystemConfigArgs> fileSystemConfig() {
         return this.fileSystemConfig == null ? Codegen.empty() : this.fileSystemConfig;
     }
 
@@ -112,7 +112,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="handler")
       private final @Nullable Output<String> handler;
 
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler == null ? Codegen.empty() : this.handler;
     }
 
@@ -123,7 +123,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageConfig")
       private final @Nullable Output<FunctionImageConfigArgs> imageConfig;
 
-    public Output<FunctionImageConfigArgs> getImageConfig() {
+    public Output<FunctionImageConfigArgs> imageConfig() {
         return this.imageConfig == null ? Codegen.empty() : this.imageConfig;
     }
 
@@ -134,7 +134,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
@@ -145,7 +145,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -156,7 +156,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layers")
       private final @Nullable Output<List<String>> layers;
 
-    public Output<List<String>> getLayers() {
+    public Output<List<String>> layers() {
         return this.layers == null ? Codegen.empty() : this.layers;
     }
 
@@ -167,7 +167,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="memorySize")
       private final @Nullable Output<Integer> memorySize;
 
-    public Output<Integer> getMemorySize() {
+    public Output<Integer> memorySize() {
         return this.memorySize == null ? Codegen.empty() : this.memorySize;
     }
 
@@ -178,7 +178,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -189,7 +189,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
-    public Output<String> getPackageType() {
+    public Output<String> packageType() {
         return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
@@ -200,7 +200,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publish")
       private final @Nullable Output<Boolean> publish;
 
-    public Output<Boolean> getPublish() {
+    public Output<Boolean> publish() {
         return this.publish == null ? Codegen.empty() : this.publish;
     }
 
@@ -211,7 +211,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservedConcurrentExecutions")
       private final @Nullable Output<Integer> reservedConcurrentExecutions;
 
-    public Output<Integer> getReservedConcurrentExecutions() {
+    public Output<Integer> reservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions == null ? Codegen.empty() : this.reservedConcurrentExecutions;
     }
 
@@ -222,7 +222,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -233,7 +233,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime")
       private final @Nullable Output<Either<String,Runtime>> runtime;
 
-    public Output<Either<String,Runtime>> getRuntime() {
+    public Output<Either<String,Runtime>> runtime() {
         return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
@@ -244,7 +244,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
+    public Output<String> s3Bucket() {
         return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
@@ -255,7 +255,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
-    public Output<String> getS3Key() {
+    public Output<String> s3Key() {
         return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
@@ -266,7 +266,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> getS3ObjectVersion() {
+    public Output<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
@@ -277,7 +277,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceCodeHash")
       private final @Nullable Output<String> sourceCodeHash;
 
-    public Output<String> getSourceCodeHash() {
+    public Output<String> sourceCodeHash() {
         return this.sourceCodeHash == null ? Codegen.empty() : this.sourceCodeHash;
     }
 
@@ -288,7 +288,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -299,7 +299,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -310,7 +310,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracingConfig")
       private final @Nullable Output<FunctionTracingConfigArgs> tracingConfig;
 
-    public Output<FunctionTracingConfigArgs> getTracingConfig() {
+    public Output<FunctionTracingConfigArgs> tracingConfig() {
         return this.tracingConfig == null ? Codegen.empty() : this.tracingConfig;
     }
 
@@ -321,7 +321,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<FunctionVpcConfigArgs> vpcConfig;
 
-    public Output<FunctionVpcConfigArgs> getVpcConfig() {
+    public Output<FunctionVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

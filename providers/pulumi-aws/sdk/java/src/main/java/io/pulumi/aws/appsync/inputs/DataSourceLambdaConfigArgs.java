@@ -21,7 +21,7 @@ public final class DataSourceLambdaConfigArgs extends io.pulumi.resources.Resour
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 

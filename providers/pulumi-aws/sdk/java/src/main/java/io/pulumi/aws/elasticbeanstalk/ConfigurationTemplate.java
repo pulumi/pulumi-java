@@ -44,7 +44,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return name of the application to associate with this configuration template
      * 
      */
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     /**
@@ -58,7 +58,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return Short description of the Template
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return The ID of the environment used with this configuration template
      * 
      */
-    public Output</* @Nullable */ String> getEnvironmentId() {
+    public Output</* @Nullable */ String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -86,7 +86,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * @return A unique name for this Template.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * below in Option Settings
      * 
      */
-    public Output<List<ConfigurationTemplateSetting>> getSettings() {
+    public Output<List<ConfigurationTemplateSetting>> settings() {
         return this.settings;
     }
     /**
@@ -120,7 +120,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    public Output</* @Nullable */ String> getSolutionStackName() {
+    public Output</* @Nullable */ String> solutionStackName() {
         return this.solutionStackName;
     }
 

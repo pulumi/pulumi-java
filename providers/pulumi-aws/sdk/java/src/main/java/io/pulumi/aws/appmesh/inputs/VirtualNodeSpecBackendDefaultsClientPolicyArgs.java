@@ -22,7 +22,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyArgs extends io.pul
     @Import(name="tls")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs> tls;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs> getTls() {
+    public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

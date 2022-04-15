@@ -26,7 +26,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="acceptStatus")
       private final @Nullable Output<String> acceptStatus;
 
-    public Output<String> getAcceptStatus() {
+    public Output<String> acceptStatus() {
         return this.acceptStatus == null ? Codegen.empty() : this.acceptStatus;
     }
 
@@ -38,7 +38,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="accepter")
       private final @Nullable Output<VpcPeeringConnectionAccepterGetArgs> accepter;
 
-    public Output<VpcPeeringConnectionAccepterGetArgs> getAccepter() {
+    public Output<VpcPeeringConnectionAccepterGetArgs> accepter() {
         return this.accepter == null ? Codegen.empty() : this.accepter;
     }
 
@@ -49,7 +49,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> getAutoAccept() {
+    public Output<Boolean> autoAccept() {
         return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
     }
 
@@ -61,7 +61,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="peerOwnerId")
       private final @Nullable Output<String> peerOwnerId;
 
-    public Output<String> getPeerOwnerId() {
+    public Output<String> peerOwnerId() {
         return this.peerOwnerId == null ? Codegen.empty() : this.peerOwnerId;
     }
 
@@ -73,7 +73,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion == null ? Codegen.empty() : this.peerRegion;
     }
 
@@ -84,7 +84,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="peerVpcId")
       private final @Nullable Output<String> peerVpcId;
 
-    public Output<String> getPeerVpcId() {
+    public Output<String> peerVpcId() {
         return this.peerVpcId == null ? Codegen.empty() : this.peerVpcId;
     }
 
@@ -96,7 +96,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="requester")
       private final @Nullable Output<VpcPeeringConnectionRequesterGetArgs> requester;
 
-    public Output<VpcPeeringConnectionRequesterGetArgs> getRequester() {
+    public Output<VpcPeeringConnectionRequesterGetArgs> requester() {
         return this.requester == null ? Codegen.empty() : this.requester;
     }
 
@@ -107,7 +107,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -118,7 +118,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -129,7 +129,7 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

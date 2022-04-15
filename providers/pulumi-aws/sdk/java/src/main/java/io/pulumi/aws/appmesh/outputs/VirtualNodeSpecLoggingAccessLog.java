@@ -26,7 +26,7 @@ public final class VirtualNodeSpecLoggingAccessLog {
      * The file object to send virtual node access logs to.
      * 
     */
-    public Optional<VirtualNodeSpecLoggingAccessLogFile> getFile() {
+    public Optional<VirtualNodeSpecLoggingAccessLogFile> file() {
         return Optional.ofNullable(this.file);
     }
 

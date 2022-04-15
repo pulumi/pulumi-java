@@ -122,100 +122,100 @@ public final class GetLayerVersionResult {
      * The Amazon Resource Name (ARN) of the Lambda Layer with version.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public Optional<String> getCompatibleArchitecture() {
+    public Optional<String> compatibleArchitecture() {
         return Optional.ofNullable(this.compatibleArchitecture);
     }
     /**
      * A list of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleArchitectures) the specific Lambda Layer version is compatible with.
      * 
     */
-    public List<String> getCompatibleArchitectures() {
+    public List<String> compatibleArchitectures() {
         return this.compatibleArchitectures;
     }
-    public Optional<String> getCompatibleRuntime() {
+    public Optional<String> compatibleRuntime() {
         return Optional.ofNullable(this.compatibleRuntime);
     }
     /**
      * A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleRuntimes) the specific Lambda Layer version is compatible with.
      * 
     */
-    public List<String> getCompatibleRuntimes() {
+    public List<String> compatibleRuntimes() {
         return this.compatibleRuntimes;
     }
     /**
      * The date this resource was created.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * Description of the specific Lambda Layer version.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Amazon Resource Name (ARN) of the Lambda Layer without version.
      * 
     */
-    public String getLayerArn() {
+    public String layerArn() {
         return this.layerArn;
     }
-    public String getLayerName() {
+    public String layerName() {
         return this.layerName;
     }
     /**
      * License info associated with the specific Lambda Layer version.
      * 
     */
-    public String getLicenseInfo() {
+    public String licenseInfo() {
         return this.licenseInfo;
     }
     /**
      * The Amazon Resource Name (ARN) of a signing job.
      * 
     */
-    public String getSigningJobArn() {
+    public String signingJobArn() {
         return this.signingJobArn;
     }
     /**
      * The Amazon Resource Name (ARN) for a signing profile version.
      * 
     */
-    public String getSigningProfileVersionArn() {
+    public String signingProfileVersionArn() {
         return this.signingProfileVersionArn;
     }
     /**
      * Base64-encoded representation of raw SHA-256 sum of the zip file.
      * 
     */
-    public String getSourceCodeHash() {
+    public String sourceCodeHash() {
         return this.sourceCodeHash;
     }
     /**
      * The size in bytes of the function .zip file.
      * 
     */
-    public Integer getSourceCodeSize() {
+    public Integer sourceCodeSize() {
         return this.sourceCodeSize;
     }
     /**
      * This Lamba Layer version.
      * 
     */
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

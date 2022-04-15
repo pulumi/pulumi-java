@@ -42,21 +42,21 @@ public final class BucketLifecycleRuleTransition {
      * Specifies the date after which you want the corresponding action to take effect.
      * 
     */
-    public Optional<String> getDate() {
+    public Optional<String> date() {
         return Optional.ofNullable(this.date);
     }
     /**
      * Specifies the number of days after object creation when the specific rule action takes effect.
      * 
     */
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
      * 
     */
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
 

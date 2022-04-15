@@ -23,7 +23,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="samlMetadataDocument")
       private final @Nullable Output<String> samlMetadataDocument;
 
-    public Output<String> getSamlMetadataDocument() {
+    public Output<String> samlMetadataDocument() {
         return this.samlMetadataDocument == null ? Codegen.empty() : this.samlMetadataDocument;
     }
 
@@ -56,7 +56,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -78,7 +78,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
-    public Output<String> getValidUntil() {
+    public Output<String> validUntil() {
         return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 

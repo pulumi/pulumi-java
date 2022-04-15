@@ -42,7 +42,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * @return The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
      * 
      */
-    public Output</* @Nullable */ String> getComputePlatform() {
+    public Output</* @Nullable */ String> computePlatform() {
         return this.computePlatform;
     }
     /**
@@ -56,7 +56,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * @return The AWS Assigned deployment config id
      * 
      */
-    public Output<String> getDeploymentConfigId() {
+    public Output<String> deploymentConfigId() {
         return this.deploymentConfigId;
     }
     /**
@@ -70,7 +70,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the deployment config.
      * 
      */
-    public Output<String> getDeploymentConfigName() {
+    public Output<String> deploymentConfigName() {
         return this.deploymentConfigName;
     }
     /**
@@ -84,7 +84,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * @return A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
      * 
      */
-    public Output</* @Nullable */ DeploymentConfigMinimumHealthyHosts> getMinimumHealthyHosts() {
+    public Output</* @Nullable */ DeploymentConfigMinimumHealthyHosts> minimumHealthyHosts() {
         return this.minimumHealthyHosts;
     }
     /**
@@ -98,7 +98,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * @return A traffic_routing_config block. Traffic Routing Config is documented below.
      * 
      */
-    public Output</* @Nullable */ DeploymentConfigTrafficRoutingConfig> getTrafficRoutingConfig() {
+    public Output</* @Nullable */ DeploymentConfigTrafficRoutingConfig> trafficRoutingConfig() {
         return this.trafficRoutingConfig;
     }
 

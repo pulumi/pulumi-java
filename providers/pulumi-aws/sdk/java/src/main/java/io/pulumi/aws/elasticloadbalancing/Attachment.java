@@ -43,7 +43,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return The name of the ELB.
      * 
      */
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb;
     }
     /**
@@ -57,7 +57,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * @return Instance ID to place in the ELB pool.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 

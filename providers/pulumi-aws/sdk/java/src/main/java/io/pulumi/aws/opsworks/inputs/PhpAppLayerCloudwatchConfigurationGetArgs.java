@@ -20,14 +20,14 @@ public final class PhpAppLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logStreams")
       private final @Nullable Output<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
-    public Output<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
+    public Output<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams() {
         return this.logStreams == null ? Codegen.empty() : this.logStreams;
     }
 

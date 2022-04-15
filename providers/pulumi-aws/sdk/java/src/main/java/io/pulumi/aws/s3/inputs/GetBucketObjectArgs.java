@@ -22,7 +22,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -33,14 +33,14 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
     @Import(name="range")
       private final @Nullable String range;
 
-    public Optional<String> getRange() {
+    public Optional<String> range() {
         return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
     }
 
@@ -51,7 +51,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -62,7 +62,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="versionId")
       private final @Nullable String versionId;
 
-    public Optional<String> getVersionId() {
+    public Optional<String> versionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
     }
 

@@ -20,7 +20,7 @@ public final class GetPolicyDocumentStatementPrincipal extends io.pulumi.resourc
     @Import(name="identifiers", required=true)
       private final List<String> identifiers;
 
-    public List<String> getIdentifiers() {
+    public List<String> identifiers() {
         return this.identifiers;
     }
 
@@ -31,7 +31,7 @@ public final class GetPolicyDocumentStatementPrincipal extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

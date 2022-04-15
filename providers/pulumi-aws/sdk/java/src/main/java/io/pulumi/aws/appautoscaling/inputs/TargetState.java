@@ -23,7 +23,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
-    public Output<Integer> getMaxCapacity() {
+    public Output<Integer> maxCapacity() {
         return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
@@ -34,7 +34,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minCapacity")
       private final @Nullable Output<Integer> minCapacity;
 
-    public Output<Integer> getMinCapacity() {
+    public Output<Integer> minCapacity() {
         return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 
@@ -45,7 +45,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -56,7 +56,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -67,7 +67,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalableDimension")
       private final @Nullable Output<String> scalableDimension;
 
-    public Output<String> getScalableDimension() {
+    public Output<String> scalableDimension() {
         return this.scalableDimension == null ? Codegen.empty() : this.scalableDimension;
     }
 
@@ -78,7 +78,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
+    public Output<String> serviceNamespace() {
         return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
     }
 

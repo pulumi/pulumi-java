@@ -22,7 +22,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -33,7 +33,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
@@ -44,7 +44,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

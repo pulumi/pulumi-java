@@ -21,7 +21,7 @@ public final class ConnectionConfirmationArgs extends io.pulumi.resources.Resour
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 

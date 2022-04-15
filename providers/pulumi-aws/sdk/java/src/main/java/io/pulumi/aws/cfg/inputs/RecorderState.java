@@ -23,7 +23,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="recordingGroup")
       private final @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
 
-    public Output<RecorderRecordingGroupGetArgs> getRecordingGroup() {
+    public Output<RecorderRecordingGroupGetArgs> recordingGroup() {
         return this.recordingGroup == null ? Codegen.empty() : this.recordingGroup;
     }
 
@@ -45,7 +45,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

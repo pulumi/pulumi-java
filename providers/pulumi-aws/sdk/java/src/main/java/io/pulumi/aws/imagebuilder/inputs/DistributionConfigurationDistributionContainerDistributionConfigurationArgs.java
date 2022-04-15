@@ -24,7 +24,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="containerTags")
       private final @Nullable Output<List<String>> containerTags;
 
-    public Output<List<String>> getContainerTags() {
+    public Output<List<String>> containerTags() {
         return this.containerTags == null ? Codegen.empty() : this.containerTags;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="targetRepository", required=true)
       private final Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository;
 
-    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> getTargetRepository() {
+    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository() {
         return this.targetRepository;
     }
 

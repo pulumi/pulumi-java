@@ -25,7 +25,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersGetArgs 
     @Import(name="bodies")
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyGetArgs>> bodies;
 
-    public Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyGetArgs>> getBodies() {
+    public Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyGetArgs>> bodies() {
         return this.bodies == null ? Codegen.empty() : this.bodies;
     }
 
@@ -36,7 +36,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersGetArgs 
     @Import(name="headers")
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderGetArgs>> headers;
 
-    public Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderGetArgs>> getHeaders() {
+    public Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderGetArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -47,7 +47,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersGetArgs 
     @Import(name="queryStrings")
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringGetArgs>> queryStrings;
 
-    public Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringGetArgs>> getQueryStrings() {
+    public Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringGetArgs>> queryStrings() {
         return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 

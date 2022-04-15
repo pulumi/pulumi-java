@@ -19,7 +19,7 @@ public final class GetCodeSigningConfigPolicy extends io.pulumi.resources.Invoke
     @Import(name="untrustedArtifactOnDeployment", required=true)
       private final String untrustedArtifactOnDeployment;
 
-    public String getUntrustedArtifactOnDeployment() {
+    public String untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 

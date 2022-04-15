@@ -23,7 +23,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
@@ -34,7 +34,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
     @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
+    public Output<String> policyArn() {
         return this.policyArn;
     }
 
@@ -45,7 +45,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
     @Import(name="roles")
       private final @Nullable Output<List<String>> roles;
 
-    public Output<List<String>> getRoles() {
+    public Output<List<String>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 
@@ -56,7 +56,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
     @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users == null ? Codegen.empty() : this.users;
     }
 

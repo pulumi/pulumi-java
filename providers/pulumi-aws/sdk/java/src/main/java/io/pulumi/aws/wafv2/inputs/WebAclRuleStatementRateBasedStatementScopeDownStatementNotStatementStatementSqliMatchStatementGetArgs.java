@@ -24,7 +24,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

@@ -21,7 +21,7 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -32,7 +32,7 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     @Import(name="scheduleIdentifier", required=true)
       private final Output<String> scheduleIdentifier;
 
-    public Output<String> getScheduleIdentifier() {
+    public Output<String> scheduleIdentifier() {
         return this.scheduleIdentifier;
     }
 

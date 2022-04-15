@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
-    public Output<String> getFileKey() {
+    public Output<String> fileKey() {
         return this.fileKey;
     }
 

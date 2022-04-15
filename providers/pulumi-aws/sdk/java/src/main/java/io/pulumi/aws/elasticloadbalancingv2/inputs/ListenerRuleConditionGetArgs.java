@@ -28,7 +28,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
     @Import(name="hostHeader")
       private final @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader;
 
-    public Output<ListenerRuleConditionHostHeaderGetArgs> getHostHeader() {
+    public Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader() {
         return this.hostHeader == null ? Codegen.empty() : this.hostHeader;
     }
 
@@ -39,7 +39,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
     @Import(name="httpHeader")
       private final @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader;
 
-    public Output<ListenerRuleConditionHttpHeaderGetArgs> getHttpHeader() {
+    public Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader() {
         return this.httpHeader == null ? Codegen.empty() : this.httpHeader;
     }
 
@@ -50,7 +50,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
     @Import(name="httpRequestMethod")
       private final @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod;
 
-    public Output<ListenerRuleConditionHttpRequestMethodGetArgs> getHttpRequestMethod() {
+    public Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod() {
         return this.httpRequestMethod == null ? Codegen.empty() : this.httpRequestMethod;
     }
 
@@ -61,7 +61,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
     @Import(name="pathPattern")
       private final @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern;
 
-    public Output<ListenerRuleConditionPathPatternGetArgs> getPathPattern() {
+    public Output<ListenerRuleConditionPathPatternGetArgs> pathPattern() {
         return this.pathPattern == null ? Codegen.empty() : this.pathPattern;
     }
 
@@ -72,7 +72,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
     @Import(name="queryStrings")
       private final @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings;
 
-    public Output<List<ListenerRuleConditionQueryStringGetArgs>> getQueryStrings() {
+    public Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings() {
         return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 
@@ -83,7 +83,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
     @Import(name="sourceIp")
       private final @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp;
 
-    public Output<ListenerRuleConditionSourceIpGetArgs> getSourceIp() {
+    public Output<ListenerRuleConditionSourceIpGetArgs> sourceIp() {
         return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
     }
 

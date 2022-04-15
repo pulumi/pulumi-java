@@ -28,7 +28,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> getBody() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> getMethod() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> getQueryString() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementB
     @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> getUriPath() {
+    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

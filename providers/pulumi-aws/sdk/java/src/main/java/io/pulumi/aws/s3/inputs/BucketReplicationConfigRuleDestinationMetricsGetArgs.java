@@ -23,7 +23,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
     @Import(name="eventThreshold")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
 
-    public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> getEventThreshold() {
+    public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold() {
         return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
     }
 
@@ -34,7 +34,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

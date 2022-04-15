@@ -59,7 +59,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Instruction set architecture for your Lambda function. Valid values are `["x86_64"]` and `["arm64"]`. Default is `["x86_64"]`. Removing this attribute, function's architecture stay the same.
      * 
      */
-    public Output<List<String>> getArchitectures() {
+    public Output<List<String>> architectures() {
         return this.architectures;
     }
     /**
@@ -73,7 +73,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -87,7 +87,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Path to the function's deployment package within the local filesystem. Conflicts with `image_uri`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
-    public Output</* @Nullable */ Archive> getCode() {
+    public Output</* @Nullable */ Archive> code() {
         return this.code;
     }
     /**
@@ -101,7 +101,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return To enable code signing for this function, specify the ARN of a code-signing configuration. A code-signing configuration includes a set of signing profiles, which define the trusted publishers for this function.
      * 
      */
-    public Output</* @Nullable */ String> getCodeSigningConfigArn() {
+    public Output</* @Nullable */ String> codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
@@ -115,7 +115,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionDeadLetterConfig> getDeadLetterConfig() {
+    public Output</* @Nullable */ FunctionDeadLetterConfig> deadLetterConfig() {
         return this.deadLetterConfig;
     }
     /**
@@ -129,7 +129,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Description of what your Lambda Function does.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -143,7 +143,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionEnvironment> getEnvironment() {
+    public Output</* @Nullable */ FunctionEnvironment> environment() {
         return this.environment;
     }
     /**
@@ -157,7 +157,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionFileSystemConfig> getFileSystemConfig() {
+    public Output</* @Nullable */ FunctionFileSystemConfig> fileSystemConfig() {
         return this.fileSystemConfig;
     }
     /**
@@ -171,7 +171,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
      * 
      */
-    public Output</* @Nullable */ String> getHandler() {
+    public Output</* @Nullable */ String> handler() {
         return this.handler;
     }
     /**
@@ -185,7 +185,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionImageConfig> getImageConfig() {
+    public Output</* @Nullable */ FunctionImageConfig> imageConfig() {
         return this.imageConfig;
     }
     /**
@@ -199,7 +199,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return ECR image URI containing the function's deployment package. Conflicts with `filename`, `s3_bucket`, `s3_key`, and `s3_object_version`.
      * 
      */
-    public Output</* @Nullable */ String> getImageUri() {
+    public Output</* @Nullable */ String> imageUri() {
         return this.imageUri;
     }
     /**
@@ -213,7 +213,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`.
      * 
      */
-    public Output<String> getInvokeArn() {
+    public Output<String> invokeArn() {
         return this.invokeArn;
     }
     /**
@@ -227,7 +227,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and the provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyArn() {
+    public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -241,7 +241,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Date this resource was last modified.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -255,7 +255,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
      * 
      */
-    public Output</* @Nullable */ List<String>> getLayers() {
+    public Output</* @Nullable */ List<String>> layers() {
         return this.layers;
     }
     /**
@@ -269,7 +269,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
      * 
      */
-    public Output</* @Nullable */ Integer> getMemorySize() {
+    public Output</* @Nullable */ Integer> memorySize() {
         return this.memorySize;
     }
     /**
@@ -283,7 +283,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Unique name for your Lambda Function.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -297,7 +297,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Lambda deployment package type. Valid values are `Zip` and `Image`. Defaults to `Zip`.
      * 
      */
-    public Output</* @Nullable */ String> getPackageType() {
+    public Output</* @Nullable */ String> packageType() {
         return this.packageType;
     }
     /**
@@ -311,7 +311,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPublish() {
+    public Output</* @Nullable */ Boolean> publish() {
         return this.publish;
     }
     /**
@@ -325,7 +325,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return ARN identifying your Lambda Function Version (if versioning is enabled via `publish = true`).
      * 
      */
-    public Output<String> getQualifiedArn() {
+    public Output<String> qualifiedArn() {
         return this.qualifiedArn;
     }
     /**
@@ -339,7 +339,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
      * 
      */
-    public Output</* @Nullable */ Integer> getReservedConcurrentExecutions() {
+    public Output</* @Nullable */ Integer> reservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions;
     }
     /**
@@ -353,7 +353,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the function's execution role. The role provides the function's identity and access to AWS services and resources.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -367,7 +367,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Identifier of the function's runtime. See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
      * 
      */
-    public Output</* @Nullable */ String> getRuntime() {
+    public Output</* @Nullable */ String> runtime() {
         return this.runtime;
     }
     /**
@@ -381,7 +381,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return S3 bucket location containing the function's deployment package. Conflicts with `filename` and `image_uri`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
-    public Output</* @Nullable */ String> getS3Bucket() {
+    public Output</* @Nullable */ String> s3Bucket() {
         return this.s3Bucket;
     }
     /**
@@ -395,7 +395,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return S3 key of an object containing the function's deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
-    public Output</* @Nullable */ String> getS3Key() {
+    public Output</* @Nullable */ String> s3Key() {
         return this.s3Key;
     }
     /**
@@ -409,7 +409,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Object version containing the function's deployment package. Conflicts with `filename` and `image_uri`.
      * 
      */
-    public Output</* @Nullable */ String> getS3ObjectVersion() {
+    public Output</* @Nullable */ String> s3ObjectVersion() {
         return this.s3ObjectVersion;
     }
     /**
@@ -423,7 +423,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return ARN of the signing job.
      * 
      */
-    public Output<String> getSigningJobArn() {
+    public Output<String> signingJobArn() {
         return this.signingJobArn;
     }
     /**
@@ -437,7 +437,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return ARN of the signing profile version.
      * 
      */
-    public Output<String> getSigningProfileVersionArn() {
+    public Output<String> signingProfileVersionArn() {
         return this.signingProfileVersionArn;
     }
     /**
@@ -451,7 +451,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3_key`. The usual way to set this is `filebase64sha256("file.zip")`, where "file.zip" is the local filename of the lambda function source archive.
      * 
      */
-    public Output<String> getSourceCodeHash() {
+    public Output<String> sourceCodeHash() {
         return this.sourceCodeHash;
     }
     /**
@@ -465,7 +465,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Size in bytes of the function .zip file.
      * 
      */
-    public Output<Integer> getSourceCodeSize() {
+    public Output<Integer> sourceCodeSize() {
         return this.sourceCodeSize;
     }
     /**
@@ -479,7 +479,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the object.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -493,7 +493,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -507,7 +507,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html).
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -521,7 +521,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output<FunctionTracingConfig> getTracingConfig() {
+    public Output<FunctionTracingConfig> tracingConfig() {
         return this.tracingConfig;
     }
     /**
@@ -537,7 +537,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * * `vpc_config.vpc_id` - ID of the VPC.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
     /**
@@ -551,7 +551,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Configuration block. Detailed below.
      * 
      */
-    public Output</* @Nullable */ FunctionVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ FunctionVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 

@@ -27,7 +27,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="asyncInferenceConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigGetArgs> getAsyncInferenceConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig() {
         return this.asyncInferenceConfig == null ? Codegen.empty() : this.asyncInferenceConfig;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="dataCaptureConfig")
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig;
 
-    public Output<EndpointConfigurationDataCaptureConfigGetArgs> getDataCaptureConfig() {
+    public Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig() {
         return this.dataCaptureConfig == null ? Codegen.empty() : this.dataCaptureConfig;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -71,7 +71,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="productionVariants")
       private final @Nullable Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants;
 
-    public Output<List<EndpointConfigurationProductionVariantGetArgs>> getProductionVariants() {
+    public Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants() {
         return this.productionVariants == null ? Codegen.empty() : this.productionVariants;
     }
 
@@ -93,7 +93,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

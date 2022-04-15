@@ -22,7 +22,7 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluateTargetHealth", required=true)
       private final Output<Boolean> evaluateTargetHealth;
 
-    public Output<Boolean> getEvaluateTargetHealth() {
+    public Output<Boolean> evaluateTargetHealth() {
         return this.evaluateTargetHealth;
     }
 
@@ -33,7 +33,7 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,7 +44,7 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 

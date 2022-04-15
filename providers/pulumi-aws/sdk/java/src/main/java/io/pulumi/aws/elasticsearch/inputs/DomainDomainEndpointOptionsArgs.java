@@ -23,7 +23,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="customEndpoint")
       private final @Nullable Output<String> customEndpoint;
 
-    public Output<String> getCustomEndpoint() {
+    public Output<String> customEndpoint() {
         return this.customEndpoint == null ? Codegen.empty() : this.customEndpoint;
     }
 
@@ -34,7 +34,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="customEndpointCertificateArn")
       private final @Nullable Output<String> customEndpointCertificateArn;
 
-    public Output<String> getCustomEndpointCertificateArn() {
+    public Output<String> customEndpointCertificateArn() {
         return this.customEndpointCertificateArn == null ? Codegen.empty() : this.customEndpointCertificateArn;
     }
 
@@ -45,7 +45,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="customEndpointEnabled")
       private final @Nullable Output<Boolean> customEndpointEnabled;
 
-    public Output<Boolean> getCustomEndpointEnabled() {
+    public Output<Boolean> customEndpointEnabled() {
         return this.customEndpointEnabled == null ? Codegen.empty() : this.customEndpointEnabled;
     }
 
@@ -56,14 +56,14 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
     @Import(name="enforceHttps")
       private final @Nullable Output<Boolean> enforceHttps;
 
-    public Output<Boolean> getEnforceHttps() {
+    public Output<Boolean> enforceHttps() {
         return this.enforceHttps == null ? Codegen.empty() : this.enforceHttps;
     }
 
     @Import(name="tlsSecurityPolicy")
       private final @Nullable Output<String> tlsSecurityPolicy;
 
-    public Output<String> getTlsSecurityPolicy() {
+    public Output<String> tlsSecurityPolicy() {
         return this.tlsSecurityPolicy == null ? Codegen.empty() : this.tlsSecurityPolicy;
     }
 

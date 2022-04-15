@@ -24,7 +24,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

@@ -21,14 +21,14 @@ public final class GetSchedulingPolicyFairSharePolicy extends io.pulumi.resource
     @Import(name="computeReservation", required=true)
       private final Integer computeReservation;
 
-    public Integer getComputeReservation() {
+    public Integer computeReservation() {
         return this.computeReservation;
     }
 
     @Import(name="shareDecaySeconds", required=true)
       private final Integer shareDecaySeconds;
 
-    public Integer getShareDecaySeconds() {
+    public Integer shareDecaySeconds() {
         return this.shareDecaySeconds;
     }
 
@@ -39,7 +39,7 @@ public final class GetSchedulingPolicyFairSharePolicy extends io.pulumi.resource
     @Import(name="shareDistributions", required=true)
       private final List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
-    public List<GetSchedulingPolicyFairSharePolicyShareDistribution> getShareDistributions() {
+    public List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions() {
         return this.shareDistributions;
     }
 

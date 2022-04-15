@@ -45,7 +45,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of Glue Workflow
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +59,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getDefaultRunProperties() {
+    public Output</* @Nullable */ Map<String,Object>> defaultRunProperties() {
         return this.defaultRunProperties;
     }
     /**
@@ -73,7 +73,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Description of the workflow.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -87,7 +87,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxConcurrentRuns() {
+    public Output</* @Nullable */ Integer> maxConcurrentRuns() {
         return this.maxConcurrentRuns;
     }
     /**
@@ -101,7 +101,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The name you assign to this workflow.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

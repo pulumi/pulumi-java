@@ -30,19 +30,19 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption {
         this.validUntil = validUntil;
     }
 
-    public Integer getBlockDurationMinutes() {
+    public Integer blockDurationMinutes() {
         return this.blockDurationMinutes;
     }
-    public String getInstanceInterruptionBehavior() {
+    public String instanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior;
     }
-    public String getMaxPrice() {
+    public String maxPrice() {
         return this.maxPrice;
     }
-    public String getSpotInstanceType() {
+    public String spotInstanceType() {
         return this.spotInstanceType;
     }
-    public String getValidUntil() {
+    public String validUntil() {
         return this.validUntil;
     }
 

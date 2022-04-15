@@ -141,116 +141,116 @@ public final class GetVpcIamPoolResult {
      * The IP protocol assigned to this pool.
      * 
     */
-    public String getAddressFamily() {
+    public String addressFamily() {
         return this.addressFamily;
     }
     /**
      * A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16.
      * 
     */
-    public Integer getAllocationDefaultNetmaskLength() {
+    public Integer allocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength;
     }
     /**
      * The maximum netmask length that will be required for CIDR allocations in this pool.
      * 
     */
-    public Integer getAllocationMaxNetmaskLength() {
+    public Integer allocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength;
     }
     /**
      * The minimum netmask length that will be required for CIDR allocations in this pool.
      * 
     */
-    public Integer getAllocationMinNetmaskLength() {
+    public Integer allocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength;
     }
     /**
      * Tags that are required to create resources in using this pool.
      * 
     */
-    public Map<String,String> getAllocationResourceTags() {
+    public Map<String,String> allocationResourceTags() {
         return this.allocationResourceTags;
     }
     /**
      * Amazon Resource Name (ARN) of the pool
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * If enabled, IPAM will continuously look for resources within the CIDR range of this pool and automatically import them as allocations into your IPAM.
      * 
     */
-    public Boolean getAutoImport() {
+    public Boolean autoImport() {
         return this.autoImport;
     }
     /**
      * Limits which service in AWS that the pool can be used in. "ec2", for example, allows users to use space for Elastic IP addresses and VPCs.
      * 
     */
-    public String getAwsService() {
+    public String awsService() {
         return this.awsService;
     }
     /**
      * A description for the IPAM pool.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public List<GetVpcIamPoolFilter> getFilters() {
+    public List<GetVpcIamPoolFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getIpamPoolId() {
+    public Optional<String> ipamPoolId() {
         return Optional.ofNullable(this.ipamPoolId);
     }
     /**
      * The ID of the scope the pool belongs to.
      * 
     */
-    public String getIpamScopeId() {
+    public String ipamScopeId() {
         return this.ipamScopeId;
     }
-    public String getIpamScopeType() {
+    public String ipamScopeType() {
         return this.ipamScopeType;
     }
     /**
      * Locale is the Region where your pool is available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region.
      * 
     */
-    public String getLocale() {
+    public String locale() {
         return this.locale;
     }
-    public Integer getPoolDepth() {
+    public Integer poolDepth() {
         return this.poolDepth;
     }
     /**
      * Defines whether or not IPv6 pool space is publicly ∂advertisable over the internet.
      * 
     */
-    public Boolean getPubliclyAdvertisable() {
+    public Boolean publiclyAdvertisable() {
         return this.publiclyAdvertisable;
     }
     /**
      * The ID of the source IPAM pool.
      * 
     */
-    public String getSourceIpamPoolId() {
+    public String sourceIpamPoolId() {
         return this.sourceIpamPoolId;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * A map of tags to assigned to the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

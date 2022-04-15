@@ -24,7 +24,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementX
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementX
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

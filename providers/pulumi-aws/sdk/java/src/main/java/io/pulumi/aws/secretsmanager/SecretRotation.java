@@ -50,7 +50,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * @return Specifies whether automatic rotation is enabled for this secret.
      * 
      */
-    public Output<Boolean> getRotationEnabled() {
+    public Output<Boolean> rotationEnabled() {
         return this.rotationEnabled;
     }
     /**
@@ -64,7 +64,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * @return Specifies the ARN of the Lambda function that can rotate the secret.
      * 
      */
-    public Output<String> getRotationLambdaArn() {
+    public Output<String> rotationLambdaArn() {
         return this.rotationLambdaArn;
     }
     /**
@@ -78,7 +78,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * @return A structure that defines the rotation configuration for this secret. Defined below.
      * 
      */
-    public Output<SecretRotationRotationRules> getRotationRules() {
+    public Output<SecretRotationRotationRules> rotationRules() {
         return this.rotationRules;
     }
     /**
@@ -92,13 +92,13 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * @return Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
      * 
      */
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
 

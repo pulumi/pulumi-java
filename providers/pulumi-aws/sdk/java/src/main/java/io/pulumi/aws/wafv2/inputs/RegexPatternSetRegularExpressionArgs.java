@@ -21,7 +21,7 @@ public final class RegexPatternSetRegularExpressionArgs extends io.pulumi.resour
     @Import(name="regexString", required=true)
       private final Output<String> regexString;
 
-    public Output<String> getRegexString() {
+    public Output<String> regexString() {
         return this.regexString;
     }
 

@@ -23,7 +23,7 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -45,7 +45,7 @@ public final class ProtectionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

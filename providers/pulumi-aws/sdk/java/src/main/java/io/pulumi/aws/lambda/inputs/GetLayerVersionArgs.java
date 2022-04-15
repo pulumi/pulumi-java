@@ -22,7 +22,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="compatibleArchitecture")
       private final @Nullable String compatibleArchitecture;
 
-    public Optional<String> getCompatibleArchitecture() {
+    public Optional<String> compatibleArchitecture() {
         return this.compatibleArchitecture == null ? Optional.empty() : Optional.ofNullable(this.compatibleArchitecture);
     }
 
@@ -33,7 +33,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="compatibleRuntime")
       private final @Nullable String compatibleRuntime;
 
-    public Optional<String> getCompatibleRuntime() {
+    public Optional<String> compatibleRuntime() {
         return this.compatibleRuntime == null ? Optional.empty() : Optional.ofNullable(this.compatibleRuntime);
     }
 
@@ -44,7 +44,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="layerName", required=true)
       private final String layerName;
 
-    public String getLayerName() {
+    public String layerName() {
         return this.layerName;
     }
 
@@ -55,7 +55,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable Integer version;
 
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

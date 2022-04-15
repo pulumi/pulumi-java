@@ -21,10 +21,10 @@ public final class GetTableServerSideEncryption {
         this.kmsKeyArn = kmsKeyArn;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getKmsKeyArn() {
+    public String kmsKeyArn() {
         return this.kmsKeyArn;
     }
 

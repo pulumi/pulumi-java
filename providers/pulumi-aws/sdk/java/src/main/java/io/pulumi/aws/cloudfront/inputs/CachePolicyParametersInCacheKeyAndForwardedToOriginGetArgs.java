@@ -25,7 +25,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="cookiesConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs> cookiesConfig;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs> getCookiesConfig() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs> cookiesConfig() {
         return this.cookiesConfig;
     }
 
@@ -36,7 +36,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="enableAcceptEncodingBrotli")
       private final @Nullable Output<Boolean> enableAcceptEncodingBrotli;
 
-    public Output<Boolean> getEnableAcceptEncodingBrotli() {
+    public Output<Boolean> enableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli == null ? Codegen.empty() : this.enableAcceptEncodingBrotli;
     }
 
@@ -47,7 +47,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="enableAcceptEncodingGzip")
       private final @Nullable Output<Boolean> enableAcceptEncodingGzip;
 
-    public Output<Boolean> getEnableAcceptEncodingGzip() {
+    public Output<Boolean> enableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip == null ? Codegen.empty() : this.enableAcceptEncodingGzip;
     }
 
@@ -58,7 +58,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="headersConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> headersConfig;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> getHeadersConfig() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigGetArgs> headersConfig() {
         return this.headersConfig;
     }
 
@@ -69,7 +69,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs ex
     @Import(name="queryStringsConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs> queryStringsConfig;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs> getQueryStringsConfig() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigGetArgs> queryStringsConfig() {
         return this.queryStringsConfig;
     }
 

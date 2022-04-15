@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGetArgs extends io.pu
     @Import(name="grpc")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs> grpc;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs> getGrpc() {
+    public Output<VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs> grpc() {
         return this.grpc == null ? Codegen.empty() : this.grpc;
     }
 
@@ -35,7 +35,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGetArgs extends io.pu
     @Import(name="http")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttpGetArgs> http;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolHttpGetArgs> getHttp() {
+    public Output<VirtualGatewaySpecListenerConnectionPoolHttpGetArgs> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGetArgs extends io.pu
     @Import(name="http2")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs> http2;
 
-    public Output<VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs> getHttp2() {
+    public Output<VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs> http2() {
         return this.http2 == null ? Codegen.empty() : this.http2;
     }
 

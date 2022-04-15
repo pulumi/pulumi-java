@@ -75,49 +75,49 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
      * Inspect all query arguments.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArguments> getAllQueryArguments() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
      * Inspect the request body, which immediately follows the request headers.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBody> getBody() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethod> getMethod() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryString> getQueryString() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * Inspect a single header. See Single Header below for details.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader> getSingleHeader() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument> getSingleQueryArgument() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
     */
-    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPath> getUriPath() {
+    public Optional<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
 

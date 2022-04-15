@@ -23,7 +23,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="directoryName", required=true)
       private final Output<String> directoryName;
 
-    public Output<String> getDirectoryName() {
+    public Output<String> directoryName() {
         return this.directoryName;
     }
 
@@ -34,7 +34,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="organizationalUnitDistinguishedNames", required=true)
       private final Output<List<String>> organizationalUnitDistinguishedNames;
 
-    public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
+    public Output<List<String>> organizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames;
     }
 
@@ -45,7 +45,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceAccountCredentials", required=true)
       private final Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
-    public Output<DirectoryConfigServiceAccountCredentialsArgs> getServiceAccountCredentials() {
+    public Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials() {
         return this.serviceAccountCredentials;
     }
 

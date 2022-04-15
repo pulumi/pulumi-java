@@ -42,7 +42,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -56,7 +56,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The ARN of the CodeDeploy application.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
      * 
      */
-    public Output</* @Nullable */ String> getComputePlatform() {
+    public Output</* @Nullable */ String> computePlatform() {
         return this.computePlatform;
     }
     /**
@@ -84,7 +84,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name for a connection to a GitHub account.
      * 
      */
-    public Output<String> getGithubAccountName() {
+    public Output<String> githubAccountName() {
         return this.githubAccountName;
     }
     /**
@@ -98,7 +98,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Whether the user has authenticated with GitHub for the specified application.
      * 
      */
-    public Output<Boolean> getLinkedToGithub() {
+    public Output<Boolean> linkedToGithub() {
         return this.linkedToGithub;
     }
     /**
@@ -112,7 +112,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the application.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +126,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +140,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

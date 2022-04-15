@@ -15,14 +15,14 @@ public final class GetListenerDefaultActionRedirect extends io.pulumi.resources.
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -33,28 +33,28 @@ public final class GetListenerDefaultActionRedirect extends io.pulumi.resources.
     @Import(name="port", required=true)
       private final String port;
 
-    public String getPort() {
+    public String port() {
         return this.port;
     }
 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
     @Import(name="statusCode", required=true)
       private final String statusCode;
 
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

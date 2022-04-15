@@ -22,7 +22,7 @@ public final class IpGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class IpGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 

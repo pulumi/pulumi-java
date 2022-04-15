@@ -32,14 +32,14 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * The Column Delimiter.
      * 
     */
-    public String getRecordColumnDelimiter() {
+    public String recordColumnDelimiter() {
         return this.recordColumnDelimiter;
     }
     /**
      * The Row Delimiter.
      * 
     */
-    public String getRecordRowDelimiter() {
+    public String recordRowDelimiter() {
         return this.recordRowDelimiter;
     }
 

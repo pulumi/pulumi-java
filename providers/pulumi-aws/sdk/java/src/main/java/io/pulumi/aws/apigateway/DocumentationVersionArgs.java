@@ -22,7 +22,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -33,7 +33,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -44,7 +44,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

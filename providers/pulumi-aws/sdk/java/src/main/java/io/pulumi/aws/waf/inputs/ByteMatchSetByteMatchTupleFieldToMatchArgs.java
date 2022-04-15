@@ -23,7 +23,7 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchArgs extends io.pulumi.
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -37,7 +37,7 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchArgs extends io.pulumi.
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

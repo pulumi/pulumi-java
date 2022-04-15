@@ -26,7 +26,7 @@ public final class ClusterIdentityOidc {
      * Issuer URL for the OpenID Connect identity provider.
      * 
     */
-    public Optional<String> getIssuer() {
+    public Optional<String> issuer() {
         return Optional.ofNullable(this.issuer);
     }
 

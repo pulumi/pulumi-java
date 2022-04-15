@@ -23,7 +23,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -45,7 +45,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -56,7 +56,7 @@ public final class AdmChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

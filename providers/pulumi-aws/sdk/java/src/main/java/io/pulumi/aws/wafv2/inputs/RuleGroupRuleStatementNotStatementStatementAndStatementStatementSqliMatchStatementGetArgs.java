@@ -24,7 +24,7 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatem
     @Import(name="fieldToMatch")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatem
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

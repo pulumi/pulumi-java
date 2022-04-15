@@ -21,7 +21,7 @@ public final class ClassifierXmlClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="classification", required=true)
       private final Output<String> classification;
 
-    public Output<String> getClassification() {
+    public Output<String> classification() {
         return this.classification;
     }
 
@@ -32,7 +32,7 @@ public final class ClassifierXmlClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="rowTag", required=true)
       private final Output<String> rowTag;
 
-    public Output<String> getRowTag() {
+    public Output<String> rowTag() {
         return this.rowTag;
     }
 

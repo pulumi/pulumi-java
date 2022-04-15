@@ -34,7 +34,7 @@ public final class GeoMatchSetGeoMatchConstraint {
      * The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
@@ -43,7 +43,7 @@ public final class GeoMatchSetGeoMatchConstraint {
      * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

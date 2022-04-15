@@ -23,13 +23,13 @@ public final class GetSigningJobRevocationRecord {
         this.revokedBy = revokedBy;
     }
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
-    public String getRevokedAt() {
+    public String revokedAt() {
         return this.revokedAt;
     }
-    public String getRevokedBy() {
+    public String revokedBy() {
         return this.revokedBy;
     }
 

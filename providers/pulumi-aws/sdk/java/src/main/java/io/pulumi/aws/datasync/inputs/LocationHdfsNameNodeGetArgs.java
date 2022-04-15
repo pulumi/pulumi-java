@@ -22,7 +22,7 @@ public final class LocationHdfsNameNodeGetArgs extends io.pulumi.resources.Resou
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -33,7 +33,7 @@ public final class LocationHdfsNameNodeGetArgs extends io.pulumi.resources.Resou
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 

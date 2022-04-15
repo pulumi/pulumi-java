@@ -23,7 +23,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -45,7 +45,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

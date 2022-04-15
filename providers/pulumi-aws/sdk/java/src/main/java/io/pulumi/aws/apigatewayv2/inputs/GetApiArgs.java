@@ -22,7 +22,7 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiId", required=true)
       private final String apiId;
 
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
     @Import(name="classification", required=true)
       private final Output<String> classification;
 
-    public Output<String> getClassification() {
+    public Output<String> classification() {
         return this.classification;
     }
 
@@ -33,7 +33,7 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
     @Import(name="customPatterns")
       private final @Nullable Output<String> customPatterns;
 
-    public Output<String> getCustomPatterns() {
+    public Output<String> customPatterns() {
         return this.customPatterns == null ? Codegen.empty() : this.customPatterns;
     }
 
@@ -44,7 +44,7 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
     @Import(name="grokPattern", required=true)
       private final Output<String> grokPattern;
 
-    public Output<String> getGrokPattern() {
+    public Output<String> grokPattern() {
         return this.grokPattern;
     }
 

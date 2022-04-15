@@ -26,7 +26,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -37,7 +37,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegationSetId")
       private final @Nullable Output<String> delegationSetId;
 
-    public Output<String> getDelegationSetId() {
+    public Output<String> delegationSetId() {
         return this.delegationSetId == null ? Codegen.empty() : this.delegationSetId;
     }
 
@@ -48,7 +48,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -59,7 +59,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -81,7 +81,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcs")
       private final @Nullable Output<List<ZoneVpcArgs>> vpcs;
 
-    public Output<List<ZoneVpcArgs>> getVpcs() {
+    public Output<List<ZoneVpcArgs>> vpcs() {
         return this.vpcs == null ? Codegen.empty() : this.vpcs;
     }
 

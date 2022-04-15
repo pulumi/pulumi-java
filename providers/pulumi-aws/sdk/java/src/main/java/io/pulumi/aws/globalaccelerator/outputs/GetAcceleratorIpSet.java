@@ -21,10 +21,10 @@ public final class GetAcceleratorIpSet {
         this.ipFamily = ipFamily;
     }
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
-    public String getIpFamily() {
+    public String ipFamily() {
         return this.ipFamily;
     }
 

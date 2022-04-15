@@ -24,7 +24,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -35,7 +35,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationSet")
       private final @Nullable Output<String> configurationSet;
 
-    public Output<String> getConfigurationSet() {
+    public Output<String> configurationSet() {
         return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
     }
 
@@ -46,7 +46,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -57,7 +57,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fromAddress")
       private final @Nullable Output<String> fromAddress;
 
-    public Output<String> getFromAddress() {
+    public Output<String> fromAddress() {
         return this.fromAddress == null ? Codegen.empty() : this.fromAddress;
     }
 
@@ -68,7 +68,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<String> identity;
 
-    public Output<String> getIdentity() {
+    public Output<String> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -79,7 +79,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="messagesPerSecond")
       private final @Nullable Output<Integer> messagesPerSecond;
 
-    public Output<Integer> getMessagesPerSecond() {
+    public Output<Integer> messagesPerSecond() {
         return this.messagesPerSecond == null ? Codegen.empty() : this.messagesPerSecond;
     }
 
@@ -90,7 +90,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

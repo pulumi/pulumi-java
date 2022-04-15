@@ -22,7 +22,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authScheme")
       private final @Nullable Output<String> authScheme;
 
-    public Output<String> getAuthScheme() {
+    public Output<String> authScheme() {
         return this.authScheme == null ? Codegen.empty() : this.authScheme;
     }
 
@@ -33,7 +33,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamAuth")
       private final @Nullable Output<String> iamAuth;
 
-    public Output<String> getIamAuth() {
+    public Output<String> iamAuth() {
         return this.iamAuth == null ? Codegen.empty() : this.iamAuth;
     }
 
@@ -55,7 +55,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 

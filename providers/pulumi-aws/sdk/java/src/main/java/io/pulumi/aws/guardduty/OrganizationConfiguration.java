@@ -44,7 +44,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * @return When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
      * 
      */
-    public Output<Boolean> getAutoEnable() {
+    public Output<Boolean> autoEnable() {
         return this.autoEnable;
     }
     /**
@@ -58,7 +58,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * @return Configuration for the collected datasources.
      * 
      */
-    public Output<OrganizationConfigurationDatasources> getDatasources() {
+    public Output<OrganizationConfigurationDatasources> datasources() {
         return this.datasources;
     }
     /**
@@ -72,7 +72,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * @return The detector ID of the GuardDuty account.
      * 
      */
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 

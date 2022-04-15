@@ -33,23 +33,23 @@ public final class GetCredentialsResult {
         this.registryId = registryId;
     }
 
-    public String getAuthorizationToken() {
+    public String authorizationToken() {
         return this.authorizationToken;
     }
-    public String getExpiresAt() {
+    public String expiresAt() {
         return this.expiresAt;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getProxyEndpoint() {
+    public String proxyEndpoint() {
         return this.proxyEndpoint;
     }
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
 

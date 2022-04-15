@@ -57,35 +57,35 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
      * 
     */
-    public List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> getDimensions() {
+    public List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
      * The name of the metric.
      * 
     */
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
     /**
      * The namespace of the metric.
      * 
     */
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
     /**
      * The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
      * 
     */
-    public String getStatistic() {
+    public String statistic() {
         return this.statistic;
     }
     /**
      * The unit of the metric.
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
 

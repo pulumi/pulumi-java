@@ -23,7 +23,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="encryptionKey")
       private final @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey;
 
-    public Output<PipelineArtifactStoreEncryptionKeyGetArgs> getEncryptionKey() {
+    public Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -34,7 +34,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -45,7 +45,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -56,7 +56,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

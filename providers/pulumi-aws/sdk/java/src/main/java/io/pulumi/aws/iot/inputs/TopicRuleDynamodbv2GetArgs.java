@@ -23,7 +23,7 @@ public final class TopicRuleDynamodbv2GetArgs extends io.pulumi.resources.Resour
     @Import(name="putItem")
       private final @Nullable Output<TopicRuleDynamodbv2PutItemGetArgs> putItem;
 
-    public Output<TopicRuleDynamodbv2PutItemGetArgs> getPutItem() {
+    public Output<TopicRuleDynamodbv2PutItemGetArgs> putItem() {
         return this.putItem == null ? Codegen.empty() : this.putItem;
     }
 
@@ -34,7 +34,7 @@ public final class TopicRuleDynamodbv2GetArgs extends io.pulumi.resources.Resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

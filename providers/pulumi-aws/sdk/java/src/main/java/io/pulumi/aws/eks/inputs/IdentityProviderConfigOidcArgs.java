@@ -23,7 +23,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -34,7 +34,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="groupsClaim")
       private final @Nullable Output<String> groupsClaim;
 
-    public Output<String> getGroupsClaim() {
+    public Output<String> groupsClaim() {
         return this.groupsClaim == null ? Codegen.empty() : this.groupsClaim;
     }
 
@@ -45,7 +45,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="groupsPrefix")
       private final @Nullable Output<String> groupsPrefix;
 
-    public Output<String> getGroupsPrefix() {
+    public Output<String> groupsPrefix() {
         return this.groupsPrefix == null ? Codegen.empty() : this.groupsPrefix;
     }
 
@@ -56,7 +56,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="identityProviderConfigName", required=true)
       private final Output<String> identityProviderConfigName;
 
-    public Output<String> getIdentityProviderConfigName() {
+    public Output<String> identityProviderConfigName() {
         return this.identityProviderConfigName;
     }
 
@@ -67,7 +67,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="issuerUrl", required=true)
       private final Output<String> issuerUrl;
 
-    public Output<String> getIssuerUrl() {
+    public Output<String> issuerUrl() {
         return this.issuerUrl;
     }
 
@@ -78,7 +78,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="requiredClaims")
       private final @Nullable Output<Map<String,String>> requiredClaims;
 
-    public Output<Map<String,String>> getRequiredClaims() {
+    public Output<Map<String,String>> requiredClaims() {
         return this.requiredClaims == null ? Codegen.empty() : this.requiredClaims;
     }
 
@@ -89,7 +89,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="usernameClaim")
       private final @Nullable Output<String> usernameClaim;
 
-    public Output<String> getUsernameClaim() {
+    public Output<String> usernameClaim() {
         return this.usernameClaim == null ? Codegen.empty() : this.usernameClaim;
     }
 
@@ -100,7 +100,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
     @Import(name="usernamePrefix")
       private final @Nullable Output<String> usernamePrefix;
 
-    public Output<String> getUsernamePrefix() {
+    public Output<String> usernamePrefix() {
         return this.usernamePrefix == null ? Codegen.empty() : this.usernamePrefix;
     }
 

@@ -145,120 +145,120 @@ public final class GetSnapshotResult {
      * Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The data encryption key identifier for the snapshot.
      * 
     */
-    public String getDataEncryptionKeyId() {
+    public String dataEncryptionKeyId() {
         return this.dataEncryptionKeyId;
     }
     /**
      * A description for the snapshot
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Whether the snapshot is encrypted.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
-    public List<GetSnapshotFilter> getFilters() {
+    public List<GetSnapshotFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
      * The ARN of the Outpost on which the snapshot is stored.
      * 
     */
-    public String getOutpostArn() {
+    public String outpostArn() {
         return this.outpostArn;
     }
     /**
      * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
     */
-    public String getOwnerAlias() {
+    public String ownerAlias() {
         return this.ownerAlias;
     }
     /**
      * The AWS account ID of the EBS snapshot owner.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners == null ? List.of() : this.owners;
     }
-    public List<String> getRestorableByUserIds() {
+    public List<String> restorableByUserIds() {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
     }
     /**
      * The snapshot ID (e.g., snap-59fcb34e).
      * 
     */
-    public String getSnapshotId() {
+    public String snapshotId() {
         return this.snapshotId;
     }
-    public List<String> getSnapshotIds() {
+    public List<String> snapshotIds() {
         return this.snapshotIds == null ? List.of() : this.snapshotIds;
     }
     /**
      * The snapshot state.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The storage tier in which the snapshot is stored.
      * 
     */
-    public String getStorageTier() {
+    public String storageTier() {
         return this.storageTier;
     }
     /**
      * A map of tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The volume ID (e.g., vol-59fcb34e).
      * 
     */
-    public String getVolumeId() {
+    public String volumeId() {
         return this.volumeId;
     }
     /**
      * The size of the drive in GiBs.
      * 
     */
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
 

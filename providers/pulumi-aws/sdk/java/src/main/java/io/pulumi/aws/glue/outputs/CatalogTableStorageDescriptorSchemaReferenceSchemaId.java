@@ -41,21 +41,21 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
      * Name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
      * 
     */
-    public Optional<String> getRegistryName() {
+    public Optional<String> registryName() {
         return Optional.ofNullable(this.registryName);
     }
     /**
      * ARN of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
     */
-    public Optional<String> getSchemaArn() {
+    public Optional<String> schemaArn() {
         return Optional.ofNullable(this.schemaArn);
     }
     /**
      * Name of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
     */
-    public Optional<String> getSchemaName() {
+    public Optional<String> schemaName() {
         return Optional.ofNullable(this.schemaName);
     }
 

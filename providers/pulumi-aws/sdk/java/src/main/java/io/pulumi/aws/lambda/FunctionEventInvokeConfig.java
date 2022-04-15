@@ -60,7 +60,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * @return Configuration block with destination configuration. See below for details.
      * 
      */
-    public Output</* @Nullable */ FunctionEventInvokeConfigDestinationConfig> getDestinationConfig() {
+    public Output</* @Nullable */ FunctionEventInvokeConfigDestinationConfig> destinationConfig() {
         return this.destinationConfig;
     }
     /**
@@ -74,7 +74,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * @return Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -88,7 +88,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * @return Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumEventAgeInSeconds() {
+    public Output</* @Nullable */ Integer> maximumEventAgeInSeconds() {
         return this.maximumEventAgeInSeconds;
     }
     /**
@@ -102,7 +102,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * @return Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumRetryAttempts() {
+    public Output</* @Nullable */ Integer> maximumRetryAttempts() {
         return this.maximumRetryAttempts;
     }
     /**
@@ -116,7 +116,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * @return Lambda Function published version, `$LATEST`, or Lambda Alias name.
      * 
      */
-    public Output</* @Nullable */ String> getQualifier() {
+    public Output</* @Nullable */ String> qualifier() {
         return this.qualifier;
     }
 

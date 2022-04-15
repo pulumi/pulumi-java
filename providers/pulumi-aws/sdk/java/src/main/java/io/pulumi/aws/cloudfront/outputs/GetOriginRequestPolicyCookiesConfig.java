@@ -22,10 +22,10 @@ public final class GetOriginRequestPolicyCookiesConfig {
         this.cookies = cookies;
     }
 
-    public String getCookieBehavior() {
+    public String cookieBehavior() {
         return this.cookieBehavior;
     }
-    public List<GetOriginRequestPolicyCookiesConfigCookie> getCookies() {
+    public List<GetOriginRequestPolicyCookiesConfigCookie> cookies() {
         return this.cookies;
     }
 

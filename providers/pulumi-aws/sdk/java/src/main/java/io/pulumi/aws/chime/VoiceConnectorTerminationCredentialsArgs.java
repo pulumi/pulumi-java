@@ -23,7 +23,7 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
     @Import(name="credentials", required=true)
       private final Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
 
-    public Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> getCredentials() {
+    public Output<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials() {
         return this.credentials;
     }
 
@@ -34,7 +34,7 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
     @Import(name="voiceConnectorId", required=true)
       private final Output<String> voiceConnectorId;
 
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

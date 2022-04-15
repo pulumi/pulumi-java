@@ -22,7 +22,7 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -33,7 +33,7 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
     @Import(name="contentSha256")
       private final @Nullable Output<String> contentSha256;
 
-    public Output<String> getContentSha256() {
+    public Output<String> contentSha256() {
         return this.contentSha256 == null ? Codegen.empty() : this.contentSha256;
     }
 
@@ -44,7 +44,7 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

@@ -25,7 +25,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -36,7 +36,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="inputFormatConfiguration", required=true)
       private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs> inputFormatConfiguration;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs> getInputFormatConfiguration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs> inputFormatConfiguration() {
         return this.inputFormatConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="outputFormatConfiguration", required=true)
       private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs> outputFormatConfiguration;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs> getOutputFormatConfiguration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs> outputFormatConfiguration() {
         return this.outputFormatConfiguration;
     }
 
@@ -58,7 +58,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="schemaConfiguration", required=true)
       private final Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs> schemaConfiguration;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs> getSchemaConfiguration() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs> schemaConfiguration() {
         return this.schemaConfiguration;
     }
 

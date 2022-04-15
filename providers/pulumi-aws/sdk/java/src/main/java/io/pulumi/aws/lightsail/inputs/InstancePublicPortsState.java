@@ -24,7 +24,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
@@ -35,7 +35,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
     @Import(name="portInfos")
       private final @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
 
-    public Output<List<InstancePublicPortsPortInfoGetArgs>> getPortInfos() {
+    public Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos() {
         return this.portInfos == null ? Codegen.empty() : this.portInfos;
     }
 

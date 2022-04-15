@@ -22,7 +22,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location", required=true)
       private final Output<DocumentationPartLocationArgs> location;
 
-    public Output<DocumentationPartLocationArgs> getLocation() {
+    public Output<DocumentationPartLocationArgs> location() {
         return this.location;
     }
 
@@ -33,7 +33,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     @Import(name="properties", required=true)
       private final Output<String> properties;
 
-    public Output<String> getProperties() {
+    public Output<String> properties() {
         return this.properties;
     }
 
@@ -44,7 +44,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 

@@ -22,7 +22,7 @@ public final class ServiceHealthCheckCustomConfigGetArgs extends io.pulumi.resou
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
+    public Output<Integer> failureThreshold() {
         return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 

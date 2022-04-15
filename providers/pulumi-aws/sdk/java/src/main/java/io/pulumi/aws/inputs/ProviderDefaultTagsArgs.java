@@ -19,7 +19,7 @@ public final class ProviderDefaultTagsArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

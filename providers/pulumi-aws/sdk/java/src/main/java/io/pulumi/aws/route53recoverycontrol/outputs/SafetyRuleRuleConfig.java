@@ -41,21 +41,21 @@ public final class SafetyRuleRuleConfig {
      * Logical negation of the rule.
      * 
     */
-    public Boolean getInverted() {
+    public Boolean inverted() {
         return this.inverted;
     }
     /**
      * Number of controls that must be set when you specify an `ATLEAST` type rule.
      * 
     */
-    public Integer getThreshold() {
+    public Integer threshold() {
         return this.threshold;
     }
     /**
      * Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

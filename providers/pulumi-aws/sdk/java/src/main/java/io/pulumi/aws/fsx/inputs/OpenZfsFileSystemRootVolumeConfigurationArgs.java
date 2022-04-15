@@ -26,7 +26,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="copyTagsToSnapshots")
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
-    public Output<Boolean> getCopyTagsToSnapshots() {
+    public Output<Boolean> copyTagsToSnapshots() {
         return this.copyTagsToSnapshots == null ? Codegen.empty() : this.copyTagsToSnapshots;
     }
 
@@ -37,7 +37,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
-    public Output<String> getDataCompressionType() {
+    public Output<String> dataCompressionType() {
         return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
@@ -48,7 +48,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="nfsExports")
       private final @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports;
 
-    public Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> getNfsExports() {
+    public Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports() {
         return this.nfsExports == null ? Codegen.empty() : this.nfsExports;
     }
 
@@ -59,7 +59,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -70,7 +70,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     @Import(name="userAndGroupQuotas")
       private final @Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
-    public Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> getUserAndGroupQuotas() {
+    public Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas() {
         return this.userAndGroupQuotas == null ? Codegen.empty() : this.userAndGroupQuotas;
     }
 

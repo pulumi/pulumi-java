@@ -24,7 +24,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appName", required=true)
       private final Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -35,7 +35,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appType", required=true)
       private final Output<String> appType;
 
-    public Output<String> getAppType() {
+    public Output<String> appType() {
         return this.appType;
     }
 
@@ -46,7 +46,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainId", required=true)
       private final Output<String> domainId;
 
-    public Output<String> getDomainId() {
+    public Output<String> domainId() {
         return this.domainId;
     }
 
@@ -57,7 +57,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSpec")
       private final @Nullable Output<AppResourceSpecArgs> resourceSpec;
 
-    public Output<AppResourceSpecArgs> getResourceSpec() {
+    public Output<AppResourceSpecArgs> resourceSpec() {
         return this.resourceSpec == null ? Codegen.empty() : this.resourceSpec;
     }
 
@@ -68,7 +68,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProfileName", required=true)
       private final Output<String> userProfileName;
 
-    public Output<String> getUserProfileName() {
+    public Output<String> userProfileName() {
         return this.userProfileName;
     }
 

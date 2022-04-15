@@ -43,7 +43,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return ARN of this auto scaling configuration version.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return Name of the auto scaling configuration.
      * 
      */
-    public Output<String> getAutoScalingConfigurationName() {
+    public Output<String> autoScalingConfigurationName() {
         return this.autoScalingConfigurationName;
     }
     /**
@@ -71,7 +71,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return The revision of this auto scaling configuration.
      * 
      */
-    public Output<Integer> getAutoScalingConfigurationRevision() {
+    public Output<Integer> autoScalingConfigurationRevision() {
         return this.autoScalingConfigurationRevision;
     }
     /**
@@ -85,7 +85,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return Whether the auto scaling configuration has the highest `auto_scaling_configuration_revision` among all configurations that share the same `auto_scaling_configuration_name`.
      * 
      */
-    public Output<Boolean> getLatest() {
+    public Output<Boolean> latest() {
         return this.latest;
     }
     /**
@@ -99,7 +99,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return The maximal number of concurrent requests that you want an instance to process. When the number of concurrent requests goes over this limit, App Runner scales up your service.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxConcurrency() {
+    public Output</* @Nullable */ Integer> maxConcurrency() {
         return this.maxConcurrency;
     }
     /**
@@ -113,7 +113,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return The maximal number of instances that App Runner provisions for your service.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxSize() {
+    public Output</* @Nullable */ Integer> maxSize() {
         return this.maxSize;
     }
     /**
@@ -127,7 +127,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return The minimal number of instances that App Runner provisions for your service.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinSize() {
+    public Output</* @Nullable */ Integer> minSize() {
         return this.minSize;
     }
     /**
@@ -141,7 +141,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return The current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can't be used. It is permanently removed some time after deletion.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -155,7 +155,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +169,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

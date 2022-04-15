@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
      * 
     */
-    public String getAddressDefinition() {
+    public String addressDefinition() {
         return this.addressDefinition;
     }
 

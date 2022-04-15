@@ -51,31 +51,31 @@ public final class LoadBalancerSubnetMapping {
      * The allocation ID of the Elastic IP address.
      * 
     */
-    public Optional<String> getAllocationId() {
+    public Optional<String> allocationId() {
         return Optional.ofNullable(this.allocationId);
     }
     /**
      * An ipv6 address within the subnet to assign to the internet-facing load balancer.
      * 
     */
-    public Optional<String> getIpv6Address() {
+    public Optional<String> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
-    public Optional<String> getOutpostId() {
+    public Optional<String> outpostId() {
         return Optional.ofNullable(this.outpostId);
     }
     /**
      * A private ipv4 address within the subnet to assign to the internal-facing load balancer.
      * 
     */
-    public Optional<String> getPrivateIpv4Address() {
+    public Optional<String> privateIpv4Address() {
         return Optional.ofNullable(this.privateIpv4Address);
     }
     /**
      * The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
      * 
     */
-    public String getSubnetId() {
+    public String subnetId() {
         return this.subnetId;
     }
 

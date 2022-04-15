@@ -22,7 +22,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
     @Import(name="coreCount")
       private final @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> getCoreCount() {
+    public Output<Integer> coreCount() {
         return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
@@ -34,7 +34,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
     @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> getThreadsPerCore() {
+    public Output<Integer> threadsPerCore() {
         return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 

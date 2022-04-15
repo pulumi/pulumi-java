@@ -24,7 +24,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
     @Import(name="fieldSelectors", required=true)
       private final Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
 
-    public Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> getFieldSelectors() {
+    public Output<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors() {
         return this.fieldSelectors;
     }
 
@@ -35,7 +35,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

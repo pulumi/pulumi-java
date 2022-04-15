@@ -22,7 +22,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
     @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups;
     }
 

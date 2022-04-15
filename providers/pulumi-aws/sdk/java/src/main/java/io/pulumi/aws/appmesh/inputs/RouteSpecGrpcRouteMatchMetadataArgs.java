@@ -24,7 +24,7 @@ public final class RouteSpecGrpcRouteMatchMetadataArgs extends io.pulumi.resourc
     @Import(name="invert")
       private final @Nullable Output<Boolean> invert;
 
-    public Output<Boolean> getInvert() {
+    public Output<Boolean> invert() {
         return this.invert == null ? Codegen.empty() : this.invert;
     }
 
@@ -35,7 +35,7 @@ public final class RouteSpecGrpcRouteMatchMetadataArgs extends io.pulumi.resourc
     @Import(name="match")
       private final @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchArgs> match;
 
-    public Output<RouteSpecGrpcRouteMatchMetadataMatchArgs> getMatch() {
+    public Output<RouteSpecGrpcRouteMatchMetadataMatchArgs> match() {
         return this.match == null ? Codegen.empty() : this.match;
     }
 
@@ -46,7 +46,7 @@ public final class RouteSpecGrpcRouteMatchMetadataArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

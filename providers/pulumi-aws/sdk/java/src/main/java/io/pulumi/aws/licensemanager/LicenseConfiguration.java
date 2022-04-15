@@ -57,7 +57,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return The license configuration ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Description of the license configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +85,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Number of licenses managed by the license configuration.
      * 
      */
-    public Output</* @Nullable */ Integer> getLicenseCount() {
+    public Output</* @Nullable */ Integer> licenseCount() {
         return this.licenseCount;
     }
     /**
@@ -99,7 +99,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Sets the number of available licenses as a hard limit.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLicenseCountHardLimit() {
+    public Output</* @Nullable */ Boolean> licenseCountHardLimit() {
         return this.licenseCountHardLimit;
     }
     /**
@@ -113,7 +113,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
      * 
      */
-    public Output<String> getLicenseCountingType() {
+    public Output<String> licenseCountingType() {
         return this.licenseCountingType;
     }
     /**
@@ -127,7 +127,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Array of configured License Manager rules.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLicenseRules() {
+    public Output</* @Nullable */ List<String>> licenseRules() {
         return this.licenseRules;
     }
     /**
@@ -141,7 +141,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Name of the license configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +155,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return Account ID of the owner of the license configuration.
      * 
      */
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
     /**
@@ -169,7 +169,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -183,7 +183,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

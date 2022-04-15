@@ -32,14 +32,14 @@ public final class VoiceConnectorTerminationCredentialsCredential {
      * RFC2617 compliant password associated with the SIP credentials.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * RFC2617 compliant username associated with the SIP credentials.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

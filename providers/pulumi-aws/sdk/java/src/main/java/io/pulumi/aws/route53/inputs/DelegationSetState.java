@@ -23,7 +23,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameServers")
       private final @Nullable Output<List<String>> nameServers;
 
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers == null ? Codegen.empty() : this.nameServers;
     }
 
@@ -47,7 +47,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 

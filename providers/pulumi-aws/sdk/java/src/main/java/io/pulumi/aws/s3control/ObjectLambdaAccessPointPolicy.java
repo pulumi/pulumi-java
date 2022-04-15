@@ -33,7 +33,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
     @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -47,7 +47,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @return Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy;
     }
     /**
@@ -61,7 +61,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @return The name of the Object Lambda Access Point.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +75,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * @return The Object Lambda Access Point resource policy document.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

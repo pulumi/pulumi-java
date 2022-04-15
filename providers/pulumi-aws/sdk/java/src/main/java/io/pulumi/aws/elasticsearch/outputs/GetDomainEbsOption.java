@@ -48,28 +48,28 @@ public final class GetDomainEbsOption {
      * Whether EBS volumes are attached to data nodes in the domain.
      * 
     */
-    public Boolean getEbsEnabled() {
+    public Boolean ebsEnabled() {
         return this.ebsEnabled;
     }
     /**
      * The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
      * 
     */
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
     /**
      * The size of EBS volumes attached to data nodes (in GB).
      * 
     */
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
     /**
      * The type of EBS volumes attached to data nodes.
      * 
     */
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

@@ -33,14 +33,14 @@ public final class GetDomainEncryptionAtRest {
      * Whether node to node encryption is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * The KMS key id used to encrypt data at rest.
      * 
     */
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
 

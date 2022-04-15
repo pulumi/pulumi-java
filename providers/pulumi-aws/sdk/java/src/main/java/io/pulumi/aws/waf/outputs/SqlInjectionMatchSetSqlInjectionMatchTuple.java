@@ -37,7 +37,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
      * Specifies where in a web request to look for snippets of malicious SQL code.
      * 
     */
-    public SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch getFieldToMatch() {
+    public SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
     /**
@@ -48,7 +48,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
      * for all supported values.
      * 
     */
-    public String getTextTransformation() {
+    public String textTransformation() {
         return this.textTransformation;
     }
 

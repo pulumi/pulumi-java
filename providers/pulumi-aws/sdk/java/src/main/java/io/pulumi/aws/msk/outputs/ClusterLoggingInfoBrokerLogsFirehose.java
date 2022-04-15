@@ -35,14 +35,14 @@ public final class ClusterLoggingInfoBrokerLogsFirehose {
      * Name of the Kinesis Data Firehose delivery stream to deliver logs to.
      * 
     */
-    public Optional<String> getDeliveryStream() {
+    public Optional<String> deliveryStream() {
         return Optional.ofNullable(this.deliveryStream);
     }
     /**
      * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

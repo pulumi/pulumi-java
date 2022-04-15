@@ -21,7 +21,7 @@ public final class ModelPrimaryContainerImageConfigGetArgs extends io.pulumi.res
     @Import(name="repositoryAccessMode", required=true)
       private final Output<String> repositoryAccessMode;
 
-    public Output<String> getRepositoryAccessMode() {
+    public Output<String> repositoryAccessMode() {
         return this.repositoryAccessMode;
     }
 

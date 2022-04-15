@@ -23,7 +23,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="artifactIdentifier")
       private final @Nullable Output<String> artifactIdentifier;
 
-    public Output<String> getArtifactIdentifier() {
+    public Output<String> artifactIdentifier() {
         return this.artifactIdentifier == null ? Codegen.empty() : this.artifactIdentifier;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bucketOwnerAccess")
       private final @Nullable Output<String> bucketOwnerAccess;
 
-    public Output<String> getBucketOwnerAccess() {
+    public Output<String> bucketOwnerAccess() {
         return this.bucketOwnerAccess == null ? Codegen.empty() : this.bucketOwnerAccess;
     }
 
@@ -45,7 +45,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionDisabled")
       private final @Nullable Output<Boolean> encryptionDisabled;
 
-    public Output<Boolean> getEncryptionDisabled() {
+    public Output<Boolean> encryptionDisabled() {
         return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
     }
 
@@ -56,7 +56,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -67,7 +67,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="namespaceType")
       private final @Nullable Output<String> namespaceType;
 
-    public Output<String> getNamespaceType() {
+    public Output<String> namespaceType() {
         return this.namespaceType == null ? Codegen.empty() : this.namespaceType;
     }
 
@@ -89,7 +89,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="overrideArtifactName")
       private final @Nullable Output<Boolean> overrideArtifactName;
 
-    public Output<Boolean> getOverrideArtifactName() {
+    public Output<Boolean> overrideArtifactName() {
         return this.overrideArtifactName == null ? Codegen.empty() : this.overrideArtifactName;
     }
 
@@ -100,7 +100,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packaging")
       private final @Nullable Output<String> packaging;
 
-    public Output<String> getPackaging() {
+    public Output<String> packaging() {
         return this.packaging == null ? Codegen.empty() : this.packaging;
     }
 
@@ -111,7 +111,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -122,7 +122,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

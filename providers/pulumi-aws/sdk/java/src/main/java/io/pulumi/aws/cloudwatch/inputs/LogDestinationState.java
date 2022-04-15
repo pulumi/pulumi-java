@@ -22,7 +22,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -55,7 +55,7 @@ public final class LogDestinationState extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 

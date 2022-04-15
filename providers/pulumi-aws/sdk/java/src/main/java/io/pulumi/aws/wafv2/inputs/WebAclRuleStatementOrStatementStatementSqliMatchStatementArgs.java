@@ -24,7 +24,7 @@ public final class WebAclRuleStatementOrStatementStatementSqliMatchStatementArgs
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementOrStatementStatementSqliMatchStatementArgs
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementOrStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementOrStatementStatementSqliMatchStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementOrStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

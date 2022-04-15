@@ -40,7 +40,7 @@ public class FleetStackAssociation extends io.pulumi.resources.CustomResource {
      * @return Name of the fleet.
      * 
      */
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
     /**
@@ -54,7 +54,7 @@ public class FleetStackAssociation extends io.pulumi.resources.CustomResource {
      * @return Name of the stack.
      * 
      */
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 

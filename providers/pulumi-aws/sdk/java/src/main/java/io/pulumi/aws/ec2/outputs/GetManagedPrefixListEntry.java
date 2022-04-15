@@ -20,10 +20,10 @@ public final class GetManagedPrefixListEntry {
         this.description = description;
     }
 
-    public String getCidr() {
+    public String cidr() {
         return this.cidr;
     }
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 

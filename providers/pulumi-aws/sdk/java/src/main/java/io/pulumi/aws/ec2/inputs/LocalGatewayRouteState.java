@@ -22,7 +22,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
+    public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
@@ -33,7 +33,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     @Import(name="localGatewayRouteTableId")
       private final @Nullable Output<String> localGatewayRouteTableId;
 
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Codegen.empty() : this.localGatewayRouteTableId;
     }
 
@@ -44,7 +44,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     @Import(name="localGatewayVirtualInterfaceGroupId")
       private final @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
 
-    public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
+    public Output<String> localGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId == null ? Codegen.empty() : this.localGatewayVirtualInterfaceGroupId;
     }
 

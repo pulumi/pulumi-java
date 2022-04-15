@@ -19,7 +19,7 @@ public final class GetGroupLaunchTemplate extends io.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -30,14 +30,14 @@ public final class GetGroupLaunchTemplate extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

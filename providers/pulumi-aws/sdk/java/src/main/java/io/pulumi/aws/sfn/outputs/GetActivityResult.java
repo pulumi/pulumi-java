@@ -34,24 +34,24 @@ public final class GetActivityResult {
         this.name = name;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The date the activity was created.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

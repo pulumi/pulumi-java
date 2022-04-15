@@ -22,7 +22,7 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="data", required=true)
       private final Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 

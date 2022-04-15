@@ -33,14 +33,14 @@ public final class MLTransformParameters {
      * The parameters for the find matches algorithm. see Find Matches Parameters.
      * 
     */
-    public MLTransformParametersFindMatchesParameters getFindMatchesParameters() {
+    public MLTransformParametersFindMatchesParameters findMatchesParameters() {
         return this.findMatchesParameters;
     }
     /**
      * The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
      * 
     */
-    public String getTransformType() {
+    public String transformType() {
         return this.transformType;
     }
 

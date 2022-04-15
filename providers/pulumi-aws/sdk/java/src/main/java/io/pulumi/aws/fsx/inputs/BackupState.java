@@ -23,7 +23,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -45,7 +45,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -56,7 +56,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
@@ -67,7 +67,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -78,7 +78,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -89,7 +89,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -100,7 +100,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 

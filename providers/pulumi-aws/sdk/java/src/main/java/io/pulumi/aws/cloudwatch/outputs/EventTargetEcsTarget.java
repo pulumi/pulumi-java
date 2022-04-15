@@ -103,77 +103,77 @@ public final class EventTargetEcsTarget {
      * Specifies whether to enable Amazon ECS managed tags for the task.
      * 
     */
-    public Optional<Boolean> getEnableEcsManagedTags() {
+    public Optional<Boolean> enableEcsManagedTags() {
         return Optional.ofNullable(this.enableEcsManagedTags);
     }
     /**
      * Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
      * 
     */
-    public Optional<Boolean> getEnableExecuteCommand() {
+    public Optional<Boolean> enableExecuteCommand() {
         return Optional.ofNullable(this.enableExecuteCommand);
     }
     /**
      * Specifies an ECS task group for the task. The maximum length is 255 characters.
      * 
     */
-    public Optional<String> getGroup() {
+    public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
      * 
     */
-    public Optional<String> getLaunchType() {
+    public Optional<String> launchType() {
         return Optional.ofNullable(this.launchType);
     }
     /**
      * Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
      * 
     */
-    public Optional<EventTargetEcsTargetNetworkConfiguration> getNetworkConfiguration() {
+    public Optional<EventTargetEcsTargetNetworkConfiguration> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
     /**
      * An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
      * 
     */
-    public List<EventTargetEcsTargetPlacementConstraint> getPlacementConstraints() {
+    public List<EventTargetEcsTargetPlacementConstraint> placementConstraints() {
         return this.placementConstraints == null ? List.of() : this.placementConstraints;
     }
     /**
      * Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
      * 
     */
-    public Optional<String> getPlatformVersion() {
+    public Optional<String> platformVersion() {
         return Optional.ofNullable(this.platformVersion);
     }
     /**
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
      * 
     */
-    public Optional<String> getPropagateTags() {
+    public Optional<String> propagateTags() {
         return Optional.ofNullable(this.propagateTags);
     }
     /**
      * A map of tags to assign to ecs resources.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The number of tasks to create based on the TaskDefinition. The default is 1.
      * 
     */
-    public Optional<Integer> getTaskCount() {
+    public Optional<Integer> taskCount() {
         return Optional.ofNullable(this.taskCount);
     }
     /**
      * The ARN of the task definition to use if the event target is an Amazon ECS cluster.
      * 
     */
-    public String getTaskDefinitionArn() {
+    public String taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 

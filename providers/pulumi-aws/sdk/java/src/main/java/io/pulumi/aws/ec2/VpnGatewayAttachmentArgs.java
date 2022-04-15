@@ -21,7 +21,7 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -32,7 +32,7 @@ public final class VpnGatewayAttachmentArgs extends io.pulumi.resources.Resource
     @Import(name="vpnGatewayId", required=true)
       private final Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
+    public Output<String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 

@@ -46,26 +46,26 @@ public final class GetOrderableClusterResult {
      * List of Availability Zone names where the Redshit Cluster is available.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
-    public String getClusterType() {
+    public String clusterType() {
         return this.clusterType;
     }
-    public String getClusterVersion() {
+    public String clusterVersion() {
         return this.clusterVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getNodeType() {
+    public String nodeType() {
         return this.nodeType;
     }
-    public List<String> getPreferredNodeTypes() {
+    public List<String> preferredNodeTypes() {
         return this.preferredNodeTypes == null ? List.of() : this.preferredNodeTypes;
     }
 

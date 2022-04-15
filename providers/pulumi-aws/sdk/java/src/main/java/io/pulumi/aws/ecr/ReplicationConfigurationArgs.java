@@ -22,7 +22,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="replicationConfiguration")
       private final @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
-    public Output<ReplicationConfigurationReplicationConfigurationArgs> getReplicationConfiguration() {
+    public Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration() {
         return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 

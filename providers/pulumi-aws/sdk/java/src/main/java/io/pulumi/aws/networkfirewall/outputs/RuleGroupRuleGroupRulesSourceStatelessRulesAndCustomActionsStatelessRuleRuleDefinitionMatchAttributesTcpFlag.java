@@ -37,7 +37,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
      * 
     */
-    public List<String> getFlags() {
+    public List<String> flags() {
         return this.flags;
     }
     /**
@@ -45,7 +45,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
      * 
     */
-    public List<String> getMasks() {
+    public List<String> masks() {
         return this.masks == null ? List.of() : this.masks;
     }
 

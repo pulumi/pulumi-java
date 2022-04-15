@@ -26,7 +26,7 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
     @Import(name="inputPaths")
       private final @Nullable Output<Map<String,String>> inputPaths;
 
-    public Output<Map<String,String>> getInputPaths() {
+    public Output<Map<String,String>> inputPaths() {
         return this.inputPaths == null ? Codegen.empty() : this.inputPaths;
     }
 
@@ -37,7 +37,7 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
     @Import(name="inputTemplate", required=true)
       private final Output<String> inputTemplate;
 
-    public Output<String> getInputTemplate() {
+    public Output<String> inputTemplate() {
         return this.inputTemplate;
     }
 

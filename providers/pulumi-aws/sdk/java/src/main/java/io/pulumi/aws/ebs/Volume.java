@@ -43,7 +43,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The AZ where the EBS volume will exist.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -71,7 +71,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return If true, the disk will be encrypted.
      * 
      */
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted;
     }
     /**
@@ -85,13 +85,13 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The amount of IOPS to provision for the disk. Only valid for `type` of `io1`, `io2` or `gp3`.
      * 
      */
-    public Output<Integer> getIops() {
+    public Output<Integer> iops() {
         return this.iops;
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -105,7 +105,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
      * 
      */
-    public Output</* @Nullable */ Boolean> getMultiAttachEnabled() {
+    public Output</* @Nullable */ Boolean> multiAttachEnabled() {
         return this.multiAttachEnabled;
     }
     /**
@@ -119,7 +119,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost.
      * 
      */
-    public Output</* @Nullable */ String> getOutpostArn() {
+    public Output</* @Nullable */ String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -133,7 +133,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The size of the drive in GiBs.
      * 
      */
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
     /**
@@ -147,7 +147,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return A snapshot to base the EBS volume off of.
      * 
      */
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
     /**
@@ -161,7 +161,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -175,7 +175,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -189,7 +189,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The throughput that the volume supports, in MiB/s. Only valid for `type` of `gp3`.
      * 
      */
-    public Output<Integer> getThroughput() {
+    public Output<Integer> throughput() {
         return this.throughput;
     }
     /**
@@ -203,7 +203,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * @return The type of EBS volume. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

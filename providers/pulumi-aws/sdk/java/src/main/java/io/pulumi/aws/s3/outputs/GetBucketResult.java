@@ -77,59 +77,59 @@ public final class GetBucketResult {
      * The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
      * 
     */
-    public String getBucketDomainName() {
+    public String bucketDomainName() {
         return this.bucketDomainName;
     }
     /**
      * The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
      * 
     */
-    public String getBucketRegionalDomainName() {
+    public String bucketRegionalDomainName() {
         return this.bucketRegionalDomainName;
     }
     /**
      * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
      * 
     */
-    public String getHostedZoneId() {
+    public String hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The AWS region this bucket resides in.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
      * 
     */
-    public String getWebsiteDomain() {
+    public String websiteDomain() {
         return this.websiteDomain;
     }
     /**
      * The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
      * 
     */
-    public String getWebsiteEndpoint() {
+    public String websiteEndpoint() {
         return this.websiteEndpoint;
     }
 

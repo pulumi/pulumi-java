@@ -78,59 +78,59 @@ public final class GetConnectionResult {
      * The ARN of the connection.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The Direct Connect endpoint on which the physical connection terminates.
      * 
     */
-    public String getAwsDevice() {
+    public String awsDevice() {
         return this.awsDevice;
     }
     /**
      * The bandwidth of the connection.
      * 
     */
-    public String getBandwidth() {
+    public String bandwidth() {
         return this.bandwidth;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The AWS Direct Connect location where the connection is located.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ID of the AWS account that owns the connection.
      * 
     */
-    public String getOwnerAccountId() {
+    public String ownerAccountId() {
         return this.ownerAccountId;
     }
     /**
      * The name of the service provider associated with the connection.
      * 
     */
-    public String getProviderName() {
+    public String providerName() {
         return this.providerName;
     }
     /**
      * A map of tags for the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

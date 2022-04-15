@@ -23,7 +23,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="allowUsersToChangePassword")
       private final @Nullable Output<Boolean> allowUsersToChangePassword;
 
-    public Output<Boolean> getAllowUsersToChangePassword() {
+    public Output<Boolean> allowUsersToChangePassword() {
         return this.allowUsersToChangePassword == null ? Codegen.empty() : this.allowUsersToChangePassword;
     }
 
@@ -34,7 +34,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="expirePasswords")
       private final @Nullable Output<Boolean> expirePasswords;
 
-    public Output<Boolean> getExpirePasswords() {
+    public Output<Boolean> expirePasswords() {
         return this.expirePasswords == null ? Codegen.empty() : this.expirePasswords;
     }
 
@@ -45,7 +45,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="hardExpiry")
       private final @Nullable Output<Boolean> hardExpiry;
 
-    public Output<Boolean> getHardExpiry() {
+    public Output<Boolean> hardExpiry() {
         return this.hardExpiry == null ? Codegen.empty() : this.hardExpiry;
     }
 
@@ -56,7 +56,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="maxPasswordAge")
       private final @Nullable Output<Integer> maxPasswordAge;
 
-    public Output<Integer> getMaxPasswordAge() {
+    public Output<Integer> maxPasswordAge() {
         return this.maxPasswordAge == null ? Codegen.empty() : this.maxPasswordAge;
     }
 
@@ -67,7 +67,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="minimumPasswordLength")
       private final @Nullable Output<Integer> minimumPasswordLength;
 
-    public Output<Integer> getMinimumPasswordLength() {
+    public Output<Integer> minimumPasswordLength() {
         return this.minimumPasswordLength == null ? Codegen.empty() : this.minimumPasswordLength;
     }
 
@@ -78,7 +78,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="passwordReusePrevention")
       private final @Nullable Output<Integer> passwordReusePrevention;
 
-    public Output<Integer> getPasswordReusePrevention() {
+    public Output<Integer> passwordReusePrevention() {
         return this.passwordReusePrevention == null ? Codegen.empty() : this.passwordReusePrevention;
     }
 
@@ -89,7 +89,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="requireLowercaseCharacters")
       private final @Nullable Output<Boolean> requireLowercaseCharacters;
 
-    public Output<Boolean> getRequireLowercaseCharacters() {
+    public Output<Boolean> requireLowercaseCharacters() {
         return this.requireLowercaseCharacters == null ? Codegen.empty() : this.requireLowercaseCharacters;
     }
 
@@ -100,7 +100,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="requireNumbers")
       private final @Nullable Output<Boolean> requireNumbers;
 
-    public Output<Boolean> getRequireNumbers() {
+    public Output<Boolean> requireNumbers() {
         return this.requireNumbers == null ? Codegen.empty() : this.requireNumbers;
     }
 
@@ -111,7 +111,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="requireSymbols")
       private final @Nullable Output<Boolean> requireSymbols;
 
-    public Output<Boolean> getRequireSymbols() {
+    public Output<Boolean> requireSymbols() {
         return this.requireSymbols == null ? Codegen.empty() : this.requireSymbols;
     }
 
@@ -122,7 +122,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     @Import(name="requireUppercaseCharacters")
       private final @Nullable Output<Boolean> requireUppercaseCharacters;
 
-    public Output<Boolean> getRequireUppercaseCharacters() {
+    public Output<Boolean> requireUppercaseCharacters() {
         return this.requireUppercaseCharacters == null ? Codegen.empty() : this.requireUppercaseCharacters;
     }
 

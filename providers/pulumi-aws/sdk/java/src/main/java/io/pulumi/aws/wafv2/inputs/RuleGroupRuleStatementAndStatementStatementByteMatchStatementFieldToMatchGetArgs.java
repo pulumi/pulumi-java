@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> getBody() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyGetArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> getMethod() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodGetArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> getQueryString() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> getUriPath() {
+    public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

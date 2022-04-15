@@ -41,21 +41,21 @@ public final class AccessPosixProfile {
      * The POSIX group ID used for all EFS operations by this user.
      * 
     */
-    public Integer getGid() {
+    public Integer gid() {
         return this.gid;
     }
     /**
      * The secondary POSIX group IDs used for all EFS operations by this user.
      * 
     */
-    public List<Integer> getSecondaryGids() {
+    public List<Integer> secondaryGids() {
         return this.secondaryGids == null ? List.of() : this.secondaryGids;
     }
     /**
      * The POSIX user ID used for all EFS operations by this user.
      * 
     */
-    public Integer getUid() {
+    public Integer uid() {
         return this.uid;
     }
 

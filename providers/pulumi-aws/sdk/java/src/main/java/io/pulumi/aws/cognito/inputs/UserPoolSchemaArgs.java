@@ -25,7 +25,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributeDataType", required=true)
       private final Output<String> attributeDataType;
 
-    public Output<String> getAttributeDataType() {
+    public Output<String> attributeDataType() {
         return this.attributeDataType;
     }
 
@@ -36,7 +36,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="developerOnlyAttribute")
       private final @Nullable Output<Boolean> developerOnlyAttribute;
 
-    public Output<Boolean> getDeveloperOnlyAttribute() {
+    public Output<Boolean> developerOnlyAttribute() {
         return this.developerOnlyAttribute == null ? Codegen.empty() : this.developerOnlyAttribute;
     }
 
@@ -47,7 +47,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mutable")
       private final @Nullable Output<Boolean> mutable;
 
-    public Output<Boolean> getMutable() {
+    public Output<Boolean> mutable() {
         return this.mutable == null ? Codegen.empty() : this.mutable;
     }
 
@@ -58,7 +58,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberAttributeConstraints")
       private final @Nullable Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints;
 
-    public Output<UserPoolSchemaNumberAttributeConstraintsArgs> getNumberAttributeConstraints() {
+    public Output<UserPoolSchemaNumberAttributeConstraintsArgs> numberAttributeConstraints() {
         return this.numberAttributeConstraints == null ? Codegen.empty() : this.numberAttributeConstraints;
     }
 
@@ -80,7 +80,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
+    public Output<Boolean> required() {
         return this.required == null ? Codegen.empty() : this.required;
     }
 
@@ -91,7 +91,7 @@ public final class UserPoolSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stringAttributeConstraints")
       private final @Nullable Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints;
 
-    public Output<UserPoolSchemaStringAttributeConstraintsArgs> getStringAttributeConstraints() {
+    public Output<UserPoolSchemaStringAttributeConstraintsArgs> stringAttributeConstraints() {
         return this.stringAttributeConstraints == null ? Codegen.empty() : this.stringAttributeConstraints;
     }
 

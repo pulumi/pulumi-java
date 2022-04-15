@@ -23,7 +23,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterExpression")
       private final @Nullable Output<String> filterExpression;
 
-    public Output<String> getFilterExpression() {
+    public Output<String> filterExpression() {
         return this.filterExpression == null ? Codegen.empty() : this.filterExpression;
     }
 
@@ -45,7 +45,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -56,7 +56,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

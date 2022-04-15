@@ -25,7 +25,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

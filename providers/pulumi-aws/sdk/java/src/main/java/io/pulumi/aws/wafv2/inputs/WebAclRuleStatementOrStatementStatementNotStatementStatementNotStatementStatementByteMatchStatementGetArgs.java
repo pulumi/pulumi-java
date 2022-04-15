@@ -25,7 +25,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="positionalConstraint", required=true)
       private final Output<String> positionalConstraint;
 
-    public Output<String> getPositionalConstraint() {
+    public Output<String> positionalConstraint() {
         return this.positionalConstraint;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="searchString", required=true)
       private final Output<String> searchString;
 
-    public Output<String> getSearchString() {
+    public Output<String> searchString() {
         return this.searchString;
     }
 
@@ -58,7 +58,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

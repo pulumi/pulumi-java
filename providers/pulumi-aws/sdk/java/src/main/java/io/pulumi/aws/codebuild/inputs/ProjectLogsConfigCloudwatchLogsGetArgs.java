@@ -22,7 +22,7 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
@@ -33,7 +33,7 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -44,7 +44,7 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
     @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
-    public Output<String> getStreamName() {
+    public Output<String> streamName() {
         return this.streamName == null ? Codegen.empty() : this.streamName;
     }
 

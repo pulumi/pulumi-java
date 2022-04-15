@@ -24,7 +24,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
     @Import(name="networkServices")
       private final @Nullable Output<List<String>> networkServices;
 
-    public Output<List<String>> getNetworkServices() {
+    public Output<List<String>> networkServices() {
         return this.networkServices == null ? Codegen.empty() : this.networkServices;
     }
 
@@ -57,7 +57,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -68,7 +68,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -25,7 +25,7 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
      * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementNotStatementStatementNotStatementStatementOrStatementStatement> getStatements() {
+    public List<WebAclRuleStatementNotStatementStatementNotStatementStatementOrStatementStatement> statements() {
         return this.statements;
     }
 

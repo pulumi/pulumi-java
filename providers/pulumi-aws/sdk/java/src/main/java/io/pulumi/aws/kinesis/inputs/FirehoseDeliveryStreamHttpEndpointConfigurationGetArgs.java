@@ -26,7 +26,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
+    public Output<String> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
@@ -37,7 +37,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="bufferingInterval")
       private final @Nullable Output<Integer> bufferingInterval;
 
-    public Output<Integer> getBufferingInterval() {
+    public Output<Integer> bufferingInterval() {
         return this.bufferingInterval == null ? Codegen.empty() : this.bufferingInterval;
     }
 
@@ -48,7 +48,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="bufferingSize")
       private final @Nullable Output<Integer> bufferingSize;
 
-    public Output<Integer> getBufferingSize() {
+    public Output<Integer> bufferingSize() {
         return this.bufferingSize == null ? Codegen.empty() : this.bufferingSize;
     }
 
@@ -59,7 +59,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
+    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
@@ -70,7 +70,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
-    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
+    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
@@ -92,7 +92,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="requestConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> requestConfiguration;
 
-    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> getRequestConfiguration() {
+    public Output<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> requestConfiguration() {
         return this.requestConfiguration == null ? Codegen.empty() : this.requestConfiguration;
     }
 
@@ -103,7 +103,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
-    public Output<Integer> getRetryDuration() {
+    public Output<Integer> retryDuration() {
         return this.retryDuration == null ? Codegen.empty() : this.retryDuration;
     }
 
@@ -114,7 +114,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -125,7 +125,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
-    public Output<String> getS3BackupMode() {
+    public Output<String> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
@@ -136,7 +136,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

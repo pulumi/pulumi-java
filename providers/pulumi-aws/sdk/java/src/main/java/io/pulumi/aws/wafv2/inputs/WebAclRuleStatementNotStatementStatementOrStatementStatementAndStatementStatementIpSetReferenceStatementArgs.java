@@ -23,7 +23,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementA
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementA
     @Import(name="ipSetForwardedIpConfig")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
 
-    public Output<WebAclRuleStatementNotStatementStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> getIpSetForwardedIpConfig() {
+    public Output<WebAclRuleStatementNotStatementStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig() {
         return this.ipSetForwardedIpConfig == null ? Codegen.empty() : this.ipSetForwardedIpConfig;
     }
 

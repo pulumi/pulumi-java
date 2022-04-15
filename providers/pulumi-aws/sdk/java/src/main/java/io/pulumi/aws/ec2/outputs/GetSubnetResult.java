@@ -152,128 +152,128 @@ public final class GetSubnetResult {
      * ARN of the subnet.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Whether an IPv6 address is assigned on creation.
      * 
     */
-    public Boolean getAssignIpv6AddressOnCreation() {
+    public Boolean assignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation;
     }
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public String getAvailabilityZoneId() {
+    public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * Available IP addresses of the subnet.
      * 
     */
-    public Integer getAvailableIpAddressCount() {
+    public Integer availableIpAddressCount() {
         return this.availableIpAddressCount;
     }
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
      * Identifier of customer owned IPv4 address pool.
      * 
     */
-    public String getCustomerOwnedIpv4Pool() {
+    public String customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
-    public Boolean getDefaultForAz() {
+    public Boolean defaultForAz() {
         return this.defaultForAz;
     }
     /**
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet return synthetic IPv6 addresses for IPv4-only destinations.
      * 
     */
-    public Boolean getEnableDns64() {
+    public Boolean enableDns64() {
         return this.enableDns64;
     }
     /**
      * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
      * 
     */
-    public Boolean getEnableResourceNameDnsARecordOnLaunch() {
+    public Boolean enableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch;
     }
     /**
      * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
      * 
     */
-    public Boolean getEnableResourceNameDnsAaaaRecordOnLaunch() {
+    public Boolean enableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
-    public List<GetSubnetFilter> getFilters() {
+    public List<GetSubnetFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getIpv6CidrBlock() {
+    public String ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     /**
      * Association ID of the IPv6 CIDR block.
      * 
     */
-    public String getIpv6CidrBlockAssociationId() {
+    public String ipv6CidrBlockAssociationId() {
         return this.ipv6CidrBlockAssociationId;
     }
     /**
      * Indicates whether this is an IPv6-only subnet.
      * 
     */
-    public Boolean getIpv6Native() {
+    public Boolean ipv6Native() {
         return this.ipv6Native;
     }
     /**
      * Whether customer owned IP addresses are assigned on network interface creation.
      * 
     */
-    public Boolean getMapCustomerOwnedIpOnLaunch() {
+    public Boolean mapCustomerOwnedIpOnLaunch() {
         return this.mapCustomerOwnedIpOnLaunch;
     }
     /**
      * Whether public IP addresses are assigned on instance launch.
      * 
     */
-    public Boolean getMapPublicIpOnLaunch() {
+    public Boolean mapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
     /**
      * ARN of the Outpost.
      * 
     */
-    public String getOutpostArn() {
+    public String outpostArn() {
         return this.outpostArn;
     }
     /**
      * ID of the AWS account that owns the subnet.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * The type of hostnames assigned to instances in the subnet at launch.
      * 
     */
-    public String getPrivateDnsHostnameTypeOnLaunch() {
+    public String privateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

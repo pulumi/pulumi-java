@@ -45,7 +45,7 @@ public class BucketPublicAccessBlock extends io.pulumi.resources.CustomResource 
      * * PUT Object calls will fail if the request includes an object ACL.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBlockPublicAcls() {
+    public Output</* @Nullable */ Boolean> blockPublicAcls() {
         return this.blockPublicAcls;
     }
     /**
@@ -61,7 +61,7 @@ public class BucketPublicAccessBlock extends io.pulumi.resources.CustomResource 
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBlockPublicPolicy() {
+    public Output</* @Nullable */ Boolean> blockPublicPolicy() {
         return this.blockPublicPolicy;
     }
     /**
@@ -75,7 +75,7 @@ public class BucketPublicAccessBlock extends io.pulumi.resources.CustomResource 
      * @return S3 Bucket to which this Public Access Block configuration should be applied.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -91,7 +91,7 @@ public class BucketPublicAccessBlock extends io.pulumi.resources.CustomResource 
      * * Ignore public ACLs on this bucket and any objects that it contains.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnorePublicAcls() {
+    public Output</* @Nullable */ Boolean> ignorePublicAcls() {
         return this.ignorePublicAcls;
     }
     /**
@@ -107,7 +107,7 @@ public class BucketPublicAccessBlock extends io.pulumi.resources.CustomResource 
      * * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRestrictPublicBuckets() {
+    public Output</* @Nullable */ Boolean> restrictPublicBuckets() {
         return this.restrictPublicBuckets;
     }
 

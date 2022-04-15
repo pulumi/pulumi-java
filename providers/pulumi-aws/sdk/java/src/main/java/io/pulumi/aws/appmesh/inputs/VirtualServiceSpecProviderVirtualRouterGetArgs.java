@@ -21,7 +21,7 @@ public final class VirtualServiceSpecProviderVirtualRouterGetArgs extends io.pul
     @Import(name="virtualRouterName", required=true)
       private final Output<String> virtualRouterName;
 
-    public Output<String> getVirtualRouterName() {
+    public Output<String> virtualRouterName() {
         return this.virtualRouterName;
     }
 

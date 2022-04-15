@@ -20,7 +20,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
     @Import(name="componentId")
       private final @Nullable Output<String> componentId;
 
-    public Output<String> getComponentId() {
+    public Output<String> componentId() {
         return this.componentId == null ? Codegen.empty() : this.componentId;
     }
 
@@ -31,7 +31,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
     @Import(name="dnsTargetResource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceGetArgs> getDnsTargetResource() {
+    public Output<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource() {
         return this.dnsTargetResource == null ? Codegen.empty() : this.dnsTargetResource;
     }
 
@@ -42,7 +42,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
     @Import(name="readinessScopes")
       private final @Nullable Output<List<String>> readinessScopes;
 
-    public Output<List<String>> getReadinessScopes() {
+    public Output<List<String>> readinessScopes() {
         return this.readinessScopes == null ? Codegen.empty() : this.readinessScopes;
     }
 
@@ -53,7 +53,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 

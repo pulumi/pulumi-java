@@ -23,7 +23,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -45,7 +45,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -56,7 +56,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -67,7 +67,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="liveStageEtag")
       private final @Nullable Output<String> liveStageEtag;
 
-    public Output<String> getLiveStageEtag() {
+    public Output<String> liveStageEtag() {
         return this.liveStageEtag == null ? Codegen.empty() : this.liveStageEtag;
     }
 
@@ -78,7 +78,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publish")
       private final @Nullable Output<Boolean> publish;
 
-    public Output<Boolean> getPublish() {
+    public Output<Boolean> publish() {
         return this.publish == null ? Codegen.empty() : this.publish;
     }
 
@@ -100,7 +100,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
@@ -111,7 +111,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

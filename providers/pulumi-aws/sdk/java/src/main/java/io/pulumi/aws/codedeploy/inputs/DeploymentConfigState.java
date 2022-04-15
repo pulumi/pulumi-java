@@ -24,7 +24,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
-    public Output<String> getComputePlatform() {
+    public Output<String> computePlatform() {
         return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
@@ -35,7 +35,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="deploymentConfigId")
       private final @Nullable Output<String> deploymentConfigId;
 
-    public Output<String> getDeploymentConfigId() {
+    public Output<String> deploymentConfigId() {
         return this.deploymentConfigId == null ? Codegen.empty() : this.deploymentConfigId;
     }
 
@@ -46,7 +46,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="deploymentConfigName")
       private final @Nullable Output<String> deploymentConfigName;
 
-    public Output<String> getDeploymentConfigName() {
+    public Output<String> deploymentConfigName() {
         return this.deploymentConfigName == null ? Codegen.empty() : this.deploymentConfigName;
     }
 
@@ -57,7 +57,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="minimumHealthyHosts")
       private final @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
 
-    public Output<DeploymentConfigMinimumHealthyHostsGetArgs> getMinimumHealthyHosts() {
+    public Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts() {
         return this.minimumHealthyHosts == null ? Codegen.empty() : this.minimumHealthyHosts;
     }
 
@@ -68,7 +68,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     @Import(name="trafficRoutingConfig")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
-    public Output<DeploymentConfigTrafficRoutingConfigGetArgs> getTrafficRoutingConfig() {
+    public Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig() {
         return this.trafficRoutingConfig == null ? Codegen.empty() : this.trafficRoutingConfig;
     }
 

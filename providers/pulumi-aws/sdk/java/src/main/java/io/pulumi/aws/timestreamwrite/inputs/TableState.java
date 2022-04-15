@@ -25,7 +25,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -47,7 +47,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="magneticStoreWriteProperties")
       private final @Nullable Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
 
-    public Output<TableMagneticStoreWritePropertiesGetArgs> getMagneticStoreWriteProperties() {
+    public Output<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties == null ? Codegen.empty() : this.magneticStoreWriteProperties;
     }
 
@@ -58,7 +58,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionProperties")
       private final @Nullable Output<TableRetentionPropertiesGetArgs> retentionProperties;
 
-    public Output<TableRetentionPropertiesGetArgs> getRetentionProperties() {
+    public Output<TableRetentionPropertiesGetArgs> retentionProperties() {
         return this.retentionProperties == null ? Codegen.empty() : this.retentionProperties;
     }
 
@@ -69,7 +69,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
@@ -80,7 +80,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -29,7 +29,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="byteMatchStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementGetArgs> byteMatchStatement() {
         return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
@@ -40,7 +40,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="geoMatchStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementGeoMatchStatementGetArgs> geoMatchStatement() {
         return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
@@ -51,7 +51,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
     }
 
@@ -62,7 +62,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="labelMatchStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementLabelMatchStatementGetArgs> labelMatchStatement() {
         return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
@@ -73,7 +73,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
@@ -84,7 +84,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="sizeConstraintStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
@@ -95,7 +95,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="sqliMatchStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement() {
         return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
@@ -106,7 +106,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     @Import(name="xssMatchStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
+    public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementXssMatchStatementGetArgs> xssMatchStatement() {
         return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 

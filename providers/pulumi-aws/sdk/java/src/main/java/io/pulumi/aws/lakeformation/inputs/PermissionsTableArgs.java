@@ -23,7 +23,7 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -34,7 +34,7 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -45,14 +45,14 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="wildcard")
       private final @Nullable Output<Boolean> wildcard;
 
-    public Output<Boolean> getWildcard() {
+    public Output<Boolean> wildcard() {
         return this.wildcard == null ? Codegen.empty() : this.wildcard;
     }
 

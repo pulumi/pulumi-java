@@ -23,10 +23,10 @@ public final class OriginRequestPolicyCookiesConfig {
         this.cookies = cookies;
     }
 
-    public String getCookieBehavior() {
+    public String cookieBehavior() {
         return this.cookieBehavior;
     }
-    public Optional<OriginRequestPolicyCookiesConfigCookies> getCookies() {
+    public Optional<OriginRequestPolicyCookiesConfigCookies> cookies() {
         return Optional.ofNullable(this.cookies);
     }
 

@@ -23,7 +23,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="botName")
       private final @Nullable Output<String> botName;
 
-    public Output<String> getBotName() {
+    public Output<String> botName() {
         return this.botName == null ? Codegen.empty() : this.botName;
     }
 
@@ -45,7 +45,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="botVersion")
       private final @Nullable Output<String> botVersion;
 
-    public Output<String> getBotVersion() {
+    public Output<String> botVersion() {
         return this.botVersion == null ? Codegen.empty() : this.botVersion;
     }
 
@@ -56,7 +56,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
@@ -67,7 +67,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationLogs")
       private final @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
 
-    public Output<BotAliasConversationLogsGetArgs> getConversationLogs() {
+    public Output<BotAliasConversationLogsGetArgs> conversationLogs() {
         return this.conversationLogs == null ? Codegen.empty() : this.conversationLogs;
     }
 
@@ -78,7 +78,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
@@ -89,7 +89,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -100,7 +100,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
     }
 
@@ -111,7 +111,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     @Import(name="snapshotsEnabled", required=true)
       private final Output<Boolean> snapshotsEnabled;
 
-    public Output<Boolean> getSnapshotsEnabled() {
+    public Output<Boolean> snapshotsEnabled() {
         return this.snapshotsEnabled;
     }
 

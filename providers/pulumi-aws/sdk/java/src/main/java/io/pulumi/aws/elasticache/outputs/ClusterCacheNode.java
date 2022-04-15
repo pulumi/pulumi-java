@@ -37,24 +37,24 @@ public final class ClusterCacheNode {
         this.port = port;
     }
 
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
      * 
     */
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
 

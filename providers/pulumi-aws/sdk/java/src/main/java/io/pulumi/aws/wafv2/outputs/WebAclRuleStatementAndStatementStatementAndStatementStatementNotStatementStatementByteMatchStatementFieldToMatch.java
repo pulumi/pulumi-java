@@ -75,49 +75,49 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
      * Inspect all query arguments.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchAllQueryArguments> getAllQueryArguments() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchAllQueryArguments> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
      * Inspect the request body, which immediately follows the request headers.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchBody> getBody() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchBody> body() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchMethod> getMethod() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchMethod> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchQueryString> getQueryString() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchQueryString> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * Inspect a single header. See Single Header below for details.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader> getSingleHeader() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleHeader> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument> getSingleQueryArgument() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
     */
-    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchUriPath> getUriPath() {
+    public Optional<WebAclRuleStatementAndStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchUriPath> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
 

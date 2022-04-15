@@ -32,14 +32,14 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * The name of the policy. Must be between 1 and 255 characters in length.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Value of the dimension.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

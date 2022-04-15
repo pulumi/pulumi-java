@@ -50,7 +50,7 @@ public final class ClusterRestoreToPointInTime {
      * Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
      * 
     */
-    public Optional<String> getRestoreToTime() {
+    public Optional<String> restoreToTime() {
         return Optional.ofNullable(this.restoreToTime);
     }
     /**
@@ -58,21 +58,21 @@ public final class ClusterRestoreToPointInTime {
      * Valid options are `full-copy` (default) and `copy-on-write`.
      * 
     */
-    public Optional<String> getRestoreType() {
+    public Optional<String> restoreType() {
         return Optional.ofNullable(this.restoreType);
     }
     /**
      * The identifier of the source database cluster from which to restore.
      * 
     */
-    public String getSourceClusterIdentifier() {
+    public String sourceClusterIdentifier() {
         return this.sourceClusterIdentifier;
     }
     /**
      * Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with `restore_to_time`.
      * 
     */
-    public Optional<Boolean> getUseLatestRestorableTime() {
+    public Optional<Boolean> useLatestRestorableTime() {
         return Optional.ofNullable(this.useLatestRestorableTime);
     }
 

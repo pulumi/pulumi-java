@@ -23,7 +23,7 @@ public final class DomainEncryptAtRestArgs extends io.pulumi.resources.ResourceA
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class DomainEncryptAtRestArgs extends io.pulumi.resources.ResourceA
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 

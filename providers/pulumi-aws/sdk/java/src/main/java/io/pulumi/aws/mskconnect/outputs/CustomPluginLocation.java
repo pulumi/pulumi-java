@@ -24,7 +24,7 @@ public final class CustomPluginLocation {
      * Information of the plugin file stored in Amazon S3. See below.
      * 
     */
-    public CustomPluginLocationS3 getS3() {
+    public CustomPluginLocationS3 s3() {
         return this.s3;
     }
 

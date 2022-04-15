@@ -25,7 +25,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="canarySize")
       private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs> canarySize;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs> getCanarySize() {
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs> canarySize() {
         return this.canarySize == null ? Codegen.empty() : this.canarySize;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="linearStepSize")
       private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> linearStepSize;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> getLinearStepSize() {
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> linearStepSize() {
         return this.linearStepSize == null ? Codegen.empty() : this.linearStepSize;
     }
 
@@ -47,7 +47,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -58,7 +58,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="waitIntervalInSeconds", required=true)
       private final Output<Integer> waitIntervalInSeconds;
 
-    public Output<Integer> getWaitIntervalInSeconds() {
+    public Output<Integer> waitIntervalInSeconds() {
         return this.waitIntervalInSeconds;
     }
 

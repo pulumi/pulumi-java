@@ -16,21 +16,21 @@ public final class GetBrokerInstance extends io.pulumi.resources.InvokeArgs {
     @Import(name="consoleUrl", required=true)
       private final String consoleUrl;
 
-    public String getConsoleUrl() {
+    public String consoleUrl() {
         return this.consoleUrl;
     }
 
     @Import(name="endpoints", required=true)
       private final List<String> endpoints;
 
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints;
     }
 
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 

@@ -23,7 +23,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -34,7 +34,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -45,7 +45,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="encryption")
       private final @Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption;
 
-    public Output<InventoryDestinationBucketEncryptionArgs> getEncryption() {
+    public Output<InventoryDestinationBucketEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -56,7 +56,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -67,7 +67,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 

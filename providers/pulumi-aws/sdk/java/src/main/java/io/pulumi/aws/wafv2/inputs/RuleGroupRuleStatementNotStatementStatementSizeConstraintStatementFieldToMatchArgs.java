@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBodyArgs> body;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBodyArgs> getBody() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethodArgs> method;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethodArgs> getMethod() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs> getQueryString() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementNotStatementStatementSizeConstraintStat
     @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathArgs> getUriPath() {
+    public Output<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

@@ -43,7 +43,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return The code the system generates when it processes the activation.
      * 
      */
-    public Output<String> getActivationCode() {
+    public Output<String> activationCode() {
         return this.activationCode;
     }
     /**
@@ -57,7 +57,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return The description of the resource that you want to register.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -85,7 +85,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return If the current activation has expired.
      * 
      */
-    public Output<Boolean> getExpired() {
+    public Output<Boolean> expired() {
         return this.expired;
     }
     /**
@@ -99,7 +99,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return The IAM Role to attach to the managed instance.
      * 
      */
-    public Output<String> getIamRole() {
+    public Output<String> iamRole() {
         return this.iamRole;
     }
     /**
@@ -113,7 +113,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return The default name of the registered managed instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return The number of managed instances that are currently registered using this activation.
      * 
      */
-    public Output<Integer> getRegistrationCount() {
+    public Output<Integer> registrationCount() {
         return this.registrationCount;
     }
     /**
@@ -141,7 +141,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return The maximum number of managed instances you want to register. The default value is 1 instance.
      * 
      */
-    public Output</* @Nullable */ Integer> getRegistrationLimit() {
+    public Output</* @Nullable */ Integer> registrationLimit() {
         return this.registrationLimit;
     }
     /**
@@ -155,7 +155,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +169,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

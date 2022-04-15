@@ -22,14 +22,14 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dbInstanceIdentifier", required=true)
       private final String dbInstanceIdentifier;
 
-    public String getDbInstanceIdentifier() {
+    public String dbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

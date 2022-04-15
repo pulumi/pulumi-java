@@ -25,7 +25,7 @@ public final class DistributionOriginGroupFailoverCriteria {
      * A list of HTTP status codes for the origin group
      * 
     */
-    public List<Integer> getStatusCodes() {
+    public List<Integer> statusCodes() {
         return this.statusCodes;
     }
 

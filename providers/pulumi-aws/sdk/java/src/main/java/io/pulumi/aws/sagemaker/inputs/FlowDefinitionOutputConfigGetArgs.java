@@ -22,7 +22,7 @@ public final class FlowDefinitionOutputConfigGetArgs extends io.pulumi.resources
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -33,7 +33,7 @@ public final class FlowDefinitionOutputConfigGetArgs extends io.pulumi.resources
     @Import(name="s3OutputPath", required=true)
       private final Output<String> s3OutputPath;
 
-    public Output<String> getS3OutputPath() {
+    public Output<String> s3OutputPath() {
         return this.s3OutputPath;
     }
 

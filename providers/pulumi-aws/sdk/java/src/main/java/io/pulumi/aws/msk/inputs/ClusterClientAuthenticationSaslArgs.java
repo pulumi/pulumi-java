@@ -22,7 +22,7 @@ public final class ClusterClientAuthenticationSaslArgs extends io.pulumi.resourc
     @Import(name="iam")
       private final @Nullable Output<Boolean> iam;
 
-    public Output<Boolean> getIam() {
+    public Output<Boolean> iam() {
         return this.iam == null ? Codegen.empty() : this.iam;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterClientAuthenticationSaslArgs extends io.pulumi.resourc
     @Import(name="scram")
       private final @Nullable Output<Boolean> scram;
 
-    public Output<Boolean> getScram() {
+    public Output<Boolean> scram() {
         return this.scram == null ? Codegen.empty() : this.scram;
     }
 

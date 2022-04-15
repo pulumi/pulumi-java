@@ -22,7 +22,7 @@ public final class MeshSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="egressFilter")
       private final @Nullable Output<MeshSpecEgressFilterArgs> egressFilter;
 
-    public Output<MeshSpecEgressFilterArgs> getEgressFilter() {
+    public Output<MeshSpecEgressFilterArgs> egressFilter() {
         return this.egressFilter == null ? Codegen.empty() : this.egressFilter;
     }
 

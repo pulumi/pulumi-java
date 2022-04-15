@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="s3ContentLocation")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation;
 
-    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> getS3ContentLocation() {
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation() {
         return this.s3ContentLocation == null ? Codegen.empty() : this.s3ContentLocation;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="textContent")
       private final @Nullable Output<String> textContent;
 
-    public Output<String> getTextContent() {
+    public Output<String> textContent() {
         return this.textContent == null ? Codegen.empty() : this.textContent;
     }
 

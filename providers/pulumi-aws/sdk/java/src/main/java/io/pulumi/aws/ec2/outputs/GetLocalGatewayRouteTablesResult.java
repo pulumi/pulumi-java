@@ -38,24 +38,24 @@ public final class GetLocalGatewayRouteTablesResult {
         this.tags = tags;
     }
 
-    public List<GetLocalGatewayRouteTablesFilter> getFilters() {
+    public List<GetLocalGatewayRouteTablesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of Local Gateway Route Table identifiers
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

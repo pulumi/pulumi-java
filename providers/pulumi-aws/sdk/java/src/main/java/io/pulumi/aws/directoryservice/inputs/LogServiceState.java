@@ -22,7 +22,7 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
@@ -33,7 +33,7 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 

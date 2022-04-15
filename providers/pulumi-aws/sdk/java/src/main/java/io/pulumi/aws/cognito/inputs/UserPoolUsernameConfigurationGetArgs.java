@@ -21,7 +21,7 @@ public final class UserPoolUsernameConfigurationGetArgs extends io.pulumi.resour
     @Import(name="caseSensitive", required=true)
       private final Output<Boolean> caseSensitive;
 
-    public Output<Boolean> getCaseSensitive() {
+    public Output<Boolean> caseSensitive() {
         return this.caseSensitive;
     }
 

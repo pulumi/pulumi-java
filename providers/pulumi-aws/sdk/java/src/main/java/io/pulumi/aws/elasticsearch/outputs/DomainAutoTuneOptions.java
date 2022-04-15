@@ -43,21 +43,21 @@ public final class DomainAutoTuneOptions {
      * The Auto-Tune desired state for the domain. Valid values: `ENABLED` or `DISABLED`.
      * 
     */
-    public String getDesiredState() {
+    public String desiredState() {
         return this.desiredState;
     }
     /**
      * Configuration block for Auto-Tune maintenance windows. Can be specified multiple times for each maintenance window. Detailed below.
      * 
     */
-    public List<DomainAutoTuneOptionsMaintenanceSchedule> getMaintenanceSchedules() {
+    public List<DomainAutoTuneOptionsMaintenanceSchedule> maintenanceSchedules() {
         return this.maintenanceSchedules == null ? List.of() : this.maintenanceSchedules;
     }
     /**
      * Whether to roll back to default Auto-Tune settings when disabling Auto-Tune. Valid values: `DEFAULT_ROLLBACK` or `NO_ROLLBACK`.
      * 
     */
-    public Optional<String> getRollbackOnDisable() {
+    public Optional<String> rollbackOnDisable() {
         return Optional.ofNullable(this.rollbackOnDisable);
     }
 

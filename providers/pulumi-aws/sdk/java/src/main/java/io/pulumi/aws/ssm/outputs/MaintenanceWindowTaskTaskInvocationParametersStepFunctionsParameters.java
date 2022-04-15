@@ -34,14 +34,14 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * The inputs for the STEP_FUNCTION task.
      * 
     */
-    public Optional<String> getInput() {
+    public Optional<String> input() {
         return Optional.ofNullable(this.input);
     }
     /**
      * The name of the STEP_FUNCTION task.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

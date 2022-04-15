@@ -22,7 +22,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
@@ -33,7 +33,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
     @Import(name="resourceRecordName")
       private final @Nullable Output<String> resourceRecordName;
 
-    public Output<String> getResourceRecordName() {
+    public Output<String> resourceRecordName() {
         return this.resourceRecordName == null ? Codegen.empty() : this.resourceRecordName;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
     @Import(name="resourceRecordType")
       private final @Nullable Output<String> resourceRecordType;
 
-    public Output<String> getResourceRecordType() {
+    public Output<String> resourceRecordType() {
         return this.resourceRecordType == null ? Codegen.empty() : this.resourceRecordType;
     }
 
@@ -55,7 +55,7 @@ public final class CertificateDomainValidationOptionArgs extends io.pulumi.resou
     @Import(name="resourceRecordValue")
       private final @Nullable Output<String> resourceRecordValue;
 
-    public Output<String> getResourceRecordValue() {
+    public Output<String> resourceRecordValue() {
         return this.resourceRecordValue == null ? Codegen.empty() : this.resourceRecordValue;
     }
 

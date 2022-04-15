@@ -23,7 +23,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationArn")
       private final @Nullable Output<String> notificationArn;
 
-    public Output<String> getNotificationArn() {
+    public Output<String> notificationArn() {
         return this.notificationArn == null ? Codegen.empty() : this.notificationArn;
     }
 
@@ -34,7 +34,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationEvents")
       private final @Nullable Output<List<String>> notificationEvents;
 
-    public Output<List<String>> getNotificationEvents() {
+    public Output<List<String>> notificationEvents() {
         return this.notificationEvents == null ? Codegen.empty() : this.notificationEvents;
     }
 
@@ -45,7 +45,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType == null ? Codegen.empty() : this.notificationType;
     }
 

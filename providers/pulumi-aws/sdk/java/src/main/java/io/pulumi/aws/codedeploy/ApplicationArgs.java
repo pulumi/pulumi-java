@@ -23,7 +23,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
-    public Output<String> getComputePlatform() {
+    public Output<String> computePlatform() {
         return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

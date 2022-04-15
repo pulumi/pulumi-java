@@ -56,34 +56,34 @@ public final class GetSecurityGroupsResult {
      * ARNs of the matched security groups.
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
-    public List<GetSecurityGroupsFilter> getFilters() {
+    public List<GetSecurityGroupsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * IDs of the matches security groups.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
      * 
     */
-    public List<String> getVpcIds() {
+    public List<String> vpcIds() {
         return this.vpcIds;
     }
 

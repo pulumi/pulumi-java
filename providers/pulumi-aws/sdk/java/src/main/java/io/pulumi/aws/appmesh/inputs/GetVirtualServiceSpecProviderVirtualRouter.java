@@ -19,7 +19,7 @@ public final class GetVirtualServiceSpecProviderVirtualRouter extends io.pulumi.
     @Import(name="virtualRouterName", required=true)
       private final String virtualRouterName;
 
-    public String getVirtualRouterName() {
+    public String virtualRouterName() {
         return this.virtualRouterName;
     }
 

@@ -21,7 +21,7 @@ public final class RecordWeightedRoutingPolicyGetArgs extends io.pulumi.resource
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 

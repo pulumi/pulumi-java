@@ -25,7 +25,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -36,7 +36,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
     @Import(name="routes", required=true)
       private final Output<List<VoiceConnectorOrganizationRouteArgs>> routes;
 
-    public Output<List<VoiceConnectorOrganizationRouteArgs>> getRoutes() {
+    public Output<List<VoiceConnectorOrganizationRouteArgs>> routes() {
         return this.routes;
     }
 
@@ -47,7 +47,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
     @Import(name="voiceConnectorId", required=true)
       private final Output<String> voiceConnectorId;
 
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

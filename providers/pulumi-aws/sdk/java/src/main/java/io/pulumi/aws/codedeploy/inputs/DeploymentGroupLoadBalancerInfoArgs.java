@@ -25,7 +25,7 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
     @Import(name="elbInfos")
       private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
 
-    public Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> getElbInfos() {
+    public Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos() {
         return this.elbInfos == null ? Codegen.empty() : this.elbInfos;
     }
 
@@ -36,7 +36,7 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
     @Import(name="targetGroupInfos")
       private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
 
-    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> getTargetGroupInfos() {
+    public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos() {
         return this.targetGroupInfos == null ? Codegen.empty() : this.targetGroupInfos;
     }
 
@@ -47,7 +47,7 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
     @Import(name="targetGroupPairInfo")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
 
-    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> getTargetGroupPairInfo() {
+    public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo() {
         return this.targetGroupPairInfo == null ? Codegen.empty() : this.targetGroupPairInfo;
     }
 

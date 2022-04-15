@@ -24,7 +24,7 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="autoscalingGroups")
       private final @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
 
-    public Output<List<NodeGroupResourceAutoscalingGroupArgs>> getAutoscalingGroups() {
+    public Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups() {
         return this.autoscalingGroups == null ? Codegen.empty() : this.autoscalingGroups;
     }
 
@@ -35,7 +35,7 @@ public final class NodeGroupResourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="remoteAccessSecurityGroupId")
       private final @Nullable Output<String> remoteAccessSecurityGroupId;
 
-    public Output<String> getRemoteAccessSecurityGroupId() {
+    public Output<String> remoteAccessSecurityGroupId() {
         return this.remoteAccessSecurityGroupId == null ? Codegen.empty() : this.remoteAccessSecurityGroupId;
     }
 

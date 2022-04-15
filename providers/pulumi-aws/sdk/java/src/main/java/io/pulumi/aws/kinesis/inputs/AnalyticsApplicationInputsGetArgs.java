@@ -29,7 +29,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -41,7 +41,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="kinesisFirehose")
       private final @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
 
-    public Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> getKinesisFirehose() {
+    public Output<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose() {
         return this.kinesisFirehose == null ? Codegen.empty() : this.kinesisFirehose;
     }
 
@@ -53,7 +53,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="kinesisStream")
       private final @Nullable Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
 
-    public Output<AnalyticsApplicationInputsKinesisStreamGetArgs> getKinesisStream() {
+    public Output<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream() {
         return this.kinesisStream == null ? Codegen.empty() : this.kinesisStream;
     }
 
@@ -64,7 +64,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="namePrefix", required=true)
       private final Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
 
@@ -76,7 +76,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="parallelism")
       private final @Nullable Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
 
-    public Output<AnalyticsApplicationInputsParallelismGetArgs> getParallelism() {
+    public Output<AnalyticsApplicationInputsParallelismGetArgs> parallelism() {
         return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
@@ -88,7 +88,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="processingConfiguration")
       private final @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
 
-    public Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> getProcessingConfiguration() {
+    public Output<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
@@ -99,7 +99,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationInputsSchemaGetArgs> schema;
 
-    public Output<AnalyticsApplicationInputsSchemaGetArgs> getSchema() {
+    public Output<AnalyticsApplicationInputsSchemaGetArgs> schema() {
         return this.schema;
     }
 
@@ -111,14 +111,14 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
     @Import(name="startingPositionConfigurations")
       private final @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
 
-    public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> getStartingPositionConfigurations() {
+    public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? Codegen.empty() : this.startingPositionConfigurations;
     }
 
     @Import(name="streamNames")
       private final @Nullable Output<List<String>> streamNames;
 
-    public Output<List<String>> getStreamNames() {
+    public Output<List<String>> streamNames() {
         return this.streamNames == null ? Codegen.empty() : this.streamNames;
     }
 

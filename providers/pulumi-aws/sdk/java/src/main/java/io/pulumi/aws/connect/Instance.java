@@ -44,7 +44,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the instance.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether auto resolve best voices is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoResolveBestVoicesEnabled() {
+    public Output</* @Nullable */ Boolean> autoResolveBestVoicesEnabled() {
         return this.autoResolveBestVoicesEnabled;
     }
     /**
@@ -72,7 +72,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether contact flow logs are enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getContactFlowLogsEnabled() {
+    public Output</* @Nullable */ Boolean> contactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled;
     }
     /**
@@ -86,7 +86,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether contact lens is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getContactLensEnabled() {
+    public Output</* @Nullable */ Boolean> contactLensEnabled() {
         return this.contactLensEnabled;
     }
     /**
@@ -100,7 +100,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies when the instance was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -114,7 +114,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The identifier for the directory if identity_management_type is `EXISTING_DIRECTORY`.
      * 
      */
-    public Output</* @Nullable */ String> getDirectoryId() {
+    public Output</* @Nullable */ String> directoryId() {
         return this.directoryId;
     }
     /**
@@ -128,7 +128,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEarlyMediaEnabled() {
+    public Output</* @Nullable */ Boolean> earlyMediaEnabled() {
         return this.earlyMediaEnabled;
     }
     /**
@@ -142,7 +142,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies the identity management type attached to the instance. Allowed Values are: `SAML`, `CONNECT_MANAGED`, `EXISTING_DIRECTORY`.
      * 
      */
-    public Output<String> getIdentityManagementType() {
+    public Output<String> identityManagementType() {
         return this.identityManagementType;
     }
     /**
@@ -156,7 +156,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether inbound calls are enabled.
      * 
      */
-    public Output<Boolean> getInboundCallsEnabled() {
+    public Output<Boolean> inboundCallsEnabled() {
         return this.inboundCallsEnabled;
     }
     /**
@@ -170,7 +170,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the instance. Required if `directory_id` not specified.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceAlias() {
+    public Output</* @Nullable */ String> instanceAlias() {
         return this.instanceAlias;
     }
     /**
@@ -186,7 +186,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * <!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` -->
      * 
      */
-    public Output<Boolean> getOutboundCallsEnabled() {
+    public Output<Boolean> outboundCallsEnabled() {
         return this.outboundCallsEnabled;
     }
     /**
@@ -200,7 +200,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The service role of the instance.
      * 
      */
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
     /**
@@ -214,7 +214,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The state of the instance.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

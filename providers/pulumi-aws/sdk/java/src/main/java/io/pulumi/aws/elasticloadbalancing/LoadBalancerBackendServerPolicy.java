@@ -38,7 +38,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @return The instance port to apply the policy to.
      * 
      */
-    public Output<Integer> getInstancePort() {
+    public Output<Integer> instancePort() {
         return this.instancePort;
     }
     /**
@@ -52,7 +52,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @return The load balancer to attach the policy to.
      * 
      */
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
     /**
@@ -66,7 +66,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @return List of Policy Names to apply to the backend server.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPolicyNames() {
+    public Output</* @Nullable */ List<String>> policyNames() {
         return this.policyNames;
     }
 

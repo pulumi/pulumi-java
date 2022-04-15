@@ -40,7 +40,7 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * @return An identity pool ID in the format REGION:GUID.
      * 
      */
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
     /**
@@ -58,19 +58,19 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
-    public Output<String> getIdentityProviderName() {
+    public Output<String> identityProviderName() {
         return this.identityProviderName;
     }
     @Export(name="principalTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> principalTags;
 
-    public Output</* @Nullable */ Map<String,String>> getPrincipalTags() {
+    public Output</* @Nullable */ Map<String,String>> principalTags() {
         return this.principalTags;
     }
     @Export(name="useDefaults", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useDefaults;
 
-    public Output</* @Nullable */ Boolean> getUseDefaults() {
+    public Output</* @Nullable */ Boolean> useDefaults() {
         return this.useDefaults;
     }
 

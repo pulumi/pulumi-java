@@ -25,7 +25,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditStreamArn")
       private final @Nullable Output<String> auditStreamArn;
 
-    public Output<String> getAuditStreamArn() {
+    public Output<String> auditStreamArn() {
         return this.auditStreamArn == null ? Codegen.empty() : this.auditStreamArn;
     }
 
@@ -36,7 +36,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceCaCertificate")
       private final @Nullable Output<String> deviceCaCertificate;
 
-    public Output<String> getDeviceCaCertificate() {
+    public Output<String> deviceCaCertificate() {
         return this.deviceCaCertificate == null ? Codegen.empty() : this.deviceCaCertificate;
     }
 
@@ -47,7 +47,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -58,7 +58,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityProvider")
       private final @Nullable Output<FleetIdentityProviderArgs> identityProvider;
 
-    public Output<FleetIdentityProviderArgs> getIdentityProvider() {
+    public Output<FleetIdentityProviderArgs> identityProvider() {
         return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
@@ -69,7 +69,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<FleetNetworkArgs> network;
 
-    public Output<FleetNetworkArgs> getNetwork() {
+    public Output<FleetNetworkArgs> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -91,7 +91,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="optimizeForEndUserLocation")
       private final @Nullable Output<Boolean> optimizeForEndUserLocation;
 
-    public Output<Boolean> getOptimizeForEndUserLocation() {
+    public Output<Boolean> optimizeForEndUserLocation() {
         return this.optimizeForEndUserLocation == null ? Codegen.empty() : this.optimizeForEndUserLocation;
     }
 

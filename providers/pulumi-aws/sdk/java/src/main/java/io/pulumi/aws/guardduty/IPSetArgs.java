@@ -24,7 +24,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activate", required=true)
       private final Output<Boolean> activate;
 
-    public Output<Boolean> getActivate() {
+    public Output<Boolean> activate() {
         return this.activate;
     }
 
@@ -35,7 +35,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -46,7 +46,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -57,7 +57,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -68,7 +68,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

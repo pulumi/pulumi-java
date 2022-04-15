@@ -22,7 +22,7 @@ public final class WebhookAuthenticationConfigurationGetArgs extends io.pulumi.r
     @Import(name="allowedIpRange")
       private final @Nullable Output<String> allowedIpRange;
 
-    public Output<String> getAllowedIpRange() {
+    public Output<String> allowedIpRange() {
         return this.allowedIpRange == null ? Codegen.empty() : this.allowedIpRange;
     }
 
@@ -33,7 +33,7 @@ public final class WebhookAuthenticationConfigurationGetArgs extends io.pulumi.r
     @Import(name="secretToken")
       private final @Nullable Output<String> secretToken;
 
-    public Output<String> getSecretToken() {
+    public Output<String> secretToken() {
         return this.secretToken == null ? Codegen.empty() : this.secretToken;
     }
 

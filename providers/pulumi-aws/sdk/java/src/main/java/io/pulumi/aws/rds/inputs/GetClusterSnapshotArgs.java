@@ -23,7 +23,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="dbClusterIdentifier")
       private final @Nullable String dbClusterIdentifier;
 
-    public Optional<String> getDbClusterIdentifier() {
+    public Optional<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbClusterIdentifier);
     }
 
@@ -34,7 +34,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="dbClusterSnapshotIdentifier")
       private final @Nullable String dbClusterSnapshotIdentifier;
 
-    public Optional<String> getDbClusterSnapshotIdentifier() {
+    public Optional<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbClusterSnapshotIdentifier);
     }
 
@@ -46,7 +46,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="includePublic")
       private final @Nullable Boolean includePublic;
 
-    public Optional<Boolean> getIncludePublic() {
+    public Optional<Boolean> includePublic() {
         return this.includePublic == null ? Optional.empty() : Optional.ofNullable(this.includePublic);
     }
 
@@ -59,7 +59,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="includeShared")
       private final @Nullable Boolean includeShared;
 
-    public Optional<Boolean> getIncludeShared() {
+    public Optional<Boolean> includeShared() {
         return this.includeShared == null ? Optional.empty() : Optional.ofNullable(this.includeShared);
     }
 
@@ -70,7 +70,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -83,7 +83,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="snapshotType")
       private final @Nullable String snapshotType;
 
-    public Optional<String> getSnapshotType() {
+    public Optional<String> snapshotType() {
         return this.snapshotType == null ? Optional.empty() : Optional.ofNullable(this.snapshotType);
     }
 
@@ -94,7 +94,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

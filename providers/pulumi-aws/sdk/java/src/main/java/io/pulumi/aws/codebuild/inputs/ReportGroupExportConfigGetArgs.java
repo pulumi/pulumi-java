@@ -23,7 +23,7 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="s3Destination")
       private final @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
 
-    public Output<ReportGroupExportConfigS3DestinationGetArgs> getS3Destination() {
+    public Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination() {
         return this.s3Destination == null ? Codegen.empty() : this.s3Destination;
     }
 
@@ -34,7 +34,7 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -24,7 +24,7 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     @Import(name="stickiness")
       private final @Nullable Output<ListenerRuleActionForwardStickinessArgs> stickiness;
 
-    public Output<ListenerRuleActionForwardStickinessArgs> getStickiness() {
+    public Output<ListenerRuleActionForwardStickinessArgs> stickiness() {
         return this.stickiness == null ? Codegen.empty() : this.stickiness;
     }
 
@@ -35,7 +35,7 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     @Import(name="targetGroups", required=true)
       private final Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
 
-    public Output<List<ListenerRuleActionForwardTargetGroupArgs>> getTargetGroups() {
+    public Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups() {
         return this.targetGroups;
     }
 

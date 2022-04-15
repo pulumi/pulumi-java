@@ -25,7 +25,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     @Import(name="callingRegions", required=true)
       private final Output<List<String>> callingRegions;
 
-    public Output<List<String>> getCallingRegions() {
+    public Output<List<String>> callingRegions() {
         return this.callingRegions;
     }
 
@@ -36,7 +36,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     @Import(name="cidrAllowLists", required=true)
       private final Output<List<String>> cidrAllowLists;
 
-    public Output<List<String>> getCidrAllowLists() {
+    public Output<List<String>> cidrAllowLists() {
         return this.cidrAllowLists;
     }
 
@@ -47,7 +47,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     @Import(name="cpsLimit")
       private final @Nullable Output<Integer> cpsLimit;
 
-    public Output<Integer> getCpsLimit() {
+    public Output<Integer> cpsLimit() {
         return this.cpsLimit == null ? Codegen.empty() : this.cpsLimit;
     }
 
@@ -58,7 +58,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     @Import(name="defaultPhoneNumber")
       private final @Nullable Output<String> defaultPhoneNumber;
 
-    public Output<String> getDefaultPhoneNumber() {
+    public Output<String> defaultPhoneNumber() {
         return this.defaultPhoneNumber == null ? Codegen.empty() : this.defaultPhoneNumber;
     }
 
@@ -69,7 +69,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -80,7 +80,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     @Import(name="voiceConnectorId", required=true)
       private final Output<String> voiceConnectorId;
 
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

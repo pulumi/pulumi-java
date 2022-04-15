@@ -24,7 +24,7 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="gameSessionActivationTimeoutSeconds")
       private final @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
 
-    public Output<Integer> getGameSessionActivationTimeoutSeconds() {
+    public Output<Integer> gameSessionActivationTimeoutSeconds() {
         return this.gameSessionActivationTimeoutSeconds == null ? Codegen.empty() : this.gameSessionActivationTimeoutSeconds;
     }
 
@@ -35,7 +35,7 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="maxConcurrentGameSessionActivations")
       private final @Nullable Output<Integer> maxConcurrentGameSessionActivations;
 
-    public Output<Integer> getMaxConcurrentGameSessionActivations() {
+    public Output<Integer> maxConcurrentGameSessionActivations() {
         return this.maxConcurrentGameSessionActivations == null ? Codegen.empty() : this.maxConcurrentGameSessionActivations;
     }
 
@@ -46,7 +46,7 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="serverProcesses")
       private final @Nullable Output<List<FleetRuntimeConfigurationServerProcessArgs>> serverProcesses;
 
-    public Output<List<FleetRuntimeConfigurationServerProcessArgs>> getServerProcesses() {
+    public Output<List<FleetRuntimeConfigurationServerProcessArgs>> serverProcesses() {
         return this.serverProcesses == null ? Codegen.empty() : this.serverProcesses;
     }
 

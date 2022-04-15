@@ -47,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return ARN of the cluster.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
      * 
      */
-    public Output<ClusterCertificateAuthority> getCertificateAuthority() {
+    public Output<ClusterCertificateAuthority> certificateAuthority() {
         return this.certificateAuthority;
     }
     /**
@@ -75,7 +75,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Unix epoch timestamp in seconds for when the cluster was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -89,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
      * 
      */
-    public Output</* @Nullable */ List<String>> getEnabledClusterLogTypes() {
+    public Output</* @Nullable */ List<String>> enabledClusterLogTypes() {
         return this.enabledClusterLogTypes;
     }
     /**
@@ -103,7 +103,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
      * 
      */
-    public Output</* @Nullable */ ClusterEncryptionConfig> getEncryptionConfig() {
+    public Output</* @Nullable */ ClusterEncryptionConfig> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -117,7 +117,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Endpoint for your Kubernetes API server.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -131,7 +131,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
      * 
      */
-    public Output<List<ClusterIdentity>> getIdentities() {
+    public Output<List<ClusterIdentity>> identities() {
         return this.identities;
     }
     /**
@@ -145,7 +145,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    public Output<ClusterKubernetesNetworkConfig> getKubernetesNetworkConfig() {
+    public Output<ClusterKubernetesNetworkConfig> kubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig;
     }
     /**
@@ -159,7 +159,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -173,7 +173,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Platform version for the cluster.
      * 
      */
-    public Output<String> getPlatformVersion() {
+    public Output<String> platformVersion() {
         return this.platformVersion;
     }
     /**
@@ -187,7 +187,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -201,7 +201,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -215,7 +215,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -229,7 +229,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -243,7 +243,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
     /**
@@ -257,7 +257,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
      * 
      */
-    public Output<ClusterVpcConfig> getVpcConfig() {
+    public Output<ClusterVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 

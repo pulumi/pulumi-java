@@ -22,7 +22,7 @@ public final class StateMachineTracingConfigurationGetArgs extends io.pulumi.res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

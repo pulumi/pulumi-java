@@ -42,21 +42,21 @@ public final class ProvisionedProductProvisioningParameter {
      * Parameter key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
      * 
     */
-    public Optional<Boolean> getUsePreviousValue() {
+    public Optional<Boolean> usePreviousValue() {
         return Optional.ofNullable(this.usePreviousValue);
     }
     /**
      * Parameter value.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

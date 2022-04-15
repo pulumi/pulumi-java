@@ -47,7 +47,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of Glue ML Transform.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return Description of the ML Transform.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
-    public Output<String> getGlueVersion() {
+    public Output<String> glueVersion() {
         return this.glueVersion;
     }
     /**
@@ -89,7 +89,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return A list of AWS Glue table definitions used by the transform. see Input Record Tables.
      * 
      */
-    public Output<List<MLTransformInputRecordTable>> getInputRecordTables() {
+    public Output<List<MLTransformInputRecordTable>> inputRecordTables() {
         return this.inputRecordTables;
     }
     /**
@@ -103,7 +103,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The number of labels available for this transform.
      * 
      */
-    public Output<Integer> getLabelCount() {
+    public Output<Integer> labelCount() {
         return this.labelCount;
     }
     /**
@@ -117,7 +117,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
      * 
      */
-    public Output<Double> getMaxCapacity() {
+    public Output<Double> maxCapacity() {
         return this.maxCapacity;
     }
     /**
@@ -131,7 +131,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The maximum number of times to retry this ML Transform if it fails.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxRetries() {
+    public Output</* @Nullable */ Integer> maxRetries() {
         return this.maxRetries;
     }
     /**
@@ -145,7 +145,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The name you assign to this ML Transform. It must be unique in your account.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +159,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumberOfWorkers() {
+    public Output</* @Nullable */ Integer> numberOfWorkers() {
         return this.numberOfWorkers;
     }
     /**
@@ -173,7 +173,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
      * 
      */
-    public Output<MLTransformParameters> getParameters() {
+    public Output<MLTransformParameters> parameters() {
         return this.parameters;
     }
     /**
@@ -187,7 +187,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role associated with this ML Transform.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -201,7 +201,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The object that represents the schema that this transform accepts. see Schema.
      * 
      */
-    public Output<List<MLTransformSchema>> getSchemas() {
+    public Output<List<MLTransformSchema>> schemas() {
         return this.schemas;
     }
     /**
@@ -215,7 +215,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -229,7 +229,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -243,7 +243,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -257,7 +257,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * @return The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
      * 
      */
-    public Output</* @Nullable */ String> getWorkerType() {
+    public Output</* @Nullable */ String> workerType() {
         return this.workerType;
     }
 

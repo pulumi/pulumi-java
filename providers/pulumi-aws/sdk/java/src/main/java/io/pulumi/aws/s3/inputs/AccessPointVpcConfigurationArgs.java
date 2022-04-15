@@ -21,7 +21,7 @@ public final class AccessPointVpcConfigurationArgs extends io.pulumi.resources.R
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

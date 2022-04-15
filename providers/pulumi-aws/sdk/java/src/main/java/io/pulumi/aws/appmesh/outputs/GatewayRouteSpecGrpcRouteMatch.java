@@ -24,7 +24,7 @@ public final class GatewayRouteSpecGrpcRouteMatch {
      * The fully qualified domain name for the service to match from the request.
      * 
     */
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

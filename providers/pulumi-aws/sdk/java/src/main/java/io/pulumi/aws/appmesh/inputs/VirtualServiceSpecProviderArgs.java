@@ -23,7 +23,7 @@ public final class VirtualServiceSpecProviderArgs extends io.pulumi.resources.Re
     @Import(name="virtualNode")
       private final @Nullable Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode;
 
-    public Output<VirtualServiceSpecProviderVirtualNodeArgs> getVirtualNode() {
+    public Output<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode() {
         return this.virtualNode == null ? Codegen.empty() : this.virtualNode;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualServiceSpecProviderArgs extends io.pulumi.resources.Re
     @Import(name="virtualRouter")
       private final @Nullable Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter;
 
-    public Output<VirtualServiceSpecProviderVirtualRouterArgs> getVirtualRouter() {
+    public Output<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter() {
         return this.virtualRouter == null ? Codegen.empty() : this.virtualRouter;
     }
 

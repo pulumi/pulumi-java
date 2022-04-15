@@ -22,7 +22,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
     @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
@@ -33,14 +33,14 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
     @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId == null ? Codegen.empty() : this.outpostId;
     }
 
@@ -51,7 +51,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
     @Import(name="privateIpv4Address")
       private final @Nullable Output<String> privateIpv4Address;
 
-    public Output<String> getPrivateIpv4Address() {
+    public Output<String> privateIpv4Address() {
         return this.privateIpv4Address == null ? Codegen.empty() : this.privateIpv4Address;
     }
 
@@ -62,7 +62,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

@@ -25,7 +25,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
      * List of Amazon Resource Names (ARNs) of the load balancer listeners.
      * 
     */
-    public List<String> getListenerArns() {
+    public List<String> listenerArns() {
         return this.listenerArns;
     }
 

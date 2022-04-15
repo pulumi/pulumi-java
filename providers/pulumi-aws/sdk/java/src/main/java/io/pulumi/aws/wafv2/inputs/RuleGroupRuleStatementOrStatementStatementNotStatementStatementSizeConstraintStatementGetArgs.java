@@ -26,7 +26,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -37,7 +37,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
     @Import(name="fieldToMatch")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -48,7 +48,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -59,7 +59,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

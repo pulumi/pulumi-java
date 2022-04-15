@@ -102,77 +102,77 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * Configuration options for sending command output to CloudWatch Logs. Documented below.
      * 
     */
-    public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig> getCloudwatchConfig() {
+    public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig> cloudwatchConfig() {
         return Optional.ofNullable(this.cloudwatchConfig);
     }
     /**
      * Information about the command(s) to execute.
      * 
     */
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
      * 
     */
-    public Optional<String> getDocumentHash() {
+    public Optional<String> documentHash() {
         return Optional.ofNullable(this.documentHash);
     }
     /**
      * SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
      * 
     */
-    public Optional<String> getDocumentHashType() {
+    public Optional<String> documentHashType() {
         return Optional.ofNullable(this.documentHashType);
     }
     /**
      * The version of an Automation document to use during task execution.
      * 
     */
-    public Optional<String> getDocumentVersion() {
+    public Optional<String> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
      * 
     */
-    public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig> getNotificationConfig() {
+    public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig> notificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
     /**
      * The name of the Amazon S3 bucket.
      * 
     */
-    public Optional<String> getOutputS3Bucket() {
+    public Optional<String> outputS3Bucket() {
         return Optional.ofNullable(this.outputS3Bucket);
     }
     /**
      * The Amazon S3 bucket subfolder.
      * 
     */
-    public Optional<String> getOutputS3KeyPrefix() {
+    public Optional<String> outputS3KeyPrefix() {
         return Optional.ofNullable(this.outputS3KeyPrefix);
     }
     /**
      * The parameters for the RUN_COMMAND task execution. Documented below.
      * 
     */
-    public List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> getParameters() {
+    public List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The IAM service role to assume during task execution.
      * 
     */
-    public Optional<String> getServiceRoleArn() {
+    public Optional<String> serviceRoleArn() {
         return Optional.ofNullable(this.serviceRoleArn);
     }
     /**
      * If this time is reached and the command has not already started executing, it doesn't run.
      * 
     */
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
 

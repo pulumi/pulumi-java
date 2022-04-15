@@ -27,7 +27,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowCredentials", required=true)
       private final Output<Boolean> accessControlAllowCredentials;
 
-    public Output<Boolean> getAccessControlAllowCredentials() {
+    public Output<Boolean> accessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
     }
 
@@ -38,7 +38,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowHeaders", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> getAccessControlAllowHeaders() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs> accessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
     }
 
@@ -49,7 +49,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowMethods", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> getAccessControlAllowMethods() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsArgs> accessControlAllowMethods() {
         return this.accessControlAllowMethods;
     }
 
@@ -60,7 +60,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlAllowOrigins", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> getAccessControlAllowOrigins() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsArgs> accessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
     }
 
@@ -71,7 +71,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlExposeHeaders")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders;
 
-    public Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> getAccessControlExposeHeaders() {
+    public Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersArgs> accessControlExposeHeaders() {
         return this.accessControlExposeHeaders == null ? Codegen.empty() : this.accessControlExposeHeaders;
     }
 
@@ -82,7 +82,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="accessControlMaxAgeSec")
       private final @Nullable Output<Integer> accessControlMaxAgeSec;
 
-    public Output<Integer> getAccessControlMaxAgeSec() {
+    public Output<Integer> accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec == null ? Codegen.empty() : this.accessControlMaxAgeSec;
     }
 
@@ -93,7 +93,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     @Import(name="originOverride", required=true)
       private final Output<Boolean> originOverride;
 
-    public Output<Boolean> getOriginOverride() {
+    public Output<Boolean> originOverride() {
         return this.originOverride;
     }
 

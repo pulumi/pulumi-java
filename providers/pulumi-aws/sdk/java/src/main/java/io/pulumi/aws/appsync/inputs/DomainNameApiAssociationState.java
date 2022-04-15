@@ -22,7 +22,7 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
@@ -33,7 +33,7 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 

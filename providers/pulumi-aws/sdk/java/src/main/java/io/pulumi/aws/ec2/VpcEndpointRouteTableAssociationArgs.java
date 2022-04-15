@@ -21,7 +21,7 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 
@@ -32,7 +32,7 @@ public final class VpcEndpointRouteTableAssociationArgs extends io.pulumi.resour
     @Import(name="vpcEndpointId", required=true)
       private final Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 

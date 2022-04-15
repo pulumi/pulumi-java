@@ -23,7 +23,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     @Import(name="onDemandAllocationStrategy")
       private final @Nullable Output<String> onDemandAllocationStrategy;
 
-    public Output<String> getOnDemandAllocationStrategy() {
+    public Output<String> onDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy == null ? Codegen.empty() : this.onDemandAllocationStrategy;
     }
 
@@ -34,7 +34,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     @Import(name="onDemandBaseCapacity")
       private final @Nullable Output<Integer> onDemandBaseCapacity;
 
-    public Output<Integer> getOnDemandBaseCapacity() {
+    public Output<Integer> onDemandBaseCapacity() {
         return this.onDemandBaseCapacity == null ? Codegen.empty() : this.onDemandBaseCapacity;
     }
 
@@ -45,7 +45,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     @Import(name="onDemandPercentageAboveBaseCapacity")
       private final @Nullable Output<Integer> onDemandPercentageAboveBaseCapacity;
 
-    public Output<Integer> getOnDemandPercentageAboveBaseCapacity() {
+    public Output<Integer> onDemandPercentageAboveBaseCapacity() {
         return this.onDemandPercentageAboveBaseCapacity == null ? Codegen.empty() : this.onDemandPercentageAboveBaseCapacity;
     }
 
@@ -56,7 +56,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     @Import(name="spotAllocationStrategy")
       private final @Nullable Output<String> spotAllocationStrategy;
 
-    public Output<String> getSpotAllocationStrategy() {
+    public Output<String> spotAllocationStrategy() {
         return this.spotAllocationStrategy == null ? Codegen.empty() : this.spotAllocationStrategy;
     }
 
@@ -67,7 +67,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     @Import(name="spotInstancePools")
       private final @Nullable Output<Integer> spotInstancePools;
 
-    public Output<Integer> getSpotInstancePools() {
+    public Output<Integer> spotInstancePools() {
         return this.spotInstancePools == null ? Codegen.empty() : this.spotInstancePools;
     }
 
@@ -78,7 +78,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
     @Import(name="spotMaxPrice")
       private final @Nullable Output<String> spotMaxPrice;
 
-    public Output<String> getSpotMaxPrice() {
+    public Output<String> spotMaxPrice() {
         return this.spotMaxPrice == null ? Codegen.empty() : this.spotMaxPrice;
     }
 

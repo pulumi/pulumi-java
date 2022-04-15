@@ -25,7 +25,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<AcceleratorAttributesArgs> attributes;
 
-    public Output<AcceleratorAttributesArgs> getAttributes() {
+    public Output<AcceleratorAttributesArgs> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -36,7 +36,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -47,7 +47,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
-    public Output<String> getIpAddressType() {
+    public Output<String> ipAddressType() {
         return this.ipAddressType == null ? Codegen.empty() : this.ipAddressType;
     }
 
@@ -58,7 +58,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -69,7 +69,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

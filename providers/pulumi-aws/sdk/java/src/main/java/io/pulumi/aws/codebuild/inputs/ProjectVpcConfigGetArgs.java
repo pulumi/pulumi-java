@@ -22,7 +22,7 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -33,7 +33,7 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 
@@ -44,7 +44,7 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

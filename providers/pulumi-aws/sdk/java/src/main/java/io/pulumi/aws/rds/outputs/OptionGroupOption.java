@@ -65,42 +65,42 @@ public final class OptionGroupOption {
      * A list of DB Security Groups for which the option is enabled.
      * 
     */
-    public List<String> getDbSecurityGroupMemberships() {
+    public List<String> dbSecurityGroupMemberships() {
         return this.dbSecurityGroupMemberships == null ? List.of() : this.dbSecurityGroupMemberships;
     }
     /**
      * The Name of the Option (e.g., MEMCACHED).
      * 
     */
-    public String getOptionName() {
+    public String optionName() {
         return this.optionName;
     }
     /**
      * A list of option settings to apply.
      * 
     */
-    public List<OptionGroupOptionOptionSetting> getOptionSettings() {
+    public List<OptionGroupOptionOptionSetting> optionSettings() {
         return this.optionSettings == null ? List.of() : this.optionSettings;
     }
     /**
      * The Port number when connecting to the Option (e.g., 11211).
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The version of the option (e.g., 13.1.0.0).
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
     /**
      * A list of VPC Security Groups for which the option is enabled.
      * 
     */
-    public List<String> getVpcSecurityGroupMemberships() {
+    public List<String> vpcSecurityGroupMemberships() {
         return this.vpcSecurityGroupMemberships == null ? List.of() : this.vpcSecurityGroupMemberships;
     }
 

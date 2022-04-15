@@ -32,7 +32,7 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
      * @return An AWS Account ID to add create volume permissions
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -46,7 +46,7 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
      * @return A snapshot ID
      * 
      */
-    public Output<String> getSnapshotId() {
+    public Output<String> snapshotId() {
         return this.snapshotId;
     }
 

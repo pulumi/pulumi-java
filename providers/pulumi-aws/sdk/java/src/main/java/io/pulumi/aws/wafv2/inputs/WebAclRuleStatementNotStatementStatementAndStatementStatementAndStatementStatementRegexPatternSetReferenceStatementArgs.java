@@ -25,7 +25,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

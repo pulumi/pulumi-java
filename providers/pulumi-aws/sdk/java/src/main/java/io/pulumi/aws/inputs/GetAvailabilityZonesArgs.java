@@ -24,7 +24,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="allAvailabilityZones")
       private final @Nullable Boolean allAvailabilityZones;
 
-    public Optional<Boolean> getAllAvailabilityZones() {
+    public Optional<Boolean> allAvailabilityZones() {
         return this.allAvailabilityZones == null ? Optional.empty() : Optional.ofNullable(this.allAvailabilityZones);
     }
 
@@ -35,7 +35,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="excludeNames")
       private final @Nullable List<String> excludeNames;
 
-    public List<String> getExcludeNames() {
+    public List<String> excludeNames() {
         return this.excludeNames == null ? List.of() : this.excludeNames;
     }
 
@@ -46,7 +46,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="excludeZoneIds")
       private final @Nullable List<String> excludeZoneIds;
 
-    public List<String> getExcludeZoneIds() {
+    public List<String> excludeZoneIds() {
         return this.excludeZoneIds == null ? List.of() : this.excludeZoneIds;
     }
 
@@ -57,7 +57,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="filters")
       private final @Nullable List<GetAvailabilityZonesFilter> filters;
 
-    public List<GetAvailabilityZonesFilter> getFilters() {
+    public List<GetAvailabilityZonesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -71,7 +71,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 

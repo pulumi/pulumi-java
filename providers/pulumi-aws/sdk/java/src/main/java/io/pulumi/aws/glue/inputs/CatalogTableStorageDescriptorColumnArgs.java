@@ -23,7 +23,7 @@ public final class CatalogTableStorageDescriptorColumnArgs extends io.pulumi.res
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -34,7 +34,7 @@ public final class CatalogTableStorageDescriptorColumnArgs extends io.pulumi.res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class CatalogTableStorageDescriptorColumnArgs extends io.pulumi.res
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -56,7 +56,7 @@ public final class CatalogTableStorageDescriptorColumnArgs extends io.pulumi.res
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

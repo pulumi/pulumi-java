@@ -23,7 +23,7 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
     @Import(name="action", required=true)
       private final Output<RouteSpecTcpRouteActionGetArgs> action;
 
-    public Output<RouteSpecTcpRouteActionGetArgs> getAction() {
+    public Output<RouteSpecTcpRouteActionGetArgs> action() {
         return this.action;
     }
 
@@ -34,7 +34,7 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
     @Import(name="timeout")
       private final @Nullable Output<RouteSpecTcpRouteTimeoutGetArgs> timeout;
 
-    public Output<RouteSpecTcpRouteTimeoutGetArgs> getTimeout() {
+    public Output<RouteSpecTcpRouteTimeoutGetArgs> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

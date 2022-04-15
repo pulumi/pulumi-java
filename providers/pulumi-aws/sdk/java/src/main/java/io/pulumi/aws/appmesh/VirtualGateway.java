@@ -44,7 +44,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The ARN of the virtual gateway.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +58,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The creation date of the virtual gateway.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -72,7 +72,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The last update date of the virtual gateway.
      * 
      */
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
@@ -86,7 +86,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
      * 
      */
-    public Output<String> getMeshName() {
+    public Output<String> meshName() {
         return this.meshName;
     }
     /**
@@ -100,7 +100,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
-    public Output<String> getMeshOwner() {
+    public Output<String> meshOwner() {
         return this.meshOwner;
     }
     /**
@@ -114,7 +114,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The resource owner's AWS account ID.
      * 
      */
-    public Output<String> getResourceOwner() {
+    public Output<String> resourceOwner() {
         return this.resourceOwner;
     }
     /**
@@ -142,7 +142,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return The virtual gateway specification to apply.
      * 
      */
-    public Output<VirtualGatewaySpec> getSpec() {
+    public Output<VirtualGatewaySpec> spec() {
         return this.spec;
     }
     /**
@@ -156,7 +156,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +170,7 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

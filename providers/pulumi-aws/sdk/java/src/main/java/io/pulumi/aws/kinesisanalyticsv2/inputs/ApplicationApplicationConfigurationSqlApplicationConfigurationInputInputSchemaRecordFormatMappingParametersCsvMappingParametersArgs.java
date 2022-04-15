@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordColumnDelimiter", required=true)
       private final Output<String> recordColumnDelimiter;
 
-    public Output<String> getRecordColumnDelimiter() {
+    public Output<String> recordColumnDelimiter() {
         return this.recordColumnDelimiter;
     }
 
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordRowDelimiter", required=true)
       private final Output<String> recordRowDelimiter;
 
-    public Output<String> getRecordRowDelimiter() {
+    public Output<String> recordRowDelimiter() {
         return this.recordRowDelimiter;
     }
 

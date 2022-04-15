@@ -22,7 +22,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
     @Import(name="imageIdOverride")
       private final @Nullable Output<String> imageIdOverride;
 
-    public Output<String> getImageIdOverride() {
+    public Output<String> imageIdOverride() {
         return this.imageIdOverride == null ? Codegen.empty() : this.imageIdOverride;
     }
 
@@ -33,7 +33,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 

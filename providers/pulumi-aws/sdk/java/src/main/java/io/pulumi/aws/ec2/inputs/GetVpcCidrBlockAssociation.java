@@ -19,7 +19,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
     @Import(name="associationId", required=true)
       private final String associationId;
 
-    public String getAssociationId() {
+    public String associationId() {
         return this.associationId;
     }
 
@@ -30,7 +30,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
     @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
 
@@ -42,7 +42,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

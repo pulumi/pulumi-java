@@ -23,7 +23,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readinessCheckName", required=true)
       private final Output<String> readinessCheckName;
 
-    public Output<String> getReadinessCheckName() {
+    public Output<String> readinessCheckName() {
         return this.readinessCheckName;
     }
 
@@ -34,7 +34,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName", required=true)
       private final Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
 
@@ -45,7 +45,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

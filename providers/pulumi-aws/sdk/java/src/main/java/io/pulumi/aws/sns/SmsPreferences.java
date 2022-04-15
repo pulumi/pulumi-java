@@ -33,7 +33,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @return A string, such as your business brand, that is displayed as the sender on the receiving device.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultSenderId() {
+    public Output</* @Nullable */ String> defaultSenderId() {
         return this.defaultSenderId;
     }
     /**
@@ -47,7 +47,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @return The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
      * 
      */
-    public Output</* @Nullable */ String> getDefaultSmsType() {
+    public Output</* @Nullable */ String> defaultSmsType() {
         return this.defaultSmsType;
     }
     /**
@@ -61,7 +61,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryStatusIamRoleArn() {
+    public Output</* @Nullable */ String> deliveryStatusIamRoleArn() {
         return this.deliveryStatusIamRoleArn;
     }
     /**
@@ -75,7 +75,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @return The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
      * 
      */
-    public Output</* @Nullable */ String> getDeliveryStatusSuccessSamplingRate() {
+    public Output</* @Nullable */ String> deliveryStatusSuccessSamplingRate() {
         return this.deliveryStatusSuccessSamplingRate;
     }
     /**
@@ -89,7 +89,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @return The maximum amount in USD that you are willing to spend each month to send SMS messages.
      * 
      */
-    public Output<Integer> getMonthlySpendLimit() {
+    public Output<Integer> monthlySpendLimit() {
         return this.monthlySpendLimit;
     }
     /**
@@ -103,7 +103,7 @@ public class SmsPreferences extends io.pulumi.resources.CustomResource {
      * @return The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
      * 
      */
-    public Output</* @Nullable */ String> getUsageReportS3Bucket() {
+    public Output</* @Nullable */ String> usageReportS3Bucket() {
         return this.usageReportS3Bucket;
     }
 

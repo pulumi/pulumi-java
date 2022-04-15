@@ -24,7 +24,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -35,7 +35,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sizeConstraints")
       private final @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
-    public Output<List<SizeConstraintSetSizeConstraintArgs>> getSizeConstraints() {
+    public Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints() {
         return this.sizeConstraints == null ? Codegen.empty() : this.sizeConstraints;
     }
 

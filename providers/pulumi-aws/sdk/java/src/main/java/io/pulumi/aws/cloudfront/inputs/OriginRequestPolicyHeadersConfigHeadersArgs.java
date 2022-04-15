@@ -19,7 +19,7 @@ public final class OriginRequestPolicyHeadersConfigHeadersArgs extends io.pulumi
     @Import(name="items")
       private final @Nullable Output<List<String>> items;
 
-    public Output<List<String>> getItems() {
+    public Output<List<String>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 

@@ -51,29 +51,29 @@ public final class GetSecurityGroupResult {
      * The computed ARN of the security group.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The description of the security group.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public List<GetSecurityGroupFilter> getFilters() {
+    public List<GetSecurityGroupFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

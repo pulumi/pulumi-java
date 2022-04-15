@@ -48,7 +48,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
      * 
      */
-    public Output</* @Nullable */ String> getBasePath() {
+    public Output</* @Nullable */ String> basePath() {
         return this.basePath;
     }
     /**
@@ -62,7 +62,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The already-registered domain name to connect the API to.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -76,7 +76,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The id of the API to connect.
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -90,7 +90,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
      * 
      */
-    public Output</* @Nullable */ String> getStageName() {
+    public Output</* @Nullable */ String> stageName() {
         return this.stageName;
     }
 

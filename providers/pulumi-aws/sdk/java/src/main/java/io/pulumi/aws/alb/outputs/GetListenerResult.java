@@ -52,38 +52,38 @@ public final class GetListenerResult {
         this.tags = tags;
     }
 
-    public String getAlpnPolicy() {
+    public String alpnPolicy() {
         return this.alpnPolicy;
     }
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getCertificateArn() {
+    public String certificateArn() {
         return this.certificateArn;
     }
-    public List<GetListenerDefaultAction> getDefaultActions() {
+    public List<GetListenerDefaultAction> defaultActions() {
         return this.defaultActions;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getLoadBalancerArn() {
+    public String loadBalancerArn() {
         return this.loadBalancerArn;
     }
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
-    public String getSslPolicy() {
+    public String sslPolicy() {
         return this.sslPolicy;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

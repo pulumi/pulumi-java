@@ -21,7 +21,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -32,7 +32,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceShareArn", required=true)
       private final Output<String> resourceShareArn;
 
-    public Output<String> getResourceShareArn() {
+    public Output<String> resourceShareArn() {
         return this.resourceShareArn;
     }
 

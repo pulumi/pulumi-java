@@ -22,7 +22,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultBaseline")
       private final @Nullable Boolean defaultBaseline;
 
-    public Optional<Boolean> getDefaultBaseline() {
+    public Optional<Boolean> defaultBaseline() {
         return this.defaultBaseline == null ? Optional.empty() : Optional.ofNullable(this.defaultBaseline);
     }
 
@@ -33,7 +33,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="namePrefix")
       private final @Nullable String namePrefix;
 
-    public Optional<String> getNamePrefix() {
+    public Optional<String> namePrefix() {
         return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
     }
 
@@ -44,7 +44,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="operatingSystem")
       private final @Nullable String operatingSystem;
 
-    public Optional<String> getOperatingSystem() {
+    public Optional<String> operatingSystem() {
         return this.operatingSystem == null ? Optional.empty() : Optional.ofNullable(this.operatingSystem);
     }
 
@@ -55,7 +55,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="owner", required=true)
       private final String owner;
 
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
 

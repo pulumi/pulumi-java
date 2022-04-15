@@ -32,21 +32,21 @@ public final class GetNodeGroupsResult {
         this.names = names;
     }
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A set of all node group names in an EKS Cluster.
      * 
     */
-    public List<String> getNames() {
+    public List<String> names() {
         return this.names;
     }
 

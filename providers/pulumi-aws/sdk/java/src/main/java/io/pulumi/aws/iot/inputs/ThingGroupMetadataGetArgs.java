@@ -20,7 +20,7 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -31,14 +31,14 @@ public final class ThingGroupMetadataGetArgs extends io.pulumi.resources.Resourc
     @Import(name="parentGroupName")
       private final @Nullable Output<String> parentGroupName;
 
-    public Output<String> getParentGroupName() {
+    public Output<String> parentGroupName() {
         return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
     }
 
     @Import(name="rootToParentGroups")
       private final @Nullable Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups;
 
-    public Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> getRootToParentGroups() {
+    public Output<List<ThingGroupMetadataRootToParentGroupGetArgs>> rootToParentGroups() {
         return this.rootToParentGroups == null ? Codegen.empty() : this.rootToParentGroups;
     }
 

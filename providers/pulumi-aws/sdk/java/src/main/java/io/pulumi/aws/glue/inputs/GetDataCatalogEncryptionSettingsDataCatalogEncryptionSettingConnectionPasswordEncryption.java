@@ -20,7 +20,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     @Import(name="awsKmsKeyId", required=true)
       private final String awsKmsKeyId;
 
-    public String getAwsKmsKeyId() {
+    public String awsKmsKeyId() {
         return this.awsKmsKeyId;
     }
 
@@ -31,7 +31,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     @Import(name="returnConnectionPasswordEncrypted", required=true)
       private final Boolean returnConnectionPasswordEncrypted;
 
-    public Boolean getReturnConnectionPasswordEncrypted() {
+    public Boolean returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }
 

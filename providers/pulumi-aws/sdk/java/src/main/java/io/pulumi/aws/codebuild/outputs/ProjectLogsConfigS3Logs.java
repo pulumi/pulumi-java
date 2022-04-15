@@ -49,28 +49,28 @@ public final class ProjectLogsConfigS3Logs {
      * Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects. Valid values are `NONE`, `READ_ONLY`, and `FULL`. your CodeBuild service role must have the `s3:PutBucketAcl` permission. This permission allows CodeBuild to modify the access control list for the bucket.
      * 
     */
-    public Optional<String> getBucketOwnerAccess() {
+    public Optional<String> bucketOwnerAccess() {
         return Optional.ofNullable(this.bucketOwnerAccess);
     }
     /**
      * Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getEncryptionDisabled() {
+    public Optional<Boolean> encryptionDisabled() {
         return Optional.ofNullable(this.encryptionDisabled);
     }
     /**
      * Location of the source code from git or s3.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

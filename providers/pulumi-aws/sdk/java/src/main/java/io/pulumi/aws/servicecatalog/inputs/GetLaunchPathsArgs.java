@@ -21,7 +21,7 @@ public final class GetLaunchPathsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
-    public Optional<String> getAcceptLanguage() {
+    public Optional<String> acceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
     }
 
@@ -32,7 +32,7 @@ public final class GetLaunchPathsArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="productId", required=true)
       private final String productId;
 
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
 

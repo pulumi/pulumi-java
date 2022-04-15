@@ -22,7 +22,7 @@ public final class GetKafkaVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="preferredVersions")
       private final @Nullable List<String> preferredVersions;
 
-    public List<String> getPreferredVersions() {
+    public List<String> preferredVersions() {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
     }
 
@@ -33,7 +33,7 @@ public final class GetKafkaVersionArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

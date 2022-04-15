@@ -21,10 +21,10 @@ public final class GetSlotTypeEnumerationValue {
         this.value = value;
     }
 
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -24,7 +24,7 @@ public final class DataSourceParametersS3 {
      * An object containing the S3 location of the S3 manifest file.
      * 
     */
-    public DataSourceParametersS3ManifestFileLocation getManifestFileLocation() {
+    public DataSourceParametersS3ManifestFileLocation manifestFileLocation() {
         return this.manifestFileLocation;
     }
 

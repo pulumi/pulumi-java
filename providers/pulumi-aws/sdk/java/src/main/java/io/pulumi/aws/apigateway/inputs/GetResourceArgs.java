@@ -19,7 +19,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -30,7 +30,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 

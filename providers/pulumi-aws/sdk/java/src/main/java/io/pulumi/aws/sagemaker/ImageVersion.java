@@ -43,7 +43,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * * `image_arn`- The Amazon Resource Name (ARN) of the image the version is based on.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * @return The registry path of the container image on which this image version is based.
      * 
      */
-    public Output<String> getBaseImage() {
+    public Output<String> baseImage() {
         return this.baseImage;
     }
     /**
@@ -71,13 +71,13 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * @return The registry path of the container image that contains this image version.
      * 
      */
-    public Output<String> getContainerImage() {
+    public Output<String> containerImage() {
         return this.containerImage;
     }
     @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
-    public Output<String> getImageArn() {
+    public Output<String> imageArn() {
         return this.imageArn;
     }
     /**
@@ -91,13 +91,13 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * @return The name of the image. Must be unique to your account.
      * 
      */
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
     @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="baseEjectionDuration", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> getBaseEjectionDuration() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration() {
         return this.baseEjectionDuration;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="interval", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> getInterval() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval() {
         return this.interval;
     }
 
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="maxEjectionPercent", required=true)
       private final Output<Integer> maxEjectionPercent;
 
-    public Output<Integer> getMaxEjectionPercent() {
+    public Output<Integer> maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
@@ -57,7 +57,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="maxServerErrors", required=true)
       private final Output<Integer> maxServerErrors;
 
-    public Output<Integer> getMaxServerErrors() {
+    public Output<Integer> maxServerErrors() {
         return this.maxServerErrors;
     }
 

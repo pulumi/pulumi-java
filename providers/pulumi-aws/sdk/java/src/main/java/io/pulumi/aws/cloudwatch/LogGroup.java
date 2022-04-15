@@ -42,7 +42,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the log group. Any `:*` suffix added by the API, denoting all CloudWatch Log Streams under the CloudWatch Log Group, is removed for greater compatibility with other AWS services that do not accept the suffix.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -60,7 +60,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * permissions for the CMK whenever the encrypted data is requested.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -74,7 +74,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the log group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -106,7 +106,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * If you select 0, the events in the log group are always retained and never expire.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionInDays() {
+    public Output</* @Nullable */ Integer> retentionInDays() {
         return this.retentionInDays;
     }
     /**
@@ -120,7 +120,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -134,7 +134,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

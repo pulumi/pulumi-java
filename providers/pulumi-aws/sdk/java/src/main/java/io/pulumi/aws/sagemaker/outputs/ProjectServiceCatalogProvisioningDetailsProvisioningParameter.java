@@ -34,14 +34,14 @@ public final class ProjectServiceCatalogProvisioningDetailsProvisioningParameter
      * The key that identifies a provisioning parameter.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value of the provisioning parameter.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

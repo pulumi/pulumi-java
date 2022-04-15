@@ -33,14 +33,14 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      * Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Defines the capacity size, either as a number of instances or a capacity percentage.
      * 
     */
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

@@ -19,7 +19,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
     @Import(name="catalogEncryptionMode", required=true)
       private final String catalogEncryptionMode;
 
-    public String getCatalogEncryptionMode() {
+    public String catalogEncryptionMode() {
         return this.catalogEncryptionMode;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
     @Import(name="sseAwsKmsKeyId", required=true)
       private final String sseAwsKmsKeyId;
 
-    public String getSseAwsKmsKeyId() {
+    public String sseAwsKmsKeyId() {
         return this.sseAwsKmsKeyId;
     }
 

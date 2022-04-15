@@ -33,14 +33,14 @@ public final class GetDedicatedHostFilter {
      * The name of the field to filter by, as defined by [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeHosts.html).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Set of values that are accepted for the given field. A host will be selected if any one of the given values matches.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

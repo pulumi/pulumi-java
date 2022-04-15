@@ -23,7 +23,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -34,7 +34,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 

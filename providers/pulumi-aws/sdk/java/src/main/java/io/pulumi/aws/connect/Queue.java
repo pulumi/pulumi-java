@@ -47,7 +47,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Queue.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies the description of the Queue.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -75,7 +75,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies the identifier of the Hours of Operation.
      * 
      */
-    public Output<String> getHoursOfOperationId() {
+    public Output<String> hoursOfOperationId() {
         return this.hoursOfOperationId;
     }
     /**
@@ -89,7 +89,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -103,7 +103,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies the maximum number of contacts that can be in the queue before it is considered full. Minimum value of 0.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxContacts() {
+    public Output</* @Nullable */ Integer> maxContacts() {
         return this.maxContacts;
     }
     /**
@@ -117,7 +117,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the Queue.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A block that defines the outbound caller ID name, number, and outbound whisper flow. The Outbound Caller Config block is documented below.
      * 
      */
-    public Output</* @Nullable */ QueueOutboundCallerConfig> getOutboundCallerConfig() {
+    public Output</* @Nullable */ QueueOutboundCallerConfig> outboundCallerConfig() {
         return this.outboundCallerConfig;
     }
     /**
@@ -145,7 +145,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return The identifier for the Queue.
      * 
      */
-    public Output<String> getQueueId() {
+    public Output<String> queueId() {
         return this.queueId;
     }
     /**
@@ -159,7 +159,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies a list of quick connects ids that determine the quick connects available to agents who are working the queue.
      * 
      */
-    public Output</* @Nullable */ List<String>> getQuickConnectIds() {
+    public Output</* @Nullable */ List<String>> quickConnectIds() {
         return this.quickConnectIds;
     }
     /**
@@ -173,7 +173,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Specifies the description of the Queue. Valid values are `ENABLED`, `DISABLED`.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -187,7 +187,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the Queue. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -201,7 +201,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

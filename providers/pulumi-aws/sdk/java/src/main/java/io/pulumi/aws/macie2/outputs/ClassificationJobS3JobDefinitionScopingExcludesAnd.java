@@ -35,14 +35,14 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAnd {
      * A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
      * 
     */
-    public Optional<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm> getSimpleScopeTerm() {
+    public Optional<ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm> simpleScopeTerm() {
         return Optional.ofNullable(this.simpleScopeTerm);
     }
     /**
      * A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
      * 
     */
-    public Optional<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm> getTagScopeTerm() {
+    public Optional<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm> tagScopeTerm() {
         return Optional.ofNullable(this.tagScopeTerm);
     }
 

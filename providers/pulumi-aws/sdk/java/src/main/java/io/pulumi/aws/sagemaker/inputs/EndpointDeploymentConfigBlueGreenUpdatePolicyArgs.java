@@ -23,7 +23,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     @Import(name="maximumExecutionTimeoutInSeconds")
       private final @Nullable Output<Integer> maximumExecutionTimeoutInSeconds;
 
-    public Output<Integer> getMaximumExecutionTimeoutInSeconds() {
+    public Output<Integer> maximumExecutionTimeoutInSeconds() {
         return this.maximumExecutionTimeoutInSeconds == null ? Codegen.empty() : this.maximumExecutionTimeoutInSeconds;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     @Import(name="terminationWaitInSeconds")
       private final @Nullable Output<Integer> terminationWaitInSeconds;
 
-    public Output<Integer> getTerminationWaitInSeconds() {
+    public Output<Integer> terminationWaitInSeconds() {
         return this.terminationWaitInSeconds == null ? Codegen.empty() : this.terminationWaitInSeconds;
     }
 
@@ -45,7 +45,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
     @Import(name="trafficRoutingConfiguration", required=true)
       private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> getTrafficRoutingConfiguration() {
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration() {
         return this.trafficRoutingConfiguration;
     }
 

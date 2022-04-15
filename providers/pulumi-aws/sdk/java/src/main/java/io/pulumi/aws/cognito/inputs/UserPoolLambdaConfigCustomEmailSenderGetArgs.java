@@ -21,7 +21,7 @@ public final class UserPoolLambdaConfigCustomEmailSenderGetArgs extends io.pulum
     @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
-    public Output<String> getLambdaArn() {
+    public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
 
@@ -32,7 +32,7 @@ public final class UserPoolLambdaConfigCustomEmailSenderGetArgs extends io.pulum
     @Import(name="lambdaVersion", required=true)
       private final Output<String> lambdaVersion;
 
-    public Output<String> getLambdaVersion() {
+    public Output<String> lambdaVersion() {
         return this.lambdaVersion;
     }
 

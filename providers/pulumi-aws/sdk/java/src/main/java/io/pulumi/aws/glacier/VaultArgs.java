@@ -25,7 +25,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicy")
       private final @Nullable Output<String> accessPolicy;
 
-    public Output<String> getAccessPolicy() {
+    public Output<String> accessPolicy() {
         return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notification")
       private final @Nullable Output<VaultNotificationArgs> notification;
 
-    public Output<VaultNotificationArgs> getNotification() {
+    public Output<VaultNotificationArgs> notification() {
         return this.notification == null ? Codegen.empty() : this.notification;
     }
 
@@ -58,7 +58,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

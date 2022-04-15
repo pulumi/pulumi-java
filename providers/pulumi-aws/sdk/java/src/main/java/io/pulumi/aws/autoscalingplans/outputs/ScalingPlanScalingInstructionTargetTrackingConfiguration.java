@@ -79,14 +79,14 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
      * 
     */
-    public Optional<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification> getCustomizedScalingMetricSpecification() {
+    public Optional<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification> customizedScalingMetricSpecification() {
         return Optional.ofNullable(this.customizedScalingMetricSpecification);
     }
     /**
      * Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getDisableScaleIn() {
+    public Optional<Boolean> disableScaleIn() {
         return Optional.ofNullable(this.disableScaleIn);
     }
     /**
@@ -94,7 +94,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      * This value is used only if the resource is an Auto Scaling group.
      * 
     */
-    public Optional<Integer> getEstimatedInstanceWarmup() {
+    public Optional<Integer> estimatedInstanceWarmup() {
         return Optional.ofNullable(this.estimatedInstanceWarmup);
     }
     /**
@@ -102,7 +102,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
      * 
     */
-    public Optional<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification> getPredefinedScalingMetricSpecification() {
+    public Optional<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification> predefinedScalingMetricSpecification() {
         return Optional.ofNullable(this.predefinedScalingMetricSpecification);
     }
     /**
@@ -110,7 +110,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      * This value is not used if the scalable resource is an Auto Scaling group.
      * 
     */
-    public Optional<Integer> getScaleInCooldown() {
+    public Optional<Integer> scaleInCooldown() {
         return Optional.ofNullable(this.scaleInCooldown);
     }
     /**
@@ -118,14 +118,14 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      * This value is not used if the scalable resource is an Auto Scaling group.
      * 
     */
-    public Optional<Integer> getScaleOutCooldown() {
+    public Optional<Integer> scaleOutCooldown() {
         return Optional.ofNullable(this.scaleOutCooldown);
     }
     /**
      * The target value for the metric.
      * 
     */
-    public Double getTargetValue() {
+    public Double targetValue() {
         return this.targetValue;
     }
 

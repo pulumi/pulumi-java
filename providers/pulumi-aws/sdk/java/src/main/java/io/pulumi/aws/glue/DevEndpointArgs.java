@@ -26,7 +26,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<Map<String,Object>> arguments;
 
-    public Output<Map<String,Object>> getArguments() {
+    public Output<Map<String,Object>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -37,7 +37,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extraJarsS3Path")
       private final @Nullable Output<String> extraJarsS3Path;
 
-    public Output<String> getExtraJarsS3Path() {
+    public Output<String> extraJarsS3Path() {
         return this.extraJarsS3Path == null ? Codegen.empty() : this.extraJarsS3Path;
     }
 
@@ -48,7 +48,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extraPythonLibsS3Path")
       private final @Nullable Output<String> extraPythonLibsS3Path;
 
-    public Output<String> getExtraPythonLibsS3Path() {
+    public Output<String> extraPythonLibsS3Path() {
         return this.extraPythonLibsS3Path == null ? Codegen.empty() : this.extraPythonLibsS3Path;
     }
 
@@ -59,7 +59,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
-    public Output<String> getGlueVersion() {
+    public Output<String> glueVersion() {
         return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
     }
 
@@ -70,7 +70,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> getNumberOfNodes() {
+    public Output<Integer> numberOfNodes() {
         return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
     }
 
@@ -92,7 +92,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> getNumberOfWorkers() {
+    public Output<Integer> numberOfWorkers() {
         return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
     }
 
@@ -103,7 +103,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
@@ -114,7 +114,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKeys")
       private final @Nullable Output<List<String>> publicKeys;
 
-    public Output<List<String>> getPublicKeys() {
+    public Output<List<String>> publicKeys() {
         return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
@@ -125,7 +125,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -136,7 +136,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
-    public Output<String> getSecurityConfiguration() {
+    public Output<String> securityConfiguration() {
         return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
     }
 
@@ -147,7 +147,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -158,7 +158,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -169,7 +169,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -180,7 +180,7 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
-    public Output<String> getWorkerType() {
+    public Output<String> workerType() {
         return this.workerType == null ? Codegen.empty() : this.workerType;
     }
 

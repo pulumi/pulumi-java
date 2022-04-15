@@ -113,98 +113,98 @@ public final class GetImageRecipeResult {
         this.workingDirectory = workingDirectory;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Set of objects with block device mappings for the the image recipe.
      * 
     */
-    public List<GetImageRecipeBlockDeviceMapping> getBlockDeviceMappings() {
+    public List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
      * List of objects with components for the image recipe.
      * 
     */
-    public List<GetImageRecipeComponent> getComponents() {
+    public List<GetImageRecipeComponent> components() {
         return this.components;
     }
     /**
      * Date the image recipe was created.
      * 
     */
-    public String getDateCreated() {
+    public String dateCreated() {
         return this.dateCreated;
     }
     /**
      * Description of the image recipe.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the image recipe.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Owner of the image recipe.
      * 
     */
-    public String getOwner() {
+    public String owner() {
         return this.owner;
     }
     /**
      * Platform of the image recipe.
      * 
     */
-    public String getParentImage() {
+    public String parentImage() {
         return this.parentImage;
     }
     /**
      * Platform of the image recipe.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * Key-value map of resource tags for the image recipe.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Base64 encoded contents of user data. Commands or a command script to run when build instance is launched.
      * 
     */
-    public String getUserDataBase64() {
+    public String userDataBase64() {
         return this.userDataBase64;
     }
     /**
      * Version of the image recipe.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * The working directory used during build and test workflows.
      * 
     */
-    public String getWorkingDirectory() {
+    public String workingDirectory() {
         return this.workingDirectory;
     }
 

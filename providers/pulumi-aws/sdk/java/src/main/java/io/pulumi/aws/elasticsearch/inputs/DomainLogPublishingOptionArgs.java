@@ -23,7 +23,7 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
     @Import(name="cloudwatchLogGroupArn", required=true)
       private final Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -34,7 +34,7 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -45,7 +45,7 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 

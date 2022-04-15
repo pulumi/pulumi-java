@@ -21,7 +21,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -32,7 +32,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     @Import(name="managedPolicyArn", required=true)
       private final Output<String> managedPolicyArn;
 
-    public Output<String> getManagedPolicyArn() {
+    public Output<String> managedPolicyArn() {
         return this.managedPolicyArn;
     }
 
@@ -43,7 +43,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 

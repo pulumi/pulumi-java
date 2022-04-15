@@ -22,7 +22,7 @@ public final class GetInfrastructureConfigurationsArgs extends io.pulumi.resourc
     @Import(name="filters")
       private final @Nullable List<GetInfrastructureConfigurationsFilter> filters;
 
-    public List<GetInfrastructureConfigurationsFilter> getFilters() {
+    public List<GetInfrastructureConfigurationsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 

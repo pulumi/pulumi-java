@@ -19,7 +19,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="localGatewayId")
       private final @Nullable Output<String> localGatewayId;
 
-    public Output<String> getLocalGatewayId() {
+    public Output<String> localGatewayId() {
         return this.localGatewayId == null ? Codegen.empty() : this.localGatewayId;
     }
 
@@ -30,7 +30,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="localGatewayRouteTableId")
       private final @Nullable Output<String> localGatewayRouteTableId;
 
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Codegen.empty() : this.localGatewayRouteTableId;
     }
 
@@ -41,7 +41,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -52,7 +52,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -63,7 +63,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

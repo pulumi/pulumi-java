@@ -23,7 +23,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> getCommands() {
+    public Output<List<String>> commands() {
         return this.commands == null ? Codegen.empty() : this.commands;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="entryPoints")
       private final @Nullable Output<List<String>> entryPoints;
 
-    public Output<List<String>> getEntryPoints() {
+    public Output<List<String>> entryPoints() {
         return this.entryPoints == null ? Codegen.empty() : this.entryPoints;
     }
 
@@ -45,7 +45,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
     @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
-    public Output<String> getWorkingDirectory() {
+    public Output<String> workingDirectory() {
         return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 

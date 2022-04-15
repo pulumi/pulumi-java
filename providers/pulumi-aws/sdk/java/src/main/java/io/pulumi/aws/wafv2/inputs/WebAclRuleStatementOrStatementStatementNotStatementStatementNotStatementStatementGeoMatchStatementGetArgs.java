@@ -24,7 +24,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="countryCodes", required=true)
       private final Output<List<String>> countryCodes;
 
-    public Output<List<String>> getCountryCodes() {
+    public Output<List<String>> countryCodes() {
         return this.countryCodes;
     }
 
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     @Import(name="forwardedIpConfig")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
-    public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
+    public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig() {
         return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
     }
 

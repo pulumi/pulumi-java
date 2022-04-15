@@ -22,7 +22,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesGetArgs extends io.pulum
     @Import(name="capacityRebalance")
       private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
-    public Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {
+    public Output<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance() {
         return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 

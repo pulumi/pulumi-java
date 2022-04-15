@@ -26,7 +26,7 @@ public final class AnalyticsApplicationInputsParallelism {
      * The Count of streams.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
 

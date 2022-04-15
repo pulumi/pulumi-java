@@ -42,7 +42,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return ARN of the license configuration.
      * 
      */
-    public Output<String> getLicenseConfigurationArn() {
+    public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
     /**
@@ -56,7 +56,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return ARN of the resource associated with the license configuration.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 

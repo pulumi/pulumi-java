@@ -49,14 +49,14 @@ public final class VirtualNodeSpecListenerOutlierDetection {
      * The base amount of time for which a host is ejected.
      * 
     */
-    public VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration getBaseEjectionDuration() {
+    public VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration() {
         return this.baseEjectionDuration;
     }
     /**
      * The time interval between ejection sweep analysis.
      * 
     */
-    public VirtualNodeSpecListenerOutlierDetectionInterval getInterval() {
+    public VirtualNodeSpecListenerOutlierDetectionInterval interval() {
         return this.interval;
     }
     /**
@@ -64,14 +64,14 @@ public final class VirtualNodeSpecListenerOutlierDetection {
      * Minimum value of `0`. Maximum value of `100`.
      * 
     */
-    public Integer getMaxEjectionPercent() {
+    public Integer maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
     /**
      * Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
      * 
     */
-    public Integer getMaxServerErrors() {
+    public Integer maxServerErrors() {
         return this.maxServerErrors;
     }
 

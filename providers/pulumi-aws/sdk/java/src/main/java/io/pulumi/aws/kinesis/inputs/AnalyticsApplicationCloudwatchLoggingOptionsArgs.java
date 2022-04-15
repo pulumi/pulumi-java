@@ -22,7 +22,7 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -33,7 +33,7 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
     @Import(name="logStreamArn", required=true)
       private final Output<String> logStreamArn;
 
-    public Output<String> getLogStreamArn() {
+    public Output<String> logStreamArn() {
         return this.logStreamArn;
     }
 
@@ -44,7 +44,7 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

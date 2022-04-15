@@ -24,7 +24,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
     @Import(name="resourceTypes", required=true)
       private final Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
+    public Output<List<String>> resourceTypes() {
         return this.resourceTypes;
     }
 
@@ -35,7 +35,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
     @Import(name="schedules", required=true)
       private final Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules;
 
-    public Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> getSchedules() {
+    public Output<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules() {
         return this.schedules;
     }
 
@@ -46,7 +46,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
     @Import(name="targetTags", required=true)
       private final Output<Map<String,String>> targetTags;
 
-    public Output<Map<String,String>> getTargetTags() {
+    public Output<Map<String,String>> targetTags() {
         return this.targetTags;
     }
 

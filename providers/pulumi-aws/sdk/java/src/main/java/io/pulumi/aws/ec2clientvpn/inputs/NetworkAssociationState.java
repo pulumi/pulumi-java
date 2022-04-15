@@ -23,7 +23,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     @Import(name="associationId")
       private final @Nullable Output<String> associationId;
 
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId == null ? Codegen.empty() : this.associationId;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     @Import(name="clientVpnEndpointId")
       private final @Nullable Output<String> clientVpnEndpointId;
 
-    public Output<String> getClientVpnEndpointId() {
+    public Output<String> clientVpnEndpointId() {
         return this.clientVpnEndpointId == null ? Codegen.empty() : this.clientVpnEndpointId;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -67,7 +67,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -78,7 +78,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 

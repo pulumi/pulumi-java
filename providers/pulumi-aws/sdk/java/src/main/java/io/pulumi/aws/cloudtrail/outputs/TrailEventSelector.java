@@ -51,28 +51,28 @@ public final class TrailEventSelector {
      * Configuration block for data events. See details below.
      * 
     */
-    public List<TrailEventSelectorDataResource> getDataResources() {
+    public List<TrailEventSelectorDataResource> dataResources() {
         return this.dataResources == null ? List.of() : this.dataResources;
     }
     /**
      * A set of event sources to exclude. Valid values include: `kms.amazonaws.com` and `rdsdata.amazonaws.com`. `include_management_events` must be set to`true` to allow this.
      * 
     */
-    public List<String> getExcludeManagementEventSources() {
+    public List<String> excludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
     }
     /**
      * Whether to include management events for your trail. Defaults to `true`.
      * 
     */
-    public Optional<Boolean> getIncludeManagementEvents() {
+    public Optional<Boolean> includeManagementEvents() {
         return Optional.ofNullable(this.includeManagementEvents);
     }
     /**
      * Type of events to log. Valid values are `ReadOnly`, `WriteOnly`, `All`. Default value is `All`.
      * 
     */
-    public Optional<String> getReadWriteType() {
+    public Optional<String> readWriteType() {
         return Optional.ofNullable(this.readWriteType);
     }
 

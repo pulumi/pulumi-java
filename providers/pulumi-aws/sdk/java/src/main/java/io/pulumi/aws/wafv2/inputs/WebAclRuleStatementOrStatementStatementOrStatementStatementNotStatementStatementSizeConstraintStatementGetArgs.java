@@ -26,7 +26,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -37,7 +37,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -48,7 +48,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -59,7 +59,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

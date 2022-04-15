@@ -16,7 +16,7 @@ public final class GetSigningJobSource extends io.pulumi.resources.InvokeArgs {
     @Import(name="s3s", required=true)
       private final List<GetSigningJobSourceS3> s3s;
 
-    public List<GetSigningJobSourceS3> getS3s() {
+    public List<GetSigningJobSourceS3> s3s() {
         return this.s3s;
     }
 

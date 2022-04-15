@@ -75,7 +75,7 @@ public class Document extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -89,7 +89,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return One or more configuration blocks describing attachments sources to a version of a document. Defined below.
      * 
      */
-    public Output</* @Nullable */ List<DocumentAttachmentsSource>> getAttachmentsSources() {
+    public Output</* @Nullable */ List<DocumentAttachmentsSource>> attachmentsSources() {
         return this.attachmentsSources;
     }
     /**
@@ -103,7 +103,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The JSON or YAML content of the document.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -117,7 +117,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The date the document was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -131,7 +131,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The default version of the document.
      * 
      */
-    public Output<String> getDefaultVersion() {
+    public Output<String> defaultVersion() {
         return this.defaultVersion;
     }
     /**
@@ -145,7 +145,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The description of the document.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -159,7 +159,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The format of the document. Valid document types include: `JSON` and `YAML`
      * 
      */
-    public Output</* @Nullable */ String> getDocumentFormat() {
+    public Output</* @Nullable */ String> documentFormat() {
         return this.documentFormat;
     }
     /**
@@ -173,7 +173,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
      * 
      */
-    public Output<String> getDocumentType() {
+    public Output<String> documentType() {
         return this.documentType;
     }
     /**
@@ -187,7 +187,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The document version.
      * 
      */
-    public Output<String> getDocumentVersion() {
+    public Output<String> documentVersion() {
         return this.documentVersion;
     }
     /**
@@ -201,7 +201,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The sha1 or sha256 of the document content
      * 
      */
-    public Output<String> getHash() {
+    public Output<String> hash() {
         return this.hash;
     }
     /**
@@ -215,7 +215,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return "Sha1" "Sha256". The hashing algorithm used when hashing the content.
      * 
      */
-    public Output<String> getHashType() {
+    public Output<String> hashType() {
         return this.hashType;
     }
     /**
@@ -229,7 +229,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The latest version of the document.
      * 
      */
-    public Output<String> getLatestVersion() {
+    public Output<String> latestVersion() {
         return this.latestVersion;
     }
     /**
@@ -243,7 +243,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The name of the document.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -257,7 +257,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The AWS user account of the person who created the document.
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -271,7 +271,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The parameters that are available to this document.
      * 
      */
-    public Output<List<DocumentParameter>> getParameters() {
+    public Output<List<DocumentParameter>> parameters() {
         return this.parameters;
     }
     /**
@@ -285,7 +285,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Additional Permissions to attach to the document. See Permissions below for details.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getPermissions() {
+    public Output</* @Nullable */ Map<String,String>> permissions() {
         return this.permissions;
     }
     /**
@@ -299,7 +299,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
      * 
      */
-    public Output<List<String>> getPlatformTypes() {
+    public Output<List<String>> platformTypes() {
         return this.platformTypes;
     }
     /**
@@ -313,7 +313,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The schema version of the document.
      * 
      */
-    public Output<String> getSchemaVersion() {
+    public Output<String> schemaVersion() {
         return this.schemaVersion;
     }
     /**
@@ -327,7 +327,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return "Creating", "Active" or "Deleting". The current status of the document.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -341,7 +341,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -355,7 +355,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -369,7 +369,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
      * 
      */
-    public Output</* @Nullable */ String> getTargetType() {
+    public Output</* @Nullable */ String> targetType() {
         return this.targetType;
     }
     /**
@@ -383,7 +383,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
-    public Output</* @Nullable */ String> getVersionName() {
+    public Output</* @Nullable */ String> versionName() {
         return this.versionName;
     }
 

@@ -21,7 +21,7 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -34,7 +34,7 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends io.pulumi.resources
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

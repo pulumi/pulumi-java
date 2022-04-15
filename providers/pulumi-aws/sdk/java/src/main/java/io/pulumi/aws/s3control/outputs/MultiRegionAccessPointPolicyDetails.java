@@ -32,14 +32,14 @@ public final class MultiRegionAccessPointPolicyDetails {
      * The name of the Multi-Region Access Point.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A valid JSON document that specifies the policy that you want to associate with this Multi-Region Access Point. Once applied, the policy can be edited, but not deleted. For more information, see the documentation on [Multi-Region Access Point Permissions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointPermissions.html).
      * 
     */
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
 

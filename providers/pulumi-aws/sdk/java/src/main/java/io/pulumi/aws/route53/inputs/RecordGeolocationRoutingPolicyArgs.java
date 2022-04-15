@@ -22,7 +22,7 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
     @Import(name="continent")
       private final @Nullable Output<String> continent;
 
-    public Output<String> getContinent() {
+    public Output<String> continent() {
         return this.continent == null ? Codegen.empty() : this.continent;
     }
 
@@ -33,7 +33,7 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
     @Import(name="country")
       private final @Nullable Output<String> country;
 
-    public Output<String> getCountry() {
+    public Output<String> country() {
         return this.country == null ? Codegen.empty() : this.country;
     }
 
@@ -44,7 +44,7 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
     @Import(name="subdivision")
       private final @Nullable Output<String> subdivision;
 
-    public Output<String> getSubdivision() {
+    public Output<String> subdivision() {
         return this.subdivision == null ? Codegen.empty() : this.subdivision;
     }
 

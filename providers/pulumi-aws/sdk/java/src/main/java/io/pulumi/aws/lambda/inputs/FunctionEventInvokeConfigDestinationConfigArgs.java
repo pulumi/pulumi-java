@@ -23,7 +23,7 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends io.pul
     @Import(name="onFailure")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> getOnFailure() {
+    public Output<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure() {
         return this.onFailure == null ? Codegen.empty() : this.onFailure;
     }
 
@@ -34,7 +34,7 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends io.pul
     @Import(name="onSuccess")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess;
 
-    public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> getOnSuccess() {
+    public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess() {
         return this.onSuccess == null ? Codegen.empty() : this.onSuccess;
     }
 

@@ -83,62 +83,62 @@ public final class GetInstanceRootBlockDevice {
      * If the root block device will be deleted on termination.
      * 
     */
-    public Boolean getDeleteOnTermination() {
+    public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
     }
     /**
      * The physical name of the device.
      * 
     */
-    public String getDeviceName() {
+    public String deviceName() {
         return this.deviceName;
     }
     /**
      * If the EBS volume is encrypted.
      * 
     */
-    public Boolean getEncrypted() {
+    public Boolean encrypted() {
         return this.encrypted;
     }
     /**
      * `0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
      * 
     */
-    public Integer getIops() {
+    public Integer iops() {
         return this.iops;
     }
-    public String getKmsKeyId() {
+    public String kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * A map of tags assigned to the Instance.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The throughput of the volume, in MiB/s.
      * 
     */
-    public Integer getThroughput() {
+    public Integer throughput() {
         return this.throughput;
     }
-    public String getVolumeId() {
+    public String volumeId() {
         return this.volumeId;
     }
     /**
      * The size of the volume, in GiB.
      * 
     */
-    public Integer getVolumeSize() {
+    public Integer volumeSize() {
         return this.volumeSize;
     }
     /**
      * The type of the volume.
      * 
     */
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

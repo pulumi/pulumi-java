@@ -19,7 +19,7 @@ public final class GetUserPoolSigningCertificateArgs extends io.pulumi.resources
     @Import(name="userPoolId", required=true)
       private final String userPoolId;
 
-    public String getUserPoolId() {
+    public String userPoolId() {
         return this.userPoolId;
     }
 

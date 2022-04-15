@@ -48,28 +48,28 @@ public final class AppLimits {
      * The maximum number of messages that the campaign can send daily.
      * 
     */
-    public Optional<Integer> getDaily() {
+    public Optional<Integer> daily() {
         return Optional.ofNullable(this.daily);
     }
     /**
      * The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.
      * 
     */
-    public Optional<Integer> getMaximumDuration() {
+    public Optional<Integer> maximumDuration() {
         return Optional.ofNullable(this.maximumDuration);
     }
     /**
      * The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.
      * 
     */
-    public Optional<Integer> getMessagesPerSecond() {
+    public Optional<Integer> messagesPerSecond() {
         return Optional.ofNullable(this.messagesPerSecond);
     }
     /**
      * The maximum total number of messages that the campaign can send.
      * 
     */
-    public Optional<Integer> getTotal() {
+    public Optional<Integer> total() {
         return Optional.ofNullable(this.total);
     }
 

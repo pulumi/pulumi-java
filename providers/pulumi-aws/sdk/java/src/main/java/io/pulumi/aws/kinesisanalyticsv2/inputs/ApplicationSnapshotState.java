@@ -23,7 +23,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
@@ -34,7 +34,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     @Import(name="applicationVersionId")
       private final @Nullable Output<Integer> applicationVersionId;
 
-    public Output<Integer> getApplicationVersionId() {
+    public Output<Integer> applicationVersionId() {
         return this.applicationVersionId == null ? Codegen.empty() : this.applicationVersionId;
     }
 
@@ -45,7 +45,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     @Import(name="snapshotCreationTimestamp")
       private final @Nullable Output<String> snapshotCreationTimestamp;
 
-    public Output<String> getSnapshotCreationTimestamp() {
+    public Output<String> snapshotCreationTimestamp() {
         return this.snapshotCreationTimestamp == null ? Codegen.empty() : this.snapshotCreationTimestamp;
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
     @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
-    public Output<String> getSnapshotName() {
+    public Output<String> snapshotName() {
         return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 

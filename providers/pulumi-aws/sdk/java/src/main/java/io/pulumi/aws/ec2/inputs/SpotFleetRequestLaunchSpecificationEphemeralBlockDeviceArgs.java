@@ -17,14 +17,14 @@ public final class SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs e
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
     @Import(name="virtualName", required=true)
       private final Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName;
     }
 

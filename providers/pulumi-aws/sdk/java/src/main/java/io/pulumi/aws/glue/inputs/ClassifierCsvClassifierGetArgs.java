@@ -24,7 +24,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="allowSingleColumn")
       private final @Nullable Output<Boolean> allowSingleColumn;
 
-    public Output<Boolean> getAllowSingleColumn() {
+    public Output<Boolean> allowSingleColumn() {
         return this.allowSingleColumn == null ? Codegen.empty() : this.allowSingleColumn;
     }
 
@@ -35,7 +35,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="containsHeader")
       private final @Nullable Output<String> containsHeader;
 
-    public Output<String> getContainsHeader() {
+    public Output<String> containsHeader() {
         return this.containsHeader == null ? Codegen.empty() : this.containsHeader;
     }
 
@@ -46,7 +46,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
+    public Output<String> delimiter() {
         return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
@@ -57,7 +57,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="disableValueTrimming")
       private final @Nullable Output<Boolean> disableValueTrimming;
 
-    public Output<Boolean> getDisableValueTrimming() {
+    public Output<Boolean> disableValueTrimming() {
         return this.disableValueTrimming == null ? Codegen.empty() : this.disableValueTrimming;
     }
 
@@ -68,7 +68,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
+    public Output<List<String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -79,7 +79,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
     @Import(name="quoteSymbol")
       private final @Nullable Output<String> quoteSymbol;
 
-    public Output<String> getQuoteSymbol() {
+    public Output<String> quoteSymbol() {
         return this.quoteSymbol == null ? Codegen.empty() : this.quoteSymbol;
     }
 

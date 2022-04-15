@@ -34,14 +34,14 @@ public final class DistributionDefaultCacheBehaviorFunctionAssociation {
      * Valid values: `viewer-request` or `viewer-response`
      * 
     */
-    public String getEventType() {
+    public String eventType() {
         return this.eventType;
     }
     /**
      * ARN of the Cloudfront function.
      * 
     */
-    public String getFunctionArn() {
+    public String functionArn() {
         return this.functionArn;
     }
 

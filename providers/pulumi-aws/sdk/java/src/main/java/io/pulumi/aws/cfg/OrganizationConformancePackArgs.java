@@ -24,7 +24,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
 
-    public Output<String> getDeliveryS3Bucket() {
+    public Output<String> deliveryS3Bucket() {
         return this.deliveryS3Bucket == null ? Codegen.empty() : this.deliveryS3Bucket;
     }
 
@@ -35,7 +35,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
 
-    public Output<String> getDeliveryS3KeyPrefix() {
+    public Output<String> deliveryS3KeyPrefix() {
         return this.deliveryS3KeyPrefix == null ? Codegen.empty() : this.deliveryS3KeyPrefix;
     }
 
@@ -46,7 +46,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
-    public Output<List<String>> getExcludedAccounts() {
+    public Output<List<String>> excludedAccounts() {
         return this.excludedAccounts == null ? Codegen.empty() : this.excludedAccounts;
     }
 
@@ -57,7 +57,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="inputParameters")
       private final @Nullable Output<List<OrganizationConformancePackInputParameterArgs>> inputParameters;
 
-    public Output<List<OrganizationConformancePackInputParameterArgs>> getInputParameters() {
+    public Output<List<OrganizationConformancePackInputParameterArgs>> inputParameters() {
         return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
@@ -68,7 +68,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -79,7 +79,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
@@ -90,7 +90,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;
 
-    public Output<String> getTemplateS3Uri() {
+    public Output<String> templateS3Uri() {
         return this.templateS3Uri == null ? Codegen.empty() : this.templateS3Uri;
     }
 

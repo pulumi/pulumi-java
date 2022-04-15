@@ -619,907 +619,907 @@ public final class ProviderEndpointArgs {
         this.workspaces = Codegen.empty();
         this.xray = Codegen.empty();
     }
-    public @Nullable Output<String> getAccessanalyzer() {
+    public @Nullable Output<String> accessanalyzer() {
         return this.accessanalyzer;
     }
-    public @Nullable Output<String> getAccount() {
+    public @Nullable Output<String> account() {
         return this.account;
     }
-    public @Nullable Output<String> getAcm() {
+    public @Nullable Output<String> acm() {
         return this.acm;
     }
-    public @Nullable Output<String> getAcmpca() {
+    public @Nullable Output<String> acmpca() {
         return this.acmpca;
     }
-    public @Nullable Output<String> getAlexaforbusiness() {
+    public @Nullable Output<String> alexaforbusiness() {
         return this.alexaforbusiness;
     }
-    public @Nullable Output<String> getAmp() {
+    public @Nullable Output<String> amp() {
         return this.amp;
     }
-    public @Nullable Output<String> getAmplify() {
+    public @Nullable Output<String> amplify() {
         return this.amplify;
     }
-    public @Nullable Output<String> getAmplifybackend() {
+    public @Nullable Output<String> amplifybackend() {
         return this.amplifybackend;
     }
-    public @Nullable Output<String> getApigateway() {
+    public @Nullable Output<String> apigateway() {
         return this.apigateway;
     }
-    public @Nullable Output<String> getApigatewayv2() {
+    public @Nullable Output<String> apigatewayv2() {
         return this.apigatewayv2;
     }
-    public @Nullable Output<String> getAppautoscaling() {
+    public @Nullable Output<String> appautoscaling() {
         return this.appautoscaling;
     }
-    public @Nullable Output<String> getAppconfig() {
+    public @Nullable Output<String> appconfig() {
         return this.appconfig;
     }
-    public @Nullable Output<String> getAppflow() {
+    public @Nullable Output<String> appflow() {
         return this.appflow;
     }
-    public @Nullable Output<String> getAppintegrations() {
+    public @Nullable Output<String> appintegrations() {
         return this.appintegrations;
     }
-    public @Nullable Output<String> getAppintegrationsservice() {
+    public @Nullable Output<String> appintegrationsservice() {
         return this.appintegrationsservice;
     }
-    public @Nullable Output<String> getApplicationautoscaling() {
+    public @Nullable Output<String> applicationautoscaling() {
         return this.applicationautoscaling;
     }
-    public @Nullable Output<String> getApplicationcostprofiler() {
+    public @Nullable Output<String> applicationcostprofiler() {
         return this.applicationcostprofiler;
     }
-    public @Nullable Output<String> getApplicationdiscovery() {
+    public @Nullable Output<String> applicationdiscovery() {
         return this.applicationdiscovery;
     }
-    public @Nullable Output<String> getApplicationdiscoveryservice() {
+    public @Nullable Output<String> applicationdiscoveryservice() {
         return this.applicationdiscoveryservice;
     }
-    public @Nullable Output<String> getApplicationinsights() {
+    public @Nullable Output<String> applicationinsights() {
         return this.applicationinsights;
     }
-    public @Nullable Output<String> getAppmesh() {
+    public @Nullable Output<String> appmesh() {
         return this.appmesh;
     }
-    public @Nullable Output<String> getAppregistry() {
+    public @Nullable Output<String> appregistry() {
         return this.appregistry;
     }
-    public @Nullable Output<String> getApprunner() {
+    public @Nullable Output<String> apprunner() {
         return this.apprunner;
     }
-    public @Nullable Output<String> getAppstream() {
+    public @Nullable Output<String> appstream() {
         return this.appstream;
     }
-    public @Nullable Output<String> getAppsync() {
+    public @Nullable Output<String> appsync() {
         return this.appsync;
     }
-    public @Nullable Output<String> getAthena() {
+    public @Nullable Output<String> athena() {
         return this.athena;
     }
-    public @Nullable Output<String> getAuditmanager() {
+    public @Nullable Output<String> auditmanager() {
         return this.auditmanager;
     }
-    public @Nullable Output<String> getAugmentedairuntime() {
+    public @Nullable Output<String> augmentedairuntime() {
         return this.augmentedairuntime;
     }
-    public @Nullable Output<String> getAutoscaling() {
+    public @Nullable Output<String> autoscaling() {
         return this.autoscaling;
     }
-    public @Nullable Output<String> getAutoscalingplans() {
+    public @Nullable Output<String> autoscalingplans() {
         return this.autoscalingplans;
     }
-    public @Nullable Output<String> getBackup() {
+    public @Nullable Output<String> backup() {
         return this.backup;
     }
-    public @Nullable Output<String> getBatch() {
+    public @Nullable Output<String> batch() {
         return this.batch;
     }
-    public @Nullable Output<String> getBraket() {
+    public @Nullable Output<String> braket() {
         return this.braket;
     }
-    public @Nullable Output<String> getBudgets() {
+    public @Nullable Output<String> budgets() {
         return this.budgets;
     }
-    public @Nullable Output<String> getChime() {
+    public @Nullable Output<String> chime() {
         return this.chime;
     }
-    public @Nullable Output<String> getCloud9() {
+    public @Nullable Output<String> cloud9() {
         return this.cloud9;
     }
-    public @Nullable Output<String> getCloudcontrol() {
+    public @Nullable Output<String> cloudcontrol() {
         return this.cloudcontrol;
     }
-    public @Nullable Output<String> getCloudcontrolapi() {
+    public @Nullable Output<String> cloudcontrolapi() {
         return this.cloudcontrolapi;
     }
-    public @Nullable Output<String> getClouddirectory() {
+    public @Nullable Output<String> clouddirectory() {
         return this.clouddirectory;
     }
-    public @Nullable Output<String> getCloudformation() {
+    public @Nullable Output<String> cloudformation() {
         return this.cloudformation;
     }
-    public @Nullable Output<String> getCloudfront() {
+    public @Nullable Output<String> cloudfront() {
         return this.cloudfront;
     }
-    public @Nullable Output<String> getCloudhsm() {
+    public @Nullable Output<String> cloudhsm() {
         return this.cloudhsm;
     }
-    public @Nullable Output<String> getCloudhsmv2() {
+    public @Nullable Output<String> cloudhsmv2() {
         return this.cloudhsmv2;
     }
-    public @Nullable Output<String> getCloudsearch() {
+    public @Nullable Output<String> cloudsearch() {
         return this.cloudsearch;
     }
-    public @Nullable Output<String> getCloudsearchdomain() {
+    public @Nullable Output<String> cloudsearchdomain() {
         return this.cloudsearchdomain;
     }
-    public @Nullable Output<String> getCloudtrail() {
+    public @Nullable Output<String> cloudtrail() {
         return this.cloudtrail;
     }
-    public @Nullable Output<String> getCloudwatch() {
+    public @Nullable Output<String> cloudwatch() {
         return this.cloudwatch;
     }
-    public @Nullable Output<String> getCloudwatchevents() {
+    public @Nullable Output<String> cloudwatchevents() {
         return this.cloudwatchevents;
     }
-    public @Nullable Output<String> getCloudwatchlogs() {
+    public @Nullable Output<String> cloudwatchlogs() {
         return this.cloudwatchlogs;
     }
-    public @Nullable Output<String> getCodeartifact() {
+    public @Nullable Output<String> codeartifact() {
         return this.codeartifact;
     }
-    public @Nullable Output<String> getCodebuild() {
+    public @Nullable Output<String> codebuild() {
         return this.codebuild;
     }
-    public @Nullable Output<String> getCodecommit() {
+    public @Nullable Output<String> codecommit() {
         return this.codecommit;
     }
-    public @Nullable Output<String> getCodedeploy() {
+    public @Nullable Output<String> codedeploy() {
         return this.codedeploy;
     }
-    public @Nullable Output<String> getCodeguruprofiler() {
+    public @Nullable Output<String> codeguruprofiler() {
         return this.codeguruprofiler;
     }
-    public @Nullable Output<String> getCodegurureviewer() {
+    public @Nullable Output<String> codegurureviewer() {
         return this.codegurureviewer;
     }
-    public @Nullable Output<String> getCodepipeline() {
+    public @Nullable Output<String> codepipeline() {
         return this.codepipeline;
     }
-    public @Nullable Output<String> getCodestar() {
+    public @Nullable Output<String> codestar() {
         return this.codestar;
     }
-    public @Nullable Output<String> getCodestarconnections() {
+    public @Nullable Output<String> codestarconnections() {
         return this.codestarconnections;
     }
-    public @Nullable Output<String> getCodestarnotifications() {
+    public @Nullable Output<String> codestarnotifications() {
         return this.codestarnotifications;
     }
-    public @Nullable Output<String> getCognitoidentity() {
+    public @Nullable Output<String> cognitoidentity() {
         return this.cognitoidentity;
     }
-    public @Nullable Output<String> getCognitoidentityprovider() {
+    public @Nullable Output<String> cognitoidentityprovider() {
         return this.cognitoidentityprovider;
     }
-    public @Nullable Output<String> getCognitoidp() {
+    public @Nullable Output<String> cognitoidp() {
         return this.cognitoidp;
     }
-    public @Nullable Output<String> getCognitosync() {
+    public @Nullable Output<String> cognitosync() {
         return this.cognitosync;
     }
-    public @Nullable Output<String> getComprehend() {
+    public @Nullable Output<String> comprehend() {
         return this.comprehend;
     }
-    public @Nullable Output<String> getComprehendmedical() {
+    public @Nullable Output<String> comprehendmedical() {
         return this.comprehendmedical;
     }
-    public @Nullable Output<String> getConfig() {
+    public @Nullable Output<String> config() {
         return this.config;
     }
-    public @Nullable Output<String> getConfigservice() {
+    public @Nullable Output<String> configservice() {
         return this.configservice;
     }
-    public @Nullable Output<String> getConnect() {
+    public @Nullable Output<String> connect() {
         return this.connect;
     }
-    public @Nullable Output<String> getConnectcontactlens() {
+    public @Nullable Output<String> connectcontactlens() {
         return this.connectcontactlens;
     }
-    public @Nullable Output<String> getConnectparticipant() {
+    public @Nullable Output<String> connectparticipant() {
         return this.connectparticipant;
     }
-    public @Nullable Output<String> getCostandusagereportservice() {
+    public @Nullable Output<String> costandusagereportservice() {
         return this.costandusagereportservice;
     }
-    public @Nullable Output<String> getCostexplorer() {
+    public @Nullable Output<String> costexplorer() {
         return this.costexplorer;
     }
-    public @Nullable Output<String> getCur() {
+    public @Nullable Output<String> cur() {
         return this.cur;
     }
-    public @Nullable Output<String> getDatabasemigration() {
+    public @Nullable Output<String> databasemigration() {
         return this.databasemigration;
     }
-    public @Nullable Output<String> getDatabasemigrationservice() {
+    public @Nullable Output<String> databasemigrationservice() {
         return this.databasemigrationservice;
     }
-    public @Nullable Output<String> getDataexchange() {
+    public @Nullable Output<String> dataexchange() {
         return this.dataexchange;
     }
-    public @Nullable Output<String> getDatapipeline() {
+    public @Nullable Output<String> datapipeline() {
         return this.datapipeline;
     }
-    public @Nullable Output<String> getDatasync() {
+    public @Nullable Output<String> datasync() {
         return this.datasync;
     }
-    public @Nullable Output<String> getDax() {
+    public @Nullable Output<String> dax() {
         return this.dax;
     }
-    public @Nullable Output<String> getDetective() {
+    public @Nullable Output<String> detective() {
         return this.detective;
     }
-    public @Nullable Output<String> getDevicefarm() {
+    public @Nullable Output<String> devicefarm() {
         return this.devicefarm;
     }
-    public @Nullable Output<String> getDevopsguru() {
+    public @Nullable Output<String> devopsguru() {
         return this.devopsguru;
     }
-    public @Nullable Output<String> getDirectconnect() {
+    public @Nullable Output<String> directconnect() {
         return this.directconnect;
     }
-    public @Nullable Output<String> getDlm() {
+    public @Nullable Output<String> dlm() {
         return this.dlm;
     }
-    public @Nullable Output<String> getDms() {
+    public @Nullable Output<String> dms() {
         return this.dms;
     }
-    public @Nullable Output<String> getDocdb() {
+    public @Nullable Output<String> docdb() {
         return this.docdb;
     }
-    public @Nullable Output<String> getDs() {
+    public @Nullable Output<String> ds() {
         return this.ds;
     }
-    public @Nullable Output<String> getDynamodb() {
+    public @Nullable Output<String> dynamodb() {
         return this.dynamodb;
     }
-    public @Nullable Output<String> getDynamodbstreams() {
+    public @Nullable Output<String> dynamodbstreams() {
         return this.dynamodbstreams;
     }
-    public @Nullable Output<String> getEc2() {
+    public @Nullable Output<String> ec2() {
         return this.ec2;
     }
-    public @Nullable Output<String> getEc2instanceconnect() {
+    public @Nullable Output<String> ec2instanceconnect() {
         return this.ec2instanceconnect;
     }
-    public @Nullable Output<String> getEcr() {
+    public @Nullable Output<String> ecr() {
         return this.ecr;
     }
-    public @Nullable Output<String> getEcrpublic() {
+    public @Nullable Output<String> ecrpublic() {
         return this.ecrpublic;
     }
-    public @Nullable Output<String> getEcs() {
+    public @Nullable Output<String> ecs() {
         return this.ecs;
     }
-    public @Nullable Output<String> getEfs() {
+    public @Nullable Output<String> efs() {
         return this.efs;
     }
-    public @Nullable Output<String> getEks() {
+    public @Nullable Output<String> eks() {
         return this.eks;
     }
-    public @Nullable Output<String> getElasticache() {
+    public @Nullable Output<String> elasticache() {
         return this.elasticache;
     }
-    public @Nullable Output<String> getElasticbeanstalk() {
+    public @Nullable Output<String> elasticbeanstalk() {
         return this.elasticbeanstalk;
     }
-    public @Nullable Output<String> getElasticinference() {
+    public @Nullable Output<String> elasticinference() {
         return this.elasticinference;
     }
-    public @Nullable Output<String> getElasticsearch() {
+    public @Nullable Output<String> elasticsearch() {
         return this.elasticsearch;
     }
-    public @Nullable Output<String> getElasticsearchservice() {
+    public @Nullable Output<String> elasticsearchservice() {
         return this.elasticsearchservice;
     }
-    public @Nullable Output<String> getElastictranscoder() {
+    public @Nullable Output<String> elastictranscoder() {
         return this.elastictranscoder;
     }
-    public @Nullable Output<String> getElb() {
+    public @Nullable Output<String> elb() {
         return this.elb;
     }
-    public @Nullable Output<String> getElbv2() {
+    public @Nullable Output<String> elbv2() {
         return this.elbv2;
     }
-    public @Nullable Output<String> getEmr() {
+    public @Nullable Output<String> emr() {
         return this.emr;
     }
-    public @Nullable Output<String> getEmrcontainers() {
+    public @Nullable Output<String> emrcontainers() {
         return this.emrcontainers;
     }
-    public @Nullable Output<String> getEs() {
+    public @Nullable Output<String> es() {
         return this.es;
     }
-    public @Nullable Output<String> getEventbridge() {
+    public @Nullable Output<String> eventbridge() {
         return this.eventbridge;
     }
-    public @Nullable Output<String> getEvents() {
+    public @Nullable Output<String> events() {
         return this.events;
     }
-    public @Nullable Output<String> getFinspace() {
+    public @Nullable Output<String> finspace() {
         return this.finspace;
     }
-    public @Nullable Output<String> getFinspacedata() {
+    public @Nullable Output<String> finspacedata() {
         return this.finspacedata;
     }
-    public @Nullable Output<String> getFirehose() {
+    public @Nullable Output<String> firehose() {
         return this.firehose;
     }
-    public @Nullable Output<String> getFis() {
+    public @Nullable Output<String> fis() {
         return this.fis;
     }
-    public @Nullable Output<String> getFms() {
+    public @Nullable Output<String> fms() {
         return this.fms;
     }
-    public @Nullable Output<String> getForecast() {
+    public @Nullable Output<String> forecast() {
         return this.forecast;
     }
-    public @Nullable Output<String> getForecastquery() {
+    public @Nullable Output<String> forecastquery() {
         return this.forecastquery;
     }
-    public @Nullable Output<String> getForecastqueryservice() {
+    public @Nullable Output<String> forecastqueryservice() {
         return this.forecastqueryservice;
     }
-    public @Nullable Output<String> getForecastservice() {
+    public @Nullable Output<String> forecastservice() {
         return this.forecastservice;
     }
-    public @Nullable Output<String> getFrauddetector() {
+    public @Nullable Output<String> frauddetector() {
         return this.frauddetector;
     }
-    public @Nullable Output<String> getFsx() {
+    public @Nullable Output<String> fsx() {
         return this.fsx;
     }
-    public @Nullable Output<String> getGamelift() {
+    public @Nullable Output<String> gamelift() {
         return this.gamelift;
     }
-    public @Nullable Output<String> getGlacier() {
+    public @Nullable Output<String> glacier() {
         return this.glacier;
     }
-    public @Nullable Output<String> getGlobalaccelerator() {
+    public @Nullable Output<String> globalaccelerator() {
         return this.globalaccelerator;
     }
-    public @Nullable Output<String> getGlue() {
+    public @Nullable Output<String> glue() {
         return this.glue;
     }
-    public @Nullable Output<String> getGluedatabrew() {
+    public @Nullable Output<String> gluedatabrew() {
         return this.gluedatabrew;
     }
-    public @Nullable Output<String> getGreengrass() {
+    public @Nullable Output<String> greengrass() {
         return this.greengrass;
     }
-    public @Nullable Output<String> getGreengrassv2() {
+    public @Nullable Output<String> greengrassv2() {
         return this.greengrassv2;
     }
-    public @Nullable Output<String> getGroundstation() {
+    public @Nullable Output<String> groundstation() {
         return this.groundstation;
     }
-    public @Nullable Output<String> getGuardduty() {
+    public @Nullable Output<String> guardduty() {
         return this.guardduty;
     }
-    public @Nullable Output<String> getHealth() {
+    public @Nullable Output<String> health() {
         return this.health;
     }
-    public @Nullable Output<String> getHealthlake() {
+    public @Nullable Output<String> healthlake() {
         return this.healthlake;
     }
-    public @Nullable Output<String> getHoneycode() {
+    public @Nullable Output<String> honeycode() {
         return this.honeycode;
     }
-    public @Nullable Output<String> getIam() {
+    public @Nullable Output<String> iam() {
         return this.iam;
     }
-    public @Nullable Output<String> getIdentitystore() {
+    public @Nullable Output<String> identitystore() {
         return this.identitystore;
     }
-    public @Nullable Output<String> getImagebuilder() {
+    public @Nullable Output<String> imagebuilder() {
         return this.imagebuilder;
     }
-    public @Nullable Output<String> getInspector() {
+    public @Nullable Output<String> inspector() {
         return this.inspector;
     }
-    public @Nullable Output<String> getIot() {
+    public @Nullable Output<String> iot() {
         return this.iot;
     }
-    public @Nullable Output<String> getIot1clickdevices() {
+    public @Nullable Output<String> iot1clickdevices() {
         return this.iot1clickdevices;
     }
-    public @Nullable Output<String> getIot1clickdevicesservice() {
+    public @Nullable Output<String> iot1clickdevicesservice() {
         return this.iot1clickdevicesservice;
     }
-    public @Nullable Output<String> getIot1clickprojects() {
+    public @Nullable Output<String> iot1clickprojects() {
         return this.iot1clickprojects;
     }
-    public @Nullable Output<String> getIotanalytics() {
+    public @Nullable Output<String> iotanalytics() {
         return this.iotanalytics;
     }
-    public @Nullable Output<String> getIotdataplane() {
+    public @Nullable Output<String> iotdataplane() {
         return this.iotdataplane;
     }
-    public @Nullable Output<String> getIotdeviceadvisor() {
+    public @Nullable Output<String> iotdeviceadvisor() {
         return this.iotdeviceadvisor;
     }
-    public @Nullable Output<String> getIotevents() {
+    public @Nullable Output<String> iotevents() {
         return this.iotevents;
     }
-    public @Nullable Output<String> getIoteventsdata() {
+    public @Nullable Output<String> ioteventsdata() {
         return this.ioteventsdata;
     }
-    public @Nullable Output<String> getIotfleethub() {
+    public @Nullable Output<String> iotfleethub() {
         return this.iotfleethub;
     }
-    public @Nullable Output<String> getIotjobsdataplane() {
+    public @Nullable Output<String> iotjobsdataplane() {
         return this.iotjobsdataplane;
     }
-    public @Nullable Output<String> getIotsecuretunneling() {
+    public @Nullable Output<String> iotsecuretunneling() {
         return this.iotsecuretunneling;
     }
-    public @Nullable Output<String> getIotsitewise() {
+    public @Nullable Output<String> iotsitewise() {
         return this.iotsitewise;
     }
-    public @Nullable Output<String> getIotthingsgraph() {
+    public @Nullable Output<String> iotthingsgraph() {
         return this.iotthingsgraph;
     }
-    public @Nullable Output<String> getIotwireless() {
+    public @Nullable Output<String> iotwireless() {
         return this.iotwireless;
     }
-    public @Nullable Output<String> getKafka() {
+    public @Nullable Output<String> kafka() {
         return this.kafka;
     }
-    public @Nullable Output<String> getKafkaconnect() {
+    public @Nullable Output<String> kafkaconnect() {
         return this.kafkaconnect;
     }
-    public @Nullable Output<String> getKendra() {
+    public @Nullable Output<String> kendra() {
         return this.kendra;
     }
-    public @Nullable Output<String> getKinesis() {
+    public @Nullable Output<String> kinesis() {
         return this.kinesis;
     }
-    public @Nullable Output<String> getKinesisanalytics() {
+    public @Nullable Output<String> kinesisanalytics() {
         return this.kinesisanalytics;
     }
-    public @Nullable Output<String> getKinesisanalyticsv2() {
+    public @Nullable Output<String> kinesisanalyticsv2() {
         return this.kinesisanalyticsv2;
     }
-    public @Nullable Output<String> getKinesisvideo() {
+    public @Nullable Output<String> kinesisvideo() {
         return this.kinesisvideo;
     }
-    public @Nullable Output<String> getKinesisvideoarchivedmedia() {
+    public @Nullable Output<String> kinesisvideoarchivedmedia() {
         return this.kinesisvideoarchivedmedia;
     }
-    public @Nullable Output<String> getKinesisvideomedia() {
+    public @Nullable Output<String> kinesisvideomedia() {
         return this.kinesisvideomedia;
     }
-    public @Nullable Output<String> getKinesisvideosignalingchannels() {
+    public @Nullable Output<String> kinesisvideosignalingchannels() {
         return this.kinesisvideosignalingchannels;
     }
-    public @Nullable Output<String> getKms() {
+    public @Nullable Output<String> kms() {
         return this.kms;
     }
-    public @Nullable Output<String> getLakeformation() {
+    public @Nullable Output<String> lakeformation() {
         return this.lakeformation;
     }
-    public @Nullable Output<String> getLambda() {
+    public @Nullable Output<String> lambda() {
         return this.lambda;
     }
-    public @Nullable Output<String> getLexmodelbuilding() {
+    public @Nullable Output<String> lexmodelbuilding() {
         return this.lexmodelbuilding;
     }
-    public @Nullable Output<String> getLexmodelbuildingservice() {
+    public @Nullable Output<String> lexmodelbuildingservice() {
         return this.lexmodelbuildingservice;
     }
-    public @Nullable Output<String> getLexmodels() {
+    public @Nullable Output<String> lexmodels() {
         return this.lexmodels;
     }
-    public @Nullable Output<String> getLexmodelsv2() {
+    public @Nullable Output<String> lexmodelsv2() {
         return this.lexmodelsv2;
     }
-    public @Nullable Output<String> getLexruntime() {
+    public @Nullable Output<String> lexruntime() {
         return this.lexruntime;
     }
-    public @Nullable Output<String> getLexruntimeservice() {
+    public @Nullable Output<String> lexruntimeservice() {
         return this.lexruntimeservice;
     }
-    public @Nullable Output<String> getLexruntimev2() {
+    public @Nullable Output<String> lexruntimev2() {
         return this.lexruntimev2;
     }
-    public @Nullable Output<String> getLicensemanager() {
+    public @Nullable Output<String> licensemanager() {
         return this.licensemanager;
     }
-    public @Nullable Output<String> getLightsail() {
+    public @Nullable Output<String> lightsail() {
         return this.lightsail;
     }
-    public @Nullable Output<String> getLocation() {
+    public @Nullable Output<String> location() {
         return this.location;
     }
-    public @Nullable Output<String> getLookoutequipment() {
+    public @Nullable Output<String> lookoutequipment() {
         return this.lookoutequipment;
     }
-    public @Nullable Output<String> getLookoutforvision() {
+    public @Nullable Output<String> lookoutforvision() {
         return this.lookoutforvision;
     }
-    public @Nullable Output<String> getLookoutmetrics() {
+    public @Nullable Output<String> lookoutmetrics() {
         return this.lookoutmetrics;
     }
-    public @Nullable Output<String> getMachinelearning() {
+    public @Nullable Output<String> machinelearning() {
         return this.machinelearning;
     }
-    public @Nullable Output<String> getMacie() {
+    public @Nullable Output<String> macie() {
         return this.macie;
     }
-    public @Nullable Output<String> getMacie2() {
+    public @Nullable Output<String> macie2() {
         return this.macie2;
     }
-    public @Nullable Output<String> getManagedblockchain() {
+    public @Nullable Output<String> managedblockchain() {
         return this.managedblockchain;
     }
-    public @Nullable Output<String> getMarketplacecatalog() {
+    public @Nullable Output<String> marketplacecatalog() {
         return this.marketplacecatalog;
     }
-    public @Nullable Output<String> getMarketplacecommerceanalytics() {
+    public @Nullable Output<String> marketplacecommerceanalytics() {
         return this.marketplacecommerceanalytics;
     }
-    public @Nullable Output<String> getMarketplaceentitlement() {
+    public @Nullable Output<String> marketplaceentitlement() {
         return this.marketplaceentitlement;
     }
-    public @Nullable Output<String> getMarketplaceentitlementservice() {
+    public @Nullable Output<String> marketplaceentitlementservice() {
         return this.marketplaceentitlementservice;
     }
-    public @Nullable Output<String> getMarketplacemetering() {
+    public @Nullable Output<String> marketplacemetering() {
         return this.marketplacemetering;
     }
-    public @Nullable Output<String> getMediaconnect() {
+    public @Nullable Output<String> mediaconnect() {
         return this.mediaconnect;
     }
-    public @Nullable Output<String> getMediaconvert() {
+    public @Nullable Output<String> mediaconvert() {
         return this.mediaconvert;
     }
-    public @Nullable Output<String> getMedialive() {
+    public @Nullable Output<String> medialive() {
         return this.medialive;
     }
-    public @Nullable Output<String> getMediapackage() {
+    public @Nullable Output<String> mediapackage() {
         return this.mediapackage;
     }
-    public @Nullable Output<String> getMediapackagevod() {
+    public @Nullable Output<String> mediapackagevod() {
         return this.mediapackagevod;
     }
-    public @Nullable Output<String> getMediastore() {
+    public @Nullable Output<String> mediastore() {
         return this.mediastore;
     }
-    public @Nullable Output<String> getMediastoredata() {
+    public @Nullable Output<String> mediastoredata() {
         return this.mediastoredata;
     }
-    public @Nullable Output<String> getMediatailor() {
+    public @Nullable Output<String> mediatailor() {
         return this.mediatailor;
     }
-    public @Nullable Output<String> getMemorydb() {
+    public @Nullable Output<String> memorydb() {
         return this.memorydb;
     }
-    public @Nullable Output<String> getMgn() {
+    public @Nullable Output<String> mgn() {
         return this.mgn;
     }
-    public @Nullable Output<String> getMigrationhub() {
+    public @Nullable Output<String> migrationhub() {
         return this.migrationhub;
     }
-    public @Nullable Output<String> getMigrationhubconfig() {
+    public @Nullable Output<String> migrationhubconfig() {
         return this.migrationhubconfig;
     }
-    public @Nullable Output<String> getMobile() {
+    public @Nullable Output<String> mobile() {
         return this.mobile;
     }
-    public @Nullable Output<String> getMobileanalytics() {
+    public @Nullable Output<String> mobileanalytics() {
         return this.mobileanalytics;
     }
-    public @Nullable Output<String> getMq() {
+    public @Nullable Output<String> mq() {
         return this.mq;
     }
-    public @Nullable Output<String> getMturk() {
+    public @Nullable Output<String> mturk() {
         return this.mturk;
     }
-    public @Nullable Output<String> getMwaa() {
+    public @Nullable Output<String> mwaa() {
         return this.mwaa;
     }
-    public @Nullable Output<String> getNeptune() {
+    public @Nullable Output<String> neptune() {
         return this.neptune;
     }
-    public @Nullable Output<String> getNetworkfirewall() {
+    public @Nullable Output<String> networkfirewall() {
         return this.networkfirewall;
     }
-    public @Nullable Output<String> getNetworkmanager() {
+    public @Nullable Output<String> networkmanager() {
         return this.networkmanager;
     }
-    public @Nullable Output<String> getNimblestudio() {
+    public @Nullable Output<String> nimblestudio() {
         return this.nimblestudio;
     }
-    public @Nullable Output<String> getOpsworks() {
+    public @Nullable Output<String> opsworks() {
         return this.opsworks;
     }
-    public @Nullable Output<String> getOpsworkscm() {
+    public @Nullable Output<String> opsworkscm() {
         return this.opsworkscm;
     }
-    public @Nullable Output<String> getOrganizations() {
+    public @Nullable Output<String> organizations() {
         return this.organizations;
     }
-    public @Nullable Output<String> getOutposts() {
+    public @Nullable Output<String> outposts() {
         return this.outposts;
     }
-    public @Nullable Output<String> getPersonalize() {
+    public @Nullable Output<String> personalize() {
         return this.personalize;
     }
-    public @Nullable Output<String> getPersonalizeevents() {
+    public @Nullable Output<String> personalizeevents() {
         return this.personalizeevents;
     }
-    public @Nullable Output<String> getPersonalizeruntime() {
+    public @Nullable Output<String> personalizeruntime() {
         return this.personalizeruntime;
     }
-    public @Nullable Output<String> getPi() {
+    public @Nullable Output<String> pi() {
         return this.pi;
     }
-    public @Nullable Output<String> getPinpoint() {
+    public @Nullable Output<String> pinpoint() {
         return this.pinpoint;
     }
-    public @Nullable Output<String> getPinpointemail() {
+    public @Nullable Output<String> pinpointemail() {
         return this.pinpointemail;
     }
-    public @Nullable Output<String> getPinpointsmsvoice() {
+    public @Nullable Output<String> pinpointsmsvoice() {
         return this.pinpointsmsvoice;
     }
-    public @Nullable Output<String> getPolly() {
+    public @Nullable Output<String> polly() {
         return this.polly;
     }
-    public @Nullable Output<String> getPricing() {
+    public @Nullable Output<String> pricing() {
         return this.pricing;
     }
-    public @Nullable Output<String> getPrometheus() {
+    public @Nullable Output<String> prometheus() {
         return this.prometheus;
     }
-    public @Nullable Output<String> getPrometheusservice() {
+    public @Nullable Output<String> prometheusservice() {
         return this.prometheusservice;
     }
-    public @Nullable Output<String> getProton() {
+    public @Nullable Output<String> proton() {
         return this.proton;
     }
-    public @Nullable Output<String> getQldb() {
+    public @Nullable Output<String> qldb() {
         return this.qldb;
     }
-    public @Nullable Output<String> getQldbsession() {
+    public @Nullable Output<String> qldbsession() {
         return this.qldbsession;
     }
-    public @Nullable Output<String> getQuicksight() {
+    public @Nullable Output<String> quicksight() {
         return this.quicksight;
     }
-    public @Nullable Output<String> getRam() {
+    public @Nullable Output<String> ram() {
         return this.ram;
     }
-    public @Nullable Output<String> getRds() {
+    public @Nullable Output<String> rds() {
         return this.rds;
     }
-    public @Nullable Output<String> getRdsdata() {
+    public @Nullable Output<String> rdsdata() {
         return this.rdsdata;
     }
-    public @Nullable Output<String> getRdsdataservice() {
+    public @Nullable Output<String> rdsdataservice() {
         return this.rdsdataservice;
     }
-    public @Nullable Output<String> getRedshift() {
+    public @Nullable Output<String> redshift() {
         return this.redshift;
     }
-    public @Nullable Output<String> getRedshiftdata() {
+    public @Nullable Output<String> redshiftdata() {
         return this.redshiftdata;
     }
-    public @Nullable Output<String> getRekognition() {
+    public @Nullable Output<String> rekognition() {
         return this.rekognition;
     }
-    public @Nullable Output<String> getResourcegroups() {
+    public @Nullable Output<String> resourcegroups() {
         return this.resourcegroups;
     }
-    public @Nullable Output<String> getResourcegroupstagging() {
+    public @Nullable Output<String> resourcegroupstagging() {
         return this.resourcegroupstagging;
     }
-    public @Nullable Output<String> getResourcegroupstaggingapi() {
+    public @Nullable Output<String> resourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi;
     }
-    public @Nullable Output<String> getRobomaker() {
+    public @Nullable Output<String> robomaker() {
         return this.robomaker;
     }
-    public @Nullable Output<String> getRoute53() {
+    public @Nullable Output<String> route53() {
         return this.route53;
     }
-    public @Nullable Output<String> getRoute53domains() {
+    public @Nullable Output<String> route53domains() {
         return this.route53domains;
     }
-    public @Nullable Output<String> getRoute53recoverycontrolconfig() {
+    public @Nullable Output<String> route53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig;
     }
-    public @Nullable Output<String> getRoute53recoveryreadiness() {
+    public @Nullable Output<String> route53recoveryreadiness() {
         return this.route53recoveryreadiness;
     }
-    public @Nullable Output<String> getRoute53resolver() {
+    public @Nullable Output<String> route53resolver() {
         return this.route53resolver;
     }
-    public @Nullable Output<String> getS3() {
+    public @Nullable Output<String> s3() {
         return this.s3;
     }
-    public @Nullable Output<String> getS3control() {
+    public @Nullable Output<String> s3control() {
         return this.s3control;
     }
-    public @Nullable Output<String> getS3outposts() {
+    public @Nullable Output<String> s3outposts() {
         return this.s3outposts;
     }
-    public @Nullable Output<String> getSagemaker() {
+    public @Nullable Output<String> sagemaker() {
         return this.sagemaker;
     }
-    public @Nullable Output<String> getSagemakeredgemanager() {
+    public @Nullable Output<String> sagemakeredgemanager() {
         return this.sagemakeredgemanager;
     }
-    public @Nullable Output<String> getSagemakerfeaturestoreruntime() {
+    public @Nullable Output<String> sagemakerfeaturestoreruntime() {
         return this.sagemakerfeaturestoreruntime;
     }
-    public @Nullable Output<String> getSagemakerruntime() {
+    public @Nullable Output<String> sagemakerruntime() {
         return this.sagemakerruntime;
     }
-    public @Nullable Output<String> getSavingsplans() {
+    public @Nullable Output<String> savingsplans() {
         return this.savingsplans;
     }
-    public @Nullable Output<String> getSchemas() {
+    public @Nullable Output<String> schemas() {
         return this.schemas;
     }
-    public @Nullable Output<String> getSdb() {
+    public @Nullable Output<String> sdb() {
         return this.sdb;
     }
-    public @Nullable Output<String> getSecretsmanager() {
+    public @Nullable Output<String> secretsmanager() {
         return this.secretsmanager;
     }
-    public @Nullable Output<String> getSecurityhub() {
+    public @Nullable Output<String> securityhub() {
         return this.securityhub;
     }
-    public @Nullable Output<String> getServerlessapplicationrepository() {
+    public @Nullable Output<String> serverlessapplicationrepository() {
         return this.serverlessapplicationrepository;
     }
-    public @Nullable Output<String> getServerlessapprepo() {
+    public @Nullable Output<String> serverlessapprepo() {
         return this.serverlessapprepo;
     }
-    public @Nullable Output<String> getServerlessrepo() {
+    public @Nullable Output<String> serverlessrepo() {
         return this.serverlessrepo;
     }
-    public @Nullable Output<String> getServicecatalog() {
+    public @Nullable Output<String> servicecatalog() {
         return this.servicecatalog;
     }
-    public @Nullable Output<String> getServicediscovery() {
+    public @Nullable Output<String> servicediscovery() {
         return this.servicediscovery;
     }
-    public @Nullable Output<String> getServicequotas() {
+    public @Nullable Output<String> servicequotas() {
         return this.servicequotas;
     }
-    public @Nullable Output<String> getSes() {
+    public @Nullable Output<String> ses() {
         return this.ses;
     }
-    public @Nullable Output<String> getSesv2() {
+    public @Nullable Output<String> sesv2() {
         return this.sesv2;
     }
-    public @Nullable Output<String> getSfn() {
+    public @Nullable Output<String> sfn() {
         return this.sfn;
     }
-    public @Nullable Output<String> getShield() {
+    public @Nullable Output<String> shield() {
         return this.shield;
     }
-    public @Nullable Output<String> getSigner() {
+    public @Nullable Output<String> signer() {
         return this.signer;
     }
-    public @Nullable Output<String> getSimpledb() {
+    public @Nullable Output<String> simpledb() {
         return this.simpledb;
     }
-    public @Nullable Output<String> getSms() {
+    public @Nullable Output<String> sms() {
         return this.sms;
     }
-    public @Nullable Output<String> getSnowball() {
+    public @Nullable Output<String> snowball() {
         return this.snowball;
     }
-    public @Nullable Output<String> getSns() {
+    public @Nullable Output<String> sns() {
         return this.sns;
     }
-    public @Nullable Output<String> getSqs() {
+    public @Nullable Output<String> sqs() {
         return this.sqs;
     }
-    public @Nullable Output<String> getSsm() {
+    public @Nullable Output<String> ssm() {
         return this.ssm;
     }
-    public @Nullable Output<String> getSsmcontacts() {
+    public @Nullable Output<String> ssmcontacts() {
         return this.ssmcontacts;
     }
-    public @Nullable Output<String> getSsmincidents() {
+    public @Nullable Output<String> ssmincidents() {
         return this.ssmincidents;
     }
-    public @Nullable Output<String> getSso() {
+    public @Nullable Output<String> sso() {
         return this.sso;
     }
-    public @Nullable Output<String> getSsoadmin() {
+    public @Nullable Output<String> ssoadmin() {
         return this.ssoadmin;
     }
-    public @Nullable Output<String> getSsooidc() {
+    public @Nullable Output<String> ssooidc() {
         return this.ssooidc;
     }
-    public @Nullable Output<String> getStepfunctions() {
+    public @Nullable Output<String> stepfunctions() {
         return this.stepfunctions;
     }
-    public @Nullable Output<String> getStoragegateway() {
+    public @Nullable Output<String> storagegateway() {
         return this.storagegateway;
     }
-    public @Nullable Output<String> getSts() {
+    public @Nullable Output<String> sts() {
         return this.sts;
     }
-    public @Nullable Output<String> getSupport() {
+    public @Nullable Output<String> support() {
         return this.support;
     }
-    public @Nullable Output<String> getSwf() {
+    public @Nullable Output<String> swf() {
         return this.swf;
     }
-    public @Nullable Output<String> getSynthetics() {
+    public @Nullable Output<String> synthetics() {
         return this.synthetics;
     }
-    public @Nullable Output<String> getTextract() {
+    public @Nullable Output<String> textract() {
         return this.textract;
     }
-    public @Nullable Output<String> getTimestreamquery() {
+    public @Nullable Output<String> timestreamquery() {
         return this.timestreamquery;
     }
-    public @Nullable Output<String> getTimestreamwrite() {
+    public @Nullable Output<String> timestreamwrite() {
         return this.timestreamwrite;
     }
-    public @Nullable Output<String> getTranscribe() {
+    public @Nullable Output<String> transcribe() {
         return this.transcribe;
     }
-    public @Nullable Output<String> getTranscribeservice() {
+    public @Nullable Output<String> transcribeservice() {
         return this.transcribeservice;
     }
-    public @Nullable Output<String> getTranscribestreaming() {
+    public @Nullable Output<String> transcribestreaming() {
         return this.transcribestreaming;
     }
-    public @Nullable Output<String> getTranscribestreamingservice() {
+    public @Nullable Output<String> transcribestreamingservice() {
         return this.transcribestreamingservice;
     }
-    public @Nullable Output<String> getTransfer() {
+    public @Nullable Output<String> transfer() {
         return this.transfer;
     }
-    public @Nullable Output<String> getTranslate() {
+    public @Nullable Output<String> translate() {
         return this.translate;
     }
-    public @Nullable Output<String> getWaf() {
+    public @Nullable Output<String> waf() {
         return this.waf;
     }
-    public @Nullable Output<String> getWafregional() {
+    public @Nullable Output<String> wafregional() {
         return this.wafregional;
     }
-    public @Nullable Output<String> getWafv2() {
+    public @Nullable Output<String> wafv2() {
         return this.wafv2;
     }
-    public @Nullable Output<String> getWellarchitected() {
+    public @Nullable Output<String> wellarchitected() {
         return this.wellarchitected;
     }
-    public @Nullable Output<String> getWorkdocs() {
+    public @Nullable Output<String> workdocs() {
         return this.workdocs;
     }
-    public @Nullable Output<String> getWorklink() {
+    public @Nullable Output<String> worklink() {
         return this.worklink;
     }
-    public @Nullable Output<String> getWorkmail() {
+    public @Nullable Output<String> workmail() {
         return this.workmail;
     }
-    public @Nullable Output<String> getWorkmailmessageflow() {
+    public @Nullable Output<String> workmailmessageflow() {
         return this.workmailmessageflow;
     }
-    public @Nullable Output<String> getWorkspaces() {
+    public @Nullable Output<String> workspaces() {
         return this.workspaces;
     }
-    public @Nullable Output<String> getXray() {
+    public @Nullable Output<String> xray() {
         return this.xray;
     }
 

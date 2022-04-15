@@ -16,7 +16,7 @@ public final class GetTablePointInTimeRecovery {
         this.enabled = enabled;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

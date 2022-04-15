@@ -26,7 +26,7 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     @Import(name="recordColumns", required=true)
       private final Output<List<AnalyticsApplicationInputsSchemaRecordColumnArgs>> recordColumns;
 
-    public Output<List<AnalyticsApplicationInputsSchemaRecordColumnArgs>> getRecordColumns() {
+    public Output<List<AnalyticsApplicationInputsSchemaRecordColumnArgs>> recordColumns() {
         return this.recordColumns;
     }
 
@@ -37,7 +37,7 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
-    public Output<String> getRecordEncoding() {
+    public Output<String> recordEncoding() {
         return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
@@ -49,7 +49,7 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     @Import(name="recordFormat", required=true)
       private final Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> recordFormat;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> getRecordFormat() {
+    public Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> recordFormat() {
         return this.recordFormat;
     }
 

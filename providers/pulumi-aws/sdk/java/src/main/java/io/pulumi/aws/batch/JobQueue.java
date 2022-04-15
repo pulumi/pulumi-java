@@ -43,7 +43,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of the job queue.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -61,7 +61,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * in the list will dictate the order.
      * 
      */
-    public Output<List<String>> getComputeEnvironments() {
+    public Output<List<String>> computeEnvironments() {
         return this.computeEnvironments;
     }
     /**
@@ -75,7 +75,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the job queue.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * are evaluated first when associated with the same compute environment.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -105,7 +105,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * @return The ARN of the fair share scheduling policy. If this parameter is specified, the job queue uses a fair share scheduling policy. If this parameter isn't specified, the job queue uses a first in, first out (FIFO) scheduling policy. After a job queue is created, you can replace but can't remove the fair share scheduling policy.
      * 
      */
-    public Output</* @Nullable */ String> getSchedulingPolicyArn() {
+    public Output</* @Nullable */ String> schedulingPolicyArn() {
         return this.schedulingPolicyArn;
     }
     /**
@@ -119,7 +119,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * @return The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -133,7 +133,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -147,7 +147,7 @@ public class JobQueue extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

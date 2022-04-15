@@ -21,7 +21,7 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="samlMetadata", required=true)
       private final Output<String> samlMetadata;
 
-    public Output<String> getSamlMetadata() {
+    public Output<String> samlMetadata() {
         return this.samlMetadata;
     }
 
@@ -32,7 +32,7 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

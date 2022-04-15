@@ -22,7 +22,7 @@ public final class ImageBuilderAccessEndpointGetArgs extends io.pulumi.resources
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -33,7 +33,7 @@ public final class ImageBuilderAccessEndpointGetArgs extends io.pulumi.resources
     @Import(name="vpceId")
       private final @Nullable Output<String> vpceId;
 
-    public Output<String> getVpceId() {
+    public Output<String> vpceId() {
         return this.vpceId == null ? Codegen.empty() : this.vpceId;
     }
 

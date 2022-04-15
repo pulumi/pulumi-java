@@ -21,7 +21,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
@@ -32,7 +32,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

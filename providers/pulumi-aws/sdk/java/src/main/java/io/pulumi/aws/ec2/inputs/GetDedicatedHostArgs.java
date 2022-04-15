@@ -24,7 +24,7 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetDedicatedHostFilter> filters;
 
-    public List<GetDedicatedHostFilter> getFilters() {
+    public List<GetDedicatedHostFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,14 +35,14 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="hostId")
       private final @Nullable String hostId;
 
-    public Optional<String> getHostId() {
+    public Optional<String> hostId() {
         return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

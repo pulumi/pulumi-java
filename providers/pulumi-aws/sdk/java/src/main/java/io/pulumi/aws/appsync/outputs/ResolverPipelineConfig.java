@@ -26,7 +26,7 @@ public final class ResolverPipelineConfig {
      * The list of Function ID.
      * 
     */
-    public List<String> getFunctions() {
+    public List<String> functions() {
         return this.functions == null ? List.of() : this.functions;
     }
 

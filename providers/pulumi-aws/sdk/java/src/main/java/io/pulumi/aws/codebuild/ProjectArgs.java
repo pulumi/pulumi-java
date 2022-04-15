@@ -37,7 +37,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifacts", required=true)
       private final Output<ProjectArtifactsArgs> artifacts;
 
-    public Output<ProjectArtifactsArgs> getArtifacts() {
+    public Output<ProjectArtifactsArgs> artifacts() {
         return this.artifacts;
     }
 
@@ -48,7 +48,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="badgeEnabled")
       private final @Nullable Output<Boolean> badgeEnabled;
 
-    public Output<Boolean> getBadgeEnabled() {
+    public Output<Boolean> badgeEnabled() {
         return this.badgeEnabled == null ? Codegen.empty() : this.badgeEnabled;
     }
 
@@ -59,7 +59,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildBatchConfig")
       private final @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig;
 
-    public Output<ProjectBuildBatchConfigArgs> getBuildBatchConfig() {
+    public Output<ProjectBuildBatchConfigArgs> buildBatchConfig() {
         return this.buildBatchConfig == null ? Codegen.empty() : this.buildBatchConfig;
     }
 
@@ -70,7 +70,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildTimeout")
       private final @Nullable Output<Integer> buildTimeout;
 
-    public Output<Integer> getBuildTimeout() {
+    public Output<Integer> buildTimeout() {
         return this.buildTimeout == null ? Codegen.empty() : this.buildTimeout;
     }
 
@@ -81,7 +81,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cache")
       private final @Nullable Output<ProjectCacheArgs> cache;
 
-    public Output<ProjectCacheArgs> getCache() {
+    public Output<ProjectCacheArgs> cache() {
         return this.cache == null ? Codegen.empty() : this.cache;
     }
 
@@ -92,7 +92,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="concurrentBuildLimit")
       private final @Nullable Output<Integer> concurrentBuildLimit;
 
-    public Output<Integer> getConcurrentBuildLimit() {
+    public Output<Integer> concurrentBuildLimit() {
         return this.concurrentBuildLimit == null ? Codegen.empty() : this.concurrentBuildLimit;
     }
 
@@ -103,7 +103,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -114,7 +114,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -125,7 +125,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment", required=true)
       private final Output<ProjectEnvironmentArgs> environment;
 
-    public Output<ProjectEnvironmentArgs> getEnvironment() {
+    public Output<ProjectEnvironmentArgs> environment() {
         return this.environment;
     }
 
@@ -136,7 +136,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemLocations")
       private final @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
 
-    public Output<List<ProjectFileSystemLocationArgs>> getFileSystemLocations() {
+    public Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations() {
         return this.fileSystemLocations == null ? Codegen.empty() : this.fileSystemLocations;
     }
 
@@ -147,7 +147,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logsConfig")
       private final @Nullable Output<ProjectLogsConfigArgs> logsConfig;
 
-    public Output<ProjectLogsConfigArgs> getLogsConfig() {
+    public Output<ProjectLogsConfigArgs> logsConfig() {
         return this.logsConfig == null ? Codegen.empty() : this.logsConfig;
     }
 
@@ -158,7 +158,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -169,7 +169,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectVisibility")
       private final @Nullable Output<String> projectVisibility;
 
-    public Output<String> getProjectVisibility() {
+    public Output<String> projectVisibility() {
         return this.projectVisibility == null ? Codegen.empty() : this.projectVisibility;
     }
 
@@ -180,7 +180,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queuedTimeout")
       private final @Nullable Output<Integer> queuedTimeout;
 
-    public Output<Integer> getQueuedTimeout() {
+    public Output<Integer> queuedTimeout() {
         return this.queuedTimeout == null ? Codegen.empty() : this.queuedTimeout;
     }
 
@@ -191,7 +191,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceAccessRole")
       private final @Nullable Output<String> resourceAccessRole;
 
-    public Output<String> getResourceAccessRole() {
+    public Output<String> resourceAccessRole() {
         return this.resourceAccessRole == null ? Codegen.empty() : this.resourceAccessRole;
     }
 
@@ -202,7 +202,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryArtifacts")
       private final @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
 
-    public Output<List<ProjectSecondaryArtifactArgs>> getSecondaryArtifacts() {
+    public Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts() {
         return this.secondaryArtifacts == null ? Codegen.empty() : this.secondaryArtifacts;
     }
 
@@ -213,7 +213,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondarySourceVersions")
       private final @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
 
-    public Output<List<ProjectSecondarySourceVersionArgs>> getSecondarySourceVersions() {
+    public Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions() {
         return this.secondarySourceVersions == null ? Codegen.empty() : this.secondarySourceVersions;
     }
 
@@ -224,7 +224,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondarySources")
       private final @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources;
 
-    public Output<List<ProjectSecondarySourceArgs>> getSecondarySources() {
+    public Output<List<ProjectSecondarySourceArgs>> secondarySources() {
         return this.secondarySources == null ? Codegen.empty() : this.secondarySources;
     }
 
@@ -235,7 +235,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
 
@@ -246,7 +246,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source", required=true)
       private final Output<ProjectSourceArgs> source;
 
-    public Output<ProjectSourceArgs> getSource() {
+    public Output<ProjectSourceArgs> source() {
         return this.source;
     }
 
@@ -257,7 +257,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceVersion")
       private final @Nullable Output<String> sourceVersion;
 
-    public Output<String> getSourceVersion() {
+    public Output<String> sourceVersion() {
         return this.sourceVersion == null ? Codegen.empty() : this.sourceVersion;
     }
 
@@ -268,7 +268,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -279,7 +279,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
       private final @Nullable Output<ProjectVpcConfigArgs> vpcConfig;
 
-    public Output<ProjectVpcConfigArgs> getVpcConfig() {
+    public Output<ProjectVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

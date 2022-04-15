@@ -28,7 +28,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs> body;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs> getBody() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs> method;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs> getMethod() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> queryString;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> getQueryString() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
     @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> uriPath;
 
-    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> getUriPath() {
+    public Output<WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

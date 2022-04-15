@@ -28,7 +28,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments() {
         return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
@@ -39,7 +39,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchBodyArgs> body;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchBodyArgs> getBody() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchBodyArgs> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchMethodArgs> method;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchMethodArgs> getMethod() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchMethodArgs> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -61,7 +61,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchQueryStringArgs> queryString() {
         return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
@@ -72,7 +72,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchSingleHeaderArgs> singleHeader() {
         return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
@@ -83,7 +83,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument() {
         return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
@@ -94,7 +94,7 @@ public final class WebAclRuleStatementXssMatchStatementFieldToMatchArgs extends 
     @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath;
 
-    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs> getUriPath() {
+    public Output<WebAclRuleStatementXssMatchStatementFieldToMatchUriPathArgs> uriPath() {
         return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 

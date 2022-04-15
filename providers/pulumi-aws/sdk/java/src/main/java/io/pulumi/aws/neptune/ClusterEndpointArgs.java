@@ -20,7 +20,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterEndpointIdentifier", required=true)
       private final Output<String> clusterEndpointIdentifier;
 
-    public Output<String> getClusterEndpointIdentifier() {
+    public Output<String> clusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier;
     }
 
@@ -31,7 +31,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -42,7 +42,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -53,7 +53,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="excludedMembers")
       private final @Nullable Output<List<String>> excludedMembers;
 
-    public Output<List<String>> getExcludedMembers() {
+    public Output<List<String>> excludedMembers() {
         return this.excludedMembers == null ? Codegen.empty() : this.excludedMembers;
     }
 
@@ -64,7 +64,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="staticMembers")
       private final @Nullable Output<List<String>> staticMembers;
 
-    public Output<List<String>> getStaticMembers() {
+    public Output<List<String>> staticMembers() {
         return this.staticMembers == null ? Codegen.empty() : this.staticMembers;
     }
 
@@ -75,7 +75,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

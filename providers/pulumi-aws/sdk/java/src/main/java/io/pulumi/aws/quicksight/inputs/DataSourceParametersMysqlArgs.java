@@ -22,7 +22,7 @@ public final class DataSourceParametersMysqlArgs extends io.pulumi.resources.Res
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -33,7 +33,7 @@ public final class DataSourceParametersMysqlArgs extends io.pulumi.resources.Res
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -44,7 +44,7 @@ public final class DataSourceParametersMysqlArgs extends io.pulumi.resources.Res
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 

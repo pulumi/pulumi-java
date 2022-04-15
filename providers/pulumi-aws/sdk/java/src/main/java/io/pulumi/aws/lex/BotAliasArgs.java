@@ -23,7 +23,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="botName", required=true)
       private final Output<String> botName;
 
-    public Output<String> getBotName() {
+    public Output<String> botName() {
         return this.botName;
     }
 
@@ -34,7 +34,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="botVersion", required=true)
       private final Output<String> botVersion;
 
-    public Output<String> getBotVersion() {
+    public Output<String> botVersion() {
         return this.botVersion;
     }
 
@@ -45,7 +45,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationLogs")
       private final @Nullable Output<BotAliasConversationLogsArgs> conversationLogs;
 
-    public Output<BotAliasConversationLogsArgs> getConversationLogs() {
+    public Output<BotAliasConversationLogsArgs> conversationLogs() {
         return this.conversationLogs == null ? Codegen.empty() : this.conversationLogs;
     }
 
@@ -56,7 +56,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

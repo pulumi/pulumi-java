@@ -24,7 +24,7 @@ public final class GetBundleRootStorage {
      * The size of the user storage.
      * 
     */
-    public String getCapacity() {
+    public String capacity() {
         return this.capacity;
     }
 

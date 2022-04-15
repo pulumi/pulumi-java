@@ -23,7 +23,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionArgs extends i
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -34,7 +34,7 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionArgs extends i
     @Import(name="principal")
       private final @Nullable Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal == null ? Codegen.empty() : this.principal;
     }
 

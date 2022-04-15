@@ -28,7 +28,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="authenticateCognito")
       private final @Nullable Output<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito;
 
-    public Output<ListenerDefaultActionAuthenticateCognitoGetArgs> getAuthenticateCognito() {
+    public Output<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito() {
         return this.authenticateCognito == null ? Codegen.empty() : this.authenticateCognito;
     }
 
@@ -39,7 +39,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="authenticateOidc")
       private final @Nullable Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc;
 
-    public Output<ListenerDefaultActionAuthenticateOidcGetArgs> getAuthenticateOidc() {
+    public Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc() {
         return this.authenticateOidc == null ? Codegen.empty() : this.authenticateOidc;
     }
 
@@ -50,7 +50,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="fixedResponse")
       private final @Nullable Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse;
 
-    public Output<ListenerDefaultActionFixedResponseGetArgs> getFixedResponse() {
+    public Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse() {
         return this.fixedResponse == null ? Codegen.empty() : this.fixedResponse;
     }
 
@@ -61,7 +61,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="forward")
       private final @Nullable Output<ListenerDefaultActionForwardGetArgs> forward;
 
-    public Output<ListenerDefaultActionForwardGetArgs> getForward() {
+    public Output<ListenerDefaultActionForwardGetArgs> forward() {
         return this.forward == null ? Codegen.empty() : this.forward;
     }
 
@@ -72,7 +72,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
@@ -83,7 +83,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="redirect")
       private final @Nullable Output<ListenerDefaultActionRedirectGetArgs> redirect;
 
-    public Output<ListenerDefaultActionRedirectGetArgs> getRedirect() {
+    public Output<ListenerDefaultActionRedirectGetArgs> redirect() {
         return this.redirect == null ? Codegen.empty() : this.redirect;
     }
 
@@ -94,7 +94,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
+    public Output<String> targetGroupArn() {
         return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
@@ -105,7 +105,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

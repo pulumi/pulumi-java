@@ -33,14 +33,14 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      * The key of the application execution property key-value map.
      * 
     */
-    public String getPropertyGroupId() {
+    public String propertyGroupId() {
         return this.propertyGroupId;
     }
     /**
      * Application execution property key-value map.
      * 
     */
-    public Map<String,String> getPropertyMap() {
+    public Map<String,String> propertyMap() {
         return this.propertyMap;
     }
 

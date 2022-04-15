@@ -23,7 +23,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -34,7 +34,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -45,7 +45,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
@@ -56,7 +56,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="disableTemplateValidation")
       private final @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Output<Boolean> getDisableTemplateValidation() {
+    public Output<Boolean> disableTemplateValidation() {
         return this.disableTemplateValidation == null ? Codegen.empty() : this.disableTemplateValidation;
     }
 
@@ -78,7 +78,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="guidance")
       private final @Nullable Output<String> guidance;
 
-    public Output<String> getGuidance() {
+    public Output<String> guidance() {
         return this.guidance == null ? Codegen.empty() : this.guidance;
     }
 
@@ -89,7 +89,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -100,7 +100,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -111,7 +111,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="templatePhysicalId")
       private final @Nullable Output<String> templatePhysicalId;
 
-    public Output<String> getTemplatePhysicalId() {
+    public Output<String> templatePhysicalId() {
         return this.templatePhysicalId == null ? Codegen.empty() : this.templatePhysicalId;
     }
 
@@ -122,7 +122,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
-    public Output<String> getTemplateUrl() {
+    public Output<String> templateUrl() {
         return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
     }
 
@@ -133,7 +133,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

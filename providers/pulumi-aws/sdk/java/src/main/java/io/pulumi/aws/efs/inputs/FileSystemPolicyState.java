@@ -23,7 +23,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
@@ -34,7 +34,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -45,7 +45,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 

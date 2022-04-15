@@ -26,7 +26,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
     @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
-    public Output<String> getComparisonOperator() {
+    public Output<String> comparisonOperator() {
         return this.comparisonOperator;
     }
 
@@ -37,7 +37,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
     @Import(name="fieldToMatch")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs> getFieldToMatch() {
+    public Output<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -48,7 +48,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
     @Import(name="size", required=true)
       private final Output<Integer> size;
 
-    public Output<Integer> getSize() {
+    public Output<Integer> size() {
         return this.size;
     }
 
@@ -59,7 +59,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
     @Import(name="textTransformations", required=true)
       private final Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs>> textTransformations;
 
-    public Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs>> getTextTransformations() {
+    public Output<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

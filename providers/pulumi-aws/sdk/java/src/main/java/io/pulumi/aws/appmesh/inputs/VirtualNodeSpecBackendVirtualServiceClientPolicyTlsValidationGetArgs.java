@@ -23,7 +23,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     @Import(name="trust", required=true)
       private final Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> getTrust() {
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust() {
         return this.trust;
     }
 

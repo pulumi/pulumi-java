@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
     @Import(name="customActions")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> getCustomActions() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions() {
         return this.customActions == null ? Codegen.empty() : this.customActions;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
     @Import(name="statelessRules", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> getStatelessRules() {
+    public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules() {
         return this.statelessRules;
     }
 

@@ -43,7 +43,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return Enables access logs for the API stage. Detailed below.
      * 
      */
-    public Output</* @Nullable */ StageAccessLogSettings> getAccessLogSettings() {
+    public Output</* @Nullable */ StageAccessLogSettings> accessLogSettings() {
         return this.accessLogSettings;
     }
     /**
@@ -57,7 +57,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return Specifies whether a cache cluster is enabled for the stage
      * 
      */
-    public Output</* @Nullable */ Boolean> getCacheClusterEnabled() {
+    public Output</* @Nullable */ Boolean> cacheClusterEnabled() {
         return this.cacheClusterEnabled;
     }
     /**
@@ -85,7 +85,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
      * 
      */
-    public Output</* @Nullable */ String> getCacheClusterSize() {
+    public Output</* @Nullable */ String> cacheClusterSize() {
         return this.cacheClusterSize;
     }
     /**
@@ -99,7 +99,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The identifier of a client certificate for the stage.
      * 
      */
-    public Output</* @Nullable */ String> getClientCertificateId() {
+    public Output</* @Nullable */ String> clientCertificateId() {
         return this.clientCertificateId;
     }
     /**
@@ -113,7 +113,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The ID of the deployment that the stage points to
      * 
      */
-    public Output<String> getDeployment() {
+    public Output<String> deployment() {
         return this.deployment;
     }
     /**
@@ -127,7 +127,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The description of the stage
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -141,7 +141,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The version of the associated API documentation
      * 
      */
-    public Output</* @Nullable */ String> getDocumentationVersion() {
+    public Output</* @Nullable */ String> documentationVersion() {
         return this.documentationVersion;
     }
     /**
@@ -159,7 +159,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 
      */
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn;
     }
     /**
@@ -175,7 +175,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
      * 
      */
-    public Output<String> getInvokeUrl() {
+    public Output<String> invokeUrl() {
         return this.invokeUrl;
     }
     /**
@@ -189,7 +189,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -203,7 +203,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The name of the stage
      * 
      */
-    public Output<String> getStageName() {
+    public Output<String> stageName() {
         return this.stageName;
     }
     /**
@@ -217,7 +217,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -231,7 +231,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -245,7 +245,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return A map that defines the stage variables
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getVariables() {
+    public Output</* @Nullable */ Map<String,String>> variables() {
         return this.variables;
     }
     /**
@@ -259,7 +259,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return The ARN of the WebAcl associated with the Stage.
      * 
      */
-    public Output<String> getWebAclArn() {
+    public Output<String> webAclArn() {
         return this.webAclArn;
     }
     /**
@@ -273,7 +273,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @return Whether active tracing with X-ray is enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getXrayTracingEnabled() {
+    public Output</* @Nullable */ Boolean> xrayTracingEnabled() {
         return this.xrayTracingEnabled;
     }
 

@@ -24,7 +24,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     @Import(name="checkpointDelay")
       private final @Nullable Output<String> checkpointDelay;
 
-    public Output<String> getCheckpointDelay() {
+    public Output<String> checkpointDelay() {
         return this.checkpointDelay == null ? Codegen.empty() : this.checkpointDelay;
     }
 
@@ -35,7 +35,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     @Import(name="checkpointPercentages")
       private final @Nullable Output<List<Integer>> checkpointPercentages;
 
-    public Output<List<Integer>> getCheckpointPercentages() {
+    public Output<List<Integer>> checkpointPercentages() {
         return this.checkpointPercentages == null ? Codegen.empty() : this.checkpointPercentages;
     }
 
@@ -46,7 +46,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     @Import(name="instanceWarmup")
       private final @Nullable Output<String> instanceWarmup;
 
-    public Output<String> getInstanceWarmup() {
+    public Output<String> instanceWarmup() {
         return this.instanceWarmup == null ? Codegen.empty() : this.instanceWarmup;
     }
 
@@ -57,7 +57,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     @Import(name="minHealthyPercentage")
       private final @Nullable Output<Integer> minHealthyPercentage;
 
-    public Output<Integer> getMinHealthyPercentage() {
+    public Output<Integer> minHealthyPercentage() {
         return this.minHealthyPercentage == null ? Codegen.empty() : this.minHealthyPercentage;
     }
 

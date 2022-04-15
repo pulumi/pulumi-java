@@ -42,7 +42,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -56,7 +56,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -70,7 +70,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the repository to apply the policy.
      * 
      */
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 

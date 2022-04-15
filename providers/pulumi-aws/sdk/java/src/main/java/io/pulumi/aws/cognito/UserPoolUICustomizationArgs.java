@@ -22,7 +22,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     @Import(name="css")
       private final @Nullable Output<String> css;
 
-    public Output<String> getCss() {
+    public Output<String> css() {
         return this.css == null ? Codegen.empty() : this.css;
     }
 
@@ -44,7 +44,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     @Import(name="imageFile")
       private final @Nullable Output<String> imageFile;
 
-    public Output<String> getImageFile() {
+    public Output<String> imageFile() {
         return this.imageFile == null ? Codegen.empty() : this.imageFile;
     }
 
@@ -55,7 +55,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

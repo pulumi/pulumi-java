@@ -63,42 +63,42 @@ public final class FleetLaunchTemplateConfigOverride {
      * Availability Zone in which to launch the instances.
      * 
     */
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * Instance type.
      * 
     */
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Maximum price per unit hour that you are willing to pay for a Spot Instance.
      * 
     */
-    public Optional<String> getMaxPrice() {
+    public Optional<String> maxPrice() {
         return Optional.ofNullable(this.maxPrice);
     }
     /**
      * Priority for the launch template override. If `on_demand_options` `allocation_strategy` is set to `prioritized`, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.
      * 
     */
-    public Optional<Double> getPriority() {
+    public Optional<Double> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * ID of the subnet in which to launch the instances.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * Number of units provided by the specified instance type.
      * 
     */
-    public Optional<Double> getWeightedCapacity() {
+    public Optional<Double> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

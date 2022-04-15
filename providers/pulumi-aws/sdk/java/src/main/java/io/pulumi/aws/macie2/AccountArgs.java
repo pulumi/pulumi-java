@@ -22,7 +22,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> getFindingPublishingFrequency() {
+    public Output<String> findingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
@@ -33,7 +33,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

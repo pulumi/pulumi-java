@@ -24,7 +24,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     @Import(name="autoScalingConfigurationName", required=true)
       private final Output<String> autoScalingConfigurationName;
 
-    public Output<String> getAutoScalingConfigurationName() {
+    public Output<String> autoScalingConfigurationName() {
         return this.autoScalingConfigurationName;
     }
 
@@ -35,7 +35,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     @Import(name="maxConcurrency")
       private final @Nullable Output<Integer> maxConcurrency;
 
-    public Output<Integer> getMaxConcurrency() {
+    public Output<Integer> maxConcurrency() {
         return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
     }
 
@@ -46,7 +46,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -57,7 +57,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -68,7 +68,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

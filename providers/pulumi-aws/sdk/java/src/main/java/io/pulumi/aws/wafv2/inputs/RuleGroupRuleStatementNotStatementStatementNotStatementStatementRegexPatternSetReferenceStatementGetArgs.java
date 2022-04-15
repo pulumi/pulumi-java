@@ -25,7 +25,7 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     @Import(name="fieldToMatch")
       private final @Nullable Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
@@ -47,7 +47,7 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
 
-    public Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> getTextTransformations() {
+    public Output<List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 

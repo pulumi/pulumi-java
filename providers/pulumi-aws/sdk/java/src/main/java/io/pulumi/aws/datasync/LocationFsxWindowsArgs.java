@@ -24,7 +24,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -35,7 +35,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fsxFilesystemArn", required=true)
       private final Output<String> fsxFilesystemArn;
 
-    public Output<String> getFsxFilesystemArn() {
+    public Output<String> fsxFilesystemArn() {
         return this.fsxFilesystemArn;
     }
 
@@ -46,7 +46,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -57,7 +57,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
-    public Output<List<String>> getSecurityGroupArns() {
+    public Output<List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
 
@@ -68,7 +68,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
@@ -79,7 +79,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -90,7 +90,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

@@ -23,7 +23,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     @Import(name="authParameters")
       private final @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
 
-    public Output<EventConnectionAuthParametersGetArgs> getAuthParameters() {
+    public Output<EventConnectionAuthParametersGetArgs> authParameters() {
         return this.authParameters == null ? Codegen.empty() : this.authParameters;
     }
 
@@ -45,7 +45,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
@@ -56,7 +56,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -67,7 +67,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -78,7 +78,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 

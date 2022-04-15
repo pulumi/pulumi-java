@@ -42,7 +42,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the App Image Config.
      * 
      */
-    public Output<String> getAppImageConfigName() {
+    public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
     /**
@@ -56,7 +56,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
      * 
      */
-    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> getKernelGatewayImageConfig() {
+    public Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig;
     }
     /**
@@ -84,7 +84,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +98,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

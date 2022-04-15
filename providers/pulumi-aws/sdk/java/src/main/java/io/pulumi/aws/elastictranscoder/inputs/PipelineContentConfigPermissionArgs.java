@@ -23,7 +23,7 @@ public final class PipelineContentConfigPermissionArgs extends io.pulumi.resourc
     @Import(name="accesses")
       private final @Nullable Output<List<String>> accesses;
 
-    public Output<List<String>> getAccesses() {
+    public Output<List<String>> accesses() {
         return this.accesses == null ? Codegen.empty() : this.accesses;
     }
 
@@ -34,7 +34,7 @@ public final class PipelineContentConfigPermissionArgs extends io.pulumi.resourc
     @Import(name="grantee")
       private final @Nullable Output<String> grantee;
 
-    public Output<String> getGrantee() {
+    public Output<String> grantee() {
         return this.grantee == null ? Codegen.empty() : this.grantee;
     }
 
@@ -45,7 +45,7 @@ public final class PipelineContentConfigPermissionArgs extends io.pulumi.resourc
     @Import(name="granteeType")
       private final @Nullable Output<String> granteeType;
 
-    public Output<String> getGranteeType() {
+    public Output<String> granteeType() {
         return this.granteeType == null ? Codegen.empty() : this.granteeType;
     }
 

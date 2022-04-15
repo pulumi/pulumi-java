@@ -109,87 +109,87 @@ public final class GetProxyResult {
      * The ARN of the DB Proxy.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The configuration(s) with authorization mechanisms to connect to the associated instance or cluster.
      * 
     */
-    public List<GetProxyAuth> getAuths() {
+    public List<GetProxyAuth> auths() {
         return this.auths;
     }
     /**
      * Whether the proxy includes detailed information about SQL statements in its logs.
      * 
     */
-    public Boolean getDebugLogging() {
+    public Boolean debugLogging() {
         return this.debugLogging;
     }
     /**
      * The endpoint that you can use to connect to the DB proxy.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The kinds of databases that the proxy can connect to.
      * 
     */
-    public String getEngineFamily() {
+    public String engineFamily() {
         return this.engineFamily;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The number of seconds a connection to the proxy can have no activity before the proxy drops the client connection.
      * 
     */
-    public Integer getIdleClientTimeout() {
+    public Integer idleClientTimeout() {
         return this.idleClientTimeout;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Indicates whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
     */
-    public Boolean getRequireTls() {
+    public Boolean requireTls() {
         return this.requireTls;
     }
     /**
      * The Amazon Resource Name (ARN) for the IAM role that the proxy uses to access Amazon Secrets Manager.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * Provides the VPC ID of the DB proxy.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
     /**
      * Provides a list of VPC security groups that the proxy belongs to.
      * 
     */
-    public List<String> getVpcSecurityGroupIds() {
+    public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
     /**
      * The EC2 subnet IDs for the proxy.
      * 
     */
-    public List<String> getVpcSubnetIds() {
+    public List<String> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 

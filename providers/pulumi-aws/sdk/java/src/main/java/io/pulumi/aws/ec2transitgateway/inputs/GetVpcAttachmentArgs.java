@@ -24,7 +24,7 @@ public final class GetVpcAttachmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetVpcAttachmentFilter> filters;
 
-    public List<GetVpcAttachmentFilter> getFilters() {
+    public List<GetVpcAttachmentFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetVpcAttachmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -46,7 +46,7 @@ public final class GetVpcAttachmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

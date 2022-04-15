@@ -43,31 +43,31 @@ public final class GetTargetGroupHealthCheck {
         this.unhealthyThreshold = unhealthyThreshold;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
-    public String getMatcher() {
+    public String matcher() {
         return this.matcher;
     }
-    public String getPath() {
+    public String path() {
         return this.path;
     }
-    public String getPort() {
+    public String port() {
         return this.port;
     }
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
-    public Integer getTimeout() {
+    public Integer timeout() {
         return this.timeout;
     }
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

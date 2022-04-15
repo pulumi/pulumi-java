@@ -21,7 +21,7 @@ public final class ProjectEnvironmentRegistryCredentialGetArgs extends io.pulumi
     @Import(name="credential", required=true)
       private final Output<String> credential;
 
-    public Output<String> getCredential() {
+    public Output<String> credential() {
         return this.credential;
     }
 
@@ -32,7 +32,7 @@ public final class ProjectEnvironmentRegistryCredentialGetArgs extends io.pulumi
     @Import(name="credentialProvider", required=true)
       private final Output<String> credentialProvider;
 
-    public Output<String> getCredentialProvider() {
+    public Output<String> credentialProvider() {
         return this.credentialProvider;
     }
 

@@ -25,7 +25,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="acl")
       private final @Nullable Output<String> acl;
 
-    public Output<String> getAcl() {
+    public Output<String> acl() {
         return this.acl == null ? Codegen.empty() : this.acl;
     }
 
@@ -36,7 +36,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -47,7 +47,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
+    public Output<Boolean> bucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
     }
 
@@ -58,7 +58,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
-    public Output<String> getCacheControl() {
+    public Output<String> cacheControl() {
         return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
     }
 
@@ -69,7 +69,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -80,7 +80,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentBase64")
       private final @Nullable Output<String> contentBase64;
 
-    public Output<String> getContentBase64() {
+    public Output<String> contentBase64() {
         return this.contentBase64 == null ? Codegen.empty() : this.contentBase64;
     }
 
@@ -91,7 +91,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
-    public Output<String> getContentDisposition() {
+    public Output<String> contentDisposition() {
         return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
     }
 
@@ -102,7 +102,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
-    public Output<String> getContentEncoding() {
+    public Output<String> contentEncoding() {
         return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 
@@ -113,7 +113,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
-    public Output<String> getContentLanguage() {
+    public Output<String> contentLanguage() {
         return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
     }
 
@@ -124,7 +124,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -135,7 +135,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -146,7 +146,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -157,7 +157,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -168,7 +168,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -179,7 +179,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -190,7 +190,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockLegalHoldStatus")
       private final @Nullable Output<String> objectLockLegalHoldStatus;
 
-    public Output<String> getObjectLockLegalHoldStatus() {
+    public Output<String> objectLockLegalHoldStatus() {
         return this.objectLockLegalHoldStatus == null ? Codegen.empty() : this.objectLockLegalHoldStatus;
     }
 
@@ -201,7 +201,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockMode")
       private final @Nullable Output<String> objectLockMode;
 
-    public Output<String> getObjectLockMode() {
+    public Output<String> objectLockMode() {
         return this.objectLockMode == null ? Codegen.empty() : this.objectLockMode;
     }
 
@@ -212,7 +212,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockRetainUntilDate")
       private final @Nullable Output<String> objectLockRetainUntilDate;
 
-    public Output<String> getObjectLockRetainUntilDate() {
+    public Output<String> objectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate == null ? Codegen.empty() : this.objectLockRetainUntilDate;
     }
 
@@ -223,7 +223,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverSideEncryption")
       private final @Nullable Output<String> serverSideEncryption;
 
-    public Output<String> getServerSideEncryption() {
+    public Output<String> serverSideEncryption() {
         return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
@@ -234,7 +234,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> getSource() {
+    public Output<AssetOrArchive> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -245,7 +245,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceHash")
       private final @Nullable Output<String> sourceHash;
 
-    public Output<String> getSourceHash() {
+    public Output<String> sourceHash() {
         return this.sourceHash == null ? Codegen.empty() : this.sourceHash;
     }
 
@@ -256,7 +256,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
@@ -267,7 +267,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -278,7 +278,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -289,7 +289,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
@@ -300,7 +300,7 @@ public final class BucketObjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteRedirect")
       private final @Nullable Output<String> websiteRedirect;
 
-    public Output<String> getWebsiteRedirect() {
+    public Output<String> websiteRedirect() {
         return this.websiteRedirect == null ? Codegen.empty() : this.websiteRedirect;
     }
 

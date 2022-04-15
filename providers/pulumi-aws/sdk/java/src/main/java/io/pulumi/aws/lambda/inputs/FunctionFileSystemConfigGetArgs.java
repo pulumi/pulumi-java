@@ -21,7 +21,7 @@ public final class FunctionFileSystemConfigGetArgs extends io.pulumi.resources.R
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
@@ -32,7 +32,7 @@ public final class FunctionFileSystemConfigGetArgs extends io.pulumi.resources.R
     @Import(name="localMountPath", required=true)
       private final Output<String> localMountPath;
 
-    public Output<String> getLocalMountPath() {
+    public Output<String> localMountPath() {
         return this.localMountPath;
     }
 

@@ -23,7 +23,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
+    public Output<Integer> days() {
         return this.days == null ? Codegen.empty() : this.days;
     }
 
@@ -34,7 +34,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     @Import(name="storageClass", required=true)
       private final Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
 

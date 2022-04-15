@@ -42,7 +42,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of this Test Grid Project.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @return Human-readable description of the project.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @return The name of the Selenium testing project.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +98,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -112,7 +112,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @return The VPC security groups and subnets that are attached to a project. See VPC Config below.
      * 
      */
-    public Output</* @Nullable */ TestGridProjectVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 
