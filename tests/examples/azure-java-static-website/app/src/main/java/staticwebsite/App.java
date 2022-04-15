@@ -1,5 +1,7 @@
 package staticwebsite;
 
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.Pulumi;
 import io.pulumi.asset.FileAsset;
 import io.pulumi.azurenative.cdn.Endpoint;
@@ -19,8 +21,6 @@ import io.pulumi.azurenative.storage.enums.Kind;
 import io.pulumi.azurenative.storage.enums.SkuName;
 import io.pulumi.azurenative.storage.inputs.SkuArgs;
 import io.pulumi.azurenative.storage.outputs.EndpointsResponse;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 
@@ -30,7 +30,7 @@ public class App {
         System.exit(exitCode);
     }
 
-    private static ExportContext stack(StackContext ctx) {
+    private static Exports stack(Context ctx) {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("storageaccount",

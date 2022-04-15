@@ -1,5 +1,7 @@
 package webserver;
 
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.Pulumi;
 import io.pulumi.aws.ec2.Ec2Functions;
 import io.pulumi.aws.ec2.Instance;
@@ -10,7 +12,6 @@ import io.pulumi.aws.ec2.inputs.GetAmiArgs;
 import io.pulumi.aws.ec2.inputs.GetAmiFilter;
 import io.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import io.pulumi.aws.ec2.outputs.GetAmiResult;
-import io.pulumi.context.StackContext;
 import io.pulumi.core.Output;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class App {
         System.exit(exitCode);
     }
 
-    public static io.pulumi.context.ExportContext stack(StackContext ctx) {
+    public static Exports stack(Context ctx) {
         final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
                 .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
                 .owners("137112412989")

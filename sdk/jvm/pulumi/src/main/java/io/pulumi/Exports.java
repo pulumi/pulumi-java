@@ -1,4 +1,4 @@
-package io.pulumi.context;
+package io.pulumi;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -6,9 +6,9 @@ import io.pulumi.core.internal.annotations.InternalUse;
 import java.util.Map;
 
 /**
- * All exports associated with the current {@link StackContext}
+ * All exports associated with the current {@link Context}
  */
-public interface ExportContext {
+public interface Exports {
 
     /**
      * Used by Pulumi runtime.

@@ -1,7 +1,5 @@
 package io.pulumi.core.internal;
 
-import io.pulumi.Stack;
-import io.pulumi.Stack.StackInternal;
 import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.asset.AssetOrArchive.AssetOrArchiveInternal;
 import io.pulumi.core.Output;
@@ -21,6 +19,8 @@ import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.ProviderResource.ProviderResourceInternal;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.Resource.ResourceInternal;
+import io.pulumi.resources.Stack;
+import io.pulumi.resources.Stack.StackInternal;
 
 public class Internal {
 
