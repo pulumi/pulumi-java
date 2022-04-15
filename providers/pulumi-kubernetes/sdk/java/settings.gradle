@@ -9,11 +9,5 @@ pluginManagement {
   }
 }
 
-includeBuild('../../../../sdk/jvm') {
-  dependencySubstitution {
-    substitute module('io.pulumi:pulumi') using project(':pulumi')
-  }
-}
-
 rootProject.name = "io.pulumi.kubernetes"
 include("lib")
