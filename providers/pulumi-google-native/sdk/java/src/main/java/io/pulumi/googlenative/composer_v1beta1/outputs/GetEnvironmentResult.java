@@ -69,49 +69,49 @@ public final class GetEnvironmentResult {
      * Configuration parameters for this environment.
      * 
     */
-    public EnvironmentConfigResponse getConfig() {
+    public EnvironmentConfigResponse config() {
         return this.config;
     }
     /**
      * The time at which this environment was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of the environment.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The time at which this environment was last modified.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
      * 
     */
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
 

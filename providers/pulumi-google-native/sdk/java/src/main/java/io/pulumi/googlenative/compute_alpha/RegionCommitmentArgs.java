@@ -30,7 +30,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> getAutoRenew() {
+    public Output<Boolean> autoRenew() {
         return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
@@ -41,7 +41,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="category")
       private final @Nullable Output<RegionCommitmentCategory> category;
 
-    public Output<RegionCommitmentCategory> getCategory() {
+    public Output<RegionCommitmentCategory> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -52,7 +52,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="licenseResource")
       private final @Nullable Output<LicenseResourceCommitmentArgs> licenseResource;
 
-    public Output<LicenseResourceCommitmentArgs> getLicenseResource() {
+    public Output<LicenseResourceCommitmentArgs> licenseResource() {
         return this.licenseResource == null ? Codegen.empty() : this.licenseResource;
     }
 
@@ -74,7 +74,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mergeSourceCommitments")
       private final @Nullable Output<List<String>> mergeSourceCommitments;
 
-    public Output<List<String>> getMergeSourceCommitments() {
+    public Output<List<String>> mergeSourceCommitments() {
         return this.mergeSourceCommitments == null ? Codegen.empty() : this.mergeSourceCommitments;
     }
 
@@ -85,7 +85,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,28 +96,28 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="plan")
       private final @Nullable Output<RegionCommitmentPlan> plan;
 
-    public Output<RegionCommitmentPlan> getPlan() {
+    public Output<RegionCommitmentPlan> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -128,7 +128,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="reservations")
       private final @Nullable Output<List<ReservationArgs>> reservations;
 
-    public Output<List<ReservationArgs>> getReservations() {
+    public Output<List<ReservationArgs>> reservations() {
         return this.reservations == null ? Codegen.empty() : this.reservations;
     }
 
@@ -139,7 +139,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resources")
       private final @Nullable Output<List<ResourceCommitmentArgs>> resources;
 
-    public Output<List<ResourceCommitmentArgs>> getResources() {
+    public Output<List<ResourceCommitmentArgs>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -150,7 +150,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="splitSourceCommitment")
       private final @Nullable Output<String> splitSourceCommitment;
 
-    public Output<String> getSplitSourceCommitment() {
+    public Output<String> splitSourceCommitment() {
         return this.splitSourceCommitment == null ? Codegen.empty() : this.splitSourceCommitment;
     }
 
@@ -161,7 +161,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<RegionCommitmentType> type;
 
-    public Output<RegionCommitmentType> getType() {
+    public Output<RegionCommitmentType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

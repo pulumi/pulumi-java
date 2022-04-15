@@ -30,7 +30,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosAppInfo")
       private final @Nullable Output<IosAppInfoArgs> iosAppInfo;
 
-    public Output<IosAppInfoArgs> getIosAppInfo() {
+    public Output<IosAppInfoArgs> iosAppInfo() {
         return this.iosAppInfo == null ? Codegen.empty() : this.iosAppInfo;
     }
 
@@ -41,7 +41,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosRoboTest")
       private final @Nullable Output<IosRoboTestArgs> iosRoboTest;
 
-    public Output<IosRoboTestArgs> getIosRoboTest() {
+    public Output<IosRoboTestArgs> iosRoboTest() {
         return this.iosRoboTest == null ? Codegen.empty() : this.iosRoboTest;
     }
 
@@ -52,7 +52,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosTestLoop")
       private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
-    public Output<IosTestLoopArgs> getIosTestLoop() {
+    public Output<IosTestLoopArgs> iosTestLoop() {
         return this.iosTestLoop == null ? Codegen.empty() : this.iosTestLoop;
     }
 
@@ -63,7 +63,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosXcTest")
       private final @Nullable Output<IosXcTestArgs> iosXcTest;
 
-    public Output<IosXcTestArgs> getIosXcTest() {
+    public Output<IosXcTestArgs> iosXcTest() {
         return this.iosXcTest == null ? Codegen.empty() : this.iosXcTest;
     }
 
@@ -74,7 +74,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;
 
-    public Output<DurationArgs> getTestTimeout() {
+    public Output<DurationArgs> testTimeout() {
         return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
     }
 

@@ -23,7 +23,7 @@ public final class TableFieldSchemaPolicyTagsArgs extends io.pulumi.resources.Re
     @Import(name="names")
       private final @Nullable Output<List<String>> names;
 
-    public Output<List<String>> getNames() {
+    public Output<List<String>> names() {
         return this.names == null ? Codegen.empty() : this.names;
     }
 

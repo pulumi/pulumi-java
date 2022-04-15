@@ -28,7 +28,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="utilization")
       private final @Nullable Output<VmUtilizationMetricsArgs> utilization;
 
-    public Output<VmUtilizationMetricsArgs> getUtilization() {
+    public Output<VmUtilizationMetricsArgs> utilization() {
         return this.utilization == null ? Codegen.empty() : this.utilization;
     }
 
@@ -39,7 +39,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
-    public Output<String> getVmId() {
+    public Output<String> vmId() {
         return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 
@@ -50,7 +50,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vmwareVmDetails")
       private final @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
 
-    public Output<VmwareVmDetailsArgs> getVmwareVmDetails() {
+    public Output<VmwareVmDetailsArgs> vmwareVmDetails() {
         return this.vmwareVmDetails == null ? Codegen.empty() : this.vmwareVmDetails;
     }
 

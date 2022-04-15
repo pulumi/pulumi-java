@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
     @Import(name="column", required=true)
       private final String column;
 
-    public String getColumn() {
+    public String column() {
         return this.column;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
     @Import(name="subcolumns", required=true)
       private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
 
-    public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> getSubcolumns() {
+    public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns() {
         return this.subcolumns;
     }
 
@@ -68,7 +68,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends io.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -34,14 +34,14 @@ public final class PrimaryStepResponse {
      * Step Id and outcome of each individual step.
      * 
     */
-    public List<IndividualOutcomeResponse> getIndividualOutcome() {
+    public List<IndividualOutcomeResponse> individualOutcome() {
         return this.individualOutcome;
     }
     /**
      * Rollup test status of multiple steps that were run with the same configuration as a group.
      * 
     */
-    public String getRollUp() {
+    public String rollUp() {
         return this.rollUp;
     }
 

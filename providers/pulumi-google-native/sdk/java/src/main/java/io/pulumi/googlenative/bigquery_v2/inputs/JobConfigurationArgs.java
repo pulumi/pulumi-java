@@ -28,7 +28,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="copy")
       private final @Nullable Output<JobConfigurationTableCopyArgs> copy;
 
-    public Output<JobConfigurationTableCopyArgs> getCopy() {
+    public Output<JobConfigurationTableCopyArgs> copy() {
         return this.copy == null ? Codegen.empty() : this.copy;
     }
 
@@ -39,7 +39,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dryRun")
       private final @Nullable Output<Boolean> dryRun;
 
-    public Output<Boolean> getDryRun() {
+    public Output<Boolean> dryRun() {
         return this.dryRun == null ? Codegen.empty() : this.dryRun;
     }
 
@@ -50,7 +50,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="extract")
       private final @Nullable Output<JobConfigurationExtractArgs> extract;
 
-    public Output<JobConfigurationExtractArgs> getExtract() {
+    public Output<JobConfigurationExtractArgs> extract() {
         return this.extract == null ? Codegen.empty() : this.extract;
     }
 
@@ -61,7 +61,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> getJobTimeoutMs() {
+    public Output<String> jobTimeoutMs() {
         return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
     }
 
@@ -72,7 +72,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -83,7 +83,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="load")
       private final @Nullable Output<JobConfigurationLoadArgs> load;
 
-    public Output<JobConfigurationLoadArgs> getLoad() {
+    public Output<JobConfigurationLoadArgs> load() {
         return this.load == null ? Codegen.empty() : this.load;
     }
 
@@ -94,7 +94,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="query")
       private final @Nullable Output<JobConfigurationQueryArgs> query;
 
-    public Output<JobConfigurationQueryArgs> getQuery() {
+    public Output<JobConfigurationQueryArgs> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 

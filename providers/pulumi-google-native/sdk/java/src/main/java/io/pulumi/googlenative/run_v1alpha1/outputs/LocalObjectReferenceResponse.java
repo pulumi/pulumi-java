@@ -24,7 +24,7 @@ public final class LocalObjectReferenceResponse {
      * (Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

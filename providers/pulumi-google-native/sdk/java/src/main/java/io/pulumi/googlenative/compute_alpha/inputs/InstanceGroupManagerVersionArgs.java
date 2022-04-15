@@ -23,7 +23,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
 
-    public Output<String> getInstanceTemplate() {
+    public Output<String> instanceTemplate() {
         return this.instanceTemplate == null ? Codegen.empty() : this.instanceTemplate;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     @Import(name="targetSize")
       private final @Nullable Output<FixedOrPercentArgs> targetSize;
 
-    public Output<FixedOrPercentArgs> getTargetSize() {
+    public Output<FixedOrPercentArgs> targetSize() {
         return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 

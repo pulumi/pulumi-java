@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
     @Import(name="identifyingFields")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getIdentifyingFields() {
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields() {
         return this.identifyingFields == null ? Codegen.empty() : this.identifyingFields;
     }
 

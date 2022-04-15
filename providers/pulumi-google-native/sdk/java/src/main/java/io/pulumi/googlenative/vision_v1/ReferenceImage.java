@@ -31,7 +31,7 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
      * @return Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
      * 
      */
-    public Output<List<BoundingPolyResponse>> getBoundingPolys() {
+    public Output<List<BoundingPolyResponse>> boundingPolys() {
         return this.boundingPolys;
     }
     /**
@@ -45,7 +45,7 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
      * @return The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
      * @return The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

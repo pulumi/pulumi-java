@@ -23,21 +23,21 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
     @Import(name="config", required=true)
       private final Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 
-    public Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> getConfig() {
+    public Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config() {
         return this.config;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

@@ -23,7 +23,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="androidModelId", required=true)
       private final String androidModelId;
 
-    public String getAndroidModelId() {
+    public String androidModelId() {
         return this.androidModelId;
     }
 
@@ -34,7 +34,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="androidVersionId", required=true)
       private final String androidVersionId;
 
-    public String getAndroidVersionId() {
+    public String androidVersionId() {
         return this.androidVersionId;
     }
 
@@ -45,7 +45,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="locale", required=true)
       private final String locale;
 
-    public String getLocale() {
+    public String locale() {
         return this.locale;
     }
 
@@ -56,7 +56,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="orientation", required=true)
       private final String orientation;
 
-    public String getOrientation() {
+    public String orientation() {
         return this.orientation;
     }
 

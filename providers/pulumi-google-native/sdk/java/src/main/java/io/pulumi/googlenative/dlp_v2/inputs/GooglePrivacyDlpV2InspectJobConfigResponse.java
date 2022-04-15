@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
     @Import(name="actions", required=true)
       private final List<GooglePrivacyDlpV2ActionResponse> actions;
 
-    public List<GooglePrivacyDlpV2ActionResponse> getActions() {
+    public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
     @Import(name="inspectConfig", required=true)
       private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
-    public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
+    public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
     @Import(name="inspectTemplateName", required=true)
       private final String inspectTemplateName;
 
-    public String getInspectTemplateName() {
+    public String inspectTemplateName() {
         return this.inspectTemplateName;
     }
 
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
     @Import(name="storageConfig", required=true)
       private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
-    public GooglePrivacyDlpV2StorageConfigResponse getStorageConfig() {
+    public GooglePrivacyDlpV2StorageConfigResponse storageConfig() {
         return this.storageConfig;
     }
 

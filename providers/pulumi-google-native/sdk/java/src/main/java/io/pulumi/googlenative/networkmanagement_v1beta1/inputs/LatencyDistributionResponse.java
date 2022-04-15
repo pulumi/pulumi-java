@@ -24,7 +24,7 @@ public final class LatencyDistributionResponse extends io.pulumi.resources.Invok
     @Import(name="latencyPercentiles", required=true)
       private final List<LatencyPercentileResponse> latencyPercentiles;
 
-    public List<LatencyPercentileResponse> getLatencyPercentiles() {
+    public List<LatencyPercentileResponse> latencyPercentiles() {
         return this.latencyPercentiles;
     }
 

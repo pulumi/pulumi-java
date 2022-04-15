@@ -17,42 +17,42 @@ public final class GetFhirArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="fhirId", required=true)
       private final String fhirId;
 
-    public String getFhirId() {
+    public String fhirId() {
         return this.fhirId;
     }
 
     @Import(name="fhirId1", required=true)
       private final String fhirId1;
 
-    public String getFhirId1() {
+    public String fhirId1() {
         return this.fhirId1;
     }
 
     @Import(name="fhirStoreId", required=true)
       private final String fhirStoreId;
 
-    public String getFhirStoreId() {
+    public String fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

@@ -25,7 +25,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Output<List<AcceleratorConfigArgs>> getAccelerators() {
+    public Output<List<AcceleratorConfigArgs>> accelerators() {
         return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
@@ -36,7 +36,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpuOvercommitType")
       private final @Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType;
 
-    public Output<NodeTemplateCpuOvercommitType> getCpuOvercommitType() {
+    public Output<NodeTemplateCpuOvercommitType> cpuOvercommitType() {
         return this.cpuOvercommitType == null ? Codegen.empty() : this.cpuOvercommitType;
     }
 
@@ -47,14 +47,14 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="disks")
       private final @Nullable Output<List<LocalDiskArgs>> disks;
 
-    public Output<List<LocalDiskArgs>> getDisks() {
+    public Output<List<LocalDiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -65,7 +65,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeAffinityLabels")
       private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
-    public Output<Map<String,String>> getNodeAffinityLabels() {
+    public Output<Map<String,String>> nodeAffinityLabels() {
         return this.nodeAffinityLabels == null ? Codegen.empty() : this.nodeAffinityLabels;
     }
 
@@ -87,7 +87,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
@@ -98,28 +98,28 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTypeFlexibility")
       private final @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
 
-    public Output<NodeTemplateNodeTypeFlexibilityArgs> getNodeTypeFlexibility() {
+    public Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility() {
         return this.nodeTypeFlexibility == null ? Codegen.empty() : this.nodeTypeFlexibility;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -130,7 +130,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverBinding")
       private final @Nullable Output<ServerBindingArgs> serverBinding;
 
-    public Output<ServerBindingArgs> getServerBinding() {
+    public Output<ServerBindingArgs> serverBinding() {
         return this.serverBinding == null ? Codegen.empty() : this.serverBinding;
     }
 

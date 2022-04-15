@@ -137,105 +137,105 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
      * The basic card response for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageBasicCardResponse getBasicCard() {
+    public GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
     }
     /**
      * Browse carousel card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
+    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
     }
     /**
      * The card response.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageCardResponse getCard() {
+    public GoogleCloudDialogflowV2IntentMessageCardResponse card() {
         return this.card;
     }
     /**
      * The carousel card response for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse getCarouselSelect() {
+    public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
     }
     /**
      * The image response.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
     /**
      * The link out suggestion chip for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
+    public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
     }
     /**
      * The list card response for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageListSelectResponse getListSelect() {
+    public GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
     }
     /**
      * The media content card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageMediaContentResponse getMediaContent() {
+    public GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
     }
     /**
      * A custom platform-specific response.
      * 
     */
-    public Map<String,String> getPayload() {
+    public Map<String,String> payload() {
         return this.payload;
     }
     /**
      * Optional. The platform that this message is intended for.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * The quick replies response.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse getQuickReplies() {
+    public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
     }
     /**
      * The voice and text-only responses for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse getSimpleResponses() {
+    public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
     }
     /**
      * The suggestion chips for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse getSuggestions() {
+    public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
     }
     /**
      * Table card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageTableCardResponse getTableCard() {
+    public GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
     }
     /**
      * The text response.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageTextResponse getText() {
+    public GoogleCloudDialogflowV2IntentMessageTextResponse text() {
         return this.text;
     }
 

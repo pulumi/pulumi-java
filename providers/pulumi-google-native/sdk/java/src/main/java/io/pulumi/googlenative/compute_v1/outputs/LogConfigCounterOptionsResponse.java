@@ -41,21 +41,21 @@ public final class LogConfigCounterOptionsResponse {
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public List<LogConfigCounterOptionsCustomFieldResponse> getCustomFields() {
+    public List<LogConfigCounterOptionsCustomFieldResponse> customFields() {
         return this.customFields;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
     */
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 

@@ -28,7 +28,7 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="customFields")
       private final @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
 
-    public Output<List<LogConfigCounterOptionsCustomFieldArgs>> getCustomFields() {
+    public Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields() {
         return this.customFields == null ? Codegen.empty() : this.customFields;
     }
 
@@ -39,7 +39,7 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -50,7 +50,7 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="metric")
       private final @Nullable Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric == null ? Codegen.empty() : this.metric;
     }
 

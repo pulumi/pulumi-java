@@ -24,7 +24,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     @Import(name="healthChecks")
       private final @Nullable Output<List<String>> healthChecks;
 
-    public Output<List<String>> getHealthChecks() {
+    public Output<List<String>> healthChecks() {
         return this.healthChecks == null ? Codegen.empty() : this.healthChecks;
     }
 
@@ -46,7 +46,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     @Import(name="healthStatusAggregationPolicy")
       private final @Nullable Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
 
-    public Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> getHealthStatusAggregationPolicy() {
+    public Output<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy() {
         return this.healthStatusAggregationPolicy == null ? Codegen.empty() : this.healthStatusAggregationPolicy;
     }
 
@@ -57,7 +57,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     @Import(name="networkEndpointGroups")
       private final @Nullable Output<List<String>> networkEndpointGroups;
 
-    public Output<List<String>> getNetworkEndpointGroups() {
+    public Output<List<String>> networkEndpointGroups() {
         return this.networkEndpointGroups == null ? Codegen.empty() : this.networkEndpointGroups;
     }
 
@@ -79,28 +79,28 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
     @Import(name="notificationEndpoints")
       private final @Nullable Output<List<String>> notificationEndpoints;
 
-    public Output<List<String>> getNotificationEndpoints() {
+    public Output<List<String>> notificationEndpoints() {
         return this.notificationEndpoints == null ? Codegen.empty() : this.notificationEndpoints;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 

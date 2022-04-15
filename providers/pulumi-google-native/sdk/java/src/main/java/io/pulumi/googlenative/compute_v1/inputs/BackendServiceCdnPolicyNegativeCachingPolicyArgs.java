@@ -26,7 +26,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyArgs extends io.p
     @Import(name="code")
       private final @Nullable Output<Integer> code;
 
-    public Output<Integer> getCode() {
+    public Output<Integer> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -37,7 +37,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyArgs extends io.p
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

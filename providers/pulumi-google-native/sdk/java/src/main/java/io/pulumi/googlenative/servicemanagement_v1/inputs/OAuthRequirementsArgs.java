@@ -26,7 +26,7 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="canonicalScopes")
       private final @Nullable Output<String> canonicalScopes;
 
-    public Output<String> getCanonicalScopes() {
+    public Output<String> canonicalScopes() {
         return this.canonicalScopes == null ? Codegen.empty() : this.canonicalScopes;
     }
 

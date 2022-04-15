@@ -24,7 +24,7 @@ public final class TrafficPortSelectorResponse extends io.pulumi.resources.Invok
     @Import(name="ports", required=true)
       private final List<String> ports;
 
-    public List<String> getPorts() {
+    public List<String> ports() {
         return this.ports;
     }
 

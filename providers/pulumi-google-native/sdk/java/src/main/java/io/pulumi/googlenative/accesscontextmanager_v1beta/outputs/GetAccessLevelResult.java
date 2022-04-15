@@ -55,35 +55,35 @@ public final class GetAccessLevelResult {
      * A `BasicLevel` composed of `Conditions`.
      * 
     */
-    public BasicLevelResponse getBasic() {
+    public BasicLevelResponse basic() {
         return this.basic;
     }
     /**
      * A `CustomLevel` written in the Common Expression Language.
      * 
     */
-    public CustomLevelResponse getCustom() {
+    public CustomLevelResponse custom() {
         return this.custom;
     }
     /**
      * Description of the `AccessLevel` and its use. Does not affect behavior.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the `short_name` component is 50 characters.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Human readable title. Must be unique within the Policy.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

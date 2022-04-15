@@ -25,7 +25,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="providers", required=true)
       private final List<AuthProviderResponse> providers;
 
-    public List<AuthProviderResponse> getProviders() {
+    public List<AuthProviderResponse> providers() {
         return this.providers;
     }
 
@@ -36,7 +36,7 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="rules", required=true)
       private final List<AuthenticationRuleResponse> rules;
 
-    public List<AuthenticationRuleResponse> getRules() {
+    public List<AuthenticationRuleResponse> rules() {
         return this.rules;
     }
 

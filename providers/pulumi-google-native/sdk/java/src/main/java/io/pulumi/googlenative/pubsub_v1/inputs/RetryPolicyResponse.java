@@ -23,7 +23,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maximumBackoff", required=true)
       private final String maximumBackoff;
 
-    public String getMaximumBackoff() {
+    public String maximumBackoff() {
         return this.maximumBackoff;
     }
 
@@ -34,7 +34,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minimumBackoff", required=true)
       private final String minimumBackoff;
 
-    public String getMinimumBackoff() {
+    public String minimumBackoff() {
         return this.minimumBackoff;
     }
 

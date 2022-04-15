@@ -32,7 +32,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This field contains the chart type for the report
      * 
      */
-    public Output<String> getChartType() {
+    public Output<String> chartType() {
         return this.chartType;
     }
     /**
@@ -46,7 +46,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used. This field contains a list of comments associated with custom report
      * 
      */
-    public Output<List<String>> getComments() {
+    public Output<List<String>> comments() {
         return this.comments;
     }
     /**
@@ -60,7 +60,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Unix time when the app was created json key: createdAt
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -74,7 +74,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This contains the list of dimensions for the report
      * 
      */
-    public Output<List<String>> getDimensions() {
+    public Output<List<String>> dimensions() {
         return this.dimensions;
     }
     /**
@@ -88,7 +88,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This is the display name for the report
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -102,7 +102,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Environment name
      * 
      */
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
     /**
@@ -116,7 +116,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This field contains the filter expression
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -130,7 +130,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used. Contains the from time for the report
      * 
      */
-    public Output<String> getFromTime() {
+    public Output<String> fromTime() {
         return this.fromTime;
     }
     /**
@@ -144,7 +144,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Modified time of this entity as milliseconds since epoch. json key: lastModifiedAt
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -158,7 +158,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Last viewed time of this entity as milliseconds since epoch
      * 
      */
-    public Output<String> getLastViewedAt() {
+    public Output<String> lastViewedAt() {
         return this.lastViewedAt;
     }
     /**
@@ -172,7 +172,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used This field contains the limit for the result retrieved
      * 
      */
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit;
     }
     /**
@@ -186,7 +186,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This contains the list of metrics
      * 
      */
-    public Output<List<GoogleCloudApigeeV1CustomReportMetricResponse>> getMetrics() {
+    public Output<List<GoogleCloudApigeeV1CustomReportMetricResponse>> metrics() {
         return this.metrics;
     }
     /**
@@ -200,7 +200,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Unique identifier for the report T his is a legacy field used to encode custom report unique id
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -214,7 +214,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used. This field contains the offset for the data
      * 
      */
-    public Output<String> getOffset() {
+    public Output<String> offset() {
         return this.offset;
     }
     /**
@@ -228,7 +228,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Organization name
      * 
      */
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization;
     }
     /**
@@ -242,7 +242,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This field contains report properties such as ui metadata etc.
      * 
      */
-    public Output<List<GoogleCloudApigeeV1ReportPropertyResponse>> getProperties() {
+    public Output<List<GoogleCloudApigeeV1ReportPropertyResponse>> properties() {
         return this.properties;
     }
     /**
@@ -256,7 +256,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used much. Contains the list of sort by columns
      * 
      */
-    public Output<List<String>> getSortByCols() {
+    public Output<List<String>> sortByCols() {
         return this.sortByCols;
     }
     /**
@@ -270,7 +270,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used much. Contains the sort order for the sort columns
      * 
      */
-    public Output<String> getSortOrder() {
+    public Output<String> sortOrder() {
         return this.sortOrder;
     }
     /**
@@ -284,7 +284,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used. This field contains a list of tags associated with custom report
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -298,7 +298,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return This field contains the time unit of aggregation for the report
      * 
      */
-    public Output<String> getTimeUnit() {
+    public Output<String> timeUnit() {
         return this.timeUnit;
     }
     /**
@@ -312,7 +312,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used. Contains the end time for the report
      * 
      */
-    public Output<String> getToTime() {
+    public Output<String> toTime() {
         return this.toTime;
     }
     /**
@@ -326,7 +326,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Legacy field: not used. This field contains the top k parameter value for restricting the result
      * 
      */
-    public Output<String> getTopk() {
+    public Output<String> topk() {
         return this.topk;
     }
 

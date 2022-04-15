@@ -27,7 +27,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     @Import(name="categoricalFeatures")
       private final @Nullable Output<Map<String,String>> categoricalFeatures;
 
-    public Output<Map<String,String>> getCategoricalFeatures() {
+    public Output<Map<String,String>> categoricalFeatures() {
         return this.categoricalFeatures == null ? Codegen.empty() : this.categoricalFeatures;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     @Import(name="numericalFeatures")
       private final @Nullable Output<Map<String,String>> numericalFeatures;
 
-    public Output<Map<String,String>> getNumericalFeatures() {
+    public Output<Map<String,String>> numericalFeatures() {
         return this.numericalFeatures == null ? Codegen.empty() : this.numericalFeatures;
     }
 

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
     @Import(name="jobConfig", required=true)
       private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
-    public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse getJobConfig() {
+    public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig() {
         return this.jobConfig;
     }
 

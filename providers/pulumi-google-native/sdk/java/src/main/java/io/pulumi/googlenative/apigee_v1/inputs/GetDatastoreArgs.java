@@ -15,14 +15,14 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datastoreId", required=true)
       private final String datastoreId;
 
-    public String getDatastoreId() {
+    public String datastoreId() {
         return this.datastoreId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

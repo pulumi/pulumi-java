@@ -23,7 +23,7 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
     @Import(name="certificatePath", required=true)
       private final String certificatePath;
 
-    public String getCertificatePath() {
+    public String certificatePath() {
         return this.certificatePath;
     }
 
@@ -34,7 +34,7 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
     @Import(name="privateKeyPath", required=true)
       private final String privateKeyPath;
 
-    public String getPrivateKeyPath() {
+    public String privateKeyPath() {
         return this.privateKeyPath;
     }
 

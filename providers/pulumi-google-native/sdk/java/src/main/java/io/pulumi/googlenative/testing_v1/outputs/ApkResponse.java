@@ -33,14 +33,14 @@ public final class ApkResponse {
      * The path to an APK to be installed on the device before the test begins.
      * 
     */
-    public FileReferenceResponse getLocation() {
+    public FileReferenceResponse location() {
         return this.location;
     }
     /**
      * The java package for the APK to be installed. Value is determined by examining the application's manifest.
      * 
     */
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
 

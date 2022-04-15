@@ -24,7 +24,7 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
     @Import(name="emails", required=true)
       private final List<String> emails;
 
-    public List<String> getEmails() {
+    public List<String> emails() {
         return this.emails;
     }
 
@@ -35,7 +35,7 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
     @Import(name="instruction", required=true)
       private final String instruction;
 
-    public String getInstruction() {
+    public String instruction() {
         return this.instruction;
     }
 
@@ -46,7 +46,7 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
     @Import(name="uris", required=true)
       private final List<String> uris;
 
-    public List<String> getUris() {
+    public List<String> uris() {
         return this.uris;
     }
 

@@ -27,7 +27,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditionAbsent", required=true)
       private final MetricAbsenceResponse conditionAbsent;
 
-    public MetricAbsenceResponse getConditionAbsent() {
+    public MetricAbsenceResponse conditionAbsent() {
         return this.conditionAbsent;
     }
 
@@ -38,7 +38,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditionMatchedLog", required=true)
       private final LogMatchResponse conditionMatchedLog;
 
-    public LogMatchResponse getConditionMatchedLog() {
+    public LogMatchResponse conditionMatchedLog() {
         return this.conditionMatchedLog;
     }
 
@@ -49,7 +49,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditionMonitoringQueryLanguage", required=true)
       private final MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
 
-    public MonitoringQueryLanguageConditionResponse getConditionMonitoringQueryLanguage() {
+    public MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage;
     }
 
@@ -60,7 +60,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditionThreshold", required=true)
       private final MetricThresholdResponse conditionThreshold;
 
-    public MetricThresholdResponse getConditionThreshold() {
+    public MetricThresholdResponse conditionThreshold() {
         return this.conditionThreshold;
     }
 
@@ -71,7 +71,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -82,7 +82,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

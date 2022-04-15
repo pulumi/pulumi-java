@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs extends 
     @Import(name="bigqueryConnectionSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> getBigqueryConnectionSpec() {
+    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs> bigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec == null ? Codegen.empty() : this.bigqueryConnectionSpec;
     }
 

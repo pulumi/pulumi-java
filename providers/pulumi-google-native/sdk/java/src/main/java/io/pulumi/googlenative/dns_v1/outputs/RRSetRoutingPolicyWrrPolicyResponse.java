@@ -22,10 +22,10 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
         this.kind = kind;
     }
 
-    public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> getItems() {
+    public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items() {
         return this.items;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

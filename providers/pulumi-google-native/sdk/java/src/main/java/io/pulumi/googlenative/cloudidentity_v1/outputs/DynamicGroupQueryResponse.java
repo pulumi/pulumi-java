@@ -32,14 +32,14 @@ public final class DynamicGroupQueryResponse {
      * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
      * Resource type for the Dynamic Group Query
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

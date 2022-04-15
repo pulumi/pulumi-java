@@ -33,14 +33,14 @@ public final class IdentityResponse {
      * The revision number of the update.
      * 
     */
-    public Integer getRevision() {
+    public Integer revision() {
         return this.revision;
     }
     /**
      * The revision independent identifier of the update.
      * 
     */
-    public String getUpdateId() {
+    public String updateId() {
         return this.updateId;
     }
 

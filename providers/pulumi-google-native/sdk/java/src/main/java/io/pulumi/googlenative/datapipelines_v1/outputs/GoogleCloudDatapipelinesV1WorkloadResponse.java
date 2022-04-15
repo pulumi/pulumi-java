@@ -33,14 +33,14 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
      * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
      * 
     */
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse getDataflowFlexTemplateRequest() {
+    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
     }
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
      * 
     */
-    public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse getDataflowLaunchTemplateRequest() {
+    public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
     }
 

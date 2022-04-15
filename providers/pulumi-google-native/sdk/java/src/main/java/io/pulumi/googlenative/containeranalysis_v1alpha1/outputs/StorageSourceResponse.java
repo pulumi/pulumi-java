@@ -39,21 +39,21 @@ public final class StorageSourceResponse {
      * Google Cloud Storage bucket containing source (see [Bucket Name Requirements] (https://cloud.google.com/storage/docs/bucket-naming#requirements)).
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Google Cloud Storage generation for the object.
      * 
     */
-    public String getGeneration() {
+    public String generation() {
         return this.generation;
     }
     /**
      * Google Cloud Storage object containing source.
      * 
     */
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

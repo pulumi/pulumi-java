@@ -25,7 +25,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientInfoDetails", required=true)
       private final List<ClientInfoDetailResponse> clientInfoDetails;
 
-    public List<ClientInfoDetailResponse> getClientInfoDetails() {
+    public List<ClientInfoDetailResponse> clientInfoDetails() {
         return this.clientInfoDetails;
     }
 
@@ -36,7 +36,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

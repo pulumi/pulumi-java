@@ -39,21 +39,21 @@ public final class GetAccessPolicyResult {
      * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
      * 
     */
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
     /**
      * Human readable title. Does not affect behavior.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

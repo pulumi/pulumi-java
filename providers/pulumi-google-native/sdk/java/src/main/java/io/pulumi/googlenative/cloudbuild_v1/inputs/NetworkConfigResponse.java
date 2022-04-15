@@ -23,7 +23,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="egressOption", required=true)
       private final String egressOption;
 
-    public String getEgressOption() {
+    public String egressOption() {
         return this.egressOption;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="peeredNetwork", required=true)
       private final String peeredNetwork;
 
-    public String getPeeredNetwork() {
+    public String peeredNetwork() {
         return this.peeredNetwork;
     }
 

@@ -28,7 +28,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forwardedPorts")
       private final @Nullable Output<List<String>> forwardedPorts;
 
-    public Output<List<String>> getForwardedPorts() {
+    public Output<List<String>> forwardedPorts() {
         return this.forwardedPorts == null ? Codegen.empty() : this.forwardedPorts;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceTag")
       private final @Nullable Output<String> instanceTag;
 
-    public Output<String> getInstanceTag() {
+    public Output<String> instanceTag() {
         return this.instanceTag == null ? Codegen.empty() : this.instanceTag;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionAffinity")
       private final @Nullable Output<Boolean> sessionAffinity;
 
-    public Output<Boolean> getSessionAffinity() {
+    public Output<Boolean> sessionAffinity() {
         return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
@@ -72,7 +72,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetworkName")
       private final @Nullable Output<String> subnetworkName;
 
-    public Output<String> getSubnetworkName() {
+    public Output<String> subnetworkName() {
         return this.subnetworkName == null ? Codegen.empty() : this.subnetworkName;
     }
 

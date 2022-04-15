@@ -31,7 +31,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -45,7 +45,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return The automatically generated Apple ID assigned to the iOS app by Apple in the iOS App Store.
      * 
      */
-    public Output<String> getAppStoreId() {
+    public Output<String> appStoreId() {
         return this.appStoreId;
     }
     /**
@@ -59,7 +59,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. The canonical bundle ID of the iOS app as it would appear in the iOS AppStore.
      * 
      */
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
     /**
@@ -73,7 +73,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return The user-assigned display name for the `IosApp`.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -87,7 +87,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return The resource name of the IosApp, in the format: projects/PROJECT_IDENTIFIER /iosApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.iosApps#IosApp.FIELDS.app_id)).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `IosApp`.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -115,7 +115,7 @@ public class IosApp extends io.pulumi.resources.CustomResource {
      * @return The Apple Developer Team ID associated with the App in the App Store.
      * 
      */
-    public Output<String> getTeamId() {
+    public Output<String> teamId() {
         return this.teamId;
     }
 

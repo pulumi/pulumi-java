@@ -38,7 +38,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Type used for App Engine services.
      * 
      */
-    public Output<AppEngineResponse> getAppEngine() {
+    public Output<AppEngineResponse> appEngine() {
         return this.appEngine;
     }
     /**
@@ -52,7 +52,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Type used for Cloud Endpoints services.
      * 
      */
-    public Output<CloudEndpointsResponse> getCloudEndpoints() {
+    public Output<CloudEndpointsResponse> cloudEndpoints() {
         return this.cloudEndpoints;
     }
     /**
@@ -66,7 +66,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Type used for Istio services that live in a Kubernetes cluster.
      * 
      */
-    public Output<ClusterIstioResponse> getClusterIstio() {
+    public Output<ClusterIstioResponse> clusterIstio() {
         return this.clusterIstio;
     }
     /**
@@ -80,7 +80,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Custom service type.
      * 
      */
-    public Output<CustomResponse> getCustom() {
+    public Output<CustomResponse> custom() {
         return this.custom;
     }
     /**
@@ -94,7 +94,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Name used for UI elements listing this Service.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -108,7 +108,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
      * 
      */
-    public Output<IstioCanonicalServiceResponse> getIstioCanonicalService() {
+    public Output<IstioCanonicalServiceResponse> istioCanonicalService() {
         return this.istioCanonicalService;
     }
     /**
@@ -122,7 +122,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Type used for Istio services scoped to an Istio mesh.
      * 
      */
-    public Output<MeshIstioResponse> getMeshIstio() {
+    public Output<MeshIstioResponse> meshIstio() {
         return this.meshIstio;
     }
     /**
@@ -136,7 +136,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -150,7 +150,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Configuration for how to query telemetry on a Service.
      * 
      */
-    public Output<TelemetryResponse> getTelemetry() {
+    public Output<TelemetryResponse> telemetry() {
         return this.telemetry;
     }
     /**
@@ -164,7 +164,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
      */
-    public Output<Map<String,String>> getUserLabels() {
+    public Output<Map<String,String>> userLabels() {
         return this.userLabels;
     }
 

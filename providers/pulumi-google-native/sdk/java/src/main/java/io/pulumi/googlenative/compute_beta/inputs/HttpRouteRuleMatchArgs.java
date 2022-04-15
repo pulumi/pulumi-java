@@ -31,7 +31,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fullPathMatch")
       private final @Nullable Output<String> fullPathMatch;
 
-    public Output<String> getFullPathMatch() {
+    public Output<String> fullPathMatch() {
         return this.fullPathMatch == null ? Codegen.empty() : this.fullPathMatch;
     }
 
@@ -42,7 +42,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="headerMatches")
       private final @Nullable Output<List<HttpHeaderMatchArgs>> headerMatches;
 
-    public Output<List<HttpHeaderMatchArgs>> getHeaderMatches() {
+    public Output<List<HttpHeaderMatchArgs>> headerMatches() {
         return this.headerMatches == null ? Codegen.empty() : this.headerMatches;
     }
 
@@ -53,7 +53,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> getIgnoreCase() {
+    public Output<Boolean> ignoreCase() {
         return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
@@ -64,7 +64,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metadataFilters")
       private final @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
 
-    public Output<List<MetadataFilterArgs>> getMetadataFilters() {
+    public Output<List<MetadataFilterArgs>> metadataFilters() {
         return this.metadataFilters == null ? Codegen.empty() : this.metadataFilters;
     }
 
@@ -75,7 +75,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
-    public Output<String> getPrefixMatch() {
+    public Output<String> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
@@ -86,7 +86,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryParameterMatches")
       private final @Nullable Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches;
 
-    public Output<List<HttpQueryParameterMatchArgs>> getQueryParameterMatches() {
+    public Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches() {
         return this.queryParameterMatches == null ? Codegen.empty() : this.queryParameterMatches;
     }
 
@@ -97,7 +97,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
+    public Output<String> regexMatch() {
         return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 

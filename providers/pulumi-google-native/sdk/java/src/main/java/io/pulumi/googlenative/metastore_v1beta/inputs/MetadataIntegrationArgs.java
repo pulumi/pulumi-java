@@ -27,7 +27,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="dataCatalogConfig")
       private final @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
 
-    public Output<DataCatalogConfigArgs> getDataCatalogConfig() {
+    public Output<DataCatalogConfigArgs> dataCatalogConfig() {
         return this.dataCatalogConfig == null ? Codegen.empty() : this.dataCatalogConfig;
     }
 
@@ -38,7 +38,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
     @Import(name="dataplexConfig")
       private final @Nullable Output<DataplexConfigArgs> dataplexConfig;
 
-    public Output<DataplexConfigArgs> getDataplexConfig() {
+    public Output<DataplexConfigArgs> dataplexConfig() {
         return this.dataplexConfig == null ? Codegen.empty() : this.dataplexConfig;
     }
 

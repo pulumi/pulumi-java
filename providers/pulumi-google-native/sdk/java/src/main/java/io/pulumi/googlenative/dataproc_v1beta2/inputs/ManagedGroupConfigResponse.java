@@ -23,7 +23,7 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="instanceGroupManagerName", required=true)
       private final String instanceGroupManagerName;
 
-    public String getInstanceGroupManagerName() {
+    public String instanceGroupManagerName() {
         return this.instanceGroupManagerName;
     }
 
@@ -34,7 +34,7 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="instanceTemplateName", required=true)
       private final String instanceTemplateName;
 
-    public String getInstanceTemplateName() {
+    public String instanceTemplateName() {
         return this.instanceTemplateName;
     }
 

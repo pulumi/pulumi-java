@@ -15,14 +15,14 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sshPublicKeyId", required=true)
       private final String sshPublicKeyId;
 
-    public String getSshPublicKeyId() {
+    public String sshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

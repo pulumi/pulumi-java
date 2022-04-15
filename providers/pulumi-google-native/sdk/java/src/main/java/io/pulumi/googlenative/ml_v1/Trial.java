@@ -34,7 +34,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return The identifier of the client that originally requested this trial.
      * 
      */
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
     /**
@@ -48,7 +48,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return Time at which the trial's status changed to COMPLETED.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -62,7 +62,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return The final measurement containing the objective value.
      * 
      */
-    public Output<GoogleCloudMlV1__MeasurementResponse> getFinalMeasurement() {
+    public Output<GoogleCloudMlV1__MeasurementResponse> finalMeasurement() {
         return this.finalMeasurement;
     }
     /**
@@ -76,7 +76,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
      * 
      */
-    public Output<String> getInfeasibleReason() {
+    public Output<String> infeasibleReason() {
         return this.infeasibleReason;
     }
     /**
@@ -90,7 +90,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
      * 
      */
-    public Output<List<GoogleCloudMlV1__MeasurementResponse>> getMeasurements() {
+    public Output<List<GoogleCloudMlV1__MeasurementResponse>> measurements() {
         return this.measurements;
     }
     /**
@@ -104,7 +104,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return Name of the trial assigned by the service.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -118,7 +118,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return The parameters of the trial.
      * 
      */
-    public Output<List<GoogleCloudMlV1_Trial_ParameterResponse>> getParameters() {
+    public Output<List<GoogleCloudMlV1_Trial_ParameterResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -132,7 +132,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return Time at which the trial was started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -146,7 +146,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return The detailed state of a trial.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -160,7 +160,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @return If true, the parameters in this trial are not attempted again.
      * 
      */
-    public Output<Boolean> getTrialInfeasible() {
+    public Output<Boolean> trialInfeasible() {
         return this.trialInfeasible;
     }
 

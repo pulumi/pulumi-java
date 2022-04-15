@@ -22,7 +22,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
     @Import(name="metadataBasedReadinessSignal")
       private final @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
-    public Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> getMetadataBasedReadinessSignal() {
+    public Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal == null ? Codegen.empty() : this.metadataBasedReadinessSignal;
     }
 

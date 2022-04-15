@@ -35,7 +35,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
      * 
      */
-    public Output<Integer> getDataRefreshWindowDays() {
+    public Output<Integer> dataRefreshWindowDays() {
         return this.dataRefreshWindowDays;
     }
     /**
@@ -49,7 +49,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Data source id. Cannot be changed once data transfer is created.
      * 
      */
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
     /**
@@ -63,7 +63,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Region in which BigQuery dataset is located.
      * 
      */
-    public Output<String> getDatasetRegion() {
+    public Output<String> datasetRegion() {
         return this.datasetRegion;
     }
     /**
@@ -77,7 +77,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return The BigQuery target dataset id.
      * 
      */
-    public Output<String> getDestinationDatasetId() {
+    public Output<String> destinationDatasetId() {
         return this.destinationDatasetId;
     }
     /**
@@ -91,7 +91,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Is this config disabled. When set to true, no runs are scheduled for a given transfer.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -105,7 +105,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return User specified display name for the data transfer.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -119,7 +119,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
      * 
      */
-    public Output<EmailPreferencesResponse> getEmailPreferences() {
+    public Output<EmailPreferencesResponse> emailPreferences() {
         return this.emailPreferences;
     }
     /**
@@ -133,7 +133,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Next time when data transfer will run.
      * 
      */
-    public Output<String> getNextRunTime() {
+    public Output<String> nextRunTime() {
         return this.nextRunTime;
     }
     /**
@@ -161,7 +161,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
      * 
      */
-    public Output<String> getNotificationPubsubTopic() {
+    public Output<String> notificationPubsubTopic() {
         return this.notificationPubsubTopic;
     }
     /**
@@ -175,7 +175,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.
      * 
      */
-    public Output<UserInfoResponse> getOwnerInfo() {
+    public Output<UserInfoResponse> ownerInfo() {
         return this.ownerInfo;
     }
     /**
@@ -189,7 +189,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer' section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 
      */
-    public Output<Map<String,String>> getParams() {
+    public Output<Map<String,String>> params() {
         return this.params;
     }
     /**
@@ -203,7 +203,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
      * 
      */
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
     /**
@@ -217,7 +217,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Options customizing the data transfer schedule.
      * 
      */
-    public Output<ScheduleOptionsResponse> getScheduleOptions() {
+    public Output<ScheduleOptionsResponse> scheduleOptions() {
         return this.scheduleOptions;
     }
     /**
@@ -231,7 +231,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return State of the most recently updated transfer run.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -245,7 +245,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @return Data transfer modification time. Ignored by server on input.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

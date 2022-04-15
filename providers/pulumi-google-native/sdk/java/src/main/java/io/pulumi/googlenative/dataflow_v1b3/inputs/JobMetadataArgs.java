@@ -33,7 +33,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigTableDetails")
       private final @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
 
-    public Output<List<BigTableIODetailsArgs>> getBigTableDetails() {
+    public Output<List<BigTableIODetailsArgs>> bigTableDetails() {
         return this.bigTableDetails == null ? Codegen.empty() : this.bigTableDetails;
     }
 
@@ -44,7 +44,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bigqueryDetails")
       private final @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
 
-    public Output<List<BigQueryIODetailsArgs>> getBigqueryDetails() {
+    public Output<List<BigQueryIODetailsArgs>> bigqueryDetails() {
         return this.bigqueryDetails == null ? Codegen.empty() : this.bigqueryDetails;
     }
 
@@ -55,7 +55,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreDetails")
       private final @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
 
-    public Output<List<DatastoreIODetailsArgs>> getDatastoreDetails() {
+    public Output<List<DatastoreIODetailsArgs>> datastoreDetails() {
         return this.datastoreDetails == null ? Codegen.empty() : this.datastoreDetails;
     }
 
@@ -66,7 +66,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileDetails")
       private final @Nullable Output<List<FileIODetailsArgs>> fileDetails;
 
-    public Output<List<FileIODetailsArgs>> getFileDetails() {
+    public Output<List<FileIODetailsArgs>> fileDetails() {
         return this.fileDetails == null ? Codegen.empty() : this.fileDetails;
     }
 
@@ -77,7 +77,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsubDetails")
       private final @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
 
-    public Output<List<PubSubIODetailsArgs>> getPubsubDetails() {
+    public Output<List<PubSubIODetailsArgs>> pubsubDetails() {
         return this.pubsubDetails == null ? Codegen.empty() : this.pubsubDetails;
     }
 
@@ -88,7 +88,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sdkVersion")
       private final @Nullable Output<SdkVersionArgs> sdkVersion;
 
-    public Output<SdkVersionArgs> getSdkVersion() {
+    public Output<SdkVersionArgs> sdkVersion() {
         return this.sdkVersion == null ? Codegen.empty() : this.sdkVersion;
     }
 
@@ -99,7 +99,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spannerDetails")
       private final @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
 
-    public Output<List<SpannerIODetailsArgs>> getSpannerDetails() {
+    public Output<List<SpannerIODetailsArgs>> spannerDetails() {
         return this.spannerDetails == null ? Codegen.empty() : this.spannerDetails;
     }
 

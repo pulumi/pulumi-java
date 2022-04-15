@@ -26,7 +26,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
     @Import(name="utilizationTarget")
       private final @Nullable Output<Double> utilizationTarget;
 
-    public Output<Double> getUtilizationTarget() {
+    public Output<Double> utilizationTarget() {
         return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
     }
 

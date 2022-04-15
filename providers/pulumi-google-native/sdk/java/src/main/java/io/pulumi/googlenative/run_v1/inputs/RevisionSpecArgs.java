@@ -32,7 +32,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerConcurrency")
       private final @Nullable Output<Integer> containerConcurrency;
 
-    public Output<Integer> getContainerConcurrency() {
+    public Output<Integer> containerConcurrency() {
         return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
     }
 
@@ -43,7 +43,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> containers() {
         return this.containers == null ? Codegen.empty() : this.containers;
     }
 
@@ -54,7 +54,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableServiceLinks")
       private final @Nullable Output<Boolean> enableServiceLinks;
 
-    public Output<Boolean> getEnableServiceLinks() {
+    public Output<Boolean> enableServiceLinks() {
         return this.enableServiceLinks == null ? Codegen.empty() : this.enableServiceLinks;
     }
 
@@ -65,7 +65,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imagePullSecrets")
       private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
+    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
         return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
     }
 
@@ -76,7 +76,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
-    public Output<String> getServiceAccountName() {
+    public Output<String> serviceAccountName() {
         return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
@@ -87,14 +87,14 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
+    public Output<List<VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

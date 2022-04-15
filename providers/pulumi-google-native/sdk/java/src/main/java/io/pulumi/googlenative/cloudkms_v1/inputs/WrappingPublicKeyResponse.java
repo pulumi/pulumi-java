@@ -23,7 +23,7 @@ public final class WrappingPublicKeyResponse extends io.pulumi.resources.InvokeA
     @Import(name="pem", required=true)
       private final String pem;
 
-    public String getPem() {
+    public String pem() {
         return this.pem;
     }
 

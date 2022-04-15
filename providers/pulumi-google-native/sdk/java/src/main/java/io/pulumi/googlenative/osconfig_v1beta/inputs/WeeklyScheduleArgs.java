@@ -25,7 +25,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dayOfWeek", required=true)
       private final Output<WeeklyScheduleDayOfWeek> dayOfWeek;
 
-    public Output<WeeklyScheduleDayOfWeek> getDayOfWeek() {
+    public Output<WeeklyScheduleDayOfWeek> dayOfWeek() {
         return this.dayOfWeek;
     }
 

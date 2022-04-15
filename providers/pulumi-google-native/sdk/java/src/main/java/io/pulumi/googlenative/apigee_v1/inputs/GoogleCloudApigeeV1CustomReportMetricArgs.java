@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
     @Import(name="function")
       private final @Nullable Output<String> function;
 
-    public Output<String> getFunction() {
+    public Output<String> function() {
         return this.function == null ? Codegen.empty() : this.function;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

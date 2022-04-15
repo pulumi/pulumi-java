@@ -27,7 +27,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="highBoost")
       private final @Nullable Output<Boolean> highBoost;
 
-    public Output<Boolean> getHighBoost() {
+    public Output<Boolean> highBoost() {
         return this.highBoost == null ? Codegen.empty() : this.highBoost;
     }
 
@@ -38,7 +38,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lowBoost")
       private final @Nullable Output<Boolean> lowBoost;
 
-    public Output<Boolean> getLowBoost() {
+    public Output<Boolean> lowBoost() {
         return this.lowBoost == null ? Codegen.empty() : this.lowBoost;
     }
 
@@ -49,7 +49,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lufs")
       private final @Nullable Output<Double> lufs;
 
-    public Output<Double> getLufs() {
+    public Output<Double> lufs() {
         return this.lufs == null ? Codegen.empty() : this.lufs;
     }
 

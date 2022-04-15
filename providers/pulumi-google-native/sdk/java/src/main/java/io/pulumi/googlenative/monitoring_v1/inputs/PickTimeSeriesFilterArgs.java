@@ -28,7 +28,7 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     @Import(name="direction")
       private final @Nullable Output<PickTimeSeriesFilterDirection> direction;
 
-    public Output<PickTimeSeriesFilterDirection> getDirection() {
+    public Output<PickTimeSeriesFilterDirection> direction() {
         return this.direction == null ? Codegen.empty() : this.direction;
     }
 
@@ -39,7 +39,7 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     @Import(name="numTimeSeries")
       private final @Nullable Output<Integer> numTimeSeries;
 
-    public Output<Integer> getNumTimeSeries() {
+    public Output<Integer> numTimeSeries() {
         return this.numTimeSeries == null ? Codegen.empty() : this.numTimeSeries;
     }
 
@@ -50,7 +50,7 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     @Import(name="rankingMethod")
       private final @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
 
-    public Output<PickTimeSeriesFilterRankingMethod> getRankingMethod() {
+    public Output<PickTimeSeriesFilterRankingMethod> rankingMethod() {
         return this.rankingMethod == null ? Codegen.empty() : this.rankingMethod;
     }
 

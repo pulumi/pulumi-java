@@ -22,14 +22,14 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
     @Import(name="keyid")
       private final @Nullable Output<String> keyid;
 
-    public Output<String> getKeyid() {
+    public Output<String> keyid() {
         return this.keyid == null ? Codegen.empty() : this.keyid;
     }
 
     @Import(name="sig")
       private final @Nullable Output<String> sig;
 
-    public Output<String> getSig() {
+    public Output<String> sig() {
         return this.sig == null ? Codegen.empty() : this.sig;
     }
 

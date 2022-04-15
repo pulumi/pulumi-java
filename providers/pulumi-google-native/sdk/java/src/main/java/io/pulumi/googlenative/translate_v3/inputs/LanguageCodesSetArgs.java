@@ -27,7 +27,7 @@ public final class LanguageCodesSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="languageCodes")
       private final @Nullable Output<List<String>> languageCodes;
 
-    public Output<List<String>> getLanguageCodes() {
+    public Output<List<String>> languageCodes() {
         return this.languageCodes == null ? Codegen.empty() : this.languageCodes;
     }
 

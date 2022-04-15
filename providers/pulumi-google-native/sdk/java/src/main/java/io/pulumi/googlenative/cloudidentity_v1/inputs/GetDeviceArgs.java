@@ -17,14 +17,14 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="customer")
       private final @Nullable String customer;
 
-    public Optional<String> getCustomer() {
+    public Optional<String> customer() {
         return this.customer == null ? Optional.empty() : Optional.ofNullable(this.customer);
     }
 
     @Import(name="deviceId", required=true)
       private final String deviceId;
 
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
 

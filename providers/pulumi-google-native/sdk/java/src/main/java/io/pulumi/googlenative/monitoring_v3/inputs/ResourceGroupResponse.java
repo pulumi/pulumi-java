@@ -23,7 +23,7 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceType", required=true)
       private final String resourceType;
 
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

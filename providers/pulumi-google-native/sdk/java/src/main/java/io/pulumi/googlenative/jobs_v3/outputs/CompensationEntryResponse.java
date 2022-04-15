@@ -63,42 +63,42 @@ public final class CompensationEntryResponse {
      * Optional. Compensation amount.
      * 
     */
-    public MoneyResponse getAmount() {
+    public MoneyResponse amount() {
         return this.amount;
     }
     /**
      * Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
      * 
     */
-    public Double getExpectedUnitsPerYear() {
+    public Double expectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
     }
     /**
      * Optional. Compensation range.
      * 
     */
-    public CompensationRangeResponse getRange() {
+    public CompensationRangeResponse range() {
         return this.range;
     }
     /**
      * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
      * 
     */
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 

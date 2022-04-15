@@ -30,7 +30,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="exec")
       private final @Nullable Output<OSPolicyResourceExecResourceArgs> exec;
 
-    public Output<OSPolicyResourceExecResourceArgs> getExec() {
+    public Output<OSPolicyResourceExecResourceArgs> exec() {
         return this.exec == null ? Codegen.empty() : this.exec;
     }
 
@@ -41,7 +41,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileResourceArgs> file;
 
-    public Output<OSPolicyResourceFileResourceArgs> getFile() {
+    public Output<OSPolicyResourceFileResourceArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -52,7 +52,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -63,7 +63,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pkg")
       private final @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg;
 
-    public Output<OSPolicyResourcePackageResourceArgs> getPkg() {
+    public Output<OSPolicyResourcePackageResourceArgs> pkg() {
         return this.pkg == null ? Codegen.empty() : this.pkg;
     }
 
@@ -74,7 +74,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="repository")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository;
 
-    public Output<OSPolicyResourceRepositoryResourceArgs> getRepository() {
+    public Output<OSPolicyResourceRepositoryResourceArgs> repository() {
         return this.repository == null ? Codegen.empty() : this.repository;
     }
 

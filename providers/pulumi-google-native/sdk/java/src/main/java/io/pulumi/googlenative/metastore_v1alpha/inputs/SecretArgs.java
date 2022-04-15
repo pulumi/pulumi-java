@@ -26,7 +26,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudSecret")
       private final @Nullable Output<String> cloudSecret;
 
-    public Output<String> getCloudSecret() {
+    public Output<String> cloudSecret() {
         return this.cloudSecret == null ? Codegen.empty() : this.cloudSecret;
     }
 

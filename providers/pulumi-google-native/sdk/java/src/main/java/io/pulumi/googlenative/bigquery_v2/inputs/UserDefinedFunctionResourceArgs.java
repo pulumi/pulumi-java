@@ -26,7 +26,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
     @Import(name="inlineCode")
       private final @Nullable Output<String> inlineCode;
 
-    public Output<String> getInlineCode() {
+    public Output<String> inlineCode() {
         return this.inlineCode == null ? Codegen.empty() : this.inlineCode;
     }
 
@@ -37,7 +37,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
     @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 

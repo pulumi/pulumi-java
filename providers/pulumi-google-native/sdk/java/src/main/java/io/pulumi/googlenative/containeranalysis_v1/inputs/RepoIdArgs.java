@@ -27,7 +27,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectRepoId")
       private final @Nullable Output<ProjectRepoIdArgs> projectRepoId;
 
-    public Output<ProjectRepoIdArgs> getProjectRepoId() {
+    public Output<ProjectRepoIdArgs> projectRepoId() {
         return this.projectRepoId == null ? Codegen.empty() : this.projectRepoId;
     }
 
@@ -38,7 +38,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

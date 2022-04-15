@@ -26,7 +26,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="v1Name", required=true)
       private final Output<String> v1Name;
 
-    public Output<String> getV1Name() {
+    public Output<String> v1Name() {
         return this.v1Name;
     }
 
@@ -37,7 +37,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="v2Blob", required=true)
       private final Output<List<String>> v2Blob;
 
-    public Output<List<String>> getV2Blob() {
+    public Output<List<String>> v2Blob() {
         return this.v2Blob;
     }
 

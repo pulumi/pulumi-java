@@ -46,28 +46,28 @@ public final class RowAccessPolicyReferenceResponse {
      * [Required] The ID of the dataset containing this row access policy.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
     */
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * [Required] The ID of the project containing this row access policy.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * [Required] The ID of the table containing this row access policy.
      * 
     */
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

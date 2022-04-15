@@ -24,7 +24,7 @@ public final class ObbFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="obb", required=true)
       private final FileReferenceResponse obb;
 
-    public FileReferenceResponse getObb() {
+    public FileReferenceResponse obb() {
         return this.obb;
     }
 
@@ -35,7 +35,7 @@ public final class ObbFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="obbFileName", required=true)
       private final String obbFileName;
 
-    public String getObbFileName() {
+    public String obbFileName() {
         return this.obbFileName;
     }
 

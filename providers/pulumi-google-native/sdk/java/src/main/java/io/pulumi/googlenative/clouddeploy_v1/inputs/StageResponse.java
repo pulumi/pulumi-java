@@ -24,7 +24,7 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="profiles", required=true)
       private final List<String> profiles;
 
-    public List<String> getProfiles() {
+    public List<String> profiles() {
         return this.profiles;
     }
 
@@ -35,7 +35,7 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
       private final String targetId;
 
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
 

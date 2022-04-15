@@ -41,21 +41,21 @@ public final class UpgradeOccurrenceResponse {
      * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
     */
-    public UpgradeDistributionResponse getDistribution() {
+    public UpgradeDistributionResponse distribution() {
         return this.distribution;
     }
     /**
      * Required - The package this Upgrade is for.
      * 
     */
-    public String getPackage_() {
+    public String package_() {
         return this.package_;
     }
     /**
      * Required - The version of the package in a machine + human readable form.
      * 
     */
-    public VersionResponse getParsedVersion() {
+    public VersionResponse parsedVersion() {
         return this.parsedVersion;
     }
 

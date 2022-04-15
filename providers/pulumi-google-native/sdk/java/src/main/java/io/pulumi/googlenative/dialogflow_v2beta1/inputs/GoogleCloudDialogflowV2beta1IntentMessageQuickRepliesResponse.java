@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
     @Import(name="quickReplies", required=true)
       private final List<String> quickReplies;
 
-    public List<String> getQuickReplies() {
+    public List<String> quickReplies() {
         return this.quickReplies;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

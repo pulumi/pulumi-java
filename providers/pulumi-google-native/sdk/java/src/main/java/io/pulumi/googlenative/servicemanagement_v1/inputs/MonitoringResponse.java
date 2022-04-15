@@ -24,7 +24,7 @@ public final class MonitoringResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="consumerDestinations", required=true)
       private final List<MonitoringDestinationResponse> consumerDestinations;
 
-    public List<MonitoringDestinationResponse> getConsumerDestinations() {
+    public List<MonitoringDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
     }
 
@@ -35,7 +35,7 @@ public final class MonitoringResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="producerDestinations", required=true)
       private final List<MonitoringDestinationResponse> producerDestinations;
 
-    public List<MonitoringDestinationResponse> getProducerDestinations() {
+    public List<MonitoringDestinationResponse> producerDestinations() {
         return this.producerDestinations;
     }
 

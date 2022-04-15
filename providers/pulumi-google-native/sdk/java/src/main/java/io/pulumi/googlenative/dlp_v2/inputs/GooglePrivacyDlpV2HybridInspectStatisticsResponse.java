@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
     @Import(name="abortedCount", required=true)
       private final String abortedCount;
 
-    public String getAbortedCount() {
+    public String abortedCount() {
         return this.abortedCount;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
     @Import(name="pendingCount", required=true)
       private final String pendingCount;
 
-    public String getPendingCount() {
+    public String pendingCount() {
         return this.pendingCount;
     }
 
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
     @Import(name="processedCount", required=true)
       private final String processedCount;
 
-    public String getProcessedCount() {
+    public String processedCount() {
         return this.processedCount;
     }
 

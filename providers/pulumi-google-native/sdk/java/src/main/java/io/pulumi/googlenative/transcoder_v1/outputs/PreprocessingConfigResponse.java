@@ -65,42 +65,42 @@ public final class PreprocessingConfigResponse {
      * Audio preprocessing configuration.
      * 
     */
-    public AudioResponse getAudio() {
+    public AudioResponse audio() {
         return this.audio;
     }
     /**
      * Color preprocessing configuration.
      * 
     */
-    public ColorResponse getColor() {
+    public ColorResponse color() {
         return this.color;
     }
     /**
      * Specify the video cropping configuration.
      * 
     */
-    public CropResponse getCrop() {
+    public CropResponse crop() {
         return this.crop;
     }
     /**
      * Deblock preprocessing configuration.
      * 
     */
-    public DeblockResponse getDeblock() {
+    public DeblockResponse deblock() {
         return this.deblock;
     }
     /**
      * Denoise preprocessing configuration.
      * 
     */
-    public DenoiseResponse getDenoise() {
+    public DenoiseResponse denoise() {
         return this.denoise;
     }
     /**
      * Specify the video pad filter configuration.
      * 
     */
-    public PadResponse getPad() {
+    public PadResponse pad() {
         return this.pad;
     }
 

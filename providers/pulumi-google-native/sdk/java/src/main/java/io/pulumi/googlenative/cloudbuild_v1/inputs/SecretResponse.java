@@ -24,7 +24,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -35,7 +35,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="secretEnv", required=true)
       private final Map<String,String> secretEnv;
 
-    public Map<String,String> getSecretEnv() {
+    public Map<String,String> secretEnv() {
         return this.secretEnv;
     }
 

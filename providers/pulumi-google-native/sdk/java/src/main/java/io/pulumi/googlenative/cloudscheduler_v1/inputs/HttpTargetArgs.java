@@ -30,7 +30,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -41,7 +41,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -52,7 +52,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod")
       private final @Nullable Output<HttpTargetHttpMethod> httpMethod;
 
-    public Output<HttpTargetHttpMethod> getHttpMethod() {
+    public Output<HttpTargetHttpMethod> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -63,7 +63,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oauthToken")
       private final @Nullable Output<OAuthTokenArgs> oauthToken;
 
-    public Output<OAuthTokenArgs> getOauthToken() {
+    public Output<OAuthTokenArgs> oauthToken() {
         return this.oauthToken == null ? Codegen.empty() : this.oauthToken;
     }
 
@@ -74,7 +74,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcToken")
       private final @Nullable Output<OidcTokenArgs> oidcToken;
 
-    public Output<OidcTokenArgs> getOidcToken() {
+    public Output<OidcTokenArgs> oidcToken() {
         return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
     }
 
@@ -85,7 +85,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 

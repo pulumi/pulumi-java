@@ -49,28 +49,28 @@ public final class OSPolicyResourceRepositoryResourceResponse {
      * An Apt Repository.
      * 
     */
-    public OSPolicyResourceRepositoryResourceAptRepositoryResponse getApt() {
+    public OSPolicyResourceRepositoryResourceAptRepositoryResponse apt() {
         return this.apt;
     }
     /**
      * A Goo Repository.
      * 
     */
-    public OSPolicyResourceRepositoryResourceGooRepositoryResponse getGoo() {
+    public OSPolicyResourceRepositoryResourceGooRepositoryResponse goo() {
         return this.goo;
     }
     /**
      * A Yum Repository.
      * 
     */
-    public OSPolicyResourceRepositoryResourceYumRepositoryResponse getYum() {
+    public OSPolicyResourceRepositoryResourceYumRepositoryResponse yum() {
         return this.yum;
     }
     /**
      * A Zypper Repository.
      * 
     */
-    public OSPolicyResourceRepositoryResourceZypperRepositoryResponse getZypper() {
+    public OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper() {
         return this.zypper;
     }
 

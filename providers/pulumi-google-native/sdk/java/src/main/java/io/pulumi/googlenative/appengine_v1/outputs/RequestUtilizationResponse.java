@@ -32,14 +32,14 @@ public final class RequestUtilizationResponse {
      * Target number of concurrent requests.
      * 
     */
-    public Integer getTargetConcurrentRequests() {
+    public Integer targetConcurrentRequests() {
         return this.targetConcurrentRequests;
     }
     /**
      * Target requests per second.
      * 
     */
-    public Integer getTargetRequestCountPerSecond() {
+    public Integer targetRequestCountPerSecond() {
         return this.targetRequestCountPerSecond;
     }
 

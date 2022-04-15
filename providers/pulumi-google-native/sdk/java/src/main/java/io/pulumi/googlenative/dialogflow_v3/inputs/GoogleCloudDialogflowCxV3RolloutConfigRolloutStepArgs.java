@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
     @Import(name="minDuration")
       private final @Nullable Output<String> minDuration;
 
-    public Output<String> getMinDuration() {
+    public Output<String> minDuration() {
         return this.minDuration == null ? Codegen.empty() : this.minDuration;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepArgs extends
     @Import(name="trafficPercent")
       private final @Nullable Output<Integer> trafficPercent;
 
-    public Output<Integer> getTrafficPercent() {
+    public Output<Integer> trafficPercent() {
         return this.trafficPercent == null ? Codegen.empty() : this.trafficPercent;
     }
 

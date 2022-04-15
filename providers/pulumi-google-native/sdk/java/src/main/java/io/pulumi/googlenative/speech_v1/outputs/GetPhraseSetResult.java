@@ -42,21 +42,21 @@ public final class GetPhraseSetResult {
      * Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
      * 
     */
-    public Double getBoost() {
+    public Double boost() {
         return this.boost;
     }
     /**
      * The resource name of the phrase set.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of word and phrases.
      * 
     */
-    public List<PhraseResponse> getPhrases() {
+    public List<PhraseResponse> phrases() {
         return this.phrases;
     }
 

@@ -20,7 +20,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     @Import(name="healthCheck", required=true)
       private final String healthCheck;
 
-    public String getHealthCheck() {
+    public String healthCheck() {
         return this.healthCheck;
     }
 
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     @Import(name="initialDelaySec", required=true)
       private final Integer initialDelaySec;
 
-    public Integer getInitialDelaySec() {
+    public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 

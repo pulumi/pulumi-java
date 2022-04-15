@@ -74,49 +74,49 @@ public final class JobMetadataResponse {
      * Identification of a Cloud Bigtable source used in the Dataflow job.
      * 
     */
-    public List<BigTableIODetailsResponse> getBigTableDetails() {
+    public List<BigTableIODetailsResponse> bigTableDetails() {
         return this.bigTableDetails;
     }
     /**
      * Identification of a BigQuery source used in the Dataflow job.
      * 
     */
-    public List<BigQueryIODetailsResponse> getBigqueryDetails() {
+    public List<BigQueryIODetailsResponse> bigqueryDetails() {
         return this.bigqueryDetails;
     }
     /**
      * Identification of a Datastore source used in the Dataflow job.
      * 
     */
-    public List<DatastoreIODetailsResponse> getDatastoreDetails() {
+    public List<DatastoreIODetailsResponse> datastoreDetails() {
         return this.datastoreDetails;
     }
     /**
      * Identification of a File source used in the Dataflow job.
      * 
     */
-    public List<FileIODetailsResponse> getFileDetails() {
+    public List<FileIODetailsResponse> fileDetails() {
         return this.fileDetails;
     }
     /**
      * Identification of a Pub/Sub source used in the Dataflow job.
      * 
     */
-    public List<PubSubIODetailsResponse> getPubsubDetails() {
+    public List<PubSubIODetailsResponse> pubsubDetails() {
         return this.pubsubDetails;
     }
     /**
      * The SDK version used to run the job.
      * 
     */
-    public SdkVersionResponse getSdkVersion() {
+    public SdkVersionResponse sdkVersion() {
         return this.sdkVersion;
     }
     /**
      * Identification of a Spanner source used in the Dataflow job.
      * 
     */
-    public List<SpannerIODetailsResponse> getSpannerDetails() {
+    public List<SpannerIODetailsResponse> spannerDetails() {
         return this.spannerDetails;
     }
 

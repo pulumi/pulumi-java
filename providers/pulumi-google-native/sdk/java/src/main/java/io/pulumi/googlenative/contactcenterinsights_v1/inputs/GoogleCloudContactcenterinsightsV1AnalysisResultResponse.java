@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
     @Import(name="callAnalysisMetadata", required=true)
       private final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
 
-    public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse getCallAnalysisMetadata() {
+    public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata() {
         return this.callAnalysisMetadata;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 

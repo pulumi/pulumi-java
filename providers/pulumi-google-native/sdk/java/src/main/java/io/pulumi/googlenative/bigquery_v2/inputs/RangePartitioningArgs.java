@@ -23,7 +23,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -34,7 +34,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
     @Import(name="range")
       private final @Nullable Output<RangePartitioningRangeArgs> range;
 
-    public Output<RangePartitioningRangeArgs> getRange() {
+    public Output<RangePartitioningRangeArgs> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 

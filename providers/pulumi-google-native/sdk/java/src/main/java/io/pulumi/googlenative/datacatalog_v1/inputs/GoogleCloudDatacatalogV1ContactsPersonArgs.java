@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
     @Import(name="designation")
       private final @Nullable Output<String> designation;
 
-    public Output<String> getDesignation() {
+    public Output<String> designation() {
         return this.designation == null ? Codegen.empty() : this.designation;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 

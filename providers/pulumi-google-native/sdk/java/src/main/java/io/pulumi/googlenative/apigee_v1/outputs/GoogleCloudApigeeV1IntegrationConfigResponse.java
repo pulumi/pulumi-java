@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse {
      * Flag that specifies whether the Integration add-on is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

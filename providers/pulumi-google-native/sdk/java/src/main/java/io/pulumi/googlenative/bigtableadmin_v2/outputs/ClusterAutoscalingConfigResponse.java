@@ -33,14 +33,14 @@ public final class ClusterAutoscalingConfigResponse {
      * Autoscaling limits for this cluster.
      * 
     */
-    public AutoscalingLimitsResponse getAutoscalingLimits() {
+    public AutoscalingLimitsResponse autoscalingLimits() {
         return this.autoscalingLimits;
     }
     /**
      * Autoscaling targets for this cluster.
      * 
     */
-    public AutoscalingTargetsResponse getAutoscalingTargets() {
+    public AutoscalingTargetsResponse autoscalingTargets() {
         return this.autoscalingTargets;
     }
 

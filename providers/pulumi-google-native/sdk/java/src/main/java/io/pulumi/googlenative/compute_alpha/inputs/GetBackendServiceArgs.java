@@ -17,14 +17,14 @@ public final class GetBackendServiceArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="backendService", required=true)
       private final String backendService;
 
-    public String getBackendService() {
+    public String backendService() {
         return this.backendService;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

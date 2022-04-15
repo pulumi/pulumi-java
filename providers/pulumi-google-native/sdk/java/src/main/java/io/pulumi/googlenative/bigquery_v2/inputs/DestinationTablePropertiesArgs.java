@@ -23,7 +23,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
@@ -45,7 +45,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -56,7 +56,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

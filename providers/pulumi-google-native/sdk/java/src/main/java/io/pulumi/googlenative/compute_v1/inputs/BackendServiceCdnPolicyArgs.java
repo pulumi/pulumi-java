@@ -33,7 +33,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="bypassCacheOnRequestHeaders")
       private final @Nullable Output<List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders;
 
-    public Output<List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs>> getBypassCacheOnRequestHeaders() {
+    public Output<List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders() {
         return this.bypassCacheOnRequestHeaders == null ? Codegen.empty() : this.bypassCacheOnRequestHeaders;
     }
 
@@ -44,7 +44,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="cacheKeyPolicy")
       private final @Nullable Output<CacheKeyPolicyArgs> cacheKeyPolicy;
 
-    public Output<CacheKeyPolicyArgs> getCacheKeyPolicy() {
+    public Output<CacheKeyPolicyArgs> cacheKeyPolicy() {
         return this.cacheKeyPolicy == null ? Codegen.empty() : this.cacheKeyPolicy;
     }
 
@@ -55,7 +55,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="cacheMode")
       private final @Nullable Output<BackendServiceCdnPolicyCacheMode> cacheMode;
 
-    public Output<BackendServiceCdnPolicyCacheMode> getCacheMode() {
+    public Output<BackendServiceCdnPolicyCacheMode> cacheMode() {
         return this.cacheMode == null ? Codegen.empty() : this.cacheMode;
     }
 
@@ -66,7 +66,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="clientTtl")
       private final @Nullable Output<Integer> clientTtl;
 
-    public Output<Integer> getClientTtl() {
+    public Output<Integer> clientTtl() {
         return this.clientTtl == null ? Codegen.empty() : this.clientTtl;
     }
 
@@ -77,7 +77,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
+    public Output<Integer> defaultTtl() {
         return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
@@ -88,7 +88,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
+    public Output<Integer> maxTtl() {
         return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
@@ -99,7 +99,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="negativeCaching")
       private final @Nullable Output<Boolean> negativeCaching;
 
-    public Output<Boolean> getNegativeCaching() {
+    public Output<Boolean> negativeCaching() {
         return this.negativeCaching == null ? Codegen.empty() : this.negativeCaching;
     }
 
@@ -110,7 +110,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="negativeCachingPolicy")
       private final @Nullable Output<List<BackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy;
 
-    public Output<List<BackendServiceCdnPolicyNegativeCachingPolicyArgs>> getNegativeCachingPolicy() {
+    public Output<List<BackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Codegen.empty() : this.negativeCachingPolicy;
     }
 
@@ -121,7 +121,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="requestCoalescing")
       private final @Nullable Output<Boolean> requestCoalescing;
 
-    public Output<Boolean> getRequestCoalescing() {
+    public Output<Boolean> requestCoalescing() {
         return this.requestCoalescing == null ? Codegen.empty() : this.requestCoalescing;
     }
 
@@ -132,7 +132,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="serveWhileStale")
       private final @Nullable Output<Integer> serveWhileStale;
 
-    public Output<Integer> getServeWhileStale() {
+    public Output<Integer> serveWhileStale() {
         return this.serveWhileStale == null ? Codegen.empty() : this.serveWhileStale;
     }
 
@@ -143,7 +143,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="signedUrlCacheMaxAgeSec")
       private final @Nullable Output<String> signedUrlCacheMaxAgeSec;
 
-    public Output<String> getSignedUrlCacheMaxAgeSec() {
+    public Output<String> signedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec == null ? Codegen.empty() : this.signedUrlCacheMaxAgeSec;
     }
 

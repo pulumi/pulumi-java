@@ -22,7 +22,7 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
+    public Output<String> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 
@@ -33,7 +33,7 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="skipLeadingRows")
       private final @Nullable Output<String> skipLeadingRows;
 
-    public Output<String> getSkipLeadingRows() {
+    public Output<String> skipLeadingRows() {
         return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
     }
 

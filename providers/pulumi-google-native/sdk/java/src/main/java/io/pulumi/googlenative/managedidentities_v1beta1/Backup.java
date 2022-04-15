@@ -31,7 +31,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The time the backups was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +45,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -59,7 +59,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The current state of the backup.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -87,7 +87,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Additional information about the current status of this backup, if available.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -101,7 +101,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Indicates whether it’s an on-demand backup or scheduled.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -115,7 +115,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Last update time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

@@ -23,7 +23,7 @@ public final class OSPolicyResourceExecResourceResponse extends io.pulumi.resour
     @Import(name="enforce", required=true)
       private final OSPolicyResourceExecResourceExecResponse enforce;
 
-    public OSPolicyResourceExecResourceExecResponse getEnforce() {
+    public OSPolicyResourceExecResourceExecResponse enforce() {
         return this.enforce;
     }
 
@@ -34,7 +34,7 @@ public final class OSPolicyResourceExecResourceResponse extends io.pulumi.resour
     @Import(name="validate", required=true)
       private final OSPolicyResourceExecResourceExecResponse validate;
 
-    public OSPolicyResourceExecResourceExecResponse getValidate() {
+    public OSPolicyResourceExecResourceExecResponse validate() {
         return this.validate;
     }
 

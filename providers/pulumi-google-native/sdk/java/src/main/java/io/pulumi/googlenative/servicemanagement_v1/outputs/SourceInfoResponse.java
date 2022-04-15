@@ -26,7 +26,7 @@ public final class SourceInfoResponse {
      * All files used during config generation.
      * 
     */
-    public List<Map<String,String>> getSourceFiles() {
+    public List<Map<String,String>> sourceFiles() {
         return this.sourceFiles;
     }
 

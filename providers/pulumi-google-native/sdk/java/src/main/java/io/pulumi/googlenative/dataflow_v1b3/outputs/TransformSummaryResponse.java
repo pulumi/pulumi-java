@@ -55,35 +55,35 @@ public final class TransformSummaryResponse {
      * Transform-specific display data.
      * 
     */
-    public List<DisplayDataResponse> getDisplayData() {
+    public List<DisplayDataResponse> displayData() {
         return this.displayData;
     }
     /**
      * User names for all collection inputs to this transform.
      * 
     */
-    public List<String> getInputCollectionName() {
+    public List<String> inputCollectionName() {
         return this.inputCollectionName;
     }
     /**
      * Type of transform.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * User provided name for this transform instance.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * User names for all collection outputs to this transform.
      * 
     */
-    public List<String> getOutputCollectionName() {
+    public List<String> outputCollectionName() {
         return this.outputCollectionName;
     }
 

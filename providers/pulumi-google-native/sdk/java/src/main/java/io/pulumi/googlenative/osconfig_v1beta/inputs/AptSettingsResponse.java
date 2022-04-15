@@ -24,7 +24,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="excludes", required=true)
       private final List<String> excludes;
 
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes;
     }
 
@@ -35,7 +35,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="exclusivePackages", required=true)
       private final List<String> exclusivePackages;
 
-    public List<String> getExclusivePackages() {
+    public List<String> exclusivePackages() {
         return this.exclusivePackages;
     }
 
@@ -46,7 +46,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

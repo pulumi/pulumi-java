@@ -113,84 +113,84 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
      * Bucketing
      * 
     */
-    public GooglePrivacyDlpV2BucketingConfigResponse getBucketingConfig() {
+    public GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig() {
         return this.bucketingConfig;
     }
     /**
      * Mask
      * 
     */
-    public GooglePrivacyDlpV2CharacterMaskConfigResponse getCharacterMaskConfig() {
+    public GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig() {
         return this.characterMaskConfig;
     }
     /**
      * Deterministic Crypto
      * 
     */
-    public GooglePrivacyDlpV2CryptoDeterministicConfigResponse getCryptoDeterministicConfig() {
+    public GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig() {
         return this.cryptoDeterministicConfig;
     }
     /**
      * Crypto
      * 
     */
-    public GooglePrivacyDlpV2CryptoHashConfigResponse getCryptoHashConfig() {
+    public GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig() {
         return this.cryptoHashConfig;
     }
     /**
      * Ffx-Fpe
      * 
     */
-    public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse getCryptoReplaceFfxFpeConfig() {
+    public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig() {
         return this.cryptoReplaceFfxFpeConfig;
     }
     /**
      * Date Shift
      * 
     */
-    public GooglePrivacyDlpV2DateShiftConfigResponse getDateShiftConfig() {
+    public GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig() {
         return this.dateShiftConfig;
     }
     /**
      * Fixed size bucketing
      * 
     */
-    public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse getFixedSizeBucketingConfig() {
+    public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig() {
         return this.fixedSizeBucketingConfig;
     }
     /**
      * Redact
      * 
     */
-    public GooglePrivacyDlpV2RedactConfigResponse getRedactConfig() {
+    public GooglePrivacyDlpV2RedactConfigResponse redactConfig() {
         return this.redactConfig;
     }
     /**
      * Replace with a specified value.
      * 
     */
-    public GooglePrivacyDlpV2ReplaceValueConfigResponse getReplaceConfig() {
+    public GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig() {
         return this.replaceConfig;
     }
     /**
      * Replace with a value randomly drawn (with replacement) from a dictionary.
      * 
     */
-    public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse getReplaceDictionaryConfig() {
+    public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig() {
         return this.replaceDictionaryConfig;
     }
     /**
      * Replace with infotype
      * 
     */
-    public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse getReplaceWithInfoTypeConfig() {
+    public GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig() {
         return this.replaceWithInfoTypeConfig;
     }
     /**
      * Time extraction
      * 
     */
-    public GooglePrivacyDlpV2TimePartConfigResponse getTimePartConfig() {
+    public GooglePrivacyDlpV2TimePartConfigResponse timePartConfig() {
         return this.timePartConfig;
     }
 

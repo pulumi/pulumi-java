@@ -33,14 +33,14 @@ public final class Oauth2ClientCredentialsResponse {
      * The client identifier.
      * 
     */
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
     /**
      * Secret version reference containing the client secret.
      * 
     */
-    public SecretResponse getClientSecret() {
+    public SecretResponse clientSecret() {
         return this.clientSecret;
     }
 

@@ -23,7 +23,7 @@ public final class OAuthTokenResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 
@@ -34,7 +34,7 @@ public final class OAuthTokenResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

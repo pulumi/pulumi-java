@@ -23,7 +23,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="allowlist", required=true)
       private final OracleRdbmsResponse allowlist;
 
-    public OracleRdbmsResponse getAllowlist() {
+    public OracleRdbmsResponse allowlist() {
         return this.allowlist;
     }
 
@@ -34,7 +34,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="rejectlist", required=true)
       private final OracleRdbmsResponse rejectlist;
 
-    public OracleRdbmsResponse getRejectlist() {
+    public OracleRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
 

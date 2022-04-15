@@ -28,7 +28,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="callCredentials")
       private final @Nullable Output<CallCredentialsArgs> callCredentials;
 
-    public Output<CallCredentialsArgs> getCallCredentials() {
+    public Output<CallCredentialsArgs> callCredentials() {
         return this.callCredentials == null ? Codegen.empty() : this.callCredentials;
     }
 
@@ -39,7 +39,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="channelCredentials")
       private final @Nullable Output<ChannelCredentialsArgs> channelCredentials;
 
-    public Output<ChannelCredentialsArgs> getChannelCredentials() {
+    public Output<ChannelCredentialsArgs> channelCredentials() {
         return this.channelCredentials == null ? Codegen.empty() : this.channelCredentials;
     }
 
@@ -50,7 +50,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="targetUri")
       private final @Nullable Output<String> targetUri;
 
-    public Output<String> getTargetUri() {
+    public Output<String> targetUri() {
         return this.targetUri == null ? Codegen.empty() : this.targetUri;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse ex
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
 

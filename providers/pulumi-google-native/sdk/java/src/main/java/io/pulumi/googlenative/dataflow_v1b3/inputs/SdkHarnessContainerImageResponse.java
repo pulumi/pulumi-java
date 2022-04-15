@@ -24,7 +24,7 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
     @Import(name="containerImage", required=true)
       private final String containerImage;
 
-    public String getContainerImage() {
+    public String containerImage() {
         return this.containerImage;
     }
 
@@ -35,7 +35,7 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
@@ -46,7 +46,7 @@ public final class SdkHarnessContainerImageResponse extends io.pulumi.resources.
     @Import(name="useSingleCorePerContainer", required=true)
       private final Boolean useSingleCorePerContainer;
 
-    public Boolean getUseSingleCorePerContainer() {
+    public Boolean useSingleCorePerContainer() {
         return this.useSingleCorePerContainer;
     }
 

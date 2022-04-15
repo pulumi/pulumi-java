@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends io.pulumi.r
     @Import(name="outputSchema")
       private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema;
 
-    public Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> getOutputSchema() {
+    public Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema() {
         return this.outputSchema == null ? Codegen.empty() : this.outputSchema;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends io.pulumi.r
     @Import(name="table")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
+    public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 

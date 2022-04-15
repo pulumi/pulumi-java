@@ -26,7 +26,7 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

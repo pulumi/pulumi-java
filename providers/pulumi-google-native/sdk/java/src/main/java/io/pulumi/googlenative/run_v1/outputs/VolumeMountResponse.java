@@ -47,28 +47,28 @@ public final class VolumeMountResponse {
      * Path within the container at which the volume should be mounted. Must not contain ':'.
      * 
     */
-    public String getMountPath() {
+    public String mountPath() {
         return this.mountPath;
     }
     /**
      * The name of the volume. There must be a corresponding Volume with the same name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * (Optional) Only true is accepted. Defaults to true.
      * 
     */
-    public Boolean getReadOnly() {
+    public Boolean readOnly() {
         return this.readOnly;
     }
     /**
      * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
      * 
     */
-    public String getSubPath() {
+    public String subPath() {
         return this.subPath;
     }
 

@@ -26,7 +26,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
     @Import(name="avroFileFormat", required=true)
       private final AvroFileFormatResponse avroFileFormat;
 
-    public AvroFileFormatResponse getAvroFileFormat() {
+    public AvroFileFormatResponse avroFileFormat() {
         return this.avroFileFormat;
     }
 
@@ -37,7 +37,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
     @Import(name="fileRotationInterval", required=true)
       private final String fileRotationInterval;
 
-    public String getFileRotationInterval() {
+    public String fileRotationInterval() {
         return this.fileRotationInterval;
     }
 
@@ -48,7 +48,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
     @Import(name="fileRotationMb", required=true)
       private final Integer fileRotationMb;
 
-    public Integer getFileRotationMb() {
+    public Integer fileRotationMb() {
         return this.fileRotationMb;
     }
 
@@ -59,7 +59,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
     @Import(name="jsonFileFormat", required=true)
       private final JsonFileFormatResponse jsonFileFormat;
 
-    public JsonFileFormatResponse getJsonFileFormat() {
+    public JsonFileFormatResponse jsonFileFormat() {
         return this.jsonFileFormat;
     }
 
@@ -70,7 +70,7 @@ public final class GcsDestinationConfigResponse extends io.pulumi.resources.Invo
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

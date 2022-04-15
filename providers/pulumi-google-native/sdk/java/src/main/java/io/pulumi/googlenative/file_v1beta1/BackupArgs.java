@@ -19,7 +19,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
-    public Output<String> getBackupId() {
+    public Output<String> backupId() {
         return this.backupId;
     }
 
@@ -30,7 +30,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,21 +41,21 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -66,7 +66,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceFileShare")
       private final @Nullable Output<String> sourceFileShare;
 
-    public Output<String> getSourceFileShare() {
+    public Output<String> sourceFileShare() {
         return this.sourceFileShare == null ? Codegen.empty() : this.sourceFileShare;
     }
 
@@ -77,7 +77,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceInstance")
       private final @Nullable Output<String> sourceInstance;
 
-    public Output<String> getSourceInstance() {
+    public Output<String> sourceInstance() {
         return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
     }
 

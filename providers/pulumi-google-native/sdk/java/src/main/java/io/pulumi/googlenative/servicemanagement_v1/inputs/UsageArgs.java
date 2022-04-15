@@ -28,7 +28,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="producerNotificationChannel")
       private final @Nullable Output<String> producerNotificationChannel;
 
-    public Output<String> getProducerNotificationChannel() {
+    public Output<String> producerNotificationChannel() {
         return this.producerNotificationChannel == null ? Codegen.empty() : this.producerNotificationChannel;
     }
 
@@ -39,7 +39,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requirements")
       private final @Nullable Output<List<String>> requirements;
 
-    public Output<List<String>> getRequirements() {
+    public Output<List<String>> requirements() {
         return this.requirements == null ? Codegen.empty() : this.requirements;
     }
 
@@ -50,7 +50,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<UsageRuleArgs>> rules;
 
-    public Output<List<UsageRuleArgs>> getRules() {
+    public Output<List<UsageRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

@@ -23,7 +23,7 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
     @Import(name="gcfsConfig", required=true)
       private final GcfsConfigResponse gcfsConfig;
 
-    public GcfsConfigResponse getGcfsConfig() {
+    public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }
 

@@ -33,14 +33,14 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
     */
-    public Boolean getPullDeps() {
+    public Boolean pullDeps() {
         return this.pullDeps;
     }
     /**
      * An rpm package.
      * 
     */
-    public OSPolicyResourceFileResponse getSource() {
+    public OSPolicyResourceFileResponse source() {
         return this.source;
     }
 

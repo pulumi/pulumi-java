@@ -24,7 +24,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="durationMs")
       private final @Nullable Output<String> durationMs;
 
-    public Output<String> getDurationMs() {
+    public Output<String> durationMs() {
         return this.durationMs == null ? Codegen.empty() : this.durationMs;
     }
 
@@ -35,7 +35,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="evalLoss")
       private final @Nullable Output<Double> evalLoss;
 
-    public Output<Double> getEvalLoss() {
+    public Output<Double> evalLoss() {
         return this.evalLoss == null ? Codegen.empty() : this.evalLoss;
     }
 
@@ -46,7 +46,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="index")
       private final @Nullable Output<Integer> index;
 
-    public Output<Integer> getIndex() {
+    public Output<Integer> index() {
         return this.index == null ? Codegen.empty() : this.index;
     }
 
@@ -57,7 +57,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="learnRate")
       private final @Nullable Output<Double> learnRate;
 
-    public Output<Double> getLearnRate() {
+    public Output<Double> learnRate() {
         return this.learnRate == null ? Codegen.empty() : this.learnRate;
     }
 
@@ -68,7 +68,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     @Import(name="trainingLoss")
       private final @Nullable Output<Double> trainingLoss;
 
-    public Output<Double> getTrainingLoss() {
+    public Output<Double> trainingLoss() {
         return this.trainingLoss == null ? Codegen.empty() : this.trainingLoss;
     }
 

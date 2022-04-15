@@ -26,7 +26,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="error", required=true)
       private final StatusResponse error;
 
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
 
@@ -37,7 +37,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="result", required=true)
       private final String result;
 
-    public String getResult() {
+    public String result() {
         return this.result;
     }
 
@@ -48,7 +48,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="traces", required=true)
       private final List<TraceResponse> traces;
 
-    public List<TraceResponse> getTraces() {
+    public List<TraceResponse> traces() {
         return this.traces;
     }
 
@@ -59,7 +59,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
     @Import(name="verifyTime", required=true)
       private final String verifyTime;
 
-    public String getVerifyTime() {
+    public String verifyTime() {
         return this.verifyTime;
     }
 

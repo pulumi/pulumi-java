@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
     @Import(name="audio", required=true)
       private final String audio;
 
-    public String getAudio() {
+    public String audio() {
         return this.audio;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
     @Import(name="config", required=true)
       private final GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config;
 
-    public GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse getConfig() {
+    public GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config() {
         return this.config;
     }
 

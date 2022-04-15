@@ -24,7 +24,7 @@ public final class BucketEncryptionResponse {
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
      * 
     */
-    public String getDefaultKmsKeyName() {
+    public String defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 

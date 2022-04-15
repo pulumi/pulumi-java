@@ -31,7 +31,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The email address to send notifications to. This does not need to be a Google account.
      * 
      */
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
     /**
@@ -45,7 +45,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
      * 
      */
-    public Output<String> getLanguageTag() {
+    public Output<String> languageTag() {
         return this.languageTag;
     }
     /**
@@ -59,7 +59,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The categories of notifications that the contact will receive communications for.
      * 
      */
-    public Output<List<String>> getNotificationCategorySubscriptions() {
+    public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
     /**
@@ -87,7 +87,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
      * 
      */
-    public Output<String> getValidateTime() {
+    public Output<String> validateTime() {
         return this.validateTime;
     }
     /**
@@ -101,7 +101,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * @return The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
      * 
      */
-    public Output<String> getValidationState() {
+    public Output<String> validationState() {
         return this.validationState;
     }
 

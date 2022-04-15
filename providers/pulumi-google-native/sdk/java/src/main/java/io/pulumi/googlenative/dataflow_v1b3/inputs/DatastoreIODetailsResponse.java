@@ -23,7 +23,7 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
@@ -34,7 +34,7 @@ public final class DatastoreIODetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

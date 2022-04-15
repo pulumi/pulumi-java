@@ -15,21 +15,21 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
     @Import(name="customerId", required=true)
       private final String customerId;
 
-    public String getCustomerId() {
+    public String customerId() {
         return this.customerId;
     }
 
     @Import(name="entitlementId", required=true)
       private final String entitlementId;
 
-    public String getEntitlementId() {
+    public String entitlementId() {
         return this.entitlementId;
     }
 

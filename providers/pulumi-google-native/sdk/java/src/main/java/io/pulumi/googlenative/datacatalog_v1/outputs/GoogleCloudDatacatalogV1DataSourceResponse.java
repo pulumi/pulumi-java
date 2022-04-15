@@ -32,14 +32,14 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
      * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
      * 
     */
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
     /**
      * Service that physically stores the data.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

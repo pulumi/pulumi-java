@@ -17,28 +17,28 @@ public final class GetChangeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="changeId", required=true)
       private final String changeId;
 
-    public String getChangeId() {
+    public String changeId() {
         return this.changeId;
     }
 
     @Import(name="clientOperationId")
       private final @Nullable String clientOperationId;
 
-    public Optional<String> getClientOperationId() {
+    public Optional<String> clientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="managedZone", required=true)
       private final String managedZone;
 
-    public String getManagedZone() {
+    public String managedZone() {
         return this.managedZone;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

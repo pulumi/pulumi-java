@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
     @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageListSelectItemArgs>> items() {
         return this.items;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

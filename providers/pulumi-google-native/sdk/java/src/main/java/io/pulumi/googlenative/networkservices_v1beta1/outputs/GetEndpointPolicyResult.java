@@ -98,77 +98,77 @@ public final class GetEndpointPolicyResult {
      * Optional. This field specifies the URL of AuthorizationPolicy resource that applies authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization. If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
      * 
     */
-    public String getAuthorizationPolicy() {
+    public String authorizationPolicy() {
         return this.authorizationPolicy;
     }
     /**
      * Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic from the proxy to the actual endpoints. More specifically, it is applied to the outgoing traffic from the proxy to the endpoint. This is typically used for sidecar model where the proxy identifies itself as endpoint to the control plane, with the connection between sidecar and endpoint requiring authentication. If this field is not set, authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
      * 
     */
-    public String getClientTlsPolicy() {
+    public String clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
     /**
      * The timestamp when the resource was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * A matcher that selects endpoints to which the policies should be applied.
      * 
     */
-    public EndpointMatcherResponse getEndpointMatcher() {
+    public EndpointMatcherResponse endpointMatcher() {
         return this.endpointMatcher;
     }
     /**
      * Optional. Set of label tags associated with the EndpointPolicy resource.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Name of the EndpointPolicy resource. It matches pattern `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional. A URL referring to ServerTlsPolicy resource. ServerTlsPolicy is used to determine the authentication policy to be applied to terminate the inbound traffic at the identified backends. If this field is not set, authentication is disabled(open) for this endpoint.
      * 
     */
-    public String getServerTlsPolicy() {
+    public String serverTlsPolicy() {
         return this.serverTlsPolicy;
     }
     /**
      * Optional. Port selector for the (matched) endpoints. If no port selector is provided, the matched config is applied to all ports.
      * 
     */
-    public TrafficPortSelectorResponse getTrafficPortSelector() {
+    public TrafficPortSelectorResponse trafficPortSelector() {
         return this.trafficPortSelector;
     }
     /**
      * The type of endpoint policy. This is primarily used to validate the configuration.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The timestamp when the resource was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

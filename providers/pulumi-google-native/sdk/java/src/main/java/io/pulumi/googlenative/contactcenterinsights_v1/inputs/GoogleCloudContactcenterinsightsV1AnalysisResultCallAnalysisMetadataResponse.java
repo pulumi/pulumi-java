@@ -28,7 +28,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="annotations", required=true)
       private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
 
-    public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> getAnnotations() {
+    public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations() {
         return this.annotations;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="entities", required=true)
       private final Map<String,String> entities;
 
-    public Map<String,String> getEntities() {
+    public Map<String,String> entities() {
         return this.entities;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="intents", required=true)
       private final Map<String,String> intents;
 
-    public Map<String,String> getIntents() {
+    public Map<String,String> intents() {
         return this.intents;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="issueModelResult", required=true)
       private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
 
-    public GoogleCloudContactcenterinsightsV1IssueModelResultResponse getIssueModelResult() {
+    public GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult() {
         return this.issueModelResult;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="phraseMatchers", required=true)
       private final Map<String,String> phraseMatchers;
 
-    public Map<String,String> getPhraseMatchers() {
+    public Map<String,String> phraseMatchers() {
         return this.phraseMatchers;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     @Import(name="sentiments", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
-    public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> getSentiments() {
+    public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments() {
         return this.sentiments;
     }
 

@@ -50,28 +50,28 @@ public final class AuthenticationRuleResponse {
      * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
      * 
     */
-    public Boolean getAllowWithoutCredential() {
+    public Boolean allowWithoutCredential() {
         return this.allowWithoutCredential;
     }
     /**
      * The requirements for OAuth credentials.
      * 
     */
-    public OAuthRequirementsResponse getOauth() {
+    public OAuthRequirementsResponse oauth() {
         return this.oauth;
     }
     /**
      * Requirements for additional authentication providers.
      * 
     */
-    public List<AuthRequirementResponse> getRequirements() {
+    public List<AuthRequirementResponse> requirements() {
         return this.requirements;
     }
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
     */
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

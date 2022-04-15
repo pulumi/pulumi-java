@@ -40,21 +40,21 @@ public final class PickTimeSeriesFilterResponse {
      * How to use the ranking to select time series that pass through the filter.
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * How many time series to allow to pass through the filter.
      * 
     */
-    public Integer getNumTimeSeries() {
+    public Integer numTimeSeries() {
         return this.numTimeSeries;
     }
     /**
      * ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
      * 
     */
-    public String getRankingMethod() {
+    public String rankingMethod() {
         return this.rankingMethod;
     }
 

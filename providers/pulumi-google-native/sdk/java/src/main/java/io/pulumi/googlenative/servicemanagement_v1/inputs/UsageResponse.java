@@ -25,7 +25,7 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="producerNotificationChannel", required=true)
       private final String producerNotificationChannel;
 
-    public String getProducerNotificationChannel() {
+    public String producerNotificationChannel() {
         return this.producerNotificationChannel;
     }
 
@@ -36,7 +36,7 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requirements", required=true)
       private final List<String> requirements;
 
-    public List<String> getRequirements() {
+    public List<String> requirements() {
         return this.requirements;
     }
 
@@ -47,7 +47,7 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
       private final List<UsageRuleResponse> rules;
 
-    public List<UsageRuleResponse> getRules() {
+    public List<UsageRuleResponse> rules() {
         return this.rules;
     }
 

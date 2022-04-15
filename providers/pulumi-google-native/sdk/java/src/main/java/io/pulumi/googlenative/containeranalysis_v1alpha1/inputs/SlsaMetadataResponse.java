@@ -25,7 +25,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="buildFinishedOn", required=true)
       private final String buildFinishedOn;
 
-    public String getBuildFinishedOn() {
+    public String buildFinishedOn() {
         return this.buildFinishedOn;
     }
 
@@ -36,7 +36,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="buildInvocationId", required=true)
       private final String buildInvocationId;
 
-    public String getBuildInvocationId() {
+    public String buildInvocationId() {
         return this.buildInvocationId;
     }
 
@@ -47,7 +47,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="buildStartedOn", required=true)
       private final String buildStartedOn;
 
-    public String getBuildStartedOn() {
+    public String buildStartedOn() {
         return this.buildStartedOn;
     }
 
@@ -58,7 +58,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="completeness", required=true)
       private final SlsaCompletenessResponse completeness;
 
-    public SlsaCompletenessResponse getCompleteness() {
+    public SlsaCompletenessResponse completeness() {
         return this.completeness;
     }
 
@@ -69,7 +69,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="reproducible", required=true)
       private final Boolean reproducible;
 
-    public Boolean getReproducible() {
+    public Boolean reproducible() {
         return this.reproducible;
     }
 

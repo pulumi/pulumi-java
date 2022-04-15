@@ -25,7 +25,7 @@ public final class ResourcePolicyWeeklyCycleResponse {
      * Up to 7 intervals/windows, one for each day of the week.
      * 
     */
-    public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> getDayOfWeeks() {
+    public List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 

@@ -25,14 +25,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bindings")
       private final @Nullable Output<List<BucketIamPolicyBindingsItemArgs>> bindings;
 
-    public Output<List<BucketIamPolicyBindingsItemArgs>> getBindings() {
+    public Output<List<BucketIamPolicyBindingsItemArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -43,7 +43,7 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -54,14 +54,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> getProvisionalUserProject() {
+    public Output<String> provisionalUserProject() {
         return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
@@ -72,14 +72,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
-    public Output<String> getUserProject() {
+    public Output<String> userProject() {
         return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 
@@ -90,7 +90,7 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -87,63 +87,63 @@ public final class SecurityPolicyRuleResponse {
      * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional, additional actions that are performed on headers.
      * 
     */
-    public SecurityPolicyRuleHttpHeaderActionResponse getHeaderAction() {
+    public SecurityPolicyRuleHttpHeaderActionResponse headerAction() {
         return this.headerAction;
     }
     /**
      * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
      * 
     */
-    public SecurityPolicyRuleMatcherResponse getMatch() {
+    public SecurityPolicyRuleMatcherResponse match() {
         return this.match;
     }
     /**
      * If set to true, the specified action is not enforced.
      * 
     */
-    public Boolean getPreview() {
+    public Boolean preview() {
         return this.preview;
     }
     /**
      * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
      * 
     */
-    public SecurityPolicyRuleRateLimitOptionsResponse getRateLimitOptions() {
+    public SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions() {
         return this.rateLimitOptions;
     }
     /**
      * Parameters defining the redirect action. Cannot be specified for any other actions.
      * 
     */
-    public SecurityPolicyRuleRedirectOptionsResponse getRedirectOptions() {
+    public SecurityPolicyRuleRedirectOptionsResponse redirectOptions() {
         return this.redirectOptions;
     }
 

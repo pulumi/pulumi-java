@@ -135,105 +135,105 @@ public final class ClusterConfigResponse {
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
      * 
     */
-    public AutoscalingConfigResponse getAutoscalingConfig() {
+    public AutoscalingConfigResponse autoscalingConfig() {
         return this.autoscalingConfig;
     }
     /**
      * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
      * 
     */
-    public String getConfigBucket() {
+    public String configBucket() {
         return this.configBucket;
     }
     /**
      * Optional. Encryption settings for the cluster.
      * 
     */
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * Optional. Port/endpoint configuration for this cluster
      * 
     */
-    public EndpointConfigResponse getEndpointConfig() {
+    public EndpointConfigResponse endpointConfig() {
         return this.endpointConfig;
     }
     /**
      * Optional. The shared Compute Engine config settings for all instances in a cluster.
      * 
     */
-    public GceClusterConfigResponse getGceClusterConfig() {
+    public GceClusterConfigResponse gceClusterConfig() {
         return this.gceClusterConfig;
     }
     /**
      * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
      * 
     */
-    public GkeClusterConfigResponse getGkeClusterConfig() {
+    public GkeClusterConfigResponse gkeClusterConfig() {
         return this.gkeClusterConfig;
     }
     /**
      * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
      * 
     */
-    public List<NodeInitializationActionResponse> getInitializationActions() {
+    public List<NodeInitializationActionResponse> initializationActions() {
         return this.initializationActions;
     }
     /**
      * Optional. Lifecycle setting for the cluster.
      * 
     */
-    public LifecycleConfigResponse getLifecycleConfig() {
+    public LifecycleConfigResponse lifecycleConfig() {
         return this.lifecycleConfig;
     }
     /**
      * Optional. The Compute Engine config settings for the cluster's master instance.
      * 
     */
-    public InstanceGroupConfigResponse getMasterConfig() {
+    public InstanceGroupConfigResponse masterConfig() {
         return this.masterConfig;
     }
     /**
      * Optional. Metastore configuration.
      * 
     */
-    public MetastoreConfigResponse getMetastoreConfig() {
+    public MetastoreConfigResponse metastoreConfig() {
         return this.metastoreConfig;
     }
     /**
      * Optional. The Compute Engine config settings for a cluster's secondary worker instances
      * 
     */
-    public InstanceGroupConfigResponse getSecondaryWorkerConfig() {
+    public InstanceGroupConfigResponse secondaryWorkerConfig() {
         return this.secondaryWorkerConfig;
     }
     /**
      * Optional. Security settings for the cluster.
      * 
     */
-    public SecurityConfigResponse getSecurityConfig() {
+    public SecurityConfigResponse securityConfig() {
         return this.securityConfig;
     }
     /**
      * Optional. The config settings for cluster software.
      * 
     */
-    public SoftwareConfigResponse getSoftwareConfig() {
+    public SoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
     }
     /**
      * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket (see Dataproc staging and temp buckets (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
      * 
     */
-    public String getTempBucket() {
+    public String tempBucket() {
         return this.tempBucket;
     }
     /**
      * Optional. The Compute Engine config settings for the cluster's worker instances.
      * 
     */
-    public InstanceGroupConfigResponse getWorkerConfig() {
+    public InstanceGroupConfigResponse workerConfig() {
         return this.workerConfig;
     }
 

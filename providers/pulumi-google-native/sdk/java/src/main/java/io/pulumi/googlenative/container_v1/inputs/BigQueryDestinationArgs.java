@@ -26,7 +26,7 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 

@@ -28,7 +28,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="allowAll")
       private final @Nullable Output<Boolean> allowAll;
 
-    public Output<Boolean> getAllowAll() {
+    public Output<Boolean> allowAll() {
         return this.allowAll == null ? Codegen.empty() : this.allowAll;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="condition")
       private final @Nullable Output<GoogleTypeExprArgs> condition;
 
-    public Output<GoogleTypeExprArgs> getCondition() {
+    public Output<GoogleTypeExprArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="denyAll")
       private final @Nullable Output<Boolean> denyAll;
 
-    public Output<Boolean> getDenyAll() {
+    public Output<Boolean> denyAll() {
         return this.denyAll == null ? Codegen.empty() : this.denyAll;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="enforce")
       private final @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> getEnforce() {
+    public Output<Boolean> enforce() {
         return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends io.pul
     @Import(name="values")
       private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> getValues() {
+    public Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

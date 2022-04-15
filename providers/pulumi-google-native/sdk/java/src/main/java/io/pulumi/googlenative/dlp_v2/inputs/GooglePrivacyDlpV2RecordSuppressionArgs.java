@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
     @Import(name="condition")
       private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
-    public Output<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
+    public Output<GooglePrivacyDlpV2RecordConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 

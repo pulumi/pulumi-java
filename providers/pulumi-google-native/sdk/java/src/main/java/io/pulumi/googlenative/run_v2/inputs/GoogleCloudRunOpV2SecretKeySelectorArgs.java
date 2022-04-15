@@ -26,7 +26,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

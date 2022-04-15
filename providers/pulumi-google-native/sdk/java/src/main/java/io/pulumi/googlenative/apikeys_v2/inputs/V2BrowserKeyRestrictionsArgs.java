@@ -27,7 +27,7 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
     @Import(name="allowedReferrers")
       private final @Nullable Output<List<String>> allowedReferrers;
 
-    public Output<List<String>> getAllowedReferrers() {
+    public Output<List<String>> allowedReferrers() {
         return this.allowedReferrers == null ? Codegen.empty() : this.allowedReferrers;
     }
 

@@ -32,14 +32,14 @@ public final class LanguageCodePairResponse {
      * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
      * 
     */
-    public String getSourceLanguageCode() {
+    public String sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
     /**
      * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
      * 
     */
-    public String getTargetLanguageCode() {
+    public String targetLanguageCode() {
         return this.targetLanguageCode;
     }
 

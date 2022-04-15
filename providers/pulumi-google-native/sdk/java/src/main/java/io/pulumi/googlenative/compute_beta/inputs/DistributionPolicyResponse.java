@@ -21,7 +21,7 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
     @Import(name="targetShape", required=true)
       private final String targetShape;
 
-    public String getTargetShape() {
+    public String targetShape() {
         return this.targetShape;
     }
 
@@ -32,7 +32,7 @@ public final class DistributionPolicyResponse extends io.pulumi.resources.Invoke
     @Import(name="zones", required=true)
       private final List<DistributionPolicyZoneConfigurationResponse> zones;
 
-    public List<DistributionPolicyZoneConfigurationResponse> getZones() {
+    public List<DistributionPolicyZoneConfigurationResponse> zones() {
         return this.zones;
     }
 

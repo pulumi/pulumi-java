@@ -173,140 +173,140 @@ public final class InstancePropertiesResponse {
      * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
      * 
     */
-    public AdvancedMachineFeaturesResponse getAdvancedMachineFeatures() {
+    public AdvancedMachineFeaturesResponse advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
      * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
     */
-    public Boolean getCanIpForward() {
+    public Boolean canIpForward() {
         return this.canIpForward;
     }
     /**
      * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
      * 
     */
-    public ConfidentialInstanceConfigResponse getConfidentialInstanceConfig() {
+    public ConfidentialInstanceConfigResponse confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
     /**
      * An optional text description for the instances that are created from these properties.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * An array of disks that are associated with the instances that are created from these properties.
      * 
     */
-    public List<AttachedDiskResponse> getDisks() {
+    public List<AttachedDiskResponse> disks() {
         return this.disks;
     }
     /**
      * A list of guest accelerator cards' type and count to use for instances created from these properties.
      * 
     */
-    public List<AcceleratorConfigResponse> getGuestAccelerators() {
+    public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
      * Labels to apply to instances that are created from these properties.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The machine type to use for instances that are created from these properties.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
      * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
     */
-    public MetadataResponse getMetadata() {
+    public MetadataResponse metadata() {
         return this.metadata;
     }
     /**
      * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
      * 
     */
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
      * An array of network access configurations for this interface.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * Note that for MachineImage, this is not supported yet.
      * 
     */
-    public NetworkPerformanceConfigResponse getNetworkPerformanceConfig() {
+    public NetworkPerformanceConfigResponse networkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
     /**
      * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
      * 
     */
-    public String getPrivateIpv6GoogleAccess() {
+    public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
      * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
      * 
     */
-    public ReservationAffinityResponse getReservationAffinity() {
+    public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
      * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
      * 
     */
-    public Map<String,String> getResourceManagerTags() {
+    public Map<String,String> resourceManagerTags() {
         return this.resourceManagerTags;
     }
     /**
      * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
      * 
     */
-    public List<String> getResourcePolicies() {
+    public List<String> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
      * Specifies the scheduling options for the instances that are created from these properties.
      * 
     */
-    public SchedulingResponse getScheduling() {
+    public SchedulingResponse scheduling() {
         return this.scheduling;
     }
     /**
      * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
      * 
     */
-    public List<ServiceAccountResponse> getServiceAccounts() {
+    public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
     }
     /**
      * Note that for MachineImage, this is not supported yet.
      * 
     */
-    public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
+    public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
      * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
     */
-    public TagsResponse getTags() {
+    public TagsResponse tags() {
         return this.tags;
     }
 

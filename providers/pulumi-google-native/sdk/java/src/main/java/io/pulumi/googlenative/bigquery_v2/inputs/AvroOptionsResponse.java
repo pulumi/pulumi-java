@@ -19,7 +19,7 @@ public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="useAvroLogicalTypes", required=true)
       private final Boolean useAvroLogicalTypes;
 
-    public Boolean getUseAvroLogicalTypes() {
+    public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
     }
 

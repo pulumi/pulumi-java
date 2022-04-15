@@ -31,7 +31,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -45,7 +45,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -59,7 +59,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +73,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return The resource name of the pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * @return The state of the pool.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

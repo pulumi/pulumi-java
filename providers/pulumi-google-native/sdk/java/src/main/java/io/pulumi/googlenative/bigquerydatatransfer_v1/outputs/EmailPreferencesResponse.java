@@ -24,7 +24,7 @@ public final class EmailPreferencesResponse {
      * If true, email notifications will be sent on transfer run failures.
      * 
     */
-    public Boolean getEnableFailureEmail() {
+    public Boolean enableFailureEmail() {
         return this.enableFailureEmail;
     }
 

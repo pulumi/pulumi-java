@@ -55,35 +55,35 @@ public final class TemplateContentsResponse {
      * Import files referenced by the main template.
      * 
     */
-    public List<ImportFileResponse> getImports() {
+    public List<ImportFileResponse> imports() {
         return this.imports;
     }
     /**
      * Which interpreter (python or jinja) should be used during expansion.
      * 
     */
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
     /**
      * The filename of the mainTemplate
      * 
     */
-    public String getMainTemplate() {
+    public String mainTemplate() {
         return this.mainTemplate;
     }
     /**
      * The contents of the template schema.
      * 
     */
-    public String getSchema() {
+    public String schema() {
         return this.schema;
     }
     /**
      * The contents of the main template file.
      * 
     */
-    public String getTemplate() {
+    public String template() {
         return this.template;
     }
 

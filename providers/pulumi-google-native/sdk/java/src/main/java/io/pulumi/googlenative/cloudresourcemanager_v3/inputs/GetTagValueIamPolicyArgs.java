@@ -15,7 +15,7 @@ public final class GetTagValueIamPolicyArgs extends io.pulumi.resources.InvokeAr
     @Import(name="tagValueId", required=true)
       private final String tagValueId;
 
-    public String getTagValueId() {
+    public String tagValueId() {
         return this.tagValueId;
     }
 

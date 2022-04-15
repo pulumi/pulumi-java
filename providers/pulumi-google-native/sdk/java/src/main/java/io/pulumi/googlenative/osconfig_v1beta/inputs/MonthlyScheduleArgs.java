@@ -26,7 +26,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="monthDay", required=true)
       private final Output<Integer> monthDay;
 
-    public Output<Integer> getMonthDay() {
+    public Output<Integer> monthDay() {
         return this.monthDay;
     }
 
@@ -37,7 +37,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="weekDayOfMonth", required=true)
       private final Output<WeekDayOfMonthArgs> weekDayOfMonth;
 
-    public Output<WeekDayOfMonthArgs> getWeekDayOfMonth() {
+    public Output<WeekDayOfMonthArgs> weekDayOfMonth() {
         return this.weekDayOfMonth;
     }
 

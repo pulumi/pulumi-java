@@ -28,7 +28,7 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
     @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Output<List<String>> getExemptedMembers() {
+    public Output<List<String>> exemptedMembers() {
         return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
@@ -39,7 +39,7 @@ public final class ApigatewayAuditLogConfigArgs extends io.pulumi.resources.Reso
     @Import(name="logType")
       private final @Nullable Output<ApigatewayAuditLogConfigLogType> logType;
 
-    public Output<ApigatewayAuditLogConfigLogType> getLogType() {
+    public Output<ApigatewayAuditLogConfigLogType> logType() {
         return this.logType == null ? Codegen.empty() : this.logType;
     }
 

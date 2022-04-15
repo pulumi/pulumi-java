@@ -26,7 +26,7 @@ public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.R
     @Import(name="permissionType")
       private final @Nullable Output<AuthorizationLoggingOptionsPermissionType> permissionType;
 
-    public Output<AuthorizationLoggingOptionsPermissionType> getPermissionType() {
+    public Output<AuthorizationLoggingOptionsPermissionType> permissionType() {
         return this.permissionType == null ? Codegen.empty() : this.permissionType;
     }
 

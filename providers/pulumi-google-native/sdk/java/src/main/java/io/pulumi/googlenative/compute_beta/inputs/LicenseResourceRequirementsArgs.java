@@ -22,7 +22,7 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
     @Import(name="minGuestCpuCount")
       private final @Nullable Output<Integer> minGuestCpuCount;
 
-    public Output<Integer> getMinGuestCpuCount() {
+    public Output<Integer> minGuestCpuCount() {
         return this.minGuestCpuCount == null ? Codegen.empty() : this.minGuestCpuCount;
     }
 
@@ -33,7 +33,7 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
     @Import(name="minMemoryMb")
       private final @Nullable Output<Integer> minMemoryMb;
 
-    public Output<Integer> getMinMemoryMb() {
+    public Output<Integer> minMemoryMb() {
         return this.minMemoryMb == null ? Codegen.empty() : this.minMemoryMb;
     }
 

@@ -29,7 +29,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     @Import(name="appEngineRouting")
       private final @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
 
-    public Output<AppEngineRoutingArgs> getAppEngineRouting() {
+    public Output<AppEngineRoutingArgs> appEngineRouting() {
         return this.appEngineRouting == null ? Codegen.empty() : this.appEngineRouting;
     }
 
@@ -40,7 +40,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -51,7 +51,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     @Import(name="httpMethod")
       private final @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
 
-    public Output<AppEngineHttpRequestHttpMethod> getHttpMethod() {
+    public Output<AppEngineHttpRequestHttpMethod> httpMethod() {
         return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
@@ -62,7 +62,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     @Import(name="payload")
       private final @Nullable Output<String> payload;
 
-    public Output<String> getPayload() {
+    public Output<String> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -73,7 +73,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     @Import(name="relativeUrl")
       private final @Nullable Output<String> relativeUrl;
 
-    public Output<String> getRelativeUrl() {
+    public Output<String> relativeUrl() {
         return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse extends
     @Import(name="targetUri", required=true)
       private final String targetUri;
 
-    public String getTargetUri() {
+    public String targetUri() {
         return this.targetUri;
     }
 

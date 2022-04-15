@@ -23,7 +23,7 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
     @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
-    public String getAcceleratorType() {
+    public String acceleratorType() {
         return this.acceleratorType;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
     @Import(name="amount", required=true)
       private final String amount;
 
-    public String getAmount() {
+    public String amount() {
         return this.amount;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceCommitmentResponse extends io.pulumi.resources.Invoke
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -15,21 +15,21 @@ public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeA
     @Import(name="attachmentId", required=true)
       private final String attachmentId;
 
-    public String getAttachmentId() {
+    public String attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="envgroupId", required=true)
       private final String envgroupId;
 
-    public String getEnvgroupId() {
+    public String envgroupId() {
         return this.envgroupId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

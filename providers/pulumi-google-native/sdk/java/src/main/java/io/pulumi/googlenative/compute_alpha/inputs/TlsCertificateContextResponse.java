@@ -25,7 +25,7 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
     @Import(name="certificatePaths", required=true)
       private final TlsCertificatePathsResponse certificatePaths;
 
-    public TlsCertificatePathsResponse getCertificatePaths() {
+    public TlsCertificatePathsResponse certificatePaths() {
         return this.certificatePaths;
     }
 
@@ -36,7 +36,7 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
     @Import(name="certificateSource", required=true)
       private final String certificateSource;
 
-    public String getCertificateSource() {
+    public String certificateSource() {
         return this.certificateSource;
     }
 
@@ -47,7 +47,7 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
     @Import(name="sdsConfig", required=true)
       private final SdsConfigResponse sdsConfig;
 
-    public SdsConfigResponse getSdsConfig() {
+    public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
 

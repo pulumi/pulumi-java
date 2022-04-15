@@ -39,21 +39,21 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
      * The creation time of the resource within the given system.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
     /**
      * The last-modified time of the resource within the given system.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

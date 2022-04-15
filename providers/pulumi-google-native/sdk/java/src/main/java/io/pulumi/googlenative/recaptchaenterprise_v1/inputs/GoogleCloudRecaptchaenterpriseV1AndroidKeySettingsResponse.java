@@ -25,7 +25,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
     @Import(name="allowAllPackageNames", required=true)
       private final Boolean allowAllPackageNames;
 
-    public Boolean getAllowAllPackageNames() {
+    public Boolean allowAllPackageNames() {
         return this.allowAllPackageNames;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
     @Import(name="allowedPackageNames", required=true)
       private final List<String> allowedPackageNames;
 
-    public List<String> getAllowedPackageNames() {
+    public List<String> allowedPackageNames() {
         return this.allowedPackageNames;
     }
 

@@ -28,7 +28,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testPackageId")
       private final @Nullable Output<String> testPackageId;
 
-    public Output<String> getTestPackageId() {
+    public Output<String> testPackageId() {
         return this.testPackageId == null ? Codegen.empty() : this.testPackageId;
     }
 
@@ -39,7 +39,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testRunnerClass")
       private final @Nullable Output<String> testRunnerClass;
 
-    public Output<String> getTestRunnerClass() {
+    public Output<String> testRunnerClass() {
         return this.testRunnerClass == null ? Codegen.empty() : this.testRunnerClass;
     }
 
@@ -50,7 +50,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> getTestTargets() {
+    public Output<List<String>> testTargets() {
         return this.testTargets == null ? Codegen.empty() : this.testTargets;
     }
 
@@ -61,7 +61,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     @Import(name="useOrchestrator")
       private final @Nullable Output<Boolean> useOrchestrator;
 
-    public Output<Boolean> getUseOrchestrator() {
+    public Output<Boolean> useOrchestrator() {
         return this.useOrchestrator == null ? Codegen.empty() : this.useOrchestrator;
     }
 

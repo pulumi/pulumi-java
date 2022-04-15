@@ -40,21 +40,21 @@ public final class WindowsUpdateSettingsResponse {
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
      * 
     */
-    public List<String> getClassifications() {
+    public List<String> classifications() {
         return this.classifications;
     }
     /**
      * List of KBs to exclude from update.
      * 
     */
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes;
     }
     /**
      * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
      * 
     */
-    public List<String> getExclusivePatches() {
+    public List<String> exclusivePatches() {
         return this.exclusivePatches;
     }
 

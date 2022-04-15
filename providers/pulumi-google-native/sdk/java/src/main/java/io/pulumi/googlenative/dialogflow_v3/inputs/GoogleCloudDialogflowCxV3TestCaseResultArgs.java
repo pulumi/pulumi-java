@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="conversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
 
-    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getConversationTurns() {
+    public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns() {
         return this.conversationTurns == null ? Codegen.empty() : this.conversationTurns;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="testResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
 
-    public Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> getTestResult() {
+    public Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult() {
         return this.testResult == null ? Codegen.empty() : this.testResult;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
     @Import(name="testTime")
       private final @Nullable Output<String> testTime;
 
-    public Output<String> getTestTime() {
+    public Output<String> testTime() {
         return this.testTime == null ? Codegen.empty() : this.testTime;
     }
 

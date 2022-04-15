@@ -29,10 +29,10 @@ public final class DSSEAttestationOccurrenceResponse {
      * If doing something security critical, make sure to verify the signatures in this metadata.
      * 
     */
-    public EnvelopeResponse getEnvelope() {
+    public EnvelopeResponse envelope() {
         return this.envelope;
     }
-    public InTotoStatementResponse getStatement() {
+    public InTotoStatementResponse statement() {
         return this.statement;
     }
 

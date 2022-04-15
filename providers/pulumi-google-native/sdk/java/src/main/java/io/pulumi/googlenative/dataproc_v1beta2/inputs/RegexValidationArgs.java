@@ -26,7 +26,7 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="regexes", required=true)
       private final Output<List<String>> regexes;
 
-    public Output<List<String>> getRegexes() {
+    public Output<List<String>> regexes() {
         return this.regexes;
     }
 

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ScheduleResponse extends io.pulumi.resource
     @Import(name="recurrencePeriodDuration", required=true)
       private final String recurrencePeriodDuration;
 
-    public String getRecurrencePeriodDuration() {
+    public String recurrencePeriodDuration() {
         return this.recurrencePeriodDuration;
     }
 

@@ -28,7 +28,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enterpriseConfigResourceName")
       private final @Nullable Output<String> enterpriseConfigResourceName;
 
-    public Output<String> getEnterpriseConfigResourceName() {
+    public Output<String> enterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName == null ? Codegen.empty() : this.enterpriseConfigResourceName;
     }
 
@@ -39,7 +39,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="installationId")
       private final @Nullable Output<String> installationId;
 
-    public Output<String> getInstallationId() {
+    public Output<String> installationId() {
         return this.installationId == null ? Codegen.empty() : this.installationId;
     }
 
@@ -50,7 +50,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -72,7 +72,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pullRequest")
       private final @Nullable Output<PullRequestFilterArgs> pullRequest;
 
-    public Output<PullRequestFilterArgs> getPullRequest() {
+    public Output<PullRequestFilterArgs> pullRequest() {
         return this.pullRequest == null ? Codegen.empty() : this.pullRequest;
     }
 
@@ -83,7 +83,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="push")
       private final @Nullable Output<PushFilterArgs> push;
 
-    public Output<PushFilterArgs> getPush() {
+    public Output<PushFilterArgs> push() {
         return this.push == null ? Codegen.empty() : this.push;
     }
 

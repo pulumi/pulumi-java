@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
     @Import(name="condition", required=true)
       private final String condition;
 
-    public String getCondition() {
+    public String condition() {
         return this.condition;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse extends
     @Import(name="versionVariants", required=true)
       private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
-    public GoogleCloudDialogflowCxV3VersionVariantsResponse getVersionVariants() {
+    public GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants() {
         return this.versionVariants;
     }
 

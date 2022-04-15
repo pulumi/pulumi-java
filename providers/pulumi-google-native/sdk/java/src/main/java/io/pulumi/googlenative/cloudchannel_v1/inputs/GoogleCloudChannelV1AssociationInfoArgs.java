@@ -26,7 +26,7 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
     @Import(name="baseEntitlement")
       private final @Nullable Output<String> baseEntitlement;
 
-    public Output<String> getBaseEntitlement() {
+    public Output<String> baseEntitlement() {
         return this.baseEntitlement == null ? Codegen.empty() : this.baseEntitlement;
     }
 

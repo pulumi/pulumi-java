@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
     @Import(name="newValue")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getNewValue() {
+    public Output<GooglePrivacyDlpV2ValueArgs> newValue() {
         return this.newValue == null ? Codegen.empty() : this.newValue;
     }
 

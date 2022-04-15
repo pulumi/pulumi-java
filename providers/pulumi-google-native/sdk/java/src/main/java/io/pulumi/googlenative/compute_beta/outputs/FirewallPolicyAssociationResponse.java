@@ -53,35 +53,35 @@ public final class FirewallPolicyAssociationResponse {
      * The target that the firewall policy is attached to.
      * 
     */
-    public String getAttachmentTarget() {
+    public String attachmentTarget() {
         return this.attachmentTarget;
     }
     /**
      * Deprecated, please use short name instead. The display name of the firewall policy of the association.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The firewall policy ID of the association.
      * 
     */
-    public String getFirewallPolicyId() {
+    public String firewallPolicyId() {
         return this.firewallPolicyId;
     }
     /**
      * The name for an association.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The short name of the firewall policy of the association.
      * 
     */
-    public String getShortName() {
+    public String shortName() {
         return this.shortName;
     }
 

@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
      * Generic Service configuration of this webhook.
      * 
     */
-    public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse getGenericWebService() {
+    public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
     }
     /**
      * The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

@@ -25,7 +25,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
     @Import(name="retentionPolicy", required=true)
       private final ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
 
-    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse getRetentionPolicy() {
+    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy() {
         return this.retentionPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
     @Import(name="schedule", required=true)
       private final ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleResponse getSchedule() {
+    public ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule() {
         return this.schedule;
     }
 
@@ -47,7 +47,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
     @Import(name="snapshotProperties", required=true)
       private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
-    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse getSnapshotProperties() {
+    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties() {
         return this.snapshotProperties;
     }
 

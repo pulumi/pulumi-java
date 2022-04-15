@@ -17,21 +17,21 @@ public final class GetRegionTargetHttpProxyArgs extends io.pulumi.resources.Invo
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="targetHttpProxy", required=true)
       private final String targetHttpProxy;
 
-    public String getTargetHttpProxy() {
+    public String targetHttpProxy() {
         return this.targetHttpProxy;
     }
 

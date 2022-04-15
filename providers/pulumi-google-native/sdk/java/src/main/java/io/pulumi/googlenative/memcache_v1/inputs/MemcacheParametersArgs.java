@@ -23,7 +23,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="params")
       private final @Nullable Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> getParams() {
+    public Output<Map<String,String>> params() {
         return this.params == null ? Codegen.empty() : this.params;
     }
 

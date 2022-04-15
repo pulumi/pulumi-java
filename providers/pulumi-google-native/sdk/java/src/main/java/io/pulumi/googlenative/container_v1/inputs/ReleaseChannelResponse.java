@@ -23,7 +23,7 @@ public final class ReleaseChannelResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="channel", required=true)
       private final String channel;
 
-    public String getChannel() {
+    public String channel() {
         return this.channel;
     }
 

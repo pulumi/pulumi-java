@@ -27,7 +27,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
     @Import(name="lockedTime")
       private final @Nullable Output<String> lockedTime;
 
-    public Output<String> getLockedTime() {
+    public Output<String> lockedTime() {
         return this.lockedTime == null ? Codegen.empty() : this.lockedTime;
     }
 

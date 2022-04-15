@@ -25,7 +25,7 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends io.pulumi.resourc
     @Import(name="deployment", required=true)
       private final Output<DeploymentArgs> deployment;
 
-    public Output<DeploymentArgs> getDeployment() {
+    public Output<DeploymentArgs> deployment() {
         return this.deployment;
     }
 

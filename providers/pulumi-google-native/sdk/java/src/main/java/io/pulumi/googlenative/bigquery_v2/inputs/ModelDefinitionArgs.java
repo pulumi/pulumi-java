@@ -24,7 +24,7 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modelOptions")
       private final @Nullable Output<ModelDefinitionModelOptionsArgs> modelOptions;
 
-    public Output<ModelDefinitionModelOptionsArgs> getModelOptions() {
+    public Output<ModelDefinitionModelOptionsArgs> modelOptions() {
         return this.modelOptions == null ? Codegen.empty() : this.modelOptions;
     }
 
@@ -35,7 +35,7 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="trainingRuns")
       private final @Nullable Output<List<BqmlTrainingRunArgs>> trainingRuns;
 
-    public Output<List<BqmlTrainingRunArgs>> getTrainingRuns() {
+    public Output<List<BqmlTrainingRunArgs>> trainingRuns() {
         return this.trainingRuns == null ? Codegen.empty() : this.trainingRuns;
     }
 

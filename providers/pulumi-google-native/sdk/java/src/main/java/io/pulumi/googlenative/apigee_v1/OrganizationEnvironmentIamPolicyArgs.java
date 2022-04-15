@@ -26,7 +26,7 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     @Import(name="auditConfigs")
       private final @Nullable Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
 
-    public Output<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
+    public Output<List<GoogleIamV1AuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -37,14 +37,14 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     @Import(name="bindings")
       private final @Nullable Output<List<GoogleIamV1BindingArgs>> bindings;
 
-    public Output<List<GoogleIamV1BindingArgs>> getBindings() {
+    public Output<List<GoogleIamV1BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -55,14 +55,14 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -73,7 +73,7 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
+    public Output<String> updateMask() {
         return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
@@ -84,7 +84,7 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

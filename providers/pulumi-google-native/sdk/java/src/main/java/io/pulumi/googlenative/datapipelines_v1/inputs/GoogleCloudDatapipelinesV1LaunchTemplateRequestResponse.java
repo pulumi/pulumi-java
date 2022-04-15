@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
     @Import(name="gcsPath", required=true)
       private final String gcsPath;
 
-    public String getGcsPath() {
+    public String gcsPath() {
         return this.gcsPath;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
     @Import(name="launchParameters", required=true)
       private final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
 
-    public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse getLaunchParameters() {
+    public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters() {
         return this.launchParameters;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
     @Import(name="validateOnly", required=true)
       private final Boolean validateOnly;
 
-    public Boolean getValidateOnly() {
+    public Boolean validateOnly() {
         return this.validateOnly;
     }
 

@@ -26,7 +26,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
     @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
@@ -37,7 +37,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

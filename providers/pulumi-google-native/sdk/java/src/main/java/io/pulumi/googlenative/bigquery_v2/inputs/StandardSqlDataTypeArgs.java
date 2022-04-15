@@ -27,7 +27,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
     @Import(name="arrayElementType")
       private final @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
 
-    public Output<StandardSqlDataTypeArgs> getArrayElementType() {
+    public Output<StandardSqlDataTypeArgs> arrayElementType() {
         return this.arrayElementType == null ? Codegen.empty() : this.arrayElementType;
     }
 
@@ -38,7 +38,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
     @Import(name="structType")
       private final @Nullable Output<StandardSqlStructTypeArgs> structType;
 
-    public Output<StandardSqlStructTypeArgs> getStructType() {
+    public Output<StandardSqlStructTypeArgs> structType() {
         return this.structType == null ? Codegen.empty() : this.structType;
     }
 
@@ -49,7 +49,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
     @Import(name="typeKind", required=true)
       private final Output<StandardSqlDataTypeTypeKind> typeKind;
 
-    public Output<StandardSqlDataTypeTypeKind> getTypeKind() {
+    public Output<StandardSqlDataTypeTypeKind> typeKind() {
         return this.typeKind;
     }
 

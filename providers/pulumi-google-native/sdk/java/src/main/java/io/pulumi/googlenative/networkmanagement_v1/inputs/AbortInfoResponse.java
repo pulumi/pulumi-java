@@ -23,7 +23,7 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cause", required=true)
       private final String cause;
 
-    public String getCause() {
+    public String cause() {
         return this.cause;
     }
 
@@ -34,7 +34,7 @@ public final class AbortInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

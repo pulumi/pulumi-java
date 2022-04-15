@@ -28,7 +28,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
     @Import(name="audio", required=true)
       private final AudioResponse audio;
 
-    public AudioResponse getAudio() {
+    public AudioResponse audio() {
         return this.audio;
     }
 
@@ -39,7 +39,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
     @Import(name="color", required=true)
       private final ColorResponse color;
 
-    public ColorResponse getColor() {
+    public ColorResponse color() {
         return this.color;
     }
 
@@ -50,7 +50,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
     @Import(name="crop", required=true)
       private final CropResponse crop;
 
-    public CropResponse getCrop() {
+    public CropResponse crop() {
         return this.crop;
     }
 
@@ -61,7 +61,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
     @Import(name="deblock", required=true)
       private final DeblockResponse deblock;
 
-    public DeblockResponse getDeblock() {
+    public DeblockResponse deblock() {
         return this.deblock;
     }
 
@@ -72,7 +72,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
     @Import(name="denoise", required=true)
       private final DenoiseResponse denoise;
 
-    public DenoiseResponse getDenoise() {
+    public DenoiseResponse denoise() {
         return this.denoise;
     }
 
@@ -83,7 +83,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
     @Import(name="pad", required=true)
       private final PadResponse pad;
 
-    public PadResponse getPad() {
+    public PadResponse pad() {
         return this.pad;
     }
 

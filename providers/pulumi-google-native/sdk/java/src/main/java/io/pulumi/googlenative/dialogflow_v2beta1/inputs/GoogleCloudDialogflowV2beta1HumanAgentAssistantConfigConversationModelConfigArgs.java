@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     @Import(name="model")
       private final @Nullable Output<String> model;
 
-    public Output<String> getModel() {
+    public Output<String> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 

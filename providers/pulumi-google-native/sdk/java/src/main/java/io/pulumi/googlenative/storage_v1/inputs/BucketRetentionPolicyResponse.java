@@ -24,7 +24,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="effectiveTime", required=true)
       private final String effectiveTime;
 
-    public String getEffectiveTime() {
+    public String effectiveTime() {
         return this.effectiveTime;
     }
 
@@ -35,7 +35,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="isLocked", required=true)
       private final Boolean isLocked;
 
-    public Boolean getIsLocked() {
+    public Boolean isLocked() {
         return this.isLocked;
     }
 
@@ -46,7 +46,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="retentionPeriod", required=true)
       private final String retentionPeriod;
 
-    public String getRetentionPeriod() {
+    public String retentionPeriod() {
         return this.retentionPeriod;
     }
 

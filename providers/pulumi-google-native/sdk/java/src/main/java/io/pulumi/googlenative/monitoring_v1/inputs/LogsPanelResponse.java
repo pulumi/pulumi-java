@@ -24,7 +24,7 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -35,7 +35,7 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceNames", required=true)
       private final List<String> resourceNames;
 
-    public List<String> getResourceNames() {
+    public List<String> resourceNames() {
         return this.resourceNames;
     }
 

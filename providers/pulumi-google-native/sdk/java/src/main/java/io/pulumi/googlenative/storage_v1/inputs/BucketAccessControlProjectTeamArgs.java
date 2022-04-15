@@ -26,7 +26,7 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
@@ -37,7 +37,7 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
     @Import(name="team")
       private final @Nullable Output<String> team;
 
-    public Output<String> getTeam() {
+    public Output<String> team() {
         return this.team == null ? Codegen.empty() : this.team;
     }
 

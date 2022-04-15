@@ -25,7 +25,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
     @Import(name="nextRotationTime", required=true)
       private final Output<String> nextRotationTime;
 
-    public Output<String> getNextRotationTime() {
+    public Output<String> nextRotationTime() {
         return this.nextRotationTime;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
     @Import(name="rotationPeriod", required=true)
       private final Output<String> rotationPeriod;
 
-    public Output<String> getRotationPeriod() {
+    public Output<String> rotationPeriod() {
         return this.rotationPeriod;
     }
 

@@ -15,7 +15,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="pipelineId", required=true)
       private final String pipelineId;
 
-    public String getPipelineId() {
+    public String pipelineId() {
         return this.pipelineId;
     }
 

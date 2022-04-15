@@ -20,10 +20,10 @@ public final class BasicAuthResponse {
         this.user = user;
     }
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
-    public String getUser() {
+    public String user() {
         return this.user;
     }
 

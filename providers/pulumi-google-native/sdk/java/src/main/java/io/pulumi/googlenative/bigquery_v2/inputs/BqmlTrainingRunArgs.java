@@ -25,7 +25,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="iterationResults")
       private final @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
 
-    public Output<List<BqmlIterationResultArgs>> getIterationResults() {
+    public Output<List<BqmlIterationResultArgs>> iterationResults() {
         return this.iterationResults == null ? Codegen.empty() : this.iterationResults;
     }
 
@@ -36,7 +36,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -47,7 +47,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -58,7 +58,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="trainingOptions")
       private final @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
 
-    public Output<BqmlTrainingRunTrainingOptionsArgs> getTrainingOptions() {
+    public Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions() {
         return this.trainingOptions == null ? Codegen.empty() : this.trainingOptions;
     }
 

@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     @Import(name="answer", required=true)
       private final String answer;
 
-    public String getAnswer() {
+    public String answer() {
         return this.answer;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
 
-    public Double getConfidenceScore() {
+    public Double confidenceScore() {
         return this.confidenceScore;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     @Import(name="queryRecord", required=true)
       private final String queryRecord;
 
-    public String getQueryRecord() {
+    public String queryRecord() {
         return this.queryRecord;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     @Import(name="question", required=true)
       private final String question;
 
-    public String getQuestion() {
+    public String question() {
         return this.question;
     }
 
@@ -80,7 +80,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

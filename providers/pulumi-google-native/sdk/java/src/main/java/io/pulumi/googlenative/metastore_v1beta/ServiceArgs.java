@@ -32,7 +32,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<ServiceDatabaseType> databaseType;
 
-    public Output<ServiceDatabaseType> getDatabaseType() {
+    public Output<ServiceDatabaseType> databaseType() {
         return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
@@ -43,7 +43,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+    public Output<EncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -54,7 +54,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hiveMetastoreConfig")
       private final @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
 
-    public Output<HiveMetastoreConfigArgs> getHiveMetastoreConfig() {
+    public Output<HiveMetastoreConfigArgs> hiveMetastoreConfig() {
         return this.hiveMetastoreConfig == null ? Codegen.empty() : this.hiveMetastoreConfig;
     }
 
@@ -65,14 +65,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -83,7 +83,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<MaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -94,7 +94,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadataIntegration")
       private final @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
 
-    public Output<MetadataIntegrationArgs> getMetadataIntegration() {
+    public Output<MetadataIntegrationArgs> metadataIntegration() {
         return this.metadataIntegration == null ? Codegen.empty() : this.metadataIntegration;
     }
 
@@ -105,7 +105,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -116,7 +116,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -127,7 +127,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> getNetworkConfig() {
+    public Output<NetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -138,14 +138,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -156,21 +156,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="releaseChannel")
       private final @Nullable Output<ServiceReleaseChannel> releaseChannel;
 
-    public Output<ServiceReleaseChannel> getReleaseChannel() {
+    public Output<ServiceReleaseChannel> releaseChannel() {
         return this.releaseChannel == null ? Codegen.empty() : this.releaseChannel;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -181,7 +181,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<ServiceTier> tier;
 
-    public Output<ServiceTier> getTier() {
+    public Output<ServiceTier> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

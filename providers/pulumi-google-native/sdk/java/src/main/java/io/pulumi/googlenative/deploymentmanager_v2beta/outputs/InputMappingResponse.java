@@ -46,28 +46,28 @@ public final class InputMappingResponse {
      * The name of the field that is going to be injected.
      * 
     */
-    public String getFieldName() {
+    public String fieldName() {
         return this.fieldName;
     }
     /**
      * The location where this mapping applies.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Regex to evaluate on method to decide if input applies.
      * 
     */
-    public String getMethodMatch() {
+    public String methodMatch() {
         return this.methodMatch;
     }
     /**
      * A jsonPath expression to select an element.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
     @Import(name="outputConfig")
       private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
-    public Output<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {
+    public Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig() {
         return this.outputConfig == null ? Codegen.empty() : this.outputConfig;
     }
 

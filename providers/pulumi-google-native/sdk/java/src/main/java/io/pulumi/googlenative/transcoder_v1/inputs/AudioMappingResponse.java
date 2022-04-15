@@ -25,7 +25,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="atomKey", required=true)
       private final String atomKey;
 
-    public String getAtomKey() {
+    public String atomKey() {
         return this.atomKey;
     }
 
@@ -36,7 +36,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gainDb", required=true)
       private final Double gainDb;
 
-    public Double getGainDb() {
+    public Double gainDb() {
         return this.gainDb;
     }
 
@@ -47,7 +47,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputChannel", required=true)
       private final Integer inputChannel;
 
-    public Integer getInputChannel() {
+    public Integer inputChannel() {
         return this.inputChannel;
     }
 
@@ -58,7 +58,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputKey", required=true)
       private final String inputKey;
 
-    public String getInputKey() {
+    public String inputKey() {
         return this.inputKey;
     }
 
@@ -69,7 +69,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputTrack", required=true)
       private final Integer inputTrack;
 
-    public Integer getInputTrack() {
+    public Integer inputTrack() {
         return this.inputTrack;
     }
 
@@ -80,7 +80,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputChannel", required=true)
       private final Integer outputChannel;
 
-    public Integer getOutputChannel() {
+    public Integer outputChannel() {
         return this.outputChannel;
     }
 

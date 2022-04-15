@@ -27,7 +27,7 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -38,7 +38,7 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelExtractors")
       private final @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Output<Map<String,String>> getLabelExtractors() {
+    public Output<Map<String,String>> labelExtractors() {
         return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
     }
 

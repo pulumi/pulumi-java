@@ -26,7 +26,7 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
     @Import(name="executableFile", required=true)
       private final Output<String> executableFile;
 
-    public Output<String> getExecutableFile() {
+    public Output<String> executableFile() {
         return this.executableFile;
     }
 
@@ -37,7 +37,7 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
     @Import(name="executionTimeout")
       private final @Nullable Output<String> executionTimeout;
 
-    public Output<String> getExecutionTimeout() {
+    public Output<String> executionTimeout() {
         return this.executionTimeout == null ? Codegen.empty() : this.executionTimeout;
     }
 

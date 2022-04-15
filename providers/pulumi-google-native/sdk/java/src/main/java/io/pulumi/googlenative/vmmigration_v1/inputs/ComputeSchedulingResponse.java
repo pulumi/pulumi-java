@@ -26,7 +26,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
     @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
 
-    public Integer getMinNodeCpus() {
+    public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
 
@@ -37,7 +37,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
     @Import(name="nodeAffinities", required=true)
       private final List<SchedulingNodeAffinityResponse> nodeAffinities;
 
-    public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
+    public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
 
@@ -48,7 +48,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
     @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
 
@@ -59,7 +59,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
     @Import(name="restartType", required=true)
       private final String restartType;
 
-    public String getRestartType() {
+    public String restartType() {
         return this.restartType;
     }
 

@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
      * If not empty, the ID of the namespace to which the entities belong.
      * 
     */
-    public String getNamespaceId() {
+    public String namespaceId() {
         return this.namespaceId;
     }
     /**
      * The ID of the project to which the entities belong.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2FieldIdResponse {
      * Name describing the field.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

@@ -16,7 +16,7 @@ public final class InstanceGroupManagerStandbyPolicyResponse {
         this.initialDelaySec = initialDelaySec;
     }
 
-    public Integer getInitialDelaySec() {
+    public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 

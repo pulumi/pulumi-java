@@ -24,7 +24,7 @@ public final class RowLevelSecurityStatisticsResponse {
      * [Preview] Whether any accessed data was protected by row access policies.
      * 
     */
-    public Boolean getRowLevelSecurityApplied() {
+    public Boolean rowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
     }
 

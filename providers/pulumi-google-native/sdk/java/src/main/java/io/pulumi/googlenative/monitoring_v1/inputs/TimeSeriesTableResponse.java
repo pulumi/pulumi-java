@@ -24,7 +24,7 @@ public final class TimeSeriesTableResponse extends io.pulumi.resources.InvokeArg
     @Import(name="dataSets", required=true)
       private final List<TableDataSetResponse> dataSets;
 
-    public List<TableDataSetResponse> getDataSets() {
+    public List<TableDataSetResponse> dataSets() {
         return this.dataSets;
     }
 

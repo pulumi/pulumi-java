@@ -29,7 +29,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedOutputUrl")
       private final @Nullable Output<String> expectedOutputUrl;
 
-    public Output<String> getExpectedOutputUrl() {
+    public Output<String> expectedOutputUrl() {
         return this.expectedOutputUrl == null ? Codegen.empty() : this.expectedOutputUrl;
     }
 
@@ -51,7 +51,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expectedRedirectResponseCode")
       private final @Nullable Output<Integer> expectedRedirectResponseCode;
 
-    public Output<Integer> getExpectedRedirectResponseCode() {
+    public Output<Integer> expectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode == null ? Codegen.empty() : this.expectedRedirectResponseCode;
     }
 
@@ -62,7 +62,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
 
-    public Output<List<UrlMapTestHeaderArgs>> getHeaders() {
+    public Output<List<UrlMapTestHeaderArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -73,7 +73,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -84,7 +84,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -95,7 +95,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

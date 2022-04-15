@@ -27,7 +27,7 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
-    public Output<String> getContainerImage() {
+    public Output<String> containerImage() {
         return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
@@ -38,7 +38,7 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -49,7 +49,7 @@ public final class RuntimeConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

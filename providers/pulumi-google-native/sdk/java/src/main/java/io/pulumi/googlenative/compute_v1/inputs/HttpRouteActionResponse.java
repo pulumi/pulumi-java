@@ -26,7 +26,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="corsPolicy", required=true)
       private final CorsPolicyResponse corsPolicy;
 
-    public CorsPolicyResponse getCorsPolicy() {
+    public CorsPolicyResponse corsPolicy() {
         return this.corsPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="faultInjectionPolicy", required=true)
       private final HttpFaultInjectionResponse faultInjectionPolicy;
 
-    public HttpFaultInjectionResponse getFaultInjectionPolicy() {
+    public HttpFaultInjectionResponse faultInjectionPolicy() {
         return this.faultInjectionPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="maxStreamDuration", required=true)
       private final DurationResponse maxStreamDuration;
 
-    public DurationResponse getMaxStreamDuration() {
+    public DurationResponse maxStreamDuration() {
         return this.maxStreamDuration;
     }
 
@@ -59,7 +59,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="requestMirrorPolicy", required=true)
       private final RequestMirrorPolicyResponse requestMirrorPolicy;
 
-    public RequestMirrorPolicyResponse getRequestMirrorPolicy() {
+    public RequestMirrorPolicyResponse requestMirrorPolicy() {
         return this.requestMirrorPolicy;
     }
 
@@ -70,7 +70,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="retryPolicy", required=true)
       private final HttpRetryPolicyResponse retryPolicy;
 
-    public HttpRetryPolicyResponse getRetryPolicy() {
+    public HttpRetryPolicyResponse retryPolicy() {
         return this.retryPolicy;
     }
 
@@ -81,7 +81,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="timeout", required=true)
       private final DurationResponse timeout;
 
-    public DurationResponse getTimeout() {
+    public DurationResponse timeout() {
         return this.timeout;
     }
 
@@ -92,7 +92,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="urlRewrite", required=true)
       private final UrlRewriteResponse urlRewrite;
 
-    public UrlRewriteResponse getUrlRewrite() {
+    public UrlRewriteResponse urlRewrite() {
         return this.urlRewrite;
     }
 
@@ -103,7 +103,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="weightedBackendServices", required=true)
       private final List<WeightedBackendServiceResponse> weightedBackendServices;
 
-    public List<WeightedBackendServiceResponse> getWeightedBackendServices() {
+    public List<WeightedBackendServiceResponse> weightedBackendServices() {
         return this.weightedBackendServices;
     }
 

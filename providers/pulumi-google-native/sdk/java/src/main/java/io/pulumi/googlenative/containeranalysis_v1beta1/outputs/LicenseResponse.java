@@ -32,14 +32,14 @@ public final class LicenseResponse {
      * Comments
      * 
     */
-    public String getComments() {
+    public String comments() {
         return this.comments;
     }
     /**
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
 

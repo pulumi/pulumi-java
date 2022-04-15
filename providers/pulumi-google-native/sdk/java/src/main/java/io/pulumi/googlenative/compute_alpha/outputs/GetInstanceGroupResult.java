@@ -112,91 +112,91 @@ public final class GetInstanceGroupResult {
      * The creation timestamp for this instance group in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The fingerprint of the named ports. The system uses this fingerprint to detect conflicts when multiple users change the named ports concurrently.
      * 
     */
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
     /**
      * The resource type, which is always compute#instanceGroup for instance groups.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      *  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group.
      * 
     */
-    public List<NamedPortResponse> getNamedPorts() {
+    public List<NamedPortResponse> namedPorts() {
         return this.namedPorts;
     }
     /**
      * The URL of the network to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * The URL of the region where the instance group is located (for regional resources).
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * The URL for this instance group. The server generates this URL.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
      * 
     */
-    public String getSelfLinkWithId() {
+    public String selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * The total number of instances in the instance group.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * The URL of the subnetwork to which all instances in the instance group belong. If your instance has multiple network interfaces, then the network and subnetwork fields only refer to the network and subnet used by your primary interface (nic0).
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
     /**
      * The URL of the zone where the instance group is located (for zonal resources).
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

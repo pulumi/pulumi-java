@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
     @Import(name="kmsWrapped")
       private final @Nullable Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped;
 
-    public Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> getKmsWrapped() {
+    public Output<GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs> kmsWrapped() {
         return this.kmsWrapped == null ? Codegen.empty() : this.kmsWrapped;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
     @Import(name="transient")
       private final @Nullable Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_;
 
-    public Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> getTransient_() {
+    public Output<GooglePrivacyDlpV2TransientCryptoKeyArgs> transient_() {
         return this.transient_ == null ? Codegen.empty() : this.transient_;
     }
 
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2CryptoKeyArgs extends io.pulumi.resources.R
     @Import(name="unwrapped")
       private final @Nullable Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped;
 
-    public Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> getUnwrapped() {
+    public Output<GooglePrivacyDlpV2UnwrappedCryptoKeyArgs> unwrapped() {
         return this.unwrapped == null ? Codegen.empty() : this.unwrapped;
     }
 

@@ -33,14 +33,14 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse {
      * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
      * 
     */
-    public GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse getLastPeriodAmount() {
+    public GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount() {
         return this.lastPeriodAmount;
     }
     /**
      * A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
      * 
     */
-    public GoogleTypeMoneyResponse getSpecifiedAmount() {
+    public GoogleTypeMoneyResponse specifiedAmount() {
         return this.specifiedAmount;
     }
 

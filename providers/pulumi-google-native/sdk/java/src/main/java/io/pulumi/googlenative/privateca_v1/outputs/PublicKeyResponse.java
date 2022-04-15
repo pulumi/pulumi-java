@@ -32,14 +32,14 @@ public final class PublicKeyResponse {
      * The format of the public key.
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
     /**
      * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

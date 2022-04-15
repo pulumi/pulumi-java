@@ -32,14 +32,14 @@ public final class ObjectAccessControlProjectTeamResponse {
      * The project number.
      * 
     */
-    public String getProjectNumber() {
+    public String projectNumber() {
         return this.projectNumber;
     }
     /**
      * The team.
      * 
     */
-    public String getTeam() {
+    public String team() {
         return this.team;
     }
 

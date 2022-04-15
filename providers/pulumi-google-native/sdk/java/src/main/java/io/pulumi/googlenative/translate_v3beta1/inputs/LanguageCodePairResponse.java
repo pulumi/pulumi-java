@@ -23,7 +23,7 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sourceLanguageCode", required=true)
       private final String sourceLanguageCode;
 
-    public String getSourceLanguageCode() {
+    public String sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
 
@@ -34,7 +34,7 @@ public final class LanguageCodePairResponse extends io.pulumi.resources.InvokeAr
     @Import(name="targetLanguageCode", required=true)
       private final String targetLanguageCode;
 
-    public String getTargetLanguageCode() {
+    public String targetLanguageCode() {
         return this.targetLanguageCode;
     }
 

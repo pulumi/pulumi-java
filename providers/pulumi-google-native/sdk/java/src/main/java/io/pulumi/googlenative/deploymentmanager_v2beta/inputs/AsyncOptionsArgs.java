@@ -27,7 +27,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
 
-    public Output<String> getMethodMatch() {
+    public Output<String> methodMatch() {
         return this.methodMatch == null ? Codegen.empty() : this.methodMatch;
     }
 
@@ -38,7 +38,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pollingOptions")
       private final @Nullable Output<PollingOptionsArgs> pollingOptions;
 
-    public Output<PollingOptionsArgs> getPollingOptions() {
+    public Output<PollingOptionsArgs> pollingOptions() {
         return this.pollingOptions == null ? Codegen.empty() : this.pollingOptions;
     }
 

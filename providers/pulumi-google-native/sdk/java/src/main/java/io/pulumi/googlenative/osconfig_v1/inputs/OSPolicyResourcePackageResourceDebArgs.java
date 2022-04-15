@@ -27,7 +27,7 @@ public final class OSPolicyResourcePackageResourceDebArgs extends io.pulumi.reso
     @Import(name="pullDeps")
       private final @Nullable Output<Boolean> pullDeps;
 
-    public Output<Boolean> getPullDeps() {
+    public Output<Boolean> pullDeps() {
         return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
     }
 
@@ -38,7 +38,7 @@ public final class OSPolicyResourcePackageResourceDebArgs extends io.pulumi.reso
     @Import(name="source", required=true)
       private final Output<OSPolicyResourceFileArgs> source;
 
-    public Output<OSPolicyResourceFileArgs> getSource() {
+    public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
 

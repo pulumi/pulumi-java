@@ -36,7 +36,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="databaseConfig")
       private final @Nullable Output<DatabaseConfigArgs> databaseConfig;
 
-    public Output<DatabaseConfigArgs> getDatabaseConfig() {
+    public Output<DatabaseConfigArgs> databaseConfig() {
         return this.databaseConfig == null ? Codegen.empty() : this.databaseConfig;
     }
 
@@ -47,7 +47,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+    public Output<EncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -58,7 +58,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="environmentSize")
       private final @Nullable Output<EnvironmentConfigEnvironmentSize> environmentSize;
 
-    public Output<EnvironmentConfigEnvironmentSize> getEnvironmentSize() {
+    public Output<EnvironmentConfigEnvironmentSize> environmentSize() {
         return this.environmentSize == null ? Codegen.empty() : this.environmentSize;
     }
 
@@ -69,7 +69,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<MaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -80,7 +80,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="nodeConfig")
       private final @Nullable Output<NodeConfigArgs> nodeConfig;
 
-    public Output<NodeConfigArgs> getNodeConfig() {
+    public Output<NodeConfigArgs> nodeConfig() {
         return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
     }
 
@@ -91,7 +91,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
@@ -102,7 +102,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateEnvironmentConfig")
       private final @Nullable Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
 
-    public Output<PrivateEnvironmentConfigArgs> getPrivateEnvironmentConfig() {
+    public Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig() {
         return this.privateEnvironmentConfig == null ? Codegen.empty() : this.privateEnvironmentConfig;
     }
 
@@ -113,7 +113,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="softwareConfig")
       private final @Nullable Output<SoftwareConfigArgs> softwareConfig;
 
-    public Output<SoftwareConfigArgs> getSoftwareConfig() {
+    public Output<SoftwareConfigArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -124,7 +124,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webServerConfig")
       private final @Nullable Output<WebServerConfigArgs> webServerConfig;
 
-    public Output<WebServerConfigArgs> getWebServerConfig() {
+    public Output<WebServerConfigArgs> webServerConfig() {
         return this.webServerConfig == null ? Codegen.empty() : this.webServerConfig;
     }
 
@@ -135,7 +135,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webServerNetworkAccessControl")
       private final @Nullable Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
 
-    public Output<WebServerNetworkAccessControlArgs> getWebServerNetworkAccessControl() {
+    public Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl() {
         return this.webServerNetworkAccessControl == null ? Codegen.empty() : this.webServerNetworkAccessControl;
     }
 
@@ -146,7 +146,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="workloadsConfig")
       private final @Nullable Output<WorkloadsConfigArgs> workloadsConfig;
 
-    public Output<WorkloadsConfigArgs> getWorkloadsConfig() {
+    public Output<WorkloadsConfigArgs> workloadsConfig() {
         return this.workloadsConfig == null ? Codegen.empty() : this.workloadsConfig;
     }
 

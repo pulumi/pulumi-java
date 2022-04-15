@@ -22,7 +22,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -33,7 +33,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterBillingAccount")
       private final @Nullable Output<String> masterBillingAccount;
 
-    public Output<String> getMasterBillingAccount() {
+    public Output<String> masterBillingAccount() {
         return this.masterBillingAccount == null ? Codegen.empty() : this.masterBillingAccount;
     }
 

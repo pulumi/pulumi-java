@@ -16,7 +16,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
         this.concurrencyLimit = concurrencyLimit;
     }
 
-    public Integer getConcurrencyLimit() {
+    public Integer concurrencyLimit() {
         return this.concurrencyLimit;
     }
 

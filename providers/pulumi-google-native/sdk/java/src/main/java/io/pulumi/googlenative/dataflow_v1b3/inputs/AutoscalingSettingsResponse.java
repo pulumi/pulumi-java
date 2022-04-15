@@ -24,7 +24,7 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -35,7 +35,7 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
     @Import(name="maxNumWorkers", required=true)
       private final Integer maxNumWorkers;
 
-    public Integer getMaxNumWorkers() {
+    public Integer maxNumWorkers() {
         return this.maxNumWorkers;
     }
 

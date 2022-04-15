@@ -25,7 +25,7 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="computeEngineTargetDetails", required=true)
       private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
-    public ComputeEngineTargetDetailsResponse getComputeEngineTargetDetails() {
+    public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
 
@@ -36,7 +36,7 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -47,7 +47,7 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="error", required=true)
       private final StatusResponse error;
 
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
 
@@ -58,7 +58,7 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -69,7 +69,7 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -80,7 +80,7 @@ public final class CloneJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stateTime", required=true)
       private final String stateTime;
 
-    public String getStateTime() {
+    public String stateTime() {
         return this.stateTime;
     }
 

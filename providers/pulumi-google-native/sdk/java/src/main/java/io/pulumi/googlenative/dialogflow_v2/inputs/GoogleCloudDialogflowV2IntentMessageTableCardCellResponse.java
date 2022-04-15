@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse ext
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

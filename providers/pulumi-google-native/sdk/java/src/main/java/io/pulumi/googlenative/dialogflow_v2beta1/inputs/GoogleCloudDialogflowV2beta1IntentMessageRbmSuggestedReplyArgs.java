@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     @Import(name="postbackData")
       private final @Nullable Output<String> postbackData;
 
-    public Output<String> getPostbackData() {
+    public Output<String> postbackData() {
         return this.postbackData == null ? Codegen.empty() : this.postbackData;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

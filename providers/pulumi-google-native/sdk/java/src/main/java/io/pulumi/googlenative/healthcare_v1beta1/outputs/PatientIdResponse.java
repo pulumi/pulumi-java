@@ -32,14 +32,14 @@ public final class PatientIdResponse {
      * ID type. For example, MRN or NHS.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The patient's unique identifier.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

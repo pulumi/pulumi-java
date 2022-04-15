@@ -29,7 +29,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -43,7 +43,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,13 +57,13 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService. An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -77,7 +77,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return URL of the region where the resource resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -105,7 +105,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return The resource URL for the network edge security service associated with this network edge security service.
      * 
      */
-    public Output<String> getSecurityPolicy() {
+    public Output<String> securityPolicy() {
         return this.securityPolicy;
     }
     /**
@@ -119,7 +119,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -133,7 +133,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
 

@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
     @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
+    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
         return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
     @Import(name="rules")
       private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
 
-    public Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> getRules() {
+    public Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 

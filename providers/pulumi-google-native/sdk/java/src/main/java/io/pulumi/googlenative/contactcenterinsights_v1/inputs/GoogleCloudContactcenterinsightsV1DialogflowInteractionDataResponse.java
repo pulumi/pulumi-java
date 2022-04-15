@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     @Import(name="confidence", required=true)
       private final Double confidence;
 
-    public Double getConfidence() {
+    public Double confidence() {
         return this.confidence;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     @Import(name="dialogflowIntentId", required=true)
       private final String dialogflowIntentId;
 
-    public String getDialogflowIntentId() {
+    public String dialogflowIntentId() {
         return this.dialogflowIntentId;
     }
 

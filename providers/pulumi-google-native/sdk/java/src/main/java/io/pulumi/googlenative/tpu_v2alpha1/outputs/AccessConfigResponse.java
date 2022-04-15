@@ -24,7 +24,7 @@ public final class AccessConfigResponse {
      * An external IP address associated with the TPU worker.
      * 
     */
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
 

@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
     @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

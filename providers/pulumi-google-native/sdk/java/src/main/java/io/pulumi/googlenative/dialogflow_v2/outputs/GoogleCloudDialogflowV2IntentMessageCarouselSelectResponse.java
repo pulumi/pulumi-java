@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse {
      * Carousel items.
      * 
     */
-    public List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> getItems() {
+    public List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items() {
         return this.items;
     }
 

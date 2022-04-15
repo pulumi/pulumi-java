@@ -23,7 +23,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizationCode")
       private final @Nullable Output<String> authorizationCode;
 
-    public Output<String> getAuthorizationCode() {
+    public Output<String> authorizationCode() {
         return this.authorizationCode == null ? Codegen.empty() : this.authorizationCode;
     }
 
@@ -34,7 +34,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataRefreshWindowDays")
       private final @Nullable Output<Integer> dataRefreshWindowDays;
 
-    public Output<Integer> getDataRefreshWindowDays() {
+    public Output<Integer> dataRefreshWindowDays() {
         return this.dataRefreshWindowDays == null ? Codegen.empty() : this.dataRefreshWindowDays;
     }
 
@@ -45,7 +45,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceId")
       private final @Nullable Output<String> dataSourceId;
 
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId == null ? Codegen.empty() : this.dataSourceId;
     }
 
@@ -56,7 +56,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationDatasetId")
       private final @Nullable Output<String> destinationDatasetId;
 
-    public Output<String> getDestinationDatasetId() {
+    public Output<String> destinationDatasetId() {
         return this.destinationDatasetId == null ? Codegen.empty() : this.destinationDatasetId;
     }
 
@@ -67,7 +67,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -78,7 +78,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -89,14 +89,14 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emailPreferences")
       private final @Nullable Output<EmailPreferencesArgs> emailPreferences;
 
-    public Output<EmailPreferencesArgs> getEmailPreferences() {
+    public Output<EmailPreferencesArgs> emailPreferences() {
         return this.emailPreferences == null ? Codegen.empty() : this.emailPreferences;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -107,7 +107,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -118,7 +118,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationPubsubTopic")
       private final @Nullable Output<String> notificationPubsubTopic;
 
-    public Output<String> getNotificationPubsubTopic() {
+    public Output<String> notificationPubsubTopic() {
         return this.notificationPubsubTopic == null ? Codegen.empty() : this.notificationPubsubTopic;
     }
 
@@ -129,14 +129,14 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="params")
       private final @Nullable Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> getParams() {
+    public Output<Map<String,String>> params() {
         return this.params == null ? Codegen.empty() : this.params;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -147,7 +147,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -158,21 +158,21 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleOptions")
       private final @Nullable Output<ScheduleOptionsArgs> scheduleOptions;
 
-    public Output<ScheduleOptionsArgs> getScheduleOptions() {
+    public Output<ScheduleOptionsArgs> scheduleOptions() {
         return this.scheduleOptions == null ? Codegen.empty() : this.scheduleOptions;
     }
 
     @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
-    public Output<String> getServiceAccountName() {
+    public Output<String> serviceAccountName() {
         return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
     @Import(name="versionInfo")
       private final @Nullable Output<String> versionInfo;
 
-    public Output<String> getVersionInfo() {
+    public Output<String> versionInfo() {
         return this.versionInfo == null ? Codegen.empty() : this.versionInfo;
     }
 

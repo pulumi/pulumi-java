@@ -69,49 +69,49 @@ public final class GetBackupResult {
      * The time when the backup was started.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The description of the backup.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The time when the backup finished creating.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Services that are restoring from the backup.
      * 
     */
-    public List<String> getRestoringServices() {
+    public List<String> restoringServices() {
         return this.restoringServices;
     }
     /**
      * The revision of the service at the time of backup.
      * 
     */
-    public ServiceResponse getServiceRevision() {
+    public ServiceResponse serviceRevision() {
         return this.serviceRevision;
     }
     /**
      * The current state of the backup.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

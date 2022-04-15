@@ -40,21 +40,21 @@ public final class ReservationAffinityResponse {
      * Optional. Type of reservation to consume
      * 
     */
-    public String getConsumeReservationType() {
+    public String consumeReservationType() {
         return this.consumeReservationType;
     }
     /**
      * Optional. Corresponds to the label key of reservation resource.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Optional. Corresponds to the label values of reservation resource.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

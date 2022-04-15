@@ -36,7 +36,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Access controls on the object.
      * 
      */
-    public Output<List<ObjectAccessControlResponse>> getAcl() {
+    public Output<List<ObjectAccessControlResponse>> acl() {
         return this.acl;
     }
     /**
@@ -50,7 +50,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket containing this object.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -64,7 +64,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
      * 
      */
-    public Output<String> getCacheControl() {
+    public Output<String> cacheControl() {
         return this.cacheControl;
     }
     /**
@@ -78,7 +78,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Number of underlying components that make up this object. Components are accumulated by compose operations.
      * 
      */
-    public Output<Integer> getComponentCount() {
+    public Output<Integer> componentCount() {
         return this.componentCount;
     }
     /**
@@ -92,7 +92,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Content-Disposition of the object data.
      * 
      */
-    public Output<String> getContentDisposition() {
+    public Output<String> contentDisposition() {
         return this.contentDisposition;
     }
     /**
@@ -106,7 +106,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Content-Encoding of the object data.
      * 
      */
-    public Output<String> getContentEncoding() {
+    public Output<String> contentEncoding() {
         return this.contentEncoding;
     }
     /**
@@ -120,7 +120,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Content-Language of the object data.
      * 
      */
-    public Output<String> getContentLanguage() {
+    public Output<String> contentLanguage() {
         return this.contentLanguage;
     }
     /**
@@ -134,7 +134,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -148,7 +148,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
      * 
      */
-    public Output<String> getCrc32c() {
+    public Output<String> crc32c() {
         return this.crc32c;
     }
     /**
@@ -162,7 +162,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return A timestamp in RFC 3339 format specified by the user for an object.
      * 
      */
-    public Output<String> getCustomTime() {
+    public Output<String> customTime() {
         return this.customTime;
     }
     /**
@@ -176,7 +176,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
      * 
      */
-    public Output<BucketObjectCustomerEncryptionResponse> getCustomerEncryption() {
+    public Output<BucketObjectCustomerEncryptionResponse> customerEncryption() {
         return this.customerEncryption;
     }
     /**
@@ -190,7 +190,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return HTTP 1.1 Entity tag for the object.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -204,7 +204,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
      * 
      */
-    public Output<Boolean> getEventBasedHold() {
+    public Output<Boolean> eventBasedHold() {
         return this.eventBasedHold;
     }
     /**
@@ -218,7 +218,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The content generation of this object. Used for object versioning.
      * 
      */
-    public Output<String> getGeneration() {
+    public Output<String> generation() {
         return this.generation;
     }
     /**
@@ -232,7 +232,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The kind of item this is. For objects, this is always storage#object.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -246,7 +246,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -260,7 +260,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
      * 
      */
-    public Output<String> getMd5Hash() {
+    public Output<String> md5Hash() {
         return this.md5Hash;
     }
     /**
@@ -274,7 +274,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Media download link.
      * 
      */
-    public Output<String> getMediaLink() {
+    public Output<String> mediaLink() {
         return this.mediaLink;
     }
     /**
@@ -288,7 +288,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return User-provided metadata, in key/value pairs.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -302,7 +302,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
      * 
      */
-    public Output<String> getMetageneration() {
+    public Output<String> metageneration() {
         return this.metageneration;
     }
     /**
@@ -316,7 +316,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The name of the object. Required if not specified by URL parameter.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -330,7 +330,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The owner of the object. This will always be the uploader of the object.
      * 
      */
-    public Output<BucketObjectOwnerResponse> getOwner() {
+    public Output<BucketObjectOwnerResponse> owner() {
         return this.owner;
     }
     /**
@@ -344,7 +344,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return A server-determined value that specifies the earliest time that the object's retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
      * 
      */
-    public Output<String> getRetentionExpirationTime() {
+    public Output<String> retentionExpirationTime() {
         return this.retentionExpirationTime;
     }
     /**
@@ -358,7 +358,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The link to this object.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -372,7 +372,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Content-Length of the data in bytes.
      * 
      */
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size;
     }
     /**
@@ -386,7 +386,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Storage class of the object.
      * 
      */
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
     /**
@@ -400,7 +400,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
      * 
      */
-    public Output<Boolean> getTemporaryHold() {
+    public Output<Boolean> temporaryHold() {
         return this.temporaryHold;
     }
     /**
@@ -414,7 +414,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The creation time of the object in RFC 3339 format.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -428,7 +428,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
      * 
      */
-    public Output<String> getTimeDeleted() {
+    public Output<String> timeDeleted() {
         return this.timeDeleted;
     }
     /**
@@ -442,7 +442,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The time at which the object's storage class was last changed. When the object is initially created, it will be set to timeCreated.
      * 
      */
-    public Output<String> getTimeStorageClassUpdated() {
+    public Output<String> timeStorageClassUpdated() {
         return this.timeStorageClassUpdated;
     }
     /**
@@ -456,7 +456,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * @return The modification time of the object metadata in RFC 3339 format.
      * 
      */
-    public Output<String> getUpdated() {
+    public Output<String> updated() {
         return this.updated;
     }
 

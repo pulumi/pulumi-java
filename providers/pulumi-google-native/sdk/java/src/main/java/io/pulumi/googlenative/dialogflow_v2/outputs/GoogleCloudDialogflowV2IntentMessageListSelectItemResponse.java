@@ -48,28 +48,28 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse {
      * Optional. The main text describing the item.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. The image to display.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
     }
     /**
      * Additional information about this option.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse getInfo() {
+    public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
     /**
      * The title of the list item.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

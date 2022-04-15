@@ -33,7 +33,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -47,7 +47,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
      * 
      */
-    public Output<List<ResourceRecordResponse>> getResourceRecords() {
+    public Output<List<ResourceRecordResponse>> resourceRecords() {
         return this.resourceRecords;
     }
     /**
@@ -61,7 +61,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
      * 
      */
-    public Output<SslSettingsResponse> getSslSettings() {
+    public Output<SslSettingsResponse> sslSettings() {
         return this.sslSettings;
     }
 

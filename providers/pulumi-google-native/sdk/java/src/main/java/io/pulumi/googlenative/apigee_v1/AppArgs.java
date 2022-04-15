@@ -24,7 +24,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiProducts")
       private final @Nullable Output<List<String>> apiProducts;
 
-    public Output<List<String>> getApiProducts() {
+    public Output<List<String>> apiProducts() {
         return this.apiProducts == null ? Codegen.empty() : this.apiProducts;
     }
 
@@ -35,7 +35,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appFamily")
       private final @Nullable Output<String> appFamily;
 
-    public Output<String> getAppFamily() {
+    public Output<String> appFamily() {
         return this.appFamily == null ? Codegen.empty() : this.appFamily;
     }
 
@@ -46,7 +46,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -57,7 +57,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -68,7 +68,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callbackUrl")
       private final @Nullable Output<String> callbackUrl;
 
-    public Output<String> getCallbackUrl() {
+    public Output<String> callbackUrl() {
         return this.callbackUrl == null ? Codegen.empty() : this.callbackUrl;
     }
 
@@ -79,7 +79,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="developerId", required=true)
       private final Output<String> developerId;
 
-    public Output<String> getDeveloperId() {
+    public Output<String> developerId() {
         return this.developerId;
     }
 
@@ -90,7 +90,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyExpiresIn")
       private final @Nullable Output<String> keyExpiresIn;
 
-    public Output<String> getKeyExpiresIn() {
+    public Output<String> keyExpiresIn() {
         return this.keyExpiresIn == null ? Codegen.empty() : this.keyExpiresIn;
     }
 
@@ -101,14 +101,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -119,7 +119,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
@@ -130,7 +130,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

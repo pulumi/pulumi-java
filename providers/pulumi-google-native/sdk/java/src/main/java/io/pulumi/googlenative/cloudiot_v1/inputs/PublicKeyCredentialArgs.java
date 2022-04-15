@@ -27,7 +27,7 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     @Import(name="format")
       private final @Nullable Output<PublicKeyCredentialFormat> format;
 
-    public Output<PublicKeyCredentialFormat> getFormat() {
+    public Output<PublicKeyCredentialFormat> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -38,7 +38,7 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

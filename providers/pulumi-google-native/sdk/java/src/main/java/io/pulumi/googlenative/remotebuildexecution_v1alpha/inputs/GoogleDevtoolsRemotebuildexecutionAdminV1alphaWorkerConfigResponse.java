@@ -26,7 +26,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="accelerator", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator;
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse getAccelerator() {
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator() {
         return this.accelerator;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
-    public String getDiskSizeGb() {
+    public String diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="maxConcurrentActions", required=true)
       private final String maxConcurrentActions;
 
-    public String getMaxConcurrentActions() {
+    public String maxConcurrentActions() {
         return this.maxConcurrentActions;
     }
 
@@ -92,7 +92,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
@@ -103,7 +103,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="networkAccess", required=true)
       private final String networkAccess;
 
-    public String getNetworkAccess() {
+    public String networkAccess() {
         return this.networkAccess;
     }
 
@@ -114,7 +114,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="reserved", required=true)
       private final Boolean reserved;
 
-    public Boolean getReserved() {
+    public Boolean reserved() {
         return this.reserved;
     }
 
@@ -125,7 +125,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="soleTenantNodeType", required=true)
       private final String soleTenantNodeType;
 
-    public String getSoleTenantNodeType() {
+    public String soleTenantNodeType() {
         return this.soleTenantNodeType;
     }
 
@@ -136,7 +136,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
     @Import(name="vmImage", required=true)
       private final String vmImage;
 
-    public String getVmImage() {
+    public String vmImage() {
         return this.vmImage;
     }
 

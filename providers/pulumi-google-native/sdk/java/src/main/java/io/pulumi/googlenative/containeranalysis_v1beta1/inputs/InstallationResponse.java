@@ -25,7 +25,7 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final List<LocationResponse> location;
 
-    public List<LocationResponse> getLocation() {
+    public List<LocationResponse> location() {
         return this.location;
     }
 
@@ -36,7 +36,7 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

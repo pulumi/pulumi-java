@@ -34,13 +34,13 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -54,7 +54,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Resource policy for instances for placement configuration.
      * 
      */
-    public Output<ResourcePolicyGroupPlacementPolicyResponse> getGroupPlacementPolicy() {
+    public Output<ResourcePolicyGroupPlacementPolicyResponse> groupPlacementPolicy() {
         return this.groupPlacementPolicy;
     }
     /**
@@ -68,7 +68,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Resource policy for scheduling instance operations.
      * 
      */
-    public Output<ResourcePolicyInstanceSchedulePolicyResponse> getInstanceSchedulePolicy() {
+    public Output<ResourcePolicyInstanceSchedulePolicyResponse> instanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
     /**
@@ -82,7 +82,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#resource_policies for resource policies.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -96,13 +96,13 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -116,7 +116,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The system status of the resource policy.
      * 
      */
-    public Output<ResourcePolicyResourceStatusResponse> getResourceStatus() {
+    public Output<ResourcePolicyResourceStatusResponse> resourceStatus() {
         return this.resourceStatus;
     }
     /**
@@ -130,7 +130,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Server-defined fully-qualified URL for this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -144,7 +144,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -158,7 +158,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Resource policy for persistent disks for creating snapshots.
      * 
      */
-    public Output<ResourcePolicySnapshotSchedulePolicyResponse> getSnapshotSchedulePolicy() {
+    public Output<ResourcePolicySnapshotSchedulePolicyResponse> snapshotSchedulePolicy() {
         return this.snapshotSchedulePolicy;
     }
     /**
@@ -172,7 +172,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return The status of resource policy creation.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -186,7 +186,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @return Resource policy applicable to VMs for infrastructure maintenance.
      * 
      */
-    public Output<ResourcePolicyVmMaintenancePolicyResponse> getVmMaintenancePolicy() {
+    public Output<ResourcePolicyVmMaintenancePolicyResponse> vmMaintenancePolicy() {
         return this.vmMaintenancePolicy;
     }
 

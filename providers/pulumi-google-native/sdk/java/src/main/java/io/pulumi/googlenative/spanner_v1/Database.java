@@ -34,7 +34,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return If exists, the time at which the database creation started.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -48,7 +48,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The dialect of the Cloud Spanner Database.
      * 
      */
-    public Output<String> getDatabaseDialect() {
+    public Output<String> databaseDialect() {
         return this.databaseDialect;
     }
     /**
@@ -62,7 +62,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
      * 
      */
-    public Output<String> getDefaultLeader() {
+    public Output<String> defaultLeader() {
         return this.defaultLeader;
     }
     /**
@@ -76,7 +76,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Earliest timestamp at which older versions of the data can be read. This value is continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are using this value to recover data, make sure to account for the time from the moment when the value is queried to the moment when you initiate the recovery.
      * 
      */
-    public Output<String> getEarliestVersionTime() {
+    public Output<String> earliestVersionTime() {
         return this.earliestVersionTime;
     }
     /**
@@ -90,7 +90,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return For databases that are using customer managed encryption, this field contains the encryption configuration for the database. For databases that are using Google default or other types of encryption, this field is empty.
      * 
      */
-    public Output<EncryptionConfigResponse> getEncryptionConfig() {
+    public Output<EncryptionConfigResponse> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -104,7 +104,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return For databases that are using customer managed encryption, this field contains the encryption information for the database, such as encryption state and the Cloud KMS key versions that are in use. For databases that are using Google default or other types of encryption, this field is empty. This field is propagated lazily from the backend. There might be a delay from when a key version is being used and when it appears in this field.
      * 
      */
-    public Output<List<EncryptionInfoResponse>> getEncryptionInfo() {
+    public Output<List<EncryptionInfoResponse>> encryptionInfo() {
         return this.encryptionInfo;
     }
     /**
@@ -118,7 +118,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The name of the database. Values are of the form `projects//instances//databases/`, where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other API methods to identify the database.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +132,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return Applicable only for restored databases. Contains information about the restore source.
      * 
      */
-    public Output<RestoreInfoResponse> getRestoreInfo() {
+    public Output<RestoreInfoResponse> restoreInfo() {
         return this.restoreInfo;
     }
     /**
@@ -146,7 +146,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The current database state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -160,7 +160,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The period in which Cloud Spanner retains all versions of data for the database. This is the same as the value of version_retention_period database option set using UpdateDatabaseDdl. Defaults to 1 hour, if not set.
      * 
      */
-    public Output<String> getVersionRetentionPeriod() {
+    public Output<String> versionRetentionPeriod() {
         return this.versionRetentionPeriod;
     }
 

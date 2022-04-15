@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends io.pulu
     @Import(name="bigqueryTableName", required=true)
       private final String bigqueryTableName;
 
-    public String getBigqueryTableName() {
+    public String bigqueryTableName() {
         return this.bigqueryTableName;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends io.pulu
     @Import(name="samplingPercentage", required=true)
       private final Double samplingPercentage;
 
-    public Double getSamplingPercentage() {
+    public Double samplingPercentage() {
         return this.samplingPercentage;
     }
 

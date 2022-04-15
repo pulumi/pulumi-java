@@ -26,7 +26,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentId")
       private final @Nullable Output<String> agentId;
 
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId == null ? Codegen.empty() : this.agentId;
     }
 
@@ -37,14 +37,14 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="callMetadata")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata;
 
-    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> getCallMetadata() {
+    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata() {
         return this.callMetadata == null ? Codegen.empty() : this.callMetadata;
     }
 
     @Import(name="conversationId")
       private final @Nullable Output<String> conversationId;
 
-    public Output<String> getConversationId() {
+    public Output<String> conversationId() {
         return this.conversationId == null ? Codegen.empty() : this.conversationId;
     }
 
@@ -55,7 +55,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource;
 
-    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> getDataSource() {
+    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -66,7 +66,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
@@ -77,7 +77,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -88,14 +88,14 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -106,7 +106,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="medium")
       private final @Nullable Output<ConversationMedium> medium;
 
-    public Output<ConversationMedium> getMedium() {
+    public Output<ConversationMedium> medium() {
         return this.medium == null ? Codegen.empty() : this.medium;
     }
 
@@ -117,7 +117,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -128,14 +128,14 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="obfuscatedUserId")
       private final @Nullable Output<String> obfuscatedUserId;
 
-    public Output<String> getObfuscatedUserId() {
+    public Output<String> obfuscatedUserId() {
         return this.obfuscatedUserId == null ? Codegen.empty() : this.obfuscatedUserId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -146,7 +146,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -157,7 +157,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

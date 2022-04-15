@@ -27,7 +27,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
     @Import(name="conditions", required=true)
       private final List<GoogleCloudRunV1ConditionResponse> conditions;
 
-    public List<GoogleCloudRunV1ConditionResponse> getConditions() {
+    public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
     }
 
@@ -38,7 +38,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
     @Import(name="mappedRouteName", required=true)
       private final String mappedRouteName;
 
-    public String getMappedRouteName() {
+    public String mappedRouteName() {
         return this.mappedRouteName;
     }
 
@@ -49,7 +49,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
     @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
-    public Integer getObservedGeneration() {
+    public Integer observedGeneration() {
         return this.observedGeneration;
     }
 
@@ -60,7 +60,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
     @Import(name="resourceRecords", required=true)
       private final List<ResourceRecordResponse> resourceRecords;
 
-    public List<ResourceRecordResponse> getResourceRecords() {
+    public List<ResourceRecordResponse> resourceRecords() {
         return this.resourceRecords;
     }
 
@@ -71,7 +71,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

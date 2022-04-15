@@ -40,21 +40,21 @@ public final class KeyOperationAttestationResponse {
      * The certificate chains needed to validate the attestation
      * 
     */
-    public CertificateChainsResponse getCertChains() {
+    public CertificateChainsResponse certChains() {
         return this.certChains;
     }
     /**
      * The attestation data provided by the HSM when the key operation was performed.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The format of the attestation data.
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 

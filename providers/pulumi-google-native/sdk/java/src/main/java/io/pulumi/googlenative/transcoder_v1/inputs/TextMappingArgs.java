@@ -26,7 +26,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="atomKey", required=true)
       private final Output<String> atomKey;
 
-    public Output<String> getAtomKey() {
+    public Output<String> atomKey() {
         return this.atomKey;
     }
 
@@ -37,7 +37,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputKey", required=true)
       private final Output<String> inputKey;
 
-    public Output<String> getInputKey() {
+    public Output<String> inputKey() {
         return this.inputKey;
     }
 
@@ -48,7 +48,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputTrack", required=true)
       private final Output<Integer> inputTrack;
 
-    public Output<Integer> getInputTrack() {
+    public Output<Integer> inputTrack() {
         return this.inputTrack;
     }
 

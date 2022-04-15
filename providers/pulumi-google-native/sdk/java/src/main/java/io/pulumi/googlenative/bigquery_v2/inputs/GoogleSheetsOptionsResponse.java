@@ -19,7 +19,7 @@ public final class GoogleSheetsOptionsResponse extends io.pulumi.resources.Invok
     @Import(name="range", required=true)
       private final String range;
 
-    public String getRange() {
+    public String range() {
         return this.range;
     }
 
@@ -30,7 +30,7 @@ public final class GoogleSheetsOptionsResponse extends io.pulumi.resources.Invok
     @Import(name="skipLeadingRows", required=true)
       private final String skipLeadingRows;
 
-    public String getSkipLeadingRows() {
+    public String skipLeadingRows() {
         return this.skipLeadingRows;
     }
 

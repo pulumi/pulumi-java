@@ -24,7 +24,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -35,7 +35,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties;
     }
 

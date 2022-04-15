@@ -32,7 +32,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availableMemoryMb")
       private final @Nullable Output<Integer> availableMemoryMb;
 
-    public Output<Integer> getAvailableMemoryMb() {
+    public Output<Integer> availableMemoryMb() {
         return this.availableMemoryMb == null ? Codegen.empty() : this.availableMemoryMb;
     }
 
@@ -43,7 +43,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildEnvironmentVariables")
       private final @Nullable Output<Map<String,String>> buildEnvironmentVariables;
 
-    public Output<Map<String,String>> getBuildEnvironmentVariables() {
+    public Output<Map<String,String>> buildEnvironmentVariables() {
         return this.buildEnvironmentVariables == null ? Codegen.empty() : this.buildEnvironmentVariables;
     }
 
@@ -54,7 +54,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildWorkerPool")
       private final @Nullable Output<String> buildWorkerPool;
 
-    public Output<String> getBuildWorkerPool() {
+    public Output<String> buildWorkerPool() {
         return this.buildWorkerPool == null ? Codegen.empty() : this.buildWorkerPool;
     }
 
@@ -65,7 +65,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dockerRepository")
       private final @Nullable Output<String> dockerRepository;
 
-    public Output<String> getDockerRepository() {
+    public Output<String> dockerRepository() {
         return this.dockerRepository == null ? Codegen.empty() : this.dockerRepository;
     }
 
@@ -87,7 +87,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryPoint")
       private final @Nullable Output<String> entryPoint;
 
-    public Output<String> getEntryPoint() {
+    public Output<String> entryPoint() {
         return this.entryPoint == null ? Codegen.empty() : this.entryPoint;
     }
 
@@ -98,7 +98,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
-    public Output<Map<String,String>> getEnvironmentVariables() {
+    public Output<Map<String,String>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -109,7 +109,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTrigger")
       private final @Nullable Output<EventTriggerArgs> eventTrigger;
 
-    public Output<EventTriggerArgs> getEventTrigger() {
+    public Output<EventTriggerArgs> eventTrigger() {
         return this.eventTrigger == null ? Codegen.empty() : this.eventTrigger;
     }
 
@@ -120,7 +120,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsTrigger")
       private final @Nullable Output<HttpsTriggerArgs> httpsTrigger;
 
-    public Output<HttpsTriggerArgs> getHttpsTrigger() {
+    public Output<HttpsTriggerArgs> httpsTrigger() {
         return this.httpsTrigger == null ? Codegen.empty() : this.httpsTrigger;
     }
 
@@ -131,7 +131,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingressSettings")
       private final @Nullable Output<FunctionIngressSettings> ingressSettings;
 
-    public Output<FunctionIngressSettings> getIngressSettings() {
+    public Output<FunctionIngressSettings> ingressSettings() {
         return this.ingressSettings == null ? Codegen.empty() : this.ingressSettings;
     }
 
@@ -142,7 +142,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
@@ -153,14 +153,14 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -171,7 +171,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
@@ -182,7 +182,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> getMinInstances() {
+    public Output<Integer> minInstances() {
         return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
@@ -193,7 +193,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -204,14 +204,14 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -222,7 +222,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime == null ? Codegen.empty() : this.runtime;
     }
 
@@ -233,7 +233,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretEnvironmentVariables")
       private final @Nullable Output<List<SecretEnvVarArgs>> secretEnvironmentVariables;
 
-    public Output<List<SecretEnvVarArgs>> getSecretEnvironmentVariables() {
+    public Output<List<SecretEnvVarArgs>> secretEnvironmentVariables() {
         return this.secretEnvironmentVariables == null ? Codegen.empty() : this.secretEnvironmentVariables;
     }
 
@@ -244,7 +244,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretVolumes")
       private final @Nullable Output<List<SecretVolumeArgs>> secretVolumes;
 
-    public Output<List<SecretVolumeArgs>> getSecretVolumes() {
+    public Output<List<SecretVolumeArgs>> secretVolumes() {
         return this.secretVolumes == null ? Codegen.empty() : this.secretVolumes;
     }
 
@@ -255,7 +255,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -266,7 +266,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceArchiveUrl")
       private final @Nullable Output<String> sourceArchiveUrl;
 
-    public Output<String> getSourceArchiveUrl() {
+    public Output<String> sourceArchiveUrl() {
         return this.sourceArchiveUrl == null ? Codegen.empty() : this.sourceArchiveUrl;
     }
 
@@ -277,7 +277,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRepository")
       private final @Nullable Output<SourceRepositoryArgs> sourceRepository;
 
-    public Output<SourceRepositoryArgs> getSourceRepository() {
+    public Output<SourceRepositoryArgs> sourceRepository() {
         return this.sourceRepository == null ? Codegen.empty() : this.sourceRepository;
     }
 
@@ -288,7 +288,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceToken")
       private final @Nullable Output<String> sourceToken;
 
-    public Output<String> getSourceToken() {
+    public Output<String> sourceToken() {
         return this.sourceToken == null ? Codegen.empty() : this.sourceToken;
     }
 
@@ -299,7 +299,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceUploadUrl")
       private final @Nullable Output<String> sourceUploadUrl;
 
-    public Output<String> getSourceUploadUrl() {
+    public Output<String> sourceUploadUrl() {
         return this.sourceUploadUrl == null ? Codegen.empty() : this.sourceUploadUrl;
     }
 
@@ -310,7 +310,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -321,7 +321,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnector")
       private final @Nullable Output<String> vpcConnector;
 
-    public Output<String> getVpcConnector() {
+    public Output<String> vpcConnector() {
         return this.vpcConnector == null ? Codegen.empty() : this.vpcConnector;
     }
 
@@ -332,7 +332,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConnectorEgressSettings")
       private final @Nullable Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings;
 
-    public Output<FunctionVpcConnectorEgressSettings> getVpcConnectorEgressSettings() {
+    public Output<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings() {
         return this.vpcConnectorEgressSettings == null ? Codegen.empty() : this.vpcConnectorEgressSettings;
     }
 

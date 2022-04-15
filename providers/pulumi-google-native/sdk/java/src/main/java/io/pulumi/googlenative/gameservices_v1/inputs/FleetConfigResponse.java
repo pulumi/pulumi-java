@@ -23,7 +23,7 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fleetSpec", required=true)
       private final String fleetSpec;
 
-    public String getFleetSpec() {
+    public String fleetSpec() {
         return this.fleetSpec;
     }
 
@@ -34,7 +34,7 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

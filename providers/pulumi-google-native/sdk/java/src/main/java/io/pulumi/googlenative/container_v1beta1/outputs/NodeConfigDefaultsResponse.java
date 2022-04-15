@@ -24,7 +24,7 @@ public final class NodeConfigDefaultsResponse {
      * GCFS (Google Container File System, a.k.a Riptide) options.
      * 
     */
-    public GcfsConfigResponse getGcfsConfig() {
+    public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }
 

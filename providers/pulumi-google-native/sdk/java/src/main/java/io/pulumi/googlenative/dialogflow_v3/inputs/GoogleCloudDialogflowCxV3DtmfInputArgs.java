@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     @Import(name="digits")
       private final @Nullable Output<String> digits;
 
-    public Output<String> getDigits() {
+    public Output<String> digits() {
         return this.digits == null ? Codegen.empty() : this.digits;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
     @Import(name="finishDigit")
       private final @Nullable Output<String> finishDigit;
 
-    public Output<String> getFinishDigit() {
+    public Output<String> finishDigit() {
         return this.finishDigit == null ? Codegen.empty() : this.finishDigit;
     }
 

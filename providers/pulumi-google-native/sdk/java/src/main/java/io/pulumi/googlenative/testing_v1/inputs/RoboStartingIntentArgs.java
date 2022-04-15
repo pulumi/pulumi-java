@@ -28,7 +28,7 @@ public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="launcherActivity")
       private final @Nullable Output<LauncherActivityIntentArgs> launcherActivity;
 
-    public Output<LauncherActivityIntentArgs> getLauncherActivity() {
+    public Output<LauncherActivityIntentArgs> launcherActivity() {
         return this.launcherActivity == null ? Codegen.empty() : this.launcherActivity;
     }
 
@@ -39,7 +39,7 @@ public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="startActivity")
       private final @Nullable Output<StartActivityIntentArgs> startActivity;
 
-    public Output<StartActivityIntentArgs> getStartActivity() {
+    public Output<StartActivityIntentArgs> startActivity() {
         return this.startActivity == null ? Codegen.empty() : this.startActivity;
     }
 
@@ -50,7 +50,7 @@ public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

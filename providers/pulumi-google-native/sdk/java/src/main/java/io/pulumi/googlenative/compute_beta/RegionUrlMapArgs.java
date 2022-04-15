@@ -29,7 +29,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRouteAction")
       private final @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
 
-    public Output<HttpRouteActionArgs> getDefaultRouteAction() {
+    public Output<HttpRouteActionArgs> defaultRouteAction() {
         return this.defaultRouteAction == null ? Codegen.empty() : this.defaultRouteAction;
     }
 
@@ -40,7 +40,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
-    public Output<String> getDefaultService() {
+    public Output<String> defaultService() {
         return this.defaultService == null ? Codegen.empty() : this.defaultService;
     }
 
@@ -51,7 +51,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultUrlRedirect")
       private final @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
 
-    public Output<HttpRedirectActionArgs> getDefaultUrlRedirect() {
+    public Output<HttpRedirectActionArgs> defaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
     }
 
@@ -62,7 +62,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headerAction")
       private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Output<HttpHeaderActionArgs> getHeaderAction() {
+    public Output<HttpHeaderActionArgs> headerAction() {
         return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
@@ -84,7 +84,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostRules")
       private final @Nullable Output<List<HostRuleArgs>> hostRules;
 
-    public Output<List<HostRuleArgs>> getHostRules() {
+    public Output<List<HostRuleArgs>> hostRules() {
         return this.hostRules == null ? Codegen.empty() : this.hostRules;
     }
 
@@ -95,7 +95,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -106,28 +106,28 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathMatchers")
       private final @Nullable Output<List<PathMatcherArgs>> pathMatchers;
 
-    public Output<List<PathMatcherArgs>> getPathMatchers() {
+    public Output<List<PathMatcherArgs>> pathMatchers() {
         return this.pathMatchers == null ? Codegen.empty() : this.pathMatchers;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -138,7 +138,7 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tests")
       private final @Nullable Output<List<UrlMapTestArgs>> tests;
 
-    public Output<List<UrlMapTestArgs>> getTests() {
+    public Output<List<UrlMapTestArgs>> tests() {
         return this.tests == null ? Codegen.empty() : this.tests;
     }
 

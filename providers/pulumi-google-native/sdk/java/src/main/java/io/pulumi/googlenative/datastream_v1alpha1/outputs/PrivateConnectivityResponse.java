@@ -16,7 +16,7 @@ public final class PrivateConnectivityResponse {
         this.privateConnectionName = privateConnectionName;
     }
 
-    public String getPrivateConnectionName() {
+    public String privateConnectionName() {
         return this.privateConnectionName;
     }
 

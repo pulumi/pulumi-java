@@ -22,7 +22,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="banDurationSec", required=true)
       private final Integer banDurationSec;
 
-    public Integer getBanDurationSec() {
+    public Integer banDurationSec() {
         return this.banDurationSec;
     }
 
@@ -33,7 +33,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="banThreshold", required=true)
       private final SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
 
-    public SecurityPolicyRuleRateLimitOptionsThresholdResponse getBanThreshold() {
+    public SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold() {
         return this.banThreshold;
     }
 
@@ -44,7 +44,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="conformAction", required=true)
       private final String conformAction;
 
-    public String getConformAction() {
+    public String conformAction() {
         return this.conformAction;
     }
 
@@ -55,7 +55,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="enforceOnKey", required=true)
       private final String enforceOnKey;
 
-    public String getEnforceOnKey() {
+    public String enforceOnKey() {
         return this.enforceOnKey;
     }
 
@@ -66,7 +66,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="enforceOnKeyName", required=true)
       private final String enforceOnKeyName;
 
-    public String getEnforceOnKeyName() {
+    public String enforceOnKeyName() {
         return this.enforceOnKeyName;
     }
 
@@ -77,7 +77,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="exceedAction", required=true)
       private final String exceedAction;
 
-    public String getExceedAction() {
+    public String exceedAction() {
         return this.exceedAction;
     }
 
@@ -88,7 +88,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="exceedRedirectOptions", required=true)
       private final SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
 
-    public SecurityPolicyRuleRedirectOptionsResponse getExceedRedirectOptions() {
+    public SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions() {
         return this.exceedRedirectOptions;
     }
 
@@ -99,7 +99,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
     @Import(name="rateLimitThreshold", required=true)
       private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
 
-    public SecurityPolicyRuleRateLimitOptionsThresholdResponse getRateLimitThreshold() {
+    public SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 

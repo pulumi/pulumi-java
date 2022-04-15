@@ -27,7 +27,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="appdevexperience")
       private final @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
-    public Output<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
+    public Output<AppDevExperienceFeatureSpecArgs> appdevexperience() {
         return this.appdevexperience == null ? Codegen.empty() : this.appdevexperience;
     }
 
@@ -38,7 +38,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="multiclusteringress")
       private final @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
-    public Output<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {
+    public Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress() {
         return this.multiclusteringress == null ? Codegen.empty() : this.multiclusteringress;
     }
 

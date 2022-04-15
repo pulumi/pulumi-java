@@ -24,7 +24,7 @@ public final class ExpiryDetailResponse {
      * The time at which the `MembershipRole` will expire.
      * 
     */
-    public String getExpireTime() {
+    public String expireTime() {
         return this.expireTime;
     }
 

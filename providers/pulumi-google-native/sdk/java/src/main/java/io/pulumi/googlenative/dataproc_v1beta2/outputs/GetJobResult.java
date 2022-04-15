@@ -174,140 +174,140 @@ public final class GetJobResult {
      * Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
      * 
     */
-    public Boolean getDone() {
+    public Boolean done() {
         return this.done;
     }
     /**
      * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
     */
-    public String getDriverControlFilesUri() {
+    public String driverControlFilesUri() {
         return this.driverControlFilesUri;
     }
     /**
      * A URI pointing to the location of the stdout of the job's driver program.
      * 
     */
-    public String getDriverOutputResourceUri() {
+    public String driverOutputResourceUri() {
         return this.driverOutputResourceUri;
     }
     /**
      * Optional. Job is a Hadoop job.
      * 
     */
-    public HadoopJobResponse getHadoopJob() {
+    public HadoopJobResponse hadoopJob() {
         return this.hadoopJob;
     }
     /**
      * Optional. Job is a Hive job.
      * 
     */
-    public HiveJobResponse getHiveJob() {
+    public HiveJobResponse hiveJob() {
         return this.hiveJob;
     }
     /**
      * A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
      * 
     */
-    public String getJobUuid() {
+    public String jobUuid() {
         return this.jobUuid;
     }
     /**
      * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Optional. Job is a Pig job.
      * 
     */
-    public PigJobResponse getPigJob() {
+    public PigJobResponse pigJob() {
         return this.pigJob;
     }
     /**
      * Job information, including how, when, and where to run the job.
      * 
     */
-    public JobPlacementResponse getPlacement() {
+    public JobPlacementResponse placement() {
         return this.placement;
     }
     /**
      * Optional. Job is a Presto job.
      * 
     */
-    public PrestoJobResponse getPrestoJob() {
+    public PrestoJobResponse prestoJob() {
         return this.prestoJob;
     }
     /**
      * Optional. Job is a PySpark job.
      * 
     */
-    public PySparkJobResponse getPysparkJob() {
+    public PySparkJobResponse pysparkJob() {
         return this.pysparkJob;
     }
     /**
      * Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
      * 
     */
-    public JobReferenceResponse getReference() {
+    public JobReferenceResponse reference() {
         return this.reference;
     }
     /**
      * Optional. Job scheduling configuration.
      * 
     */
-    public JobSchedulingResponse getScheduling() {
+    public JobSchedulingResponse scheduling() {
         return this.scheduling;
     }
     /**
      * Optional. Job is a Spark job.
      * 
     */
-    public SparkJobResponse getSparkJob() {
+    public SparkJobResponse sparkJob() {
         return this.sparkJob;
     }
     /**
      * Optional. Job is a SparkR job.
      * 
     */
-    public SparkRJobResponse getSparkRJob() {
+    public SparkRJobResponse sparkRJob() {
         return this.sparkRJob;
     }
     /**
      * Optional. Job is a SparkSql job.
      * 
     */
-    public SparkSqlJobResponse getSparkSqlJob() {
+    public SparkSqlJobResponse sparkSqlJob() {
         return this.sparkSqlJob;
     }
     /**
      * The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
      * 
     */
-    public JobStatusResponse getStatus() {
+    public JobStatusResponse status() {
         return this.status;
     }
     /**
      * The previous job status.
      * 
     */
-    public List<JobStatusResponse> getStatusHistory() {
+    public List<JobStatusResponse> statusHistory() {
         return this.statusHistory;
     }
     /**
      * The email address of the user submitting the job. For jobs submitted on the cluster, the address is username@hostname.
      * 
     */
-    public String getSubmittedBy() {
+    public String submittedBy() {
         return this.submittedBy;
     }
     /**
      * The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
     */
-    public List<YarnApplicationResponse> getYarnApplications() {
+    public List<YarnApplicationResponse> yarnApplications() {
         return this.yarnApplications;
     }
 

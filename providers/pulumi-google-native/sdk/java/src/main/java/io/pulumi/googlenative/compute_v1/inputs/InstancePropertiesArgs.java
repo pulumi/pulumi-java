@@ -38,7 +38,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="advancedMachineFeatures")
       private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Output<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
+    public Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures() {
         return this.advancedMachineFeatures == null ? Codegen.empty() : this.advancedMachineFeatures;
     }
 
@@ -49,7 +49,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
-    public Output<Boolean> getCanIpForward() {
+    public Output<Boolean> canIpForward() {
         return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
     }
 
@@ -60,7 +60,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Output<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
+    public Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig() {
         return this.confidentialInstanceConfig == null ? Codegen.empty() : this.confidentialInstanceConfig;
     }
 
@@ -71,7 +71,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="disks")
       private final @Nullable Output<List<AttachedDiskArgs>> disks;
 
-    public Output<List<AttachedDiskArgs>> getDisks() {
+    public Output<List<AttachedDiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -93,7 +93,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
-    public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
+    public Output<List<AcceleratorConfigArgs>> guestAccelerators() {
         return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
     }
 
@@ -104,7 +104,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -115,7 +115,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -126,7 +126,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
 
-    public Output<MetadataArgs> getMetadata() {
+    public Output<MetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -137,7 +137,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -148,7 +148,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
         return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
@@ -159,7 +159,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="networkPerformanceConfig")
       private final @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Output<NetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
+    public Output<NetworkPerformanceConfigArgs> networkPerformanceConfig() {
         return this.networkPerformanceConfig == null ? Codegen.empty() : this.networkPerformanceConfig;
     }
 
@@ -170,7 +170,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Output<InstancePropertiesPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
+    public Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
@@ -181,7 +181,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="reservationAffinity")
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
-    public Output<ReservationAffinityArgs> getReservationAffinity() {
+    public Output<ReservationAffinityArgs> reservationAffinity() {
         return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
@@ -192,7 +192,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceManagerTags")
       private final @Nullable Output<Map<String,String>> resourceManagerTags;
 
-    public Output<Map<String,String>> getResourceManagerTags() {
+    public Output<Map<String,String>> resourceManagerTags() {
         return this.resourceManagerTags == null ? Codegen.empty() : this.resourceManagerTags;
     }
 
@@ -203,7 +203,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Output<List<String>> getResourcePolicies() {
+    public Output<List<String>> resourcePolicies() {
         return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
     }
 
@@ -214,7 +214,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Output<SchedulingArgs> getScheduling() {
+    public Output<SchedulingArgs> scheduling() {
         return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
@@ -225,7 +225,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serviceAccounts")
       private final @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
 
-    public Output<List<ServiceAccountArgs>> getServiceAccounts() {
+    public Output<List<ServiceAccountArgs>> serviceAccounts() {
         return this.serviceAccounts == null ? Codegen.empty() : this.serviceAccounts;
     }
 
@@ -236,7 +236,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
@@ -247,7 +247,7 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<TagsArgs> tags;
 
-    public Output<TagsArgs> getTags() {
+    public Output<TagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -20,7 +20,7 @@ public final class TCPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -31,7 +31,7 @@ public final class TCPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="portName", required=true)
       private final String portName;
 
-    public String getPortName() {
+    public String portName() {
         return this.portName;
     }
 
@@ -42,7 +42,7 @@ public final class TCPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
-    public String getPortSpecification() {
+    public String portSpecification() {
         return this.portSpecification;
     }
 
@@ -53,7 +53,7 @@ public final class TCPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="proxyHeader", required=true)
       private final String proxyHeader;
 
-    public String getProxyHeader() {
+    public String proxyHeader() {
         return this.proxyHeader;
     }
 
@@ -64,7 +64,7 @@ public final class TCPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="request", required=true)
       private final String request;
 
-    public String getRequest() {
+    public String request() {
         return this.request;
     }
 
@@ -75,7 +75,7 @@ public final class TCPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="response", required=true)
       private final String response;
 
-    public String getResponse() {
+    public String response() {
         return this.response;
     }
 

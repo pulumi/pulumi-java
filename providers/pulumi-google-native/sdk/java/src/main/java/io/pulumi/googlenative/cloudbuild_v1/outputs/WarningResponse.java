@@ -32,14 +32,14 @@ public final class WarningResponse {
      * The priority for this warning.
      * 
     */
-    public String getPriority() {
+    public String priority() {
         return this.priority;
     }
     /**
      * Explanation of the warning generated.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

@@ -97,77 +97,77 @@ public final class TrustResponse {
      * The time the instance was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The last heartbeat time when the trust was known to be connected.
      * 
     */
-    public String getLastTrustHeartbeatTime() {
+    public String lastTrustHeartbeatTime() {
         return this.lastTrustHeartbeatTime;
     }
     /**
      * Optional. The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
     */
-    public Boolean getSelectiveAuthentication() {
+    public Boolean selectiveAuthentication() {
         return this.selectiveAuthentication;
     }
     /**
      * The current state of the trust.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Additional information about the current state of the trust, if available.
      * 
     */
-    public String getStateDescription() {
+    public String stateDescription() {
         return this.stateDescription;
     }
     /**
      * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
      * 
     */
-    public List<String> getTargetDnsIpAddresses() {
+    public List<String> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
     /**
      * The fully qualified target domain name which will be in trust with the current domain.
      * 
     */
-    public String getTargetDomainName() {
+    public String targetDomainName() {
         return this.targetDomainName;
     }
     /**
      * The trust direction, which decides if the current domain is trusted, trusting, or both.
      * 
     */
-    public String getTrustDirection() {
+    public String trustDirection() {
         return this.trustDirection;
     }
     /**
      * The trust secret used for the handshake with the target domain. This will not be stored.
      * 
     */
-    public String getTrustHandshakeSecret() {
+    public String trustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
     /**
      * The type of trust represented by the trust resource.
      * 
     */
-    public String getTrustType() {
+    public String trustType() {
         return this.trustType;
     }
     /**
      * The last update time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

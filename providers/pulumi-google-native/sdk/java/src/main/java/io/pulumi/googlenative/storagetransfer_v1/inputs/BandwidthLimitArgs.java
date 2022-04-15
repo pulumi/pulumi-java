@@ -26,7 +26,7 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limitMbps")
       private final @Nullable Output<String> limitMbps;
 
-    public Output<String> getLimitMbps() {
+    public Output<String> limitMbps() {
         return this.limitMbps == null ? Codegen.empty() : this.limitMbps;
     }
 

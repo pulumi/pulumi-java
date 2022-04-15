@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
     @Import(name="words")
       private final @Nullable Output<List<String>> words;
 
-    public Output<List<String>> getWords() {
+    public Output<List<String>> words() {
         return this.words == null ? Codegen.empty() : this.words;
     }
 

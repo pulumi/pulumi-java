@@ -23,7 +23,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
     @Import(name="identityNamespace", required=true)
       private final String identityNamespace;
 
-    public String getIdentityNamespace() {
+    public String identityNamespace() {
         return this.identityNamespace;
     }
 
@@ -34,7 +34,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
     @Import(name="identityProvider", required=true)
       private final String identityProvider;
 
-    public String getIdentityProvider() {
+    public String identityProvider() {
         return this.identityProvider;
     }
 
@@ -45,7 +45,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
     @Import(name="workloadPool", required=true)
       private final String workloadPool;
 
-    public String getWorkloadPool() {
+    public String workloadPool() {
         return this.workloadPool;
     }
 

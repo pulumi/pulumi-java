@@ -23,7 +23,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="deleted", required=true)
       private final String deleted;
 
-    public String getDeleted() {
+    public String deleted() {
         return this.deleted;
     }
 
@@ -34,7 +34,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="deprecated", required=true)
       private final String deprecated;
 
-    public String getDeprecated() {
+    public String deprecated() {
         return this.deprecated;
     }
 
@@ -45,7 +45,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="obsolete", required=true)
       private final String obsolete;
 
-    public String getObsolete() {
+    public String obsolete() {
         return this.obsolete;
     }
 
@@ -56,7 +56,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="replacement", required=true)
       private final String replacement;
 
-    public String getReplacement() {
+    public String replacement() {
         return this.replacement;
     }
 
@@ -67,7 +67,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

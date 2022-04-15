@@ -23,7 +23,7 @@ public final class DailyMaintenanceWindowResponse extends io.pulumi.resources.In
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -34,7 +34,7 @@ public final class DailyMaintenanceWindowResponse extends io.pulumi.resources.In
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

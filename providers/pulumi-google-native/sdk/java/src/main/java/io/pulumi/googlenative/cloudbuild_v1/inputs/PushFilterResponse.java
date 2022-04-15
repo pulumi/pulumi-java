@@ -24,7 +24,7 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="branch", required=true)
       private final String branch;
 
-    public String getBranch() {
+    public String branch() {
         return this.branch;
     }
 
@@ -35,7 +35,7 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="invertRegex", required=true)
       private final Boolean invertRegex;
 
-    public Boolean getInvertRegex() {
+    public Boolean invertRegex() {
         return this.invertRegex;
     }
 
@@ -46,7 +46,7 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
     @Import(name="productId", required=true)
       private final String productId;
 
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
     @Import(name="provisioningId", required=true)
       private final String provisioningId;
 
-    public String getProvisioningId() {
+    public String provisioningId() {
         return this.provisioningId;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends io.pul
     @Import(name="skuId", required=true)
       private final String skuId;
 
-    public String getSkuId() {
+    public String skuId() {
         return this.skuId;
     }
 

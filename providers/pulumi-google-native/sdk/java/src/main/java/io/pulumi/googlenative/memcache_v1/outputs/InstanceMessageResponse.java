@@ -32,14 +32,14 @@ public final class InstanceMessageResponse {
      * A code that correspond to one type of user-facing message.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Message on memcached instance which will be exposed to users.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

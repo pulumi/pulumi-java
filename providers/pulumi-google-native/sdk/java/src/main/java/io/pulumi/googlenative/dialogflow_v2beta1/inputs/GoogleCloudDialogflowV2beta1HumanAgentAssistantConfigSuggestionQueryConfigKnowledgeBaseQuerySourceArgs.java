@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="knowledgeBases", required=true)
       private final Output<List<String>> knowledgeBases;
 
-    public Output<List<String>> getKnowledgeBases() {
+    public Output<List<String>> knowledgeBases() {
         return this.knowledgeBases;
     }
 

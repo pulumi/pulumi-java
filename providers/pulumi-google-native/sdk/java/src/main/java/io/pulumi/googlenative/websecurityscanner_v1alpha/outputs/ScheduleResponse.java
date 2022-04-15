@@ -33,14 +33,14 @@ public final class ScheduleResponse {
      * The duration of time between executions in days.
      * 
     */
-    public Integer getIntervalDurationDays() {
+    public Integer intervalDurationDays() {
         return this.intervalDurationDays;
     }
     /**
      * A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
      * 
     */
-    public String getScheduleTime() {
+    public String scheduleTime() {
         return this.scheduleTime;
     }
 

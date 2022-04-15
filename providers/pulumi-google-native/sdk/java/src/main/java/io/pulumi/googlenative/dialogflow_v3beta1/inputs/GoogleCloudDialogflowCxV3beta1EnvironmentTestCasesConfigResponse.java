@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
     @Import(name="enableContinuousRun", required=true)
       private final Boolean enableContinuousRun;
 
-    public Boolean getEnableContinuousRun() {
+    public Boolean enableContinuousRun() {
         return this.enableContinuousRun;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
     @Import(name="enablePredeploymentRun", required=true)
       private final Boolean enablePredeploymentRun;
 
-    public Boolean getEnablePredeploymentRun() {
+    public Boolean enablePredeploymentRun() {
         return this.enablePredeploymentRun;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
     @Import(name="testCases", required=true)
       private final List<String> testCases;
 
-    public List<String> getTestCases() {
+    public List<String> testCases() {
         return this.testCases;
     }
 

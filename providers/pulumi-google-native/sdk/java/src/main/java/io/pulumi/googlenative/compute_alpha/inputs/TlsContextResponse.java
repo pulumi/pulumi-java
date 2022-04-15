@@ -24,7 +24,7 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="certificateContext", required=true)
       private final TlsCertificateContextResponse certificateContext;
 
-    public TlsCertificateContextResponse getCertificateContext() {
+    public TlsCertificateContextResponse certificateContext() {
         return this.certificateContext;
     }
 
@@ -35,7 +35,7 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="validationContext", required=true)
       private final TlsValidationContextResponse validationContext;
 
-    public TlsValidationContextResponse getValidationContext() {
+    public TlsValidationContextResponse validationContext() {
         return this.validationContext;
     }
 

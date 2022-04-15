@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulum
     @Import(name="newValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse newValue;
 
-    public GooglePrivacyDlpV2ValueResponse getNewValue() {
+    public GooglePrivacyDlpV2ValueResponse newValue() {
         return this.newValue;
     }
 

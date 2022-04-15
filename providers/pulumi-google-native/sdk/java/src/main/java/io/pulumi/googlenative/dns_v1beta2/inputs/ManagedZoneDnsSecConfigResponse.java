@@ -21,14 +21,14 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
     @Import(name="defaultKeySpecs", required=true)
       private final List<DnsKeySpecResponse> defaultKeySpecs;
 
-    public List<DnsKeySpecResponse> getDefaultKeySpecs() {
+    public List<DnsKeySpecResponse> defaultKeySpecs() {
         return this.defaultKeySpecs;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
     @Import(name="nonExistence", required=true)
       private final String nonExistence;
 
-    public String getNonExistence() {
+    public String nonExistence() {
         return this.nonExistence;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

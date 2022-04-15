@@ -24,7 +24,7 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
     @Import(name="aliasContext", required=true)
       private final AliasContextResponse aliasContext;
 
-    public AliasContextResponse getAliasContext() {
+    public AliasContextResponse aliasContext() {
         return this.aliasContext;
     }
 
@@ -35,7 +35,7 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
     @Import(name="gerritProject", required=true)
       private final String gerritProject;
 
-    public String getGerritProject() {
+    public String gerritProject() {
         return this.gerritProject;
     }
 
@@ -46,7 +46,7 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
     @Import(name="hostUri", required=true)
       private final String hostUri;
 
-    public String getHostUri() {
+    public String hostUri() {
         return this.hostUri;
     }
 
@@ -57,7 +57,7 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
     @Import(name="revisionId", required=true)
       private final String revisionId;
 
-    public String getRevisionId() {
+    public String revisionId() {
         return this.revisionId;
     }
 

@@ -32,14 +32,14 @@ public final class TlsCertificatePathsResponse {
      * The path to the file holding the client or server TLS certificate to use.
      * 
     */
-    public String getCertificatePath() {
+    public String certificatePath() {
         return this.certificatePath;
     }
     /**
      * The path to the file holding the client or server private key.
      * 
     */
-    public String getPrivateKeyPath() {
+    public String privateKeyPath() {
         return this.privateKeyPath;
     }
 

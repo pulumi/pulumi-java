@@ -32,14 +32,14 @@ public final class ExecStepResponse {
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * 
     */
-    public ExecStepConfigResponse getLinuxExecStepConfig() {
+    public ExecStepConfigResponse linuxExecStepConfig() {
         return this.linuxExecStepConfig;
     }
     /**
      * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * 
     */
-    public ExecStepConfigResponse getWindowsExecStepConfig() {
+    public ExecStepConfigResponse windowsExecStepConfig() {
         return this.windowsExecStepConfig;
     }
 

@@ -28,7 +28,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="configId")
       private final @Nullable Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId == null ? Codegen.empty() : this.configId;
     }
 
@@ -39,7 +39,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="disableTraceSampling")
       private final @Nullable Output<Boolean> disableTraceSampling;
 
-    public Output<Boolean> getDisableTraceSampling() {
+    public Output<Boolean> disableTraceSampling() {
         return this.disableTraceSampling == null ? Codegen.empty() : this.disableTraceSampling;
     }
 
@@ -50,7 +50,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="rolloutStrategy")
       private final @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
-    public Output<EndpointsApiServiceRolloutStrategy> getRolloutStrategy() {
+    public Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy() {
         return this.rolloutStrategy == null ? Codegen.empty() : this.rolloutStrategy;
     }
 

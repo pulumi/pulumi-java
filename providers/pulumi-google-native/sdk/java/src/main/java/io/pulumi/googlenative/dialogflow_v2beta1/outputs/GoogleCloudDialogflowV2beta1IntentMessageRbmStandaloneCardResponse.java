@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * Card content.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse getCardContent() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent() {
         return this.cardContent;
     }
     /**
      * Orientation of the card.
      * 
     */
-    public String getCardOrientation() {
+    public String cardOrientation() {
         return this.cardOrientation;
     }
     /**
      * Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
      * 
     */
-    public String getThumbnailImageAlignment() {
+    public String thumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
     }
 

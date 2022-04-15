@@ -25,7 +25,7 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attestation", required=true)
       private final Output<AttestationArgs> attestation;
 
-    public Output<AttestationArgs> getAttestation() {
+    public Output<AttestationArgs> attestation() {
         return this.attestation;
     }
 

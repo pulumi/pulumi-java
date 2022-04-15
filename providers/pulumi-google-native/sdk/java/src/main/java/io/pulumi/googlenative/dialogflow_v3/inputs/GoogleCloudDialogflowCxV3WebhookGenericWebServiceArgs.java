@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="allowedCaCerts")
       private final @Nullable Output<List<String>> allowedCaCerts;
 
-    public Output<List<String>> getAllowedCaCerts() {
+    public Output<List<String>> allowedCaCerts() {
         return this.allowedCaCerts == null ? Codegen.empty() : this.allowedCaCerts;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="requestHeaders")
       private final @Nullable Output<Map<String,String>> requestHeaders;
 
-    public Output<Map<String,String>> getRequestHeaders() {
+    public Output<Map<String,String>> requestHeaders() {
         return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

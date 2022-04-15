@@ -20,7 +20,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
     @Import(name="canDefer", required=true)
       private final Boolean canDefer;
 
-    public Boolean getCanDefer() {
+    public Boolean canDefer() {
         return this.canDefer;
     }
 
@@ -31,7 +31,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
 
@@ -42,7 +42,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
     @Import(name="scheduleDeadlineTime", required=true)
       private final String scheduleDeadlineTime;
 
-    public String getScheduleDeadlineTime() {
+    public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
 
@@ -53,7 +53,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

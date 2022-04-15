@@ -30,7 +30,7 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     @Import(name="bigQueryOptions")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
 
-    public Output<GooglePrivacyDlpV2BigQueryOptionsArgs> getBigQueryOptions() {
+    public Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions() {
         return this.bigQueryOptions == null ? Codegen.empty() : this.bigQueryOptions;
     }
 
@@ -41,7 +41,7 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     @Import(name="cloudStorageOptions")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
 
-    public Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> getCloudStorageOptions() {
+    public Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions() {
         return this.cloudStorageOptions == null ? Codegen.empty() : this.cloudStorageOptions;
     }
 
@@ -52,7 +52,7 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     @Import(name="datastoreOptions")
       private final @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
 
-    public Output<GooglePrivacyDlpV2DatastoreOptionsArgs> getDatastoreOptions() {
+    public Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions() {
         return this.datastoreOptions == null ? Codegen.empty() : this.datastoreOptions;
     }
 
@@ -63,14 +63,14 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
     @Import(name="hybridOptions")
       private final @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
 
-    public Output<GooglePrivacyDlpV2HybridOptionsArgs> getHybridOptions() {
+    public Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions() {
         return this.hybridOptions == null ? Codegen.empty() : this.hybridOptions;
     }
 
     @Import(name="timespanConfig")
       private final @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
 
-    public Output<GooglePrivacyDlpV2TimespanConfigArgs> getTimespanConfig() {
+    public Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig() {
         return this.timespanConfig == null ? Codegen.empty() : this.timespanConfig;
     }
 

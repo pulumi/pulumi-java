@@ -24,7 +24,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="androidDevice", required=true)
       private final AndroidDeviceResponse androidDevice;
 
-    public AndroidDeviceResponse getAndroidDevice() {
+    public AndroidDeviceResponse androidDevice() {
         return this.androidDevice;
     }
 
@@ -35,7 +35,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iosDevice", required=true)
       private final IosDeviceResponse iosDevice;
 
-    public IosDeviceResponse getIosDevice() {
+    public IosDeviceResponse iosDevice() {
         return this.iosDevice;
     }
 

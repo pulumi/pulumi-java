@@ -26,7 +26,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<PlacementPolicyType> type;
 
-    public Output<PlacementPolicyType> getType() {
+    public Output<PlacementPolicyType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

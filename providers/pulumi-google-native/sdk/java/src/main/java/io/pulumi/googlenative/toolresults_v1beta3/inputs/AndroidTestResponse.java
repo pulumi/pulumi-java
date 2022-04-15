@@ -27,7 +27,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="androidAppInfo", required=true)
       private final AndroidAppInfoResponse androidAppInfo;
 
-    public AndroidAppInfoResponse getAndroidAppInfo() {
+    public AndroidAppInfoResponse androidAppInfo() {
         return this.androidAppInfo;
     }
 
@@ -38,7 +38,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="androidInstrumentationTest", required=true)
       private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
-    public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
+    public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
 
@@ -49,7 +49,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="androidRoboTest", required=true)
       private final AndroidRoboTestResponse androidRoboTest;
 
-    public AndroidRoboTestResponse getAndroidRoboTest() {
+    public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
     }
 
@@ -60,7 +60,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="androidTestLoop", required=true)
       private final AndroidTestLoopResponse androidTestLoop;
 
-    public AndroidTestLoopResponse getAndroidTestLoop() {
+    public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
     }
 
@@ -71,7 +71,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="testTimeout", required=true)
       private final DurationResponse testTimeout;
 
-    public DurationResponse getTestTimeout() {
+    public DurationResponse testTimeout() {
         return this.testTimeout;
     }
 

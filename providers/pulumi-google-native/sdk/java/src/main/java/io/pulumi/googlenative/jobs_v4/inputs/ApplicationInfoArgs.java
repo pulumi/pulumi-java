@@ -27,7 +27,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="emails")
       private final @Nullable Output<List<String>> emails;
 
-    public Output<List<String>> getEmails() {
+    public Output<List<String>> emails() {
         return this.emails == null ? Codegen.empty() : this.emails;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="instruction")
       private final @Nullable Output<String> instruction;
 
-    public Output<String> getInstruction() {
+    public Output<String> instruction() {
         return this.instruction == null ? Codegen.empty() : this.instruction;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
+    public Output<List<String>> uris() {
         return this.uris == null ? Codegen.empty() : this.uris;
     }
 

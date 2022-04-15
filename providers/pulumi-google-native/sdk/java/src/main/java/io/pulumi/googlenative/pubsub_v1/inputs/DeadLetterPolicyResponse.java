@@ -24,7 +24,7 @@ public final class DeadLetterPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="deadLetterTopic", required=true)
       private final String deadLetterTopic;
 
-    public String getDeadLetterTopic() {
+    public String deadLetterTopic() {
         return this.deadLetterTopic;
     }
 
@@ -35,7 +35,7 @@ public final class DeadLetterPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="maxDeliveryAttempts", required=true)
       private final Integer maxDeliveryAttempts;
 
-    public Integer getMaxDeliveryAttempts() {
+    public Integer maxDeliveryAttempts() {
         return this.maxDeliveryAttempts;
     }
 

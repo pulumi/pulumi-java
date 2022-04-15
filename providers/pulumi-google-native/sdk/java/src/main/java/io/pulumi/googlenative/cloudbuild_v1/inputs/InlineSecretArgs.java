@@ -27,7 +27,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envMap")
       private final @Nullable Output<Map<String,String>> envMap;
 
-    public Output<Map<String,String>> getEnvMap() {
+    public Output<Map<String,String>> envMap() {
         return this.envMap == null ? Codegen.empty() : this.envMap;
     }
 
@@ -38,7 +38,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 

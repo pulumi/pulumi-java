@@ -24,7 +24,7 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
     @Import(name="action", required=true)
       private final String action;
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
 
@@ -35,7 +35,7 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
     @Import(name="categories", required=true)
       private final List<String> categories;
 
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories;
     }
 
@@ -46,7 +46,7 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

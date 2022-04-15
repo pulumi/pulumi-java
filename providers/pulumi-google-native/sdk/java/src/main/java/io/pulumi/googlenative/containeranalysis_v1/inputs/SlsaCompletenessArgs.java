@@ -26,7 +26,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="arguments")
       private final @Nullable Output<Boolean> arguments;
 
-    public Output<Boolean> getArguments() {
+    public Output<Boolean> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -37,7 +37,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="environment")
       private final @Nullable Output<Boolean> environment;
 
-    public Output<Boolean> getEnvironment() {
+    public Output<Boolean> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -48,7 +48,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="materials")
       private final @Nullable Output<Boolean> materials;
 
-    public Output<Boolean> getMaterials() {
+    public Output<Boolean> materials() {
         return this.materials == null ? Codegen.empty() : this.materials;
     }
 

@@ -17,28 +17,28 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="publicKeyType")
       private final @Nullable String publicKeyType;
 
-    public Optional<String> getPublicKeyType() {
+    public Optional<String> publicKeyType() {
         return this.publicKeyType == null ? Optional.empty() : Optional.ofNullable(this.publicKeyType);
     }
 
     @Import(name="serviceAccountId", required=true)
       private final String serviceAccountId;
 
-    public String getServiceAccountId() {
+    public String serviceAccountId() {
         return this.serviceAccountId;
     }
 

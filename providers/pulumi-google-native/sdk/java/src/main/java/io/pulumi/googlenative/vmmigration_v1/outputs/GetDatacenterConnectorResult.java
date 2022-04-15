@@ -89,70 +89,70 @@ public final class GetDatacenterConnectorResult {
      * The communication channel between the datacenter connector and GCP.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * The time the connector was created (as an API call, not when it was actually installed).
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Provides details on the state of the Datacenter Connector in case of an error.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The connector's name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
      * 
     */
-    public String getRegistrationId() {
+    public String registrationId() {
         return this.registrationId;
     }
     /**
      * The service account to use in the connector when communicating with the cloud.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * State of the DatacenterConnector, as determined by the health checks.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The time the state was last set.
      * 
     */
-    public String getStateTime() {
+    public String stateTime() {
         return this.stateTime;
     }
     /**
      * The last time the connector was updated with an API call.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

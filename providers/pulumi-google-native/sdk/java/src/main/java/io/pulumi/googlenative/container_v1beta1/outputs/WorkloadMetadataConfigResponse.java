@@ -32,14 +32,14 @@ public final class WorkloadMetadataConfigResponse {
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
      * 
     */
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
     /**
      * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
      * 
     */
-    public String getNodeMetadata() {
+    public String nodeMetadata() {
         return this.nodeMetadata;
     }
 

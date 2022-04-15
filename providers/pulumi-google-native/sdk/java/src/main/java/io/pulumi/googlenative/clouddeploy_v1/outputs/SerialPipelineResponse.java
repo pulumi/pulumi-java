@@ -25,7 +25,7 @@ public final class SerialPipelineResponse {
      * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
      * 
     */
-    public List<StageResponse> getStages() {
+    public List<StageResponse> stages() {
         return this.stages;
     }
 

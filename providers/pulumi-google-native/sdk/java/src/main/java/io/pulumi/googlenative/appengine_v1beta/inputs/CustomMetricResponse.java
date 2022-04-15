@@ -24,7 +24,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -35,7 +35,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 
@@ -46,7 +46,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="singleInstanceAssignment", required=true)
       private final Double singleInstanceAssignment;
 
-    public Double getSingleInstanceAssignment() {
+    public Double singleInstanceAssignment() {
         return this.singleInstanceAssignment;
     }
 
@@ -57,7 +57,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetType", required=true)
       private final String targetType;
 
-    public String getTargetType() {
+    public String targetType() {
         return this.targetType;
     }
 
@@ -68,7 +68,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetUtilization", required=true)
       private final Double targetUtilization;
 
-    public Double getTargetUtilization() {
+    public Double targetUtilization() {
         return this.targetUtilization;
     }
 

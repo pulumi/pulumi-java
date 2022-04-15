@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse extends io.pu
     @Import(name="placeIds", required=true)
       private final List<String> placeIds;
 
-    public List<String> getPlaceIds() {
+    public List<String> placeIds() {
         return this.placeIds;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse extends io.pu
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

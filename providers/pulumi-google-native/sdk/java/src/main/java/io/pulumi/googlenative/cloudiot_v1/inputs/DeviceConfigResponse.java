@@ -23,7 +23,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="binaryData", required=true)
       private final String binaryData;
 
-    public String getBinaryData() {
+    public String binaryData() {
         return this.binaryData;
     }
 
@@ -34,7 +34,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudUpdateTime", required=true)
       private final String cloudUpdateTime;
 
-    public String getCloudUpdateTime() {
+    public String cloudUpdateTime() {
         return this.cloudUpdateTime;
     }
 
@@ -45,7 +45,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceAckTime", required=true)
       private final String deviceAckTime;
 
-    public String getDeviceAckTime() {
+    public String deviceAckTime() {
         return this.deviceAckTime;
     }
 
@@ -56,7 +56,7 @@ public final class DeviceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

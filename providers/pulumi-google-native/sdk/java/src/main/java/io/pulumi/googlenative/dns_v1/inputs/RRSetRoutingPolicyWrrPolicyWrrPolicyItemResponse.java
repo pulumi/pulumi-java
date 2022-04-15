@@ -21,14 +21,14 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
     @Import(name="rrdatas", required=true)
       private final List<String> rrdatas;
 
-    public List<String> getRrdatas() {
+    public List<String> rrdatas() {
         return this.rrdatas;
     }
 
@@ -39,7 +39,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
     @Import(name="signatureRrdatas", required=true)
       private final List<String> signatureRrdatas;
 
-    public List<String> getSignatureRrdatas() {
+    public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
 
@@ -50,7 +50,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse extends io.p
     @Import(name="weight", required=true)
       private final Double weight;
 
-    public Double getWeight() {
+    public Double weight() {
         return this.weight;
     }
 

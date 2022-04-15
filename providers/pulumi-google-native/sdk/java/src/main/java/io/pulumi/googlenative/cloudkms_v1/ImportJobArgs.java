@@ -20,7 +20,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importJobId", required=true)
       private final Output<String> importJobId;
 
-    public Output<String> getImportJobId() {
+    public Output<String> importJobId() {
         return this.importJobId;
     }
 
@@ -31,28 +31,28 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="importMethod", required=true)
       private final Output<ImportJobImportMethod> importMethod;
 
-    public Output<ImportJobImportMethod> getImportMethod() {
+    public Output<ImportJobImportMethod> importMethod() {
         return this.importMethod;
     }
 
     @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectionLevel", required=true)
       private final Output<ImportJobProtectionLevel> protectionLevel;
 
-    public Output<ImportJobProtectionLevel> getProtectionLevel() {
+    public Output<ImportJobProtectionLevel> protectionLevel() {
         return this.protectionLevel;
     }
 

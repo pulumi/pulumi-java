@@ -33,14 +33,14 @@ public final class AccessUrlsResponse {
      * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
      * 
     */
-    public String getCaCertificateAccessUrl() {
+    public String caCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
     /**
      * The URLs where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
      * 
     */
-    public List<String> getCrlAccessUrls() {
+    public List<String> crlAccessUrls() {
         return this.crlAccessUrls;
     }
 

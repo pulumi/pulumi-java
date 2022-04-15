@@ -27,7 +27,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subject", required=true)
       private final Output<SubjectArgs> subject;
 
-    public Output<SubjectArgs> getSubject() {
+    public Output<SubjectArgs> subject() {
         return this.subject;
     }
 
@@ -38,7 +38,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subjectAltName")
       private final @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
-    public Output<SubjectAltNamesArgs> getSubjectAltName() {
+    public Output<SubjectAltNamesArgs> subjectAltName() {
         return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 

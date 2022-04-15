@@ -17,14 +17,14 @@ public final class GetDatasetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

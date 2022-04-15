@@ -31,7 +31,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -45,7 +45,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Chain of certificates under this alias.
      * 
      */
-    public Output<GoogleCloudApigeeV1CertificateResponse> getCertsInfo() {
+    public Output<GoogleCloudApigeeV1CertificateResponse> certsInfo() {
         return this.certsInfo;
     }
     /**
@@ -59,7 +59,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Type of alias.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

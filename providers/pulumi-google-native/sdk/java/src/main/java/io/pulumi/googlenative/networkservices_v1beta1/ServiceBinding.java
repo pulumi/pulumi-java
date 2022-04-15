@@ -30,7 +30,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +44,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return Optional. A free-text description of the resource. Max length 1024 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
      */
-    public Output<String> getEndpointFilter() {
+    public Output<String> endpointFilter() {
         return this.endpointFilter;
     }
     /**
@@ -72,7 +72,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -86,7 +86,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -114,7 +114,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

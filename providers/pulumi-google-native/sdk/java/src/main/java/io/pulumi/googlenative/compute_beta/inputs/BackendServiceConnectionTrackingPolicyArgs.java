@@ -29,7 +29,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="connectionPersistenceOnUnhealthyBackends")
       private final @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
 
-    public Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> getConnectionPersistenceOnUnhealthyBackends() {
+    public Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends == null ? Codegen.empty() : this.connectionPersistenceOnUnhealthyBackends;
     }
 
@@ -40,7 +40,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="enableStrongAffinity")
       private final @Nullable Output<Boolean> enableStrongAffinity;
 
-    public Output<Boolean> getEnableStrongAffinity() {
+    public Output<Boolean> enableStrongAffinity() {
         return this.enableStrongAffinity == null ? Codegen.empty() : this.enableStrongAffinity;
     }
 
@@ -51,7 +51,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="idleTimeoutSec")
       private final @Nullable Output<Integer> idleTimeoutSec;
 
-    public Output<Integer> getIdleTimeoutSec() {
+    public Output<Integer> idleTimeoutSec() {
         return this.idleTimeoutSec == null ? Codegen.empty() : this.idleTimeoutSec;
     }
 
@@ -62,7 +62,7 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends io.pulumi.
     @Import(name="trackingMode")
       private final @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
 
-    public Output<BackendServiceConnectionTrackingPolicyTrackingMode> getTrackingMode() {
+    public Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode() {
         return this.trackingMode == null ? Codegen.empty() : this.trackingMode;
     }
 

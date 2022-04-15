@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseRespons
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

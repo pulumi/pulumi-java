@@ -28,7 +28,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="capacityGb")
       private final @Nullable Output<String> capacityGb;
 
-    public Output<String> getCapacityGb() {
+    public Output<String> capacityGb() {
         return this.capacityGb == null ? Codegen.empty() : this.capacityGb;
     }
 
@@ -39,7 +39,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="nfsExportOptions")
       private final @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
 
-    public Output<List<NfsExportOptionsArgs>> getNfsExportOptions() {
+    public Output<List<NfsExportOptionsArgs>> nfsExportOptions() {
         return this.nfsExportOptions == null ? Codegen.empty() : this.nfsExportOptions;
     }
 
@@ -61,7 +61,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceBackup")
       private final @Nullable Output<String> sourceBackup;
 
-    public Output<String> getSourceBackup() {
+    public Output<String> sourceBackup() {
         return this.sourceBackup == null ? Codegen.empty() : this.sourceBackup;
     }
 

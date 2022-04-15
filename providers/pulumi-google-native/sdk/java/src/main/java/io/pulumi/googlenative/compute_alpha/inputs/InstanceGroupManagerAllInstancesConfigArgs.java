@@ -22,7 +22,7 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends io.pulumi.
     @Import(name="properties")
       private final @Nullable Output<InstancePropertiesPatchArgs> properties;
 
-    public Output<InstancePropertiesPatchArgs> getProperties() {
+    public Output<InstancePropertiesPatchArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

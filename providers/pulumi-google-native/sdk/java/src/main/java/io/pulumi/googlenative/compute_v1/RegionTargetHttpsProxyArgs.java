@@ -25,7 +25,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="authorizationPolicy")
       private final @Nullable Output<String> authorizationPolicy;
 
-    public Output<String> getAuthorizationPolicy() {
+    public Output<String> authorizationPolicy() {
         return this.authorizationPolicy == null ? Codegen.empty() : this.authorizationPolicy;
     }
 
@@ -36,7 +36,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,14 +47,14 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -65,7 +65,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="proxyBind")
       private final @Nullable Output<Boolean> proxyBind;
 
-    public Output<Boolean> getProxyBind() {
+    public Output<Boolean> proxyBind() {
         return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
     }
 
@@ -76,21 +76,21 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="quicOverride")
       private final @Nullable Output<RegionTargetHttpsProxyQuicOverride> quicOverride;
 
-    public Output<RegionTargetHttpsProxyQuicOverride> getQuicOverride() {
+    public Output<RegionTargetHttpsProxyQuicOverride> quicOverride() {
         return this.quicOverride == null ? Codegen.empty() : this.quicOverride;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -101,7 +101,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="serverTlsPolicy")
       private final @Nullable Output<String> serverTlsPolicy;
 
-    public Output<String> getServerTlsPolicy() {
+    public Output<String> serverTlsPolicy() {
         return this.serverTlsPolicy == null ? Codegen.empty() : this.serverTlsPolicy;
     }
 
@@ -112,7 +112,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="sslCertificates")
       private final @Nullable Output<List<String>> sslCertificates;
 
-    public Output<List<String>> getSslCertificates() {
+    public Output<List<String>> sslCertificates() {
         return this.sslCertificates == null ? Codegen.empty() : this.sslCertificates;
     }
 
@@ -123,7 +123,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
@@ -134,7 +134,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap == null ? Codegen.empty() : this.urlMap;
     }
 

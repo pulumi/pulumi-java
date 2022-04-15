@@ -27,7 +27,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentHash")
       private final @Nullable Output<HashArgs> contentHash;
 
-    public Output<HashArgs> getContentHash() {
+    public Output<HashArgs> contentHash() {
         return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

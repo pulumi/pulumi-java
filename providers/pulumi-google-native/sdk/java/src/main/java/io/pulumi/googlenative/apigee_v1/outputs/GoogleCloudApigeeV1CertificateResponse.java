@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1CertificateResponse {
      * Chain of certificates under this name.
      * 
     */
-    public List<GoogleCloudApigeeV1CertInfoResponse> getCertInfo() {
+    public List<GoogleCloudApigeeV1CertInfoResponse> certInfo() {
         return this.certInfo;
     }
 

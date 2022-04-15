@@ -25,7 +25,7 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="enableHttpPortAccess", required=true)
       private final Boolean enableHttpPortAccess;
 
-    public Boolean getEnableHttpPortAccess() {
+    public Boolean enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
 
@@ -36,7 +36,7 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="httpPorts", required=true)
       private final Map<String,String> httpPorts;
 
-    public Map<String,String> getHttpPorts() {
+    public Map<String,String> httpPorts() {
         return this.httpPorts;
     }
 

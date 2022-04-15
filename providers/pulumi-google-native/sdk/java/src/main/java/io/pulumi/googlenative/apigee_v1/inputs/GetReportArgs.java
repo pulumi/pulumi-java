@@ -15,14 +15,14 @@ public final class GetReportArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="reportId", required=true)
       private final String reportId;
 
-    public String getReportId() {
+    public String reportId() {
         return this.reportId;
     }
 

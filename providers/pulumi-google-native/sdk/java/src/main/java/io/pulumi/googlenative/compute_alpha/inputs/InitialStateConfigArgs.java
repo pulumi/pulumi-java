@@ -27,7 +27,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dbs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbs;
 
-    public Output<List<FileContentBufferArgs>> getDbs() {
+    public Output<List<FileContentBufferArgs>> dbs() {
         return this.dbs == null ? Codegen.empty() : this.dbs;
     }
 
@@ -38,7 +38,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dbxs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbxs;
 
-    public Output<List<FileContentBufferArgs>> getDbxs() {
+    public Output<List<FileContentBufferArgs>> dbxs() {
         return this.dbxs == null ? Codegen.empty() : this.dbxs;
     }
 
@@ -49,7 +49,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keks")
       private final @Nullable Output<List<FileContentBufferArgs>> keks;
 
-    public Output<List<FileContentBufferArgs>> getKeks() {
+    public Output<List<FileContentBufferArgs>> keks() {
         return this.keks == null ? Codegen.empty() : this.keks;
     }
 
@@ -60,7 +60,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pk")
       private final @Nullable Output<FileContentBufferArgs> pk;
 
-    public Output<FileContentBufferArgs> getPk() {
+    public Output<FileContentBufferArgs> pk() {
         return this.pk == null ? Codegen.empty() : this.pk;
     }
 

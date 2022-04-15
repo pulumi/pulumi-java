@@ -24,7 +24,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,14 +35,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -53,7 +53,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,14 +64,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="productCategory")
       private final @Nullable Output<String> productCategory;
 
-    public Output<String> getProductCategory() {
+    public Output<String> productCategory() {
         return this.productCategory == null ? Codegen.empty() : this.productCategory;
     }
 
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
@@ -82,14 +82,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="productLabels")
       private final @Nullable Output<List<KeyValueArgs>> productLabels;
 
-    public Output<List<KeyValueArgs>> getProductLabels() {
+    public Output<List<KeyValueArgs>> productLabels() {
         return this.productLabels == null ? Codegen.empty() : this.productLabels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

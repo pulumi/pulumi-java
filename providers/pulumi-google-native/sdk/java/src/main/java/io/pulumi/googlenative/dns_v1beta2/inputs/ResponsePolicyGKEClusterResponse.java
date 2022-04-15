@@ -19,14 +19,14 @@ public final class ResponsePolicyGKEClusterResponse extends io.pulumi.resources.
     @Import(name="gkeClusterName", required=true)
       private final String gkeClusterName;
 
-    public String getGkeClusterName() {
+    public String gkeClusterName() {
         return this.gkeClusterName;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

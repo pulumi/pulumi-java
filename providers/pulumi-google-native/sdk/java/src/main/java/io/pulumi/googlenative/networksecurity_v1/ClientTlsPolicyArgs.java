@@ -26,14 +26,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clientCertificate")
       private final @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
 
-    public Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> getClientCertificate() {
+    public Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate() {
         return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     @Import(name="clientTlsPolicyId", required=true)
       private final Output<String> clientTlsPolicyId;
 
-    public Output<String> getClientTlsPolicyId() {
+    public Output<String> clientTlsPolicyId() {
         return this.clientTlsPolicyId;
     }
 
@@ -44,7 +44,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -55,14 +55,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,14 +73,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -91,7 +91,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serverValidationCa")
       private final @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
 
-    public Output<List<ValidationCAArgs>> getServerValidationCa() {
+    public Output<List<ValidationCAArgs>> serverValidationCa() {
         return this.serverValidationCa == null ? Codegen.empty() : this.serverValidationCa;
     }
 
@@ -102,7 +102,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sni")
       private final @Nullable Output<String> sni;
 
-    public Output<String> getSni() {
+    public Output<String> sni() {
         return this.sni == null ? Codegen.empty() : this.sni;
     }
 

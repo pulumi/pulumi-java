@@ -23,35 +23,35 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="basicPerfSampleSeries")
       private final @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
-    public Output<BasicPerfSampleSeriesArgs> getBasicPerfSampleSeries() {
+    public Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries() {
         return this.basicPerfSampleSeries == null ? Codegen.empty() : this.basicPerfSampleSeries;
     }
 
     @Import(name="executionId", required=true)
       private final Output<String> executionId;
 
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
     @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 

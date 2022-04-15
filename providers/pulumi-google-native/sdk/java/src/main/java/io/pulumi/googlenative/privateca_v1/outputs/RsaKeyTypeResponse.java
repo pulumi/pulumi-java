@@ -32,14 +32,14 @@ public final class RsaKeyTypeResponse {
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
      * 
     */
-    public String getMaxModulusSize() {
+    public String maxModulusSize() {
         return this.maxModulusSize;
     }
     /**
      * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
      * 
     */
-    public String getMinModulusSize() {
+    public String minModulusSize() {
         return this.minModulusSize;
     }
 

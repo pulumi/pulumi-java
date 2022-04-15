@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
     @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> getMethods() {
+    public Output<List<String>> methods() {
         return this.methods == null ? Codegen.empty() : this.methods;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 

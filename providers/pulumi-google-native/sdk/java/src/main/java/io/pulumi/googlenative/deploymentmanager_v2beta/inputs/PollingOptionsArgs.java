@@ -24,7 +24,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnostics")
       private final @Nullable Output<List<DiagnosticArgs>> diagnostics;
 
-    public Output<List<DiagnosticArgs>> getDiagnostics() {
+    public Output<List<DiagnosticArgs>> diagnostics() {
         return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
@@ -35,7 +35,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failCondition")
       private final @Nullable Output<String> failCondition;
 
-    public Output<String> getFailCondition() {
+    public Output<String> failCondition() {
         return this.failCondition == null ? Codegen.empty() : this.failCondition;
     }
 
@@ -46,7 +46,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="finishCondition")
       private final @Nullable Output<String> finishCondition;
 
-    public Output<String> getFinishCondition() {
+    public Output<String> finishCondition() {
         return this.finishCondition == null ? Codegen.empty() : this.finishCondition;
     }
 
@@ -57,7 +57,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pollingLink")
       private final @Nullable Output<String> pollingLink;
 
-    public Output<String> getPollingLink() {
+    public Output<String> pollingLink() {
         return this.pollingLink == null ? Codegen.empty() : this.pollingLink;
     }
 
@@ -68,7 +68,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetLink")
       private final @Nullable Output<String> targetLink;
 
-    public Output<String> getTargetLink() {
+    public Output<String> targetLink() {
         return this.targetLink == null ? Codegen.empty() : this.targetLink;
     }
 

@@ -23,7 +23,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
     @Import(name="amount", required=true)
       private final String amount;
 
-    public String getAmount() {
+    public String amount() {
         return this.amount;
     }
 
@@ -34,7 +34,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
     @Import(name="coresPerLicense", required=true)
       private final String coresPerLicense;
 
-    public String getCoresPerLicense() {
+    public String coresPerLicense() {
         return this.coresPerLicense;
     }
 
@@ -45,7 +45,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
     @Import(name="license", required=true)
       private final String license;
 
-    public String getLicense() {
+    public String license() {
         return this.license;
     }
 

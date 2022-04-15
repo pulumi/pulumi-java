@@ -24,7 +24,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -35,7 +35,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluationJobConfig", required=true)
       private final Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig;
 
-    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> getEvaluationJobConfig() {
+    public Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs> evaluationJobConfig() {
         return this.evaluationJobConfig;
     }
 
@@ -57,7 +57,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelMissingGroundTruth", required=true)
       private final Output<Boolean> labelMissingGroundTruth;
 
-    public Output<Boolean> getLabelMissingGroundTruth() {
+    public Output<Boolean> labelMissingGroundTruth() {
         return this.labelMissingGroundTruth;
     }
 
@@ -68,14 +68,14 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="modelVersion", required=true)
       private final Output<String> modelVersion;
 
-    public Output<String> getModelVersion() {
+    public Output<String> modelVersion() {
         return this.modelVersion;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -86,7 +86,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 

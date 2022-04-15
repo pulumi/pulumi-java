@@ -32,7 +32,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The time at which the channel was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +46,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -60,7 +60,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Text labels used for extra metadata and/or filtering.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -74,7 +74,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The current release for the channel, if any.
      * 
      */
-    public Output<ReleaseResponse> getRelease() {
+    public Output<ReleaseResponse> release() {
         return this.release;
     }
     /**
@@ -102,7 +102,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
      * 
      */
-    public Output<Integer> getRetainedReleaseCount() {
+    public Output<Integer> retainedReleaseCount() {
         return this.retainedReleaseCount;
     }
     /**
@@ -116,7 +116,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
      * 
      */
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl;
     }
     /**
@@ -130,7 +130,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The time at which the channel was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -144,7 +144,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

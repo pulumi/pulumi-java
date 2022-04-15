@@ -26,7 +26,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
     @Import(name="bigqueryDestination")
       private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
-    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> getBigqueryDestination() {
+    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
     }
 

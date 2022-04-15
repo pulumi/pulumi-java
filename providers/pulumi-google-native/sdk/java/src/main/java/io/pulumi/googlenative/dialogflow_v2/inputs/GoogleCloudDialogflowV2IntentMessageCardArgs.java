@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
     @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> getButtons() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageCardButtonArgs>> buttons() {
         return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardArgs extends io.pulum
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

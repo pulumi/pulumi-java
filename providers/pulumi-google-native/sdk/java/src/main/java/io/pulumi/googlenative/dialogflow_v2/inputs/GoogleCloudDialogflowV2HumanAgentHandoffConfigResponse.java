@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
     @Import(name="livePersonConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
-    public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse getLivePersonConfig() {
+    public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig() {
         return this.livePersonConfig;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
     @Import(name="salesforceLiveAgentConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
-    public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse getSalesforceLiveAgentConfig() {
+    public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
     }
 

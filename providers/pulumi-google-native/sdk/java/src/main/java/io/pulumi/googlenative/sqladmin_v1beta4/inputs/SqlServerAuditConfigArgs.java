@@ -26,7 +26,7 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -37,7 +37,7 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

@@ -25,7 +25,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="address", required=true)
       private final String address;
 
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
 
@@ -36,7 +36,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deadline", required=true)
       private final Double deadline;
 
-    public Double getDeadline() {
+    public Double deadline() {
         return this.deadline;
     }
 
@@ -47,7 +47,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disableAuth", required=true)
       private final Boolean disableAuth;
 
-    public Boolean getDisableAuth() {
+    public Boolean disableAuth() {
         return this.disableAuth;
     }
 
@@ -58,7 +58,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jwtAudience", required=true)
       private final String jwtAudience;
 
-    public String getJwtAudience() {
+    public String jwtAudience() {
         return this.jwtAudience;
     }
 
@@ -69,14 +69,14 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operationDeadline", required=true)
       private final Double operationDeadline;
 
-    public Double getOperationDeadline() {
+    public Double operationDeadline() {
         return this.operationDeadline;
     }
 
     @Import(name="pathTranslation", required=true)
       private final String pathTranslation;
 
-    public String getPathTranslation() {
+    public String pathTranslation() {
         return this.pathTranslation;
     }
 
@@ -87,7 +87,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -98,7 +98,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

@@ -32,7 +32,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the webhook is disabled.
      * 
      */
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -46,7 +46,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the webhook, unique within the agent.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -60,7 +60,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Configuration for a generic web service.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse> getGenericWebService() {
+    public Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse> genericWebService() {
         return this.genericWebService;
     }
     /**
@@ -74,7 +74,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse> getServiceDirectory() {
+    public Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse> serviceDirectory() {
         return this.serviceDirectory;
     }
     /**
@@ -102,7 +102,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
      */
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout;
     }
 

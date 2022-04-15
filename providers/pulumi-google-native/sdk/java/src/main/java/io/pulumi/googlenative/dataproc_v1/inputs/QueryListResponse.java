@@ -24,7 +24,7 @@ public final class QueryListResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="queries", required=true)
       private final List<String> queries;
 
-    public List<String> getQueries() {
+    public List<String> queries() {
         return this.queries;
     }
 

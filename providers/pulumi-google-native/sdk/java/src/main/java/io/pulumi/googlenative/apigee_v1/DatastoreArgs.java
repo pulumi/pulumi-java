@@ -23,7 +23,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreConfig")
       private final @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
-    public Output<GoogleCloudApigeeV1DatastoreConfigArgs> getDatastoreConfig() {
+    public Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig() {
         return this.datastoreConfig == null ? Codegen.empty() : this.datastoreConfig;
     }
 
@@ -34,14 +34,14 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -52,7 +52,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 

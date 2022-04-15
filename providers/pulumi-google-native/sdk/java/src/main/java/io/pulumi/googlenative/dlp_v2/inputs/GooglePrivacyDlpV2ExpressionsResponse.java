@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
     @Import(name="conditions", required=true)
       private final GooglePrivacyDlpV2ConditionsResponse conditions;
 
-    public GooglePrivacyDlpV2ConditionsResponse getConditions() {
+    public GooglePrivacyDlpV2ConditionsResponse conditions() {
         return this.conditions;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
     @Import(name="logicalOperator", required=true)
       private final String logicalOperator;
 
-    public String getLogicalOperator() {
+    public String logicalOperator() {
         return this.logicalOperator;
     }
 

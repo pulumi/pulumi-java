@@ -27,7 +27,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ellipticCurve")
       private final @Nullable Output<EcKeyTypeArgs> ellipticCurve;
 
-    public Output<EcKeyTypeArgs> getEllipticCurve() {
+    public Output<EcKeyTypeArgs> ellipticCurve() {
         return this.ellipticCurve == null ? Codegen.empty() : this.ellipticCurve;
     }
 
@@ -38,7 +38,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rsa")
       private final @Nullable Output<RsaKeyTypeArgs> rsa;
 
-    public Output<RsaKeyTypeArgs> getRsa() {
+    public Output<RsaKeyTypeArgs> rsa() {
         return this.rsa == null ? Codegen.empty() : this.rsa;
     }
 

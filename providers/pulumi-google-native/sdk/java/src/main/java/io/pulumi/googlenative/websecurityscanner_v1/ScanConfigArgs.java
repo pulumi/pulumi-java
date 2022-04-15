@@ -30,7 +30,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
 
-    public Output<AuthenticationArgs> getAuthentication() {
+    public Output<AuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -41,7 +41,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blacklistPatterns")
       private final @Nullable Output<List<String>> blacklistPatterns;
 
-    public Output<List<String>> getBlacklistPatterns() {
+    public Output<List<String>> blacklistPatterns() {
         return this.blacklistPatterns == null ? Codegen.empty() : this.blacklistPatterns;
     }
 
@@ -52,7 +52,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -63,7 +63,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportToSecurityCommandCenter")
       private final @Nullable Output<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter;
 
-    public Output<ScanConfigExportToSecurityCommandCenter> getExportToSecurityCommandCenter() {
+    public Output<ScanConfigExportToSecurityCommandCenter> exportToSecurityCommandCenter() {
         return this.exportToSecurityCommandCenter == null ? Codegen.empty() : this.exportToSecurityCommandCenter;
     }
 
@@ -74,7 +74,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreHttpStatusErrors")
       private final @Nullable Output<Boolean> ignoreHttpStatusErrors;
 
-    public Output<Boolean> getIgnoreHttpStatusErrors() {
+    public Output<Boolean> ignoreHttpStatusErrors() {
         return this.ignoreHttpStatusErrors == null ? Codegen.empty() : this.ignoreHttpStatusErrors;
     }
 
@@ -85,7 +85,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedScan")
       private final @Nullable Output<Boolean> managedScan;
 
-    public Output<Boolean> getManagedScan() {
+    public Output<Boolean> managedScan() {
         return this.managedScan == null ? Codegen.empty() : this.managedScan;
     }
 
@@ -96,7 +96,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxQps")
       private final @Nullable Output<Integer> maxQps;
 
-    public Output<Integer> getMaxQps() {
+    public Output<Integer> maxQps() {
         return this.maxQps == null ? Codegen.empty() : this.maxQps;
     }
 
@@ -107,14 +107,14 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -125,7 +125,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="riskLevel")
       private final @Nullable Output<ScanConfigRiskLevel> riskLevel;
 
-    public Output<ScanConfigRiskLevel> getRiskLevel() {
+    public Output<ScanConfigRiskLevel> riskLevel() {
         return this.riskLevel == null ? Codegen.empty() : this.riskLevel;
     }
 
@@ -136,7 +136,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> getSchedule() {
+    public Output<ScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -147,7 +147,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startingUrls", required=true)
       private final Output<List<String>> startingUrls;
 
-    public Output<List<String>> getStartingUrls() {
+    public Output<List<String>> startingUrls() {
         return this.startingUrls;
     }
 
@@ -158,7 +158,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticIpScan")
       private final @Nullable Output<Boolean> staticIpScan;
 
-    public Output<Boolean> getStaticIpScan() {
+    public Output<Boolean> staticIpScan() {
         return this.staticIpScan == null ? Codegen.empty() : this.staticIpScan;
     }
 
@@ -169,7 +169,7 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAgent")
       private final @Nullable Output<ScanConfigUserAgent> userAgent;
 
-    public Output<ScanConfigUserAgent> getUserAgent() {
+    public Output<ScanConfigUserAgent> userAgent() {
         return this.userAgent == null ? Codegen.empty() : this.userAgent;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityResponse extends 
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityResponse extends 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

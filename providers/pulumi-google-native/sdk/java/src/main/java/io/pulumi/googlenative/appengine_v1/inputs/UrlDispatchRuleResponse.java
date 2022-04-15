@@ -23,7 +23,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -34,7 +34,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -45,7 +45,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

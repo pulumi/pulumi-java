@@ -29,7 +29,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowNullHeader")
       private final @Nullable Output<Boolean> allowNullHeader;
 
-    public Output<Boolean> getAllowNullHeader() {
+    public Output<Boolean> allowNullHeader() {
         return this.allowNullHeader == null ? Codegen.empty() : this.allowNullHeader;
     }
 
@@ -40,7 +40,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<SchemaPackageArgs> schema;
 
-    public Output<SchemaPackageArgs> getSchema() {
+    public Output<SchemaPackageArgs> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -51,7 +51,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="segmentTerminator")
       private final @Nullable Output<String> segmentTerminator;
 
-    public Output<String> getSegmentTerminator() {
+    public Output<String> segmentTerminator() {
         return this.segmentTerminator == null ? Codegen.empty() : this.segmentTerminator;
     }
 
@@ -62,7 +62,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<ParserConfigVersion> version;
 
-    public Output<ParserConfigVersion> getVersion() {
+    public Output<ParserConfigVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -23,7 +23,7 @@ public final class AutoscalingTargetsResponse extends io.pulumi.resources.Invoke
     @Import(name="cpuUtilizationPercent", required=true)
       private final Integer cpuUtilizationPercent;
 
-    public Integer getCpuUtilizationPercent() {
+    public Integer cpuUtilizationPercent() {
         return this.cpuUtilizationPercent;
     }
 

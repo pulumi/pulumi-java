@@ -17,14 +17,14 @@ public final class GetHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthCheck", required=true)
       private final String healthCheck;
 
-    public String getHealthCheck() {
+    public String healthCheck() {
         return this.healthCheck;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

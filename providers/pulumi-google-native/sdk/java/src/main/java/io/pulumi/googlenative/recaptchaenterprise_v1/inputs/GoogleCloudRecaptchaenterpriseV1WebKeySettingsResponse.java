@@ -25,7 +25,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
     @Import(name="allowAllDomains", required=true)
       private final Boolean allowAllDomains;
 
-    public Boolean getAllowAllDomains() {
+    public Boolean allowAllDomains() {
         return this.allowAllDomains;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
     @Import(name="allowAmpTraffic", required=true)
       private final Boolean allowAmpTraffic;
 
-    public Boolean getAllowAmpTraffic() {
+    public Boolean allowAmpTraffic() {
         return this.allowAmpTraffic;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
     @Import(name="allowedDomains", required=true)
       private final List<String> allowedDomains;
 
-    public List<String> getAllowedDomains() {
+    public List<String> allowedDomains() {
         return this.allowedDomains;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
     @Import(name="challengeSecurityPreference", required=true)
       private final String challengeSecurityPreference;
 
-    public String getChallengeSecurityPreference() {
+    public String challengeSecurityPreference() {
         return this.challengeSecurityPreference;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse extend
     @Import(name="integrationType", required=true)
       private final String integrationType;
 
-    public String getIntegrationType() {
+    public String integrationType() {
         return this.integrationType;
     }
 

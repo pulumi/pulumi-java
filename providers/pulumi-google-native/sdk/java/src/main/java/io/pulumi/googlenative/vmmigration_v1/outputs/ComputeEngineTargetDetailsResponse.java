@@ -143,119 +143,119 @@ public final class ComputeEngineTargetDetailsResponse {
      * Additional licenses to assign to the VM.
      * 
     */
-    public List<String> getAdditionalLicenses() {
+    public List<String> additionalLicenses() {
         return this.additionalLicenses;
     }
     /**
      * The OS license returned from the adaptation module report.
      * 
     */
-    public AppliedLicenseResponse getAppliedLicense() {
+    public AppliedLicenseResponse appliedLicense() {
         return this.appliedLicense;
     }
     /**
      * The VM Boot Option, as set in the source vm.
      * 
     */
-    public String getBootOption() {
+    public String bootOption() {
         return this.bootOption;
     }
     /**
      * Compute instance scheduling information (if empty default is used).
      * 
     */
-    public ComputeSchedulingResponse getComputeScheduling() {
+    public ComputeSchedulingResponse computeScheduling() {
         return this.computeScheduling;
     }
     /**
      * The disk type to use in the VM.
      * 
     */
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
     /**
      * A map of labels to associate with the VM.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The license type to use in OS adaptation.
      * 
     */
-    public String getLicenseType() {
+    public String licenseType() {
         return this.licenseType;
     }
     /**
      * The machine type to create the VM with.
      * 
     */
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
     /**
      * The machine type series to create the VM with.
      * 
     */
-    public String getMachineTypeSeries() {
+    public String machineTypeSeries() {
         return this.machineTypeSeries;
     }
     /**
      * The metadata key/value pairs to assign to the VM.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * List of NICs connected to this VM.
      * 
     */
-    public List<NetworkInterfaceResponse> getNetworkInterfaces() {
+    public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * A map of network tags to associate with the VM.
      * 
     */
-    public List<String> getNetworkTags() {
+    public List<String> networkTags() {
         return this.networkTags;
     }
     /**
      * The GCP target project ID or project name.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
      * 
     */
-    public Boolean getSecureBoot() {
+    public Boolean secureBoot() {
         return this.secureBoot;
     }
     /**
      * The service account to associate the VM with.
      * 
     */
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
     /**
      * The name of the VM to create.
      * 
     */
-    public String getVmName() {
+    public String vmName() {
         return this.vmName;
     }
     /**
      * The zone in which to create the VM.
      * 
     */
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

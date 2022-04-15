@@ -28,7 +28,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endpointFilter")
       private final @Nullable Output<String> endpointFilter;
 
-    public Output<String> getEndpointFilter() {
+    public Output<String> endpointFilter() {
         return this.endpointFilter == null ? Codegen.empty() : this.endpointFilter;
     }
 
@@ -39,7 +39,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serverCertificates", required=true)
       private final Output<List<CertificateArgs>> serverCertificates;
 
-    public Output<List<CertificateArgs>> getServerCertificates() {
+    public Output<List<CertificateArgs>> serverCertificates() {
         return this.serverCertificates;
     }
 
@@ -61,7 +61,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceDirectoryService", required=true)
       private final Output<String> serviceDirectoryService;
 
-    public Output<String> getServiceDirectoryService() {
+    public Output<String> serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
 

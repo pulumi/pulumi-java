@@ -27,7 +27,7 @@ public final class PhraseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boost")
       private final @Nullable Output<Double> boost;
 
-    public Output<Double> getBoost() {
+    public Output<Double> boost() {
         return this.boost == null ? Codegen.empty() : this.boost;
     }
 
@@ -38,7 +38,7 @@ public final class PhraseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

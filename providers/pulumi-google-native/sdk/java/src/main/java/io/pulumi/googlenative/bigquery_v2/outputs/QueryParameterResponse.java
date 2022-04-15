@@ -41,21 +41,21 @@ public final class QueryParameterResponse {
      * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * [Required] The type of this parameter.
      * 
     */
-    public QueryParameterTypeResponse getParameterType() {
+    public QueryParameterTypeResponse parameterType() {
         return this.parameterType;
     }
     /**
      * [Required] The value of this parameter.
      * 
     */
-    public QueryParameterValueResponse getParameterValue() {
+    public QueryParameterValueResponse parameterValue() {
         return this.parameterValue;
     }
 

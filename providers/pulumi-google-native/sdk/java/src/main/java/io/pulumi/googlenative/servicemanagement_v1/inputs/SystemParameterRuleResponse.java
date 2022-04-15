@@ -25,7 +25,7 @@ public final class SystemParameterRuleResponse extends io.pulumi.resources.Invok
     @Import(name="parameters", required=true)
       private final List<SystemParameterResponse> parameters;
 
-    public List<SystemParameterResponse> getParameters() {
+    public List<SystemParameterResponse> parameters() {
         return this.parameters;
     }
 
@@ -36,7 +36,7 @@ public final class SystemParameterRuleResponse extends io.pulumi.resources.Invok
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

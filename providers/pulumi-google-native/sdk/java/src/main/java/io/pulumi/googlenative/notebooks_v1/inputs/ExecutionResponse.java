@@ -24,7 +24,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -35,7 +35,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="executionTemplate", required=true)
       private final ExecutionTemplateResponse executionTemplate;
 
-    public ExecutionTemplateResponse getExecutionTemplate() {
+    public ExecutionTemplateResponse executionTemplate() {
         return this.executionTemplate;
     }
 
@@ -68,7 +68,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobUri", required=true)
       private final String jobUri;
 
-    public String getJobUri() {
+    public String jobUri() {
         return this.jobUri;
     }
 
@@ -79,7 +79,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -90,7 +90,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputNotebookFile", required=true)
       private final String outputNotebookFile;
 
-    public String getOutputNotebookFile() {
+    public String outputNotebookFile() {
         return this.outputNotebookFile;
     }
 
@@ -101,7 +101,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -112,7 +112,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

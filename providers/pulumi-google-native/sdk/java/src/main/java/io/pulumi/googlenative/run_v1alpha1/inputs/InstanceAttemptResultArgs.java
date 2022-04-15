@@ -27,7 +27,7 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     @Import(name="exitCode")
       private final @Nullable Output<Integer> exitCode;
 
-    public Output<Integer> getExitCode() {
+    public Output<Integer> exitCode() {
         return this.exitCode == null ? Codegen.empty() : this.exitCode;
     }
 
@@ -38,7 +38,7 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
     @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;
 
-    public Output<GoogleRpcStatusArgs> getStatus() {
+    public Output<GoogleRpcStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

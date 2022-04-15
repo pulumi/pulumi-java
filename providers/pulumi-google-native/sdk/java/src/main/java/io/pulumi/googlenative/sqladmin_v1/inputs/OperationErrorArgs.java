@@ -26,7 +26,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
+    public Output<String> code() {
         return this.code == null ? Codegen.empty() : this.code;
     }
 
@@ -37,7 +37,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 

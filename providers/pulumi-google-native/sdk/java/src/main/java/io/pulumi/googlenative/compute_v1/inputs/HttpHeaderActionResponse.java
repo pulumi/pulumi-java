@@ -25,7 +25,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="requestHeadersToAdd", required=true)
       private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
 
-    public List<HttpHeaderOptionResponse> getRequestHeadersToAdd() {
+    public List<HttpHeaderOptionResponse> requestHeadersToAdd() {
         return this.requestHeadersToAdd;
     }
 
@@ -36,7 +36,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="requestHeadersToRemove", required=true)
       private final List<String> requestHeadersToRemove;
 
-    public List<String> getRequestHeadersToRemove() {
+    public List<String> requestHeadersToRemove() {
         return this.requestHeadersToRemove;
     }
 
@@ -47,7 +47,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="responseHeadersToAdd", required=true)
       private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
 
-    public List<HttpHeaderOptionResponse> getResponseHeadersToAdd() {
+    public List<HttpHeaderOptionResponse> responseHeadersToAdd() {
         return this.responseHeadersToAdd;
     }
 
@@ -58,7 +58,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="responseHeadersToRemove", required=true)
       private final List<String> responseHeadersToRemove;
 
-    public List<String> getResponseHeadersToRemove() {
+    public List<String> responseHeadersToRemove() {
         return this.responseHeadersToRemove;
     }
 

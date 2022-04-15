@@ -27,7 +27,7 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     @Import(name="recurrence")
       private final @Nullable Output<String> recurrence;
 
-    public Output<String> getRecurrence() {
+    public Output<String> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 
@@ -38,7 +38,7 @@ public final class RecurringTimeWindowArgs extends io.pulumi.resources.ResourceA
     @Import(name="window")
       private final @Nullable Output<TimeWindowArgs> window;
 
-    public Output<TimeWindowArgs> getWindow() {
+    public Output<TimeWindowArgs> window() {
         return this.window == null ? Codegen.empty() : this.window;
     }
 

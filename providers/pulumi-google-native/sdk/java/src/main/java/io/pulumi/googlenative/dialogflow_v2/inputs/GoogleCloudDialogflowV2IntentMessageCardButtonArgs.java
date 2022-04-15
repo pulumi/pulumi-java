@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonArgs extends io
     @Import(name="postback")
       private final @Nullable Output<String> postback;
 
-    public Output<String> getPostback() {
+    public Output<String> postback() {
         return this.postback == null ? Codegen.empty() : this.postback;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonArgs extends io
     @Import(name="text")
       private final @Nullable Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

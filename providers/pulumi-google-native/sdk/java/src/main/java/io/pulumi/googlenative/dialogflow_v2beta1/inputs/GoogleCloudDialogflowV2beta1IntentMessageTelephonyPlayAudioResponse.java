@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioRe
     @Import(name="audioUri", required=true)
       private final String audioUri;
 
-    public String getAudioUri() {
+    public String audioUri() {
         return this.audioUri;
     }
 

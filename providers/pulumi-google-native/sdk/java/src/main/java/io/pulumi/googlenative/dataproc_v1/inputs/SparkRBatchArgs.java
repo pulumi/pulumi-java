@@ -27,7 +27,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> getArchiveUris() {
+    public Output<List<String>> archiveUris() {
         return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
@@ -38,7 +38,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -49,7 +49,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> getFileUris() {
+    public Output<List<String>> fileUris() {
         return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
@@ -60,7 +60,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mainRFileUri", required=true)
       private final Output<String> mainRFileUri;
 
-    public Output<String> getMainRFileUri() {
+    public Output<String> mainRFileUri() {
         return this.mainRFileUri;
     }
 

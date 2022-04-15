@@ -17,14 +17,14 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

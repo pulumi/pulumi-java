@@ -27,7 +27,7 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="shownColumns")
       private final @Nullable Output<List<String>> shownColumns;
 
-    public Output<List<String>> getShownColumns() {
+    public Output<List<String>> shownColumns() {
         return this.shownColumns == null ? Codegen.empty() : this.shownColumns;
     }
 

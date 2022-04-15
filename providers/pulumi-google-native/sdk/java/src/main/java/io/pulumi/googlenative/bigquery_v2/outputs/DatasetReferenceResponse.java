@@ -32,14 +32,14 @@ public final class DatasetReferenceResponse {
      * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
     */
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
     /**
      * [Optional] The ID of the project containing this dataset.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

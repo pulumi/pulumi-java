@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends io.pulumi.
     @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 

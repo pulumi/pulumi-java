@@ -23,7 +23,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gatewayAuthMethod", required=true)
       private final String gatewayAuthMethod;
 
-    public String getGatewayAuthMethod() {
+    public String gatewayAuthMethod() {
         return this.gatewayAuthMethod;
     }
 
@@ -34,7 +34,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gatewayType", required=true)
       private final String gatewayType;
 
-    public String getGatewayType() {
+    public String gatewayType() {
         return this.gatewayType;
     }
 
@@ -45,7 +45,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="lastAccessedGatewayId", required=true)
       private final String lastAccessedGatewayId;
 
-    public String getLastAccessedGatewayId() {
+    public String lastAccessedGatewayId() {
         return this.lastAccessedGatewayId;
     }
 
@@ -56,7 +56,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="lastAccessedGatewayTime", required=true)
       private final String lastAccessedGatewayTime;
 
-    public String getLastAccessedGatewayTime() {
+    public String lastAccessedGatewayTime() {
         return this.lastAccessedGatewayTime;
     }
 

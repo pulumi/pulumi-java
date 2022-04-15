@@ -77,56 +77,56 @@ public final class GetPrivateConnectionResult {
      * The create time of the resource.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * In case of error, the details of the error in a user-friendly format.
      * 
     */
-    public ErrorResponse getError() {
+    public ErrorResponse error() {
         return this.error;
     }
     /**
      * Labels.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The resource's name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the Private Connection.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The update time of the resource.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * VPC Peering Config.
      * 
     */
-    public VpcPeeringConfigResponse getVpcPeeringConfig() {
+    public VpcPeeringConfigResponse vpcPeeringConfig() {
         return this.vpcPeeringConfig;
     }
 

@@ -27,7 +27,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fileHashes", required=true)
       private final Map<String,String> fileHashes;
 
-    public Map<String,String> getFileHashes() {
+    public Map<String,String> fileHashes() {
         return this.fileHashes;
     }
 
@@ -38,7 +38,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="resolvedRepoSource", required=true)
       private final RepoSourceResponse resolvedRepoSource;
 
-    public RepoSourceResponse getResolvedRepoSource() {
+    public RepoSourceResponse resolvedRepoSource() {
         return this.resolvedRepoSource;
     }
 
@@ -49,7 +49,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="resolvedStorageSource", required=true)
       private final StorageSourceResponse resolvedStorageSource;
 
-    public StorageSourceResponse getResolvedStorageSource() {
+    public StorageSourceResponse resolvedStorageSource() {
         return this.resolvedStorageSource;
     }
 
@@ -60,7 +60,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="resolvedStorageSourceManifest", required=true)
       private final StorageSourceManifestResponse resolvedStorageSourceManifest;
 
-    public StorageSourceManifestResponse getResolvedStorageSourceManifest() {
+    public StorageSourceManifestResponse resolvedStorageSourceManifest() {
         return this.resolvedStorageSourceManifest;
     }
 

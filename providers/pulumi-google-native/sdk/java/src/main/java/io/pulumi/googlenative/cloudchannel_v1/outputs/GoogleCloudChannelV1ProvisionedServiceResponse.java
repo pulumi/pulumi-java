@@ -39,21 +39,21 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
      * The product pertaining to the provisioning resource as specified in the Offer.
      * 
     */
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
     /**
      * Provisioning ID of the entitlement. For Google Workspace, this would be the underlying Subscription ID. For Google Cloud Platform, this would be the Billing Account ID of the billing subaccount."
      * 
     */
-    public String getProvisioningId() {
+    public String provisioningId() {
         return this.provisioningId;
     }
     /**
      * The SKU pertaining to the provisioning resource as specified in the Offer.
      * 
     */
-    public String getSkuId() {
+    public String skuId() {
         return this.skuId;
     }
 

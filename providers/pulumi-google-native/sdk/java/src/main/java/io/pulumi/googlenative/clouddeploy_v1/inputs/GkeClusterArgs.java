@@ -26,7 +26,7 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 

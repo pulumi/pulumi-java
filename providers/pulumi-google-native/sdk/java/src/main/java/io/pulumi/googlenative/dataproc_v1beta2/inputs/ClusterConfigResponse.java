@@ -35,7 +35,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="autoscalingConfig", required=true)
       private final AutoscalingConfigResponse autoscalingConfig;
 
-    public AutoscalingConfigResponse getAutoscalingConfig() {
+    public AutoscalingConfigResponse autoscalingConfig() {
         return this.autoscalingConfig;
     }
 
@@ -46,7 +46,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="configBucket", required=true)
       private final String configBucket;
 
-    public String getConfigBucket() {
+    public String configBucket() {
         return this.configBucket;
     }
 
@@ -57,7 +57,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
-    public EncryptionConfigResponse getEncryptionConfig() {
+    public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
     }
 
@@ -68,7 +68,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="endpointConfig", required=true)
       private final EndpointConfigResponse endpointConfig;
 
-    public EndpointConfigResponse getEndpointConfig() {
+    public EndpointConfigResponse endpointConfig() {
         return this.endpointConfig;
     }
 
@@ -79,7 +79,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gceClusterConfig", required=true)
       private final GceClusterConfigResponse gceClusterConfig;
 
-    public GceClusterConfigResponse getGceClusterConfig() {
+    public GceClusterConfigResponse gceClusterConfig() {
         return this.gceClusterConfig;
     }
 
@@ -90,7 +90,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="gkeClusterConfig", required=true)
       private final GkeClusterConfigResponse gkeClusterConfig;
 
-    public GkeClusterConfigResponse getGkeClusterConfig() {
+    public GkeClusterConfigResponse gkeClusterConfig() {
         return this.gkeClusterConfig;
     }
 
@@ -101,7 +101,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="initializationActions", required=true)
       private final List<NodeInitializationActionResponse> initializationActions;
 
-    public List<NodeInitializationActionResponse> getInitializationActions() {
+    public List<NodeInitializationActionResponse> initializationActions() {
         return this.initializationActions;
     }
 
@@ -112,7 +112,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="lifecycleConfig", required=true)
       private final LifecycleConfigResponse lifecycleConfig;
 
-    public LifecycleConfigResponse getLifecycleConfig() {
+    public LifecycleConfigResponse lifecycleConfig() {
         return this.lifecycleConfig;
     }
 
@@ -123,7 +123,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="masterConfig", required=true)
       private final InstanceGroupConfigResponse masterConfig;
 
-    public InstanceGroupConfigResponse getMasterConfig() {
+    public InstanceGroupConfigResponse masterConfig() {
         return this.masterConfig;
     }
 
@@ -134,7 +134,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metastoreConfig", required=true)
       private final MetastoreConfigResponse metastoreConfig;
 
-    public MetastoreConfigResponse getMetastoreConfig() {
+    public MetastoreConfigResponse metastoreConfig() {
         return this.metastoreConfig;
     }
 
@@ -145,7 +145,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="secondaryWorkerConfig", required=true)
       private final InstanceGroupConfigResponse secondaryWorkerConfig;
 
-    public InstanceGroupConfigResponse getSecondaryWorkerConfig() {
+    public InstanceGroupConfigResponse secondaryWorkerConfig() {
         return this.secondaryWorkerConfig;
     }
 
@@ -156,7 +156,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="securityConfig", required=true)
       private final SecurityConfigResponse securityConfig;
 
-    public SecurityConfigResponse getSecurityConfig() {
+    public SecurityConfigResponse securityConfig() {
         return this.securityConfig;
     }
 
@@ -167,7 +167,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="softwareConfig", required=true)
       private final SoftwareConfigResponse softwareConfig;
 
-    public SoftwareConfigResponse getSoftwareConfig() {
+    public SoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
     }
 
@@ -178,7 +178,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="tempBucket", required=true)
       private final String tempBucket;
 
-    public String getTempBucket() {
+    public String tempBucket() {
         return this.tempBucket;
     }
 
@@ -189,7 +189,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="workerConfig", required=true)
       private final InstanceGroupConfigResponse workerConfig;
 
-    public InstanceGroupConfigResponse getWorkerConfig() {
+    public InstanceGroupConfigResponse workerConfig() {
         return this.workerConfig;
     }
 

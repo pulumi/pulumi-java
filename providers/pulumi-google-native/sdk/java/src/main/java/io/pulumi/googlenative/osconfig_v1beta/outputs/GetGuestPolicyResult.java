@@ -86,63 +86,63 @@ public final class GetGuestPolicyResult {
      * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
      * 
     */
-    public AssignmentResponse getAssignment() {
+    public AssignmentResponse assignment() {
         return this.assignment;
     }
     /**
      * Time this guest policy was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
      * 
     */
-    public List<PackageRepositoryResponse> getPackageRepositories() {
+    public List<PackageRepositoryResponse> packageRepositories() {
         return this.packageRepositories;
     }
     /**
      * The software packages to be managed by this policy.
      * 
     */
-    public List<PackageResponse> getPackages() {
+    public List<PackageResponse> packages() {
         return this.packages;
     }
     /**
      * A list of Recipes to install on the VM instance.
      * 
     */
-    public List<SoftwareRecipeResponse> getRecipes() {
+    public List<SoftwareRecipeResponse> recipes() {
         return this.recipes;
     }
     /**
      * Last time this guest policy was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

@@ -27,7 +27,7 @@ public final class AutoscalingPolicyScaleDownControlArgs extends io.pulumi.resou
     @Import(name="maxScaledDownReplicas")
       private final @Nullable Output<FixedOrPercentArgs> maxScaledDownReplicas;
 
-    public Output<FixedOrPercentArgs> getMaxScaledDownReplicas() {
+    public Output<FixedOrPercentArgs> maxScaledDownReplicas() {
         return this.maxScaledDownReplicas == null ? Codegen.empty() : this.maxScaledDownReplicas;
     }
 
@@ -38,7 +38,7 @@ public final class AutoscalingPolicyScaleDownControlArgs extends io.pulumi.resou
     @Import(name="timeWindowSec")
       private final @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> getTimeWindowSec() {
+    public Output<Integer> timeWindowSec() {
         return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
     }
 

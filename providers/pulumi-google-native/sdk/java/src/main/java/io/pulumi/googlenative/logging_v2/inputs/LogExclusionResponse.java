@@ -24,7 +24,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -35,7 +35,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disabled", required=true)
       private final Boolean disabled;
 
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 
@@ -57,7 +57,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 
@@ -68,7 +68,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

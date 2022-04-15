@@ -24,7 +24,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
      * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
      * 
     */
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
 

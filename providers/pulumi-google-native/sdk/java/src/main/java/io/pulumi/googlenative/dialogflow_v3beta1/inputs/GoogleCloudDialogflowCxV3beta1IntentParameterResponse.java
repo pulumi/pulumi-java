@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     @Import(name="entityType", required=true)
       private final String entityType;
 
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     @Import(name="isList", required=true)
       private final Boolean isList;
 
-    public Boolean getIsList() {
+    public Boolean isList() {
         return this.isList;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse extends
     @Import(name="redact", required=true)
       private final Boolean redact;
 
-    public Boolean getRedact() {
+    public Boolean redact() {
         return this.redact;
     }
 

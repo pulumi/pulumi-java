@@ -29,7 +29,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="epoch")
       private final @Nullable Output<Integer> epoch;
 
-    public Output<Integer> getEpoch() {
+    public Output<Integer> epoch() {
         return this.epoch == null ? Codegen.empty() : this.epoch;
     }
 
@@ -40,7 +40,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fullName")
       private final @Nullable Output<String> fullName;
 
-    public Output<String> getFullName() {
+    public Output<String> fullName() {
         return this.fullName == null ? Codegen.empty() : this.fullName;
     }
 
@@ -51,7 +51,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inclusive")
       private final @Nullable Output<Boolean> inclusive;
 
-    public Output<Boolean> getInclusive() {
+    public Output<Boolean> inclusive() {
         return this.inclusive == null ? Codegen.empty() : this.inclusive;
     }
 
@@ -62,7 +62,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<VersionKind> kind;
 
-    public Output<VersionKind> getKind() {
+    public Output<VersionKind> kind() {
         return this.kind;
     }
 
@@ -73,7 +73,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,7 +84,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revision")
       private final @Nullable Output<String> revision;
 
-    public Output<String> getRevision() {
+    public Output<String> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 

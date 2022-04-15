@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
     @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
     @Import(name="table")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
+    public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 

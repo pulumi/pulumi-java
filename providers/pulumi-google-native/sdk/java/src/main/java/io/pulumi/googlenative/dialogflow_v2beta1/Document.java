@@ -33,7 +33,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types. Note: This field is in the process of being deprecated, please use raw_content instead.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -47,7 +47,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
      * 
      */
-    public Output<String> getContentUri() {
+    public Output<String> contentUri() {
         return this.contentUri;
     }
     /**
@@ -61,7 +61,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The display name of the document. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -75,7 +75,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don't try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
      * 
      */
-    public Output<Boolean> getEnableAutoReload() {
+    public Output<Boolean> enableAutoReload() {
         return this.enableAutoReload;
     }
     /**
@@ -89,7 +89,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The knowledge type of document content.
      * 
      */
-    public Output<List<String>> getKnowledgeTypes() {
+    public Output<List<String>> knowledgeTypes() {
         return this.knowledgeTypes;
     }
     /**
@@ -103,7 +103,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The time and status of the latest reload. This reload may have been triggered automatically or manually and may not have succeeded.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse> getLatestReloadStatus() {
+    public Output<GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse> latestReloadStatus() {
         return this.latestReloadStatus;
     }
     /**
@@ -117,7 +117,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases include storing a document's title, an external URL distinct from the document's content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -131,7 +131,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The MIME type of this document.
      * 
      */
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType;
     }
     /**
@@ -145,7 +145,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return Optional. The document resource name. The name must be empty when creating a document. Format: `projects//locations//knowledgeBases//documents/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +159,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * @return The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types.
      * 
      */
-    public Output<String> getRawContent() {
+    public Output<String> rawContent() {
         return this.rawContent;
     }
 

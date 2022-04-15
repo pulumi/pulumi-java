@@ -34,7 +34,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
      * 
      */
-    public Output<CertificateRawDataResponse> getCertificateRawData() {
+    public Output<CertificateRawDataResponse> certificateRawData() {
         return this.certificateRawData;
     }
     /**
@@ -48,7 +48,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -62,7 +62,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return Aggregate count of the domain mappings with this certificate mapped. This count includes domain mappings on applications for which the user does not have VIEWER permissions.Only returned by GET or LIST requests when specifically requested by the view=FULL_CERTIFICATE option.
      * 
      */
-    public Output<Integer> getDomainMappingsCount() {
+    public Output<Integer> domainMappingsCount() {
         return this.domainMappingsCount;
     }
     /**
@@ -76,7 +76,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return Topmost applicable domains of this certificate. This certificate applies to these domains and their subdomains. Example: example.com.
      * 
      */
-    public Output<List<String>> getDomainNames() {
+    public Output<List<String>> domainNames() {
         return this.domainNames;
     }
     /**
@@ -90,7 +90,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return The time when this certificate expires. To update the renewal time on this certificate, upload an SSL certificate with a different expiration time using AuthorizedCertificates.UpdateAuthorizedCertificate.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -104,7 +104,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return Only applicable if this certificate is managed by App Engine. Managed certificates are tied to the lifecycle of a DomainMapping and cannot be updated or deleted via the AuthorizedCertificates API. If this certificate is manually administered by the user, this field will be empty.
      * 
      */
-    public Output<ManagedCertificateResponse> getManagedCertificate() {
+    public Output<ManagedCertificateResponse> managedCertificate() {
         return this.managedCertificate;
     }
     /**
@@ -118,7 +118,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return Full path to the AuthorizedCertificate resource in the API. Example: apps/myapp/authorizedCertificates/12345.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +132,7 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
      * @return The full paths to user visible Domain Mapping resources that have this certificate mapped. Example: apps/myapp/domainMappings/example.com.This may not represent the full list of mapped domain mappings if the user does not have VIEWER permissions on all of the applications that have this certificate mapped. See domain_mappings_count for a complete count.Only returned by GET or LIST requests when specifically requested by the view=FULL_CERTIFICATE option.
      * 
      */
-    public Output<List<String>> getVisibleDomainMappings() {
+    public Output<List<String>> visibleDomainMappings() {
         return this.visibleDomainMappings;
     }
 

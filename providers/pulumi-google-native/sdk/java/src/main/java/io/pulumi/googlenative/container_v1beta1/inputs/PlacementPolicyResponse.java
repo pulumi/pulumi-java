@@ -23,7 +23,7 @@ public final class PlacementPolicyResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

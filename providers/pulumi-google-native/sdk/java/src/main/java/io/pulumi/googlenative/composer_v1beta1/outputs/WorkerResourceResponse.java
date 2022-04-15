@@ -54,35 +54,35 @@ public final class WorkerResourceResponse {
      * Optional. CPU request and limit for a single Airflow worker replica.
      * 
     */
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
     /**
      * Optional. Maximum number of workers for autoscaling.
      * 
     */
-    public Integer getMaxCount() {
+    public Integer maxCount() {
         return this.maxCount;
     }
     /**
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
      * 
     */
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
     /**
      * Optional. Minimum number of workers for autoscaling.
      * 
     */
-    public Integer getMinCount() {
+    public Integer minCount() {
         return this.minCount;
     }
     /**
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
      * 
     */
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

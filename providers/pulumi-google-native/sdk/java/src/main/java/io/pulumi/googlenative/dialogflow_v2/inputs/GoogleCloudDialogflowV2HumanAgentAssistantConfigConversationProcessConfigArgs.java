@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     @Import(name="recentSentencesCount")
       private final @Nullable Output<Integer> recentSentencesCount;
 
-    public Output<Integer> getRecentSentencesCount() {
+    public Output<Integer> recentSentencesCount() {
         return this.recentSentencesCount == null ? Codegen.empty() : this.recentSentencesCount;
     }
 

@@ -24,7 +24,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="delegateeProject", required=true)
       private final String delegateeProject;
 
-    public String getDelegateeProject() {
+    public String delegateeProject() {
         return this.delegateeProject;
     }
 
@@ -35,7 +35,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
 
@@ -57,7 +57,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="isAddress", required=true)
       private final Boolean isAddress;
 
-    public Boolean getIsAddress() {
+    public Boolean isAddress() {
         return this.isAddress;
     }
 
@@ -68,7 +68,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -90,7 +90,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

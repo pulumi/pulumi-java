@@ -25,7 +25,7 @@ public final class ResponsePolicyRuleLocalDataResponse {
      * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
      * 
     */
-    public List<ResourceRecordSetResponse> getLocalDatas() {
+    public List<ResourceRecordSetResponse> localDatas() {
         return this.localDatas;
     }
 

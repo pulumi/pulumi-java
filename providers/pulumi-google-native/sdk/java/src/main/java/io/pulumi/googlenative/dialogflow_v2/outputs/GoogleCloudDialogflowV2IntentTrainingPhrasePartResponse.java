@@ -47,28 +47,28 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse {
      * Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
      * 
     */
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
     /**
      * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
      * 
     */
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
     /**
      * The text for this part.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
     /**
      * Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
      * 
     */
-    public Boolean getUserDefined() {
+    public Boolean userDefined() {
         return this.userDefined;
     }
 

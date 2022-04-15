@@ -19,7 +19,7 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
     @Import(name="content", required=true)
       private final String content;
 
-    public String getContent() {
+    public String content() {
         return this.content;
     }
 
@@ -30,7 +30,7 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
     @Import(name="fileType", required=true)
       private final String fileType;
 
-    public String getFileType() {
+    public String fileType() {
         return this.fileType;
     }
 

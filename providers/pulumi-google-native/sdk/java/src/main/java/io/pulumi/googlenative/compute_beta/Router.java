@@ -35,7 +35,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return BGP information specific to this router.
      * 
      */
-    public Output<RouterBgpResponse> getBgp() {
+    public Output<RouterBgpResponse> bgp() {
         return this.bgp;
     }
     /**
@@ -49,7 +49,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
      * 
      */
-    public Output<List<RouterBgpPeerResponse>> getBgpPeers() {
+    public Output<List<RouterBgpPeerResponse>> bgpPeers() {
         return this.bgpPeers;
     }
     /**
@@ -63,7 +63,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -77,7 +77,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -91,7 +91,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
      * 
      */
-    public Output<Boolean> getEncryptedInterconnectRouter() {
+    public Output<Boolean> encryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter;
     }
     /**
@@ -105,7 +105,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
      * 
      */
-    public Output<List<RouterInterfaceResponse>> getInterfaces() {
+    public Output<List<RouterInterfaceResponse>> interfaces() {
         return this.interfaces;
     }
     /**
@@ -119,7 +119,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Type of resource. Always compute#router for routers.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -133,7 +133,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return A list of NAT services created in this router.
      * 
      */
-    public Output<List<RouterNatResponse>> getNats() {
+    public Output<List<RouterNatResponse>> nats() {
         return this.nats;
     }
     /**
@@ -161,7 +161,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return URI of the network to which this router belongs.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -175,7 +175,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -189,7 +189,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 

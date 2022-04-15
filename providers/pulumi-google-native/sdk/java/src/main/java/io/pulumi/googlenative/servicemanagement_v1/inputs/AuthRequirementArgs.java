@@ -26,7 +26,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="audiences")
       private final @Nullable Output<String> audiences;
 
-    public Output<String> getAudiences() {
+    public Output<String> audiences() {
         return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
@@ -37,7 +37,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="providerId")
       private final @Nullable Output<String> providerId;
 
-    public Output<String> getProviderId() {
+    public Output<String> providerId() {
         return this.providerId == null ? Codegen.empty() : this.providerId;
     }
 

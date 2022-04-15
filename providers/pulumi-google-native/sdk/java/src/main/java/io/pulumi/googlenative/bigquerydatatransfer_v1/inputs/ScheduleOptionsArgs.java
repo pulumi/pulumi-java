@@ -27,7 +27,7 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="disableAutoScheduling")
       private final @Nullable Output<Boolean> disableAutoScheduling;
 
-    public Output<Boolean> getDisableAutoScheduling() {
+    public Output<Boolean> disableAutoScheduling() {
         return this.disableAutoScheduling == null ? Codegen.empty() : this.disableAutoScheduling;
     }
 
@@ -38,7 +38,7 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -49,7 +49,7 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

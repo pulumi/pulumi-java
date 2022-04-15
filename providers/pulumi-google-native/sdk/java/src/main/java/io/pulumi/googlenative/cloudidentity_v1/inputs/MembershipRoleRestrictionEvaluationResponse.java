@@ -23,7 +23,7 @@ public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

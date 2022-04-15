@@ -32,14 +32,14 @@ public final class GoogleMonitoringV3RangeResponse {
      * Range maximum.
      * 
     */
-    public Double getMax() {
+    public Double max() {
         return this.max;
     }
     /**
      * Range minimum.
      * 
     */
-    public Double getMin() {
+    public Double min() {
         return this.min;
     }
 

@@ -19,7 +19,7 @@ public final class ParquetOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="enableListInference", required=true)
       private final Boolean enableListInference;
 
-    public Boolean getEnableListInference() {
+    public Boolean enableListInference() {
         return this.enableListInference;
     }
 
@@ -30,7 +30,7 @@ public final class ParquetOptionsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="enumAsString", required=true)
       private final Boolean enumAsString;
 
-    public Boolean getEnumAsString() {
+    public Boolean enumAsString() {
         return this.enumAsString;
     }
 

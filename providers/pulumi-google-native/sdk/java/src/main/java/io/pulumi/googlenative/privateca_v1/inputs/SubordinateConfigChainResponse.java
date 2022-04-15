@@ -24,7 +24,7 @@ public final class SubordinateConfigChainResponse extends io.pulumi.resources.In
     @Import(name="pemCertificates", required=true)
       private final List<String> pemCertificates;
 
-    public List<String> getPemCertificates() {
+    public List<String> pemCertificates() {
         return this.pemCertificates;
     }
 

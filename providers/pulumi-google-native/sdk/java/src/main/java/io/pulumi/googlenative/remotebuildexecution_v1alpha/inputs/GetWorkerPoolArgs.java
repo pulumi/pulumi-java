@@ -17,21 +17,21 @@ public final class GetWorkerPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="workerpoolId", required=true)
       private final String workerpoolId;
 
-    public String getWorkerpoolId() {
+    public String workerpoolId() {
         return this.workerpoolId;
     }
 

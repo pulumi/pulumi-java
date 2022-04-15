@@ -25,7 +25,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
      * 
     */
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 

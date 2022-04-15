@@ -19,7 +19,7 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
     @Import(name="canonicalUrl", required=true)
       private final String canonicalUrl;
 
-    public String getCanonicalUrl() {
+    public String canonicalUrl() {
         return this.canonicalUrl;
     }
 
@@ -30,7 +30,7 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

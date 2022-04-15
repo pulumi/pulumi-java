@@ -41,21 +41,21 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
      * The table source type.
      * 
     */
-    public String getTableSourceType() {
+    public String tableSourceType() {
         return this.tableSourceType;
     }
     /**
      * Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
      * 
     */
-    public GoogleCloudDatacatalogV1TableSpecResponse getTableSpec() {
+    public GoogleCloudDatacatalogV1TableSpecResponse tableSpec() {
         return this.tableSpec;
     }
     /**
      * Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
      * 
     */
-    public GoogleCloudDatacatalogV1ViewSpecResponse getViewSpec() {
+    public GoogleCloudDatacatalogV1ViewSpecResponse viewSpec() {
         return this.viewSpec;
     }
 

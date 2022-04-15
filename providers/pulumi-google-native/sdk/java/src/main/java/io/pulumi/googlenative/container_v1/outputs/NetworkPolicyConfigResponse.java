@@ -24,7 +24,7 @@ public final class NetworkPolicyConfigResponse {
      * Whether NetworkPolicy is enabled for this cluster.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

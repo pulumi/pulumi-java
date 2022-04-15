@@ -48,28 +48,28 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
      * Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
      * 
     */
-    public GooglePrivacyDlpV2FieldIdResponse getContext() {
+    public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
     }
     /**
      * Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.
      * 
     */
-    public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
+    public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
     /**
      * For example, -5 means shift date to at most 5 days back in the past.
      * 
     */
-    public Integer getLowerBoundDays() {
+    public Integer lowerBoundDays() {
         return this.lowerBoundDays;
     }
     /**
      * Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction. For example, 3 means shift date to at most 3 days into the future.
      * 
     */
-    public Integer getUpperBoundDays() {
+    public Integer upperBoundDays() {
         return this.upperBoundDays;
     }
 

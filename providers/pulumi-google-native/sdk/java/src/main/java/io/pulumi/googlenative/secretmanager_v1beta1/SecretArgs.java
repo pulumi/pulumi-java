@@ -24,14 +24,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -42,14 +42,14 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replication", required=true)
       private final Output<ReplicationArgs> replication;
 
-    public Output<ReplicationArgs> getReplication() {
+    public Output<ReplicationArgs> replication() {
         return this.replication;
     }
 
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 

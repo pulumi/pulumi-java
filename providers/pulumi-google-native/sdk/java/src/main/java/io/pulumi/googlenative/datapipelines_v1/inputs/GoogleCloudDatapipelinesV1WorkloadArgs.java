@@ -27,7 +27,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
     @Import(name="dataflowFlexTemplateRequest")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> getDataflowFlexTemplateRequest() {
+    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest == null ? Codegen.empty() : this.dataflowFlexTemplateRequest;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends io.pulumi.reso
     @Import(name="dataflowLaunchTemplateRequest")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> getDataflowLaunchTemplateRequest() {
+    public Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest == null ? Codegen.empty() : this.dataflowLaunchTemplateRequest;
     }
 

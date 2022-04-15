@@ -29,7 +29,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="chainName")
       private final @Nullable Output<String> chainName;
 
-    public Output<String> getChainName() {
+    public Output<String> chainName() {
         return this.chainName == null ? Codegen.empty() : this.chainName;
     }
 
@@ -40,7 +40,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> getGuestFlush() {
+    public Output<Boolean> guestFlush() {
         return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
     }
 
@@ -51,7 +51,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -62,7 +62,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
     }
 

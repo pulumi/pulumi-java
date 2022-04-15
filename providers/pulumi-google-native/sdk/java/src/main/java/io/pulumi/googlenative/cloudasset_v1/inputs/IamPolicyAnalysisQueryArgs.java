@@ -31,7 +31,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     @Import(name="accessSelector")
       private final @Nullable Output<AccessSelectorArgs> accessSelector;
 
-    public Output<AccessSelectorArgs> getAccessSelector() {
+    public Output<AccessSelectorArgs> accessSelector() {
         return this.accessSelector == null ? Codegen.empty() : this.accessSelector;
     }
 
@@ -42,7 +42,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     @Import(name="conditionContext")
       private final @Nullable Output<ConditionContextArgs> conditionContext;
 
-    public Output<ConditionContextArgs> getConditionContext() {
+    public Output<ConditionContextArgs> conditionContext() {
         return this.conditionContext == null ? Codegen.empty() : this.conditionContext;
     }
 
@@ -53,7 +53,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     @Import(name="identitySelector")
       private final @Nullable Output<IdentitySelectorArgs> identitySelector;
 
-    public Output<IdentitySelectorArgs> getIdentitySelector() {
+    public Output<IdentitySelectorArgs> identitySelector() {
         return this.identitySelector == null ? Codegen.empty() : this.identitySelector;
     }
 
@@ -64,7 +64,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     @Import(name="options")
       private final @Nullable Output<OptionsArgs> options;
 
-    public Output<OptionsArgs> getOptions() {
+    public Output<OptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -75,7 +75,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     @Import(name="resourceSelector")
       private final @Nullable Output<ResourceSelectorArgs> resourceSelector;
 
-    public Output<ResourceSelectorArgs> getResourceSelector() {
+    public Output<ResourceSelectorArgs> resourceSelector() {
         return this.resourceSelector == null ? Codegen.empty() : this.resourceSelector;
     }
 
@@ -86,7 +86,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 

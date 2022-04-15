@@ -22,7 +22,7 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowedConfigValues", required=true)
       private final Output<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 
-    public Output<List<ReusableConfigWrapperArgs>> getAllowedConfigValues() {
+    public Output<List<ReusableConfigWrapperArgs>> allowedConfigValues() {
         return this.allowedConfigValues;
     }
 

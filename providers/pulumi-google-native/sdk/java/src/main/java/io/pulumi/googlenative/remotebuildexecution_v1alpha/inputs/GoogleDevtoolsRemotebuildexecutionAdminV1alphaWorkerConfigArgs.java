@@ -29,7 +29,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="accelerator")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> getAccelerator() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator() {
         return this.accelerator == null ? Codegen.empty() : this.accelerator;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="diskSizeGb", required=true)
       private final Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="diskType", required=true)
       private final Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="maxConcurrentActions")
       private final @Nullable Output<String> maxConcurrentActions;
 
-    public Output<String> getMaxConcurrentActions() {
+    public Output<String> maxConcurrentActions() {
         return this.maxConcurrentActions == null ? Codegen.empty() : this.maxConcurrentActions;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -106,7 +106,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="networkAccess")
       private final @Nullable Output<String> networkAccess;
 
-    public Output<String> getNetworkAccess() {
+    public Output<String> networkAccess() {
         return this.networkAccess == null ? Codegen.empty() : this.networkAccess;
     }
 
@@ -117,7 +117,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> getReserved() {
+    public Output<Boolean> reserved() {
         return this.reserved == null ? Codegen.empty() : this.reserved;
     }
 
@@ -128,7 +128,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="soleTenantNodeType")
       private final @Nullable Output<String> soleTenantNodeType;
 
-    public Output<String> getSoleTenantNodeType() {
+    public Output<String> soleTenantNodeType() {
         return this.soleTenantNodeType == null ? Codegen.empty() : this.soleTenantNodeType;
     }
 
@@ -139,7 +139,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;
 
-    public Output<String> getVmImage() {
+    public Output<String> vmImage() {
         return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 

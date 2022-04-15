@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="enableTextToSpeech")
       private final @Nullable Output<Boolean> enableTextToSpeech;
 
-    public Output<Boolean> getEnableTextToSpeech() {
+    public Output<Boolean> enableTextToSpeech() {
         return this.enableTextToSpeech == null ? Codegen.empty() : this.enableTextToSpeech;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="outputAudioEncoding", required=true)
       private final Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding;
 
-    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> getOutputAudioEncoding() {
+    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncoding> outputAudioEncoding() {
         return this.outputAudioEncoding;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="sampleRateHertz")
       private final @Nullable Output<Integer> sampleRateHertz;
 
-    public Output<Integer> getSampleRateHertz() {
+    public Output<Integer> sampleRateHertz() {
         return this.sampleRateHertz == null ? Codegen.empty() : this.sampleRateHertz;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsArgs extends 
     @Import(name="synthesizeSpeechConfigs")
       private final @Nullable Output<Map<String,String>> synthesizeSpeechConfigs;
 
-    public Output<Map<String,String>> getSynthesizeSpeechConfigs() {
+    public Output<Map<String,String>> synthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs == null ? Codegen.empty() : this.synthesizeSpeechConfigs;
     }
 

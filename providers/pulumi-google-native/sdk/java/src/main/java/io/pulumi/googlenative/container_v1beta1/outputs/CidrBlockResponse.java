@@ -32,14 +32,14 @@ public final class CidrBlockResponse {
      * cidr_block must be specified in CIDR notation.
      * 
     */
-    public String getCidrBlock() {
+    public String cidrBlock() {
         return this.cidrBlock;
     }
     /**
      * display_name is an optional field for users to identify CIDR blocks.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 

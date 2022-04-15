@@ -21,14 +21,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collectionGroupId", required=true)
       private final Output<String> collectionGroupId;
 
-    public Output<String> getCollectionGroupId() {
+    public Output<String> collectionGroupId() {
         return this.collectionGroupId;
     }
 
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -39,14 +39,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields;
 
-    public Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> getFields() {
+    public Output<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -57,7 +57,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryScope")
       private final @Nullable Output<IndexQueryScope> queryScope;
 
-    public Output<IndexQueryScope> getQueryScope() {
+    public Output<IndexQueryScope> queryScope() {
         return this.queryScope == null ? Codegen.empty() : this.queryScope;
     }
 

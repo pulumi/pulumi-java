@@ -23,7 +23,7 @@ public final class RotationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nextRotationTime", required=true)
       private final String nextRotationTime;
 
-    public String getNextRotationTime() {
+    public String nextRotationTime() {
         return this.nextRotationTime;
     }
 
@@ -34,7 +34,7 @@ public final class RotationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rotationPeriod", required=true)
       private final String rotationPeriod;
 
-    public String getRotationPeriod() {
+    public String rotationPeriod() {
         return this.rotationPeriod;
     }
 

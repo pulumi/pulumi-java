@@ -24,7 +24,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
-    public Boolean getCanReschedule() {
+    public Boolean canReschedule() {
         return this.canReschedule;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -46,7 +46,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="scheduleDeadlineTime", required=true)
       private final String scheduleDeadlineTime;
 
-    public String getScheduleDeadlineTime() {
+    public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
 
@@ -57,7 +57,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

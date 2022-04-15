@@ -24,7 +24,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,14 +35,14 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -53,14 +53,14 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="properties")
       private final @Nullable Output<InstancePropertiesArgs> properties;
 
-    public Output<InstancePropertiesArgs> getProperties() {
+    public Output<InstancePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -71,7 +71,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceInstance")
       private final @Nullable Output<String> sourceInstance;
 
-    public Output<String> getSourceInstance() {
+    public Output<String> sourceInstance() {
         return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
     }
 
@@ -82,7 +82,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceInstanceParams")
       private final @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
 
-    public Output<SourceInstanceParamsArgs> getSourceInstanceParams() {
+    public Output<SourceInstanceParamsArgs> sourceInstanceParams() {
         return this.sourceInstanceParams == null ? Codegen.empty() : this.sourceInstanceParams;
     }
 

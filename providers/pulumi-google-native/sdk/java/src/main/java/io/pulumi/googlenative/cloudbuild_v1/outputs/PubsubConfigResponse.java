@@ -46,28 +46,28 @@ public final class PubsubConfigResponse {
      * Service account that will make the push request.
      * 
     */
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
      * 
     */
-    public String getSubscription() {
+    public String subscription() {
         return this.subscription;
     }
     /**
      * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

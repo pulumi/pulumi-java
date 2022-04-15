@@ -24,7 +24,7 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="caCertificateAccessUrl", required=true)
       private final String caCertificateAccessUrl;
 
-    public String getCaCertificateAccessUrl() {
+    public String caCertificateAccessUrl() {
         return this.caCertificateAccessUrl;
     }
 
@@ -35,7 +35,7 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="crlAccessUrls", required=true)
       private final List<String> crlAccessUrls;
 
-    public List<String> getCrlAccessUrls() {
+    public List<String> crlAccessUrls() {
         return this.crlAccessUrls;
     }
 

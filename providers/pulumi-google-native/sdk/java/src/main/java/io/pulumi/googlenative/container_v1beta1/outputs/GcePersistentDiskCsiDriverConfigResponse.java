@@ -24,7 +24,7 @@ public final class GcePersistentDiskCsiDriverConfigResponse {
      * Whether the Compute Engine PD CSI driver is enabled for this cluster.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

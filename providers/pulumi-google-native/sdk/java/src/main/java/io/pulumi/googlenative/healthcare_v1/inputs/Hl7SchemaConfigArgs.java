@@ -29,7 +29,7 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="messageSchemaConfigs")
       private final @Nullable Output<Map<String,String>> messageSchemaConfigs;
 
-    public Output<Map<String,String>> getMessageSchemaConfigs() {
+    public Output<Map<String,String>> messageSchemaConfigs() {
         return this.messageSchemaConfigs == null ? Codegen.empty() : this.messageSchemaConfigs;
     }
 
@@ -40,7 +40,7 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Output<List<VersionSourceArgs>> getVersion() {
+    public Output<List<VersionSourceArgs>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

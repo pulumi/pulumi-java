@@ -24,7 +24,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="height", required=true)
       private final Integer height;
 
-    public Integer getHeight() {
+    public Integer height() {
         return this.height;
     }
 
@@ -35,7 +35,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="widget", required=true)
       private final WidgetResponse widget;
 
-    public WidgetResponse getWidget() {
+    public WidgetResponse widget() {
         return this.widget;
     }
 
@@ -46,7 +46,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="width", required=true)
       private final Integer width;
 
-    public Integer getWidth() {
+    public Integer width() {
         return this.width;
     }
 
@@ -57,7 +57,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xPos", required=true)
       private final Integer xPos;
 
-    public Integer getXPos() {
+    public Integer xPos() {
         return this.xPos;
     }
 
@@ -68,7 +68,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="yPos", required=true)
       private final Integer yPos;
 
-    public Integer getYPos() {
+    public Integer yPos() {
         return this.yPos;
     }
 

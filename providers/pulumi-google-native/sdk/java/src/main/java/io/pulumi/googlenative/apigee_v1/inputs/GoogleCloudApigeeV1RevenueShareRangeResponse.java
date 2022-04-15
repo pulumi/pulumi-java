@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
     @Import(name="end", required=true)
       private final String end;
 
-    public String getEnd() {
+    public String end() {
         return this.end;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
     @Import(name="sharePercentage", required=true)
       private final Double sharePercentage;
 
-    public Double getSharePercentage() {
+    public Double sharePercentage() {
         return this.sharePercentage;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
     @Import(name="start", required=true)
       private final String start;
 
-    public String getStart() {
+    public String start() {
         return this.start;
     }
 

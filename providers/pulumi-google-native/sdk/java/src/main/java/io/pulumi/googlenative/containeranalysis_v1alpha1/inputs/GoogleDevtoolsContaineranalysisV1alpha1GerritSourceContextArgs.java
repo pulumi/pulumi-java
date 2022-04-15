@@ -27,7 +27,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="aliasContext")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> getAliasContext() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext() {
         return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="gerritProject")
       private final @Nullable Output<String> gerritProject;
 
-    public Output<String> getGerritProject() {
+    public Output<String> gerritProject() {
         return this.gerritProject == null ? Codegen.empty() : this.gerritProject;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="hostUri")
       private final @Nullable Output<String> hostUri;
 
-    public Output<String> getHostUri() {
+    public Output<String> hostUri() {
         return this.hostUri == null ? Codegen.empty() : this.hostUri;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArg
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 

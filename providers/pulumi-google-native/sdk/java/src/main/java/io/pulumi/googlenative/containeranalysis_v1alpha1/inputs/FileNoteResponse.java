@@ -24,7 +24,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="checksum", required=true)
       private final List<String> checksum;
 
-    public List<String> getChecksum() {
+    public List<String> checksum() {
         return this.checksum;
     }
 
@@ -35,7 +35,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileType", required=true)
       private final String fileType;
 
-    public String getFileType() {
+    public String fileType() {
         return this.fileType;
     }
 
@@ -46,7 +46,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

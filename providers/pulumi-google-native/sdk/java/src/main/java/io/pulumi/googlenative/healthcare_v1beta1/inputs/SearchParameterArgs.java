@@ -26,7 +26,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="canonicalUrl")
       private final @Nullable Output<String> canonicalUrl;
 
-    public Output<String> getCanonicalUrl() {
+    public Output<String> canonicalUrl() {
         return this.canonicalUrl == null ? Codegen.empty() : this.canonicalUrl;
     }
 
@@ -37,7 +37,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
-    public Output<String> getParameter() {
+    public Output<String> parameter() {
         return this.parameter == null ? Codegen.empty() : this.parameter;
     }
 

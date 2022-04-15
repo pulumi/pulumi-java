@@ -18,21 +18,21 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="datacenterConnectorId", required=true)
       private final Output<String> datacenterConnectorId;
 
-    public Output<String> getDatacenterConnectorId() {
+    public Output<String> datacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -43,14 +43,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="registrationId")
       private final @Nullable Output<String> registrationId;
 
-    public Output<String> getRegistrationId() {
+    public Output<String> registrationId() {
         return this.registrationId == null ? Codegen.empty() : this.registrationId;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -61,14 +61,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -79,7 +79,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

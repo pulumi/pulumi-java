@@ -23,7 +23,7 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
     @Import(name="canonicalService", required=true)
       private final String canonicalService;
 
-    public String getCanonicalService() {
+    public String canonicalService() {
         return this.canonicalService;
     }
 
@@ -34,7 +34,7 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
     @Import(name="canonicalServiceNamespace", required=true)
       private final String canonicalServiceNamespace;
 
-    public String getCanonicalServiceNamespace() {
+    public String canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
     }
 
@@ -45,7 +45,7 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
     @Import(name="meshUid", required=true)
       private final String meshUid;
 
-    public String getMeshUid() {
+    public String meshUid() {
         return this.meshUid;
     }
 

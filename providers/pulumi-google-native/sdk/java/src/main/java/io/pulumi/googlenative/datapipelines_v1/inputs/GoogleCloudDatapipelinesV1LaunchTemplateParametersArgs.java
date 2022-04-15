@@ -29,7 +29,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="environment")
       private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
-    public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> getEnvironment() {
+    public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="transformNameMapping")
       private final @Nullable Output<Map<String,String>> transformNameMapping;
 
-    public Output<Map<String,String>> getTransformNameMapping() {
+    public Output<Map<String,String>> transformNameMapping() {
         return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     @Import(name="update")
       private final @Nullable Output<Boolean> update;
 
-    public Output<Boolean> getUpdate() {
+    public Output<Boolean> update() {
         return this.update == null ? Codegen.empty() : this.update;
     }
 

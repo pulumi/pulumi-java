@@ -24,7 +24,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     @Import(name="force", required=true)
       private final Boolean force;
 
-    public Boolean getForce() {
+    public Boolean force() {
         return this.force;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     @Import(name="tableUri", required=true)
       private final String tableUri;
 
-    public String getTableUri() {
+    public String tableUri() {
         return this.tableUri;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
-    public String getWriteDisposition() {
+    public String writeDisposition() {
         return this.writeDisposition;
     }
 

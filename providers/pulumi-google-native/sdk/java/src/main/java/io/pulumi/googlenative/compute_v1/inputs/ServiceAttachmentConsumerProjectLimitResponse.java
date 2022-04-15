@@ -20,7 +20,7 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
     @Import(name="connectionLimit", required=true)
       private final Integer connectionLimit;
 
-    public Integer getConnectionLimit() {
+    public Integer connectionLimit() {
         return this.connectionLimit;
     }
 
@@ -31,7 +31,7 @@ public final class ServiceAttachmentConsumerProjectLimitResponse extends io.pulu
     @Import(name="projectIdOrNum", required=true)
       private final String projectIdOrNum;
 
-    public String getProjectIdOrNum() {
+    public String projectIdOrNum() {
         return this.projectIdOrNum;
     }
 

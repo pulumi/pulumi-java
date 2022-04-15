@@ -24,7 +24,7 @@ public final class ContextResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
       private final List<ContextRuleResponse> rules;
 
-    public List<ContextRuleResponse> getRules() {
+    public List<ContextRuleResponse> rules() {
         return this.rules;
     }
 

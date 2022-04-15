@@ -25,7 +25,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeredNetwork", required=true)
       private final Output<String> peeredNetwork;
 
-    public Output<String> getPeeredNetwork() {
+    public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends io.pulu
     @Import(name="speechModelVariant")
       private final @Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
-    public Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> getSpeechModelVariant() {
+    public Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant() {
         return this.speechModelVariant == null ? Codegen.empty() : this.speechModelVariant;
     }
 

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
      * A 128/192/256 bit key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
     @Import(name="bytesLimitPerFile", required=true)
       private final String bytesLimitPerFile;
 
-    public String getBytesLimitPerFile() {
+    public String bytesLimitPerFile() {
         return this.bytesLimitPerFile;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
     @Import(name="bytesLimitPerFilePercent", required=true)
       private final Integer bytesLimitPerFilePercent;
 
-    public Integer getBytesLimitPerFilePercent() {
+    public Integer bytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
     @Import(name="fileSet", required=true)
       private final GooglePrivacyDlpV2FileSetResponse fileSet;
 
-    public GooglePrivacyDlpV2FileSetResponse getFileSet() {
+    public GooglePrivacyDlpV2FileSetResponse fileSet() {
         return this.fileSet;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
     @Import(name="fileTypes", required=true)
       private final List<String> fileTypes;
 
-    public List<String> getFileTypes() {
+    public List<String> fileTypes() {
         return this.fileTypes;
     }
 
@@ -70,14 +70,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
     @Import(name="filesLimitPercent", required=true)
       private final Integer filesLimitPercent;
 
-    public Integer getFilesLimitPercent() {
+    public Integer filesLimitPercent() {
         return this.filesLimitPercent;
     }
 
     @Import(name="sampleMethod", required=true)
       private final String sampleMethod;
 
-    public String getSampleMethod() {
+    public String sampleMethod() {
         return this.sampleMethod;
     }
 

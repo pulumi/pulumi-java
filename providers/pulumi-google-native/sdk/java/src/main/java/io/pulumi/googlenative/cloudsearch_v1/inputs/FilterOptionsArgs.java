@@ -27,7 +27,7 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<FilterArgs> filter;
 
-    public Output<FilterArgs> getFilter() {
+    public Output<FilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -38,7 +38,7 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType == null ? Codegen.empty() : this.objectType;
     }
 

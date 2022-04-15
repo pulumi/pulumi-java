@@ -41,21 +41,21 @@ public final class FirewallPolicyRuleMatcherResponse {
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
      * 
     */
-    public List<String> getDestIpRanges() {
+    public List<String> destIpRanges() {
         return this.destIpRanges;
     }
     /**
      * Pairs of IP protocols and ports that the rule should match.
      * 
     */
-    public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> getLayer4Configs() {
+    public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs() {
         return this.layer4Configs;
     }
     /**
      * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
      * 
     */
-    public List<String> getSrcIpRanges() {
+    public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 

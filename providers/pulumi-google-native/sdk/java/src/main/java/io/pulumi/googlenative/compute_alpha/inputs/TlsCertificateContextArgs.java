@@ -28,7 +28,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     @Import(name="certificatePaths")
       private final @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
 
-    public Output<TlsCertificatePathsArgs> getCertificatePaths() {
+    public Output<TlsCertificatePathsArgs> certificatePaths() {
         return this.certificatePaths == null ? Codegen.empty() : this.certificatePaths;
     }
 
@@ -39,7 +39,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     @Import(name="certificateSource")
       private final @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
 
-    public Output<TlsCertificateContextCertificateSource> getCertificateSource() {
+    public Output<TlsCertificateContextCertificateSource> certificateSource() {
         return this.certificateSource == null ? Codegen.empty() : this.certificateSource;
     }
 
@@ -50,7 +50,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
     @Import(name="sdsConfig")
       private final @Nullable Output<SdsConfigArgs> sdsConfig;
 
-    public Output<SdsConfigArgs> getSdsConfig() {
+    public Output<SdsConfigArgs> sdsConfig() {
         return this.sdsConfig == null ? Codegen.empty() : this.sdsConfig;
     }
 

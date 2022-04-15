@@ -28,7 +28,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="normalizedVertices")
       private final @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
 
-    public Output<List<NormalizedVertexArgs>> getNormalizedVertices() {
+    public Output<List<NormalizedVertexArgs>> normalizedVertices() {
         return this.normalizedVertices == null ? Codegen.empty() : this.normalizedVertices;
     }
 
@@ -39,7 +39,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vertices")
       private final @Nullable Output<List<VertexArgs>> vertices;
 
-    public Output<List<VertexArgs>> getVertices() {
+    public Output<List<VertexArgs>> vertices() {
         return this.vertices == null ? Codegen.empty() : this.vertices;
     }
 

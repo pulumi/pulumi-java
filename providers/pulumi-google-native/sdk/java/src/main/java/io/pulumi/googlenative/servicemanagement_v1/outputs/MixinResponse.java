@@ -32,14 +32,14 @@ public final class MixinResponse {
      * The fully qualified name of the interface which is included.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * If non-empty specifies a path under which inherited HTTP paths are rooted.
      * 
     */
-    public String getRoot() {
+    public String root() {
         return this.root;
     }
 

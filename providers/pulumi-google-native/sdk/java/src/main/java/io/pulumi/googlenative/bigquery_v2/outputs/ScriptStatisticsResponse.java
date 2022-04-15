@@ -34,14 +34,14 @@ public final class ScriptStatisticsResponse {
      * Whether this child job was a statement or expression.
      * 
     */
-    public String getEvaluationKind() {
+    public String evaluationKind() {
         return this.evaluationKind;
     }
     /**
      * Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
      * 
     */
-    public List<ScriptStackFrameResponse> getStackFrames() {
+    public List<ScriptStackFrameResponse> stackFrames() {
         return this.stackFrames;
     }
 

@@ -28,7 +28,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionAttributes")
       private final @Nullable Output<Map<String,String>> connectionAttributes;
 
-    public Output<Map<String,String>> getConnectionAttributes() {
+    public Output<Map<String,String>> connectionAttributes() {
         return this.connectionAttributes == null ? Codegen.empty() : this.connectionAttributes;
     }
 
@@ -39,7 +39,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseService", required=true)
       private final Output<String> databaseService;
 
-    public Output<String> getDatabaseService() {
+    public Output<String> databaseService() {
         return this.databaseService;
     }
 
@@ -50,7 +50,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -61,7 +61,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -72,7 +72,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -83,7 +83,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

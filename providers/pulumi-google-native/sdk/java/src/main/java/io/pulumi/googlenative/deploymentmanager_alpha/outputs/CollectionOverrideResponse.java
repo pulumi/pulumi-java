@@ -41,21 +41,21 @@ public final class CollectionOverrideResponse {
      * The collection that identifies this resource within its service.
      * 
     */
-    public String getCollection() {
+    public String collection() {
         return this.collection;
     }
     /**
      * Custom verb method mappings to support unordered list API mappings.
      * 
     */
-    public MethodMapResponse getMethodMap() {
+    public MethodMapResponse methodMap() {
         return this.methodMap;
     }
     /**
      * The options to apply to this resource-level override
      * 
     */
-    public OptionsResponse getOptions() {
+    public OptionsResponse options() {
         return this.options;
     }
 

@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
     @Import(name="methods", required=true)
       private final List<String> methods;
 
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1OperationResponse extends io.pulumi.resour
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

@@ -29,7 +29,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availability")
       private final @Nullable Output<AvailabilityCriteriaArgs> availability;
 
-    public Output<AvailabilityCriteriaArgs> getAvailability() {
+    public Output<AvailabilityCriteriaArgs> availability() {
         return this.availability == null ? Codegen.empty() : this.availability;
     }
 
@@ -40,7 +40,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latency")
       private final @Nullable Output<LatencyCriteriaArgs> latency;
 
-    public Output<LatencyCriteriaArgs> getLatency() {
+    public Output<LatencyCriteriaArgs> latency() {
         return this.latency == null ? Codegen.empty() : this.latency;
     }
 
@@ -51,7 +51,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<List<String>> location;
 
-    public Output<List<String>> getLocation() {
+    public Output<List<String>> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -62,7 +62,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method")
       private final @Nullable Output<List<String>> method;
 
-    public Output<List<String>> getMethod() {
+    public Output<List<String>> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -73,7 +73,7 @@ public final class BasicSliArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<List<String>> version;
 
-    public Output<List<String>> getVersion() {
+    public Output<List<String>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

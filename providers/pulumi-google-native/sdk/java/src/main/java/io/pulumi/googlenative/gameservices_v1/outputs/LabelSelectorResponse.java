@@ -25,7 +25,7 @@ public final class LabelSelectorResponse {
      * Resource labels for this selector.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

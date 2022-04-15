@@ -27,7 +27,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalGroupKeys")
       private final @Nullable Output<List<EntityKeyArgs>> additionalGroupKeys;
 
-    public Output<List<EntityKeyArgs>> getAdditionalGroupKeys() {
+    public Output<List<EntityKeyArgs>> additionalGroupKeys() {
         return this.additionalGroupKeys == null ? Codegen.empty() : this.additionalGroupKeys;
     }
 
@@ -38,7 +38,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamicGroupMetadata")
       private final @Nullable Output<DynamicGroupMetadataArgs> dynamicGroupMetadata;
 
-    public Output<DynamicGroupMetadataArgs> getDynamicGroupMetadata() {
+    public Output<DynamicGroupMetadataArgs> dynamicGroupMetadata() {
         return this.dynamicGroupMetadata == null ? Codegen.empty() : this.dynamicGroupMetadata;
     }
 
@@ -71,14 +71,14 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupKey", required=true)
       private final Output<EntityKeyArgs> groupKey;
 
-    public Output<EntityKeyArgs> getGroupKey() {
+    public Output<EntityKeyArgs> groupKey() {
         return this.groupKey;
     }
 
     @Import(name="initialGroupConfig", required=true)
       private final Output<String> initialGroupConfig;
 
-    public Output<String> getInitialGroupConfig() {
+    public Output<String> initialGroupConfig() {
         return this.initialGroupConfig;
     }
 
@@ -89,7 +89,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
 
@@ -100,7 +100,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -111,7 +111,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="posixGroups")
       private final @Nullable Output<List<PosixGroupArgs>> posixGroups;
 
-    public Output<List<PosixGroupArgs>> getPosixGroups() {
+    public Output<List<PosixGroupArgs>> posixGroups() {
         return this.posixGroups == null ? Codegen.empty() : this.posixGroups;
     }
 

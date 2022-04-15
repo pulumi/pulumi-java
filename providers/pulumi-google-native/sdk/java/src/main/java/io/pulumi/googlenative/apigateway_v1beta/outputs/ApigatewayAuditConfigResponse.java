@@ -34,14 +34,14 @@ public final class ApigatewayAuditConfigResponse {
      * The configuration for logging of each type of permission.
      * 
     */
-    public List<ApigatewayAuditLogConfigResponse> getAuditLogConfigs() {
+    public List<ApigatewayAuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

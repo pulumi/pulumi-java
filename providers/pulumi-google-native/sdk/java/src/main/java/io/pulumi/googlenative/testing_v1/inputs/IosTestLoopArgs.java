@@ -28,7 +28,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appIpa", required=true)
       private final Output<FileReferenceArgs> appIpa;
 
-    public Output<FileReferenceArgs> getAppIpa() {
+    public Output<FileReferenceArgs> appIpa() {
         return this.appIpa;
     }
 
@@ -39,7 +39,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scenarios")
       private final @Nullable Output<List<Integer>> scenarios;
 
-    public Output<List<Integer>> getScenarios() {
+    public Output<List<Integer>> scenarios() {
         return this.scenarios == null ? Codegen.empty() : this.scenarios;
     }
 

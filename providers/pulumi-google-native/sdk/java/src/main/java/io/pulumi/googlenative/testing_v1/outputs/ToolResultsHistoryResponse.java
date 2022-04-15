@@ -32,14 +32,14 @@ public final class ToolResultsHistoryResponse {
      * A tool results history ID.
      * 
     */
-    public String getHistoryId() {
+    public String historyId() {
         return this.historyId;
     }
     /**
      * The cloud project that owns the tool results history.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

@@ -47,28 +47,28 @@ public final class GetAgentPoolResult {
      * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
      * 
     */
-    public BandwidthLimitResponse getBandwidthLimit() {
+    public BandwidthLimitResponse bandwidthLimit() {
         return this.bandwidthLimit;
     }
     /**
      * Specifies the client-specified AgentPool description.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the state of the AgentPool.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

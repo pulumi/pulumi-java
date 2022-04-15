@@ -20,21 +20,21 @@ public final class ModelDefinitionModelOptionsResponse extends io.pulumi.resourc
     @Import(name="labels", required=true)
       private final List<String> labels;
 
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels;
     }
 
     @Import(name="lossType", required=true)
       private final String lossType;
 
-    public String getLossType() {
+    public String lossType() {
         return this.lossType;
     }
 
     @Import(name="modelType", required=true)
       private final String modelType;
 
-    public String getModelType() {
+    public String modelType() {
         return this.modelType;
     }
 

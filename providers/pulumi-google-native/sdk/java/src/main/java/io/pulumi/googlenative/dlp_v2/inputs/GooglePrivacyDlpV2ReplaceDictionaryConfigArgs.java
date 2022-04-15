@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
     @Import(name="wordList")
       private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
-    public Output<GooglePrivacyDlpV2WordListArgs> getWordList() {
+    public Output<GooglePrivacyDlpV2WordListArgs> wordList() {
         return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 

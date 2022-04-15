@@ -22,7 +22,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="dataset", required=true)
       private final DatasetAccessEntryResponse dataset;
 
-    public DatasetAccessEntryResponse getDataset() {
+    public DatasetAccessEntryResponse dataset() {
         return this.dataset;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="domain", required=true)
       private final String domain;
 
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
 
@@ -44,7 +44,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="groupByEmail", required=true)
       private final String groupByEmail;
 
-    public String getGroupByEmail() {
+    public String groupByEmail() {
         return this.groupByEmail;
     }
 
@@ -55,7 +55,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="iamMember", required=true)
       private final String iamMember;
 
-    public String getIamMember() {
+    public String iamMember() {
         return this.iamMember;
     }
 
@@ -66,7 +66,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 
@@ -77,7 +77,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="routine", required=true)
       private final RoutineReferenceResponse routine;
 
-    public RoutineReferenceResponse getRoutine() {
+    public RoutineReferenceResponse routine() {
         return this.routine;
     }
 
@@ -88,7 +88,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="specialGroup", required=true)
       private final String specialGroup;
 
-    public String getSpecialGroup() {
+    public String specialGroup() {
         return this.specialGroup;
     }
 
@@ -99,7 +99,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="userByEmail", required=true)
       private final String userByEmail;
 
-    public String getUserByEmail() {
+    public String userByEmail() {
         return this.userByEmail;
     }
 
@@ -110,7 +110,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
     @Import(name="view", required=true)
       private final TableReferenceResponse view;
 
-    public TableReferenceResponse getView() {
+    public TableReferenceResponse view() {
         return this.view;
     }
 

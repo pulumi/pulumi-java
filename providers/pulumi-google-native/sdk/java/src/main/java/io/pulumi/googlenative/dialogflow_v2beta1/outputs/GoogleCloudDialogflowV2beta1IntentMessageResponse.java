@@ -185,147 +185,147 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
      * Displays a basic card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse getBasicCard() {
+    public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
     }
     /**
      * Browse carousel card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
+    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
     }
     /**
      * Displays a card.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageCardResponse getCard() {
+    public GoogleCloudDialogflowV2beta1IntentMessageCardResponse card() {
         return this.card;
     }
     /**
      * Displays a carousel card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse getCarouselSelect() {
+    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
     }
     /**
      * Displays an image.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
     /**
      * Displays a link out suggestion chip for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
+    public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
     }
     /**
      * Displays a list card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse getListSelect() {
+    public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
     }
     /**
      * The media content card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse getMediaContent() {
+    public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
     }
     /**
      * A custom platform-specific response.
      * 
     */
-    public Map<String,String> getPayload() {
+    public Map<String,String> payload() {
         return this.payload;
     }
     /**
      * Optional. The platform that this message is intended for.
      * 
     */
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
     /**
      * Displays quick replies.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse getQuickReplies() {
+    public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
     }
     /**
      * Rich Business Messaging (RBM) carousel rich card response.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse getRbmCarouselRichCard() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard() {
         return this.rbmCarouselRichCard;
     }
     /**
      * Standalone Rich Business Messaging (RBM) rich card response.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse getRbmStandaloneRichCard() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard;
     }
     /**
      * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse getRbmText() {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText() {
         return this.rbmText;
     }
     /**
      * Returns a voice or text-only response for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse getSimpleResponses() {
+    public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
     }
     /**
      * Displays suggestion chips for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse getSuggestions() {
+    public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
     }
     /**
      * Table card for Actions on Google.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse getTableCard() {
+    public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
     }
     /**
      * Plays audio from a file in Telephony Gateway.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse getTelephonyPlayAudio() {
+    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio() {
         return this.telephonyPlayAudio;
     }
     /**
      * Synthesizes speech in Telephony Gateway.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse getTelephonySynthesizeSpeech() {
+    public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech;
     }
     /**
      * Transfers the call in Telephony Gateway.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse getTelephonyTransferCall() {
+    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall() {
         return this.telephonyTransferCall;
     }
     /**
      * Returns a text response.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageTextResponse getText() {
+    public GoogleCloudDialogflowV2beta1IntentMessageTextResponse text() {
         return this.text;
     }
 

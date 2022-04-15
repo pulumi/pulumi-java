@@ -29,7 +29,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalContexts")
       private final @Nullable Output<List<SourceContextArgs>> additionalContexts;
 
-    public Output<List<SourceContextArgs>> getAdditionalContexts() {
+    public Output<List<SourceContextArgs>> additionalContexts() {
         return this.additionalContexts == null ? Codegen.empty() : this.additionalContexts;
     }
 
@@ -40,7 +40,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactStorageSourceUri")
       private final @Nullable Output<String> artifactStorageSourceUri;
 
-    public Output<String> getArtifactStorageSourceUri() {
+    public Output<String> artifactStorageSourceUri() {
         return this.artifactStorageSourceUri == null ? Codegen.empty() : this.artifactStorageSourceUri;
     }
 
@@ -51,7 +51,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<SourceContextArgs> context;
 
-    public Output<SourceContextArgs> getContext() {
+    public Output<SourceContextArgs> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -62,7 +62,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileHashes")
       private final @Nullable Output<Map<String,String>> fileHashes;
 
-    public Output<Map<String,String>> getFileHashes() {
+    public Output<Map<String,String>> fileHashes() {
         return this.fileHashes == null ? Codegen.empty() : this.fileHashes;
     }
 

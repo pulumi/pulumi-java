@@ -25,7 +25,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceLanguageCode", required=true)
       private final Output<String> sourceLanguageCode;
 
-    public Output<String> getSourceLanguageCode() {
+    public Output<String> sourceLanguageCode() {
         return this.sourceLanguageCode;
     }
 
@@ -36,7 +36,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="targetLanguageCode", required=true)
       private final Output<String> targetLanguageCode;
 
-    public Output<String> getTargetLanguageCode() {
+    public Output<String> targetLanguageCode() {
         return this.targetLanguageCode;
     }
 

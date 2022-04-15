@@ -24,7 +24,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destinationIp", required=true)
       private final String destinationIp;
 
-    public String getDestinationIp() {
+    public String destinationIp() {
         return this.destinationIp;
     }
 
@@ -35,7 +35,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destinationNetworkUri", required=true)
       private final String destinationNetworkUri;
 
-    public String getDestinationNetworkUri() {
+    public String destinationNetworkUri() {
         return this.destinationNetworkUri;
     }
 
@@ -46,7 +46,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destinationPort", required=true)
       private final Integer destinationPort;
 
-    public Integer getDestinationPort() {
+    public Integer destinationPort() {
         return this.destinationPort;
     }
 
@@ -57,7 +57,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
@@ -68,7 +68,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceIp", required=true)
       private final String sourceIp;
 
-    public String getSourceIp() {
+    public String sourceIp() {
         return this.sourceIp;
     }
 
@@ -79,7 +79,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceNetworkUri", required=true)
       private final String sourceNetworkUri;
 
-    public String getSourceNetworkUri() {
+    public String sourceNetworkUri() {
         return this.sourceNetworkUri;
     }
 
@@ -90,7 +90,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourcePort", required=true)
       private final Integer sourcePort;
 
-    public Integer getSourcePort() {
+    public Integer sourcePort() {
         return this.sourcePort;
     }
 

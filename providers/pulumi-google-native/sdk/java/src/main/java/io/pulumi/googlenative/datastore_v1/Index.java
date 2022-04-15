@@ -32,7 +32,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
-    public Output<String> getAncestor() {
+    public Output<String> ancestor() {
         return this.ancestor;
     }
     /**
@@ -46,7 +46,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the index.
      * 
      */
-    public Output<String> getIndexId() {
+    public Output<String> indexId() {
         return this.indexId;
     }
     /**
@@ -60,7 +60,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The entity kind to which this index applies.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -74,7 +74,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return Project ID.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -88,7 +88,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return An ordered sequence of property names and their index attributes.
      * 
      */
-    public Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> getProperties() {
+    public Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> properties() {
         return this.properties;
     }
     /**
@@ -102,7 +102,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The state of the index.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

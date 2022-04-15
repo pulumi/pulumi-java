@@ -42,21 +42,21 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse {
      * Quasi-identifier columns.
      * 
     */
-    public List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> getQuasiIds() {
+    public List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds() {
         return this.quasiIds;
     }
     /**
      * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
      * 
     */
-    public GooglePrivacyDlpV2FieldIdResponse getRelativeFrequency() {
+    public GooglePrivacyDlpV2FieldIdResponse relativeFrequency() {
         return this.relativeFrequency;
     }
     /**
      * Auxiliary table location.
      * 
     */
-    public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
+    public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 

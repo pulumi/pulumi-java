@@ -20,10 +20,10 @@ public final class UpcomingMaintenanceTimeWindowResponse {
         this.latest = latest;
     }
 
-    public String getEarliest() {
+    public String earliest() {
         return this.earliest;
     }
-    public String getLatest() {
+    public String latest() {
         return this.latest;
     }
 

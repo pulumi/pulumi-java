@@ -24,7 +24,7 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="enable", required=true)
       private final Boolean enable;
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 
@@ -35,7 +35,7 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 

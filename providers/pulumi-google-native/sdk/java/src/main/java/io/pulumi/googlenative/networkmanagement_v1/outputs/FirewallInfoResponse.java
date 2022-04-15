@@ -90,70 +90,70 @@ public final class FirewallInfoResponse {
      * Possible values: ALLOW, DENY
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * Possible values: INGRESS, EGRESS
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The firewall rule's type.
      * 
     */
-    public String getFirewallRuleType() {
+    public String firewallRuleType() {
         return this.firewallRuleType;
     }
     /**
      * The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
      * 
     */
-    public String getNetworkUri() {
+    public String networkUri() {
         return this.networkUri;
     }
     /**
      * The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
      * 
     */
-    public String getPolicy() {
+    public String policy() {
         return this.policy;
     }
     /**
      * The priority of the firewall rule.
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * The target service accounts specified by the firewall rule.
      * 
     */
-    public List<String> getTargetServiceAccounts() {
+    public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
     /**
      * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
     */
-    public List<String> getTargetTags() {
+    public List<String> targetTags() {
         return this.targetTags;
     }
     /**
      * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
      * 
     */
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

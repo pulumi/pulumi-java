@@ -32,14 +32,14 @@ public final class NodeConfigResponse {
      * Number of cpus per Memcached node.
      * 
     */
-    public Integer getCpuCount() {
+    public Integer cpuCount() {
         return this.cpuCount;
     }
     /**
      * Memory size in MiB for each Memcached node.
      * 
     */
-    public Integer getMemorySizeMb() {
+    public Integer memorySizeMb() {
         return this.memorySizeMb;
     }
 

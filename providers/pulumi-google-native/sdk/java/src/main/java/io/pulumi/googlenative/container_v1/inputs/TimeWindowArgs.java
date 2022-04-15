@@ -27,7 +27,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -38,7 +38,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceExclusionOptions")
       private final @Nullable Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
 
-    public Output<MaintenanceExclusionOptionsArgs> getMaintenanceExclusionOptions() {
+    public Output<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions == null ? Codegen.empty() : this.maintenanceExclusionOptions;
     }
 
@@ -49,7 +49,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

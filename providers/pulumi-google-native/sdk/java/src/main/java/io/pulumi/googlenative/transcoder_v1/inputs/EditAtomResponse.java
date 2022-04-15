@@ -24,7 +24,7 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTimeOffset", required=true)
       private final String endTimeOffset;
 
-    public String getEndTimeOffset() {
+    public String endTimeOffset() {
         return this.endTimeOffset;
     }
 
@@ -35,7 +35,7 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputs", required=true)
       private final List<String> inputs;
 
-    public List<String> getInputs() {
+    public List<String> inputs() {
         return this.inputs;
     }
 
@@ -46,7 +46,7 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
       private final String key;
 
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 
@@ -57,7 +57,7 @@ public final class EditAtomResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOffset", required=true)
       private final String startTimeOffset;
 
-    public String getStartTimeOffset() {
+    public String startTimeOffset() {
         return this.startTimeOffset;
     }
 

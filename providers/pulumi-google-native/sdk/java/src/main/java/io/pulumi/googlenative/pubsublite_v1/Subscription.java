@@ -30,7 +30,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The settings for this subscription's message delivery.
      * 
      */
-    public Output<DeliveryConfigResponse> getDeliveryConfig() {
+    public Output<DeliveryConfigResponse> deliveryConfig() {
         return this.deliveryConfig;
     }
     /**
@@ -44,7 +44,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

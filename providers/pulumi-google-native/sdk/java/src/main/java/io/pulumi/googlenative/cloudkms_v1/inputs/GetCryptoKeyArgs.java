@@ -17,28 +17,28 @@ public final class GetCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="cryptoKeyId", required=true)
       private final String cryptoKeyId;
 
-    public String getCryptoKeyId() {
+    public String cryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @Import(name="keyRingId", required=true)
       private final String keyRingId;
 
-    public String getKeyRingId() {
+    public String keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

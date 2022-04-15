@@ -26,7 +26,7 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionArgs extends io.pulu
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;
 
-    public Output<String> getRedirectUri() {
+    public Output<String> redirectUri() {
         return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 

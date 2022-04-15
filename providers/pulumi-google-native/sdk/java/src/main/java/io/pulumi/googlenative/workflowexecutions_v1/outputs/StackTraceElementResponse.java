@@ -40,21 +40,21 @@ public final class StackTraceElementResponse {
      * The source position information of the stack trace element.
      * 
     */
-    public PositionResponse getPosition() {
+    public PositionResponse position() {
         return this.position;
     }
     /**
      * The routine where the error occurred.
      * 
     */
-    public String getRoutine() {
+    public String routine() {
         return this.routine;
     }
     /**
      * The step the error occurred at.
      * 
     */
-    public String getStep() {
+    public String step() {
         return this.step;
     }
 

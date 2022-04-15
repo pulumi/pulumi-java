@@ -27,7 +27,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
+    public Output<Integer> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

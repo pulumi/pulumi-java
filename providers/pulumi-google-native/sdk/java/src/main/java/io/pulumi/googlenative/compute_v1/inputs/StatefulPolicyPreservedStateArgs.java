@@ -27,7 +27,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
     @Import(name="disks")
       private final @Nullable Output<Map<String,String>> disks;
 
-    public Output<Map<String,String>> getDisks() {
+    public Output<Map<String,String>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 

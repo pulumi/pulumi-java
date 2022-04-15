@@ -30,7 +30,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return The time at which the environment group was created as milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -44,7 +44,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return Host names for this environment group.
      * 
      */
-    public Output<List<String>> getHostnames() {
+    public Output<List<String>> hostnames() {
         return this.hostnames;
     }
     /**
@@ -58,7 +58,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return The time at which the environment group was last updated as milliseconds since epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -72,7 +72,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return ID of the environment group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @return State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

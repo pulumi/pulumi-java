@@ -25,7 +25,7 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
     @Import(name="installation", required=true)
       private final Output<InstallationArgs> installation;
 
-    public Output<InstallationArgs> getInstallation() {
+    public Output<InstallationArgs> installation() {
         return this.installation;
     }
 

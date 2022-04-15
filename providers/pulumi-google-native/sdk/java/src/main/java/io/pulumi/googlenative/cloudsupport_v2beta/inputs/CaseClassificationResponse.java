@@ -23,7 +23,7 @@ public final class CaseClassificationResponse extends io.pulumi.resources.Invoke
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 

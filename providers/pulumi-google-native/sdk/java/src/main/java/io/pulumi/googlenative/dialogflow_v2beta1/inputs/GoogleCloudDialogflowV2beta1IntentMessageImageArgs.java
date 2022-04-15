@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
     @Import(name="accessibilityText")
       private final @Nullable Output<String> accessibilityText;
 
-    public Output<String> getAccessibilityText() {
+    public Output<String> accessibilityText() {
         return this.accessibilityText == null ? Codegen.empty() : this.accessibilityText;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
+    public Output<String> imageUri() {
         return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 

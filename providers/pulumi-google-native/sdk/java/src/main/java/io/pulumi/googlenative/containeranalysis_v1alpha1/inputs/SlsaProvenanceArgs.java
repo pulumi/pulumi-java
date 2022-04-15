@@ -30,7 +30,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="builder")
       private final @Nullable Output<SlsaBuilderArgs> builder;
 
-    public Output<SlsaBuilderArgs> getBuilder() {
+    public Output<SlsaBuilderArgs> builder_() {
         return this.builder == null ? Codegen.empty() : this.builder;
     }
 
@@ -41,7 +41,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="materials")
       private final @Nullable Output<List<MaterialArgs>> materials;
 
-    public Output<List<MaterialArgs>> getMaterials() {
+    public Output<List<MaterialArgs>> materials() {
         return this.materials == null ? Codegen.empty() : this.materials;
     }
 
@@ -52,7 +52,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<SlsaMetadataArgs> metadata;
 
-    public Output<SlsaMetadataArgs> getMetadata() {
+    public Output<SlsaMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -63,7 +63,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recipe")
       private final @Nullable Output<SlsaRecipeArgs> recipe;
 
-    public Output<SlsaRecipeArgs> getRecipe() {
+    public Output<SlsaRecipeArgs> recipe() {
         return this.recipe == null ? Codegen.empty() : this.recipe;
     }
 
@@ -111,11 +111,11 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder builder(@Nullable Output<SlsaBuilderArgs> builder) {
+        public Builder builder_(@Nullable Output<SlsaBuilderArgs> builder) {
             this.builder = builder;
             return this;
         }
-        public Builder builder(@Nullable SlsaBuilderArgs builder) {
+        public Builder builder_(@Nullable SlsaBuilderArgs builder) {
             this.builder = Codegen.ofNullable(builder);
             return this;
         }

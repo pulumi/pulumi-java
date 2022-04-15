@@ -27,7 +27,7 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
 
-    public Output<Integer> getFilesCount() {
+    public Output<Integer> filesCount() {
         return this.filesCount == null ? Codegen.empty() : this.filesCount;
     }
 
@@ -38,7 +38,7 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;
 
-    public Output<String> getSourceUrl() {
+    public Output<String> sourceUrl() {
         return this.sourceUrl == null ? Codegen.empty() : this.sourceUrl;
     }
 

@@ -24,7 +24,7 @@ public final class VirtualNICResponse {
      * Whether gVNIC features are enabled in the node pool.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

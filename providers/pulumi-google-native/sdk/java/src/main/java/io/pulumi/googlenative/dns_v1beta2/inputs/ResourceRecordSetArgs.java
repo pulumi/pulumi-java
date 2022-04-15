@@ -25,7 +25,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routingPolicy")
       private final @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
 
-    public Output<RRSetRoutingPolicyArgs> getRoutingPolicy() {
+    public Output<RRSetRoutingPolicyArgs> routingPolicy() {
         return this.routingPolicy == null ? Codegen.empty() : this.routingPolicy;
     }
 
@@ -58,7 +58,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
@@ -69,7 +69,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> getSignatureRrdatas() {
+    public Output<List<String>> signatureRrdatas() {
         return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
     }
 
@@ -80,7 +80,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
@@ -91,7 +91,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

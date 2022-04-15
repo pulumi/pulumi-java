@@ -22,21 +22,21 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

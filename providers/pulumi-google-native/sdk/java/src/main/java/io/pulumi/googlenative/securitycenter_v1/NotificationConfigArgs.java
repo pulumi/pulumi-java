@@ -19,7 +19,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -30,7 +30,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -41,14 +41,14 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -59,7 +59,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
     }
 
@@ -70,7 +70,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="streamingConfig")
       private final @Nullable Output<StreamingConfigArgs> streamingConfig;
 
-    public Output<StreamingConfigArgs> getStreamingConfig() {
+    public Output<StreamingConfigArgs> streamingConfig() {
         return this.streamingConfig == null ? Codegen.empty() : this.streamingConfig;
     }
 

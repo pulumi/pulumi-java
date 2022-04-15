@@ -27,7 +27,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -38,7 +38,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scale")
       private final @Nullable Output<AxisScale> scale;
 
-    public Output<AxisScale> getScale() {
+    public Output<AxisScale> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 

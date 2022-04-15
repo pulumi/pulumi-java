@@ -26,7 +26,7 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataSets", required=true)
       private final Output<List<TableDataSetArgs>> dataSets;
 
-    public Output<List<TableDataSetArgs>> getDataSets() {
+    public Output<List<TableDataSetArgs>> dataSets() {
         return this.dataSets;
     }
 

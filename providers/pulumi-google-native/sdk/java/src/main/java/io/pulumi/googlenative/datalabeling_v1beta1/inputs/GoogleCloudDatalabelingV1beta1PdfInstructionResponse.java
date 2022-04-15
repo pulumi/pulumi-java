@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
     @Import(name="gcsFileUri", required=true)
       private final String gcsFileUri;
 
-    public String getGcsFileUri() {
+    public String gcsFileUri() {
         return this.gcsFileUri;
     }
 

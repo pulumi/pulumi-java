@@ -25,7 +25,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataset")
       private final @Nullable Output<DatasetAccessEntryArgs> dataset;
 
-    public Output<DatasetAccessEntryArgs> getDataset() {
+    public Output<DatasetAccessEntryArgs> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -36,7 +36,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -47,7 +47,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="groupByEmail")
       private final @Nullable Output<String> groupByEmail;
 
-    public Output<String> getGroupByEmail() {
+    public Output<String> groupByEmail() {
         return this.groupByEmail == null ? Codegen.empty() : this.groupByEmail;
     }
 
@@ -58,7 +58,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iamMember")
       private final @Nullable Output<String> iamMember;
 
-    public Output<String> getIamMember() {
+    public Output<String> iamMember() {
         return this.iamMember == null ? Codegen.empty() : this.iamMember;
     }
 
@@ -69,7 +69,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -80,7 +80,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routine")
       private final @Nullable Output<RoutineReferenceArgs> routine;
 
-    public Output<RoutineReferenceArgs> getRoutine() {
+    public Output<RoutineReferenceArgs> routine() {
         return this.routine == null ? Codegen.empty() : this.routine;
     }
 
@@ -91,7 +91,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="specialGroup")
       private final @Nullable Output<String> specialGroup;
 
-    public Output<String> getSpecialGroup() {
+    public Output<String> specialGroup() {
         return this.specialGroup == null ? Codegen.empty() : this.specialGroup;
     }
 
@@ -102,7 +102,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userByEmail")
       private final @Nullable Output<String> userByEmail;
 
-    public Output<String> getUserByEmail() {
+    public Output<String> userByEmail() {
         return this.userByEmail == null ? Codegen.empty() : this.userByEmail;
     }
 
@@ -113,7 +113,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="view")
       private final @Nullable Output<TableReferenceArgs> view;
 
-    public Output<TableReferenceArgs> getView() {
+    public Output<TableReferenceArgs> view() {
         return this.view == null ? Codegen.empty() : this.view;
     }
 

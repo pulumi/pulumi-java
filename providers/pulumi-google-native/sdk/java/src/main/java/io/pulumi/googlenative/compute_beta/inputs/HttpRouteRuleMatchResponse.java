@@ -28,7 +28,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="fullPathMatch", required=true)
       private final String fullPathMatch;
 
-    public String getFullPathMatch() {
+    public String fullPathMatch() {
         return this.fullPathMatch;
     }
 
@@ -39,7 +39,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="headerMatches", required=true)
       private final List<HttpHeaderMatchResponse> headerMatches;
 
-    public List<HttpHeaderMatchResponse> getHeaderMatches() {
+    public List<HttpHeaderMatchResponse> headerMatches() {
         return this.headerMatches;
     }
 
@@ -50,7 +50,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="ignoreCase", required=true)
       private final Boolean ignoreCase;
 
-    public Boolean getIgnoreCase() {
+    public Boolean ignoreCase() {
         return this.ignoreCase;
     }
 
@@ -61,7 +61,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="metadataFilters", required=true)
       private final List<MetadataFilterResponse> metadataFilters;
 
-    public List<MetadataFilterResponse> getMetadataFilters() {
+    public List<MetadataFilterResponse> metadataFilters() {
         return this.metadataFilters;
     }
 
@@ -72,7 +72,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="prefixMatch", required=true)
       private final String prefixMatch;
 
-    public String getPrefixMatch() {
+    public String prefixMatch() {
         return this.prefixMatch;
     }
 
@@ -83,7 +83,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="queryParameterMatches", required=true)
       private final List<HttpQueryParameterMatchResponse> queryParameterMatches;
 
-    public List<HttpQueryParameterMatchResponse> getQueryParameterMatches() {
+    public List<HttpQueryParameterMatchResponse> queryParameterMatches() {
         return this.queryParameterMatches;
     }
 
@@ -94,7 +94,7 @@ public final class HttpRouteRuleMatchResponse extends io.pulumi.resources.Invoke
     @Import(name="regexMatch", required=true)
       private final String regexMatch;
 
-    public String getRegexMatch() {
+    public String regexMatch() {
         return this.regexMatch;
     }
 

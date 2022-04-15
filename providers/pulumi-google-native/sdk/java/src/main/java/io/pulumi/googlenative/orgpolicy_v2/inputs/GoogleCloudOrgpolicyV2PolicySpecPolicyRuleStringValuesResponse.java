@@ -24,7 +24,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     @Import(name="allowedValues", required=true)
       private final List<String> allowedValues;
 
-    public List<String> getAllowedValues() {
+    public List<String> allowedValues() {
         return this.allowedValues;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     @Import(name="deniedValues", required=true)
       private final List<String> deniedValues;
 
-    public List<String> getDeniedValues() {
+    public List<String> deniedValues() {
         return this.deniedValues;
     }
 

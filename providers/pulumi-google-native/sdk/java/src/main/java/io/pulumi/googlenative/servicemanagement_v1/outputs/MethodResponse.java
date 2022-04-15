@@ -70,49 +70,49 @@ public final class MethodResponse {
      * The simple name of this method.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Any metadata attached to the method.
      * 
     */
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
     /**
      * If true, the request is streamed.
      * 
     */
-    public Boolean getRequestStreaming() {
+    public Boolean requestStreaming() {
         return this.requestStreaming;
     }
     /**
      * A URL of the input message type.
      * 
     */
-    public String getRequestTypeUrl() {
+    public String requestTypeUrl() {
         return this.requestTypeUrl;
     }
     /**
      * If true, the response is streamed.
      * 
     */
-    public Boolean getResponseStreaming() {
+    public Boolean responseStreaming() {
         return this.responseStreaming;
     }
     /**
      * The URL of the output message type.
      * 
     */
-    public String getResponseTypeUrl() {
+    public String responseTypeUrl() {
         return this.responseTypeUrl;
     }
     /**
      * The source syntax of this method.
      * 
     */
-    public String getSyntax() {
+    public String syntax() {
         return this.syntax;
     }
 

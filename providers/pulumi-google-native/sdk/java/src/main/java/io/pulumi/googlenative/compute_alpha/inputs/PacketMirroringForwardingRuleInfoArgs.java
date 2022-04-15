@@ -22,7 +22,7 @@ public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resou
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

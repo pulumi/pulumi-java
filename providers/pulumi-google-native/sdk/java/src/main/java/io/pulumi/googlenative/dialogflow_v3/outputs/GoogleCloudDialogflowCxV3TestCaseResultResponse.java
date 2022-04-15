@@ -55,35 +55,35 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
      * The conversation turns uttered during the test case replay in chronological order.
      * 
     */
-    public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> getConversationTurns() {
+    public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns() {
         return this.conversationTurns;
     }
     /**
      * Environment where the test was run. If not set, it indicates the draft environment.
      * 
     */
-    public String getEnvironment() {
+    public String environment() {
         return this.environment;
     }
     /**
      * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Whether the test case passed in the agent environment.
      * 
     */
-    public String getTestResult() {
+    public String testResult() {
         return this.testResult;
     }
     /**
      * The time that the test was run.
      * 
     */
-    public String getTestTime() {
+    public String testTime() {
         return this.testTime;
     }
 

@@ -29,7 +29,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="autodetect", required=true)
       private final Boolean autodetect;
 
-    public Boolean getAutodetect() {
+    public Boolean autodetect() {
         return this.autodetect;
     }
 
@@ -40,7 +40,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="avroOptions", required=true)
       private final AvroOptionsResponse avroOptions;
 
-    public AvroOptionsResponse getAvroOptions() {
+    public AvroOptionsResponse avroOptions() {
         return this.avroOptions;
     }
 
@@ -51,7 +51,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="bigtableOptions", required=true)
       private final BigtableOptionsResponse bigtableOptions;
 
-    public BigtableOptionsResponse getBigtableOptions() {
+    public BigtableOptionsResponse bigtableOptions() {
         return this.bigtableOptions;
     }
 
@@ -62,7 +62,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="compression", required=true)
       private final String compression;
 
-    public String getCompression() {
+    public String compression() {
         return this.compression;
     }
 
@@ -73,7 +73,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="connectionId", required=true)
       private final String connectionId;
 
-    public String getConnectionId() {
+    public String connectionId() {
         return this.connectionId;
     }
 
@@ -84,7 +84,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="csvOptions", required=true)
       private final CsvOptionsResponse csvOptions;
 
-    public CsvOptionsResponse getCsvOptions() {
+    public CsvOptionsResponse csvOptions() {
         return this.csvOptions;
     }
 
@@ -95,7 +95,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="decimalTargetTypes", required=true)
       private final List<String> decimalTargetTypes;
 
-    public List<String> getDecimalTargetTypes() {
+    public List<String> decimalTargetTypes() {
         return this.decimalTargetTypes;
     }
 
@@ -106,7 +106,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="googleSheetsOptions", required=true)
       private final GoogleSheetsOptionsResponse googleSheetsOptions;
 
-    public GoogleSheetsOptionsResponse getGoogleSheetsOptions() {
+    public GoogleSheetsOptionsResponse googleSheetsOptions() {
         return this.googleSheetsOptions;
     }
 
@@ -117,7 +117,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="hivePartitioningOptions", required=true)
       private final HivePartitioningOptionsResponse hivePartitioningOptions;
 
-    public HivePartitioningOptionsResponse getHivePartitioningOptions() {
+    public HivePartitioningOptionsResponse hivePartitioningOptions() {
         return this.hivePartitioningOptions;
     }
 
@@ -128,7 +128,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="ignoreUnknownValues", required=true)
       private final Boolean ignoreUnknownValues;
 
-    public Boolean getIgnoreUnknownValues() {
+    public Boolean ignoreUnknownValues() {
         return this.ignoreUnknownValues;
     }
 
@@ -139,7 +139,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="maxBadRecords", required=true)
       private final Integer maxBadRecords;
 
-    public Integer getMaxBadRecords() {
+    public Integer maxBadRecords() {
         return this.maxBadRecords;
     }
 
@@ -150,7 +150,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="parquetOptions", required=true)
       private final ParquetOptionsResponse parquetOptions;
 
-    public ParquetOptionsResponse getParquetOptions() {
+    public ParquetOptionsResponse parquetOptions() {
         return this.parquetOptions;
     }
 
@@ -161,7 +161,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="schema", required=true)
       private final TableSchemaResponse schema;
 
-    public TableSchemaResponse getSchema() {
+    public TableSchemaResponse schema() {
         return this.schema;
     }
 
@@ -172,7 +172,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="sourceFormat", required=true)
       private final String sourceFormat;
 
-    public String getSourceFormat() {
+    public String sourceFormat() {
         return this.sourceFormat;
     }
 
@@ -183,7 +183,7 @@ public final class ExternalDataConfigurationResponse extends io.pulumi.resources
     @Import(name="sourceUris", required=true)
       private final List<String> sourceUris;
 
-    public List<String> getSourceUris() {
+    public List<String> sourceUris() {
         return this.sourceUris;
     }
 

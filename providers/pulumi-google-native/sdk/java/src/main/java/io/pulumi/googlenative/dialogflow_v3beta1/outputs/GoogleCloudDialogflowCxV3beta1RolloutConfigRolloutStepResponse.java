@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
      * The name of the rollout step;
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
      * 
     */
-    public String getMinDuration() {
+    public String minDuration() {
         return this.minDuration;
     }
     /**
      * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
      * 
     */
-    public Integer getTrafficPercent() {
+    public Integer trafficPercent() {
         return this.trafficPercent;
     }
 

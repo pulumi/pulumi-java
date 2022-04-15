@@ -78,56 +78,56 @@ public final class GetJobResult {
      * [Required] Describes the job configuration.
      * 
     */
-    public JobConfigurationResponse getConfiguration() {
+    public JobConfigurationResponse configuration() {
         return this.configuration;
     }
     /**
      * A hash of this resource.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * [Optional] Reference describing the unique-per-user name of the job.
      * 
     */
-    public JobReferenceResponse getJobReference() {
+    public JobReferenceResponse jobReference() {
         return this.jobReference;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * A URL that can be used to access this resource again.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Information about the job, including starting time and ending time of the job.
      * 
     */
-    public JobStatisticsResponse getStatistics() {
+    public JobStatisticsResponse statistics() {
         return this.statistics;
     }
     /**
      * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
     */
-    public JobStatusResponse getStatus() {
+    public JobStatusResponse status() {
         return this.status;
     }
     /**
      * Email address of the user who ran the job.
      * 
     */
-    public String getUserEmail() {
+    public String userEmail() {
         return this.userEmail;
     }
 

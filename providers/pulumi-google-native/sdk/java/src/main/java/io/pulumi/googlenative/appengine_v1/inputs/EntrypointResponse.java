@@ -23,7 +23,7 @@ public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shell", required=true)
       private final String shell;
 
-    public String getShell() {
+    public String shell() {
         return this.shell;
     }
 

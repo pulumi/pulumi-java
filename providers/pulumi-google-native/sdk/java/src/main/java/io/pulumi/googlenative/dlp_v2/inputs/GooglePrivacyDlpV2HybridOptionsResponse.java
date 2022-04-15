@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
     @Import(name="requiredFindingLabelKeys", required=true)
       private final List<String> requiredFindingLabelKeys;
 
-    public List<String> getRequiredFindingLabelKeys() {
+    public List<String> requiredFindingLabelKeys() {
         return this.requiredFindingLabelKeys;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
     @Import(name="tableOptions", required=true)
       private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
-    public GooglePrivacyDlpV2TableOptionsResponse getTableOptions() {
+    public GooglePrivacyDlpV2TableOptionsResponse tableOptions() {
         return this.tableOptions;
     }
 

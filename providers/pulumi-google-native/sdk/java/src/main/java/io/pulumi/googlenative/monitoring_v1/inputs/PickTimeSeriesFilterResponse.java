@@ -24,7 +24,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
     @Import(name="direction", required=true)
       private final String direction;
 
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
 
@@ -35,7 +35,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
     @Import(name="numTimeSeries", required=true)
       private final Integer numTimeSeries;
 
-    public Integer getNumTimeSeries() {
+    public Integer numTimeSeries() {
         return this.numTimeSeries;
     }
 
@@ -46,7 +46,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
     @Import(name="rankingMethod", required=true)
       private final String rankingMethod;
 
-    public String getRankingMethod() {
+    public String rankingMethod() {
         return this.rankingMethod;
     }
 

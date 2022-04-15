@@ -23,14 +23,14 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compositeFilter")
       private final @Nullable Output<CompositeFilterArgs> compositeFilter;
 
-    public Output<CompositeFilterArgs> getCompositeFilter() {
+    public Output<CompositeFilterArgs> compositeFilter() {
         return this.compositeFilter == null ? Codegen.empty() : this.compositeFilter;
     }
 
     @Import(name="valueFilter")
       private final @Nullable Output<ValueFilterArgs> valueFilter;
 
-    public Output<ValueFilterArgs> getValueFilter() {
+    public Output<ValueFilterArgs> valueFilter() {
         return this.valueFilter == null ? Codegen.empty() : this.valueFilter;
     }
 

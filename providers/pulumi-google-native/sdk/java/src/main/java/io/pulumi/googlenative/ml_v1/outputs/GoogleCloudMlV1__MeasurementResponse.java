@@ -41,21 +41,21 @@ public final class GoogleCloudMlV1__MeasurementResponse {
      * Time that the trial has been running at the point of this measurement.
      * 
     */
-    public String getElapsedTime() {
+    public String elapsedTime() {
         return this.elapsedTime;
     }
     /**
      * Provides a list of metrics that act as inputs into the objective function.
      * 
     */
-    public List<GoogleCloudMlV1_Measurement_MetricResponse> getMetrics() {
+    public List<GoogleCloudMlV1_Measurement_MetricResponse> metrics() {
         return this.metrics;
     }
     /**
      * The number of steps a machine learning model has been trained for. Must be non-negative.
      * 
     */
-    public String getStepCount() {
+    public String stepCount() {
         return this.stepCount;
     }
 

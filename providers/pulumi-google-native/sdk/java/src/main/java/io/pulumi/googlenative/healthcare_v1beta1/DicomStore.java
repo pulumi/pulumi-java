@@ -33,7 +33,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -47,7 +47,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -61,7 +61,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return Notification destination for new DICOM instances. Supplied by the client.
      * 
      */
-    public Output<NotificationConfigResponse> getNotificationConfig() {
+    public Output<NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -75,7 +75,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * @return A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
      * 
      */
-    public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse>> getStreamConfigs() {
+    public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse>> streamConfigs() {
         return this.streamConfigs;
     }
 

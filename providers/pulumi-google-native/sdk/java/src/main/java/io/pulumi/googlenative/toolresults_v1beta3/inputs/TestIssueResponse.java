@@ -24,7 +24,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="category", required=true)
       private final String category;
 
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
 
@@ -35,7 +35,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -46,7 +46,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -57,7 +57,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -68,7 +68,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="warning", required=true)
       private final AnyResponse warning;
 
-    public AnyResponse getWarning() {
+    public AnyResponse warning() {
         return this.warning;
     }
 

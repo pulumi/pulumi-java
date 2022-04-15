@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends io.pulumi.reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 

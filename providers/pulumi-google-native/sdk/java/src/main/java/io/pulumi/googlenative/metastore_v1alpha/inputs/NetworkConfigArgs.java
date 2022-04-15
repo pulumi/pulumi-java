@@ -27,7 +27,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consumers")
       private final @Nullable Output<List<ConsumerArgs>> consumers;
 
-    public Output<List<ConsumerArgs>> getConsumers() {
+    public Output<List<ConsumerArgs>> consumers() {
         return this.consumers == null ? Codegen.empty() : this.consumers;
     }
 

@@ -23,7 +23,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
     @Import(name="customerDemarcId", required=true)
       private final String customerDemarcId;
 
-    public String getCustomerDemarcId() {
+    public String customerDemarcId() {
         return this.customerDemarcId;
     }
 
@@ -34,7 +34,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
     @Import(name="googleCircuitId", required=true)
       private final String googleCircuitId;
 
-    public String getGoogleCircuitId() {
+    public String googleCircuitId() {
         return this.googleCircuitId;
     }
 
@@ -45,7 +45,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
     @Import(name="googleDemarcId", required=true)
       private final String googleDemarcId;
 
-    public String getGoogleDemarcId() {
+    public String googleDemarcId() {
         return this.googleDemarcId;
     }
 

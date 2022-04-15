@@ -20,7 +20,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="annotatedDatasetId", required=true)
       private final Output<String> annotatedDatasetId;
 
-    public Output<String> getAnnotatedDatasetId() {
+    public Output<String> annotatedDatasetId() {
         return this.annotatedDatasetId;
     }
 
@@ -31,7 +31,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -42,21 +42,21 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="feedbackThreadId", required=true)
       private final Output<String> feedbackThreadId;
 
-    public Output<String> getFeedbackThreadId() {
+    public Output<String> feedbackThreadId() {
         return this.feedbackThreadId;
     }
 
@@ -67,7 +67,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -78,28 +78,28 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="operatorFeedbackMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
 
-    public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> getOperatorFeedbackMetadata() {
+    public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata() {
         return this.operatorFeedbackMetadata == null ? Codegen.empty() : this.operatorFeedbackMetadata;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requesterFeedbackMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 
-    public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> getRequesterFeedbackMetadata() {
+    public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata() {
         return this.requesterFeedbackMetadata == null ? Codegen.empty() : this.requesterFeedbackMetadata;
     }
 

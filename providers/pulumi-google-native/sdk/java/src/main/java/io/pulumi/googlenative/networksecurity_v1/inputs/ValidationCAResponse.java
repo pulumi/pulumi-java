@@ -24,7 +24,7 @@ public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="certificateProviderInstance", required=true)
       private final CertificateProviderInstanceResponse certificateProviderInstance;
 
-    public CertificateProviderInstanceResponse getCertificateProviderInstance() {
+    public CertificateProviderInstanceResponse certificateProviderInstance() {
         return this.certificateProviderInstance;
     }
 
@@ -35,7 +35,7 @@ public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="grpcEndpoint", required=true)
       private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
 
-    public GoogleCloudNetworksecurityV1GrpcEndpointResponse getGrpcEndpoint() {
+    public GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint() {
         return this.grpcEndpoint;
     }
 

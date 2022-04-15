@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
      * 
     */
-    public Boolean getSmartReplyAllowlistCovered() {
+    public Boolean smartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
     }
 

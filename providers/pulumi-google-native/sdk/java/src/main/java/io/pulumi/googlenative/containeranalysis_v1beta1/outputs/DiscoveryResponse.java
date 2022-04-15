@@ -24,7 +24,7 @@ public final class DiscoveryResponse {
      * Immutable. The kind of analysis that is handled by this discovery.
      * 
     */
-    public String getAnalysisKind() {
+    public String analysisKind() {
         return this.analysisKind;
     }
 

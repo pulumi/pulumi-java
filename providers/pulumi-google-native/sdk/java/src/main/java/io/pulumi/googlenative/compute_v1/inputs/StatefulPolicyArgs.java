@@ -18,7 +18,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preservedState")
       private final @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
 
-    public Output<StatefulPolicyPreservedStateArgs> getPreservedState() {
+    public Output<StatefulPolicyPreservedStateArgs> preservedState() {
         return this.preservedState == null ? Codegen.empty() : this.preservedState;
     }
 

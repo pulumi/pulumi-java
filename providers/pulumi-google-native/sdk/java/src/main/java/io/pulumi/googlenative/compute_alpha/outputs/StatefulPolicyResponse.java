@@ -16,7 +16,7 @@ public final class StatefulPolicyResponse {
         this.preservedState = preservedState;
     }
 
-    public StatefulPolicyPreservedStateResponse getPreservedState() {
+    public StatefulPolicyPreservedStateResponse preservedState() {
         return this.preservedState;
     }
 

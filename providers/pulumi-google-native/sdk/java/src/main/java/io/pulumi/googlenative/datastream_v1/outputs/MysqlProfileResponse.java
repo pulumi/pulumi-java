@@ -55,35 +55,35 @@ public final class MysqlProfileResponse {
      * Hostname for the MySQL connection.
      * 
     */
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
     /**
      * Input only. Password for the MySQL connection.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Port for the MySQL connection, default value is 3306.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * SSL configuration for the MySQL connection.
      * 
     */
-    public MysqlSslConfigResponse getSslConfig() {
+    public MysqlSslConfigResponse sslConfig() {
         return this.sslConfig;
     }
     /**
      * Username for the MySQL connection.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

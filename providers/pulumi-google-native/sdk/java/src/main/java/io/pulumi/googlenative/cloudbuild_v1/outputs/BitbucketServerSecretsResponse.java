@@ -39,21 +39,21 @@ public final class BitbucketServerSecretsResponse {
      * The resource name for the admin access token's secret version.
      * 
     */
-    public String getAdminAccessTokenVersionName() {
+    public String adminAccessTokenVersionName() {
         return this.adminAccessTokenVersionName;
     }
     /**
      * The resource name for the read access token's secret version.
      * 
     */
-    public String getReadAccessTokenVersionName() {
+    public String readAccessTokenVersionName() {
         return this.readAccessTokenVersionName;
     }
     /**
      * Immutable. The resource name for the webhook secret's secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
     */
-    public String getWebhookSecretVersionName() {
+    public String webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
 

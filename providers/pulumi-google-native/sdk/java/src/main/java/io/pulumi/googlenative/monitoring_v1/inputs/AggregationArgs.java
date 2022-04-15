@@ -29,7 +29,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alignmentPeriod")
       private final @Nullable Output<String> alignmentPeriod;
 
-    public Output<String> getAlignmentPeriod() {
+    public Output<String> alignmentPeriod() {
         return this.alignmentPeriod == null ? Codegen.empty() : this.alignmentPeriod;
     }
 
@@ -40,7 +40,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crossSeriesReducer")
       private final @Nullable Output<AggregationCrossSeriesReducer> crossSeriesReducer;
 
-    public Output<AggregationCrossSeriesReducer> getCrossSeriesReducer() {
+    public Output<AggregationCrossSeriesReducer> crossSeriesReducer() {
         return this.crossSeriesReducer == null ? Codegen.empty() : this.crossSeriesReducer;
     }
 
@@ -51,7 +51,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupByFields")
       private final @Nullable Output<List<String>> groupByFields;
 
-    public Output<List<String>> getGroupByFields() {
+    public Output<List<String>> groupByFields() {
         return this.groupByFields == null ? Codegen.empty() : this.groupByFields;
     }
 
@@ -62,7 +62,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="perSeriesAligner")
       private final @Nullable Output<AggregationPerSeriesAligner> perSeriesAligner;
 
-    public Output<AggregationPerSeriesAligner> getPerSeriesAligner() {
+    public Output<AggregationPerSeriesAligner> perSeriesAligner() {
         return this.perSeriesAligner == null ? Codegen.empty() : this.perSeriesAligner;
     }
 

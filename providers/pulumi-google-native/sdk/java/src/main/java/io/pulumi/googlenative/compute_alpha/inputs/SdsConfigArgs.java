@@ -26,7 +26,7 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcServiceConfig")
       private final @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
 
-    public Output<GrpcServiceConfigArgs> getGrpcServiceConfig() {
+    public Output<GrpcServiceConfigArgs> grpcServiceConfig() {
         return this.grpcServiceConfig == null ? Codegen.empty() : this.grpcServiceConfig;
     }
 

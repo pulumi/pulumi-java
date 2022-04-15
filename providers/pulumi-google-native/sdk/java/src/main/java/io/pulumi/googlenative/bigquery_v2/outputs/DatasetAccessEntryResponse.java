@@ -30,10 +30,10 @@ public final class DatasetAccessEntryResponse {
      * [Required] The dataset this entry applies to.
      * 
     */
-    public DatasetReferenceResponse getDataset() {
+    public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
-    public List<String> getTargetTypes() {
+    public List<String> targetTypes() {
         return this.targetTypes;
     }
 

@@ -24,14 +24,14 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="ipAllocationMode")
       private final @Nullable Output<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode;
 
-    public Output<NetworkInterfaceSubInterfaceIpAllocationMode> getIpAllocationMode() {
+    public Output<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode() {
         return this.ipAllocationMode == null ? Codegen.empty() : this.ipAllocationMode;
     }
 
@@ -42,7 +42,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
     @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan == null ? Codegen.empty() : this.vlan;
     }
 

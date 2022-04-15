@@ -15,14 +15,14 @@ public final class GetFolderContactArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactId", required=true)
       private final String contactId;
 
-    public String getContactId() {
+    public String contactId() {
         return this.contactId;
     }
 
     @Import(name="folderId", required=true)
       private final String folderId;
 
-    public String getFolderId() {
+    public String folderId() {
         return this.folderId;
     }
 

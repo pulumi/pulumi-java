@@ -48,28 +48,28 @@ public final class WindowsDetailResponse {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
      * 
     */
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
     /**
      * The description of this vulnerability.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
      * 
     */
-    public List<KnowledgeBaseResponse> getFixingKbs() {
+    public List<KnowledgeBaseResponse> fixingKbs() {
         return this.fixingKbs;
     }
     /**
      * The name of this vulnerability.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

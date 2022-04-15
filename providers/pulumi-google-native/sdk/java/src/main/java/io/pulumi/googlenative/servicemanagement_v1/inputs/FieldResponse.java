@@ -27,7 +27,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cardinality", required=true)
       private final String cardinality;
 
-    public String getCardinality() {
+    public String cardinality() {
         return this.cardinality;
     }
 
@@ -38,7 +38,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultValue", required=true)
       private final String defaultValue;
 
-    public String getDefaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
 
@@ -49,7 +49,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jsonName", required=true)
       private final String jsonName;
 
-    public String getJsonName() {
+    public String jsonName() {
         return this.jsonName;
     }
 
@@ -60,7 +60,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -71,7 +71,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -82,7 +82,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="number", required=true)
       private final Integer number;
 
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
 
@@ -93,7 +93,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oneofIndex", required=true)
       private final Integer oneofIndex;
 
-    public Integer getOneofIndex() {
+    public Integer oneofIndex() {
         return this.oneofIndex;
     }
 
@@ -104,7 +104,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
 
@@ -115,7 +115,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="packed", required=true)
       private final Boolean packed;
 
-    public Boolean getPacked() {
+    public Boolean packed() {
         return this.packed;
     }
 
@@ -126,7 +126,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="typeUrl", required=true)
       private final String typeUrl;
 
-    public String getTypeUrl() {
+    public String typeUrl() {
         return this.typeUrl;
     }
 

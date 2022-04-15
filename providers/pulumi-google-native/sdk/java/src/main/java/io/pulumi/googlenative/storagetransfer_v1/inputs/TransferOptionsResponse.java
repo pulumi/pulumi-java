@@ -24,7 +24,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="deleteObjectsFromSourceAfterTransfer", required=true)
       private final Boolean deleteObjectsFromSourceAfterTransfer;
 
-    public Boolean getDeleteObjectsFromSourceAfterTransfer() {
+    public Boolean deleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer;
     }
 
@@ -35,7 +35,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="deleteObjectsUniqueInSink", required=true)
       private final Boolean deleteObjectsUniqueInSink;
 
-    public Boolean getDeleteObjectsUniqueInSink() {
+    public Boolean deleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink;
     }
 
@@ -46,7 +46,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="metadataOptions", required=true)
       private final MetadataOptionsResponse metadataOptions;
 
-    public MetadataOptionsResponse getMetadataOptions() {
+    public MetadataOptionsResponse metadataOptions() {
         return this.metadataOptions;
     }
 
@@ -57,7 +57,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
     @Import(name="overwriteObjectsAlreadyExistingInSink", required=true)
       private final Boolean overwriteObjectsAlreadyExistingInSink;
 
-    public Boolean getOverwriteObjectsAlreadyExistingInSink() {
+    public Boolean overwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink;
     }
 

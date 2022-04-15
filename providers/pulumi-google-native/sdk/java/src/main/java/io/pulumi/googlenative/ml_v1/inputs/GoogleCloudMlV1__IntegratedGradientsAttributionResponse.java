@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionResponse exten
     @Import(name="numIntegralSteps", required=true)
       private final Integer numIntegralSteps;
 
-    public Integer getNumIntegralSteps() {
+    public Integer numIntegralSteps() {
         return this.numIntegralSteps;
     }
 

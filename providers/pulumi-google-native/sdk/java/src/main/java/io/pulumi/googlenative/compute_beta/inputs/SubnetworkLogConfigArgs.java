@@ -31,7 +31,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="aggregationInterval")
       private final @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval;
 
-    public Output<SubnetworkLogConfigAggregationInterval> getAggregationInterval() {
+    public Output<SubnetworkLogConfigAggregationInterval> aggregationInterval() {
         return this.aggregationInterval == null ? Codegen.empty() : this.aggregationInterval;
     }
 
@@ -42,7 +42,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -53,7 +53,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="filterExpr")
       private final @Nullable Output<String> filterExpr;
 
-    public Output<String> getFilterExpr() {
+    public Output<String> filterExpr() {
         return this.filterExpr == null ? Codegen.empty() : this.filterExpr;
     }
 
@@ -64,7 +64,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="flowSampling")
       private final @Nullable Output<Double> flowSampling;
 
-    public Output<Double> getFlowSampling() {
+    public Output<Double> flowSampling() {
         return this.flowSampling == null ? Codegen.empty() : this.flowSampling;
     }
 
@@ -75,7 +75,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="metadata")
       private final @Nullable Output<SubnetworkLogConfigMetadata> metadata;
 
-    public Output<SubnetworkLogConfigMetadata> getMetadata() {
+    public Output<SubnetworkLogConfigMetadata> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -86,7 +86,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="metadataFields")
       private final @Nullable Output<List<String>> metadataFields;
 
-    public Output<List<String>> getMetadataFields() {
+    public Output<List<String>> metadataFields() {
         return this.metadataFields == null ? Codegen.empty() : this.metadataFields;
     }
 

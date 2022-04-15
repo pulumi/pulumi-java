@@ -24,7 +24,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="queryInsightsEnabled", required=true)
       private final Boolean queryInsightsEnabled;
 
-    public Boolean getQueryInsightsEnabled() {
+    public Boolean queryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
 
@@ -35,7 +35,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="queryPlansPerMinute", required=true)
       private final Integer queryPlansPerMinute;
 
-    public Integer getQueryPlansPerMinute() {
+    public Integer queryPlansPerMinute() {
         return this.queryPlansPerMinute;
     }
 
@@ -46,7 +46,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="queryStringLength", required=true)
       private final Integer queryStringLength;
 
-    public Integer getQueryStringLength() {
+    public Integer queryStringLength() {
         return this.queryStringLength;
     }
 
@@ -57,7 +57,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="recordApplicationTags", required=true)
       private final Boolean recordApplicationTags;
 
-    public Boolean getRecordApplicationTags() {
+    public Boolean recordApplicationTags() {
         return this.recordApplicationTags;
     }
 
@@ -68,7 +68,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="recordClientAddress", required=true)
       private final Boolean recordClientAddress;
 
-    public Boolean getRecordClientAddress() {
+    public Boolean recordClientAddress() {
         return this.recordClientAddress;
     }
 

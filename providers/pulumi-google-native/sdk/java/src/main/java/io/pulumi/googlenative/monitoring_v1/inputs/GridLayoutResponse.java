@@ -25,7 +25,7 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="columns", required=true)
       private final String columns;
 
-    public String getColumns() {
+    public String columns() {
         return this.columns;
     }
 
@@ -36,7 +36,7 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="widgets", required=true)
       private final List<WidgetResponse> widgets;
 
-    public List<WidgetResponse> getWidgets() {
+    public List<WidgetResponse> widgets() {
         return this.widgets;
     }
 

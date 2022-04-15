@@ -39,21 +39,21 @@ public final class OperationErrorResponse {
      * Identifies the specific error that occurred.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * This is always `sql#operationError`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Additional information about the error encountered.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

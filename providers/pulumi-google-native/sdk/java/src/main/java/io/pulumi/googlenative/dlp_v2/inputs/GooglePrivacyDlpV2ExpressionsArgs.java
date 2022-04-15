@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
     @Import(name="conditions")
       private final @Nullable Output<GooglePrivacyDlpV2ConditionsArgs> conditions;
 
-    public Output<GooglePrivacyDlpV2ConditionsArgs> getConditions() {
+    public Output<GooglePrivacyDlpV2ConditionsArgs> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
     @Import(name="logicalOperator")
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;
 
-    public Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> getLogicalOperator() {
+    public Output<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator() {
         return this.logicalOperator == null ? Codegen.empty() : this.logicalOperator;
     }
 

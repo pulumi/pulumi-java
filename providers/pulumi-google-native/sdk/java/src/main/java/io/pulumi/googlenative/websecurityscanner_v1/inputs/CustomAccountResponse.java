@@ -23,7 +23,7 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="loginUrl", required=true)
       private final String loginUrl;
 
-    public String getLoginUrl() {
+    public String loginUrl() {
         return this.loginUrl;
     }
 
@@ -34,7 +34,7 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -45,7 +45,7 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

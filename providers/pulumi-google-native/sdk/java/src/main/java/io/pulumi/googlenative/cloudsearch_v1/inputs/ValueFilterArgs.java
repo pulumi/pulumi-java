@@ -23,7 +23,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
 
-    public Output<String> getOperatorName() {
+    public Output<String> operatorName() {
         return this.operatorName == null ? Codegen.empty() : this.operatorName;
     }
 
@@ -34,7 +34,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<ValueArgs> value;
 
-    public Output<ValueArgs> getValue() {
+    public Output<ValueArgs> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

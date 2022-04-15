@@ -23,7 +23,7 @@ public final class ApiEndpointHandlerResponse extends io.pulumi.resources.Invoke
     @Import(name="scriptPath", required=true)
       private final String scriptPath;
 
-    public String getScriptPath() {
+    public String scriptPath() {
         return this.scriptPath;
     }
 

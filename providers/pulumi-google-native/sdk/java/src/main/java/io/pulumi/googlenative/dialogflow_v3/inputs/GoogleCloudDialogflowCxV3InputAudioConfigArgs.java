@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="audioEncoding", required=true)
       private final Output<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding;
 
-    public Output<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> getAudioEncoding() {
+    public Output<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding() {
         return this.audioEncoding;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="enableWordInfo")
       private final @Nullable Output<Boolean> enableWordInfo;
 
-    public Output<Boolean> getEnableWordInfo() {
+    public Output<Boolean> enableWordInfo() {
         return this.enableWordInfo == null ? Codegen.empty() : this.enableWordInfo;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="model")
       private final @Nullable Output<String> model;
 
-    public Output<String> getModel() {
+    public Output<String> model() {
         return this.model == null ? Codegen.empty() : this.model;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="modelVariant")
       private final @Nullable Output<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> modelVariant;
 
-    public Output<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> getModelVariant() {
+    public Output<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> modelVariant() {
         return this.modelVariant == null ? Codegen.empty() : this.modelVariant;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="phraseHints")
       private final @Nullable Output<List<String>> phraseHints;
 
-    public Output<List<String>> getPhraseHints() {
+    public Output<List<String>> phraseHints() {
         return this.phraseHints == null ? Codegen.empty() : this.phraseHints;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="sampleRateHertz")
       private final @Nullable Output<Integer> sampleRateHertz;
 
-    public Output<Integer> getSampleRateHertz() {
+    public Output<Integer> sampleRateHertz() {
         return this.sampleRateHertz == null ? Codegen.empty() : this.sampleRateHertz;
     }
 
@@ -97,7 +97,7 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     @Import(name="singleUtterance")
       private final @Nullable Output<Boolean> singleUtterance;
 
-    public Output<Boolean> getSingleUtterance() {
+    public Output<Boolean> singleUtterance() {
         return this.singleUtterance == null ? Codegen.empty() : this.singleUtterance;
     }
 

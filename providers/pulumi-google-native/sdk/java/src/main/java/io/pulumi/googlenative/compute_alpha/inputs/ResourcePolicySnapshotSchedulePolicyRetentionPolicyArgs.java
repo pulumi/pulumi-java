@@ -28,14 +28,14 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     @Import(name="maxRetentionDays")
       private final @Nullable Output<Integer> maxRetentionDays;
 
-    public Output<Integer> getMaxRetentionDays() {
+    public Output<Integer> maxRetentionDays() {
         return this.maxRetentionDays == null ? Codegen.empty() : this.maxRetentionDays;
     }
 
     @Import(name="onPolicySwitch")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> getOnPolicySwitch() {
+    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch() {
         return this.onPolicySwitch == null ? Codegen.empty() : this.onPolicySwitch;
     }
 
@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     @Import(name="onSourceDiskDelete")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> getOnSourceDiskDelete() {
+    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete() {
         return this.onSourceDiskDelete == null ? Codegen.empty() : this.onSourceDiskDelete;
     }
 

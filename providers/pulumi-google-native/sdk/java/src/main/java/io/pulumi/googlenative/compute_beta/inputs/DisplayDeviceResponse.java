@@ -23,7 +23,7 @@ public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enableDisplay", required=true)
       private final Boolean enableDisplay;
 
-    public Boolean getEnableDisplay() {
+    public Boolean enableDisplay() {
         return this.enableDisplay;
     }
 

@@ -23,7 +23,7 @@ public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeA
     @Import(name="entity", required=true)
       private final String entity;
 
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
 
@@ -34,7 +34,7 @@ public final class BucketObjectOwnerResponse extends io.pulumi.resources.InvokeA
     @Import(name="entityId", required=true)
       private final String entityId;
 
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
 

@@ -46,28 +46,28 @@ public final class DatabaseDumpResponse {
      * The type of the database.
      * 
     */
-    public String getDatabaseType() {
+    public String databaseType() {
         return this.databaseType;
     }
     /**
      * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
      * 
     */
-    public String getGcsUri() {
+    public String gcsUri() {
         return this.gcsUri;
     }
     /**
      * The name of the source database.
      * 
     */
-    public String getSourceDatabase() {
+    public String sourceDatabase() {
         return this.sourceDatabase;
     }
     /**
      * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

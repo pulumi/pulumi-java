@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends io.pul
     @Import(name="numPaths")
       private final @Nullable Output<Integer> numPaths;
 
-    public Output<Integer> getNumPaths() {
+    public Output<Integer> numPaths() {
         return this.numPaths == null ? Codegen.empty() : this.numPaths;
     }
 

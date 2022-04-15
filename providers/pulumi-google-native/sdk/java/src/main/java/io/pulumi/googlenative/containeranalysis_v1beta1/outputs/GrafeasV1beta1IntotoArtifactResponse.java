@@ -21,10 +21,10 @@ public final class GrafeasV1beta1IntotoArtifactResponse {
         this.resourceUri = resourceUri;
     }
 
-    public ArtifactHashesResponse getHashes() {
+    public ArtifactHashesResponse hashes() {
         return this.hashes;
     }
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

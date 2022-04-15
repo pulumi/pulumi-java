@@ -17,28 +17,28 @@ public final class GetReferenceImageArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="productId", required=true)
       private final String productId;
 
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="referenceImageId", required=true)
       private final String referenceImageId;
 
-    public String getReferenceImageId() {
+    public String referenceImageId() {
         return this.referenceImageId;
     }
 

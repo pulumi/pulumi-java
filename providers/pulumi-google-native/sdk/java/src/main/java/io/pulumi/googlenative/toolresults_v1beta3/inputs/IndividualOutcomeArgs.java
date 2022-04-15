@@ -29,14 +29,14 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="multistepNumber")
       private final @Nullable Output<Integer> multistepNumber;
 
-    public Output<Integer> getMultistepNumber() {
+    public Output<Integer> multistepNumber() {
         return this.multistepNumber == null ? Codegen.empty() : this.multistepNumber;
     }
 
     @Import(name="outcomeSummary")
       private final @Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary;
 
-    public Output<IndividualOutcomeOutcomeSummary> getOutcomeSummary() {
+    public Output<IndividualOutcomeOutcomeSummary> outcomeSummary() {
         return this.outcomeSummary == null ? Codegen.empty() : this.outcomeSummary;
     }
 
@@ -47,14 +47,14 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="runDuration")
       private final @Nullable Output<DurationArgs> runDuration;
 
-    public Output<DurationArgs> getRunDuration() {
+    public Output<DurationArgs> runDuration() {
         return this.runDuration == null ? Codegen.empty() : this.runDuration;
     }
 
     @Import(name="stepId")
       private final @Nullable Output<String> stepId;
 
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId == null ? Codegen.empty() : this.stepId;
     }
 

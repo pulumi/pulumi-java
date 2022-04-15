@@ -32,14 +32,14 @@ public final class HttpsTriggerResponse {
      * The security level for the function.
      * 
     */
-    public String getSecurityLevel() {
+    public String securityLevel() {
         return this.securityLevel;
     }
     /**
      * The deployed url for the function.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

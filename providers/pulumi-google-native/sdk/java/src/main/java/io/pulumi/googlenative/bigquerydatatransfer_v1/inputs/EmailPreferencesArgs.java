@@ -26,7 +26,7 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enableFailureEmail")
       private final @Nullable Output<Boolean> enableFailureEmail;
 
-    public Output<Boolean> getEnableFailureEmail() {
+    public Output<Boolean> enableFailureEmail() {
         return this.enableFailureEmail == null ? Codegen.empty() : this.enableFailureEmail;
     }
 

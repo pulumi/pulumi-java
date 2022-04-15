@@ -39,21 +39,21 @@ public final class SoftwareRecipeArtifactGcsResponse {
      * Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.
      * 
     */
-    public String getGeneration() {
+    public String generation() {
         return this.generation;
     }
     /**
      * Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.
      * 
     */
-    public String getObject() {
+    public String object() {
         return this.object;
     }
 

@@ -20,7 +20,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
     @Import(name="endColumn", required=true)
       private final Integer endColumn;
 
-    public Integer getEndColumn() {
+    public Integer endColumn() {
         return this.endColumn;
     }
 
@@ -31,7 +31,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
     @Import(name="endLine", required=true)
       private final Integer endLine;
 
-    public Integer getEndLine() {
+    public Integer endLine() {
         return this.endLine;
     }
 
@@ -42,7 +42,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
     @Import(name="procedureId", required=true)
       private final String procedureId;
 
-    public String getProcedureId() {
+    public String procedureId() {
         return this.procedureId;
     }
 
@@ -53,7 +53,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startColumn", required=true)
       private final Integer startColumn;
 
-    public Integer getStartColumn() {
+    public Integer startColumn() {
         return this.startColumn;
     }
 
@@ -64,7 +64,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startLine", required=true)
       private final Integer startLine;
 
-    public Integer getStartLine() {
+    public Integer startLine() {
         return this.startLine;
     }
 
@@ -75,7 +75,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
     @Import(name="text", required=true)
       private final String text;
 
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

@@ -41,21 +41,21 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
      * 
     */
-    public Boolean getAllowMultiLabel() {
+    public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
     /**
      * Annotation spec set resource name.
      * 
     */
-    public String getAnnotationSpecSet() {
+    public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
      * Optional. Configs for sentiment selection. We deprecate sentiment analysis in data labeling side as it is incompatible with uCAIP.
      * 
     */
-    public GoogleCloudDatalabelingV1beta1SentimentConfigResponse getSentimentConfig() {
+    public GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig() {
         return this.sentimentConfig;
     }
 

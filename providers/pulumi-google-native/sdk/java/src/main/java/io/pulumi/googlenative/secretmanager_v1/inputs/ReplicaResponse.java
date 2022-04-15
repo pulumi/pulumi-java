@@ -24,7 +24,7 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customerManagedEncryption", required=true)
       private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
-    public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
+    public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
     }
 
@@ -35,7 +35,7 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

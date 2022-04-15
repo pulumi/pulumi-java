@@ -25,7 +25,7 @@ public final class GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputUri", required=true)
       private final Output<String> inputUri;
 
-    public Output<String> getInputUri() {
+    public Output<String> inputUri() {
         return this.inputUri;
     }
 

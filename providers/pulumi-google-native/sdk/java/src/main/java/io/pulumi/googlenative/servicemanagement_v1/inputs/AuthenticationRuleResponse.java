@@ -27,7 +27,7 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="allowWithoutCredential", required=true)
       private final Boolean allowWithoutCredential;
 
-    public Boolean getAllowWithoutCredential() {
+    public Boolean allowWithoutCredential() {
         return this.allowWithoutCredential;
     }
 
@@ -38,7 +38,7 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="oauth", required=true)
       private final OAuthRequirementsResponse oauth;
 
-    public OAuthRequirementsResponse getOauth() {
+    public OAuthRequirementsResponse oauth() {
         return this.oauth;
     }
 
@@ -49,7 +49,7 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="requirements", required=true)
       private final List<AuthRequirementResponse> requirements;
 
-    public List<AuthRequirementResponse> getRequirements() {
+    public List<AuthRequirementResponse> requirements() {
         return this.requirements;
     }
 
@@ -60,7 +60,7 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

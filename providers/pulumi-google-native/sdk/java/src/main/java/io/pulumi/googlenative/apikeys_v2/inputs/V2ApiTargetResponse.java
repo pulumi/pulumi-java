@@ -24,7 +24,7 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="methods", required=true)
       private final List<String> methods;
 
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods;
     }
 
@@ -35,7 +35,7 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

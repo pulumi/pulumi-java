@@ -31,14 +31,14 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiproduct")
       private final @Nullable Output<String> apiproduct;
 
-    public Output<String> getApiproduct() {
+    public Output<String> apiproduct() {
         return this.apiproduct == null ? Codegen.empty() : this.apiproduct;
     }
 
     @Import(name="apiproductId", required=true)
       private final Output<String> apiproductId;
 
-    public Output<String> getApiproductId() {
+    public Output<String> apiproductId() {
         return this.apiproductId;
     }
 
@@ -49,7 +49,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingPeriod")
       private final @Nullable Output<RatePlanBillingPeriod> billingPeriod;
 
-    public Output<RatePlanBillingPeriod> getBillingPeriod() {
+    public Output<RatePlanBillingPeriod> billingPeriod() {
         return this.billingPeriod == null ? Codegen.empty() : this.billingPeriod;
     }
 
@@ -60,7 +60,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consumptionPricingRates")
       private final @Nullable Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
 
-    public Output<List<GoogleCloudApigeeV1RateRangeArgs>> getConsumptionPricingRates() {
+    public Output<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates() {
         return this.consumptionPricingRates == null ? Codegen.empty() : this.consumptionPricingRates;
     }
 
@@ -71,7 +71,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consumptionPricingType")
       private final @Nullable Output<RatePlanConsumptionPricingType> consumptionPricingType;
 
-    public Output<RatePlanConsumptionPricingType> getConsumptionPricingType() {
+    public Output<RatePlanConsumptionPricingType> consumptionPricingType() {
         return this.consumptionPricingType == null ? Codegen.empty() : this.consumptionPricingType;
     }
 
@@ -82,7 +82,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
-    public Output<String> getCurrencyCode() {
+    public Output<String> currencyCode() {
         return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
     }
 
@@ -93,7 +93,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -104,7 +104,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -115,7 +115,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -126,7 +126,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedFeeFrequency")
       private final @Nullable Output<Integer> fixedFeeFrequency;
 
-    public Output<Integer> getFixedFeeFrequency() {
+    public Output<Integer> fixedFeeFrequency() {
         return this.fixedFeeFrequency == null ? Codegen.empty() : this.fixedFeeFrequency;
     }
 
@@ -137,14 +137,14 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixedRecurringFee")
       private final @Nullable Output<GoogleTypeMoneyArgs> fixedRecurringFee;
 
-    public Output<GoogleTypeMoneyArgs> getFixedRecurringFee() {
+    public Output<GoogleTypeMoneyArgs> fixedRecurringFee() {
         return this.fixedRecurringFee == null ? Codegen.empty() : this.fixedRecurringFee;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -155,7 +155,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revenueShareRates")
       private final @Nullable Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
 
-    public Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> getRevenueShareRates() {
+    public Output<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates() {
         return this.revenueShareRates == null ? Codegen.empty() : this.revenueShareRates;
     }
 
@@ -166,7 +166,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revenueShareType")
       private final @Nullable Output<RatePlanRevenueShareType> revenueShareType;
 
-    public Output<RatePlanRevenueShareType> getRevenueShareType() {
+    public Output<RatePlanRevenueShareType> revenueShareType() {
         return this.revenueShareType == null ? Codegen.empty() : this.revenueShareType;
     }
 
@@ -177,7 +177,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setupFee")
       private final @Nullable Output<GoogleTypeMoneyArgs> setupFee;
 
-    public Output<GoogleTypeMoneyArgs> getSetupFee() {
+    public Output<GoogleTypeMoneyArgs> setupFee() {
         return this.setupFee == null ? Codegen.empty() : this.setupFee;
     }
 
@@ -188,7 +188,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -199,7 +199,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<RatePlanState> state;
 
-    public Output<RatePlanState> getState() {
+    public Output<RatePlanState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

@@ -44,7 +44,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
      * 
      */
-    public Output<ClusteringResponse> getClustering() {
+    public Output<ClusteringResponse> clustering() {
         return this.clustering;
     }
     /**
@@ -58,7 +58,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The time when this table was created, in milliseconds since the epoch.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -72,7 +72,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The default collation of the table.
      * 
      */
-    public Output<String> getDefaultCollation() {
+    public Output<String> defaultCollation() {
         return this.defaultCollation;
     }
     /**
@@ -86,7 +86,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] A user-friendly description of this table.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -100,7 +100,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Custom encryption configuration (e.g., Cloud KMS keys).
      * 
      */
-    public Output<EncryptionConfigurationResponse> getEncryptionConfiguration() {
+    public Output<EncryptionConfigurationResponse> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -114,7 +114,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A hash of the table metadata. Used to ensure there were no concurrent modifications to the resource when attempting an update. Not guaranteed to change when the table contents or the fields numRows, numBytes, numLongTermBytes or lastModifiedTime change.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -128,7 +128,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.
      * 
      */
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -142,7 +142,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
      * 
      */
-    public Output<ExternalDataConfigurationResponse> getExternalDataConfiguration() {
+    public Output<ExternalDataConfigurationResponse> externalDataConfiguration() {
         return this.externalDataConfiguration;
     }
     /**
@@ -156,7 +156,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] A descriptive name for this table.
      * 
      */
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -170,7 +170,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -184,7 +184,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -198,7 +198,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The time when this table was last modified, in milliseconds since the epoch.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -212,7 +212,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The geographic location where the table resides. This value is inherited from the dataset.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -226,7 +226,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] Materialized view definition.
      * 
      */
-    public Output<MaterializedViewDefinitionResponse> getMaterializedView() {
+    public Output<MaterializedViewDefinitionResponse> materializedView() {
         return this.materializedView;
     }
     /**
@@ -240,7 +240,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
      * 
      */
-    public Output<ModelDefinitionResponse> getModel() {
+    public Output<ModelDefinitionResponse> model() {
         return this.model;
     }
     /**
@@ -254,7 +254,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
-    public Output<String> getNumBytes() {
+    public Output<String> numBytes() {
         return this.numBytes;
     }
     /**
@@ -268,7 +268,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The number of bytes in the table that are considered "long-term storage".
      * 
      */
-    public Output<String> getNumLongTermBytes() {
+    public Output<String> numLongTermBytes() {
         return this.numLongTermBytes;
     }
     /**
@@ -282,7 +282,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [TrustedTester] The physical size of this table in bytes, excluding any data in the streaming buffer. This includes compression and storage used for time travel.
      * 
      */
-    public Output<String> getNumPhysicalBytes() {
+    public Output<String> numPhysicalBytes() {
         return this.numPhysicalBytes;
     }
     /**
@@ -296,7 +296,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The number of rows of data in this table, excluding any data in the streaming buffer.
      * 
      */
-    public Output<String> getNumRows() {
+    public Output<String> numRows() {
         return this.numRows;
     }
     /**
@@ -310,7 +310,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
      */
-    public Output<RangePartitioningResponse> getRangePartitioning() {
+    public Output<RangePartitioningResponse> rangePartitioning() {
         return this.rangePartitioning;
     }
     /**
@@ -324,7 +324,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
      * 
      */
-    public Output<Boolean> getRequirePartitionFilter() {
+    public Output<Boolean> requirePartitionFilter() {
         return this.requirePartitionFilter;
     }
     /**
@@ -338,7 +338,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] Describes the schema of this table.
      * 
      */
-    public Output<TableSchemaResponse> getSchema() {
+    public Output<TableSchemaResponse> schema() {
         return this.schema;
     }
     /**
@@ -352,7 +352,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A URL that can be used to access this resource again.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -366,7 +366,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Snapshot definition.
      * 
      */
-    public Output<SnapshotDefinitionResponse> getSnapshotDefinition() {
+    public Output<SnapshotDefinitionResponse> snapshotDefinition() {
         return this.snapshotDefinition;
     }
     /**
@@ -380,7 +380,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Contains information regarding this table's streaming buffer, if one is present. This field will be absent if the table is not being streamed to or if there is no data in the streaming buffer.
      * 
      */
-    public Output<StreamingbufferResponse> getStreamingBuffer() {
+    public Output<StreamingbufferResponse> streamingBuffer() {
         return this.streamingBuffer;
     }
     /**
@@ -394,7 +394,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Required] Reference describing the ID of this table.
      * 
      */
-    public Output<TableReferenceResponse> getTableReference() {
+    public Output<TableReferenceResponse> tableReference() {
         return this.tableReference;
     }
     /**
@@ -408,7 +408,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
      */
-    public Output<TimePartitioningResponse> getTimePartitioning() {
+    public Output<TimePartitioningResponse> timePartitioning() {
         return this.timePartitioning;
     }
     /**
@@ -422,7 +422,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Describes the table type. The following values are supported: TABLE: A normal BigQuery table. VIEW: A virtual table defined by a SQL query. SNAPSHOT: An immutable, read-only table that is a copy of another table. [TrustedTester] MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -436,7 +436,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return [Optional] The view definition.
      * 
      */
-    public Output<ViewDefinitionResponse> getView() {
+    public Output<ViewDefinitionResponse> view() {
         return this.view;
     }
 

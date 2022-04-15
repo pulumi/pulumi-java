@@ -24,7 +24,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="builderVersion", required=true)
       private final String builderVersion;
 
-    public String getBuilderVersion() {
+    public String builderVersion() {
         return this.builderVersion;
     }
 
@@ -35,7 +35,7 @@ public final class BuildResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="signature", required=true)
       private final BuildSignatureResponse signature;
 
-    public BuildSignatureResponse getSignature() {
+    public BuildSignatureResponse signature() {
         return this.signature;
     }
 

@@ -35,7 +35,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="coolDownPeriodSec")
       private final @Nullable Output<Integer> coolDownPeriodSec;
 
-    public Output<Integer> getCoolDownPeriodSec() {
+    public Output<Integer> coolDownPeriodSec() {
         return this.coolDownPeriodSec == null ? Codegen.empty() : this.coolDownPeriodSec;
     }
 
@@ -46,7 +46,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cpuUtilization")
       private final @Nullable Output<AutoscalingPolicyCpuUtilizationArgs> cpuUtilization;
 
-    public Output<AutoscalingPolicyCpuUtilizationArgs> getCpuUtilization() {
+    public Output<AutoscalingPolicyCpuUtilizationArgs> cpuUtilization() {
         return this.cpuUtilization == null ? Codegen.empty() : this.cpuUtilization;
     }
 
@@ -57,7 +57,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customMetricUtilizations")
       private final @Nullable Output<List<AutoscalingPolicyCustomMetricUtilizationArgs>> customMetricUtilizations;
 
-    public Output<List<AutoscalingPolicyCustomMetricUtilizationArgs>> getCustomMetricUtilizations() {
+    public Output<List<AutoscalingPolicyCustomMetricUtilizationArgs>> customMetricUtilizations() {
         return this.customMetricUtilizations == null ? Codegen.empty() : this.customMetricUtilizations;
     }
 
@@ -68,7 +68,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="loadBalancingUtilization")
       private final @Nullable Output<AutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization;
 
-    public Output<AutoscalingPolicyLoadBalancingUtilizationArgs> getLoadBalancingUtilization() {
+    public Output<AutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization() {
         return this.loadBalancingUtilization == null ? Codegen.empty() : this.loadBalancingUtilization;
     }
 
@@ -79,7 +79,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxNumReplicas")
       private final @Nullable Output<Integer> maxNumReplicas;
 
-    public Output<Integer> getMaxNumReplicas() {
+    public Output<Integer> maxNumReplicas() {
         return this.maxNumReplicas == null ? Codegen.empty() : this.maxNumReplicas;
     }
 
@@ -90,7 +90,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minNumReplicas")
       private final @Nullable Output<Integer> minNumReplicas;
 
-    public Output<Integer> getMinNumReplicas() {
+    public Output<Integer> minNumReplicas() {
         return this.minNumReplicas == null ? Codegen.empty() : this.minNumReplicas;
     }
 
@@ -101,21 +101,21 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mode")
       private final @Nullable Output<AutoscalingPolicyMode> mode;
 
-    public Output<AutoscalingPolicyMode> getMode() {
+    public Output<AutoscalingPolicyMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="scaleDownControl")
       private final @Nullable Output<AutoscalingPolicyScaleDownControlArgs> scaleDownControl;
 
-    public Output<AutoscalingPolicyScaleDownControlArgs> getScaleDownControl() {
+    public Output<AutoscalingPolicyScaleDownControlArgs> scaleDownControl() {
         return this.scaleDownControl == null ? Codegen.empty() : this.scaleDownControl;
     }
 
     @Import(name="scaleInControl")
       private final @Nullable Output<AutoscalingPolicyScaleInControlArgs> scaleInControl;
 
-    public Output<AutoscalingPolicyScaleInControlArgs> getScaleInControl() {
+    public Output<AutoscalingPolicyScaleInControlArgs> scaleInControl() {
         return this.scaleInControl == null ? Codegen.empty() : this.scaleInControl;
     }
 
@@ -126,7 +126,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scalingSchedules")
       private final @Nullable Output<Map<String,String>> scalingSchedules;
 
-    public Output<Map<String,String>> getScalingSchedules() {
+    public Output<Map<String,String>> scalingSchedules() {
         return this.scalingSchedules == null ? Codegen.empty() : this.scalingSchedules;
     }
 

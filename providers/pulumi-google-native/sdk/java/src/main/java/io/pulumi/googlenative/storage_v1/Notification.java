@@ -32,7 +32,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
      */
-    public Output<Map<String,String>> getCustomAttributes() {
+    public Output<Map<String,String>> customAttributes() {
         return this.customAttributes;
     }
     /**
@@ -46,7 +46,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return HTTP 1.1 Entity tag for this subscription notification.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -60,7 +60,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
      */
-    public Output<List<String>> getEventTypes() {
+    public Output<List<String>> eventTypes() {
         return this.eventTypes;
     }
     /**
@@ -74,7 +74,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The kind of item this is. For notifications, this is always storage#notification.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -88,7 +88,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return If present, only apply this notification configuration to object names that begin with this prefix.
      * 
      */
-    public Output<String> getObjectNamePrefix() {
+    public Output<String> objectNamePrefix() {
         return this.objectNamePrefix;
     }
     /**
@@ -102,7 +102,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The desired content of the Payload.
      * 
      */
-    public Output<String> getPayloadFormat() {
+    public Output<String> payloadFormat() {
         return this.payloadFormat;
     }
     /**
@@ -116,7 +116,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The canonical URL of this notification.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -130,7 +130,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

@@ -17,35 +17,35 @@ public final class GetInstanceNamespaceIamPolicyArgs extends io.pulumi.resources
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="namespaceId", required=true)
       private final String namespaceId;
 
-    public String getNamespaceId() {
+    public String namespaceId() {
         return this.namespaceId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

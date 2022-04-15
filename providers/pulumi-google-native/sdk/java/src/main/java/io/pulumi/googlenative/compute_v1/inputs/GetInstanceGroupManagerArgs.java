@@ -17,21 +17,21 @@ public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.Invok
     @Import(name="instanceGroupManager", required=true)
       private final String instanceGroupManager;
 
-    public String getInstanceGroupManager() {
+    public String instanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

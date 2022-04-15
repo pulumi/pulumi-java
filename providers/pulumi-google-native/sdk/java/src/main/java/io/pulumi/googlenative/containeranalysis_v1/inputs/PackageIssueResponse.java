@@ -25,7 +25,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="affectedCpeUri", required=true)
       private final String affectedCpeUri;
 
-    public String getAffectedCpeUri() {
+    public String affectedCpeUri() {
         return this.affectedCpeUri;
     }
 
@@ -36,7 +36,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="affectedPackage", required=true)
       private final String affectedPackage;
 
-    public String getAffectedPackage() {
+    public String affectedPackage() {
         return this.affectedPackage;
     }
 
@@ -47,7 +47,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="affectedVersion", required=true)
       private final VersionResponse affectedVersion;
 
-    public VersionResponse getAffectedVersion() {
+    public VersionResponse affectedVersion() {
         return this.affectedVersion;
     }
 
@@ -58,7 +58,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="effectiveSeverity", required=true)
       private final String effectiveSeverity;
 
-    public String getEffectiveSeverity() {
+    public String effectiveSeverity() {
         return this.effectiveSeverity;
     }
 
@@ -69,7 +69,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fixAvailable", required=true)
       private final Boolean fixAvailable;
 
-    public Boolean getFixAvailable() {
+    public Boolean fixAvailable() {
         return this.fixAvailable;
     }
 
@@ -80,7 +80,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fixedCpeUri", required=true)
       private final String fixedCpeUri;
 
-    public String getFixedCpeUri() {
+    public String fixedCpeUri() {
         return this.fixedCpeUri;
     }
 
@@ -91,7 +91,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fixedPackage", required=true)
       private final String fixedPackage;
 
-    public String getFixedPackage() {
+    public String fixedPackage() {
         return this.fixedPackage;
     }
 
@@ -102,7 +102,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fixedVersion", required=true)
       private final VersionResponse fixedVersion;
 
-    public VersionResponse getFixedVersion() {
+    public VersionResponse fixedVersion() {
         return this.fixedVersion;
     }
 
@@ -113,7 +113,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="packageType", required=true)
       private final String packageType;
 
-    public String getPackageType() {
+    public String packageType() {
         return this.packageType;
     }
 

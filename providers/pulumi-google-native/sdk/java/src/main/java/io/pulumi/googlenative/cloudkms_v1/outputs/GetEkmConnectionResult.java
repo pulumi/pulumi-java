@@ -48,28 +48,28 @@ public final class GetEkmConnectionResult {
      * The time at which the EkmConnection was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
      * 
     */
-    public List<ServiceResolverResponse> getServiceResolvers() {
+    public List<ServiceResolverResponse> serviceResolvers() {
         return this.serviceResolvers;
     }
 

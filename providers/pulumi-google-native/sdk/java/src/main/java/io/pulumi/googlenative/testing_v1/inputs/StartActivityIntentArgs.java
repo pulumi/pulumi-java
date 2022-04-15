@@ -27,7 +27,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -38,7 +38,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -49,7 +49,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

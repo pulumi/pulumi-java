@@ -26,7 +26,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 

@@ -29,7 +29,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="completionRatio", required=true)
       private final Double completionRatio;
 
-    public Double getCompletionRatio() {
+    public Double completionRatio() {
         return this.completionRatio;
     }
 
@@ -40,7 +40,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="creationTime", required=true)
       private final String creationTime;
 
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
 
@@ -51,7 +51,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -62,7 +62,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="extract", required=true)
       private final JobStatistics4Response extract;
 
-    public JobStatistics4Response getExtract() {
+    public JobStatistics4Response extract() {
         return this.extract;
     }
 
@@ -73,7 +73,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="load", required=true)
       private final JobStatistics3Response load;
 
-    public JobStatistics3Response getLoad() {
+    public JobStatistics3Response load() {
         return this.load;
     }
 
@@ -84,7 +84,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="numChildJobs", required=true)
       private final String numChildJobs;
 
-    public String getNumChildJobs() {
+    public String numChildJobs() {
         return this.numChildJobs;
     }
 
@@ -95,7 +95,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="parentJobId", required=true)
       private final String parentJobId;
 
-    public String getParentJobId() {
+    public String parentJobId() {
         return this.parentJobId;
     }
 
@@ -106,7 +106,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="query", required=true)
       private final JobStatistics2Response query;
 
-    public JobStatistics2Response getQuery() {
+    public JobStatistics2Response query() {
         return this.query;
     }
 
@@ -117,7 +117,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="quotaDeferments", required=true)
       private final List<String> quotaDeferments;
 
-    public List<String> getQuotaDeferments() {
+    public List<String> quotaDeferments() {
         return this.quotaDeferments;
     }
 
@@ -128,7 +128,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="reservationId", required=true)
       private final String reservationId;
 
-    public String getReservationId() {
+    public String reservationId() {
         return this.reservationId;
     }
 
@@ -139,7 +139,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="reservationUsage", required=true)
       private final List<JobStatisticsReservationUsageItemResponse> reservationUsage;
 
-    public List<JobStatisticsReservationUsageItemResponse> getReservationUsage() {
+    public List<JobStatisticsReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
     }
 
@@ -150,7 +150,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="rowLevelSecurityStatistics", required=true)
       private final RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
 
-    public RowLevelSecurityStatisticsResponse getRowLevelSecurityStatistics() {
+    public RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics() {
         return this.rowLevelSecurityStatistics;
     }
 
@@ -161,7 +161,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="scriptStatistics", required=true)
       private final ScriptStatisticsResponse scriptStatistics;
 
-    public ScriptStatisticsResponse getScriptStatistics() {
+    public ScriptStatisticsResponse scriptStatistics() {
         return this.scriptStatistics;
     }
 
@@ -172,7 +172,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sessionInfo", required=true)
       private final SessionInfoResponse sessionInfo;
 
-    public SessionInfoResponse getSessionInfo() {
+    public SessionInfoResponse sessionInfo() {
         return this.sessionInfo;
     }
 
@@ -183,7 +183,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -194,7 +194,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="totalSlotMs", required=true)
       private final String totalSlotMs;
 
-    public String getTotalSlotMs() {
+    public String totalSlotMs() {
         return this.totalSlotMs;
     }
 
@@ -205,7 +205,7 @@ public final class JobStatisticsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="transactionInfo", required=true)
       private final TransactionInfoResponse transactionInfo;
 
-    public TransactionInfoResponse getTransactionInfo() {
+    public TransactionInfoResponse transactionInfo() {
         return this.transactionInfo;
     }
 

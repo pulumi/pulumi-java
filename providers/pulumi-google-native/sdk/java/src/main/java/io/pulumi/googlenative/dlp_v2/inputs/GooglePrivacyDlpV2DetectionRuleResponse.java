@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse extends io.pulumi.res
     @Import(name="hotwordRule", required=true)
       private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
-    public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
+    public GooglePrivacyDlpV2HotwordRuleResponse hotwordRule() {
         return this.hotwordRule;
     }
 

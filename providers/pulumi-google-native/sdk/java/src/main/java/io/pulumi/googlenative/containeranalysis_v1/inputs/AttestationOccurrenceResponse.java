@@ -26,7 +26,7 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="jwts", required=true)
       private final List<JwtResponse> jwts;
 
-    public List<JwtResponse> getJwts() {
+    public List<JwtResponse> jwts() {
         return this.jwts;
     }
 
@@ -37,7 +37,7 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="serializedPayload", required=true)
       private final String serializedPayload;
 
-    public String getSerializedPayload() {
+    public String serializedPayload() {
         return this.serializedPayload;
     }
 
@@ -48,7 +48,7 @@ public final class AttestationOccurrenceResponse extends io.pulumi.resources.Inv
     @Import(name="signatures", required=true)
       private final List<SignatureResponse> signatures;
 
-    public List<SignatureResponse> getSignatures() {
+    public List<SignatureResponse> signatures() {
         return this.signatures;
     }
 

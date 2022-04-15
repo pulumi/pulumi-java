@@ -23,7 +23,7 @@ public final class MixinResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class MixinResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="root", required=true)
       private final String root;
 
-    public String getRoot() {
+    public String root() {
         return this.root;
     }
 

@@ -23,7 +23,7 @@ public final class HttpDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="listUrl", required=true)
       private final String listUrl;
 
-    public String getListUrl() {
+    public String listUrl() {
         return this.listUrl;
     }
 

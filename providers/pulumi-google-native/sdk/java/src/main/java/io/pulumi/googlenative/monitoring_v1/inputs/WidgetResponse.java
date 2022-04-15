@@ -30,7 +30,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alertChart", required=true)
       private final AlertChartResponse alertChart;
 
-    public AlertChartResponse getAlertChart() {
+    public AlertChartResponse alertChart() {
         return this.alertChart;
     }
 
@@ -41,7 +41,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="blank", required=true)
       private final EmptyResponse blank;
 
-    public EmptyResponse getBlank() {
+    public EmptyResponse blank() {
         return this.blank;
     }
 
@@ -52,7 +52,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logsPanel", required=true)
       private final LogsPanelResponse logsPanel;
 
-    public LogsPanelResponse getLogsPanel() {
+    public LogsPanelResponse logsPanel() {
         return this.logsPanel;
     }
 
@@ -63,7 +63,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scorecard", required=true)
       private final ScorecardResponse scorecard;
 
-    public ScorecardResponse getScorecard() {
+    public ScorecardResponse scorecard() {
         return this.scorecard;
     }
 
@@ -74,7 +74,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="text", required=true)
       private final TextResponse text;
 
-    public TextResponse getText() {
+    public TextResponse text() {
         return this.text;
     }
 
@@ -85,7 +85,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeSeriesTable", required=true)
       private final TimeSeriesTableResponse timeSeriesTable;
 
-    public TimeSeriesTableResponse getTimeSeriesTable() {
+    public TimeSeriesTableResponse timeSeriesTable() {
         return this.timeSeriesTable;
     }
 
@@ -96,7 +96,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -107,7 +107,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xyChart", required=true)
       private final XyChartResponse xyChart;
 
-    public XyChartResponse getXyChart() {
+    public XyChartResponse xyChart() {
         return this.xyChart;
     }
 

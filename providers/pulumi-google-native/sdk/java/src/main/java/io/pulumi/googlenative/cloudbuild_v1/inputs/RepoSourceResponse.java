@@ -25,7 +25,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="branchName", required=true)
       private final String branchName;
 
-    public String getBranchName() {
+    public String branchName() {
         return this.branchName;
     }
 
@@ -36,7 +36,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="commitSha", required=true)
       private final String commitSha;
 
-    public String getCommitSha() {
+    public String commitSha() {
         return this.commitSha;
     }
 
@@ -47,7 +47,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dir", required=true)
       private final String dir;
 
-    public String getDir() {
+    public String dir() {
         return this.dir;
     }
 
@@ -58,7 +58,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="invertRegex", required=true)
       private final Boolean invertRegex;
 
-    public Boolean getInvertRegex() {
+    public Boolean invertRegex() {
         return this.invertRegex;
     }
 
@@ -69,7 +69,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -80,7 +80,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="repoName", required=true)
       private final String repoName;
 
-    public String getRepoName() {
+    public String repoName() {
         return this.repoName;
     }
 
@@ -91,7 +91,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="substitutions", required=true)
       private final Map<String,String> substitutions;
 
-    public Map<String,String> getSubstitutions() {
+    public Map<String,String> substitutions() {
         return this.substitutions;
     }
 
@@ -102,7 +102,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tagName", required=true)
       private final String tagName;
 
-    public String getTagName() {
+    public String tagName() {
         return this.tagName;
     }
 

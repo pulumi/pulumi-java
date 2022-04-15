@@ -65,42 +65,42 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
      * Categorical stats
      * 
     */
-    public GooglePrivacyDlpV2CategoricalStatsConfigResponse getCategoricalStatsConfig() {
+    public GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig() {
         return this.categoricalStatsConfig;
     }
     /**
      * delta-presence
      * 
     */
-    public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse getDeltaPresenceEstimationConfig() {
+    public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig() {
         return this.deltaPresenceEstimationConfig;
     }
     /**
      * K-anonymity
      * 
     */
-    public GooglePrivacyDlpV2KAnonymityConfigResponse getKAnonymityConfig() {
+    public GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig() {
         return this.kAnonymityConfig;
     }
     /**
      * k-map
      * 
     */
-    public GooglePrivacyDlpV2KMapEstimationConfigResponse getKMapEstimationConfig() {
+    public GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig() {
         return this.kMapEstimationConfig;
     }
     /**
      * l-diversity
      * 
     */
-    public GooglePrivacyDlpV2LDiversityConfigResponse getLDiversityConfig() {
+    public GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig() {
         return this.lDiversityConfig;
     }
     /**
      * Numerical stats
      * 
     */
-    public GooglePrivacyDlpV2NumericalStatsConfigResponse getNumericalStatsConfig() {
+    public GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig() {
         return this.numericalStatsConfig;
     }
 

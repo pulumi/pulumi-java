@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends io.pulumi.re
     @Import(name="people", required=true)
       private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
-    public List<GoogleCloudDatacatalogV1ContactsPersonResponse> getPeople() {
+    public List<GoogleCloudDatacatalogV1ContactsPersonResponse> people() {
         return this.people;
     }
 

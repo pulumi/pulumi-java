@@ -48,28 +48,28 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
      * Optional. The body text of the card.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. The image to display.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
+    public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
     }
     /**
      * Additional info about the option item.
      * 
     */
-    public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse getInfo() {
+    public GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info() {
         return this.info;
     }
     /**
      * Title of the carousel item.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

@@ -27,7 +27,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -38,7 +38,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preprocessingConfig")
       private final @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
 
-    public Output<PreprocessingConfigArgs> getPreprocessingConfig() {
+    public Output<PreprocessingConfigArgs> preprocessingConfig() {
         return this.preprocessingConfig == null ? Codegen.empty() : this.preprocessingConfig;
     }
 
@@ -49,7 +49,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

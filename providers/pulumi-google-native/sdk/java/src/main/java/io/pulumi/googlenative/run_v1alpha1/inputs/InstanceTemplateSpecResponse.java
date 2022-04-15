@@ -23,7 +23,7 @@ public final class InstanceTemplateSpecResponse extends io.pulumi.resources.Invo
     @Import(name="spec", required=true)
       private final InstanceSpecResponse spec;
 
-    public InstanceSpecResponse getSpec() {
+    public InstanceSpecResponse spec() {
         return this.spec;
     }
 

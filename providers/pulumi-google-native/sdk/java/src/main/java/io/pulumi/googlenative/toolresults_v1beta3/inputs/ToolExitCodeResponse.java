@@ -23,7 +23,7 @@ public final class ToolExitCodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="number", required=true)
       private final Integer number;
 
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
 

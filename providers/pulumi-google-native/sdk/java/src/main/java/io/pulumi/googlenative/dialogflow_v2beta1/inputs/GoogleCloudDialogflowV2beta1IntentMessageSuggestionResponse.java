@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse e
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

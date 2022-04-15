@@ -28,7 +28,7 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
     @Import(name="siteToSiteDataTransfer")
       private final @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> getSiteToSiteDataTransfer() {
+    public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer == null ? Codegen.empty() : this.siteToSiteDataTransfer;
     }
 
@@ -39,7 +39,7 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
     @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
+    public Output<List<String>> uris() {
         return this.uris == null ? Codegen.empty() : this.uris;
     }
 

@@ -23,7 +23,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> getSrcIpRanges() {
+    public Output<List<String>> srcIpRanges() {
         return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 

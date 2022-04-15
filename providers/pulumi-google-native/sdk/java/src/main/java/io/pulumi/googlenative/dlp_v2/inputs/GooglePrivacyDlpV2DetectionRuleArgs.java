@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
     @Import(name="hotwordRule")
       private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
-    public Output<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {
+    public Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule() {
         return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
     }
 

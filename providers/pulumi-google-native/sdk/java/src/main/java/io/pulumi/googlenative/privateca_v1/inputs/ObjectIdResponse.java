@@ -24,7 +24,7 @@ public final class ObjectIdResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objectIdPath", required=true)
       private final List<Integer> objectIdPath;
 
-    public List<Integer> getObjectIdPath() {
+    public List<Integer> objectIdPath() {
         return this.objectIdPath;
     }
 

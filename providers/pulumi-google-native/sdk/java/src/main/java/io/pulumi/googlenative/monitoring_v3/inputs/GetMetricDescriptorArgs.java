@@ -17,14 +17,14 @@ public final class GetMetricDescriptorArgs extends io.pulumi.resources.InvokeArg
     @Import(name="metricDescriptorId", required=true)
       private final String metricDescriptorId;
 
-    public String getMetricDescriptorId() {
+    public String metricDescriptorId() {
         return this.metricDescriptorId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

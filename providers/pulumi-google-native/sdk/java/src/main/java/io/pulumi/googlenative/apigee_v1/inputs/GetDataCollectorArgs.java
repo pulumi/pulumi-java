@@ -15,14 +15,14 @@ public final class GetDataCollectorArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datacollectorId", required=true)
       private final String datacollectorId;
 
-    public String getDatacollectorId() {
+    public String datacollectorId() {
         return this.datacollectorId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

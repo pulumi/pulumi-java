@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    public GooglePrivacyDlpV2FieldIdResponse getField() {
+    public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
     @Import(name="value", required=true)
       private final GooglePrivacyDlpV2ValueResponse value;
 
-    public GooglePrivacyDlpV2ValueResponse getValue() {
+    public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
 

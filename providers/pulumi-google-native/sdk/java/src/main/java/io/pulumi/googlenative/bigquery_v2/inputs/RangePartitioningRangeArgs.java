@@ -26,7 +26,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end == null ? Codegen.empty() : this.end;
     }
 
@@ -37,7 +37,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -48,7 +48,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start == null ? Codegen.empty() : this.start;
     }
 

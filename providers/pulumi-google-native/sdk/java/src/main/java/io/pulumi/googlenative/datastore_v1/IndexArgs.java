@@ -25,7 +25,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ancestor", required=true)
       private final Output<IndexAncestor> ancestor;
 
-    public Output<IndexAncestor> getAncestor() {
+    public Output<IndexAncestor> ancestor() {
         return this.ancestor;
     }
 
@@ -36,14 +36,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -54,7 +54,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
-    public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> getProperties() {
+    public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties() {
         return this.properties;
     }
 

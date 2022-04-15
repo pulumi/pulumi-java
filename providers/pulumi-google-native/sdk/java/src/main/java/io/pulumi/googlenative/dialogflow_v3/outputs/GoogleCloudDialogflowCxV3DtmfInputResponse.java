@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
      * The dtmf digits.
      * 
     */
-    public String getDigits() {
+    public String digits() {
         return this.digits;
     }
     /**
      * The finish digit (if any).
      * 
     */
-    public String getFinishDigit() {
+    public String finishDigit() {
         return this.finishDigit;
     }
 

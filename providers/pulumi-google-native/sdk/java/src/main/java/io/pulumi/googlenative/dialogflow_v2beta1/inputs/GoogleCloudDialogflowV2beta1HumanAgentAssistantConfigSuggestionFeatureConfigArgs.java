@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="conversationModelConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> getConversationModelConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig() {
         return this.conversationModelConfig == null ? Codegen.empty() : this.conversationModelConfig;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="conversationProcessConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> getConversationProcessConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig() {
         return this.conversationProcessConfig == null ? Codegen.empty() : this.conversationProcessConfig;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="enableEventBasedSuggestion")
       private final @Nullable Output<Boolean> enableEventBasedSuggestion;
 
-    public Output<Boolean> getEnableEventBasedSuggestion() {
+    public Output<Boolean> enableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion == null ? Codegen.empty() : this.enableEventBasedSuggestion;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="queryConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> getQueryConfig() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig() {
         return this.queryConfig == null ? Codegen.empty() : this.queryConfig;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="suggestionFeature")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature;
 
-    public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> getSuggestionFeature() {
+    public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureArgs> suggestionFeature() {
         return this.suggestionFeature == null ? Codegen.empty() : this.suggestionFeature;
     }
 
@@ -86,7 +86,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="suggestionTriggerSettings")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
 
-    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> getSuggestionTriggerSettings() {
+    public Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings() {
         return this.suggestionTriggerSettings == null ? Codegen.empty() : this.suggestionTriggerSettings;
     }
 

@@ -40,21 +40,21 @@ public final class IosDeviceFileResponse {
      * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
      * 
     */
-    public String getBundleId() {
+    public String bundleId() {
         return this.bundleId;
     }
     /**
      * The source file
      * 
     */
-    public FileReferenceResponse getContent() {
+    public FileReferenceResponse content() {
         return this.content;
     }
     /**
      * Location of the file on the device, inside the app's sandboxed filesystem
      * 
     */
-    public String getDevicePath() {
+    public String devicePath() {
         return this.devicePath;
     }
 

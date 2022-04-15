@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
     @Import(name="context", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse context;
 
-    public GooglePrivacyDlpV2FieldIdResponse getContext() {
+    public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
     @Import(name="cryptoKey", required=true)
       private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
-    public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
+    public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends i
     @Import(name="surrogateInfoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    public GooglePrivacyDlpV2InfoTypeResponse getSurrogateInfoType() {
+    public GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType() {
         return this.surrogateInfoType;
     }
 

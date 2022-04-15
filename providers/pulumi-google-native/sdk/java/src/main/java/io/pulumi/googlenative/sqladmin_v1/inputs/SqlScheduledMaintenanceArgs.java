@@ -23,7 +23,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
     @Import(name="canDefer")
       private final @Nullable Output<Boolean> canDefer;
 
-    public Output<Boolean> getCanDefer() {
+    public Output<Boolean> canDefer() {
         return this.canDefer == null ? Codegen.empty() : this.canDefer;
     }
 
@@ -34,7 +34,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
     @Import(name="canReschedule")
       private final @Nullable Output<Boolean> canReschedule;
 
-    public Output<Boolean> getCanReschedule() {
+    public Output<Boolean> canReschedule() {
         return this.canReschedule == null ? Codegen.empty() : this.canReschedule;
     }
 
@@ -45,7 +45,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
     @Import(name="scheduleDeadlineTime")
       private final @Nullable Output<String> scheduleDeadlineTime;
 
-    public Output<String> getScheduleDeadlineTime() {
+    public Output<String> scheduleDeadlineTime() {
         return this.scheduleDeadlineTime == null ? Codegen.empty() : this.scheduleDeadlineTime;
     }
 
@@ -56,7 +56,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 

@@ -24,14 +24,14 @@ public final class ManagedZoneCloudLoggingConfigResponse extends io.pulumi.resou
     @Import(name="enableLogging", required=true)
       private final Boolean enableLogging;
 
-    public Boolean getEnableLogging() {
+    public Boolean enableLogging() {
         return this.enableLogging;
     }
 
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

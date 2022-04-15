@@ -15,28 +15,28 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
       private final String appId;
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
 
     @Import(name="developerId", required=true)
       private final String developerId;
 
-    public String getDeveloperId() {
+    public String developerId() {
         return this.developerId;
     }
 
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

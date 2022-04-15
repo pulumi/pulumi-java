@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
     @Import(name="count", required=true)
       private final Integer count;
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
 
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
     @Import(name="intervalSec", required=true)
       private final Integer intervalSec;
 
-    public Integer getIntervalSec() {
+    public Integer intervalSec() {
         return this.intervalSec;
     }
 
