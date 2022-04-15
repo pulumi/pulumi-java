@@ -42,7 +42,7 @@ public class App {
 
         final var bucketPolicy = new BucketPolicy("bucketPolicy",
                 BucketPolicyArgs.builder().bucket(siteBucket.getId())
-                        .policy(siteBucket.getArn()
+                        .policy(siteBucket.arn()
                                 .applyValue(bucketArn -> """
                                             {
                                                 "Version":"2012-10-17",
@@ -56,8 +56,8 @@ public class App {
                                         """.formatted(bucketArn))
                         ).build());
 
-        ctx.export("bucketName", siteBucket.getBucketName());
-        ctx.export("websiteUrl", siteBucket.getWebsiteURL());
+        ctx.export("bucketName", siteBucket.bucketName());
+        ctx.export("websiteUrl", siteBucket.websiteURL());
 
         return ctx.exports();
     }
