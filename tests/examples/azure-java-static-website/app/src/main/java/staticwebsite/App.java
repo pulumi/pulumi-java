@@ -35,45 +35,45 @@ public class App {
 
         var storageAccount = new StorageAccount("storageaccount",
                 StorageAccountArgs.builder().kind(Either.ofRight(Kind.StorageV2))
-                        .resourceGroupName(resourceGroup.getName())
+                        .resourceGroupName(resourceGroup.name())
                         .sku(SkuArgs.builder()
                                 .name(Either.ofRight(SkuName.Standard_LRS))
                                 .build()).build());
 
         var staticWebsite = new StorageAccountStaticWebsite("staticWebsite",
-                StorageAccountStaticWebsiteArgs.builder().accountName(storageAccount.getName())
-                        .resourceGroupName(resourceGroup.getName())
+                StorageAccountStaticWebsiteArgs.builder().accountName(storageAccount.name())
+                        .resourceGroupName(resourceGroup.name())
                         .indexDocument("index.html")
                         .error404Document("404.html").build());
 
         var indexHtml = new Blob("index.html",
-                BlobArgs.builder().accountName(storageAccount.getName())
-                        .resourceGroupName(resourceGroup.getName())
-                        .containerName(staticWebsite.getContainerName())
+                BlobArgs.builder().accountName(storageAccount.name())
+                        .resourceGroupName(resourceGroup.name())
+                        .containerName(staticWebsite.containerName())
                         .source(new FileAsset("./wwwroot/index.html"))
                         .contentType("text/html").build());
 
         var notFoundHtml = new Blob("404.html",
-                BlobArgs.builder().accountName(storageAccount.getName())
-                        .resourceGroupName(resourceGroup.getName())
-                        .containerName(staticWebsite.getContainerName())
+                BlobArgs.builder().accountName(storageAccount.name())
+                        .resourceGroupName(resourceGroup.name())
+                        .containerName(staticWebsite.containerName())
                         .source(new FileAsset("./wwwroot/404.html"))
                         .contentType("text/html").build());
 
         // Web endpoint to the website.
-        ctx.export("staticEndpoint", storageAccount.getPrimaryEndpoints()
-                .applyValue(EndpointsResponse::getWeb));
+        ctx.export("staticEndpoint", storageAccount.primaryEndpoints()
+                .applyValue(EndpointsResponse::web));
 
         // (Optional) Add a CDN in front of the storage account.
         var profile = new Profile("profile",
-                ProfileArgs.builder().resourceGroupName(resourceGroup.getName())
+                ProfileArgs.builder().resourceGroupName(resourceGroup.name())
                         .location("global")
                         .sku(io.pulumi.azurenative.cdn.inputs.SkuArgs.builder()
                                 .name(Either.ofRight(io.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft))
                                 .build()).build());
 
-        var endpointOrigin = storageAccount.getPrimaryEndpoints()
-                .applyValue(pe -> pe.getWeb().replace("https://", "").replace("/", ""));
+        var endpointOrigin = storageAccount.primaryEndpoints()
+                .applyValue(pe -> pe.web().replace("https://", "").replace("/", ""));
 
         var endpoint = new Endpoint("endpoint",
                 EndpointArgs.builder().isHttpAllowed(false)
@@ -84,16 +84,16 @@ public class App {
                                 .httpsPort(443)
                                 .name("origin-storage-account")
                                 .build())
-                        .profileName(profile.getName())
+                        .profileName(profile.name())
                         .queryStringCachingBehavior(QueryStringCachingBehavior.NotSet)
-                        .resourceGroupName(resourceGroup.getName())
+                        .resourceGroupName(resourceGroup.name())
                         .build()
         );
 
 
         // CDN endpoint to the website.
         // Allow it some time after the deployment to get ready.
-        ctx.export("cdnEndpoint", Output.format("https://%s", endpoint.getHostName()));
+        ctx.export("cdnEndpoint", Output.format("https://%s", endpoint.hostName()));
         return ctx.exports();
     }
 }

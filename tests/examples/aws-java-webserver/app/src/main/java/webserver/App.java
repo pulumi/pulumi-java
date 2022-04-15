@@ -29,7 +29,7 @@ public class App {
                 .owners("137112412989")
                 .mostRecent(true)
                 .build()
-        ).thenApply(GetAmiResult::getId);
+        ).thenApply(GetAmiResult::id);
 
         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()
                 .ingress(SecurityGroupIngressArgs.builder()
@@ -58,8 +58,8 @@ public class App {
                 .build()
         );
 
-        ctx.export("publicIp", server.getPublicIp());
-        ctx.export("publicHostName", server.getPublicDns());
+        ctx.export("publicIp", server.publicIp());
+        ctx.export("publicHostName", server.publicDns());
         return ctx.exports();
     }
 }
