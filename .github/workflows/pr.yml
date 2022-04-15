@@ -225,23 +225,6 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: 'gradle'
-      - name: Set up Go 1.17.x
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.17.x
-      - name: Configure Go cache
-        id: go-cache-paths
-        run: |
-          echo "::set-output name=go-build::$(go env GOCACHE)"
-          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
-      - name: Set up Go cache
-        uses: actions/cache@v2
-        id: go-cache
-        with:
-          path: |
-              ${{ steps.go-cache-paths.outputs.go-build }}
-              ${{ steps.go-cache-paths.outputs.go-mod }}
-          key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Download versions.txt
         uses: actions/download-artifact@v2
         with:
@@ -249,24 +232,29 @@ jobs:
           path: artifacts
       - name: Setup versioning env vars
         run: cat artifacts/versions.txt | tee $GITHUB_ENV
-      - name: Ensure dependencies
-        run: make ensure
+      - name: Download go-binaries
+        uses: actions/download-artifact@v2
+        with:
+          name: go-binaries
+          path: bin
+      - name: Activate go-binaries
+        run: |
+          chmod a+x bin/pulumi-language-jvm
+          chmod a+x bin/pulumi-java-gen
       - name: Codegen the provider code
-        run: make provider.${PROVIDER}.generate
-        env:
-          PROVIDER: ${{ matrix.provider }}
+        run: ./bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
-          gradle-version: 7.4.1
           arguments: build
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
       - name: Publish
         uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
-          gradle-version: 7.4.1
           arguments: publish
           build-root-directory: providers/pulumi-${{ matrix.provider }}/sdk/java
+          gradle-version: 7.4.1
 
       # Below: compute JAR size diff of the current version compared to PR base.
       - name: Get new JAR size
