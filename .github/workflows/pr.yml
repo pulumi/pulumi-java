@@ -132,8 +132,8 @@ jobs:
           path: ~/bin
       - name: Activate go-binaries
         run: |
-          chmod a+x bin/pulumi-language-jvm
-          chmod a+x bin/pulumi-java-gen
+          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-java-gen
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
@@ -237,8 +237,8 @@ jobs:
           path: ~/bin
       - name: Activate go-binaries
         run: |
-          chmod a+x bin/pulumi-language-jvm
-          chmod a+x bin/pulumi-java-gen
+          chmod a+x ~/bin/pulumi-language-jvm
+          chmod a+x ~/bin/pulumi-java-gen
       - name: Codegen the provider code
         run: ~/bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
       - name: Build and unit-test
