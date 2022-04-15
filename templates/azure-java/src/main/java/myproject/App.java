@@ -18,7 +18,7 @@ public class App {
         int exitCode = Pulumi.run(ctx -> {
             var resourceGroup = new ResourceGroup("resourceGroup");
             var storageAccount = new StorageAccount("sa", StorageAccountArgs.builder()
-                    .resourceGroupName(resourceGroup.getName())
+                    .resourceGroupName(resourceGroup.name())
                     .sku(SkuArgs.builder()
                             .name(Either.ofRight(SkuName.Standard_LRS))
                             .build())
@@ -26,8 +26,8 @@ public class App {
                     .build());
 
             var primaryStorageKey = getStorageAccountPrimaryKey(
-                    resourceGroup.getName(),
-                    storageAccount.getName());
+                    resourceGroup.name(),
+                    storageAccount.name());
 
             ctx.export("primaryStorageKey", primaryStorageKey);
             return ctx.exports();
