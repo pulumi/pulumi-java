@@ -10,6 +10,7 @@ replace github.com/pulumi/pulumi/pkg/v3 => github.com/pulumi/pulumi/pkg/v3 v3.28
 
 require (
 	github.com/pulumi/pulumi/pkg/v3 v3.27.1-0.20220329142136-9c2b0b0c8b4d
+	github.com/pulumi/pulumi/sdk/v3 v3.28.0
 	github.com/stretchr/testify v1.7.1
 )
 
@@ -94,7 +95,6 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/term v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/pulumi/pulumi/sdk/v3 v3.28.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rjeczalik/notify v0.9.2 // indirect
 	github.com/rogpeppe/go-internal v1.8.1 // indirect

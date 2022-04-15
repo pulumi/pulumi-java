@@ -23,14 +23,15 @@ import (
 )
 
 type Config struct {
-	ArtifactID  string      `yaml:"artifactID"`
-	Version     string      `yaml:"version"`
-	Schema      string      `yaml:"schema"`
-	Out         string      `yaml:"out"`
-	VersionFile string      `yaml:"versionFile"`
-	PackageInfo interface{} `yaml:"packageInfo"`
-	PluginFile  string      `yaml:"pluginFile"`
-	Overlays    []string    `yaml:"overlays"`
+	ArtifactID    string      `yaml:"artifactID"`
+	Version       string      `yaml:"version"`
+	Schema        string      `yaml:"schema"`
+	Out           string      `yaml:"out"`
+	VersionFile   string      `yaml:"versionFile"`
+	PackageInfo   interface{} `yaml:"packageInfo"`
+	PluginFile    string      `yaml:"pluginFile"`
+	Overlays      []string    `yaml:"overlays"`
+	VersionEnvVar string      `yaml:"versionEnvVar"`
 }
 
 func main() {
@@ -59,6 +60,11 @@ func parseConfig(path string) (*Config, error) {
 	}
 	if cfg.Version == "" {
 		return nil, fmt.Errorf("Missing required field in config at %s: version", path)
+	}
+	if cfg.VersionEnvVar == "" {
+		cfg.VersionEnvVar = fmt.Sprintf("PULUMI_%s_PROVIDER_SDK_VERSION",
+			strings.ReplaceAll(strings.ToUpper(cfg.ArtifactID),
+				"-", "_"))
 	}
 	return &cfg, nil
 }
@@ -226,6 +232,7 @@ func readOverlays(rootDir string, cfg Config) (map[string][]byte, error) {
 						ArtifactID:      cfg.ArtifactID,
 						DefaultVersion:  cfg.Version,
 						TemplateComment: fmt.Sprintf(templateComment, entry.Name()),
+						VersionEnvVar:   cfg.VersionEnvVar,
 					}
 					bytes, err = expandOverlayTemplate(data, bytes)
 					if err != nil {
@@ -251,6 +258,7 @@ type OverlayTemplateData struct {
 	ArtifactID      string
 	DefaultVersion  string
 	TemplateComment string
+	VersionEnvVar   string
 }
 
 func expandOverlayTemplate(
