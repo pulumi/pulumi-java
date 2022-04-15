@@ -17,19 +17,19 @@ class RegexPatternTest {
     private static Stream<Arguments> testNamedMatch() {
         return Stream.of(
                 arguments(
-                        "^(?<package>io/pulumi/.*)/version.txt$",
+                        "^(?<package>com/pulumi/.*)/version.txt$",
                         "",
                         Map.of("package", Optional.empty())),
                 arguments(
-                        "^(?<package>io/pulumi/.*)/version.txt$",
-                        "io/pulumi/random/version.txt",
-                        Map.of("package", Optional.of("io/pulumi/random"))
+                        "^(?<package>com/pulumi/.*)/version.txt$",
+                        "com/pulumi/random/version.txt",
+                        Map.of("package", Optional.of("com/pulumi/random"))
                 ),
                 arguments(
-                        "^(?<package>io/pulumi/(?<name>.+))/plugin.json$",
-                        "io/pulumi/random/plugin.json",
+                        "^(?<package>com/pulumi/(?<name>.+))/plugin.json$",
+                        "com/pulumi/random/plugin.json",
                         Map.of(
-                                "package", Optional.of("io/pulumi/random"),
+                                "package", Optional.of("com/pulumi/random"),
                                 "name", Optional.of("random")
                         )
                 )

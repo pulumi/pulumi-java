@@ -25,8 +25,8 @@ class PulumiPlugins {
     // Make sure capturing groups are the same in the patterns, very easy to miss when refactoring
     private static final String PACKAGE_CAPTURING_GROUP = "package";
     private static final String NAME_CAPTURING_GROUP = "name";
-    private static final RegexPattern PLUGIN_PATTERN = RegexPattern.of("^(?<package>io/pulumi/(?<name>.+))/plugin.json$");
-    private static final RegexPattern VERSION_PATTERN = RegexPattern.of("(?<package>io/pulumi/(?<name>.+))/version.txt$");
+    private static final RegexPattern PLUGIN_PATTERN = RegexPattern.of("^(?<package>com/pulumi/(?<name>.+))/plugin.json$");
+    private static final RegexPattern VERSION_PATTERN = RegexPattern.of("(?<package>com/pulumi/(?<name>.+))/version.txt$");
 
     private PulumiPlugins() {
         throw new UnsupportedOperationException("static class");
