@@ -18,13 +18,13 @@ public class Resource extends io.pulumi.resources.CustomResource {
     @Export(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
-    public Output</* @Nullable */ String> getBar() {
+    public Output</* @Nullable */ String> bar() {
         return this.bar;
     }
     @Export(name="baz", type=String.class, parameters={})
     private Output</* @Nullable */ String> baz;
 
-    public Output</* @Nullable */ String> getBaz() {
+    public Output</* @Nullable */ String> baz() {
         return this.baz;
     }
 

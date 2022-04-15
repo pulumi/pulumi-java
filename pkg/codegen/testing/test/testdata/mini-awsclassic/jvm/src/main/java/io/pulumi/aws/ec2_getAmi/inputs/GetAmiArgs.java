@@ -23,7 +23,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="executableUsers")
       private final @Nullable List<String> executableUsers;
 
-    public List<String> getExecutableUsers() {
+    public List<String> executableUsers() {
         return this.executableUsers == null ? List.of() : this.executableUsers;
     }
 
@@ -34,7 +34,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="owners", required=true)
       private final List<String> owners;
 
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners;
     }
 

@@ -19,42 +19,42 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
     @Import(name="a", required=true)
       private final Boolean a;
 
-    public Boolean getA() {
+    public Boolean a() {
         return this.a;
     }
 
     @Import(name="b")
       private final @Nullable Boolean b;
 
-    public Optional<Boolean> getB() {
+    public Optional<Boolean> b() {
         return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
     @Import(name="c", required=true)
       private final Integer c;
 
-    public Integer getC() {
+    public Integer c() {
         return this.c;
     }
 
     @Import(name="d")
       private final @Nullable Integer d;
 
-    public Optional<Integer> getD() {
+    public Optional<Integer> d() {
         return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
     @Import(name="e", required=true)
       private final String e;
 
-    public String getE() {
+    public String e() {
         return this.e;
     }
 
     @Import(name="f")
       private final @Nullable String f;
 
-    public Optional<String> getF() {
+    public Optional<String> f() {
         return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
     }
 

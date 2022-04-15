@@ -23,10 +23,10 @@ public final class ObjectWithNodeOptionalInputs {
         this.foo = foo;
     }
 
-    public Optional<Integer> getBar() {
+    public Optional<Integer> bar() {
         return Optional.ofNullable(this.bar);
     }
-    public String getFoo() {
+    public String foo() {
         return this.foo;
     }
 

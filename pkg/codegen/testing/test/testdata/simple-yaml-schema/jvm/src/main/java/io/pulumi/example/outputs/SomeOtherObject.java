@@ -18,7 +18,7 @@ public final class SomeOtherObject {
         this.baz = baz;
     }
 
-    public Optional<String> getBaz() {
+    public Optional<String> baz() {
         return Optional.ofNullable(this.baz);
     }
 

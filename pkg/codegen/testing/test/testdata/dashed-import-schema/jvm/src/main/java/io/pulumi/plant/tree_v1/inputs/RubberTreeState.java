@@ -20,7 +20,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="farm")
       private final @Nullable Output<Either<Farm,String>> farm;
 
-    public Output<Either<Farm,String>> getFarm() {
+    public Output<Either<Farm,String>> farm() {
         return this.farm == null ? Codegen.empty() : this.farm;
     }
 

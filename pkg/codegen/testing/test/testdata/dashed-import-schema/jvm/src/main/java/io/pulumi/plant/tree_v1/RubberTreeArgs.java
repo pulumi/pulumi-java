@@ -24,35 +24,35 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<ContainerArgs> container;
 
-    public Output<ContainerArgs> getContainer() {
+    public Output<ContainerArgs> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
     @Import(name="diameter", required=true)
       private final Output<Diameter> diameter;
 
-    public Output<Diameter> getDiameter() {
+    public Output<Diameter> diameter() {
         return this.diameter;
     }
 
     @Import(name="farm")
       private final @Nullable Output<Either<Farm,String>> farm;
 
-    public Output<Either<Farm,String>> getFarm() {
+    public Output<Either<Farm,String>> farm() {
         return this.farm == null ? Codegen.empty() : this.farm;
     }
 
     @Import(name="size")
       private final @Nullable Output<TreeSize> size;
 
-    public Output<TreeSize> getSize() {
+    public Output<TreeSize> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="type", required=true)
       private final Output<RubberTreeVariety> type;
 
-    public Output<RubberTreeVariety> getType() {
+    public Output<RubberTreeVariety> type() {
         return this.type;
     }
 

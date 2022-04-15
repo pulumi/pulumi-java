@@ -26,7 +26,7 @@ public final class GetAmiResult {
      * for machine images.
      * 
     */
-    public String getKernelId() {
+    public String kernelId() {
         return this.kernelId;
     }
 

@@ -23,7 +23,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
     @Import(name="creationTime", required=true)
       private final String creationTime;
 
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
 
@@ -34,7 +34,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -45,7 +45,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
     @Import(name="permissions", required=true)
       private final String permissions;
 
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 
@@ -56,7 +56,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

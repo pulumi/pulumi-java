@@ -17,7 +17,7 @@ public final class Rec {
         this.rec1 = rec1;
     }
 
-    public Optional<Rec> getRec1() {
+    public Optional<Rec> rec1() {
         return Optional.ofNullable(this.rec1);
     }
 

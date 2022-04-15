@@ -33,14 +33,14 @@ public final class FilterablePropertyResponse {
      * Values to be filtered.
      * 
     */
-    public List<String> getSupportedValues() {
+    public List<String> supportedValues() {
         return this.supportedValues;
     }
     /**
      * Type of product filter.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

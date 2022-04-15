@@ -19,13 +19,13 @@ public class Person extends io.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="pets", type=List.class, parameters={Pet.class})
     private Output</* @Nullable */ List<Pet>> pets;
 
-    public Output</* @Nullable */ List<Pet>> getPets() {
+    public Output</* @Nullable */ List<Pet>> pets() {
         return this.pets;
     }
 
