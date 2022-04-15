@@ -36,14 +36,14 @@ public final class CronJobStatus {
      * A list of pointers to currently running jobs.
      * 
     */
-    public List<ObjectReference> getActive() {
+    public List<ObjectReference> active() {
         return this.active == null ? List.of() : this.active;
     }
     /**
      * Information when was the last time the job was successfully scheduled.
      * 
     */
-    public Optional<String> getLastScheduleTime() {
+    public Optional<String> lastScheduleTime() {
         return Optional.ofNullable(this.lastScheduleTime);
     }
 

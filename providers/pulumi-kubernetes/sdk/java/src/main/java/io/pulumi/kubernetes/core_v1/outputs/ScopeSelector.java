@@ -26,7 +26,7 @@ public final class ScopeSelector {
      * A list of scope selector requirements by scope of the resources.
      * 
     */
-    public List<ScopedResourceSelectorRequirement> getMatchExpressions() {
+    public List<ScopedResourceSelectorRequirement> matchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }
 

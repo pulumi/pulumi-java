@@ -42,21 +42,21 @@ public final class PortworxVolumeSource {
      * FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * VolumeID uniquely identifies a Portworx volume
      * 
     */
-    public String getVolumeID() {
+    public String volumeID() {
         return this.volumeID;
     }
 

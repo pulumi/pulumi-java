@@ -34,14 +34,14 @@ public final class Policy {
      * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
      * 
     */
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
     /**
      * Stages is a list of stages for which events are created.
      * 
     */
-    public List<String> getStages() {
+    public List<String> stages() {
         return this.stages == null ? List.of() : this.stages;
     }
 

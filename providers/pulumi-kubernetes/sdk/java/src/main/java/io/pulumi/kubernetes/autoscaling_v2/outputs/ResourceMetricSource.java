@@ -33,14 +33,14 @@ public final class ResourceMetricSource {
      * name is the name of the resource in question.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * target specifies the target value for the given metric
      * 
     */
-    public MetricTarget getTarget() {
+    public MetricTarget target() {
         return this.target;
     }
 

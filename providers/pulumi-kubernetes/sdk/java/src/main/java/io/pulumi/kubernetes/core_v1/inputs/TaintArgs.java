@@ -31,7 +31,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="effect", required=true)
       private final Output<String> effect;
 
-    public Output<String> getEffect() {
+    public Output<String> effect() {
         return this.effect;
     }
 
@@ -42,7 +42,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -53,7 +53,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeAdded")
       private final @Nullable Output<String> timeAdded;
 
-    public Output<String> getTimeAdded() {
+    public Output<String> timeAdded() {
         return this.timeAdded == null ? Codegen.empty() : this.timeAdded;
     }
 
@@ -64,7 +64,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

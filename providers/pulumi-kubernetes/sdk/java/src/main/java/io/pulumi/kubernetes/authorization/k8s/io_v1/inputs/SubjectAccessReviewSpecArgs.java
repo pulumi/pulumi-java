@@ -30,7 +30,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
 
-    public Output<Map<String,List<String>>> getExtra() {
+    public Output<Map<String,List<String>>> extra() {
         return this.extra == null ? Codegen.empty() : this.extra;
     }
 
@@ -41,7 +41,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups == null ? Codegen.empty() : this.groups;
     }
 
@@ -52,7 +52,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     @Import(name="nonResourceAttributes")
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
+    public Output<NonResourceAttributesArgs> nonResourceAttributes() {
         return this.nonResourceAttributes == null ? Codegen.empty() : this.nonResourceAttributes;
     }
 
@@ -63,7 +63,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     @Import(name="resourceAttributes")
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Output<ResourceAttributesArgs> getResourceAttributes() {
+    public Output<ResourceAttributesArgs> resourceAttributes() {
         return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
@@ -74,7 +74,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 
@@ -85,7 +85,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

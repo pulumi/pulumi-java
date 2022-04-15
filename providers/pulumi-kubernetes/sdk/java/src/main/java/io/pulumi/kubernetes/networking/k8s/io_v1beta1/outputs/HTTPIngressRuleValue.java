@@ -25,7 +25,7 @@ public final class HTTPIngressRuleValue {
      * A collection of paths that map requests to backends.
      * 
     */
-    public List<HTTPIngressPath> getPaths() {
+    public List<HTTPIngressPath> paths() {
         return this.paths;
     }
 

@@ -34,7 +34,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -48,13 +48,13 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -68,7 +68,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return The certificate request itself and any additional information.
      * 
      */
-    public Output</* @Nullable */ CertificateSigningRequestSpec> getSpec() {
+    public Output</* @Nullable */ CertificateSigningRequestSpec> spec() {
         return this.spec;
     }
     /**
@@ -82,7 +82,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @return Derived information about the request.
      * 
      */
-    public Output</* @Nullable */ CertificateSigningRequestStatus> getStatus() {
+    public Output</* @Nullable */ CertificateSigningRequestStatus> status() {
         return this.status;
     }
 

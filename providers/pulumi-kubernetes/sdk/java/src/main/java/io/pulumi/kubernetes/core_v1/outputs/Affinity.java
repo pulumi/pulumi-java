@@ -43,21 +43,21 @@ public final class Affinity {
      * Describes node affinity scheduling rules for the pod.
      * 
     */
-    public Optional<NodeAffinity> getNodeAffinity() {
+    public Optional<NodeAffinity> nodeAffinity() {
         return Optional.ofNullable(this.nodeAffinity);
     }
     /**
      * Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
      * 
     */
-    public Optional<PodAffinity> getPodAffinity() {
+    public Optional<PodAffinity> podAffinity() {
         return Optional.ofNullable(this.podAffinity);
     }
     /**
      * Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
      * 
     */
-    public Optional<PodAntiAffinity> getPodAntiAffinity() {
+    public Optional<PodAntiAffinity> podAntiAffinity() {
         return Optional.ofNullable(this.podAntiAffinity);
     }
 

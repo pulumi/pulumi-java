@@ -37,7 +37,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -48,7 +48,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -59,7 +59,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<EnvVarArgs>> env;
 
-    public Output<List<EnvVarArgs>> getEnv() {
+    public Output<List<EnvVarArgs>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -70,7 +70,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envFrom")
       private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
-    public Output<List<EnvFromSourceArgs>> getEnvFrom() {
+    public Output<List<EnvFromSourceArgs>> envFrom() {
         return this.envFrom == null ? Codegen.empty() : this.envFrom;
     }
 
@@ -81,7 +81,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -97,7 +97,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imagePullPolicy")
       private final @Nullable Output<String> imagePullPolicy;
 
-    public Output<String> getImagePullPolicy() {
+    public Output<String> imagePullPolicy() {
         return this.imagePullPolicy == null ? Codegen.empty() : this.imagePullPolicy;
     }
 
@@ -108,7 +108,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycle")
       private final @Nullable Output<LifecycleArgs> lifecycle;
 
-    public Output<LifecycleArgs> getLifecycle() {
+    public Output<LifecycleArgs> lifecycle() {
         return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
@@ -119,7 +119,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="livenessProbe")
       private final @Nullable Output<ProbeArgs> livenessProbe;
 
-    public Output<ProbeArgs> getLivenessProbe() {
+    public Output<ProbeArgs> livenessProbe() {
         return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
@@ -130,7 +130,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -141,7 +141,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<ContainerPortArgs>> ports;
 
-    public Output<List<ContainerPortArgs>> getPorts() {
+    public Output<List<ContainerPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 
@@ -152,7 +152,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readinessProbe")
       private final @Nullable Output<ProbeArgs> readinessProbe;
 
-    public Output<ProbeArgs> getReadinessProbe() {
+    public Output<ProbeArgs> readinessProbe() {
         return this.readinessProbe == null ? Codegen.empty() : this.readinessProbe;
     }
 
@@ -163,7 +163,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<ResourceRequirementsArgs> resources;
 
-    public Output<ResourceRequirementsArgs> getResources() {
+    public Output<ResourceRequirementsArgs> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -174,7 +174,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityContext")
       private final @Nullable Output<SecurityContextArgs> securityContext;
 
-    public Output<SecurityContextArgs> getSecurityContext() {
+    public Output<SecurityContextArgs> securityContext() {
         return this.securityContext == null ? Codegen.empty() : this.securityContext;
     }
 
@@ -185,7 +185,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startupProbe")
       private final @Nullable Output<ProbeArgs> startupProbe;
 
-    public Output<ProbeArgs> getStartupProbe() {
+    public Output<ProbeArgs> startupProbe() {
         return this.startupProbe == null ? Codegen.empty() : this.startupProbe;
     }
 
@@ -196,7 +196,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stdin")
       private final @Nullable Output<Boolean> stdin;
 
-    public Output<Boolean> getStdin() {
+    public Output<Boolean> stdin() {
         return this.stdin == null ? Codegen.empty() : this.stdin;
     }
 
@@ -207,7 +207,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stdinOnce")
       private final @Nullable Output<Boolean> stdinOnce;
 
-    public Output<Boolean> getStdinOnce() {
+    public Output<Boolean> stdinOnce() {
         return this.stdinOnce == null ? Codegen.empty() : this.stdinOnce;
     }
 
@@ -218,7 +218,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminationMessagePath")
       private final @Nullable Output<String> terminationMessagePath;
 
-    public Output<String> getTerminationMessagePath() {
+    public Output<String> terminationMessagePath() {
         return this.terminationMessagePath == null ? Codegen.empty() : this.terminationMessagePath;
     }
 
@@ -233,7 +233,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminationMessagePolicy")
       private final @Nullable Output<String> terminationMessagePolicy;
 
-    public Output<String> getTerminationMessagePolicy() {
+    public Output<String> terminationMessagePolicy() {
         return this.terminationMessagePolicy == null ? Codegen.empty() : this.terminationMessagePolicy;
     }
 
@@ -244,7 +244,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tty")
       private final @Nullable Output<Boolean> tty;
 
-    public Output<Boolean> getTty() {
+    public Output<Boolean> tty() {
         return this.tty == null ? Codegen.empty() : this.tty;
     }
 
@@ -255,7 +255,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeDevices")
       private final @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
 
-    public Output<List<VolumeDeviceArgs>> getVolumeDevices() {
+    public Output<List<VolumeDeviceArgs>> volumeDevices() {
         return this.volumeDevices == null ? Codegen.empty() : this.volumeDevices;
     }
 
@@ -266,7 +266,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> getVolumeMounts() {
+    public Output<List<VolumeMountArgs>> volumeMounts() {
         return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 
@@ -277,7 +277,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workingDir")
       private final @Nullable Output<String> workingDir;
 
-    public Output<String> getWorkingDir() {
+    public Output<String> workingDir() {
         return this.workingDir == null ? Codegen.empty() : this.workingDir;
     }
 

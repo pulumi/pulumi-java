@@ -35,14 +35,14 @@ public final class Webhook {
      * ClientConfig holds the connection parameters for the webhook required
      * 
     */
-    public WebhookClientConfig getClientConfig() {
+    public WebhookClientConfig clientConfig() {
         return this.clientConfig;
     }
     /**
      * Throttle holds the options for throttling the webhook
      * 
     */
-    public Optional<WebhookThrottleConfig> getThrottle() {
+    public Optional<WebhookThrottleConfig> throttle() {
         return Optional.ofNullable(this.throttle);
     }
 

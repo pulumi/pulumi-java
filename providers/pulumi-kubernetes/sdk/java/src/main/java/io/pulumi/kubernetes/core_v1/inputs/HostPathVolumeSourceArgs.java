@@ -26,7 +26,7 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -37,7 +37,7 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

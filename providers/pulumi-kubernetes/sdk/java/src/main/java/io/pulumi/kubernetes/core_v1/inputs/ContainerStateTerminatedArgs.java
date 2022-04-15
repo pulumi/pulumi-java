@@ -27,7 +27,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="containerID")
       private final @Nullable Output<String> containerID;
 
-    public Output<String> getContainerID() {
+    public Output<String> containerID() {
         return this.containerID == null ? Codegen.empty() : this.containerID;
     }
 
@@ -38,7 +38,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="exitCode", required=true)
       private final Output<Integer> exitCode;
 
-    public Output<Integer> getExitCode() {
+    public Output<Integer> exitCode() {
         return this.exitCode;
     }
 
@@ -49,7 +49,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="finishedAt")
       private final @Nullable Output<String> finishedAt;
 
-    public Output<String> getFinishedAt() {
+    public Output<String> finishedAt() {
         return this.finishedAt == null ? Codegen.empty() : this.finishedAt;
     }
 
@@ -60,7 +60,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -71,7 +71,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -82,7 +82,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="signal")
       private final @Nullable Output<Integer> signal;
 
-    public Output<Integer> getSignal() {
+    public Output<Integer> signal() {
         return this.signal == null ? Codegen.empty() : this.signal;
     }
 
@@ -93,7 +93,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
     @Import(name="startedAt")
       private final @Nullable Output<String> startedAt;
 
-    public Output<String> getStartedAt() {
+    public Output<String> startedAt() {
         return this.startedAt == null ? Codegen.empty() : this.startedAt;
     }
 

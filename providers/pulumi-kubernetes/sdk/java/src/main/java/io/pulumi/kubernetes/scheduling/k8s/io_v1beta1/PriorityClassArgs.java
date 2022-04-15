@@ -25,7 +25,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -36,7 +36,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalDefault")
       private final @Nullable Output<Boolean> globalDefault;
 
-    public Output<Boolean> getGlobalDefault() {
+    public Output<Boolean> globalDefault() {
         return this.globalDefault == null ? Codegen.empty() : this.globalDefault;
     }
 
@@ -58,7 +58,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -69,7 +69,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -80,7 +80,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preemptionPolicy")
       private final @Nullable Output<String> preemptionPolicy;
 
-    public Output<String> getPreemptionPolicy() {
+    public Output<String> preemptionPolicy() {
         return this.preemptionPolicy == null ? Codegen.empty() : this.preemptionPolicy;
     }
 
@@ -91,7 +91,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 

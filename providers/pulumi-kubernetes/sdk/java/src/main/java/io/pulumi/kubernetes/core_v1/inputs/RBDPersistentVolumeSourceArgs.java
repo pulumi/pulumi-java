@@ -29,7 +29,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -40,7 +40,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -51,7 +51,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="keyring")
       private final @Nullable Output<String> keyring;
 
-    public Output<String> getKeyring() {
+    public Output<String> keyring() {
         return this.keyring == null ? Codegen.empty() : this.keyring;
     }
 
@@ -62,7 +62,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="monitors", required=true)
       private final Output<List<String>> monitors;
 
-    public Output<List<String>> getMonitors() {
+    public Output<List<String>> monitors() {
         return this.monitors;
     }
 
@@ -73,7 +73,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="pool")
       private final @Nullable Output<String> pool;
 
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool == null ? Codegen.empty() : this.pool;
     }
 
@@ -84,7 +84,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -95,7 +95,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="secretRef")
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
-    public Output<SecretReferenceArgs> getSecretRef() {
+    public Output<SecretReferenceArgs> secretRef() {
         return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
@@ -106,7 +106,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

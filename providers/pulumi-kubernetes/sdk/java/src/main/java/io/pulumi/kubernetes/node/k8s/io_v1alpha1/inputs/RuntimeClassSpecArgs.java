@@ -28,7 +28,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="overhead")
       private final @Nullable Output<OverheadArgs> overhead;
 
-    public Output<OverheadArgs> getOverhead() {
+    public Output<OverheadArgs> overhead() {
         return this.overhead == null ? Codegen.empty() : this.overhead;
     }
 
@@ -39,7 +39,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="runtimeHandler", required=true)
       private final Output<String> runtimeHandler;
 
-    public Output<String> getRuntimeHandler() {
+    public Output<String> runtimeHandler() {
         return this.runtimeHandler;
     }
 
@@ -50,7 +50,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Output<SchedulingArgs> getScheduling() {
+    public Output<SchedulingArgs> scheduling() {
         return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 

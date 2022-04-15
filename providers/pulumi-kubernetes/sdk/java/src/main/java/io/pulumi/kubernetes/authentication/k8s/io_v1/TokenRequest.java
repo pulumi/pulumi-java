@@ -32,7 +32,7 @@ public class TokenRequest extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -46,7 +46,7 @@ public class TokenRequest extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -60,7 +60,7 @@ public class TokenRequest extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -74,7 +74,7 @@ public class TokenRequest extends io.pulumi.resources.CustomResource {
      * @return Spec holds information about the request being evaluated
      * 
      */
-    public Output<TokenRequestSpec> getSpec() {
+    public Output<TokenRequestSpec> spec() {
         return this.spec;
     }
     /**
@@ -88,7 +88,7 @@ public class TokenRequest extends io.pulumi.resources.CustomResource {
      * @return Status is filled in by the server and indicates whether the token can be authenticated.
      * 
      */
-    public Output</* @Nullable */ TokenRequestStatus> getStatus() {
+    public Output</* @Nullable */ TokenRequestStatus> status() {
         return this.status;
     }
 

@@ -51,28 +51,28 @@ public final class VolumeProjection {
      * information about the configMap data to project
      * 
     */
-    public Optional<ConfigMapProjection> getConfigMap() {
+    public Optional<ConfigMapProjection> configMap() {
         return Optional.ofNullable(this.configMap);
     }
     /**
      * information about the downwardAPI data to project
      * 
     */
-    public Optional<DownwardAPIProjection> getDownwardAPI() {
+    public Optional<DownwardAPIProjection> downwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
     /**
      * information about the secret data to project
      * 
     */
-    public Optional<SecretProjection> getSecret() {
+    public Optional<SecretProjection> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
      * information about the serviceAccountToken data to project
      * 
     */
-    public Optional<ServiceAccountTokenProjection> getServiceAccountToken() {
+    public Optional<ServiceAccountTokenProjection> serviceAccountToken() {
         return Optional.ofNullable(this.serviceAccountToken);
     }
 

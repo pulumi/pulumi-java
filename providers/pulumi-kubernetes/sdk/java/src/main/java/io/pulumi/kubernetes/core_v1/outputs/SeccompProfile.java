@@ -41,7 +41,7 @@ public final class SeccompProfile {
      * localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
      * 
     */
-    public Optional<String> getLocalhostProfile() {
+    public Optional<String> localhostProfile() {
         return Optional.ofNullable(this.localhostProfile);
     }
     /**
@@ -55,7 +55,7 @@ public final class SeccompProfile {
      *  - `"Unconfined"` indicates no seccomp profile is applied (A.K.A. unconfined).
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

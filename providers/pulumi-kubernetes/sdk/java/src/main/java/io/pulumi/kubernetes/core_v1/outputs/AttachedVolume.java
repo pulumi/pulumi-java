@@ -32,14 +32,14 @@ public final class AttachedVolume {
      * DevicePath represents the device path where the volume should be available
      * 
     */
-    public String getDevicePath() {
+    public String devicePath() {
         return this.devicePath;
     }
     /**
      * Name of the attached volume
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

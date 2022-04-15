@@ -26,7 +26,7 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
     @Import(name="startedAt")
       private final @Nullable Output<String> startedAt;
 
-    public Output<String> getStartedAt() {
+    public Output<String> startedAt() {
         return this.startedAt == null ? Codegen.empty() : this.startedAt;
     }
 

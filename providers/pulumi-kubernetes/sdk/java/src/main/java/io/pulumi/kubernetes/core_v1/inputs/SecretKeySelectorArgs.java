@@ -27,7 +27,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -38,7 +38,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> getOptional() {
+    public Output<Boolean> optional() {
         return this.optional == null ? Codegen.empty() : this.optional;
     }
 

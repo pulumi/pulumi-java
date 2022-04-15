@@ -27,7 +27,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     @Import(name="JSONPath", required=true)
       private final Output<String> JSONPath;
 
-    public Output<String> getJSONPath() {
+    public Output<String> JSONPath() {
         return this.JSONPath;
     }
 
@@ -38,7 +38,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -60,7 +60,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -71,7 +71,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -82,7 +82,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,11 +140,11 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder jSONPath(Output<String> JSONPath) {
+        public Builder JSONPath(Output<String> JSONPath) {
             this.JSONPath = Objects.requireNonNull(JSONPath);
             return this;
         }
-        public Builder jSONPath(String JSONPath) {
+        public Builder JSONPath(String JSONPath) {
             this.JSONPath = Output.of(Objects.requireNonNull(JSONPath));
             return this;
         }

@@ -27,7 +27,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ipBlock")
       private final @Nullable Output<IPBlockArgs> ipBlock;
 
-    public Output<IPBlockArgs> getIpBlock() {
+    public Output<IPBlockArgs> ipBlock() {
         return this.ipBlock == null ? Codegen.empty() : this.ipBlock;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Output<LabelSelectorArgs> getNamespaceSelector() {
+    public Output<LabelSelectorArgs> namespaceSelector() {
         return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="podSelector")
       private final @Nullable Output<LabelSelectorArgs> podSelector;
 
-    public Output<LabelSelectorArgs> getPodSelector() {
+    public Output<LabelSelectorArgs> podSelector() {
         return this.podSelector == null ? Codegen.empty() : this.podSelector;
     }
 

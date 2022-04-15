@@ -26,7 +26,7 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="burst")
       private final @Nullable Output<Integer> burst;
 
-    public Output<Integer> getBurst() {
+    public Output<Integer> burst() {
         return this.burst == null ? Codegen.empty() : this.burst;
     }
 
@@ -37,7 +37,7 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="qps")
       private final @Nullable Output<Integer> qps;
 
-    public Output<Integer> getQps() {
+    public Output<Integer> qps() {
         return this.qps == null ? Codegen.empty() : this.qps;
     }
 

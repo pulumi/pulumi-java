@@ -42,21 +42,21 @@ public final class AzureFileVolumeSource {
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * the name of secret that contains Azure Storage Account Name and Key
      * 
     */
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
     /**
      * Share Name
      * 
     */
-    public String getShareName() {
+    public String shareName() {
         return this.shareName;
     }
 

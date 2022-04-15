@@ -33,14 +33,14 @@ public final class TopologySelectorLabelRequirement {
      * The label key that the selector applies to.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

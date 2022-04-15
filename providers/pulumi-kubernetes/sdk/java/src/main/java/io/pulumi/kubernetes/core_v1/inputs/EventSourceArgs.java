@@ -26,7 +26,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="component")
       private final @Nullable Output<String> component;
 
-    public Output<String> getComponent() {
+    public Output<String> component() {
         return this.component == null ? Codegen.empty() : this.component;
     }
 
@@ -37,7 +37,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 

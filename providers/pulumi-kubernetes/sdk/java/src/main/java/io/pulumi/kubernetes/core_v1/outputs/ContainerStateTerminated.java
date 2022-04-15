@@ -70,49 +70,49 @@ public final class ContainerStateTerminated {
      * Container's ID in the format 'docker://<container_id>'
      * 
     */
-    public Optional<String> getContainerID() {
+    public Optional<String> containerID() {
         return Optional.ofNullable(this.containerID);
     }
     /**
      * Exit status from the last termination of the container
      * 
     */
-    public Integer getExitCode() {
+    public Integer exitCode() {
         return this.exitCode;
     }
     /**
      * Time at which the container last terminated
      * 
     */
-    public Optional<String> getFinishedAt() {
+    public Optional<String> finishedAt() {
         return Optional.ofNullable(this.finishedAt);
     }
     /**
      * Message regarding the last termination of the container
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason from the last termination of the container
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Signal from the last termination of the container
      * 
     */
-    public Optional<Integer> getSignal() {
+    public Optional<Integer> signal() {
         return Optional.ofNullable(this.signal);
     }
     /**
      * Time at which previous execution of the container started
      * 
     */
-    public Optional<String> getStartedAt() {
+    public Optional<String> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }
 

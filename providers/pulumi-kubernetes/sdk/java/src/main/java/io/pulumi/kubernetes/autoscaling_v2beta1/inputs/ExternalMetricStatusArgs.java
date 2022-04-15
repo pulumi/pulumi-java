@@ -27,7 +27,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="currentAverageValue")
       private final @Nullable Output<String> currentAverageValue;
 
-    public Output<String> getCurrentAverageValue() {
+    public Output<String> currentAverageValue() {
         return this.currentAverageValue == null ? Codegen.empty() : this.currentAverageValue;
     }
 
@@ -38,7 +38,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="currentValue", required=true)
       private final Output<String> currentValue;
 
-    public Output<String> getCurrentValue() {
+    public Output<String> currentValue() {
         return this.currentValue;
     }
 
@@ -49,7 +49,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -60,7 +60,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
-    public Output<LabelSelectorArgs> getMetricSelector() {
+    public Output<LabelSelectorArgs> metricSelector() {
         return this.metricSelector == null ? Codegen.empty() : this.metricSelector;
     }
 

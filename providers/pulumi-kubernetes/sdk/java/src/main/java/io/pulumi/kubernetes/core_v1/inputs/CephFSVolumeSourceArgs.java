@@ -29,7 +29,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monitors", required=true)
       private final Output<List<String>> monitors;
 
-    public Output<List<String>> getMonitors() {
+    public Output<List<String>> monitors() {
         return this.monitors;
     }
 
@@ -40,7 +40,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -51,7 +51,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -62,7 +62,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="secretFile")
       private final @Nullable Output<String> secretFile;
 
-    public Output<String> getSecretFile() {
+    public Output<String> secretFile() {
         return this.secretFile == null ? Codegen.empty() : this.secretFile;
     }
 
@@ -73,7 +73,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
-    public Output<LocalObjectReferenceArgs> getSecretRef() {
+    public Output<LocalObjectReferenceArgs> secretRef() {
         return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
@@ -84,7 +84,7 @@ public final class CephFSVolumeSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

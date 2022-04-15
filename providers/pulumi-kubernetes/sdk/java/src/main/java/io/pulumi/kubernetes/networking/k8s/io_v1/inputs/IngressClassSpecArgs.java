@@ -27,7 +27,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="controller")
       private final @Nullable Output<String> controller;
 
-    public Output<String> getController() {
+    public Output<String> controller() {
         return this.controller == null ? Codegen.empty() : this.controller;
     }
 
@@ -38,7 +38,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<IngressClassParametersReferenceArgs> parameters;
 
-    public Output<IngressClassParametersReferenceArgs> getParameters() {
+    public Output<IngressClassParametersReferenceArgs> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

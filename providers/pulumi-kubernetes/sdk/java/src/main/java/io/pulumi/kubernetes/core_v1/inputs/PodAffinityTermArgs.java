@@ -28,7 +28,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="labelSelector")
       private final @Nullable Output<LabelSelectorArgs> labelSelector;
 
-    public Output<LabelSelectorArgs> getLabelSelector() {
+    public Output<LabelSelectorArgs> labelSelector() {
         return this.labelSelector == null ? Codegen.empty() : this.labelSelector;
     }
 
@@ -39,7 +39,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Output<LabelSelectorArgs> getNamespaceSelector() {
+    public Output<LabelSelectorArgs> namespaceSelector() {
         return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
     }
 
@@ -50,7 +50,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespaces")
       private final @Nullable Output<List<String>> namespaces;
 
-    public Output<List<String>> getNamespaces() {
+    public Output<List<String>> namespaces() {
         return this.namespaces == null ? Codegen.empty() : this.namespaces;
     }
 
@@ -61,7 +61,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="topologyKey", required=true)
       private final Output<String> topologyKey;
 
-    public Output<String> getTopologyKey() {
+    public Output<String> topologyKey() {
         return this.topologyKey;
     }
 

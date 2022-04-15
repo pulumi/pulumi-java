@@ -27,7 +27,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="acquireTime")
       private final @Nullable Output<String> acquireTime;
 
-    public Output<String> getAcquireTime() {
+    public Output<String> acquireTime() {
         return this.acquireTime == null ? Codegen.empty() : this.acquireTime;
     }
 
@@ -38,7 +38,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="holderIdentity")
       private final @Nullable Output<String> holderIdentity;
 
-    public Output<String> getHolderIdentity() {
+    public Output<String> holderIdentity() {
         return this.holderIdentity == null ? Codegen.empty() : this.holderIdentity;
     }
 
@@ -49,7 +49,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="leaseDurationSeconds")
       private final @Nullable Output<Integer> leaseDurationSeconds;
 
-    public Output<Integer> getLeaseDurationSeconds() {
+    public Output<Integer> leaseDurationSeconds() {
         return this.leaseDurationSeconds == null ? Codegen.empty() : this.leaseDurationSeconds;
     }
 
@@ -60,7 +60,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="leaseTransitions")
       private final @Nullable Output<Integer> leaseTransitions;
 
-    public Output<Integer> getLeaseTransitions() {
+    public Output<Integer> leaseTransitions() {
         return this.leaseTransitions == null ? Codegen.empty() : this.leaseTransitions;
     }
 
@@ -71,7 +71,7 @@ public final class LeaseSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="renewTime")
       private final @Nullable Output<String> renewTime;
 
-    public Output<String> getRenewTime() {
+    public Output<String> renewTime() {
         return this.renewTime == null ? Codegen.empty() : this.renewTime;
     }
 

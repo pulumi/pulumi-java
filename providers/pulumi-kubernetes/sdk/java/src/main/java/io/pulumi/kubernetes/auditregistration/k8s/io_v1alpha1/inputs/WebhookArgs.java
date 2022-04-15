@@ -27,7 +27,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientConfig", required=true)
       private final Output<WebhookClientConfigArgs> clientConfig;
 
-    public Output<WebhookClientConfigArgs> getClientConfig() {
+    public Output<WebhookClientConfigArgs> clientConfig() {
         return this.clientConfig;
     }
 
@@ -38,7 +38,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="throttle")
       private final @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
-    public Output<WebhookThrottleConfigArgs> getThrottle() {
+    public Output<WebhookThrottleConfigArgs> throttle() {
         return this.throttle == null ? Codegen.empty() : this.throttle;
     }
 

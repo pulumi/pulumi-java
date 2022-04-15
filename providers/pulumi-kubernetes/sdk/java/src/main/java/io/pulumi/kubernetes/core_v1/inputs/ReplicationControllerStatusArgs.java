@@ -28,7 +28,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
 
-    public Output<Integer> getAvailableReplicas() {
+    public Output<Integer> availableReplicas() {
         return this.availableReplicas == null ? Codegen.empty() : this.availableReplicas;
     }
 
@@ -39,7 +39,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="conditions")
       private final @Nullable Output<List<ReplicationControllerConditionArgs>> conditions;
 
-    public Output<List<ReplicationControllerConditionArgs>> getConditions() {
+    public Output<List<ReplicationControllerConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -50,7 +50,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="fullyLabeledReplicas")
       private final @Nullable Output<Integer> fullyLabeledReplicas;
 
-    public Output<Integer> getFullyLabeledReplicas() {
+    public Output<Integer> fullyLabeledReplicas() {
         return this.fullyLabeledReplicas == null ? Codegen.empty() : this.fullyLabeledReplicas;
     }
 
@@ -61,7 +61,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -72,7 +72,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> getReadyReplicas() {
+    public Output<Integer> readyReplicas() {
         return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
     }
 
@@ -83,7 +83,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas;
     }
 

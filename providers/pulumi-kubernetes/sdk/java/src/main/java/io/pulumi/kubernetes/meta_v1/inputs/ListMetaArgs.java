@@ -27,7 +27,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="continue")
       private final @Nullable Output<String> continue_;
 
-    public Output<String> getContinue_() {
+    public Output<String> continue_() {
         return this.continue_ == null ? Codegen.empty() : this.continue_;
     }
 
@@ -38,7 +38,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="remainingItemCount")
       private final @Nullable Output<Integer> remainingItemCount;
 
-    public Output<Integer> getRemainingItemCount() {
+    public Output<Integer> remainingItemCount() {
         return this.remainingItemCount == null ? Codegen.empty() : this.remainingItemCount;
     }
 
@@ -49,7 +49,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
@@ -62,7 +62,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 

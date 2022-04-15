@@ -26,7 +26,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -37,7 +37,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -48,7 +48,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -59,7 +59,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

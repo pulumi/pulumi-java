@@ -26,7 +26,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
     @Import(name="scaleDown")
       private final @Nullable Output<HPAScalingRulesArgs> scaleDown;
 
-    public Output<HPAScalingRulesArgs> getScaleDown() {
+    public Output<HPAScalingRulesArgs> scaleDown() {
         return this.scaleDown == null ? Codegen.empty() : this.scaleDown;
     }
 
@@ -40,7 +40,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
     @Import(name="scaleUp")
       private final @Nullable Output<HPAScalingRulesArgs> scaleUp;
 
-    public Output<HPAScalingRulesArgs> getScaleUp() {
+    public Output<HPAScalingRulesArgs> scaleUp() {
         return this.scaleUp == null ? Codegen.empty() : this.scaleUp;
     }
 

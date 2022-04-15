@@ -51,7 +51,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -65,7 +65,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -79,7 +79,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -93,7 +93,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ IngressSpec> getSpec() {
+    public Output</* @Nullable */ IngressSpec> spec() {
         return this.spec;
     }
     /**
@@ -107,7 +107,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ IngressStatus> getStatus() {
+    public Output</* @Nullable */ IngressStatus> status() {
         return this.status;
     }
 

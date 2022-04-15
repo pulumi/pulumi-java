@@ -27,7 +27,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="default")
       private final @Nullable Output<Map<String,String>> default_;
 
-    public Output<Map<String,String>> getDefault_() {
+    public Output<Map<String,String>> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
@@ -38,7 +38,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultRequest")
       private final @Nullable Output<Map<String,String>> defaultRequest;
 
-    public Output<Map<String,String>> getDefaultRequest() {
+    public Output<Map<String,String>> defaultRequest() {
         return this.defaultRequest == null ? Codegen.empty() : this.defaultRequest;
     }
 
@@ -49,7 +49,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="max")
       private final @Nullable Output<Map<String,String>> max;
 
-    public Output<Map<String,String>> getMax() {
+    public Output<Map<String,String>> max() {
         return this.max == null ? Codegen.empty() : this.max;
     }
 
@@ -60,7 +60,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxLimitRequestRatio")
       private final @Nullable Output<Map<String,String>> maxLimitRequestRatio;
 
-    public Output<Map<String,String>> getMaxLimitRequestRatio() {
+    public Output<Map<String,String>> maxLimitRequestRatio() {
         return this.maxLimitRequestRatio == null ? Codegen.empty() : this.maxLimitRequestRatio;
     }
 
@@ -71,7 +71,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="min")
       private final @Nullable Output<Map<String,String>> min;
 
-    public Output<Map<String,String>> getMin() {
+    public Output<Map<String,String>> min() {
         return this.min == null ? Codegen.empty() : this.min;
     }
 
@@ -87,7 +87,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

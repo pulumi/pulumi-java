@@ -46,20 +46,20 @@ public final class NamespaceCondition {
         this.type = type;
     }
 
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
@@ -73,7 +73,7 @@ public final class NamespaceCondition {
      *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

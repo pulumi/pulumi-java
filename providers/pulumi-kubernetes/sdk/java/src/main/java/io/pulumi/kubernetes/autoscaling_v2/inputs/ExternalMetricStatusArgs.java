@@ -26,7 +26,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
 
-    public Output<MetricValueStatusArgs> getCurrent() {
+    public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
 
@@ -37,7 +37,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
-    public Output<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 

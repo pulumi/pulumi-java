@@ -27,7 +27,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories == null ? Codegen.empty() : this.categories;
     }
 
@@ -38,7 +38,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -49,7 +49,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     @Import(name="listKind")
       private final @Nullable Output<String> listKind;
 
-    public Output<String> getListKind() {
+    public Output<String> listKind() {
         return this.listKind == null ? Codegen.empty() : this.listKind;
     }
 
@@ -60,7 +60,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     @Import(name="plural", required=true)
       private final Output<String> plural;
 
-    public Output<String> getPlural() {
+    public Output<String> plural() {
         return this.plural;
     }
 
@@ -71,7 +71,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     @Import(name="shortNames")
       private final @Nullable Output<List<String>> shortNames;
 
-    public Output<List<String>> getShortNames() {
+    public Output<List<String>> shortNames() {
         return this.shortNames == null ? Codegen.empty() : this.shortNames;
     }
 
@@ -82,7 +82,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     @Import(name="singular")
       private final @Nullable Output<String> singular;
 
-    public Output<String> getSingular() {
+    public Output<String> singular() {
         return this.singular == null ? Codegen.empty() : this.singular;
     }
 

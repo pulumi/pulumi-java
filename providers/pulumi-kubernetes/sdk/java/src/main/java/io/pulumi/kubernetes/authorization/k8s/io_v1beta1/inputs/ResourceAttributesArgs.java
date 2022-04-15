@@ -26,7 +26,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -59,7 +59,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resource")
       private final @Nullable Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -70,7 +70,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subresource")
       private final @Nullable Output<String> subresource;
 
-    public Output<String> getSubresource() {
+    public Output<String> subresource() {
         return this.subresource == null ? Codegen.empty() : this.subresource;
     }
 
@@ -81,7 +81,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="verb")
       private final @Nullable Output<String> verb;
 
-    public Output<String> getVerb() {
+    public Output<String> verb() {
         return this.verb == null ? Codegen.empty() : this.verb;
     }
 
@@ -92,7 +92,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -27,7 +27,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -38,7 +38,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
     @Import(name="spec", required=true)
       private final Output<PersistentVolumeClaimSpecArgs> spec;
 
-    public Output<PersistentVolumeClaimSpecArgs> getSpec() {
+    public Output<PersistentVolumeClaimSpecArgs> spec() {
         return this.spec;
     }
 

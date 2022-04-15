@@ -27,7 +27,7 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ingress")
       private final @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
 
-    public Output<List<LoadBalancerIngressArgs>> getIngress() {
+    public Output<List<LoadBalancerIngressArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 

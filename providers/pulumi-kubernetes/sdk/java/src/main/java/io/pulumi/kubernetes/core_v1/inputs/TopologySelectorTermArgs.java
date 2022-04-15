@@ -27,7 +27,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
     @Import(name="matchLabelExpressions")
       private final @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
-    public Output<List<TopologySelectorLabelRequirementArgs>> getMatchLabelExpressions() {
+    public Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions() {
         return this.matchLabelExpressions == null ? Codegen.empty() : this.matchLabelExpressions;
     }
 

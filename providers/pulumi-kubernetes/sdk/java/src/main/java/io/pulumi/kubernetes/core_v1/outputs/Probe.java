@@ -94,70 +94,70 @@ public final class Probe {
      * Exec specifies the action to take.
      * 
     */
-    public Optional<ExecAction> getExec() {
+    public Optional<ExecAction> exec() {
         return Optional.ofNullable(this.exec);
     }
     /**
      * Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
      * 
     */
-    public Optional<Integer> getFailureThreshold() {
+    public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * GRPC specifies an action involving a GRPC port. This is an alpha field and requires enabling GRPCContainerProbe feature gate.
      * 
     */
-    public Optional<GRPCAction> getGrpc() {
+    public Optional<GRPCAction> grpc() {
         return Optional.ofNullable(this.grpc);
     }
     /**
      * HTTPGet specifies the http request to perform.
      * 
     */
-    public Optional<HTTPGetAction> getHttpGet() {
+    public Optional<HTTPGetAction> httpGet() {
         return Optional.ofNullable(this.httpGet);
     }
     /**
      * Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
     */
-    public Optional<Integer> getInitialDelaySeconds() {
+    public Optional<Integer> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
     /**
      * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
      * 
     */
-    public Optional<Integer> getPeriodSeconds() {
+    public Optional<Integer> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
     /**
      * Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.
      * 
     */
-    public Optional<Integer> getSuccessThreshold() {
+    public Optional<Integer> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * TCPSocket specifies an action involving a TCP port.
      * 
     */
-    public Optional<TCPSocketAction> getTcpSocket() {
+    public Optional<TCPSocketAction> tcpSocket() {
         return Optional.ofNullable(this.tcpSocket);
     }
     /**
      * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
      * 
     */
-    public Optional<Integer> getTerminationGracePeriodSeconds() {
+    public Optional<Integer> terminationGracePeriodSeconds() {
         return Optional.ofNullable(this.terminationGracePeriodSeconds);
     }
     /**
      * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
     */
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
 

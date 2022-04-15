@@ -43,21 +43,21 @@ public final class LoadBalancerIngress {
      * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
      * 
     */
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
      * 
     */
-    public List<PortStatus> getPorts() {
+    public List<PortStatus> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 

@@ -25,7 +25,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="architecture", required=true)
       private final Output<String> architecture;
 
-    public Output<String> getArchitecture() {
+    public Output<String> architecture() {
         return this.architecture;
     }
 
@@ -36,7 +36,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootID", required=true)
       private final Output<String> bootID;
 
-    public Output<String> getBootID() {
+    public Output<String> bootID() {
         return this.bootID;
     }
 
@@ -47,7 +47,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerRuntimeVersion", required=true)
       private final Output<String> containerRuntimeVersion;
 
-    public Output<String> getContainerRuntimeVersion() {
+    public Output<String> containerRuntimeVersion() {
         return this.containerRuntimeVersion;
     }
 
@@ -58,7 +58,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kernelVersion", required=true)
       private final Output<String> kernelVersion;
 
-    public Output<String> getKernelVersion() {
+    public Output<String> kernelVersion() {
         return this.kernelVersion;
     }
 
@@ -69,7 +69,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeProxyVersion", required=true)
       private final Output<String> kubeProxyVersion;
 
-    public Output<String> getKubeProxyVersion() {
+    public Output<String> kubeProxyVersion() {
         return this.kubeProxyVersion;
     }
 
@@ -80,7 +80,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeletVersion", required=true)
       private final Output<String> kubeletVersion;
 
-    public Output<String> getKubeletVersion() {
+    public Output<String> kubeletVersion() {
         return this.kubeletVersion;
     }
 
@@ -91,7 +91,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineID", required=true)
       private final Output<String> machineID;
 
-    public Output<String> getMachineID() {
+    public Output<String> machineID() {
         return this.machineID;
     }
 
@@ -102,7 +102,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatingSystem", required=true)
       private final Output<String> operatingSystem;
 
-    public Output<String> getOperatingSystem() {
+    public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -113,7 +113,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osImage", required=true)
       private final Output<String> osImage;
 
-    public Output<String> getOsImage() {
+    public Output<String> osImage() {
         return this.osImage;
     }
 
@@ -124,7 +124,7 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemUUID", required=true)
       private final Output<String> systemUUID;
 
-    public Output<String> getSystemUUID() {
+    public Output<String> systemUUID() {
         return this.systemUUID;
     }
 

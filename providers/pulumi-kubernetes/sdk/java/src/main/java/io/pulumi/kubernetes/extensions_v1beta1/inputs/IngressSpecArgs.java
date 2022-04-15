@@ -30,7 +30,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backend")
       private final @Nullable Output<IngressBackendArgs> backend;
 
-    public Output<IngressBackendArgs> getBackend() {
+    public Output<IngressBackendArgs> backend() {
         return this.backend == null ? Codegen.empty() : this.backend;
     }
 
@@ -41,7 +41,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingressClassName")
       private final @Nullable Output<String> ingressClassName;
 
-    public Output<String> getIngressClassName() {
+    public Output<String> ingressClassName() {
         return this.ingressClassName == null ? Codegen.empty() : this.ingressClassName;
     }
 
@@ -52,7 +52,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<IngressRuleArgs>> rules;
 
-    public Output<List<IngressRuleArgs>> getRules() {
+    public Output<List<IngressRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -63,7 +63,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tls")
       private final @Nullable Output<List<IngressTLSArgs>> tls;
 
-    public Output<List<IngressTLSArgs>> getTls() {
+    public Output<List<IngressTLSArgs>> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

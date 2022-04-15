@@ -27,7 +27,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
 
-    public Output<RollingUpdateDeploymentArgs> getRollingUpdate() {
+    public Output<RollingUpdateDeploymentArgs> rollingUpdate() {
         return this.rollingUpdate == null ? Codegen.empty() : this.rollingUpdate;
     }
 
@@ -42,7 +42,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

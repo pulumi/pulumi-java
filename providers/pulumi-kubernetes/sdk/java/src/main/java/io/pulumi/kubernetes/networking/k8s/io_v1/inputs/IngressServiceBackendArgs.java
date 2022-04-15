@@ -27,7 +27,7 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
     @Import(name="port")
       private final @Nullable Output<ServiceBackendPortArgs> port;
 
-    public Output<ServiceBackendPortArgs> getPort() {
+    public Output<ServiceBackendPortArgs> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

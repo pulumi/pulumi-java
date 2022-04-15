@@ -32,7 +32,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="allowPrivilegeEscalation")
       private final @Nullable Output<Boolean> allowPrivilegeEscalation;
 
-    public Output<Boolean> getAllowPrivilegeEscalation() {
+    public Output<Boolean> allowPrivilegeEscalation() {
         return this.allowPrivilegeEscalation == null ? Codegen.empty() : this.allowPrivilegeEscalation;
     }
 
@@ -43,7 +43,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="capabilities")
       private final @Nullable Output<CapabilitiesArgs> capabilities;
 
-    public Output<CapabilitiesArgs> getCapabilities() {
+    public Output<CapabilitiesArgs> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
@@ -54,7 +54,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> getPrivileged() {
+    public Output<Boolean> privileged() {
         return this.privileged == null ? Codegen.empty() : this.privileged;
     }
 
@@ -65,7 +65,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="procMount")
       private final @Nullable Output<String> procMount;
 
-    public Output<String> getProcMount() {
+    public Output<String> procMount() {
         return this.procMount == null ? Codegen.empty() : this.procMount;
     }
 
@@ -76,7 +76,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnlyRootFilesystem")
       private final @Nullable Output<Boolean> readOnlyRootFilesystem;
 
-    public Output<Boolean> getReadOnlyRootFilesystem() {
+    public Output<Boolean> readOnlyRootFilesystem() {
         return this.readOnlyRootFilesystem == null ? Codegen.empty() : this.readOnlyRootFilesystem;
     }
 
@@ -87,7 +87,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsGroup")
       private final @Nullable Output<Integer> runAsGroup;
 
-    public Output<Integer> getRunAsGroup() {
+    public Output<Integer> runAsGroup() {
         return this.runAsGroup == null ? Codegen.empty() : this.runAsGroup;
     }
 
@@ -98,7 +98,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsNonRoot")
       private final @Nullable Output<Boolean> runAsNonRoot;
 
-    public Output<Boolean> getRunAsNonRoot() {
+    public Output<Boolean> runAsNonRoot() {
         return this.runAsNonRoot == null ? Codegen.empty() : this.runAsNonRoot;
     }
 
@@ -109,7 +109,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="runAsUser")
       private final @Nullable Output<Integer> runAsUser;
 
-    public Output<Integer> getRunAsUser() {
+    public Output<Integer> runAsUser() {
         return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 
@@ -120,7 +120,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
+    public Output<SELinuxOptionsArgs> seLinuxOptions() {
         return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
     }
 
@@ -131,7 +131,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="seccompProfile")
       private final @Nullable Output<SeccompProfileArgs> seccompProfile;
 
-    public Output<SeccompProfileArgs> getSeccompProfile() {
+    public Output<SeccompProfileArgs> seccompProfile() {
         return this.seccompProfile == null ? Codegen.empty() : this.seccompProfile;
     }
 
@@ -142,7 +142,7 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="windowsOptions")
       private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
-    public Output<WindowsSecurityContextOptionsArgs> getWindowsOptions() {
+    public Output<WindowsSecurityContextOptionsArgs> windowsOptions() {
         return this.windowsOptions == null ? Codegen.empty() : this.windowsOptions;
     }
 

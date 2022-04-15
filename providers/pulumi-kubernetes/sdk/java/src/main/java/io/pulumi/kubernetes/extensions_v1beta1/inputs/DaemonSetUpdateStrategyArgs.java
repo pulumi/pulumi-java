@@ -23,7 +23,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
     @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
 
-    public Output<RollingUpdateDaemonSetArgs> getRollingUpdate() {
+    public Output<RollingUpdateDaemonSetArgs> rollingUpdate() {
         return this.rollingUpdate == null ? Codegen.empty() : this.rollingUpdate;
     }
 
@@ -34,7 +34,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

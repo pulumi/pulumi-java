@@ -22,7 +22,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
-    public Output<String> getLastTransitionTime() {
+    public Output<String> lastTransitionTime() {
         return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
     }
 
@@ -33,7 +33,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     @Import(name="lastUpdateTime")
       private final @Nullable Output<String> lastUpdateTime;
 
-    public Output<String> getLastUpdateTime() {
+    public Output<String> lastUpdateTime() {
         return this.lastUpdateTime == null ? Codegen.empty() : this.lastUpdateTime;
     }
 
@@ -44,7 +44,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -55,7 +55,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -66,7 +66,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -77,7 +77,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

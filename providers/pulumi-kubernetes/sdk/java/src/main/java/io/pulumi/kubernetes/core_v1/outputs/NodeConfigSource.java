@@ -26,7 +26,7 @@ public final class NodeConfigSource {
      * ConfigMap is a reference to a Node's ConfigMap
      * 
     */
-    public Optional<ConfigMapNodeConfigSource> getConfigMap() {
+    public Optional<ConfigMapNodeConfigSource> configMap() {
         return Optional.ofNullable(this.configMap);
     }
 
