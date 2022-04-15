@@ -22,10 +22,10 @@ public final class ServiceConvergeConfig {
         this.timeout = timeout;
     }
 
-    public Optional<String> getDelay() {
+    public Optional<String> delay() {
         return Optional.ofNullable(this.delay);
     }
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
 

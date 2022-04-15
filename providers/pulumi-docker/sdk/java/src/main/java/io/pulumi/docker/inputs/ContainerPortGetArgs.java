@@ -19,28 +19,28 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="external")
       private final @Nullable Output<Integer> external;
 
-    public Output<Integer> getExternal() {
+    public Output<Integer> external() {
         return this.external == null ? Codegen.empty() : this.external;
     }
 
     @Import(name="internal", required=true)
       private final Output<Integer> internal;
 
-    public Output<Integer> getInternal() {
+    public Output<Integer> internal() {
         return this.internal;
     }
 
     @Import(name="ip")
       private final @Nullable Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

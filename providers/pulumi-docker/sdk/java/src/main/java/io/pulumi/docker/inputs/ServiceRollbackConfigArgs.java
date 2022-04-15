@@ -19,42 +19,42 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="delay")
       private final @Nullable Output<String> delay;
 
-    public Output<String> getDelay() {
+    public Output<String> delay() {
         return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     @Import(name="failureAction")
       private final @Nullable Output<String> failureAction;
 
-    public Output<String> getFailureAction() {
+    public Output<String> failureAction() {
         return this.failureAction == null ? Codegen.empty() : this.failureAction;
     }
 
     @Import(name="maxFailureRatio")
       private final @Nullable Output<String> maxFailureRatio;
 
-    public Output<String> getMaxFailureRatio() {
+    public Output<String> maxFailureRatio() {
         return this.maxFailureRatio == null ? Codegen.empty() : this.maxFailureRatio;
     }
 
     @Import(name="monitor")
       private final @Nullable Output<String> monitor;
 
-    public Output<String> getMonitor() {
+    public Output<String> monitor() {
         return this.monitor == null ? Codegen.empty() : this.monitor;
     }
 
     @Import(name="order")
       private final @Nullable Output<String> order;
 
-    public Output<String> getOrder() {
+    public Output<String> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 
     @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> getParallelism() {
+    public Output<Integer> parallelism() {
         return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 

@@ -20,10 +20,10 @@ public final class ServiceTaskSpecPlacementPlatform {
         this.os = os;
     }
 
-    public String getArchitecture() {
+    public String architecture() {
         return this.architecture;
     }
-    public String getOs() {
+    public String os() {
         return this.os;
     }
 

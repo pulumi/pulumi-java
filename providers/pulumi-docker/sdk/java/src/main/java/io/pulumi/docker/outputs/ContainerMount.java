@@ -41,25 +41,25 @@ public final class ContainerMount {
         this.volumeOptions = volumeOptions;
     }
 
-    public Optional<ContainerMountBindOptions> getBindOptions() {
+    public Optional<ContainerMountBindOptions> bindOptions() {
         return Optional.ofNullable(this.bindOptions);
     }
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
-    public Optional<ContainerMountTmpfsOptions> getTmpfsOptions() {
+    public Optional<ContainerMountTmpfsOptions> tmpfsOptions() {
         return Optional.ofNullable(this.tmpfsOptions);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public Optional<ContainerMountVolumeOptions> getVolumeOptions() {
+    public Optional<ContainerMountVolumeOptions> volumeOptions() {
         return Optional.ofNullable(this.volumeOptions);
     }
 
