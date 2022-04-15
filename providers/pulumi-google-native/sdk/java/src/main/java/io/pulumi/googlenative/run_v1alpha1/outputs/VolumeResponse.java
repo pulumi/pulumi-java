@@ -29,17 +29,17 @@ public final class VolumeResponse {
         this.secret = secret;
     }
 
-    public ConfigMapVolumeSourceResponse getConfigMap() {
+    public ConfigMapVolumeSourceResponse configMap() {
         return this.configMap;
     }
     /**
      * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public SecretVolumeSourceResponse getSecret() {
+    public SecretVolumeSourceResponse secret() {
         return this.secret;
     }
 

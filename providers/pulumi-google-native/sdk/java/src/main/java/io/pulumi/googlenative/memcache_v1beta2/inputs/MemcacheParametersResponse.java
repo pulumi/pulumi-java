@@ -20,7 +20,7 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
     @Import(name="params", required=true)
       private final Map<String,String> params;
 
-    public Map<String,String> getParams() {
+    public Map<String,String> params() {
         return this.params;
     }
 

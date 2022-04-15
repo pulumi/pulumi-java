@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends io.pulumi
     @Import(name="flow", required=true)
       private final String flow;
 
-    public String getFlow() {
+    public String flow() {
         return this.flow;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse extends io.pulumi
     @Import(name="trackingParameters", required=true)
       private final List<String> trackingParameters;
 
-    public List<String> getTrackingParameters() {
+    public List<String> trackingParameters() {
         return this.trackingParameters;
     }
 

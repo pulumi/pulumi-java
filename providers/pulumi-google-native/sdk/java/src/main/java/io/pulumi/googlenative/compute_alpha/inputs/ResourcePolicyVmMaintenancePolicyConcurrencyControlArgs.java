@@ -22,7 +22,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     @Import(name="concurrencyLimit")
       private final @Nullable Output<Integer> concurrencyLimit;
 
-    public Output<Integer> getConcurrencyLimit() {
+    public Output<Integer> concurrencyLimit() {
         return this.concurrencyLimit == null ? Codegen.empty() : this.concurrencyLimit;
     }
 

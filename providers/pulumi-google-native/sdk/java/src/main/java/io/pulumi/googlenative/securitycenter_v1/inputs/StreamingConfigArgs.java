@@ -26,7 +26,7 @@ public final class StreamingConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 

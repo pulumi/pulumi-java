@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     @Import(name="allowMultiLabel", required=true)
       private final Boolean allowMultiLabel;
 
-    public Boolean getAllowMultiLabel() {
+    public Boolean allowMultiLabel() {
         return this.allowMultiLabel;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     @Import(name="annotationSpecSet", required=true)
       private final String annotationSpecSet;
 
-    public String getAnnotationSpecSet() {
+    public String annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     @Import(name="answerAggregationType", required=true)
       private final String answerAggregationType;
 
-    public String getAnswerAggregationType() {
+    public String answerAggregationType() {
         return this.answerAggregationType;
     }
 

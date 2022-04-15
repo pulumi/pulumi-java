@@ -19,7 +19,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
     @Import(name="datasetId", required=true)
       private final String datasetId;
 
-    public String getDatasetId() {
+    public String datasetId() {
         return this.datasetId;
     }
 
@@ -30,7 +30,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
     @Import(name="policyId", required=true)
       private final String policyId;
 
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
 
@@ -41,7 +41,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -52,7 +52,7 @@ public final class RowAccessPolicyReferenceResponse extends io.pulumi.resources.
     @Import(name="tableId", required=true)
       private final String tableId;
 
-    public String getTableId() {
+    public String tableId() {
         return this.tableId;
     }
 

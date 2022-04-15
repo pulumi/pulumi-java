@@ -23,7 +23,7 @@ public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="namespacedGkeDeploymentTarget", required=true)
       private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
-    public NamespacedGkeDeploymentTargetResponse getNamespacedGkeDeploymentTarget() {
+    public NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
     }
 

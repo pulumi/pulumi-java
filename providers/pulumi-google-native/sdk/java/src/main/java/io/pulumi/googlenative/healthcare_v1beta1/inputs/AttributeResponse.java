@@ -24,7 +24,7 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="attributeDefinitionId", required=true)
       private final String attributeDefinitionId;
 
-    public String getAttributeDefinitionId() {
+    public String attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
 
@@ -35,7 +35,7 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

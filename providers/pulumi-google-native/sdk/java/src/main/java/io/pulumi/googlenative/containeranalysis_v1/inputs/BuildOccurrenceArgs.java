@@ -28,7 +28,7 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="intotoStatement")
       private final @Nullable Output<InTotoStatementArgs> intotoStatement;
 
-    public Output<InTotoStatementArgs> getIntotoStatement() {
+    public Output<InTotoStatementArgs> intotoStatement() {
         return this.intotoStatement == null ? Codegen.empty() : this.intotoStatement;
     }
 
@@ -39,7 +39,7 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="provenance")
       private final @Nullable Output<BuildProvenanceArgs> provenance;
 
-    public Output<BuildProvenanceArgs> getProvenance() {
+    public Output<BuildProvenanceArgs> provenance() {
         return this.provenance == null ? Codegen.empty() : this.provenance;
     }
 
@@ -50,7 +50,7 @@ public final class BuildOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="provenanceBytes")
       private final @Nullable Output<String> provenanceBytes;
 
-    public Output<String> getProvenanceBytes() {
+    public Output<String> provenanceBytes() {
         return this.provenanceBytes == null ? Codegen.empty() : this.provenanceBytes;
     }
 

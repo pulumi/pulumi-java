@@ -17,21 +17,21 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends io.pulumi.resources.
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="policyBasedRouteId", required=true)
       private final String policyBasedRouteId;
 
-    public String getPolicyBasedRouteId() {
+    public String policyBasedRouteId() {
         return this.policyBasedRouteId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

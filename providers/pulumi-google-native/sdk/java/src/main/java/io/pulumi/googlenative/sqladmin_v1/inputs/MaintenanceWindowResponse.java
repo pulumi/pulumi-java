@@ -24,7 +24,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="day", required=true)
       private final Integer day;
 
-    public Integer getDay() {
+    public Integer day() {
         return this.day;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="hour", required=true)
       private final Integer hour;
 
-    public Integer getHour() {
+    public Integer hour() {
         return this.hour;
     }
 
@@ -46,7 +46,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="updateTrack", required=true)
       private final String updateTrack;
 
-    public String getUpdateTrack() {
+    public String updateTrack() {
         return this.updateTrack;
     }
 

@@ -47,28 +47,28 @@ public final class SchedulerResourceResponse {
      * Optional. The number of schedulers.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * Optional. CPU request and limit for a single Airflow scheduler replica.
      * 
     */
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
     /**
      * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
      * 
     */
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
     /**
      * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
      * 
     */
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

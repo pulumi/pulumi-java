@@ -56,35 +56,35 @@ public final class GetDomainMappingResult {
      * The API version for this call such as "domains.cloudrun.com/v1".
      * 
     */
-    public String getApiVersion() {
+    public String apiVersion() {
         return this.apiVersion;
     }
     /**
      * The kind of resource, in this case "DomainMapping".
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Metadata associated with this BuildTemplate.
      * 
     */
-    public ObjectMetaResponse getMetadata() {
+    public ObjectMetaResponse metadata() {
         return this.metadata;
     }
     /**
      * The spec for this DomainMapping.
      * 
     */
-    public DomainMappingSpecResponse getSpec() {
+    public DomainMappingSpecResponse spec() {
         return this.spec;
     }
     /**
      * The current status of the DomainMapping.
      * 
     */
-    public DomainMappingStatusResponse getStatus() {
+    public DomainMappingStatusResponse status() {
         return this.status;
     }
 

@@ -26,7 +26,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="cisBenchmark", required=true)
       private final CisBenchmarkResponse cisBenchmark;
 
-    public CisBenchmarkResponse getCisBenchmark() {
+    public CisBenchmarkResponse cisBenchmark() {
         return this.cisBenchmark;
     }
 
@@ -37,7 +37,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="rationale", required=true)
       private final String rationale;
 
-    public String getRationale() {
+    public String rationale() {
         return this.rationale;
     }
 
@@ -59,7 +59,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="remediation", required=true)
       private final String remediation;
 
-    public String getRemediation() {
+    public String remediation() {
         return this.remediation;
     }
 
@@ -70,7 +70,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="scanInstructions", required=true)
       private final String scanInstructions;
 
-    public String getScanInstructions() {
+    public String scanInstructions() {
         return this.scanInstructions;
     }
 
@@ -81,7 +81,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 
@@ -92,7 +92,7 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="version", required=true)
       private final List<ComplianceVersionResponse> version;
 
-    public List<ComplianceVersionResponse> getVersion() {
+    public List<ComplianceVersionResponse> version() {
         return this.version;
     }
 

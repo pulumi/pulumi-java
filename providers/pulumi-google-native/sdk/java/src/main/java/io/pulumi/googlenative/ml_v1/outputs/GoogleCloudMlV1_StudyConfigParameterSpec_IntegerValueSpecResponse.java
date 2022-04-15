@@ -32,14 +32,14 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      * Must be specified if type is `INTEGER`. Maximum value of the parameter.
      * 
     */
-    public String getMaxValue() {
+    public String maxValue() {
         return this.maxValue;
     }
     /**
      * Must be specified if type is `INTEGER`. Minimum value of the parameter.
      * 
     */
-    public String getMinValue() {
+    public String minValue() {
         return this.minValue;
     }
 

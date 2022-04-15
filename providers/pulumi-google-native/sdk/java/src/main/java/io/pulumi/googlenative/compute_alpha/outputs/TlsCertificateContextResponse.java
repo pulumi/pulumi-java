@@ -41,21 +41,21 @@ public final class TlsCertificateContextResponse {
      * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
      * 
     */
-    public TlsCertificatePathsResponse getCertificatePaths() {
+    public TlsCertificatePathsResponse certificatePaths() {
         return this.certificatePaths;
     }
     /**
      * Defines how TLS certificates are obtained.
      * 
     */
-    public String getCertificateSource() {
+    public String certificateSource() {
         return this.certificateSource;
     }
     /**
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
      * 
     */
-    public SdsConfigResponse getSdsConfig() {
+    public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
 

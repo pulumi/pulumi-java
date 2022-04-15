@@ -24,7 +24,7 @@ public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources
     @Import(name="disruptionBudget", required=true)
       private final FixedOrPercentResponse disruptionBudget;
 
-    public FixedOrPercentResponse getDisruptionBudget() {
+    public FixedOrPercentResponse disruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -35,7 +35,7 @@ public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources
     @Import(name="minWaitDuration", required=true)
       private final String minWaitDuration;
 
-    public String getMinWaitDuration() {
+    public String minWaitDuration() {
         return this.minWaitDuration;
     }
 

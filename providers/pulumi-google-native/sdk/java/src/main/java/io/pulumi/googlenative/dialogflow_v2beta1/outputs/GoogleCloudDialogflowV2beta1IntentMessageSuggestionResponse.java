@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
      * The text shown the in the suggestion chip.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

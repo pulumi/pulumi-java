@@ -26,7 +26,7 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<Integer> instances;
 
-    public Output<Integer> getInstances() {
+    public Output<Integer> instances() {
         return this.instances == null ? Codegen.empty() : this.instances;
     }
 

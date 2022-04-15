@@ -26,7 +26,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
 
@@ -37,7 +37,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="condition", required=true)
       private final PipelineConditionResponse condition;
 
-    public PipelineConditionResponse getCondition() {
+    public PipelineConditionResponse condition() {
         return this.condition;
     }
 
@@ -48,7 +48,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -59,7 +59,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -70,7 +70,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -81,7 +81,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -92,7 +92,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -103,7 +103,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="serialPipeline", required=true)
       private final SerialPipelineResponse serialPipeline;
 
-    public SerialPipelineResponse getSerialPipeline() {
+    public SerialPipelineResponse serialPipeline() {
         return this.serialPipeline;
     }
 
@@ -114,7 +114,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 
@@ -125,7 +125,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

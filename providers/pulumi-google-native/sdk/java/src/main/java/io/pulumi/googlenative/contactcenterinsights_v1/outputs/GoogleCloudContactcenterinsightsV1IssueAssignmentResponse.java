@@ -40,21 +40,21 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
      * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource name of the assigned issue.
      * 
     */
-    public String getIssue() {
+    public String issue() {
         return this.issue;
     }
     /**
      * Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
      * 
     */
-    public Double getScore() {
+    public Double score() {
         return this.score;
     }
 

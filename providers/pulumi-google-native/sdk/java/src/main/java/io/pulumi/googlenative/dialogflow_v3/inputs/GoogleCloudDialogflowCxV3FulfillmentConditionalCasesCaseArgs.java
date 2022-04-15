@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
     @Import(name="caseContent")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent;
 
-    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> getCaseContent() {
+    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent() {
         return this.caseContent == null ? Codegen.empty() : this.caseContent;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
     @Import(name="condition")
       private final @Nullable Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 

@@ -26,7 +26,7 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content", required=true)
       private final Output<FileReferenceArgs> content;
 
-    public Output<FileReferenceArgs> getContent() {
+    public Output<FileReferenceArgs> content() {
         return this.content;
     }
 
@@ -37,7 +37,7 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="devicePath", required=true)
       private final Output<String> devicePath;
 
-    public Output<String> getDevicePath() {
+    public Output<String> devicePath() {
         return this.devicePath;
     }
 

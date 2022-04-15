@@ -25,7 +25,7 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="attribute", required=true)
       private final Output<String> attribute;
 
-    public Output<String> getAttribute() {
+    public Output<String> attribute() {
         return this.attribute;
     }
 
@@ -36,7 +36,7 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

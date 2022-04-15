@@ -24,7 +24,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
     @Import(name="disks", required=true)
       private final Map<String,String> disks;
 
-    public Map<String,String> getDisks() {
+    public Map<String,String> disks() {
         return this.disks;
     }
 
@@ -35,7 +35,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
     @Import(name="externalIPs", required=true)
       private final Map<String,String> externalIPs;
 
-    public Map<String,String> getExternalIPs() {
+    public Map<String,String> externalIPs() {
         return this.externalIPs;
     }
 
@@ -46,7 +46,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
     @Import(name="internalIPs", required=true)
       private final Map<String,String> internalIPs;
 
-    public Map<String,String> getInternalIPs() {
+    public Map<String,String> internalIPs() {
         return this.internalIPs;
     }
 

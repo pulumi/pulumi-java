@@ -28,7 +28,7 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="additionalExtensions", required=true)
       private final List<X509ExtensionResponse> additionalExtensions;
 
-    public List<X509ExtensionResponse> getAdditionalExtensions() {
+    public List<X509ExtensionResponse> additionalExtensions() {
         return this.additionalExtensions;
     }
 
@@ -39,7 +39,7 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="aiaOcspServers", required=true)
       private final List<String> aiaOcspServers;
 
-    public List<String> getAiaOcspServers() {
+    public List<String> aiaOcspServers() {
         return this.aiaOcspServers;
     }
 
@@ -50,7 +50,7 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="caOptions", required=true)
       private final CaOptionsResponse caOptions;
 
-    public CaOptionsResponse getCaOptions() {
+    public CaOptionsResponse caOptions() {
         return this.caOptions;
     }
 
@@ -61,7 +61,7 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="keyUsage", required=true)
       private final KeyUsageResponse keyUsage;
 
-    public KeyUsageResponse getKeyUsage() {
+    public KeyUsageResponse keyUsage() {
         return this.keyUsage;
     }
 
@@ -72,7 +72,7 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="policyIds", required=true)
       private final List<ObjectIdResponse> policyIds;
 
-    public List<ObjectIdResponse> getPolicyIds() {
+    public List<ObjectIdResponse> policyIds() {
         return this.policyIds;
     }
 

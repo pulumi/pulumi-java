@@ -26,7 +26,7 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
     @Import(name="toolExecution")
       private final @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Output<ToolExecutionArgs> getToolExecution() {
+    public Output<ToolExecutionArgs> toolExecution() {
         return this.toolExecution == null ? Codegen.empty() : this.toolExecution;
     }
 

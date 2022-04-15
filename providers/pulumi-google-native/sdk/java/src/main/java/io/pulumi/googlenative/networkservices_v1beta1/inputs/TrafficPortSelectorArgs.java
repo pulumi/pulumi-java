@@ -27,7 +27,7 @@ public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> getPorts() {
+    public Output<List<String>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

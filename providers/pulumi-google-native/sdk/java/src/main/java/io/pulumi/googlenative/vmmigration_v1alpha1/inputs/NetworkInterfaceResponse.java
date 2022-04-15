@@ -23,7 +23,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="externalIp", required=true)
       private final String externalIp;
 
-    public String getExternalIp() {
+    public String externalIp() {
         return this.externalIp;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="internalIp", required=true)
       private final String internalIp;
 
-    public String getInternalIp() {
+    public String internalIp() {
         return this.internalIp;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

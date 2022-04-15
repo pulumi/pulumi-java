@@ -23,7 +23,7 @@ public final class NetworkRoutingConfigResponse extends io.pulumi.resources.Invo
     @Import(name="routingMode", required=true)
       private final String routingMode;
 
-    public String getRoutingMode() {
+    public String routingMode() {
         return this.routingMode;
     }
 

@@ -26,7 +26,7 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entity")
       private final @Nullable Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity == null ? Codegen.empty() : this.entity;
     }
 
@@ -37,7 +37,7 @@ public final class BucketOwnerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 

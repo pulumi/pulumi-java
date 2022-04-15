@@ -27,7 +27,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numFacetBuckets")
       private final @Nullable Output<Integer> numFacetBuckets;
 
-    public Output<Integer> getNumFacetBuckets() {
+    public Output<Integer> numFacetBuckets() {
         return this.numFacetBuckets == null ? Codegen.empty() : this.numFacetBuckets;
     }
 
@@ -38,7 +38,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;
 
-    public Output<String> getObjectType() {
+    public Output<String> objectType() {
         return this.objectType == null ? Codegen.empty() : this.objectType;
     }
 
@@ -49,7 +49,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
 
-    public Output<String> getOperatorName() {
+    public Output<String> operatorName() {
         return this.operatorName == null ? Codegen.empty() : this.operatorName;
     }
 
@@ -60,7 +60,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceName")
       private final @Nullable Output<String> sourceName;
 
-    public Output<String> getSourceName() {
+    public Output<String> sourceName() {
         return this.sourceName == null ? Codegen.empty() : this.sourceName;
     }
 

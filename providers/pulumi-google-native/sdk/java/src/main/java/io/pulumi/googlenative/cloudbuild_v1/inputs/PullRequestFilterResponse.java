@@ -24,7 +24,7 @@ public final class PullRequestFilterResponse extends io.pulumi.resources.InvokeA
     @Import(name="branch", required=true)
       private final String branch;
 
-    public String getBranch() {
+    public String branch() {
         return this.branch;
     }
 
@@ -35,7 +35,7 @@ public final class PullRequestFilterResponse extends io.pulumi.resources.InvokeA
     @Import(name="commentControl", required=true)
       private final String commentControl;
 
-    public String getCommentControl() {
+    public String commentControl() {
         return this.commentControl;
     }
 
@@ -46,7 +46,7 @@ public final class PullRequestFilterResponse extends io.pulumi.resources.InvokeA
     @Import(name="invertRegex", required=true)
       private final Boolean invertRegex;
 
-    public Boolean getInvertRegex() {
+    public Boolean invertRegex() {
         return this.invertRegex;
     }
 

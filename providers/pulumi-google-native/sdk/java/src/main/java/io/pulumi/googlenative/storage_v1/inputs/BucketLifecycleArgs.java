@@ -27,7 +27,7 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rule")
       private final @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
-    public Output<List<BucketLifecycleRuleItemArgs>> getRule() {
+    public Output<List<BucketLifecycleRuleItemArgs>> rule() {
         return this.rule == null ? Codegen.empty() : this.rule;
     }
 

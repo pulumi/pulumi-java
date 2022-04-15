@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 
-    public Output<GoogleCloudDialogflowV2FulfillmentFeatureType> getType() {
+    public Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

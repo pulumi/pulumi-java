@@ -19,7 +19,7 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

@@ -15,21 +15,21 @@ public final class GetReferenceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="referenceId", required=true)
       private final String referenceId;
 
-    public String getReferenceId() {
+    public String referenceId() {
         return this.referenceId;
     }
 

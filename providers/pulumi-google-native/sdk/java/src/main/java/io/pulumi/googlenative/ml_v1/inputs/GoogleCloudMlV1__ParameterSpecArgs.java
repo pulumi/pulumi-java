@@ -30,7 +30,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="categoricalValues")
       private final @Nullable Output<List<String>> categoricalValues;
 
-    public Output<List<String>> getCategoricalValues() {
+    public Output<List<String>> categoricalValues() {
         return this.categoricalValues == null ? Codegen.empty() : this.categoricalValues;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="discreteValues")
       private final @Nullable Output<List<Double>> discreteValues;
 
-    public Output<List<Double>> getDiscreteValues() {
+    public Output<List<Double>> discreteValues() {
         return this.discreteValues == null ? Codegen.empty() : this.discreteValues;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="maxValue")
       private final @Nullable Output<Double> maxValue;
 
-    public Output<Double> getMaxValue() {
+    public Output<Double> maxValue() {
         return this.maxValue == null ? Codegen.empty() : this.maxValue;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="minValue")
       private final @Nullable Output<Double> minValue;
 
-    public Output<Double> getMinValue() {
+    public Output<Double> minValue() {
         return this.minValue == null ? Codegen.empty() : this.minValue;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="parameterName", required=true)
       private final Output<String> parameterName;
 
-    public Output<String> getParameterName() {
+    public Output<String> parameterName() {
         return this.parameterName;
     }
 
@@ -85,7 +85,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="scaleType")
       private final @Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType;
 
-    public Output<GoogleCloudMlV1__ParameterSpecScaleType> getScaleType() {
+    public Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType() {
         return this.scaleType == null ? Codegen.empty() : this.scaleType;
     }
 
@@ -96,7 +96,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<GoogleCloudMlV1__ParameterSpecType> type;
 
-    public Output<GoogleCloudMlV1__ParameterSpecType> getType() {
+    public Output<GoogleCloudMlV1__ParameterSpecType> type() {
         return this.type;
     }
 

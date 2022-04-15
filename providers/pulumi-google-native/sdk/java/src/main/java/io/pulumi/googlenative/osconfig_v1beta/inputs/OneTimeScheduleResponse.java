@@ -23,7 +23,7 @@ public final class OneTimeScheduleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="executeTime", required=true)
       private final String executeTime;
 
-    public String getExecuteTime() {
+    public String executeTime() {
         return this.executeTime;
     }
 

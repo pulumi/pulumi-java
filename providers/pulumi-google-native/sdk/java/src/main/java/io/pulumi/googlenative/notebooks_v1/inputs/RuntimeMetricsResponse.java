@@ -24,7 +24,7 @@ public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="systemMetrics", required=true)
       private final Map<String,String> systemMetrics;
 
-    public Map<String,String> getSystemMetrics() {
+    public Map<String,String> systemMetrics() {
         return this.systemMetrics;
     }
 

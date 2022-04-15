@@ -17,21 +17,21 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeGroup", required=true)
       private final String nodeGroup;
 
-    public String getNodeGroup() {
+    public String nodeGroup() {
         return this.nodeGroup;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

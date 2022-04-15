@@ -31,7 +31,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @return The collection of entities to override or supplement the custom entity type.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse>> getEntities() {
+    public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse>> entities() {
         return this.entities;
     }
     /**
@@ -45,7 +45,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
      */
-    public Output<String> getEntityOverrideMode() {
+    public Output<String> entityOverrideMode() {
         return this.entityOverrideMode;
     }
     /**
@@ -59,7 +59,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

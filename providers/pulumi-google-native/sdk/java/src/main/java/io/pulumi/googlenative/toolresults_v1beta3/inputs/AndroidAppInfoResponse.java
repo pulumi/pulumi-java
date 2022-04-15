@@ -23,7 +23,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="packageName", required=true)
       private final String packageName;
 
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
 
@@ -45,7 +45,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="versionCode", required=true)
       private final String versionCode;
 
-    public String getVersionCode() {
+    public String versionCode() {
         return this.versionCode;
     }
 
@@ -56,7 +56,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="versionName", required=true)
       private final String versionName;
 
-    public String getVersionName() {
+    public String versionName() {
         return this.versionName;
     }
 

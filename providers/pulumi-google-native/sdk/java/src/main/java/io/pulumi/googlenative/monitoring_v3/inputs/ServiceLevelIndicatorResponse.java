@@ -25,7 +25,7 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
     @Import(name="basicSli", required=true)
       private final BasicSliResponse basicSli;
 
-    public BasicSliResponse getBasicSli() {
+    public BasicSliResponse basicSli() {
         return this.basicSli;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
     @Import(name="requestBased", required=true)
       private final RequestBasedSliResponse requestBased;
 
-    public RequestBasedSliResponse getRequestBased() {
+    public RequestBasedSliResponse requestBased() {
         return this.requestBased;
     }
 
@@ -47,7 +47,7 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
     @Import(name="windowsBased", required=true)
       private final WindowsBasedSliResponse windowsBased;
 
-    public WindowsBasedSliResponse getWindowsBased() {
+    public WindowsBasedSliResponse windowsBased() {
         return this.windowsBased;
     }
 

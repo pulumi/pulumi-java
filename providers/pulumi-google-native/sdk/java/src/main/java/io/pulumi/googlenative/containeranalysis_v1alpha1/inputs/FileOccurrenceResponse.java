@@ -25,7 +25,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="attributions", required=true)
       private final List<String> attributions;
 
-    public List<String> getAttributions() {
+    public List<String> attributions() {
         return this.attributions;
     }
 
@@ -36,7 +36,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="comment", required=true)
       private final String comment;
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
 
@@ -47,7 +47,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="contributors", required=true)
       private final List<String> contributors;
 
-    public List<String> getContributors() {
+    public List<String> contributors() {
         return this.contributors;
     }
 
@@ -58,7 +58,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="copyright", required=true)
       private final String copyright;
 
-    public String getCopyright() {
+    public String copyright() {
         return this.copyright;
     }
 
@@ -69,7 +69,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="filesLicenseInfo", required=true)
       private final List<String> filesLicenseInfo;
 
-    public List<String> getFilesLicenseInfo() {
+    public List<String> filesLicenseInfo() {
         return this.filesLicenseInfo;
     }
 
@@ -80,7 +80,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="licenseConcluded", required=true)
       private final LicenseResponse licenseConcluded;
 
-    public LicenseResponse getLicenseConcluded() {
+    public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
     }
 
@@ -91,7 +91,7 @@ public final class FileOccurrenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="notice", required=true)
       private final String notice;
 
-    public String getNotice() {
+    public String notice() {
         return this.notice;
     }
 

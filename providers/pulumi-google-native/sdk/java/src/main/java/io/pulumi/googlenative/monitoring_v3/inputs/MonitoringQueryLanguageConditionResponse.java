@@ -24,7 +24,7 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -35,7 +35,7 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -46,7 +46,7 @@ public final class MonitoringQueryLanguageConditionResponse extends io.pulumi.re
     @Import(name="trigger", required=true)
       private final TriggerResponse trigger;
 
-    public TriggerResponse getTrigger() {
+    public TriggerResponse trigger() {
         return this.trigger;
     }
 

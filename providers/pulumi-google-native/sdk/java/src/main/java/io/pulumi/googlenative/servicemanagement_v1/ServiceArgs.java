@@ -22,7 +22,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="producerProjectId")
       private final @Nullable Output<String> producerProjectId;
 
-    public Output<String> getProducerProjectId() {
+    public Output<String> producerProjectId() {
         return this.producerProjectId == null ? Codegen.empty() : this.producerProjectId;
     }
 
@@ -33,7 +33,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 

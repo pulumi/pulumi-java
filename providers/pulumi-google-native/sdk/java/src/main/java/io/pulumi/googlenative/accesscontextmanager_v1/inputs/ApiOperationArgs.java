@@ -28,7 +28,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodSelectors")
       private final @Nullable Output<List<MethodSelectorArgs>> methodSelectors;
 
-    public Output<List<MethodSelectorArgs>> getMethodSelectors() {
+    public Output<List<MethodSelectorArgs>> methodSelectors() {
         return this.methodSelectors == null ? Codegen.empty() : this.methodSelectors;
     }
 
@@ -39,7 +39,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 

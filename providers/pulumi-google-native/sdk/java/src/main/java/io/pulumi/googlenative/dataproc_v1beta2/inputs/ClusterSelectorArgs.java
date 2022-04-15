@@ -27,7 +27,7 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterLabels", required=true)
       private final Output<Map<String,String>> clusterLabels;
 
-    public Output<Map<String,String>> getClusterLabels() {
+    public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

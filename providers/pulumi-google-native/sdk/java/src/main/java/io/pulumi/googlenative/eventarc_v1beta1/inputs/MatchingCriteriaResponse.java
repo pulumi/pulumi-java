@@ -23,7 +23,7 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="attribute", required=true)
       private final String attribute;
 
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
 
@@ -34,7 +34,7 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -27,7 +27,7 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
-    public Output<String> getStartTimeOffset() {
+    public Output<String> startTimeOffset() {
         return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 
@@ -38,7 +38,7 @@ public final class AnimationStaticArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="xy")
       private final @Nullable Output<NormalizedCoordinateArgs> xy;
 
-    public Output<NormalizedCoordinateArgs> getXy() {
+    public Output<NormalizedCoordinateArgs> xy() {
         return this.xy == null ? Codegen.empty() : this.xy;
     }
 

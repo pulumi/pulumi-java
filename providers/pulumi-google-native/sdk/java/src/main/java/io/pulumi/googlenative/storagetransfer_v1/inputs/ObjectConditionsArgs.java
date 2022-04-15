@@ -27,7 +27,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="excludePrefixes")
       private final @Nullable Output<List<String>> excludePrefixes;
 
-    public Output<List<String>> getExcludePrefixes() {
+    public Output<List<String>> excludePrefixes() {
         return this.excludePrefixes == null ? Codegen.empty() : this.excludePrefixes;
     }
 
@@ -38,7 +38,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="includePrefixes")
       private final @Nullable Output<List<String>> includePrefixes;
 
-    public Output<List<String>> getIncludePrefixes() {
+    public Output<List<String>> includePrefixes() {
         return this.includePrefixes == null ? Codegen.empty() : this.includePrefixes;
     }
 
@@ -49,7 +49,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lastModifiedBefore")
       private final @Nullable Output<String> lastModifiedBefore;
 
-    public Output<String> getLastModifiedBefore() {
+    public Output<String> lastModifiedBefore() {
         return this.lastModifiedBefore == null ? Codegen.empty() : this.lastModifiedBefore;
     }
 
@@ -60,7 +60,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lastModifiedSince")
       private final @Nullable Output<String> lastModifiedSince;
 
-    public Output<String> getLastModifiedSince() {
+    public Output<String> lastModifiedSince() {
         return this.lastModifiedSince == null ? Codegen.empty() : this.lastModifiedSince;
     }
 
@@ -71,7 +71,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxTimeElapsedSinceLastModification")
       private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
-    public Output<String> getMaxTimeElapsedSinceLastModification() {
+    public Output<String> maxTimeElapsedSinceLastModification() {
         return this.maxTimeElapsedSinceLastModification == null ? Codegen.empty() : this.maxTimeElapsedSinceLastModification;
     }
 
@@ -82,7 +82,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="minTimeElapsedSinceLastModification")
       private final @Nullable Output<String> minTimeElapsedSinceLastModification;
 
-    public Output<String> getMinTimeElapsedSinceLastModification() {
+    public Output<String> minTimeElapsedSinceLastModification() {
         return this.minTimeElapsedSinceLastModification == null ? Codegen.empty() : this.minTimeElapsedSinceLastModification;
     }
 

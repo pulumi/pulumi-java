@@ -26,7 +26,7 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<ClusterTelemetryType> type;
 
-    public Output<ClusterTelemetryType> getType() {
+    public Output<ClusterTelemetryType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

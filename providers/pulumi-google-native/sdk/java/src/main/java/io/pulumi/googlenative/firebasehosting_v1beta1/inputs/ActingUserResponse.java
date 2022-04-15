@@ -23,7 +23,7 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="email", required=true)
       private final String email;
 
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
 
@@ -34,7 +34,7 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageUrl", required=true)
       private final String imageUrl;
 
-    public String getImageUrl() {
+    public String imageUrl() {
         return this.imageUrl;
     }
 

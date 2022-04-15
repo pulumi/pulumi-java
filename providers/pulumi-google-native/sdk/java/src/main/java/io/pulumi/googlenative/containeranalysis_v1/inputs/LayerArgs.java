@@ -26,7 +26,7 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arguments")
       private final @Nullable Output<String> arguments;
 
-    public Output<String> getArguments() {
+    public Output<String> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -37,7 +37,7 @@ public final class LayerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="directive", required=true)
       private final Output<String> directive;
 
-    public Output<String> getDirective() {
+    public Output<String> directive() {
         return this.directive;
     }
 

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
     @Import(name="charactersToSkip", required=true)
       private final String charactersToSkip;
 
-    public String getCharactersToSkip() {
+    public String charactersToSkip() {
         return this.charactersToSkip;
     }
 
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
     @Import(name="commonCharactersToIgnore", required=true)
       private final String commonCharactersToIgnore;
 
-    public String getCommonCharactersToIgnore() {
+    public String commonCharactersToIgnore() {
         return this.commonCharactersToIgnore;
     }
 

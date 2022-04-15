@@ -29,7 +29,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="eventTypes")
       private final @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
 
-    public Output<List<NotificationConfigEventTypesItem>> getEventTypes() {
+    public Output<List<NotificationConfigEventTypesItem>> eventTypes() {
         return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
     }
 
@@ -40,7 +40,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="payloadFormat", required=true)
       private final Output<NotificationConfigPayloadFormat> payloadFormat;
 
-    public Output<NotificationConfigPayloadFormat> getPayloadFormat() {
+    public Output<NotificationConfigPayloadFormat> payloadFormat() {
         return this.payloadFormat;
     }
 
@@ -51,7 +51,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 

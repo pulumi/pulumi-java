@@ -23,7 +23,7 @@ public final class SlsaCompletenessResponse extends io.pulumi.resources.InvokeAr
     @Import(name="arguments", required=true)
       private final Boolean arguments;
 
-    public Boolean getArguments() {
+    public Boolean arguments() {
         return this.arguments;
     }
 
@@ -34,7 +34,7 @@ public final class SlsaCompletenessResponse extends io.pulumi.resources.InvokeAr
     @Import(name="environment", required=true)
       private final Boolean environment;
 
-    public Boolean getEnvironment() {
+    public Boolean environment() {
         return this.environment;
     }
 
@@ -45,7 +45,7 @@ public final class SlsaCompletenessResponse extends io.pulumi.resources.InvokeAr
     @Import(name="materials", required=true)
       private final Boolean materials;
 
-    public Boolean getMaterials() {
+    public Boolean materials() {
         return this.materials;
     }
 

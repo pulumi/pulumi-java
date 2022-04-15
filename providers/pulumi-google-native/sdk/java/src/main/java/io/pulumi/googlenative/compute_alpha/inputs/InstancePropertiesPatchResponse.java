@@ -24,7 +24,7 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -35,7 +35,7 @@ public final class InstancePropertiesPatchResponse extends io.pulumi.resources.I
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 

@@ -15,7 +15,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId", required=true)
       private final String appId;
 
-    public String getAppId() {
+    public String appId() {
         return this.appId;
     }
 

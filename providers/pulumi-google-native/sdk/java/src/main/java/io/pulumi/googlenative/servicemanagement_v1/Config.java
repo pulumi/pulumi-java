@@ -54,7 +54,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
      * 
      */
-    public Output<List<ApiResponse>> getApis() {
+    public Output<List<ApiResponse>> apis() {
         return this.apis;
     }
     /**
@@ -68,7 +68,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Auth configuration.
      * 
      */
-    public Output<AuthenticationResponse> getAuthentication() {
+    public Output<AuthenticationResponse> authentication() {
         return this.authentication;
     }
     /**
@@ -82,7 +82,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return API backend configuration.
      * 
      */
-    public Output<BackendResponse> getBackend() {
+    public Output<BackendResponse> backend() {
         return this.backend;
     }
     /**
@@ -96,7 +96,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Billing configuration.
      * 
      */
-    public Output<BillingResponse> getBilling() {
+    public Output<BillingResponse> billing() {
         return this.billing;
     }
     /**
@@ -110,7 +110,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Obsolete. Do not use. This field has no semantic meaning. The service config compiler always sets this field to `3`.
      * 
      */
-    public Output<Integer> getConfigVersion() {
+    public Output<Integer> configVersion() {
         return this.configVersion;
     }
     /**
@@ -124,7 +124,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Context configuration.
      * 
      */
-    public Output<ContextResponse> getContext() {
+    public Output<ContextResponse> context() {
         return this.context;
     }
     /**
@@ -138,7 +138,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Configuration for the service control plane.
      * 
      */
-    public Output<ControlResponse> getControl() {
+    public Output<ControlResponse> control() {
         return this.control;
     }
     /**
@@ -152,7 +152,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Custom error configuration.
      * 
      */
-    public Output<CustomErrorResponse> getCustomError() {
+    public Output<CustomErrorResponse> customError() {
         return this.customError;
     }
     /**
@@ -166,7 +166,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Additional API documentation.
      * 
      */
-    public Output<DocumentationResponse> getDocumentation() {
+    public Output<DocumentationResponse> documentation() {
         return this.documentation;
     }
     /**
@@ -180,7 +180,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Configuration for network endpoints. If this is empty, then an endpoint with the same name as the service is automatically generated to service all defined APIs.
      * 
      */
-    public Output<List<EndpointResponse>> getEndpoints() {
+    public Output<List<EndpointResponse>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -194,7 +194,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum
      * 
      */
-    public Output<List<EnumResponse>> getEnums() {
+    public Output<List<EnumResponse>> enums() {
         return this.enums;
     }
     /**
@@ -208,7 +208,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return HTTP configuration.
      * 
      */
-    public Output<HttpResponse> getHttp() {
+    public Output<HttpResponse> http() {
         return this.http;
     }
     /**
@@ -222,7 +222,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Logging configuration.
      * 
      */
-    public Output<LoggingResponse> getLogging() {
+    public Output<LoggingResponse> logging() {
         return this.logging;
     }
     /**
@@ -236,7 +236,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Defines the logs used by this service.
      * 
      */
-    public Output<List<LogDescriptorResponse>> getLogs() {
+    public Output<List<LogDescriptorResponse>> logs() {
         return this.logs;
     }
     /**
@@ -250,7 +250,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Defines the metrics used by this service.
      * 
      */
-    public Output<List<MetricDescriptorResponse>> getMetrics() {
+    public Output<List<MetricDescriptorResponse>> metrics() {
         return this.metrics;
     }
     /**
@@ -264,7 +264,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Defines the monitored resources used by this service. This is required by the Service.monitoring and Service.logging configurations.
      * 
      */
-    public Output<List<MonitoredResourceDescriptorResponse>> getMonitoredResources() {
+    public Output<List<MonitoredResourceDescriptorResponse>> monitoredResources() {
         return this.monitoredResources;
     }
     /**
@@ -278,7 +278,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Monitoring configuration.
      * 
      */
-    public Output<MonitoringResponse> getMonitoring() {
+    public Output<MonitoringResponse> monitoring() {
         return this.monitoring;
     }
     /**
@@ -292,7 +292,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The service name, which is a DNS-like logical identifier for the service, such as `calendar.googleapis.com`. The service name typically goes through DNS verification to make sure the owner of the service also owns the DNS name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -306,7 +306,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The Google project that owns this service.
      * 
      */
-    public Output<String> getProducerProjectId() {
+    public Output<String> producerProjectId() {
         return this.producerProjectId;
     }
     /**
@@ -320,7 +320,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Quota configuration.
      * 
      */
-    public Output<QuotaResponse> getQuota() {
+    public Output<QuotaResponse> quota() {
         return this.quota;
     }
     /**
@@ -334,7 +334,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The source information for this configuration if available.
      * 
      */
-    public Output<SourceInfoResponse> getSourceInfo() {
+    public Output<SourceInfoResponse> sourceInfo() {
         return this.sourceInfo;
     }
     /**
@@ -348,7 +348,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return System parameter configuration.
      * 
      */
-    public Output<SystemParametersResponse> getSystemParameters() {
+    public Output<SystemParametersResponse> systemParameters() {
         return this.systemParameters;
     }
     /**
@@ -362,7 +362,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return A list of all proto message types included in this API service. It serves similar purpose as [google.api.Service.types], except that these types are not needed by user-defined APIs. Therefore, they will not show up in the generated discovery doc. This field should only be used to define system APIs in ESF.
      * 
      */
-    public Output<List<TypeResponse>> getSystemTypes() {
+    public Output<List<TypeResponse>> systemTypes() {
         return this.systemTypes;
     }
     /**
@@ -376,7 +376,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The product title for this service, it is the name displayed in Google Cloud Console.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -390,7 +390,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32
      * 
      */
-    public Output<List<TypeResponse>> getTypes() {
+    public Output<List<TypeResponse>> types() {
         return this.types;
     }
     /**
@@ -404,7 +404,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Configuration controlling usage of this service.
      * 
      */
-    public Output<UsageResponse> getUsage() {
+    public Output<UsageResponse> usage() {
         return this.usage;
     }
 

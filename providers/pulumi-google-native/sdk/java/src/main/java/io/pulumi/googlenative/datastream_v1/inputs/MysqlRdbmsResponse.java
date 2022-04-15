@@ -24,7 +24,7 @@ public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mysqlDatabases", required=true)
       private final List<MysqlDatabaseResponse> mysqlDatabases;
 
-    public List<MysqlDatabaseResponse> getMysqlDatabases() {
+    public List<MysqlDatabaseResponse> mysqlDatabases() {
         return this.mysqlDatabases;
     }
 

@@ -18,21 +18,21 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
-    public Output<String> getUserProject() {
+    public Output<String> userProject() {
         return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 

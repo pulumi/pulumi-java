@@ -23,7 +23,7 @@ public final class AnimationEndResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTimeOffset", required=true)
       private final String startTimeOffset;
 
-    public String getStartTimeOffset() {
+    public String startTimeOffset() {
         return this.startTimeOffset;
     }
 

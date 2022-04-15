@@ -27,7 +27,7 @@ public final class NodeKubeletConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cpuCfsQuota")
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
-    public Output<Boolean> getCpuCfsQuota() {
+    public Output<Boolean> cpuCfsQuota() {
         return this.cpuCfsQuota == null ? Codegen.empty() : this.cpuCfsQuota;
     }
 
@@ -38,7 +38,7 @@ public final class NodeKubeletConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
-    public Output<String> getCpuCfsQuotaPeriod() {
+    public Output<String> cpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Codegen.empty() : this.cpuCfsQuotaPeriod;
     }
 
@@ -49,7 +49,7 @@ public final class NodeKubeletConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cpuManagerPolicy")
       private final @Nullable Output<String> cpuManagerPolicy;
 
-    public Output<String> getCpuManagerPolicy() {
+    public Output<String> cpuManagerPolicy() {
         return this.cpuManagerPolicy == null ? Codegen.empty() : this.cpuManagerPolicy;
     }
 

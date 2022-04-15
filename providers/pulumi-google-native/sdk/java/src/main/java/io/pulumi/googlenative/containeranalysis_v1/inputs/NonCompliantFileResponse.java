@@ -23,7 +23,7 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
     @Import(name="displayCommand", required=true)
       private final String displayCommand;
 
-    public String getDisplayCommand() {
+    public String displayCommand() {
         return this.displayCommand;
     }
 
@@ -34,7 +34,7 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -45,7 +45,7 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 

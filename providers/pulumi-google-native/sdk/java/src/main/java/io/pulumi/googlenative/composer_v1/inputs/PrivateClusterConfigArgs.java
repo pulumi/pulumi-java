@@ -27,7 +27,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
     @Import(name="enablePrivateEndpoint")
       private final @Nullable Output<Boolean> enablePrivateEndpoint;
 
-    public Output<Boolean> getEnablePrivateEndpoint() {
+    public Output<Boolean> enablePrivateEndpoint() {
         return this.enablePrivateEndpoint == null ? Codegen.empty() : this.enablePrivateEndpoint;
     }
 
@@ -38,7 +38,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
     @Import(name="masterIpv4CidrBlock")
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
-    public Output<String> getMasterIpv4CidrBlock() {
+    public Output<String> masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock == null ? Codegen.empty() : this.masterIpv4CidrBlock;
     }
 

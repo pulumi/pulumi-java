@@ -32,14 +32,14 @@ public final class TextResponse {
      * The text content to be displayed.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * How the text content is formatted.
      * 
     */
-    public String getFormat() {
+    public String format() {
         return this.format;
     }
 

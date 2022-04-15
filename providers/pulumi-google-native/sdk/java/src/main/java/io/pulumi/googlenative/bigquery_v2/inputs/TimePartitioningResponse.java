@@ -20,7 +20,7 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
     @Import(name="expirationMs", required=true)
       private final String expirationMs;
 
-    public String getExpirationMs() {
+    public String expirationMs() {
         return this.expirationMs;
     }
 
@@ -31,14 +31,14 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
     @Import(name="field", required=true)
       private final String field;
 
-    public String getField() {
+    public String field() {
         return this.field;
     }
 
     @Import(name="requirePartitionFilter", required=true)
       private final Boolean requirePartitionFilter;
 
-    public Boolean getRequirePartitionFilter() {
+    public Boolean requirePartitionFilter() {
         return this.requirePartitionFilter;
     }
 
@@ -49,7 +49,7 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

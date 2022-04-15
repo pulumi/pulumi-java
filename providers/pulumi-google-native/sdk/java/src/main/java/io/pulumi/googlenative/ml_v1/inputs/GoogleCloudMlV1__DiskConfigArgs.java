@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
     @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> getBootDiskSizeGb() {
+    public Output<Integer> bootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__DiskConfigArgs extends io.pulumi.resources.R
     @Import(name="bootDiskType")
       private final @Nullable Output<String> bootDiskType;
 
-    public Output<String> getBootDiskType() {
+    public Output<String> bootDiskType() {
         return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
     }
 

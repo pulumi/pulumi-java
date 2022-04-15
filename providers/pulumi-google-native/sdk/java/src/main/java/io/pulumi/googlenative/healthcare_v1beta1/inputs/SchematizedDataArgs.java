@@ -26,7 +26,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data == null ? Codegen.empty() : this.data;
     }
 
@@ -37,7 +37,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="error")
       private final @Nullable Output<String> error;
 
-    public Output<String> getError() {
+    public Output<String> error() {
         return this.error == null ? Codegen.empty() : this.error;
     }
 

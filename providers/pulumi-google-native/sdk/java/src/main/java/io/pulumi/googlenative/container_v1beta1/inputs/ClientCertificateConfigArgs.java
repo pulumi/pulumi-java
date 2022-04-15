@@ -26,7 +26,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
     @Import(name="issueClientCertificate")
       private final @Nullable Output<Boolean> issueClientCertificate;
 
-    public Output<Boolean> getIssueClientCertificate() {
+    public Output<Boolean> issueClientCertificate() {
         return this.issueClientCertificate == null ? Codegen.empty() : this.issueClientCertificate;
     }
 

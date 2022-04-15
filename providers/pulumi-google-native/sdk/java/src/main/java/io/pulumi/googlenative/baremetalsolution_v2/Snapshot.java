@@ -30,7 +30,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The creation time of the storage volume snapshot.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +44,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The description of the storage volume snapshot.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +58,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The name of the storage volume snapshot.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The size of the storage volume snapshot, in bytes.
      * 
      */
-    public Output<String> getSizeBytes() {
+    public Output<String> sizeBytes() {
         return this.sizeBytes;
     }
     /**
@@ -86,7 +86,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The storage volume this snapshot belongs to.
      * 
      */
-    public Output<String> getStorageVolume() {
+    public Output<String> storageVolume() {
         return this.storageVolume;
     }
 

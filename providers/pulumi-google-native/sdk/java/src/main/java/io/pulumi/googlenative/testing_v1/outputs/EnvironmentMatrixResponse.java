@@ -41,21 +41,21 @@ public final class EnvironmentMatrixResponse {
      * A list of Android devices; the test will be run only on the specified devices.
      * 
     */
-    public AndroidDeviceListResponse getAndroidDeviceList() {
+    public AndroidDeviceListResponse androidDeviceList() {
         return this.androidDeviceList;
     }
     /**
      * A matrix of Android devices.
      * 
     */
-    public AndroidMatrixResponse getAndroidMatrix() {
+    public AndroidMatrixResponse androidMatrix() {
         return this.androidMatrix;
     }
     /**
      * A list of iOS devices.
      * 
     */
-    public IosDeviceListResponse getIosDeviceList() {
+    public IosDeviceListResponse iosDeviceList() {
         return this.iosDeviceList;
     }
 

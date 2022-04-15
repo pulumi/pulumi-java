@@ -24,7 +24,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="destinationConnectionProfileName", required=true)
       private final String destinationConnectionProfileName;
 
-    public String getDestinationConnectionProfileName() {
+    public String destinationConnectionProfileName() {
         return this.destinationConnectionProfileName;
     }
 
@@ -35,7 +35,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="gcsDestinationConfig", required=true)
       private final GcsDestinationConfigResponse gcsDestinationConfig;
 
-    public GcsDestinationConfigResponse getGcsDestinationConfig() {
+    public GcsDestinationConfigResponse gcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }
 

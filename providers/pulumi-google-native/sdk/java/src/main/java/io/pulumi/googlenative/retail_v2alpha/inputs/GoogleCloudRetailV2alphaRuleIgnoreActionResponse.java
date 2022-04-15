@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse extends io.p
     @Import(name="ignoreTerms", required=true)
       private final List<String> ignoreTerms;
 
-    public List<String> getIgnoreTerms() {
+    public List<String> ignoreTerms() {
         return this.ignoreTerms;
     }
 

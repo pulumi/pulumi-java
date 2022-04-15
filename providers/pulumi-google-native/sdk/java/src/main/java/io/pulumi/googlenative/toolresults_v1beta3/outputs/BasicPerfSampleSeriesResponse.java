@@ -23,13 +23,13 @@ public final class BasicPerfSampleSeriesResponse {
         this.sampleSeriesLabel = sampleSeriesLabel;
     }
 
-    public String getPerfMetricType() {
+    public String perfMetricType() {
         return this.perfMetricType;
     }
-    public String getPerfUnit() {
+    public String perfUnit() {
         return this.perfUnit;
     }
-    public String getSampleSeriesLabel() {
+    public String sampleSeriesLabel() {
         return this.sampleSeriesLabel;
     }
 

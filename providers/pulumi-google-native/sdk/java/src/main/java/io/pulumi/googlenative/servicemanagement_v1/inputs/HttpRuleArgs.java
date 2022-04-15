@@ -28,7 +28,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalBindings")
       private final @Nullable Output<List<HttpRuleArgs>> additionalBindings;
 
-    public Output<List<HttpRuleArgs>> getAdditionalBindings() {
+    public Output<List<HttpRuleArgs>> additionalBindings() {
         return this.additionalBindings == null ? Codegen.empty() : this.additionalBindings;
     }
 
@@ -39,7 +39,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -50,7 +50,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<CustomHttpPatternArgs> custom;
 
-    public Output<CustomHttpPatternArgs> getCustom() {
+    public Output<CustomHttpPatternArgs> custom() {
         return this.custom == null ? Codegen.empty() : this.custom;
     }
 
@@ -61,7 +61,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delete")
       private final @Nullable Output<String> delete;
 
-    public Output<String> getDelete() {
+    public Output<String> delete() {
         return this.delete == null ? Codegen.empty() : this.delete;
     }
 
@@ -72,7 +72,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="get")
       private final @Nullable Output<String> get;
 
-    public Output<String> getGet() {
+    public Output<String> get() {
         return this.get == null ? Codegen.empty() : this.get;
     }
 
@@ -83,7 +83,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="patch")
       private final @Nullable Output<String> patch;
 
-    public Output<String> getPatch() {
+    public Output<String> patch() {
         return this.patch == null ? Codegen.empty() : this.patch;
     }
 
@@ -94,7 +94,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="post")
       private final @Nullable Output<String> post;
 
-    public Output<String> getPost() {
+    public Output<String> post() {
         return this.post == null ? Codegen.empty() : this.post;
     }
 
@@ -105,7 +105,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="put")
       private final @Nullable Output<String> put;
 
-    public Output<String> getPut() {
+    public Output<String> put() {
         return this.put == null ? Codegen.empty() : this.put;
     }
 
@@ -116,7 +116,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseBody")
       private final @Nullable Output<String> responseBody;
 
-    public Output<String> getResponseBody() {
+    public Output<String> responseBody() {
         return this.responseBody == null ? Codegen.empty() : this.responseBody;
     }
 
@@ -127,7 +127,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

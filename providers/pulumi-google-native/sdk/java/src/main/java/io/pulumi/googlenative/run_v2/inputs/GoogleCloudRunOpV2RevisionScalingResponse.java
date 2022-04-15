@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends io.pulumi.r
     @Import(name="maxInstanceCount", required=true)
       private final Integer maxInstanceCount;
 
-    public Integer getMaxInstanceCount() {
+    public Integer maxInstanceCount() {
         return this.maxInstanceCount;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse extends io.pulumi.r
     @Import(name="minInstanceCount", required=true)
       private final Integer minInstanceCount;
 
-    public Integer getMinInstanceCount() {
+    public Integer minInstanceCount() {
         return this.minInstanceCount;
     }
 

@@ -24,7 +24,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
       private final @Nullable Output<ContainerImageArgs> containerImage;
 
-    public Output<ContainerImageArgs> getContainerImage() {
+    public Output<ContainerImageArgs> containerImage() {
         return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
@@ -35,7 +35,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,21 +46,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -71,14 +71,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
-    public Output<String> getPostStartupScript() {
+    public Output<String> postStartupScript() {
         return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -89,7 +89,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmImage")
       private final @Nullable Output<VmImageArgs> vmImage;
 
-    public Output<VmImageArgs> getVmImage() {
+    public Output<VmImageArgs> vmImage() {
         return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 

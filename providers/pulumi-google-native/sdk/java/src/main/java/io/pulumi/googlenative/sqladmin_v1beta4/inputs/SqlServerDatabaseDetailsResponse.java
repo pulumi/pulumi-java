@@ -24,7 +24,7 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
     @Import(name="compatibilityLevel", required=true)
       private final Integer compatibilityLevel;
 
-    public Integer getCompatibilityLevel() {
+    public Integer compatibilityLevel() {
         return this.compatibilityLevel;
     }
 
@@ -35,7 +35,7 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
     @Import(name="recoveryModel", required=true)
       private final String recoveryModel;
 
-    public String getRecoveryModel() {
+    public String recoveryModel() {
         return this.recoveryModel;
     }
 

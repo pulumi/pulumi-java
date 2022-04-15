@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessRe
      * Custom metadata. Dialogflow doesn't impose any structure on this.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 

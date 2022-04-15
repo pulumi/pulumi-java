@@ -23,7 +23,7 @@ public final class VerticalPodAutoscalingResponse extends io.pulumi.resources.In
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

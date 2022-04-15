@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
     @Import(name="attemptTime", required=true)
       private final String attemptTime;
 
-    public String getAttemptTime() {
+    public String attemptTime() {
         return this.attemptTime;
     }
 
@@ -32,7 +32,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
     @Import(name="partialFailures", required=true)
       private final List<GoogleRpcStatusResponse> partialFailures;
 
-    public List<GoogleRpcStatusResponse> getPartialFailures() {
+    public List<GoogleRpcStatusResponse> partialFailures() {
         return this.partialFailures;
     }
 

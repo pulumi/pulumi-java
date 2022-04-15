@@ -26,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
     @Import(name="boundingBoxEvaluationOptions")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
-    public Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {
+    public Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions == null ? Codegen.empty() : this.boundingBoxEvaluationOptions;
     }
 

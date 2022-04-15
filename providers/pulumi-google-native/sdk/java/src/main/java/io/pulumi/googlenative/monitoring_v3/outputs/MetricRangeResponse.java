@@ -33,14 +33,14 @@ public final class MetricRangeResponse {
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
      * 
     */
-    public GoogleMonitoringV3RangeResponse getRange() {
+    public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
      * 
     */
-    public String getTimeSeries() {
+    public String timeSeries() {
         return this.timeSeries;
     }
 

@@ -25,7 +25,7 @@ public final class HintArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="humanReadableName", required=true)
       private final Output<String> humanReadableName;
 
-    public Output<String> getHumanReadableName() {
+    public Output<String> humanReadableName() {
         return this.humanReadableName;
     }
 

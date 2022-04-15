@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     @Import(name="phraseMatchRules", required=true)
       private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
 
-    public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
+    public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules() {
         return this.phraseMatchRules;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

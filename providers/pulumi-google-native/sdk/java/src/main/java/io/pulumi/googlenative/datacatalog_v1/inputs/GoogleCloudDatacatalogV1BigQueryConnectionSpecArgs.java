@@ -28,7 +28,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
     @Import(name="cloudSql")
       private final @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
 
-    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> getCloudSql() {
+    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql() {
         return this.cloudSql == null ? Codegen.empty() : this.cloudSql;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
     @Import(name="connectionType")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> getConnectionType() {
+    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType() {
         return this.connectionType == null ? Codegen.empty() : this.connectionType;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
     @Import(name="hasCredential")
       private final @Nullable Output<Boolean> hasCredential;
 
-    public Output<Boolean> getHasCredential() {
+    public Output<Boolean> hasCredential() {
         return this.hasCredential == null ? Codegen.empty() : this.hasCredential;
     }
 

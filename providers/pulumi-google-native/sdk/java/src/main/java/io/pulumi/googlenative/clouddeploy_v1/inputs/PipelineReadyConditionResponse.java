@@ -24,7 +24,7 @@ public final class PipelineReadyConditionResponse extends io.pulumi.resources.In
     @Import(name="status", required=true)
       private final Boolean status;
 
-    public Boolean getStatus() {
+    public Boolean status() {
         return this.status;
     }
 
@@ -35,7 +35,7 @@ public final class PipelineReadyConditionResponse extends io.pulumi.resources.In
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

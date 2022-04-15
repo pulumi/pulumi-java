@@ -25,7 +25,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="fields", required=true)
       private final List<String> fields;
 
-    public List<String> getFields() {
+    public List<String> fields() {
         return this.fields;
     }
 
@@ -47,7 +47,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
     @Import(name="validation", required=true)
       private final ParameterValidationResponse validation;
 
-    public ParameterValidationResponse getValidation() {
+    public ParameterValidationResponse validation() {
         return this.validation;
     }
 

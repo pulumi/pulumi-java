@@ -15,7 +15,7 @@ public final class StatefulPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="preservedState", required=true)
       private final StatefulPolicyPreservedStateResponse preservedState;
 
-    public StatefulPolicyPreservedStateResponse getPreservedState() {
+    public StatefulPolicyPreservedStateResponse preservedState() {
         return this.preservedState;
     }
 

@@ -26,7 +26,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customFeatures")
       private final @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> getCustomFeatures() {
+    public Output<List<String>> customFeatures() {
         return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
     }
 
@@ -37,7 +37,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTlsVersion")
       private final @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
 
-    public Output<SslPolicyMinTlsVersion> getMinTlsVersion() {
+    public Output<SslPolicyMinTlsVersion> minTlsVersion() {
         return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
@@ -59,7 +59,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,21 +70,21 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profile")
       private final @Nullable Output<SslPolicyProfile> profile;
 
-    public Output<SslPolicyProfile> getProfile() {
+    public Output<SslPolicyProfile> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -95,7 +95,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tlsSettings")
       private final @Nullable Output<ServerTlsSettingsArgs> tlsSettings;
 
-    public Output<ServerTlsSettingsArgs> getTlsSettings() {
+    public Output<ServerTlsSettingsArgs> tlsSettings() {
         return this.tlsSettings == null ? Codegen.empty() : this.tlsSettings;
     }
 

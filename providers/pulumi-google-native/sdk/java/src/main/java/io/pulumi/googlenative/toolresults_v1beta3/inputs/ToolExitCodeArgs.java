@@ -26,7 +26,7 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
+    public Output<Integer> number() {
         return this.number == null ? Codegen.empty() : this.number;
     }
 

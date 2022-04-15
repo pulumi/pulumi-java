@@ -62,42 +62,42 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
      * The piece of text from the `source` knowledge base document.
      * 
     */
-    public String getAnswer() {
+    public String answer() {
         return this.answer;
     }
     /**
      * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
     */
-    public Double getConfidenceScore() {
+    public Double confidenceScore() {
         return this.confidenceScore;
     }
     /**
      * Map that contains metadata about the FAQ answer and the document that it originates from.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}.
      * 
     */
-    public String getQueryRecord() {
+    public String queryRecord() {
         return this.queryRecord;
     }
     /**
      * The corresponding FAQ question.
      * 
     */
-    public String getQuestion() {
+    public String question() {
         return this.question;
     }
     /**
      * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

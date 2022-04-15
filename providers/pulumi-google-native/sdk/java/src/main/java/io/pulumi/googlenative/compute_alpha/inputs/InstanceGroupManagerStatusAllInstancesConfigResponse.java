@@ -20,7 +20,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     @Import(name="currentRevision", required=true)
       private final String currentRevision;
 
-    public String getCurrentRevision() {
+    public String currentRevision() {
         return this.currentRevision;
     }
 
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     @Import(name="effective", required=true)
       private final Boolean effective;
 
-    public Boolean getEffective() {
+    public Boolean effective() {
         return this.effective;
     }
 

@@ -22,7 +22,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTimeUsec")
       private final @Nullable Output<String> expirationTimeUsec;
 
-    public Output<String> getExpirationTimeUsec() {
+    public Output<String> expirationTimeUsec() {
         return this.expirationTimeUsec == null ? Codegen.empty() : this.expirationTimeUsec;
     }
 
@@ -33,14 +33,14 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

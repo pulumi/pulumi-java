@@ -23,7 +23,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
     @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
-    public Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> getRequestHeadersToAdds() {
+    public Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
     }
 

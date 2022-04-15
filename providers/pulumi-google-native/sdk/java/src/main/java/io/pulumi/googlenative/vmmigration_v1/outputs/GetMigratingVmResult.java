@@ -146,119 +146,119 @@ public final class GetMigratingVmResult {
      * Details of the target VM in Compute Engine.
      * 
     */
-    public ComputeEngineTargetDefaultsResponse getComputeEngineTargetDefaults() {
+    public ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults() {
         return this.computeEngineTargetDefaults;
     }
     /**
      * The time the migrating VM was created (this refers to this resource and not to the time it was installed in the source).
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The percentage progress of the current running replication cycle.
      * 
     */
-    public ReplicationCycleResponse getCurrentSyncInfo() {
+    public ReplicationCycleResponse currentSyncInfo() {
         return this.currentSyncInfo;
     }
     /**
      * The description attached to the migrating VM by the user.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name attached to the MigratingVm by the user.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Provides details on the state of the Migrating VM in case of an error in replication.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * The group this migrating vm is included in, if any. The group is represented by the full path of the appropriate Group resource.
      * 
     */
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
     /**
      * The labels of the migrating VM.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The most updated snapshot created time in the source that finished replication.
      * 
     */
-    public ReplicationSyncResponse getLastSync() {
+    public ReplicationSyncResponse lastSync() {
         return this.lastSync;
     }
     /**
      * The identifier of the MigratingVm.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The replication schedule policy.
      * 
     */
-    public SchedulePolicyResponse getPolicy() {
+    public SchedulePolicyResponse policy() {
         return this.policy;
     }
     /**
      * The recent clone jobs performed on the migrating VM. This field holds the vm's last completed clone job and the vm's running clone job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
      * 
     */
-    public List<CloneJobResponse> getRecentCloneJobs() {
+    public List<CloneJobResponse> recentCloneJobs() {
         return this.recentCloneJobs;
     }
     /**
      * The recent cutover jobs performed on the migrating VM. This field holds the vm's last completed cutover job and the vm's running cutover job, if one exists. Note: To have this field populated you need to explicitly request it via the "view" parameter of the Get/List request.
      * 
     */
-    public List<CutoverJobResponse> getRecentCutoverJobs() {
+    public List<CutoverJobResponse> recentCutoverJobs() {
         return this.recentCutoverJobs;
     }
     /**
      * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
      * 
     */
-    public String getSourceVmId() {
+    public String sourceVmId() {
         return this.sourceVmId;
     }
     /**
      * State of the MigratingVm.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The last time the migrating VM state was updated.
      * 
     */
-    public String getStateTime() {
+    public String stateTime() {
         return this.stateTime;
     }
     /**
      * The last time the migrating VM resource was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

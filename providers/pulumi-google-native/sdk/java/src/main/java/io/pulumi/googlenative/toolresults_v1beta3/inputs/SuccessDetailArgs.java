@@ -26,7 +26,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="otherNativeCrash")
       private final @Nullable Output<Boolean> otherNativeCrash;
 
-    public Output<Boolean> getOtherNativeCrash() {
+    public Output<Boolean> otherNativeCrash() {
         return this.otherNativeCrash == null ? Codegen.empty() : this.otherNativeCrash;
     }
 

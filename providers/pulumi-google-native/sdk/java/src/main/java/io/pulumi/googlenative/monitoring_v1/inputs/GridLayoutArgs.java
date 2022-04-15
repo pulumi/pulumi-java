@@ -28,7 +28,7 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columns")
       private final @Nullable Output<String> columns;
 
-    public Output<String> getColumns() {
+    public Output<String> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 
@@ -39,7 +39,7 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="widgets")
       private final @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Output<List<WidgetArgs>> getWidgets() {
+    public Output<List<WidgetArgs>> widgets() {
         return this.widgets == null ? Codegen.empty() : this.widgets;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
     @Import(name="enableInsightsExport")
       private final @Nullable Output<Boolean> enableInsightsExport;
 
-    public Output<Boolean> getEnableInsightsExport() {
+    public Output<Boolean> enableInsightsExport() {
         return this.enableInsightsExport == null ? Codegen.empty() : this.enableInsightsExport;
     }
 

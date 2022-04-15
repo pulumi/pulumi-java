@@ -24,7 +24,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType", required=true)
       private final Output<InstructionDataType> dataType;
 
-    public Output<InstructionDataType> getDataType() {
+    public Output<InstructionDataType> dataType() {
         return this.dataType;
     }
 
@@ -35,7 +35,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -57,14 +57,14 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pdfInstruction")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
-    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> getPdfInstruction() {
+    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction() {
         return this.pdfInstruction == null ? Codegen.empty() : this.pdfInstruction;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

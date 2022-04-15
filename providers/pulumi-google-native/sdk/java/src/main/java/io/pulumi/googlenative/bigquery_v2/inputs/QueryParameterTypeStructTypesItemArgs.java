@@ -23,7 +23,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     @Import(name="type")
       private final @Nullable Output<QueryParameterTypeArgs> type;
 
-    public Output<QueryParameterTypeArgs> getType() {
+    public Output<QueryParameterTypeArgs> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,14 +27,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotationSource")
       private final @Nullable Output<AnnotationSourceArgs> annotationSource;
 
-    public Output<AnnotationSourceArgs> getAnnotationSource() {
+    public Output<AnnotationSourceArgs> annotationSource() {
         return this.annotationSource == null ? Codegen.empty() : this.annotationSource;
     }
 
     @Import(name="annotationStoreId", required=true)
       private final Output<String> annotationStoreId;
 
-    public Output<String> getAnnotationStoreId() {
+    public Output<String> annotationStoreId() {
         return this.annotationStoreId;
     }
 
@@ -45,14 +45,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customData")
       private final @Nullable Output<Map<String,String>> customData;
 
-    public Output<Map<String,String>> getCustomData() {
+    public Output<Map<String,String>> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -63,14 +63,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageAnnotation")
       private final @Nullable Output<ImageAnnotationArgs> imageAnnotation;
 
-    public Output<ImageAnnotationArgs> getImageAnnotation() {
+    public Output<ImageAnnotationArgs> imageAnnotation() {
         return this.imageAnnotation == null ? Codegen.empty() : this.imageAnnotation;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,14 +81,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -99,7 +99,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceAnnotation")
       private final @Nullable Output<ResourceAnnotationArgs> resourceAnnotation;
 
-    public Output<ResourceAnnotationArgs> getResourceAnnotation() {
+    public Output<ResourceAnnotationArgs> resourceAnnotation() {
         return this.resourceAnnotation == null ? Codegen.empty() : this.resourceAnnotation;
     }
 
@@ -110,7 +110,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="textAnnotation")
       private final @Nullable Output<SensitiveTextAnnotationArgs> textAnnotation;
 
-    public Output<SensitiveTextAnnotationArgs> getTextAnnotation() {
+    public Output<SensitiveTextAnnotationArgs> textAnnotation() {
         return this.textAnnotation == null ? Codegen.empty() : this.textAnnotation;
     }
 

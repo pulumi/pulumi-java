@@ -78,56 +78,56 @@ public final class GetTestCaseResult {
      * When the test was created.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The latest test result.
      * 
     */
-    public GoogleCloudDialogflowCxV3TestCaseResultResponse getLastTestResult() {
+    public GoogleCloudDialogflowCxV3TestCaseResultResponse lastTestResult() {
         return this.lastTestResult;
     }
     /**
      * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Additional freeform notes about the test case. Limit of 400 characters.
      * 
     */
-    public String getNotes() {
+    public String notes() {
         return this.notes;
     }
     /**
      * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
     /**
      * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
     */
-    public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> getTestCaseConversationTurns() {
+    public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> testCaseConversationTurns() {
         return this.testCaseConversationTurns;
     }
     /**
      * Config for the test case.
      * 
     */
-    public GoogleCloudDialogflowCxV3TestConfigResponse getTestConfig() {
+    public GoogleCloudDialogflowCxV3TestConfigResponse testConfig() {
         return this.testConfig;
     }
 

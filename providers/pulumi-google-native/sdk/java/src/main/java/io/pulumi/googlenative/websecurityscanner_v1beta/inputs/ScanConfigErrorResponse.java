@@ -23,7 +23,7 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
     @Import(name="fieldName", required=true)
       private final String fieldName;
 
-    public String getFieldName() {
+    public String fieldName() {
         return this.fieldName;
     }
 

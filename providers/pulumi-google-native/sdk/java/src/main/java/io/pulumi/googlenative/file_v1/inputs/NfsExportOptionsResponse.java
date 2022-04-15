@@ -24,7 +24,7 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="accessMode", required=true)
       private final String accessMode;
 
-    public String getAccessMode() {
+    public String accessMode() {
         return this.accessMode;
     }
 
@@ -35,7 +35,7 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="anonGid", required=true)
       private final String anonGid;
 
-    public String getAnonGid() {
+    public String anonGid() {
         return this.anonGid;
     }
 
@@ -46,7 +46,7 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="anonUid", required=true)
       private final String anonUid;
 
-    public String getAnonUid() {
+    public String anonUid() {
         return this.anonUid;
     }
 
@@ -57,7 +57,7 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipRanges", required=true)
       private final List<String> ipRanges;
 
-    public List<String> getIpRanges() {
+    public List<String> ipRanges() {
         return this.ipRanges;
     }
 
@@ -68,7 +68,7 @@ public final class NfsExportOptionsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="squashMode", required=true)
       private final String squashMode;
 
-    public String getSquashMode() {
+    public String squashMode() {
         return this.squashMode;
     }
 

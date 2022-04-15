@@ -26,7 +26,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
     @Import(name="ekmConnectionKeyPath")
       private final @Nullable Output<String> ekmConnectionKeyPath;
 
-    public Output<String> getEkmConnectionKeyPath() {
+    public Output<String> ekmConnectionKeyPath() {
         return this.ekmConnectionKeyPath == null ? Codegen.empty() : this.ekmConnectionKeyPath;
     }
 
@@ -37,7 +37,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
     @Import(name="externalKeyUri")
       private final @Nullable Output<String> externalKeyUri;
 
-    public Output<String> getExternalKeyUri() {
+    public Output<String> externalKeyUri() {
         return this.externalKeyUri == null ? Codegen.empty() : this.externalKeyUri;
     }
 

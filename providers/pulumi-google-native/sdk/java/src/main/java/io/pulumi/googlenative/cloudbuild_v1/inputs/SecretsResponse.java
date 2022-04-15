@@ -25,7 +25,7 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inline", required=true)
       private final List<InlineSecretResponse> inline;
 
-    public List<InlineSecretResponse> getInline() {
+    public List<InlineSecretResponse> inline() {
         return this.inline;
     }
 
@@ -36,7 +36,7 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="secretManager", required=true)
       private final List<SecretManagerSecretResponse> secretManager;
 
-    public List<SecretManagerSecretResponse> getSecretManager() {
+    public List<SecretManagerSecretResponse> secretManager() {
         return this.secretManager;
     }
 

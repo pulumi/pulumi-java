@@ -23,7 +23,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="forwardingPath")
       private final @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
-    public Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> getForwardingPath() {
+    public Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath() {
         return this.forwardingPath == null ? Codegen.empty() : this.forwardingPath;
     }
 
@@ -34,7 +34,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
+    public Output<String> ipv4Address() {
         return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
     }
 
@@ -45,14 +45,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
     @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
-    public Output<String> getIpv6Address() {
+    public Output<String> ipv6Address() {
         return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

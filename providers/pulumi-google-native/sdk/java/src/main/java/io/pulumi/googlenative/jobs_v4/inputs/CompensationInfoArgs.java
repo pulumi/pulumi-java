@@ -27,7 +27,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="entries")
       private final @Nullable Output<List<CompensationEntryArgs>> entries;
 
-    public Output<List<CompensationEntryArgs>> getEntries() {
+    public Output<List<CompensationEntryArgs>> entries() {
         return this.entries == null ? Codegen.empty() : this.entries;
     }
 

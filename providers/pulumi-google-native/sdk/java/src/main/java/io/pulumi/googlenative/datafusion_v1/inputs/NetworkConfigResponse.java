@@ -23,7 +23,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ipAllocation", required=true)
       private final String ipAllocation;
 
-    public String getIpAllocation() {
+    public String ipAllocation() {
         return this.ipAllocation;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 

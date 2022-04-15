@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     @Import(name="maxValue")
       private final @Nullable Output<Double> maxValue;
 
-    public Output<Double> getMaxValue() {
+    public Output<Double> maxValue() {
         return this.maxValue == null ? Codegen.empty() : this.maxValue;
     }
 
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     @Import(name="minValue")
       private final @Nullable Output<Double> minValue;
 
-    public Output<Double> getMinValue() {
+    public Output<Double> minValue() {
         return this.minValue == null ? Codegen.empty() : this.minValue;
     }
 

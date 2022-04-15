@@ -26,7 +26,7 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="auditConfigs")
       private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> getAuditConfigs() {
+    public Output<List<AuditConfigArgs>> auditConfigs() {
         return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
@@ -37,7 +37,7 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
+    public Output<List<BindingArgs>> bindings() {
         return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
@@ -48,14 +48,14 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="tagValueId", required=true)
       private final Output<String> tagValueId;
 
-    public Output<String> getTagValueId() {
+    public Output<String> tagValueId() {
         return this.tagValueId;
     }
 
@@ -66,7 +66,7 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="updateMask")
       private final @Nullable Output<String> updateMask;
 
-    public Output<String> getUpdateMask() {
+    public Output<String> updateMask() {
         return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
@@ -77,7 +77,7 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

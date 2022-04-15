@@ -27,7 +27,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="amount")
       private final @Nullable Output<String> amount;
 
-    public Output<String> getAmount() {
+    public Output<String> amount() {
         return this.amount == null ? Codegen.empty() : this.amount;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<ResourceCommitmentType> type;
 
-    public Output<ResourceCommitmentType> getType() {
+    public Output<ResourceCommitmentType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -27,7 +27,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configMapKeyRef")
       private final @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
-    public Output<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
+    public Output<ConfigMapKeySelectorArgs> configMapKeyRef() {
         return this.configMapKeyRef == null ? Codegen.empty() : this.configMapKeyRef;
     }
 
@@ -38,7 +38,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretKeyRef")
       private final @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
-    public Output<SecretKeySelectorArgs> getSecretKeyRef() {
+    public Output<SecretKeySelectorArgs> secretKeyRef() {
         return this.secretKeyRef == null ? Codegen.empty() : this.secretKeyRef;
     }
 

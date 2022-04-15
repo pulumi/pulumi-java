@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
     @Import(name="apiSource", required=true)
       private final String apiSource;
 
-    public String getApiSource() {
+    public String apiSource() {
         return this.apiSource;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
     @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
     @Import(name="operations", required=true)
       private final List<GoogleCloudApigeeV1OperationResponse> operations;
 
-    public List<GoogleCloudApigeeV1OperationResponse> getOperations() {
+    public List<GoogleCloudApigeeV1OperationResponse> operations() {
         return this.operations;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
     @Import(name="quota", required=true)
       private final GoogleCloudApigeeV1QuotaResponse quota;
 
-    public GoogleCloudApigeeV1QuotaResponse getQuota() {
+    public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }
 

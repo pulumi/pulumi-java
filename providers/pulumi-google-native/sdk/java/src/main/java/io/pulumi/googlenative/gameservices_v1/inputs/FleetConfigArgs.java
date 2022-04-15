@@ -26,7 +26,7 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetSpec")
       private final @Nullable Output<String> fleetSpec;
 
-    public Output<String> getFleetSpec() {
+    public Output<String> fleetSpec() {
         return this.fleetSpec == null ? Codegen.empty() : this.fleetSpec;
     }
 
@@ -37,7 +37,7 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

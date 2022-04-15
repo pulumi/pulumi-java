@@ -24,7 +24,7 @@ public final class StandardSqlTableTypeResponse extends io.pulumi.resources.Invo
     @Import(name="columns", required=true)
       private final List<StandardSqlFieldResponse> columns;
 
-    public List<StandardSqlFieldResponse> getColumns() {
+    public List<StandardSqlFieldResponse> columns() {
         return this.columns;
     }
 

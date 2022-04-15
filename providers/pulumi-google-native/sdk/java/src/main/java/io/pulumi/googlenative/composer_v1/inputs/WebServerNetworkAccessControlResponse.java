@@ -24,7 +24,7 @@ public final class WebServerNetworkAccessControlResponse extends io.pulumi.resou
     @Import(name="allowedIpRanges", required=true)
       private final List<AllowedIpRangeResponse> allowedIpRanges;
 
-    public List<AllowedIpRangeResponse> getAllowedIpRanges() {
+    public List<AllowedIpRangeResponse> allowedIpRanges() {
         return this.allowedIpRanges;
     }
 

@@ -32,14 +32,14 @@ public final class DomainRedirectResponse {
      * The domain name to redirect to.
      * 
     */
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
     /**
      * The redirect status code.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

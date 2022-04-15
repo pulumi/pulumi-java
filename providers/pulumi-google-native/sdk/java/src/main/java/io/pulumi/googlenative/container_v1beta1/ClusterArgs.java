@@ -59,7 +59,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addonsConfig")
       private final @Nullable Output<AddonsConfigArgs> addonsConfig;
 
-    public Output<AddonsConfigArgs> getAddonsConfig() {
+    public Output<AddonsConfigArgs> addonsConfig() {
         return this.addonsConfig == null ? Codegen.empty() : this.addonsConfig;
     }
 
@@ -70,7 +70,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticatorGroupsConfig")
       private final @Nullable Output<AuthenticatorGroupsConfigArgs> authenticatorGroupsConfig;
 
-    public Output<AuthenticatorGroupsConfigArgs> getAuthenticatorGroupsConfig() {
+    public Output<AuthenticatorGroupsConfigArgs> authenticatorGroupsConfig() {
         return this.authenticatorGroupsConfig == null ? Codegen.empty() : this.authenticatorGroupsConfig;
     }
 
@@ -81,7 +81,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autopilot")
       private final @Nullable Output<AutopilotArgs> autopilot;
 
-    public Output<AutopilotArgs> getAutopilot() {
+    public Output<AutopilotArgs> autopilot() {
         return this.autopilot == null ? Codegen.empty() : this.autopilot;
     }
 
@@ -92,7 +92,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaling")
       private final @Nullable Output<ClusterAutoscalingArgs> autoscaling;
 
-    public Output<ClusterAutoscalingArgs> getAutoscaling() {
+    public Output<ClusterAutoscalingArgs> autoscaling() {
         return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
@@ -103,7 +103,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryAuthorization")
       private final @Nullable Output<BinaryAuthorizationArgs> binaryAuthorization;
 
-    public Output<BinaryAuthorizationArgs> getBinaryAuthorization() {
+    public Output<BinaryAuthorizationArgs> binaryAuthorization() {
         return this.binaryAuthorization == null ? Codegen.empty() : this.binaryAuthorization;
     }
 
@@ -114,7 +114,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterIpv4Cidr")
       private final @Nullable Output<String> clusterIpv4Cidr;
 
-    public Output<String> getClusterIpv4Cidr() {
+    public Output<String> clusterIpv4Cidr() {
         return this.clusterIpv4Cidr == null ? Codegen.empty() : this.clusterIpv4Cidr;
     }
 
@@ -125,7 +125,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterTelemetry")
       private final @Nullable Output<ClusterTelemetryArgs> clusterTelemetry;
 
-    public Output<ClusterTelemetryArgs> getClusterTelemetry() {
+    public Output<ClusterTelemetryArgs> clusterTelemetry() {
         return this.clusterTelemetry == null ? Codegen.empty() : this.clusterTelemetry;
     }
 
@@ -136,7 +136,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<StatusConditionArgs>> conditions;
 
-    public Output<List<StatusConditionArgs>> getConditions() {
+    public Output<List<StatusConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -147,7 +147,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="confidentialNodes")
       private final @Nullable Output<ConfidentialNodesArgs> confidentialNodes;
 
-    public Output<ConfidentialNodesArgs> getConfidentialNodes() {
+    public Output<ConfidentialNodesArgs> confidentialNodes() {
         return this.confidentialNodes == null ? Codegen.empty() : this.confidentialNodes;
     }
 
@@ -158,7 +158,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseEncryption")
       private final @Nullable Output<DatabaseEncryptionArgs> databaseEncryption;
 
-    public Output<DatabaseEncryptionArgs> getDatabaseEncryption() {
+    public Output<DatabaseEncryptionArgs> databaseEncryption() {
         return this.databaseEncryption == null ? Codegen.empty() : this.databaseEncryption;
     }
 
@@ -169,7 +169,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultMaxPodsConstraint")
       private final @Nullable Output<MaxPodsConstraintArgs> defaultMaxPodsConstraint;
 
-    public Output<MaxPodsConstraintArgs> getDefaultMaxPodsConstraint() {
+    public Output<MaxPodsConstraintArgs> defaultMaxPodsConstraint() {
         return this.defaultMaxPodsConstraint == null ? Codegen.empty() : this.defaultMaxPodsConstraint;
     }
 
@@ -180,7 +180,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -191,7 +191,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableKubernetesAlpha")
       private final @Nullable Output<Boolean> enableKubernetesAlpha;
 
-    public Output<Boolean> getEnableKubernetesAlpha() {
+    public Output<Boolean> enableKubernetesAlpha() {
         return this.enableKubernetesAlpha == null ? Codegen.empty() : this.enableKubernetesAlpha;
     }
 
@@ -202,7 +202,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityServiceConfig")
       private final @Nullable Output<IdentityServiceConfigArgs> identityServiceConfig;
 
-    public Output<IdentityServiceConfigArgs> getIdentityServiceConfig() {
+    public Output<IdentityServiceConfigArgs> identityServiceConfig() {
         return this.identityServiceConfig == null ? Codegen.empty() : this.identityServiceConfig;
     }
 
@@ -213,7 +213,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialClusterVersion")
       private final @Nullable Output<String> initialClusterVersion;
 
-    public Output<String> getInitialClusterVersion() {
+    public Output<String> initialClusterVersion() {
         return this.initialClusterVersion == null ? Codegen.empty() : this.initialClusterVersion;
     }
 
@@ -224,7 +224,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAllocationPolicy")
       private final @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
 
-    public Output<IPAllocationPolicyArgs> getIpAllocationPolicy() {
+    public Output<IPAllocationPolicyArgs> ipAllocationPolicy() {
         return this.ipAllocationPolicy == null ? Codegen.empty() : this.ipAllocationPolicy;
     }
 
@@ -235,14 +235,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="legacyAbac")
       private final @Nullable Output<LegacyAbacArgs> legacyAbac;
 
-    public Output<LegacyAbacArgs> getLegacyAbac() {
+    public Output<LegacyAbacArgs> legacyAbac() {
         return this.legacyAbac == null ? Codegen.empty() : this.legacyAbac;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -253,7 +253,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations == null ? Codegen.empty() : this.locations;
     }
 
@@ -264,7 +264,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Output<LoggingConfigArgs> getLoggingConfig() {
+    public Output<LoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -275,7 +275,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingService")
       private final @Nullable Output<String> loggingService;
 
-    public Output<String> getLoggingService() {
+    public Output<String> loggingService() {
         return this.loggingService == null ? Codegen.empty() : this.loggingService;
     }
 
@@ -286,7 +286,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
       private final @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
-    public Output<MaintenancePolicyArgs> getMaintenancePolicy() {
+    public Output<MaintenancePolicyArgs> maintenancePolicy() {
         return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
@@ -297,7 +297,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="master")
       private final @Nullable Output<MasterArgs> master;
 
-    public Output<MasterArgs> getMaster() {
+    public Output<MasterArgs> master() {
         return this.master == null ? Codegen.empty() : this.master;
     }
 
@@ -308,7 +308,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterAuth")
       private final @Nullable Output<MasterAuthArgs> masterAuth;
 
-    public Output<MasterAuthArgs> getMasterAuth() {
+    public Output<MasterAuthArgs> masterAuth() {
         return this.masterAuth == null ? Codegen.empty() : this.masterAuth;
     }
 
@@ -319,7 +319,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="masterAuthorizedNetworksConfig")
       private final @Nullable Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
-    public Output<MasterAuthorizedNetworksConfigArgs> getMasterAuthorizedNetworksConfig() {
+    public Output<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig == null ? Codegen.empty() : this.masterAuthorizedNetworksConfig;
     }
 
@@ -330,7 +330,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="meshCertificates")
       private final @Nullable Output<MeshCertificatesArgs> meshCertificates;
 
-    public Output<MeshCertificatesArgs> getMeshCertificates() {
+    public Output<MeshCertificatesArgs> meshCertificates() {
         return this.meshCertificates == null ? Codegen.empty() : this.meshCertificates;
     }
 
@@ -341,7 +341,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoringConfig")
       private final @Nullable Output<MonitoringConfigArgs> monitoringConfig;
 
-    public Output<MonitoringConfigArgs> getMonitoringConfig() {
+    public Output<MonitoringConfigArgs> monitoringConfig() {
         return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
     }
 
@@ -352,7 +352,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoringService")
       private final @Nullable Output<String> monitoringService;
 
-    public Output<String> getMonitoringService() {
+    public Output<String> monitoringService() {
         return this.monitoringService == null ? Codegen.empty() : this.monitoringService;
     }
 
@@ -363,7 +363,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -374,7 +374,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -385,7 +385,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> getNetworkConfig() {
+    public Output<NetworkConfigArgs> networkConfig() {
         return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
@@ -396,7 +396,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkPolicy")
       private final @Nullable Output<NetworkPolicyArgs> networkPolicy;
 
-    public Output<NetworkPolicyArgs> getNetworkPolicy() {
+    public Output<NetworkPolicyArgs> networkPolicy() {
         return this.networkPolicy == null ? Codegen.empty() : this.networkPolicy;
     }
 
@@ -407,7 +407,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodePoolDefaults")
       private final @Nullable Output<NodePoolDefaultsArgs> nodePoolDefaults;
 
-    public Output<NodePoolDefaultsArgs> getNodePoolDefaults() {
+    public Output<NodePoolDefaultsArgs> nodePoolDefaults() {
         return this.nodePoolDefaults == null ? Codegen.empty() : this.nodePoolDefaults;
     }
 
@@ -418,7 +418,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodePools")
       private final @Nullable Output<List<NodePoolArgs>> nodePools;
 
-    public Output<List<NodePoolArgs>> getNodePools() {
+    public Output<List<NodePoolArgs>> nodePools() {
         return this.nodePools == null ? Codegen.empty() : this.nodePools;
     }
 
@@ -429,7 +429,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> getNotificationConfig() {
+    public Output<NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
@@ -440,7 +440,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -451,7 +451,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podSecurityPolicyConfig")
       private final @Nullable Output<PodSecurityPolicyConfigArgs> podSecurityPolicyConfig;
 
-    public Output<PodSecurityPolicyConfigArgs> getPodSecurityPolicyConfig() {
+    public Output<PodSecurityPolicyConfigArgs> podSecurityPolicyConfig() {
         return this.podSecurityPolicyConfig == null ? Codegen.empty() : this.podSecurityPolicyConfig;
     }
 
@@ -462,14 +462,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateClusterConfig")
       private final @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
 
-    public Output<PrivateClusterConfigArgs> getPrivateClusterConfig() {
+    public Output<PrivateClusterConfigArgs> privateClusterConfig() {
         return this.privateClusterConfig == null ? Codegen.empty() : this.privateClusterConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -480,7 +480,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="releaseChannel")
       private final @Nullable Output<ReleaseChannelArgs> releaseChannel;
 
-    public Output<ReleaseChannelArgs> getReleaseChannel() {
+    public Output<ReleaseChannelArgs> releaseChannel() {
         return this.releaseChannel == null ? Codegen.empty() : this.releaseChannel;
     }
 
@@ -491,7 +491,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceLabels")
       private final @Nullable Output<Map<String,String>> resourceLabels;
 
-    public Output<Map<String,String>> getResourceLabels() {
+    public Output<Map<String,String>> resourceLabels() {
         return this.resourceLabels == null ? Codegen.empty() : this.resourceLabels;
     }
 
@@ -502,7 +502,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUsageExportConfig")
       private final @Nullable Output<ResourceUsageExportConfigArgs> resourceUsageExportConfig;
 
-    public Output<ResourceUsageExportConfigArgs> getResourceUsageExportConfig() {
+    public Output<ResourceUsageExportConfigArgs> resourceUsageExportConfig() {
         return this.resourceUsageExportConfig == null ? Codegen.empty() : this.resourceUsageExportConfig;
     }
 
@@ -513,7 +513,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shieldedNodes")
       private final @Nullable Output<ShieldedNodesArgs> shieldedNodes;
 
-    public Output<ShieldedNodesArgs> getShieldedNodes() {
+    public Output<ShieldedNodesArgs> shieldedNodes() {
         return this.shieldedNodes == null ? Codegen.empty() : this.shieldedNodes;
     }
 
@@ -524,7 +524,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -535,7 +535,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tpuConfig")
       private final @Nullable Output<TpuConfigArgs> tpuConfig;
 
-    public Output<TpuConfigArgs> getTpuConfig() {
+    public Output<TpuConfigArgs> tpuConfig() {
         return this.tpuConfig == null ? Codegen.empty() : this.tpuConfig;
     }
 
@@ -546,7 +546,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verticalPodAutoscaling")
       private final @Nullable Output<VerticalPodAutoscalingArgs> verticalPodAutoscaling;
 
-    public Output<VerticalPodAutoscalingArgs> getVerticalPodAutoscaling() {
+    public Output<VerticalPodAutoscalingArgs> verticalPodAutoscaling() {
         return this.verticalPodAutoscaling == null ? Codegen.empty() : this.verticalPodAutoscaling;
     }
 
@@ -557,7 +557,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workloadCertificates")
       private final @Nullable Output<WorkloadCertificatesArgs> workloadCertificates;
 
-    public Output<WorkloadCertificatesArgs> getWorkloadCertificates() {
+    public Output<WorkloadCertificatesArgs> workloadCertificates() {
         return this.workloadCertificates == null ? Codegen.empty() : this.workloadCertificates;
     }
 
@@ -568,7 +568,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workloadIdentityConfig")
       private final @Nullable Output<WorkloadIdentityConfigArgs> workloadIdentityConfig;
 
-    public Output<WorkloadIdentityConfigArgs> getWorkloadIdentityConfig() {
+    public Output<WorkloadIdentityConfigArgs> workloadIdentityConfig() {
         return this.workloadIdentityConfig == null ? Codegen.empty() : this.workloadIdentityConfig;
     }
 

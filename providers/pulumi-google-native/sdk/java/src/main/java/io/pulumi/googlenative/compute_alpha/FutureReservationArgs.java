@@ -25,14 +25,14 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -43,7 +43,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -54,21 +54,21 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -79,7 +79,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="shareSettings")
       private final @Nullable Output<ShareSettingsArgs> shareSettings;
 
-    public Output<ShareSettingsArgs> getShareSettings() {
+    public Output<ShareSettingsArgs> shareSettings() {
         return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
     }
 
@@ -90,7 +90,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="specificSkuProperties")
       private final @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
-    public Output<FutureReservationSpecificSKUPropertiesArgs> getSpecificSkuProperties() {
+    public Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties() {
         return this.specificSkuProperties == null ? Codegen.empty() : this.specificSkuProperties;
     }
 
@@ -101,14 +101,14 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeWindow")
       private final @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
 
-    public Output<FutureReservationTimeWindowArgs> getTimeWindow() {
+    public Output<FutureReservationTimeWindowArgs> timeWindow() {
         return this.timeWindow == null ? Codegen.empty() : this.timeWindow;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

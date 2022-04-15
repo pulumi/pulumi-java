@@ -27,7 +27,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterLabels")
       private final @Nullable Output<Map<String,String>> clusterLabels;
 
-    public Output<Map<String,String>> getClusterLabels() {
+    public Output<Map<String,String>> clusterLabels() {
         return this.clusterLabels == null ? Codegen.empty() : this.clusterLabels;
     }
 
@@ -38,7 +38,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 

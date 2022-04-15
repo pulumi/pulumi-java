@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
     @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
+    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
         return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
     @Import(name="primitiveTransformation", required=true)
       private final Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
-    public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {
+    public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation() {
         return this.primitiveTransformation;
     }
 

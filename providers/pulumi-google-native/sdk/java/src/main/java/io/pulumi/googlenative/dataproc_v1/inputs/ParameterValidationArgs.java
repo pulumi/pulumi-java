@@ -27,7 +27,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
     @Import(name="regex")
       private final @Nullable Output<RegexValidationArgs> regex;
 
-    public Output<RegexValidationArgs> getRegex() {
+    public Output<RegexValidationArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -38,7 +38,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
     @Import(name="values")
       private final @Nullable Output<ValueValidationArgs> values;
 
-    public Output<ValueValidationArgs> getValues() {
+    public Output<ValueValidationArgs> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

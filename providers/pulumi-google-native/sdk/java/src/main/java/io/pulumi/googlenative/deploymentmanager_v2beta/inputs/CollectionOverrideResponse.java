@@ -24,7 +24,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
     @Import(name="collection", required=true)
       private final String collection;
 
-    public String getCollection() {
+    public String collection() {
         return this.collection;
     }
 
@@ -35,7 +35,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
     @Import(name="options", required=true)
       private final OptionsResponse options;
 
-    public OptionsResponse getOptions() {
+    public OptionsResponse options() {
         return this.options;
     }
 

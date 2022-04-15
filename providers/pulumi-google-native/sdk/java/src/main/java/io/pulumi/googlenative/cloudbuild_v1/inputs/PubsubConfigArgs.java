@@ -27,7 +27,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
@@ -38,7 +38,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<PubsubConfigState> state;
 
-    public Output<PubsubConfigState> getState() {
+    public Output<PubsubConfigState> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -49,7 +49,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

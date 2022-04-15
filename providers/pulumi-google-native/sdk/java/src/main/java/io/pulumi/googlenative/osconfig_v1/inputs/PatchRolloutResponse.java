@@ -24,7 +24,7 @@ public final class PatchRolloutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disruptionBudget", required=true)
       private final FixedOrPercentResponse disruptionBudget;
 
-    public FixedOrPercentResponse getDisruptionBudget() {
+    public FixedOrPercentResponse disruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -35,7 +35,7 @@ public final class PatchRolloutResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 

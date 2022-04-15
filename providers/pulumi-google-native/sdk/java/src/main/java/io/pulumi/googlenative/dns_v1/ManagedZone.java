@@ -30,7 +30,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
     @Export(name="cloudLoggingConfig", type=ManagedZoneCloudLoggingConfigResponse.class, parameters={})
     private Output<ManagedZoneCloudLoggingConfigResponse> cloudLoggingConfig;
 
-    public Output<ManagedZoneCloudLoggingConfigResponse> getCloudLoggingConfig() {
+    public Output<ManagedZoneCloudLoggingConfigResponse> cloudLoggingConfig() {
         return this.cloudLoggingConfig;
     }
     /**
@@ -44,7 +44,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The time that this resource was created on the server. This is in RFC3339 text format. Output only.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -58,7 +58,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The DNS name of this managed zone, for instance "example.com.".
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -86,7 +86,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return DNSSEC configuration.
      * 
      */
-    public Output<ManagedZoneDnsSecConfigResponse> getDnssecConfig() {
+    public Output<ManagedZoneDnsSecConfigResponse> dnssecConfig() {
         return this.dnssecConfig;
     }
     /**
@@ -100,13 +100,13 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.
      * 
      */
-    public Output<ManagedZoneForwardingConfigResponse> getForwardingConfig() {
+    public Output<ManagedZoneForwardingConfigResponse> forwardingConfig() {
         return this.forwardingConfig;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -120,7 +120,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return User labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -134,7 +134,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +148,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.
      * 
      */
-    public Output<String> getNameServerSet() {
+    public Output<String> nameServerSet() {
         return this.nameServerSet;
     }
     /**
@@ -162,7 +162,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return Delegate your managed_zone to these virtual name servers; defined by the server (output only)
      * 
      */
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     /**
@@ -176,7 +176,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.
      * 
      */
-    public Output<ManagedZonePeeringConfigResponse> getPeeringConfig() {
+    public Output<ManagedZonePeeringConfigResponse> peeringConfig() {
         return this.peeringConfig;
     }
     /**
@@ -190,7 +190,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
      * 
      */
-    public Output<ManagedZonePrivateVisibilityConfigResponse> getPrivateVisibilityConfig() {
+    public Output<ManagedZonePrivateVisibilityConfigResponse> privateVisibilityConfig() {
         return this.privateVisibilityConfig;
     }
     /**
@@ -204,7 +204,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.
      * 
      */
-    public Output<ManagedZoneReverseLookupConfigResponse> getReverseLookupConfig() {
+    public Output<ManagedZoneReverseLookupConfigResponse> reverseLookupConfig() {
         return this.reverseLookupConfig;
     }
     /**
@@ -218,7 +218,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.
      * 
      */
-    public Output<ManagedZoneServiceDirectoryConfigResponse> getServiceDirectoryConfig() {
+    public Output<ManagedZoneServiceDirectoryConfigResponse> serviceDirectoryConfig() {
         return this.serviceDirectoryConfig;
     }
     /**
@@ -232,7 +232,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * @return The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
      * 
      */
-    public Output<String> getVisibility() {
+    public Output<String> visibility() {
         return this.visibility;
     }
 

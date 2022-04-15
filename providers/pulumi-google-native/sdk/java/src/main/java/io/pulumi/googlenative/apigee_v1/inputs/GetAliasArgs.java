@@ -15,28 +15,28 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="aliasId", required=true)
       private final String aliasId;
 
-    public String getAliasId() {
+    public String aliasId() {
         return this.aliasId;
     }
 
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="keystoreId", required=true)
       private final String keystoreId;
 
-    public String getKeystoreId() {
+    public String keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

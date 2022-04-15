@@ -28,7 +28,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
 
-    public Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> getMetrics() {
+    public Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
     @Import(name="stepCount")
       private final @Nullable Output<String> stepCount;
 
-    public Output<String> getStepCount() {
+    public Output<String> stepCount() {
         return this.stepCount == null ? Codegen.empty() : this.stepCount;
     }
 

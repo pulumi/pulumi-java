@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
     @Import(name="audioUri")
       private final @Nullable Output<String> audioUri;
 
-    public Output<String> getAudioUri() {
+    public Output<String> audioUri() {
         return this.audioUri == null ? Codegen.empty() : this.audioUri;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
     @Import(name="transcriptUri")
       private final @Nullable Output<String> transcriptUri;
 
-    public Output<String> getTranscriptUri() {
+    public Output<String> transcriptUri() {
         return this.transcriptUri == null ? Codegen.empty() : this.transcriptUri;
     }
 

@@ -31,7 +31,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<FieldArgs>> fields;
 
-    public Output<List<FieldArgs>> getFields() {
+    public Output<List<FieldArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -42,7 +42,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -53,7 +53,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oneofs")
       private final @Nullable Output<List<String>> oneofs;
 
-    public Output<List<String>> getOneofs() {
+    public Output<List<String>> oneofs() {
         return this.oneofs == null ? Codegen.empty() : this.oneofs;
     }
 
@@ -64,7 +64,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> getOptions() {
+    public Output<List<OptionArgs>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -75,7 +75,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Output<SourceContextArgs> getSourceContext() {
+    public Output<SourceContextArgs> sourceContext() {
         return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
     }
 
@@ -86,7 +86,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syntax")
       private final @Nullable Output<TypeSyntax> syntax;
 
-    public Output<TypeSyntax> getSyntax() {
+    public Output<TypeSyntax> syntax() {
         return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 

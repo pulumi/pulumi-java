@@ -27,7 +27,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="ignoreMinOccurs", required=true)
       private final Boolean ignoreMinOccurs;
 
-    public Boolean getIgnoreMinOccurs() {
+    public Boolean ignoreMinOccurs() {
         return this.ignoreMinOccurs;
     }
 
@@ -38,7 +38,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="schemas", required=true)
       private final List<Hl7SchemaConfigResponse> schemas;
 
-    public List<Hl7SchemaConfigResponse> getSchemas() {
+    public List<Hl7SchemaConfigResponse> schemas() {
         return this.schemas;
     }
 
@@ -49,7 +49,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="schematizedParsingType", required=true)
       private final String schematizedParsingType;
 
-    public String getSchematizedParsingType() {
+    public String schematizedParsingType() {
         return this.schematizedParsingType;
     }
 
@@ -60,7 +60,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="types", required=true)
       private final List<Hl7TypesConfigResponse> types;
 
-    public List<Hl7TypesConfigResponse> getTypes() {
+    public List<Hl7TypesConfigResponse> types() {
         return this.types;
     }
 
@@ -71,7 +71,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="unexpectedSegmentHandling", required=true)
       private final String unexpectedSegmentHandling;
 
-    public String getUnexpectedSegmentHandling() {
+    public String unexpectedSegmentHandling() {
         return this.unexpectedSegmentHandling;
     }
 

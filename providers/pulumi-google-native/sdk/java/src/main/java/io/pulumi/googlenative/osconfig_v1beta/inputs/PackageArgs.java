@@ -28,7 +28,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredState")
       private final @Nullable Output<PackageDesiredState> desiredState;
 
-    public Output<PackageDesiredState> getDesiredState() {
+    public Output<PackageDesiredState> desiredState() {
         return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
@@ -39,7 +39,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manager")
       private final @Nullable Output<PackageManager> manager;
 
-    public Output<PackageManager> getManager() {
+    public Output<PackageManager> manager() {
         return this.manager == null ? Codegen.empty() : this.manager;
     }
 
@@ -50,7 +50,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

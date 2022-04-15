@@ -24,7 +24,7 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="projectRepoId", required=true)
       private final ProjectRepoIdResponse projectRepoId;
 
-    public ProjectRepoIdResponse getProjectRepoId() {
+    public ProjectRepoIdResponse projectRepoId() {
         return this.projectRepoId;
     }
 
@@ -35,7 +35,7 @@ public final class RepoIdResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 

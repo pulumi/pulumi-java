@@ -25,7 +25,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     @Import(name="columns")
       private final @Nullable Output<List<BigtableColumnArgs>> columns;
 
-    public Output<List<BigtableColumnArgs>> getColumns() {
+    public Output<List<BigtableColumnArgs>> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 
@@ -36,7 +36,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
@@ -47,7 +47,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     @Import(name="familyId")
       private final @Nullable Output<String> familyId;
 
-    public Output<String> getFamilyId() {
+    public Output<String> familyId() {
         return this.familyId == null ? Codegen.empty() : this.familyId;
     }
 
@@ -58,7 +58,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     @Import(name="onlyReadLatest")
       private final @Nullable Output<Boolean> onlyReadLatest;
 
-    public Output<Boolean> getOnlyReadLatest() {
+    public Output<Boolean> onlyReadLatest() {
         return this.onlyReadLatest == null ? Codegen.empty() : this.onlyReadLatest;
     }
 
@@ -69,7 +69,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

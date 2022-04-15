@@ -29,7 +29,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<FieldArgs>> fields;
 
-    public Output<List<FieldArgs>> getFields() {
+    public Output<List<FieldArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 
@@ -40,7 +40,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primitive")
       private final @Nullable Output<TypePrimitive> primitive;
 
-    public Output<TypePrimitive> getPrimitive() {
+    public Output<TypePrimitive> primitive() {
         return this.primitive == null ? Codegen.empty() : this.primitive;
     }
 

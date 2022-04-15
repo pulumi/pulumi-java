@@ -32,14 +32,14 @@ public final class VpcPeeringConfigResponse {
      * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
      * 
     */
-    public String getSubnet() {
+    public String subnet() {
         return this.subnet;
     }
     /**
      * Fully qualified name of the VPC that Datastream will peer to. Format: `projects/{project}/global/{networks}/{name}`
      * 
     */
-    public String getVpc() {
+    public String vpc() {
         return this.vpc;
     }
 

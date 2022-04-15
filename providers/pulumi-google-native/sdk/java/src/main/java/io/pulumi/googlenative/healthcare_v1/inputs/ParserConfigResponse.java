@@ -25,7 +25,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowNullHeader", required=true)
       private final Boolean allowNullHeader;
 
-    public Boolean getAllowNullHeader() {
+    public Boolean allowNullHeader() {
         return this.allowNullHeader;
     }
 
@@ -36,7 +36,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="schema", required=true)
       private final SchemaPackageResponse schema;
 
-    public SchemaPackageResponse getSchema() {
+    public SchemaPackageResponse schema() {
         return this.schema;
     }
 
@@ -47,7 +47,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="segmentTerminator", required=true)
       private final String segmentTerminator;
 
-    public String getSegmentTerminator() {
+    public String segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -58,7 +58,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

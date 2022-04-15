@@ -27,7 +27,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipBlocks")
       private final @Nullable Output<List<String>> ipBlocks;
 
-    public Output<List<String>> getIpBlocks() {
+    public Output<List<String>> ipBlocks() {
         return this.ipBlocks == null ? Codegen.empty() : this.ipBlocks;
     }
 
@@ -38,7 +38,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principals")
       private final @Nullable Output<List<String>> principals;
 
-    public Output<List<String>> getPrincipals() {
+    public Output<List<String>> principals() {
         return this.principals == null ? Codegen.empty() : this.principals;
     }
 

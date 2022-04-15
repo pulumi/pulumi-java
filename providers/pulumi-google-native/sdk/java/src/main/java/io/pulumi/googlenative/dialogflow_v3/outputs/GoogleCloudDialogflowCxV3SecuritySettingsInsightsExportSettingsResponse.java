@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
      * 
     */
-    public Boolean getEnableInsightsExport() {
+    public Boolean enableInsightsExport() {
         return this.enableInsightsExport;
     }
 

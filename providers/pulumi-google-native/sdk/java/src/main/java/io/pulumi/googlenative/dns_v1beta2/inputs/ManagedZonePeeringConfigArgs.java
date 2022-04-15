@@ -19,7 +19,7 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -30,7 +30,7 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     @Import(name="targetNetwork")
       private final @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 
-    public Output<ManagedZonePeeringConfigTargetNetworkArgs> getTargetNetwork() {
+    public Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork() {
         return this.targetNetwork == null ? Codegen.empty() : this.targetNetwork;
     }
 

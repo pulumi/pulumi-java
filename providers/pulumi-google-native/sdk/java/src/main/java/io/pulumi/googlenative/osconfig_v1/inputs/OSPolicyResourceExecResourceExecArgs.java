@@ -29,7 +29,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -40,7 +40,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Output<OSPolicyResourceFileArgs> getFile() {
+    public Output<OSPolicyResourceFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -51,7 +51,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="interpreter", required=true)
       private final Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
-    public Output<OSPolicyResourceExecResourceExecInterpreter> getInterpreter() {
+    public Output<OSPolicyResourceExecResourceExecInterpreter> interpreter() {
         return this.interpreter;
     }
 
@@ -62,7 +62,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="outputFilePath")
       private final @Nullable Output<String> outputFilePath;
 
-    public Output<String> getOutputFilePath() {
+    public Output<String> outputFilePath() {
         return this.outputFilePath == null ? Codegen.empty() : this.outputFilePath;
     }
 
@@ -73,7 +73,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 

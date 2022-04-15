@@ -24,7 +24,7 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="range", required=true)
       private final GoogleMonitoringV3RangeResponse range;
 
-    public GoogleMonitoringV3RangeResponse getRange() {
+    public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
 
@@ -35,7 +35,7 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeSeries", required=true)
       private final String timeSeries;
 
-    public String getTimeSeries() {
+    public String timeSeries() {
         return this.timeSeries;
     }
 

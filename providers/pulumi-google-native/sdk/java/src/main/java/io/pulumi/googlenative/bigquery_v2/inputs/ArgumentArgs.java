@@ -29,7 +29,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="argumentKind")
       private final @Nullable Output<ArgumentArgumentKind> argumentKind;
 
-    public Output<ArgumentArgumentKind> getArgumentKind() {
+    public Output<ArgumentArgumentKind> argumentKind() {
         return this.argumentKind == null ? Codegen.empty() : this.argumentKind;
     }
 
@@ -40,7 +40,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<StandardSqlDataTypeArgs> dataType;
 
-    public Output<StandardSqlDataTypeArgs> getDataType() {
+    public Output<StandardSqlDataTypeArgs> dataType() {
         return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
@@ -51,7 +51,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<ArgumentMode> mode;
 
-    public Output<ArgumentMode> getMode() {
+    public Output<ArgumentMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -62,7 +62,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

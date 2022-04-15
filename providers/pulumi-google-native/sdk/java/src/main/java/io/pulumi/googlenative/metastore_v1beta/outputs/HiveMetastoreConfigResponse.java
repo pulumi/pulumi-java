@@ -55,35 +55,35 @@ public final class HiveMetastoreConfigResponse {
      * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen.
      * 
     */
-    public Map<String,String> getAuxiliaryVersions() {
+    public Map<String,String> auxiliaryVersions() {
         return this.auxiliaryVersions;
     }
     /**
      * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden). These overrides are also applied to auxiliary versions and can be further customized in the auxiliary version's AuxiliaryVersionConfig.
      * 
     */
-    public Map<String,String> getConfigOverrides() {
+    public Map<String,String> configOverrides() {
         return this.configOverrides;
     }
     /**
      * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
      * 
     */
-    public String getEndpointProtocol() {
+    public String endpointProtocol() {
         return this.endpointProtocol;
     }
     /**
      * Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field from the request's service.
      * 
     */
-    public KerberosConfigResponse getKerberosConfig() {
+    public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
     /**
      * Immutable. The Hive metastore schema version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

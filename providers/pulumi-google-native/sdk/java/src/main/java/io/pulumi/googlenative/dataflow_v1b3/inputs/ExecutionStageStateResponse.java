@@ -23,7 +23,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
     @Import(name="currentStateTime", required=true)
       private final String currentStateTime;
 
-    public String getCurrentStateTime() {
+    public String currentStateTime() {
         return this.currentStateTime;
     }
 
@@ -34,7 +34,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
     @Import(name="executionStageName", required=true)
       private final String executionStageName;
 
-    public String getExecutionStageName() {
+    public String executionStageName() {
         return this.executionStageName;
     }
 
@@ -45,7 +45,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
     @Import(name="executionStageState", required=true)
       private final String executionStageState;
 
-    public String getExecutionStageState() {
+    public String executionStageState() {
         return this.executionStageState;
     }
 

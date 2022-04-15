@@ -27,7 +27,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="effectiveTime")
       private final @Nullable Output<String> effectiveTime;
 
-    public Output<String> getEffectiveTime() {
+    public Output<String> effectiveTime() {
         return this.effectiveTime == null ? Codegen.empty() : this.effectiveTime;
     }
 
@@ -38,7 +38,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="isLocked")
       private final @Nullable Output<Boolean> isLocked;
 
-    public Output<Boolean> getIsLocked() {
+    public Output<Boolean> isLocked() {
         return this.isLocked == null ? Codegen.empty() : this.isLocked;
     }
 
@@ -49,7 +49,7 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="retentionPeriod")
       private final @Nullable Output<String> retentionPeriod;
 
-    public Output<String> getRetentionPeriod() {
+    public Output<String> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 

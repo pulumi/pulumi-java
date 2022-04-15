@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
     @Import(name="audioUri", required=true)
       private final String audioUri;
 
-    public String getAudioUri() {
+    public String audioUri() {
         return this.audioUri;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
     @Import(name="transcriptUri", required=true)
       private final String transcriptUri;
 
-    public String getTranscriptUri() {
+    public String transcriptUri() {
         return this.transcriptUri;
     }
 

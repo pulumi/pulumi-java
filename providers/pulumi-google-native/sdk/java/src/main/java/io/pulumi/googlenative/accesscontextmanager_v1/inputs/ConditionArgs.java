@@ -29,7 +29,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="devicePolicy")
       private final @Nullable Output<DevicePolicyArgs> devicePolicy;
 
-    public Output<DevicePolicyArgs> getDevicePolicy() {
+    public Output<DevicePolicyArgs> devicePolicy() {
         return this.devicePolicy == null ? Codegen.empty() : this.devicePolicy;
     }
 
@@ -40,7 +40,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipSubnetworks")
       private final @Nullable Output<List<String>> ipSubnetworks;
 
-    public Output<List<String>> getIpSubnetworks() {
+    public Output<List<String>> ipSubnetworks() {
         return this.ipSubnetworks == null ? Codegen.empty() : this.ipSubnetworks;
     }
 
@@ -51,7 +51,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -62,7 +62,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> getNegate() {
+    public Output<Boolean> negate() {
         return this.negate == null ? Codegen.empty() : this.negate;
     }
 
@@ -73,7 +73,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions == null ? Codegen.empty() : this.regions;
     }
 
@@ -84,7 +84,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requiredAccessLevels")
       private final @Nullable Output<List<String>> requiredAccessLevels;
 
-    public Output<List<String>> getRequiredAccessLevels() {
+    public Output<List<String>> requiredAccessLevels() {
         return this.requiredAccessLevels == null ? Codegen.empty() : this.requiredAccessLevels;
     }
 

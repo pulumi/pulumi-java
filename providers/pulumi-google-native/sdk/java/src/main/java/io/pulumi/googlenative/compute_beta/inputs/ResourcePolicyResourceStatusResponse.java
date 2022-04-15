@@ -23,7 +23,7 @@ public final class ResourcePolicyResourceStatusResponse extends io.pulumi.resour
     @Import(name="instanceSchedulePolicy", required=true)
       private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
-    public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse getInstanceSchedulePolicy() {
+    public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
 

@@ -25,7 +25,7 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="gcsSource", required=true)
       private final Output<GcsSourceArgs> gcsSource;
 
-    public Output<GcsSourceArgs> getGcsSource() {
+    public Output<GcsSourceArgs> gcsSource() {
         return this.gcsSource;
     }
 

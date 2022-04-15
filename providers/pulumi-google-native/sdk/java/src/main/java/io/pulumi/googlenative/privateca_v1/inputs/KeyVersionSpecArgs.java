@@ -27,7 +27,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="algorithm")
       private final @Nullable Output<KeyVersionSpecAlgorithm> algorithm;
 
-    public Output<KeyVersionSpecAlgorithm> getAlgorithm() {
+    public Output<KeyVersionSpecAlgorithm> algorithm() {
         return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
@@ -38,7 +38,7 @@ public final class KeyVersionSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudKmsKeyVersion")
       private final @Nullable Output<String> cloudKmsKeyVersion;
 
-    public Output<String> getCloudKmsKeyVersion() {
+    public Output<String> cloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion == null ? Codegen.empty() : this.cloudKmsKeyVersion;
     }
 

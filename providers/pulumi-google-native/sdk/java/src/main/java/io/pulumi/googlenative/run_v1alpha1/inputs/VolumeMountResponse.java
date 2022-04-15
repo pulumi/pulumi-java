@@ -24,7 +24,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mountPath", required=true)
       private final String mountPath;
 
-    public String getMountPath() {
+    public String mountPath() {
         return this.mountPath;
     }
 
@@ -35,7 +35,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -46,7 +46,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="readOnly", required=true)
       private final Boolean readOnly;
 
-    public Boolean getReadOnly() {
+    public Boolean readOnly() {
         return this.readOnly;
     }
 
@@ -57,7 +57,7 @@ public final class VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subPath", required=true)
       private final String subPath;
 
-    public String getSubPath() {
+    public String subPath() {
         return this.subPath;
     }
 

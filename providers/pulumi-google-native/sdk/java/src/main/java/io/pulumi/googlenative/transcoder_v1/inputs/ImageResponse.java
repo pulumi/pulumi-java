@@ -25,7 +25,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alpha", required=true)
       private final Double alpha;
 
-    public Double getAlpha() {
+    public Double alpha() {
         return this.alpha;
     }
 
@@ -36,7 +36,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resolution", required=true)
       private final NormalizedCoordinateResponse resolution;
 
-    public NormalizedCoordinateResponse getResolution() {
+    public NormalizedCoordinateResponse resolution() {
         return this.resolution;
     }
 
@@ -47,7 +47,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

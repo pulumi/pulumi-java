@@ -42,21 +42,21 @@ public final class KeyUsageResponse {
      * Describes high-level ways in which a key may be used.
      * 
     */
-    public KeyUsageOptionsResponse getBaseKeyUsage() {
+    public KeyUsageOptionsResponse baseKeyUsage() {
         return this.baseKeyUsage;
     }
     /**
      * Detailed scenarios in which a key may be used.
      * 
     */
-    public ExtendedKeyUsageOptionsResponse getExtendedKeyUsage() {
+    public ExtendedKeyUsageOptionsResponse extendedKeyUsage() {
         return this.extendedKeyUsage;
     }
     /**
      * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
      * 
     */
-    public List<ObjectIdResponse> getUnknownExtendedKeyUsages() {
+    public List<ObjectIdResponse> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages;
     }
 

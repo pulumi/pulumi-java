@@ -24,7 +24,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<QueryContentArgs> content;
 
-    public Output<QueryContentArgs> getContent() {
+    public Output<QueryContentArgs> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -35,7 +35,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -57,28 +57,28 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="savedQueryId", required=true)
       private final Output<String> savedQueryId;
 
-    public Output<String> getSavedQueryId() {
+    public Output<String> savedQueryId() {
         return this.savedQueryId;
     }
 
     @Import(name="v1Id", required=true)
       private final Output<String> v1Id;
 
-    public Output<String> getV1Id() {
+    public Output<String> v1Id() {
         return this.v1Id;
     }
 
     @Import(name="v1Id1", required=true)
       private final Output<String> v1Id1;
 
-    public Output<String> getV1Id1() {
+    public Output<String> v1Id1() {
         return this.v1Id1;
     }
 

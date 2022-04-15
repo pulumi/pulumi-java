@@ -27,7 +27,7 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
     @Import(name="connector")
       private final @Nullable Output<String> connector;
 
-    public Output<String> getConnector() {
+    public Output<String> connector() {
         return this.connector == null ? Codegen.empty() : this.connector;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
     @Import(name="egress")
       private final @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
 
-    public Output<GoogleCloudRunOpV2VpcAccessEgress> getEgress() {
+    public Output<GoogleCloudRunOpV2VpcAccessEgress> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 

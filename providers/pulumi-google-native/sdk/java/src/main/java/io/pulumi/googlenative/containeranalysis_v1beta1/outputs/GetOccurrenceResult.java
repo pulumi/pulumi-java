@@ -164,133 +164,133 @@ public final class GetOccurrenceResult {
      * Describes an attestation of an artifact.
      * 
     */
-    public DetailsResponse getAttestation() {
+    public DetailsResponse attestation() {
         return this.attestation;
     }
     /**
      * Describes a verifiable build.
      * 
     */
-    public GrafeasV1beta1BuildDetailsResponse getBuild() {
+    public GrafeasV1beta1BuildDetailsResponse build() {
         return this.build;
     }
     /**
      * The time this occurrence was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Describes the deployment of an artifact on a runtime.
      * 
     */
-    public GrafeasV1beta1DeploymentDetailsResponse getDeployment() {
+    public GrafeasV1beta1DeploymentDetailsResponse deployment() {
         return this.deployment;
     }
     /**
      * Describes how this resource derives from the basis in the associated note.
      * 
     */
-    public GrafeasV1beta1ImageDetailsResponse getDerivedImage() {
+    public GrafeasV1beta1ImageDetailsResponse derivedImage() {
         return this.derivedImage;
     }
     /**
      * Describes when a resource was discovered.
      * 
     */
-    public GrafeasV1beta1DiscoveryDetailsResponse getDiscovered() {
+    public GrafeasV1beta1DiscoveryDetailsResponse discovered() {
         return this.discovered;
     }
     /**
      * Describes the installation of a package on the linked resource.
      * 
     */
-    public GrafeasV1beta1PackageDetailsResponse getInstallation() {
+    public GrafeasV1beta1PackageDetailsResponse installation() {
         return this.installation;
     }
     /**
      * Describes a specific in-toto link.
      * 
     */
-    public GrafeasV1beta1IntotoDetailsResponse getIntoto() {
+    public GrafeasV1beta1IntotoDetailsResponse intoto() {
         return this.intoto;
     }
     /**
      * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
     */
-    public String getNoteName() {
+    public String noteName() {
         return this.noteName;
     }
     /**
      * A description of actions that can be taken to remedy the note.
      * 
     */
-    public String getRemediation() {
+    public String remediation() {
         return this.remediation;
     }
     /**
      * Immutable. The resource for which the occurrence applies.
      * 
     */
-    public ResourceResponse getResource() {
+    public ResourceResponse resource() {
         return this.resource;
     }
     /**
      * Describes a specific software bill of materials document.
      * 
     */
-    public DocumentOccurrenceResponse getSbom() {
+    public DocumentOccurrenceResponse sbom() {
         return this.sbom;
     }
     /**
      * Describes a specific SPDX File.
      * 
     */
-    public FileOccurrenceResponse getSpdxFile() {
+    public FileOccurrenceResponse spdxFile() {
         return this.spdxFile;
     }
     /**
      * Describes a specific SPDX Package.
      * 
     */
-    public PackageInfoOccurrenceResponse getSpdxPackage() {
+    public PackageInfoOccurrenceResponse spdxPackage() {
         return this.spdxPackage;
     }
     /**
      * Describes a specific SPDX Relationship.
      * 
     */
-    public RelationshipOccurrenceResponse getSpdxRelationship() {
+    public RelationshipOccurrenceResponse spdxRelationship() {
         return this.spdxRelationship;
     }
     /**
      * The time this occurrence was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Describes a security vulnerability.
      * 
     */
-    public GrafeasV1beta1VulnerabilityDetailsResponse getVulnerability() {
+    public GrafeasV1beta1VulnerabilityDetailsResponse vulnerability() {
         return this.vulnerability;
     }
 

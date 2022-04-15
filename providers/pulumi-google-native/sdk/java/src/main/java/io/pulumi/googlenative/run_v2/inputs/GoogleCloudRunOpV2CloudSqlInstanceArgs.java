@@ -27,7 +27,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
     @Import(name="connections")
       private final @Nullable Output<List<String>> connections;
 
-    public Output<List<String>> getConnections() {
+    public Output<List<String>> connections() {
         return this.connections == null ? Codegen.empty() : this.connections;
     }
 

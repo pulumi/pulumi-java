@@ -26,7 +26,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
     @Import(name="bitbucketServerConfig", required=true)
       private final BitbucketServerConfigResponse bitbucketServerConfig;
 
-    public BitbucketServerConfigResponse getBitbucketServerConfig() {
+    public BitbucketServerConfigResponse bitbucketServerConfig() {
         return this.bitbucketServerConfig;
     }
 
@@ -37,7 +37,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
     @Import(name="bitbucketServerConfigResource", required=true)
       private final String bitbucketServerConfigResource;
 
-    public String getBitbucketServerConfigResource() {
+    public String bitbucketServerConfigResource() {
         return this.bitbucketServerConfigResource;
     }
 
@@ -48,7 +48,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
     @Import(name="projectKey", required=true)
       private final String projectKey;
 
-    public String getProjectKey() {
+    public String projectKey() {
         return this.projectKey;
     }
 
@@ -59,7 +59,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
     @Import(name="pullRequest", required=true)
       private final PullRequestFilterResponse pullRequest;
 
-    public PullRequestFilterResponse getPullRequest() {
+    public PullRequestFilterResponse pullRequest() {
         return this.pullRequest;
     }
 
@@ -70,7 +70,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
     @Import(name="push", required=true)
       private final PushFilterResponse push;
 
-    public PushFilterResponse getPush() {
+    public PushFilterResponse push() {
         return this.push;
     }
 
@@ -81,7 +81,7 @@ public final class BitbucketServerTriggerConfigResponse extends io.pulumi.resour
     @Import(name="repoSlug", required=true)
       private final String repoSlug;
 
-    public String getRepoSlug() {
+    public String repoSlug() {
         return this.repoSlug;
     }
 

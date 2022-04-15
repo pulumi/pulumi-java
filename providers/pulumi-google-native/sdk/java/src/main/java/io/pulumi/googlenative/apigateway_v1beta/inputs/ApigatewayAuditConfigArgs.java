@@ -28,7 +28,7 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="auditLogConfigs")
       private final @Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<ApigatewayAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
@@ -39,7 +39,7 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

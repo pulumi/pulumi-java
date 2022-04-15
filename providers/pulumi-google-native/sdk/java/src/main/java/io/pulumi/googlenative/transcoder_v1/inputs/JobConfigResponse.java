@@ -33,7 +33,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="adBreaks", required=true)
       private final List<AdBreakResponse> adBreaks;
 
-    public List<AdBreakResponse> getAdBreaks() {
+    public List<AdBreakResponse> adBreaks() {
         return this.adBreaks;
     }
 
@@ -44,7 +44,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="editList", required=true)
       private final List<EditAtomResponse> editList;
 
-    public List<EditAtomResponse> getEditList() {
+    public List<EditAtomResponse> editList() {
         return this.editList;
     }
 
@@ -55,7 +55,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="elementaryStreams", required=true)
       private final List<ElementaryStreamResponse> elementaryStreams;
 
-    public List<ElementaryStreamResponse> getElementaryStreams() {
+    public List<ElementaryStreamResponse> elementaryStreams() {
         return this.elementaryStreams;
     }
 
@@ -66,7 +66,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputs", required=true)
       private final List<InputResponse> inputs;
 
-    public List<InputResponse> getInputs() {
+    public List<InputResponse> inputs() {
         return this.inputs;
     }
 
@@ -77,7 +77,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="manifests", required=true)
       private final List<ManifestResponse> manifests;
 
-    public List<ManifestResponse> getManifests() {
+    public List<ManifestResponse> manifests() {
         return this.manifests;
     }
 
@@ -88,7 +88,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="muxStreams", required=true)
       private final List<MuxStreamResponse> muxStreams;
 
-    public List<MuxStreamResponse> getMuxStreams() {
+    public List<MuxStreamResponse> muxStreams() {
         return this.muxStreams;
     }
 
@@ -99,7 +99,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="output", required=true)
       private final OutputResponse output;
 
-    public OutputResponse getOutput() {
+    public OutputResponse output() {
         return this.output;
     }
 
@@ -110,7 +110,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="overlays", required=true)
       private final List<OverlayResponse> overlays;
 
-    public List<OverlayResponse> getOverlays() {
+    public List<OverlayResponse> overlays() {
         return this.overlays;
     }
 
@@ -121,7 +121,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pubsubDestination", required=true)
       private final PubsubDestinationResponse pubsubDestination;
 
-    public PubsubDestinationResponse getPubsubDestination() {
+    public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
 
@@ -132,7 +132,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="spriteSheets", required=true)
       private final List<SpriteSheetResponse> spriteSheets;
 
-    public List<SpriteSheetResponse> getSpriteSheets() {
+    public List<SpriteSheetResponse> spriteSheets() {
         return this.spriteSheets;
     }
 

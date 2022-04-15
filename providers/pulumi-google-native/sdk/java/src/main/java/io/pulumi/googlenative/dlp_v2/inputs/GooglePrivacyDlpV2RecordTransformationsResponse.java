@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends io.pu
     @Import(name="fieldTransformations", required=true)
       private final List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
 
-    public List<GooglePrivacyDlpV2FieldTransformationResponse> getFieldTransformations() {
+    public List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations() {
         return this.fieldTransformations;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends io.pu
     @Import(name="recordSuppressions", required=true)
       private final List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
 
-    public List<GooglePrivacyDlpV2RecordSuppressionResponse> getRecordSuppressions() {
+    public List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions() {
         return this.recordSuppressions;
     }
 

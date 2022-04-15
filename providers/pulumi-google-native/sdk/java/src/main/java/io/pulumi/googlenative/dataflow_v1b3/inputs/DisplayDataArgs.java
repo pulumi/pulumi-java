@@ -28,7 +28,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> getBoolValue() {
+    public Output<Boolean> boolValue() {
         return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
@@ -39,7 +39,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="durationValue")
       private final @Nullable Output<String> durationValue;
 
-    public Output<String> getDurationValue() {
+    public Output<String> durationValue() {
         return this.durationValue == null ? Codegen.empty() : this.durationValue;
     }
 
@@ -50,7 +50,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
-    public Output<Double> getFloatValue() {
+    public Output<Double> floatValue() {
         return this.floatValue == null ? Codegen.empty() : this.floatValue;
     }
 
@@ -61,7 +61,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
 
-    public Output<String> getInt64Value() {
+    public Output<String> int64Value() {
         return this.int64Value == null ? Codegen.empty() : this.int64Value;
     }
 
@@ -72,7 +72,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="javaClassValue")
       private final @Nullable Output<String> javaClassValue;
 
-    public Output<String> getJavaClassValue() {
+    public Output<String> javaClassValue() {
         return this.javaClassValue == null ? Codegen.empty() : this.javaClassValue;
     }
 
@@ -83,7 +83,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -94,7 +94,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -105,7 +105,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -116,7 +116,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortStrValue")
       private final @Nullable Output<String> shortStrValue;
 
-    public Output<String> getShortStrValue() {
+    public Output<String> shortStrValue() {
         return this.shortStrValue == null ? Codegen.empty() : this.shortStrValue;
     }
 
@@ -127,7 +127,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strValue")
       private final @Nullable Output<String> strValue;
 
-    public Output<String> getStrValue() {
+    public Output<String> strValue() {
         return this.strValue == null ? Codegen.empty() : this.strValue;
     }
 
@@ -138,7 +138,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
-    public Output<String> getTimestampValue() {
+    public Output<String> timestampValue() {
         return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 
@@ -149,7 +149,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

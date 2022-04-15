@@ -47,28 +47,28 @@ public final class InitialStateConfigResponse {
      * The Key Database (db).
      * 
     */
-    public List<FileContentBufferResponse> getDbs() {
+    public List<FileContentBufferResponse> dbs() {
         return this.dbs;
     }
     /**
      * The forbidden key database (dbx).
      * 
     */
-    public List<FileContentBufferResponse> getDbxs() {
+    public List<FileContentBufferResponse> dbxs() {
         return this.dbxs;
     }
     /**
      * The Key Exchange Key (KEK).
      * 
     */
-    public List<FileContentBufferResponse> getKeks() {
+    public List<FileContentBufferResponse> keks() {
         return this.keks;
     }
     /**
      * The Platform Key (PK).
      * 
     */
-    public FileContentBufferResponse getPk() {
+    public FileContentBufferResponse pk() {
         return this.pk;
     }
 

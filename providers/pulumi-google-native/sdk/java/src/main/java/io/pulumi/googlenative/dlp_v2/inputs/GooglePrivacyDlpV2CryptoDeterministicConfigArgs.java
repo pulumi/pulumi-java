@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     @Import(name="context")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     @Import(name="cryptoKey")
       private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
         return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     @Import(name="surrogateInfoType")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType() {
         return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 

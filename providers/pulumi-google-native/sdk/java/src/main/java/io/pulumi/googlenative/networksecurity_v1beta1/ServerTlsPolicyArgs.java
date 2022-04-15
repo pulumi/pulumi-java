@@ -26,7 +26,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="allowOpen")
       private final @Nullable Output<Boolean> allowOpen;
 
-    public Output<Boolean> getAllowOpen() {
+    public Output<Boolean> allowOpen() {
         return this.allowOpen == null ? Codegen.empty() : this.allowOpen;
     }
 
@@ -37,7 +37,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,14 +48,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -66,7 +66,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="mtlsPolicy")
       private final @Nullable Output<MTLSPolicyArgs> mtlsPolicy;
 
-    public Output<MTLSPolicyArgs> getMtlsPolicy() {
+    public Output<MTLSPolicyArgs> mtlsPolicy() {
         return this.mtlsPolicy == null ? Codegen.empty() : this.mtlsPolicy;
     }
 
@@ -77,14 +77,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -95,14 +95,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serverCertificate")
       private final @Nullable Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate;
 
-    public Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> getServerCertificate() {
+    public Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate() {
         return this.serverCertificate == null ? Codegen.empty() : this.serverCertificate;
     }
 
     @Import(name="serverTlsPolicyId", required=true)
       private final Output<String> serverTlsPolicyId;
 
-    public Output<String> getServerTlsPolicyId() {
+    public Output<String> serverTlsPolicyId() {
         return this.serverTlsPolicyId;
     }
 

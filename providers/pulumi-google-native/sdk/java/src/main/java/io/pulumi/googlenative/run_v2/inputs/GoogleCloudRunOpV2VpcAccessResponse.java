@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resourc
     @Import(name="connector", required=true)
       private final String connector;
 
-    public String getConnector() {
+    public String connector() {
         return this.connector;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends io.pulumi.resourc
     @Import(name="egress", required=true)
       private final String egress;
 
-    public String getEgress() {
+    public String egress() {
         return this.egress;
     }
 

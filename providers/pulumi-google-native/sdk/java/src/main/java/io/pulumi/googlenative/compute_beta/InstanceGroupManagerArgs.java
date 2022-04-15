@@ -31,7 +31,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="autoHealingPolicies")
       private final @Nullable Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
 
-    public Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> getAutoHealingPolicies() {
+    public Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies() {
         return this.autoHealingPolicies == null ? Codegen.empty() : this.autoHealingPolicies;
     }
 
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
 
-    public Output<String> getBaseInstanceName() {
+    public Output<String> baseInstanceName() {
         return this.baseInstanceName == null ? Codegen.empty() : this.baseInstanceName;
     }
 
@@ -53,7 +53,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -64,7 +64,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="distributionPolicy")
       private final @Nullable Output<DistributionPolicyArgs> distributionPolicy;
 
-    public Output<DistributionPolicyArgs> getDistributionPolicy() {
+    public Output<DistributionPolicyArgs> distributionPolicy() {
         return this.distributionPolicy == null ? Codegen.empty() : this.distributionPolicy;
     }
 
@@ -75,7 +75,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="failoverAction")
       private final @Nullable Output<InstanceGroupManagerFailoverAction> failoverAction;
 
-    public Output<InstanceGroupManagerFailoverAction> getFailoverAction() {
+    public Output<InstanceGroupManagerFailoverAction> failoverAction() {
         return this.failoverAction == null ? Codegen.empty() : this.failoverAction;
     }
 
@@ -86,7 +86,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
 
-    public Output<String> getInstanceTemplate() {
+    public Output<String> instanceTemplate() {
         return this.instanceTemplate == null ? Codegen.empty() : this.instanceTemplate;
     }
 
@@ -97,7 +97,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -108,21 +108,21 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;
 
-    public Output<List<NamedPortArgs>> getNamedPorts() {
+    public Output<List<NamedPortArgs>> namedPorts() {
         return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -133,7 +133,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -144,7 +144,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="statefulPolicy")
       private final @Nullable Output<StatefulPolicyArgs> statefulPolicy;
 
-    public Output<StatefulPolicyArgs> getStatefulPolicy() {
+    public Output<StatefulPolicyArgs> statefulPolicy() {
         return this.statefulPolicy == null ? Codegen.empty() : this.statefulPolicy;
     }
 
@@ -155,7 +155,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
-    public Output<List<String>> getTargetPools() {
+    public Output<List<String>> targetPools() {
         return this.targetPools == null ? Codegen.empty() : this.targetPools;
     }
 
@@ -166,7 +166,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
-    public Output<Integer> getTargetSize() {
+    public Output<Integer> targetSize() {
         return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 
@@ -177,7 +177,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="updatePolicy")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
-    public Output<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
+    public Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy() {
         return this.updatePolicy == null ? Codegen.empty() : this.updatePolicy;
     }
 
@@ -188,14 +188,14 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     @Import(name="versions")
       private final @Nullable Output<List<InstanceGroupManagerVersionArgs>> versions;
 
-    public Output<List<InstanceGroupManagerVersionArgs>> getVersions() {
+    public Output<List<InstanceGroupManagerVersionArgs>> versions() {
         return this.versions == null ? Codegen.empty() : this.versions;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

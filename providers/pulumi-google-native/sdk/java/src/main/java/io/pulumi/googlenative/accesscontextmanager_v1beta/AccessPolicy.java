@@ -30,7 +30,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -44,7 +44,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -58,7 +58,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Does not affect behavior.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

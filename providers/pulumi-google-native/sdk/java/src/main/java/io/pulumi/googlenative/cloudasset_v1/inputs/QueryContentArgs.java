@@ -26,7 +26,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamPolicyAnalysisQuery")
       private final @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
-    public Output<IamPolicyAnalysisQueryArgs> getIamPolicyAnalysisQuery() {
+    public Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery() {
         return this.iamPolicyAnalysisQuery == null ? Codegen.empty() : this.iamPolicyAnalysisQuery;
     }
 

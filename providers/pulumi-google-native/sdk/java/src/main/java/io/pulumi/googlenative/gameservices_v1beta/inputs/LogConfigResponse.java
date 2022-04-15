@@ -25,7 +25,7 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cloudAudit", required=true)
       private final CloudAuditOptionsResponse cloudAudit;
 
-    public CloudAuditOptionsResponse getCloudAudit() {
+    public CloudAuditOptionsResponse cloudAudit() {
         return this.cloudAudit;
     }
 
@@ -36,7 +36,7 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="counter", required=true)
       private final CounterOptionsResponse counter;
 
-    public CounterOptionsResponse getCounter() {
+    public CounterOptionsResponse counter() {
         return this.counter;
     }
 
@@ -47,7 +47,7 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataAccess", required=true)
       private final DataAccessOptionsResponse dataAccess;
 
-    public DataAccessOptionsResponse getDataAccess() {
+    public DataAccessOptionsResponse dataAccess() {
         return this.dataAccess;
     }
 

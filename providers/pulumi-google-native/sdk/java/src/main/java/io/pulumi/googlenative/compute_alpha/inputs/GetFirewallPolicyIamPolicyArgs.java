@@ -17,14 +17,14 @@ public final class GetFirewallPolicyIamPolicyArgs extends io.pulumi.resources.In
     @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
-    public Optional<String> getOptionsRequestedPolicyVersion() {
+    public Optional<String> optionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

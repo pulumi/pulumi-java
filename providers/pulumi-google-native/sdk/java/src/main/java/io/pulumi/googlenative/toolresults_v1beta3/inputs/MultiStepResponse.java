@@ -25,7 +25,7 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="multistepNumber", required=true)
       private final Integer multistepNumber;
 
-    public Integer getMultistepNumber() {
+    public Integer multistepNumber() {
         return this.multistepNumber;
     }
 
@@ -36,7 +36,7 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="primaryStep", required=true)
       private final PrimaryStepResponse primaryStep;
 
-    public PrimaryStepResponse getPrimaryStep() {
+    public PrimaryStepResponse primaryStep() {
         return this.primaryStep;
     }
 
@@ -47,7 +47,7 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="primaryStepId", required=true)
       private final String primaryStepId;
 
-    public String getPrimaryStepId() {
+    public String primaryStepId() {
         return this.primaryStepId;
     }
 

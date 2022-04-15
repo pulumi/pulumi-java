@@ -24,7 +24,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -35,14 +35,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -53,28 +53,28 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privatePoolV1Config")
       private final @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
-    public Output<PrivatePoolV1ConfigArgs> getPrivatePoolV1Config() {
+    public Output<PrivatePoolV1ConfigArgs> privatePoolV1Config() {
         return this.privatePoolV1Config == null ? Codegen.empty() : this.privatePoolV1Config;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     @Import(name="workerPoolId", required=true)
       private final Output<String> workerPoolId;
 
-    public Output<String> getWorkerPoolId() {
+    public Output<String> workerPoolId() {
         return this.workerPoolId;
     }
 

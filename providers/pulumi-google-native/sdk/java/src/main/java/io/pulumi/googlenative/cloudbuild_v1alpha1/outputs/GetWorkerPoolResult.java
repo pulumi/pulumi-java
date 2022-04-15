@@ -90,70 +90,70 @@ public final class GetWorkerPoolResult {
      * Time at which the request to create the `WorkerPool` was received.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Time at which the request to delete the `WorkerPool` was received.
      * 
     */
-    public String getDeleteTime() {
+    public String deleteTime() {
         return this.deleteTime;
     }
     /**
      * User-defined name of the `WorkerPool`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The project ID of the GCP project for which the `WorkerPool` is created.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
      * 
     */
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions;
     }
     /**
      * The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
      * 
     */
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * WorkerPool Status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Time at which the request to update the `WorkerPool` was received.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Configuration to be used for a creating workers in the `WorkerPool`.
      * 
     */
-    public WorkerConfigResponse getWorkerConfig() {
+    public WorkerConfigResponse workerConfig() {
         return this.workerConfig;
     }
     /**
      * Total number of workers to be created across all requested regions.
      * 
     */
-    public String getWorkerCount() {
+    public String workerCount() {
         return this.workerCount;
     }
 

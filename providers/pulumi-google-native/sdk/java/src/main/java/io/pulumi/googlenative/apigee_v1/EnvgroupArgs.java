@@ -23,7 +23,7 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostnames", required=true)
       private final Output<List<String>> hostnames;
 
-    public Output<List<String>> getHostnames() {
+    public Output<List<String>> hostnames() {
         return this.hostnames;
     }
 
@@ -34,14 +34,14 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

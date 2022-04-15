@@ -29,7 +29,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudFunction")
       private final @Nullable Output<CloudFunctionEndpointArgs> cloudFunction;
 
-    public Output<CloudFunctionEndpointArgs> getCloudFunction() {
+    public Output<CloudFunctionEndpointArgs> cloudFunction() {
         return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
@@ -40,7 +40,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudSqlInstance")
       private final @Nullable Output<String> cloudSqlInstance;
 
-    public Output<String> getCloudSqlInstance() {
+    public Output<String> cloudSqlInstance() {
         return this.cloudSqlInstance == null ? Codegen.empty() : this.cloudSqlInstance;
     }
 
@@ -51,7 +51,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gkeMasterCluster")
       private final @Nullable Output<String> gkeMasterCluster;
 
-    public Output<String> getGkeMasterCluster() {
+    public Output<String> gkeMasterCluster() {
         return this.gkeMasterCluster == null ? Codegen.empty() : this.gkeMasterCluster;
     }
 
@@ -62,7 +62,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -73,7 +73,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -84,7 +84,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -95,7 +95,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkType")
       private final @Nullable Output<EndpointNetworkType> networkType;
 
-    public Output<EndpointNetworkType> getNetworkType() {
+    public Output<EndpointNetworkType> networkType() {
         return this.networkType == null ? Codegen.empty() : this.networkType;
     }
 
@@ -106,7 +106,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -117,7 +117,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

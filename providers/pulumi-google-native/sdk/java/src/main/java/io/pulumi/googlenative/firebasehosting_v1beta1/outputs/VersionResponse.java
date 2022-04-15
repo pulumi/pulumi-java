@@ -105,84 +105,84 @@ public final class VersionResponse {
      * The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
      * 
     */
-    public ServingConfigResponse getConfig() {
+    public ServingConfigResponse config() {
         return this.config;
     }
     /**
      * The time at which the version was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Identifies the user who created the version.
      * 
     */
-    public ActingUserResponse getCreateUser() {
+    public ActingUserResponse createUser() {
         return this.createUser;
     }
     /**
      * The time at which the version was `DELETED`.
      * 
     */
-    public String getDeleteTime() {
+    public String deleteTime() {
         return this.deleteTime;
     }
     /**
      * Identifies the user who `DELETED` the version.
      * 
     */
-    public ActingUserResponse getDeleteUser() {
+    public ActingUserResponse deleteUser() {
         return this.deleteUser;
     }
     /**
      * The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.
      * 
     */
-    public String getFileCount() {
+    public String fileCount() {
         return this.fileCount;
     }
     /**
      * The time at which the version was `FINALIZED`.
      * 
     */
-    public String getFinalizeTime() {
+    public String finalizeTime() {
         return this.finalizeTime;
     }
     /**
      * Identifies the user who `FINALIZED` the version.
      * 
     */
-    public ActingUserResponse getFinalizeUser() {
+    public ActingUserResponse finalizeUser() {
         return this.finalizeUser;
     }
     /**
      * The labels used for extra metadata and/or filtering.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.
      * 
     */
-    public String getVersionBytes() {
+    public String versionBytes() {
         return this.versionBytes;
     }
 

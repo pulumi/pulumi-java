@@ -41,21 +41,21 @@ public final class VideoStreamResponse {
      * H264 codec settings.
      * 
     */
-    public H264CodecSettingsResponse getH264() {
+    public H264CodecSettingsResponse h264() {
         return this.h264;
     }
     /**
      * H265 codec settings.
      * 
     */
-    public H265CodecSettingsResponse getH265() {
+    public H265CodecSettingsResponse h265() {
         return this.h265;
     }
     /**
      * VP9 codec settings.
      * 
     */
-    public Vp9CodecSettingsResponse getVp9() {
+    public Vp9CodecSettingsResponse vp9() {
         return this.vp9;
     }
 

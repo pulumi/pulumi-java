@@ -15,21 +15,21 @@ public final class GetFolderReplayArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="folderId", required=true)
       private final String folderId;
 
-    public String getFolderId() {
+    public String folderId() {
         return this.folderId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="replayId", required=true)
       private final String replayId;
 
-    public String getReplayId() {
+    public String replayId() {
         return this.replayId;
     }
 

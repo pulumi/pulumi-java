@@ -29,7 +29,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +43,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -71,7 +71,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Immutable. Resource name for TagValue in the format `tagValues/456`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
      * 
      */
-    public Output<String> getNamespacedName() {
+    public Output<String> namespacedName() {
         return this.namespacedName;
     }
     /**
@@ -99,7 +99,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -113,7 +113,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
     /**
@@ -127,7 +127,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Update time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

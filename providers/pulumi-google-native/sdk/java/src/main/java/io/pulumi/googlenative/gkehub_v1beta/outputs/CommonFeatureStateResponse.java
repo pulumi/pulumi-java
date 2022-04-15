@@ -33,14 +33,14 @@ public final class CommonFeatureStateResponse {
      * Appdevexperience specific state.
      * 
     */
-    public AppDevExperienceFeatureStateResponse getAppdevexperience() {
+    public AppDevExperienceFeatureStateResponse appdevexperience() {
         return this.appdevexperience;
     }
     /**
      * The "running state" of the Feature in this Hub.
      * 
     */
-    public FeatureStateResponse getState() {
+    public FeatureStateResponse state() {
         return this.state;
     }
 

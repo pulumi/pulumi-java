@@ -20,7 +20,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowJaggedRows", required=true)
       private final Boolean allowJaggedRows;
 
-    public Boolean getAllowJaggedRows() {
+    public Boolean allowJaggedRows() {
         return this.allowJaggedRows;
     }
 
@@ -31,7 +31,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowQuotedNewlines", required=true)
       private final Boolean allowQuotedNewlines;
 
-    public Boolean getAllowQuotedNewlines() {
+    public Boolean allowQuotedNewlines() {
         return this.allowQuotedNewlines;
     }
 
@@ -42,7 +42,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="encoding", required=true)
       private final String encoding;
 
-    public String getEncoding() {
+    public String encoding() {
         return this.encoding;
     }
 
@@ -53,7 +53,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fieldDelimiter", required=true)
       private final String fieldDelimiter;
 
-    public String getFieldDelimiter() {
+    public String fieldDelimiter() {
         return this.fieldDelimiter;
     }
 
@@ -64,7 +64,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nullMarker", required=true)
       private final String nullMarker;
 
-    public String getNullMarker() {
+    public String nullMarker() {
         return this.nullMarker;
     }
 
@@ -75,7 +75,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="quote", required=true)
       private final String quote;
 
-    public String getQuote() {
+    public String quote() {
         return this.quote;
     }
 
@@ -86,7 +86,7 @@ public final class CsvOptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="skipLeadingRows", required=true)
       private final String skipLeadingRows;
 
-    public String getSkipLeadingRows() {
+    public String skipLeadingRows() {
         return this.skipLeadingRows;
     }
 

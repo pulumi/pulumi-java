@@ -99,77 +99,77 @@ public final class GetSpokeResult {
      * The time the spoke was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * An optional description of the spoke.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Immutable. The name of the hub that this spoke is attached to.
      * 
     */
-    public String getHub() {
+    public String hub() {
         return this.hub;
     }
     /**
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * VLAN attachments that are associated with the spoke.
      * 
     */
-    public LinkedInterconnectAttachmentsResponse getLinkedInterconnectAttachments() {
+    public LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
      * Router appliance instances that are associated with the spoke.
      * 
     */
-    public LinkedRouterApplianceInstancesResponse getLinkedRouterApplianceInstances() {
+    public LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
      * VPN tunnels that are associated with the spoke.
      * 
     */
-    public LinkedVpnTunnelsResponse getLinkedVpnTunnels() {
+    public LinkedVpnTunnelsResponse linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
      * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current lifecycle state of this spoke.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The Google-generated UUID for the spoke. This value is unique across all spoke resources. If a spoke is deleted and another with the same name is created, the new spoke is assigned a different unique_id.
      * 
     */
-    public String getUniqueId() {
+    public String uniqueId() {
         return this.uniqueId;
     }
     /**
      * The time the spoke was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

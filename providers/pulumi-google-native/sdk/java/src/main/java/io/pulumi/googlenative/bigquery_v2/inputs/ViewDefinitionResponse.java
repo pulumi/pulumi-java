@@ -22,7 +22,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -33,7 +33,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="useExplicitColumnNames", required=true)
       private final Boolean useExplicitColumnNames;
 
-    public Boolean getUseExplicitColumnNames() {
+    public Boolean useExplicitColumnNames() {
         return this.useExplicitColumnNames;
     }
 
@@ -44,7 +44,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="useLegacySql", required=true)
       private final Boolean useLegacySql;
 
-    public Boolean getUseLegacySql() {
+    public Boolean useLegacySql() {
         return this.useLegacySql;
     }
 
@@ -55,7 +55,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="userDefinedFunctionResources", required=true)
       private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
-    public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {
+    public List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
     }
 

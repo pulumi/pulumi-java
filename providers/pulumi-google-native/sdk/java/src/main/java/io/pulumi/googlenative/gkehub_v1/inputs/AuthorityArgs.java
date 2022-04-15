@@ -26,7 +26,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
@@ -37,7 +37,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcJwks")
       private final @Nullable Output<String> oidcJwks;
 
-    public Output<String> getOidcJwks() {
+    public Output<String> oidcJwks() {
         return this.oidcJwks == null ? Codegen.empty() : this.oidcJwks;
     }
 

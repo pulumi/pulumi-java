@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends io
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends io
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

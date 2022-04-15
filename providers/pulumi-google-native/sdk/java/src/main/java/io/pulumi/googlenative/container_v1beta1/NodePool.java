@@ -39,7 +39,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
      * 
      */
-    public Output<NodePoolAutoscalingResponse> getAutoscaling() {
+    public Output<NodePoolAutoscalingResponse> autoscaling() {
         return this.autoscaling;
     }
     /**
@@ -53,7 +53,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return Which conditions caused the current node pool state.
      * 
      */
-    public Output<List<StatusConditionResponse>> getConditions() {
+    public Output<List<StatusConditionResponse>> conditions() {
         return this.conditions;
     }
     /**
@@ -67,7 +67,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The node configuration of the pool.
      * 
      */
-    public Output<NodeConfigResponse> getConfig() {
+    public Output<NodeConfigResponse> config() {
         return this.config;
     }
     /**
@@ -81,7 +81,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
      * 
      */
-    public Output<Integer> getInitialNodeCount() {
+    public Output<Integer> initialNodeCount() {
         return this.initialNodeCount;
     }
     /**
@@ -95,7 +95,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
      * 
      */
-    public Output<List<String>> getInstanceGroupUrls() {
+    public Output<List<String>> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
     /**
@@ -109,7 +109,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
      * 
      */
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
     /**
@@ -123,7 +123,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return NodeManagement configuration for this NodePool.
      * 
      */
-    public Output<NodeManagementResponse> getManagement() {
+    public Output<NodeManagementResponse> management() {
         return this.management;
     }
     /**
@@ -137,7 +137,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    public Output<MaxPodsConstraintResponse> getMaxPodsConstraint() {
+    public Output<MaxPodsConstraintResponse> maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
     /**
@@ -151,7 +151,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The name of the node pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -165,7 +165,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
      * 
      */
-    public Output<NodeNetworkConfigResponse> getNetworkConfig() {
+    public Output<NodeNetworkConfigResponse> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -179,7 +179,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return Specifies the node placement policy.
      * 
      */
-    public Output<PlacementPolicyResponse> getPlacementPolicy() {
+    public Output<PlacementPolicyResponse> placementPolicy() {
         return this.placementPolicy;
     }
     /**
@@ -193,7 +193,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return [Output only] The pod CIDR block size per node in this node pool.
      * 
      */
-    public Output<Integer> getPodIpv4CidrSize() {
+    public Output<Integer> podIpv4CidrSize() {
         return this.podIpv4CidrSize;
     }
     /**
@@ -207,7 +207,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return [Output only] Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -221,7 +221,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return [Output only] The status of the nodes in this pool instance.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -235,7 +235,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return Upgrade settings control disruption and speed of the upgrade.
      * 
      */
-    public Output<UpgradeSettingsResponse> getUpgradeSettings() {
+    public Output<UpgradeSettingsResponse> upgradeSettings() {
         return this.upgradeSettings;
     }
     /**
@@ -249,7 +249,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The version of the Kubernetes of this node.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

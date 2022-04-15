@@ -31,7 +31,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Created time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +45,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Optional. Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -59,7 +59,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -73,7 +73,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
      * 
      */
-    public Output<String> getManagedService() {
+    public Output<String> managedService() {
         return this.managedService;
     }
     /**
@@ -87,7 +87,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return State of the API.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -115,7 +115,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @return Updated time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

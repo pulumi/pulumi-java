@@ -58,35 +58,35 @@ public final class AuthConfigResponse {
      * List containing additional auth configs.
      * 
     */
-    public List<ConfigVariableResponse> getAdditionalVariables() {
+    public List<ConfigVariableResponse> additionalVariables() {
         return this.additionalVariables;
     }
     /**
      * The type of authentication configured.
      * 
     */
-    public String getAuthType() {
+    public String authType() {
         return this.authType;
     }
     /**
      * Oauth2ClientCredentials.
      * 
     */
-    public Oauth2ClientCredentialsResponse getOauth2ClientCredentials() {
+    public Oauth2ClientCredentialsResponse oauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
     }
     /**
      * Oauth2JwtBearer.
      * 
     */
-    public Oauth2JwtBearerResponse getOauth2JwtBearer() {
+    public Oauth2JwtBearerResponse oauth2JwtBearer() {
         return this.oauth2JwtBearer;
     }
     /**
      * UserPassword.
      * 
     */
-    public UserPasswordResponse getUserPassword() {
+    public UserPasswordResponse userPassword() {
         return this.userPassword;
     }
 

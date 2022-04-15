@@ -40,21 +40,21 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse {
      * Will be [deprecated = true] post migration;
      * 
     */
-    public List<String> getOnewayTerms() {
+    public List<String> onewayTerms() {
         return this.onewayTerms;
     }
     /**
      * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
      * 
     */
-    public List<String> getQueryTerms() {
+    public List<String> queryTerms() {
         return this.queryTerms;
     }
     /**
      * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
      * 
     */
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
 

@@ -28,7 +28,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deidentifyTemplate")
       private final @Nullable Output<String> deidentifyTemplate;
 
-    public Output<String> getDeidentifyTemplate() {
+    public Output<String> deidentifyTemplate() {
         return this.deidentifyTemplate == null ? Codegen.empty() : this.deidentifyTemplate;
     }
 
@@ -39,7 +39,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -50,7 +50,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="insightsExportSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
 
-    public Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> getInsightsExportSettings() {
+    public Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings() {
         return this.insightsExportSettings == null ? Codegen.empty() : this.insightsExportSettings;
     }
 
@@ -61,14 +61,14 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="inspectTemplate")
       private final @Nullable Output<String> inspectTemplate;
 
-    public Output<String> getInspectTemplate() {
+    public Output<String> inspectTemplate() {
         return this.inspectTemplate == null ? Codegen.empty() : this.inspectTemplate;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,14 +79,14 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -97,7 +97,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="purgeDataTypes")
       private final @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
 
-    public Output<List<SecuritySettingPurgeDataTypesItem>> getPurgeDataTypes() {
+    public Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes() {
         return this.purgeDataTypes == null ? Codegen.empty() : this.purgeDataTypes;
     }
 
@@ -108,7 +108,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="redactionScope")
       private final @Nullable Output<SecuritySettingRedactionScope> redactionScope;
 
-    public Output<SecuritySettingRedactionScope> getRedactionScope() {
+    public Output<SecuritySettingRedactionScope> redactionScope() {
         return this.redactionScope == null ? Codegen.empty() : this.redactionScope;
     }
 
@@ -119,7 +119,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="redactionStrategy")
       private final @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
 
-    public Output<SecuritySettingRedactionStrategy> getRedactionStrategy() {
+    public Output<SecuritySettingRedactionStrategy> redactionStrategy() {
         return this.redactionStrategy == null ? Codegen.empty() : this.redactionStrategy;
     }
 
@@ -130,7 +130,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="retentionWindowDays")
       private final @Nullable Output<Integer> retentionWindowDays;
 
-    public Output<Integer> getRetentionWindowDays() {
+    public Output<Integer> retentionWindowDays() {
         return this.retentionWindowDays == null ? Codegen.empty() : this.retentionWindowDays;
     }
 

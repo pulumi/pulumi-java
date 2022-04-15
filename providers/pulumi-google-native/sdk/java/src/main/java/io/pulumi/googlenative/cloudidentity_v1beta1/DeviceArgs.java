@@ -23,7 +23,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetTag")
       private final @Nullable Output<String> assetTag;
 
-    public Output<String> getAssetTag() {
+    public Output<String> assetTag() {
         return this.assetTag == null ? Codegen.empty() : this.assetTag;
     }
 
@@ -34,7 +34,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastSyncTime")
       private final @Nullable Output<String> lastSyncTime;
 
-    public Output<String> getLastSyncTime() {
+    public Output<String> lastSyncTime() {
         return this.lastSyncTime == null ? Codegen.empty() : this.lastSyncTime;
     }
 
@@ -45,7 +45,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
-    public Output<String> getSerialNumber() {
+    public Output<String> serialNumber() {
         return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
     }
 
@@ -56,7 +56,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="wifiMacAddresses")
       private final @Nullable Output<List<String>> wifiMacAddresses;
 
-    public Output<List<String>> getWifiMacAddresses() {
+    public Output<List<String>> wifiMacAddresses() {
         return this.wifiMacAddresses == null ? Codegen.empty() : this.wifiMacAddresses;
     }
 

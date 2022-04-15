@@ -25,7 +25,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
     @Import(name="tableSourceType", required=true)
       private final String tableSourceType;
 
-    public String getTableSourceType() {
+    public String tableSourceType() {
         return this.tableSourceType;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
     @Import(name="tableSpec", required=true)
       private final GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
 
-    public GoogleCloudDatacatalogV1TableSpecResponse getTableSpec() {
+    public GoogleCloudDatacatalogV1TableSpecResponse tableSpec() {
         return this.tableSpec;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
     @Import(name="viewSpec", required=true)
       private final GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
 
-    public GoogleCloudDatacatalogV1ViewSpecResponse getViewSpec() {
+    public GoogleCloudDatacatalogV1ViewSpecResponse viewSpec() {
         return this.viewSpec;
     }
 

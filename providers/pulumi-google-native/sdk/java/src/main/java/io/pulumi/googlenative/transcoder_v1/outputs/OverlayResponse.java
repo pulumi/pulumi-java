@@ -34,14 +34,14 @@ public final class OverlayResponse {
      * List of Animations. The list should be chronological, without any time overlap.
      * 
     */
-    public List<AnimationResponse> getAnimations() {
+    public List<AnimationResponse> animations() {
         return this.animations;
     }
     /**
      * Image overlay.
      * 
     */
-    public ImageResponse getImage() {
+    public ImageResponse image() {
         return this.image;
     }
 

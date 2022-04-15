@@ -28,7 +28,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -39,7 +39,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Output<OSPolicyResourceFileArgs> getFile() {
+    public Output<OSPolicyResourceFileArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -50,7 +50,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -61,7 +61,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
@@ -72,7 +72,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="state", required=true)
       private final Output<OSPolicyResourceFileResourceState> state;
 
-    public Output<OSPolicyResourceFileResourceState> getState() {
+    public Output<OSPolicyResourceFileResourceState> state() {
         return this.state;
     }
 

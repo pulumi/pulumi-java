@@ -68,49 +68,49 @@ public final class GetRegionNotificationEndpointResult {
      * Creation timestamp in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Settings of the gRPC notification endpoint including the endpoint URL and the retry duration.
      * 
     */
-    public NotificationEndpointGrpcSettingsResponse getGrpcSettings() {
+    public NotificationEndpointGrpcSettingsResponse grpcSettings() {
         return this.grpcSettings;
     }
     /**
      * Type of the resource. Always compute#notificationEndpoint for notification endpoints.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * URL of the region where the notification endpoint resides. This field applies only to the regional resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

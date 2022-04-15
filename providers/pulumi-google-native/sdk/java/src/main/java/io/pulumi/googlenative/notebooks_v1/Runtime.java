@@ -34,7 +34,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return The config settings for accessing runtime.
      * 
      */
-    public Output<RuntimeAccessConfigResponse> getAccessConfig() {
+    public Output<RuntimeAccessConfigResponse> accessConfig() {
         return this.accessConfig;
     }
     /**
@@ -48,7 +48,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Runtime creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +62,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Runtime health_state.
      * 
      */
-    public Output<String> getHealthState() {
+    public Output<String> healthState() {
         return this.healthState;
     }
     /**
@@ -76,7 +76,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Contains Runtime daemon metrics such as Service status and JupyterLab stats.
      * 
      */
-    public Output<RuntimeMetricsResponse> getMetrics() {
+    public Output<RuntimeMetricsResponse> metrics() {
         return this.metrics;
     }
     /**
@@ -90,7 +90,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return The config settings for software inside the runtime.
      * 
      */
-    public Output<RuntimeSoftwareConfigResponse> getSoftwareConfig() {
+    public Output<RuntimeSoftwareConfigResponse> softwareConfig() {
         return this.softwareConfig;
     }
     /**
@@ -118,7 +118,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Runtime state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -132,7 +132,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Runtime update time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -146,7 +146,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * @return Use a Compute Engine VM image to start the managed notebook instance.
      * 
      */
-    public Output<VirtualMachineResponse> getVirtualMachine() {
+    public Output<VirtualMachineResponse> virtualMachine() {
         return this.virtualMachine;
     }
 

@@ -27,7 +27,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     @Import(name="vm")
       private final @Nullable Output<String> vm;
 
-    public Output<String> getVm() {
+    public Output<String> vm() {
         return this.vm == null ? Codegen.empty() : this.vm;
     }
 
@@ -38,7 +38,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     @Import(name="vmIp", required=true)
       private final Output<String> vmIp;
 
-    public Output<String> getVmIp() {
+    public Output<String> vmIp() {
         return this.vmIp;
     }
 
@@ -49,7 +49,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     @Import(name="vmPort", required=true)
       private final Output<Integer> vmPort;
 
-    public Output<Integer> getVmPort() {
+    public Output<Integer> vmPort() {
         return this.vmPort;
     }
 
@@ -60,7 +60,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     @Import(name="vpc")
       private final @Nullable Output<String> vpc;
 
-    public Output<String> getVpc() {
+    public Output<String> vpc() {
         return this.vpc == null ? Codegen.empty() : this.vpc;
     }
 

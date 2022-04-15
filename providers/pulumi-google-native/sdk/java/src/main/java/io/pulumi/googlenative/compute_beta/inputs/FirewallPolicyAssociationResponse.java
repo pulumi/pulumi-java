@@ -19,7 +19,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="attachmentTarget", required=true)
       private final String attachmentTarget;
 
-    public String getAttachmentTarget() {
+    public String attachmentTarget() {
         return this.attachmentTarget;
     }
 
@@ -30,7 +30,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -41,7 +41,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="firewallPolicyId", required=true)
       private final String firewallPolicyId;
 
-    public String getFirewallPolicyId() {
+    public String firewallPolicyId() {
         return this.firewallPolicyId;
     }
 
@@ -52,7 +52,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
     @Import(name="shortName", required=true)
       private final String shortName;
 
-    public String getShortName() {
+    public String shortName() {
         return this.shortName;
     }
 

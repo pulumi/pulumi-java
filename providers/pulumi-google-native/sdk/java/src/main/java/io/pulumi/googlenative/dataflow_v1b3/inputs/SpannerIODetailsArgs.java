@@ -26,7 +26,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="databaseId")
       private final @Nullable Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId == null ? Codegen.empty() : this.databaseId;
     }
 
@@ -37,7 +37,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
@@ -48,7 +48,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

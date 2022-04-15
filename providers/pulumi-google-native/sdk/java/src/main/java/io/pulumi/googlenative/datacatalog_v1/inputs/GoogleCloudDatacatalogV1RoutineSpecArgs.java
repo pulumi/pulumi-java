@@ -30,7 +30,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     @Import(name="bigqueryRoutineSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> getBigqueryRoutineSpec() {
+    public Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec() {
         return this.bigqueryRoutineSpec == null ? Codegen.empty() : this.bigqueryRoutineSpec;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     @Import(name="definitionBody")
       private final @Nullable Output<String> definitionBody;
 
-    public Output<String> getDefinitionBody() {
+    public Output<String> definitionBody() {
         return this.definitionBody == null ? Codegen.empty() : this.definitionBody;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
+    public Output<String> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     @Import(name="returnType")
       private final @Nullable Output<String> returnType;
 
-    public Output<String> getReturnType() {
+    public Output<String> returnType() {
         return this.returnType == null ? Codegen.empty() : this.returnType;
     }
 
@@ -74,7 +74,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     @Import(name="routineArguments")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
 
-    public Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> getRoutineArguments() {
+    public Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments() {
         return this.routineArguments == null ? Codegen.empty() : this.routineArguments;
     }
 
@@ -85,7 +85,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
     @Import(name="routineType")
       private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
 
-    public Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> getRoutineType() {
+    public Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType() {
         return this.routineType == null ? Codegen.empty() : this.routineType;
     }
 

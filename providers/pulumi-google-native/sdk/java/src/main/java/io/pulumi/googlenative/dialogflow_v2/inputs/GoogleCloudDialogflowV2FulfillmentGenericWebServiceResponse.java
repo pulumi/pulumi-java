@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
     @Import(name="isCloudFunction", required=true)
       private final Boolean isCloudFunction;
 
-    public Boolean getIsCloudFunction() {
+    public Boolean isCloudFunction() {
         return this.isCloudFunction;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
     @Import(name="requestHeaders", required=true)
       private final Map<String,String> requestHeaders;
 
-    public Map<String,String> getRequestHeaders() {
+    public Map<String,String> requestHeaders() {
         return this.requestHeaders;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse e
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

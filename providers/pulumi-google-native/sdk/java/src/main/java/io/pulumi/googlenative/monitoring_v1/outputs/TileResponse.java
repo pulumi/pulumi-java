@@ -54,35 +54,35 @@ public final class TileResponse {
      * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
      * 
     */
-    public Integer getHeight() {
+    public Integer height() {
         return this.height;
     }
     /**
      * The informational widget contained in the tile. For example an XyChart.
      * 
     */
-    public WidgetResponse getWidget() {
+    public WidgetResponse widget() {
         return this.widget;
     }
     /**
      * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
      * 
     */
-    public Integer getWidth() {
+    public Integer width() {
         return this.width;
     }
     /**
      * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
      * 
     */
-    public Integer getXPos() {
+    public Integer xPos() {
         return this.xPos;
     }
     /**
      * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
      * 
     */
-    public Integer getYPos() {
+    public Integer yPos() {
         return this.yPos;
     }
 

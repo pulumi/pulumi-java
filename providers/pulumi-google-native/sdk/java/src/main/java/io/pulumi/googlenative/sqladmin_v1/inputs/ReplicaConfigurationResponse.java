@@ -25,7 +25,7 @@ public final class ReplicaConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="failoverTarget", required=true)
       private final Boolean failoverTarget;
 
-    public Boolean getFailoverTarget() {
+    public Boolean failoverTarget() {
         return this.failoverTarget;
     }
 
@@ -36,7 +36,7 @@ public final class ReplicaConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -47,7 +47,7 @@ public final class ReplicaConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="mysqlReplicaConfiguration", required=true)
       private final MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
 
-    public MySqlReplicaConfigurationResponse getMysqlReplicaConfiguration() {
+    public MySqlReplicaConfigurationResponse mysqlReplicaConfiguration() {
         return this.mysqlReplicaConfiguration;
     }
 

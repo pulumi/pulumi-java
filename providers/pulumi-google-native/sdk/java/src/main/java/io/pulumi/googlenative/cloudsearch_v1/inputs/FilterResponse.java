@@ -20,14 +20,14 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="compositeFilter", required=true)
       private final CompositeFilterResponse compositeFilter;
 
-    public CompositeFilterResponse getCompositeFilter() {
+    public CompositeFilterResponse compositeFilter() {
         return this.compositeFilter;
     }
 
     @Import(name="valueFilter", required=true)
       private final ValueFilterResponse valueFilter;
 
-    public ValueFilterResponse getValueFilter() {
+    public ValueFilterResponse valueFilter() {
         return this.valueFilter;
     }
 

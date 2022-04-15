@@ -26,7 +26,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
     @Import(name="hint")
       private final @Nullable Output<DSSEHintArgs> hint;
 
-    public Output<DSSEHintArgs> getHint() {
+    public Output<DSSEHintArgs> hint() {
         return this.hint == null ? Codegen.empty() : this.hint;
     }
 

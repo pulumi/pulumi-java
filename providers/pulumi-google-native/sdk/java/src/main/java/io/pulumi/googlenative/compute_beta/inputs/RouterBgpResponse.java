@@ -22,7 +22,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="advertiseMode", required=true)
       private final String advertiseMode;
 
-    public String getAdvertiseMode() {
+    public String advertiseMode() {
         return this.advertiseMode;
     }
 
@@ -33,7 +33,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="advertisedGroups", required=true)
       private final List<String> advertisedGroups;
 
-    public List<String> getAdvertisedGroups() {
+    public List<String> advertisedGroups() {
         return this.advertisedGroups;
     }
 
@@ -44,7 +44,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="advertisedIpRanges", required=true)
       private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
-    public List<RouterAdvertisedIpRangeResponse> getAdvertisedIpRanges() {
+    public List<RouterAdvertisedIpRangeResponse> advertisedIpRanges() {
         return this.advertisedIpRanges;
     }
 
@@ -55,7 +55,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="asn", required=true)
       private final Integer asn;
 
-    public Integer getAsn() {
+    public Integer asn() {
         return this.asn;
     }
 
@@ -66,7 +66,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keepaliveInterval", required=true)
       private final Integer keepaliveInterval;
 
-    public Integer getKeepaliveInterval() {
+    public Integer keepaliveInterval() {
         return this.keepaliveInterval;
     }
 

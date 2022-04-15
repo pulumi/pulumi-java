@@ -26,7 +26,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="displayPrice")
       private final @Nullable Output<Double> displayPrice;
 
-    public Output<Double> getDisplayPrice() {
+    public Output<Double> displayPrice() {
         return this.displayPrice == null ? Codegen.empty() : this.displayPrice;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     @Import(name="originalPrice")
       private final @Nullable Output<Double> originalPrice;
 
-    public Output<Double> getOriginalPrice() {
+    public Output<Double> originalPrice() {
         return this.originalPrice == null ? Codegen.empty() : this.originalPrice;
     }
 

@@ -27,7 +27,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingPolicy")
       private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
+    public Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy() {
         return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
@@ -38,14 +38,14 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="initialNodeCount", required=true)
       private final Output<String> initialNodeCount;
 
-    public Output<String> getInitialNodeCount() {
+    public Output<String> initialNodeCount() {
         return this.initialNodeCount;
     }
 
@@ -56,7 +56,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
-    public Output<String> getLocationHint() {
+    public Output<String> locationHint() {
         return this.locationHint == null ? Codegen.empty() : this.locationHint;
     }
 
@@ -67,14 +67,14 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenancePolicy")
       private final @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
 
-    public Output<NodeGroupMaintenancePolicy> getMaintenancePolicy() {
+    public Output<NodeGroupMaintenancePolicy> maintenancePolicy() {
         return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
     @Import(name="maintenanceWindow")
       private final @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
+    public Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
@@ -85,7 +85,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,21 +96,21 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeTemplate")
       private final @Nullable Output<String> nodeTemplate;
 
-    public Output<String> getNodeTemplate() {
+    public Output<String> nodeTemplate() {
         return this.nodeTemplate == null ? Codegen.empty() : this.nodeTemplate;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
@@ -121,21 +121,21 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareSettings")
       private final @Nullable Output<ShareSettingsArgs> shareSettings;
 
-    public Output<ShareSettingsArgs> getShareSettings() {
+    public Output<ShareSettingsArgs> shareSettings() {
         return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
     }
 
     @Import(name="status")
       private final @Nullable Output<NodeGroupStatus> status;
 
-    public Output<NodeGroupStatus> getStatus() {
+    public Output<NodeGroupStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

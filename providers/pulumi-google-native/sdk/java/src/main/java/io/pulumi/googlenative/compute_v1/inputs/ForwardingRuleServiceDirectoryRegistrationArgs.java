@@ -26,7 +26,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -37,7 +37,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 
@@ -48,7 +48,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
     @Import(name="serviceDirectoryRegion")
       private final @Nullable Output<String> serviceDirectoryRegion;
 
-    public Output<String> getServiceDirectoryRegion() {
+    public Output<String> serviceDirectoryRegion() {
         return this.serviceDirectoryRegion == null ? Codegen.empty() : this.serviceDirectoryRegion;
     }
 

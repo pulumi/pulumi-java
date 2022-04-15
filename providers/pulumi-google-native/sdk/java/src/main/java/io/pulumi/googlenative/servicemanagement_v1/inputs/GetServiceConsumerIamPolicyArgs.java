@@ -15,14 +15,14 @@ public final class GetServiceConsumerIamPolicyArgs extends io.pulumi.resources.I
     @Import(name="consumerId", required=true)
       private final String consumerId;
 
-    public String getConsumerId() {
+    public String consumerId() {
         return this.consumerId;
     }
 
     @Import(name="serviceId", required=true)
       private final String serviceId;
 
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
 

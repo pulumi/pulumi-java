@@ -26,7 +26,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
     @Import(name="logMode")
       private final @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
-    public Output<LogConfigDataAccessOptionsLogMode> getLogMode() {
+    public Output<LogConfigDataAccessOptionsLogMode> logMode() {
         return this.logMode == null ? Codegen.empty() : this.logMode;
     }
 

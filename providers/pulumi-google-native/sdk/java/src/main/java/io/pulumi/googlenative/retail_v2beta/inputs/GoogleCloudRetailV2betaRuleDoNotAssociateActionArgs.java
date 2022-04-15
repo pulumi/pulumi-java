@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     @Import(name="doNotAssociateTerms")
       private final @Nullable Output<List<String>> doNotAssociateTerms;
 
-    public Output<List<String>> getDoNotAssociateTerms() {
+    public Output<List<String>> doNotAssociateTerms() {
         return this.doNotAssociateTerms == null ? Codegen.empty() : this.doNotAssociateTerms;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     @Import(name="queryTerms")
       private final @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> getQueryTerms() {
+    public Output<List<String>> queryTerms() {
         return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     @Import(name="terms")
       private final @Nullable Output<List<String>> terms;
 
-    public Output<List<String>> getTerms() {
+    public Output<List<String>> terms() {
         return this.terms == null ? Codegen.empty() : this.terms;
     }
 

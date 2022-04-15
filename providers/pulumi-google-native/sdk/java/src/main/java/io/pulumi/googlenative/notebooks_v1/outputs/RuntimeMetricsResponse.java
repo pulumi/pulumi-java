@@ -25,7 +25,7 @@ public final class RuntimeMetricsResponse {
      * The system metrics.
      * 
     */
-    public Map<String,String> getSystemMetrics() {
+    public Map<String,String> systemMetrics() {
         return this.systemMetrics;
     }
 

@@ -25,35 +25,35 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
+    public Output<String> requestId() {
         return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId;
     }
 
@@ -64,14 +64,14 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeFrame")
       private final @Nullable Output<UtilizationReportTimeFrame> timeFrame;
 
-    public Output<UtilizationReportTimeFrame> getTimeFrame() {
+    public Output<UtilizationReportTimeFrame> timeFrame() {
         return this.timeFrame == null ? Codegen.empty() : this.timeFrame;
     }
 
     @Import(name="utilizationReportId", required=true)
       private final Output<String> utilizationReportId;
 
-    public Output<String> getUtilizationReportId() {
+    public Output<String> utilizationReportId() {
         return this.utilizationReportId;
     }
 
@@ -82,7 +82,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
     @Import(name="vms")
       private final @Nullable Output<List<VmUtilizationInfoArgs>> vms;
 
-    public Output<List<VmUtilizationInfoArgs>> getVms() {
+    public Output<List<VmUtilizationInfoArgs>> vms() {
         return this.vms == null ? Codegen.empty() : this.vms;
     }
 

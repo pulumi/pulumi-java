@@ -24,7 +24,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="defaultLimit", required=true)
       private final String defaultLimit;
 
-    public String getDefaultLimit() {
+    public String defaultLimit() {
         return this.defaultLimit;
     }
 
@@ -35,7 +35,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -57,7 +57,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
@@ -68,7 +68,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="freeTier", required=true)
       private final String freeTier;
 
-    public String getFreeTier() {
+    public String freeTier() {
         return this.freeTier;
     }
 
@@ -79,7 +79,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxLimit", required=true)
       private final String maxLimit;
 
-    public String getMaxLimit() {
+    public String maxLimit() {
         return this.maxLimit;
     }
 
@@ -90,7 +90,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metric", required=true)
       private final String metric;
 
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 
@@ -101,7 +101,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -112,7 +112,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 
@@ -123,7 +123,7 @@ public final class QuotaLimitResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
       private final Map<String,String> values;
 
-    public Map<String,String> getValues() {
+    public Map<String,String> values() {
         return this.values;
     }
 

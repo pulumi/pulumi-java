@@ -25,7 +25,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends io.pulum
     @Import(name="authorizationRule", required=true)
       private final ExprResponse authorizationRule;
 
-    public ExprResponse getAuthorizationRule() {
+    public ExprResponse authorizationRule() {
         return this.authorizationRule;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse extends io.pulum
     @Import(name="resourceAttributes", required=true)
       private final List<AttributeResponse> resourceAttributes;
 
-    public List<AttributeResponse> getResourceAttributes() {
+    public List<AttributeResponse> resourceAttributes() {
         return this.resourceAttributes;
     }
 

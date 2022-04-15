@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
     @Import(name="conditionalCases", required=true)
       private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
 
-    public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> getConditionalCases() {
+    public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases() {
         return this.conditionalCases;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
     @Import(name="messages", required=true)
       private final List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
 
-    public List<GoogleCloudDialogflowCxV3ResponseMessageResponse> getMessages() {
+    public List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages() {
         return this.messages;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
     @Import(name="returnPartialResponses", required=true)
       private final Boolean returnPartialResponses;
 
-    public Boolean getReturnPartialResponses() {
+    public Boolean returnPartialResponses() {
         return this.returnPartialResponses;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
     @Import(name="setParameterActions", required=true)
       private final List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
 
-    public List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> getSetParameterActions() {
+    public List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions() {
         return this.setParameterActions;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
     @Import(name="tag", required=true)
       private final String tag;
 
-    public String getTag() {
+    public String tag() {
         return this.tag;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
     @Import(name="webhook", required=true)
       private final String webhook;
 
-    public String getWebhook() {
+    public String webhook() {
         return this.webhook;
     }
 

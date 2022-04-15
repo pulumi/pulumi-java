@@ -31,7 +31,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> getBootDiskKmsKey() {
+    public Output<String> bootDiskKmsKey() {
         return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
     }
 
@@ -42,7 +42,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -53,7 +53,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -64,7 +64,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
@@ -75,7 +75,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="management")
       private final @Nullable Output<NodeManagementArgs> management;
 
-    public Output<NodeManagementArgs> getManagement() {
+    public Output<NodeManagementArgs> management() {
         return this.management == null ? Codegen.empty() : this.management;
     }
 
@@ -86,7 +86,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -97,7 +97,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
+    public Output<List<String>> oauthScopes() {
         return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
@@ -108,7 +108,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -119,7 +119,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
@@ -130,7 +130,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     @Import(name="upgradeSettings")
       private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Output<UpgradeSettingsArgs> getUpgradeSettings() {
+    public Output<UpgradeSettingsArgs> upgradeSettings() {
         return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
     }
 

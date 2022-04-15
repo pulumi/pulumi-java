@@ -27,7 +27,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<FileReferenceArgs> location;
 
-    public Output<FileReferenceArgs> getLocation() {
+    public Output<FileReferenceArgs> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -38,7 +38,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 

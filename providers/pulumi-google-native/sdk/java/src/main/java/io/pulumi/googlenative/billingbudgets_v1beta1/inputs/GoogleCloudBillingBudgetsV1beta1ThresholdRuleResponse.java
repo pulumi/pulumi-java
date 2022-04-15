@@ -24,7 +24,7 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse extends
     @Import(name="spendBasis", required=true)
       private final String spendBasis;
 
-    public String getSpendBasis() {
+    public String spendBasis() {
         return this.spendBasis;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse extends
     @Import(name="thresholdPercent", required=true)
       private final Double thresholdPercent;
 
-    public Double getThresholdPercent() {
+    public Double thresholdPercent() {
         return this.thresholdPercent;
     }
 

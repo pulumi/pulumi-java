@@ -24,7 +24,7 @@ public final class AuthorityResponse {
      * Hint hints at the purpose of the attestation authority.
      * 
     */
-    public HintResponse getHint() {
+    public HintResponse hint() {
         return this.hint;
     }
 

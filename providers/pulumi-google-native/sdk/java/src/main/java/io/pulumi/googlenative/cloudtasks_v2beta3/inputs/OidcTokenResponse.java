@@ -23,7 +23,7 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="audience", required=true)
       private final String audience;
 
-    public String getAudience() {
+    public String audience() {
         return this.audience;
     }
 
@@ -34,7 +34,7 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

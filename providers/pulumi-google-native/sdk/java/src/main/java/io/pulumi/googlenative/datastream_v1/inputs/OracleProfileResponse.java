@@ -25,7 +25,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="connectionAttributes", required=true)
       private final Map<String,String> connectionAttributes;
 
-    public Map<String,String> getConnectionAttributes() {
+    public Map<String,String> connectionAttributes() {
         return this.connectionAttributes;
     }
 
@@ -36,7 +36,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="databaseService", required=true)
       private final String databaseService;
 
-    public String getDatabaseService() {
+    public String databaseService() {
         return this.databaseService;
     }
 
@@ -47,7 +47,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="hostname", required=true)
       private final String hostname;
 
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
 
@@ -58,7 +58,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -69,7 +69,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -80,7 +80,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

@@ -31,7 +31,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return A `BasicLevel` composed of `Conditions`.
      * 
      */
-    public Output<BasicLevelResponse> getBasic() {
+    public Output<BasicLevelResponse> basic() {
         return this.basic;
     }
     /**
@@ -45,7 +45,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return A `CustomLevel` written in the Common Expression Language.
      * 
      */
-    public Output<CustomLevelResponse> getCustom() {
+    public Output<CustomLevelResponse> custom() {
         return this.custom;
     }
     /**
@@ -59,7 +59,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Description of the `AccessLevel` and its use. Does not affect behavior.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the `short_name` component is 50 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Human readable title. Must be unique within the Policy.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

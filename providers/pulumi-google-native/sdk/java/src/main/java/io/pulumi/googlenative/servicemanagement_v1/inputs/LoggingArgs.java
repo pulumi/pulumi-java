@@ -27,7 +27,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consumerDestinations")
       private final @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
 
-    public Output<List<LoggingDestinationArgs>> getConsumerDestinations() {
+    public Output<List<LoggingDestinationArgs>> consumerDestinations() {
         return this.consumerDestinations == null ? Codegen.empty() : this.consumerDestinations;
     }
 
@@ -38,7 +38,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="producerDestinations")
       private final @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
 
-    public Output<List<LoggingDestinationArgs>> getProducerDestinations() {
+    public Output<List<LoggingDestinationArgs>> producerDestinations() {
         return this.producerDestinations == null ? Codegen.empty() : this.producerDestinations;
     }
 

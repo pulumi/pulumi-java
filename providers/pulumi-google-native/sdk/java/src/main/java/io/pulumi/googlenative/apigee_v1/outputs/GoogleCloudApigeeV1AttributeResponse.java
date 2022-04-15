@@ -32,14 +32,14 @@ public final class GoogleCloudApigeeV1AttributeResponse {
      * API key of the attribute.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Value of the attribute.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

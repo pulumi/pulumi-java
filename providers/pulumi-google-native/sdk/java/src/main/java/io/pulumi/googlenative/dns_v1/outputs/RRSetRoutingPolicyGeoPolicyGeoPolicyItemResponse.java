@@ -35,24 +35,24 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
         this.signatureRrdatas = signatureRrdatas;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
-    public List<String> getRrdatas() {
+    public List<String> rrdatas() {
         return this.rrdatas;
     }
     /**
      * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
      * 
     */
-    public List<String> getSignatureRrdatas() {
+    public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
 

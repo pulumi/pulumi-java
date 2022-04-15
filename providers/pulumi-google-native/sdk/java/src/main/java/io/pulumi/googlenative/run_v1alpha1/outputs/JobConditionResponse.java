@@ -60,42 +60,42 @@ public final class JobConditionResponse {
      * Optional. Last time the condition transitioned from one status to another.
      * 
     */
-    public String getLastTransitionTime() {
+    public String lastTransitionTime() {
         return this.lastTransitionTime;
     }
     /**
      * Optional. Human readable message indicating details about the current status.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Optional. One-word CamelCase reason for the condition's last transition.
      * 
     */
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
     /**
      * Optional. How to interpret failures of this condition, one of Error, Warning, Info
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

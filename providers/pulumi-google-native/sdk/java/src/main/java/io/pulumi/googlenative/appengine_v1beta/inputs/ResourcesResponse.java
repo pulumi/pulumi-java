@@ -26,7 +26,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cpu", required=true)
       private final Double cpu;
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
 
@@ -37,7 +37,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskGb", required=true)
       private final Double diskGb;
 
-    public Double getDiskGb() {
+    public Double diskGb() {
         return this.diskGb;
     }
 
@@ -48,7 +48,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kmsKeyReference", required=true)
       private final String kmsKeyReference;
 
-    public String getKmsKeyReference() {
+    public String kmsKeyReference() {
         return this.kmsKeyReference;
     }
 
@@ -59,7 +59,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
 
@@ -70,7 +70,7 @@ public final class ResourcesResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumes", required=true)
       private final List<VolumeResponse> volumes;
 
-    public List<VolumeResponse> getVolumes() {
+    public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 

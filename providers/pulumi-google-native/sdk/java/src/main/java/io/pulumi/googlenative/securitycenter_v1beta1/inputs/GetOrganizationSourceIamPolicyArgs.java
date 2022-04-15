@@ -15,14 +15,14 @@ public final class GetOrganizationSourceIamPolicyArgs extends io.pulumi.resource
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="sourceId", required=true)
       private final String sourceId;
 
-    public String getSourceId() {
+    public String sourceId() {
         return this.sourceId;
     }
 

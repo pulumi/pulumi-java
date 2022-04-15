@@ -28,7 +28,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="bucketPolicyOnly")
       private final @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
-    public Output<BucketIamConfigurationBucketPolicyOnlyArgs> getBucketPolicyOnly() {
+    public Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly() {
         return this.bucketPolicyOnly == null ? Codegen.empty() : this.bucketPolicyOnly;
     }
 
@@ -39,7 +39,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="publicAccessPrevention")
       private final @Nullable Output<String> publicAccessPrevention;
 
-    public Output<String> getPublicAccessPrevention() {
+    public Output<String> publicAccessPrevention() {
         return this.publicAccessPrevention == null ? Codegen.empty() : this.publicAccessPrevention;
     }
 
@@ -50,7 +50,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="uniformBucketLevelAccess")
       private final @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
-    public Output<BucketIamConfigurationUniformBucketLevelAccessArgs> getUniformBucketLevelAccess() {
+    public Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess == null ? Codegen.empty() : this.uniformBucketLevelAccess;
     }
 

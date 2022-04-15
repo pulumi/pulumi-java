@@ -23,7 +23,7 @@ public final class ApigatewayBackendConfigResponse extends io.pulumi.resources.I
     @Import(name="googleServiceAccount", required=true)
       private final String googleServiceAccount;
 
-    public String getGoogleServiceAccount() {
+    public String googleServiceAccount() {
         return this.googleServiceAccount;
     }
 

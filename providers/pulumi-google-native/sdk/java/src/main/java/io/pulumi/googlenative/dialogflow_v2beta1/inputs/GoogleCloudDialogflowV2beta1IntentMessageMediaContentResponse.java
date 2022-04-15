@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="mediaObjects", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects() {
         return this.mediaObjects;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     @Import(name="mediaType", required=true)
       private final String mediaType;
 
-    public String getMediaType() {
+    public String mediaType() {
         return this.mediaType;
     }
 

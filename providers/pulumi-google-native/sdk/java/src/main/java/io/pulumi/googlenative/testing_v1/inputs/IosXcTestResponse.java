@@ -25,7 +25,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="appBundleId", required=true)
       private final String appBundleId;
 
-    public String getAppBundleId() {
+    public String appBundleId() {
         return this.appBundleId;
     }
 
@@ -36,7 +36,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="testSpecialEntitlements", required=true)
       private final Boolean testSpecialEntitlements;
 
-    public Boolean getTestSpecialEntitlements() {
+    public Boolean testSpecialEntitlements() {
         return this.testSpecialEntitlements;
     }
 
@@ -47,7 +47,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="testsZip", required=true)
       private final FileReferenceResponse testsZip;
 
-    public FileReferenceResponse getTestsZip() {
+    public FileReferenceResponse testsZip() {
         return this.testsZip;
     }
 
@@ -58,7 +58,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xcodeVersion", required=true)
       private final String xcodeVersion;
 
-    public String getXcodeVersion() {
+    public String xcodeVersion() {
         return this.xcodeVersion;
     }
 
@@ -69,7 +69,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="xctestrun", required=true)
       private final FileReferenceResponse xctestrun;
 
-    public FileReferenceResponse getXctestrun() {
+    public FileReferenceResponse xctestrun() {
         return this.xctestrun;
     }
 

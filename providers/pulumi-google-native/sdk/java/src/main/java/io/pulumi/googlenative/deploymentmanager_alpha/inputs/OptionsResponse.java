@@ -27,7 +27,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="asyncOptions", required=true)
       private final List<AsyncOptionsResponse> asyncOptions;
 
-    public List<AsyncOptionsResponse> getAsyncOptions() {
+    public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
     }
 
@@ -38,7 +38,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputMappings", required=true)
       private final List<InputMappingResponse> inputMappings;
 
-    public List<InputMappingResponse> getInputMappings() {
+    public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
     }
 
@@ -49,7 +49,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nameProperty", required=true)
       private final String nameProperty;
 
-    public String getNameProperty() {
+    public String nameProperty() {
         return this.nameProperty;
     }
 
@@ -60,7 +60,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="validationOptions", required=true)
       private final ValidationOptionsResponse validationOptions;
 
-    public ValidationOptionsResponse getValidationOptions() {
+    public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }
 

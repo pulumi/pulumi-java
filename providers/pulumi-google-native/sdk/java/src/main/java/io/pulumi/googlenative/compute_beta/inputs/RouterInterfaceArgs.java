@@ -22,7 +22,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
+    public Output<String> ipRange() {
         return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
@@ -33,7 +33,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkedInterconnectAttachment")
       private final @Nullable Output<String> linkedInterconnectAttachment;
 
-    public Output<String> getLinkedInterconnectAttachment() {
+    public Output<String> linkedInterconnectAttachment() {
         return this.linkedInterconnectAttachment == null ? Codegen.empty() : this.linkedInterconnectAttachment;
     }
 
@@ -44,7 +44,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkedVpnTunnel")
       private final @Nullable Output<String> linkedVpnTunnel;
 
-    public Output<String> getLinkedVpnTunnel() {
+    public Output<String> linkedVpnTunnel() {
         return this.linkedVpnTunnel == null ? Codegen.empty() : this.linkedVpnTunnel;
     }
 
@@ -55,7 +55,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -66,7 +66,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -77,7 +77,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="redundantInterface")
       private final @Nullable Output<String> redundantInterface;
 
-    public Output<String> getRedundantInterface() {
+    public Output<String> redundantInterface() {
         return this.redundantInterface == null ? Codegen.empty() : this.redundantInterface;
     }
 
@@ -88,7 +88,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 

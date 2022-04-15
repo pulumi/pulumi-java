@@ -41,21 +41,21 @@ public final class ResourceUsageExportConfigResponse {
      * Configuration to use BigQuery as usage export destination.
      * 
     */
-    public BigQueryDestinationResponse getBigqueryDestination() {
+    public BigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
     /**
      * Configuration to enable resource consumption metering.
      * 
     */
-    public ConsumptionMeteringConfigResponse getConsumptionMeteringConfig() {
+    public ConsumptionMeteringConfigResponse consumptionMeteringConfig() {
         return this.consumptionMeteringConfig;
     }
     /**
      * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
      * 
     */
-    public Boolean getEnableNetworkEgressMetering() {
+    public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
 

@@ -15,7 +15,7 @@ public final class ManagedZoneReverseLookupConfigResponse extends io.pulumi.reso
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

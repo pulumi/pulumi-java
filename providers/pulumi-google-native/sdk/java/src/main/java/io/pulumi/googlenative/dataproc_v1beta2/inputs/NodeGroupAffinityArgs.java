@@ -25,7 +25,7 @@ public final class NodeGroupAffinityArgs extends io.pulumi.resources.ResourceArg
     @Import(name="nodeGroupUri", required=true)
       private final Output<String> nodeGroupUri;
 
-    public Output<String> getNodeGroupUri() {
+    public Output<String> nodeGroupUri() {
         return this.nodeGroupUri;
     }
 

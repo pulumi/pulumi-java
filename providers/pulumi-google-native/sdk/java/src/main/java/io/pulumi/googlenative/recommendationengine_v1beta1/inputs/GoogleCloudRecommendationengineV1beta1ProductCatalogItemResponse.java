@@ -28,7 +28,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="availableQuantity", required=true)
       private final String availableQuantity;
 
-    public String getAvailableQuantity() {
+    public String availableQuantity() {
         return this.availableQuantity;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="canonicalProductUri", required=true)
       private final String canonicalProductUri;
 
-    public String getCanonicalProductUri() {
+    public String canonicalProductUri() {
         return this.canonicalProductUri;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="costs", required=true)
       private final Map<String,String> costs;
 
-    public Map<String,String> getCosts() {
+    public Map<String,String> costs() {
         return this.costs;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="currencyCode", required=true)
       private final String currencyCode;
 
-    public String getCurrencyCode() {
+    public String currencyCode() {
         return this.currencyCode;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="exactPrice", required=true)
       private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
 
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse getExactPrice() {
+    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice() {
         return this.exactPrice;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="images", required=true)
       private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
 
-    public List<GoogleCloudRecommendationengineV1beta1ImageResponse> getImages() {
+    public List<GoogleCloudRecommendationengineV1beta1ImageResponse> images() {
         return this.images;
     }
 
@@ -94,7 +94,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="priceRange", required=true)
       private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
 
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse getPriceRange() {
+    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange() {
         return this.priceRange;
     }
 
@@ -105,7 +105,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     @Import(name="stockState", required=true)
       private final String stockState;
 
-    public String getStockState() {
+    public String stockState() {
         return this.stockState;
     }
 

@@ -27,7 +27,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="automaticRestart", required=true)
       private final Boolean automaticRestart;
 
-    public Boolean getAutomaticRestart() {
+    public Boolean automaticRestart() {
         return this.automaticRestart;
     }
 
@@ -38,7 +38,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="hostErrorTimeoutSeconds", required=true)
       private final Integer hostErrorTimeoutSeconds;
 
-    public Integer getHostErrorTimeoutSeconds() {
+    public Integer hostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
     }
 
@@ -49,7 +49,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceTerminationAction", required=true)
       private final String instanceTerminationAction;
 
-    public String getInstanceTerminationAction() {
+    public String instanceTerminationAction() {
         return this.instanceTerminationAction;
     }
 
@@ -60,7 +60,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locationHint", required=true)
       private final String locationHint;
 
-    public String getLocationHint() {
+    public String locationHint() {
         return this.locationHint;
     }
 
@@ -71,7 +71,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceFreezeDurationHours", required=true)
       private final Integer maintenanceFreezeDurationHours;
 
-    public Integer getMaintenanceFreezeDurationHours() {
+    public Integer maintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
     }
 
@@ -82,7 +82,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maintenanceInterval", required=true)
       private final String maintenanceInterval;
 
-    public String getMaintenanceInterval() {
+    public String maintenanceInterval() {
         return this.maintenanceInterval;
     }
 
@@ -93,7 +93,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
 
-    public Integer getMinNodeCpus() {
+    public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
 
@@ -104,7 +104,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeAffinities", required=true)
       private final List<SchedulingNodeAffinityResponse> nodeAffinities;
 
-    public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
+    public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
     }
 
@@ -115,7 +115,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
 
@@ -126,7 +126,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 
@@ -137,7 +137,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningModel", required=true)
       private final String provisioningModel;
 
-    public String getProvisioningModel() {
+    public String provisioningModel() {
         return this.provisioningModel;
     }
 

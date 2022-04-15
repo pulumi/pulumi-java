@@ -27,7 +27,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classification")
       private final @Nullable Output<CaseClassificationArgs> classification;
 
-    public Output<CaseClassificationArgs> getClassification() {
+    public Output<CaseClassificationArgs> classification() {
         return this.classification == null ? Codegen.empty() : this.classification;
     }
 
@@ -38,7 +38,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creator")
       private final @Nullable Output<ActorArgs> creator;
 
-    public Output<ActorArgs> getCreator() {
+    public Output<ActorArgs> creator() {
         return this.creator == null ? Codegen.empty() : this.creator;
     }
 
@@ -49,7 +49,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -71,7 +71,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="escalated")
       private final @Nullable Output<Boolean> escalated;
 
-    public Output<Boolean> getEscalated() {
+    public Output<Boolean> escalated() {
         return this.escalated == null ? Codegen.empty() : this.escalated;
     }
 
@@ -82,7 +82,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -93,7 +93,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<CasePriority> priority;
 
-    public Output<CasePriority> getPriority() {
+    public Output<CasePriority> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -104,7 +104,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Output<List<String>> getSubscriberEmailAddresses() {
+    public Output<List<String>> subscriberEmailAddresses() {
         return this.subscriberEmailAddresses == null ? Codegen.empty() : this.subscriberEmailAddresses;
     }
 
@@ -115,7 +115,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testCase")
       private final @Nullable Output<Boolean> testCase;
 
-    public Output<Boolean> getTestCase() {
+    public Output<Boolean> testCase() {
         return this.testCase == null ? Codegen.empty() : this.testCase;
     }
 
@@ -126,21 +126,21 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     @Import(name="v2betaId1", required=true)
       private final Output<String> v2betaId1;
 
-    public Output<String> getV2betaId1() {
+    public Output<String> v2betaId1() {
         return this.v2betaId1;
     }
 
     @Import(name="v2betumId", required=true)
       private final Output<String> v2betumId;
 
-    public Output<String> getV2betumId() {
+    public Output<String> v2betumId() {
         return this.v2betumId;
     }
 

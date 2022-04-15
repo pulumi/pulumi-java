@@ -27,7 +27,7 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
     @Import(name="allowedIpRanges")
       private final @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
 
-    public Output<List<AllowedIpRangeArgs>> getAllowedIpRanges() {
+    public Output<List<AllowedIpRangeArgs>> allowedIpRanges() {
         return this.allowedIpRanges == null ? Codegen.empty() : this.allowedIpRanges;
     }
 

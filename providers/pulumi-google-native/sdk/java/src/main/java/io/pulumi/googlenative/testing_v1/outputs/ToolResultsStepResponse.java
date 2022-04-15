@@ -46,28 +46,28 @@ public final class ToolResultsStepResponse {
      * A tool results execution ID.
      * 
     */
-    public String getExecutionId() {
+    public String executionId() {
         return this.executionId;
     }
     /**
      * A tool results history ID.
      * 
     */
-    public String getHistoryId() {
+    public String historyId() {
         return this.historyId;
     }
     /**
      * The cloud project that owns the tool results step.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * A tool results step ID.
      * 
     */
-    public String getStepId() {
+    public String stepId() {
         return this.stepId;
     }
 

@@ -28,7 +28,7 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
     @Import(name="properties")
       private final @Nullable Output<List<String>> properties;
 
-    public Output<List<String>> getProperties() {
+    public Output<List<String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -39,7 +39,7 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends io.pulumi.reso
     @Import(name="source", required=true)
       private final Output<OSPolicyResourceFileArgs> source;
 
-    public Output<OSPolicyResourceFileArgs> getSource() {
+    public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
 

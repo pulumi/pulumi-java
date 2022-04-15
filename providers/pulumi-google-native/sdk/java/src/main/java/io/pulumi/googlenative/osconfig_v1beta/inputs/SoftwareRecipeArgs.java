@@ -30,7 +30,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
       private final @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
 
-    public Output<List<SoftwareRecipeArtifactArgs>> getArtifacts() {
+    public Output<List<SoftwareRecipeArtifactArgs>> artifacts() {
         return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
@@ -41,7 +41,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredState")
       private final @Nullable Output<SoftwareRecipeDesiredState> desiredState;
 
-    public Output<SoftwareRecipeDesiredState> getDesiredState() {
+    public Output<SoftwareRecipeDesiredState> desiredState() {
         return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
@@ -52,7 +52,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="installSteps")
       private final @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
 
-    public Output<List<SoftwareRecipeStepArgs>> getInstallSteps() {
+    public Output<List<SoftwareRecipeStepArgs>> installSteps() {
         return this.installSteps == null ? Codegen.empty() : this.installSteps;
     }
 
@@ -63,7 +63,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -74,7 +74,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateSteps")
       private final @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
 
-    public Output<List<SoftwareRecipeStepArgs>> getUpdateSteps() {
+    public Output<List<SoftwareRecipeStepArgs>> updateSteps() {
         return this.updateSteps == null ? Codegen.empty() : this.updateSteps;
     }
 
@@ -85,7 +85,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

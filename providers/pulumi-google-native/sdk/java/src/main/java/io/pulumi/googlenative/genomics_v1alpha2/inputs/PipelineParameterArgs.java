@@ -27,7 +27,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -38,7 +38,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="localCopy")
       private final @Nullable Output<LocalCopyArgs> localCopy;
 
-    public Output<LocalCopyArgs> getLocalCopy() {
+    public Output<LocalCopyArgs> localCopy() {
         return this.localCopy == null ? Codegen.empty() : this.localCopy;
     }
 
@@ -60,7 +60,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

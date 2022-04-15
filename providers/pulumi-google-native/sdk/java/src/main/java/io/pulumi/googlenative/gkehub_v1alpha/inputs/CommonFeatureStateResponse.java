@@ -25,7 +25,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
     @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureStateResponse appdevexperience;
 
-    public AppDevExperienceFeatureStateResponse getAppdevexperience() {
+    public AppDevExperienceFeatureStateResponse appdevexperience() {
         return this.appdevexperience;
     }
 
@@ -36,7 +36,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
     @Import(name="servicemesh", required=true)
       private final ServiceMeshFeatureStateResponse servicemesh;
 
-    public ServiceMeshFeatureStateResponse getServicemesh() {
+    public ServiceMeshFeatureStateResponse servicemesh() {
         return this.servicemesh;
     }
 
@@ -47,7 +47,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
     @Import(name="state", required=true)
       private final FeatureStateResponse state;
 
-    public FeatureStateResponse getState() {
+    public FeatureStateResponse state() {
         return this.state;
     }
 

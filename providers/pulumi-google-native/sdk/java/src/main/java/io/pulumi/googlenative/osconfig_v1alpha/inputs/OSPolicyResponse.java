@@ -26,7 +26,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowNoResourceGroupMatch", required=true)
       private final Boolean allowNoResourceGroupMatch;
 
-    public Boolean getAllowNoResourceGroupMatch() {
+    public Boolean allowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch;
     }
 
@@ -37,7 +37,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -48,7 +48,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -59,7 +59,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroups", required=true)
       private final List<OSPolicyResourceGroupResponse> resourceGroups;
 
-    public List<OSPolicyResourceGroupResponse> getResourceGroups() {
+    public List<OSPolicyResourceGroupResponse> resourceGroups() {
         return this.resourceGroups;
     }
 

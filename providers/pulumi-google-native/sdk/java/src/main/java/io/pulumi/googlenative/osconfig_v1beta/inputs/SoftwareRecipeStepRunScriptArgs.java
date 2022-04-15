@@ -29,7 +29,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> getAllowedExitCodes() {
+    public Output<List<Integer>> allowedExitCodes() {
         return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
@@ -40,7 +40,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     @Import(name="interpreter")
       private final @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter;
 
-    public Output<SoftwareRecipeStepRunScriptInterpreter> getInterpreter() {
+    public Output<SoftwareRecipeStepRunScriptInterpreter> interpreter() {
         return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
@@ -51,7 +51,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     @Import(name="script", required=true)
       private final Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script;
     }
 

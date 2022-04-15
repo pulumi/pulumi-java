@@ -29,7 +29,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributions")
       private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
 
-    public Output<List<UpgradeDistributionArgs>> getDistributions() {
+    public Output<List<UpgradeDistributionArgs>> distributions() {
         return this.distributions == null ? Codegen.empty() : this.distributions;
     }
 
@@ -40,7 +40,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="package")
       private final @Nullable Output<String> package_;
 
-    public Output<String> getPackage_() {
+    public Output<String> package_() {
         return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
@@ -51,7 +51,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<VersionArgs> version;
 
-    public Output<VersionArgs> getVersion() {
+    public Output<VersionArgs> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

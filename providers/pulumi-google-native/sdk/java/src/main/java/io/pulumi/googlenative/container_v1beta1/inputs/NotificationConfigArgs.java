@@ -26,7 +26,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="pubsub")
       private final @Nullable Output<PubSubArgs> pubsub;
 
-    public Output<PubSubArgs> getPubsub() {
+    public Output<PubSubArgs> pubsub() {
         return this.pubsub == null ? Codegen.empty() : this.pubsub;
     }
 

@@ -25,7 +25,7 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
 
@@ -36,7 +36,7 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

@@ -30,7 +30,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * @return Human-friendly name given to the OAuth client.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -44,7 +44,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * @return Unique identifier of the OAuth client.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * @return Client secret of the OAuth client.
      * 
      */
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 

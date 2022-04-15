@@ -27,7 +27,7 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
     @Import(name="percentages")
       private final @Nullable Output<Map<String,String>> percentages;
 
-    public Output<Map<String,String>> getPercentages() {
+    public Output<Map<String,String>> percentages() {
         return this.percentages == null ? Codegen.empty() : this.percentages;
     }
 

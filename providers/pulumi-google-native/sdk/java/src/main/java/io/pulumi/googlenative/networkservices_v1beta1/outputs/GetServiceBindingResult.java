@@ -68,49 +68,49 @@ public final class GetServiceBindingResult {
      * The timestamp when the resource was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. A free-text description of the resource. Max length 1024 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
     */
-    public String getEndpointFilter() {
+    public String endpointFilter() {
         return this.endpointFilter;
     }
     /**
      * Optional. Set of label tags associated with the ServiceBinding resource.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
     /**
      * The timestamp when the resource was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

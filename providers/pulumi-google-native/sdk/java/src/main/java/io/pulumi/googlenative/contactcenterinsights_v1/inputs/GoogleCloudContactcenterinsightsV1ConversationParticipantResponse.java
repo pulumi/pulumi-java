@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="dialogflowParticipantName", required=true)
       private final String dialogflowParticipantName;
 
-    public String getDialogflowParticipantName() {
+    public String dialogflowParticipantName() {
         return this.dialogflowParticipantName;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="obfuscatedExternalUserId", required=true)
       private final String obfuscatedExternalUserId;
 
-    public String getObfuscatedExternalUserId() {
+    public String obfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 
@@ -56,7 +56,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

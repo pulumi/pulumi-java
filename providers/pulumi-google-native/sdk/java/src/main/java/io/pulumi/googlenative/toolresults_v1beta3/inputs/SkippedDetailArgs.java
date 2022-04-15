@@ -26,7 +26,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incompatibleAppVersion")
       private final @Nullable Output<Boolean> incompatibleAppVersion;
 
-    public Output<Boolean> getIncompatibleAppVersion() {
+    public Output<Boolean> incompatibleAppVersion() {
         return this.incompatibleAppVersion == null ? Codegen.empty() : this.incompatibleAppVersion;
     }
 
@@ -37,7 +37,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incompatibleArchitecture")
       private final @Nullable Output<Boolean> incompatibleArchitecture;
 
-    public Output<Boolean> getIncompatibleArchitecture() {
+    public Output<Boolean> incompatibleArchitecture() {
         return this.incompatibleArchitecture == null ? Codegen.empty() : this.incompatibleArchitecture;
     }
 
@@ -48,7 +48,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incompatibleDevice")
       private final @Nullable Output<Boolean> incompatibleDevice;
 
-    public Output<Boolean> getIncompatibleDevice() {
+    public Output<Boolean> incompatibleDevice() {
         return this.incompatibleDevice == null ? Codegen.empty() : this.incompatibleDevice;
     }
 

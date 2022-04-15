@@ -25,7 +25,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
       private final ImageResponse image;
 
-    public ImageResponse getImage() {
+    public ImageResponse image() {
         return this.image;
     }
 
@@ -36,7 +36,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -47,7 +47,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="signatureTime", required=true)
       private final String signatureTime;
 
-    public String getSignatureTime() {
+    public String signatureTime() {
         return this.signatureTime;
     }
 
@@ -58,7 +58,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

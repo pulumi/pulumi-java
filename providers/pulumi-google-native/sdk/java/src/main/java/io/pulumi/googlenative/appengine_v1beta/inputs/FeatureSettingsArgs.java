@@ -26,7 +26,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="splitHealthChecks")
       private final @Nullable Output<Boolean> splitHealthChecks;
 
-    public Output<Boolean> getSplitHealthChecks() {
+    public Output<Boolean> splitHealthChecks() {
         return this.splitHealthChecks == null ? Codegen.empty() : this.splitHealthChecks;
     }
 
@@ -37,7 +37,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useContainerOptimizedOs")
       private final @Nullable Output<Boolean> useContainerOptimizedOs;
 
-    public Output<Boolean> getUseContainerOptimizedOs() {
+    public Output<Boolean> useContainerOptimizedOs() {
         return this.useContainerOptimizedOs == null ? Codegen.empty() : this.useContainerOptimizedOs;
     }
 

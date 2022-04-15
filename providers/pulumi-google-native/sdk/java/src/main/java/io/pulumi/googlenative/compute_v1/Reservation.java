@@ -32,7 +32,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
      * 
      */
-    public Output<String> getCommitment() {
+    public Output<String> commitment() {
         return this.commitment;
     }
     /**
@@ -46,7 +46,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -60,7 +60,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -74,7 +74,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#reservations for reservations.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -88,7 +88,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +102,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
@@ -116,7 +116,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Server-defined fully-qualified URL for this resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -130,7 +130,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Share-settings for shared-reservation
      * 
      */
-    public Output<ShareSettingsResponse> getShareSettings() {
+    public Output<ShareSettingsResponse> shareSettings() {
         return this.shareSettings;
     }
     /**
@@ -144,7 +144,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Reservation for instances with specific machine shapes.
      * 
      */
-    public Output<AllocationSpecificSKUReservationResponse> getSpecificReservation() {
+    public Output<AllocationSpecificSKUReservationResponse> specificReservation() {
         return this.specificReservation;
     }
     /**
@@ -158,7 +158,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
      */
-    public Output<Boolean> getSpecificReservationRequired() {
+    public Output<Boolean> specificReservationRequired() {
         return this.specificReservationRequired;
     }
     /**
@@ -172,7 +172,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return The status of the reservation.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -186,7 +186,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * @return Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

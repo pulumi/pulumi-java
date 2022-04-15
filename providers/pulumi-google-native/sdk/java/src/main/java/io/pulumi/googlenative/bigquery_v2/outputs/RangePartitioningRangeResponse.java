@@ -39,21 +39,21 @@ public final class RangePartitioningRangeResponse {
      * [TrustedTester] [Required] The end of range partitioning, exclusive.
      * 
     */
-    public String getEnd() {
+    public String end() {
         return this.end;
     }
     /**
      * [TrustedTester] [Required] The width of each interval.
      * 
     */
-    public String getInterval() {
+    public String interval() {
         return this.interval;
     }
     /**
      * [TrustedTester] [Required] The start of range partitioning, inclusive.
      * 
     */
-    public String getStart() {
+    public String start() {
         return this.start;
     }
 

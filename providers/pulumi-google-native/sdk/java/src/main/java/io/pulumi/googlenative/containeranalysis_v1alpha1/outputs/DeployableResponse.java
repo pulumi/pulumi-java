@@ -25,7 +25,7 @@ public final class DeployableResponse {
      * Resource URI for the artifact being deployed.
      * 
     */
-    public List<String> getResourceUri() {
+    public List<String> resourceUri() {
         return this.resourceUri;
     }
 

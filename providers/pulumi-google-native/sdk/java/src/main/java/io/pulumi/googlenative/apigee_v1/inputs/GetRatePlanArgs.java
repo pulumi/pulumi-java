@@ -15,21 +15,21 @@ public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="apiproductId", required=true)
       private final String apiproductId;
 
-    public String getApiproductId() {
+    public String apiproductId() {
         return this.apiproductId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="rateplanId", required=true)
       private final String rateplanId;
 
-    public String getRateplanId() {
+    public String rateplanId() {
         return this.rateplanId;
     }
 

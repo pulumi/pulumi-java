@@ -29,7 +29,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="ciphers")
       private final @Nullable Output<List<String>> ciphers;
 
-    public Output<List<String>> getCiphers() {
+    public Output<List<String>> ciphers() {
         return this.ciphers == null ? Codegen.empty() : this.ciphers;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="clientAuthEnabled")
       private final @Nullable Output<Boolean> clientAuthEnabled;
 
-    public Output<Boolean> getClientAuthEnabled() {
+    public Output<Boolean> clientAuthEnabled() {
         return this.clientAuthEnabled == null ? Codegen.empty() : this.clientAuthEnabled;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="commonName")
       private final @Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
 
-    public Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> getCommonName() {
+    public Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName() {
         return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="ignoreValidationErrors")
       private final @Nullable Output<Boolean> ignoreValidationErrors;
 
-    public Output<Boolean> getIgnoreValidationErrors() {
+    public Output<Boolean> ignoreValidationErrors() {
         return this.ignoreValidationErrors == null ? Codegen.empty() : this.ignoreValidationErrors;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="keyAlias")
       private final @Nullable Output<String> keyAlias;
 
-    public Output<String> getKeyAlias() {
+    public Output<String> keyAlias() {
         return this.keyAlias == null ? Codegen.empty() : this.keyAlias;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="keyStore")
       private final @Nullable Output<String> keyStore;
 
-    public Output<String> getKeyStore() {
+    public Output<String> keyStore() {
         return this.keyStore == null ? Codegen.empty() : this.keyStore;
     }
 
@@ -106,7 +106,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="protocols")
       private final @Nullable Output<List<String>> protocols;
 
-    public Output<List<String>> getProtocols() {
+    public Output<List<String>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -117,7 +117,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     @Import(name="trustStore")
       private final @Nullable Output<String> trustStore;
 
-    public Output<String> getTrustStore() {
+    public Output<String> trustStore() {
         return this.trustStore == null ? Codegen.empty() : this.trustStore;
     }
 

@@ -27,7 +27,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityConfig")
       private final @Nullable Output<IdentityConfigArgs> identityConfig;
 
-    public Output<IdentityConfigArgs> getIdentityConfig() {
+    public Output<IdentityConfigArgs> identityConfig() {
         return this.identityConfig == null ? Codegen.empty() : this.identityConfig;
     }
 
@@ -38,7 +38,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kerberosConfig")
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
-    public Output<KerberosConfigArgs> getKerberosConfig() {
+    public Output<KerberosConfigArgs> kerberosConfig() {
         return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 

@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
     @Import(name="useElapsedTime", required=true)
       private final Boolean useElapsedTime;
 
-    public Boolean getUseElapsedTime() {
+    public Boolean useElapsedTime() {
         return this.useElapsedTime;
     }
 

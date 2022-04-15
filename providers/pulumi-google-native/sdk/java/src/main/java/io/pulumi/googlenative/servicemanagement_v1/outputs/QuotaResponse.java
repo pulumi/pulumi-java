@@ -34,14 +34,14 @@ public final class QuotaResponse {
      * List of `QuotaLimit` definitions for the service.
      * 
     */
-    public List<QuotaLimitResponse> getLimits() {
+    public List<QuotaLimitResponse> limits() {
         return this.limits;
     }
     /**
      * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
      * 
     */
-    public List<MetricRuleResponse> getMetricRules() {
+    public List<MetricRuleResponse> metricRules() {
         return this.metricRules;
     }
 

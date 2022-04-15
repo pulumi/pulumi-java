@@ -27,7 +27,7 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -38,7 +38,7 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matcher")
       private final @Nullable Output<ContentMatcherMatcher> matcher;
 
-    public Output<ContentMatcherMatcher> getMatcher() {
+    public Output<ContentMatcherMatcher> matcher() {
         return this.matcher == null ? Codegen.empty() : this.matcher;
     }
 

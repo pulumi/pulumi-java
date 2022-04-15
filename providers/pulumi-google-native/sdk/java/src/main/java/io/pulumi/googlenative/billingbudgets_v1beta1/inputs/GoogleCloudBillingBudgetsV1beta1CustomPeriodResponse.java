@@ -23,7 +23,7 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
     @Import(name="endDate", required=true)
       private final GoogleTypeDateResponse endDate;
 
-    public GoogleTypeDateResponse getEndDate() {
+    public GoogleTypeDateResponse endDate() {
         return this.endDate;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
     @Import(name="startDate", required=true)
       private final GoogleTypeDateResponse startDate;
 
-    public GoogleTypeDateResponse getStartDate() {
+    public GoogleTypeDateResponse startDate() {
         return this.startDate;
     }
 

@@ -20,7 +20,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="minReceiveInterval", required=true)
       private final Integer minReceiveInterval;
 
-    public Integer getMinReceiveInterval() {
+    public Integer minReceiveInterval() {
         return this.minReceiveInterval;
     }
 
@@ -31,7 +31,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="minTransmitInterval", required=true)
       private final Integer minTransmitInterval;
 
-    public Integer getMinTransmitInterval() {
+    public Integer minTransmitInterval() {
         return this.minTransmitInterval;
     }
 
@@ -42,7 +42,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -53,7 +53,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="multiplier", required=true)
       private final Integer multiplier;
 
-    public Integer getMultiplier() {
+    public Integer multiplier() {
         return this.multiplier;
     }
 
@@ -64,7 +64,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="packetMode", required=true)
       private final String packetMode;
 
-    public String getPacketMode() {
+    public String packetMode() {
         return this.packetMode;
     }
 
@@ -75,7 +75,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sessionInitializationMode", required=true)
       private final String sessionInitializationMode;
 
-    public String getSessionInitializationMode() {
+    public String sessionInitializationMode() {
         return this.sessionInitializationMode;
     }
 
@@ -86,7 +86,7 @@ public final class RouterBgpPeerBfdResponse extends io.pulumi.resources.InvokeAr
     @Import(name="slowTimerInterval", required=true)
       private final Integer slowTimerInterval;
 
-    public Integer getSlowTimerInterval() {
+    public Integer slowTimerInterval() {
         return this.slowTimerInterval;
     }
 

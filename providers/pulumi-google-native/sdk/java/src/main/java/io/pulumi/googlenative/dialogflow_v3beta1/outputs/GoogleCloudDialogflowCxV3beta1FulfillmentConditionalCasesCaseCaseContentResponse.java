@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * Additional cases to be evaluated.
      * 
     */
-    public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse getAdditionalCases() {
+    public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases() {
         return this.additionalCases;
     }
     /**
      * Returned message.
      * 
     */
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse getMessage() {
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message() {
         return this.message;
     }
 

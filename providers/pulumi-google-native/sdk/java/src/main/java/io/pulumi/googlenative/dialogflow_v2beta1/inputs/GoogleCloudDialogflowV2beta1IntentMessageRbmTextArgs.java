@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     @Import(name="rbmSuggestion")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getRbmSuggestion() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion() {
         return this.rbmSuggestion == null ? Codegen.empty() : this.rbmSuggestion;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 

@@ -25,7 +25,7 @@ public final class QuotaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="limits", required=true)
       private final List<QuotaLimitResponse> limits;
 
-    public List<QuotaLimitResponse> getLimits() {
+    public List<QuotaLimitResponse> limits() {
         return this.limits;
     }
 
@@ -36,7 +36,7 @@ public final class QuotaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metricRules", required=true)
       private final List<MetricRuleResponse> metricRules;
 
-    public List<MetricRuleResponse> getMetricRules() {
+    public List<MetricRuleResponse> metricRules() {
         return this.metricRules;
     }
 

@@ -23,7 +23,7 @@ public final class DSSEHintResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="humanReadableName", required=true)
       private final String humanReadableName;
 
-    public String getHumanReadableName() {
+    public String humanReadableName() {
         return this.humanReadableName;
     }
 

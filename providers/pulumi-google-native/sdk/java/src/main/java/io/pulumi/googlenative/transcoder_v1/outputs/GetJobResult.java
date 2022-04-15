@@ -98,77 +98,77 @@ public final class GetJobResult {
      * The configuration for this job.
      * 
     */
-    public JobConfigResponse getConfig() {
+    public JobConfigResponse config() {
         return this.config;
     }
     /**
      * The time the job was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The time the transcoding finished.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * An error object that describes the reason for the failure. This property is always present when `state` is `FAILED`.
      * 
     */
-    public StatusResponse getError() {
+    public StatusResponse error() {
         return this.error;
     }
     /**
      * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
      * 
     */
-    public String getInputUri() {
+    public String inputUri() {
         return this.inputUri;
     }
     /**
      * The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
      * 
     */
-    public String getOutputUri() {
+    public String outputUri() {
         return this.outputUri;
     }
     /**
      * The time the transcoding started.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The current state of the job.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
      * 
     */
-    public String getTemplateId() {
+    public String templateId() {
         return this.templateId;
     }
     /**
      * Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
      * 
     */
-    public Integer getTtlAfterCompletionDays() {
+    public Integer ttlAfterCompletionDays() {
         return this.ttlAfterCompletionDays;
     }
 

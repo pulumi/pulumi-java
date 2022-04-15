@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
     @Import(name="property")
       private final @Nullable Output<String> property;
 
-    public Output<String> getProperty() {
+    public Output<String> property() {
         return this.property == null ? Codegen.empty() : this.property;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
     @Import(name="value")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getValue() {
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

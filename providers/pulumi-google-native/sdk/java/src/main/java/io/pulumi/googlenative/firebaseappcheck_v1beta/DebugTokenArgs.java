@@ -18,7 +18,7 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -29,7 +29,7 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -40,14 +40,14 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -58,7 +58,7 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="token", required=true)
       private final Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token;
     }
 

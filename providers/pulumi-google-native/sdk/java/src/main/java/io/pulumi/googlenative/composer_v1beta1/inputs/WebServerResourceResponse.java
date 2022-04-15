@@ -23,7 +23,7 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="cpu", required=true)
       private final Double cpu;
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
 
@@ -34,7 +34,7 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
-    public Double getMemoryGb() {
+    public Double memoryGb() {
         return this.memoryGb;
     }
 
@@ -45,7 +45,7 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
     @Import(name="storageGb", required=true)
       private final Double storageGb;
 
-    public Double getStorageGb() {
+    public Double storageGb() {
         return this.storageGb;
     }
 

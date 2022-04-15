@@ -27,7 +27,7 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
     @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> getTestTargets() {
+    public Output<List<String>> testTargets() {
         return this.testTargets == null ? Codegen.empty() : this.testTargets;
     }
 

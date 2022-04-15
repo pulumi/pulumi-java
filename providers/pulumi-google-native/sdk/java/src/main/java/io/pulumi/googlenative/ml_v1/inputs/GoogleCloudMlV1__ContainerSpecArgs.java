@@ -29,7 +29,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
+    public Output<List<String>> args() {
         return this.args == null ? Codegen.empty() : this.args;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     @Import(name="env")
       private final @Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env;
 
-    public Output<List<GoogleCloudMlV1__EnvVarArgs>> getEnv() {
+    public Output<List<GoogleCloudMlV1__EnvVarArgs>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     @Import(name="ports")
       private final @Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
 
-    public Output<List<GoogleCloudMlV1__ContainerPortArgs>> getPorts() {
+    public Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

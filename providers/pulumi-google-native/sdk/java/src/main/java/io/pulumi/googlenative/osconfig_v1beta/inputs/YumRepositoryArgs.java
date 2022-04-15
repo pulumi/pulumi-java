@@ -27,7 +27,7 @@ public final class YumRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseUrl", required=true)
       private final Output<String> baseUrl;
 
-    public Output<String> getBaseUrl() {
+    public Output<String> baseUrl() {
         return this.baseUrl;
     }
 
@@ -38,7 +38,7 @@ public final class YumRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -49,7 +49,7 @@ public final class YumRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gpgKeys")
       private final @Nullable Output<List<String>> gpgKeys;
 
-    public Output<List<String>> getGpgKeys() {
+    public Output<List<String>> gpgKeys() {
         return this.gpgKeys == null ? Codegen.empty() : this.gpgKeys;
     }
 
@@ -60,7 +60,7 @@ public final class YumRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

@@ -41,21 +41,21 @@ public final class QueryParameterValueResponse {
      * [Optional] The array values, if this is an array type.
      * 
     */
-    public List<QueryParameterValueResponse> getArrayValues() {
+    public List<QueryParameterValueResponse> arrayValues() {
         return this.arrayValues;
     }
     /**
      * [Optional] The struct field values, in order of the struct type's declaration.
      * 
     */
-    public Map<String,String> getStructValues() {
+    public Map<String,String> structValues() {
         return this.structValues;
     }
     /**
      * [Optional] The value of this value, if a simple scalar type.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

@@ -24,7 +24,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;
 
-    public String getDayOfWeek() {
+    public String dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -35,7 +35,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     @Import(name="hourOfDay", required=true)
       private final Integer hourOfDay;
 
-    public Integer getHourOfDay() {
+    public Integer hourOfDay() {
         return this.hourOfDay;
     }
 

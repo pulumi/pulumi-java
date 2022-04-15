@@ -24,7 +24,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
     @Import(name="hostRedirect", required=true)
       private final String hostRedirect;
 
-    public String getHostRedirect() {
+    public String hostRedirect() {
         return this.hostRedirect;
     }
 
@@ -35,7 +35,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
     @Import(name="httpsRedirect", required=true)
       private final Boolean httpsRedirect;
 
-    public Boolean getHttpsRedirect() {
+    public Boolean httpsRedirect() {
         return this.httpsRedirect;
     }
 
@@ -46,7 +46,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
     @Import(name="pathRedirect", required=true)
       private final String pathRedirect;
 
-    public String getPathRedirect() {
+    public String pathRedirect() {
         return this.pathRedirect;
     }
 
@@ -57,7 +57,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
     @Import(name="prefixRedirect", required=true)
       private final String prefixRedirect;
 
-    public String getPrefixRedirect() {
+    public String prefixRedirect() {
         return this.prefixRedirect;
     }
 
@@ -68,7 +68,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
     @Import(name="redirectResponseCode", required=true)
       private final String redirectResponseCode;
 
-    public String getRedirectResponseCode() {
+    public String redirectResponseCode() {
         return this.redirectResponseCode;
     }
 
@@ -79,7 +79,7 @@ public final class HttpRedirectActionResponse extends io.pulumi.resources.Invoke
     @Import(name="stripQuery", required=true)
       private final Boolean stripQuery;
 
-    public Boolean getStripQuery() {
+    public Boolean stripQuery() {
         return this.stripQuery;
     }
 

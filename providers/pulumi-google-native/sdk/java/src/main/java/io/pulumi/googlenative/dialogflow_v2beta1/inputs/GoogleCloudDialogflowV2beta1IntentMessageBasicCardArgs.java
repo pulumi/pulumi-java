@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> getButtons() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons() {
         return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="formattedText")
       private final @Nullable Output<String> formattedText;
 
-    public Output<String> getFormattedText() {
+    public Output<String> formattedText() {
         return this.formattedText == null ? Codegen.empty() : this.formattedText;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
+    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
-    public Output<String> getSubtitle() {
+    public Output<String> subtitle() {
         return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 

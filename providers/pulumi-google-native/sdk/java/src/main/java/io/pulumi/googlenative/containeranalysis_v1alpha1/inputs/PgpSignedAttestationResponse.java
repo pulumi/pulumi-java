@@ -23,7 +23,7 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
@@ -34,7 +34,7 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
     @Import(name="pgpKeyId", required=true)
       private final String pgpKeyId;
 
-    public String getPgpKeyId() {
+    public String pgpKeyId() {
         return this.pgpKeyId;
     }
 
@@ -45,7 +45,7 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
     @Import(name="signature", required=true)
       private final String signature;
 
-    public String getSignature() {
+    public String signature() {
         return this.signature;
     }
 

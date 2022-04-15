@@ -25,7 +25,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="completionTime", required=true)
       private final String completionTime;
 
-    public String getCompletionTime() {
+    public String completionTime() {
         return this.completionTime;
     }
 
@@ -36,7 +36,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="failed", required=true)
       private final Integer failed;
 
-    public Integer getFailed() {
+    public Integer failed() {
         return this.failed;
     }
 
@@ -47,7 +47,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="index", required=true)
       private final Integer index;
 
-    public Integer getIndex() {
+    public Integer index() {
         return this.index;
     }
 
@@ -58,7 +58,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="lastAttemptResult", required=true)
       private final InstanceAttemptResultResponse lastAttemptResult;
 
-    public InstanceAttemptResultResponse getLastAttemptResult() {
+    public InstanceAttemptResultResponse lastAttemptResult() {
         return this.lastAttemptResult;
     }
 
@@ -69,7 +69,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="lastExitCode", required=true)
       private final Integer lastExitCode;
 
-    public Integer getLastExitCode() {
+    public Integer lastExitCode() {
         return this.lastExitCode;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="restarted", required=true)
       private final Integer restarted;
 
-    public Integer getRestarted() {
+    public Integer restarted() {
         return this.restarted;
     }
 
@@ -91,7 +91,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -102,7 +102,7 @@ public final class InstanceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="succeeded", required=true)
       private final Integer succeeded;
 
-    public Integer getSucceeded() {
+    public Integer succeeded() {
         return this.succeeded;
     }
 

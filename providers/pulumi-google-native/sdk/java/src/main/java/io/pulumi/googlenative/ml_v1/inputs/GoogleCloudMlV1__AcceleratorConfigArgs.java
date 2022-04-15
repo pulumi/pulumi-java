@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
     @Import(name="count")
       private final @Nullable Output<String> count;
 
-    public Output<String> getCount() {
+    public Output<String> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
 
-    public Output<GoogleCloudMlV1__AcceleratorConfigType> getType() {
+    public Output<GoogleCloudMlV1__AcceleratorConfigType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

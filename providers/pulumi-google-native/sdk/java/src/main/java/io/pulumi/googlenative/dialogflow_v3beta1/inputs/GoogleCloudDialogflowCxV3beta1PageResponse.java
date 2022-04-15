@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="entryFulfillment", required=true)
       private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment;
 
-    public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getEntryFulfillment() {
+    public GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment() {
         return this.entryFulfillment;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="eventHandlers", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers;
 
-    public List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> getEventHandlers() {
+    public List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers() {
         return this.eventHandlers;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="form", required=true)
       private final GoogleCloudDialogflowCxV3beta1FormResponse form;
 
-    public GoogleCloudDialogflowCxV3beta1FormResponse getForm() {
+    public GoogleCloudDialogflowCxV3beta1FormResponse form() {
         return this.form;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="transitionRouteGroups", required=true)
       private final List<String> transitionRouteGroups;
 
-    public List<String> getTransitionRouteGroups() {
+    public List<String> transitionRouteGroups() {
         return this.transitionRouteGroups;
     }
 
@@ -94,7 +94,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
     @Import(name="transitionRoutes", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes;
 
-    public List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> getTransitionRoutes() {
+    public List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes() {
         return this.transitionRoutes;
     }
 

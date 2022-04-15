@@ -26,7 +26,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -48,14 +48,14 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instanceFilter", required=true)
       private final Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
-    public Output<OSPolicyAssignmentInstanceFilterArgs> getInstanceFilter() {
+    public Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -66,7 +66,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -77,21 +77,21 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="osPolicies", required=true)
       private final Output<List<OSPolicyArgs>> osPolicies;
 
-    public Output<List<OSPolicyArgs>> getOsPolicies() {
+    public Output<List<OSPolicyArgs>> osPolicies() {
         return this.osPolicies;
     }
 
     @Import(name="osPolicyAssignmentId", required=true)
       private final Output<String> osPolicyAssignmentId;
 
-    public Output<String> getOsPolicyAssignmentId() {
+    public Output<String> osPolicyAssignmentId() {
         return this.osPolicyAssignmentId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -102,7 +102,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rollout", required=true)
       private final Output<OSPolicyAssignmentRolloutArgs> rollout;
 
-    public Output<OSPolicyAssignmentRolloutArgs> getRollout() {
+    public Output<OSPolicyAssignmentRolloutArgs> rollout() {
         return this.rollout;
     }
 

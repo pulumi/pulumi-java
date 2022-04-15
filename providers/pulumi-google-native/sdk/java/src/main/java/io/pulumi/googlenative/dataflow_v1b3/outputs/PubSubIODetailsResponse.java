@@ -32,14 +32,14 @@ public final class PubSubIODetailsResponse {
      * Subscription used in the connection.
      * 
     */
-    public String getSubscription() {
+    public String subscription() {
         return this.subscription;
     }
     /**
      * Topic accessed in the connection.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

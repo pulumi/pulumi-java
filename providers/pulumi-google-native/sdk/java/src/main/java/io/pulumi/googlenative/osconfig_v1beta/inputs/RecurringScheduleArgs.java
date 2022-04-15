@@ -31,7 +31,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -42,7 +42,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frequency", required=true)
       private final Output<RecurringScheduleFrequency> frequency;
 
-    public Output<RecurringScheduleFrequency> getFrequency() {
+    public Output<RecurringScheduleFrequency> frequency() {
         return this.frequency;
     }
 
@@ -53,7 +53,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="monthly", required=true)
       private final Output<MonthlyScheduleArgs> monthly;
 
-    public Output<MonthlyScheduleArgs> getMonthly() {
+    public Output<MonthlyScheduleArgs> monthly() {
         return this.monthly;
     }
 
@@ -64,7 +64,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -75,7 +75,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeOfDay", required=true)
       private final Output<TimeOfDayArgs> timeOfDay;
 
-    public Output<TimeOfDayArgs> getTimeOfDay() {
+    public Output<TimeOfDayArgs> timeOfDay() {
         return this.timeOfDay;
     }
 
@@ -86,7 +86,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeZone", required=true)
       private final Output<TimeZoneArgs> timeZone;
 
-    public Output<TimeZoneArgs> getTimeZone() {
+    public Output<TimeZoneArgs> timeZone() {
         return this.timeZone;
     }
 
@@ -97,7 +97,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="weekly", required=true)
       private final Output<WeeklyScheduleArgs> weekly;
 
-    public Output<WeeklyScheduleArgs> getWeekly() {
+    public Output<WeeklyScheduleArgs> weekly() {
         return this.weekly;
     }
 

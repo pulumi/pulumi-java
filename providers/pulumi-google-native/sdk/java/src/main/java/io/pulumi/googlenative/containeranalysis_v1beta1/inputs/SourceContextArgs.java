@@ -30,7 +30,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudRepo")
       private final @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
 
-    public Output<CloudRepoSourceContextArgs> getCloudRepo() {
+    public Output<CloudRepoSourceContextArgs> cloudRepo() {
         return this.cloudRepo == null ? Codegen.empty() : this.cloudRepo;
     }
 
@@ -41,7 +41,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gerrit")
       private final @Nullable Output<GerritSourceContextArgs> gerrit;
 
-    public Output<GerritSourceContextArgs> getGerrit() {
+    public Output<GerritSourceContextArgs> gerrit() {
         return this.gerrit == null ? Codegen.empty() : this.gerrit;
     }
 
@@ -52,7 +52,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="git")
       private final @Nullable Output<GitSourceContextArgs> git;
 
-    public Output<GitSourceContextArgs> getGit() {
+    public Output<GitSourceContextArgs> git() {
         return this.git == null ? Codegen.empty() : this.git;
     }
 
@@ -63,7 +63,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

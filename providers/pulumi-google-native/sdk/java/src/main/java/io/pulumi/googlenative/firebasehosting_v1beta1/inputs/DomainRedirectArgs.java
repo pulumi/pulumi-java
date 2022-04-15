@@ -26,7 +26,7 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -37,7 +37,7 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<DomainRedirectType> type;
 
-    public Output<DomainRedirectType> getType() {
+    public Output<DomainRedirectType> type() {
         return this.type;
     }
 

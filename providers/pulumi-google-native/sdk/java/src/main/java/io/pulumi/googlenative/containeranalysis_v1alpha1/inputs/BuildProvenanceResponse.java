@@ -28,7 +28,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="buildOptions", required=true)
       private final Map<String,String> buildOptions;
 
-    public Map<String,String> getBuildOptions() {
+    public Map<String,String> buildOptions() {
         return this.buildOptions;
     }
 
@@ -39,7 +39,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="builderVersion", required=true)
       private final String builderVersion;
 
-    public String getBuilderVersion() {
+    public String builderVersion() {
         return this.builderVersion;
     }
 
@@ -50,7 +50,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="builtArtifacts", required=true)
       private final List<ArtifactResponse> builtArtifacts;
 
-    public List<ArtifactResponse> getBuiltArtifacts() {
+    public List<ArtifactResponse> builtArtifacts() {
         return this.builtArtifacts;
     }
 
@@ -61,7 +61,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="commands", required=true)
       private final List<CommandResponse> commands;
 
-    public List<CommandResponse> getCommands() {
+    public List<CommandResponse> commands() {
         return this.commands;
     }
 
@@ -72,7 +72,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -83,7 +83,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="creator", required=true)
       private final String creator;
 
-    public String getCreator() {
+    public String creator() {
         return this.creator;
     }
 
@@ -94,7 +94,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="finishTime", required=true)
       private final String finishTime;
 
-    public String getFinishTime() {
+    public String finishTime() {
         return this.finishTime;
     }
 
@@ -105,7 +105,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="logsBucket", required=true)
       private final String logsBucket;
 
-    public String getLogsBucket() {
+    public String logsBucket() {
         return this.logsBucket;
     }
 
@@ -116,7 +116,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="project", required=true)
       private final String project;
 
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 
@@ -127,7 +127,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="sourceProvenance", required=true)
       private final SourceResponse sourceProvenance;
 
-    public SourceResponse getSourceProvenance() {
+    public SourceResponse sourceProvenance() {
         return this.sourceProvenance;
     }
 
@@ -138,7 +138,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -149,7 +149,7 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="triggerId", required=true)
       private final String triggerId;
 
-    public String getTriggerId() {
+    public String triggerId() {
         return this.triggerId;
     }
 

@@ -29,7 +29,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentationRootUrl")
       private final @Nullable Output<String> documentationRootUrl;
 
-    public Output<String> getDocumentationRootUrl() {
+    public Output<String> documentationRootUrl() {
         return this.documentationRootUrl == null ? Codegen.empty() : this.documentationRootUrl;
     }
 
@@ -40,7 +40,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overview")
       private final @Nullable Output<String> overview;
 
-    public Output<String> getOverview() {
+    public Output<String> overview() {
         return this.overview == null ? Codegen.empty() : this.overview;
     }
 
@@ -51,7 +51,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pages")
       private final @Nullable Output<List<PageArgs>> pages;
 
-    public Output<List<PageArgs>> getPages() {
+    public Output<List<PageArgs>> pages() {
         return this.pages == null ? Codegen.empty() : this.pages;
     }
 
@@ -62,7 +62,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<DocumentationRuleArgs>> rules;
 
-    public Output<List<DocumentationRuleArgs>> getRules() {
+    public Output<List<DocumentationRuleArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -73,7 +73,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRootUrl")
       private final @Nullable Output<String> serviceRootUrl;
 
-    public Output<String> getServiceRootUrl() {
+    public Output<String> serviceRootUrl() {
         return this.serviceRootUrl == null ? Codegen.empty() : this.serviceRootUrl;
     }
 
@@ -84,7 +84,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="summary")
       private final @Nullable Output<String> summary;
 
-    public Output<String> getSummary() {
+    public Output<String> summary() {
         return this.summary == null ? Codegen.empty() : this.summary;
     }
 

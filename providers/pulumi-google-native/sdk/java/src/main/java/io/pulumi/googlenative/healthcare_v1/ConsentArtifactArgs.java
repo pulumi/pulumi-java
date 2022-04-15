@@ -26,7 +26,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="consentContentScreenshots")
       private final @Nullable Output<List<ImageArgs>> consentContentScreenshots;
 
-    public Output<List<ImageArgs>> getConsentContentScreenshots() {
+    public Output<List<ImageArgs>> consentContentScreenshots() {
         return this.consentContentScreenshots == null ? Codegen.empty() : this.consentContentScreenshots;
     }
 
@@ -37,21 +37,21 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="consentContentVersion")
       private final @Nullable Output<String> consentContentVersion;
 
-    public Output<String> getConsentContentVersion() {
+    public Output<String> consentContentVersion() {
         return this.consentContentVersion == null ? Codegen.empty() : this.consentContentVersion;
     }
 
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -62,14 +62,14 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="guardianSignature")
       private final @Nullable Output<SignatureArgs> guardianSignature;
 
-    public Output<SignatureArgs> getGuardianSignature() {
+    public Output<SignatureArgs> guardianSignature() {
         return this.guardianSignature == null ? Codegen.empty() : this.guardianSignature;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -91,14 +91,14 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -109,7 +109,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -120,7 +120,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userSignature")
       private final @Nullable Output<SignatureArgs> userSignature;
 
-    public Output<SignatureArgs> getUserSignature() {
+    public Output<SignatureArgs> userSignature() {
         return this.userSignature == null ? Codegen.empty() : this.userSignature;
     }
 
@@ -131,7 +131,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="witnessSignature")
       private final @Nullable Output<SignatureArgs> witnessSignature;
 
-    public Output<SignatureArgs> getWitnessSignature() {
+    public Output<SignatureArgs> witnessSignature() {
         return this.witnessSignature == null ? Codegen.empty() : this.witnessSignature;
     }
 

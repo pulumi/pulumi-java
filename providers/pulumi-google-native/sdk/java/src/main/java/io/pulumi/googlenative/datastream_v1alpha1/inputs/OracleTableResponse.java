@@ -25,7 +25,7 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oracleColumns", required=true)
       private final List<OracleColumnResponse> oracleColumns;
 
-    public List<OracleColumnResponse> getOracleColumns() {
+    public List<OracleColumnResponse> oracleColumns() {
         return this.oracleColumns;
     }
 
@@ -36,7 +36,7 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 

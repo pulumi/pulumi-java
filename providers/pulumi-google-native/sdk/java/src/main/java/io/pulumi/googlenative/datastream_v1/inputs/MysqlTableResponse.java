@@ -25,7 +25,7 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mysqlColumns", required=true)
       private final List<MysqlColumnResponse> mysqlColumns;
 
-    public List<MysqlColumnResponse> getMysqlColumns() {
+    public List<MysqlColumnResponse> mysqlColumns() {
         return this.mysqlColumns;
     }
 
@@ -36,7 +36,7 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="table", required=true)
       private final String table;
 
-    public String getTable() {
+    public String table() {
         return this.table;
     }
 

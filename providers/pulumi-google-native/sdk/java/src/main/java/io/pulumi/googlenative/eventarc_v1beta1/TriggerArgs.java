@@ -26,7 +26,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
       private final Output<DestinationArgs> destination;
 
-    public Output<DestinationArgs> getDestination() {
+    public Output<DestinationArgs> destination() {
         return this.destination;
     }
 
@@ -37,14 +37,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -55,7 +55,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchingCriteria", required=true)
       private final Output<List<MatchingCriteriaArgs>> matchingCriteria;
 
-    public Output<List<MatchingCriteriaArgs>> getMatchingCriteria() {
+    public Output<List<MatchingCriteriaArgs>> matchingCriteria() {
         return this.matchingCriteria;
     }
 
@@ -66,14 +66,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -84,21 +84,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="triggerId", required=true)
       private final Output<String> triggerId;
 
-    public Output<String> getTriggerId() {
+    public Output<String> triggerId() {
         return this.triggerId;
     }
 
     @Import(name="validateOnly", required=true)
       private final Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly;
     }
 

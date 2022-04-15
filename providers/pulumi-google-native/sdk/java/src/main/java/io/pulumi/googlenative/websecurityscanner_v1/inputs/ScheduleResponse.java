@@ -24,7 +24,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="intervalDurationDays", required=true)
       private final Integer intervalDurationDays;
 
-    public Integer getIntervalDurationDays() {
+    public Integer intervalDurationDays() {
         return this.intervalDurationDays;
     }
 
@@ -35,7 +35,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scheduleTime", required=true)
       private final String scheduleTime;
 
-    public String getScheduleTime() {
+    public String scheduleTime() {
         return this.scheduleTime;
     }
 

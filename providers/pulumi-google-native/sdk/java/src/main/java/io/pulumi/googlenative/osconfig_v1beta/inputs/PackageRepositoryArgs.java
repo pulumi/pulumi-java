@@ -29,7 +29,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="apt")
       private final @Nullable Output<AptRepositoryArgs> apt;
 
-    public Output<AptRepositoryArgs> getApt() {
+    public Output<AptRepositoryArgs> apt() {
         return this.apt == null ? Codegen.empty() : this.apt;
     }
 
@@ -40,7 +40,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="goo")
       private final @Nullable Output<GooRepositoryArgs> goo;
 
-    public Output<GooRepositoryArgs> getGoo() {
+    public Output<GooRepositoryArgs> goo() {
         return this.goo == null ? Codegen.empty() : this.goo;
     }
 
@@ -51,7 +51,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="yum")
       private final @Nullable Output<YumRepositoryArgs> yum;
 
-    public Output<YumRepositoryArgs> getYum() {
+    public Output<YumRepositoryArgs> yum() {
         return this.yum == null ? Codegen.empty() : this.yum;
     }
 
@@ -62,7 +62,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="zypper")
       private final @Nullable Output<ZypperRepositoryArgs> zypper;
 
-    public Output<ZypperRepositoryArgs> getZypper() {
+    public Output<ZypperRepositoryArgs> zypper() {
         return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 

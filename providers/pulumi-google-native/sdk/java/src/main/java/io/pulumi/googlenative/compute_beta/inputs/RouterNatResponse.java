@@ -29,7 +29,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="drainNatIps", required=true)
       private final List<String> drainNatIps;
 
-    public List<String> getDrainNatIps() {
+    public List<String> drainNatIps() {
         return this.drainNatIps;
     }
 
@@ -40,14 +40,14 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enableDynamicPortAllocation", required=true)
       private final Boolean enableDynamicPortAllocation;
 
-    public Boolean getEnableDynamicPortAllocation() {
+    public Boolean enableDynamicPortAllocation() {
         return this.enableDynamicPortAllocation;
     }
 
     @Import(name="enableEndpointIndependentMapping", required=true)
       private final Boolean enableEndpointIndependentMapping;
 
-    public Boolean getEnableEndpointIndependentMapping() {
+    public Boolean enableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping;
     }
 
@@ -58,7 +58,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="icmpIdleTimeoutSec", required=true)
       private final Integer icmpIdleTimeoutSec;
 
-    public Integer getIcmpIdleTimeoutSec() {
+    public Integer icmpIdleTimeoutSec() {
         return this.icmpIdleTimeoutSec;
     }
 
@@ -69,7 +69,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logConfig", required=true)
       private final RouterNatLogConfigResponse logConfig;
 
-    public RouterNatLogConfigResponse getLogConfig() {
+    public RouterNatLogConfigResponse logConfig() {
         return this.logConfig;
     }
 
@@ -80,7 +80,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxPortsPerVm", required=true)
       private final Integer maxPortsPerVm;
 
-    public Integer getMaxPortsPerVm() {
+    public Integer maxPortsPerVm() {
         return this.maxPortsPerVm;
     }
 
@@ -91,7 +91,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minPortsPerVm", required=true)
       private final Integer minPortsPerVm;
 
-    public Integer getMinPortsPerVm() {
+    public Integer minPortsPerVm() {
         return this.minPortsPerVm;
     }
 
@@ -102,7 +102,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -113,7 +113,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="natIpAllocateOption", required=true)
       private final String natIpAllocateOption;
 
-    public String getNatIpAllocateOption() {
+    public String natIpAllocateOption() {
         return this.natIpAllocateOption;
     }
 
@@ -124,7 +124,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="natIps", required=true)
       private final List<String> natIps;
 
-    public List<String> getNatIps() {
+    public List<String> natIps() {
         return this.natIps;
     }
 
@@ -135,7 +135,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rules", required=true)
       private final List<RouterNatRuleResponse> rules;
 
-    public List<RouterNatRuleResponse> getRules() {
+    public List<RouterNatRuleResponse> rules() {
         return this.rules;
     }
 
@@ -146,7 +146,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceSubnetworkIpRangesToNat", required=true)
       private final String sourceSubnetworkIpRangesToNat;
 
-    public String getSourceSubnetworkIpRangesToNat() {
+    public String sourceSubnetworkIpRangesToNat() {
         return this.sourceSubnetworkIpRangesToNat;
     }
 
@@ -157,7 +157,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetworks", required=true)
       private final List<RouterNatSubnetworkToNatResponse> subnetworks;
 
-    public List<RouterNatSubnetworkToNatResponse> getSubnetworks() {
+    public List<RouterNatSubnetworkToNatResponse> subnetworks() {
         return this.subnetworks;
     }
 
@@ -168,7 +168,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tcpEstablishedIdleTimeoutSec", required=true)
       private final Integer tcpEstablishedIdleTimeoutSec;
 
-    public Integer getTcpEstablishedIdleTimeoutSec() {
+    public Integer tcpEstablishedIdleTimeoutSec() {
         return this.tcpEstablishedIdleTimeoutSec;
     }
 
@@ -179,7 +179,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tcpTimeWaitTimeoutSec", required=true)
       private final Integer tcpTimeWaitTimeoutSec;
 
-    public Integer getTcpTimeWaitTimeoutSec() {
+    public Integer tcpTimeWaitTimeoutSec() {
         return this.tcpTimeWaitTimeoutSec;
     }
 
@@ -190,7 +190,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tcpTransitoryIdleTimeoutSec", required=true)
       private final Integer tcpTransitoryIdleTimeoutSec;
 
-    public Integer getTcpTransitoryIdleTimeoutSec() {
+    public Integer tcpTransitoryIdleTimeoutSec() {
         return this.tcpTransitoryIdleTimeoutSec;
     }
 
@@ -201,7 +201,7 @@ public final class RouterNatResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="udpIdleTimeoutSec", required=true)
       private final Integer udpIdleTimeoutSec;
 
-    public Integer getUdpIdleTimeoutSec() {
+    public Integer udpIdleTimeoutSec() {
         return this.udpIdleTimeoutSec;
     }
 

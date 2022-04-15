@@ -36,7 +36,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -47,7 +47,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamicSubstitutions")
       private final @Nullable Output<Boolean> dynamicSubstitutions;
 
-    public Output<Boolean> getDynamicSubstitutions() {
+    public Output<Boolean> dynamicSubstitutions() {
         return this.dynamicSubstitutions == null ? Codegen.empty() : this.dynamicSubstitutions;
     }
 
@@ -58,7 +58,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<String>> env;
 
-    public Output<List<String>> getEnv() {
+    public Output<List<String>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -69,7 +69,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logStreamingOption")
       private final @Nullable Output<BuildOptionsLogStreamingOption> logStreamingOption;
 
-    public Output<BuildOptionsLogStreamingOption> getLogStreamingOption() {
+    public Output<BuildOptionsLogStreamingOption> logStreamingOption() {
         return this.logStreamingOption == null ? Codegen.empty() : this.logStreamingOption;
     }
 
@@ -80,7 +80,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logging")
       private final @Nullable Output<BuildOptionsLogging> logging;
 
-    public Output<BuildOptionsLogging> getLogging() {
+    public Output<BuildOptionsLogging> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -91,7 +91,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<BuildOptionsMachineType> machineType;
 
-    public Output<BuildOptionsMachineType> getMachineType() {
+    public Output<BuildOptionsMachineType> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -102,7 +102,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pool")
       private final @Nullable Output<PoolOptionArgs> pool;
 
-    public Output<PoolOptionArgs> getPool() {
+    public Output<PoolOptionArgs> pool() {
         return this.pool == null ? Codegen.empty() : this.pool;
     }
 
@@ -113,7 +113,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestedVerifyOption")
       private final @Nullable Output<BuildOptionsRequestedVerifyOption> requestedVerifyOption;
 
-    public Output<BuildOptionsRequestedVerifyOption> getRequestedVerifyOption() {
+    public Output<BuildOptionsRequestedVerifyOption> requestedVerifyOption() {
         return this.requestedVerifyOption == null ? Codegen.empty() : this.requestedVerifyOption;
     }
 
@@ -124,7 +124,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretEnv")
       private final @Nullable Output<List<String>> secretEnv;
 
-    public Output<List<String>> getSecretEnv() {
+    public Output<List<String>> secretEnv() {
         return this.secretEnv == null ? Codegen.empty() : this.secretEnv;
     }
 
@@ -135,7 +135,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceProvenanceHash")
       private final @Nullable Output<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash;
 
-    public Output<List<BuildOptionsSourceProvenanceHashItem>> getSourceProvenanceHash() {
+    public Output<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash() {
         return this.sourceProvenanceHash == null ? Codegen.empty() : this.sourceProvenanceHash;
     }
 
@@ -146,7 +146,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="substitutionOption")
       private final @Nullable Output<BuildOptionsSubstitutionOption> substitutionOption;
 
-    public Output<BuildOptionsSubstitutionOption> getSubstitutionOption() {
+    public Output<BuildOptionsSubstitutionOption> substitutionOption() {
         return this.substitutionOption == null ? Codegen.empty() : this.substitutionOption;
     }
 
@@ -157,7 +157,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
+    public Output<List<VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
@@ -168,7 +168,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;
 
-    public Output<String> getWorkerPool() {
+    public Output<String> workerPool() {
         return this.workerPool == null ? Codegen.empty() : this.workerPool;
     }
 

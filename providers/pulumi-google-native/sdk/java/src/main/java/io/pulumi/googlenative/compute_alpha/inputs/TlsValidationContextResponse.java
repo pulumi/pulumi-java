@@ -24,7 +24,7 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
     @Import(name="certificatePath", required=true)
       private final String certificatePath;
 
-    public String getCertificatePath() {
+    public String certificatePath() {
         return this.certificatePath;
     }
 
@@ -35,7 +35,7 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
     @Import(name="sdsConfig", required=true)
       private final SdsConfigResponse sdsConfig;
 
-    public SdsConfigResponse getSdsConfig() {
+    public SdsConfigResponse sdsConfig() {
         return this.sdsConfig;
     }
 
@@ -46,7 +46,7 @@ public final class TlsValidationContextResponse extends io.pulumi.resources.Invo
     @Import(name="validationSource", required=true)
       private final String validationSource;
 
-    public String getValidationSource() {
+    public String validationSource() {
         return this.validationSource;
     }
 

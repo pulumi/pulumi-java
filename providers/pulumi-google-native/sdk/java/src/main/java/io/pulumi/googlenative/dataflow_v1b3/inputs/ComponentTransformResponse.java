@@ -23,7 +23,7 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -34,7 +34,7 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
     @Import(name="originalTransform", required=true)
       private final String originalTransform;
 
-    public String getOriginalTransform() {
+    public String originalTransform() {
         return this.originalTransform;
     }
 
@@ -45,7 +45,7 @@ public final class ComponentTransformResponse extends io.pulumi.resources.Invoke
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

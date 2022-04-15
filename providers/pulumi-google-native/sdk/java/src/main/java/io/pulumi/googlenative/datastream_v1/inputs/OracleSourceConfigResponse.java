@@ -23,7 +23,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="excludeObjects", required=true)
       private final OracleRdbmsResponse excludeObjects;
 
-    public OracleRdbmsResponse getExcludeObjects() {
+    public OracleRdbmsResponse excludeObjects() {
         return this.excludeObjects;
     }
 
@@ -34,7 +34,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
     @Import(name="includeObjects", required=true)
       private final OracleRdbmsResponse includeObjects;
 
-    public OracleRdbmsResponse getIncludeObjects() {
+    public OracleRdbmsResponse includeObjects() {
         return this.includeObjects;
     }
 

@@ -23,7 +23,7 @@ public final class AnyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="typeUrl", required=true)
       private final String typeUrl;
 
-    public String getTypeUrl() {
+    public String typeUrl() {
         return this.typeUrl;
     }
 
@@ -34,7 +34,7 @@ public final class AnyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

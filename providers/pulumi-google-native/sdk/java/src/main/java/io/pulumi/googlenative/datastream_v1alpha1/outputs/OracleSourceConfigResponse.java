@@ -32,14 +32,14 @@ public final class OracleSourceConfigResponse {
      * Oracle objects to include in the stream.
      * 
     */
-    public OracleRdbmsResponse getAllowlist() {
+    public OracleRdbmsResponse allowlist() {
         return this.allowlist;
     }
     /**
      * Oracle objects to exclude from the stream.
      * 
     */
-    public OracleRdbmsResponse getRejectlist() {
+    public OracleRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
 

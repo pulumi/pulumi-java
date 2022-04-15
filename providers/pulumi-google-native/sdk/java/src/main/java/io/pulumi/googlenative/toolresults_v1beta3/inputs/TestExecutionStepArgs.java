@@ -30,7 +30,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     @Import(name="testIssues")
       private final @Nullable Output<List<TestIssueArgs>> testIssues;
 
-    public Output<List<TestIssueArgs>> getTestIssues() {
+    public Output<List<TestIssueArgs>> testIssues() {
         return this.testIssues == null ? Codegen.empty() : this.testIssues;
     }
 
@@ -41,7 +41,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     @Import(name="testSuiteOverviews")
       private final @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
 
-    public Output<List<TestSuiteOverviewArgs>> getTestSuiteOverviews() {
+    public Output<List<TestSuiteOverviewArgs>> testSuiteOverviews() {
         return this.testSuiteOverviews == null ? Codegen.empty() : this.testSuiteOverviews;
     }
 
@@ -52,7 +52,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     @Import(name="testTiming")
       private final @Nullable Output<TestTimingArgs> testTiming;
 
-    public Output<TestTimingArgs> getTestTiming() {
+    public Output<TestTimingArgs> testTiming() {
         return this.testTiming == null ? Codegen.empty() : this.testTiming;
     }
 
@@ -63,7 +63,7 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     @Import(name="toolExecution")
       private final @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Output<ToolExecutionArgs> getToolExecution() {
+    public Output<ToolExecutionArgs> toolExecution() {
         return this.toolExecution == null ? Codegen.empty() : this.toolExecution;
     }
 

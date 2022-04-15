@@ -24,7 +24,7 @@ public final class PubsubDestinationResponse {
      * The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

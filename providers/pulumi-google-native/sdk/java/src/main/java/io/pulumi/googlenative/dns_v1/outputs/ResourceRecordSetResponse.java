@@ -62,49 +62,49 @@ public final class ResourceRecordSetResponse {
         this.type = type;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * For example, www.example.com.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
      * 
     */
-    public RRSetRoutingPolicyResponse getRoutingPolicy() {
+    public RRSetRoutingPolicyResponse routingPolicy() {
         return this.routingPolicy;
     }
     /**
      * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
      * 
     */
-    public List<String> getRrdatas() {
+    public List<String> rrdatas() {
         return this.rrdatas;
     }
     /**
      * As defined in RFC 4034 (section 3.2).
      * 
     */
-    public List<String> getSignatureRrdatas() {
+    public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
     /**
      * Number of seconds that this ResourceRecordSet can be cached by resolvers.
      * 
     */
-    public Integer getTtl() {
+    public Integer ttl() {
         return this.ttl;
     }
     /**
      * The identifier of a supported record type. See the list of Supported DNS record types.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

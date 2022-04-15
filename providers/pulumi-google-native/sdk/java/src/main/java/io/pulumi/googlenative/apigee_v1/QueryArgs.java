@@ -26,7 +26,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
-    public Output<String> getCsvDelimiter() {
+    public Output<String> csvDelimiter() {
         return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
     }
 
@@ -37,7 +37,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<String>> dimensions;
 
-    public Output<List<String>> getDimensions() {
+    public Output<List<String>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -48,14 +48,14 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envgroupHostname")
       private final @Nullable Output<String> envgroupHostname;
 
-    public Output<String> getEnvgroupHostname() {
+    public Output<String> envgroupHostname() {
         return this.envgroupHostname == null ? Codegen.empty() : this.envgroupHostname;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -66,7 +66,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -77,7 +77,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupByTimeUnit")
       private final @Nullable Output<String> groupByTimeUnit;
 
-    public Output<String> getGroupByTimeUnit() {
+    public Output<String> groupByTimeUnit() {
         return this.groupByTimeUnit == null ? Codegen.empty() : this.groupByTimeUnit;
     }
 
@@ -88,7 +88,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit == null ? Codegen.empty() : this.limit;
     }
 
@@ -99,7 +99,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
 
-    public Output<List<GoogleCloudApigeeV1QueryMetricArgs>> getMetrics() {
+    public Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -110,14 +110,14 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -128,7 +128,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
+    public Output<String> outputFormat() {
         return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
@@ -139,7 +139,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportDefinitionId")
       private final @Nullable Output<String> reportDefinitionId;
 
-    public Output<String> getReportDefinitionId() {
+    public Output<String> reportDefinitionId() {
         return this.reportDefinitionId == null ? Codegen.empty() : this.reportDefinitionId;
     }
 
@@ -150,7 +150,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeRange", required=true)
       private final Output<Object> timeRange;
 
-    public Output<Object> getTimeRange() {
+    public Output<Object> timeRange() {
         return this.timeRange;
     }
 

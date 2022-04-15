@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     @Import(name="fullMatch")
       private final @Nullable Output<Boolean> fullMatch;
 
-    public Output<Boolean> getFullMatch() {
+    public Output<Boolean> fullMatch() {
         return this.fullMatch == null ? Codegen.empty() : this.fullMatch;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

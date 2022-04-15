@@ -27,7 +27,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidTest")
       private final @Nullable Output<AndroidTestArgs> androidTest;
 
-    public Output<AndroidTestArgs> getAndroidTest() {
+    public Output<AndroidTestArgs> androidTest() {
         return this.androidTest == null ? Codegen.empty() : this.androidTest;
     }
 
@@ -38,7 +38,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosTest")
       private final @Nullable Output<IosTestArgs> iosTest;
 
-    public Output<IosTestArgs> getIosTest() {
+    public Output<IosTestArgs> iosTest() {
         return this.iosTest == null ? Codegen.empty() : this.iosTest;
     }
 

@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2ProximityResponse {
      * Number of characters after the finding to consider.
      * 
     */
-    public Integer getWindowAfter() {
+    public Integer windowAfter() {
         return this.windowAfter;
     }
     /**
      * Number of characters before the finding to consider.
      * 
     */
-    public Integer getWindowBefore() {
+    public Integer windowBefore() {
         return this.windowBefore;
     }
 

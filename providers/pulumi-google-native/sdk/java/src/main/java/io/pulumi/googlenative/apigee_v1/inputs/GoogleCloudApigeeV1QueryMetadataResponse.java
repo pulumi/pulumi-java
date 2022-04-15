@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
     @Import(name="dimensions", required=true)
       private final List<String> dimensions;
 
-    public List<String> getDimensions() {
+    public List<String> dimensions() {
         return this.dimensions;
     }
 
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
     @Import(name="endTimestamp", required=true)
       private final String endTimestamp;
 
-    public String getEndTimestamp() {
+    public String endTimestamp() {
         return this.endTimestamp;
     }
 
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
     @Import(name="metrics", required=true)
       private final List<String> metrics;
 
-    public List<String> getMetrics() {
+    public List<String> metrics() {
         return this.metrics;
     }
 
@@ -53,7 +53,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
     @Import(name="outputFormat", required=true)
       private final String outputFormat;
 
-    public String getOutputFormat() {
+    public String outputFormat() {
         return this.outputFormat;
     }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
     @Import(name="startTimestamp", required=true)
       private final String startTimestamp;
 
-    public String getStartTimestamp() {
+    public String startTimestamp() {
         return this.startTimestamp;
     }
 
@@ -75,7 +75,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
     @Import(name="timeUnit", required=true)
       private final String timeUnit;
 
-    public String getTimeUnit() {
+    public String timeUnit() {
         return this.timeUnit;
     }
 

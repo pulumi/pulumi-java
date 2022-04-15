@@ -24,7 +24,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
     @Import(name="hostname", required=true)
       private final String hostname;
 
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
 
@@ -35,7 +35,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
@@ -46,7 +46,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -57,7 +57,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
     @Import(name="privateKey", required=true)
       private final String privateKey;
 
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
 
@@ -68,7 +68,7 @@ public final class ForwardSshTunnelConnectivityResponse extends io.pulumi.resour
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

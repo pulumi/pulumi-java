@@ -48,28 +48,28 @@ public final class TimeSeriesFilterRatioResponse {
      * The denominator of the ratio.
      * 
     */
-    public RatioPartResponse getDenominator() {
+    public RatioPartResponse denominator() {
         return this.denominator;
     }
     /**
      * The numerator of the ratio.
      * 
     */
-    public RatioPartResponse getNumerator() {
+    public RatioPartResponse numerator() {
         return this.numerator;
     }
     /**
      * Ranking based time series filter.
      * 
     */
-    public PickTimeSeriesFilterResponse getPickTimeSeriesFilter() {
+    public PickTimeSeriesFilterResponse pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter;
     }
     /**
      * Apply a second aggregation after the ratio is computed.
      * 
     */
-    public AggregationResponse getSecondaryAggregation() {
+    public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
 

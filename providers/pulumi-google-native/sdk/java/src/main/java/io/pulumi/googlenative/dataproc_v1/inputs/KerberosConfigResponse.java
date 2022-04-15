@@ -25,7 +25,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="crossRealmTrustAdminServer", required=true)
       private final String crossRealmTrustAdminServer;
 
-    public String getCrossRealmTrustAdminServer() {
+    public String crossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer;
     }
 
@@ -36,7 +36,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="crossRealmTrustKdc", required=true)
       private final String crossRealmTrustKdc;
 
-    public String getCrossRealmTrustKdc() {
+    public String crossRealmTrustKdc() {
         return this.crossRealmTrustKdc;
     }
 
@@ -47,7 +47,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="crossRealmTrustRealm", required=true)
       private final String crossRealmTrustRealm;
 
-    public String getCrossRealmTrustRealm() {
+    public String crossRealmTrustRealm() {
         return this.crossRealmTrustRealm;
     }
 
@@ -58,7 +58,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="crossRealmTrustSharedPasswordUri", required=true)
       private final String crossRealmTrustSharedPasswordUri;
 
-    public String getCrossRealmTrustSharedPasswordUri() {
+    public String crossRealmTrustSharedPasswordUri() {
         return this.crossRealmTrustSharedPasswordUri;
     }
 
@@ -69,7 +69,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="enableKerberos", required=true)
       private final Boolean enableKerberos;
 
-    public Boolean getEnableKerberos() {
+    public Boolean enableKerberos() {
         return this.enableKerberos;
     }
 
@@ -80,7 +80,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="kdcDbKeyUri", required=true)
       private final String kdcDbKeyUri;
 
-    public String getKdcDbKeyUri() {
+    public String kdcDbKeyUri() {
         return this.kdcDbKeyUri;
     }
 
@@ -91,7 +91,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="keyPasswordUri", required=true)
       private final String keyPasswordUri;
 
-    public String getKeyPasswordUri() {
+    public String keyPasswordUri() {
         return this.keyPasswordUri;
     }
 
@@ -102,7 +102,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="keystorePasswordUri", required=true)
       private final String keystorePasswordUri;
 
-    public String getKeystorePasswordUri() {
+    public String keystorePasswordUri() {
         return this.keystorePasswordUri;
     }
 
@@ -113,7 +113,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="keystoreUri", required=true)
       private final String keystoreUri;
 
-    public String getKeystoreUri() {
+    public String keystoreUri() {
         return this.keystoreUri;
     }
 
@@ -124,7 +124,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="kmsKeyUri", required=true)
       private final String kmsKeyUri;
 
-    public String getKmsKeyUri() {
+    public String kmsKeyUri() {
         return this.kmsKeyUri;
     }
 
@@ -135,7 +135,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="realm", required=true)
       private final String realm;
 
-    public String getRealm() {
+    public String realm() {
         return this.realm;
     }
 
@@ -146,7 +146,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="rootPrincipalPasswordUri", required=true)
       private final String rootPrincipalPasswordUri;
 
-    public String getRootPrincipalPasswordUri() {
+    public String rootPrincipalPasswordUri() {
         return this.rootPrincipalPasswordUri;
     }
 
@@ -157,7 +157,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="tgtLifetimeHours", required=true)
       private final Integer tgtLifetimeHours;
 
-    public Integer getTgtLifetimeHours() {
+    public Integer tgtLifetimeHours() {
         return this.tgtLifetimeHours;
     }
 
@@ -168,7 +168,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="truststorePasswordUri", required=true)
       private final String truststorePasswordUri;
 
-    public String getTruststorePasswordUri() {
+    public String truststorePasswordUri() {
         return this.truststorePasswordUri;
     }
 
@@ -179,7 +179,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="truststoreUri", required=true)
       private final String truststoreUri;
 
-    public String getTruststoreUri() {
+    public String truststoreUri() {
         return this.truststoreUri;
     }
 

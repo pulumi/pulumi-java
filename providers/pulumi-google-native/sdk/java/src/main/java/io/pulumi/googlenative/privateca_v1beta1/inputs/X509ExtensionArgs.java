@@ -27,7 +27,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="critical", required=true)
       private final Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical;
     }
 
@@ -38,7 +38,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
       private final Output<ObjectIdArgs> objectId;
 
-    public Output<ObjectIdArgs> getObjectId() {
+    public Output<ObjectIdArgs> objectId() {
         return this.objectId;
     }
 
@@ -49,7 +49,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

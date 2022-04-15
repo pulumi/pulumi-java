@@ -27,7 +27,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
       private final @Nullable Output<ResourceGroupResourceType> resourceType;
 
-    public Output<ResourceGroupResourceType> getPropResourceType() {
+    public Output<ResourceGroupResourceType> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

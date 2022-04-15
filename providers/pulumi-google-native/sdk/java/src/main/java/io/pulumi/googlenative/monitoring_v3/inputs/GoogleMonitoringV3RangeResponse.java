@@ -23,7 +23,7 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
     @Import(name="max", required=true)
       private final Double max;
 
-    public Double getMax() {
+    public Double max() {
         return this.max;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
     @Import(name="min", required=true)
       private final Double min;
 
-    public Double getMin() {
+    public Double min() {
         return this.min;
     }
 

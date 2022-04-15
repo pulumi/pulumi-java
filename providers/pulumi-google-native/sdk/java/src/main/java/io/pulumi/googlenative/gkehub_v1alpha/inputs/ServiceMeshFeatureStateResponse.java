@@ -24,7 +24,7 @@ public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.I
     @Import(name="analysisMessages", required=true)
       private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
-    public List<ServiceMeshAnalysisMessageResponse> getAnalysisMessages() {
+    public List<ServiceMeshAnalysisMessageResponse> analysisMessages() {
         return this.analysisMessages;
     }
 

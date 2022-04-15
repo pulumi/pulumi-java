@@ -23,7 +23,7 @@ public final class DatabaseConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 

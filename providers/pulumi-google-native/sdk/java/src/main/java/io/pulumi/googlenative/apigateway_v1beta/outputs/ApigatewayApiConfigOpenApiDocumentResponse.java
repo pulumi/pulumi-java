@@ -24,7 +24,7 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
      * The OpenAPI Specification document file.
      * 
     */
-    public ApigatewayApiConfigFileResponse getDocument() {
+    public ApigatewayApiConfigFileResponse document() {
         return this.document;
     }
 

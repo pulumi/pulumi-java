@@ -41,21 +41,21 @@ public final class BuildApprovalResponse {
      * Configuration for manual approval of this build.
      * 
     */
-    public ApprovalConfigResponse getConfig() {
+    public ApprovalConfigResponse config() {
         return this.config;
     }
     /**
      * Result of manual approval for this Build.
      * 
     */
-    public ApprovalResultResponse getResult() {
+    public ApprovalResultResponse result() {
         return this.result;
     }
     /**
      * The state of this build's approval.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

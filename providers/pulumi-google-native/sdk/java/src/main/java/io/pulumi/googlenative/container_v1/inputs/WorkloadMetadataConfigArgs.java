@@ -26,7 +26,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     @Import(name="mode")
       private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Output<WorkloadMetadataConfigMode> getMode() {
+    public Output<WorkloadMetadataConfigMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

@@ -34,7 +34,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> getAutoDelete() {
+    public Output<Boolean> autoDelete() {
         return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
@@ -45,7 +45,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boot")
       private final @Nullable Output<Boolean> boot;
 
-    public Output<Boolean> getBoot() {
+    public Output<Boolean> boot() {
         return this.boot == null ? Codegen.empty() : this.boot;
     }
 
@@ -56,7 +56,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -67,7 +67,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
+    public Output<CustomerEncryptionKeyArgs> diskEncryptionKey() {
         return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
@@ -78,7 +78,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
+    public Output<String> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -89,7 +89,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+    public Output<List<GuestOsFeatureArgs>> guestOsFeatures() {
         return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
@@ -100,7 +100,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initializeParams")
       private final @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams;
 
-    public Output<AttachedDiskInitializeParamsArgs> getInitializeParams() {
+    public Output<AttachedDiskInitializeParamsArgs> initializeParams() {
         return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
@@ -111,7 +111,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interface")
       private final @Nullable Output<AttachedDiskInterface> interface_;
 
-    public Output<AttachedDiskInterface> getInterface_() {
+    public Output<AttachedDiskInterface> interface_() {
         return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
@@ -122,7 +122,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<AttachedDiskMode> mode;
 
-    public Output<AttachedDiskMode> getMode() {
+    public Output<AttachedDiskMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -133,7 +133,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -144,7 +144,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<AttachedDiskType> type;
 
-    public Output<AttachedDiskType> getType() {
+    public Output<AttachedDiskType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

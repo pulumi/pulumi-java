@@ -23,7 +23,7 @@ public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resourc
     @Import(name="permissionType", required=true)
       private final String permissionType;
 
-    public String getPermissionType() {
+    public String permissionType() {
         return this.permissionType;
     }
 

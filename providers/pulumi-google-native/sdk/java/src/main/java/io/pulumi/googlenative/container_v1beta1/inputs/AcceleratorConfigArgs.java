@@ -26,7 +26,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorCount")
       private final @Nullable Output<String> acceleratorCount;
 
-    public Output<String> getAcceleratorCount() {
+    public Output<String> acceleratorCount() {
         return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
     }
 
@@ -37,7 +37,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
@@ -48,7 +48,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="gpuPartitionSize")
       private final @Nullable Output<String> gpuPartitionSize;
 
-    public Output<String> getGpuPartitionSize() {
+    public Output<String> gpuPartitionSize() {
         return this.gpuPartitionSize == null ? Codegen.empty() : this.gpuPartitionSize;
     }
 

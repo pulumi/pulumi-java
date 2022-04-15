@@ -44,24 +44,24 @@ public final class ManagedZoneDnsSecConfigResponse {
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
      * 
     */
-    public List<DnsKeySpecResponse> getDefaultKeySpecs() {
+    public List<DnsKeySpecResponse> defaultKeySpecs() {
         return this.defaultKeySpecs;
     }
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
      * 
     */
-    public String getNonExistence() {
+    public String nonExistence() {
         return this.nonExistence;
     }
     /**
      * Specifies whether DNSSEC is enabled, and what mode it is in.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

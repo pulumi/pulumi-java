@@ -26,7 +26,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

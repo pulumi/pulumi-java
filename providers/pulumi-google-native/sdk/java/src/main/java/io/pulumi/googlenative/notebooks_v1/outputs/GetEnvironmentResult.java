@@ -69,49 +69,49 @@ public final class GetEnvironmentResult {
      * Use a container image to start the notebook instance.
      * 
     */
-    public ContainerImageResponse getContainerImage() {
+    public ContainerImageResponse containerImage() {
         return this.containerImage;
     }
     /**
      * The time at which this environment was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * A brief description of this environment.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Display name of this environment for the UI.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
      * 
     */
-    public String getPostStartupScript() {
+    public String postStartupScript() {
         return this.postStartupScript;
     }
     /**
      * Use a Compute Engine VM image to start the notebook instance.
      * 
     */
-    public VmImageResponse getVmImage() {
+    public VmImageResponse vmImage() {
         return this.vmImage;
     }
 

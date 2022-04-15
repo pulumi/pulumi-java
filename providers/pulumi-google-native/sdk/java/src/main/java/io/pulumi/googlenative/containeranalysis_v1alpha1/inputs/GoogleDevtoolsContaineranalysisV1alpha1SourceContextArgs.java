@@ -30,7 +30,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     @Import(name="cloudRepo")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> getCloudRepo() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo() {
         return this.cloudRepo == null ? Codegen.empty() : this.cloudRepo;
     }
 
@@ -41,7 +41,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     @Import(name="gerrit")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> getGerrit() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit() {
         return this.gerrit == null ? Codegen.empty() : this.gerrit;
     }
 
@@ -52,7 +52,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     @Import(name="git")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> getGit() {
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git() {
         return this.git == null ? Codegen.empty() : this.git;
     }
 
@@ -63,7 +63,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

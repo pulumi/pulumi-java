@@ -24,7 +24,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="certificateId", required=true)
       private final String certificateId;
 
-    public String getCertificateId() {
+    public String certificateId() {
         return this.certificateId;
     }
 
@@ -35,7 +35,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isManagedCertificate", required=true)
       private final Boolean isManagedCertificate;
 
-    public Boolean getIsManagedCertificate() {
+    public Boolean isManagedCertificate() {
         return this.isManagedCertificate;
     }
 

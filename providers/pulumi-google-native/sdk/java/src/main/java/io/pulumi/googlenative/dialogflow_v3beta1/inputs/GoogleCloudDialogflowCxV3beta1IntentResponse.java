@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="isFallback", required=true)
       private final Boolean isFallback;
 
-    public Boolean getIsFallback() {
+    public Boolean isFallback() {
         return this.isFallback;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="parameters", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters;
 
-    public List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> getParameters() {
+    public List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters() {
         return this.parameters;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="priority", required=true)
       private final Integer priority;
 
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -106,7 +106,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse extends io.pulum
     @Import(name="trainingPhrases", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases;
 
-    public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> getTrainingPhrases() {
+    public List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases() {
         return this.trainingPhrases;
     }
 

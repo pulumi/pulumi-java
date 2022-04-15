@@ -23,7 +23,7 @@ public final class AuthRequirementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="audiences", required=true)
       private final String audiences;
 
-    public String getAudiences() {
+    public String audiences() {
         return this.audiences;
     }
 
@@ -34,7 +34,7 @@ public final class AuthRequirementResponse extends io.pulumi.resources.InvokeArg
     @Import(name="providerId", required=true)
       private final String providerId;
 
-    public String getProviderId() {
+    public String providerId() {
         return this.providerId;
     }
 

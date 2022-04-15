@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
     @Import(name="estimatedAnonymity", required=true)
       private final String estimatedAnonymity;
 
-    public String getEstimatedAnonymity() {
+    public String estimatedAnonymity() {
         return this.estimatedAnonymity;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
     @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 

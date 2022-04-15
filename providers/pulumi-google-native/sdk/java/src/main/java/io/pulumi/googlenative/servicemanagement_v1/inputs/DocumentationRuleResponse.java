@@ -23,7 +23,7 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="deprecationDescription", required=true)
       private final String deprecationDescription;
 
-    public String getDeprecationDescription() {
+    public String deprecationDescription() {
         return this.deprecationDescription;
     }
 
@@ -34,7 +34,7 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -45,7 +45,7 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

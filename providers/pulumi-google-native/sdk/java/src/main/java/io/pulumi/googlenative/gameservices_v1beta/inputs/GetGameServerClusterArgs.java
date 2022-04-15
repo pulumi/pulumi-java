@@ -17,35 +17,35 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
     @Import(name="gameServerClusterId", required=true)
       private final String gameServerClusterId;
 
-    public String getGameServerClusterId() {
+    public String gameServerClusterId() {
         return this.gameServerClusterId;
     }
 
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="realmId", required=true)
       private final String realmId;
 
-    public String getRealmId() {
+    public String realmId() {
         return this.realmId;
     }
 
     @Import(name="view")
       private final @Nullable String view;
 
-    public Optional<String> getView() {
+    public Optional<String> view() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 

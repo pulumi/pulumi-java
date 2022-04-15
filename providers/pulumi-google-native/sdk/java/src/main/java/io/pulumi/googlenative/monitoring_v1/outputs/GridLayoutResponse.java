@@ -34,14 +34,14 @@ public final class GridLayoutResponse {
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
     */
-    public String getColumns() {
+    public String columns() {
         return this.columns;
     }
     /**
      * The informational elements that are arranged into the columns row-first.
      * 
     */
-    public List<WidgetResponse> getWidgets() {
+    public List<WidgetResponse> widgets() {
         return this.widgets;
     }
 

@@ -23,7 +23,7 @@ public final class StateNotificationConfigResponse extends io.pulumi.resources.I
     @Import(name="pubsubTopicName", required=true)
       private final String pubsubTopicName;
 
-    public String getPubsubTopicName() {
+    public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
 

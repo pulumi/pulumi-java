@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
      * Type of this table.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     @Import(name="action")
       private final @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
 
-    public Output<BucketLifecycleRuleItemActionArgs> getAction() {
+    public Output<BucketLifecycleRuleItemActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -34,7 +34,7 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
 
-    public Output<BucketLifecycleRuleItemConditionArgs> getCondition() {
+    public Output<BucketLifecycleRuleItemConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 

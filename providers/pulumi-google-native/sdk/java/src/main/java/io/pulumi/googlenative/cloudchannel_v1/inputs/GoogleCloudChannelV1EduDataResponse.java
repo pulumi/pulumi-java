@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
     @Import(name="instituteSize", required=true)
       private final String instituteSize;
 
-    public String getInstituteSize() {
+    public String instituteSize() {
         return this.instituteSize;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
     @Import(name="instituteType", required=true)
       private final String instituteType;
 
-    public String getInstituteType() {
+    public String instituteType() {
         return this.instituteType;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1EduDataResponse extends io.pulumi.resourc
     @Import(name="website", required=true)
       private final String website;
 
-    public String getWebsite() {
+    public String website() {
         return this.website;
     }
 

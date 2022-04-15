@@ -30,7 +30,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     @Import(name="actions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
-    public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
+    public Output<List<GooglePrivacyDlpV2ActionArgs>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -41,7 +41,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     @Import(name="inspectConfig")
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
-    public Output<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
+    public Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig() {
         return this.inspectConfig == null ? Codegen.empty() : this.inspectConfig;
     }
 
@@ -52,7 +52,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     @Import(name="inspectTemplateName")
       private final @Nullable Output<String> inspectTemplateName;
 
-    public Output<String> getInspectTemplateName() {
+    public Output<String> inspectTemplateName() {
         return this.inspectTemplateName == null ? Codegen.empty() : this.inspectTemplateName;
     }
 
@@ -63,7 +63,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     @Import(name="storageConfig")
       private final @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
-    public Output<GooglePrivacyDlpV2StorageConfigArgs> getStorageConfig() {
+    public Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig() {
         return this.storageConfig == null ? Codegen.empty() : this.storageConfig;
     }
 

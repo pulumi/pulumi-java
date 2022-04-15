@@ -15,14 +15,14 @@ public final class GetBillingAccountSinkArgs extends io.pulumi.resources.InvokeA
     @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
-    public String getBillingAccountId() {
+    public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="sinkId", required=true)
       private final String sinkId;
 
-    public String getSinkId() {
+    public String sinkId() {
         return this.sinkId;
     }
 

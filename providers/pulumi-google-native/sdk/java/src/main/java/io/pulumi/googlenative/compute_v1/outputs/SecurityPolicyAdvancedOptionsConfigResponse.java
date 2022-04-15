@@ -20,10 +20,10 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse {
         this.logLevel = logLevel;
     }
 
-    public String getJsonParsing() {
+    public String jsonParsing() {
         return this.jsonParsing;
     }
-    public String getLogLevel() {
+    public String logLevel() {
         return this.logLevel;
     }
 

@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
     @Import(name="excludeRegex")
       private final @Nullable Output<List<String>> excludeRegex;
 
-    public Output<List<String>> getExcludeRegex() {
+    public Output<List<String>> excludeRegex() {
         return this.excludeRegex == null ? Codegen.empty() : this.excludeRegex;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
     @Import(name="includeRegex")
       private final @Nullable Output<List<String>> includeRegex;
 
-    public Output<List<String>> getIncludeRegex() {
+    public Output<List<String>> includeRegex() {
         return this.includeRegex == null ? Codegen.empty() : this.includeRegex;
     }
 

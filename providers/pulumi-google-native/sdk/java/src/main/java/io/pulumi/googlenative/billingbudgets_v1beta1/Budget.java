@@ -35,7 +35,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Rules to apply to notifications sent based on budget spend and thresholds.
      * 
      */
-    public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse> getAllUpdatesRule() {
+    public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse> allUpdatesRule() {
         return this.allUpdatesRule;
     }
     /**
@@ -49,7 +49,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Budgeted amount.
      * 
      */
-    public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse> getAmount() {
+    public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse> amount() {
         return this.amount;
     }
     /**
@@ -63,7 +63,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
      * 
      */
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterResponse> getBudgetFilter() {
+    public Output<GoogleCloudBillingBudgetsV1beta1FilterResponse> budgetFilter() {
         return this.budgetFilter;
     }
     /**
@@ -77,7 +77,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return User data for display name in UI. Validation: <= 60 chars.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -91,7 +91,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -105,7 +105,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
      * 
      */
-    public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse>> getThresholdRules() {
+    public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse>> thresholdRules() {
         return this.thresholdRules;
     }
 

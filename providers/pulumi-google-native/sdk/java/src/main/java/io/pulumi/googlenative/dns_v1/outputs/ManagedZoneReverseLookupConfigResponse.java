@@ -16,7 +16,7 @@ public final class ManagedZoneReverseLookupConfigResponse {
         this.kind = kind;
     }
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 

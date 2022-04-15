@@ -24,7 +24,7 @@ public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="iosDevices", required=true)
       private final List<IosDeviceResponse> iosDevices;
 
-    public List<IosDeviceResponse> getIosDevices() {
+    public List<IosDeviceResponse> iosDevices() {
         return this.iosDevices;
     }
 

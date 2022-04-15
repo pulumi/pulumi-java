@@ -24,7 +24,7 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="manualSharding", required=true)
       private final ManualShardingResponse manualSharding;
 
-    public ManualShardingResponse getManualSharding() {
+    public ManualShardingResponse manualSharding() {
         return this.manualSharding;
     }
 
@@ -35,7 +35,7 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="uniformSharding", required=true)
       private final UniformShardingResponse uniformSharding;
 
-    public UniformShardingResponse getUniformSharding() {
+    public UniformShardingResponse uniformSharding() {
         return this.uniformSharding;
     }
 

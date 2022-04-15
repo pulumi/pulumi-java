@@ -29,7 +29,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return The time at which the data collector was created in milliseconds since the epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -43,7 +43,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return A description of the data collector.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +57,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return The time at which the Data Collector was last updated in milliseconds since the epoch.
      * 
      */
-    public Output<String> getLastModifiedAt() {
+    public Output<String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -71,7 +71,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return ID of the data collector. Must begin with `dc_`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * @return Immutable. The type of data this data collector will collect.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

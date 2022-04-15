@@ -31,7 +31,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactNotices")
       private final @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
 
-    public Output<List<RegistrationContactNoticesItem>> getContactNotices() {
+    public Output<List<RegistrationContactNoticesItem>> contactNotices() {
         return this.contactNotices == null ? Codegen.empty() : this.contactNotices;
     }
 
@@ -42,7 +42,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactSettings", required=true)
       private final Output<ContactSettingsArgs> contactSettings;
 
-    public Output<ContactSettingsArgs> getContactSettings() {
+    public Output<ContactSettingsArgs> contactSettings() {
         return this.contactSettings;
     }
 
@@ -53,7 +53,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsSettings")
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
-    public Output<DnsSettingsArgs> getDnsSettings() {
+    public Output<DnsSettingsArgs> dnsSettings() {
         return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
@@ -64,7 +64,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -75,7 +75,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainNotices")
       private final @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
 
-    public Output<List<RegistrationDomainNoticesItem>> getDomainNotices() {
+    public Output<List<RegistrationDomainNoticesItem>> domainNotices() {
         return this.domainNotices == null ? Codegen.empty() : this.domainNotices;
     }
 
@@ -86,14 +86,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -104,14 +104,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managementSettings")
       private final @Nullable Output<ManagementSettingsArgs> managementSettings;
 
-    public Output<ManagementSettingsArgs> getManagementSettings() {
+    public Output<ManagementSettingsArgs> managementSettings() {
         return this.managementSettings == null ? Codegen.empty() : this.managementSettings;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -122,7 +122,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
 
-    public Output<Boolean> getValidateOnly() {
+    public Output<Boolean> validateOnly() {
         return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
@@ -133,7 +133,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="yearlyPrice", required=true)
       private final Output<MoneyArgs> yearlyPrice;
 
-    public Output<MoneyArgs> getYearlyPrice() {
+    public Output<MoneyArgs> yearlyPrice() {
         return this.yearlyPrice;
     }
 

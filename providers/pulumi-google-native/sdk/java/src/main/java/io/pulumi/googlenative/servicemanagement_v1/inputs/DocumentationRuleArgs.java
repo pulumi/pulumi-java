@@ -26,7 +26,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deprecationDescription")
       private final @Nullable Output<String> deprecationDescription;
 
-    public Output<String> getDeprecationDescription() {
+    public Output<String> deprecationDescription() {
         return this.deprecationDescription == null ? Codegen.empty() : this.deprecationDescription;
     }
 
@@ -37,7 +37,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -48,7 +48,7 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 

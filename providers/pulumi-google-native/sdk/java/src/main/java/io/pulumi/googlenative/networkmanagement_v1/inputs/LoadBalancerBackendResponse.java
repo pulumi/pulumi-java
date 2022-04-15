@@ -24,7 +24,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -35,7 +35,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
     @Import(name="healthCheckAllowingFirewallRules", required=true)
       private final List<String> healthCheckAllowingFirewallRules;
 
-    public List<String> getHealthCheckAllowingFirewallRules() {
+    public List<String> healthCheckAllowingFirewallRules() {
         return this.healthCheckAllowingFirewallRules;
     }
 
@@ -46,7 +46,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
     @Import(name="healthCheckBlockingFirewallRules", required=true)
       private final List<String> healthCheckBlockingFirewallRules;
 
-    public List<String> getHealthCheckBlockingFirewallRules() {
+    public List<String> healthCheckBlockingFirewallRules() {
         return this.healthCheckBlockingFirewallRules;
     }
 
@@ -57,7 +57,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
     @Import(name="healthCheckFirewallState", required=true)
       private final String healthCheckFirewallState;
 
-    public String getHealthCheckFirewallState() {
+    public String healthCheckFirewallState() {
         return this.healthCheckFirewallState;
     }
 
@@ -68,7 +68,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

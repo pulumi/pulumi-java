@@ -27,7 +27,7 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strength")
       private final @Nullable Output<Double> strength;
 
-    public Output<Double> getStrength() {
+    public Output<Double> strength() {
         return this.strength == null ? Codegen.empty() : this.strength;
     }
 
@@ -38,7 +38,7 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tune")
       private final @Nullable Output<String> tune;
 
-    public Output<String> getTune() {
+    public Output<String> tune() {
         return this.tune == null ? Codegen.empty() : this.tune;
     }
 

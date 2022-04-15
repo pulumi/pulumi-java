@@ -27,7 +27,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locked")
       private final @Nullable Output<Boolean> locked;
 
-    public Output<Boolean> getLocked() {
+    public Output<Boolean> locked() {
         return this.locked == null ? Codegen.empty() : this.locked;
     }
 
@@ -38,7 +38,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 

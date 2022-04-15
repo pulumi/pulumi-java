@@ -29,7 +29,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @return The static IPV4 address.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -43,7 +43,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the NAT address.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @return State of the nat address.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

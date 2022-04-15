@@ -25,7 +25,7 @@ public final class BasicLevelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="combiningFunction", required=true)
       private final String combiningFunction;
 
-    public String getCombiningFunction() {
+    public String combiningFunction() {
         return this.combiningFunction;
     }
 
@@ -36,7 +36,7 @@ public final class BasicLevelResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<ConditionResponse> conditions;
 
-    public List<ConditionResponse> getConditions() {
+    public List<ConditionResponse> conditions() {
         return this.conditions;
     }
 

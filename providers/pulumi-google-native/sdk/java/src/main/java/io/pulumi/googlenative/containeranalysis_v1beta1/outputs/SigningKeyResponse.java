@@ -46,28 +46,28 @@ public final class SigningKeyResponse {
      * key_id is an identifier for the signing key.
      * 
     */
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
     /**
      * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
      * 
     */
-    public String getKeyScheme() {
+    public String keyScheme() {
         return this.keyScheme;
     }
     /**
      * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
      * 
     */
-    public String getKeyType() {
+    public String keyType() {
         return this.keyType;
     }
     /**
      * This field contains the actual public key.
      * 
     */
-    public String getPublicKeyValue() {
+    public String publicKeyValue() {
         return this.publicKeyValue;
     }
 

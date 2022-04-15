@@ -17,14 +17,14 @@ public final class GetHubArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="hubId", required=true)
       private final String hubId;
 
-    public String getHubId() {
+    public String hubId() {
         return this.hubId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

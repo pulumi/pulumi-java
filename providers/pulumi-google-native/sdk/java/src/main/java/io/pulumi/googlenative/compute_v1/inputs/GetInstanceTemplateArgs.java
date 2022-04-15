@@ -17,14 +17,14 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
     @Import(name="instanceTemplate", required=true)
       private final String instanceTemplate;
 
-    public String getInstanceTemplate() {
+    public String instanceTemplate() {
         return this.instanceTemplate;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

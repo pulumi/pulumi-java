@@ -24,7 +24,7 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="cpuCfsQuota", required=true)
       private final Boolean cpuCfsQuota;
 
-    public Boolean getCpuCfsQuota() {
+    public Boolean cpuCfsQuota() {
         return this.cpuCfsQuota;
     }
 
@@ -35,7 +35,7 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="cpuCfsQuotaPeriod", required=true)
       private final String cpuCfsQuotaPeriod;
 
-    public String getCpuCfsQuotaPeriod() {
+    public String cpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod;
     }
 
@@ -46,7 +46,7 @@ public final class NodeKubeletConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="cpuManagerPolicy", required=true)
       private final String cpuManagerPolicy;
 
-    public String getCpuManagerPolicy() {
+    public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 

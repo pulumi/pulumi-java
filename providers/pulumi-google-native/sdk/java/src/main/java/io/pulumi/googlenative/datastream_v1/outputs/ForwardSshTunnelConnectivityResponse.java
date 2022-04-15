@@ -54,35 +54,35 @@ public final class ForwardSshTunnelConnectivityResponse {
      * Hostname for the SSH tunnel.
      * 
     */
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
     /**
      * Input only. SSH password.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * Port for the SSH tunnel, default value is 22.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
      * Input only. SSH private key.
      * 
     */
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
     /**
      * Username for the SSH tunnel.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

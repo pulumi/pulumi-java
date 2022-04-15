@@ -37,7 +37,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingSettings")
       private final @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
 
-    public Output<AutoscalingSettingsArgs> getAutoscalingSettings() {
+    public Output<AutoscalingSettingsArgs> autoscalingSettings() {
         return this.autoscalingSettings == null ? Codegen.empty() : this.autoscalingSettings;
     }
 
@@ -48,7 +48,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDisks")
       private final @Nullable Output<List<DiskArgs>> dataDisks;
 
-    public Output<List<DiskArgs>> getDataDisks() {
+    public Output<List<DiskArgs>> dataDisks() {
         return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
@@ -59,7 +59,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultPackageSet")
       private final @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
 
-    public Output<WorkerPoolDefaultPackageSet> getDefaultPackageSet() {
+    public Output<WorkerPoolDefaultPackageSet> defaultPackageSet() {
         return this.defaultPackageSet == null ? Codegen.empty() : this.defaultPackageSet;
     }
 
@@ -70,7 +70,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -81,7 +81,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSourceImage")
       private final @Nullable Output<String> diskSourceImage;
 
-    public Output<String> getDiskSourceImage() {
+    public Output<String> diskSourceImage() {
         return this.diskSourceImage == null ? Codegen.empty() : this.diskSourceImage;
     }
 
@@ -92,7 +92,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -103,7 +103,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipConfiguration")
       private final @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
 
-    public Output<WorkerPoolIpConfiguration> getIpConfiguration() {
+    public Output<WorkerPoolIpConfiguration> ipConfiguration() {
         return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
@@ -114,7 +114,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -125,7 +125,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -136,7 +136,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -147,7 +147,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -158,7 +158,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numThreadsPerWorker")
       private final @Nullable Output<Integer> numThreadsPerWorker;
 
-    public Output<Integer> getNumThreadsPerWorker() {
+    public Output<Integer> numThreadsPerWorker() {
         return this.numThreadsPerWorker == null ? Codegen.empty() : this.numThreadsPerWorker;
     }
 
@@ -169,7 +169,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numWorkers")
       private final @Nullable Output<Integer> numWorkers;
 
-    public Output<Integer> getNumWorkers() {
+    public Output<Integer> numWorkers() {
         return this.numWorkers == null ? Codegen.empty() : this.numWorkers;
     }
 
@@ -180,7 +180,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onHostMaintenance")
       private final @Nullable Output<String> onHostMaintenance;
 
-    public Output<String> getOnHostMaintenance() {
+    public Output<String> onHostMaintenance() {
         return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
@@ -191,7 +191,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packages")
       private final @Nullable Output<List<PackageArgs>> packages;
 
-    public Output<List<PackageArgs>> getPackages() {
+    public Output<List<PackageArgs>> packages() {
         return this.packages == null ? Codegen.empty() : this.packages;
     }
 
@@ -202,7 +202,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolArgs")
       private final @Nullable Output<Map<String,String>> poolArgs;
 
-    public Output<Map<String,String>> getPoolArgs() {
+    public Output<Map<String,String>> poolArgs() {
         return this.poolArgs == null ? Codegen.empty() : this.poolArgs;
     }
 
@@ -213,7 +213,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sdkHarnessContainerImages")
       private final @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
 
-    public Output<List<SdkHarnessContainerImageArgs>> getSdkHarnessContainerImages() {
+    public Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages() {
         return this.sdkHarnessContainerImages == null ? Codegen.empty() : this.sdkHarnessContainerImages;
     }
 
@@ -224,7 +224,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -235,7 +235,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskrunnerSettings")
       private final @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
 
-    public Output<TaskRunnerSettingsArgs> getTaskrunnerSettings() {
+    public Output<TaskRunnerSettingsArgs> taskrunnerSettings() {
         return this.taskrunnerSettings == null ? Codegen.empty() : this.taskrunnerSettings;
     }
 
@@ -246,7 +246,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="teardownPolicy")
       private final @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
 
-    public Output<WorkerPoolTeardownPolicy> getTeardownPolicy() {
+    public Output<WorkerPoolTeardownPolicy> teardownPolicy() {
         return this.teardownPolicy == null ? Codegen.empty() : this.teardownPolicy;
     }
 
@@ -257,7 +257,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

@@ -33,14 +33,14 @@ public final class UserPasswordResponse {
      * Secret version reference containing the password.
      * 
     */
-    public SecretResponse getPassword() {
+    public SecretResponse password() {
         return this.password;
     }
     /**
      * Username.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

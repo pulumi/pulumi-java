@@ -92,70 +92,70 @@ public final class GetJobTriggerResult {
      * The creation timestamp of a triggeredJob.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * User provided description (max 256 chars)
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Display name (max 100 chars)
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.
      * 
     */
-    public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
+    public List<GooglePrivacyDlpV2ErrorResponse> errors() {
         return this.errors;
     }
     /**
      * For inspect jobs, a snapshot of the configuration.
      * 
     */
-    public GooglePrivacyDlpV2InspectJobConfigResponse getInspectJob() {
+    public GooglePrivacyDlpV2InspectJobConfigResponse inspectJob() {
         return this.inspectJob;
     }
     /**
      * The timestamp of the last time this trigger executed.
      * 
     */
-    public String getLastRunTime() {
+    public String lastRunTime() {
         return this.lastRunTime;
     }
     /**
      * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A status for this trigger.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
     */
-    public List<GooglePrivacyDlpV2TriggerResponse> getTriggers() {
+    public List<GooglePrivacyDlpV2TriggerResponse> triggers() {
         return this.triggers;
     }
     /**
      * The last update timestamp of a triggeredJob.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

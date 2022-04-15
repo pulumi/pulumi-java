@@ -23,7 +23,7 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
-    public Output<List<TableFieldSchemaArgs>> getFields() {
+    public Output<List<TableFieldSchemaArgs>> fields() {
         return this.fields == null ? Codegen.empty() : this.fields;
     }
 

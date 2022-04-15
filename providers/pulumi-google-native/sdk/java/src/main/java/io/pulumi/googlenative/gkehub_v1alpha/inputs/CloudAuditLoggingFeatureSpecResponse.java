@@ -24,7 +24,7 @@ public final class CloudAuditLoggingFeatureSpecResponse extends io.pulumi.resour
     @Import(name="allowlistedServiceAccounts", required=true)
       private final List<String> allowlistedServiceAccounts;
 
-    public List<String> getAllowlistedServiceAccounts() {
+    public List<String> allowlistedServiceAccounts() {
         return this.allowlistedServiceAccounts;
     }
 

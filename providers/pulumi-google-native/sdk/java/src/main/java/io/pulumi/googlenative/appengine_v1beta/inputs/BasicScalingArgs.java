@@ -27,7 +27,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
       private final @Nullable Output<String> idleTimeout;
 
-    public Output<String> getIdleTimeout() {
+    public Output<String> idleTimeout() {
         return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
@@ -38,7 +38,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> getMaxInstances() {
+    public Output<Integer> maxInstances() {
         return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 

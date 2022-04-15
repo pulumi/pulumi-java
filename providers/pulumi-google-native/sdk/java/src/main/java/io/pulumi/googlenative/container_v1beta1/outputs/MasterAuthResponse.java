@@ -57,38 +57,38 @@ public final class MasterAuthResponse {
      * [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
      * 
     */
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
      * Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
      * 
     */
-    public ClientCertificateConfigResponse getClientCertificateConfig() {
+    public ClientCertificateConfigResponse clientCertificateConfig() {
         return this.clientCertificateConfig;
     }
     /**
      * [Output only] Base64-encoded private key used by clients to authenticate to the cluster endpoint.
      * 
     */
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
-    public String getClusterCaCertificate() {
+    public String clusterCaCertificate() {
         return this.clusterCaCertificate;
     }
     /**
      * The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

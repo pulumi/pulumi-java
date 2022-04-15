@@ -25,14 +25,14 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boost")
       private final @Nullable Output<Double> boost;
 
-    public Output<Double> getBoost() {
+    public Output<Double> boost() {
         return this.boost == null ? Codegen.empty() : this.boost;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -43,7 +43,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -54,7 +54,7 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phraseSetId", required=true)
       private final Output<String> phraseSetId;
 
-    public Output<String> getPhraseSetId() {
+    public Output<String> phraseSetId() {
         return this.phraseSetId;
     }
 
@@ -65,14 +65,14 @@ public final class PhraseSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phrases")
       private final @Nullable Output<List<PhraseArgs>> phrases;
 
-    public Output<List<PhraseArgs>> getPhrases() {
+    public Output<List<PhraseArgs>> phrases() {
         return this.phrases == null ? Codegen.empty() : this.phrases;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -46,28 +46,28 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
      * 
     */
-    public Double getConfidenceLevel() {
+    public Double confidenceLevel() {
         return this.confidenceLevel;
     }
     /**
      * Lower bound of the interval.
      * 
     */
-    public Double getLowerBound() {
+    public Double lowerBound() {
         return this.lowerBound;
     }
     /**
      * The percent change between an experiment metric's value and the value for its control.
      * 
     */
-    public Double getRatio() {
+    public Double ratio() {
         return this.ratio;
     }
     /**
      * Upper bound of the interval.
      * 
     */
-    public Double getUpperBound() {
+    public Double upperBound() {
         return this.upperBound;
     }
 

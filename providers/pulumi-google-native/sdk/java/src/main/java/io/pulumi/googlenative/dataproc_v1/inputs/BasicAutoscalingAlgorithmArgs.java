@@ -28,7 +28,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
     @Import(name="cooldownPeriod")
       private final @Nullable Output<String> cooldownPeriod;
 
-    public Output<String> getCooldownPeriod() {
+    public Output<String> cooldownPeriod() {
         return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
     }
 
@@ -39,7 +39,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
     @Import(name="sparkStandaloneConfig")
       private final @Nullable Output<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig;
 
-    public Output<SparkStandaloneAutoscalingConfigArgs> getSparkStandaloneConfig() {
+    public Output<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig() {
         return this.sparkStandaloneConfig == null ? Codegen.empty() : this.sparkStandaloneConfig;
     }
 
@@ -50,7 +50,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
     @Import(name="yarnConfig")
       private final @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;
 
-    public Output<BasicYarnAutoscalingConfigArgs> getYarnConfig() {
+    public Output<BasicYarnAutoscalingConfigArgs> yarnConfig() {
         return this.yarnConfig == null ? Codegen.empty() : this.yarnConfig;
     }
 

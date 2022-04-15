@@ -48,28 +48,28 @@ public final class AndroidInstrumentationTestResponse {
      * The java package for the test to be executed. Required
      * 
     */
-    public String getTestPackageId() {
+    public String testPackageId() {
         return this.testPackageId;
     }
     /**
      * The InstrumentationTestRunner class. Required
      * 
     */
-    public String getTestRunnerClass() {
+    public String testRunnerClass() {
         return this.testRunnerClass;
     }
     /**
      * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
      * 
     */
-    public List<String> getTestTargets() {
+    public List<String> testTargets() {
         return this.testTargets;
     }
     /**
      * The flag indicates whether Android Test Orchestrator will be used to run test or not.
      * 
     */
-    public Boolean getUseOrchestrator() {
+    public Boolean useOrchestrator() {
         return this.useOrchestrator;
     }
 

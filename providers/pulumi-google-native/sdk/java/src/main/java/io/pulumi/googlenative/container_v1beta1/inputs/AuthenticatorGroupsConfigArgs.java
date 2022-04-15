@@ -27,7 +27,7 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -38,7 +38,7 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     @Import(name="securityGroup")
       private final @Nullable Output<String> securityGroup;
 
-    public Output<String> getSecurityGroup() {
+    public Output<String> securityGroup() {
         return this.securityGroup == null ? Codegen.empty() : this.securityGroup;
     }
 

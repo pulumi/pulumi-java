@@ -26,7 +26,7 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosDevices", required=true)
       private final Output<List<IosDeviceArgs>> iosDevices;
 
-    public Output<List<IosDeviceArgs>> getIosDevices() {
+    public Output<List<IosDeviceArgs>> iosDevices() {
         return this.iosDevices;
     }
 

@@ -26,7 +26,7 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
@@ -37,7 +37,7 @@ public final class V2AndroidApplicationArgs extends io.pulumi.resources.Resource
     @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> getSha1Fingerprint() {
+    public Output<String> sha1Fingerprint() {
         return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
     }
 

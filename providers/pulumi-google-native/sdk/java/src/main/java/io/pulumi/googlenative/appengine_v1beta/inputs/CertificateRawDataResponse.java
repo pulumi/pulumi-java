@@ -23,7 +23,7 @@ public final class CertificateRawDataResponse extends io.pulumi.resources.Invoke
     @Import(name="privateKey", required=true)
       private final String privateKey;
 
-    public String getPrivateKey() {
+    public String privateKey() {
         return this.privateKey;
     }
 
@@ -34,7 +34,7 @@ public final class CertificateRawDataResponse extends io.pulumi.resources.Invoke
     @Import(name="publicCertificate", required=true)
       private final String publicCertificate;
 
-    public String getPublicCertificate() {
+    public String publicCertificate() {
         return this.publicCertificate;
     }
 

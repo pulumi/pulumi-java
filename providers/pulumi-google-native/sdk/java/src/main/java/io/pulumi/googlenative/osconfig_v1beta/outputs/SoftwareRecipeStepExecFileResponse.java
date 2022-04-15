@@ -48,28 +48,28 @@ public final class SoftwareRecipeStepExecFileResponse {
      * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
      * 
     */
-    public List<Integer> getAllowedExitCodes() {
+    public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
      * Arguments to be passed to the provided executable.
      * 
     */
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
     /**
      * The id of the relevant artifact in the recipe.
      * 
     */
-    public String getArtifactId() {
+    public String artifactId() {
         return this.artifactId;
     }
     /**
      * The absolute path of the file on the local filesystem.
      * 
     */
-    public String getLocalPath() {
+    public String localPath() {
         return this.localPath;
     }
 

@@ -40,21 +40,21 @@ public final class HeaderResponse {
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
     */
-    public String getGlob() {
+    public String glob() {
         return this.glob;
     }
     /**
      * The additional headers to add to the response.
      * 
     */
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers;
     }
     /**
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
     */
-    public String getRegex() {
+    public String regex() {
         return this.regex;
     }
 

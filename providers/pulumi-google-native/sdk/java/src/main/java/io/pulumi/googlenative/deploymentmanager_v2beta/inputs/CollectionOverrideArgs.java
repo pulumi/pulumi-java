@@ -27,7 +27,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     @Import(name="collection")
       private final @Nullable Output<String> collection;
 
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection == null ? Codegen.empty() : this.collection;
     }
 
@@ -38,7 +38,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     @Import(name="options")
       private final @Nullable Output<OptionsArgs> options;
 
-    public Output<OptionsArgs> getOptions() {
+    public Output<OptionsArgs> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 

@@ -41,21 +41,21 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * Whether the variant is for the control group.
      * 
     */
-    public Boolean getIsControlGroup() {
+    public Boolean isControlGroup() {
         return this.isControlGroup;
     }
     /**
      * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
      * 
     */
-    public Double getTrafficAllocation() {
+    public Double trafficAllocation() {
         return this.trafficAllocation;
     }
     /**
      * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

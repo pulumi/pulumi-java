@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
     @Import(name="bucketSize", required=true)
       private final Double bucketSize;
 
-    public Double getBucketSize() {
+    public Double bucketSize() {
         return this.bucketSize;
     }
 
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
     @Import(name="lowerBound", required=true)
       private final GooglePrivacyDlpV2ValueResponse lowerBound;
 
-    public GooglePrivacyDlpV2ValueResponse getLowerBound() {
+    public GooglePrivacyDlpV2ValueResponse lowerBound() {
         return this.lowerBound;
     }
 
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse extends io
     @Import(name="upperBound", required=true)
       private final GooglePrivacyDlpV2ValueResponse upperBound;
 
-    public GooglePrivacyDlpV2ValueResponse getUpperBound() {
+    public GooglePrivacyDlpV2ValueResponse upperBound() {
         return this.upperBound;
     }
 

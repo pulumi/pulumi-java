@@ -17,7 +17,7 @@ public final class StandardSqlStructTypeResponse {
         this.fields = fields;
     }
 
-    public List<StandardSqlFieldResponse> getFields() {
+    public List<StandardSqlFieldResponse> fields() {
         return this.fields;
     }
 

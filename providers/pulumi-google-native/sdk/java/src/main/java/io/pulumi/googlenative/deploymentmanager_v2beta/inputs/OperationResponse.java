@@ -27,7 +27,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientOperationId", required=true)
       private final String clientOperationId;
 
-    public String getClientOperationId() {
+    public String clientOperationId() {
         return this.clientOperationId;
     }
 
@@ -38,7 +38,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -49,7 +49,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -60,7 +60,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="error", required=true)
       private final OperationErrorResponse error;
 
-    public OperationErrorResponse getError() {
+    public OperationErrorResponse error() {
         return this.error;
     }
 
@@ -71,7 +71,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpErrorMessage", required=true)
       private final String httpErrorMessage;
 
-    public String getHttpErrorMessage() {
+    public String httpErrorMessage() {
         return this.httpErrorMessage;
     }
 
@@ -82,7 +82,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpErrorStatusCode", required=true)
       private final Integer httpErrorStatusCode;
 
-    public Integer getHttpErrorStatusCode() {
+    public Integer httpErrorStatusCode() {
         return this.httpErrorStatusCode;
     }
 
@@ -93,7 +93,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="insertTime", required=true)
       private final String insertTime;
 
-    public String getInsertTime() {
+    public String insertTime() {
         return this.insertTime;
     }
 
@@ -104,7 +104,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -115,7 +115,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -126,7 +126,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operationGroupId", required=true)
       private final String operationGroupId;
 
-    public String getOperationGroupId() {
+    public String operationGroupId() {
         return this.operationGroupId;
     }
 
@@ -137,7 +137,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operationType", required=true)
       private final String operationType;
 
-    public String getOperationType() {
+    public String operationType() {
         return this.operationType;
     }
 
@@ -148,7 +148,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="progress", required=true)
       private final Integer progress;
 
-    public Integer getProgress() {
+    public Integer progress() {
         return this.progress;
     }
 
@@ -159,7 +159,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
@@ -170,7 +170,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="selfLink", required=true)
       private final String selfLink;
 
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 
@@ -181,7 +181,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -192,7 +192,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -203,7 +203,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 
@@ -214,7 +214,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
       private final String targetId;
 
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
 
@@ -225,7 +225,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetLink", required=true)
       private final String targetLink;
 
-    public String getTargetLink() {
+    public String targetLink() {
         return this.targetLink;
     }
 
@@ -236,7 +236,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="user", required=true)
       private final String user;
 
-    public String getUser() {
+    public String user() {
         return this.user;
     }
 
@@ -247,7 +247,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="warnings", required=true)
       private final List<OperationWarningsItemResponse> warnings;
 
-    public List<OperationWarningsItemResponse> getWarnings() {
+    public List<OperationWarningsItemResponse> warnings() {
         return this.warnings;
     }
 
@@ -258,7 +258,7 @@ public final class OperationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

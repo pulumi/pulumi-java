@@ -23,7 +23,7 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
     @Import(name="headquartersLocation", required=true)
       private final LocationResponse headquartersLocation;
 
-    public LocationResponse getHeadquartersLocation() {
+    public LocationResponse headquartersLocation() {
         return this.headquartersLocation;
     }
 

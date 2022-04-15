@@ -26,7 +26,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs exte
     @Import(name="repoName")
       private final @Nullable Output<String> repoName;
 
-    public Output<String> getRepoName() {
+    public Output<String> repoName() {
         return this.repoName == null ? Codegen.empty() : this.repoName;
     }
 

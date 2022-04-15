@@ -26,7 +26,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="create")
       private final @Nullable Output<String> create;
 
-    public Output<String> getCreate() {
+    public Output<String> create() {
         return this.create == null ? Codegen.empty() : this.create;
     }
 
@@ -37,7 +37,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delete")
       private final @Nullable Output<String> delete;
 
-    public Output<String> getDelete() {
+    public Output<String> delete() {
         return this.delete == null ? Codegen.empty() : this.delete;
     }
 
@@ -48,7 +48,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="get")
       private final @Nullable Output<String> get;
 
-    public Output<String> getGet() {
+    public Output<String> get() {
         return this.get == null ? Codegen.empty() : this.get;
     }
 
@@ -59,7 +59,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setIamPolicy")
       private final @Nullable Output<String> setIamPolicy;
 
-    public Output<String> getSetIamPolicy() {
+    public Output<String> setIamPolicy() {
         return this.setIamPolicy == null ? Codegen.empty() : this.setIamPolicy;
     }
 
@@ -70,7 +70,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="update")
       private final @Nullable Output<String> update;
 
-    public Output<String> getUpdate() {
+    public Output<String> update() {
         return this.update == null ? Codegen.empty() : this.update;
     }
 

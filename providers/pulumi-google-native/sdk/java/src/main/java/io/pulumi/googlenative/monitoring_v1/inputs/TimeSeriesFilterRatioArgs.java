@@ -28,7 +28,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     @Import(name="denominator")
       private final @Nullable Output<RatioPartArgs> denominator;
 
-    public Output<RatioPartArgs> getDenominator() {
+    public Output<RatioPartArgs> denominator() {
         return this.denominator == null ? Codegen.empty() : this.denominator;
     }
 
@@ -39,7 +39,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     @Import(name="numerator")
       private final @Nullable Output<RatioPartArgs> numerator;
 
-    public Output<RatioPartArgs> getNumerator() {
+    public Output<RatioPartArgs> numerator() {
         return this.numerator == null ? Codegen.empty() : this.numerator;
     }
 
@@ -50,7 +50,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     @Import(name="pickTimeSeriesFilter")
       private final @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
-    public Output<PickTimeSeriesFilterArgs> getPickTimeSeriesFilter() {
+    public Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter() {
         return this.pickTimeSeriesFilter == null ? Codegen.empty() : this.pickTimeSeriesFilter;
     }
 
@@ -61,7 +61,7 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
     @Import(name="secondaryAggregation")
       private final @Nullable Output<AggregationArgs> secondaryAggregation;
 
-    public Output<AggregationArgs> getSecondaryAggregation() {
+    public Output<AggregationArgs> secondaryAggregation() {
         return this.secondaryAggregation == null ? Codegen.empty() : this.secondaryAggregation;
     }
 

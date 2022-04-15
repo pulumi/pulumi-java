@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
-    public String getBucketSize() {
+    public String bucketSize() {
         return this.bucketSize;
     }
 
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
-    public String getBucketValueCount() {
+    public String bucketValueCount() {
         return this.bucketValueCount;
     }
 
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
 
-    public List<GooglePrivacyDlpV2ValueFrequencyResponse> getBucketValues() {
+    public List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues() {
         return this.bucketValues;
     }
 
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="valueFrequencyLowerBound", required=true)
       private final String valueFrequencyLowerBound;
 
-    public String getValueFrequencyLowerBound() {
+    public String valueFrequencyLowerBound() {
         return this.valueFrequencyLowerBound;
     }
 
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
     @Import(name="valueFrequencyUpperBound", required=true)
       private final String valueFrequencyUpperBound;
 
-    public String getValueFrequencyUpperBound() {
+    public String valueFrequencyUpperBound() {
         return this.valueFrequencyUpperBound;
     }
 

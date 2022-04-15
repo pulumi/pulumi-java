@@ -32,7 +32,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The time when the Spoke was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +46,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Short description of the spoke resource
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +60,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The resource URL of the hub resource that the spoke is attached to
      * 
      */
-    public Output<String> getHub() {
+    public Output<String> hub() {
         return this.hub;
     }
     /**
@@ -74,7 +74,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return User-defined labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -88,7 +88,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The URIs of linked interconnect attachment resources
      * 
      */
-    public Output<List<String>> getLinkedInterconnectAttachments() {
+    public Output<List<String>> linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
@@ -102,7 +102,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The URIs of linked Router appliance resources
      * 
      */
-    public Output<List<RouterApplianceInstanceResponse>> getLinkedRouterApplianceInstances() {
+    public Output<List<RouterApplianceInstanceResponse>> linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
@@ -116,7 +116,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The URIs of linked VPN tunnel resources
      * 
      */
-    public Output<List<String>> getLinkedVpnTunnels() {
+    public Output<List<String>> linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
@@ -130,7 +130,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of a Spoke resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The current lifecycle state of this Hub.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -158,7 +158,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -172,7 +172,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The time when the Spoke was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

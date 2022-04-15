@@ -40,21 +40,21 @@ public final class TpuConfigResponse {
      * Whether Cloud TPU integration is enabled or not.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
      * IPv4 CIDR block reserved for Cloud TPU in the VPC.
      * 
     */
-    public String getIpv4CidrBlock() {
+    public String ipv4CidrBlock() {
         return this.ipv4CidrBlock;
     }
     /**
      * Whether to use service networking for Cloud TPU or not.
      * 
     */
-    public Boolean getUseServiceNetworking() {
+    public Boolean useServiceNetworking() {
         return this.useServiceNetworking;
     }
 

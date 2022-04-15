@@ -23,13 +23,13 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
         this.memory = memory;
     }
 
-    public String getCpus() {
+    public String cpus() {
         return this.cpus;
     }
-    public String getLocalSsd() {
+    public String localSsd() {
         return this.localSsd;
     }
-    public String getMemory() {
+    public String memory() {
         return this.memory;
     }
 

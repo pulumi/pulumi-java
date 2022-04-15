@@ -25,7 +25,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="addressLines", required=true)
       private final List<String> addressLines;
 
-    public List<String> getAddressLines() {
+    public List<String> addressLines() {
         return this.addressLines;
     }
 
@@ -36,7 +36,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="administrativeArea", required=true)
       private final String administrativeArea;
 
-    public String getAdministrativeArea() {
+    public String administrativeArea() {
         return this.administrativeArea;
     }
 
@@ -47,7 +47,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="languageCode", required=true)
       private final String languageCode;
 
-    public String getLanguageCode() {
+    public String languageCode() {
         return this.languageCode;
     }
 
@@ -58,7 +58,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="locality", required=true)
       private final String locality;
 
-    public String getLocality() {
+    public String locality() {
         return this.locality;
     }
 
@@ -69,7 +69,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="organization", required=true)
       private final String organization;
 
-    public String getOrganization() {
+    public String organization() {
         return this.organization;
     }
 
@@ -80,7 +80,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="postalCode", required=true)
       private final String postalCode;
 
-    public String getPostalCode() {
+    public String postalCode() {
         return this.postalCode;
     }
 
@@ -91,7 +91,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="recipients", required=true)
       private final List<String> recipients;
 
-    public List<String> getRecipients() {
+    public List<String> recipients() {
         return this.recipients;
     }
 
@@ -102,7 +102,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="regionCode", required=true)
       private final String regionCode;
 
-    public String getRegionCode() {
+    public String regionCode() {
         return this.regionCode;
     }
 
@@ -113,7 +113,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="revision", required=true)
       private final Integer revision;
 
-    public Integer getRevision() {
+    public Integer revision() {
         return this.revision;
     }
 
@@ -124,7 +124,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sortingCode", required=true)
       private final String sortingCode;
 
-    public String getSortingCode() {
+    public String sortingCode() {
         return this.sortingCode;
     }
 
@@ -135,7 +135,7 @@ public final class PostalAddressResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="sublocality", required=true)
       private final String sublocality;
 
-    public String getSublocality() {
+    public String sublocality() {
         return this.sublocality;
     }
 

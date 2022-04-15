@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
     @Import(name="goal", required=true)
       private final Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal;
 
-    public Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> getGoal() {
+    public Output<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal() {
         return this.goal;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
     @Import(name="metric", required=true)
       private final Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
 

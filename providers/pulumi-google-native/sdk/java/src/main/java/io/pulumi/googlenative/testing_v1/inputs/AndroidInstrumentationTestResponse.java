@@ -27,7 +27,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="appApk", required=true)
       private final FileReferenceResponse appApk;
 
-    public FileReferenceResponse getAppApk() {
+    public FileReferenceResponse appApk() {
         return this.appApk;
     }
 
@@ -38,7 +38,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="appBundle", required=true)
       private final AppBundleResponse appBundle;
 
-    public AppBundleResponse getAppBundle() {
+    public AppBundleResponse appBundle() {
         return this.appBundle;
     }
 
@@ -49,7 +49,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="appPackageId", required=true)
       private final String appPackageId;
 
-    public String getAppPackageId() {
+    public String appPackageId() {
         return this.appPackageId;
     }
 
@@ -60,7 +60,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="orchestratorOption", required=true)
       private final String orchestratorOption;
 
-    public String getOrchestratorOption() {
+    public String orchestratorOption() {
         return this.orchestratorOption;
     }
 
@@ -71,7 +71,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="shardingOption", required=true)
       private final ShardingOptionResponse shardingOption;
 
-    public ShardingOptionResponse getShardingOption() {
+    public ShardingOptionResponse shardingOption() {
         return this.shardingOption;
     }
 
@@ -82,7 +82,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="testApk", required=true)
       private final FileReferenceResponse testApk;
 
-    public FileReferenceResponse getTestApk() {
+    public FileReferenceResponse testApk() {
         return this.testApk;
     }
 
@@ -93,7 +93,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="testPackageId", required=true)
       private final String testPackageId;
 
-    public String getTestPackageId() {
+    public String testPackageId() {
         return this.testPackageId;
     }
 
@@ -104,7 +104,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="testRunnerClass", required=true)
       private final String testRunnerClass;
 
-    public String getTestRunnerClass() {
+    public String testRunnerClass() {
         return this.testRunnerClass;
     }
 
@@ -115,7 +115,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
     @Import(name="testTargets", required=true)
       private final List<String> testTargets;
 
-    public List<String> getTestTargets() {
+    public List<String> testTargets() {
         return this.testTargets;
     }
 

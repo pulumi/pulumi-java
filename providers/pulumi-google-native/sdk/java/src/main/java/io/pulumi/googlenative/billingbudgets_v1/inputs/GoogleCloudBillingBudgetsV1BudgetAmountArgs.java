@@ -27,7 +27,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     @Import(name="lastPeriodAmount")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount;
 
-    public Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> getLastPeriodAmount() {
+    public Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount() {
         return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     @Import(name="specifiedAmount")
       private final @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
-    public Output<GoogleTypeMoneyArgs> getSpecifiedAmount() {
+    public Output<GoogleTypeMoneyArgs> specifiedAmount() {
         return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
     }
 

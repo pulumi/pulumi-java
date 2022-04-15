@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     @Import(name="agent", required=true)
       private final Output<String> agent;
 
-    public Output<String> getAgent() {
+    public Output<String> agent() {
         return this.agent;
     }
 

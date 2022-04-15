@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs extends
     @Import(name="text", required=true)
       private final Output<List<String>> text;
 
-    public Output<List<String>> getText() {
+    public Output<List<String>> text() {
         return this.text;
     }
 

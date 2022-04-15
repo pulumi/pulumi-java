@@ -25,7 +25,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends i
     @Import(name="filePatterns", required=true)
       private final List<String> filePatterns;
 
-    public List<String> getFilePatterns() {
+    public List<String> filePatterns() {
         return this.filePatterns;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse extends i
     @Import(name="sampleGcsFileSpecs", required=true)
       private final List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs;
 
-    public List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> getSampleGcsFileSpecs() {
+    public List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs;
     }
 

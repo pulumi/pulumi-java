@@ -27,7 +27,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -38,7 +38,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failurePolicy")
       private final @Nullable Output<FailurePolicyArgs> failurePolicy;
 
-    public Output<FailurePolicyArgs> getFailurePolicy() {
+    public Output<FailurePolicyArgs> failurePolicy() {
         return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
@@ -49,7 +49,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -60,7 +60,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

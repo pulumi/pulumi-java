@@ -24,7 +24,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
      * If set to true, enables Cloud Armor Machine Learning.
      * 
     */
-    public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse getLayer7DdosDefenseConfig() {
+    public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig;
     }
 

@@ -22,7 +22,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -33,7 +33,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,14 +44,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleetConfigs")
       private final @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
 
-    public Output<List<FleetConfigArgs>> getFleetConfigs() {
+    public Output<List<FleetConfigArgs>> fleetConfigs() {
         return this.fleetConfigs == null ? Codegen.empty() : this.fleetConfigs;
     }
 
     @Import(name="gameServerDeploymentId", required=true)
       private final Output<String> gameServerDeploymentId;
 
-    public Output<String> getGameServerDeploymentId() {
+    public Output<String> gameServerDeploymentId() {
         return this.gameServerDeploymentId;
     }
 
@@ -62,14 +62,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,14 +80,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -98,7 +98,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scalingConfigs")
       private final @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
 
-    public Output<List<ScalingConfigArgs>> getScalingConfigs() {
+    public Output<List<ScalingConfigArgs>> scalingConfigs() {
         return this.scalingConfigs == null ? Codegen.empty() : this.scalingConfigs;
     }
 

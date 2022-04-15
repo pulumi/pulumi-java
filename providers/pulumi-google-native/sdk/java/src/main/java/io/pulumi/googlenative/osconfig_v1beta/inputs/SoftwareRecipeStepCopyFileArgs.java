@@ -27,7 +27,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -38,7 +38,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -49,7 +49,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
+    public Output<Boolean> overwrite() {
         return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
@@ -60,7 +60,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
     @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 

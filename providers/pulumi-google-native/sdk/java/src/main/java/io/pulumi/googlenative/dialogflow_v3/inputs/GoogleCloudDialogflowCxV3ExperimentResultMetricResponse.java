@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
     @Import(name="confidenceInterval", required=true)
       private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
-    public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
+    public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval() {
         return this.confidenceInterval;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
     @Import(name="count", required=true)
       private final Double count;
 
-    public Double getCount() {
+    public Double count() {
         return this.count;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
     @Import(name="countType", required=true)
       private final String countType;
 
-    public String getCountType() {
+    public String countType() {
         return this.countType;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
     @Import(name="ratio", required=true)
       private final Double ratio;
 
-    public Double getRatio() {
+    public Double ratio() {
         return this.ratio;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

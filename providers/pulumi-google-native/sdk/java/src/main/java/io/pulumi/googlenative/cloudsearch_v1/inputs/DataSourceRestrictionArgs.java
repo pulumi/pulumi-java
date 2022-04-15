@@ -28,7 +28,7 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
     @Import(name="filterOptions")
       private final @Nullable Output<List<FilterOptionsArgs>> filterOptions;
 
-    public Output<List<FilterOptionsArgs>> getFilterOptions() {
+    public Output<List<FilterOptionsArgs>> filterOptions() {
         return this.filterOptions == null ? Codegen.empty() : this.filterOptions;
     }
 
@@ -39,7 +39,7 @@ public final class DataSourceRestrictionArgs extends io.pulumi.resources.Resourc
     @Import(name="source")
       private final @Nullable Output<SourceArgs> source;
 
-    public Output<SourceArgs> getSource() {
+    public Output<SourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

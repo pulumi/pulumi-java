@@ -24,7 +24,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="affectedCircuits", required=true)
       private final List<String> affectedCircuits;
 
-    public List<String> getAffectedCircuits() {
+    public List<String> affectedCircuits() {
         return this.affectedCircuits;
     }
 
@@ -35,7 +35,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -46,7 +46,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -57,7 +57,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="issueType", required=true)
       private final String issueType;
 
-    public String getIssueType() {
+    public String issueType() {
         return this.issueType;
     }
 
@@ -68,7 +68,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -90,7 +90,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -101,7 +101,7 @@ public final class InterconnectOutageNotificationResponse extends io.pulumi.reso
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

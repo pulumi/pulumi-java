@@ -27,7 +27,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
-    public Output<Boolean> getCanIpForward() {
+    public Output<Boolean> canIpForward() {
         return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableExternalIps")
       private final @Nullable Output<Boolean> enableExternalIps;
 
-    public Output<Boolean> getEnableExternalIps() {
+    public Output<Boolean> enableExternalIps() {
         return this.enableExternalIps == null ? Codegen.empty() : this.enableExternalIps;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 

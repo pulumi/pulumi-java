@@ -23,7 +23,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -34,7 +34,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="level")
       private final @Nullable Output<DiagnosticLevel> level;
 
-    public Output<DiagnosticLevel> getLevel() {
+    public Output<DiagnosticLevel> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 

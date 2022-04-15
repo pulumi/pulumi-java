@@ -97,77 +97,77 @@ public final class MySqlReplicaConfigurationResponse {
      * PEM representation of the trusted CA's x509 certificate.
      * 
     */
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
     /**
      * PEM representation of the replica's x509 certificate.
      * 
     */
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
     /**
      * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
      * 
     */
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
     /**
      * Seconds to wait between connect retries. MySQL's default is 60 seconds.
      * 
     */
-    public Integer getConnectRetryInterval() {
+    public Integer connectRetryInterval() {
         return this.connectRetryInterval;
     }
     /**
      * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
      * 
     */
-    public String getDumpFilePath() {
+    public String dumpFilePath() {
         return this.dumpFilePath;
     }
     /**
      * This is always `sql#mysqlReplicaConfiguration`.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Interval in milliseconds between replication heartbeats.
      * 
     */
-    public String getMasterHeartbeatPeriod() {
+    public String masterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
     }
     /**
      * The password for the replication connection.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * A list of permissible ciphers to use for SSL encryption.
      * 
     */
-    public String getSslCipher() {
+    public String sslCipher() {
         return this.sslCipher;
     }
     /**
      * The username for the replication connection.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
     /**
      * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
      * 
     */
-    public Boolean getVerifyServerCertificate() {
+    public Boolean verifyServerCertificate() {
         return this.verifyServerCertificate;
     }
 

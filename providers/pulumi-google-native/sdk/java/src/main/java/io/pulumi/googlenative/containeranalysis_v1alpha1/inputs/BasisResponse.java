@@ -24,7 +24,7 @@ public final class BasisResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
       private final FingerprintResponse fingerprint;
 
-    public FingerprintResponse getFingerprint() {
+    public FingerprintResponse fingerprint() {
         return this.fingerprint;
     }
 
@@ -35,7 +35,7 @@ public final class BasisResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceUrl", required=true)
       private final String resourceUrl;
 
-    public String getResourceUrl() {
+    public String resourceUrl() {
         return this.resourceUrl;
     }
 

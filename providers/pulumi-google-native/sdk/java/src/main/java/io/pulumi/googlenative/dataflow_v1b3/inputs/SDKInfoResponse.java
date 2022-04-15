@@ -23,7 +23,7 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="language", required=true)
       private final String language;
 
-    public String getLanguage() {
+    public String language() {
         return this.language;
     }
 
@@ -34,7 +34,7 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

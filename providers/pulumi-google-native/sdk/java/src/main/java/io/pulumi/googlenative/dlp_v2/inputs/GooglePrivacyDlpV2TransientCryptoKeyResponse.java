@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends io.pulum
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

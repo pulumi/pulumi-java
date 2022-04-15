@@ -23,28 +23,28 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -55,7 +55,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restrictions")
       private final @Nullable Output<V2RestrictionsArgs> restrictions;
 
-    public Output<V2RestrictionsArgs> getRestrictions() {
+    public Output<V2RestrictionsArgs> restrictions() {
         return this.restrictions == null ? Codegen.empty() : this.restrictions;
     }
 

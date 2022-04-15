@@ -32,7 +32,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedIssuanceModes")
       private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
-    public Output<IssuanceModesArgs> getAllowedIssuanceModes() {
+    public Output<IssuanceModesArgs> allowedIssuanceModes() {
         return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
     }
 
@@ -43,7 +43,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedKeyTypes")
       private final @Nullable Output<List<AllowedKeyTypeArgs>> allowedKeyTypes;
 
-    public Output<List<AllowedKeyTypeArgs>> getAllowedKeyTypes() {
+    public Output<List<AllowedKeyTypeArgs>> allowedKeyTypes() {
         return this.allowedKeyTypes == null ? Codegen.empty() : this.allowedKeyTypes;
     }
 
@@ -54,7 +54,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baselineValues")
       private final @Nullable Output<X509ParametersArgs> baselineValues;
 
-    public Output<X509ParametersArgs> getBaselineValues() {
+    public Output<X509ParametersArgs> baselineValues() {
         return this.baselineValues == null ? Codegen.empty() : this.baselineValues;
     }
 
@@ -65,7 +65,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityConstraints")
       private final @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
-    public Output<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
+    public Output<CertificateIdentityConstraintsArgs> identityConstraints() {
         return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
     }
 
@@ -76,7 +76,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
 
-    public Output<String> getMaximumLifetime() {
+    public Output<String> maximumLifetime() {
         return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
     }
 
@@ -87,7 +87,7 @@ public final class IssuancePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="passthroughExtensions")
       private final @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
-    public Output<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
+    public Output<CertificateExtensionConstraintsArgs> passthroughExtensions() {
         return this.passthroughExtensions == null ? Codegen.empty() : this.passthroughExtensions;
     }
 

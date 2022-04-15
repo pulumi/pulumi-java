@@ -23,7 +23,7 @@ public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArg
     @Import(name="metadataLabelMatcher", required=true)
       private final MetadataLabelMatcherResponse metadataLabelMatcher;
 
-    public MetadataLabelMatcherResponse getMetadataLabelMatcher() {
+    public MetadataLabelMatcherResponse metadataLabelMatcher() {
         return this.metadataLabelMatcher;
     }
 

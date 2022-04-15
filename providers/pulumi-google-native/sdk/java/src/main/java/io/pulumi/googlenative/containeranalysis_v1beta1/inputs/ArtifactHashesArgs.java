@@ -22,7 +22,7 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
-    public Output<String> getSha256() {
+    public Output<String> sha256() {
         return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 

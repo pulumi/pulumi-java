@@ -23,7 +23,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="caCertificate", required=true)
       private final String caCertificate;
 
-    public String getCaCertificate() {
+    public String caCertificate() {
         return this.caCertificate;
     }
 
@@ -34,7 +34,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
-    public String getClientCertificate() {
+    public String clientCertificate() {
         return this.clientCertificate;
     }
 
@@ -45,7 +45,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientKey", required=true)
       private final String clientKey;
 
-    public String getClientKey() {
+    public String clientKey() {
         return this.clientKey;
     }
 
@@ -56,7 +56,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

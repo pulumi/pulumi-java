@@ -32,14 +32,14 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
      * The number of accelerators to attach to each machine running the job.
      * 
     */
-    public String getCount() {
+    public String count() {
         return this.count;
     }
     /**
      * The type of accelerator to use.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

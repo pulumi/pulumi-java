@@ -27,7 +27,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<FingerprintArgs> fingerprint;
 
-    public Output<FingerprintArgs> getFingerprint() {
+    public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -38,7 +38,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUrl")
       private final @Nullable Output<String> resourceUrl;
 
-    public Output<String> getResourceUrl() {
+    public Output<String> resourceUrl() {
         return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
     }
 

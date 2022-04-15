@@ -27,7 +27,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -38,7 +38,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="frequency", required=true)
       private final String frequency;
 
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
 
@@ -49,7 +49,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="lastExecuteTime", required=true)
       private final String lastExecuteTime;
 
-    public String getLastExecuteTime() {
+    public String lastExecuteTime() {
         return this.lastExecuteTime;
     }
 
@@ -60,7 +60,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="monthly", required=true)
       private final MonthlyScheduleResponse monthly;
 
-    public MonthlyScheduleResponse getMonthly() {
+    public MonthlyScheduleResponse monthly() {
         return this.monthly;
     }
 
@@ -71,7 +71,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="nextExecuteTime", required=true)
       private final String nextExecuteTime;
 
-    public String getNextExecuteTime() {
+    public String nextExecuteTime() {
         return this.nextExecuteTime;
     }
 
@@ -82,7 +82,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -93,7 +93,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="timeOfDay", required=true)
       private final TimeOfDayResponse timeOfDay;
 
-    public TimeOfDayResponse getTimeOfDay() {
+    public TimeOfDayResponse timeOfDay() {
         return this.timeOfDay;
     }
 
@@ -104,7 +104,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="timeZone", required=true)
       private final TimeZoneResponse timeZone;
 
-    public TimeZoneResponse getTimeZone() {
+    public TimeZoneResponse timeZone() {
         return this.timeZone;
     }
 
@@ -115,7 +115,7 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
     @Import(name="weekly", required=true)
       private final WeeklyScheduleResponse weekly;
 
-    public WeeklyScheduleResponse getWeekly() {
+    public WeeklyScheduleResponse weekly() {
         return this.weekly;
     }
 

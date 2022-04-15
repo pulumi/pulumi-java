@@ -19,7 +19,7 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
     @Import(name="estimatedBytes", required=true)
       private final String estimatedBytes;
 
-    public String getEstimatedBytes() {
+    public String estimatedBytes() {
         return this.estimatedBytes;
     }
 
@@ -30,7 +30,7 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
     @Import(name="estimatedRows", required=true)
       private final String estimatedRows;
 
-    public String getEstimatedRows() {
+    public String estimatedRows() {
         return this.estimatedRows;
     }
 
@@ -41,7 +41,7 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
     @Import(name="oldestEntryTime", required=true)
       private final String oldestEntryTime;
 
-    public String getOldestEntryTime() {
+    public String oldestEntryTime() {
         return this.oldestEntryTime;
     }
 

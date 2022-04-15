@@ -28,7 +28,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="animations")
       private final @Nullable Output<List<AnimationArgs>> animations;
 
-    public Output<List<AnimationArgs>> getAnimations() {
+    public Output<List<AnimationArgs>> animations() {
         return this.animations == null ? Codegen.empty() : this.animations;
     }
 
@@ -39,7 +39,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<ImageArgs> image;
 
-    public Output<ImageArgs> getImage() {
+    public Output<ImageArgs> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 

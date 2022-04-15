@@ -23,7 +23,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcsUri", required=true)
       private final String gcsUri;
 
-    public String getGcsUri() {
+    public String gcsUri() {
         return this.gcsUri;
     }
 
@@ -34,7 +34,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rawBytes", required=true)
       private final String rawBytes;
 
-    public String getRawBytes() {
+    public String rawBytes() {
         return this.rawBytes;
     }
 

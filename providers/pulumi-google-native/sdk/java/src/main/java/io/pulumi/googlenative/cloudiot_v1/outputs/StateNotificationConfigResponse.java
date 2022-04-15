@@ -24,7 +24,7 @@ public final class StateNotificationConfigResponse {
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
      * 
     */
-    public String getPubsubTopicName() {
+    public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
 

@@ -23,7 +23,7 @@ public final class AzureCredentialsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sasToken", required=true)
       private final String sasToken;
 
-    public String getSasToken() {
+    public String sasToken() {
         return this.sasToken;
     }
 

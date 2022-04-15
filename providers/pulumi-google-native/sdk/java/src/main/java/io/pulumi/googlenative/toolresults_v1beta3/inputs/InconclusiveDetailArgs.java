@@ -26,7 +26,7 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
     @Import(name="abortedByUser")
       private final @Nullable Output<Boolean> abortedByUser;
 
-    public Output<Boolean> getAbortedByUser() {
+    public Output<Boolean> abortedByUser() {
         return this.abortedByUser == null ? Codegen.empty() : this.abortedByUser;
     }
 
@@ -37,7 +37,7 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
     @Import(name="hasErrorLogs")
       private final @Nullable Output<Boolean> hasErrorLogs;
 
-    public Output<Boolean> getHasErrorLogs() {
+    public Output<Boolean> hasErrorLogs() {
         return this.hasErrorLogs == null ? Codegen.empty() : this.hasErrorLogs;
     }
 
@@ -48,7 +48,7 @@ public final class InconclusiveDetailArgs extends io.pulumi.resources.ResourceAr
     @Import(name="infrastructureFailure")
       private final @Nullable Output<Boolean> infrastructureFailure;
 
-    public Output<Boolean> getInfrastructureFailure() {
+    public Output<Boolean> infrastructureFailure() {
         return this.infrastructureFailure == null ? Codegen.empty() : this.infrastructureFailure;
     }
 

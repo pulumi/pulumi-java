@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectRespon
     @Import(name="items", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> getItems() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items() {
         return this.items;
     }
 

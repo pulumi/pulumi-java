@@ -39,21 +39,21 @@ public final class VmImageResponse {
      * Use this VM image family to find the image; the newest image in this family will be used.
      * 
     */
-    public String getImageFamily() {
+    public String imageFamily() {
         return this.imageFamily;
     }
     /**
      * Use VM image name to find the image.
      * 
     */
-    public String getImageName() {
+    public String imageName() {
         return this.imageName;
     }
     /**
      * The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
 

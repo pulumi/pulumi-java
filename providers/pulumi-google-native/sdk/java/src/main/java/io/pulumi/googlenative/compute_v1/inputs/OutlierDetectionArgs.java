@@ -27,7 +27,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="baseEjectionTime")
       private final @Nullable Output<DurationArgs> baseEjectionTime;
 
-    public Output<DurationArgs> getBaseEjectionTime() {
+    public Output<DurationArgs> baseEjectionTime() {
         return this.baseEjectionTime == null ? Codegen.empty() : this.baseEjectionTime;
     }
 
@@ -38,7 +38,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consecutiveErrors")
       private final @Nullable Output<Integer> consecutiveErrors;
 
-    public Output<Integer> getConsecutiveErrors() {
+    public Output<Integer> consecutiveErrors() {
         return this.consecutiveErrors == null ? Codegen.empty() : this.consecutiveErrors;
     }
 
@@ -49,7 +49,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consecutiveGatewayFailure")
       private final @Nullable Output<Integer> consecutiveGatewayFailure;
 
-    public Output<Integer> getConsecutiveGatewayFailure() {
+    public Output<Integer> consecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure == null ? Codegen.empty() : this.consecutiveGatewayFailure;
     }
 
@@ -60,7 +60,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enforcingConsecutiveErrors")
       private final @Nullable Output<Integer> enforcingConsecutiveErrors;
 
-    public Output<Integer> getEnforcingConsecutiveErrors() {
+    public Output<Integer> enforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors == null ? Codegen.empty() : this.enforcingConsecutiveErrors;
     }
 
@@ -71,7 +71,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enforcingConsecutiveGatewayFailure")
       private final @Nullable Output<Integer> enforcingConsecutiveGatewayFailure;
 
-    public Output<Integer> getEnforcingConsecutiveGatewayFailure() {
+    public Output<Integer> enforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure == null ? Codegen.empty() : this.enforcingConsecutiveGatewayFailure;
     }
 
@@ -82,7 +82,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enforcingSuccessRate")
       private final @Nullable Output<Integer> enforcingSuccessRate;
 
-    public Output<Integer> getEnforcingSuccessRate() {
+    public Output<Integer> enforcingSuccessRate() {
         return this.enforcingSuccessRate == null ? Codegen.empty() : this.enforcingSuccessRate;
     }
 
@@ -93,7 +93,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="interval")
       private final @Nullable Output<DurationArgs> interval;
 
-    public Output<DurationArgs> getInterval() {
+    public Output<DurationArgs> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -104,7 +104,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxEjectionPercent")
       private final @Nullable Output<Integer> maxEjectionPercent;
 
-    public Output<Integer> getMaxEjectionPercent() {
+    public Output<Integer> maxEjectionPercent() {
         return this.maxEjectionPercent == null ? Codegen.empty() : this.maxEjectionPercent;
     }
 
@@ -115,7 +115,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="successRateMinimumHosts")
       private final @Nullable Output<Integer> successRateMinimumHosts;
 
-    public Output<Integer> getSuccessRateMinimumHosts() {
+    public Output<Integer> successRateMinimumHosts() {
         return this.successRateMinimumHosts == null ? Codegen.empty() : this.successRateMinimumHosts;
     }
 
@@ -126,7 +126,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="successRateRequestVolume")
       private final @Nullable Output<Integer> successRateRequestVolume;
 
-    public Output<Integer> getSuccessRateRequestVolume() {
+    public Output<Integer> successRateRequestVolume() {
         return this.successRateRequestVolume == null ? Codegen.empty() : this.successRateRequestVolume;
     }
 
@@ -137,7 +137,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="successRateStdevFactor")
       private final @Nullable Output<Integer> successRateStdevFactor;
 
-    public Output<Integer> getSuccessRateStdevFactor() {
+    public Output<Integer> successRateStdevFactor() {
         return this.successRateStdevFactor == null ? Codegen.empty() : this.successRateStdevFactor;
     }
 

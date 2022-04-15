@@ -23,7 +23,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork", required=true)
       private final Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
 
@@ -34,7 +34,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainResource", required=true)
       private final Output<String> domainResource;
 
-    public Output<String> getDomainResource() {
+    public Output<String> domainResource() {
         return this.domainResource;
     }
 
@@ -45,21 +45,21 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="peeringId", required=true)
       private final Output<String> peeringId;
 
-    public Output<String> getPeeringId() {
+    public Output<String> peeringId() {
         return this.peeringId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

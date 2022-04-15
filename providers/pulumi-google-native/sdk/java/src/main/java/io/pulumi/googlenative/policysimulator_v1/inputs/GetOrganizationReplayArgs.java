@@ -15,21 +15,21 @@ public final class GetOrganizationReplayArgs extends io.pulumi.resources.InvokeA
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="replayId", required=true)
       private final String replayId;
 
-    public String getReplayId() {
+    public String replayId() {
         return this.replayId;
     }
 

@@ -39,7 +39,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="accelerators", required=true)
       private final List<AcceleratorConfigResponse> accelerators;
 
-    public List<AcceleratorConfigResponse> getAccelerators() {
+    public List<AcceleratorConfigResponse> accelerators() {
         return this.accelerators;
     }
 
@@ -50,7 +50,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="advancedMachineFeatures", required=true)
       private final AdvancedMachineFeaturesResponse advancedMachineFeatures;
 
-    public AdvancedMachineFeaturesResponse getAdvancedMachineFeatures() {
+    public AdvancedMachineFeaturesResponse advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
 
@@ -61,7 +61,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bootDiskKmsKey", required=true)
       private final String bootDiskKmsKey;
 
-    public String getBootDiskKmsKey() {
+    public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
 
@@ -72,7 +72,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -83,7 +83,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
@@ -94,7 +94,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ephemeralStorageConfig", required=true)
       private final EphemeralStorageConfigResponse ephemeralStorageConfig;
 
-    public EphemeralStorageConfigResponse getEphemeralStorageConfig() {
+    public EphemeralStorageConfigResponse ephemeralStorageConfig() {
         return this.ephemeralStorageConfig;
     }
 
@@ -105,7 +105,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gcfsConfig", required=true)
       private final GcfsConfigResponse gcfsConfig;
 
-    public GcfsConfigResponse getGcfsConfig() {
+    public GcfsConfigResponse gcfsConfig() {
         return this.gcfsConfig;
     }
 
@@ -116,7 +116,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gvnic", required=true)
       private final VirtualNICResponse gvnic;
 
-    public VirtualNICResponse getGvnic() {
+    public VirtualNICResponse gvnic() {
         return this.gvnic;
     }
 
@@ -127,7 +127,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageType", required=true)
       private final String imageType;
 
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
 
@@ -138,7 +138,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kubeletConfig", required=true)
       private final NodeKubeletConfigResponse kubeletConfig;
 
-    public NodeKubeletConfigResponse getKubeletConfig() {
+    public NodeKubeletConfigResponse kubeletConfig() {
         return this.kubeletConfig;
     }
 
@@ -149,7 +149,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -160,7 +160,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="linuxNodeConfig", required=true)
       private final LinuxNodeConfigResponse linuxNodeConfig;
 
-    public LinuxNodeConfigResponse getLinuxNodeConfig() {
+    public LinuxNodeConfigResponse linuxNodeConfig() {
         return this.linuxNodeConfig;
     }
 
@@ -171,7 +171,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="localSsdCount", required=true)
       private final Integer localSsdCount;
 
-    public Integer getLocalSsdCount() {
+    public Integer localSsdCount() {
         return this.localSsdCount;
     }
 
@@ -182,7 +182,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -193,7 +193,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
@@ -204,7 +204,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
@@ -215,7 +215,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeGroup", required=true)
       private final String nodeGroup;
 
-    public String getNodeGroup() {
+    public String nodeGroup() {
         return this.nodeGroup;
     }
 
@@ -226,7 +226,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
@@ -237,7 +237,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 
@@ -248,7 +248,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="reservationAffinity", required=true)
       private final ReservationAffinityResponse reservationAffinity;
 
-    public ReservationAffinityResponse getReservationAffinity() {
+    public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
     }
 
@@ -259,7 +259,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sandboxConfig", required=true)
       private final SandboxConfigResponse sandboxConfig;
 
-    public SandboxConfigResponse getSandboxConfig() {
+    public SandboxConfigResponse sandboxConfig() {
         return this.sandboxConfig;
     }
 
@@ -270,7 +270,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -281,7 +281,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="shieldedInstanceConfig", required=true)
       private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
-    public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
+    public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
 
@@ -292,7 +292,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="spot", required=true)
       private final Boolean spot;
 
-    public Boolean getSpot() {
+    public Boolean spot() {
         return this.spot;
     }
 
@@ -303,7 +303,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
@@ -314,7 +314,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="taints", required=true)
       private final List<NodeTaintResponse> taints;
 
-    public List<NodeTaintResponse> getTaints() {
+    public List<NodeTaintResponse> taints() {
         return this.taints;
     }
 
@@ -325,7 +325,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workloadMetadataConfig", required=true)
       private final WorkloadMetadataConfigResponse workloadMetadataConfig;
 
-    public WorkloadMetadataConfigResponse getWorkloadMetadataConfig() {
+    public WorkloadMetadataConfigResponse workloadMetadataConfig() {
         return this.workloadMetadataConfig;
     }
 

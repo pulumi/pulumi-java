@@ -27,7 +27,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crontabSpec")
       private final @Nullable Output<String> crontabSpec;
 
-    public Output<String> getCrontabSpec() {
+    public Output<String> crontabSpec() {
         return this.crontabSpec == null ? Codegen.empty() : this.crontabSpec;
     }
 
@@ -38,7 +38,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -49,7 +49,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionCount")
       private final @Nullable Output<Integer> retentionCount;
 
-    public Output<Integer> getRetentionCount() {
+    public Output<Integer> retentionCount() {
         return this.retentionCount == null ? Codegen.empty() : this.retentionCount;
     }
 

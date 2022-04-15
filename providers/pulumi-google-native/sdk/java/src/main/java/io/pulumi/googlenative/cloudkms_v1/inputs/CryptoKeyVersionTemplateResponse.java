@@ -23,7 +23,7 @@ public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -34,7 +34,7 @@ public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.
     @Import(name="protectionLevel", required=true)
       private final String protectionLevel;
 
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
 

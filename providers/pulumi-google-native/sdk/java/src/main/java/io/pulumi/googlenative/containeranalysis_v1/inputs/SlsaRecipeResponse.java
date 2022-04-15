@@ -24,7 +24,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="arguments", required=true)
       private final Map<String,String> arguments;
 
-    public Map<String,String> getArguments() {
+    public Map<String,String> arguments() {
         return this.arguments;
     }
 
@@ -35,7 +35,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="definedInMaterial", required=true)
       private final String definedInMaterial;
 
-    public String getDefinedInMaterial() {
+    public String definedInMaterial() {
         return this.definedInMaterial;
     }
 
@@ -46,7 +46,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="entryPoint", required=true)
       private final String entryPoint;
 
-    public String getEntryPoint() {
+    public String entryPoint() {
         return this.entryPoint;
     }
 
@@ -57,7 +57,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="environment", required=true)
       private final Map<String,String> environment;
 
-    public Map<String,String> getEnvironment() {
+    public Map<String,String> environment() {
         return this.environment;
     }
 
@@ -68,7 +68,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

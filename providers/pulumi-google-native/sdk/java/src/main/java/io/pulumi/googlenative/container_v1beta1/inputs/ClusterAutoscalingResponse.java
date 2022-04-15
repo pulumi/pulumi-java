@@ -27,7 +27,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
     @Import(name="autoprovisioningLocations", required=true)
       private final List<String> autoprovisioningLocations;
 
-    public List<String> getAutoprovisioningLocations() {
+    public List<String> autoprovisioningLocations() {
         return this.autoprovisioningLocations;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
     @Import(name="autoprovisioningNodePoolDefaults", required=true)
       private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
 
-    public AutoprovisioningNodePoolDefaultsResponse getAutoprovisioningNodePoolDefaults() {
+    public AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
     @Import(name="autoscalingProfile", required=true)
       private final String autoscalingProfile;
 
-    public String getAutoscalingProfile() {
+    public String autoscalingProfile() {
         return this.autoscalingProfile;
     }
 
@@ -60,7 +60,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
     @Import(name="enableNodeAutoprovisioning", required=true)
       private final Boolean enableNodeAutoprovisioning;
 
-    public Boolean getEnableNodeAutoprovisioning() {
+    public Boolean enableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
     }
 
@@ -71,7 +71,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
     @Import(name="resourceLimits", required=true)
       private final List<ResourceLimitResponse> resourceLimits;
 
-    public List<ResourceLimitResponse> getResourceLimits() {
+    public List<ResourceLimitResponse> resourceLimits() {
         return this.resourceLimits;
     }
 

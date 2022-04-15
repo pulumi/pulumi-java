@@ -27,7 +27,7 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class OptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<Map<String,String>> value;
 
-    public Output<Map<String,String>> getValue() {
+    public Output<Map<String,String>> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

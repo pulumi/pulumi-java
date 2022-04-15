@@ -26,7 +26,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="paths", required=true)
       private final List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths;
     }
 
@@ -37,7 +37,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="routeAction", required=true)
       private final HttpRouteActionResponse routeAction;
 
-    public HttpRouteActionResponse getRouteAction() {
+    public HttpRouteActionResponse routeAction() {
         return this.routeAction;
     }
 
@@ -48,7 +48,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="service", required=true)
       private final String service;
 
-    public String getService() {
+    public String service() {
         return this.service;
     }
 
@@ -59,7 +59,7 @@ public final class PathRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="urlRedirect", required=true)
       private final HttpRedirectActionResponse urlRedirect;
 
-    public HttpRedirectActionResponse getUrlRedirect() {
+    public HttpRedirectActionResponse urlRedirect() {
         return this.urlRedirect;
     }
 

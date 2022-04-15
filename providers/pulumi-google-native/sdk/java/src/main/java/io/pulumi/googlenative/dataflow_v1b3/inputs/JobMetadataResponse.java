@@ -30,7 +30,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bigTableDetails", required=true)
       private final List<BigTableIODetailsResponse> bigTableDetails;
 
-    public List<BigTableIODetailsResponse> getBigTableDetails() {
+    public List<BigTableIODetailsResponse> bigTableDetails() {
         return this.bigTableDetails;
     }
 
@@ -41,7 +41,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bigqueryDetails", required=true)
       private final List<BigQueryIODetailsResponse> bigqueryDetails;
 
-    public List<BigQueryIODetailsResponse> getBigqueryDetails() {
+    public List<BigQueryIODetailsResponse> bigqueryDetails() {
         return this.bigqueryDetails;
     }
 
@@ -52,7 +52,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="datastoreDetails", required=true)
       private final List<DatastoreIODetailsResponse> datastoreDetails;
 
-    public List<DatastoreIODetailsResponse> getDatastoreDetails() {
+    public List<DatastoreIODetailsResponse> datastoreDetails() {
         return this.datastoreDetails;
     }
 
@@ -63,7 +63,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileDetails", required=true)
       private final List<FileIODetailsResponse> fileDetails;
 
-    public List<FileIODetailsResponse> getFileDetails() {
+    public List<FileIODetailsResponse> fileDetails() {
         return this.fileDetails;
     }
 
@@ -74,7 +74,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pubsubDetails", required=true)
       private final List<PubSubIODetailsResponse> pubsubDetails;
 
-    public List<PubSubIODetailsResponse> getPubsubDetails() {
+    public List<PubSubIODetailsResponse> pubsubDetails() {
         return this.pubsubDetails;
     }
 
@@ -85,7 +85,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sdkVersion", required=true)
       private final SdkVersionResponse sdkVersion;
 
-    public SdkVersionResponse getSdkVersion() {
+    public SdkVersionResponse sdkVersion() {
         return this.sdkVersion;
     }
 
@@ -96,7 +96,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="spannerDetails", required=true)
       private final List<SpannerIODetailsResponse> spannerDetails;
 
-    public List<SpannerIODetailsResponse> getSpannerDetails() {
+    public List<SpannerIODetailsResponse> spannerDetails() {
         return this.spannerDetails;
     }
 

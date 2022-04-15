@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
     @Import(name="conditions", required=true)
       private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
-    public List<GooglePrivacyDlpV2ConditionResponse> getConditions() {
+    public List<GooglePrivacyDlpV2ConditionResponse> conditions() {
         return this.conditions;
     }
 

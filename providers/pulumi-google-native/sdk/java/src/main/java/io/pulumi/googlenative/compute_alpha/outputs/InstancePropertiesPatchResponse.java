@@ -33,14 +33,14 @@ public final class InstancePropertiesPatchResponse {
      * The label key-value pairs that you want to patch onto the instance.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 

@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
      * Conditions to apply to the expression.
      * 
     */
-    public GooglePrivacyDlpV2ConditionsResponse getConditions() {
+    public GooglePrivacyDlpV2ConditionsResponse conditions() {
         return this.conditions;
     }
     /**
      * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
      * 
     */
-    public String getLogicalOperator() {
+    public String logicalOperator() {
         return this.logicalOperator;
     }
 

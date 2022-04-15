@@ -47,28 +47,28 @@ public final class GetAnalysisResult {
      * The result of the analysis, which is populated when the analysis finishes.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnalysisResultResponse getAnalysisResult() {
+    public GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult() {
         return this.analysisResult;
     }
     /**
      * The time at which the analysis was created, which occurs when the long-running operation completes.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The time at which the analysis was requested.
      * 
     */
-    public String getRequestTime() {
+    public String requestTime() {
         return this.requestTime;
     }
 

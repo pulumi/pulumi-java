@@ -23,7 +23,7 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
     @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
 
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -34,7 +34,7 @@ public final class BucketObjectCustomerEncryptionResponse extends io.pulumi.reso
     @Import(name="keySha256", required=true)
       private final String keySha256;
 
-    public String getKeySha256() {
+    public String keySha256() {
         return this.keySha256;
     }
 

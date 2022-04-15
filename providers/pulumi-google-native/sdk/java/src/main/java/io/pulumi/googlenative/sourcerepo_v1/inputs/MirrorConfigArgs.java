@@ -26,7 +26,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployKeyId")
       private final @Nullable Output<String> deployKeyId;
 
-    public Output<String> getDeployKeyId() {
+    public Output<String> deployKeyId() {
         return this.deployKeyId == null ? Codegen.empty() : this.deployKeyId;
     }
 
@@ -37,7 +37,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 
@@ -48,7 +48,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookId")
       private final @Nullable Output<String> webhookId;
 
-    public Output<String> getWebhookId() {
+    public Output<String> webhookId() {
         return this.webhookId == null ? Codegen.empty() : this.webhookId;
     }
 

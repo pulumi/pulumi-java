@@ -27,7 +27,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> getAutomaticRestart() {
+    public Output<Boolean> automaticRestart() {
         return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
     }
 
@@ -38,7 +38,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> getMinNodeCpus() {
+    public Output<Integer> minNodeCpus() {
         return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
     }
 
@@ -49,7 +49,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="nodeAffinities")
       private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
+    public Output<List<SchedulingNodeAffinityArgs>> nodeAffinities() {
         return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
     }
 
@@ -60,7 +60,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="onHostMaintenance")
       private final @Nullable Output<ComputeSchedulingOnHostMaintenance> onHostMaintenance;
 
-    public Output<ComputeSchedulingOnHostMaintenance> getOnHostMaintenance() {
+    public Output<ComputeSchedulingOnHostMaintenance> onHostMaintenance() {
         return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
     }
 
@@ -71,7 +71,7 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="restartType")
       private final @Nullable Output<ComputeSchedulingRestartType> restartType;
 
-    public Output<ComputeSchedulingRestartType> getRestartType() {
+    public Output<ComputeSchedulingRestartType> restartType() {
         return this.restartType == null ? Codegen.empty() : this.restartType;
     }
 

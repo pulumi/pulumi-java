@@ -26,7 +26,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="backendService")
       private final @Nullable Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 

@@ -92,70 +92,70 @@ public final class FieldResponse {
      * The field cardinality.
      * 
     */
-    public String getCardinality() {
+    public String cardinality() {
         return this.cardinality;
     }
     /**
      * The string value of the default value of this field. Proto2 syntax only.
      * 
     */
-    public String getDefaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
     /**
      * The field JSON name.
      * 
     */
-    public String getJsonName() {
+    public String jsonName() {
         return this.jsonName;
     }
     /**
      * The field type.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The field name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The field number.
      * 
     */
-    public Integer getNumber() {
+    public Integer number() {
         return this.number;
     }
     /**
      * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
      * 
     */
-    public Integer getOneofIndex() {
+    public Integer oneofIndex() {
         return this.oneofIndex;
     }
     /**
      * The protocol buffer options.
      * 
     */
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
     /**
      * Whether to use alternative packed wire representation.
      * 
     */
-    public Boolean getPacked() {
+    public Boolean packed() {
         return this.packed;
     }
     /**
      * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
      * 
     */
-    public String getTypeUrl() {
+    public String typeUrl() {
         return this.typeUrl;
     }
 

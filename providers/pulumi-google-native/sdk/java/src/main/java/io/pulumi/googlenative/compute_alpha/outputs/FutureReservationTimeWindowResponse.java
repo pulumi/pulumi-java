@@ -28,17 +28,17 @@ public final class FutureReservationTimeWindowResponse {
         this.startTime = startTime;
     }
 
-    public DurationResponse getDuration() {
+    public DurationResponse duration() {
         return this.duration;
     }
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Start time of the Future Reservation. The start_time is an RFC3339 string.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

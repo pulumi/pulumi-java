@@ -39,21 +39,21 @@ public final class PosixGroupResponse {
      * GID of the POSIX group.
      * 
     */
-    public String getGid() {
+    public String gid() {
         return this.gid;
     }
     /**
      * Name of the POSIX group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * System identifier for which group name and gid apply to. If not specified it will default to empty value.
      * 
     */
-    public String getSystemId() {
+    public String systemId() {
         return this.systemId;
     }
 

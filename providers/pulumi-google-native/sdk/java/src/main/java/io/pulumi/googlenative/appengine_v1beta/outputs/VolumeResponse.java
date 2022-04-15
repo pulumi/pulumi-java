@@ -40,21 +40,21 @@ public final class VolumeResponse {
      * Unique name for the volume.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Volume size in gigabytes.
      * 
     */
-    public Double getSizeGb() {
+    public Double sizeGb() {
         return this.sizeGb;
     }
     /**
      * Underlying volume type, e.g. 'tmpfs'.
      * 
     */
-    public String getVolumeType() {
+    public String volumeType() {
         return this.volumeType;
     }
 

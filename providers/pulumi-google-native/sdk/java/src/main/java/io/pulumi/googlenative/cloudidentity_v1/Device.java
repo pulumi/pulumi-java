@@ -33,7 +33,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Attributes specific to Android devices.
      * 
      */
-    public Output<GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse> getAndroidSpecificAttributes() {
+    public Output<GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse> androidSpecificAttributes() {
         return this.androidSpecificAttributes;
     }
     /**
@@ -47,7 +47,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Asset tag of the device.
      * 
      */
-    public Output<String> getAssetTag() {
+    public Output<String> assetTag() {
         return this.assetTag;
     }
     /**
@@ -61,7 +61,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Baseband version of the device.
      * 
      */
-    public Output<String> getBasebandVersion() {
+    public Output<String> basebandVersion() {
         return this.basebandVersion;
     }
     /**
@@ -75,7 +75,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Device bootloader version. Example: 0.6.7.
      * 
      */
-    public Output<String> getBootloaderVersion() {
+    public Output<String> bootloaderVersion() {
         return this.bootloaderVersion;
     }
     /**
@@ -89,7 +89,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Device brand. Example: Samsung.
      * 
      */
-    public Output<String> getBrand() {
+    public Output<String> brand() {
         return this.brand;
     }
     /**
@@ -103,7 +103,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Build number of the device.
      * 
      */
-    public Output<String> getBuildNumber() {
+    public Output<String> buildNumber() {
         return this.buildNumber;
     }
     /**
@@ -117,7 +117,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Represents whether the Device is compromised.
      * 
      */
-    public Output<String> getCompromisedState() {
+    public Output<String> compromisedState() {
         return this.compromisedState;
     }
     /**
@@ -131,7 +131,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return When the Company-Owned device was imported. This field is empty for BYOD devices.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -145,7 +145,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Type of device.
      * 
      */
-    public Output<String> getDeviceType() {
+    public Output<String> deviceType() {
         return this.deviceType;
     }
     /**
@@ -159,7 +159,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Whether developer options is enabled on device.
      * 
      */
-    public Output<Boolean> getEnabledDeveloperOptions() {
+    public Output<Boolean> enabledDeveloperOptions() {
         return this.enabledDeveloperOptions;
     }
     /**
@@ -173,7 +173,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Whether USB debugging is enabled on device.
      * 
      */
-    public Output<Boolean> getEnabledUsbDebugging() {
+    public Output<Boolean> enabledUsbDebugging() {
         return this.enabledUsbDebugging;
     }
     /**
@@ -187,7 +187,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Device encryption state.
      * 
      */
-    public Output<String> getEncryptionState() {
+    public Output<String> encryptionState() {
         return this.encryptionState;
     }
     /**
@@ -201,7 +201,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return IMEI number of device if GSM device; empty otherwise.
      * 
      */
-    public Output<String> getImei() {
+    public Output<String> imei() {
         return this.imei;
     }
     /**
@@ -215,7 +215,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Kernel version of the device.
      * 
      */
-    public Output<String> getKernelVersion() {
+    public Output<String> kernelVersion() {
         return this.kernelVersion;
     }
     /**
@@ -229,7 +229,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Most recent time when device synced with this service.
      * 
      */
-    public Output<String> getLastSyncTime() {
+    public Output<String> lastSyncTime() {
         return this.lastSyncTime;
     }
     /**
@@ -243,7 +243,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Management state of the device
      * 
      */
-    public Output<String> getManagementState() {
+    public Output<String> managementState() {
         return this.managementState;
     }
     /**
@@ -257,7 +257,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Device manufacturer. Example: Motorola.
      * 
      */
-    public Output<String> getManufacturer() {
+    public Output<String> manufacturer() {
         return this.manufacturer;
     }
     /**
@@ -271,7 +271,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return MEID number of device if CDMA device; empty otherwise.
      * 
      */
-    public Output<String> getMeid() {
+    public Output<String> meid() {
         return this.meid;
     }
     /**
@@ -285,7 +285,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Model name of device. Example: Pixel 3.
      * 
      */
-    public Output<String> getModel() {
+    public Output<String> model() {
         return this.model;
     }
     /**
@@ -299,7 +299,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device}`, where device is the unique id assigned to the Device.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -313,7 +313,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Mobile or network operator of device, if available.
      * 
      */
-    public Output<String> getNetworkOperator() {
+    public Output<String> networkOperator() {
         return this.networkOperator;
     }
     /**
@@ -327,7 +327,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return OS version of the device. Example: Android 8.1.0.
      * 
      */
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion;
     }
     /**
@@ -341,7 +341,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
      * 
      */
-    public Output<List<String>> getOtherAccounts() {
+    public Output<List<String>> otherAccounts() {
         return this.otherAccounts;
     }
     /**
@@ -355,7 +355,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Whether the device is owned by the company or an individual
      * 
      */
-    public Output<String> getOwnerType() {
+    public Output<String> ownerType() {
         return this.ownerType;
     }
     /**
@@ -369,7 +369,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return OS release version. Example: 6.0.
      * 
      */
-    public Output<String> getReleaseVersion() {
+    public Output<String> releaseVersion() {
         return this.releaseVersion;
     }
     /**
@@ -383,7 +383,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return OS security patch update time on device.
      * 
      */
-    public Output<String> getSecurityPatchTime() {
+    public Output<String> securityPatchTime() {
         return this.securityPatchTime;
     }
     /**
@@ -397,7 +397,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Serial Number of device. Example: HT82V1A01076.
      * 
      */
-    public Output<String> getSerialNumber() {
+    public Output<String> serialNumber() {
         return this.serialNumber;
     }
     /**
@@ -411,7 +411,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return WiFi MAC addresses of device.
      * 
      */
-    public Output<List<String>> getWifiMacAddresses() {
+    public Output<List<String>> wifiMacAddresses() {
         return this.wifiMacAddresses;
     }
 

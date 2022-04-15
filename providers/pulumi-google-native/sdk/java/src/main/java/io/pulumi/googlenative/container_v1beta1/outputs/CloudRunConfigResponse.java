@@ -33,14 +33,14 @@ public final class CloudRunConfigResponse {
      * Whether Cloud Run addon is enabled for this cluster.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
     /**
      * Which load balancer type is installed for Cloud Run.
      * 
     */
-    public String getLoadBalancerType() {
+    public String loadBalancerType() {
         return this.loadBalancerType;
     }
 

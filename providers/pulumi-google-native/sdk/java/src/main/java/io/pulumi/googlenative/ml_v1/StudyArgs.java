@@ -19,14 +19,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -37,14 +37,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="studyConfig", required=true)
       private final Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
-    public Output<GoogleCloudMlV1__StudyConfigArgs> getStudyConfig() {
+    public Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig() {
         return this.studyConfig;
     }
 
     @Import(name="studyId", required=true)
       private final Output<String> studyId;
 
-    public Output<String> getStudyId() {
+    public Output<String> studyId() {
         return this.studyId;
     }
 

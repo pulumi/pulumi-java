@@ -22,10 +22,10 @@ public final class ComplianceOccurrenceResponse {
         this.nonCompliantFiles = nonCompliantFiles;
     }
 
-    public String getNonComplianceReason() {
+    public String nonComplianceReason() {
         return this.nonComplianceReason;
     }
-    public List<NonCompliantFileResponse> getNonCompliantFiles() {
+    public List<NonCompliantFileResponse> nonCompliantFiles() {
         return this.nonCompliantFiles;
     }
 

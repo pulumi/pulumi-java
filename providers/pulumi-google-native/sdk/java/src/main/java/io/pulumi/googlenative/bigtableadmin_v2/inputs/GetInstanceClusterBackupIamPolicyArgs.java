@@ -17,28 +17,28 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends io.pulumi.resou
     @Import(name="backupId", required=true)
       private final String backupId;
 
-    public String getBackupId() {
+    public String backupId() {
         return this.backupId;
     }
 
     @Import(name="clusterId", required=true)
       private final String clusterId;
 
-    public String getClusterId() {
+    public String clusterId() {
         return this.clusterId;
     }
 
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

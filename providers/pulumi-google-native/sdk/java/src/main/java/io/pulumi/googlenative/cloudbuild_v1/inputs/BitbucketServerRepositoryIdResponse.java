@@ -24,7 +24,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
     @Import(name="projectKey", required=true)
       private final String projectKey;
 
-    public String getProjectKey() {
+    public String projectKey() {
         return this.projectKey;
     }
 
@@ -35,7 +35,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
     @Import(name="repoSlug", required=true)
       private final String repoSlug;
 
-    public String getRepoSlug() {
+    public String repoSlug() {
         return this.repoSlug;
     }
 
@@ -46,7 +46,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
     @Import(name="webhookId", required=true)
       private final Integer webhookId;
 
-    public Integer getWebhookId() {
+    public Integer webhookId() {
         return this.webhookId;
     }
 

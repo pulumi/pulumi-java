@@ -34,14 +34,14 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * A list of phase match rules that are included in this group.
      * 
     */
-    public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
+    public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules() {
         return this.phraseMatchRules;
     }
     /**
      * The type of this phrase match rule group.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

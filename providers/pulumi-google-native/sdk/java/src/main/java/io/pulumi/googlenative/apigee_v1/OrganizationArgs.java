@@ -29,7 +29,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addonsConfig")
       private final @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
 
-    public Output<GoogleCloudApigeeV1AddonsConfigArgs> getAddonsConfig() {
+    public Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig() {
         return this.addonsConfig == null ? Codegen.empty() : this.addonsConfig;
     }
 
@@ -40,7 +40,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsRegion", required=true)
       private final Output<String> analyticsRegion;
 
-    public Output<String> getAnalyticsRegion() {
+    public Output<String> analyticsRegion() {
         return this.analyticsRegion;
     }
 
@@ -51,7 +51,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<List<String>> attributes;
 
-    public Output<List<String>> getAttributes() {
+    public Output<List<String>> attributes() {
         return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
@@ -62,7 +62,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
@@ -73,7 +73,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingType")
       private final @Nullable Output<OrganizationBillingType> billingType;
 
-    public Output<OrganizationBillingType> getBillingType() {
+    public Output<OrganizationBillingType> billingType() {
         return this.billingType == null ? Codegen.empty() : this.billingType;
     }
 
@@ -84,7 +84,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerName")
       private final @Nullable Output<String> customerName;
 
-    public Output<String> getCustomerName() {
+    public Output<String> customerName() {
         return this.customerName == null ? Codegen.empty() : this.customerName;
     }
 
@@ -95,7 +95,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -106,14 +106,14 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -124,7 +124,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portalDisabled")
       private final @Nullable Output<Boolean> portalDisabled;
 
-    public Output<Boolean> getPortalDisabled() {
+    public Output<Boolean> portalDisabled() {
         return this.portalDisabled == null ? Codegen.empty() : this.portalDisabled;
     }
 
@@ -135,7 +135,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
-    public Output<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
+    public Output<GoogleCloudApigeeV1PropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -146,7 +146,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
+    public Output<String> runtimeDatabaseEncryptionKeyName() {
         return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
@@ -157,7 +157,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeType", required=true)
       private final Output<OrganizationRuntimeType> runtimeType;
 
-    public Output<OrganizationRuntimeType> getRuntimeType() {
+    public Output<OrganizationRuntimeType> runtimeType() {
         return this.runtimeType;
     }
 
@@ -168,7 +168,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<OrganizationType> type;
 
-    public Output<OrganizationType> getType() {
+    public Output<OrganizationType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

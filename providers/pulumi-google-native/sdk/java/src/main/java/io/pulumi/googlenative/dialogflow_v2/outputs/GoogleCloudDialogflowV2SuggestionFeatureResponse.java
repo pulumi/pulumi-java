@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureResponse {
      * Type of Human Agent Assistant API feature to request.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

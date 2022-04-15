@@ -24,7 +24,7 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
     @Import(name="certificates", required=true)
       private final TlsCertificatePathsResponse certificates;
 
-    public TlsCertificatePathsResponse getCertificates() {
+    public TlsCertificatePathsResponse certificates() {
         return this.certificates;
     }
 
@@ -35,7 +35,7 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
     @Import(name="channelCredentialType", required=true)
       private final String channelCredentialType;
 
-    public String getChannelCredentialType() {
+    public String channelCredentialType() {
         return this.channelCredentialType;
     }
 

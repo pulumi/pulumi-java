@@ -23,7 +23,7 @@ public final class SparkChartViewResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="minAlignmentPeriod", required=true)
       private final String minAlignmentPeriod;
 
-    public String getMinAlignmentPeriod() {
+    public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
 
@@ -34,7 +34,7 @@ public final class SparkChartViewResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sparkChartType", required=true)
       private final String sparkChartType;
 
-    public String getSparkChartType() {
+    public String sparkChartType() {
         return this.sparkChartType;
     }
 

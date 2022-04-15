@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
     @Import(name="approxNumPhrases", required=true)
       private final String approxNumPhrases;
 
-    public String getApproxNumPhrases() {
+    public String approxNumPhrases() {
         return this.approxNumPhrases;
     }
 

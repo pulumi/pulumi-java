@@ -99,77 +99,77 @@ public final class GetConnectivityTestResult {
      * The time the test was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The user-supplied description of the Connectivity Test. Maximum of 512 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Destination specification of the Connectivity Test. You can use a combination of destination IP address, Compute Engine VM instance, or VPC network to uniquely identify the destination location. Even if the destination IP address is not unique, the source IP location is unique. Usually, the analysis can infer the destination endpoint from route information. If the destination you specify is a VM instance and the instance has multiple network interfaces, then you must also specify either a destination IP address or VPC network to identify the destination interface. A reachability analysis proceeds even if the destination location is ambiguous. However, the result can include endpoints that you don't intend to test.
      * 
     */
-    public EndpointResponse getDestination() {
+    public EndpointResponse destination() {
         return this.destination;
     }
     /**
      * The display name of a Connectivity Test.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource labels to represent user-provided metadata.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Unique name of the resource using the form: `projects/{project_id}/locations/global/connectivityTests/{test_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * IP Protocol of the test. When not provided, "TCP" is assumed.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The reachability details of this test from the latest run. The details are updated when creating a new test, updating an existing test, or triggering a one-time rerun of an existing test.
      * 
     */
-    public ReachabilityDetailsResponse getReachabilityDetails() {
+    public ReachabilityDetailsResponse reachabilityDetails() {
         return this.reachabilityDetails;
     }
     /**
      * Other projects that may be relevant for reachability analysis. This is applicable to scenarios where a test can cross project boundaries.
      * 
     */
-    public List<String> getRelatedProjects() {
+    public List<String> relatedProjects() {
         return this.relatedProjects;
     }
     /**
      * Source specification of the Connectivity Test. You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. If the source of the test is within an on-premises network, then you must provide the destination VPC network. If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test.
      * 
     */
-    public EndpointResponse getSource() {
+    public EndpointResponse source() {
         return this.source;
     }
     /**
      * The time the test's configuration was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

@@ -23,7 +23,7 @@ public final class JwtLocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="header", required=true)
       private final String header;
 
-    public String getHeader() {
+    public String header() {
         return this.header;
     }
 
@@ -34,7 +34,7 @@ public final class JwtLocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="query", required=true)
       private final String query;
 
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
 
@@ -45,7 +45,7 @@ public final class JwtLocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="valuePrefix", required=true)
       private final String valuePrefix;
 
-    public String getValuePrefix() {
+    public String valuePrefix() {
         return this.valuePrefix;
     }
 

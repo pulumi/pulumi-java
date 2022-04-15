@@ -15,7 +15,7 @@ public final class GetTopicArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="topicId", required=true)
       private final String topicId;
 
-    public String getTopicId() {
+    public String topicId() {
         return this.topicId;
     }
 

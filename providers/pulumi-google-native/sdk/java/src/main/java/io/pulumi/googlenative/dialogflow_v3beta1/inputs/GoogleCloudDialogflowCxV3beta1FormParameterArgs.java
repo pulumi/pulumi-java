@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
+    public Output<Object> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="entityType", required=true)
       private final Output<String> entityType;
 
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType;
     }
 
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="fillBehavior", required=true)
       private final Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior;
 
-    public Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> getFillBehavior() {
+    public Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior() {
         return this.fillBehavior;
     }
 
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
+    public Output<Boolean> isList() {
         return this.isList == null ? Codegen.empty() : this.isList;
     }
 
@@ -84,7 +84,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
+    public Output<Boolean> redact() {
         return this.redact == null ? Codegen.empty() : this.redact;
     }
 
@@ -95,7 +95,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends io.pu
     @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
-    public Output<Boolean> getRequired() {
+    public Output<Boolean> required() {
         return this.required == null ? Codegen.empty() : this.required;
     }
 

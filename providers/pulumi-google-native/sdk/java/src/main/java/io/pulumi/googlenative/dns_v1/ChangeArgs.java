@@ -26,14 +26,14 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> additions;
 
-    public Output<List<ResourceRecordSetArgs>> getAdditions() {
+    public Output<List<ResourceRecordSetArgs>> additions() {
         return this.additions == null ? Codegen.empty() : this.additions;
     }
 
     @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
-    public Output<String> getClientOperationId() {
+    public Output<String> clientOperationId() {
         return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
@@ -44,7 +44,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> deletions;
 
-    public Output<List<ResourceRecordSetArgs>> getDeletions() {
+    public Output<List<ResourceRecordSetArgs>> deletions() {
         return this.deletions == null ? Codegen.empty() : this.deletions;
     }
 
@@ -55,7 +55,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -66,28 +66,28 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isServing")
       private final @Nullable Output<Boolean> isServing;
 
-    public Output<Boolean> getIsServing() {
+    public Output<Boolean> isServing() {
         return this.isServing == null ? Codegen.empty() : this.isServing;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="managedZone", required=true)
       private final Output<String> managedZone;
 
-    public Output<String> getManagedZone() {
+    public Output<String> managedZone() {
         return this.managedZone;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -98,7 +98,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -109,7 +109,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<ChangeStatus> status;
 
-    public Output<ChangeStatus> getStatus() {
+    public Output<ChangeStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

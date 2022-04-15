@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
     @Import(name="step")
       private final @Nullable Output<String> step;
 
-    public Output<String> getStep() {
+    public Output<String> step() {
         return this.step == null ? Codegen.empty() : this.step;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3RolloutStateArgs extends io.pulumi.r
     @Import(name="stepIndex")
       private final @Nullable Output<Integer> stepIndex;
 
-    public Output<Integer> getStepIndex() {
+    public Output<Integer> stepIndex() {
         return this.stepIndex == null ? Codegen.empty() : this.stepIndex;
     }
 

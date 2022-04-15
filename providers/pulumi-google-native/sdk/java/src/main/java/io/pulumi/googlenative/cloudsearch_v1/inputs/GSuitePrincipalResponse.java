@@ -20,7 +20,7 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
     @Import(name="gsuiteDomain", required=true)
       private final Boolean gsuiteDomain;
 
-    public Boolean getGsuiteDomain() {
+    public Boolean gsuiteDomain() {
         return this.gsuiteDomain;
     }
 
@@ -31,7 +31,7 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
     @Import(name="gsuiteGroupEmail", required=true)
       private final String gsuiteGroupEmail;
 
-    public String getGsuiteGroupEmail() {
+    public String gsuiteGroupEmail() {
         return this.gsuiteGroupEmail;
     }
 
@@ -42,7 +42,7 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
     @Import(name="gsuiteUserEmail", required=true)
       private final String gsuiteUserEmail;
 
-    public String getGsuiteUserEmail() {
+    public String gsuiteUserEmail() {
         return this.gsuiteUserEmail;
     }
 

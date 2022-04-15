@@ -35,7 +35,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by Android apps.
      * 
      */
-    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse> getAndroidSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse> androidSettings() {
         return this.androidSettings;
     }
     /**
@@ -49,7 +49,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The timestamp corresponding to the creation of this Key.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -63,7 +63,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Human-readable display name of this key. Modifiable by user.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -77,7 +77,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by iOS apps.
      * 
      */
-    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse> getIosSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse> iosSettings() {
         return this.iosSettings;
     }
     /**
@@ -91,7 +91,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return See Creating and managing labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -105,7 +105,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +119,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Options for user acceptance testing.
      * 
      */
-    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse> getTestingOptions() {
+    public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse> testingOptions() {
         return this.testingOptions;
     }
     /**
@@ -133,7 +133,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Settings for WAF
      * 
      */
-    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsResponse> getWafSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsResponse> wafSettings() {
         return this.wafSettings;
     }
     /**
@@ -147,7 +147,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by websites.
      * 
      */
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse> getWebSettings() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse> webSettings() {
         return this.webSettings;
     }
 

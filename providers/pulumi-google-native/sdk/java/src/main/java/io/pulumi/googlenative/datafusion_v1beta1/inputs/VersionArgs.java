@@ -29,7 +29,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availableFeatures")
       private final @Nullable Output<List<String>> availableFeatures;
 
-    public Output<List<String>> getAvailableFeatures() {
+    public Output<List<String>> availableFeatures() {
         return this.availableFeatures == null ? Codegen.empty() : this.availableFeatures;
     }
 
@@ -40,7 +40,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
       private final @Nullable Output<Boolean> defaultVersion;
 
-    public Output<Boolean> getDefaultVersion() {
+    public Output<Boolean> defaultVersion() {
         return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
@@ -51,7 +51,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<VersionType> type;
 
-    public Output<VersionType> getType() {
+    public Output<VersionType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -62,7 +62,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionNumber")
       private final @Nullable Output<String> versionNumber;
 
-    public Output<String> getVersionNumber() {
+    public Output<String> versionNumber() {
         return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 

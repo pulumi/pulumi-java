@@ -88,70 +88,70 @@ public final class UpgradeHistoryEntryResponse {
      * Action. Rolloback or Upgrade.
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * The container image before this instance upgrade.
      * 
     */
-    public String getContainerImage() {
+    public String containerImage() {
         return this.containerImage;
     }
     /**
      * The time that this instance upgrade history entry is created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The framework of this notebook instance.
      * 
     */
-    public String getFramework() {
+    public String framework() {
         return this.framework;
     }
     /**
      * The snapshot of the boot disk of this notebook instance before upgrade.
      * 
     */
-    public String getSnapshot() {
+    public String snapshot() {
         return this.snapshot;
     }
     /**
      * The state of this instance upgrade history entry.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
      * 
     */
-    public String getTargetImage() {
+    public String targetImage() {
         return this.targetImage;
     }
     /**
      * Target VM Version, like m63.
      * 
     */
-    public String getTargetVersion() {
+    public String targetVersion() {
         return this.targetVersion;
     }
     /**
      * The version of the notebook instance before this upgrade.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * The VM image before this instance upgrade.
      * 
     */
-    public String getVmImage() {
+    public String vmImage() {
         return this.vmImage;
     }
 

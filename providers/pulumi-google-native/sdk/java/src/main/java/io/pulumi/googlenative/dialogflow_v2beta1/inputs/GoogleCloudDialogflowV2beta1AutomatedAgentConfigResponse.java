@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse exte
     @Import(name="agent", required=true)
       private final String agent;
 
-    public String getAgent() {
+    public String agent() {
         return this.agent;
     }
 

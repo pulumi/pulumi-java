@@ -17,21 +17,21 @@ public final class GetInstanceDatabaseIamPolicyArgs extends io.pulumi.resources.
     @Import(name="databaseId", required=true)
       private final String databaseId;
 
-    public String getDatabaseId() {
+    public String databaseId() {
         return this.databaseId;
     }
 
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

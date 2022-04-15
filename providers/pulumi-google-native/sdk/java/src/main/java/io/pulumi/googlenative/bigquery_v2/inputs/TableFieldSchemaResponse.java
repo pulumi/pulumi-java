@@ -22,7 +22,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="categories", required=true)
       private final TableFieldSchemaCategoriesResponse categories;
 
-    public TableFieldSchemaCategoriesResponse getCategories() {
+    public TableFieldSchemaCategoriesResponse categories() {
         return this.categories;
     }
 
@@ -33,7 +33,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="collationSpec", required=true)
       private final String collationSpec;
 
-    public String getCollationSpec() {
+    public String collationSpec() {
         return this.collationSpec;
     }
 
@@ -44,7 +44,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -55,7 +55,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="fields", required=true)
       private final List<TableFieldSchemaResponse> fields;
 
-    public List<TableFieldSchemaResponse> getFields() {
+    public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }
 
@@ -66,7 +66,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="maxLength", required=true)
       private final String maxLength;
 
-    public String getMaxLength() {
+    public String maxLength() {
         return this.maxLength;
     }
 
@@ -77,7 +77,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="mode", required=true)
       private final String mode;
 
-    public String getMode() {
+    public String mode() {
         return this.mode;
     }
 
@@ -88,14 +88,14 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="policyTags", required=true)
       private final TableFieldSchemaPolicyTagsResponse policyTags;
 
-    public TableFieldSchemaPolicyTagsResponse getPolicyTags() {
+    public TableFieldSchemaPolicyTagsResponse policyTags() {
         return this.policyTags;
     }
 
@@ -106,7 +106,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="precision", required=true)
       private final String precision;
 
-    public String getPrecision() {
+    public String precision() {
         return this.precision;
     }
 
@@ -117,7 +117,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="scale", required=true)
       private final String scale;
 
-    public String getScale() {
+    public String scale() {
         return this.scale;
     }
 
@@ -128,7 +128,7 @@ public final class TableFieldSchemaResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

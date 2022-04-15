@@ -40,21 +40,21 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse {
      * The location of the repository directory.
      * 
     */
-    public String getBaseUrl() {
+    public String baseUrl() {
         return this.baseUrl;
     }
     /**
      * The display name of the repository.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * URIs of GPG keys.
      * 
     */
-    public List<String> getGpgKeys() {
+    public List<String> gpgKeys() {
         return this.gpgKeys;
     }
 

@@ -27,7 +27,7 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
     @Import(name="allowedBundleIds")
       private final @Nullable Output<List<String>> allowedBundleIds;
 
-    public Output<List<String>> getAllowedBundleIds() {
+    public Output<List<String>> allowedBundleIds() {
         return this.allowedBundleIds == null ? Codegen.empty() : this.allowedBundleIds;
     }
 

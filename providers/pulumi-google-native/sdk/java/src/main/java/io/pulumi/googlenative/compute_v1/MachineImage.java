@@ -36,7 +36,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The creation timestamp for this machine image in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -50,7 +50,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -64,7 +64,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    public Output<Boolean> getGuestFlush() {
+    public Output<Boolean> guestFlush() {
         return this.guestFlush;
     }
     /**
@@ -78,7 +78,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return Properties of source instance
      * 
      */
-    public Output<InstancePropertiesResponse> getInstanceProperties() {
+    public Output<InstancePropertiesResponse> instanceProperties() {
         return this.instanceProperties;
     }
     /**
@@ -92,7 +92,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The resource type, which is always compute#machineImage for machine image.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -106,7 +106,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
      * 
      */
-    public Output<CustomerEncryptionKeyResponse> getMachineImageEncryptionKey() {
+    public Output<CustomerEncryptionKeyResponse> machineImageEncryptionKey() {
         return this.machineImageEncryptionKey;
     }
     /**
@@ -120,7 +120,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -134,7 +134,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
@@ -148,7 +148,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return An array of Machine Image specific properties for disks attached to the source instance
      * 
      */
-    public Output<List<SavedDiskResponse>> getSavedDisks() {
+    public Output<List<SavedDiskResponse>> savedDisks() {
         return this.savedDisks;
     }
     /**
@@ -162,7 +162,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The URL for this machine image. The server defines this URL.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -176,7 +176,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
      * 
      */
-    public Output<List<SourceDiskEncryptionKeyResponse>> getSourceDiskEncryptionKeys() {
+    public Output<List<SourceDiskEncryptionKeyResponse>> sourceDiskEncryptionKeys() {
         return this.sourceDiskEncryptionKeys;
     }
     /**
@@ -190,7 +190,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
      * 
      */
-    public Output<String> getSourceInstance() {
+    public Output<String> sourceInstance() {
         return this.sourceInstance;
     }
     /**
@@ -204,7 +204,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return DEPRECATED: Please use instance_properties instead for source instance related properties. New properties will not be added to this field.
      * 
      */
-    public Output<SourceInstancePropertiesResponse> getSourceInstanceProperties() {
+    public Output<SourceInstancePropertiesResponse> sourceInstanceProperties() {
         return this.sourceInstanceProperties;
     }
     /**
@@ -218,7 +218,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The status of the machine image. One of the following values: INVALID, CREATING, READY, DELETING, and UPLOADING.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -232,7 +232,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
      * 
      */
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations;
     }
     /**
@@ -246,7 +246,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * @return Total size of the storage used by the machine image.
      * 
      */
-    public Output<String> getTotalStorageBytes() {
+    public Output<String> totalStorageBytes() {
         return this.totalStorageBytes;
     }
 

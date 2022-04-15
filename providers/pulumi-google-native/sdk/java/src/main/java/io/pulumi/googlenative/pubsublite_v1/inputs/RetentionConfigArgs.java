@@ -26,7 +26,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="perPartitionBytes")
       private final @Nullable Output<String> perPartitionBytes;
 
-    public Output<String> getPerPartitionBytes() {
+    public Output<String> perPartitionBytes() {
         return this.perPartitionBytes == null ? Codegen.empty() : this.perPartitionBytes;
     }
 
@@ -37,7 +37,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
+    public Output<String> period() {
         return this.period == null ? Codegen.empty() : this.period;
     }
 

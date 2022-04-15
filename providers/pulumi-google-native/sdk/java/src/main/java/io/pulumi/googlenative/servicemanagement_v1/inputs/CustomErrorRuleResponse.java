@@ -24,7 +24,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="isErrorType", required=true)
       private final Boolean isErrorType;
 
-    public Boolean getIsErrorType() {
+    public Boolean isErrorType() {
         return this.isErrorType;
     }
 
@@ -35,7 +35,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
     @Import(name="selector", required=true)
       private final String selector;
 
-    public String getSelector() {
+    public String selector() {
         return this.selector;
     }
 

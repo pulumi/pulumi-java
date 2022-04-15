@@ -27,7 +27,7 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     @Import(name="contentType")
       private final @Nullable Output<PgpSignedAttestationContentType> contentType;
 
-    public Output<PgpSignedAttestationContentType> getContentType() {
+    public Output<PgpSignedAttestationContentType> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -38,7 +38,7 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     @Import(name="pgpKeyId")
       private final @Nullable Output<String> pgpKeyId;
 
-    public Output<String> getPgpKeyId() {
+    public Output<String> pgpKeyId() {
         return this.pgpKeyId == null ? Codegen.empty() : this.pgpKeyId;
     }
 
@@ -49,7 +49,7 @@ public final class PgpSignedAttestationArgs extends io.pulumi.resources.Resource
     @Import(name="signature", required=true)
       private final Output<String> signature;
 
-    public Output<String> getSignature() {
+    public Output<String> signature() {
         return this.signature;
     }
 

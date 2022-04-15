@@ -81,63 +81,63 @@ public final class GetHmacKeyResult {
      * The ID of the HMAC Key.
      * 
     */
-    public String getAccessId() {
+    public String accessId() {
         return this.accessId;
     }
     /**
      * HTTP 1.1 Entity tag for the HMAC key.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Project ID owning the service account to which the key authenticates.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The link to this resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The email address of the key's associated service account.
      * 
     */
-    public String getServiceAccountEmail() {
+    public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * The creation time of the HMAC key in RFC 3339 format.
      * 
     */
-    public String getTimeCreated() {
+    public String timeCreated() {
         return this.timeCreated;
     }
     /**
      * The last modification time of the HMAC key metadata in RFC 3339 format.
      * 
     */
-    public String getUpdated() {
+    public String updated() {
         return this.updated;
     }
 

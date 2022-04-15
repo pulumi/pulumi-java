@@ -23,7 +23,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     @Import(name="maxNodes")
       private final @Nullable Output<Integer> maxNodes;
 
-    public Output<Integer> getMaxNodes() {
+    public Output<Integer> maxNodes() {
         return this.maxNodes == null ? Codegen.empty() : this.maxNodes;
     }
 
@@ -34,7 +34,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     @Import(name="minNodes")
       private final @Nullable Output<Integer> minNodes;
 
-    public Output<Integer> getMinNodes() {
+    public Output<Integer> minNodes() {
         return this.minNodes == null ? Codegen.empty() : this.minNodes;
     }
 
@@ -45,7 +45,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     @Import(name="mode")
       private final @Nullable Output<NodeGroupAutoscalingPolicyMode> mode;
 
-    public Output<NodeGroupAutoscalingPolicyMode> getMode() {
+    public Output<NodeGroupAutoscalingPolicyMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

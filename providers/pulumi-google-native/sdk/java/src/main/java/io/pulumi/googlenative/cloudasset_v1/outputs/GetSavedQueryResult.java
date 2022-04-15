@@ -76,56 +76,56 @@ public final class GetSavedQueryResult {
      * The query content.
      * 
     */
-    public QueryContentResponse getContent() {
+    public QueryContentResponse content() {
         return this.content;
     }
     /**
      * The create time of this saved query.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The account's email address who has created this saved query.
      * 
     */
-    public String getCreator() {
+    public String creator() {
         return this.creator;
     }
     /**
      * The description of this saved query. This value should be fewer than 255 characters.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * The last update time of this saved query.
      * 
     */
-    public String getLastUpdateTime() {
+    public String lastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * The account's email address who has updated this saved query most recently.
      * 
     */
-    public String getLastUpdater() {
+    public String lastUpdater() {
         return this.lastUpdater;
     }
     /**
      * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

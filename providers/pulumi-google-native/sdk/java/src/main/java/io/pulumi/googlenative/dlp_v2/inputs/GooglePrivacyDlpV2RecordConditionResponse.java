@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.r
     @Import(name="expressions", required=true)
       private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 
-    public GooglePrivacyDlpV2ExpressionsResponse getExpressions() {
+    public GooglePrivacyDlpV2ExpressionsResponse expressions() {
         return this.expressions;
     }
 

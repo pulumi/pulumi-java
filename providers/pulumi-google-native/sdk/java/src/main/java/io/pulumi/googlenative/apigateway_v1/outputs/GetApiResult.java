@@ -68,49 +68,49 @@ public final class GetApiResult {
      * Created time.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. Display name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
      * 
     */
-    public String getManagedService() {
+    public String managedService() {
         return this.managedService;
     }
     /**
      * Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * State of the API.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Updated time.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

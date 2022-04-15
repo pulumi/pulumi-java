@@ -78,56 +78,56 @@ public final class GetClientTlsPolicyResult {
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
      * 
     */
-    public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse getClientCertificate() {
+    public GoogleCloudNetworksecurityV1beta1CertificateProviderResponse clientCertificate() {
         return this.clientCertificate;
     }
     /**
      * The timestamp when the resource was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Optional. Free-text description of the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Optional. Set of label tags associated with the resource.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
     /**
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
      * 
     */
-    public List<ValidationCAResponse> getServerValidationCa() {
+    public List<ValidationCAResponse> serverValidationCa() {
         return this.serverValidationCa;
     }
     /**
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
      * 
     */
-    public String getSni() {
+    public String sni() {
         return this.sni;
     }
     /**
      * The timestamp when the resource was updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

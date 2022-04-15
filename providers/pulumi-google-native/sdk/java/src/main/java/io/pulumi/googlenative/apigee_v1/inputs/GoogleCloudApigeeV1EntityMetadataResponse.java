@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
     @Import(name="createdAt", required=true)
       private final String createdAt;
 
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
     @Import(name="subType", required=true)
       private final String subType;
 
-    public String getSubType() {
+    public String subType() {
         return this.subType;
     }
 

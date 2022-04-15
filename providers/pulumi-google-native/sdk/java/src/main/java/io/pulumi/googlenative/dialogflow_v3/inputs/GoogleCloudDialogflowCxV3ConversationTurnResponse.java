@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
     @Import(name="userInput", required=true)
       private final GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput;
 
-    public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse getUserInput() {
+    public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput() {
         return this.userInput;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
     @Import(name="virtualAgentOutput", required=true)
       private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
-    public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {
+    public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput() {
         return this.virtualAgentOutput;
     }
 

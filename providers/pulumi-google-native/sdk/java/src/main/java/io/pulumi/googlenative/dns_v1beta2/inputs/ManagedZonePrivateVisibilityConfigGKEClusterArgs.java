@@ -22,14 +22,14 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends io.p
     @Import(name="gkeClusterName")
       private final @Nullable Output<String> gkeClusterName;
 
-    public Output<String> getGkeClusterName() {
+    public Output<String> gkeClusterName() {
         return this.gkeClusterName == null ? Codegen.empty() : this.gkeClusterName;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

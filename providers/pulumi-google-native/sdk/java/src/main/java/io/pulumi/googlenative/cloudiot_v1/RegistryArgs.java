@@ -29,7 +29,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<List<RegistryCredentialArgs>> credentials;
 
-    public Output<List<RegistryCredentialArgs>> getCredentials() {
+    public Output<List<RegistryCredentialArgs>> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -40,7 +40,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventNotificationConfigs")
       private final @Nullable Output<List<EventNotificationConfigArgs>> eventNotificationConfigs;
 
-    public Output<List<EventNotificationConfigArgs>> getEventNotificationConfigs() {
+    public Output<List<EventNotificationConfigArgs>> eventNotificationConfigs() {
         return this.eventNotificationConfigs == null ? Codegen.empty() : this.eventNotificationConfigs;
     }
 
@@ -51,7 +51,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpConfig")
       private final @Nullable Output<HttpConfigArgs> httpConfig;
 
-    public Output<HttpConfigArgs> getHttpConfig() {
+    public Output<HttpConfigArgs> httpConfig() {
         return this.httpConfig == null ? Codegen.empty() : this.httpConfig;
     }
 
@@ -62,14 +62,14 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<RegistryLogLevel> logLevel;
 
-    public Output<RegistryLogLevel> getLogLevel() {
+    public Output<RegistryLogLevel> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -91,7 +91,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mqttConfig")
       private final @Nullable Output<MqttConfigArgs> mqttConfig;
 
-    public Output<MqttConfigArgs> getMqttConfig() {
+    public Output<MqttConfigArgs> mqttConfig() {
         return this.mqttConfig == null ? Codegen.empty() : this.mqttConfig;
     }
 
@@ -102,14 +102,14 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -120,7 +120,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stateNotificationConfig")
       private final @Nullable Output<StateNotificationConfigArgs> stateNotificationConfig;
 
-    public Output<StateNotificationConfigArgs> getStateNotificationConfig() {
+    public Output<StateNotificationConfigArgs> stateNotificationConfig() {
         return this.stateNotificationConfig == null ? Codegen.empty() : this.stateNotificationConfig;
     }
 

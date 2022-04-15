@@ -23,7 +23,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.reso
     @Import(name="discovered", required=true)
       private final DiscoveredResponse discovered;
 
-    public DiscoveredResponse getDiscovered() {
+    public DiscoveredResponse discovered() {
         return this.discovered;
     }
 

@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
     @Import(name="dictionary", required=true)
       private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
-    public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
+    public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
     @Import(name="largeCustomDictionary", required=true)
       private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
 
-    public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse getLargeCustomDictionary() {
+    public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
     }
 
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
     @Import(name="regex", required=true)
       private final GooglePrivacyDlpV2RegexResponse regex;
 
-    public GooglePrivacyDlpV2RegexResponse getRegex() {
+    public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
 

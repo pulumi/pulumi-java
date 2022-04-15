@@ -26,7 +26,7 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudHealthcareSource")
       private final @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
-    public Output<CloudHealthcareSourceArgs> getCloudHealthcareSource() {
+    public Output<CloudHealthcareSourceArgs> cloudHealthcareSource() {
         return this.cloudHealthcareSource == null ? Codegen.empty() : this.cloudHealthcareSource;
     }
 

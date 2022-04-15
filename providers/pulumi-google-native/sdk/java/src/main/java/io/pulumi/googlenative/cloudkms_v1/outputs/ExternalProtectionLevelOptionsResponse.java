@@ -32,14 +32,14 @@ public final class ExternalProtectionLevelOptionsResponse {
      * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
      * 
     */
-    public String getEkmConnectionKeyPath() {
+    public String ekmConnectionKeyPath() {
         return this.ekmConnectionKeyPath;
     }
     /**
      * The URI for an external resource that this CryptoKeyVersion represents.
      * 
     */
-    public String getExternalKeyUri() {
+    public String externalKeyUri() {
         return this.externalKeyUri;
     }
 

@@ -15,14 +15,14 @@ public final class GetTransferJobArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="projectId", required=true)
       private final String projectId;
 
-    public String getProjectId() {
+    public String projectId() {
         return this.projectId;
     }
 
     @Import(name="transferJobId", required=true)
       private final String transferJobId;
 
-    public String getTransferJobId() {
+    public String transferJobId() {
         return this.transferJobId;
     }
 

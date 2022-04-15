@@ -17,21 +17,21 @@ public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeAr
     @Import(name="futureReservation", required=true)
       private final String futureReservation;
 
-    public String getFutureReservation() {
+    public String futureReservation() {
         return this.futureReservation;
     }
 
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

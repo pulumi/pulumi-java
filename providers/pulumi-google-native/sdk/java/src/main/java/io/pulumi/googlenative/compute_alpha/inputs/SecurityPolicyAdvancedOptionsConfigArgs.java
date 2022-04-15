@@ -19,14 +19,14 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
     @Import(name="jsonParsing")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
 
-    public Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> getJsonParsing() {
+    public Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing() {
         return this.jsonParsing == null ? Codegen.empty() : this.jsonParsing;
     }
 
     @Import(name="logLevel")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
 
-    public Output<SecurityPolicyAdvancedOptionsConfigLogLevel> getLogLevel() {
+    public Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 

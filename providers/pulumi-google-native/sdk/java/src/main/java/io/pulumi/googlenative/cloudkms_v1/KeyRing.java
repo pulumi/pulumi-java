@@ -32,7 +32,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @return The time at which this KeyRing was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +46,7 @@ public class KeyRing extends io.pulumi.resources.CustomResource {
      * @return The resource name for the KeyRing in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

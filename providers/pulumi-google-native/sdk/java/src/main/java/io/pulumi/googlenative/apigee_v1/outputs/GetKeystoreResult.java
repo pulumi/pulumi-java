@@ -33,14 +33,14 @@ public final class GetKeystoreResult {
      * Aliases in this keystore.
      * 
     */
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases;
     }
     /**
      * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

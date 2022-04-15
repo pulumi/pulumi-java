@@ -21,7 +21,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="bindingId", required=true)
       private final String bindingId;
 
-    public String getBindingId() {
+    public String bindingId() {
         return this.bindingId;
     }
 
@@ -32,7 +32,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="condition", required=true)
       private final ExprResponse condition;
 
-    public ExprResponse getCondition() {
+    public ExprResponse condition() {
         return this.condition;
     }
 
@@ -43,7 +43,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="members", required=true)
       private final List<String> members;
 
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members;
     }
 
@@ -54,7 +54,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="role", required=true)
       private final String role;
 
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 

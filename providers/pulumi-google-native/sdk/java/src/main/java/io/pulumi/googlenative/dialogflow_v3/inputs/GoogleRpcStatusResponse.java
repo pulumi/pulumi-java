@@ -26,7 +26,7 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
       private final Integer code;
 
-    public Integer getCode() {
+    public Integer code() {
         return this.code;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="details", required=true)
       private final List<Map<String,String>> details;
 
-    public List<Map<String,String>> getDetails() {
+    public List<Map<String,String>> details() {
         return this.details;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleRpcStatusResponse extends io.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

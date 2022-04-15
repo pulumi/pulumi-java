@@ -24,7 +24,7 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="hdfsMetrics", required=true)
       private final Map<String,String> hdfsMetrics;
 
-    public Map<String,String> getHdfsMetrics() {
+    public Map<String,String> hdfsMetrics() {
         return this.hdfsMetrics;
     }
 
@@ -35,7 +35,7 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="yarnMetrics", required=true)
       private final Map<String,String> yarnMetrics;
 
-    public Map<String,String> getYarnMetrics() {
+    public Map<String,String> yarnMetrics() {
         return this.yarnMetrics;
     }
 

@@ -25,7 +25,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
     @Import(name="allowedExitCodes", required=true)
       private final List<Integer> allowedExitCodes;
 
-    public List<Integer> getAllowedExitCodes() {
+    public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
 
@@ -36,7 +36,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
     @Import(name="artifactId", required=true)
       private final String artifactId;
 
-    public String getArtifactId() {
+    public String artifactId() {
         return this.artifactId;
     }
 
@@ -47,7 +47,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
     @Import(name="flags", required=true)
       private final List<String> flags;
 
-    public List<String> getFlags() {
+    public List<String> flags() {
         return this.flags;
     }
 

@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends io.pulumi.resources.
     @Import(name="cost")
       private final @Nullable Output<Double> cost;
 
-    public Output<Double> getCost() {
+    public Output<Double> cost() {
         return this.cost == null ? Codegen.empty() : this.cost;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends io.pulumi.resources.
     @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
-    public Output<String> getCurrencyCode() {
+    public Output<String> currencyCode() {
         return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends io.pulumi.resources.
     @Import(name="originalPrice")
       private final @Nullable Output<Double> originalPrice;
 
-    public Output<Double> getOriginalPrice() {
+    public Output<Double> originalPrice() {
         return this.originalPrice == null ? Codegen.empty() : this.originalPrice;
     }
 
@@ -60,7 +60,7 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends io.pulumi.resources.
     @Import(name="price")
       private final @Nullable Output<Double> price;
 
-    public Output<Double> getPrice() {
+    public Output<Double> price() {
         return this.price == null ? Codegen.empty() : this.price;
     }
 
@@ -71,7 +71,7 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends io.pulumi.resources.
     @Import(name="priceEffectiveTime")
       private final @Nullable Output<String> priceEffectiveTime;
 
-    public Output<String> getPriceEffectiveTime() {
+    public Output<String> priceEffectiveTime() {
         return this.priceEffectiveTime == null ? Codegen.empty() : this.priceEffectiveTime;
     }
 
@@ -82,7 +82,7 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends io.pulumi.resources.
     @Import(name="priceExpireTime")
       private final @Nullable Output<String> priceExpireTime;
 
-    public Output<String> getPriceExpireTime() {
+    public Output<String> priceExpireTime() {
         return this.priceExpireTime == null ? Codegen.empty() : this.priceExpireTime;
     }
 

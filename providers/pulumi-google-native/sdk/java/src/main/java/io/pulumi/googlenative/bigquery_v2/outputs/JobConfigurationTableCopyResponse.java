@@ -78,56 +78,56 @@ public final class JobConfigurationTableCopyResponse {
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
      * 
     */
-    public String getCreateDisposition() {
+    public String createDisposition() {
         return this.createDisposition;
     }
     /**
      * Custom encryption configuration (e.g., Cloud KMS keys).
      * 
     */
-    public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
+    public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
     }
     /**
      * [Optional] The time when the destination table expires. Expired tables will be deleted and their storage reclaimed.
      * 
     */
-    public Object getDestinationExpirationTime() {
+    public Object destinationExpirationTime() {
         return this.destinationExpirationTime;
     }
     /**
      * [Required] The destination table
      * 
     */
-    public TableReferenceResponse getDestinationTable() {
+    public TableReferenceResponse destinationTable() {
         return this.destinationTable;
     }
     /**
      * [Optional] Supported operation types in table copy job.
      * 
     */
-    public String getOperationType() {
+    public String operationType() {
         return this.operationType;
     }
     /**
      * [Pick one] Source table to copy.
      * 
     */
-    public TableReferenceResponse getSourceTable() {
+    public TableReferenceResponse sourceTable() {
         return this.sourceTable;
     }
     /**
      * [Pick one] Source tables to copy.
      * 
     */
-    public List<TableReferenceResponse> getSourceTables() {
+    public List<TableReferenceResponse> sourceTables() {
         return this.sourceTables;
     }
     /**
      * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
      * 
     */
-    public String getWriteDisposition() {
+    public String writeDisposition() {
         return this.writeDisposition;
     }
 

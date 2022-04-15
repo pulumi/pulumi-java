@@ -21,7 +21,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
@@ -32,7 +32,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeId", required=true)
       private final String nodeId;
 
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
 
@@ -43,7 +43,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameters", required=true)
       private final MemcacheParametersResponse parameters;
 
-    public MemcacheParametersResponse getParameters() {
+    public MemcacheParametersResponse parameters() {
         return this.parameters;
     }
 
@@ -54,7 +54,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -65,7 +65,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -76,7 +76,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="zone", required=true)
       private final String zone;
 
-    public String getZone() {
+    public String zone() {
         return this.zone;
     }
 

@@ -27,7 +27,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="failureDetail", required=true)
       private final FailureDetailResponse failureDetail;
 
-    public FailureDetailResponse getFailureDetail() {
+    public FailureDetailResponse failureDetail() {
         return this.failureDetail;
     }
 
@@ -38,7 +38,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inconclusiveDetail", required=true)
       private final InconclusiveDetailResponse inconclusiveDetail;
 
-    public InconclusiveDetailResponse getInconclusiveDetail() {
+    public InconclusiveDetailResponse inconclusiveDetail() {
         return this.inconclusiveDetail;
     }
 
@@ -49,7 +49,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="skippedDetail", required=true)
       private final SkippedDetailResponse skippedDetail;
 
-    public SkippedDetailResponse getSkippedDetail() {
+    public SkippedDetailResponse skippedDetail() {
         return this.skippedDetail;
     }
 
@@ -60,7 +60,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="successDetail", required=true)
       private final SuccessDetailResponse successDetail;
 
-    public SuccessDetailResponse getSuccessDetail() {
+    public SuccessDetailResponse successDetail() {
         return this.successDetail;
     }
 
@@ -71,7 +71,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="summary", required=true)
       private final String summary;
 
-    public String getSummary() {
+    public String summary() {
         return this.summary;
     }
 

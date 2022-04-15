@@ -24,7 +24,7 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
     @Import(name="latencyMicros", required=true)
       private final String latencyMicros;
 
-    public String getLatencyMicros() {
+    public String latencyMicros() {
         return this.latencyMicros;
     }
 
@@ -35,7 +35,7 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
     @Import(name="percent", required=true)
       private final Integer percent;
 
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
 

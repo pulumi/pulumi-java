@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
     @Import(name="onHealthCheck", required=true)
       private final String onHealthCheck;
 
-    public String getOnHealthCheck() {
+    public String onHealthCheck() {
         return this.onHealthCheck;
     }
 

@@ -28,7 +28,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudAudit")
       private final @Nullable Output<CloudAuditOptionsArgs> cloudAudit;
 
-    public Output<CloudAuditOptionsArgs> getCloudAudit() {
+    public Output<CloudAuditOptionsArgs> cloudAudit() {
         return this.cloudAudit == null ? Codegen.empty() : this.cloudAudit;
     }
 
@@ -39,7 +39,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="counter")
       private final @Nullable Output<CounterOptionsArgs> counter;
 
-    public Output<CounterOptionsArgs> getCounter() {
+    public Output<CounterOptionsArgs> counter() {
         return this.counter == null ? Codegen.empty() : this.counter;
     }
 
@@ -50,7 +50,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataAccess")
       private final @Nullable Output<DataAccessOptionsArgs> dataAccess;
 
-    public Output<DataAccessOptionsArgs> getDataAccess() {
+    public Output<DataAccessOptionsArgs> dataAccess() {
         return this.dataAccess == null ? Codegen.empty() : this.dataAccess;
     }
 

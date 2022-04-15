@@ -29,7 +29,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
-    public Map<String,String> getAnnotations() {
+    public Map<String,String> annotations() {
         return this.annotations;
     }
 
@@ -40,7 +40,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="anthosCluster", required=true)
       private final AnthosClusterResponse anthosCluster;
 
-    public AnthosClusterResponse getAnthosCluster() {
+    public AnthosClusterResponse anthosCluster() {
         return this.anthosCluster;
     }
 
@@ -51,7 +51,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -62,7 +62,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -73,7 +73,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -84,7 +84,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="executionConfigs", required=true)
       private final List<ExecutionConfigResponse> executionConfigs;
 
-    public List<ExecutionConfigResponse> getExecutionConfigs() {
+    public List<ExecutionConfigResponse> executionConfigs() {
         return this.executionConfigs;
     }
 
@@ -95,7 +95,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="gke", required=true)
       private final GkeClusterResponse gke;
 
-    public GkeClusterResponse getGke() {
+    public GkeClusterResponse gke() {
         return this.gke;
     }
 
@@ -106,7 +106,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -117,7 +117,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -128,7 +128,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requireApproval", required=true)
       private final Boolean requireApproval;
 
-    public Boolean getRequireApproval() {
+    public Boolean requireApproval() {
         return this.requireApproval;
     }
 
@@ -139,7 +139,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
       private final String targetId;
 
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
 
@@ -150,7 +150,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uid", required=true)
       private final String uid;
 
-    public String getUid() {
+    public String uid() {
         return this.uid;
     }
 
@@ -161,7 +161,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTime", required=true)
       private final String updateTime;
 
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

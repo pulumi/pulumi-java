@@ -26,7 +26,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="className")
       private final @Nullable Output<String> className;
 
-    public Output<String> getClassName() {
+    public Output<String> className() {
         return this.className == null ? Codegen.empty() : this.className;
     }
 
@@ -37,7 +37,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="testSuiteName")
       private final @Nullable Output<String> testSuiteName;
 
-    public Output<String> getTestSuiteName() {
+    public Output<String> testSuiteName() {
         return this.testSuiteName == null ? Codegen.empty() : this.testSuiteName;
     }
 

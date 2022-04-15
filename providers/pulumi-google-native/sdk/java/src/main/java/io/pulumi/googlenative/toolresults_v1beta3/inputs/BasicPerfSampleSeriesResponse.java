@@ -19,21 +19,21 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
     @Import(name="perfMetricType", required=true)
       private final String perfMetricType;
 
-    public String getPerfMetricType() {
+    public String perfMetricType() {
         return this.perfMetricType;
     }
 
     @Import(name="perfUnit", required=true)
       private final String perfUnit;
 
-    public String getPerfUnit() {
+    public String perfUnit() {
         return this.perfUnit;
     }
 
     @Import(name="sampleSeriesLabel", required=true)
       private final String sampleSeriesLabel;
 
-    public String getSampleSeriesLabel() {
+    public String sampleSeriesLabel() {
         return this.sampleSeriesLabel;
     }
 

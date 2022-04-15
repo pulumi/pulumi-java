@@ -57,35 +57,35 @@ public final class IosTestResponse {
      * Information about the application under test.
      * 
     */
-    public IosAppInfoResponse getIosAppInfo() {
+    public IosAppInfoResponse iosAppInfo() {
         return this.iosAppInfo;
     }
     /**
      * An iOS Robo test.
      * 
     */
-    public IosRoboTestResponse getIosRoboTest() {
+    public IosRoboTestResponse iosRoboTest() {
         return this.iosRoboTest;
     }
     /**
      * An iOS test loop.
      * 
     */
-    public IosTestLoopResponse getIosTestLoop() {
+    public IosTestLoopResponse iosTestLoop() {
         return this.iosTestLoop;
     }
     /**
      * An iOS XCTest.
      * 
     */
-    public IosXcTestResponse getIosXcTest() {
+    public IosXcTestResponse iosXcTest() {
         return this.iosXcTest;
     }
     /**
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
     */
-    public DurationResponse getTestTimeout() {
+    public DurationResponse testTimeout() {
         return this.testTimeout;
     }
 

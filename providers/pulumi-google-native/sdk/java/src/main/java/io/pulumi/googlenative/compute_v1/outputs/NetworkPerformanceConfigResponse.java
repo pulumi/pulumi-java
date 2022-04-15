@@ -16,7 +16,7 @@ public final class NetworkPerformanceConfigResponse {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 
-    public String getTotalEgressBandwidthTier() {
+    public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

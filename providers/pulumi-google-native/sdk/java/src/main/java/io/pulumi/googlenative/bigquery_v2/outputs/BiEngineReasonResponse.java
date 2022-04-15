@@ -32,14 +32,14 @@ public final class BiEngineReasonResponse {
      * High-level BI Engine reason for partial or disabled acceleration.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Free form human-readable reason for partial or disabled acceleration.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

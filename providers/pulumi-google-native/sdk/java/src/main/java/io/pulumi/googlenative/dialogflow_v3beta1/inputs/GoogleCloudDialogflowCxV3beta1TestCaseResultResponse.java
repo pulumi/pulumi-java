@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
     @Import(name="conversationTurns", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns;
 
-    public List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> getConversationTurns() {
+    public List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> conversationTurns() {
         return this.conversationTurns;
     }
 
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
     @Import(name="environment", required=true)
       private final String environment;
 
-    public String getEnvironment() {
+    public String environment() {
         return this.environment;
     }
 
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
     @Import(name="testResult", required=true)
       private final String testResult;
 
-    public String getTestResult() {
+    public String testResult() {
         return this.testResult;
     }
 
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse extends 
     @Import(name="testTime", required=true)
       private final String testTime;
 
-    public String getTestTime() {
+    public String testTime() {
         return this.testTime;
     }
 

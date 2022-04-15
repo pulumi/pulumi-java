@@ -25,7 +25,7 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
     @Import(name="discovered", required=true)
       private final Output<DiscoveredArgs> discovered;
 
-    public Output<DiscoveredArgs> getDiscovered() {
+    public Output<DiscoveredArgs> discovered() {
         return this.discovered;
     }
 

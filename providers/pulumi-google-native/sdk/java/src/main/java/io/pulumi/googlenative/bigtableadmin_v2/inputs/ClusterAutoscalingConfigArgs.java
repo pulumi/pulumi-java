@@ -26,7 +26,7 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
     @Import(name="autoscalingLimits", required=true)
       private final Output<AutoscalingLimitsArgs> autoscalingLimits;
 
-    public Output<AutoscalingLimitsArgs> getAutoscalingLimits() {
+    public Output<AutoscalingLimitsArgs> autoscalingLimits() {
         return this.autoscalingLimits;
     }
 
@@ -37,7 +37,7 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
     @Import(name="autoscalingTargets", required=true)
       private final Output<AutoscalingTargetsArgs> autoscalingTargets;
 
-    public Output<AutoscalingTargetsArgs> getAutoscalingTargets() {
+    public Output<AutoscalingTargetsArgs> autoscalingTargets() {
         return this.autoscalingTargets;
     }
 

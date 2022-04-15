@@ -24,7 +24,7 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="httpStatus", required=true)
       private final Integer httpStatus;
 
-    public Integer getHttpStatus() {
+    public Integer httpStatus() {
         return this.httpStatus;
     }
 
@@ -35,7 +35,7 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="percentage", required=true)
       private final Double percentage;
 
-    public Double getPercentage() {
+    public Double percentage() {
         return this.percentage;
     }
 

@@ -26,7 +26,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="clientAuth")
       private final @Nullable Output<Boolean> clientAuth;
 
-    public Output<Boolean> getClientAuth() {
+    public Output<Boolean> clientAuth() {
         return this.clientAuth == null ? Codegen.empty() : this.clientAuth;
     }
 
@@ -37,7 +37,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="codeSigning")
       private final @Nullable Output<Boolean> codeSigning;
 
-    public Output<Boolean> getCodeSigning() {
+    public Output<Boolean> codeSigning() {
         return this.codeSigning == null ? Codegen.empty() : this.codeSigning;
     }
 
@@ -48,7 +48,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="emailProtection")
       private final @Nullable Output<Boolean> emailProtection;
 
-    public Output<Boolean> getEmailProtection() {
+    public Output<Boolean> emailProtection() {
         return this.emailProtection == null ? Codegen.empty() : this.emailProtection;
     }
 
@@ -59,7 +59,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="ocspSigning")
       private final @Nullable Output<Boolean> ocspSigning;
 
-    public Output<Boolean> getOcspSigning() {
+    public Output<Boolean> ocspSigning() {
         return this.ocspSigning == null ? Codegen.empty() : this.ocspSigning;
     }
 
@@ -70,7 +70,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="serverAuth")
       private final @Nullable Output<Boolean> serverAuth;
 
-    public Output<Boolean> getServerAuth() {
+    public Output<Boolean> serverAuth() {
         return this.serverAuth == null ? Codegen.empty() : this.serverAuth;
     }
 
@@ -81,7 +81,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="timeStamping")
       private final @Nullable Output<Boolean> timeStamping;
 
-    public Output<Boolean> getTimeStamping() {
+    public Output<Boolean> timeStamping() {
         return this.timeStamping == null ? Codegen.empty() : this.timeStamping;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
     @Import(name="exclusiveMaximum")
       private final @Nullable Output<Double> exclusiveMaximum;
 
-    public Output<Double> getExclusiveMaximum() {
+    public Output<Double> exclusiveMaximum() {
         return this.exclusiveMaximum == null ? Codegen.empty() : this.exclusiveMaximum;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
     @Import(name="exclusiveMinimum")
       private final @Nullable Output<Double> exclusiveMinimum;
 
-    public Output<Double> getExclusiveMinimum() {
+    public Output<Double> exclusiveMinimum() {
         return this.exclusiveMinimum == null ? Codegen.empty() : this.exclusiveMinimum;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
     @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
 
-    public Output<Double> getMaximum() {
+    public Output<Double> maximum() {
         return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends io.pulumi.resourc
     @Import(name="minimum")
       private final @Nullable Output<Double> minimum;
 
-    public Output<Double> getMinimum() {
+    public Output<Double> minimum() {
         return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 

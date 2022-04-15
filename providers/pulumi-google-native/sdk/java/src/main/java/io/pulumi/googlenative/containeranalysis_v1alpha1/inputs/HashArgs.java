@@ -27,7 +27,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<HashType> type;
 
-    public Output<HashType> getType() {
+    public Output<HashType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -38,7 +38,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

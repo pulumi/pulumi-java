@@ -26,7 +26,7 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataLicence")
       private final @Nullable Output<String> dataLicence;
 
-    public Output<String> getDataLicence() {
+    public Output<String> dataLicence() {
         return this.dataLicence == null ? Codegen.empty() : this.dataLicence;
     }
 
@@ -37,7 +37,7 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spdxVersion")
       private final @Nullable Output<String> spdxVersion;
 
-    public Output<String> getSpdxVersion() {
+    public Output<String> spdxVersion() {
         return this.spdxVersion == null ? Codegen.empty() : this.spdxVersion;
     }
 

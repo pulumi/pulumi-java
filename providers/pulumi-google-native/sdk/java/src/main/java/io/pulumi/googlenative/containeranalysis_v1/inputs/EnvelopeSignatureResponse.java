@@ -15,14 +15,14 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
     @Import(name="keyid", required=true)
       private final String keyid;
 
-    public String getKeyid() {
+    public String keyid() {
         return this.keyid;
     }
 
     @Import(name="sig", required=true)
       private final String sig;
 
-    public String getSig() {
+    public String sig() {
         return this.sig;
     }
 

@@ -26,7 +26,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
     @Import(name="all", required=true)
       private final Boolean all;
 
-    public Boolean getAll() {
+    public Boolean all() {
         return this.all;
     }
 
@@ -37,7 +37,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
     @Import(name="groupLabels", required=true)
       private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
 
-    public List<PatchInstanceFilterGroupLabelResponse> getGroupLabels() {
+    public List<PatchInstanceFilterGroupLabelResponse> groupLabels() {
         return this.groupLabels;
     }
 
@@ -48,7 +48,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
     @Import(name="instanceNamePrefixes", required=true)
       private final List<String> instanceNamePrefixes;
 
-    public List<String> getInstanceNamePrefixes() {
+    public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
     }
 
@@ -59,7 +59,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
     @Import(name="instances", required=true)
       private final List<String> instances;
 
-    public List<String> getInstances() {
+    public List<String> instances() {
         return this.instances;
     }
 
@@ -70,7 +70,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
     @Import(name="zones", required=true)
       private final List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones;
     }
 

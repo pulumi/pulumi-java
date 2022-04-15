@@ -23,7 +23,7 @@ public final class I18nConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="root", required=true)
       private final String root;
 
-    public String getRoot() {
+    public String root() {
         return this.root;
     }
 

@@ -28,7 +28,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="addressLines")
       private final @Nullable Output<List<String>> addressLines;
 
-    public Output<List<String>> getAddressLines() {
+    public Output<List<String>> addressLines() {
         return this.addressLines == null ? Codegen.empty() : this.addressLines;
     }
 
@@ -39,7 +39,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="administrativeArea")
       private final @Nullable Output<String> administrativeArea;
 
-    public Output<String> getAdministrativeArea() {
+    public Output<String> administrativeArea() {
         return this.administrativeArea == null ? Codegen.empty() : this.administrativeArea;
     }
 
@@ -50,7 +50,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
@@ -61,7 +61,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="locality")
       private final @Nullable Output<String> locality;
 
-    public Output<String> getLocality() {
+    public Output<String> locality() {
         return this.locality == null ? Codegen.empty() : this.locality;
     }
 
@@ -72,7 +72,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization == null ? Codegen.empty() : this.organization;
     }
 
@@ -83,7 +83,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
+    public Output<String> postalCode() {
         return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
@@ -94,7 +94,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="recipients")
       private final @Nullable Output<List<String>> recipients;
 
-    public Output<List<String>> getRecipients() {
+    public Output<List<String>> recipients() {
         return this.recipients == null ? Codegen.empty() : this.recipients;
     }
 
@@ -105,7 +105,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="regionCode", required=true)
       private final Output<String> regionCode;
 
-    public Output<String> getRegionCode() {
+    public Output<String> regionCode() {
         return this.regionCode;
     }
 
@@ -116,7 +116,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 
@@ -127,7 +127,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="sortingCode")
       private final @Nullable Output<String> sortingCode;
 
-    public Output<String> getSortingCode() {
+    public Output<String> sortingCode() {
         return this.sortingCode == null ? Codegen.empty() : this.sortingCode;
     }
 
@@ -138,7 +138,7 @@ public final class GoogleTypePostalAddressArgs extends io.pulumi.resources.Resou
     @Import(name="sublocality")
       private final @Nullable Output<String> sublocality;
 
-    public Output<String> getSublocality() {
+    public Output<String> sublocality() {
         return this.sublocality == null ? Codegen.empty() : this.sublocality;
     }
 

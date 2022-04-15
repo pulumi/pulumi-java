@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
     @Import(name="openUriAction", required=true)
       private final GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
 
-    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse getOpenUriAction() {
+    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction() {
         return this.openUriAction;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse e
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

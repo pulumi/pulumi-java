@@ -28,7 +28,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
-    public Output<String> getExactMatch() {
+    public Output<String> exactMatch() {
         return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
@@ -39,7 +39,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
@@ -50,7 +50,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="invertMatch")
       private final @Nullable Output<Boolean> invertMatch;
 
-    public Output<Boolean> getInvertMatch() {
+    public Output<Boolean> invertMatch() {
         return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
     }
 
@@ -61,7 +61,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
-    public Output<String> getPrefixMatch() {
+    public Output<String> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
@@ -72,7 +72,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> getPresentMatch() {
+    public Output<Boolean> presentMatch() {
         return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
@@ -83,7 +83,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rangeMatch")
       private final @Nullable Output<Int64RangeMatchArgs> rangeMatch;
 
-    public Output<Int64RangeMatchArgs> getRangeMatch() {
+    public Output<Int64RangeMatchArgs> rangeMatch() {
         return this.rangeMatch == null ? Codegen.empty() : this.rangeMatch;
     }
 
@@ -94,7 +94,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
+    public Output<String> regexMatch() {
         return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 
@@ -105,7 +105,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="suffixMatch")
       private final @Nullable Output<String> suffixMatch;
 
-    public Output<String> getSuffixMatch() {
+    public Output<String> suffixMatch() {
         return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
     }
 

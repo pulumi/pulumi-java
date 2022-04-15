@@ -23,14 +23,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="executionId", required=true)
       private final Output<String> executionId;
 
-    public Output<String> getExecutionId() {
+    public Output<String> executionId() {
         return this.executionId;
     }
 
@@ -41,14 +41,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="executionTemplate")
       private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
-    public Output<ExecutionTemplateArgs> getExecutionTemplate() {
+    public Output<ExecutionTemplateArgs> executionTemplate() {
         return this.executionTemplate == null ? Codegen.empty() : this.executionTemplate;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,14 +59,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputNotebookFile")
       private final @Nullable Output<String> outputNotebookFile;
 
-    public Output<String> getOutputNotebookFile() {
+    public Output<String> outputNotebookFile() {
         return this.outputNotebookFile == null ? Codegen.empty() : this.outputNotebookFile;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

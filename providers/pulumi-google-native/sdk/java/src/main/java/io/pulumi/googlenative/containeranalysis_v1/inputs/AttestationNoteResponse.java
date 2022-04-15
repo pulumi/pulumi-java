@@ -23,7 +23,7 @@ public final class AttestationNoteResponse extends io.pulumi.resources.InvokeArg
     @Import(name="hint", required=true)
       private final HintResponse hint;
 
-    public HintResponse getHint() {
+    public HintResponse hint() {
         return this.hint;
     }
 

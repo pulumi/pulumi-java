@@ -26,7 +26,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
@@ -48,7 +48,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionCode")
       private final @Nullable Output<String> versionCode;
 
-    public Output<String> getVersionCode() {
+    public Output<String> versionCode() {
         return this.versionCode == null ? Codegen.empty() : this.versionCode;
     }
 
@@ -59,7 +59,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
+    public Output<String> versionName() {
         return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 

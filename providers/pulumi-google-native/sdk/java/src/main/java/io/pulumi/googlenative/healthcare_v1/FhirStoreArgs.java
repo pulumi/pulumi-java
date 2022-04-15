@@ -25,7 +25,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -36,7 +36,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSearchHandlingStrict")
       private final @Nullable Output<Boolean> defaultSearchHandlingStrict;
 
-    public Output<Boolean> getDefaultSearchHandlingStrict() {
+    public Output<Boolean> defaultSearchHandlingStrict() {
         return this.defaultSearchHandlingStrict == null ? Codegen.empty() : this.defaultSearchHandlingStrict;
     }
 
@@ -47,7 +47,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableReferentialIntegrity")
       private final @Nullable Output<Boolean> disableReferentialIntegrity;
 
-    public Output<Boolean> getDisableReferentialIntegrity() {
+    public Output<Boolean> disableReferentialIntegrity() {
         return this.disableReferentialIntegrity == null ? Codegen.empty() : this.disableReferentialIntegrity;
     }
 
@@ -58,7 +58,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableResourceVersioning")
       private final @Nullable Output<Boolean> disableResourceVersioning;
 
-    public Output<Boolean> getDisableResourceVersioning() {
+    public Output<Boolean> disableResourceVersioning() {
         return this.disableResourceVersioning == null ? Codegen.empty() : this.disableResourceVersioning;
     }
 
@@ -69,14 +69,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableUpdateCreate")
       private final @Nullable Output<Boolean> enableUpdateCreate;
 
-    public Output<Boolean> getEnableUpdateCreate() {
+    public Output<Boolean> enableUpdateCreate() {
         return this.enableUpdateCreate == null ? Codegen.empty() : this.enableUpdateCreate;
     }
 
     @Import(name="fhirStoreId")
       private final @Nullable Output<String> fhirStoreId;
 
-    public Output<String> getFhirStoreId() {
+    public Output<String> fhirStoreId() {
         return this.fhirStoreId == null ? Codegen.empty() : this.fhirStoreId;
     }
 
@@ -87,14 +87,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -105,14 +105,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> getNotificationConfig() {
+    public Output<NotificationConfigArgs> notificationConfig() {
         return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -123,7 +123,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamConfigs")
       private final @Nullable Output<List<StreamConfigArgs>> streamConfigs;
 
-    public Output<List<StreamConfigArgs>> getStreamConfigs() {
+    public Output<List<StreamConfigArgs>> streamConfigs() {
         return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 
@@ -134,7 +134,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationConfig")
       private final @Nullable Output<ValidationConfigArgs> validationConfig;
 
-    public Output<ValidationConfigArgs> getValidationConfig() {
+    public Output<ValidationConfigArgs> validationConfig() {
         return this.validationConfig == null ? Codegen.empty() : this.validationConfig;
     }
 
@@ -145,7 +145,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<FhirStoreVersion> version;
 
-    public Output<FhirStoreVersion> getVersion() {
+    public Output<FhirStoreVersion> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

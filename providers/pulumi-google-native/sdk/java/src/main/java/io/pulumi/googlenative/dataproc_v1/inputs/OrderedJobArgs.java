@@ -37,7 +37,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hadoopJob")
       private final @Nullable Output<HadoopJobArgs> hadoopJob;
 
-    public Output<HadoopJobArgs> getHadoopJob() {
+    public Output<HadoopJobArgs> hadoopJob() {
         return this.hadoopJob == null ? Codegen.empty() : this.hadoopJob;
     }
 
@@ -48,7 +48,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hiveJob")
       private final @Nullable Output<HiveJobArgs> hiveJob;
 
-    public Output<HiveJobArgs> getHiveJob() {
+    public Output<HiveJobArgs> hiveJob() {
         return this.hiveJob == null ? Codegen.empty() : this.hiveJob;
     }
 
@@ -59,7 +59,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -70,7 +70,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pigJob")
       private final @Nullable Output<PigJobArgs> pigJob;
 
-    public Output<PigJobArgs> getPigJob() {
+    public Output<PigJobArgs> pigJob() {
         return this.pigJob == null ? Codegen.empty() : this.pigJob;
     }
 
@@ -81,7 +81,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prerequisiteStepIds")
       private final @Nullable Output<List<String>> prerequisiteStepIds;
 
-    public Output<List<String>> getPrerequisiteStepIds() {
+    public Output<List<String>> prerequisiteStepIds() {
         return this.prerequisiteStepIds == null ? Codegen.empty() : this.prerequisiteStepIds;
     }
 
@@ -92,7 +92,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prestoJob")
       private final @Nullable Output<PrestoJobArgs> prestoJob;
 
-    public Output<PrestoJobArgs> getPrestoJob() {
+    public Output<PrestoJobArgs> prestoJob() {
         return this.prestoJob == null ? Codegen.empty() : this.prestoJob;
     }
 
@@ -103,7 +103,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pysparkJob")
       private final @Nullable Output<PySparkJobArgs> pysparkJob;
 
-    public Output<PySparkJobArgs> getPysparkJob() {
+    public Output<PySparkJobArgs> pysparkJob() {
         return this.pysparkJob == null ? Codegen.empty() : this.pysparkJob;
     }
 
@@ -114,7 +114,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
       private final @Nullable Output<JobSchedulingArgs> scheduling;
 
-    public Output<JobSchedulingArgs> getScheduling() {
+    public Output<JobSchedulingArgs> scheduling() {
         return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
@@ -125,7 +125,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkJob")
       private final @Nullable Output<SparkJobArgs> sparkJob;
 
-    public Output<SparkJobArgs> getSparkJob() {
+    public Output<SparkJobArgs> sparkJob() {
         return this.sparkJob == null ? Codegen.empty() : this.sparkJob;
     }
 
@@ -136,7 +136,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkRJob")
       private final @Nullable Output<SparkRJobArgs> sparkRJob;
 
-    public Output<SparkRJobArgs> getSparkRJob() {
+    public Output<SparkRJobArgs> sparkRJob() {
         return this.sparkRJob == null ? Codegen.empty() : this.sparkRJob;
     }
 
@@ -147,7 +147,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkSqlJob")
       private final @Nullable Output<SparkSqlJobArgs> sparkSqlJob;
 
-    public Output<SparkSqlJobArgs> getSparkSqlJob() {
+    public Output<SparkSqlJobArgs> sparkSqlJob() {
         return this.sparkSqlJob == null ? Codegen.empty() : this.sparkSqlJob;
     }
 
@@ -158,7 +158,7 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
-    public Output<String> getStepId() {
+    public Output<String> stepId() {
         return this.stepId;
     }
 

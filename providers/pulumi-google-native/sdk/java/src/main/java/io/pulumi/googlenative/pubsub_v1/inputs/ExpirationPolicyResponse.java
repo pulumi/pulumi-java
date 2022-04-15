@@ -23,7 +23,7 @@ public final class ExpirationPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ttl", required=true)
       private final String ttl;
 
-    public String getTtl() {
+    public String ttl() {
         return this.ttl;
     }
 

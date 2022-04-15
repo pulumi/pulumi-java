@@ -21,10 +21,10 @@ public final class MaterialResponse {
         this.uri = uri;
     }
 
-    public Map<String,String> getDigest() {
+    public Map<String,String> digest() {
         return this.digest;
     }
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 

@@ -27,7 +27,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="classification")
       private final @Nullable Output<String> classification;
 
-    public Output<String> getClassification() {
+    public Output<String> classification() {
         return this.classification == null ? Codegen.empty() : this.classification;
     }
 
@@ -38,7 +38,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
@@ -49,7 +49,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="cve")
       private final @Nullable Output<List<String>> cve;
 
-    public Output<List<String>> getCve() {
+    public Output<List<String>> cve() {
         return this.cve == null ? Codegen.empty() : this.cve;
     }
 
@@ -60,7 +60,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     @Import(name="severity")
       private final @Nullable Output<String> severity;
 
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 

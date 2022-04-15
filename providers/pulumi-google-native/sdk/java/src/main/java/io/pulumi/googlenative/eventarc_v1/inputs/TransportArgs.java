@@ -26,7 +26,7 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pubsub")
       private final @Nullable Output<PubsubArgs> pubsub;
 
-    public Output<PubsubArgs> getPubsub() {
+    public Output<PubsubArgs> pubsub() {
         return this.pubsub == null ? Codegen.empty() : this.pubsub;
     }
 

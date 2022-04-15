@@ -70,49 +70,49 @@ public final class WindowsUpdateResponse {
      * The list of categories to which the update belongs.
      * 
     */
-    public List<CategoryResponse> getCategories() {
+    public List<CategoryResponse> categories() {
         return this.categories;
     }
     /**
      * The localized description of the update.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Required - The unique identifier for the update.
      * 
     */
-    public IdentityResponse getIdentity() {
+    public IdentityResponse identity() {
         return this.identity;
     }
     /**
      * The Microsoft Knowledge Base article IDs that are associated with the update.
      * 
     */
-    public List<String> getKbArticleIds() {
+    public List<String> kbArticleIds() {
         return this.kbArticleIds;
     }
     /**
      * The last published timestamp of the update.
      * 
     */
-    public String getLastPublishedTimestamp() {
+    public String lastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
     }
     /**
      * The hyperlink to the support information for the update.
      * 
     */
-    public String getSupportUrl() {
+    public String supportUrl() {
         return this.supportUrl;
     }
     /**
      * The localized title of the update.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

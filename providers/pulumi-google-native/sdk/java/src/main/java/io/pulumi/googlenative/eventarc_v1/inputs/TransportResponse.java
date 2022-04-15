@@ -23,7 +23,7 @@ public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pubsub", required=true)
       private final PubsubResponse pubsub;
 
-    public PubsubResponse getPubsub() {
+    public PubsubResponse pubsub() {
         return this.pubsub;
     }
 

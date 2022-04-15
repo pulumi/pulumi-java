@@ -49,28 +49,28 @@ public final class ScalingConfigResponse {
      * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
     */
-    public String getFleetAutoscalerSpec() {
+    public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
     /**
      * The name of the Scaling Config
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The schedules to which this Scaling Config applies.
      * 
     */
-    public List<ScheduleResponse> getSchedules() {
+    public List<ScheduleResponse> schedules() {
         return this.schedules;
     }
     /**
      * Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
      * 
     */
-    public List<LabelSelectorResponse> getSelectors() {
+    public List<LabelSelectorResponse> selectors() {
         return this.selectors;
     }
 

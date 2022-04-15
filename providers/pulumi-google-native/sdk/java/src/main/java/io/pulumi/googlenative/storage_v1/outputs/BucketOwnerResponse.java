@@ -32,14 +32,14 @@ public final class BucketOwnerResponse {
      * The entity, in the form project-owner-projectId.
      * 
     */
-    public String getEntity() {
+    public String entity() {
         return this.entity;
     }
     /**
      * The ID for the entity.
      * 
     */
-    public String getEntityId() {
+    public String entityId() {
         return this.entityId;
     }
 

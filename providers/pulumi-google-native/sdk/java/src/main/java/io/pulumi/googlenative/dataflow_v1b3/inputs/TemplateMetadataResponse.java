@@ -25,7 +25,7 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
     @Import(name="parameters", required=true)
       private final List<ParameterMetadataResponse> parameters;
 
-    public List<ParameterMetadataResponse> getParameters() {
+    public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
     }
 

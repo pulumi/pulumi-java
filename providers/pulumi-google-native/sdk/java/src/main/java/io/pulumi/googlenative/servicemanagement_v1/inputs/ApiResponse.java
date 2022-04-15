@@ -28,7 +28,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="methods", required=true)
       private final List<MethodResponse> methods;
 
-    public List<MethodResponse> getMethods() {
+    public List<MethodResponse> methods() {
         return this.methods;
     }
 
@@ -39,7 +39,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="mixins", required=true)
       private final List<MixinResponse> mixins;
 
-    public List<MixinResponse> getMixins() {
+    public List<MixinResponse> mixins() {
         return this.mixins;
     }
 
@@ -50,7 +50,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -61,7 +61,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
 
@@ -72,7 +72,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceContext", required=true)
       private final SourceContextResponse sourceContext;
 
-    public SourceContextResponse getSourceContext() {
+    public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
 
@@ -83,7 +83,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
       private final String syntax;
 
-    public String getSyntax() {
+    public String syntax() {
         return this.syntax;
     }
 
@@ -94,7 +94,7 @@ public final class ApiResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -40,21 +40,21 @@ public final class WeeklyMaintenanceWindowResponse {
      * The day of week that maintenance updates occur.
      * 
     */
-    public String getDay() {
+    public String day() {
         return this.day;
     }
     /**
      * Duration of the maintenance window. The current window is fixed at 1 hour.
      * 
     */
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
     /**
      * Start time of the window in UTC time.
      * 
     */
-    public TimeOfDayResponse getStartTime() {
+    public TimeOfDayResponse startTime() {
         return this.startTime;
     }
 

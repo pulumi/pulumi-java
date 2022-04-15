@@ -24,7 +24,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxBackoffDuration", required=true)
       private final String maxBackoffDuration;
 
-    public String getMaxBackoffDuration() {
+    public String maxBackoffDuration() {
         return this.maxBackoffDuration;
     }
 
@@ -35,7 +35,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxDoublings", required=true)
       private final Integer maxDoublings;
 
-    public Integer getMaxDoublings() {
+    public Integer maxDoublings() {
         return this.maxDoublings;
     }
 
@@ -46,7 +46,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxRetryDuration", required=true)
       private final String maxRetryDuration;
 
-    public String getMaxRetryDuration() {
+    public String maxRetryDuration() {
         return this.maxRetryDuration;
     }
 
@@ -57,7 +57,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="minBackoffDuration", required=true)
       private final String minBackoffDuration;
 
-    public String getMinBackoffDuration() {
+    public String minBackoffDuration() {
         return this.minBackoffDuration;
     }
 
@@ -68,7 +68,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="retryCount", required=true)
       private final Integer retryCount;
 
-    public Integer getRetryCount() {
+    public Integer retryCount() {
         return this.retryCount;
     }
 

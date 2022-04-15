@@ -25,7 +25,7 @@ public final class ObjectIdResponse {
      * The parts of an OID path. The most significant parts of the path come first.
      * 
     */
-    public List<Integer> getObjectIdPath() {
+    public List<Integer> objectIdPath() {
         return this.objectIdPath;
     }
 

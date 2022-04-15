@@ -24,7 +24,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscale")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> getAutoscale() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale() {
         return this.autoscale == null ? Codegen.empty() : this.autoscale;
     }
 
@@ -35,14 +35,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channel")
       private final @Nullable Output<String> channel;
 
-    public Output<String> getChannel() {
+    public Output<String> channel() {
         return this.channel == null ? Codegen.empty() : this.channel;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -53,7 +53,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,7 +64,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -75,14 +75,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolId")
       private final @Nullable Output<String> poolId;
 
-    public Output<String> getPoolId() {
+    public Output<String> poolId() {
         return this.poolId == null ? Codegen.empty() : this.poolId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -93,7 +93,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerConfig")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> getWorkerConfig() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
@@ -104,7 +104,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;
 
-    public Output<String> getWorkerCount() {
+    public Output<String> workerCount() {
         return this.workerCount == null ? Codegen.empty() : this.workerCount;
     }
 

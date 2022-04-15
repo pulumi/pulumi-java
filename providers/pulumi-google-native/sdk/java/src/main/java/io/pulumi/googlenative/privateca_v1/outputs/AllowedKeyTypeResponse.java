@@ -33,14 +33,14 @@ public final class AllowedKeyTypeResponse {
      * Represents an allowed Elliptic Curve key type.
      * 
     */
-    public EcKeyTypeResponse getEllipticCurve() {
+    public EcKeyTypeResponse ellipticCurve() {
         return this.ellipticCurve;
     }
     /**
      * Represents an allowed RSA key type.
      * 
     */
-    public RsaKeyTypeResponse getRsa() {
+    public RsaKeyTypeResponse rsa() {
         return this.rsa;
     }
 

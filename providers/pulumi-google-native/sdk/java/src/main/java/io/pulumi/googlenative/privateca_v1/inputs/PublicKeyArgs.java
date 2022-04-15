@@ -26,7 +26,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format", required=true)
       private final Output<PublicKeyFormat> format;
 
-    public Output<PublicKeyFormat> getFormat() {
+    public Output<PublicKeyFormat> format() {
         return this.format;
     }
 
@@ -37,7 +37,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 

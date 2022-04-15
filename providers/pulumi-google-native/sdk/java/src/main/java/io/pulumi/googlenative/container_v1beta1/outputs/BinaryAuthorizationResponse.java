@@ -24,7 +24,7 @@ public final class BinaryAuthorizationResponse {
      * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

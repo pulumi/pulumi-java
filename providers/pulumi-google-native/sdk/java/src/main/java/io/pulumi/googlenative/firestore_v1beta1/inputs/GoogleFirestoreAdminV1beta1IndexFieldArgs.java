@@ -27,7 +27,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
     @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
-    public Output<String> getFieldPath() {
+    public Output<String> fieldPath() {
         return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
@@ -38,7 +38,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
     @Import(name="mode")
       private final @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
-    public Output<GoogleFirestoreAdminV1beta1IndexFieldMode> getMode() {
+    public Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

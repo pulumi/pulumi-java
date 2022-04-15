@@ -19,7 +19,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     @Import(name="lastRunStartTime", required=true)
       private final String lastRunStartTime;
 
-    public String getLastRunStartTime() {
+    public String lastRunStartTime() {
         return this.lastRunStartTime;
     }
 
@@ -30,7 +30,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     @Import(name="nextRunStartTime", required=true)
       private final String nextRunStartTime;
 
-    public String getNextRunStartTime() {
+    public String nextRunStartTime() {
         return this.nextRunStartTime;
     }
 

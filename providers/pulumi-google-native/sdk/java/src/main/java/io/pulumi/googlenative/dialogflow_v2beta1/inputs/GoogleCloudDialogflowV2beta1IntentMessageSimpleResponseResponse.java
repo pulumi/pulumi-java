@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     @Import(name="displayText", required=true)
       private final String displayText;
 
-    public String getDisplayText() {
+    public String displayText() {
         return this.displayText;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     @Import(name="ssml", required=true)
       private final String ssml;
 
-    public String getSsml() {
+    public String ssml() {
         return this.ssml;
     }
 
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
     @Import(name="textToSpeech", required=true)
       private final String textToSpeech;
 
-    public String getTextToSpeech() {
+    public String textToSpeech() {
         return this.textToSpeech;
     }
 

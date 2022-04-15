@@ -26,7 +26,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowlist")
       private final @Nullable Output<MysqlRdbmsArgs> allowlist;
 
-    public Output<MysqlRdbmsArgs> getAllowlist() {
+    public Output<MysqlRdbmsArgs> allowlist() {
         return this.allowlist == null ? Codegen.empty() : this.allowlist;
     }
 
@@ -37,7 +37,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rejectlist")
       private final @Nullable Output<MysqlRdbmsArgs> rejectlist;
 
-    public Output<MysqlRdbmsArgs> getRejectlist() {
+    public Output<MysqlRdbmsArgs> rejectlist() {
         return this.rejectlist == null ? Codegen.empty() : this.rejectlist;
     }
 

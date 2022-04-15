@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     @Import(name="enableEntityExtraction", required=true)
       private final Boolean enableEntityExtraction;
 
-    public Boolean getEnableEntityExtraction() {
+    public Boolean enableEntityExtraction() {
         return this.enableEntityExtraction;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     @Import(name="enableSentimentAnalysis", required=true)
       private final Boolean enableSentimentAnalysis;
 
-    public Boolean getEnableSentimentAnalysis() {
+    public Boolean enableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
     }
 

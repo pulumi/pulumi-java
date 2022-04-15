@@ -24,7 +24,7 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customClassId", required=true)
       private final Output<String> customClassId;
 
-    public Output<String> getCustomClassId() {
+    public Output<String> customClassId() {
         return this.customClassId;
     }
 
@@ -35,14 +35,14 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="items")
       private final @Nullable Output<List<ClassItemArgs>> items;
 
-    public Output<List<ClassItemArgs>> getItems() {
+    public Output<List<ClassItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -53,14 +53,14 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

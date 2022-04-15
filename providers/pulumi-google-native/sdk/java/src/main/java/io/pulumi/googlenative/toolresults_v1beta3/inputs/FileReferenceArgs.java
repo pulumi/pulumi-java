@@ -26,7 +26,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileUri")
       private final @Nullable Output<String> fileUri;
 
-    public Output<String> getFileUri() {
+    public Output<String> fileUri() {
         return this.fileUri == null ? Codegen.empty() : this.fileUri;
     }
 

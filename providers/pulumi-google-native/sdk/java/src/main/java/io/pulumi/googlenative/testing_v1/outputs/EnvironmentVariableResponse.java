@@ -32,14 +32,14 @@ public final class EnvironmentVariableResponse {
      * Key for the environment variable.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Value for the environment variable.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

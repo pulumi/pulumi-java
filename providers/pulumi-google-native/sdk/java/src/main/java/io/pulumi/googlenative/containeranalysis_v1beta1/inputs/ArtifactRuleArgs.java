@@ -23,7 +23,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactRule")
       private final @Nullable Output<List<String>> artifactRule;
 
-    public Output<List<String>> getArtifactRule() {
+    public Output<List<String>> artifactRule() {
         return this.artifactRule == null ? Codegen.empty() : this.artifactRule;
     }
 

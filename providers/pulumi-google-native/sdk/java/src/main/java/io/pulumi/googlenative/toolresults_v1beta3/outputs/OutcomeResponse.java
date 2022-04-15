@@ -57,35 +57,35 @@ public final class OutcomeResponse {
      * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
      * 
     */
-    public FailureDetailResponse getFailureDetail() {
+    public FailureDetailResponse failureDetail() {
         return this.failureDetail;
     }
     /**
      * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
      * 
     */
-    public InconclusiveDetailResponse getInconclusiveDetail() {
+    public InconclusiveDetailResponse inconclusiveDetail() {
         return this.inconclusiveDetail;
     }
     /**
      * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
      * 
     */
-    public SkippedDetailResponse getSkippedDetail() {
+    public SkippedDetailResponse skippedDetail() {
         return this.skippedDetail;
     }
     /**
      * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
      * 
     */
-    public SuccessDetailResponse getSuccessDetail() {
+    public SuccessDetailResponse successDetail() {
         return this.successDetail;
     }
     /**
      * The simplest way to interpret a result. Required
      * 
     */
-    public String getSummary() {
+    public String summary() {
         return this.summary;
     }
 

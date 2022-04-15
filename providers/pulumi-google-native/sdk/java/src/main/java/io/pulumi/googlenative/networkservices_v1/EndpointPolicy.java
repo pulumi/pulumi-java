@@ -32,7 +32,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. This field specifies the URL of AuthorizationPolicy resource that applies authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization. If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
      * 
      */
-    public Output<String> getAuthorizationPolicy() {
+    public Output<String> authorizationPolicy() {
         return this.authorizationPolicy;
     }
     /**
@@ -46,7 +46,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic from the proxy to the actual endpoints. More specifically, it is applied to the outgoing traffic from the proxy to the endpoint. This is typically used for sidecar model where the proxy identifies itself as endpoint to the control plane, with the connection between sidecar and endpoint requiring authentication. If this field is not set, authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
      * 
      */
-    public Output<String> getClientTlsPolicy() {
+    public Output<String> clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
     /**
@@ -60,7 +60,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -74,7 +74,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. A free-text description of the resource. Max length 1024 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return A matcher that selects endpoints to which the policies should be applied.
      * 
      */
-    public Output<EndpointMatcherResponse> getEndpointMatcher() {
+    public Output<EndpointMatcherResponse> endpointMatcher() {
         return this.endpointMatcher;
     }
     /**
@@ -102,7 +102,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Set of label tags associated with the EndpointPolicy resource.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -116,7 +116,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the EndpointPolicy resource. It matches pattern `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +130,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. A URL referring to ServerTlsPolicy resource. ServerTlsPolicy is used to determine the authentication policy to be applied to terminate the inbound traffic at the identified backends. If this field is not set, authentication is disabled(open) for this endpoint.
      * 
      */
-    public Output<String> getServerTlsPolicy() {
+    public Output<String> serverTlsPolicy() {
         return this.serverTlsPolicy;
     }
     /**
@@ -144,7 +144,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return Optional. Port selector for the (matched) endpoints. If no port selector is provided, the matched config is applied to all ports.
      * 
      */
-    public Output<TrafficPortSelectorResponse> getTrafficPortSelector() {
+    public Output<TrafficPortSelectorResponse> trafficPortSelector() {
         return this.trafficPortSelector;
     }
     /**
@@ -158,7 +158,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return The type of endpoint policy. This is primarily used to validate the configuration.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -172,7 +172,7 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
      * @return The timestamp when the resource was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

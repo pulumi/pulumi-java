@@ -24,7 +24,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="canIpForward", required=true)
       private final Boolean canIpForward;
 
-    public Boolean getCanIpForward() {
+    public Boolean canIpForward() {
         return this.canIpForward;
     }
 
@@ -35,7 +35,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enableExternalIps", required=true)
       private final Boolean enableExternalIps;
 
-    public Boolean getEnableExternalIps() {
+    public Boolean enableExternalIps() {
         return this.enableExternalIps;
     }
 
@@ -46,7 +46,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -57,7 +57,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 

@@ -26,7 +26,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
     @Import(name="audioUri")
       private final @Nullable Output<String> audioUri;
 
-    public Output<String> getAudioUri() {
+    public Output<String> audioUri() {
         return this.audioUri == null ? Codegen.empty() : this.audioUri;
     }
 
