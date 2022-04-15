@@ -275,7 +275,7 @@ jobs:
           ref: ${{ github.event.pull_request.base.ref }}
       - run: make submodule_update
       - name: Regenerate JVM provider SDK from ${{ github.event.pull_request.base.ref }}
-        run: make provider.${PROVIDER}.generate
+        run: ./bin/pulumi-java-gen -config providers/pulumi-${{ matrix.provider }}/pulumi-java-gen.yaml
         continue-on-error: true
         env:
           PROVIDER: ${{ matrix.provider }}
