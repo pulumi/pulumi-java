@@ -3,9 +3,9 @@
 
 package io.pulumi.random;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.ResourceType;
-import io.pulumi.core.internal.Codegen;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.ResourceType;
+import com.pulumi.core.internal.Codegen;
 import io.pulumi.random.ProviderArgs;
 import io.pulumi.random.Utilities;
 import javax.annotation.Nullable;

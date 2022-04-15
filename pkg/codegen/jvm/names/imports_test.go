@@ -27,5 +27,5 @@ func TestImports(t *testing.T) {
 
 	assert.Equal(t, `import java.util.Map;`, i.ImportCode())
 
-	assert.Equal(t, `package io.pulumi.random;`, i.PackageCode())
+	assert.Equal(t, `package com.pulumi.random;`, i.PackageCode())
 }

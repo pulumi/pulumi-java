@@ -500,7 +500,7 @@ func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 		pluginArgs: []string{
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
-			"-PmainClass=io.pulumi.bootstrap.internal.Main",
+			"-PmainClass=com.pulumi.bootstrap.internal.Main",
 			"--args=packages",
 		},
 	}, nil
@@ -513,7 +513,7 @@ func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
 			"--quiet", "--no-transfer-progress", "compile", "exec:java",
-			"-DmainClass=io.pulumi.bootstrap.internal.Main",
+			"-DmainClass=com.pulumi.bootstrap.internal.Main",
 			"-DmainArgs=packages",
 		},
 	}, nil
@@ -524,7 +524,7 @@ func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
 		cmd:        cmd,
 		buildArgs:  nil, // not supported
 		runArgs:    []string{"-jar", filepath.Clean(path)},
-		pluginArgs: []string{"-cp", filepath.Clean(path), "io.pulumi.bootstrap.internal.Main", "packages"},
+		pluginArgs: []string{"-cp", filepath.Clean(path), "com.pulumi.bootstrap.internal.Main", "packages"},
 	}, nil
 }
 

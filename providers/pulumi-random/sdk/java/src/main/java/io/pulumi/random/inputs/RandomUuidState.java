@@ -3,9 +3,9 @@
 
 package io.pulumi.random.inputs;
 
-import io.pulumi.core.Output;
-import io.pulumi.core.annotations.Import;
-import io.pulumi.core.internal.Codegen;
+import com.pulumi.core.Output;
+import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
