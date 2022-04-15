@@ -26,7 +26,7 @@ public final class GetResolverRuleAssociationResult {
      * Primary Identifier for Resolver Rule Association
      * 
     */
-    public Optional<String> getResolverRuleAssociationId() {
+    public Optional<String> resolverRuleAssociationId() {
         return Optional.ofNullable(this.resolverRuleAssociationId);
     }
 

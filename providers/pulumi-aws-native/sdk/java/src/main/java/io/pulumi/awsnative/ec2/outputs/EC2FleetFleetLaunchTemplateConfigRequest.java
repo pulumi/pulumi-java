@@ -24,10 +24,10 @@ public final class EC2FleetFleetLaunchTemplateConfigRequest {
         this.overrides = overrides;
     }
 
-    public Optional<EC2FleetFleetLaunchTemplateSpecificationRequest> getLaunchTemplateSpecification() {
+    public Optional<EC2FleetFleetLaunchTemplateSpecificationRequest> launchTemplateSpecification() {
         return Optional.ofNullable(this.launchTemplateSpecification);
     }
-    public List<EC2FleetFleetLaunchTemplateOverridesRequest> getOverrides() {
+    public List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }
 

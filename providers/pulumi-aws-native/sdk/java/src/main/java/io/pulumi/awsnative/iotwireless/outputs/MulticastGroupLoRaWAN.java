@@ -49,28 +49,28 @@ public final class MulticastGroupLoRaWAN {
      * Multicast group LoRaWAN DL Class
      * 
     */
-    public String getDlClass() {
+    public String dlClass() {
         return this.dlClass;
     }
     /**
      * Multicast group number of devices in group. Returned after successful read.
      * 
     */
-    public Optional<Integer> getNumberOfDevicesInGroup() {
+    public Optional<Integer> numberOfDevicesInGroup() {
         return Optional.ofNullable(this.numberOfDevicesInGroup);
     }
     /**
      * Multicast group number of devices requested. Returned after successful read.
      * 
     */
-    public Optional<Integer> getNumberOfDevicesRequested() {
+    public Optional<Integer> numberOfDevicesRequested() {
         return Optional.ofNullable(this.numberOfDevicesRequested);
     }
     /**
      * Multicast group LoRaWAN RF region
      * 
     */
-    public String getRfRegion() {
+    public String rfRegion() {
         return this.rfRegion;
     }
 

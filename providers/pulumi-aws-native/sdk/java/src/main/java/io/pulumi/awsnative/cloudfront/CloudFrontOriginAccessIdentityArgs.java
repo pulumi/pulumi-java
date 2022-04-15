@@ -17,7 +17,7 @@ public final class CloudFrontOriginAccessIdentityArgs extends io.pulumi.resource
     @Import(name="cloudFrontOriginAccessIdentityConfig", required=true)
       private final Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
 
-    public Output<CloudFrontOriginAccessIdentityConfigArgs> getCloudFrontOriginAccessIdentityConfig() {
+    public Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
 

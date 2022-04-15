@@ -21,42 +21,42 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="bytesScannedCutoffPerQuery")
       private final @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
-    public Output<Integer> getBytesScannedCutoffPerQuery() {
+    public Output<Integer> bytesScannedCutoffPerQuery() {
         return this.bytesScannedCutoffPerQuery == null ? Codegen.empty() : this.bytesScannedCutoffPerQuery;
     }
 
     @Import(name="enforceWorkGroupConfiguration")
       private final @Nullable Output<Boolean> enforceWorkGroupConfiguration;
 
-    public Output<Boolean> getEnforceWorkGroupConfiguration() {
+    public Output<Boolean> enforceWorkGroupConfiguration() {
         return this.enforceWorkGroupConfiguration == null ? Codegen.empty() : this.enforceWorkGroupConfiguration;
     }
 
     @Import(name="engineVersion")
       private final @Nullable Output<WorkGroupEngineVersionArgs> engineVersion;
 
-    public Output<WorkGroupEngineVersionArgs> getEngineVersion() {
+    public Output<WorkGroupEngineVersionArgs> engineVersion() {
         return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     @Import(name="publishCloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> publishCloudWatchMetricsEnabled;
 
-    public Output<Boolean> getPublishCloudWatchMetricsEnabled() {
+    public Output<Boolean> publishCloudWatchMetricsEnabled() {
         return this.publishCloudWatchMetricsEnabled == null ? Codegen.empty() : this.publishCloudWatchMetricsEnabled;
     }
 
     @Import(name="requesterPaysEnabled")
       private final @Nullable Output<Boolean> requesterPaysEnabled;
 
-    public Output<Boolean> getRequesterPaysEnabled() {
+    public Output<Boolean> requesterPaysEnabled() {
         return this.requesterPaysEnabled == null ? Codegen.empty() : this.requesterPaysEnabled;
     }
 
     @Import(name="resultConfiguration")
       private final @Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration;
 
-    public Output<WorkGroupResultConfigurationArgs> getResultConfiguration() {
+    public Output<WorkGroupResultConfigurationArgs> resultConfiguration() {
         return this.resultConfiguration == null ? Codegen.empty() : this.resultConfiguration;
     }
 

@@ -89,63 +89,63 @@ public final class GetApplicationResult {
      * The ARN of the ApplicationInsights application.
      * 
     */
-    public Optional<String> getApplicationARN() {
+    public Optional<String> applicationARN() {
         return Optional.ofNullable(this.applicationARN);
     }
     /**
      * If set to true, application will be configured with recommended monitoring configuration.
      * 
     */
-    public Optional<Boolean> getAutoConfigurationEnabled() {
+    public Optional<Boolean> autoConfigurationEnabled() {
         return Optional.ofNullable(this.autoConfigurationEnabled);
     }
     /**
      * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
     */
-    public Optional<Boolean> getCWEMonitorEnabled() {
+    public Optional<Boolean> cWEMonitorEnabled() {
         return Optional.ofNullable(this.cWEMonitorEnabled);
     }
     /**
      * The monitoring settings of the components.
      * 
     */
-    public List<ApplicationComponentMonitoringSetting> getComponentMonitoringSettings() {
+    public List<ApplicationComponentMonitoringSetting> componentMonitoringSettings() {
         return this.componentMonitoringSettings == null ? List.of() : this.componentMonitoringSettings;
     }
     /**
      * The custom grouped components.
      * 
     */
-    public List<ApplicationCustomComponent> getCustomComponents() {
+    public List<ApplicationCustomComponent> customComponents() {
         return this.customComponents == null ? List.of() : this.customComponents;
     }
     /**
      * The log pattern sets.
      * 
     */
-    public List<ApplicationLogPatternSet> getLogPatternSets() {
+    public List<ApplicationLogPatternSet> logPatternSets() {
         return this.logPatternSets == null ? List.of() : this.logPatternSets;
     }
     /**
      * When set to true, creates opsItems for any problems detected on an application.
      * 
     */
-    public Optional<Boolean> getOpsCenterEnabled() {
+    public Optional<Boolean> opsCenterEnabled() {
         return Optional.ofNullable(this.opsCenterEnabled);
     }
     /**
      * The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
     */
-    public Optional<String> getOpsItemSNSTopicArn() {
+    public Optional<String> opsItemSNSTopicArn() {
         return Optional.ofNullable(this.opsItemSNSTopicArn);
     }
     /**
      * The tags of Application Insights application.
      * 
     */
-    public List<ApplicationTag> getTags() {
+    public List<ApplicationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

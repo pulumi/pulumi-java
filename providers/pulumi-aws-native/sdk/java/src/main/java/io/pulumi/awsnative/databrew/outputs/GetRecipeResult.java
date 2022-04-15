@@ -32,10 +32,10 @@ public final class GetRecipeResult {
      * Description of the recipe
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<RecipeStep> getSteps() {
+    public List<RecipeStep> steps() {
         return this.steps == null ? List.of() : this.steps;
     }
 

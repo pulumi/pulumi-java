@@ -22,7 +22,7 @@ public final class AssetModelMetricWindowArgs extends io.pulumi.resources.Resour
     @Import(name="tumbling")
       private final @Nullable Output<AssetModelTumblingWindowArgs> tumbling;
 
-    public Output<AssetModelTumblingWindowArgs> getTumbling() {
+    public Output<AssetModelTumblingWindowArgs> tumbling() {
         return this.tumbling == null ? Codegen.empty() : this.tumbling;
     }
 

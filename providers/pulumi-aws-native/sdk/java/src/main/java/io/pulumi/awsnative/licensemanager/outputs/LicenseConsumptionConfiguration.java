@@ -27,13 +27,13 @@ public final class LicenseConsumptionConfiguration {
         this.renewType = renewType;
     }
 
-    public Optional<LicenseBorrowConfiguration> getBorrowConfiguration() {
+    public Optional<LicenseBorrowConfiguration> borrowConfiguration() {
         return Optional.ofNullable(this.borrowConfiguration);
     }
-    public Optional<LicenseProvisionalConfiguration> getProvisionalConfiguration() {
+    public Optional<LicenseProvisionalConfiguration> provisionalConfiguration() {
         return Optional.ofNullable(this.provisionalConfiguration);
     }
-    public Optional<String> getRenewType() {
+    public Optional<String> renewType() {
         return Optional.ofNullable(this.renewType);
     }
 

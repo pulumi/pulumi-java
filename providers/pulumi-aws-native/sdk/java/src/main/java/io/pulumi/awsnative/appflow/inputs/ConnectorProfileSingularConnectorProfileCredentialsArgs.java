@@ -21,7 +21,7 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
     @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
 

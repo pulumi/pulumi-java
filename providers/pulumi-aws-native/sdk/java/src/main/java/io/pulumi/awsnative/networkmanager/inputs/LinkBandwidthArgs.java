@@ -26,7 +26,7 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="downloadSpeed")
       private final @Nullable Output<Integer> downloadSpeed;
 
-    public Output<Integer> getDownloadSpeed() {
+    public Output<Integer> downloadSpeed() {
         return this.downloadSpeed == null ? Codegen.empty() : this.downloadSpeed;
     }
 
@@ -37,7 +37,7 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uploadSpeed")
       private final @Nullable Output<Integer> uploadSpeed;
 
-    public Output<Integer> getUploadSpeed() {
+    public Output<Integer> uploadSpeed() {
         return this.uploadSpeed == null ? Codegen.empty() : this.uploadSpeed;
     }
 

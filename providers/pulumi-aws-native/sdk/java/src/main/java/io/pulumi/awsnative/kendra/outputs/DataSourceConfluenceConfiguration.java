@@ -53,34 +53,34 @@ public final class DataSourceConfluenceConfiguration {
         this.vpcConfiguration = vpcConfiguration;
     }
 
-    public Optional<DataSourceConfluenceAttachmentConfiguration> getAttachmentConfiguration() {
+    public Optional<DataSourceConfluenceAttachmentConfiguration> attachmentConfiguration() {
         return Optional.ofNullable(this.attachmentConfiguration);
     }
-    public Optional<DataSourceConfluenceBlogConfiguration> getBlogConfiguration() {
+    public Optional<DataSourceConfluenceBlogConfiguration> blogConfiguration() {
         return Optional.ofNullable(this.blogConfiguration);
     }
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
-    public Optional<DataSourceConfluencePageConfiguration> getPageConfiguration() {
+    public Optional<DataSourceConfluencePageConfiguration> pageConfiguration() {
         return Optional.ofNullable(this.pageConfiguration);
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
-    public String getServerUrl() {
+    public String serverUrl() {
         return this.serverUrl;
     }
-    public Optional<DataSourceConfluenceSpaceConfiguration> getSpaceConfiguration() {
+    public Optional<DataSourceConfluenceSpaceConfiguration> spaceConfiguration() {
         return Optional.ofNullable(this.spaceConfiguration);
     }
-    public DataSourceConfluenceVersion getVersion() {
+    public DataSourceConfluenceVersion version() {
         return this.version;
     }
-    public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
+    public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 

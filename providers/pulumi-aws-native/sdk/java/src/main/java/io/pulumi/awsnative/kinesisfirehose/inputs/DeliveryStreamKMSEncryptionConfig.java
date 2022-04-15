@@ -15,7 +15,7 @@ public final class DeliveryStreamKMSEncryptionConfig extends io.pulumi.resources
     @Import(name="aWSKMSKeyARN", required=true)
       private final String aWSKMSKeyARN;
 
-    public String getAWSKMSKeyARN() {
+    public String aWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
     }
 

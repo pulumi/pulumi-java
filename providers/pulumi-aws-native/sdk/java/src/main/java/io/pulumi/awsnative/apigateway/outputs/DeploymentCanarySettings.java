@@ -43,21 +43,21 @@ public final class DeploymentCanarySettings {
      * The percentage (0-100) of traffic diverted to a canary deployment.
      * 
     */
-    public Optional<Double> getPercentTraffic() {
+    public Optional<Double> percentTraffic() {
         return Optional.ofNullable(this.percentTraffic);
     }
     /**
      * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
      * 
     */
-    public Optional<Object> getStageVariableOverrides() {
+    public Optional<Object> stageVariableOverrides() {
         return Optional.ofNullable(this.stageVariableOverrides);
     }
     /**
      * Whether the canary deployment uses the stage cache.
      * 
     */
-    public Optional<Boolean> getUseStageCache() {
+    public Optional<Boolean> useStageCache() {
         return Optional.ofNullable(this.useStageCache);
     }
 

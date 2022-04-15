@@ -22,13 +22,13 @@ public class PublicKey extends io.pulumi.resources.CustomResource {
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="publicKeyConfig", type=PublicKeyConfig.class, parameters={})
     private Output<PublicKeyConfig> publicKeyConfig;
 
-    public Output<PublicKeyConfig> getPublicKeyConfig() {
+    public Output<PublicKeyConfig> publicKeyConfig() {
         return this.publicKeyConfig;
     }
 

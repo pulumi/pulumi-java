@@ -21,7 +21,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
     @Import(name="apiSecretKey", required=true)
       private final Output<String> apiSecretKey;
 
-    public Output<String> getApiSecretKey() {
+    public Output<String> apiSecretKey() {
         return this.apiSecretKey;
     }
 

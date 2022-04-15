@@ -22,7 +22,7 @@ public final class UserProfileResourceSpec extends io.pulumi.resources.InvokeArg
     @Import(name="instanceType")
       private final @Nullable UserProfileResourceSpecInstanceType instanceType;
 
-    public Optional<UserProfileResourceSpecInstanceType> getInstanceType() {
+    public Optional<UserProfileResourceSpecInstanceType> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
@@ -33,7 +33,7 @@ public final class UserProfileResourceSpec extends io.pulumi.resources.InvokeArg
     @Import(name="sageMakerImageArn")
       private final @Nullable String sageMakerImageArn;
 
-    public Optional<String> getSageMakerImageArn() {
+    public Optional<String> sageMakerImageArn() {
         return this.sageMakerImageArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageArn);
     }
 
@@ -44,7 +44,7 @@ public final class UserProfileResourceSpec extends io.pulumi.resources.InvokeArg
     @Import(name="sageMakerImageVersionArn")
       private final @Nullable String sageMakerImageVersionArn;
 
-    public Optional<String> getSageMakerImageVersionArn() {
+    public Optional<String> sageMakerImageVersionArn() {
         return this.sageMakerImageVersionArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 

@@ -23,43 +23,43 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
     @Export(name="appVisibility", type=String.class, parameters={})
     private Output<String> appVisibility;
 
-    public Output<String> getAppVisibility() {
+    public Output<String> appVisibility() {
         return this.appVisibility;
     }
     @Export(name="attributes", type=List.class, parameters={EntitlementAttribute.class})
     private Output<List<EntitlementAttribute>> attributes;
 
-    public Output<List<EntitlementAttribute>> getAttributes() {
+    public Output<List<EntitlementAttribute>> attributes() {
         return this.attributes;
     }
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 

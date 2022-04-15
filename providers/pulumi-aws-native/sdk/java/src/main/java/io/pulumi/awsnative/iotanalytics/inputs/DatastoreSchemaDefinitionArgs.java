@@ -19,7 +19,7 @@ public final class DatastoreSchemaDefinitionArgs extends io.pulumi.resources.Res
     @Import(name="columns")
       private final @Nullable Output<List<DatastoreColumnArgs>> columns;
 
-    public Output<List<DatastoreColumnArgs>> getColumns() {
+    public Output<List<DatastoreColumnArgs>> columns() {
         return this.columns == null ? Codegen.empty() : this.columns;
     }
 

@@ -26,28 +26,28 @@ public final class ThemeConfigurationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataColorPalette")
       private final @Nullable Output<ThemeDataColorPaletteArgs> dataColorPalette;
 
-    public Output<ThemeDataColorPaletteArgs> getDataColorPalette() {
+    public Output<ThemeDataColorPaletteArgs> dataColorPalette() {
         return this.dataColorPalette == null ? Codegen.empty() : this.dataColorPalette;
     }
 
     @Import(name="sheet")
       private final @Nullable Output<ThemeSheetStyleArgs> sheet;
 
-    public Output<ThemeSheetStyleArgs> getSheet() {
+    public Output<ThemeSheetStyleArgs> sheet() {
         return this.sheet == null ? Codegen.empty() : this.sheet;
     }
 
     @Import(name="typography")
       private final @Nullable Output<ThemeTypographyArgs> typography;
 
-    public Output<ThemeTypographyArgs> getTypography() {
+    public Output<ThemeTypographyArgs> typography() {
         return this.typography == null ? Codegen.empty() : this.typography;
     }
 
     @Import(name="uIColorPalette")
       private final @Nullable Output<ThemeUIColorPaletteArgs> uIColorPalette;
 
-    public Output<ThemeUIColorPaletteArgs> getUIColorPalette() {
+    public Output<ThemeUIColorPaletteArgs> uIColorPalette() {
         return this.uIColorPalette == null ? Codegen.empty() : this.uIColorPalette;
     }
 

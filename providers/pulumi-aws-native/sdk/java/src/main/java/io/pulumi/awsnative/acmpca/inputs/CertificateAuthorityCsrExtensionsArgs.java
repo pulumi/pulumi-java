@@ -24,14 +24,14 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
     @Import(name="keyUsage")
       private final @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage;
 
-    public Output<CertificateAuthorityKeyUsageArgs> getKeyUsage() {
+    public Output<CertificateAuthorityKeyUsageArgs> keyUsage() {
         return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     @Import(name="subjectInformationAccess")
       private final @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
 
-    public Output<List<CertificateAuthorityAccessDescriptionArgs>> getSubjectInformationAccess() {
+    public Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess() {
         return this.subjectInformationAccess == null ? Codegen.empty() : this.subjectInformationAccess;
     }
 

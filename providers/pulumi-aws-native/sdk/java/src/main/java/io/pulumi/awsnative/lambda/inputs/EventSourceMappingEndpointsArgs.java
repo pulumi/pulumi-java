@@ -27,7 +27,7 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
     @Import(name="kafkaBootstrapServers")
       private final @Nullable Output<List<String>> kafkaBootstrapServers;
 
-    public Output<List<String>> getKafkaBootstrapServers() {
+    public Output<List<String>> kafkaBootstrapServers() {
         return this.kafkaBootstrapServers == null ? Codegen.empty() : this.kafkaBootstrapServers;
     }
 

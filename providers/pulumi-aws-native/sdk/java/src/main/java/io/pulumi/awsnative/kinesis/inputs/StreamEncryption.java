@@ -24,7 +24,7 @@ public final class StreamEncryption extends io.pulumi.resources.InvokeArgs {
     @Import(name="encryptionType", required=true)
       private final StreamEncryptionEncryptionType encryptionType;
 
-    public StreamEncryptionEncryptionType getEncryptionType() {
+    public StreamEncryptionEncryptionType encryptionType() {
         return this.encryptionType;
     }
 
@@ -35,7 +35,7 @@ public final class StreamEncryption extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyId", required=true)
       private final String keyId;
 
-    public String getKeyId() {
+    public String keyId() {
         return this.keyId;
     }
 

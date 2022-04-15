@@ -24,63 +24,63 @@ public final class DeliveryStreamSplunkDestinationConfigurationArgs extends io.p
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="hECAcknowledgmentTimeoutInSeconds")
       private final @Nullable Output<Integer> hECAcknowledgmentTimeoutInSeconds;
 
-    public Output<Integer> getHECAcknowledgmentTimeoutInSeconds() {
+    public Output<Integer> hECAcknowledgmentTimeoutInSeconds() {
         return this.hECAcknowledgmentTimeoutInSeconds == null ? Codegen.empty() : this.hECAcknowledgmentTimeoutInSeconds;
     }
 
     @Import(name="hECEndpoint", required=true)
       private final Output<String> hECEndpoint;
 
-    public Output<String> getHECEndpoint() {
+    public Output<String> hECEndpoint() {
         return this.hECEndpoint;
     }
 
     @Import(name="hECEndpointType", required=true)
       private final Output<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> hECEndpointType;
 
-    public Output<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> getHECEndpointType() {
+    public Output<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> hECEndpointType() {
         return this.hECEndpointType;
     }
 
     @Import(name="hECToken", required=true)
       private final Output<String> hECToken;
 
-    public Output<String> getHECToken() {
+    public Output<String> hECToken() {
         return this.hECToken;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
+    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
         return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamSplunkRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamSplunkRetryOptionsArgs> getRetryOptions() {
+    public Output<DeliveryStreamSplunkRetryOptionsArgs> retryOptions() {
         return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
-    public Output<String> getS3BackupMode() {
+    public Output<String> s3BackupMode() {
         return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 

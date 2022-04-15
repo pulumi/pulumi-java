@@ -23,7 +23,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
-    public Output<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
+    public Output<SessionFindingPublishingFrequency> findingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
@@ -34,7 +34,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<SessionStatus> status;
 
-    public Output<SessionStatus> getStatus() {
+    public Output<SessionStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

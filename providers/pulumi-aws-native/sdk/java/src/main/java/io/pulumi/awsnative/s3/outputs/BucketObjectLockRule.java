@@ -18,7 +18,7 @@ public final class BucketObjectLockRule {
         this.defaultRetention = defaultRetention;
     }
 
-    public Optional<BucketDefaultRetention> getDefaultRetention() {
+    public Optional<BucketDefaultRetention> defaultRetention() {
         return Optional.ofNullable(this.defaultRetention);
     }
 

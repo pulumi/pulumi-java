@@ -26,70 +26,70 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bindingProperties")
       private final @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties;
 
-    public Output<ComponentBindingPropertiesArgs> getBindingProperties() {
+    public Output<ComponentBindingPropertiesArgs> bindingProperties() {
         return this.bindingProperties == null ? Codegen.empty() : this.bindingProperties;
     }
 
     @Import(name="children")
       private final @Nullable Output<List<ComponentChildArgs>> children;
 
-    public Output<List<ComponentChildArgs>> getChildren() {
+    public Output<List<ComponentChildArgs>> children() {
         return this.children == null ? Codegen.empty() : this.children;
     }
 
     @Import(name="collectionProperties")
       private final @Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties;
 
-    public Output<ComponentCollectionPropertiesArgs> getCollectionProperties() {
+    public Output<ComponentCollectionPropertiesArgs> collectionProperties() {
         return this.collectionProperties == null ? Codegen.empty() : this.collectionProperties;
     }
 
     @Import(name="componentType")
       private final @Nullable Output<String> componentType;
 
-    public Output<String> getComponentType() {
+    public Output<String> componentType() {
         return this.componentType == null ? Codegen.empty() : this.componentType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<ComponentOverridesArgs> overrides;
 
-    public Output<ComponentOverridesArgs> getOverrides() {
+    public Output<ComponentOverridesArgs> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     @Import(name="properties")
       private final @Nullable Output<ComponentPropertiesArgs> properties;
 
-    public Output<ComponentPropertiesArgs> getProperties() {
+    public Output<ComponentPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<ComponentTagsArgs> tags;
 
-    public Output<ComponentTagsArgs> getTags() {
+    public Output<ComponentTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="variants")
       private final @Nullable Output<List<ComponentVariantArgs>> variants;
 
-    public Output<List<ComponentVariantArgs>> getVariants() {
+    public Output<List<ComponentVariantArgs>> variants() {
         return this.variants == null ? Codegen.empty() : this.variants;
     }
 

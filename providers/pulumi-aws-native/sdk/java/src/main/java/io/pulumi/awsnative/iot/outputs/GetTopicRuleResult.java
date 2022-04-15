@@ -28,13 +28,13 @@ public final class GetTopicRuleResult {
         this.topicRulePayload = topicRulePayload;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public List<TopicRuleTag> getTags() {
+    public List<TopicRuleTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<TopicRulePayload> getTopicRulePayload() {
+    public Optional<TopicRulePayload> topicRulePayload() {
         return Optional.ofNullable(this.topicRulePayload);
     }
 

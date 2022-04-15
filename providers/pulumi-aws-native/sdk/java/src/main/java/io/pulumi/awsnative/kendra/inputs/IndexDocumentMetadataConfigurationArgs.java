@@ -21,28 +21,28 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="relevance")
       private final @Nullable Output<IndexRelevanceArgs> relevance;
 
-    public Output<IndexRelevanceArgs> getRelevance() {
+    public Output<IndexRelevanceArgs> relevance() {
         return this.relevance == null ? Codegen.empty() : this.relevance;
     }
 
     @Import(name="search")
       private final @Nullable Output<IndexSearchArgs> search;
 
-    public Output<IndexSearchArgs> getSearch() {
+    public Output<IndexSearchArgs> search() {
         return this.search == null ? Codegen.empty() : this.search;
     }
 
     @Import(name="type", required=true)
       private final Output<IndexDocumentAttributeValueType> type;
 
-    public Output<IndexDocumentAttributeValueType> getType() {
+    public Output<IndexDocumentAttributeValueType> type() {
         return this.type;
     }
 

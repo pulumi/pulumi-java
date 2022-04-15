@@ -47,30 +47,30 @@ public final class BotLocale {
         this.voiceSettings = voiceSettings;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of intents
      * 
     */
-    public List<BotIntent> getIntents() {
+    public List<BotIntent> intents() {
         return this.intents == null ? List.of() : this.intents;
     }
-    public String getLocaleId() {
+    public String localeId() {
         return this.localeId;
     }
-    public Double getNluConfidenceThreshold() {
+    public Double nluConfidenceThreshold() {
         return this.nluConfidenceThreshold;
     }
     /**
      * List of SlotTypes
      * 
     */
-    public List<BotSlotType> getSlotTypes() {
+    public List<BotSlotType> slotTypes() {
         return this.slotTypes == null ? List.of() : this.slotTypes;
     }
-    public Optional<BotVoiceSettings> getVoiceSettings() {
+    public Optional<BotVoiceSettings> voiceSettings() {
         return Optional.ofNullable(this.voiceSettings);
     }
 

@@ -18,14 +18,14 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     @Import(name="payloadVersion")
       private final @Nullable Output<String> payloadVersion;
 
-    public Output<String> getPayloadVersion() {
+    public Output<String> payloadVersion() {
         return this.payloadVersion == null ? Codegen.empty() : this.payloadVersion;
     }
 
     @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 

@@ -23,140 +23,140 @@ public final class DistributionCacheBehavior extends io.pulumi.resources.InvokeA
     @Import(name="allowedMethods")
       private final @Nullable List<String> allowedMethods;
 
-    public List<String> getAllowedMethods() {
+    public List<String> allowedMethods() {
         return this.allowedMethods == null ? List.of() : this.allowedMethods;
     }
 
     @Import(name="cachePolicyId")
       private final @Nullable String cachePolicyId;
 
-    public Optional<String> getCachePolicyId() {
+    public Optional<String> cachePolicyId() {
         return this.cachePolicyId == null ? Optional.empty() : Optional.ofNullable(this.cachePolicyId);
     }
 
     @Import(name="cachedMethods")
       private final @Nullable List<String> cachedMethods;
 
-    public List<String> getCachedMethods() {
+    public List<String> cachedMethods() {
         return this.cachedMethods == null ? List.of() : this.cachedMethods;
     }
 
     @Import(name="compress")
       private final @Nullable Boolean compress;
 
-    public Optional<Boolean> getCompress() {
+    public Optional<Boolean> compress() {
         return this.compress == null ? Optional.empty() : Optional.ofNullable(this.compress);
     }
 
     @Import(name="defaultTTL")
       private final @Nullable Double defaultTTL;
 
-    public Optional<Double> getDefaultTTL() {
+    public Optional<Double> defaultTTL() {
         return this.defaultTTL == null ? Optional.empty() : Optional.ofNullable(this.defaultTTL);
     }
 
     @Import(name="fieldLevelEncryptionId")
       private final @Nullable String fieldLevelEncryptionId;
 
-    public Optional<String> getFieldLevelEncryptionId() {
+    public Optional<String> fieldLevelEncryptionId() {
         return this.fieldLevelEncryptionId == null ? Optional.empty() : Optional.ofNullable(this.fieldLevelEncryptionId);
     }
 
     @Import(name="forwardedValues")
       private final @Nullable DistributionForwardedValues forwardedValues;
 
-    public Optional<DistributionForwardedValues> getForwardedValues() {
+    public Optional<DistributionForwardedValues> forwardedValues() {
         return this.forwardedValues == null ? Optional.empty() : Optional.ofNullable(this.forwardedValues);
     }
 
     @Import(name="functionAssociations")
       private final @Nullable List<DistributionFunctionAssociation> functionAssociations;
 
-    public List<DistributionFunctionAssociation> getFunctionAssociations() {
+    public List<DistributionFunctionAssociation> functionAssociations() {
         return this.functionAssociations == null ? List.of() : this.functionAssociations;
     }
 
     @Import(name="lambdaFunctionAssociations")
       private final @Nullable List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations;
 
-    public List<DistributionLambdaFunctionAssociation> getLambdaFunctionAssociations() {
+    public List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? List.of() : this.lambdaFunctionAssociations;
     }
 
     @Import(name="maxTTL")
       private final @Nullable Double maxTTL;
 
-    public Optional<Double> getMaxTTL() {
+    public Optional<Double> maxTTL() {
         return this.maxTTL == null ? Optional.empty() : Optional.ofNullable(this.maxTTL);
     }
 
     @Import(name="minTTL")
       private final @Nullable Double minTTL;
 
-    public Optional<Double> getMinTTL() {
+    public Optional<Double> minTTL() {
         return this.minTTL == null ? Optional.empty() : Optional.ofNullable(this.minTTL);
     }
 
     @Import(name="originRequestPolicyId")
       private final @Nullable String originRequestPolicyId;
 
-    public Optional<String> getOriginRequestPolicyId() {
+    public Optional<String> originRequestPolicyId() {
         return this.originRequestPolicyId == null ? Optional.empty() : Optional.ofNullable(this.originRequestPolicyId);
     }
 
     @Import(name="pathPattern", required=true)
       private final String pathPattern;
 
-    public String getPathPattern() {
+    public String pathPattern() {
         return this.pathPattern;
     }
 
     @Import(name="realtimeLogConfigArn")
       private final @Nullable String realtimeLogConfigArn;
 
-    public Optional<String> getRealtimeLogConfigArn() {
+    public Optional<String> realtimeLogConfigArn() {
         return this.realtimeLogConfigArn == null ? Optional.empty() : Optional.ofNullable(this.realtimeLogConfigArn);
     }
 
     @Import(name="responseHeadersPolicyId")
       private final @Nullable String responseHeadersPolicyId;
 
-    public Optional<String> getResponseHeadersPolicyId() {
+    public Optional<String> responseHeadersPolicyId() {
         return this.responseHeadersPolicyId == null ? Optional.empty() : Optional.ofNullable(this.responseHeadersPolicyId);
     }
 
     @Import(name="smoothStreaming")
       private final @Nullable Boolean smoothStreaming;
 
-    public Optional<Boolean> getSmoothStreaming() {
+    public Optional<Boolean> smoothStreaming() {
         return this.smoothStreaming == null ? Optional.empty() : Optional.ofNullable(this.smoothStreaming);
     }
 
     @Import(name="targetOriginId", required=true)
       private final String targetOriginId;
 
-    public String getTargetOriginId() {
+    public String targetOriginId() {
         return this.targetOriginId;
     }
 
     @Import(name="trustedKeyGroups")
       private final @Nullable List<String> trustedKeyGroups;
 
-    public List<String> getTrustedKeyGroups() {
+    public List<String> trustedKeyGroups() {
         return this.trustedKeyGroups == null ? List.of() : this.trustedKeyGroups;
     }
 
     @Import(name="trustedSigners")
       private final @Nullable List<String> trustedSigners;
 
-    public List<String> getTrustedSigners() {
+    public List<String> trustedSigners() {
         return this.trustedSigners == null ? List.of() : this.trustedSigners;
     }
 
     @Import(name="viewerProtocolPolicy", required=true)
       private final String viewerProtocolPolicy;
 
-    public String getViewerProtocolPolicy() {
+    public String viewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }
 

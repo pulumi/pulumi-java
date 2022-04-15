@@ -24,21 +24,21 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
     @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
-    public Output<String> getPathId() {
+    public Output<String> pathId() {
         return this.pathId == null ? Codegen.empty() : this.pathId;
     }
 
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
     @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProjectProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<ProjectProvisioningParameterArgs>> getProvisioningParameters() {
+    public Output<List<ProjectProvisioningParameterArgs>> provisioningParameters() {
         return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
     }
 

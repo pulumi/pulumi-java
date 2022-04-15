@@ -22,7 +22,7 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     @Import(name="allowMultipleValues")
       private final @Nullable Output<Boolean> allowMultipleValues;
 
-    public Output<Boolean> getAllowMultipleValues() {
+    public Output<Boolean> allowMultipleValues() {
         return this.allowMultipleValues == null ? Codegen.empty() : this.allowMultipleValues;
     }
 

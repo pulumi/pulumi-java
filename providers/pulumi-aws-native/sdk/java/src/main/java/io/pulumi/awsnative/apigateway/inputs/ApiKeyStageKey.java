@@ -21,7 +21,7 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
     @Import(name="restApiId")
       private final @Nullable String restApiId;
 
-    public Optional<String> getRestApiId() {
+    public Optional<String> restApiId() {
         return this.restApiId == null ? Optional.empty() : Optional.ofNullable(this.restApiId);
     }
 
@@ -32,7 +32,7 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
     @Import(name="stageName")
       private final @Nullable String stageName;
 
-    public Optional<String> getStageName() {
+    public Optional<String> stageName() {
         return this.stageName == null ? Optional.empty() : Optional.ofNullable(this.stageName);
     }
 

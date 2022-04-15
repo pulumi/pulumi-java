@@ -31,17 +31,17 @@ public final class GetFaqResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Tags for labeling the FAQ
      * 
     */
-    public List<FaqTag> getTags() {
+    public List<FaqTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

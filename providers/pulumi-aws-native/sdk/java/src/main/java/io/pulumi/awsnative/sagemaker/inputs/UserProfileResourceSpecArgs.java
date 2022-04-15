@@ -23,7 +23,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     @Import(name="instanceType")
       private final @Nullable Output<UserProfileResourceSpecInstanceType> instanceType;
 
-    public Output<UserProfileResourceSpecInstanceType> getInstanceType() {
+    public Output<UserProfileResourceSpecInstanceType> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -34,7 +34,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     @Import(name="sageMakerImageArn")
       private final @Nullable Output<String> sageMakerImageArn;
 
-    public Output<String> getSageMakerImageArn() {
+    public Output<String> sageMakerImageArn() {
         return this.sageMakerImageArn == null ? Codegen.empty() : this.sageMakerImageArn;
     }
 
@@ -45,7 +45,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     @Import(name="sageMakerImageVersionArn")
       private final @Nullable Output<String> sageMakerImageVersionArn;
 
-    public Output<String> getSageMakerImageVersionArn() {
+    public Output<String> sageMakerImageVersionArn() {
         return this.sageMakerImageVersionArn == null ? Codegen.empty() : this.sageMakerImageVersionArn;
     }
 

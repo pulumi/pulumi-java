@@ -28,7 +28,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;
 
-    public Output<String> getComponentArn() {
+    public Output<String> componentArn() {
         return this.componentArn == null ? Codegen.empty() : this.componentArn;
     }
 
@@ -39,7 +39,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
     @Import(name="parameters")
       private final @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
-    public Output<List<ImageRecipeComponentParameterArgs>> getParameters() {
+    public Output<List<ImageRecipeComponentParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

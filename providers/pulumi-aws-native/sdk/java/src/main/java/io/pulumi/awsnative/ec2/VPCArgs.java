@@ -25,7 +25,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
 
@@ -36,7 +36,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDnsHostnames")
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
-    public Output<Boolean> getEnableDnsHostnames() {
+    public Output<Boolean> enableDnsHostnames() {
         return this.enableDnsHostnames == null ? Codegen.empty() : this.enableDnsHostnames;
     }
 
@@ -47,7 +47,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDnsSupport")
       private final @Nullable Output<Boolean> enableDnsSupport;
 
-    public Output<Boolean> getEnableDnsSupport() {
+    public Output<Boolean> enableDnsSupport() {
         return this.enableDnsSupport == null ? Codegen.empty() : this.enableDnsSupport;
     }
 
@@ -64,7 +64,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceTenancy")
       private final @Nullable Output<String> instanceTenancy;
 
-    public Output<String> getInstanceTenancy() {
+    public Output<String> instanceTenancy() {
         return this.instanceTenancy == null ? Codegen.empty() : this.instanceTenancy;
     }
 
@@ -75,7 +75,7 @@ public final class VPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<VPCTagArgs>> tags;
 
-    public Output<List<VPCTagArgs>> getTags() {
+    public Output<List<VPCTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

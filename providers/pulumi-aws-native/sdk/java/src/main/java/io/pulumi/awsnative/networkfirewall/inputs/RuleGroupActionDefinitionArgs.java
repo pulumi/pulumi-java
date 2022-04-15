@@ -18,7 +18,7 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     @Import(name="publishMetricAction")
       private final @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
 
-    public Output<RuleGroupPublishMetricActionArgs> getPublishMetricAction() {
+    public Output<RuleGroupPublishMetricActionArgs> publishMetricAction() {
         return this.publishMetricAction == null ? Codegen.empty() : this.publishMetricAction;
     }
 

@@ -18,21 +18,21 @@ public final class ChannelCustomerManagedS3Args extends io.pulumi.resources.Reso
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
       private final @Nullable Output<String> keyPrefix;
 
-    public Output<String> getKeyPrefix() {
+    public Output<String> keyPrefix() {
         return this.keyPrefix == null ? Codegen.empty() : this.keyPrefix;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

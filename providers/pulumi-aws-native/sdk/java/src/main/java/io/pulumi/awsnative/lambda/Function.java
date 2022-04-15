@@ -35,7 +35,7 @@ public class Function extends io.pulumi.resources.CustomResource {
     @Export(name="architectures", type=List.class, parameters={FunctionArchitecturesItem.class})
     private Output</* @Nullable */ List<FunctionArchitecturesItem>> architectures;
 
-    public Output</* @Nullable */ List<FunctionArchitecturesItem>> getArchitectures() {
+    public Output</* @Nullable */ List<FunctionArchitecturesItem>> architectures() {
         return this.architectures;
     }
     /**
@@ -49,7 +49,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Unique identifier for function resources
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +63,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The code for the function.
      * 
      */
-    public Output<FunctionCode> getCode() {
+    public Output<FunctionCode> code() {
         return this.code;
     }
     /**
@@ -77,7 +77,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A unique Arn for CodeSigningConfig resource
      * 
      */
-    public Output</* @Nullable */ String> getCodeSigningConfigArn() {
+    public Output</* @Nullable */ String> codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
@@ -91,7 +91,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
      * 
      */
-    public Output</* @Nullable */ FunctionDeadLetterConfig> getDeadLetterConfig() {
+    public Output</* @Nullable */ FunctionDeadLetterConfig> deadLetterConfig() {
         return this.deadLetterConfig;
     }
     /**
@@ -105,7 +105,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A description of the function.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -119,7 +119,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Environment variables that are accessible from function code during execution.
      * 
      */
-    public Output</* @Nullable */ FunctionEnvironment> getEnvironment() {
+    public Output</* @Nullable */ FunctionEnvironment> environment() {
         return this.environment;
     }
     /**
@@ -133,7 +133,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
      */
-    public Output</* @Nullable */ List<FunctionFileSystemConfig>> getFileSystemConfigs() {
+    public Output</* @Nullable */ List<FunctionFileSystemConfig>> fileSystemConfigs() {
         return this.fileSystemConfigs;
     }
     /**
@@ -147,7 +147,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
      * 
      */
-    public Output</* @Nullable */ String> getFunctionName() {
+    public Output</* @Nullable */ String> functionName() {
         return this.functionName;
     }
     /**
@@ -161,7 +161,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
      * 
      */
-    public Output</* @Nullable */ String> getHandler() {
+    public Output</* @Nullable */ String> handler() {
         return this.handler;
     }
     /**
@@ -175,7 +175,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return ImageConfig
      * 
      */
-    public Output</* @Nullable */ FunctionImageConfig> getImageConfig() {
+    public Output</* @Nullable */ FunctionImageConfig> imageConfig() {
         return this.imageConfig;
     }
     /**
@@ -189,7 +189,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyArn() {
+    public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -203,7 +203,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLayers() {
+    public Output</* @Nullable */ List<String>> layers() {
         return this.layers;
     }
     /**
@@ -217,7 +217,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
-    public Output</* @Nullable */ Integer> getMemorySize() {
+    public Output</* @Nullable */ Integer> memorySize() {
         return this.memorySize;
     }
     /**
@@ -231,7 +231,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return PackageType.
      * 
      */
-    public Output</* @Nullable */ FunctionPackageType> getPackageType() {
+    public Output</* @Nullable */ FunctionPackageType> packageType() {
         return this.packageType;
     }
     /**
@@ -245,7 +245,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The number of simultaneous executions to reserve for the function.
      * 
      */
-    public Output</* @Nullable */ Integer> getReservedConcurrentExecutions() {
+    public Output</* @Nullable */ Integer> reservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions;
     }
     /**
@@ -259,7 +259,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the function's execution role.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -273,7 +273,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The identifier of the function's runtime.
      * 
      */
-    public Output</* @Nullable */ String> getRuntime() {
+    public Output</* @Nullable */ String> runtime() {
         return this.runtime;
     }
     /**
@@ -287,7 +287,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the function.
      * 
      */
-    public Output</* @Nullable */ List<FunctionTag>> getTags() {
+    public Output</* @Nullable */ List<FunctionTag>> tags() {
         return this.tags;
     }
     /**
@@ -301,7 +301,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeout() {
+    public Output</* @Nullable */ Integer> timeout() {
         return this.timeout;
     }
     /**
@@ -315,7 +315,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
      * 
      */
-    public Output</* @Nullable */ FunctionTracingConfig> getTracingConfig() {
+    public Output</* @Nullable */ FunctionTracingConfig> tracingConfig() {
         return this.tracingConfig;
     }
     /**
@@ -329,7 +329,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @return For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
      * 
      */
-    public Output</* @Nullable */ FunctionVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ FunctionVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 

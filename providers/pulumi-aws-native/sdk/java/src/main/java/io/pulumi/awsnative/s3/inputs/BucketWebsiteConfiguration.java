@@ -28,7 +28,7 @@ public final class BucketWebsiteConfiguration extends io.pulumi.resources.Invoke
     @Import(name="errorDocument")
       private final @Nullable String errorDocument;
 
-    public Optional<String> getErrorDocument() {
+    public Optional<String> errorDocument() {
         return this.errorDocument == null ? Optional.empty() : Optional.ofNullable(this.errorDocument);
     }
 
@@ -39,21 +39,21 @@ public final class BucketWebsiteConfiguration extends io.pulumi.resources.Invoke
     @Import(name="indexDocument")
       private final @Nullable String indexDocument;
 
-    public Optional<String> getIndexDocument() {
+    public Optional<String> indexDocument() {
         return this.indexDocument == null ? Optional.empty() : Optional.ofNullable(this.indexDocument);
     }
 
     @Import(name="redirectAllRequestsTo")
       private final @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
 
-    public Optional<BucketRedirectAllRequestsTo> getRedirectAllRequestsTo() {
+    public Optional<BucketRedirectAllRequestsTo> redirectAllRequestsTo() {
         return this.redirectAllRequestsTo == null ? Optional.empty() : Optional.ofNullable(this.redirectAllRequestsTo);
     }
 
     @Import(name="routingRules")
       private final @Nullable List<BucketRoutingRule> routingRules;
 
-    public List<BucketRoutingRule> getRoutingRules() {
+    public List<BucketRoutingRule> routingRules() {
         return this.routingRules == null ? List.of() : this.routingRules;
     }
 

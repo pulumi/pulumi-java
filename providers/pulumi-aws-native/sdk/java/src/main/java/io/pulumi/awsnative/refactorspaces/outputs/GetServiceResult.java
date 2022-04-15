@@ -31,17 +31,17 @@ public final class GetServiceResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getServiceIdentifier() {
+    public Optional<String> serviceIdentifier() {
         return Optional.ofNullable(this.serviceIdentifier);
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
     */
-    public List<ServiceTag> getTags() {
+    public List<ServiceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

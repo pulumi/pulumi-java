@@ -19,14 +19,14 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
     @Import(name="orcSerDe")
       private final @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe;
 
-    public Output<DeliveryStreamOrcSerDeArgs> getOrcSerDe() {
+    public Output<DeliveryStreamOrcSerDeArgs> orcSerDe() {
         return this.orcSerDe == null ? Codegen.empty() : this.orcSerDe;
     }
 
     @Import(name="parquetSerDe")
       private final @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe;
 
-    public Output<DeliveryStreamParquetSerDeArgs> getParquetSerDe() {
+    public Output<DeliveryStreamParquetSerDeArgs> parquetSerDe() {
         return this.parquetSerDe == null ? Codegen.empty() : this.parquetSerDe;
     }
 

@@ -18,7 +18,7 @@ public final class ListenerCertificate {
         this.certificateArn = certificateArn;
     }
 
-    public Optional<String> getCertificateArn() {
+    public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
 

@@ -56,41 +56,41 @@ public final class GetServiceResult {
         this.status = status;
     }
 
-    public Optional<ServiceHealthCheckConfiguration> getHealthCheckConfiguration() {
+    public Optional<ServiceHealthCheckConfiguration> healthCheckConfiguration() {
         return Optional.ofNullable(this.healthCheckConfiguration);
     }
-    public Optional<ServiceInstanceConfiguration> getInstanceConfiguration() {
+    public Optional<ServiceInstanceConfiguration> instanceConfiguration() {
         return Optional.ofNullable(this.instanceConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
     */
-    public Optional<String> getServiceArn() {
+    public Optional<String> serviceArn() {
         return Optional.ofNullable(this.serviceArn);
     }
     /**
      * The AppRunner Service Id
      * 
     */
-    public Optional<String> getServiceId() {
+    public Optional<String> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
     /**
      * The Service Url of the AppRunner Service.
      * 
     */
-    public Optional<String> getServiceUrl() {
+    public Optional<String> serviceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
-    public Optional<ServiceSourceConfiguration> getSourceConfiguration() {
+    public Optional<ServiceSourceConfiguration> sourceConfiguration() {
         return Optional.ofNullable(this.sourceConfiguration);
     }
     /**
      * AppRunner Service status.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

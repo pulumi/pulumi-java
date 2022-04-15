@@ -23,7 +23,7 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
     @Import(name="gid", required=true)
       private final Output<String> gid;
 
-    public Output<String> getGid() {
+    public Output<String> gid() {
         return this.gid;
     }
 
@@ -34,7 +34,7 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
     @Import(name="secondaryGids")
       private final @Nullable Output<List<String>> secondaryGids;
 
-    public Output<List<String>> getSecondaryGids() {
+    public Output<List<String>> secondaryGids() {
         return this.secondaryGids == null ? Codegen.empty() : this.secondaryGids;
     }
 
@@ -45,7 +45,7 @@ public final class AccessPointPosixUserArgs extends io.pulumi.resources.Resource
     @Import(name="uid", required=true)
       private final Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
 

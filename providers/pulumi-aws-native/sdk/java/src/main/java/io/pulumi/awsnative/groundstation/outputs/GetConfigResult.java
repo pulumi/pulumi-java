@@ -37,22 +37,22 @@ public final class GetConfigResult {
         this.type = type;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<ConfigData> getConfigData() {
+    public Optional<ConfigData> configData() {
         return Optional.ofNullable(this.configData);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public List<ConfigTag> getTags() {
+    public List<ConfigTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

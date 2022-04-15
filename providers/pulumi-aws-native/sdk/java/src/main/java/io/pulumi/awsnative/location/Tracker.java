@@ -23,61 +23,61 @@ public class Tracker extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     @Export(name="positionFiltering", type=TrackerPositionFiltering.class, parameters={})
     private Output</* @Nullable */ TrackerPositionFiltering> positionFiltering;
 
-    public Output</* @Nullable */ TrackerPositionFiltering> getPositionFiltering() {
+    public Output</* @Nullable */ TrackerPositionFiltering> positionFiltering() {
         return this.positionFiltering;
     }
     @Export(name="pricingPlan", type=TrackerPricingPlan.class, parameters={})
     private Output</* @Nullable */ TrackerPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ TrackerPricingPlan> getPricingPlan() {
+    public Output</* @Nullable */ TrackerPricingPlan> pricingPlan() {
         return this.pricingPlan;
     }
     @Export(name="pricingPlanDataSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> pricingPlanDataSource;
 
-    public Output</* @Nullable */ String> getPricingPlanDataSource() {
+    public Output</* @Nullable */ String> pricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
     @Export(name="trackerArn", type=String.class, parameters={})
     private Output<String> trackerArn;
 
-    public Output<String> getTrackerArn() {
+    public Output<String> trackerArn() {
         return this.trackerArn;
     }
     @Export(name="trackerName", type=String.class, parameters={})
     private Output<String> trackerName;
 
-    public Output<String> getTrackerName() {
+    public Output<String> trackerName() {
         return this.trackerName;
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

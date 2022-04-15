@@ -22,7 +22,7 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -33,7 +33,7 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     @Import(name="retainStacksOnAccountRemoval")
       private final @Nullable Output<Boolean> retainStacksOnAccountRemoval;
 
-    public Output<Boolean> getRetainStacksOnAccountRemoval() {
+    public Output<Boolean> retainStacksOnAccountRemoval() {
         return this.retainStacksOnAccountRemoval == null ? Codegen.empty() : this.retainStacksOnAccountRemoval;
     }
 

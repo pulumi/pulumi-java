@@ -19,14 +19,14 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     @Import(name="jsonConfiguration")
       private final @Nullable Output<DatastoreJsonConfigurationArgs> jsonConfiguration;
 
-    public Output<DatastoreJsonConfigurationArgs> getJsonConfiguration() {
+    public Output<DatastoreJsonConfigurationArgs> jsonConfiguration() {
         return this.jsonConfiguration == null ? Codegen.empty() : this.jsonConfiguration;
     }
 
     @Import(name="parquetConfiguration")
       private final @Nullable Output<DatastoreParquetConfigurationArgs> parquetConfiguration;
 
-    public Output<DatastoreParquetConfigurationArgs> getParquetConfiguration() {
+    public Output<DatastoreParquetConfigurationArgs> parquetConfiguration() {
         return this.parquetConfiguration == null ? Codegen.empty() : this.parquetConfiguration;
     }
 

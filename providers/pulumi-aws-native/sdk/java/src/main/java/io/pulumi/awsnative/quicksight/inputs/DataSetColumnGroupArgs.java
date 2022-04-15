@@ -24,7 +24,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
     @Import(name="geoSpatialColumnGroup")
       private final @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
-    public Output<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {
+    public Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup() {
         return this.geoSpatialColumnGroup == null ? Codegen.empty() : this.geoSpatialColumnGroup;
     }
 

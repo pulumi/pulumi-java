@@ -19,14 +19,14 @@ public final class LaunchStepConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="groupWeights", required=true)
       private final Output<List<LaunchGroupToWeightArgs>> groupWeights;
 
-    public Output<List<LaunchGroupToWeightArgs>> getGroupWeights() {
+    public Output<List<LaunchGroupToWeightArgs>> groupWeights() {
         return this.groupWeights;
     }
 
     @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 

@@ -15,7 +15,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="authorizerId", required=true)
       private final String authorizerId;
 
-    public String getAuthorizerId() {
+    public String authorizerId() {
         return this.authorizerId;
     }
 
@@ -26,7 +26,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 

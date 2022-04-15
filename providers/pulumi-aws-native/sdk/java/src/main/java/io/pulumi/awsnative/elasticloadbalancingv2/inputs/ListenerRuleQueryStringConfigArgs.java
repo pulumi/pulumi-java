@@ -19,7 +19,7 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
     @Import(name="values")
       private final @Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values;
 
-    public Output<List<ListenerRuleQueryStringKeyValueArgs>> getValues() {
+    public Output<List<ListenerRuleQueryStringKeyValueArgs>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

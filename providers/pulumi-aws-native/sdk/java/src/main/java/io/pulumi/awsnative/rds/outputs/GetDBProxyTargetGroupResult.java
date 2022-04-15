@@ -34,20 +34,20 @@ public final class GetDBProxyTargetGroupResult {
         this.targetGroupArn = targetGroupArn;
     }
 
-    public Optional<DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> getConnectionPoolConfigurationInfo() {
+    public Optional<DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> connectionPoolConfigurationInfo() {
         return Optional.ofNullable(this.connectionPoolConfigurationInfo);
     }
-    public List<String> getDBClusterIdentifiers() {
+    public List<String> dBClusterIdentifiers() {
         return this.dBClusterIdentifiers == null ? List.of() : this.dBClusterIdentifiers;
     }
-    public List<String> getDBInstanceIdentifiers() {
+    public List<String> dBInstanceIdentifiers() {
         return this.dBInstanceIdentifiers == null ? List.of() : this.dBInstanceIdentifiers;
     }
     /**
      * The Amazon Resource Name (ARN) representing the target group.
      * 
     */
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }
 

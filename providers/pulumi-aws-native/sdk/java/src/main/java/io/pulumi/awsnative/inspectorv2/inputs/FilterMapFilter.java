@@ -18,21 +18,21 @@ public final class FilterMapFilter extends io.pulumi.resources.InvokeArgs {
     @Import(name="comparison", required=true)
       private final FilterMapComparison comparison;
 
-    public FilterMapComparison getComparison() {
+    public FilterMapComparison comparison() {
         return this.comparison;
     }
 
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

@@ -31,7 +31,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCells() {
+    public Output</* @Nullable */ List<String>> cells() {
         return this.cells;
     }
     /**
@@ -45,7 +45,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output<String> getRecoveryGroupArn() {
+    public Output<String> recoveryGroupArn() {
         return this.recoveryGroupArn;
     }
     /**
@@ -59,7 +59,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the recovery group to create.
      * 
      */
-    public Output<String> getRecoveryGroupName() {
+    public Output<String> recoveryGroupName() {
         return this.recoveryGroupName;
     }
     /**
@@ -73,7 +73,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output</* @Nullable */ List<RecoveryGroupTag>> getTags() {
+    public Output</* @Nullable */ List<RecoveryGroupTag>> tags() {
         return this.tags;
     }
 

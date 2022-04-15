@@ -16,7 +16,7 @@ public final class DataSourceAclConfiguration {
         this.allowedGroupsColumnName = allowedGroupsColumnName;
     }
 
-    public String getAllowedGroupsColumnName() {
+    public String allowedGroupsColumnName() {
         return this.allowedGroupsColumnName;
     }
 

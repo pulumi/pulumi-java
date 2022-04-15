@@ -15,7 +15,7 @@ public final class GetRouteCalculatorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="calculatorName", required=true)
       private final String calculatorName;
 
-    public String getCalculatorName() {
+    public String calculatorName() {
         return this.calculatorName;
     }
 

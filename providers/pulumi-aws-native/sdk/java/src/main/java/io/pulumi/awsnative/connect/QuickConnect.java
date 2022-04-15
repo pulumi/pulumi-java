@@ -32,7 +32,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * @return The description of the quick connect.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -46,7 +46,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -60,7 +60,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * @return The name of the quick connect.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +74,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the quick connect.
      * 
      */
-    public Output<String> getQuickConnectArn() {
+    public Output<String> quickConnectArn() {
         return this.quickConnectArn;
     }
     /**
@@ -88,7 +88,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * @return Configuration settings for the quick connect.
      * 
      */
-    public Output<QuickConnectConfig> getQuickConnectConfig() {
+    public Output<QuickConnectConfig> quickConnectConfig() {
         return this.quickConnectConfig;
     }
     /**
@@ -102,7 +102,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<QuickConnectTag>> getTags() {
+    public Output</* @Nullable */ List<QuickConnectTag>> tags() {
         return this.tags;
     }
 

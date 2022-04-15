@@ -21,10 +21,10 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
         this.privateIpAddress = privateIpAddress;
     }
 
-    public Boolean getPrimary() {
+    public Boolean primary() {
         return this.primary;
     }
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 

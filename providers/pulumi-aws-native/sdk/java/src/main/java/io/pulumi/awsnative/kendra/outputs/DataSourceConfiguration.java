@@ -55,34 +55,34 @@ public final class DataSourceConfiguration {
         this.workDocsConfiguration = workDocsConfiguration;
     }
 
-    public Optional<DataSourceConfluenceConfiguration> getConfluenceConfiguration() {
+    public Optional<DataSourceConfluenceConfiguration> confluenceConfiguration() {
         return Optional.ofNullable(this.confluenceConfiguration);
     }
-    public Optional<DataSourceDatabaseConfiguration> getDatabaseConfiguration() {
+    public Optional<DataSourceDatabaseConfiguration> databaseConfiguration() {
         return Optional.ofNullable(this.databaseConfiguration);
     }
-    public Optional<DataSourceGoogleDriveConfiguration> getGoogleDriveConfiguration() {
+    public Optional<DataSourceGoogleDriveConfiguration> googleDriveConfiguration() {
         return Optional.ofNullable(this.googleDriveConfiguration);
     }
-    public Optional<DataSourceOneDriveConfiguration> getOneDriveConfiguration() {
+    public Optional<DataSourceOneDriveConfiguration> oneDriveConfiguration() {
         return Optional.ofNullable(this.oneDriveConfiguration);
     }
-    public Optional<DataSourceS3DataSourceConfiguration> getS3Configuration() {
+    public Optional<DataSourceS3DataSourceConfiguration> s3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }
-    public Optional<DataSourceSalesforceConfiguration> getSalesforceConfiguration() {
+    public Optional<DataSourceSalesforceConfiguration> salesforceConfiguration() {
         return Optional.ofNullable(this.salesforceConfiguration);
     }
-    public Optional<DataSourceServiceNowConfiguration> getServiceNowConfiguration() {
+    public Optional<DataSourceServiceNowConfiguration> serviceNowConfiguration() {
         return Optional.ofNullable(this.serviceNowConfiguration);
     }
-    public Optional<DataSourceSharePointConfiguration> getSharePointConfiguration() {
+    public Optional<DataSourceSharePointConfiguration> sharePointConfiguration() {
         return Optional.ofNullable(this.sharePointConfiguration);
     }
-    public Optional<DataSourceWebCrawlerConfiguration> getWebCrawlerConfiguration() {
+    public Optional<DataSourceWebCrawlerConfiguration> webCrawlerConfiguration() {
         return Optional.ofNullable(this.webCrawlerConfiguration);
     }
-    public Optional<DataSourceWorkDocsConfiguration> getWorkDocsConfiguration() {
+    public Optional<DataSourceWorkDocsConfiguration> workDocsConfiguration() {
         return Optional.ofNullable(this.workDocsConfiguration);
     }
 

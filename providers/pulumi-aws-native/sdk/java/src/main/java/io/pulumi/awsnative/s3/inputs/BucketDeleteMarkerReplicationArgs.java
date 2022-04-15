@@ -18,7 +18,7 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
     @Import(name="status")
       private final @Nullable Output<BucketDeleteMarkerReplicationStatus> status;
 
-    public Output<BucketDeleteMarkerReplicationStatus> getStatus() {
+    public Output<BucketDeleteMarkerReplicationStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

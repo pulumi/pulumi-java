@@ -17,35 +17,35 @@ public final class CanaryCode extends io.pulumi.resources.InvokeArgs {
     @Import(name="handler", required=true)
       private final String handler;
 
-    public String getHandler() {
+    public String handler() {
         return this.handler;
     }
 
     @Import(name="s3Bucket")
       private final @Nullable String s3Bucket;
 
-    public Optional<String> getS3Bucket() {
+    public Optional<String> s3Bucket() {
         return this.s3Bucket == null ? Optional.empty() : Optional.ofNullable(this.s3Bucket);
     }
 
     @Import(name="s3Key")
       private final @Nullable String s3Key;
 
-    public Optional<String> getS3Key() {
+    public Optional<String> s3Key() {
         return this.s3Key == null ? Optional.empty() : Optional.ofNullable(this.s3Key);
     }
 
     @Import(name="s3ObjectVersion")
       private final @Nullable String s3ObjectVersion;
 
-    public Optional<String> getS3ObjectVersion() {
+    public Optional<String> s3ObjectVersion() {
         return this.s3ObjectVersion == null ? Optional.empty() : Optional.ofNullable(this.s3ObjectVersion);
     }
 
     @Import(name="script")
       private final @Nullable String script;
 
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 

@@ -15,7 +15,7 @@ public final class GetFHIRDatastoreArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="datastoreId", required=true)
       private final String datastoreId;
 
-    public String getDatastoreId() {
+    public String datastoreId() {
         return this.datastoreId;
     }
 

@@ -21,7 +21,7 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -32,7 +32,7 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
     @Import(name="valueReference", required=true)
       private final Output<String> valueReference;
 
-    public Output<String> getValueReference() {
+    public Output<String> valueReference() {
         return this.valueReference;
     }
 

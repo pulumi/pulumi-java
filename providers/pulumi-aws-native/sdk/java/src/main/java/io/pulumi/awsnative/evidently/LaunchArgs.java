@@ -23,49 +23,49 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="groups", required=true)
       private final Output<List<LaunchGroupObjectArgs>> groups;
 
-    public Output<List<LaunchGroupObjectArgs>> getGroups() {
+    public Output<List<LaunchGroupObjectArgs>> groups() {
         return this.groups;
     }
 
     @Import(name="metricMonitors")
       private final @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
 
-    public Output<List<LaunchMetricDefinitionObjectArgs>> getMetricMonitors() {
+    public Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors() {
         return this.metricMonitors == null ? Codegen.empty() : this.metricMonitors;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
     @Import(name="randomizationSalt")
       private final @Nullable Output<String> randomizationSalt;
 
-    public Output<String> getRandomizationSalt() {
+    public Output<String> randomizationSalt() {
         return this.randomizationSalt == null ? Codegen.empty() : this.randomizationSalt;
     }
 
     @Import(name="scheduledSplitsConfig", required=true)
       private final Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
 
-    public Output<List<LaunchStepConfigArgs>> getScheduledSplitsConfig() {
+    public Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
     }
 
@@ -76,7 +76,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LaunchTagArgs>> tags;
 
-    public Output<List<LaunchTagArgs>> getTags() {
+    public Output<List<LaunchTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

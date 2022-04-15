@@ -20,21 +20,21 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryDescription")
       private final @Nullable Output<String> queryDescription;
 
-    public Output<String> getQueryDescription() {
+    public Output<String> queryDescription() {
         return this.queryDescription == null ? Codegen.empty() : this.queryDescription;
     }
 
     @Import(name="queryExpression", required=true)
       private final Output<String> queryExpression;
 
-    public Output<String> getQueryExpression() {
+    public Output<String> queryExpression() {
         return this.queryExpression;
     }
 
     @Import(name="queryName", required=true)
       private final Output<String> queryName;
 
-    public Output<String> getQueryName() {
+    public Output<String> queryName() {
         return this.queryName;
     }
 
@@ -45,7 +45,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StoredQueryTagArgs>> tags;
 
-    public Output<List<StoredQueryTagArgs>> getTags() {
+    public Output<List<StoredQueryTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -34,20 +34,20 @@ public final class GetEnvironmentResult {
         this.transitGatewayId = transitGatewayId;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getEnvironmentIdentifier() {
+    public Optional<String> environmentIdentifier() {
         return Optional.ofNullable(this.environmentIdentifier);
     }
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
     */
-    public List<EnvironmentTag> getTags() {
+    public List<EnvironmentTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getTransitGatewayId() {
+    public Optional<String> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
 

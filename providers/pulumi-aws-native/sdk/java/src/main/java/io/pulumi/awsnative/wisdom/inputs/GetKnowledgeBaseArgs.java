@@ -15,7 +15,7 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="knowledgeBaseId", required=true)
       private final String knowledgeBaseId;
 
-    public String getKnowledgeBaseId() {
+    public String knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 

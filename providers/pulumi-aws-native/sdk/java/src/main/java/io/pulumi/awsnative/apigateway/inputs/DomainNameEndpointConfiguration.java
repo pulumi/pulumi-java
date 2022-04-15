@@ -18,7 +18,7 @@ public final class DomainNameEndpointConfiguration extends io.pulumi.resources.I
     @Import(name="types")
       private final @Nullable List<String> types;
 
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types == null ? List.of() : this.types;
     }
 

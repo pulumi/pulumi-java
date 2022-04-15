@@ -19,42 +19,42 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="architecture")
       private final @Nullable Output<FilterStringFilterArgs> architecture;
 
-    public Output<FilterStringFilterArgs> getArchitecture() {
+    public Output<FilterStringFilterArgs> architecture() {
         return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
     @Import(name="epoch")
       private final @Nullable Output<FilterNumberFilterArgs> epoch;
 
-    public Output<FilterNumberFilterArgs> getEpoch() {
+    public Output<FilterNumberFilterArgs> epoch() {
         return this.epoch == null ? Codegen.empty() : this.epoch;
     }
 
     @Import(name="name")
       private final @Nullable Output<FilterStringFilterArgs> name;
 
-    public Output<FilterStringFilterArgs> getName() {
+    public Output<FilterStringFilterArgs> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="release")
       private final @Nullable Output<FilterStringFilterArgs> release;
 
-    public Output<FilterStringFilterArgs> getRelease() {
+    public Output<FilterStringFilterArgs> release() {
         return this.release == null ? Codegen.empty() : this.release;
     }
 
     @Import(name="sourceLayerHash")
       private final @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
 
-    public Output<FilterStringFilterArgs> getSourceLayerHash() {
+    public Output<FilterStringFilterArgs> sourceLayerHash() {
         return this.sourceLayerHash == null ? Codegen.empty() : this.sourceLayerHash;
     }
 
     @Import(name="version")
       private final @Nullable Output<FilterStringFilterArgs> version;
 
-    public Output<FilterStringFilterArgs> getVersion() {
+    public Output<FilterStringFilterArgs> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

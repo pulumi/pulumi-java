@@ -21,7 +21,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputArgs extends io.pulumi.
     @Import(name="s3Output", required=true)
       private final Output<ModelBiasJobDefinitionS3OutputArgs> s3Output;
 
-    public Output<ModelBiasJobDefinitionS3OutputArgs> getS3Output() {
+    public Output<ModelBiasJobDefinitionS3OutputArgs> s3Output() {
         return this.s3Output;
     }
 

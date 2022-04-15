@@ -23,10 +23,10 @@ public final class DomainConfigurationAuthorizerConfig {
         this.defaultAuthorizerName = defaultAuthorizerName;
     }
 
-    public Optional<Boolean> getAllowAuthorizerOverride() {
+    public Optional<Boolean> allowAuthorizerOverride() {
         return Optional.ofNullable(this.allowAuthorizerOverride);
     }
-    public Optional<String> getDefaultAuthorizerName() {
+    public Optional<String> defaultAuthorizerName() {
         return Optional.ofNullable(this.defaultAuthorizerName);
     }
 

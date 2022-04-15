@@ -19,28 +19,28 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     @Import(name="android")
       private final @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> android;
 
-    public Output<InAppTemplateOverrideButtonConfigurationArgs> getAndroid() {
+    public Output<InAppTemplateOverrideButtonConfigurationArgs> android() {
         return this.android == null ? Codegen.empty() : this.android;
     }
 
     @Import(name="defaultConfig")
       private final @Nullable Output<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig;
 
-    public Output<InAppTemplateDefaultButtonConfigurationArgs> getDefaultConfig() {
+    public Output<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig() {
         return this.defaultConfig == null ? Codegen.empty() : this.defaultConfig;
     }
 
     @Import(name="iOS")
       private final @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> iOS;
 
-    public Output<InAppTemplateOverrideButtonConfigurationArgs> getIOS() {
+    public Output<InAppTemplateOverrideButtonConfigurationArgs> iOS() {
         return this.iOS == null ? Codegen.empty() : this.iOS;
     }
 
     @Import(name="web")
       private final @Nullable Output<InAppTemplateOverrideButtonConfigurationArgs> web;
 
-    public Output<InAppTemplateOverrideButtonConfigurationArgs> getWeb() {
+    public Output<InAppTemplateOverrideButtonConfigurationArgs> web() {
         return this.web == null ? Codegen.empty() : this.web;
     }
 

@@ -46,7 +46,7 @@ public final class FleetServerProcess {
      * The number of server processes that use this configuration to run concurrently on an instance.
      * 
     */
-    public Integer getConcurrentExecutions() {
+    public Integer concurrentExecutions() {
         return this.concurrentExecutions;
     }
     /**
@@ -57,14 +57,14 @@ public final class FleetServerProcess {
      * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
      * 
     */
-    public String getLaunchPath() {
+    public String launchPath() {
         return this.launchPath;
     }
     /**
      * An optional list of parameters to pass to the server executable or Realtime script on launch.
      * 
     */
-    public Optional<String> getParameters() {
+    public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
 

@@ -23,10 +23,10 @@ public final class ObjectTypeFieldMap {
         this.objectTypeField = objectTypeField;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<ObjectTypeField> getObjectTypeField() {
+    public Optional<ObjectTypeField> objectTypeField() {
         return Optional.ofNullable(this.objectTypeField);
     }
 

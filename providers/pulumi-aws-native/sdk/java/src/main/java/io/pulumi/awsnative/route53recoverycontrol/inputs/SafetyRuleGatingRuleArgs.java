@@ -27,7 +27,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     @Import(name="gatingControls", required=true)
       private final Output<List<String>> gatingControls;
 
-    public Output<List<String>> getGatingControls() {
+    public Output<List<String>> gatingControls() {
         return this.gatingControls;
     }
 
@@ -39,7 +39,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     @Import(name="targetControls", required=true)
       private final Output<List<String>> targetControls;
 
-    public Output<List<String>> getTargetControls() {
+    public Output<List<String>> targetControls() {
         return this.targetControls;
     }
 
@@ -50,7 +50,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     @Import(name="waitPeriodMs", required=true)
       private final Output<Integer> waitPeriodMs;
 
-    public Output<Integer> getWaitPeriodMs() {
+    public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 

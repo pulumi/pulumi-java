@@ -28,16 +28,16 @@ public final class PipelineMath {
         this.next = next;
     }
 
-    public String getAttribute() {
+    public String attribute() {
         return this.attribute;
     }
-    public String getMath() {
+    public String math() {
         return this.math;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return Optional.ofNullable(this.next);
     }
 

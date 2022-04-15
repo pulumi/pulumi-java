@@ -21,28 +21,28 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     @Import(name="aggregateKeyType", required=true)
       private final Output<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
 
-    public Output<RuleGroupRateBasedStatementAggregateKeyType> getAggregateKeyType() {
+    public Output<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @Import(name="forwardedIPConfig")
       private final @Nullable Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
+    public Output<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig() {
         return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
     }
 
     @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
+    public Output<Integer> limit() {
         return this.limit;
     }
 
     @Import(name="scopeDownStatement")
       private final @Nullable Output<RuleGroupStatementArgs> scopeDownStatement;
 
-    public Output<RuleGroupStatementArgs> getScopeDownStatement() {
+    public Output<RuleGroupStatementArgs> scopeDownStatement() {
         return this.scopeDownStatement == null ? Codegen.empty() : this.scopeDownStatement;
     }
 

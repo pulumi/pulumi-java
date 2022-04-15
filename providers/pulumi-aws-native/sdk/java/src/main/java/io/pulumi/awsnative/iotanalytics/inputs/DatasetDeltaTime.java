@@ -16,14 +16,14 @@ public final class DatasetDeltaTime extends io.pulumi.resources.InvokeArgs {
     @Import(name="offsetSeconds", required=true)
       private final Integer offsetSeconds;
 
-    public Integer getOffsetSeconds() {
+    public Integer offsetSeconds() {
         return this.offsetSeconds;
     }
 
     @Import(name="timeExpression", required=true)
       private final String timeExpression;
 
-    public String getTimeExpression() {
+    public String timeExpression() {
         return this.timeExpression;
     }
 

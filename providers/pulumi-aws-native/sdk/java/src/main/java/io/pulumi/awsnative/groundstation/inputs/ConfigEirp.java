@@ -18,14 +18,14 @@ public final class ConfigEirp extends io.pulumi.resources.InvokeArgs {
     @Import(name="units")
       private final @Nullable ConfigEirpUnits units;
 
-    public Optional<ConfigEirpUnits> getUnits() {
+    public Optional<ConfigEirpUnits> units() {
         return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
       private final @Nullable Double value;
 
-    public Optional<Double> getValue() {
+    public Optional<Double> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

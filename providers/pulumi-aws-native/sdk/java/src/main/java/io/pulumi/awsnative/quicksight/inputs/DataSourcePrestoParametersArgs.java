@@ -26,7 +26,7 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
     @Import(name="catalog", required=true)
       private final Output<String> catalog;
 
-    public Output<String> getCatalog() {
+    public Output<String> catalog() {
         return this.catalog;
     }
 
@@ -37,7 +37,7 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -48,7 +48,7 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
     @Import(name="port", required=true)
       private final Output<Double> port;
 
-    public Output<Double> getPort() {
+    public Output<Double> port() {
         return this.port;
     }
 

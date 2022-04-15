@@ -25,13 +25,13 @@ public final class TopicRuleStepFunctionsAction {
         this.stateMachineName = stateMachineName;
     }
 
-    public Optional<String> getExecutionNamePrefix() {
+    public Optional<String> executionNamePrefix() {
         return Optional.ofNullable(this.executionNamePrefix);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getStateMachineName() {
+    public String stateMachineName() {
         return this.stateMachineName;
     }
 

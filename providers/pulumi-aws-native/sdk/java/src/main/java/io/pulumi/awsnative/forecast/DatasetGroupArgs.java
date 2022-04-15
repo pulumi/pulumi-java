@@ -25,7 +25,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetArns")
       private final @Nullable Output<List<String>> datasetArns;
 
-    public Output<List<String>> getDatasetArns() {
+    public Output<List<String>> datasetArns() {
         return this.datasetArns == null ? Codegen.empty() : this.datasetArns;
     }
 
@@ -36,7 +36,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetGroupName")
       private final @Nullable Output<String> datasetGroupName;
 
-    public Output<String> getDatasetGroupName() {
+    public Output<String> datasetGroupName() {
         return this.datasetGroupName == null ? Codegen.empty() : this.datasetGroupName;
     }
 
@@ -47,7 +47,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<DatasetGroupDomain> domain;
 
-    public Output<DatasetGroupDomain> getDomain() {
+    public Output<DatasetGroupDomain> domain() {
         return this.domain;
     }
 
@@ -58,7 +58,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DatasetGroupTagArgs>> tags;
 
-    public Output<List<DatasetGroupTagArgs>> getTags() {
+    public Output<List<DatasetGroupTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

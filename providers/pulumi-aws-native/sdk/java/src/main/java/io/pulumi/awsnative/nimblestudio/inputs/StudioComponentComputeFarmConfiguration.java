@@ -25,7 +25,7 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
     @Import(name="activeDirectoryUser")
       private final @Nullable String activeDirectoryUser;
 
-    public Optional<String> getActiveDirectoryUser() {
+    public Optional<String> activeDirectoryUser() {
         return this.activeDirectoryUser == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryUser);
     }
 
@@ -36,7 +36,7 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
     @Import(name="endpoint")
       private final @Nullable String endpoint;
 
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 

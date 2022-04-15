@@ -17,7 +17,7 @@ public final class TopicRulePutItemInputArgs extends io.pulumi.resources.Resourc
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

@@ -17,7 +17,7 @@ public final class BucketDeleteMarkerReplication extends io.pulumi.resources.Inv
     @Import(name="status")
       private final @Nullable BucketDeleteMarkerReplicationStatus status;
 
-    public Optional<BucketDeleteMarkerReplicationStatus> getStatus() {
+    public Optional<BucketDeleteMarkerReplicationStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

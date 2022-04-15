@@ -18,14 +18,14 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
     @Import(name="appIntegrationArn", required=true)
       private final Output<String> appIntegrationArn;
 
-    public Output<String> getAppIntegrationArn() {
+    public Output<String> appIntegrationArn() {
         return this.appIntegrationArn;
     }
 
     @Import(name="objectFields", required=true)
       private final Output<List<String>> objectFields;
 
-    public Output<List<String>> getObjectFields() {
+    public Output<List<String>> objectFields() {
         return this.objectFields;
     }
 

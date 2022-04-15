@@ -24,7 +24,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     @Import(name="destinationFileLocation")
       private final @Nullable Output<WorkflowInputFileLocationArgs> destinationFileLocation;
 
-    public Output<WorkflowInputFileLocationArgs> getDestinationFileLocation() {
+    public Output<WorkflowInputFileLocationArgs> destinationFileLocation() {
         return this.destinationFileLocation == null ? Codegen.empty() : this.destinationFileLocation;
     }
 
@@ -35,7 +35,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     @Import(name="overwriteExisting")
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
 
-    public Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
+    public Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting() {
         return this.overwriteExisting == null ? Codegen.empty() : this.overwriteExisting;
     }
 

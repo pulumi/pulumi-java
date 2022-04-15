@@ -19,14 +19,14 @@ public final class DatasetQueryAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<DatasetFilter> filters;
 
-    public List<DatasetFilter> getFilters() {
+    public List<DatasetFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
     @Import(name="sqlQuery", required=true)
       private final String sqlQuery;
 
-    public String getSqlQuery() {
+    public String sqlQuery() {
         return this.sqlQuery;
     }
 

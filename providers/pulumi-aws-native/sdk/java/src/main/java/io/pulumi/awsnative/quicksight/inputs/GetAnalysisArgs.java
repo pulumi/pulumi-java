@@ -15,14 +15,14 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="analysisId", required=true)
       private final String analysisId;
 
-    public String getAnalysisId() {
+    public String analysisId() {
         return this.analysisId;
     }
 
     @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
-    public String getAwsAccountId() {
+    public String awsAccountId() {
         return this.awsAccountId;
     }
 

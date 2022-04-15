@@ -88,66 +88,66 @@ public final class GetAuthorizerResult {
      * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
      * 
     */
-    public Optional<String> getAuthType() {
+    public Optional<String> authType() {
         return Optional.ofNullable(this.authType);
     }
     /**
      * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
      * 
     */
-    public Optional<String> getAuthorizerCredentials() {
+    public Optional<String> authorizerCredentials() {
         return Optional.ofNullable(this.authorizerCredentials);
     }
-    public Optional<String> getAuthorizerId() {
+    public Optional<String> authorizerId() {
         return Optional.ofNullable(this.authorizerId);
     }
     /**
      * The TTL in seconds of cached authorizer results.
      * 
     */
-    public Optional<Integer> getAuthorizerResultTtlInSeconds() {
+    public Optional<Integer> authorizerResultTtlInSeconds() {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
     /**
      * Specifies the authorizer's Uniform Resource Identifier (URI).
      * 
     */
-    public Optional<String> getAuthorizerUri() {
+    public Optional<String> authorizerUri() {
         return Optional.ofNullable(this.authorizerUri);
     }
     /**
      * The identity source for which authorization is requested.
      * 
     */
-    public Optional<String> getIdentitySource() {
+    public Optional<String> identitySource() {
         return Optional.ofNullable(this.identitySource);
     }
     /**
      * A validation expression for the incoming identity token.
      * 
     */
-    public Optional<String> getIdentityValidationExpression() {
+    public Optional<String> identityValidationExpression() {
         return Optional.ofNullable(this.identityValidationExpression);
     }
     /**
      * The name of the authorizer.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
      * 
     */
-    public List<String> getProviderARNs() {
+    public List<String> providerARNs() {
         return this.providerARNs == null ? List.of() : this.providerARNs;
     }
     /**
      * The authorizer type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

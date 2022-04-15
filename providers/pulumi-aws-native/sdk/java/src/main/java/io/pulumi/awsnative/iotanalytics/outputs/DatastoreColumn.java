@@ -20,10 +20,10 @@ public final class DatastoreColumn {
         this.type = type;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

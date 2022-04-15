@@ -69,48 +69,48 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
      * The time at which the monitoring job was created.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
-    public Optional<String> getEndpointName() {
+    public Optional<String> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
     /**
      * Contains the reason a monitoring job failed, if it failed.
      * 
     */
-    public Optional<String> getFailureReason() {
+    public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The status of the monitoring job.
      * 
     */
-    public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus getMonitoringExecutionStatus() {
+    public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
-    public String getMonitoringScheduleName() {
+    public String monitoringScheduleName() {
         return this.monitoringScheduleName;
     }
     /**
      * The Amazon Resource Name (ARN) of the monitoring job.
      * 
     */
-    public Optional<String> getProcessingJobArn() {
+    public Optional<String> processingJobArn() {
         return Optional.ofNullable(this.processingJobArn);
     }
     /**
      * The time the monitoring job was scheduled.
      * 
     */
-    public String getScheduledTime() {
+    public String scheduledTime() {
         return this.scheduledTime;
     }
 

@@ -19,14 +19,14 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     @Import(name="triggerProperties")
       private final @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
 
-    public Output<IntegrationTriggerPropertiesArgs> getTriggerProperties() {
+    public Output<IntegrationTriggerPropertiesArgs> triggerProperties() {
         return this.triggerProperties == null ? Codegen.empty() : this.triggerProperties;
     }
 
     @Import(name="triggerType", required=true)
       private final Output<IntegrationTriggerType> triggerType;
 
-    public Output<IntegrationTriggerType> getTriggerType() {
+    public Output<IntegrationTriggerType> triggerType() {
         return this.triggerType;
     }
 

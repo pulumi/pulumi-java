@@ -17,14 +17,14 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
     @Import(name="kinesisStreamARN", required=true)
       private final Output<String> kinesisStreamARN;
 
-    public Output<String> getKinesisStreamARN() {
+    public Output<String> kinesisStreamARN() {
         return this.kinesisStreamARN;
     }
 
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 

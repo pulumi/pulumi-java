@@ -17,7 +17,7 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
     @Import(name="timeoutInMinutes", required=true)
       private final Output<Integer> timeoutInMinutes;
 
-    public Output<Integer> getTimeoutInMinutes() {
+    public Output<Integer> timeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 

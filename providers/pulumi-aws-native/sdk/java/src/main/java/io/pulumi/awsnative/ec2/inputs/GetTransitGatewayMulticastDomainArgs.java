@@ -19,7 +19,7 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final String transitGatewayMulticastDomainId;
 
-    public String getTransitGatewayMulticastDomainId() {
+    public String transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

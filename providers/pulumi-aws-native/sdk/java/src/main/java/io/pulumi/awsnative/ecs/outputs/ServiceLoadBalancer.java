@@ -29,16 +29,16 @@ public final class ServiceLoadBalancer {
         this.targetGroupArn = targetGroupArn;
     }
 
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
-    public Optional<Integer> getContainerPort() {
+    public Optional<Integer> containerPort() {
         return Optional.ofNullable(this.containerPort);
     }
-    public Optional<String> getLoadBalancerName() {
+    public Optional<String> loadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
-    public Optional<String> getTargetGroupArn() {
+    public Optional<String> targetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }
 

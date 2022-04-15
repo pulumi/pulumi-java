@@ -46,28 +46,28 @@ public final class GetFileSystemResult {
         this.throughputMode = throughputMode;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<FileSystemBackupPolicy> getBackupPolicy() {
+    public Optional<FileSystemBackupPolicy> backupPolicy() {
         return Optional.ofNullable(this.backupPolicy);
     }
-    public Optional<String> getFileSystemId() {
+    public Optional<String> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
-    public Optional<Object> getFileSystemPolicy() {
+    public Optional<Object> fileSystemPolicy() {
         return Optional.ofNullable(this.fileSystemPolicy);
     }
-    public List<FileSystemElasticFileSystemTag> getFileSystemTags() {
+    public List<FileSystemElasticFileSystemTag> fileSystemTags() {
         return this.fileSystemTags == null ? List.of() : this.fileSystemTags;
     }
-    public List<FileSystemLifecyclePolicy> getLifecyclePolicies() {
+    public List<FileSystemLifecyclePolicy> lifecyclePolicies() {
         return this.lifecyclePolicies == null ? List.of() : this.lifecyclePolicies;
     }
-    public Optional<Double> getProvisionedThroughputInMibps() {
+    public Optional<Double> provisionedThroughputInMibps() {
         return Optional.ofNullable(this.provisionedThroughputInMibps);
     }
-    public Optional<String> getThroughputMode() {
+    public Optional<String> throughputMode() {
         return Optional.ofNullable(this.throughputMode);
     }
 

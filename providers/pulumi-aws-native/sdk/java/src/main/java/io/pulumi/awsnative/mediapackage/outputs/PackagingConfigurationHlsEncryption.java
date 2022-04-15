@@ -39,17 +39,17 @@ public final class PackagingConfigurationHlsEncryption {
      * An HTTP Live Streaming (HLS) encryption configuration.
      * 
     */
-    public Optional<String> getConstantInitializationVector() {
+    public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The encryption method to use.
      * 
     */
-    public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
+    public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }
-    public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {
+    public PackagingConfigurationSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

@@ -26,14 +26,14 @@ public final class JobValidationConfiguration extends io.pulumi.resources.Invoke
     @Import(name="rulesetArn", required=true)
       private final String rulesetArn;
 
-    public String getRulesetArn() {
+    public String rulesetArn() {
         return this.rulesetArn;
     }
 
     @Import(name="validationMode")
       private final @Nullable JobValidationMode validationMode;
 
-    public Optional<JobValidationMode> getValidationMode() {
+    public Optional<JobValidationMode> validationMode() {
         return this.validationMode == null ? Optional.empty() : Optional.ofNullable(this.validationMode);
     }
 

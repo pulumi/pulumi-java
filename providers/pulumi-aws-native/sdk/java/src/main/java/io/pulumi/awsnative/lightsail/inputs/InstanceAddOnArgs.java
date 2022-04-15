@@ -28,14 +28,14 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addOnType", required=true)
       private final Output<String> addOnType;
 
-    public Output<String> getAddOnType() {
+    public Output<String> addOnType() {
         return this.addOnType;
     }
 
     @Import(name="autoSnapshotAddOnRequest")
       private final @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
-    public Output<InstanceAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
+    public Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest() {
         return this.autoSnapshotAddOnRequest == null ? Codegen.empty() : this.autoSnapshotAddOnRequest;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<InstanceAddOnStatus> status;
 
-    public Output<InstanceAddOnStatus> getStatus() {
+    public Output<InstanceAddOnStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

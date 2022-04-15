@@ -27,7 +27,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
     @Import(name="deliveryStream")
       private final @Nullable Output<String> deliveryStream;
 
-    public Output<String> getDeliveryStream() {
+    public Output<String> deliveryStream() {
         return this.deliveryStream == null ? Codegen.empty() : this.deliveryStream;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

@@ -24,13 +24,13 @@ public final class DeliveryStreamVpcConfiguration {
         this.subnetIds = subnetIds;
     }
 
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
 

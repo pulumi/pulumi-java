@@ -23,7 +23,7 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
     @Export(name="storageLensConfiguration", type=StorageLensConfiguration.class, parameters={})
     private Output<StorageLensConfiguration> storageLensConfiguration;
 
-    public Output<StorageLensConfiguration> getStorageLensConfiguration() {
+    public Output<StorageLensConfiguration> storageLensConfiguration() {
         return this.storageLensConfiguration;
     }
     /**
@@ -37,7 +37,7 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
      * @return A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
      * 
      */
-    public Output</* @Nullable */ List<StorageLensTag>> getTags() {
+    public Output</* @Nullable */ List<StorageLensTag>> tags() {
         return this.tags;
     }
 

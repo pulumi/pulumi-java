@@ -31,7 +31,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @return The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
      * 
      */
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -45,7 +45,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @return The name of the Amazon S3 bucket to which the certificate was uploaded.
      * 
      */
-    public Output<String> getCertificateS3BucketName() {
+    public Output<String> certificateS3BucketName() {
         return this.certificateS3BucketName;
     }
     /**
@@ -59,7 +59,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @return The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
      * 
      */
-    public Output<String> getCertificateS3ObjectKey() {
+    public Output<String> certificateS3ObjectKey() {
         return this.certificateS3ObjectKey;
     }
     /**
@@ -73,7 +73,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @return The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
      * 
      */
-    public Output<String> getEncryptionKmsKeyId() {
+    public Output<String> encryptionKmsKeyId() {
         return this.encryptionKmsKeyId;
     }
     /**
@@ -87,7 +87,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @return The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 

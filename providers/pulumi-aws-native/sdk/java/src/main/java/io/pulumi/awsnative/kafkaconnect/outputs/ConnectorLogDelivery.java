@@ -16,7 +16,7 @@ public final class ConnectorLogDelivery {
         this.workerLogDelivery = workerLogDelivery;
     }
 
-    public ConnectorWorkerLogDelivery getWorkerLogDelivery() {
+    public ConnectorWorkerLogDelivery workerLogDelivery() {
         return this.workerLogDelivery;
     }
 

@@ -27,79 +27,79 @@ public class Policy extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="deleteAllPolicyResources", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteAllPolicyResources;
 
-    public Output</* @Nullable */ Boolean> getDeleteAllPolicyResources() {
+    public Output</* @Nullable */ Boolean> deleteAllPolicyResources() {
         return this.deleteAllPolicyResources;
     }
     @Export(name="excludeMap", type=PolicyIEMap.class, parameters={})
     private Output</* @Nullable */ PolicyIEMap> excludeMap;
 
-    public Output</* @Nullable */ PolicyIEMap> getExcludeMap() {
+    public Output</* @Nullable */ PolicyIEMap> excludeMap() {
         return this.excludeMap;
     }
     @Export(name="excludeResourceTags", type=Boolean.class, parameters={})
     private Output<Boolean> excludeResourceTags;
 
-    public Output<Boolean> getExcludeResourceTags() {
+    public Output<Boolean> excludeResourceTags() {
         return this.excludeResourceTags;
     }
     @Export(name="includeMap", type=PolicyIEMap.class, parameters={})
     private Output</* @Nullable */ PolicyIEMap> includeMap;
 
-    public Output</* @Nullable */ PolicyIEMap> getIncludeMap() {
+    public Output</* @Nullable */ PolicyIEMap> includeMap() {
         return this.includeMap;
     }
     @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
-    public Output<String> getPolicyName() {
+    public Output<String> policyName() {
         return this.policyName;
     }
     @Export(name="remediationEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> remediationEnabled;
 
-    public Output<Boolean> getRemediationEnabled() {
+    public Output<Boolean> remediationEnabled() {
         return this.remediationEnabled;
     }
     @Export(name="resourceTags", type=List.class, parameters={PolicyResourceTag.class})
     private Output</* @Nullable */ List<PolicyResourceTag>> resourceTags;
 
-    public Output</* @Nullable */ List<PolicyResourceTag>> getResourceTags() {
+    public Output</* @Nullable */ List<PolicyResourceTag>> resourceTags() {
         return this.resourceTags;
     }
     @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     @Export(name="resourceTypeList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resourceTypeList;
 
-    public Output</* @Nullable */ List<String>> getResourceTypeList() {
+    public Output</* @Nullable */ List<String>> resourceTypeList() {
         return this.resourceTypeList;
     }
     @Export(name="resourcesCleanUp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> resourcesCleanUp;
 
-    public Output</* @Nullable */ Boolean> getResourcesCleanUp() {
+    public Output</* @Nullable */ Boolean> resourcesCleanUp() {
         return this.resourcesCleanUp;
     }
     @Export(name="securityServicePolicyData", type=SecurityServicePolicyDataProperties.class, parameters={})
     private Output<SecurityServicePolicyDataProperties> securityServicePolicyData;
 
-    public Output<SecurityServicePolicyDataProperties> getSecurityServicePolicyData() {
+    public Output<SecurityServicePolicyDataProperties> securityServicePolicyData() {
         return this.securityServicePolicyData;
     }
     @Export(name="tags", type=List.class, parameters={PolicyTag.class})
     private Output</* @Nullable */ List<PolicyTag>> tags;
 
-    public Output</* @Nullable */ List<PolicyTag>> getTags() {
+    public Output</* @Nullable */ List<PolicyTag>> tags() {
         return this.tags;
     }
 

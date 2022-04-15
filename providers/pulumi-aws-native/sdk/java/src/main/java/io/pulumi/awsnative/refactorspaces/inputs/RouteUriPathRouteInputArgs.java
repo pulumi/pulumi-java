@@ -22,28 +22,28 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     @Import(name="activationState", required=true)
       private final Output<RouteActivationState> activationState;
 
-    public Output<RouteActivationState> getActivationState() {
+    public Output<RouteActivationState> activationState() {
         return this.activationState;
     }
 
     @Import(name="includeChildPaths")
       private final @Nullable Output<Boolean> includeChildPaths;
 
-    public Output<Boolean> getIncludeChildPaths() {
+    public Output<Boolean> includeChildPaths() {
         return this.includeChildPaths == null ? Codegen.empty() : this.includeChildPaths;
     }
 
     @Import(name="methods")
       private final @Nullable Output<List<RouteMethod>> methods;
 
-    public Output<List<RouteMethod>> getMethods() {
+    public Output<List<RouteMethod>> methods() {
         return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     @Import(name="sourcePath")
       private final @Nullable Output<String> sourcePath;
 
-    public Output<String> getSourcePath() {
+    public Output<String> sourcePath() {
         return this.sourcePath == null ? Codegen.empty() : this.sourcePath;
     }
 

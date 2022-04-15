@@ -22,10 +22,10 @@ public final class FeatureGroupS3StorageConfig {
         this.s3Uri = s3Uri;
     }
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
-    public String getS3Uri() {
+    public String s3Uri() {
         return this.s3Uri;
     }
 

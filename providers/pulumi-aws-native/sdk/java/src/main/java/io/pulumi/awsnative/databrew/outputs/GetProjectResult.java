@@ -49,28 +49,28 @@ public final class GetProjectResult {
      * Dataset name
      * 
     */
-    public Optional<String> getDatasetName() {
+    public Optional<String> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
      * Recipe name
      * 
     */
-    public Optional<String> getRecipeName() {
+    public Optional<String> recipeName() {
         return Optional.ofNullable(this.recipeName);
     }
     /**
      * Role arn
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * Sample
      * 
     */
-    public Optional<ProjectSample> getSample() {
+    public Optional<ProjectSample> sample() {
         return Optional.ofNullable(this.sample);
     }
 

@@ -23,35 +23,35 @@ public final class ClusterExecuteCommandLogConfigurationArgs extends io.pulumi.r
     @Import(name="cloudWatchEncryptionEnabled")
       private final @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
 
-    public Output<Boolean> getCloudWatchEncryptionEnabled() {
+    public Output<Boolean> cloudWatchEncryptionEnabled() {
         return this.cloudWatchEncryptionEnabled == null ? Codegen.empty() : this.cloudWatchEncryptionEnabled;
     }
 
     @Import(name="cloudWatchLogGroupName")
       private final @Nullable Output<String> cloudWatchLogGroupName;
 
-    public Output<String> getCloudWatchLogGroupName() {
+    public Output<String> cloudWatchLogGroupName() {
         return this.cloudWatchLogGroupName == null ? Codegen.empty() : this.cloudWatchLogGroupName;
     }
 
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
     @Import(name="s3EncryptionEnabled")
       private final @Nullable Output<Boolean> s3EncryptionEnabled;
 
-    public Output<Boolean> getS3EncryptionEnabled() {
+    public Output<Boolean> s3EncryptionEnabled() {
         return this.s3EncryptionEnabled == null ? Codegen.empty() : this.s3EncryptionEnabled;
     }
 
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
+    public Output<String> s3KeyPrefix() {
         return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 

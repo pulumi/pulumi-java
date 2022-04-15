@@ -24,10 +24,10 @@ public final class ListenerRuleForwardConfig {
         this.targetGroups = targetGroups;
     }
 
-    public Optional<ListenerRuleTargetGroupStickinessConfig> getTargetGroupStickinessConfig() {
+    public Optional<ListenerRuleTargetGroupStickinessConfig> targetGroupStickinessConfig() {
         return Optional.ofNullable(this.targetGroupStickinessConfig);
     }
-    public List<ListenerRuleTargetGroupTuple> getTargetGroups() {
+    public List<ListenerRuleTargetGroupTuple> targetGroups() {
         return this.targetGroups == null ? List.of() : this.targetGroups;
     }
 

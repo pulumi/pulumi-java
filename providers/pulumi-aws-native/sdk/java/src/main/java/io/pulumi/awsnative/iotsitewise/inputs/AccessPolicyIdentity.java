@@ -23,21 +23,21 @@ public final class AccessPolicyIdentity extends io.pulumi.resources.InvokeArgs {
     @Import(name="iamRole")
       private final @Nullable AccessPolicyIamRole iamRole;
 
-    public Optional<AccessPolicyIamRole> getIamRole() {
+    public Optional<AccessPolicyIamRole> iamRole() {
         return this.iamRole == null ? Optional.empty() : Optional.ofNullable(this.iamRole);
     }
 
     @Import(name="iamUser")
       private final @Nullable AccessPolicyIamUser iamUser;
 
-    public Optional<AccessPolicyIamUser> getIamUser() {
+    public Optional<AccessPolicyIamUser> iamUser() {
         return this.iamUser == null ? Optional.empty() : Optional.ofNullable(this.iamUser);
     }
 
     @Import(name="user")
       private final @Nullable AccessPolicyUser user;
 
-    public Optional<AccessPolicyUser> getUser() {
+    public Optional<AccessPolicyUser> user() {
         return this.user == null ? Optional.empty() : Optional.ofNullable(this.user);
     }
 

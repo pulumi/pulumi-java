@@ -21,7 +21,7 @@ public final class ManagedExecutionProperties extends io.pulumi.resources.Invoke
     @Import(name="active")
       private final @Nullable Boolean active;
 
-    public Optional<Boolean> getActive() {
+    public Optional<Boolean> active() {
         return this.active == null ? Optional.empty() : Optional.ofNullable(this.active);
     }
 

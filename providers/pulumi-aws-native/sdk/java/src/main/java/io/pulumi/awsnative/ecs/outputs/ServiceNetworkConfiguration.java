@@ -18,7 +18,7 @@ public final class ServiceNetworkConfiguration {
         this.awsvpcConfiguration = awsvpcConfiguration;
     }
 
-    public Optional<ServiceAwsVpcConfiguration> getAwsvpcConfiguration() {
+    public Optional<ServiceAwsVpcConfiguration> awsvpcConfiguration() {
         return Optional.ofNullable(this.awsvpcConfiguration);
     }
 

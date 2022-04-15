@@ -22,7 +22,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 

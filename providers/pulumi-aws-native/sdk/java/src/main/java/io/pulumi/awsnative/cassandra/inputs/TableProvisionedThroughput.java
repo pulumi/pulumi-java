@@ -19,14 +19,14 @@ public final class TableProvisionedThroughput extends io.pulumi.resources.Invoke
     @Import(name="readCapacityUnits", required=true)
       private final Integer readCapacityUnits;
 
-    public Integer getReadCapacityUnits() {
+    public Integer readCapacityUnits() {
         return this.readCapacityUnits;
     }
 
     @Import(name="writeCapacityUnits", required=true)
       private final Integer writeCapacityUnits;
 
-    public Integer getWriteCapacityUnits() {
+    public Integer writeCapacityUnits() {
         return this.writeCapacityUnits;
     }
 

@@ -22,49 +22,49 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alpnPolicy")
       private final @Nullable Output<List<String>> alpnPolicy;
 
-    public Output<List<String>> getAlpnPolicy() {
+    public Output<List<String>> alpnPolicy() {
         return this.alpnPolicy == null ? Codegen.empty() : this.alpnPolicy;
     }
 
     @Import(name="certificates")
       private final @Nullable Output<List<ListenerCertificateArgs>> certificates;
 
-    public Output<List<ListenerCertificateArgs>> getCertificates() {
+    public Output<List<ListenerCertificateArgs>> certificates() {
         return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     @Import(name="defaultActions", required=true)
       private final Output<List<ListenerActionArgs>> defaultActions;
 
-    public Output<List<ListenerActionArgs>> getDefaultActions() {
+    public Output<List<ListenerActionArgs>> defaultActions() {
         return this.defaultActions;
     }
 
     @Import(name="loadBalancerArn", required=true)
       private final Output<String> loadBalancerArn;
 
-    public Output<String> getLoadBalancerArn() {
+    public Output<String> loadBalancerArn() {
         return this.loadBalancerArn;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
-    public Output<String> getSslPolicy() {
+    public Output<String> sslPolicy() {
         return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 

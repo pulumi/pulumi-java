@@ -21,14 +21,14 @@ public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.Res
     @Import(name="endpointPort", required=true)
       private final Output<Integer> endpointPort;
 
-    public Output<Integer> getEndpointPort() {
+    public Output<Integer> endpointPort() {
         return this.endpointPort;
     }
 
     @Import(name="listenerPort", required=true)
       private final Output<Integer> listenerPort;
 
-    public Output<Integer> getListenerPort() {
+    public Output<Integer> listenerPort() {
         return this.listenerPort;
     }
 

@@ -22,14 +22,14 @@ public final class WebACLTextTransformationArgs extends io.pulumi.resources.Reso
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
     @Import(name="type", required=true)
       private final Output<WebACLTextTransformationType> type;
 
-    public Output<WebACLTextTransformationType> getType() {
+    public Output<WebACLTextTransformationType> type() {
         return this.type;
     }
 

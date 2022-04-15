@@ -22,10 +22,10 @@ public final class ProfilingGroupChannel {
         this.channelUri = channelUri;
     }
 
-    public Optional<String> getChannelId() {
+    public Optional<String> channelId() {
         return Optional.ofNullable(this.channelId);
     }
-    public String getChannelUri() {
+    public String channelUri() {
         return this.channelUri;
     }
 

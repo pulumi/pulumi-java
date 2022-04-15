@@ -27,14 +27,14 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
     @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName;
     }
 
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
+    public Output<DetectorModelPayloadArgs> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 

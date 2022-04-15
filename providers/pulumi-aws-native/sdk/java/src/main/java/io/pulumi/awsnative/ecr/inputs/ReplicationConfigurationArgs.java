@@ -26,7 +26,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="rules", required=true)
       private final Output<List<ReplicationConfigurationReplicationRuleArgs>> rules;
 
-    public Output<List<ReplicationConfigurationReplicationRuleArgs>> getRules() {
+    public Output<List<ReplicationConfigurationReplicationRuleArgs>> rules() {
         return this.rules;
     }
 

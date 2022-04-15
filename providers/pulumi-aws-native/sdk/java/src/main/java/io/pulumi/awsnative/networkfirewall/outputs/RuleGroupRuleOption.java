@@ -22,10 +22,10 @@ public final class RuleGroupRuleOption {
         this.settings = settings;
     }
 
-    public String getKeyword() {
+    public String keyword() {
         return this.keyword;
     }
-    public List<String> getSettings() {
+    public List<String> settings() {
         return this.settings == null ? List.of() : this.settings;
     }
 

@@ -19,7 +19,7 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="endpointGroupArn", required=true)
       private final String endpointGroupArn;
 
-    public String getEndpointGroupArn() {
+    public String endpointGroupArn() {
         return this.endpointGroupArn;
     }
 

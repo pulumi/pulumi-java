@@ -23,10 +23,10 @@ public final class PresignedUrlConfigProperties {
         this.roleArn = roleArn;
     }
 
-    public Optional<Integer> getExpiresInSec() {
+    public Optional<Integer> expiresInSec() {
         return Optional.ofNullable(this.expiresInSec);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

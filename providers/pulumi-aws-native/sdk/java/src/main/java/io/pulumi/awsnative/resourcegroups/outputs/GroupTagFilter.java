@@ -23,10 +23,10 @@ public final class GroupTagFilter {
         this.values = values;
     }
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

@@ -26,7 +26,7 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
     @Import(name="dataTransferProtection")
       private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
 
-    public Optional<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
+    public Optional<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection() {
         return this.dataTransferProtection == null ? Optional.empty() : Optional.ofNullable(this.dataTransferProtection);
     }
 
@@ -37,7 +37,7 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
     @Import(name="rpcProtection")
       private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
 
-    public Optional<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
+    public Optional<LocationHDFSQopConfigurationRpcProtection> rpcProtection() {
         return this.rpcProtection == null ? Optional.empty() : Optional.ofNullable(this.rpcProtection);
     }
 

@@ -35,7 +35,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The list of endpoint objects.
      * 
      */
-    public Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> getEndpointConfigurations() {
+    public Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> endpointConfigurations() {
         return this.endpointConfigurations;
     }
     /**
@@ -49,7 +49,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the endpoint group
      * 
      */
-    public Output<String> getEndpointGroupArn() {
+    public Output<String> endpointGroupArn() {
         return this.endpointGroupArn;
     }
     /**
@@ -63,7 +63,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the AWS Region where the endpoint group is located
      * 
      */
-    public Output<String> getEndpointGroupRegion() {
+    public Output<String> endpointGroupRegion() {
         return this.endpointGroupRegion;
     }
     /**
@@ -77,13 +77,13 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
      * 
      */
-    public Output</* @Nullable */ Integer> getHealthCheckIntervalSeconds() {
+    public Output</* @Nullable */ Integer> healthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds;
     }
     @Export(name="healthCheckPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckPath;
 
-    public Output</* @Nullable */ String> getHealthCheckPath() {
+    public Output</* @Nullable */ String> healthCheckPath() {
         return this.healthCheckPath;
     }
     /**
@@ -97,7 +97,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    public Output</* @Nullable */ Integer> getHealthCheckPort() {
+    public Output</* @Nullable */ Integer> healthCheckPort() {
         return this.healthCheckPort;
     }
     /**
@@ -111,7 +111,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    public Output</* @Nullable */ EndpointGroupHealthCheckProtocol> getHealthCheckProtocol() {
+    public Output</* @Nullable */ EndpointGroupHealthCheckProtocol> healthCheckProtocol() {
         return this.healthCheckProtocol;
     }
     /**
@@ -125,13 +125,13 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the listener
      * 
      */
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     @Export(name="portOverrides", type=List.class, parameters={EndpointGroupPortOverride.class})
     private Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides;
 
-    public Output</* @Nullable */ List<EndpointGroupPortOverride>> getPortOverrides() {
+    public Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides() {
         return this.portOverrides;
     }
     /**
@@ -145,7 +145,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The number of consecutive health checks required to set the state of the endpoint to unhealthy.
      * 
      */
-    public Output</* @Nullable */ Integer> getThresholdCount() {
+    public Output</* @Nullable */ Integer> thresholdCount() {
         return this.thresholdCount;
     }
     /**
@@ -159,7 +159,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @return The percentage of traffic to sent to an AWS Region
      * 
      */
-    public Output</* @Nullable */ Double> getTrafficDialPercentage() {
+    public Output</* @Nullable */ Double> trafficDialPercentage() {
         return this.trafficDialPercentage;
     }
 

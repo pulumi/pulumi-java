@@ -24,42 +24,42 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compressionFormat")
       private final @Nullable Output<JobOutputCompressionFormat> compressionFormat;
 
-    public Output<JobOutputCompressionFormat> getCompressionFormat() {
+    public Output<JobOutputCompressionFormat> compressionFormat() {
         return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
     @Import(name="format")
       private final @Nullable Output<JobOutputFormat> format;
 
-    public Output<JobOutputFormat> getFormat() {
+    public Output<JobOutputFormat> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
     @Import(name="formatOptions")
       private final @Nullable Output<JobOutputFormatOptionsArgs> formatOptions;
 
-    public Output<JobOutputFormatOptionsArgs> getFormatOptions() {
+    public Output<JobOutputFormatOptionsArgs> formatOptions() {
         return this.formatOptions == null ? Codegen.empty() : this.formatOptions;
     }
 
     @Import(name="location", required=true)
       private final Output<JobS3LocationArgs> location;
 
-    public Output<JobS3LocationArgs> getLocation() {
+    public Output<JobS3LocationArgs> location() {
         return this.location;
     }
 
     @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> getOverwrite() {
+    public Output<Boolean> overwrite() {
         return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     @Import(name="partitionColumns")
       private final @Nullable Output<List<String>> partitionColumns;
 
-    public Output<List<String>> getPartitionColumns() {
+    public Output<List<String>> partitionColumns() {
         return this.partitionColumns == null ? Codegen.empty() : this.partitionColumns;
     }
 

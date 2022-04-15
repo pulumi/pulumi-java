@@ -15,14 +15,14 @@ public final class TopicRuleCloudwatchLogsAction extends io.pulumi.resources.Inv
     @Import(name="logGroupName", required=true)
       private final String logGroupName;
 
-    public String getLogGroupName() {
+    public String logGroupName() {
         return this.logGroupName;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

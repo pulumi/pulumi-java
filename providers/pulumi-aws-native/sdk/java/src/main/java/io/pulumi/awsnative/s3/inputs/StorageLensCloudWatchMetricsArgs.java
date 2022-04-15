@@ -25,7 +25,7 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 

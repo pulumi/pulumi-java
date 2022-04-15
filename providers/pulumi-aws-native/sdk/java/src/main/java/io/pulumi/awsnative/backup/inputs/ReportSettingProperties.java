@@ -26,7 +26,7 @@ public final class ReportSettingProperties extends io.pulumi.resources.InvokeArg
     @Import(name="frameworkArns")
       private final @Nullable List<String> frameworkArns;
 
-    public List<String> getFrameworkArns() {
+    public List<String> frameworkArns() {
         return this.frameworkArns == null ? List.of() : this.frameworkArns;
     }
 
@@ -37,7 +37,7 @@ public final class ReportSettingProperties extends io.pulumi.resources.InvokeArg
     @Import(name="reportTemplate", required=true)
       private final String reportTemplate;
 
-    public String getReportTemplate() {
+    public String reportTemplate() {
         return this.reportTemplate;
     }
 

@@ -18,7 +18,7 @@ public final class NotificationChannelSnsChannelConfig {
         this.topicArn = topicArn;
     }
 
-    public Optional<String> getTopicArn() {
+    public Optional<String> topicArn() {
         return Optional.ofNullable(this.topicArn);
     }
 

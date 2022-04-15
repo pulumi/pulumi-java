@@ -19,28 +19,28 @@ public final class AnomalyDetectorS3SourceConfig extends io.pulumi.resources.Inv
     @Import(name="fileFormatDescriptor", required=true)
       private final AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
 
-    public AnomalyDetectorFileFormatDescriptor getFileFormatDescriptor() {
+    public AnomalyDetectorFileFormatDescriptor fileFormatDescriptor() {
         return this.fileFormatDescriptor;
     }
 
     @Import(name="historicalDataPathList")
       private final @Nullable List<String> historicalDataPathList;
 
-    public List<String> getHistoricalDataPathList() {
+    public List<String> historicalDataPathList() {
         return this.historicalDataPathList == null ? List.of() : this.historicalDataPathList;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="templatedPathList")
       private final @Nullable List<String> templatedPathList;
 
-    public List<String> getTemplatedPathList() {
+    public List<String> templatedPathList() {
         return this.templatedPathList == null ? List.of() : this.templatedPathList;
     }
 

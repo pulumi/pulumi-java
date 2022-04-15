@@ -26,37 +26,37 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
     @Export(name="actions", type=List.class, parameters={ListenerRuleAction.class})
     private Output<List<ListenerRuleAction>> actions;
 
-    public Output<List<ListenerRuleAction>> getActions() {
+    public Output<List<ListenerRuleAction>> actions() {
         return this.actions;
     }
     @Export(name="conditions", type=List.class, parameters={ListenerRuleRuleCondition.class})
     private Output<List<ListenerRuleRuleCondition>> conditions;
 
-    public Output<List<ListenerRuleRuleCondition>> getConditions() {
+    public Output<List<ListenerRuleRuleCondition>> conditions() {
         return this.conditions;
     }
     @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
     @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     @Export(name="ruleArn", type=String.class, parameters={})
     private Output<String> ruleArn;
 
-    public Output<String> getRuleArn() {
+    public Output<String> ruleArn() {
         return this.ruleArn;
     }
 

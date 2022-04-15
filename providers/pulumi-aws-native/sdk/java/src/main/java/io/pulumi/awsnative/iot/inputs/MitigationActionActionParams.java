@@ -26,42 +26,42 @@ public final class MitigationActionActionParams extends io.pulumi.resources.Invo
     @Import(name="addThingsToThingGroupParams")
       private final @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams;
 
-    public Optional<MitigationActionAddThingsToThingGroupParams> getAddThingsToThingGroupParams() {
+    public Optional<MitigationActionAddThingsToThingGroupParams> addThingsToThingGroupParams() {
         return this.addThingsToThingGroupParams == null ? Optional.empty() : Optional.ofNullable(this.addThingsToThingGroupParams);
     }
 
     @Import(name="enableIoTLoggingParams")
       private final @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams;
 
-    public Optional<MitigationActionEnableIoTLoggingParams> getEnableIoTLoggingParams() {
+    public Optional<MitigationActionEnableIoTLoggingParams> enableIoTLoggingParams() {
         return this.enableIoTLoggingParams == null ? Optional.empty() : Optional.ofNullable(this.enableIoTLoggingParams);
     }
 
     @Import(name="publishFindingToSnsParams")
       private final @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams;
 
-    public Optional<MitigationActionPublishFindingToSnsParams> getPublishFindingToSnsParams() {
+    public Optional<MitigationActionPublishFindingToSnsParams> publishFindingToSnsParams() {
         return this.publishFindingToSnsParams == null ? Optional.empty() : Optional.ofNullable(this.publishFindingToSnsParams);
     }
 
     @Import(name="replaceDefaultPolicyVersionParams")
       private final @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams;
 
-    public Optional<MitigationActionReplaceDefaultPolicyVersionParams> getReplaceDefaultPolicyVersionParams() {
+    public Optional<MitigationActionReplaceDefaultPolicyVersionParams> replaceDefaultPolicyVersionParams() {
         return this.replaceDefaultPolicyVersionParams == null ? Optional.empty() : Optional.ofNullable(this.replaceDefaultPolicyVersionParams);
     }
 
     @Import(name="updateCACertificateParams")
       private final @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams;
 
-    public Optional<MitigationActionUpdateCACertificateParams> getUpdateCACertificateParams() {
+    public Optional<MitigationActionUpdateCACertificateParams> updateCACertificateParams() {
         return this.updateCACertificateParams == null ? Optional.empty() : Optional.ofNullable(this.updateCACertificateParams);
     }
 
     @Import(name="updateDeviceCertificateParams")
       private final @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams;
 
-    public Optional<MitigationActionUpdateDeviceCertificateParams> getUpdateDeviceCertificateParams() {
+    public Optional<MitigationActionUpdateDeviceCertificateParams> updateDeviceCertificateParams() {
         return this.updateDeviceCertificateParams == null ? Optional.empty() : Optional.ofNullable(this.updateDeviceCertificateParams);
     }
 

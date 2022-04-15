@@ -18,14 +18,14 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="offsetSeconds", required=true)
       private final Output<Integer> offsetSeconds;
 
-    public Output<Integer> getOffsetSeconds() {
+    public Output<Integer> offsetSeconds() {
         return this.offsetSeconds;
     }
 
     @Import(name="timeExpression", required=true)
       private final Output<String> timeExpression;
 
-    public Output<String> getTimeExpression() {
+    public Output<String> timeExpression() {
         return this.timeExpression;
     }
 

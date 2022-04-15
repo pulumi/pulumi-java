@@ -18,7 +18,7 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     @Import(name="daysBeforeExpiry")
       private final @Nullable Output<Integer> daysBeforeExpiry;
 
-    public Output<Integer> getDaysBeforeExpiry() {
+    public Output<Integer> daysBeforeExpiry() {
         return this.daysBeforeExpiry == null ? Codegen.empty() : this.daysBeforeExpiry;
     }
 

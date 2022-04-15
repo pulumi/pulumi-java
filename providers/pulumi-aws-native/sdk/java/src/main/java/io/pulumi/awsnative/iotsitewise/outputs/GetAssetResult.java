@@ -65,41 +65,41 @@ public final class GetAssetResult {
      * The ARN of the asset
      * 
     */
-    public Optional<String> getAssetArn() {
+    public Optional<String> assetArn() {
         return Optional.ofNullable(this.assetArn);
     }
-    public List<AssetHierarchy> getAssetHierarchies() {
+    public List<AssetHierarchy> assetHierarchies() {
         return this.assetHierarchies == null ? List.of() : this.assetHierarchies;
     }
     /**
      * The ID of the asset
      * 
     */
-    public Optional<String> getAssetId() {
+    public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
     /**
      * The ID of the asset model from which to create the asset.
      * 
     */
-    public Optional<String> getAssetModelId() {
+    public Optional<String> assetModelId() {
         return Optional.ofNullable(this.assetModelId);
     }
     /**
      * A unique, friendly name for the asset.
      * 
     */
-    public Optional<String> getAssetName() {
+    public Optional<String> assetName() {
         return Optional.ofNullable(this.assetName);
     }
-    public List<AssetProperty> getAssetProperties() {
+    public List<AssetProperty> assetProperties() {
         return this.assetProperties == null ? List.of() : this.assetProperties;
     }
     /**
      * A list of key-value pairs that contain metadata for the asset.
      * 
     */
-    public List<AssetTag> getTags() {
+    public List<AssetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

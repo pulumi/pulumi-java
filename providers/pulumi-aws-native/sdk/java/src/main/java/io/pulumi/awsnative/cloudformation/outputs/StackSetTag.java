@@ -32,14 +32,14 @@ public final class StackSetTag {
      * A string used to identify this tag. You can specify a maximum of 127 characters for a tag key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * A string containing the value for this tag. You can specify a maximum of 256 characters for a tag value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

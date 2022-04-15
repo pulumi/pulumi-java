@@ -23,10 +23,10 @@ public final class RepositoryEncryptionConfiguration {
         this.kmsKey = kmsKey;
     }
 
-    public RepositoryEncryptionType getEncryptionType() {
+    public RepositoryEncryptionType encryptionType() {
         return this.encryptionType;
     }
-    public Optional<String> getKmsKey() {
+    public Optional<String> kmsKey() {
         return Optional.ofNullable(this.kmsKey);
     }
 

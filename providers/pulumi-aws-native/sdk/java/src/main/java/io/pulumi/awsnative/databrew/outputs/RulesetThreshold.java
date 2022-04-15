@@ -27,13 +27,13 @@ public final class RulesetThreshold {
         this.value = value;
     }
 
-    public Optional<RulesetThresholdType> getType() {
+    public Optional<RulesetThresholdType> type() {
         return Optional.ofNullable(this.type);
     }
-    public Optional<RulesetThresholdUnit> getUnit() {
+    public Optional<RulesetThresholdUnit> unit() {
         return Optional.ofNullable(this.unit);
     }
-    public Double getValue() {
+    public Double value() {
         return this.value;
     }
 

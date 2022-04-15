@@ -19,56 +19,56 @@ public final class AnomalyDetectorRedshiftSourceConfigArgs extends io.pulumi.res
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="databaseHost", required=true)
       private final Output<String> databaseHost;
 
-    public Output<String> getDatabaseHost() {
+    public Output<String> databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
       private final Output<Integer> databasePort;
 
-    public Output<Integer> getDatabasePort() {
+    public Output<Integer> databasePort() {
         return this.databasePort;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="secretManagerArn", required=true)
       private final Output<String> secretManagerArn;
 
-    public Output<String> getSecretManagerArn() {
+    public Output<String> secretManagerArn() {
         return this.secretManagerArn;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="vpcConfiguration", required=true)
       private final Output<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<AnomalyDetectorVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 

@@ -23,10 +23,10 @@ public final class ServicePlacementConstraint {
         this.type = type;
     }
 
-    public Optional<String> getExpression() {
+    public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
-    public ServicePlacementConstraintType getType() {
+    public ServicePlacementConstraintType type() {
         return this.type;
     }
 

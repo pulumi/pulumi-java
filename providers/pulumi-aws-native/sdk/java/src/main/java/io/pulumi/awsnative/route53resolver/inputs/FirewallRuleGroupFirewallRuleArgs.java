@@ -30,7 +30,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="action", required=true)
       private final Output<FirewallRuleGroupFirewallRuleAction> action;
 
-    public Output<FirewallRuleGroupFirewallRuleAction> getAction() {
+    public Output<FirewallRuleGroupFirewallRuleAction> action() {
         return this.action;
     }
 
@@ -41,7 +41,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="blockOverrideDnsType")
       private final @Nullable Output<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType;
 
-    public Output<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> getBlockOverrideDnsType() {
+    public Output<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType() {
         return this.blockOverrideDnsType == null ? Codegen.empty() : this.blockOverrideDnsType;
     }
 
@@ -52,7 +52,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="blockOverrideDomain")
       private final @Nullable Output<String> blockOverrideDomain;
 
-    public Output<String> getBlockOverrideDomain() {
+    public Output<String> blockOverrideDomain() {
         return this.blockOverrideDomain == null ? Codegen.empty() : this.blockOverrideDomain;
     }
 
@@ -63,7 +63,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="blockOverrideTtl")
       private final @Nullable Output<Integer> blockOverrideTtl;
 
-    public Output<Integer> getBlockOverrideTtl() {
+    public Output<Integer> blockOverrideTtl() {
         return this.blockOverrideTtl == null ? Codegen.empty() : this.blockOverrideTtl;
     }
 
@@ -74,7 +74,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="blockResponse")
       private final @Nullable Output<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse;
 
-    public Output<FirewallRuleGroupFirewallRuleBlockResponse> getBlockResponse() {
+    public Output<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse() {
         return this.blockResponse == null ? Codegen.empty() : this.blockResponse;
     }
 
@@ -85,7 +85,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="firewallDomainListId", required=true)
       private final Output<String> firewallDomainListId;
 
-    public Output<String> getFirewallDomainListId() {
+    public Output<String> firewallDomainListId() {
         return this.firewallDomainListId;
     }
 
@@ -96,7 +96,7 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 

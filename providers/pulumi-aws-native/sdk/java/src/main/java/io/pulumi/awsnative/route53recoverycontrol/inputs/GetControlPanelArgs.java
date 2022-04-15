@@ -19,7 +19,7 @@ public final class GetControlPanelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="controlPanelArn", required=true)
       private final String controlPanelArn;
 
-    public String getControlPanelArn() {
+    public String controlPanelArn() {
         return this.controlPanelArn;
     }
 

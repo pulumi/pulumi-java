@@ -16,7 +16,7 @@ public final class ScheduledQueryNotificationConfiguration {
         this.snsConfiguration = snsConfiguration;
     }
 
-    public ScheduledQuerySnsConfiguration getSnsConfiguration() {
+    public ScheduledQuerySnsConfiguration snsConfiguration() {
         return this.snsConfiguration;
     }
 

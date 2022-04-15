@@ -25,13 +25,13 @@ public final class BackupVaultLockConfigurationType {
         this.minRetentionDays = minRetentionDays;
     }
 
-    public Optional<Double> getChangeableForDays() {
+    public Optional<Double> changeableForDays() {
         return Optional.ofNullable(this.changeableForDays);
     }
-    public Optional<Double> getMaxRetentionDays() {
+    public Optional<Double> maxRetentionDays() {
         return Optional.ofNullable(this.maxRetentionDays);
     }
-    public Double getMinRetentionDays() {
+    public Double minRetentionDays() {
         return this.minRetentionDays;
     }
 

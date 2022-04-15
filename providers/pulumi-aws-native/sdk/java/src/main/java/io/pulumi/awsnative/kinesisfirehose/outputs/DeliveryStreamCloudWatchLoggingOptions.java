@@ -26,13 +26,13 @@ public final class DeliveryStreamCloudWatchLoggingOptions {
         this.logStreamName = logStreamName;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public Optional<String> getLogGroupName() {
+    public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
-    public Optional<String> getLogStreamName() {
+    public Optional<String> logStreamName() {
         return Optional.ofNullable(this.logStreamName);
     }
 

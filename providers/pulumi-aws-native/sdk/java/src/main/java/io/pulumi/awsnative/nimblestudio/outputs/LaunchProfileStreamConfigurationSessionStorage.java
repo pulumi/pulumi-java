@@ -34,10 +34,10 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
      *                 <code>UPLOAD</code>.</p>
      * 
     */
-    public List<LaunchProfileStreamingSessionStorageMode> getMode() {
+    public List<LaunchProfileStreamingSessionStorageMode> mode() {
         return this.mode == null ? List.of() : this.mode;
     }
-    public Optional<LaunchProfileStreamingSessionStorageRoot> getRoot() {
+    public Optional<LaunchProfileStreamingSessionStorageRoot> root() {
         return Optional.ofNullable(this.root);
     }
 

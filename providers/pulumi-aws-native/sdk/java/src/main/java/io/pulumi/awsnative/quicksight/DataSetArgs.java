@@ -29,7 +29,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
@@ -40,49 +40,49 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="columnGroups")
       private final @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups;
 
-    public Output<List<DataSetColumnGroupArgs>> getColumnGroups() {
+    public Output<List<DataSetColumnGroupArgs>> columnGroups() {
         return this.columnGroups == null ? Codegen.empty() : this.columnGroups;
     }
 
     @Import(name="columnLevelPermissionRules")
       private final @Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules;
 
-    public Output<List<DataSetColumnLevelPermissionRuleArgs>> getColumnLevelPermissionRules() {
+    public Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules() {
         return this.columnLevelPermissionRules == null ? Codegen.empty() : this.columnLevelPermissionRules;
     }
 
     @Import(name="dataSetId")
       private final @Nullable Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId == null ? Codegen.empty() : this.dataSetId;
     }
 
     @Import(name="fieldFolders")
       private final @Nullable Output<DataSetFieldFolderMapArgs> fieldFolders;
 
-    public Output<DataSetFieldFolderMapArgs> getFieldFolders() {
+    public Output<DataSetFieldFolderMapArgs> fieldFolders() {
         return this.fieldFolders == null ? Codegen.empty() : this.fieldFolders;
     }
 
     @Import(name="importMode")
       private final @Nullable Output<DataSetImportMode> importMode;
 
-    public Output<DataSetImportMode> getImportMode() {
+    public Output<DataSetImportMode> importMode() {
         return this.importMode == null ? Codegen.empty() : this.importMode;
     }
 
     @Import(name="ingestionWaitPolicy")
       private final @Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy;
 
-    public Output<DataSetIngestionWaitPolicyArgs> getIngestionWaitPolicy() {
+    public Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy() {
         return this.ingestionWaitPolicy == null ? Codegen.empty() : this.ingestionWaitPolicy;
     }
 
     @Import(name="logicalTableMap")
       private final @Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap;
 
-    public Output<DataSetLogicalTableMapArgs> getLogicalTableMap() {
+    public Output<DataSetLogicalTableMapArgs> logicalTableMap() {
         return this.logicalTableMap == null ? Codegen.empty() : this.logicalTableMap;
     }
 
@@ -93,7 +93,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,21 +104,21 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<DataSetResourcePermissionArgs>> permissions;
 
-    public Output<List<DataSetResourcePermissionArgs>> getPermissions() {
+    public Output<List<DataSetResourcePermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="physicalTableMap")
       private final @Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap;
 
-    public Output<DataSetPhysicalTableMapArgs> getPhysicalTableMap() {
+    public Output<DataSetPhysicalTableMapArgs> physicalTableMap() {
         return this.physicalTableMap == null ? Codegen.empty() : this.physicalTableMap;
     }
 
     @Import(name="rowLevelPermissionDataSet")
       private final @Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet;
 
-    public Output<DataSetRowLevelPermissionDataSetArgs> getRowLevelPermissionDataSet() {
+    public Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet() {
         return this.rowLevelPermissionDataSet == null ? Codegen.empty() : this.rowLevelPermissionDataSet;
     }
 
@@ -129,7 +129,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DataSetTagArgs>> tags;
 
-    public Output<List<DataSetTagArgs>> getTags() {
+    public Output<List<DataSetTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

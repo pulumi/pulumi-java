@@ -30,16 +30,16 @@ public final class AppBlockScriptDetails {
         this.timeoutInSeconds = timeoutInSeconds;
     }
 
-    public Optional<String> getExecutableParameters() {
+    public Optional<String> executableParameters() {
         return Optional.ofNullable(this.executableParameters);
     }
-    public String getExecutablePath() {
+    public String executablePath() {
         return this.executablePath;
     }
-    public AppBlockS3Location getScriptS3Location() {
+    public AppBlockS3Location scriptS3Location() {
         return this.scriptS3Location;
     }
-    public Integer getTimeoutInSeconds() {
+    public Integer timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 

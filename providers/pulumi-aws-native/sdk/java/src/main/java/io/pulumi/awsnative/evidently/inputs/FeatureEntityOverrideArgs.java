@@ -18,14 +18,14 @@ public final class FeatureEntityOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
-    public Output<String> getEntityId() {
+    public Output<String> entityId() {
         return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 
     @Import(name="variation")
       private final @Nullable Output<String> variation;
 
-    public Output<String> getVariation() {
+    public Output<String> variation() {
         return this.variation == null ? Codegen.empty() : this.variation;
     }
 

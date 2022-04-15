@@ -43,26 +43,26 @@ public final class RulesetRule {
         this.threshold = threshold;
     }
 
-    public String getCheckExpression() {
+    public String checkExpression() {
         return this.checkExpression;
     }
-    public List<RulesetColumnSelector> getColumnSelectors() {
+    public List<RulesetColumnSelector> columnSelectors() {
         return this.columnSelectors == null ? List.of() : this.columnSelectors;
     }
-    public Optional<Boolean> getDisabled() {
+    public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
      * Name of the rule
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<RulesetSubstitutionValue> getSubstitutionMap() {
+    public List<RulesetSubstitutionValue> substitutionMap() {
         return this.substitutionMap == null ? List.of() : this.substitutionMap;
     }
-    public Optional<RulesetThreshold> getThreshold() {
+    public Optional<RulesetThreshold> threshold() {
         return Optional.ofNullable(this.threshold);
     }
 

@@ -19,21 +19,21 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
+    public Output<String> bucketPrefix() {
         return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="s3OutputFormatConfig")
       private final @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
-    public Output<FlowS3OutputFormatConfigArgs> getS3OutputFormatConfig() {
+    public Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig() {
         return this.s3OutputFormatConfig == null ? Codegen.empty() : this.s3OutputFormatConfig;
     }
 

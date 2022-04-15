@@ -24,14 +24,14 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     @Import(name="audioLogSettings")
       private final @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
 
-    public Output<List<BotAliasAudioLogSettingArgs>> getAudioLogSettings() {
+    public Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings() {
         return this.audioLogSettings == null ? Codegen.empty() : this.audioLogSettings;
     }
 
     @Import(name="textLogSettings")
       private final @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
 
-    public Output<List<BotAliasTextLogSettingArgs>> getTextLogSettings() {
+    public Output<List<BotAliasTextLogSettingArgs>> textLogSettings() {
         return this.textLogSettings == null ? Codegen.empty() : this.textLogSettings;
     }
 

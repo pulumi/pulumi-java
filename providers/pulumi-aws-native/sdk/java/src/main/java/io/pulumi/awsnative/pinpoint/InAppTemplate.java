@@ -25,43 +25,43 @@ public class InAppTemplate extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="content", type=List.class, parameters={InAppTemplateInAppMessageContent.class})
     private Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> content;
 
-    public Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> getContent() {
+    public Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> content() {
         return this.content;
     }
     @Export(name="customConfig", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> customConfig;
 
-    public Output</* @Nullable */ Object> getCustomConfig() {
+    public Output</* @Nullable */ Object> customConfig() {
         return this.customConfig;
     }
     @Export(name="layout", type=InAppTemplateLayout.class, parameters={})
     private Output</* @Nullable */ InAppTemplateLayout> layout;
 
-    public Output</* @Nullable */ InAppTemplateLayout> getLayout() {
+    public Output</* @Nullable */ InAppTemplateLayout> layout() {
         return this.layout;
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     @Export(name="templateDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateDescription;
 
-    public Output</* @Nullable */ String> getTemplateDescription() {
+    public Output</* @Nullable */ String> templateDescription() {
         return this.templateDescription;
     }
     @Export(name="templateName", type=String.class, parameters={})
     private Output<String> templateName;
 
-    public Output<String> getTemplateName() {
+    public Output<String> templateName() {
         return this.templateName;
     }
 

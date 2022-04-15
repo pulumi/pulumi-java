@@ -86,63 +86,63 @@ public final class GetAssetResult {
      * The ARN of the Asset.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time the Asset was initially submitted for Ingest.
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * The list of egress endpoints available for the Asset.
      * 
     */
-    public List<AssetEgressEndpoint> getEgressEndpoints() {
+    public List<AssetEgressEndpoint> egressEndpoints() {
         return this.egressEndpoints == null ? List.of() : this.egressEndpoints;
     }
     /**
      * The unique identifier for the Asset.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The ID of the PackagingGroup for the Asset.
      * 
     */
-    public Optional<String> getPackagingGroupId() {
+    public Optional<String> packagingGroupId() {
         return Optional.ofNullable(this.packagingGroupId);
     }
     /**
      * The resource ID to include in SPEKE key requests.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * ARN of the source object in S3.
      * 
     */
-    public Optional<String> getSourceArn() {
+    public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
     /**
      * The IAM role_arn used to access the source S3 bucket.
      * 
     */
-    public Optional<String> getSourceRoleArn() {
+    public Optional<String> sourceRoleArn() {
         return Optional.ofNullable(this.sourceRoleArn);
     }
     /**
      * A collection of tags associated with a resource
      * 
     */
-    public List<AssetTag> getTags() {
+    public List<AssetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

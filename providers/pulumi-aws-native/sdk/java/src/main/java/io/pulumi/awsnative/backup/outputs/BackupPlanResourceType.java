@@ -27,13 +27,13 @@ public final class BackupPlanResourceType {
         this.backupPlanRule = backupPlanRule;
     }
 
-    public List<BackupPlanAdvancedBackupSettingResourceType> getAdvancedBackupSettings() {
+    public List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings() {
         return this.advancedBackupSettings == null ? List.of() : this.advancedBackupSettings;
     }
-    public String getBackupPlanName() {
+    public String backupPlanName() {
         return this.backupPlanName;
     }
-    public List<BackupPlanBackupRuleResourceType> getBackupPlanRule() {
+    public List<BackupPlanBackupRuleResourceType> backupPlanRule() {
         return this.backupPlanRule;
     }
 

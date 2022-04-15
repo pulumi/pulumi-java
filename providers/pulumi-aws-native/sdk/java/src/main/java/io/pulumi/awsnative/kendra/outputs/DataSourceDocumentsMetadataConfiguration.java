@@ -18,7 +18,7 @@ public final class DataSourceDocumentsMetadataConfiguration {
         this.s3Prefix = s3Prefix;
     }
 
-    public Optional<String> getS3Prefix() {
+    public Optional<String> s3Prefix() {
         return Optional.ofNullable(this.s3Prefix);
     }
 

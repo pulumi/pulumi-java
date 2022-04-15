@@ -18,21 +18,21 @@ public final class DataSourceProxyConfiguration extends io.pulumi.resources.Invo
     @Import(name="credentials")
       private final @Nullable String credentials;
 
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
     @Import(name="host", required=true)
       private final String host;
 
-    public String getHost() {
+    public String host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

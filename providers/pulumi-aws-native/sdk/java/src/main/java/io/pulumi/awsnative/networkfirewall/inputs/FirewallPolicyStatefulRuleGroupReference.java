@@ -18,14 +18,14 @@ public final class FirewallPolicyStatefulRuleGroupReference extends io.pulumi.re
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
     @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
-    public String getResourceArn() {
+    public String resourceArn() {
         return this.resourceArn;
     }
 

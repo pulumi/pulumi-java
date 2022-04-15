@@ -93,70 +93,70 @@ public final class GetDeviceResult {
      * The description of the device.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the device.
      * 
     */
-    public Optional<String> getDeviceArn() {
+    public Optional<String> deviceArn() {
         return Optional.ofNullable(this.deviceArn);
     }
     /**
      * The ID of the device.
      * 
     */
-    public Optional<String> getDeviceId() {
+    public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
      * The site location.
      * 
     */
-    public Optional<DeviceLocation> getLocation() {
+    public Optional<DeviceLocation> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The device model
      * 
     */
-    public Optional<String> getModel() {
+    public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
     /**
      * The device serial number.
      * 
     */
-    public Optional<String> getSerialNumber() {
+    public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
      * The site ID.
      * 
     */
-    public Optional<String> getSiteId() {
+    public Optional<String> siteId() {
         return Optional.ofNullable(this.siteId);
     }
     /**
      * The tags for the device.
      * 
     */
-    public List<DeviceTag> getTags() {
+    public List<DeviceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The device type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The device vendor.
      * 
     */
-    public Optional<String> getVendor() {
+    public Optional<String> vendor() {
         return Optional.ofNullable(this.vendor);
     }
 

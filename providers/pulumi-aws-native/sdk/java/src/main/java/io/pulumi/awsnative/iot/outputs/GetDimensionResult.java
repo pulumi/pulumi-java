@@ -43,21 +43,21 @@ public final class GetDimensionResult {
      * The ARN (Amazon resource name) of the created dimension.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Specifies the value or list of values for the dimension.
      * 
     */
-    public List<String> getStringValues() {
+    public List<String> stringValues() {
         return this.stringValues == null ? List.of() : this.stringValues;
     }
     /**
      * Metadata that can be used to manage the dimension.
      * 
     */
-    public List<DimensionTag> getTags() {
+    public List<DimensionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

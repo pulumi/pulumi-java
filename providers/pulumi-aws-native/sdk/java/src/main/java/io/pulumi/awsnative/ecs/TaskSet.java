@@ -35,7 +35,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     /**
@@ -49,7 +49,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
      * 
      */
-    public Output</* @Nullable */ String> getExternalId() {
+    public Output</* @Nullable */ String> externalId() {
         return this.externalId;
     }
     /**
@@ -63,19 +63,19 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
      * 
      */
-    public Output</* @Nullable */ TaskSetLaunchType> getLaunchType() {
+    public Output</* @Nullable */ TaskSetLaunchType> launchType() {
         return this.launchType;
     }
     @Export(name="loadBalancers", type=List.class, parameters={TaskSetLoadBalancer.class})
     private Output</* @Nullable */ List<TaskSetLoadBalancer>> loadBalancers;
 
-    public Output</* @Nullable */ List<TaskSetLoadBalancer>> getLoadBalancers() {
+    public Output</* @Nullable */ List<TaskSetLoadBalancer>> loadBalancers() {
         return this.loadBalancers;
     }
     @Export(name="networkConfiguration", type=TaskSetNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ TaskSetNetworkConfiguration> networkConfiguration;
 
-    public Output</* @Nullable */ TaskSetNetworkConfiguration> getNetworkConfiguration() {
+    public Output</* @Nullable */ TaskSetNetworkConfiguration> networkConfiguration() {
         return this.networkConfiguration;
     }
     /**
@@ -89,7 +89,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
      * 
      */
-    public Output</* @Nullable */ String> getPlatformVersion() {
+    public Output</* @Nullable */ String> platformVersion() {
         return this.platformVersion;
     }
     /**
@@ -103,7 +103,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
      */
-    public Output</* @Nullable */ TaskSetScale> getScale() {
+    public Output</* @Nullable */ TaskSetScale> scale() {
         return this.scale;
     }
     /**
@@ -117,7 +117,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -131,7 +131,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
      * 
      */
-    public Output</* @Nullable */ List<TaskSetServiceRegistry>> getServiceRegistries() {
+    public Output</* @Nullable */ List<TaskSetServiceRegistry>> serviceRegistries() {
         return this.serviceRegistries;
     }
     /**
@@ -145,7 +145,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * @return The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.
      * 
      */
-    public Output<String> getTaskDefinition() {
+    public Output<String> taskDefinition() {
         return this.taskDefinition;
     }
 

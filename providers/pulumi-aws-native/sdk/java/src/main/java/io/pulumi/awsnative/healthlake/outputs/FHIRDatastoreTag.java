@@ -32,14 +32,14 @@ public final class FHIRDatastoreTag {
      * The key of the tag.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The value of the tag.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

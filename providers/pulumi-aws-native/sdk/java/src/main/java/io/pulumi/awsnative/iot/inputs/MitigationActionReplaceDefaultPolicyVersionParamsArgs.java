@@ -21,7 +21,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     @Import(name="templateName", required=true)
       private final Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
-    public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> getTemplateName() {
+    public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName() {
         return this.templateName;
     }
 

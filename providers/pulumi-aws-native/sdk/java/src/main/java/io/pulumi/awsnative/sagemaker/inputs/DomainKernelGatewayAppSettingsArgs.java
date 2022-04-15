@@ -28,7 +28,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
     @Import(name="customImages")
       private final @Nullable Output<List<DomainCustomImageArgs>> customImages;
 
-    public Output<List<DomainCustomImageArgs>> getCustomImages() {
+    public Output<List<DomainCustomImageArgs>> customImages() {
         return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
@@ -39,7 +39,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
-    public Output<DomainResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<DomainResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 

@@ -19,7 +19,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

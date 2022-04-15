@@ -21,10 +21,10 @@ public final class BackupVaultNotificationObjectType {
         this.sNSTopicArn = sNSTopicArn;
     }
 
-    public List<String> getBackupVaultEvents() {
+    public List<String> backupVaultEvents() {
         return this.backupVaultEvents;
     }
-    public String getSNSTopicArn() {
+    public String sNSTopicArn() {
         return this.sNSTopicArn;
     }
 

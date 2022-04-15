@@ -27,13 +27,13 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
         this.roleArn = roleArn;
     }
 
-    public Optional<Boolean> getAllAwsRegions() {
+    public Optional<Boolean> allAwsRegions() {
         return Optional.ofNullable(this.allAwsRegions);
     }
-    public List<String> getAwsRegions() {
+    public List<String> awsRegions() {
         return this.awsRegions == null ? List.of() : this.awsRegions;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

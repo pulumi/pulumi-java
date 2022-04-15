@@ -26,7 +26,7 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
     @Import(name="insightType")
       private final @Nullable Output<String> insightType;
 
-    public Output<String> getInsightType() {
+    public Output<String> insightType() {
         return this.insightType == null ? Codegen.empty() : this.insightType;
     }
 

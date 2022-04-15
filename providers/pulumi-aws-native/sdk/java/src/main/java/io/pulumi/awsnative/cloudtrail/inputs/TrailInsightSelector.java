@@ -25,7 +25,7 @@ public final class TrailInsightSelector extends io.pulumi.resources.InvokeArgs {
     @Import(name="insightType")
       private final @Nullable String insightType;
 
-    public Optional<String> getInsightType() {
+    public Optional<String> insightType() {
         return this.insightType == null ? Optional.empty() : Optional.ofNullable(this.insightType);
     }
 

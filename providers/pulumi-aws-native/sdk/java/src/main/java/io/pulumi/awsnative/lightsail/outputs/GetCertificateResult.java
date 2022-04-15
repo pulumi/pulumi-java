@@ -35,21 +35,21 @@ public final class GetCertificateResult {
         this.tags = tags;
     }
 
-    public Optional<String> getCertificateArn() {
+    public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
      * The validation status of the certificate.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<CertificateTag> getTags() {
+    public List<CertificateTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

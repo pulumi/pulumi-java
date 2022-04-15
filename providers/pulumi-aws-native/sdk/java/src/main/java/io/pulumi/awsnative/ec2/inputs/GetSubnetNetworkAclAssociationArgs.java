@@ -15,7 +15,7 @@ public final class GetSubnetNetworkAclAssociationArgs extends io.pulumi.resource
     @Import(name="associationId", required=true)
       private final String associationId;
 
-    public String getAssociationId() {
+    public String associationId() {
         return this.associationId;
     }
 

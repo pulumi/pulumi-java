@@ -19,42 +19,42 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="destinationPort", required=true)
       private final Output<String> destinationPort;
 
-    public Output<String> getDestinationPort() {
+    public Output<String> destinationPort() {
         return this.destinationPort;
     }
 
     @Import(name="direction", required=true)
       private final Output<RuleGroupHeaderDirection> direction;
 
-    public Output<RuleGroupHeaderDirection> getDirection() {
+    public Output<RuleGroupHeaderDirection> direction() {
         return this.direction;
     }
 
     @Import(name="protocol", required=true)
       private final Output<RuleGroupHeaderProtocol> protocol;
 
-    public Output<RuleGroupHeaderProtocol> getProtocol() {
+    public Output<RuleGroupHeaderProtocol> protocol() {
         return this.protocol;
     }
 
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
     @Import(name="sourcePort", required=true)
       private final Output<String> sourcePort;
 
-    public Output<String> getSourcePort() {
+    public Output<String> sourcePort() {
         return this.sourcePort;
     }
 

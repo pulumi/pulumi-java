@@ -20,10 +20,10 @@ public final class CertificateEdiPartyName {
         this.partyName = partyName;
     }
 
-    public String getNameAssigner() {
+    public String nameAssigner() {
         return this.nameAssigner;
     }
-    public String getPartyName() {
+    public String partyName() {
         return this.partyName;
     }
 

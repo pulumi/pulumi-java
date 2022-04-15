@@ -19,49 +19,49 @@ public final class DataSourceGoogleDriveConfiguration extends io.pulumi.resource
     @Import(name="excludeMimeTypes")
       private final @Nullable List<String> excludeMimeTypes;
 
-    public List<String> getExcludeMimeTypes() {
+    public List<String> excludeMimeTypes() {
         return this.excludeMimeTypes == null ? List.of() : this.excludeMimeTypes;
     }
 
     @Import(name="excludeSharedDrives")
       private final @Nullable List<String> excludeSharedDrives;
 
-    public List<String> getExcludeSharedDrives() {
+    public List<String> excludeSharedDrives() {
         return this.excludeSharedDrives == null ? List.of() : this.excludeSharedDrives;
     }
 
     @Import(name="excludeUserAccounts")
       private final @Nullable List<String> excludeUserAccounts;
 
-    public List<String> getExcludeUserAccounts() {
+    public List<String> excludeUserAccounts() {
         return this.excludeUserAccounts == null ? List.of() : this.excludeUserAccounts;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @Import(name="secretArn", required=true)
       private final String secretArn;
 
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 

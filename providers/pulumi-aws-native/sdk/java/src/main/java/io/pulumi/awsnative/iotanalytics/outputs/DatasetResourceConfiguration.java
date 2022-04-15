@@ -21,10 +21,10 @@ public final class DatasetResourceConfiguration {
         this.volumeSizeInGB = volumeSizeInGB;
     }
 
-    public DatasetResourceConfigurationComputeType getComputeType() {
+    public DatasetResourceConfigurationComputeType computeType() {
         return this.computeType;
     }
-    public Integer getVolumeSizeInGB() {
+    public Integer volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 

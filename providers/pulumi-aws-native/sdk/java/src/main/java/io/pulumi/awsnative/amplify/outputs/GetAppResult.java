@@ -63,46 +63,46 @@ public final class GetAppResult {
         this.tags = tags;
     }
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
-    public Optional<String> getAppName() {
+    public Optional<String> appName() {
         return Optional.ofNullable(this.appName);
     }
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getBuildSpec() {
+    public Optional<String> buildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
-    public Optional<String> getCustomHeaders() {
+    public Optional<String> customHeaders() {
         return Optional.ofNullable(this.customHeaders);
     }
-    public List<AppCustomRule> getCustomRules() {
+    public List<AppCustomRule> customRules() {
         return this.customRules == null ? List.of() : this.customRules;
     }
-    public Optional<String> getDefaultDomain() {
+    public Optional<String> defaultDomain() {
         return Optional.ofNullable(this.defaultDomain);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Boolean> getEnableBranchAutoDeletion() {
+    public Optional<Boolean> enableBranchAutoDeletion() {
         return Optional.ofNullable(this.enableBranchAutoDeletion);
     }
-    public List<AppEnvironmentVariable> getEnvironmentVariables() {
+    public List<AppEnvironmentVariable> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
-    public Optional<String> getIAMServiceRole() {
+    public Optional<String> iAMServiceRole() {
         return Optional.ofNullable(this.iAMServiceRole);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
-    public List<AppTag> getTags() {
+    public List<AppTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

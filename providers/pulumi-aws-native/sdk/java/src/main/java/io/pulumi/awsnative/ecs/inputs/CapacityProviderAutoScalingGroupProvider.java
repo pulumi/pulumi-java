@@ -19,21 +19,21 @@ public final class CapacityProviderAutoScalingGroupProvider extends io.pulumi.re
     @Import(name="autoScalingGroupArn", required=true)
       private final String autoScalingGroupArn;
 
-    public String getAutoScalingGroupArn() {
+    public String autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
 
     @Import(name="managedScaling")
       private final @Nullable CapacityProviderManagedScaling managedScaling;
 
-    public Optional<CapacityProviderManagedScaling> getManagedScaling() {
+    public Optional<CapacityProviderManagedScaling> managedScaling() {
         return this.managedScaling == null ? Optional.empty() : Optional.ofNullable(this.managedScaling);
     }
 
     @Import(name="managedTerminationProtection")
       private final @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection;
 
-    public Optional<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> getManagedTerminationProtection() {
+    public Optional<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection() {
         return this.managedTerminationProtection == null ? Optional.empty() : Optional.ofNullable(this.managedTerminationProtection);
     }
 

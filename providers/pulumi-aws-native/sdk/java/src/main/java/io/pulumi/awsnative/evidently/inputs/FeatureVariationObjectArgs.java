@@ -20,35 +20,35 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> getBooleanValue() {
+    public Output<Boolean> booleanValue() {
         return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
-    public Output<Double> getDoubleValue() {
+    public Output<Double> doubleValue() {
         return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="longValue")
       private final @Nullable Output<Double> longValue;
 
-    public Output<Double> getLongValue() {
+    public Output<Double> longValue() {
         return this.longValue == null ? Codegen.empty() : this.longValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
-    public Output<String> getStringValue() {
+    public Output<String> stringValue() {
         return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     @Import(name="variationName")
       private final @Nullable Output<String> variationName;
 
-    public Output<String> getVariationName() {
+    public Output<String> variationName() {
         return this.variationName == null ? Codegen.empty() : this.variationName;
     }
 

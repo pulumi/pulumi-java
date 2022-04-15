@@ -21,7 +21,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDefinition", required=true)
       private final Output<InputDefinitionArgs> inputDefinition;
 
-    public Output<InputDefinitionArgs> getInputDefinition() {
+    public Output<InputDefinitionArgs> inputDefinition() {
         return this.inputDefinition;
     }
 
@@ -32,7 +32,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputDescription")
       private final @Nullable Output<String> inputDescription;
 
-    public Output<String> getInputDescription() {
+    public Output<String> inputDescription() {
         return this.inputDescription == null ? Codegen.empty() : this.inputDescription;
     }
 
@@ -43,7 +43,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputName")
       private final @Nullable Output<String> inputName;
 
-    public Output<String> getInputName() {
+    public Output<String> inputName() {
         return this.inputName == null ? Codegen.empty() : this.inputName;
     }
 
@@ -56,7 +56,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<InputTagArgs>> tags;
 
-    public Output<List<InputTagArgs>> getTags() {
+    public Output<List<InputTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -34,19 +34,19 @@ public final class GetBackupVaultResult {
         this.notifications = notifications;
     }
 
-    public Optional<Object> getAccessPolicy() {
+    public Optional<Object> accessPolicy() {
         return Optional.ofNullable(this.accessPolicy);
     }
-    public Optional<String> getBackupVaultArn() {
+    public Optional<String> backupVaultArn() {
         return Optional.ofNullable(this.backupVaultArn);
     }
-    public Optional<Object> getBackupVaultTags() {
+    public Optional<Object> backupVaultTags() {
         return Optional.ofNullable(this.backupVaultTags);
     }
-    public Optional<BackupVaultLockConfigurationType> getLockConfiguration() {
+    public Optional<BackupVaultLockConfigurationType> lockConfiguration() {
         return Optional.ofNullable(this.lockConfiguration);
     }
-    public Optional<BackupVaultNotificationObjectType> getNotifications() {
+    public Optional<BackupVaultNotificationObjectType> notifications() {
         return Optional.ofNullable(this.notifications);
     }
 

@@ -28,7 +28,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
-    public Output<String> getCurrentRevisionId() {
+    public Output<String> currentRevisionId() {
         return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
     }
 
@@ -39,7 +39,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -50,7 +50,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -61,7 +61,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="renderingEngine")
       private final @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
 
-    public Output<SimulationApplicationRenderingEngineArgs> getRenderingEngine() {
+    public Output<SimulationApplicationRenderingEngineArgs> renderingEngine() {
         return this.renderingEngine == null ? Codegen.empty() : this.renderingEngine;
     }
 
@@ -72,7 +72,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="robotSoftwareSuite", required=true)
       private final Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
-    public Output<SimulationApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
+    public Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
 
@@ -83,7 +83,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="simulationSoftwareSuite", required=true)
       private final Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
 
-    public Output<SimulationApplicationSimulationSoftwareSuiteArgs> getSimulationSoftwareSuite() {
+    public Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite() {
         return this.simulationSoftwareSuite;
     }
 
@@ -94,14 +94,14 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     @Import(name="sources")
       private final @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
 
-    public Output<List<SimulationApplicationSourceConfigArgs>> getSources() {
+    public Output<List<SimulationApplicationSourceConfigArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     @Import(name="tags")
       private final @Nullable Output<SimulationApplicationTagsArgs> tags;
 
-    public Output<SimulationApplicationTagsArgs> getTags() {
+    public Output<SimulationApplicationTagsArgs> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

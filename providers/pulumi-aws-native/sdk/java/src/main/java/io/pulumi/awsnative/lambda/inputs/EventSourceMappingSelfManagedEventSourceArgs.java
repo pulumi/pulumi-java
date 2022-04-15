@@ -26,7 +26,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
     @Import(name="endpoints")
       private final @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
-    public Output<EventSourceMappingEndpointsArgs> getEndpoints() {
+    public Output<EventSourceMappingEndpointsArgs> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 

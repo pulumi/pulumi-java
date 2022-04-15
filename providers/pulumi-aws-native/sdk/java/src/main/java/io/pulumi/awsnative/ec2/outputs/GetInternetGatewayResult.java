@@ -36,14 +36,14 @@ public final class GetInternetGatewayResult {
      * ID of internet gateway.
      * 
     */
-    public Optional<String> getInternetGatewayId() {
+    public Optional<String> internetGatewayId() {
         return Optional.ofNullable(this.internetGatewayId);
     }
     /**
      * Any tags to assign to the internet gateway.
      * 
     */
-    public List<InternetGatewayTag> getTags() {
+    public List<InternetGatewayTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

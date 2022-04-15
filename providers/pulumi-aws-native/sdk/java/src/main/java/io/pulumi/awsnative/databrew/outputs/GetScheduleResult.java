@@ -31,10 +31,10 @@ public final class GetScheduleResult {
      * Schedule cron
      * 
     */
-    public Optional<String> getCronExpression() {
+    public Optional<String> cronExpression() {
         return Optional.ofNullable(this.cronExpression);
     }
-    public List<String> getJobNames() {
+    public List<String> jobNames() {
         return this.jobNames == null ? List.of() : this.jobNames;
     }
 

@@ -73,49 +73,49 @@ public final class FirewallRuleGroupFirewallRule {
      * Rule Action
      * 
     */
-    public FirewallRuleGroupFirewallRuleAction getAction() {
+    public FirewallRuleGroupFirewallRuleAction action() {
         return this.action;
     }
     /**
      * BlockOverrideDnsType
      * 
     */
-    public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> getBlockOverrideDnsType() {
+    public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType() {
         return Optional.ofNullable(this.blockOverrideDnsType);
     }
     /**
      * BlockOverrideDomain
      * 
     */
-    public Optional<String> getBlockOverrideDomain() {
+    public Optional<String> blockOverrideDomain() {
         return Optional.ofNullable(this.blockOverrideDomain);
     }
     /**
      * BlockOverrideTtl
      * 
     */
-    public Optional<Integer> getBlockOverrideTtl() {
+    public Optional<Integer> blockOverrideTtl() {
         return Optional.ofNullable(this.blockOverrideTtl);
     }
     /**
      * BlockResponse
      * 
     */
-    public Optional<FirewallRuleGroupFirewallRuleBlockResponse> getBlockResponse() {
+    public Optional<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse() {
         return Optional.ofNullable(this.blockResponse);
     }
     /**
      * ResourceId
      * 
     */
-    public String getFirewallDomainListId() {
+    public String firewallDomainListId() {
         return this.firewallDomainListId;
     }
     /**
      * Rule Priority
      * 
     */
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
 

@@ -22,10 +22,10 @@ public final class FeatureEntityOverride {
         this.variation = variation;
     }
 
-    public Optional<String> getEntityId() {
+    public Optional<String> entityId() {
         return Optional.ofNullable(this.entityId);
     }
-    public Optional<String> getVariation() {
+    public Optional<String> variation() {
         return Optional.ofNullable(this.variation);
     }
 

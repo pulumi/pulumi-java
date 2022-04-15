@@ -17,7 +17,7 @@ public final class InstanceAccessControlAttributeConfigurationProperties {
         this.accessControlAttributes = accessControlAttributes;
     }
 
-    public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> getAccessControlAttributes() {
+    public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes() {
         return this.accessControlAttributes;
     }
 

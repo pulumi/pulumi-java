@@ -92,14 +92,14 @@ public final class DashboardVersion {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that this dashboard version was created.</p>
      * 
     */
-    public Optional<String> getCreatedTime() {
+    public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
@@ -107,52 +107,52 @@ public final class DashboardVersion {
      *             version of the dashboard.</p>
      * 
     */
-    public List<String> getDataSetArns() {
+    public List<String> dataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
      * <p>Description.</p>
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>Errors associated with this dashboard version.</p>
      * 
     */
-    public List<DashboardError> getErrors() {
+    public List<DashboardError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
      * 
     */
-    public List<DashboardSheet> getSheets() {
+    public List<DashboardSheet> sheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
     /**
      * <p>Source entity ARN.</p>
      * 
     */
-    public Optional<String> getSourceEntityArn() {
+    public Optional<String> sourceEntityArn() {
         return Optional.ofNullable(this.sourceEntityArn);
     }
-    public Optional<DashboardResourceStatus> getStatus() {
+    public Optional<DashboardResourceStatus> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * <p>The ARN of the theme associated with a version of the dashboard.</p>
      * 
     */
-    public Optional<String> getThemeArn() {
+    public Optional<String> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
     /**
      * <p>Version number for this version of the dashboard.</p>
      * 
     */
-    public Optional<Double> getVersionNumber() {
+    public Optional<Double> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }
 

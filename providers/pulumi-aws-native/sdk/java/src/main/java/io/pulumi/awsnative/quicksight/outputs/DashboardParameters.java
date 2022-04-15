@@ -51,28 +51,28 @@ public final class DashboardParameters {
      * <p>Date-time parameters.</p>
      * 
     */
-    public List<DashboardDateTimeParameter> getDateTimeParameters() {
+    public List<DashboardDateTimeParameter> dateTimeParameters() {
         return this.dateTimeParameters == null ? List.of() : this.dateTimeParameters;
     }
     /**
      * <p>Decimal parameters.</p>
      * 
     */
-    public List<DashboardDecimalParameter> getDecimalParameters() {
+    public List<DashboardDecimalParameter> decimalParameters() {
         return this.decimalParameters == null ? List.of() : this.decimalParameters;
     }
     /**
      * <p>Integer parameters.</p>
      * 
     */
-    public List<DashboardIntegerParameter> getIntegerParameters() {
+    public List<DashboardIntegerParameter> integerParameters() {
         return this.integerParameters == null ? List.of() : this.integerParameters;
     }
     /**
      * <p>String parameters.</p>
      * 
     */
-    public List<DashboardStringParameter> getStringParameters() {
+    public List<DashboardStringParameter> stringParameters() {
         return this.stringParameters == null ? List.of() : this.stringParameters;
     }
 

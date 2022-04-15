@@ -20,10 +20,10 @@ public final class RealtimeLogConfigKinesisStreamConfig {
         this.streamArn = streamArn;
     }
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
-    public String getStreamArn() {
+    public String streamArn() {
         return this.streamArn;
     }
 

@@ -32,17 +32,17 @@ public final class PackagingConfigurationMssPackage {
         this.segmentDurationSeconds = segmentDurationSeconds;
     }
 
-    public Optional<PackagingConfigurationMssEncryption> getEncryption() {
+    public Optional<PackagingConfigurationMssEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * A list of MSS manifest configurations.
      * 
     */
-    public List<PackagingConfigurationMssManifest> getMssManifests() {
+    public List<PackagingConfigurationMssManifest> mssManifests() {
         return this.mssManifests;
     }
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
 

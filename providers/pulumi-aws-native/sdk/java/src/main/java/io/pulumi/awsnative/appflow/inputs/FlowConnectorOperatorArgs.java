@@ -36,105 +36,105 @@ public final class FlowConnectorOperatorArgs extends io.pulumi.resources.Resourc
     @Import(name="amplitude")
       private final @Nullable Output<FlowAmplitudeConnectorOperator> amplitude;
 
-    public Output<FlowAmplitudeConnectorOperator> getAmplitude() {
+    public Output<FlowAmplitudeConnectorOperator> amplitude() {
         return this.amplitude == null ? Codegen.empty() : this.amplitude;
     }
 
     @Import(name="datadog")
       private final @Nullable Output<FlowDatadogConnectorOperator> datadog;
 
-    public Output<FlowDatadogConnectorOperator> getDatadog() {
+    public Output<FlowDatadogConnectorOperator> datadog() {
         return this.datadog == null ? Codegen.empty() : this.datadog;
     }
 
     @Import(name="dynatrace")
       private final @Nullable Output<FlowDynatraceConnectorOperator> dynatrace;
 
-    public Output<FlowDynatraceConnectorOperator> getDynatrace() {
+    public Output<FlowDynatraceConnectorOperator> dynatrace() {
         return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
     }
 
     @Import(name="googleAnalytics")
       private final @Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics;
 
-    public Output<FlowGoogleAnalyticsConnectorOperator> getGoogleAnalytics() {
+    public Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics() {
         return this.googleAnalytics == null ? Codegen.empty() : this.googleAnalytics;
     }
 
     @Import(name="inforNexus")
       private final @Nullable Output<FlowInforNexusConnectorOperator> inforNexus;
 
-    public Output<FlowInforNexusConnectorOperator> getInforNexus() {
+    public Output<FlowInforNexusConnectorOperator> inforNexus() {
         return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
     }
 
     @Import(name="marketo")
       private final @Nullable Output<FlowMarketoConnectorOperator> marketo;
 
-    public Output<FlowMarketoConnectorOperator> getMarketo() {
+    public Output<FlowMarketoConnectorOperator> marketo() {
         return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="s3")
       private final @Nullable Output<FlowS3ConnectorOperator> s3;
 
-    public Output<FlowS3ConnectorOperator> getS3() {
+    public Output<FlowS3ConnectorOperator> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="sAPOData")
       private final @Nullable Output<FlowSAPODataConnectorOperator> sAPOData;
 
-    public Output<FlowSAPODataConnectorOperator> getSAPOData() {
+    public Output<FlowSAPODataConnectorOperator> sAPOData() {
         return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<FlowSalesforceConnectorOperator> salesforce;
 
-    public Output<FlowSalesforceConnectorOperator> getSalesforce() {
+    public Output<FlowSalesforceConnectorOperator> salesforce() {
         return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<FlowServiceNowConnectorOperator> serviceNow;
 
-    public Output<FlowServiceNowConnectorOperator> getServiceNow() {
+    public Output<FlowServiceNowConnectorOperator> serviceNow() {
         return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="singular")
       private final @Nullable Output<FlowSingularConnectorOperator> singular;
 
-    public Output<FlowSingularConnectorOperator> getSingular() {
+    public Output<FlowSingularConnectorOperator> singular() {
         return this.singular == null ? Codegen.empty() : this.singular;
     }
 
     @Import(name="slack")
       private final @Nullable Output<FlowSlackConnectorOperator> slack;
 
-    public Output<FlowSlackConnectorOperator> getSlack() {
+    public Output<FlowSlackConnectorOperator> slack() {
         return this.slack == null ? Codegen.empty() : this.slack;
     }
 
     @Import(name="trendmicro")
       private final @Nullable Output<FlowTrendmicroConnectorOperator> trendmicro;
 
-    public Output<FlowTrendmicroConnectorOperator> getTrendmicro() {
+    public Output<FlowTrendmicroConnectorOperator> trendmicro() {
         return this.trendmicro == null ? Codegen.empty() : this.trendmicro;
     }
 
     @Import(name="veeva")
       private final @Nullable Output<FlowVeevaConnectorOperator> veeva;
 
-    public Output<FlowVeevaConnectorOperator> getVeeva() {
+    public Output<FlowVeevaConnectorOperator> veeva() {
         return this.veeva == null ? Codegen.empty() : this.veeva;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<FlowZendeskConnectorOperator> zendesk;
 
-    public Output<FlowZendeskConnectorOperator> getZendesk() {
+    public Output<FlowZendeskConnectorOperator> zendesk() {
         return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 

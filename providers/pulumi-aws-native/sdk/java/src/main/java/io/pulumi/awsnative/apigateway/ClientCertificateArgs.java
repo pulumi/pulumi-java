@@ -24,7 +24,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<ClientCertificateTagArgs>> tags;
 
-    public Output<List<ClientCertificateTagArgs>> getTags() {
+    public Output<List<ClientCertificateTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -19,7 +19,7 @@ public final class ScheduledActionResumeClusterMessage extends io.pulumi.resourc
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 

@@ -27,7 +27,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     @Import(name="ipFamily")
       private final @Nullable Output<ClusterKubernetesNetworkConfigIpFamily> ipFamily;
 
-    public Output<ClusterKubernetesNetworkConfigIpFamily> getIpFamily() {
+    public Output<ClusterKubernetesNetworkConfigIpFamily> ipFamily() {
         return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     @Import(name="serviceIpv4Cidr")
       private final @Nullable Output<String> serviceIpv4Cidr;
 
-    public Output<String> getServiceIpv4Cidr() {
+    public Output<String> serviceIpv4Cidr() {
         return this.serviceIpv4Cidr == null ? Codegen.empty() : this.serviceIpv4Cidr;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     @Import(name="serviceIpv6Cidr")
       private final @Nullable Output<String> serviceIpv6Cidr;
 
-    public Output<String> getServiceIpv6Cidr() {
+    public Output<String> serviceIpv6Cidr() {
         return this.serviceIpv6Cidr == null ? Codegen.empty() : this.serviceIpv6Cidr;
     }
 

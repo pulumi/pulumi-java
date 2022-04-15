@@ -25,7 +25,7 @@ public final class ThemeBorderStyle extends io.pulumi.resources.InvokeArgs {
     @Import(name="show")
       private final @Nullable Boolean show;
 
-    public Optional<Boolean> getShow() {
+    public Optional<Boolean> show() {
         return this.show == null ? Optional.empty() : Optional.ofNullable(this.show);
     }
 

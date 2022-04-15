@@ -28,16 +28,16 @@ public final class IndexSearch {
         this.sortable = sortable;
     }
 
-    public Optional<Boolean> getDisplayable() {
+    public Optional<Boolean> displayable() {
         return Optional.ofNullable(this.displayable);
     }
-    public Optional<Boolean> getFacetable() {
+    public Optional<Boolean> facetable() {
         return Optional.ofNullable(this.facetable);
     }
-    public Optional<Boolean> getSearchable() {
+    public Optional<Boolean> searchable() {
         return Optional.ofNullable(this.searchable);
     }
-    public Optional<Boolean> getSortable() {
+    public Optional<Boolean> sortable() {
         return Optional.ofNullable(this.sortable);
     }
 

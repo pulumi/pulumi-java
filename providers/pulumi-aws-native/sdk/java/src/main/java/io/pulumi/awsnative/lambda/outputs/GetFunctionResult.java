@@ -163,140 +163,140 @@ public final class GetFunctionResult {
         this.vpcConfig = vpcConfig;
     }
 
-    public List<FunctionArchitecturesItem> getArchitectures() {
+    public List<FunctionArchitecturesItem> architectures() {
         return this.architectures == null ? List.of() : this.architectures;
     }
     /**
      * Unique identifier for function resources
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A unique Arn for CodeSigningConfig resource
      * 
     */
-    public Optional<String> getCodeSigningConfigArn() {
+    public Optional<String> codeSigningConfigArn() {
         return Optional.ofNullable(this.codeSigningConfigArn);
     }
     /**
      * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
      * 
     */
-    public Optional<FunctionDeadLetterConfig> getDeadLetterConfig() {
+    public Optional<FunctionDeadLetterConfig> deadLetterConfig() {
         return Optional.ofNullable(this.deadLetterConfig);
     }
     /**
      * A description of the function.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Environment variables that are accessible from function code during execution.
      * 
     */
-    public Optional<FunctionEnvironment> getEnvironment() {
+    public Optional<FunctionEnvironment> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
     */
-    public List<FunctionFileSystemConfig> getFileSystemConfigs() {
+    public List<FunctionFileSystemConfig> fileSystemConfigs() {
         return this.fileSystemConfigs == null ? List.of() : this.fileSystemConfigs;
     }
     /**
      * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
      * 
     */
-    public Optional<String> getHandler() {
+    public Optional<String> handler() {
         return Optional.ofNullable(this.handler);
     }
     /**
      * ImageConfig
      * 
     */
-    public Optional<FunctionImageConfig> getImageConfig() {
+    public Optional<FunctionImageConfig> imageConfig() {
         return Optional.ofNullable(this.imageConfig);
     }
     /**
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
      * 
     */
-    public List<String> getLayers() {
+    public List<String> layers() {
         return this.layers == null ? List.of() : this.layers;
     }
     /**
      * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
     */
-    public Optional<Integer> getMemorySize() {
+    public Optional<Integer> memorySize() {
         return Optional.ofNullable(this.memorySize);
     }
     /**
      * PackageType.
      * 
     */
-    public Optional<FunctionPackageType> getPackageType() {
+    public Optional<FunctionPackageType> packageType() {
         return Optional.ofNullable(this.packageType);
     }
     /**
      * The number of simultaneous executions to reserve for the function.
      * 
     */
-    public Optional<Integer> getReservedConcurrentExecutions() {
+    public Optional<Integer> reservedConcurrentExecutions() {
         return Optional.ofNullable(this.reservedConcurrentExecutions);
     }
     /**
      * The Amazon Resource Name (ARN) of the function's execution role.
      * 
     */
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
      * The identifier of the function's runtime.
      * 
     */
-    public Optional<String> getRuntime() {
+    public Optional<String> runtime() {
         return Optional.ofNullable(this.runtime);
     }
     /**
      * A list of tags to apply to the function.
      * 
     */
-    public List<FunctionTag> getTags() {
+    public List<FunctionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
      * 
     */
-    public Optional<FunctionTracingConfig> getTracingConfig() {
+    public Optional<FunctionTracingConfig> tracingConfig() {
         return Optional.ofNullable(this.tracingConfig);
     }
     /**
      * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
      * 
     */
-    public Optional<FunctionVpcConfig> getVpcConfig() {
+    public Optional<FunctionVpcConfig> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
 

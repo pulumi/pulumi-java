@@ -25,13 +25,13 @@ public final class DomainMasterUserOptions {
         this.masterUserPassword = masterUserPassword;
     }
 
-    public Optional<String> getMasterUserARN() {
+    public Optional<String> masterUserARN() {
         return Optional.ofNullable(this.masterUserARN);
     }
-    public Optional<String> getMasterUserName() {
+    public Optional<String> masterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
-    public Optional<String> getMasterUserPassword() {
+    public Optional<String> masterUserPassword() {
         return Optional.ofNullable(this.masterUserPassword);
     }
 

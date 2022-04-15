@@ -19,14 +19,14 @@ public final class WebACLRuleGroupReferenceStatement extends io.pulumi.resources
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
     @Import(name="excludedRules")
       private final @Nullable List<WebACLExcludedRule> excludedRules;
 
-    public List<WebACLExcludedRule> getExcludedRules() {
+    public List<WebACLExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
 

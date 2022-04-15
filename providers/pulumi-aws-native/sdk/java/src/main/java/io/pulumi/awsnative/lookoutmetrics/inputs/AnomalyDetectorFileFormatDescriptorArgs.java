@@ -19,14 +19,14 @@ public final class AnomalyDetectorFileFormatDescriptorArgs extends io.pulumi.res
     @Import(name="csvFormatDescriptor")
       private final @Nullable Output<AnomalyDetectorCsvFormatDescriptorArgs> csvFormatDescriptor;
 
-    public Output<AnomalyDetectorCsvFormatDescriptorArgs> getCsvFormatDescriptor() {
+    public Output<AnomalyDetectorCsvFormatDescriptorArgs> csvFormatDescriptor() {
         return this.csvFormatDescriptor == null ? Codegen.empty() : this.csvFormatDescriptor;
     }
 
     @Import(name="jsonFormatDescriptor")
       private final @Nullable Output<AnomalyDetectorJsonFormatDescriptorArgs> jsonFormatDescriptor;
 
-    public Output<AnomalyDetectorJsonFormatDescriptorArgs> getJsonFormatDescriptor() {
+    public Output<AnomalyDetectorJsonFormatDescriptorArgs> jsonFormatDescriptor() {
         return this.jsonFormatDescriptor == null ? Codegen.empty() : this.jsonFormatDescriptor;
     }
 

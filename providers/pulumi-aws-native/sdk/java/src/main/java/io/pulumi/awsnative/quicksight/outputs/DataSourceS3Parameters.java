@@ -16,7 +16,7 @@ public final class DataSourceS3Parameters {
         this.manifestFileLocation = manifestFileLocation;
     }
 
-    public DataSourceManifestFileLocation getManifestFileLocation() {
+    public DataSourceManifestFileLocation manifestFileLocation() {
         return this.manifestFileLocation;
     }
 

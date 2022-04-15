@@ -18,21 +18,21 @@ public final class ListenerRuleFixedResponseConfigArgs extends io.pulumi.resourc
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     @Import(name="messageBody")
       private final @Nullable Output<String> messageBody;
 
-    public Output<String> getMessageBody() {
+    public Output<String> messageBody() {
         return this.messageBody == null ? Codegen.empty() : this.messageBody;
     }
 
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

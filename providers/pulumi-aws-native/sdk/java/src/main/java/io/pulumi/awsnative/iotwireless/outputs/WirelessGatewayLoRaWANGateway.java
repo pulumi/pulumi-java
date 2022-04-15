@@ -20,10 +20,10 @@ public final class WirelessGatewayLoRaWANGateway {
         this.rfRegion = rfRegion;
     }
 
-    public String getGatewayEui() {
+    public String gatewayEui() {
         return this.gatewayEui;
     }
-    public String getRfRegion() {
+    public String rfRegion() {
         return this.rfRegion;
     }
 

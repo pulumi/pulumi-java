@@ -23,14 +23,14 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     @Import(name="nLBResource")
       private final @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
 
-    public Output<ResourceSetNLBResourceArgs> getNLBResource() {
+    public Output<ResourceSetNLBResourceArgs> nLBResource() {
         return this.nLBResource == null ? Codegen.empty() : this.nLBResource;
     }
 
     @Import(name="r53Resource")
       private final @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
 
-    public Output<ResourceSetR53ResourceRecordArgs> getR53Resource() {
+    public Output<ResourceSetR53ResourceRecordArgs> r53Resource() {
         return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
     }
 

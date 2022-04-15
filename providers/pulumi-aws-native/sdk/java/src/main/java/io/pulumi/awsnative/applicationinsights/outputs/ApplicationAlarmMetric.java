@@ -24,7 +24,7 @@ public final class ApplicationAlarmMetric {
      * The name of the metric to be monitored for the component.
      * 
     */
-    public String getAlarmMetricName() {
+    public String alarmMetricName() {
         return this.alarmMetricName;
     }
 

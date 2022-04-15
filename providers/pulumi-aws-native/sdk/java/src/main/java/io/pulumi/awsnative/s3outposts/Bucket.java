@@ -32,7 +32,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +46,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return A name for the bucket.
      * 
      */
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
     /**
@@ -60,7 +60,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return Rules that define how Amazon S3Outposts manages objects during their lifetime.
      * 
      */
-    public Output</* @Nullable */ BucketLifecycleConfiguration> getLifecycleConfiguration() {
+    public Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration() {
         return this.lifecycleConfiguration;
     }
     /**
@@ -74,7 +74,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return The id of the customer outpost on which the bucket resides.
      * 
      */
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
     /**
@@ -88,7 +88,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * @return An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketTag>> getTags() {
+    public Output</* @Nullable */ List<BucketTag>> tags() {
         return this.tags;
     }
 

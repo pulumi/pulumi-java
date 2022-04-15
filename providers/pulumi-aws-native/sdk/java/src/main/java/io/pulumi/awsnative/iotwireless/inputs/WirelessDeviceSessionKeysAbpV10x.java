@@ -15,14 +15,14 @@ public final class WirelessDeviceSessionKeysAbpV10x extends io.pulumi.resources.
     @Import(name="appSKey", required=true)
       private final String appSKey;
 
-    public String getAppSKey() {
+    public String appSKey() {
         return this.appSKey;
     }
 
     @Import(name="nwkSKey", required=true)
       private final String nwkSKey;
 
-    public String getNwkSKey() {
+    public String nwkSKey() {
         return this.nwkSKey;
     }
 

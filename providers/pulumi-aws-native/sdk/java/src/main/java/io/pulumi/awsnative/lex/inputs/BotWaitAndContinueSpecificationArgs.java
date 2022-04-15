@@ -28,7 +28,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     @Import(name="continueResponse", required=true)
       private final Output<BotResponseSpecificationArgs> continueResponse;
 
-    public Output<BotResponseSpecificationArgs> getContinueResponse() {
+    public Output<BotResponseSpecificationArgs> continueResponse() {
         return this.continueResponse;
     }
 
@@ -39,7 +39,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
+    public Output<Boolean> isActive() {
         return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
@@ -50,7 +50,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     @Import(name="stillWaitingResponse")
       private final @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
 
-    public Output<BotStillWaitingResponseSpecificationArgs> getStillWaitingResponse() {
+    public Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse() {
         return this.stillWaitingResponse == null ? Codegen.empty() : this.stillWaitingResponse;
     }
 
@@ -61,7 +61,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     @Import(name="waitingResponse", required=true)
       private final Output<BotResponseSpecificationArgs> waitingResponse;
 
-    public Output<BotResponseSpecificationArgs> getWaitingResponse() {
+    public Output<BotResponseSpecificationArgs> waitingResponse() {
         return this.waitingResponse;
     }
 

@@ -23,63 +23,63 @@ public final class BackupPlanBackupRuleResourceType extends io.pulumi.resources.
     @Import(name="completionWindowMinutes")
       private final @Nullable Double completionWindowMinutes;
 
-    public Optional<Double> getCompletionWindowMinutes() {
+    public Optional<Double> completionWindowMinutes() {
         return this.completionWindowMinutes == null ? Optional.empty() : Optional.ofNullable(this.completionWindowMinutes);
     }
 
     @Import(name="copyActions")
       private final @Nullable List<BackupPlanCopyActionResourceType> copyActions;
 
-    public List<BackupPlanCopyActionResourceType> getCopyActions() {
+    public List<BackupPlanCopyActionResourceType> copyActions() {
         return this.copyActions == null ? List.of() : this.copyActions;
     }
 
     @Import(name="enableContinuousBackup")
       private final @Nullable Boolean enableContinuousBackup;
 
-    public Optional<Boolean> getEnableContinuousBackup() {
+    public Optional<Boolean> enableContinuousBackup() {
         return this.enableContinuousBackup == null ? Optional.empty() : Optional.ofNullable(this.enableContinuousBackup);
     }
 
     @Import(name="lifecycle")
       private final @Nullable BackupPlanLifecycleResourceType lifecycle;
 
-    public Optional<BackupPlanLifecycleResourceType> getLifecycle() {
+    public Optional<BackupPlanLifecycleResourceType> lifecycle() {
         return this.lifecycle == null ? Optional.empty() : Optional.ofNullable(this.lifecycle);
     }
 
     @Import(name="recoveryPointTags")
       private final @Nullable Object recoveryPointTags;
 
-    public Optional<Object> getRecoveryPointTags() {
+    public Optional<Object> recoveryPointTags() {
         return this.recoveryPointTags == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointTags);
     }
 
     @Import(name="ruleName", required=true)
       private final String ruleName;
 
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 
     @Import(name="scheduleExpression")
       private final @Nullable String scheduleExpression;
 
-    public Optional<String> getScheduleExpression() {
+    public Optional<String> scheduleExpression() {
         return this.scheduleExpression == null ? Optional.empty() : Optional.ofNullable(this.scheduleExpression);
     }
 
     @Import(name="startWindowMinutes")
       private final @Nullable Double startWindowMinutes;
 
-    public Optional<Double> getStartWindowMinutes() {
+    public Optional<Double> startWindowMinutes() {
         return this.startWindowMinutes == null ? Optional.empty() : Optional.ofNullable(this.startWindowMinutes);
     }
 
     @Import(name="targetBackupVault", required=true)
       private final String targetBackupVault;
 
-    public String getTargetBackupVault() {
+    public String targetBackupVault() {
         return this.targetBackupVault;
     }
 

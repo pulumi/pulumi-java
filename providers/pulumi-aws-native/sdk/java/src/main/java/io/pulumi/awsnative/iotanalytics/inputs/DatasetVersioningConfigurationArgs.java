@@ -19,14 +19,14 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
     @Import(name="maxVersions")
       private final @Nullable Output<Integer> maxVersions;
 
-    public Output<Integer> getMaxVersions() {
+    public Output<Integer> maxVersions() {
         return this.maxVersions == null ? Codegen.empty() : this.maxVersions;
     }
 
     @Import(name="unlimited")
       private final @Nullable Output<Boolean> unlimited;
 
-    public Output<Boolean> getUnlimited() {
+    public Output<Boolean> unlimited() {
         return this.unlimited == null ? Codegen.empty() : this.unlimited;
     }
 

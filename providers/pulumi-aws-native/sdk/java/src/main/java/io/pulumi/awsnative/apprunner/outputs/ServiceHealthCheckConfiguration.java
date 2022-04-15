@@ -64,42 +64,42 @@ public final class ServiceHealthCheckConfiguration {
      * Health check Healthy Threshold
      * 
     */
-    public Optional<Integer> getHealthyThreshold() {
+    public Optional<Integer> healthyThreshold() {
         return Optional.ofNullable(this.healthyThreshold);
     }
     /**
      * Health check Interval
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Health check Path
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Health Check Protocol
      * 
     */
-    public Optional<ServiceHealthCheckConfigurationProtocol> getProtocol() {
+    public Optional<ServiceHealthCheckConfigurationProtocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Health check Timeout
      * 
     */
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Health check Unhealthy Threshold
      * 
     */
-    public Optional<Integer> getUnhealthyThreshold() {
+    public Optional<Integer> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
 

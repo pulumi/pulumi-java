@@ -15,14 +15,14 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="stackName", required=true)
       private final String stackName;
 
-    public String getStackName() {
+    public String stackName() {
         return this.stackName;
     }
 

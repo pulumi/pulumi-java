@@ -22,14 +22,14 @@ public final class CertificateAuthorityRevocationConfiguration extends io.pulumi
     @Import(name="crlConfiguration")
       private final @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
 
-    public Optional<CertificateAuthorityCrlConfiguration> getCrlConfiguration() {
+    public Optional<CertificateAuthorityCrlConfiguration> crlConfiguration() {
         return this.crlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.crlConfiguration);
     }
 
     @Import(name="ocspConfiguration")
       private final @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
 
-    public Optional<CertificateAuthorityOcspConfiguration> getOcspConfiguration() {
+    public Optional<CertificateAuthorityOcspConfiguration> ocspConfiguration() {
         return this.ocspConfiguration == null ? Optional.empty() : Optional.ofNullable(this.ocspConfiguration);
     }
 

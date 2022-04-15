@@ -26,14 +26,14 @@ public final class AnalyzerArchiveRule {
         this.ruleName = ruleName;
     }
 
-    public List<AnalyzerFilter> getFilter() {
+    public List<AnalyzerFilter> filter() {
         return this.filter;
     }
     /**
      * The archive rule name
      * 
     */
-    public String getRuleName() {
+    public String ruleName() {
         return this.ruleName;
     }
 

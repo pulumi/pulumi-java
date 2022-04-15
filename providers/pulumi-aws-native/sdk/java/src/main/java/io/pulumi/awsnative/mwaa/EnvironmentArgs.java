@@ -35,119 +35,119 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="airflowConfigurationOptions")
       private final @Nullable Output<Object> airflowConfigurationOptions;
 
-    public Output<Object> getAirflowConfigurationOptions() {
+    public Output<Object> airflowConfigurationOptions() {
         return this.airflowConfigurationOptions == null ? Codegen.empty() : this.airflowConfigurationOptions;
     }
 
     @Import(name="airflowVersion")
       private final @Nullable Output<String> airflowVersion;
 
-    public Output<String> getAirflowVersion() {
+    public Output<String> airflowVersion() {
         return this.airflowVersion == null ? Codegen.empty() : this.airflowVersion;
     }
 
     @Import(name="dagS3Path")
       private final @Nullable Output<String> dagS3Path;
 
-    public Output<String> getDagS3Path() {
+    public Output<String> dagS3Path() {
         return this.dagS3Path == null ? Codegen.empty() : this.dagS3Path;
     }
 
     @Import(name="environmentClass")
       private final @Nullable Output<String> environmentClass;
 
-    public Output<String> getEnvironmentClass() {
+    public Output<String> environmentClass() {
         return this.environmentClass == null ? Codegen.empty() : this.environmentClass;
     }
 
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
+    public Output<String> kmsKey() {
         return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     @Import(name="loggingConfiguration")
       private final @Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<EnvironmentLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
-    public Output<Integer> getMaxWorkers() {
+    public Output<Integer> maxWorkers() {
         return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
     }
 
     @Import(name="minWorkers")
       private final @Nullable Output<Integer> minWorkers;
 
-    public Output<Integer> getMinWorkers() {
+    public Output<Integer> minWorkers() {
         return this.minWorkers == null ? Codegen.empty() : this.minWorkers;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="networkConfiguration")
       private final @Nullable Output<EnvironmentNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<EnvironmentNetworkConfigurationArgs> getNetworkConfiguration() {
+    public Output<EnvironmentNetworkConfigurationArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     @Import(name="pluginsS3ObjectVersion")
       private final @Nullable Output<String> pluginsS3ObjectVersion;
 
-    public Output<String> getPluginsS3ObjectVersion() {
+    public Output<String> pluginsS3ObjectVersion() {
         return this.pluginsS3ObjectVersion == null ? Codegen.empty() : this.pluginsS3ObjectVersion;
     }
 
     @Import(name="pluginsS3Path")
       private final @Nullable Output<String> pluginsS3Path;
 
-    public Output<String> getPluginsS3Path() {
+    public Output<String> pluginsS3Path() {
         return this.pluginsS3Path == null ? Codegen.empty() : this.pluginsS3Path;
     }
 
     @Import(name="requirementsS3ObjectVersion")
       private final @Nullable Output<String> requirementsS3ObjectVersion;
 
-    public Output<String> getRequirementsS3ObjectVersion() {
+    public Output<String> requirementsS3ObjectVersion() {
         return this.requirementsS3ObjectVersion == null ? Codegen.empty() : this.requirementsS3ObjectVersion;
     }
 
     @Import(name="requirementsS3Path")
       private final @Nullable Output<String> requirementsS3Path;
 
-    public Output<String> getRequirementsS3Path() {
+    public Output<String> requirementsS3Path() {
         return this.requirementsS3Path == null ? Codegen.empty() : this.requirementsS3Path;
     }
 
     @Import(name="schedulers")
       private final @Nullable Output<Integer> schedulers;
 
-    public Output<Integer> getSchedulers() {
+    public Output<Integer> schedulers() {
         return this.schedulers == null ? Codegen.empty() : this.schedulers;
     }
 
     @Import(name="sourceBucketArn")
       private final @Nullable Output<String> sourceBucketArn;
 
-    public Output<String> getSourceBucketArn() {
+    public Output<String> sourceBucketArn() {
         return this.sourceBucketArn == null ? Codegen.empty() : this.sourceBucketArn;
     }
 
@@ -158,21 +158,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
-    public Output<Object> getTags() {
+    public Output<Object> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="webserverAccessMode")
       private final @Nullable Output<EnvironmentWebserverAccessMode> webserverAccessMode;
 
-    public Output<EnvironmentWebserverAccessMode> getWebserverAccessMode() {
+    public Output<EnvironmentWebserverAccessMode> webserverAccessMode() {
         return this.webserverAccessMode == null ? Codegen.empty() : this.webserverAccessMode;
     }
 
     @Import(name="weeklyMaintenanceWindowStart")
       private final @Nullable Output<String> weeklyMaintenanceWindowStart;
 
-    public Output<String> getWeeklyMaintenanceWindowStart() {
+    public Output<String> weeklyMaintenanceWindowStart() {
         return this.weeklyMaintenanceWindowStart == null ? Codegen.empty() : this.weeklyMaintenanceWindowStart;
     }
 

@@ -18,14 +18,14 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 
     @Import(name="variable")
       private final @Nullable Output<String> variable;
 
-    public Output<String> getVariable() {
+    public Output<String> variable() {
         return this.variable == null ? Codegen.empty() : this.variable;
     }
 

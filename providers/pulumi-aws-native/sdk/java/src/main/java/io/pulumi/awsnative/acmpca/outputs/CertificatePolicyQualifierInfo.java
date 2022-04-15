@@ -21,10 +21,10 @@ public final class CertificatePolicyQualifierInfo {
         this.qualifier = qualifier;
     }
 
-    public String getPolicyQualifierId() {
+    public String policyQualifierId() {
         return this.policyQualifierId;
     }
-    public CertificateQualifier getQualifier() {
+    public CertificateQualifier qualifier() {
         return this.qualifier;
     }
 

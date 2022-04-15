@@ -21,14 +21,14 @@ public final class GatewayCapabilitySummary extends io.pulumi.resources.InvokeAr
     @Import(name="capabilityConfiguration")
       private final @Nullable String capabilityConfiguration;
 
-    public Optional<String> getCapabilityConfiguration() {
+    public Optional<String> capabilityConfiguration() {
         return this.capabilityConfiguration == null ? Optional.empty() : Optional.ofNullable(this.capabilityConfiguration);
     }
 
     @Import(name="capabilityNamespace", required=true)
       private final String capabilityNamespace;
 
-    public String getCapabilityNamespace() {
+    public String capabilityNamespace() {
         return this.capabilityNamespace;
     }
 

@@ -27,13 +27,13 @@ public final class WebACLJsonBody {
         this.matchScope = matchScope;
     }
 
-    public Optional<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
+    public Optional<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior() {
         return Optional.ofNullable(this.invalidFallbackBehavior);
     }
-    public WebACLJsonMatchPattern getMatchPattern() {
+    public WebACLJsonMatchPattern matchPattern() {
         return this.matchPattern;
     }
-    public WebACLJsonMatchScope getMatchScope() {
+    public WebACLJsonMatchScope matchScope() {
         return this.matchScope;
     }
 

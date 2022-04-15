@@ -24,7 +24,7 @@ public final class EventIntegrationEventFilter {
      * The source of the events.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

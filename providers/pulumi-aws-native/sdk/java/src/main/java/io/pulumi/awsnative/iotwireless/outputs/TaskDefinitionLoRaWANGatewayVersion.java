@@ -25,13 +25,13 @@ public final class TaskDefinitionLoRaWANGatewayVersion {
         this.station = station;
     }
 
-    public Optional<String> getModel() {
+    public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
-    public Optional<String> getPackageVersion() {
+    public Optional<String> packageVersion() {
         return Optional.ofNullable(this.packageVersion);
     }
-    public Optional<String> getStation() {
+    public Optional<String> station() {
         return Optional.ofNullable(this.station);
     }
 

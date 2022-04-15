@@ -17,7 +17,7 @@ public final class CidrResult {
         this.subnets = subnets;
     }
 
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
 

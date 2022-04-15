@@ -24,7 +24,7 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
     @Import(name="hostname", required=true)
       private final String hostname;
 
-    public String getHostname() {
+    public String hostname() {
         return this.hostname;
     }
 
@@ -35,7 +35,7 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

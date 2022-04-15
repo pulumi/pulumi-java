@@ -18,7 +18,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
         this.resourceStatement = resourceStatement;
     }
 
-    public Optional<NetworkInsightsAccessScopeResourceStatementRequest> getResourceStatement() {
+    public Optional<NetworkInsightsAccessScopeResourceStatementRequest> resourceStatement() {
         return Optional.ofNullable(this.resourceStatement);
     }
 

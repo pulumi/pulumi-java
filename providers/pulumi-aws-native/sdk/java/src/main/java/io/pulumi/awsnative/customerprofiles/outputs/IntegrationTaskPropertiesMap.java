@@ -21,10 +21,10 @@ public final class IntegrationTaskPropertiesMap {
         this.property = property;
     }
 
-    public IntegrationOperatorPropertiesKeys getOperatorPropertyKey() {
+    public IntegrationOperatorPropertiesKeys operatorPropertyKey() {
         return this.operatorPropertyKey;
     }
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
 

@@ -66,50 +66,50 @@ public final class GetMissionProfileResult {
         this.trackingConfigArn = trackingConfigArn;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Post-pass time needed after the contact.
      * 
     */
-    public Optional<Integer> getContactPostPassDurationSeconds() {
+    public Optional<Integer> contactPostPassDurationSeconds() {
         return Optional.ofNullable(this.contactPostPassDurationSeconds);
     }
     /**
      * Pre-pass time needed before the contact.
      * 
     */
-    public Optional<Integer> getContactPrePassDurationSeconds() {
+    public Optional<Integer> contactPrePassDurationSeconds() {
         return Optional.ofNullable(this.contactPrePassDurationSeconds);
     }
-    public List<MissionProfileDataflowEdge> getDataflowEdges() {
+    public List<MissionProfileDataflowEdge> dataflowEdges() {
         return this.dataflowEdges == null ? List.of() : this.dataflowEdges;
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
      * 
     */
-    public Optional<Integer> getMinimumViableContactDurationSeconds() {
+    public Optional<Integer> minimumViableContactDurationSeconds() {
         return Optional.ofNullable(this.minimumViableContactDurationSeconds);
     }
     /**
      * A name used to identify a mission profile.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
-    public List<MissionProfileTag> getTags() {
+    public List<MissionProfileTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getTrackingConfigArn() {
+    public Optional<String> trackingConfigArn() {
         return Optional.ofNullable(this.trackingConfigArn);
     }
 

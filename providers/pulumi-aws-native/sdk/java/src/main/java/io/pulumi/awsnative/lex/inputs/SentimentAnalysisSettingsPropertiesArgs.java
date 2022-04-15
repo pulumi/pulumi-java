@@ -25,7 +25,7 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
     @Import(name="detectSentiment", required=true)
       private final Output<Boolean> detectSentiment;
 
-    public Output<Boolean> getDetectSentiment() {
+    public Output<Boolean> detectSentiment() {
         return this.detectSentiment;
     }
 

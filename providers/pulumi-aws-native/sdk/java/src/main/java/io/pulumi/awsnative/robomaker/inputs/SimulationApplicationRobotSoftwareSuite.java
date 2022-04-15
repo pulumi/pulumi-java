@@ -26,7 +26,7 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
     @Import(name="name", required=true)
       private final SimulationApplicationRobotSoftwareSuiteName name;
 
-    public SimulationApplicationRobotSoftwareSuiteName getName() {
+    public SimulationApplicationRobotSoftwareSuiteName name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
     @Import(name="version")
       private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 
-    public Optional<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
+    public Optional<SimulationApplicationRobotSoftwareSuiteVersion> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

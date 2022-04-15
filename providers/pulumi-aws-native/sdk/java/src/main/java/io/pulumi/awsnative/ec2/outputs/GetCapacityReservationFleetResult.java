@@ -30,16 +30,16 @@ public final class GetCapacityReservationFleetResult {
         this.totalTargetCapacity = totalTargetCapacity;
     }
 
-    public Optional<String> getCapacityReservationFleetId() {
+    public Optional<String> capacityReservationFleetId() {
         return Optional.ofNullable(this.capacityReservationFleetId);
     }
-    public Optional<Boolean> getNoRemoveEndDate() {
+    public Optional<Boolean> noRemoveEndDate() {
         return Optional.ofNullable(this.noRemoveEndDate);
     }
-    public Optional<Boolean> getRemoveEndDate() {
+    public Optional<Boolean> removeEndDate() {
         return Optional.ofNullable(this.removeEndDate);
     }
-    public Optional<Integer> getTotalTargetCapacity() {
+    public Optional<Integer> totalTargetCapacity() {
         return Optional.ofNullable(this.totalTargetCapacity);
     }
 

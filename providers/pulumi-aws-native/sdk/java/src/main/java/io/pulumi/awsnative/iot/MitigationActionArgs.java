@@ -25,21 +25,21 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="actionName")
       private final @Nullable Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName == null ? Codegen.empty() : this.actionName;
     }
 
     @Import(name="actionParams", required=true)
       private final Output<MitigationActionActionParamsArgs> actionParams;
 
-    public Output<MitigationActionActionParamsArgs> getActionParams() {
+    public Output<MitigationActionActionParamsArgs> actionParams() {
         return this.actionParams;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -50,7 +50,7 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<List<MitigationActionTagArgs>> tags;
 
-    public Output<List<MitigationActionTagArgs>> getTags() {
+    public Output<List<MitigationActionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

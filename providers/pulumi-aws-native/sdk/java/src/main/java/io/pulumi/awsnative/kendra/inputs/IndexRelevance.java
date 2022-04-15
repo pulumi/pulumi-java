@@ -22,35 +22,35 @@ public final class IndexRelevance extends io.pulumi.resources.InvokeArgs {
     @Import(name="duration")
       private final @Nullable String duration;
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 
     @Import(name="freshness")
       private final @Nullable Boolean freshness;
 
-    public Optional<Boolean> getFreshness() {
+    public Optional<Boolean> freshness() {
         return this.freshness == null ? Optional.empty() : Optional.ofNullable(this.freshness);
     }
 
     @Import(name="importance")
       private final @Nullable Integer importance;
 
-    public Optional<Integer> getImportance() {
+    public Optional<Integer> importance() {
         return this.importance == null ? Optional.empty() : Optional.ofNullable(this.importance);
     }
 
     @Import(name="rankOrder")
       private final @Nullable IndexOrder rankOrder;
 
-    public Optional<IndexOrder> getRankOrder() {
+    public Optional<IndexOrder> rankOrder() {
         return this.rankOrder == null ? Optional.empty() : Optional.ofNullable(this.rankOrder);
     }
 
     @Import(name="valueImportanceItems")
       private final @Nullable List<IndexValueImportanceItem> valueImportanceItems;
 
-    public List<IndexValueImportanceItem> getValueImportanceItems() {
+    public List<IndexValueImportanceItem> valueImportanceItems() {
         return this.valueImportanceItems == null ? List.of() : this.valueImportanceItems;
     }
 

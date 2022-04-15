@@ -22,10 +22,10 @@ public final class ClusterLoggingProperties {
         this.s3KeyPrefix = s3KeyPrefix;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public Optional<String> getS3KeyPrefix() {
+    public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
 

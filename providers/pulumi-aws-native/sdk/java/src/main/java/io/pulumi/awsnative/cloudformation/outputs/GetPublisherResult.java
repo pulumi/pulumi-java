@@ -50,28 +50,28 @@ public final class GetPublisherResult {
      * The type of account used as the identity provider when registering this publisher with CloudFormation.
      * 
     */
-    public Optional<PublisherIdentityProvider> getIdentityProvider() {
+    public Optional<PublisherIdentityProvider> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
     /**
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
     */
-    public Optional<String> getPublisherId() {
+    public Optional<String> publisherId() {
         return Optional.ofNullable(this.publisherId);
     }
     /**
      * The URL to the publisher's profile with the identity provider.
      * 
     */
-    public Optional<String> getPublisherProfile() {
+    public Optional<String> publisherProfile() {
         return Optional.ofNullable(this.publisherProfile);
     }
     /**
      * Whether the publisher is verified.
      * 
     */
-    public Optional<PublisherStatus> getPublisherStatus() {
+    public Optional<PublisherStatus> publisherStatus() {
         return Optional.ofNullable(this.publisherStatus);
     }
 

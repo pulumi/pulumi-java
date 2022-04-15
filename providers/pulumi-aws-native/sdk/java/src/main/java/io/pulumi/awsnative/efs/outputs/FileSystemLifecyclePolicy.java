@@ -22,10 +22,10 @@ public final class FileSystemLifecyclePolicy {
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }
 
-    public Optional<String> getTransitionToIA() {
+    public Optional<String> transitionToIA() {
         return Optional.ofNullable(this.transitionToIA);
     }
-    public Optional<String> getTransitionToPrimaryStorageClass() {
+    public Optional<String> transitionToPrimaryStorageClass() {
         return Optional.ofNullable(this.transitionToPrimaryStorageClass);
     }
 

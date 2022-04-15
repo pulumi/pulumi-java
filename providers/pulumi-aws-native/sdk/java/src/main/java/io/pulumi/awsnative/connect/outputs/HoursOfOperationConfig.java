@@ -40,21 +40,21 @@ public final class HoursOfOperationConfig {
      * The day that the hours of operation applies to.
      * 
     */
-    public HoursOfOperationConfigDay getDay() {
+    public HoursOfOperationConfigDay day() {
         return this.day;
     }
     /**
      * The end time that your contact center closes.
      * 
     */
-    public HoursOfOperationTimeSlice getEndTime() {
+    public HoursOfOperationTimeSlice endTime() {
         return this.endTime;
     }
     /**
      * The start time that your contact center opens.
      * 
     */
-    public HoursOfOperationTimeSlice getStartTime() {
+    public HoursOfOperationTimeSlice startTime() {
         return this.startTime;
     }
 

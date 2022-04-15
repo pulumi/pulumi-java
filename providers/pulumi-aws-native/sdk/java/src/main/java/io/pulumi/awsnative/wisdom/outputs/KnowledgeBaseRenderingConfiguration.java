@@ -18,7 +18,7 @@ public final class KnowledgeBaseRenderingConfiguration {
         this.templateUri = templateUri;
     }
 
-    public Optional<String> getTemplateUri() {
+    public Optional<String> templateUri() {
         return Optional.ofNullable(this.templateUri);
     }
 

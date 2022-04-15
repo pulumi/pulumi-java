@@ -32,7 +32,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return Description of the Ruleset
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -46,7 +46,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return Name of the Ruleset
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,13 +60,13 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return List of the data quality rules in the ruleset
      * 
      */
-    public Output<List<RulesetRule>> getRules() {
+    public Output<List<RulesetRule>> rules() {
         return this.rules;
     }
     @Export(name="tags", type=List.class, parameters={RulesetTag.class})
     private Output</* @Nullable */ List<RulesetTag>> tags;
 
-    public Output</* @Nullable */ List<RulesetTag>> getTags() {
+    public Output</* @Nullable */ List<RulesetTag>> tags() {
         return this.tags;
     }
     /**
@@ -80,7 +80,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @return Arn of the target resource (dataset) to apply the ruleset to
      * 
      */
-    public Output<String> getTargetArn() {
+    public Output<String> targetArn() {
         return this.targetArn;
     }
 

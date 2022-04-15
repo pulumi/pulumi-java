@@ -22,7 +22,7 @@ public final class ResourceCollectionFilterArgs extends io.pulumi.resources.Reso
     @Import(name="cloudFormation")
       private final @Nullable Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation;
 
-    public Output<ResourceCollectionCloudFormationCollectionFilterArgs> getCloudFormation() {
+    public Output<ResourceCollectionCloudFormationCollectionFilterArgs> cloudFormation() {
         return this.cloudFormation == null ? Codegen.empty() : this.cloudFormation;
     }
 

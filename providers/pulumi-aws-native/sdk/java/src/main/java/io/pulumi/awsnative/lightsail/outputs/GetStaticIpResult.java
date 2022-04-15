@@ -45,24 +45,24 @@ public final class GetStaticIpResult {
      * The instance where the static IP is attached.
      * 
     */
-    public Optional<String> getAttachedTo() {
+    public Optional<String> attachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
      * The static IP address.
      * 
     */
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * A Boolean value indicating whether the static IP is attached.
      * 
     */
-    public Optional<Boolean> getIsAttached() {
+    public Optional<Boolean> isAttached() {
         return Optional.ofNullable(this.isAttached);
     }
-    public Optional<String> getStaticIpArn() {
+    public Optional<String> staticIpArn() {
         return Optional.ofNullable(this.staticIpArn);
     }
 

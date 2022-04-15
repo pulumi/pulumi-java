@@ -18,35 +18,35 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     @Import(name="databaseHost", required=true)
       private final Output<String> databaseHost;
 
-    public Output<String> getDatabaseHost() {
+    public Output<String> databaseHost() {
         return this.databaseHost;
     }
 
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
     @Import(name="databasePort", required=true)
       private final Output<Integer> databasePort;
 
-    public Output<Integer> getDatabasePort() {
+    public Output<Integer> databasePort() {
         return this.databasePort;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

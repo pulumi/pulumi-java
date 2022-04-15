@@ -21,21 +21,21 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     @Import(name="advancedBackupSettings")
       private final @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
 
-    public Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> getAdvancedBackupSettings() {
+    public Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings() {
         return this.advancedBackupSettings == null ? Codegen.empty() : this.advancedBackupSettings;
     }
 
     @Import(name="backupPlanName", required=true)
       private final Output<String> backupPlanName;
 
-    public Output<String> getBackupPlanName() {
+    public Output<String> backupPlanName() {
         return this.backupPlanName;
     }
 
     @Import(name="backupPlanRule", required=true)
       private final Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
 
-    public Output<List<BackupPlanBackupRuleResourceTypeArgs>> getBackupPlanRule() {
+    public Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule() {
         return this.backupPlanRule;
     }
 

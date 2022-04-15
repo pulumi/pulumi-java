@@ -26,13 +26,13 @@ public final class FlowS3SourceProperties {
         this.s3InputFormatConfig = s3InputFormatConfig;
     }
 
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
-    public String getBucketPrefix() {
+    public String bucketPrefix() {
         return this.bucketPrefix;
     }
-    public Optional<FlowS3InputFormatConfig> getS3InputFormatConfig() {
+    public Optional<FlowS3InputFormatConfig> s3InputFormatConfig() {
         return Optional.ofNullable(this.s3InputFormatConfig);
     }
 

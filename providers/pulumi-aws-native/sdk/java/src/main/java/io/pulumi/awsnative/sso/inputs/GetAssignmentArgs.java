@@ -21,7 +21,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
-    public String getInstanceArn() {
+    public String instanceArn() {
         return this.instanceArn;
     }
 
@@ -32,7 +32,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="permissionSetArn", required=true)
       private final String permissionSetArn;
 
-    public String getPermissionSetArn() {
+    public String permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -43,7 +43,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -54,7 +54,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="principalType", required=true)
       private final AssignmentPrincipalType principalType;
 
-    public AssignmentPrincipalType getPrincipalType() {
+    public AssignmentPrincipalType principalType() {
         return this.principalType;
     }
 
@@ -65,7 +65,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetId", required=true)
       private final String targetId;
 
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
 
@@ -76,7 +76,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetType", required=true)
       private final AssignmentTargetType targetType;
 
-    public AssignmentTargetType getTargetType() {
+    public AssignmentTargetType targetType() {
         return this.targetType;
     }
 

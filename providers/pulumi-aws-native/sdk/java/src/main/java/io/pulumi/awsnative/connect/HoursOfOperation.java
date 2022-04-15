@@ -34,7 +34,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return Configuration information for the hours of operation: day, start time, and end time.
      * 
      */
-    public Output<List<HoursOfOperationConfig>> getConfig() {
+    public Output<List<HoursOfOperationConfig>> config() {
         return this.config;
     }
     /**
@@ -48,7 +48,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return The description of the hours of operation.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -62,7 +62,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the hours of operation.
      * 
      */
-    public Output<String> getHoursOfOperationArn() {
+    public Output<String> hoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
     /**
@@ -76,7 +76,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return The identifier of the Amazon Connect instance.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -90,7 +90,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return The name of the hours of operation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +104,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<HoursOfOperationTag>> getTags() {
+    public Output</* @Nullable */ List<HoursOfOperationTag>> tags() {
         return this.tags;
     }
     /**
@@ -118,7 +118,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * @return The time zone of the hours of operation.
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 

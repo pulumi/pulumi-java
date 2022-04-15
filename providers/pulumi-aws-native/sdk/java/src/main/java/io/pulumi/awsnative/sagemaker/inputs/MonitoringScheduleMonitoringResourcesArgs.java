@@ -21,7 +21,7 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.r
     @Import(name="clusterConfig", required=true)
       private final Output<MonitoringScheduleClusterConfigArgs> clusterConfig;
 
-    public Output<MonitoringScheduleClusterConfigArgs> getClusterConfig() {
+    public Output<MonitoringScheduleClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 

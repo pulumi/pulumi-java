@@ -19,14 +19,14 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="overrides")
       private final @Nullable Output<ComponentOverridesArgs> overrides;
 
-    public Output<ComponentOverridesArgs> getOverrides() {
+    public Output<ComponentOverridesArgs> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     @Import(name="variantValues")
       private final @Nullable Output<ComponentVariantValuesArgs> variantValues;
 
-    public Output<ComponentVariantValuesArgs> getVariantValues() {
+    public Output<ComponentVariantValuesArgs> variantValues() {
         return this.variantValues == null ? Codegen.empty() : this.variantValues;
     }
 

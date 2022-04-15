@@ -51,34 +51,34 @@ public final class GetBranchResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getBuildSpec() {
+    public Optional<String> buildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<Boolean> getEnableAutoBuild() {
+    public Optional<Boolean> enableAutoBuild() {
         return Optional.ofNullable(this.enableAutoBuild);
     }
-    public Optional<Boolean> getEnablePerformanceMode() {
+    public Optional<Boolean> enablePerformanceMode() {
         return Optional.ofNullable(this.enablePerformanceMode);
     }
-    public Optional<Boolean> getEnablePullRequestPreview() {
+    public Optional<Boolean> enablePullRequestPreview() {
         return Optional.ofNullable(this.enablePullRequestPreview);
     }
-    public List<BranchEnvironmentVariable> getEnvironmentVariables() {
+    public List<BranchEnvironmentVariable> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
-    public Optional<String> getPullRequestEnvironmentName() {
+    public Optional<String> pullRequestEnvironmentName() {
         return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
-    public Optional<BranchStage> getStage() {
+    public Optional<BranchStage> stage() {
         return Optional.ofNullable(this.stage);
     }
-    public List<BranchTag> getTags() {
+    public List<BranchTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

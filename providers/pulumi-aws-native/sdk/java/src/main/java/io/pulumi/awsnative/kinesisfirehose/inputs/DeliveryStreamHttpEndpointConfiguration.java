@@ -17,21 +17,21 @@ public final class DeliveryStreamHttpEndpointConfiguration extends io.pulumi.res
     @Import(name="accessKey")
       private final @Nullable String accessKey;
 
-    public Optional<String> getAccessKey() {
+    public Optional<String> accessKey() {
         return this.accessKey == null ? Optional.empty() : Optional.ofNullable(this.accessKey);
     }
 
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

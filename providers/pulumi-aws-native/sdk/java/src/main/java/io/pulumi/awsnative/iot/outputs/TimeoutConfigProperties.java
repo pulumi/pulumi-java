@@ -16,7 +16,7 @@ public final class TimeoutConfigProperties {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
     }
 
-    public Integer getInProgressTimeoutInMinutes() {
+    public Integer inProgressTimeoutInMinutes() {
         return this.inProgressTimeoutInMinutes;
     }
 

@@ -25,7 +25,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
-    public Output<List<String>> getAgentArns() {
+    public Output<List<String>> agentArns() {
         return this.agentArns;
     }
 
@@ -36,14 +36,14 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     @Import(name="mountOptions")
       private final @Nullable Output<LocationSMBMountOptionsArgs> mountOptions;
 
-    public Output<LocationSMBMountOptionsArgs> getMountOptions() {
+    public Output<LocationSMBMountOptionsArgs> mountOptions() {
         return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
@@ -54,7 +54,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -65,7 +65,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
-    public Output<String> getServerHostname() {
+    public Output<String> serverHostname() {
         return this.serverHostname;
     }
 
@@ -76,7 +76,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
-    public Output<String> getSubdirectory() {
+    public Output<String> subdirectory() {
         return this.subdirectory;
     }
 
@@ -87,7 +87,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<LocationSMBTagArgs>> tags;
 
-    public Output<List<LocationSMBTagArgs>> getTags() {
+    public Output<List<LocationSMBTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -98,7 +98,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 

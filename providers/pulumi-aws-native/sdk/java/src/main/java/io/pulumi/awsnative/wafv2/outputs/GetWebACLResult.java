@@ -61,41 +61,41 @@ public final class GetWebACLResult {
         this.visibilityConfig = visibilityConfig;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
-    public Optional<WebACLCaptchaConfig> getCaptchaConfig() {
+    public Optional<WebACLCaptchaConfig> captchaConfig() {
         return Optional.ofNullable(this.captchaConfig);
     }
-    public Optional<WebACLCustomResponseBodies> getCustomResponseBodies() {
+    public Optional<WebACLCustomResponseBodies> customResponseBodies() {
         return Optional.ofNullable(this.customResponseBodies);
     }
-    public Optional<WebACLDefaultAction> getDefaultAction() {
+    public Optional<WebACLDefaultAction> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getLabelNamespace() {
+    public Optional<String> labelNamespace() {
         return Optional.ofNullable(this.labelNamespace);
     }
     /**
      * Collection of Rules.
      * 
     */
-    public List<WebACLRule> getRules() {
+    public List<WebACLRule> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
-    public List<WebACLTag> getTags() {
+    public List<WebACLTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<WebACLVisibilityConfig> getVisibilityConfig() {
+    public Optional<WebACLVisibilityConfig> visibilityConfig() {
         return Optional.ofNullable(this.visibilityConfig);
     }
 

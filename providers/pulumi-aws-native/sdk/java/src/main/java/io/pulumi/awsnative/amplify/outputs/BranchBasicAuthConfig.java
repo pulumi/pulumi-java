@@ -26,13 +26,13 @@ public final class BranchBasicAuthConfig {
         this.username = username;
     }
 
-    public Optional<Boolean> getEnableBasicAuth() {
+    public Optional<Boolean> enableBasicAuth() {
         return Optional.ofNullable(this.enableBasicAuth);
     }
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

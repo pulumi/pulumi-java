@@ -23,10 +23,10 @@ public final class GetSchedulingPolicyResult {
         this.fairsharePolicy = fairsharePolicy;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<SchedulingPolicyFairsharePolicy> getFairsharePolicy() {
+    public Optional<SchedulingPolicyFairsharePolicy> fairsharePolicy() {
         return Optional.ofNullable(this.fairsharePolicy);
     }
 

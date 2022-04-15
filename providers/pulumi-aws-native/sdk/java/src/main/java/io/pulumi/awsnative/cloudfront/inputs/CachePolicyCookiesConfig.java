@@ -18,14 +18,14 @@ public final class CachePolicyCookiesConfig extends io.pulumi.resources.InvokeAr
     @Import(name="cookieBehavior", required=true)
       private final String cookieBehavior;
 
-    public String getCookieBehavior() {
+    public String cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
       private final @Nullable List<String> cookies;
 
-    public List<String> getCookies() {
+    public List<String> cookies() {
         return this.cookies == null ? List.of() : this.cookies;
     }
 

@@ -86,63 +86,63 @@ public final class GetMulticastGroupResult {
      * Multicast group arn. Returned after successful create.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Wireless device to associate. Only for update request.
      * 
     */
-    public Optional<String> getAssociateWirelessDevice() {
+    public Optional<String> associateWirelessDevice() {
         return Optional.ofNullable(this.associateWirelessDevice);
     }
     /**
      * Multicast group description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Wireless device to disassociate. Only for update request.
      * 
     */
-    public Optional<String> getDisassociateWirelessDevice() {
+    public Optional<String> disassociateWirelessDevice() {
         return Optional.ofNullable(this.disassociateWirelessDevice);
     }
     /**
      * Multicast group id. Returned after successful create.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Multicast group LoRaWAN
      * 
     */
-    public Optional<MulticastGroupLoRaWAN> getLoRaWAN() {
+    public Optional<MulticastGroupLoRaWAN> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of Multicast group
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Multicast group status. Returned after successful read.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * A list of key-value pairs that contain metadata for the Multicast group.
      * 
     */
-    public List<MulticastGroupTag> getTags() {
+    public List<MulticastGroupTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

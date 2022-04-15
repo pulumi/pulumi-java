@@ -17,7 +17,7 @@ public final class ServiceNetworkConfiguration extends io.pulumi.resources.Invok
     @Import(name="awsvpcConfiguration")
       private final @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
 
-    public Optional<ServiceAwsVpcConfiguration> getAwsvpcConfiguration() {
+    public Optional<ServiceAwsVpcConfiguration> awsvpcConfiguration() {
         return this.awsvpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.awsvpcConfiguration);
     }
 

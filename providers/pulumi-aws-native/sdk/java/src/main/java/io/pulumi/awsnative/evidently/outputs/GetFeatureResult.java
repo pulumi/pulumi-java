@@ -46,29 +46,29 @@ public final class GetFeatureResult {
         this.variations = variations;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getDefaultVariation() {
+    public Optional<String> defaultVariation() {
         return Optional.ofNullable(this.defaultVariation);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public List<FeatureEntityOverride> getEntityOverrides() {
+    public List<FeatureEntityOverride> entityOverrides() {
         return this.entityOverrides == null ? List.of() : this.entityOverrides;
     }
-    public Optional<FeatureEvaluationStrategy> getEvaluationStrategy() {
+    public Optional<FeatureEvaluationStrategy> evaluationStrategy() {
         return Optional.ofNullable(this.evaluationStrategy);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<FeatureTag> getTags() {
+    public List<FeatureTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public List<FeatureVariationObject> getVariations() {
+    public List<FeatureVariationObject> variations() {
         return this.variations == null ? List.of() : this.variations;
     }
 

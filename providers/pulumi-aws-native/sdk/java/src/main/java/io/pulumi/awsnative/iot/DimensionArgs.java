@@ -25,7 +25,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -36,7 +36,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stringValues", required=true)
       private final Output<List<String>> stringValues;
 
-    public Output<List<String>> getStringValues() {
+    public Output<List<String>> stringValues() {
         return this.stringValues;
     }
 
@@ -47,7 +47,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DimensionTagArgs>> tags;
 
-    public Output<List<DimensionTagArgs>> getTags() {
+    public Output<List<DimensionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -58,7 +58,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<DimensionType> type;
 
-    public Output<DimensionType> getType() {
+    public Output<DimensionType> type() {
         return this.type;
     }
 

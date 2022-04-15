@@ -18,7 +18,7 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
     @Import(name="targetGroups", required=true)
       private final Output<List<SpotFleetTargetGroupArgs>> targetGroups;
 
-    public Output<List<SpotFleetTargetGroupArgs>> getTargetGroups() {
+    public Output<List<SpotFleetTargetGroupArgs>> targetGroups() {
         return this.targetGroups;
     }
 
