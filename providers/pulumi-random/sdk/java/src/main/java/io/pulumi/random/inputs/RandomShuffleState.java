@@ -26,7 +26,7 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<String>> inputs;
 
-    public Output<List<String>> getInputs() {
+    public Output<List<String>> inputs() {
         return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
@@ -37,7 +37,7 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -48,7 +48,7 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resultCount")
       private final @Nullable Output<Integer> resultCount;
 
-    public Output<Integer> getResultCount() {
+    public Output<Integer> resultCount() {
         return this.resultCount == null ? Codegen.empty() : this.resultCount;
     }
 
@@ -59,7 +59,7 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="results")
       private final @Nullable Output<List<String>> results;
 
-    public Output<List<String>> getResults() {
+    public Output<List<String>> results() {
         return this.results == null ? Codegen.empty() : this.results;
     }
 
@@ -70,7 +70,7 @@ public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="seed")
       private final @Nullable Output<String> seed;
 
-    public Output<String> getSeed() {
+    public Output<String> seed() {
         return this.seed == null ? Codegen.empty() : this.seed;
     }
 

@@ -24,7 +24,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> getKeepers() {
+    public Output<Map<String,Object>> keepers() {
         return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
@@ -35,7 +35,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
     @Import(name="result")
       private final @Nullable Output<String> result;
 
-    public Output<String> getResult() {
+    public Output<String> result() {
         return this.result == null ? Codegen.empty() : this.result;
     }
 

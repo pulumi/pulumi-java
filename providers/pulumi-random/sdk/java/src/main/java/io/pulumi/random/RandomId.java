@@ -60,7 +60,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return The generated id presented in base64 without additional transformations.
      * 
      */
-    public Output<String> getB64Std() {
+    public Output<String> b64Std() {
         return this.b64Std;
     }
     /**
@@ -74,7 +74,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
      * 
      */
-    public Output<String> getB64Url() {
+    public Output<String> b64Url() {
         return this.b64Url;
     }
     /**
@@ -88,7 +88,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
      * 
      */
-    public Output<Integer> getByteLength() {
+    public Output<Integer> byteLength() {
         return this.byteLength;
     }
     /**
@@ -102,7 +102,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return The generated id presented in non-padded decimal digits.
      * 
      */
-    public Output<String> getDec() {
+    public Output<String> dec() {
         return this.dec;
     }
     /**
@@ -116,7 +116,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
      * 
      */
-    public Output<String> getHex() {
+    public Output<String> hex() {
         return this.hex;
     }
     /**
@@ -130,7 +130,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -144,7 +144,7 @@ public class RandomId extends io.pulumi.resources.CustomResource {
      * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
 
