@@ -3,6 +3,7 @@
   schedule:
     - cron: 0 */6 * * *
 
+jobs:
   cleanup-sdk-prerelease-builds:
     timeout-minutes: 10
     runs-on: ubuntu-latest
