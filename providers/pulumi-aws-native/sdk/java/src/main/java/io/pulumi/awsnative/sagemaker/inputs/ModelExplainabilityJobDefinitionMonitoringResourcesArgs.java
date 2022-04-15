@@ -21,7 +21,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
     @Import(name="clusterConfig", required=true)
       private final Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Output<ModelExplainabilityJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 

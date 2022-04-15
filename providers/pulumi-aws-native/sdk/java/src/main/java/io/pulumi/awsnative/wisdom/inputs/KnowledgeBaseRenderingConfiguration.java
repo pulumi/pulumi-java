@@ -17,7 +17,7 @@ public final class KnowledgeBaseRenderingConfiguration extends io.pulumi.resourc
     @Import(name="templateUri")
       private final @Nullable String templateUri;
 
-    public Optional<String> getTemplateUri() {
+    public Optional<String> templateUri() {
         return this.templateUri == null ? Optional.empty() : Optional.ofNullable(this.templateUri);
     }
 

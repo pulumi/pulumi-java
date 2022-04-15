@@ -19,7 +19,7 @@ public final class GetRecoveryGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="recoveryGroupName", required=true)
       private final String recoveryGroupName;
 
-    public String getRecoveryGroupName() {
+    public String recoveryGroupName() {
         return this.recoveryGroupName;
     }
 

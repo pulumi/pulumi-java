@@ -62,38 +62,38 @@ public final class BucketRule {
      * Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
      * 
     */
-    public Optional<BucketAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
+    public Optional<BucketAbortIncompleteMultipartUpload> abortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
     /**
      * Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
      * 
     */
-    public Optional<String> getExpirationDate() {
+    public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
      * 
     */
-    public Optional<Integer> getExpirationInDays() {
+    public Optional<Integer> expirationInDays() {
         return Optional.ofNullable(this.expirationInDays);
     }
     /**
      * The container for the filter of the lifecycle rule.
      * 
     */
-    public Optional<BucketRuleFilterProperties> getFilter() {
+    public Optional<BucketRuleFilterProperties> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * Unique identifier for the lifecycle rule. The value can't be longer than 255 characters.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<BucketRuleStatus> getStatus() {
+    public Optional<BucketRuleStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

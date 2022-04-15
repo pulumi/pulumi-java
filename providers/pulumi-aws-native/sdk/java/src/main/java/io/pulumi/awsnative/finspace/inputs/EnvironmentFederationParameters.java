@@ -26,7 +26,7 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
     @Import(name="applicationCallBackURL")
       private final @Nullable String applicationCallBackURL;
 
-    public Optional<String> getApplicationCallBackURL() {
+    public Optional<String> applicationCallBackURL() {
         return this.applicationCallBackURL == null ? Optional.empty() : Optional.ofNullable(this.applicationCallBackURL);
     }
 
@@ -37,7 +37,7 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
     @Import(name="attributeMap")
       private final @Nullable Object attributeMap;
 
-    public Optional<Object> getAttributeMap() {
+    public Optional<Object> attributeMap() {
         return this.attributeMap == null ? Optional.empty() : Optional.ofNullable(this.attributeMap);
     }
 
@@ -48,7 +48,7 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
     @Import(name="federationProviderName")
       private final @Nullable String federationProviderName;
 
-    public Optional<String> getFederationProviderName() {
+    public Optional<String> federationProviderName() {
         return this.federationProviderName == null ? Optional.empty() : Optional.ofNullable(this.federationProviderName);
     }
 
@@ -59,7 +59,7 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
     @Import(name="federationURN")
       private final @Nullable String federationURN;
 
-    public Optional<String> getFederationURN() {
+    public Optional<String> federationURN() {
         return this.federationURN == null ? Optional.empty() : Optional.ofNullable(this.federationURN);
     }
 
@@ -70,7 +70,7 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
     @Import(name="samlMetadataDocument")
       private final @Nullable String samlMetadataDocument;
 
-    public Optional<String> getSamlMetadataDocument() {
+    public Optional<String> samlMetadataDocument() {
         return this.samlMetadataDocument == null ? Optional.empty() : Optional.ofNullable(this.samlMetadataDocument);
     }
 
@@ -81,7 +81,7 @@ public final class EnvironmentFederationParameters extends io.pulumi.resources.I
     @Import(name="samlMetadataURL")
       private final @Nullable String samlMetadataURL;
 
-    public Optional<String> getSamlMetadataURL() {
+    public Optional<String> samlMetadataURL() {
         return this.samlMetadataURL == null ? Optional.empty() : Optional.ofNullable(this.samlMetadataURL);
     }
 

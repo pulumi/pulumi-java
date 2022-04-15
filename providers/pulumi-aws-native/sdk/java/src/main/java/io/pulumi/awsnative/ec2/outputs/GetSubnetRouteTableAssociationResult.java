@@ -18,7 +18,7 @@ public final class GetSubnetRouteTableAssociationResult {
         this.id = id;
     }
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

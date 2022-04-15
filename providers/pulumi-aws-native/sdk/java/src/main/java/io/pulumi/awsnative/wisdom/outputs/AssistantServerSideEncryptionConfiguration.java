@@ -18,7 +18,7 @@ public final class AssistantServerSideEncryptionConfiguration {
         this.kmsKeyId = kmsKeyId;
     }
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
 

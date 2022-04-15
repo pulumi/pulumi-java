@@ -18,42 +18,42 @@ public final class FilterPackageFilter extends io.pulumi.resources.InvokeArgs {
     @Import(name="architecture")
       private final @Nullable FilterStringFilter architecture;
 
-    public Optional<FilterStringFilter> getArchitecture() {
+    public Optional<FilterStringFilter> architecture() {
         return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
     }
 
     @Import(name="epoch")
       private final @Nullable FilterNumberFilter epoch;
 
-    public Optional<FilterNumberFilter> getEpoch() {
+    public Optional<FilterNumberFilter> epoch() {
         return this.epoch == null ? Optional.empty() : Optional.ofNullable(this.epoch);
     }
 
     @Import(name="name")
       private final @Nullable FilterStringFilter name;
 
-    public Optional<FilterStringFilter> getName() {
+    public Optional<FilterStringFilter> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="release")
       private final @Nullable FilterStringFilter release;
 
-    public Optional<FilterStringFilter> getRelease() {
+    public Optional<FilterStringFilter> release() {
         return this.release == null ? Optional.empty() : Optional.ofNullable(this.release);
     }
 
     @Import(name="sourceLayerHash")
       private final @Nullable FilterStringFilter sourceLayerHash;
 
-    public Optional<FilterStringFilter> getSourceLayerHash() {
+    public Optional<FilterStringFilter> sourceLayerHash() {
         return this.sourceLayerHash == null ? Optional.empty() : Optional.ofNullable(this.sourceLayerHash);
     }
 
     @Import(name="version")
       private final @Nullable FilterStringFilter version;
 
-    public Optional<FilterStringFilter> getVersion() {
+    public Optional<FilterStringFilter> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

@@ -28,7 +28,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -39,7 +39,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="eventCategories")
       private final @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
-    public Output<List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
+    public Output<List<EventSubscriptionEventCategoriesItem>> eventCategories() {
         return this.eventCategories == null ? Codegen.empty() : this.eventCategories;
     }
 
@@ -50,7 +50,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="severity")
       private final @Nullable Output<EventSubscriptionSeverity> severity;
 
-    public Output<EventSubscriptionSeverity> getSeverity() {
+    public Output<EventSubscriptionSeverity> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -61,7 +61,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
@@ -72,7 +72,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceIds")
       private final @Nullable Output<List<String>> sourceIds;
 
-    public Output<List<String>> getSourceIds() {
+    public Output<List<String>> sourceIds() {
         return this.sourceIds == null ? Codegen.empty() : this.sourceIds;
     }
 
@@ -83,7 +83,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceType")
       private final @Nullable Output<EventSubscriptionSourceType> sourceType;
 
-    public Output<EventSubscriptionSourceType> getSourceType() {
+    public Output<EventSubscriptionSourceType> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
@@ -94,7 +94,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
 
-    public Output<String> getSubscriptionName() {
+    public Output<String> subscriptionName() {
         return this.subscriptionName;
     }
 
@@ -105,7 +105,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<EventSubscriptionTagArgs>> tags;
 
-    public Output<List<EventSubscriptionTagArgs>> getTags() {
+    public Output<List<EventSubscriptionTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

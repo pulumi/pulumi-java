@@ -18,14 +18,14 @@ public final class JobStatisticOverrideArgs extends io.pulumi.resources.Resource
     @Import(name="parameters", required=true)
       private final Output<JobParameterMapArgs> parameters;
 
-    public Output<JobParameterMapArgs> getParameters() {
+    public Output<JobParameterMapArgs> parameters() {
         return this.parameters;
     }
 
     @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
-    public Output<String> getStatistic() {
+    public Output<String> statistic() {
         return this.statistic;
     }
 

@@ -20,10 +20,10 @@ public final class DatasetIotEventsDestinationConfiguration {
         this.roleArn = roleArn;
     }
 
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

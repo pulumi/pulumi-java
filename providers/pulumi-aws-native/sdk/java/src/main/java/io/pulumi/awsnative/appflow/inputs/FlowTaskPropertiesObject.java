@@ -20,14 +20,14 @@ public final class FlowTaskPropertiesObject extends io.pulumi.resources.InvokeAr
     @Import(name="key", required=true)
       private final FlowOperatorPropertiesKeys key;
 
-    public FlowOperatorPropertiesKeys getKey() {
+    public FlowOperatorPropertiesKeys key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

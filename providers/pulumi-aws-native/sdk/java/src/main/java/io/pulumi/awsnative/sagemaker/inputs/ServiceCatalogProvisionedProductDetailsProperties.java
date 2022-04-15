@@ -21,14 +21,14 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends io.
     @Import(name="provisionedProductId")
       private final @Nullable String provisionedProductId;
 
-    public Optional<String> getProvisionedProductId() {
+    public Optional<String> provisionedProductId() {
         return this.provisionedProductId == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductId);
     }
 
     @Import(name="provisionedProductStatusMessage")
       private final @Nullable String provisionedProductStatusMessage;
 
-    public Optional<String> getProvisionedProductStatusMessage() {
+    public Optional<String> provisionedProductStatusMessage() {
         return this.provisionedProductStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductStatusMessage);
     }
 

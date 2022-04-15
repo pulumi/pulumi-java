@@ -24,70 +24,70 @@ public final class DataSourceConfluenceConfiguration extends io.pulumi.resources
     @Import(name="attachmentConfiguration")
       private final @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration;
 
-    public Optional<DataSourceConfluenceAttachmentConfiguration> getAttachmentConfiguration() {
+    public Optional<DataSourceConfluenceAttachmentConfiguration> attachmentConfiguration() {
         return this.attachmentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.attachmentConfiguration);
     }
 
     @Import(name="blogConfiguration")
       private final @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration;
 
-    public Optional<DataSourceConfluenceBlogConfiguration> getBlogConfiguration() {
+    public Optional<DataSourceConfluenceBlogConfiguration> blogConfiguration() {
         return this.blogConfiguration == null ? Optional.empty() : Optional.ofNullable(this.blogConfiguration);
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
-    public List<String> getExclusionPatterns() {
+    public List<String> exclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
-    public List<String> getInclusionPatterns() {
+    public List<String> inclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @Import(name="pageConfiguration")
       private final @Nullable DataSourceConfluencePageConfiguration pageConfiguration;
 
-    public Optional<DataSourceConfluencePageConfiguration> getPageConfiguration() {
+    public Optional<DataSourceConfluencePageConfiguration> pageConfiguration() {
         return this.pageConfiguration == null ? Optional.empty() : Optional.ofNullable(this.pageConfiguration);
     }
 
     @Import(name="secretArn", required=true)
       private final String secretArn;
 
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serverUrl", required=true)
       private final String serverUrl;
 
-    public String getServerUrl() {
+    public String serverUrl() {
         return this.serverUrl;
     }
 
     @Import(name="spaceConfiguration")
       private final @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration;
 
-    public Optional<DataSourceConfluenceSpaceConfiguration> getSpaceConfiguration() {
+    public Optional<DataSourceConfluenceSpaceConfiguration> spaceConfiguration() {
         return this.spaceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.spaceConfiguration);
     }
 
     @Import(name="version", required=true)
       private final DataSourceConfluenceVersion version;
 
-    public DataSourceConfluenceVersion getVersion() {
+    public DataSourceConfluenceVersion version() {
         return this.version;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
+    public Optional<DataSourceVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
     }
 

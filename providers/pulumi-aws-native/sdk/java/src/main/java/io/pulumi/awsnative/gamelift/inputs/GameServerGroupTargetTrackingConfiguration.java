@@ -19,7 +19,7 @@ public final class GameServerGroupTargetTrackingConfiguration extends io.pulumi.
     @Import(name="targetValue", required=true)
       private final Double targetValue;
 
-    public Double getTargetValue() {
+    public Double targetValue() {
         return this.targetValue;
     }
 

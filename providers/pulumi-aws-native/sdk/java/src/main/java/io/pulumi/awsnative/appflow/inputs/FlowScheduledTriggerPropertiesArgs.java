@@ -24,42 +24,42 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
     @Import(name="dataPullMode")
       private final @Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
-    public Output<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+    public Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode() {
         return this.dataPullMode == null ? Codegen.empty() : this.dataPullMode;
     }
 
     @Import(name="scheduleEndTime")
       private final @Nullable Output<Double> scheduleEndTime;
 
-    public Output<Double> getScheduleEndTime() {
+    public Output<Double> scheduleEndTime() {
         return this.scheduleEndTime == null ? Codegen.empty() : this.scheduleEndTime;
     }
 
     @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
-    public Output<String> getScheduleExpression() {
+    public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
     @Import(name="scheduleOffset")
       private final @Nullable Output<Double> scheduleOffset;
 
-    public Output<Double> getScheduleOffset() {
+    public Output<Double> scheduleOffset() {
         return this.scheduleOffset == null ? Codegen.empty() : this.scheduleOffset;
     }
 
     @Import(name="scheduleStartTime")
       private final @Nullable Output<Double> scheduleStartTime;
 
-    public Output<Double> getScheduleStartTime() {
+    public Output<Double> scheduleStartTime() {
         return this.scheduleStartTime == null ? Codegen.empty() : this.scheduleStartTime;
     }
 
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

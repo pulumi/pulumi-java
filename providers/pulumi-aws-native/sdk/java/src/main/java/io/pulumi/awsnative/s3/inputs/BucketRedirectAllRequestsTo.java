@@ -26,7 +26,7 @@ public final class BucketRedirectAllRequestsTo extends io.pulumi.resources.Invok
     @Import(name="hostName", required=true)
       private final String hostName;
 
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
 
@@ -37,7 +37,7 @@ public final class BucketRedirectAllRequestsTo extends io.pulumi.resources.Invok
     @Import(name="protocol")
       private final @Nullable BucketRedirectAllRequestsToProtocol protocol;
 
-    public Optional<BucketRedirectAllRequestsToProtocol> getProtocol() {
+    public Optional<BucketRedirectAllRequestsToProtocol> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 

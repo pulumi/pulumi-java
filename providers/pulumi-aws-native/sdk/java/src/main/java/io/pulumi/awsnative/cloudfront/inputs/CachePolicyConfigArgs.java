@@ -20,42 +20,42 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="defaultTTL", required=true)
       private final Output<Double> defaultTTL;
 
-    public Output<Double> getDefaultTTL() {
+    public Output<Double> defaultTTL() {
         return this.defaultTTL;
     }
 
     @Import(name="maxTTL", required=true)
       private final Output<Double> maxTTL;
 
-    public Output<Double> getMaxTTL() {
+    public Output<Double> maxTTL() {
         return this.maxTTL;
     }
 
     @Import(name="minTTL", required=true)
       private final Output<Double> minTTL;
 
-    public Output<Double> getMinTTL() {
+    public Output<Double> minTTL() {
         return this.minTTL;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 

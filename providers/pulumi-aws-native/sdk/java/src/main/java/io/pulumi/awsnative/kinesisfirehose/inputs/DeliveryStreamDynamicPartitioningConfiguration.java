@@ -18,14 +18,14 @@ public final class DeliveryStreamDynamicPartitioningConfiguration extends io.pul
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="retryOptions")
       private final @Nullable DeliveryStreamRetryOptions retryOptions;
 
-    public Optional<DeliveryStreamRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamRetryOptions> retryOptions() {
         return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
     }
 

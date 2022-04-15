@@ -29,7 +29,7 @@ public class ModuleDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the module version to set as the default version.
      * 
      */
-    public Output</* @Nullable */ String> getArn() {
+    public Output</* @Nullable */ String> arn() {
         return this.arn;
     }
     /**
@@ -43,7 +43,7 @@ public class ModuleDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The name of a module existing in the registry.
      * 
      */
-    public Output</* @Nullable */ String> getModuleName() {
+    public Output</* @Nullable */ String> moduleName() {
         return this.moduleName;
     }
     /**
@@ -57,7 +57,7 @@ public class ModuleDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The ID of an existing version of the named module to set as the default.
      * 
      */
-    public Output</* @Nullable */ String> getVersionId() {
+    public Output</* @Nullable */ String> versionId() {
         return this.versionId;
     }
 

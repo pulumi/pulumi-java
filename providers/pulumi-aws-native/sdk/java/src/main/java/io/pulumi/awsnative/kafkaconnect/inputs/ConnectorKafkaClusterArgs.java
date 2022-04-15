@@ -21,7 +21,7 @@ public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.Resourc
     @Import(name="apacheKafkaCluster", required=true)
       private final Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
 
-    public Output<ConnectorApacheKafkaClusterArgs> getApacheKafkaCluster() {
+    public Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster() {
         return this.apacheKafkaCluster;
     }
 

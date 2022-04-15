@@ -24,21 +24,21 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="adHocFilteringOption")
       private final @Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
 
-    public Output<DashboardAdHocFilteringOptionArgs> getAdHocFilteringOption() {
+    public Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption() {
         return this.adHocFilteringOption == null ? Codegen.empty() : this.adHocFilteringOption;
     }
 
     @Import(name="exportToCSVOption")
       private final @Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption;
 
-    public Output<DashboardExportToCSVOptionArgs> getExportToCSVOption() {
+    public Output<DashboardExportToCSVOptionArgs> exportToCSVOption() {
         return this.exportToCSVOption == null ? Codegen.empty() : this.exportToCSVOption;
     }
 
     @Import(name="sheetControlsOption")
       private final @Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption;
 
-    public Output<DashboardSheetControlsOptionArgs> getSheetControlsOption() {
+    public Output<DashboardSheetControlsOptionArgs> sheetControlsOption() {
         return this.sheetControlsOption == null ? Codegen.empty() : this.sheetControlsOption;
     }
 

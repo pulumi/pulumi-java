@@ -44,21 +44,21 @@ public final class FrameworkControl {
      * A list of ParameterName and ParameterValue pairs.
      * 
     */
-    public List<FrameworkControlInputParameter> getControlInputParameters() {
+    public List<FrameworkControlInputParameter> controlInputParameters() {
         return this.controlInputParameters == null ? List.of() : this.controlInputParameters;
     }
     /**
      * The name of a control. This name is between 1 and 256 characters.
      * 
     */
-    public String getControlName() {
+    public String controlName() {
         return this.controlName;
     }
     /**
      * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
      * 
     */
-    public Optional<FrameworkControlControlScopeProperties> getControlScope() {
+    public Optional<FrameworkControlControlScopeProperties> controlScope() {
         return Optional.ofNullable(this.controlScope);
     }
 

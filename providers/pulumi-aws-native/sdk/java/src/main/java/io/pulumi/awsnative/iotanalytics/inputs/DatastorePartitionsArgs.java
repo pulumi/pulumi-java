@@ -19,7 +19,7 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="partitions")
       private final @Nullable Output<List<DatastorePartitionArgs>> partitions;
 
-    public Output<List<DatastorePartitionArgs>> getPartitions() {
+    public Output<List<DatastorePartitionArgs>> partitions() {
         return this.partitions == null ? Codegen.empty() : this.partitions;
     }
 

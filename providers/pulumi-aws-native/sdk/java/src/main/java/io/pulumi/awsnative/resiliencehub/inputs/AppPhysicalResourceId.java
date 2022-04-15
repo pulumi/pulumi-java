@@ -17,28 +17,28 @@ public final class AppPhysicalResourceId extends io.pulumi.resources.InvokeArgs 
     @Import(name="awsAccountId")
       private final @Nullable String awsAccountId;
 
-    public Optional<String> getAwsAccountId() {
+    public Optional<String> awsAccountId() {
         return this.awsAccountId == null ? Optional.empty() : Optional.ofNullable(this.awsAccountId);
     }
 
     @Import(name="awsRegion")
       private final @Nullable String awsRegion;
 
-    public Optional<String> getAwsRegion() {
+    public Optional<String> awsRegion() {
         return this.awsRegion == null ? Optional.empty() : Optional.ofNullable(this.awsRegion);
     }
 
     @Import(name="identifier", required=true)
       private final String identifier;
 
-    public String getIdentifier() {
+    public String identifier() {
         return this.identifier;
     }
 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

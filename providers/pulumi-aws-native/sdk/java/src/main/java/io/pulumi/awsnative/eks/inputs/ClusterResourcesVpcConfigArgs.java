@@ -28,7 +28,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="endpointPrivateAccess")
       private final @Nullable Output<Boolean> endpointPrivateAccess;
 
-    public Output<Boolean> getEndpointPrivateAccess() {
+    public Output<Boolean> endpointPrivateAccess() {
         return this.endpointPrivateAccess == null ? Codegen.empty() : this.endpointPrivateAccess;
     }
 
@@ -39,7 +39,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="endpointPublicAccess")
       private final @Nullable Output<Boolean> endpointPublicAccess;
 
-    public Output<Boolean> getEndpointPublicAccess() {
+    public Output<Boolean> endpointPublicAccess() {
         return this.endpointPublicAccess == null ? Codegen.empty() : this.endpointPublicAccess;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="publicAccessCidrs")
       private final @Nullable Output<List<String>> publicAccessCidrs;
 
-    public Output<List<String>> getPublicAccessCidrs() {
+    public Output<List<String>> publicAccessCidrs() {
         return this.publicAccessCidrs == null ? Codegen.empty() : this.publicAccessCidrs;
     }
 
@@ -61,7 +61,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
@@ -72,7 +72,7 @@ public final class ClusterResourcesVpcConfigArgs extends io.pulumi.resources.Res
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 

@@ -52,28 +52,28 @@ public final class GetLoggingConfigurationResult {
      * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * 
     */
-    public List<String> getLogDestinationConfigs() {
+    public List<String> logDestinationConfigs() {
         return this.logDestinationConfigs == null ? List.of() : this.logDestinationConfigs;
     }
     /**
      * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
      * 
     */
-    public Optional<LoggingFilterProperties> getLoggingFilter() {
+    public Optional<LoggingFilterProperties> loggingFilter() {
         return Optional.ofNullable(this.loggingFilter);
     }
     /**
      * Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
      * 
     */
-    public Optional<Boolean> getManagedByFirewallManager() {
+    public Optional<Boolean> managedByFirewallManager() {
         return Optional.ofNullable(this.managedByFirewallManager);
     }
     /**
      * The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
      * 
     */
-    public List<LoggingConfigurationFieldToMatch> getRedactedFields() {
+    public List<LoggingConfigurationFieldToMatch> redactedFields() {
         return this.redactedFields == null ? List.of() : this.redactedFields;
     }
 

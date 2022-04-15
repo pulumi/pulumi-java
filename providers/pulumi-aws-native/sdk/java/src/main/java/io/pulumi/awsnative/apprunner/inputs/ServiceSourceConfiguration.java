@@ -24,7 +24,7 @@ public final class ServiceSourceConfiguration extends io.pulumi.resources.Invoke
     @Import(name="authenticationConfiguration")
       private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
 
-    public Optional<ServiceAuthenticationConfiguration> getAuthenticationConfiguration() {
+    public Optional<ServiceAuthenticationConfiguration> authenticationConfiguration() {
         return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
     }
 
@@ -35,21 +35,21 @@ public final class ServiceSourceConfiguration extends io.pulumi.resources.Invoke
     @Import(name="autoDeploymentsEnabled")
       private final @Nullable Boolean autoDeploymentsEnabled;
 
-    public Optional<Boolean> getAutoDeploymentsEnabled() {
+    public Optional<Boolean> autoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoDeploymentsEnabled);
     }
 
     @Import(name="codeRepository")
       private final @Nullable ServiceCodeRepository codeRepository;
 
-    public Optional<ServiceCodeRepository> getCodeRepository() {
+    public Optional<ServiceCodeRepository> codeRepository() {
         return this.codeRepository == null ? Optional.empty() : Optional.ofNullable(this.codeRepository);
     }
 
     @Import(name="imageRepository")
       private final @Nullable ServiceImageRepository imageRepository;
 
-    public Optional<ServiceImageRepository> getImageRepository() {
+    public Optional<ServiceImageRepository> imageRepository() {
         return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
     }
 

@@ -26,13 +26,13 @@ public final class SpotFleetSpotPlacement {
         this.tenancy = tenancy;
     }
 
-    public Optional<String> getAvailabilityZone() {
+    public Optional<String> availabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
-    public Optional<String> getGroupName() {
+    public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
-    public Optional<SpotFleetSpotPlacementTenancy> getTenancy() {
+    public Optional<SpotFleetSpotPlacementTenancy> tenancy() {
         return Optional.ofNullable(this.tenancy);
     }
 

@@ -27,7 +27,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPolicy", required=true)
       private final Output<Object> keyPolicy;
 
-    public Output<Object> getKeyPolicy() {
+    public Output<Object> keyPolicy() {
         return this.keyPolicy;
     }
 
@@ -60,7 +60,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pendingWindowInDays")
       private final @Nullable Output<Integer> pendingWindowInDays;
 
-    public Output<Integer> getPendingWindowInDays() {
+    public Output<Integer> pendingWindowInDays() {
         return this.pendingWindowInDays == null ? Codegen.empty() : this.pendingWindowInDays;
     }
 
@@ -71,7 +71,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
 
-    public Output<String> getPrimaryKeyArn() {
+    public Output<String> primaryKeyArn() {
         return this.primaryKeyArn;
     }
 
@@ -82,7 +82,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ReplicaKeyTagArgs>> tags;
 
-    public Output<List<ReplicaKeyTagArgs>> getTags() {
+    public Output<List<ReplicaKeyTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

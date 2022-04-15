@@ -38,25 +38,25 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
         this.sourcePrefixLists = sourcePrefixLists;
     }
 
-    public List<String> getDestinationAddresses() {
+    public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
-    public List<String> getDestinationPorts() {
+    public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
-    public List<String> getDestinationPrefixLists() {
+    public List<String> destinationPrefixLists() {
         return this.destinationPrefixLists == null ? List.of() : this.destinationPrefixLists;
     }
-    public List<NetworkInsightsAccessScopeProtocol> getProtocols() {
+    public List<NetworkInsightsAccessScopeProtocol> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
-    public List<String> getSourceAddresses() {
+    public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
-    public List<String> getSourcePorts() {
+    public List<String> sourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
-    public List<String> getSourcePrefixLists() {
+    public List<String> sourcePrefixLists() {
         return this.sourcePrefixLists == null ? List.of() : this.sourcePrefixLists;
     }
 

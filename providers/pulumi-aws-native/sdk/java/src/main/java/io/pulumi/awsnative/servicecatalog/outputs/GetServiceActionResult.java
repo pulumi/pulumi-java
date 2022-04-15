@@ -38,22 +38,22 @@ public final class GetServiceActionResult {
         this.name = name;
     }
 
-    public Optional<ServiceActionAcceptLanguage> getAcceptLanguage() {
+    public Optional<ServiceActionAcceptLanguage> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
-    public List<ServiceActionDefinitionParameter> getDefinition() {
+    public List<ServiceActionDefinitionParameter> definition() {
         return this.definition == null ? List.of() : this.definition;
     }
-    public Optional<ServiceActionDefinitionType> getDefinitionType() {
+    public Optional<ServiceActionDefinitionType> definitionType() {
         return Optional.ofNullable(this.definitionType);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

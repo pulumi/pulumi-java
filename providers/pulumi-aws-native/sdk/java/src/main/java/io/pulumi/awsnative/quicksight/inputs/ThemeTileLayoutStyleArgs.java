@@ -23,14 +23,14 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
     @Import(name="gutter")
       private final @Nullable Output<ThemeGutterStyleArgs> gutter;
 
-    public Output<ThemeGutterStyleArgs> getGutter() {
+    public Output<ThemeGutterStyleArgs> gutter() {
         return this.gutter == null ? Codegen.empty() : this.gutter;
     }
 
     @Import(name="margin")
       private final @Nullable Output<ThemeMarginStyleArgs> margin;
 
-    public Output<ThemeMarginStyleArgs> getMargin() {
+    public Output<ThemeMarginStyleArgs> margin() {
         return this.margin == null ? Codegen.empty() : this.margin;
     }
 

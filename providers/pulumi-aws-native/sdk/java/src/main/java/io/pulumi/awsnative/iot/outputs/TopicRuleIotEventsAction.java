@@ -29,16 +29,16 @@ public final class TopicRuleIotEventsAction {
         this.roleArn = roleArn;
     }
 
-    public Optional<Boolean> getBatchMode() {
+    public Optional<Boolean> batchMode() {
         return Optional.ofNullable(this.batchMode);
     }
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
-    public Optional<String> getMessageId() {
+    public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

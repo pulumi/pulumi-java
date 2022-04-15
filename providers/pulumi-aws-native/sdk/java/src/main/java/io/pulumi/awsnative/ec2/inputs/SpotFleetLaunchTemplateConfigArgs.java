@@ -20,14 +20,14 @@ public final class SpotFleetLaunchTemplateConfigArgs extends io.pulumi.resources
     @Import(name="launchTemplateSpecification")
       private final @Nullable Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
-    public Output<SpotFleetFleetLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
+    public Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification == null ? Codegen.empty() : this.launchTemplateSpecification;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides;
 
-    public Output<List<SpotFleetLaunchTemplateOverridesArgs>> getOverrides() {
+    public Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 

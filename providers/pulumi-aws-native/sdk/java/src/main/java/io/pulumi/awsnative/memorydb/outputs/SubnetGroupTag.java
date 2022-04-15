@@ -32,14 +32,14 @@ public final class SubnetGroupTag {
      * The key for the tag. May not be null.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The tag's value. May be null.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

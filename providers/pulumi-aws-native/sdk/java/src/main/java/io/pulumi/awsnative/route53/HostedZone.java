@@ -26,7 +26,7 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
     @Export(name="hostedZoneConfig", type=HostedZoneConfig.class, parameters={})
     private Output</* @Nullable */ HostedZoneConfig> hostedZoneConfig;
 
-    public Output</* @Nullable */ HostedZoneConfig> getHostedZoneConfig() {
+    public Output</* @Nullable */ HostedZoneConfig> hostedZoneConfig() {
         return this.hostedZoneConfig;
     }
     /**
@@ -44,7 +44,7 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
      */
-    public Output</* @Nullable */ List<HostedZoneTag>> getHostedZoneTags() {
+    public Output</* @Nullable */ List<HostedZoneTag>> hostedZoneTags() {
         return this.hostedZoneTags;
     }
     /**
@@ -62,19 +62,19 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * If you're creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers;
     }
     @Export(name="queryLoggingConfig", type=HostedZoneQueryLoggingConfig.class, parameters={})
     private Output</* @Nullable */ HostedZoneQueryLoggingConfig> queryLoggingConfig;
 
-    public Output</* @Nullable */ HostedZoneQueryLoggingConfig> getQueryLoggingConfig() {
+    public Output</* @Nullable */ HostedZoneQueryLoggingConfig> queryLoggingConfig() {
         return this.queryLoggingConfig;
     }
     /**
@@ -88,7 +88,7 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * @return A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
      */
-    public Output</* @Nullable */ List<HostedZoneVPC>> getVPCs() {
+    public Output</* @Nullable */ List<HostedZoneVPC>> vPCs() {
         return this.vPCs;
     }
 

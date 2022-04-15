@@ -27,14 +27,14 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
     @Import(name="componentId")
       private final @Nullable String componentId;
 
-    public Optional<String> getComponentId() {
+    public Optional<String> componentId() {
         return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
     }
 
     @Import(name="dnsTargetResource")
       private final @Nullable ResourceSetDNSTargetResource dnsTargetResource;
 
-    public Optional<ResourceSetDNSTargetResource> getDnsTargetResource() {
+    public Optional<ResourceSetDNSTargetResource> dnsTargetResource() {
         return this.dnsTargetResource == null ? Optional.empty() : Optional.ofNullable(this.dnsTargetResource);
     }
 
@@ -45,7 +45,7 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
     @Import(name="readinessScopes")
       private final @Nullable List<String> readinessScopes;
 
-    public List<String> getReadinessScopes() {
+    public List<String> readinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
     }
 
@@ -56,7 +56,7 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceArn")
       private final @Nullable String resourceArn;
 
-    public Optional<String> getResourceArn() {
+    public Optional<String> resourceArn() {
         return this.resourceArn == null ? Optional.empty() : Optional.ofNullable(this.resourceArn);
     }
 

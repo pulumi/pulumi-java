@@ -39,17 +39,17 @@ public final class OriginEndpointCmafEncryption {
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
      * 
     */
-    public Optional<String> getConstantInitializationVector() {
+    public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * Time (in seconds) between each encryption key rotation.
      * 
     */
-    public Optional<Integer> getKeyRotationIntervalSeconds() {
+    public Optional<Integer> keyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }
-    public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
+    public OriginEndpointSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 

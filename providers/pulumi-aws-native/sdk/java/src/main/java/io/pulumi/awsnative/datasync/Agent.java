@@ -34,7 +34,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return Activation key of the Agent.
      * 
      */
-    public Output<String> getActivationKey() {
+    public Output<String> activationKey() {
         return this.activationKey;
     }
     /**
@@ -48,7 +48,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The DataSync Agent ARN.
      * 
      */
-    public Output<String> getAgentArn() {
+    public Output<String> agentArn() {
         return this.agentArn;
     }
     /**
@@ -62,7 +62,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The name configured for the agent. Text reference used to identify the agent in the console.
      * 
      */
-    public Output</* @Nullable */ String> getAgentName() {
+    public Output</* @Nullable */ String> agentName() {
         return this.agentName;
     }
     /**
@@ -76,7 +76,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The service endpoints that the agent will connect to.
      * 
      */
-    public Output<AgentEndpointType> getEndpointType() {
+    public Output<AgentEndpointType> endpointType() {
         return this.endpointType;
     }
     /**
@@ -90,7 +90,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The ARNs of the security group used to protect your data transfer task subnets.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSecurityGroupArns() {
+    public Output</* @Nullable */ List<String>> securityGroupArns() {
         return this.securityGroupArns;
     }
     /**
@@ -104,7 +104,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSubnetArns() {
+    public Output</* @Nullable */ List<String>> subnetArns() {
         return this.subnetArns;
     }
     /**
@@ -118,7 +118,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<AgentTag>> getTags() {
+    public Output</* @Nullable */ List<AgentTag>> tags() {
         return this.tags;
     }
     /**
@@ -132,7 +132,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC endpoint that the agent has access to.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointId() {
+    public Output</* @Nullable */ String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 

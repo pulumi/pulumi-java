@@ -26,7 +26,7 @@ public final class DatasetMetadata {
      * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
      * 
     */
-    public Optional<String> getSourceArn() {
+    public Optional<String> sourceArn() {
         return Optional.ofNullable(this.sourceArn);
     }
 

@@ -27,7 +27,7 @@ public final class ImageTestsConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="imageTestsEnabled")
       private final @Nullable Output<Boolean> imageTestsEnabled;
 
-    public Output<Boolean> getImageTestsEnabled() {
+    public Output<Boolean> imageTestsEnabled() {
         return this.imageTestsEnabled == null ? Codegen.empty() : this.imageTestsEnabled;
     }
 
@@ -38,7 +38,7 @@ public final class ImageTestsConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="timeoutMinutes")
       private final @Nullable Output<Integer> timeoutMinutes;
 
-    public Output<Integer> getTimeoutMinutes() {
+    public Output<Integer> timeoutMinutes() {
         return this.timeoutMinutes == null ? Codegen.empty() : this.timeoutMinutes;
     }
 

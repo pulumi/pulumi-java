@@ -20,10 +20,10 @@ public final class ConnectionClientParameters {
         this.clientSecret = clientSecret;
     }
 
-    public String getClientID() {
+    public String clientID() {
         return this.clientID;
     }
-    public String getClientSecret() {
+    public String clientSecret() {
         return this.clientSecret;
     }
 

@@ -20,21 +20,21 @@ public final class RuleGroupRegexMatchStatementArgs extends io.pulumi.resources.
     @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="regexString", required=true)
       private final Output<String> regexString;
 
-    public Output<String> getRegexString() {
+    public Output<String> regexString() {
         return this.regexString;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
-    public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 

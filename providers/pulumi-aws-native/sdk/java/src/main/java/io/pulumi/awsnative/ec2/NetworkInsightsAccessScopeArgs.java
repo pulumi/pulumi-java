@@ -20,21 +20,21 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
     @Import(name="excludePaths")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
 
-    public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getExcludePaths() {
+    public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths() {
         return this.excludePaths == null ? Codegen.empty() : this.excludePaths;
     }
 
     @Import(name="matchPaths")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
 
-    public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getMatchPaths() {
+    public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths() {
         return this.matchPaths == null ? Codegen.empty() : this.matchPaths;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags;
 
-    public Output<List<NetworkInsightsAccessScopeTagArgs>> getTags() {
+    public Output<List<NetworkInsightsAccessScopeTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

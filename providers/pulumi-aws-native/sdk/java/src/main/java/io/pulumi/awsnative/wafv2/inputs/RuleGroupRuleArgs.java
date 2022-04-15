@@ -29,28 +29,28 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<RuleGroupRuleActionArgs> action;
 
-    public Output<RuleGroupRuleActionArgs> getAction() {
+    public Output<RuleGroupRuleActionArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
     @Import(name="captchaConfig")
       private final @Nullable Output<RuleGroupCaptchaConfigArgs> captchaConfig;
 
-    public Output<RuleGroupCaptchaConfigArgs> getCaptchaConfig() {
+    public Output<RuleGroupCaptchaConfigArgs> captchaConfig() {
         return this.captchaConfig == null ? Codegen.empty() : this.captchaConfig;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -61,21 +61,21 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleLabels")
       private final @Nullable Output<List<RuleGroupLabelArgs>> ruleLabels;
 
-    public Output<List<RuleGroupLabelArgs>> getRuleLabels() {
+    public Output<List<RuleGroupLabelArgs>> ruleLabels() {
         return this.ruleLabels == null ? Codegen.empty() : this.ruleLabels;
     }
 
     @Import(name="statement", required=true)
       private final Output<RuleGroupStatementArgs> statement;
 
-    public Output<RuleGroupStatementArgs> getStatement() {
+    public Output<RuleGroupStatementArgs> statement() {
         return this.statement;
     }
 
     @Import(name="visibilityConfig", required=true)
       private final Output<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
-    public Output<RuleGroupVisibilityConfigArgs> getVisibilityConfig() {
+    public Output<RuleGroupVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 

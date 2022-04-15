@@ -26,13 +26,13 @@ public final class InAppTemplateHeaderConfig {
         this.textColor = textColor;
     }
 
-    public Optional<InAppTemplateAlignment> getAlignment() {
+    public Optional<InAppTemplateAlignment> alignment() {
         return Optional.ofNullable(this.alignment);
     }
-    public Optional<String> getHeader() {
+    public Optional<String> header() {
         return Optional.ofNullable(this.header);
     }
-    public Optional<String> getTextColor() {
+    public Optional<String> textColor() {
         return Optional.ofNullable(this.textColor);
     }
 

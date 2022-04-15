@@ -57,35 +57,35 @@ public final class GetCodeSigningConfigResult {
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
      * 
     */
-    public Optional<CodeSigningConfigAllowedPublishers> getAllowedPublishers() {
+    public Optional<CodeSigningConfigAllowedPublishers> allowedPublishers() {
         return Optional.ofNullable(this.allowedPublishers);
     }
     /**
      * A unique Arn for CodeSigningConfig resource
      * 
     */
-    public Optional<String> getCodeSigningConfigArn() {
+    public Optional<String> codeSigningConfigArn() {
         return Optional.ofNullable(this.codeSigningConfigArn);
     }
     /**
      * A unique identifier for CodeSigningConfig resource
      * 
     */
-    public Optional<String> getCodeSigningConfigId() {
+    public Optional<String> codeSigningConfigId() {
         return Optional.ofNullable(this.codeSigningConfigId);
     }
     /**
      * Policies to control how to act if a signature is invalid
      * 
     */
-    public Optional<CodeSigningConfigCodeSigningPolicies> getCodeSigningPolicies() {
+    public Optional<CodeSigningConfigCodeSigningPolicies> codeSigningPolicies() {
         return Optional.ofNullable(this.codeSigningPolicies);
     }
     /**
      * A description of the CodeSigningConfig
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

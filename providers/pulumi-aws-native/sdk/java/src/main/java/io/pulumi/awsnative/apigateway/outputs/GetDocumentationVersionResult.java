@@ -26,7 +26,7 @@ public final class GetDocumentationVersionResult {
      * The description of the API documentation snapshot.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 

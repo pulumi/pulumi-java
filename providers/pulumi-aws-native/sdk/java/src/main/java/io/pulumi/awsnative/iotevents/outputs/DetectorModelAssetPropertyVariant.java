@@ -48,28 +48,28 @@ public final class DetectorModelAssetPropertyVariant {
      * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
      * 
     */
-    public Optional<String> getBooleanValue() {
+    public Optional<String> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
     /**
      * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
      * 
     */
-    public Optional<String> getDoubleValue() {
+    public Optional<String> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
     /**
      * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
      * 
     */
-    public Optional<String> getIntegerValue() {
+    public Optional<String> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
     /**
      * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
      * 
     */
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
 

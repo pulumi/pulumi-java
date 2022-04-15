@@ -20,35 +20,35 @@ public final class WebACLManagedRuleGroupStatement extends io.pulumi.resources.I
     @Import(name="excludedRules")
       private final @Nullable List<WebACLExcludedRule> excludedRules;
 
-    public List<WebACLExcludedRule> getExcludedRules() {
+    public List<WebACLExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="scopeDownStatement")
       private final @Nullable WebACLStatement scopeDownStatement;
 
-    public Optional<WebACLStatement> getScopeDownStatement() {
+    public Optional<WebACLStatement> scopeDownStatement() {
         return this.scopeDownStatement == null ? Optional.empty() : Optional.ofNullable(this.scopeDownStatement);
     }
 
     @Import(name="vendorName", required=true)
       private final String vendorName;
 
-    public String getVendorName() {
+    public String vendorName() {
         return this.vendorName;
     }
 
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

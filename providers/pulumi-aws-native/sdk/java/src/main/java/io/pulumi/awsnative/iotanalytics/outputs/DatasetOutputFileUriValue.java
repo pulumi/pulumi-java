@@ -16,7 +16,7 @@ public final class DatasetOutputFileUriValue {
         this.fileName = fileName;
     }
 
-    public String getFileName() {
+    public String fileName() {
         return this.fileName;
     }
 

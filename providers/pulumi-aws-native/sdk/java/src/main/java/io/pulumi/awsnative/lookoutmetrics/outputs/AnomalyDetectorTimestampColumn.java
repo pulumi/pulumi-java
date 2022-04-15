@@ -30,10 +30,10 @@ public final class AnomalyDetectorTimestampColumn {
      * A timestamp format for the timestamps in the dataset
      * 
     */
-    public Optional<String> getColumnFormat() {
+    public Optional<String> columnFormat() {
         return Optional.ofNullable(this.columnFormat);
     }
-    public Optional<String> getColumnName() {
+    public Optional<String> columnName() {
         return Optional.ofNullable(this.columnName);
     }
 

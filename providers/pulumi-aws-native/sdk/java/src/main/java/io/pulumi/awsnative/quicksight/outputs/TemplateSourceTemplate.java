@@ -24,7 +24,7 @@ public final class TemplateSourceTemplate {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 

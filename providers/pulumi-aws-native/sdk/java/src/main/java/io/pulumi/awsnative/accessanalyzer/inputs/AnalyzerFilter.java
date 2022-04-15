@@ -19,35 +19,35 @@ public final class AnalyzerFilter extends io.pulumi.resources.InvokeArgs {
     @Import(name="contains")
       private final @Nullable List<String> contains;
 
-    public List<String> getContains() {
+    public List<String> contains() {
         return this.contains == null ? List.of() : this.contains;
     }
 
     @Import(name="eq")
       private final @Nullable List<String> eq;
 
-    public List<String> getEq() {
+    public List<String> eq() {
         return this.eq == null ? List.of() : this.eq;
     }
 
     @Import(name="exists")
       private final @Nullable Boolean exists;
 
-    public Optional<Boolean> getExists() {
+    public Optional<Boolean> exists() {
         return this.exists == null ? Optional.empty() : Optional.ofNullable(this.exists);
     }
 
     @Import(name="neq")
       private final @Nullable List<String> neq;
 
-    public List<String> getNeq() {
+    public List<String> neq() {
         return this.neq == null ? List.of() : this.neq;
     }
 
     @Import(name="property", required=true)
       private final String property;
 
-    public String getProperty() {
+    public String property() {
         return this.property;
     }
 

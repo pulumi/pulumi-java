@@ -21,42 +21,42 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     @Import(name="backgroundColor")
       private final @Nullable Output<String> backgroundColor;
 
-    public Output<String> getBackgroundColor() {
+    public Output<String> backgroundColor() {
         return this.backgroundColor == null ? Codegen.empty() : this.backgroundColor;
     }
 
     @Import(name="bodyConfig")
       private final @Nullable Output<InAppTemplateBodyConfigArgs> bodyConfig;
 
-    public Output<InAppTemplateBodyConfigArgs> getBodyConfig() {
+    public Output<InAppTemplateBodyConfigArgs> bodyConfig() {
         return this.bodyConfig == null ? Codegen.empty() : this.bodyConfig;
     }
 
     @Import(name="headerConfig")
       private final @Nullable Output<InAppTemplateHeaderConfigArgs> headerConfig;
 
-    public Output<InAppTemplateHeaderConfigArgs> getHeaderConfig() {
+    public Output<InAppTemplateHeaderConfigArgs> headerConfig() {
         return this.headerConfig == null ? Codegen.empty() : this.headerConfig;
     }
 
     @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
 
-    public Output<String> getImageUrl() {
+    public Output<String> imageUrl() {
         return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
     }
 
     @Import(name="primaryBtn")
       private final @Nullable Output<InAppTemplateButtonConfigArgs> primaryBtn;
 
-    public Output<InAppTemplateButtonConfigArgs> getPrimaryBtn() {
+    public Output<InAppTemplateButtonConfigArgs> primaryBtn() {
         return this.primaryBtn == null ? Codegen.empty() : this.primaryBtn;
     }
 
     @Import(name="secondaryBtn")
       private final @Nullable Output<InAppTemplateButtonConfigArgs> secondaryBtn;
 
-    public Output<InAppTemplateButtonConfigArgs> getSecondaryBtn() {
+    public Output<InAppTemplateButtonConfigArgs> secondaryBtn() {
         return this.secondaryBtn == null ? Codegen.empty() : this.secondaryBtn;
     }
 

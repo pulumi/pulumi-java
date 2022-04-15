@@ -46,34 +46,34 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
     }
 
-    public Optional<String> getDestinationCidr() {
+    public Optional<String> destinationCidr() {
         return Optional.ofNullable(this.destinationCidr);
     }
-    public Optional<String> getDestinationPrefixListId() {
+    public Optional<String> destinationPrefixListId() {
         return Optional.ofNullable(this.destinationPrefixListId);
     }
-    public Optional<String> getEgressOnlyInternetGatewayId() {
+    public Optional<String> egressOnlyInternetGatewayId() {
         return Optional.ofNullable(this.egressOnlyInternetGatewayId);
     }
-    public Optional<String> getGatewayId() {
+    public Optional<String> gatewayId() {
         return Optional.ofNullable(this.gatewayId);
     }
-    public Optional<String> getInstanceId() {
+    public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
-    public Optional<String> getNatGatewayId() {
+    public Optional<String> natGatewayId() {
         return Optional.ofNullable(this.natGatewayId);
     }
-    public Optional<String> getNetworkInterfaceId() {
+    public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
-    public Optional<String> getOrigin() {
+    public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
-    public Optional<String> getTransitGatewayId() {
+    public Optional<String> transitGatewayId() {
         return Optional.ofNullable(this.transitGatewayId);
     }
-    public Optional<String> getVpcPeeringConnectionId() {
+    public Optional<String> vpcPeeringConnectionId() {
         return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 

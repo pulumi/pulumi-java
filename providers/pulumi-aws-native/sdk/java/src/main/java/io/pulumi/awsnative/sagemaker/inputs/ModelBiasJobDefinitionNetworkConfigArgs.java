@@ -27,7 +27,7 @@ public final class ModelBiasJobDefinitionNetworkConfigArgs extends io.pulumi.res
     @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
-    public Output<Boolean> getEnableInterContainerTrafficEncryption() {
+    public Output<Boolean> enableInterContainerTrafficEncryption() {
         return this.enableInterContainerTrafficEncryption == null ? Codegen.empty() : this.enableInterContainerTrafficEncryption;
     }
 
@@ -38,14 +38,14 @@ public final class ModelBiasJobDefinitionNetworkConfigArgs extends io.pulumi.res
     @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Output<Boolean> getEnableNetworkIsolation() {
+    public Output<Boolean> enableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
     }
 
     @Import(name="vpcConfig")
       private final @Nullable Output<ModelBiasJobDefinitionVpcConfigArgs> vpcConfig;
 
-    public Output<ModelBiasJobDefinitionVpcConfigArgs> getVpcConfig() {
+    public Output<ModelBiasJobDefinitionVpcConfigArgs> vpcConfig() {
         return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 

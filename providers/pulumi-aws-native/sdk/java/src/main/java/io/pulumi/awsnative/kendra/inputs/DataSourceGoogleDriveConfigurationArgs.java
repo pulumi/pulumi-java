@@ -20,49 +20,49 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     @Import(name="excludeMimeTypes")
       private final @Nullable Output<List<String>> excludeMimeTypes;
 
-    public Output<List<String>> getExcludeMimeTypes() {
+    public Output<List<String>> excludeMimeTypes() {
         return this.excludeMimeTypes == null ? Codegen.empty() : this.excludeMimeTypes;
     }
 
     @Import(name="excludeSharedDrives")
       private final @Nullable Output<List<String>> excludeSharedDrives;
 
-    public Output<List<String>> getExcludeSharedDrives() {
+    public Output<List<String>> excludeSharedDrives() {
         return this.excludeSharedDrives == null ? Codegen.empty() : this.excludeSharedDrives;
     }
 
     @Import(name="excludeUserAccounts")
       private final @Nullable Output<List<String>> excludeUserAccounts;
 
-    public Output<List<String>> getExcludeUserAccounts() {
+    public Output<List<String>> excludeUserAccounts() {
         return this.excludeUserAccounts == null ? Codegen.empty() : this.excludeUserAccounts;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
+    public Output<List<String>> exclusionPatterns() {
         return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
         return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
+    public Output<List<String>> inclusionPatterns() {
         return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 

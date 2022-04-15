@@ -33,7 +33,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned to the Channel.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +47,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A short text description of the Channel.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -61,7 +61,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ ChannelLogConfiguration> getEgressAccessLogs() {
+    public Output</* @Nullable */ ChannelLogConfiguration> egressAccessLogs() {
         return this.egressAccessLogs;
     }
     /**
@@ -75,7 +75,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A short text description of the Channel.
      * 
      */
-    public Output<ChannelHlsIngest> getHlsIngest() {
+    public Output<ChannelHlsIngest> hlsIngest() {
         return this.hlsIngest;
     }
     /**
@@ -89,7 +89,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ ChannelLogConfiguration> getIngressAccessLogs() {
+    public Output</* @Nullable */ ChannelLogConfiguration> ingressAccessLogs() {
         return this.ingressAccessLogs;
     }
     /**
@@ -103,7 +103,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ChannelTag>> getTags() {
+    public Output</* @Nullable */ List<ChannelTag>> tags() {
         return this.tags;
     }
 

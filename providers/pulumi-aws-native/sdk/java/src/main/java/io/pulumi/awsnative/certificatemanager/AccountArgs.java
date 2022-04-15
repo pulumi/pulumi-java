@@ -17,7 +17,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expiryEventsConfiguration", required=true)
       private final Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration;
 
-    public Output<AccountExpiryEventsConfigurationArgs> getExpiryEventsConfiguration() {
+    public Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration() {
         return this.expiryEventsConfiguration;
     }
 

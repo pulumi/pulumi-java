@@ -17,7 +17,7 @@ public final class WebACLOrStatement {
         this.statements = statements;
     }
 
-    public List<WebACLStatement> getStatements() {
+    public List<WebACLStatement> statements() {
         return this.statements;
     }
 

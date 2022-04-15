@@ -18,21 +18,21 @@ public final class DataflowEndpointGroupSecurityDetails extends io.pulumi.resour
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="securityGroupIds")
       private final @Nullable List<String> securityGroupIds;
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
 
     @Import(name="subnetIds")
       private final @Nullable List<String> subnetIds;
 
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
 

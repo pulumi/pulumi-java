@@ -45,24 +45,24 @@ public final class DatasetDatabaseInputDefinition {
      * Database table name
      * 
     */
-    public Optional<String> getDatabaseTableName() {
+    public Optional<String> databaseTableName() {
         return Optional.ofNullable(this.databaseTableName);
     }
     /**
      * Glue connection name
      * 
     */
-    public String getGlueConnectionName() {
+    public String glueConnectionName() {
         return this.glueConnectionName;
     }
     /**
      * Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
      * 
     */
-    public Optional<String> getQueryString() {
+    public Optional<String> queryString() {
         return Optional.ofNullable(this.queryString);
     }
-    public Optional<DatasetS3Location> getTempDirectory() {
+    public Optional<DatasetS3Location> tempDirectory() {
         return Optional.ofNullable(this.tempDirectory);
     }
 

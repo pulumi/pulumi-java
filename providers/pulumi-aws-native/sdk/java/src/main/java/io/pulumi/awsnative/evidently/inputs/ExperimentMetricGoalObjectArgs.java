@@ -19,7 +19,7 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     @Import(name="desiredChange", required=true)
       private final Output<ExperimentMetricGoalObjectDesiredChange> desiredChange;
 
-    public Output<ExperimentMetricGoalObjectDesiredChange> getDesiredChange() {
+    public Output<ExperimentMetricGoalObjectDesiredChange> desiredChange() {
         return this.desiredChange;
     }
 
@@ -30,7 +30,7 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     @Import(name="entityIdKey", required=true)
       private final Output<String> entityIdKey;
 
-    public Output<String> getEntityIdKey() {
+    public Output<String> entityIdKey() {
         return this.entityIdKey;
     }
 
@@ -41,21 +41,21 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     @Import(name="eventPattern", required=true)
       private final Output<String> eventPattern;
 
-    public Output<String> getEventPattern() {
+    public Output<String> eventPattern() {
         return this.eventPattern;
     }
 
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
     @Import(name="unitLabel")
       private final @Nullable Output<String> unitLabel;
 
-    public Output<String> getUnitLabel() {
+    public Output<String> unitLabel() {
         return this.unitLabel == null ? Codegen.empty() : this.unitLabel;
     }
 
@@ -66,7 +66,7 @@ public final class ExperimentMetricGoalObjectArgs extends io.pulumi.resources.Re
     @Import(name="valueKey", required=true)
       private final Output<String> valueKey;
 
-    public Output<String> getValueKey() {
+    public Output<String> valueKey() {
         return this.valueKey;
     }
 

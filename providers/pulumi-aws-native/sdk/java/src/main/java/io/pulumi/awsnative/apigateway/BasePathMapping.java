@@ -29,7 +29,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    public Output</* @Nullable */ String> getBasePath() {
+    public Output</* @Nullable */ String> basePath() {
         return this.basePath;
     }
     /**
@@ -43,7 +43,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The DomainName of an AWS::ApiGateway::DomainName resource.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -57,7 +57,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The ID of the API.
      * 
      */
-    public Output</* @Nullable */ String> getRestApiId() {
+    public Output</* @Nullable */ String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -71,7 +71,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * @return The name of the API's stage.
      * 
      */
-    public Output</* @Nullable */ String> getStage() {
+    public Output</* @Nullable */ String> stage() {
         return this.stage;
     }
 

@@ -31,7 +31,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the subnet group.
      * 
      */
-    public Output<String> getARN() {
+    public Output<String> aRN() {
         return this.aRN;
     }
     /**
@@ -45,7 +45,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return An optional description of the subnet group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
      * 
      */
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName;
     }
     /**
@@ -73,7 +73,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return A list of VPC subnet IDs for the subnet group.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -87,7 +87,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this subnet group.
      * 
      */
-    public Output</* @Nullable */ List<SubnetGroupTag>> getTags() {
+    public Output</* @Nullable */ List<SubnetGroupTag>> tags() {
         return this.tags;
     }
 

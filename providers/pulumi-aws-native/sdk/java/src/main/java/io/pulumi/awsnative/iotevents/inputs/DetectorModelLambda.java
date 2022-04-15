@@ -22,14 +22,14 @@ public final class DetectorModelLambda extends io.pulumi.resources.InvokeArgs {
     @Import(name="functionArn", required=true)
       private final String functionArn;
 
-    public String getFunctionArn() {
+    public String functionArn() {
         return this.functionArn;
     }
 
     @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 

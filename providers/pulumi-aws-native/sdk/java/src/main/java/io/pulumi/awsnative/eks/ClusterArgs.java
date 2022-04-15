@@ -24,21 +24,21 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig;
 
-    public Output<List<ClusterEncryptionConfigArgs>> getEncryptionConfig() {
+    public Output<List<ClusterEncryptionConfigArgs>> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
-    public Output<ClusterKubernetesNetworkConfigArgs> getKubernetesNetworkConfig() {
+    public Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig == null ? Codegen.empty() : this.kubernetesNetworkConfig;
     }
 
     @Import(name="logging")
       private final @Nullable Output<ClusterLoggingArgs> logging;
 
-    public Output<ClusterLoggingArgs> getLogging() {
+    public Output<ClusterLoggingArgs> logging() {
         return this.logging == null ? Codegen.empty() : this.logging;
     }
 
@@ -49,14 +49,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="resourcesVpcConfig", required=true)
       private final Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
 
-    public Output<ClusterResourcesVpcConfigArgs> getResourcesVpcConfig() {
+    public Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig() {
         return this.resourcesVpcConfig;
     }
 
@@ -67,7 +67,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -78,7 +78,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Output<List<ClusterTagArgs>> getTags() {
+    public Output<List<ClusterTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -89,7 +89,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

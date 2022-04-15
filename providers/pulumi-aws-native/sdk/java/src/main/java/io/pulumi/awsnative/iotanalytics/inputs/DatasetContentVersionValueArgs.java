@@ -17,7 +17,7 @@ public final class DatasetContentVersionValueArgs extends io.pulumi.resources.Re
     @Import(name="datasetName", required=true)
       private final Output<String> datasetName;
 
-    public Output<String> getDatasetName() {
+    public Output<String> datasetName() {
         return this.datasetName;
     }
 

@@ -32,7 +32,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -46,7 +46,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The Connect attachment options.
      * 
      */
-    public Output<TransitGatewayConnectOptions> getOptions() {
+    public Output<TransitGatewayConnectOptions> options() {
         return this.options;
     }
     /**
@@ -60,7 +60,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The state of the attachment.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -74,7 +74,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The tags for the attachment.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayConnectTag>> getTags() {
+    public Output</* @Nullable */ List<TransitGatewayConnectTag>> tags() {
         return this.tags;
     }
     /**
@@ -88,7 +88,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The ID of the Connect attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -102,7 +102,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The ID of the transit gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
@@ -116,7 +116,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * @return The ID of the attachment from which the Connect attachment was created.
      * 
      */
-    public Output<String> getTransportTransitGatewayAttachmentId() {
+    public Output<String> transportTransitGatewayAttachmentId() {
         return this.transportTransitGatewayAttachmentId;
     }
 

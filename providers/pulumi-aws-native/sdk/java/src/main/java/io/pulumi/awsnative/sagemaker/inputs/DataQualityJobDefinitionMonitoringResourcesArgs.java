@@ -21,7 +21,7 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends io.pu
     @Import(name="clusterConfig", required=true)
       private final Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
-    public Output<DataQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
+    public Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 

@@ -21,42 +21,42 @@ public final class TopicRuleTimestreamAction extends io.pulumi.resources.InvokeA
     @Import(name="batchMode")
       private final @Nullable Boolean batchMode;
 
-    public Optional<Boolean> getBatchMode() {
+    public Optional<Boolean> batchMode() {
         return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="databaseName", required=true)
       private final String databaseName;
 
-    public String getDatabaseName() {
+    public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="dimensions", required=true)
       private final List<TopicRuleTimestreamDimension> dimensions;
 
-    public List<TopicRuleTimestreamDimension> getDimensions() {
+    public List<TopicRuleTimestreamDimension> dimensions() {
         return this.dimensions;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="tableName", required=true)
       private final String tableName;
 
-    public String getTableName() {
+    public String tableName() {
         return this.tableName;
     }
 
     @Import(name="timestamp")
       private final @Nullable TopicRuleTimestreamTimestamp timestamp;
 
-    public Optional<TopicRuleTimestreamTimestamp> getTimestamp() {
+    public Optional<TopicRuleTimestreamTimestamp> timestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
     }
 

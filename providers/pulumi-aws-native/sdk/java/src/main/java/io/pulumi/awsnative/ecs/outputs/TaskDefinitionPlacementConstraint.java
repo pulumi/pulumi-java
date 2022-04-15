@@ -22,10 +22,10 @@ public final class TaskDefinitionPlacementConstraint {
         this.type = type;
     }
 
-    public Optional<String> getExpression() {
+    public Optional<String> expression() {
         return Optional.ofNullable(this.expression);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

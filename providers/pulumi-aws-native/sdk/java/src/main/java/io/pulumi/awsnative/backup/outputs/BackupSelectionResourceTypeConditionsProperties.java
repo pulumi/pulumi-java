@@ -28,16 +28,16 @@ public final class BackupSelectionResourceTypeConditionsProperties {
         this.stringNotLike = stringNotLike;
     }
 
-    public List<BackupSelectionConditionParameter> getStringEquals() {
+    public List<BackupSelectionConditionParameter> stringEquals() {
         return this.stringEquals == null ? List.of() : this.stringEquals;
     }
-    public List<BackupSelectionConditionParameter> getStringLike() {
+    public List<BackupSelectionConditionParameter> stringLike() {
         return this.stringLike == null ? List.of() : this.stringLike;
     }
-    public List<BackupSelectionConditionParameter> getStringNotEquals() {
+    public List<BackupSelectionConditionParameter> stringNotEquals() {
         return this.stringNotEquals == null ? List.of() : this.stringNotEquals;
     }
-    public List<BackupSelectionConditionParameter> getStringNotLike() {
+    public List<BackupSelectionConditionParameter> stringNotLike() {
         return this.stringNotLike == null ? List.of() : this.stringNotLike;
     }
 

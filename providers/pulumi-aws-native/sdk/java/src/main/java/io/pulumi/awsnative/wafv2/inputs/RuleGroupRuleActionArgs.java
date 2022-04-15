@@ -29,7 +29,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="allow")
       private final @Nullable Output<RuleGroupRuleActionAllowPropertiesArgs> allow;
 
-    public Output<RuleGroupRuleActionAllowPropertiesArgs> getAllow() {
+    public Output<RuleGroupRuleActionAllowPropertiesArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -40,7 +40,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="block")
       private final @Nullable Output<RuleGroupRuleActionBlockPropertiesArgs> block;
 
-    public Output<RuleGroupRuleActionBlockPropertiesArgs> getBlock() {
+    public Output<RuleGroupRuleActionBlockPropertiesArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 
@@ -51,7 +51,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="captcha")
       private final @Nullable Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
 
-    public Output<RuleGroupRuleActionCaptchaPropertiesArgs> getCaptcha() {
+    public Output<RuleGroupRuleActionCaptchaPropertiesArgs> captcha() {
         return this.captcha == null ? Codegen.empty() : this.captcha;
     }
 
@@ -62,7 +62,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="count")
       private final @Nullable Output<RuleGroupRuleActionCountPropertiesArgs> count;
 
-    public Output<RuleGroupRuleActionCountPropertiesArgs> getCount() {
+    public Output<RuleGroupRuleActionCountPropertiesArgs> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

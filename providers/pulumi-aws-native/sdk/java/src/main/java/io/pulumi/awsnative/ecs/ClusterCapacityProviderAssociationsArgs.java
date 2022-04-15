@@ -21,21 +21,21 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     @Import(name="capacityProviders", required=true)
       private final Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
 
-    public Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> getCapacityProviders() {
+    public Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders() {
         return this.capacityProviders;
     }
 
     @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
 
     @Import(name="defaultCapacityProviderStrategy", required=true)
       private final Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
 
-    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategy() {
+    public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
 

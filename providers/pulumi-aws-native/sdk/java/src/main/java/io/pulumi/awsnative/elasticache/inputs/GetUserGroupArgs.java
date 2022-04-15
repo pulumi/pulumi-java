@@ -19,7 +19,7 @@ public final class GetUserGroupArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="userGroupId", required=true)
       private final String userGroupId;
 
-    public String getUserGroupId() {
+    public String userGroupId() {
         return this.userGroupId;
     }
 

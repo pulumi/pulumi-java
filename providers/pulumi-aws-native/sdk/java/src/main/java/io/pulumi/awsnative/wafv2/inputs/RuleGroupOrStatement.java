@@ -16,7 +16,7 @@ public final class RuleGroupOrStatement extends io.pulumi.resources.InvokeArgs {
     @Import(name="statements", required=true)
       private final List<RuleGroupStatement> statements;
 
-    public List<RuleGroupStatement> getStatements() {
+    public List<RuleGroupStatement> statements() {
         return this.statements;
     }
 

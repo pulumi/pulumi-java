@@ -21,35 +21,35 @@ public final class AnomalyDetectorMetricSource extends io.pulumi.resources.Invok
     @Import(name="appFlowConfig")
       private final @Nullable AnomalyDetectorAppFlowConfig appFlowConfig;
 
-    public Optional<AnomalyDetectorAppFlowConfig> getAppFlowConfig() {
+    public Optional<AnomalyDetectorAppFlowConfig> appFlowConfig() {
         return this.appFlowConfig == null ? Optional.empty() : Optional.ofNullable(this.appFlowConfig);
     }
 
     @Import(name="cloudwatchConfig")
       private final @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig;
 
-    public Optional<AnomalyDetectorCloudwatchConfig> getCloudwatchConfig() {
+    public Optional<AnomalyDetectorCloudwatchConfig> cloudwatchConfig() {
         return this.cloudwatchConfig == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchConfig);
     }
 
     @Import(name="rDSSourceConfig")
       private final @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig;
 
-    public Optional<AnomalyDetectorRDSSourceConfig> getRDSSourceConfig() {
+    public Optional<AnomalyDetectorRDSSourceConfig> rDSSourceConfig() {
         return this.rDSSourceConfig == null ? Optional.empty() : Optional.ofNullable(this.rDSSourceConfig);
     }
 
     @Import(name="redshiftSourceConfig")
       private final @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig;
 
-    public Optional<AnomalyDetectorRedshiftSourceConfig> getRedshiftSourceConfig() {
+    public Optional<AnomalyDetectorRedshiftSourceConfig> redshiftSourceConfig() {
         return this.redshiftSourceConfig == null ? Optional.empty() : Optional.ofNullable(this.redshiftSourceConfig);
     }
 
     @Import(name="s3SourceConfig")
       private final @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig;
 
-    public Optional<AnomalyDetectorS3SourceConfig> getS3SourceConfig() {
+    public Optional<AnomalyDetectorS3SourceConfig> s3SourceConfig() {
         return this.s3SourceConfig == null ? Optional.empty() : Optional.ofNullable(this.s3SourceConfig);
     }
 

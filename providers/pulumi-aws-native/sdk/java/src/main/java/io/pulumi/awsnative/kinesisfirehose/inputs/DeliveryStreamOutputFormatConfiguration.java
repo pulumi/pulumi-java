@@ -17,7 +17,7 @@ public final class DeliveryStreamOutputFormatConfiguration extends io.pulumi.res
     @Import(name="serializer")
       private final @Nullable DeliveryStreamSerializer serializer;
 
-    public Optional<DeliveryStreamSerializer> getSerializer() {
+    public Optional<DeliveryStreamSerializer> serializer() {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
     }
 

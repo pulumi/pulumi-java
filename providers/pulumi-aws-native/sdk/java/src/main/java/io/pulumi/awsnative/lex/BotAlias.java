@@ -27,31 +27,31 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="botAliasId", type=String.class, parameters={})
     private Output<String> botAliasId;
 
-    public Output<String> getBotAliasId() {
+    public Output<String> botAliasId() {
         return this.botAliasId;
     }
     @Export(name="botAliasLocaleSettings", type=List.class, parameters={BotAliasLocaleSettingsItem.class})
     private Output</* @Nullable */ List<BotAliasLocaleSettingsItem>> botAliasLocaleSettings;
 
-    public Output</* @Nullable */ List<BotAliasLocaleSettingsItem>> getBotAliasLocaleSettings() {
+    public Output</* @Nullable */ List<BotAliasLocaleSettingsItem>> botAliasLocaleSettings() {
         return this.botAliasLocaleSettings;
     }
     @Export(name="botAliasName", type=String.class, parameters={})
     private Output<String> botAliasName;
 
-    public Output<String> getBotAliasName() {
+    public Output<String> botAliasName() {
         return this.botAliasName;
     }
     @Export(name="botAliasStatus", type=BotAliasStatus.class, parameters={})
     private Output<BotAliasStatus> botAliasStatus;
 
-    public Output<BotAliasStatus> getBotAliasStatus() {
+    public Output<BotAliasStatus> botAliasStatus() {
         return this.botAliasStatus;
     }
     /**
@@ -65,31 +65,31 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return A list of tags to add to the bot alias.
      * 
      */
-    public Output</* @Nullable */ List<BotAliasTag>> getBotAliasTags() {
+    public Output</* @Nullable */ List<BotAliasTag>> botAliasTags() {
         return this.botAliasTags;
     }
     @Export(name="botId", type=String.class, parameters={})
     private Output<String> botId;
 
-    public Output<String> getBotId() {
+    public Output<String> botId() {
         return this.botId;
     }
     @Export(name="botVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> botVersion;
 
-    public Output</* @Nullable */ String> getBotVersion() {
+    public Output</* @Nullable */ String> botVersion() {
         return this.botVersion;
     }
     @Export(name="conversationLogSettings", type=BotAliasConversationLogSettings.class, parameters={})
     private Output</* @Nullable */ BotAliasConversationLogSettings> conversationLogSettings;
 
-    public Output</* @Nullable */ BotAliasConversationLogSettings> getConversationLogSettings() {
+    public Output</* @Nullable */ BotAliasConversationLogSettings> conversationLogSettings() {
         return this.conversationLogSettings;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +103,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
      * 
      */
-    public Output</* @Nullable */ SentimentAnalysisSettingsProperties> getSentimentAnalysisSettings() {
+    public Output</* @Nullable */ SentimentAnalysisSettingsProperties> sentimentAnalysisSettings() {
         return this.sentimentAnalysisSettings;
     }
 

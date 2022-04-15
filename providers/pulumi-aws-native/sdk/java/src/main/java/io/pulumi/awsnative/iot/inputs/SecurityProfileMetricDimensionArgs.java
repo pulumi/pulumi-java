@@ -27,7 +27,7 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
     @Import(name="dimensionName", required=true)
       private final Output<String> dimensionName;
 
-    public Output<String> getDimensionName() {
+    public Output<String> dimensionName() {
         return this.dimensionName;
     }
 
@@ -38,7 +38,7 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
     @Import(name="operator")
       private final @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
 
-    public Output<SecurityProfileMetricDimensionOperator> getOperator() {
+    public Output<SecurityProfileMetricDimensionOperator> operator() {
         return this.operator == null ? Codegen.empty() : this.operator;
     }
 

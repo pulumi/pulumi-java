@@ -52,32 +52,32 @@ public final class WebACLRule {
         this.visibilityConfig = visibilityConfig;
     }
 
-    public Optional<WebACLRuleAction> getAction() {
+    public Optional<WebACLRuleAction> action() {
         return Optional.ofNullable(this.action);
     }
-    public Optional<WebACLCaptchaConfig> getCaptchaConfig() {
+    public Optional<WebACLCaptchaConfig> captchaConfig() {
         return Optional.ofNullable(this.captchaConfig);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<WebACLOverrideAction> getOverrideAction() {
+    public Optional<WebACLOverrideAction> overrideAction() {
         return Optional.ofNullable(this.overrideAction);
     }
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
      * Collection of Rule Labels.
      * 
     */
-    public List<WebACLLabel> getRuleLabels() {
+    public List<WebACLLabel> ruleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
-    public WebACLStatement getStatement() {
+    public WebACLStatement statement() {
         return this.statement;
     }
-    public WebACLVisibilityConfig getVisibilityConfig() {
+    public WebACLVisibilityConfig visibilityConfig() {
         return this.visibilityConfig;
     }
 

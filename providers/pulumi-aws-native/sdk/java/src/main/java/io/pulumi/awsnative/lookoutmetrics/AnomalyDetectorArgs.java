@@ -25,7 +25,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="anomalyDetectorConfig", required=true)
       private final Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
-    public Output<AnomalyDetectorConfigArgs> getAnomalyDetectorConfig() {
+    public Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
     }
 
@@ -36,7 +36,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="anomalyDetectorDescription")
       private final @Nullable Output<String> anomalyDetectorDescription;
 
-    public Output<String> getAnomalyDetectorDescription() {
+    public Output<String> anomalyDetectorDescription() {
         return this.anomalyDetectorDescription == null ? Codegen.empty() : this.anomalyDetectorDescription;
     }
 
@@ -47,7 +47,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="anomalyDetectorName")
       private final @Nullable Output<String> anomalyDetectorName;
 
-    public Output<String> getAnomalyDetectorName() {
+    public Output<String> anomalyDetectorName() {
         return this.anomalyDetectorName == null ? Codegen.empty() : this.anomalyDetectorName;
     }
 
@@ -58,7 +58,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
@@ -69,7 +69,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metricSetList", required=true)
       private final Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
-    public Output<List<AnomalyDetectorMetricSetArgs>> getMetricSetList() {
+    public Output<List<AnomalyDetectorMetricSetArgs>> metricSetList() {
         return this.metricSetList;
     }
 

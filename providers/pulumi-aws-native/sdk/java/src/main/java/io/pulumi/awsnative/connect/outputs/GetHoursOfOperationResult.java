@@ -72,49 +72,49 @@ public final class GetHoursOfOperationResult {
      * Configuration information for the hours of operation: day, start time, and end time.
      * 
     */
-    public List<HoursOfOperationConfig> getConfig() {
+    public List<HoursOfOperationConfig> config() {
         return this.config == null ? List.of() : this.config;
     }
     /**
      * The description of the hours of operation.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) for the hours of operation.
      * 
     */
-    public Optional<String> getHoursOfOperationArn() {
+    public Optional<String> hoursOfOperationArn() {
         return Optional.ofNullable(this.hoursOfOperationArn);
     }
     /**
      * The identifier of the Amazon Connect instance.
      * 
     */
-    public Optional<String> getInstanceArn() {
+    public Optional<String> instanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the hours of operation.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * One or more tags.
      * 
     */
-    public List<HoursOfOperationTag> getTags() {
+    public List<HoursOfOperationTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The time zone of the hours of operation.
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
 

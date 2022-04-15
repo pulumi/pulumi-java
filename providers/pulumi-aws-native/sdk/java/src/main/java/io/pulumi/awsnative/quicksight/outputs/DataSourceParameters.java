@@ -83,55 +83,55 @@ public final class DataSourceParameters {
         this.teradataParameters = teradataParameters;
     }
 
-    public Optional<DataSourceAmazonElasticsearchParameters> getAmazonElasticsearchParameters() {
+    public Optional<DataSourceAmazonElasticsearchParameters> amazonElasticsearchParameters() {
         return Optional.ofNullable(this.amazonElasticsearchParameters);
     }
-    public Optional<DataSourceAmazonOpenSearchParameters> getAmazonOpenSearchParameters() {
+    public Optional<DataSourceAmazonOpenSearchParameters> amazonOpenSearchParameters() {
         return Optional.ofNullable(this.amazonOpenSearchParameters);
     }
-    public Optional<DataSourceAthenaParameters> getAthenaParameters() {
+    public Optional<DataSourceAthenaParameters> athenaParameters() {
         return Optional.ofNullable(this.athenaParameters);
     }
-    public Optional<DataSourceAuroraParameters> getAuroraParameters() {
+    public Optional<DataSourceAuroraParameters> auroraParameters() {
         return Optional.ofNullable(this.auroraParameters);
     }
-    public Optional<DataSourceAuroraPostgreSqlParameters> getAuroraPostgreSqlParameters() {
+    public Optional<DataSourceAuroraPostgreSqlParameters> auroraPostgreSqlParameters() {
         return Optional.ofNullable(this.auroraPostgreSqlParameters);
     }
-    public Optional<DataSourceMariaDbParameters> getMariaDbParameters() {
+    public Optional<DataSourceMariaDbParameters> mariaDbParameters() {
         return Optional.ofNullable(this.mariaDbParameters);
     }
-    public Optional<DataSourceMySqlParameters> getMySqlParameters() {
+    public Optional<DataSourceMySqlParameters> mySqlParameters() {
         return Optional.ofNullable(this.mySqlParameters);
     }
-    public Optional<DataSourceOracleParameters> getOracleParameters() {
+    public Optional<DataSourceOracleParameters> oracleParameters() {
         return Optional.ofNullable(this.oracleParameters);
     }
-    public Optional<DataSourcePostgreSqlParameters> getPostgreSqlParameters() {
+    public Optional<DataSourcePostgreSqlParameters> postgreSqlParameters() {
         return Optional.ofNullable(this.postgreSqlParameters);
     }
-    public Optional<DataSourcePrestoParameters> getPrestoParameters() {
+    public Optional<DataSourcePrestoParameters> prestoParameters() {
         return Optional.ofNullable(this.prestoParameters);
     }
-    public Optional<DataSourceRdsParameters> getRdsParameters() {
+    public Optional<DataSourceRdsParameters> rdsParameters() {
         return Optional.ofNullable(this.rdsParameters);
     }
-    public Optional<DataSourceRedshiftParameters> getRedshiftParameters() {
+    public Optional<DataSourceRedshiftParameters> redshiftParameters() {
         return Optional.ofNullable(this.redshiftParameters);
     }
-    public Optional<DataSourceS3Parameters> getS3Parameters() {
+    public Optional<DataSourceS3Parameters> s3Parameters() {
         return Optional.ofNullable(this.s3Parameters);
     }
-    public Optional<DataSourceSnowflakeParameters> getSnowflakeParameters() {
+    public Optional<DataSourceSnowflakeParameters> snowflakeParameters() {
         return Optional.ofNullable(this.snowflakeParameters);
     }
-    public Optional<DataSourceSparkParameters> getSparkParameters() {
+    public Optional<DataSourceSparkParameters> sparkParameters() {
         return Optional.ofNullable(this.sparkParameters);
     }
-    public Optional<DataSourceSqlServerParameters> getSqlServerParameters() {
+    public Optional<DataSourceSqlServerParameters> sqlServerParameters() {
         return Optional.ofNullable(this.sqlServerParameters);
     }
-    public Optional<DataSourceTeradataParameters> getTeradataParameters() {
+    public Optional<DataSourceTeradataParameters> teradataParameters() {
         return Optional.ofNullable(this.teradataParameters);
     }
 

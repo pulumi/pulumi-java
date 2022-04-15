@@ -26,43 +26,43 @@ public class Feature extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="defaultVariation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultVariation;
 
-    public Output</* @Nullable */ String> getDefaultVariation() {
+    public Output</* @Nullable */ String> defaultVariation() {
         return this.defaultVariation;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="entityOverrides", type=List.class, parameters={FeatureEntityOverride.class})
     private Output</* @Nullable */ List<FeatureEntityOverride>> entityOverrides;
 
-    public Output</* @Nullable */ List<FeatureEntityOverride>> getEntityOverrides() {
+    public Output</* @Nullable */ List<FeatureEntityOverride>> entityOverrides() {
         return this.entityOverrides;
     }
     @Export(name="evaluationStrategy", type=FeatureEvaluationStrategy.class, parameters={})
     private Output</* @Nullable */ FeatureEvaluationStrategy> evaluationStrategy;
 
-    public Output</* @Nullable */ FeatureEvaluationStrategy> getEvaluationStrategy() {
+    public Output</* @Nullable */ FeatureEvaluationStrategy> evaluationStrategy() {
         return this.evaluationStrategy;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -76,13 +76,13 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<FeatureTag>> getTags() {
+    public Output</* @Nullable */ List<FeatureTag>> tags() {
         return this.tags;
     }
     @Export(name="variations", type=List.class, parameters={FeatureVariationObject.class})
     private Output<List<FeatureVariationObject>> variations;
 
-    public Output<List<FeatureVariationObject>> getVariations() {
+    public Output<List<FeatureVariationObject>> variations() {
         return this.variations;
     }
 

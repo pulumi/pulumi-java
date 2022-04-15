@@ -31,17 +31,17 @@ public final class ServiceCodeRepository {
         this.sourceCodeVersion = sourceCodeVersion;
     }
 
-    public Optional<ServiceCodeConfiguration> getCodeConfiguration() {
+    public Optional<ServiceCodeConfiguration> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * Repository Url
      * 
     */
-    public String getRepositoryUrl() {
+    public String repositoryUrl() {
         return this.repositoryUrl;
     }
-    public ServiceSourceCodeVersion getSourceCodeVersion() {
+    public ServiceSourceCodeVersion sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 

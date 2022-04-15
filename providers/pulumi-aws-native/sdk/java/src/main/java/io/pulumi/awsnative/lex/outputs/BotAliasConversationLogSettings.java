@@ -23,10 +23,10 @@ public final class BotAliasConversationLogSettings {
         this.textLogSettings = textLogSettings;
     }
 
-    public List<BotAliasAudioLogSetting> getAudioLogSettings() {
+    public List<BotAliasAudioLogSetting> audioLogSettings() {
         return this.audioLogSettings == null ? List.of() : this.audioLogSettings;
     }
-    public List<BotAliasTextLogSetting> getTextLogSettings() {
+    public List<BotAliasTextLogSetting> textLogSettings() {
         return this.textLogSettings == null ? List.of() : this.textLogSettings;
     }
 

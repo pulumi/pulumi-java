@@ -27,7 +27,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="additionalMetricsToRetainV2")
       private final @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
-    public Output<List<SecurityProfileMetricToRetainArgs>> getAdditionalMetricsToRetainV2() {
+    public Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2() {
         return this.additionalMetricsToRetainV2 == null ? Codegen.empty() : this.additionalMetricsToRetainV2;
     }
 
@@ -38,7 +38,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="alertTargets")
       private final @Nullable Output<Object> alertTargets;
 
-    public Output<Object> getAlertTargets() {
+    public Output<Object> alertTargets() {
         return this.alertTargets == null ? Codegen.empty() : this.alertTargets;
     }
 
@@ -49,7 +49,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="behaviors")
       private final @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
 
-    public Output<List<SecurityProfileBehaviorArgs>> getBehaviors() {
+    public Output<List<SecurityProfileBehaviorArgs>> behaviors() {
         return this.behaviors == null ? Codegen.empty() : this.behaviors;
     }
 
@@ -60,7 +60,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityProfileDescription")
       private final @Nullable Output<String> securityProfileDescription;
 
-    public Output<String> getSecurityProfileDescription() {
+    public Output<String> securityProfileDescription() {
         return this.securityProfileDescription == null ? Codegen.empty() : this.securityProfileDescription;
     }
 
@@ -71,7 +71,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityProfileName")
       private final @Nullable Output<String> securityProfileName;
 
-    public Output<String> getSecurityProfileName() {
+    public Output<String> securityProfileName() {
         return this.securityProfileName == null ? Codegen.empty() : this.securityProfileName;
     }
 
@@ -82,7 +82,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<SecurityProfileTagArgs>> tags;
 
-    public Output<List<SecurityProfileTagArgs>> getTags() {
+    public Output<List<SecurityProfileTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetArns")
       private final @Nullable Output<List<String>> targetArns;
 
-    public Output<List<String>> getTargetArns() {
+    public Output<List<String>> targetArns() {
         return this.targetArns == null ? Codegen.empty() : this.targetArns;
     }
 

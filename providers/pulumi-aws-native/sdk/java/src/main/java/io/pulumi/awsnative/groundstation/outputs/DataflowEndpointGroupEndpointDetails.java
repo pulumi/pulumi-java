@@ -23,10 +23,10 @@ public final class DataflowEndpointGroupEndpointDetails {
         this.securityDetails = securityDetails;
     }
 
-    public Optional<DataflowEndpointGroupDataflowEndpoint> getEndpoint() {
+    public Optional<DataflowEndpointGroupDataflowEndpoint> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
-    public Optional<DataflowEndpointGroupSecurityDetails> getSecurityDetails() {
+    public Optional<DataflowEndpointGroupSecurityDetails> securityDetails() {
         return Optional.ofNullable(this.securityDetails);
     }
 

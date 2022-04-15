@@ -18,7 +18,7 @@ public final class DeliveryStreamSplunkRetryOptionsArgs extends io.pulumi.resour
     @Import(name="durationInSeconds")
       private final @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> getDurationInSeconds() {
+    public Output<Integer> durationInSeconds() {
         return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
     }
 

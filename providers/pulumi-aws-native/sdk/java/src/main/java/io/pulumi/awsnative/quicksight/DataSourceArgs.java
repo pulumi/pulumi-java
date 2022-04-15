@@ -39,42 +39,42 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternateDataSourceParameters")
       private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
-    public Output<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
+    public Output<List<DataSourceParametersArgs>> alternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? Codegen.empty() : this.alternateDataSourceParameters;
     }
 
     @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     @Import(name="credentials")
       private final @Nullable Output<DataSourceCredentialsArgs> credentials;
 
-    public Output<DataSourceCredentialsArgs> getCredentials() {
+    public Output<DataSourceCredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     @Import(name="dataSourceId")
       private final @Nullable Output<String> dataSourceId;
 
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId == null ? Codegen.empty() : this.dataSourceId;
     }
 
     @Import(name="dataSourceParameters")
       private final @Nullable Output<DataSourceParametersArgs> dataSourceParameters;
 
-    public Output<DataSourceParametersArgs> getDataSourceParameters() {
+    public Output<DataSourceParametersArgs> dataSourceParameters() {
         return this.dataSourceParameters == null ? Codegen.empty() : this.dataSourceParameters;
     }
 
     @Import(name="errorInfo")
       private final @Nullable Output<DataSourceErrorInfoArgs> errorInfo;
 
-    public Output<DataSourceErrorInfoArgs> getErrorInfo() {
+    public Output<DataSourceErrorInfoArgs> errorInfo() {
         return this.errorInfo == null ? Codegen.empty() : this.errorInfo;
     }
 
@@ -85,7 +85,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,14 +96,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<DataSourceResourcePermissionArgs>> permissions;
 
-    public Output<List<DataSourceResourcePermissionArgs>> getPermissions() {
+    public Output<List<DataSourceResourcePermissionArgs>> permissions() {
         return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sslProperties")
       private final @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
 
-    public Output<DataSourceSslPropertiesArgs> getSslProperties() {
+    public Output<DataSourceSslPropertiesArgs> sslProperties() {
         return this.sslProperties == null ? Codegen.empty() : this.sslProperties;
     }
 
@@ -114,21 +114,21 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DataSourceTagArgs>> tags;
 
-    public Output<List<DataSourceTagArgs>> getTags() {
+    public Output<List<DataSourceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type")
       private final @Nullable Output<DataSourceType> type;
 
-    public Output<DataSourceType> getType() {
+    public Output<DataSourceType> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="vpcConnectionProperties")
       private final @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
 
-    public Output<DataSourceVpcConnectionPropertiesArgs> getVpcConnectionProperties() {
+    public Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties() {
         return this.vpcConnectionProperties == null ? Codegen.empty() : this.vpcConnectionProperties;
     }
 

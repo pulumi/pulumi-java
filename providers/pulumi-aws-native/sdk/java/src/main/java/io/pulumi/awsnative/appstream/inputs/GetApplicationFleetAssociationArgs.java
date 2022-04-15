@@ -15,14 +15,14 @@ public final class GetApplicationFleetAssociationArgs extends io.pulumi.resource
     @Import(name="applicationArn", required=true)
       private final String applicationArn;
 
-    public String getApplicationArn() {
+    public String applicationArn() {
         return this.applicationArn;
     }
 
     @Import(name="fleetName", required=true)
       private final String fleetName;
 
-    public String getFleetName() {
+    public String fleetName() {
         return this.fleetName;
     }
 

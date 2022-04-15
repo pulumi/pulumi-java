@@ -28,14 +28,14 @@ public final class GetDHCPOptionsResult {
         this.tags = tags;
     }
 
-    public Optional<String> getDhcpOptionsId() {
+    public Optional<String> dhcpOptionsId() {
         return Optional.ofNullable(this.dhcpOptionsId);
     }
     /**
      * Any tags assigned to the DHCP options set.
      * 
     */
-    public List<DHCPOptionsTag> getTags() {
+    public List<DHCPOptionsTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

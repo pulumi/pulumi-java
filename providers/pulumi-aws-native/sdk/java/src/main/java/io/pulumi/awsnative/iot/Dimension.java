@@ -34,7 +34,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return The ARN (Amazon resource name) of the created dimension.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,7 +48,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the dimension.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -62,7 +62,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return Specifies the value or list of values for the dimension.
      * 
      */
-    public Output<List<String>> getStringValues() {
+    public Output<List<String>> stringValues() {
         return this.stringValues;
     }
     /**
@@ -76,7 +76,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the dimension.
      * 
      */
-    public Output</* @Nullable */ List<DimensionTag>> getTags() {
+    public Output</* @Nullable */ List<DimensionTag>> tags() {
         return this.tags;
     }
     /**
@@ -90,7 +90,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the dimension.
      * 
      */
-    public Output<DimensionType> getType() {
+    public Output<DimensionType> type() {
         return this.type;
     }
 

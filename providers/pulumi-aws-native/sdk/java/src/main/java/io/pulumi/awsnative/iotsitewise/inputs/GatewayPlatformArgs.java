@@ -27,7 +27,7 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="greengrass")
       private final @Nullable Output<GatewayGreengrassArgs> greengrass;
 
-    public Output<GatewayGreengrassArgs> getGreengrass() {
+    public Output<GatewayGreengrassArgs> greengrass() {
         return this.greengrass == null ? Codegen.empty() : this.greengrass;
     }
 
@@ -38,7 +38,7 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="greengrassV2")
       private final @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
-    public Output<GatewayGreengrassV2Args> getGreengrassV2() {
+    public Output<GatewayGreengrassV2Args> greengrassV2() {
         return this.greengrassV2 == null ? Codegen.empty() : this.greengrassV2;
     }
 

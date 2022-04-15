@@ -18,35 +18,35 @@ public final class TopicRuleKafkaAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientProperties", required=true)
       private final Object clientProperties;
 
-    public Object getClientProperties() {
+    public Object clientProperties() {
         return this.clientProperties;
     }
 
     @Import(name="destinationArn", required=true)
       private final String destinationArn;
 
-    public String getDestinationArn() {
+    public String destinationArn() {
         return this.destinationArn;
     }
 
     @Import(name="key")
       private final @Nullable String key;
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @Import(name="partition")
       private final @Nullable String partition;
 
-    public Optional<String> getPartition() {
+    public Optional<String> partition() {
         return this.partition == null ? Optional.empty() : Optional.ofNullable(this.partition);
     }
 
     @Import(name="topic", required=true)
       private final String topic;
 
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

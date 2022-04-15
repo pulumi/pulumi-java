@@ -32,7 +32,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="alarmMetrics")
       private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
-    public List<ApplicationAlarmMetric> getAlarmMetrics() {
+    public List<ApplicationAlarmMetric> alarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
 
@@ -43,7 +43,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="alarms")
       private final @Nullable List<ApplicationAlarm> alarms;
 
-    public List<ApplicationAlarm> getAlarms() {
+    public List<ApplicationAlarm> alarms() {
         return this.alarms == null ? List.of() : this.alarms;
     }
 
@@ -54,7 +54,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="hAClusterPrometheusExporter")
       private final @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter;
 
-    public Optional<ApplicationHAClusterPrometheusExporter> getHAClusterPrometheusExporter() {
+    public Optional<ApplicationHAClusterPrometheusExporter> hAClusterPrometheusExporter() {
         return this.hAClusterPrometheusExporter == null ? Optional.empty() : Optional.ofNullable(this.hAClusterPrometheusExporter);
     }
 
@@ -65,7 +65,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="hANAPrometheusExporter")
       private final @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter;
 
-    public Optional<ApplicationHANAPrometheusExporter> getHANAPrometheusExporter() {
+    public Optional<ApplicationHANAPrometheusExporter> hANAPrometheusExporter() {
         return this.hANAPrometheusExporter == null ? Optional.empty() : Optional.ofNullable(this.hANAPrometheusExporter);
     }
 
@@ -76,7 +76,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="jMXPrometheusExporter")
       private final @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter;
 
-    public Optional<ApplicationJMXPrometheusExporter> getJMXPrometheusExporter() {
+    public Optional<ApplicationJMXPrometheusExporter> jMXPrometheusExporter() {
         return this.jMXPrometheusExporter == null ? Optional.empty() : Optional.ofNullable(this.jMXPrometheusExporter);
     }
 
@@ -87,7 +87,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="logs")
       private final @Nullable List<ApplicationLog> logs;
 
-    public List<ApplicationLog> getLogs() {
+    public List<ApplicationLog> logs() {
         return this.logs == null ? List.of() : this.logs;
     }
 
@@ -98,7 +98,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
     @Import(name="windowsEvents")
       private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
-    public List<ApplicationWindowsEvent> getWindowsEvents() {
+    public List<ApplicationWindowsEvent> windowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }
 

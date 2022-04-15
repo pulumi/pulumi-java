@@ -29,16 +29,16 @@ public final class GetComponentVersionResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getComponentName() {
+    public Optional<String> componentName() {
         return Optional.ofNullable(this.componentName);
     }
-    public Optional<String> getComponentVersion() {
+    public Optional<String> componentVersion() {
         return Optional.ofNullable(this.componentVersion);
     }
-    public Optional<Object> getTags() {
+    public Optional<Object> tags() {
         return Optional.ofNullable(this.tags);
     }
 

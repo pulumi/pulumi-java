@@ -31,17 +31,17 @@ public final class GetAccountAuditConfigurationResult {
         this.roleArn = roleArn;
     }
 
-    public Optional<AccountAuditConfigurationAuditCheckConfigurations> getAuditCheckConfigurations() {
+    public Optional<AccountAuditConfigurationAuditCheckConfigurations> auditCheckConfigurations() {
         return Optional.ofNullable(this.auditCheckConfigurations);
     }
-    public Optional<AccountAuditConfigurationAuditNotificationTargetConfigurations> getAuditNotificationTargetConfigurations() {
+    public Optional<AccountAuditConfigurationAuditNotificationTargetConfigurations> auditNotificationTargetConfigurations() {
         return Optional.ofNullable(this.auditNotificationTargetConfigurations);
     }
     /**
      * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
 

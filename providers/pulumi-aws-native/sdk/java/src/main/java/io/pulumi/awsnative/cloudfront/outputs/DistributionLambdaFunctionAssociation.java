@@ -26,13 +26,13 @@ public final class DistributionLambdaFunctionAssociation {
         this.lambdaFunctionARN = lambdaFunctionARN;
     }
 
-    public Optional<String> getEventType() {
+    public Optional<String> eventType() {
         return Optional.ofNullable(this.eventType);
     }
-    public Optional<Boolean> getIncludeBody() {
+    public Optional<Boolean> includeBody() {
         return Optional.ofNullable(this.includeBody);
     }
-    public Optional<String> getLambdaFunctionARN() {
+    public Optional<String> lambdaFunctionARN() {
         return Optional.ofNullable(this.lambdaFunctionARN);
     }
 

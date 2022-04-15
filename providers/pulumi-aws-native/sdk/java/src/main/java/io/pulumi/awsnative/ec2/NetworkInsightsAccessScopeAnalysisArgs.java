@@ -20,14 +20,14 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
     @Import(name="networkInsightsAccessScopeId", required=true)
       private final Output<String> networkInsightsAccessScopeId;
 
-    public Output<String> getNetworkInsightsAccessScopeId() {
+    public Output<String> networkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
-    public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> getTags() {
+    public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

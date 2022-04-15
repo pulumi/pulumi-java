@@ -23,14 +23,14 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
     @Import(name="allow")
       private final @Nullable Output<WebACLAllowActionArgs> allow;
 
-    public Output<WebACLAllowActionArgs> getAllow() {
+    public Output<WebACLAllowActionArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     @Import(name="block")
       private final @Nullable Output<WebACLBlockActionArgs> block;
 
-    public Output<WebACLBlockActionArgs> getBlock() {
+    public Output<WebACLBlockActionArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 

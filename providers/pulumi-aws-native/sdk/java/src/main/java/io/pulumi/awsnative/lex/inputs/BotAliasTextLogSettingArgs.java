@@ -23,14 +23,14 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     @Import(name="destination")
       private final @Nullable Output<BotAliasTextLogDestinationArgs> destination;
 
-    public Output<BotAliasTextLogDestinationArgs> getDestination() {
+    public Output<BotAliasTextLogDestinationArgs> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

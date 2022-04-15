@@ -35,7 +35,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The time of this integration got created
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -49,13 +49,13 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The unique name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     @Export(name="flowDefinition", type=IntegrationFlowDefinition.class, parameters={})
     private Output</* @Nullable */ IntegrationFlowDefinition> flowDefinition;
 
-    public Output</* @Nullable */ IntegrationFlowDefinition> getFlowDefinition() {
+    public Output</* @Nullable */ IntegrationFlowDefinition> flowDefinition() {
         return this.flowDefinition;
     }
     /**
@@ -69,7 +69,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The time of this integration got last updated at
      * 
      */
-    public Output<String> getLastUpdatedAt() {
+    public Output<String> lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
     /**
@@ -83,7 +83,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The name of the ObjectType defined for the 3rd party data in Profile Service
      * 
      */
-    public Output</* @Nullable */ String> getObjectTypeName() {
+    public Output</* @Nullable */ String> objectTypeName() {
         return this.objectTypeName;
     }
     /**
@@ -97,7 +97,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The mapping between 3rd party event types and ObjectType names
      * 
      */
-    public Output</* @Nullable */ List<IntegrationObjectTypeMapping>> getObjectTypeNames() {
+    public Output</* @Nullable */ List<IntegrationObjectTypeMapping>> objectTypeNames() {
         return this.objectTypeNames;
     }
     /**
@@ -111,7 +111,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the integration
      * 
      */
-    public Output</* @Nullable */ List<IntegrationTag>> getTags() {
+    public Output</* @Nullable */ List<IntegrationTag>> tags() {
         return this.tags;
     }
     /**
@@ -125,7 +125,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @return The URI of the S3 bucket or any other type of data source.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
 

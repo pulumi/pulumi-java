@@ -19,14 +19,14 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="objectTypeField")
       private final @Nullable Output<ObjectTypeFieldArgs> objectTypeField;
 
-    public Output<ObjectTypeFieldArgs> getObjectTypeField() {
+    public Output<ObjectTypeFieldArgs> objectTypeField() {
         return this.objectTypeField == null ? Codegen.empty() : this.objectTypeField;
     }
 

@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicyAccessControlAllowOriginsArgs extends io
     @Import(name="items", required=true)
       private final Output<List<String>> items;
 
-    public Output<List<String>> getItems() {
+    public Output<List<String>> items() {
         return this.items;
     }
 

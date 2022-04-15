@@ -35,22 +35,22 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule {
         this.securityGroupId = securityGroupId;
     }
 
-    public Optional<String> getCidr() {
+    public Optional<String> cidr() {
         return Optional.ofNullable(this.cidr);
     }
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
-    public Optional<NetworkInsightsAnalysisPortRange> getPortRange() {
+    public Optional<NetworkInsightsAnalysisPortRange> portRange() {
         return Optional.ofNullable(this.portRange);
     }
-    public Optional<String> getPrefixListId() {
+    public Optional<String> prefixListId() {
         return Optional.ofNullable(this.prefixListId);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
-    public Optional<String> getSecurityGroupId() {
+    public Optional<String> securityGroupId() {
         return Optional.ofNullable(this.securityGroupId);
     }
 

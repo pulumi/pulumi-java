@@ -15,7 +15,7 @@ public final class GetModelPackageGroupArgs extends io.pulumi.resources.InvokeAr
     @Import(name="modelPackageGroupArn", required=true)
       private final String modelPackageGroupArn;
 
-    public String getModelPackageGroupArn() {
+    public String modelPackageGroupArn() {
         return this.modelPackageGroupArn;
     }
 

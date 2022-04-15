@@ -21,7 +21,7 @@ public class SpotFleet extends io.pulumi.resources.CustomResource {
     @Export(name="spotFleetRequestConfigData", type=SpotFleetRequestConfigData.class, parameters={})
     private Output<SpotFleetRequestConfigData> spotFleetRequestConfigData;
 
-    public Output<SpotFleetRequestConfigData> getSpotFleetRequestConfigData() {
+    public Output<SpotFleetRequestConfigData> spotFleetRequestConfigData() {
         return this.spotFleetRequestConfigData;
     }
 

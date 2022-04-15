@@ -26,7 +26,7 @@ public final class GetVPCDHCPOptionsAssociationResult {
      * The ID of the VPC DHCPOptions Association.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

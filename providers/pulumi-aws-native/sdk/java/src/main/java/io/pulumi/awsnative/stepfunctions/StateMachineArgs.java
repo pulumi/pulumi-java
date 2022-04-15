@@ -26,70 +26,70 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition")
       private final @Nullable Output<StateMachineDefinitionArgs> definition;
 
-    public Output<StateMachineDefinitionArgs> getDefinition() {
+    public Output<StateMachineDefinitionArgs> definition() {
         return this.definition == null ? Codegen.empty() : this.definition;
     }
 
     @Import(name="definitionS3Location")
       private final @Nullable Output<StateMachineS3LocationArgs> definitionS3Location;
 
-    public Output<StateMachineS3LocationArgs> getDefinitionS3Location() {
+    public Output<StateMachineS3LocationArgs> definitionS3Location() {
         return this.definitionS3Location == null ? Codegen.empty() : this.definitionS3Location;
     }
 
     @Import(name="definitionString")
       private final @Nullable Output<String> definitionString;
 
-    public Output<String> getDefinitionString() {
+    public Output<String> definitionString() {
         return this.definitionString == null ? Codegen.empty() : this.definitionString;
     }
 
     @Import(name="definitionSubstitutions")
       private final @Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
 
-    public Output<StateMachineDefinitionSubstitutionsArgs> getDefinitionSubstitutions() {
+    public Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions() {
         return this.definitionSubstitutions == null ? Codegen.empty() : this.definitionSubstitutions;
     }
 
     @Import(name="loggingConfiguration")
       private final @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<StateMachineLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<StateMachineLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stateMachineName")
       private final @Nullable Output<String> stateMachineName;
 
-    public Output<String> getStateMachineName() {
+    public Output<String> stateMachineName() {
         return this.stateMachineName == null ? Codegen.empty() : this.stateMachineName;
     }
 
     @Import(name="stateMachineType")
       private final @Nullable Output<StateMachineType> stateMachineType;
 
-    public Output<StateMachineType> getStateMachineType() {
+    public Output<StateMachineType> stateMachineType() {
         return this.stateMachineType == null ? Codegen.empty() : this.stateMachineType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<StateMachineTagsEntryArgs>> tags;
 
-    public Output<List<StateMachineTagsEntryArgs>> getTags() {
+    public Output<List<StateMachineTagsEntryArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tracingConfiguration")
       private final @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
-    public Output<StateMachineTracingConfigurationArgs> getTracingConfiguration() {
+    public Output<StateMachineTracingConfigurationArgs> tracingConfiguration() {
         return this.tracingConfiguration == null ? Codegen.empty() : this.tracingConfiguration;
     }
 

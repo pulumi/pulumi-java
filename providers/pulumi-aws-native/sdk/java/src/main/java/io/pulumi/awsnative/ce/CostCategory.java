@@ -30,7 +30,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * @return Cost category ARN
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,25 +44,25 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * @return The default value for the cost category
      * 
      */
-    public Output</* @Nullable */ String> getDefaultValue() {
+    public Output</* @Nullable */ String> defaultValue() {
         return this.defaultValue;
     }
     @Export(name="effectiveStart", type=String.class, parameters={})
     private Output<String> effectiveStart;
 
-    public Output<String> getEffectiveStart() {
+    public Output<String> effectiveStart() {
         return this.effectiveStart;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="ruleVersion", type=CostCategoryRuleVersion.class, parameters={})
     private Output<CostCategoryRuleVersion> ruleVersion;
 
-    public Output<CostCategoryRuleVersion> getRuleVersion() {
+    public Output<CostCategoryRuleVersion> ruleVersion() {
         return this.ruleVersion;
     }
     /**
@@ -76,7 +76,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * @return JSON array format of Expression in Billing and Cost Management API
      * 
      */
-    public Output<String> getRules() {
+    public Output<String> rules() {
         return this.rules;
     }
     /**
@@ -90,7 +90,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * @return Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
      */
-    public Output</* @Nullable */ String> getSplitChargeRules() {
+    public Output</* @Nullable */ String> splitChargeRules() {
         return this.splitChargeRules;
     }
 

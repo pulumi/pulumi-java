@@ -34,31 +34,31 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
      * @return A unique identifier for the mitigation action.
      * 
      */
-    public Output</* @Nullable */ String> getActionName() {
+    public Output</* @Nullable */ String> actionName() {
         return this.actionName;
     }
     @Export(name="actionParams", type=MitigationActionActionParams.class, parameters={})
     private Output<MitigationActionActionParams> actionParams;
 
-    public Output<MitigationActionActionParams> getActionParams() {
+    public Output<MitigationActionActionParams> actionParams() {
         return this.actionParams;
     }
     @Export(name="mitigationActionArn", type=String.class, parameters={})
     private Output<String> mitigationActionArn;
 
-    public Output<String> getMitigationActionArn() {
+    public Output<String> mitigationActionArn() {
         return this.mitigationActionArn;
     }
     @Export(name="mitigationActionId", type=String.class, parameters={})
     private Output<String> mitigationActionId;
 
-    public Output<String> getMitigationActionId() {
+    public Output<String> mitigationActionId() {
         return this.mitigationActionId;
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -72,7 +72,7 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<MitigationActionTag>> getTags() {
+    public Output</* @Nullable */ List<MitigationActionTag>> tags() {
         return this.tags;
     }
 

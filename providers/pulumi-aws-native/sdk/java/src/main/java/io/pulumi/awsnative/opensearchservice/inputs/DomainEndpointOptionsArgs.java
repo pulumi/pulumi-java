@@ -19,35 +19,35 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="customEndpoint")
       private final @Nullable Output<String> customEndpoint;
 
-    public Output<String> getCustomEndpoint() {
+    public Output<String> customEndpoint() {
         return this.customEndpoint == null ? Codegen.empty() : this.customEndpoint;
     }
 
     @Import(name="customEndpointCertificateArn")
       private final @Nullable Output<String> customEndpointCertificateArn;
 
-    public Output<String> getCustomEndpointCertificateArn() {
+    public Output<String> customEndpointCertificateArn() {
         return this.customEndpointCertificateArn == null ? Codegen.empty() : this.customEndpointCertificateArn;
     }
 
     @Import(name="customEndpointEnabled")
       private final @Nullable Output<Boolean> customEndpointEnabled;
 
-    public Output<Boolean> getCustomEndpointEnabled() {
+    public Output<Boolean> customEndpointEnabled() {
         return this.customEndpointEnabled == null ? Codegen.empty() : this.customEndpointEnabled;
     }
 
     @Import(name="enforceHTTPS")
       private final @Nullable Output<Boolean> enforceHTTPS;
 
-    public Output<Boolean> getEnforceHTTPS() {
+    public Output<Boolean> enforceHTTPS() {
         return this.enforceHTTPS == null ? Codegen.empty() : this.enforceHTTPS;
     }
 
     @Import(name="tLSSecurityPolicy")
       private final @Nullable Output<String> tLSSecurityPolicy;
 
-    public Output<String> getTLSSecurityPolicy() {
+    public Output<String> tLSSecurityPolicy() {
         return this.tLSSecurityPolicy == null ? Codegen.empty() : this.tLSSecurityPolicy;
     }
 

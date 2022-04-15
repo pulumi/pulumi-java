@@ -20,49 +20,49 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
+    public Output<List<String>> destinationAddresses() {
         return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
     @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> getDestinationPorts() {
+    public Output<List<String>> destinationPorts() {
         return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
     @Import(name="destinationPrefixLists")
       private final @Nullable Output<List<String>> destinationPrefixLists;
 
-    public Output<List<String>> getDestinationPrefixLists() {
+    public Output<List<String>> destinationPrefixLists() {
         return this.destinationPrefixLists == null ? Codegen.empty() : this.destinationPrefixLists;
     }
 
     @Import(name="protocols")
       private final @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols;
 
-    public Output<List<NetworkInsightsAccessScopeProtocol>> getProtocols() {
+    public Output<List<NetworkInsightsAccessScopeProtocol>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
     @Import(name="sourcePorts")
       private final @Nullable Output<List<String>> sourcePorts;
 
-    public Output<List<String>> getSourcePorts() {
+    public Output<List<String>> sourcePorts() {
         return this.sourcePorts == null ? Codegen.empty() : this.sourcePorts;
     }
 
     @Import(name="sourcePrefixLists")
       private final @Nullable Output<List<String>> sourcePrefixLists;
 
-    public Output<List<String>> getSourcePrefixLists() {
+    public Output<List<String>> sourcePrefixLists() {
         return this.sourcePrefixLists == null ? Codegen.empty() : this.sourcePrefixLists;
     }
 

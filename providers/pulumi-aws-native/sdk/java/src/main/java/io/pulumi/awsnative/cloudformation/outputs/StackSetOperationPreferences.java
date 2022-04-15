@@ -37,22 +37,22 @@ public final class StackSetOperationPreferences {
         this.regionOrder = regionOrder;
     }
 
-    public Optional<Integer> getFailureToleranceCount() {
+    public Optional<Integer> failureToleranceCount() {
         return Optional.ofNullable(this.failureToleranceCount);
     }
-    public Optional<Integer> getFailureTolerancePercentage() {
+    public Optional<Integer> failureTolerancePercentage() {
         return Optional.ofNullable(this.failureTolerancePercentage);
     }
-    public Optional<Integer> getMaxConcurrentCount() {
+    public Optional<Integer> maxConcurrentCount() {
         return Optional.ofNullable(this.maxConcurrentCount);
     }
-    public Optional<Integer> getMaxConcurrentPercentage() {
+    public Optional<Integer> maxConcurrentPercentage() {
         return Optional.ofNullable(this.maxConcurrentPercentage);
     }
-    public Optional<StackSetRegionConcurrencyType> getRegionConcurrencyType() {
+    public Optional<StackSetRegionConcurrencyType> regionConcurrencyType() {
         return Optional.ofNullable(this.regionConcurrencyType);
     }
-    public List<String> getRegionOrder() {
+    public List<String> regionOrder() {
         return this.regionOrder == null ? List.of() : this.regionOrder;
     }
 

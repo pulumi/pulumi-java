@@ -22,14 +22,14 @@ public final class WorkGroupEncryptionConfiguration extends io.pulumi.resources.
     @Import(name="encryptionOption", required=true)
       private final WorkGroupEncryptionOption encryptionOption;
 
-    public WorkGroupEncryptionOption getEncryptionOption() {
+    public WorkGroupEncryptionOption encryptionOption() {
         return this.encryptionOption;
     }
 
     @Import(name="kmsKey")
       private final @Nullable String kmsKey;
 
-    public Optional<String> getKmsKey() {
+    public Optional<String> kmsKey() {
         return this.kmsKey == null ? Optional.empty() : Optional.ofNullable(this.kmsKey);
     }
 

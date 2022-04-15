@@ -18,14 +18,14 @@ public final class DeliveryStreamDeserializer extends io.pulumi.resources.Invoke
     @Import(name="hiveJsonSerDe")
       private final @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
 
-    public Optional<DeliveryStreamHiveJsonSerDe> getHiveJsonSerDe() {
+    public Optional<DeliveryStreamHiveJsonSerDe> hiveJsonSerDe() {
         return this.hiveJsonSerDe == null ? Optional.empty() : Optional.ofNullable(this.hiveJsonSerDe);
     }
 
     @Import(name="openXJsonSerDe")
       private final @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
 
-    public Optional<DeliveryStreamOpenXJsonSerDe> getOpenXJsonSerDe() {
+    public Optional<DeliveryStreamOpenXJsonSerDe> openXJsonSerDe() {
         return this.openXJsonSerDe == null ? Optional.empty() : Optional.ofNullable(this.openXJsonSerDe);
     }
 

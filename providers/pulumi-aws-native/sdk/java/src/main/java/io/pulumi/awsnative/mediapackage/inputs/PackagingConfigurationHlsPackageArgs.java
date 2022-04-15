@@ -26,7 +26,7 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationHlsEncryptionArgs> getEncryption() {
+    public Output<PackagingConfigurationHlsEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -37,14 +37,14 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     @Import(name="hlsManifests", required=true)
       private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
-    public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
+    public Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests() {
         return this.hlsManifests;
     }
 
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
+    public Output<Integer> segmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
@@ -55,7 +55,7 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     @Import(name="useAudioRenditionGroup")
       private final @Nullable Output<Boolean> useAudioRenditionGroup;
 
-    public Output<Boolean> getUseAudioRenditionGroup() {
+    public Output<Boolean> useAudioRenditionGroup() {
         return this.useAudioRenditionGroup == null ? Codegen.empty() : this.useAudioRenditionGroup;
     }
 

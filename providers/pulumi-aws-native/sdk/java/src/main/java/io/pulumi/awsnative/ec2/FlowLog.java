@@ -36,13 +36,13 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a CloudWatch Logs log group in your account. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
-    public Output</* @Nullable */ String> getDeliverLogsPermissionArn() {
+    public Output</* @Nullable */ String> deliverLogsPermissionArn() {
         return this.deliverLogsPermissionArn;
     }
     @Export(name="destinationOptions", type=DestinationOptionsProperties.class, parameters={})
     private Output</* @Nullable */ DestinationOptionsProperties> destinationOptions;
 
-    public Output</* @Nullable */ DestinationOptionsProperties> getDestinationOptions() {
+    public Output</* @Nullable */ DestinationOptionsProperties> destinationOptions() {
         return this.destinationOptions;
     }
     /**
@@ -56,7 +56,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Specifies the destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for LogDestinationType.
      * 
      */
-    public Output</* @Nullable */ String> getLogDestination() {
+    public Output</* @Nullable */ String> logDestination() {
         return this.logDestination;
     }
     /**
@@ -70,7 +70,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of destination to which the flow log data is to be published. Flow log data can be published to CloudWatch Logs or Amazon S3.
      * 
      */
-    public Output</* @Nullable */ FlowLogLogDestinationType> getLogDestinationType() {
+    public Output</* @Nullable */ FlowLogLogDestinationType> logDestinationType() {
         return this.logDestinationType;
     }
     /**
@@ -84,7 +84,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The fields to include in the flow log record, in the order in which they should appear.
      * 
      */
-    public Output</* @Nullable */ String> getLogFormat() {
+    public Output</* @Nullable */ String> logFormat() {
         return this.logFormat;
     }
     /**
@@ -98,7 +98,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The name of a new or existing CloudWatch Logs log group where Amazon EC2 publishes your flow logs. If you specify LogDestinationType as s3, do not specify DeliverLogsPermissionArn or LogGroupName.
      * 
      */
-    public Output</* @Nullable */ String> getLogGroupName() {
+    public Output</* @Nullable */ String> logGroupName() {
         return this.logGroupName;
     }
     /**
@@ -112,7 +112,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. You can specify 60 seconds (1 minute) or 600 seconds (10 minutes).
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxAggregationInterval() {
+    public Output</* @Nullable */ Integer> maxAggregationInterval() {
         return this.maxAggregationInterval;
     }
     /**
@@ -126,7 +126,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The ID of the subnet, network interface, or VPC for which you want to create a flow log.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -140,7 +140,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The type of resource for which to create the flow log. For example, if you specified a VPC ID for the ResourceId property, specify VPC for this property.
      * 
      */
-    public Output<FlowLogResourceType> getPropResourceType() {
+    public Output<FlowLogResourceType> resourceType() {
         return this.resourceType;
     }
     /**
@@ -154,7 +154,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The tags to apply to the flow logs.
      * 
      */
-    public Output</* @Nullable */ List<FlowLogTag>> getTags() {
+    public Output</* @Nullable */ List<FlowLogTag>> tags() {
         return this.tags;
     }
     /**
@@ -168,7 +168,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * @return The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
      * 
      */
-    public Output<FlowLogTrafficType> getTrafficType() {
+    public Output<FlowLogTrafficType> trafficType() {
         return this.trafficType;
     }
 

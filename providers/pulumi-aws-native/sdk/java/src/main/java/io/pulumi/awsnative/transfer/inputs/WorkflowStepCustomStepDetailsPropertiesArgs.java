@@ -27,7 +27,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -38,7 +38,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -49,7 +49,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

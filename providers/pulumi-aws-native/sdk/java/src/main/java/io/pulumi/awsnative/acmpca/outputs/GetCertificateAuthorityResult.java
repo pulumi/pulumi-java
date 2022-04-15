@@ -47,24 +47,24 @@ public final class GetCertificateAuthorityResult {
      * The Amazon Resource Name (ARN) of the certificate authority.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
      * 
     */
-    public Optional<String> getCertificateSigningRequest() {
+    public Optional<String> certificateSigningRequest() {
         return Optional.ofNullable(this.certificateSigningRequest);
     }
     /**
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
     */
-    public Optional<CertificateAuthorityRevocationConfiguration> getRevocationConfiguration() {
+    public Optional<CertificateAuthorityRevocationConfiguration> revocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }
-    public List<CertificateAuthorityTag> getTags() {
+    public List<CertificateAuthorityTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

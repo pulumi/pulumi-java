@@ -22,10 +22,10 @@ public final class StorageLensBucketsAndRegions {
         this.regions = regions;
     }
 
-    public List<String> getBuckets() {
+    public List<String> buckets() {
         return this.buckets == null ? List.of() : this.buckets;
     }
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 

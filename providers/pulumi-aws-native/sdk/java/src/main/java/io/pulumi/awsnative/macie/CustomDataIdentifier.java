@@ -31,7 +31,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Custom data identifier ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +45,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Description of custom data identifier.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Words to be ignored.
      * 
      */
-    public Output</* @Nullable */ List<String>> getIgnoreWords() {
+    public Output</* @Nullable */ List<String>> ignoreWords() {
         return this.ignoreWords;
     }
     /**
@@ -73,7 +73,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Keywords to be matched against.
      * 
      */
-    public Output</* @Nullable */ List<String>> getKeywords() {
+    public Output</* @Nullable */ List<String>> keywords() {
         return this.keywords;
     }
     /**
@@ -87,7 +87,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Maximum match distance.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaximumMatchDistance() {
+    public Output</* @Nullable */ Integer> maximumMatchDistance() {
         return this.maximumMatchDistance;
     }
     /**
@@ -101,7 +101,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Name of custom data identifier.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * @return Regular expression for custom data identifier.
      * 
      */
-    public Output<String> getRegex() {
+    public Output<String> regex() {
         return this.regex;
     }
 

@@ -18,28 +18,28 @@ public final class DomainCognitoOptions extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="identityPoolId")
       private final @Nullable String identityPoolId;
 
-    public Optional<String> getIdentityPoolId() {
+    public Optional<String> identityPoolId() {
         return this.identityPoolId == null ? Optional.empty() : Optional.ofNullable(this.identityPoolId);
     }
 
     @Import(name="roleArn")
       private final @Nullable String roleArn;
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="userPoolId")
       private final @Nullable String userPoolId;
 
-    public Optional<String> getUserPoolId() {
+    public Optional<String> userPoolId() {
         return this.userPoolId == null ? Optional.empty() : Optional.ofNullable(this.userPoolId);
     }
 

@@ -22,10 +22,10 @@ public final class TopicRuleIotSiteWiseAction {
         this.roleArn = roleArn;
     }
 
-    public List<TopicRulePutAssetPropertyValueEntry> getPutAssetPropertyValueEntries() {
+    public List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries() {
         return this.putAssetPropertyValueEntries;
     }
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

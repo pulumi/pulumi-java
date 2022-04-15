@@ -21,21 +21,21 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     @Import(name="connectionPoolConfigurationInfo")
       private final @Nullable Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
 
-    public Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> getConnectionPoolConfigurationInfo() {
+    public Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo() {
         return this.connectionPoolConfigurationInfo == null ? Codegen.empty() : this.connectionPoolConfigurationInfo;
     }
 
     @Import(name="dBClusterIdentifiers")
       private final @Nullable Output<List<String>> dBClusterIdentifiers;
 
-    public Output<List<String>> getDBClusterIdentifiers() {
+    public Output<List<String>> dBClusterIdentifiers() {
         return this.dBClusterIdentifiers == null ? Codegen.empty() : this.dBClusterIdentifiers;
     }
 
     @Import(name="dBInstanceIdentifiers")
       private final @Nullable Output<List<String>> dBInstanceIdentifiers;
 
-    public Output<List<String>> getDBInstanceIdentifiers() {
+    public Output<List<String>> dBInstanceIdentifiers() {
         return this.dBInstanceIdentifiers == null ? Codegen.empty() : this.dBInstanceIdentifiers;
     }
 
@@ -46,7 +46,7 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
 
-    public Output<String> getDBProxyName() {
+    public Output<String> dBProxyName() {
         return this.dBProxyName;
     }
 
@@ -57,7 +57,7 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     @Import(name="targetGroupName", required=true)
       private final Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
-    public Output<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
+    public Output<DBProxyTargetGroupTargetGroupName> targetGroupName() {
         return this.targetGroupName;
     }
 

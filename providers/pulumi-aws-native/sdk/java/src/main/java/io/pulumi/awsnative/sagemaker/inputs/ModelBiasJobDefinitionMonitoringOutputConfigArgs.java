@@ -28,7 +28,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -39,7 +39,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfigArgs extends io.p
     @Import(name="monitoringOutputs", required=true)
       private final Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
-    public Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
+    public Output<List<ModelBiasJobDefinitionMonitoringOutputArgs>> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 

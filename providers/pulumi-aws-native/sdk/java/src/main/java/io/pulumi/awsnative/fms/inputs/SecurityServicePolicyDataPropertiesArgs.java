@@ -19,14 +19,14 @@ public final class SecurityServicePolicyDataPropertiesArgs extends io.pulumi.res
     @Import(name="managedServiceData")
       private final @Nullable Output<String> managedServiceData;
 
-    public Output<String> getManagedServiceData() {
+    public Output<String> managedServiceData() {
         return this.managedServiceData == null ? Codegen.empty() : this.managedServiceData;
     }
 
     @Import(name="type", required=true)
       private final Output<PolicySecurityServicePolicyDataPropertiesType> type;
 
-    public Output<PolicySecurityServicePolicyDataPropertiesType> getType() {
+    public Output<PolicySecurityServicePolicyDataPropertiesType> type() {
         return this.type;
     }
 

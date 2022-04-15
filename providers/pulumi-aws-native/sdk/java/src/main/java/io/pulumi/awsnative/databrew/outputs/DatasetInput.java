@@ -31,16 +31,16 @@ public final class DatasetInput {
         this.s3InputDefinition = s3InputDefinition;
     }
 
-    public Optional<DatasetDataCatalogInputDefinition> getDataCatalogInputDefinition() {
+    public Optional<DatasetDataCatalogInputDefinition> dataCatalogInputDefinition() {
         return Optional.ofNullable(this.dataCatalogInputDefinition);
     }
-    public Optional<DatasetDatabaseInputDefinition> getDatabaseInputDefinition() {
+    public Optional<DatasetDatabaseInputDefinition> databaseInputDefinition() {
         return Optional.ofNullable(this.databaseInputDefinition);
     }
-    public Optional<DatasetMetadata> getMetadata() {
+    public Optional<DatasetMetadata> metadata() {
         return Optional.ofNullable(this.metadata);
     }
-    public Optional<DatasetS3Location> getS3InputDefinition() {
+    public Optional<DatasetS3Location> s3InputDefinition() {
         return Optional.ofNullable(this.s3InputDefinition);
     }
 

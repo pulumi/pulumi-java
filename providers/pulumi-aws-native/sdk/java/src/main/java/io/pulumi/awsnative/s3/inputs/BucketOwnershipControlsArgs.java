@@ -18,7 +18,7 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     @Import(name="rules", required=true)
       private final Output<List<BucketOwnershipControlsRuleArgs>> rules;
 
-    public Output<List<BucketOwnershipControlsRuleArgs>> getRules() {
+    public Output<List<BucketOwnershipControlsRuleArgs>> rules() {
         return this.rules;
     }
 

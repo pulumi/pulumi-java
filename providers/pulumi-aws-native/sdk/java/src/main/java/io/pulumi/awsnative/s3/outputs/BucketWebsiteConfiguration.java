@@ -43,20 +43,20 @@ public final class BucketWebsiteConfiguration {
      * The name of the error document for the website.
      * 
     */
-    public Optional<String> getErrorDocument() {
+    public Optional<String> errorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
     /**
      * The name of the index document for the website.
      * 
     */
-    public Optional<String> getIndexDocument() {
+    public Optional<String> indexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }
-    public Optional<BucketRedirectAllRequestsTo> getRedirectAllRequestsTo() {
+    public Optional<BucketRedirectAllRequestsTo> redirectAllRequestsTo() {
         return Optional.ofNullable(this.redirectAllRequestsTo);
     }
-    public List<BucketRoutingRule> getRoutingRules() {
+    public List<BucketRoutingRule> routingRules() {
         return this.routingRules == null ? List.of() : this.routingRules;
     }
 

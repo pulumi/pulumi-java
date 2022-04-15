@@ -17,21 +17,21 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
     @Import(name="catalog", required=true)
       private final Output<String> catalog;
 
-    public Output<String> getCatalog() {
+    public Output<String> catalog() {
         return this.catalog;
     }
 
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 

@@ -71,49 +71,49 @@ public final class LaunchConfigurationBlockDevice {
      * Indicates whether the volume is deleted on instance termination.
      * 
     */
-    public Optional<Boolean> getDeleteOnTermination() {
+    public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * Specifies whether the volume should be encrypted.
      * 
     */
-    public Optional<Boolean> getEncrypted() {
+    public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
      * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
      * 
     */
-    public Optional<Integer> getIops() {
+    public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * The snapshot ID of the volume to use.
      * 
     */
-    public Optional<String> getSnapshotId() {
+    public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * The throughput (MiBps) to provision for a gp3 volume.
      * 
     */
-    public Optional<Integer> getThroughput() {
+    public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
      * The volume size, in GiBs.
      * 
     */
-    public Optional<Integer> getVolumeSize() {
+    public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * The volume type.
      * 
     */
-    public Optional<String> getVolumeType() {
+    public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }
 

@@ -22,7 +22,7 @@ public final class ChannelLogConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 

@@ -30,7 +30,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
-    public Output<String> getAccessKey() {
+    public Output<String> accessKey() {
         return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
@@ -41,7 +41,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowedAccountIds", json=true)
       private final @Nullable Output<List<String>> allowedAccountIds;
 
-    public Output<List<String>> getAllowedAccountIds() {
+    public Output<List<String>> allowedAccountIds() {
         return this.allowedAccountIds == null ? Codegen.empty() : this.allowedAccountIds;
     }
 
@@ -52,7 +52,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assumeRole", json=true)
       private final @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
 
-    public Output<ProviderAssumeRoleArgs> getAssumeRole() {
+    public Output<ProviderAssumeRoleArgs> assumeRole() {
         return this.assumeRole == null ? Codegen.empty() : this.assumeRole;
     }
 
@@ -63,7 +63,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTags", json=true)
       private final @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
 
-    public Output<ProviderDefaultTagsArgs> getDefaultTags() {
+    public Output<ProviderDefaultTagsArgs> defaultTags() {
         return this.defaultTags == null ? Codegen.empty() : this.defaultTags;
     }
 
@@ -74,7 +74,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoints", json=true)
       private final @Nullable Output<List<ProviderEndpointArgs>> endpoints;
 
-    public Output<List<ProviderEndpointArgs>> getEndpoints() {
+    public Output<List<ProviderEndpointArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -85,7 +85,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forbiddenAccountIds", json=true)
       private final @Nullable Output<List<String>> forbiddenAccountIds;
 
-    public Output<List<String>> getForbiddenAccountIds() {
+    public Output<List<String>> forbiddenAccountIds() {
         return this.forbiddenAccountIds == null ? Codegen.empty() : this.forbiddenAccountIds;
     }
 
@@ -96,7 +96,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreTags", json=true)
       private final @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
 
-    public Output<ProviderIgnoreTagsArgs> getIgnoreTags() {
+    public Output<ProviderIgnoreTagsArgs> ignoreTags() {
         return this.ignoreTags == null ? Codegen.empty() : this.ignoreTags;
     }
 
@@ -107,7 +107,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="insecure", json=true)
       private final @Nullable Output<Boolean> insecure;
 
-    public Output<Boolean> getInsecure() {
+    public Output<Boolean> insecure() {
         return this.insecure == null ? Codegen.empty() : this.insecure;
     }
 
@@ -118,7 +118,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxRetries", json=true)
       private final @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
@@ -129,7 +129,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
+    public Output<String> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -140,7 +140,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -151,7 +151,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="s3ForcePathStyle", json=true)
       private final @Nullable Output<Boolean> s3ForcePathStyle;
 
-    public Output<Boolean> getS3ForcePathStyle() {
+    public Output<Boolean> s3ForcePathStyle() {
         return this.s3ForcePathStyle == null ? Codegen.empty() : this.s3ForcePathStyle;
     }
 
@@ -162,7 +162,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
-    public Output<String> getSecretKey() {
+    public Output<String> secretKey() {
         return this.secretKey == null ? Codegen.empty() : this.secretKey;
     }
 
@@ -173,7 +173,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sharedCredentialsFile")
       private final @Nullable Output<String> sharedCredentialsFile;
 
-    public Output<String> getSharedCredentialsFile() {
+    public Output<String> sharedCredentialsFile() {
         return this.sharedCredentialsFile == null ? Codegen.empty() : this.sharedCredentialsFile;
     }
 
@@ -184,7 +184,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipCredentialsValidation", json=true)
       private final @Nullable Output<Boolean> skipCredentialsValidation;
 
-    public Output<Boolean> getSkipCredentialsValidation() {
+    public Output<Boolean> skipCredentialsValidation() {
         return this.skipCredentialsValidation == null ? Codegen.empty() : this.skipCredentialsValidation;
     }
 
@@ -195,7 +195,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipGetEc2Platforms", json=true)
       private final @Nullable Output<Boolean> skipGetEc2Platforms;
 
-    public Output<Boolean> getSkipGetEc2Platforms() {
+    public Output<Boolean> skipGetEc2Platforms() {
         return this.skipGetEc2Platforms == null ? Codegen.empty() : this.skipGetEc2Platforms;
     }
 
@@ -206,7 +206,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipMetadataApiCheck", json=true)
       private final @Nullable Output<Boolean> skipMetadataApiCheck;
 
-    public Output<Boolean> getSkipMetadataApiCheck() {
+    public Output<Boolean> skipMetadataApiCheck() {
         return this.skipMetadataApiCheck == null ? Codegen.empty() : this.skipMetadataApiCheck;
     }
 
@@ -217,7 +217,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipRegionValidation", json=true)
       private final @Nullable Output<Boolean> skipRegionValidation;
 
-    public Output<Boolean> getSkipRegionValidation() {
+    public Output<Boolean> skipRegionValidation() {
         return this.skipRegionValidation == null ? Codegen.empty() : this.skipRegionValidation;
     }
 
@@ -228,7 +228,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipRequestingAccountId", json=true)
       private final @Nullable Output<Boolean> skipRequestingAccountId;
 
-    public Output<Boolean> getSkipRequestingAccountId() {
+    public Output<Boolean> skipRequestingAccountId() {
         return this.skipRequestingAccountId == null ? Codegen.empty() : this.skipRequestingAccountId;
     }
 
@@ -239,7 +239,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="token")
       private final @Nullable Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token == null ? Codegen.empty() : this.token;
     }
 

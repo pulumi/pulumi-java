@@ -19,14 +19,14 @@ public final class ThemeValuesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="value")
       private final @Nullable Output<ThemeValueArgs> value;
 
-    public Output<ThemeValueArgs> getValue() {
+    public Output<ThemeValueArgs> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

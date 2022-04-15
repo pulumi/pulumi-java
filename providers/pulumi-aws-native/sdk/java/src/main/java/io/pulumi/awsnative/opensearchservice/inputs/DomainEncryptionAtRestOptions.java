@@ -18,14 +18,14 @@ public final class DomainEncryptionAtRestOptions extends io.pulumi.resources.Inv
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
     }
 

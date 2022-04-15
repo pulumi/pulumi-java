@@ -25,13 +25,13 @@ public final class ListenerRuleFixedResponseConfig {
         this.statusCode = statusCode;
     }
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
-    public Optional<String> getMessageBody() {
+    public Optional<String> messageBody() {
         return Optional.ofNullable(this.messageBody);
     }
-    public String getStatusCode() {
+    public String statusCode() {
         return this.statusCode;
     }
 

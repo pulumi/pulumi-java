@@ -29,7 +29,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
     @Import(name="blockPublicAcls")
       private final @Nullable Output<Boolean> blockPublicAcls;
 
-    public Output<Boolean> getBlockPublicAcls() {
+    public Output<Boolean> blockPublicAcls() {
         return this.blockPublicAcls == null ? Codegen.empty() : this.blockPublicAcls;
     }
 
@@ -41,7 +41,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
     @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> getBlockPublicPolicy() {
+    public Output<Boolean> blockPublicPolicy() {
         return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
     }
 
@@ -53,7 +53,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
     @Import(name="ignorePublicAcls")
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
-    public Output<Boolean> getIgnorePublicAcls() {
+    public Output<Boolean> ignorePublicAcls() {
         return this.ignorePublicAcls == null ? Codegen.empty() : this.ignorePublicAcls;
     }
 
@@ -65,7 +65,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
     @Import(name="restrictPublicBuckets")
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
-    public Output<Boolean> getRestrictPublicBuckets() {
+    public Output<Boolean> restrictPublicBuckets() {
         return this.restrictPublicBuckets == null ? Codegen.empty() : this.restrictPublicBuckets;
     }
 

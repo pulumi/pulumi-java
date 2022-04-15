@@ -15,7 +15,7 @@ public final class GetDomainNameApiAssociationArgs extends io.pulumi.resources.I
     @Import(name="apiAssociationIdentifier", required=true)
       private final String apiAssociationIdentifier;
 
-    public String getApiAssociationIdentifier() {
+    public String apiAssociationIdentifier() {
         return this.apiAssociationIdentifier;
     }
 

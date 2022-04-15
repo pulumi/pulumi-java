@@ -27,42 +27,42 @@ public final class MitigationActionActionParamsArgs extends io.pulumi.resources.
     @Import(name="addThingsToThingGroupParams")
       private final @Nullable Output<MitigationActionAddThingsToThingGroupParamsArgs> addThingsToThingGroupParams;
 
-    public Output<MitigationActionAddThingsToThingGroupParamsArgs> getAddThingsToThingGroupParams() {
+    public Output<MitigationActionAddThingsToThingGroupParamsArgs> addThingsToThingGroupParams() {
         return this.addThingsToThingGroupParams == null ? Codegen.empty() : this.addThingsToThingGroupParams;
     }
 
     @Import(name="enableIoTLoggingParams")
       private final @Nullable Output<MitigationActionEnableIoTLoggingParamsArgs> enableIoTLoggingParams;
 
-    public Output<MitigationActionEnableIoTLoggingParamsArgs> getEnableIoTLoggingParams() {
+    public Output<MitigationActionEnableIoTLoggingParamsArgs> enableIoTLoggingParams() {
         return this.enableIoTLoggingParams == null ? Codegen.empty() : this.enableIoTLoggingParams;
     }
 
     @Import(name="publishFindingToSnsParams")
       private final @Nullable Output<MitigationActionPublishFindingToSnsParamsArgs> publishFindingToSnsParams;
 
-    public Output<MitigationActionPublishFindingToSnsParamsArgs> getPublishFindingToSnsParams() {
+    public Output<MitigationActionPublishFindingToSnsParamsArgs> publishFindingToSnsParams() {
         return this.publishFindingToSnsParams == null ? Codegen.empty() : this.publishFindingToSnsParams;
     }
 
     @Import(name="replaceDefaultPolicyVersionParams")
       private final @Nullable Output<MitigationActionReplaceDefaultPolicyVersionParamsArgs> replaceDefaultPolicyVersionParams;
 
-    public Output<MitigationActionReplaceDefaultPolicyVersionParamsArgs> getReplaceDefaultPolicyVersionParams() {
+    public Output<MitigationActionReplaceDefaultPolicyVersionParamsArgs> replaceDefaultPolicyVersionParams() {
         return this.replaceDefaultPolicyVersionParams == null ? Codegen.empty() : this.replaceDefaultPolicyVersionParams;
     }
 
     @Import(name="updateCACertificateParams")
       private final @Nullable Output<MitigationActionUpdateCACertificateParamsArgs> updateCACertificateParams;
 
-    public Output<MitigationActionUpdateCACertificateParamsArgs> getUpdateCACertificateParams() {
+    public Output<MitigationActionUpdateCACertificateParamsArgs> updateCACertificateParams() {
         return this.updateCACertificateParams == null ? Codegen.empty() : this.updateCACertificateParams;
     }
 
     @Import(name="updateDeviceCertificateParams")
       private final @Nullable Output<MitigationActionUpdateDeviceCertificateParamsArgs> updateDeviceCertificateParams;
 
-    public Output<MitigationActionUpdateDeviceCertificateParamsArgs> getUpdateDeviceCertificateParams() {
+    public Output<MitigationActionUpdateDeviceCertificateParamsArgs> updateDeviceCertificateParams() {
         return this.updateDeviceCertificateParams == null ? Codegen.empty() : this.updateDeviceCertificateParams;
     }
 

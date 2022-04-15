@@ -88,63 +88,63 @@ public final class GetDBProxyResult {
      * The authorization mechanism that the proxy uses.
      * 
     */
-    public List<DBProxyAuthFormat> getAuth() {
+    public List<DBProxyAuthFormat> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
      * The Amazon Resource Name (ARN) for the proxy.
      * 
     */
-    public Optional<String> getDBProxyArn() {
+    public Optional<String> dBProxyArn() {
         return Optional.ofNullable(this.dBProxyArn);
     }
     /**
      * Whether the proxy includes detailed information about SQL statements in its logs.
      * 
     */
-    public Optional<Boolean> getDebugLogging() {
+    public Optional<Boolean> debugLogging() {
         return Optional.ofNullable(this.debugLogging);
     }
     /**
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
      * 
     */
-    public Optional<Integer> getIdleClientTimeout() {
+    public Optional<Integer> idleClientTimeout() {
         return Optional.ofNullable(this.idleClientTimeout);
     }
     /**
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
     */
-    public Optional<Boolean> getRequireTLS() {
+    public Optional<Boolean> requireTLS() {
         return Optional.ofNullable(this.requireTLS);
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
     */
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
      * 
     */
-    public List<DBProxyTagFormat> getTags() {
+    public List<DBProxyTagFormat> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * VPC security group IDs to associate with the new proxy.
      * 
     */
-    public List<String> getVpcSecurityGroupIds() {
+    public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
 

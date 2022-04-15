@@ -30,7 +30,7 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
     @Import(name="baselineConfig")
       private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
 
-    public Optional<MonitoringScheduleBaselineConfig> getBaselineConfig() {
+    public Optional<MonitoringScheduleBaselineConfig> baselineConfig() {
         return this.baselineConfig == null ? Optional.empty() : Optional.ofNullable(this.baselineConfig);
     }
 
@@ -41,42 +41,42 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
     @Import(name="environment")
       private final @Nullable Object environment;
 
-    public Optional<Object> getEnvironment() {
+    public Optional<Object> environment() {
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
     }
 
     @Import(name="monitoringAppSpecification", required=true)
       private final MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification;
 
-    public MonitoringScheduleMonitoringAppSpecification getMonitoringAppSpecification() {
+    public MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
     @Import(name="monitoringInputs", required=true)
       private final List<MonitoringScheduleMonitoringInput> monitoringInputs;
 
-    public List<MonitoringScheduleMonitoringInput> getMonitoringInputs() {
+    public List<MonitoringScheduleMonitoringInput> monitoringInputs() {
         return this.monitoringInputs;
     }
 
     @Import(name="monitoringOutputConfig", required=true)
       private final MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig;
 
-    public MonitoringScheduleMonitoringOutputConfig getMonitoringOutputConfig() {
+    public MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
     @Import(name="monitoringResources", required=true)
       private final MonitoringScheduleMonitoringResources monitoringResources;
 
-    public MonitoringScheduleMonitoringResources getMonitoringResources() {
+    public MonitoringScheduleMonitoringResources monitoringResources() {
         return this.monitoringResources;
     }
 
     @Import(name="networkConfig")
       private final @Nullable MonitoringScheduleNetworkConfig networkConfig;
 
-    public Optional<MonitoringScheduleNetworkConfig> getNetworkConfig() {
+    public Optional<MonitoringScheduleNetworkConfig> networkConfig() {
         return this.networkConfig == null ? Optional.empty() : Optional.ofNullable(this.networkConfig);
     }
 
@@ -87,14 +87,14 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
 
-    public Optional<MonitoringScheduleStoppingCondition> getStoppingCondition() {
+    public Optional<MonitoringScheduleStoppingCondition> stoppingCondition() {
         return this.stoppingCondition == null ? Optional.empty() : Optional.ofNullable(this.stoppingCondition);
     }
 

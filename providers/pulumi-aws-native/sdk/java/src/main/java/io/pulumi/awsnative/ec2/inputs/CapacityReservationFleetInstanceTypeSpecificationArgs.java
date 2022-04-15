@@ -21,49 +21,49 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
     }
 
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Output<Boolean> getEbsOptimized() {
+    public Output<Boolean> ebsOptimized() {
         return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     @Import(name="instancePlatform")
       private final @Nullable Output<String> instancePlatform;
 
-    public Output<String> getInstancePlatform() {
+    public Output<String> instancePlatform() {
         return this.instancePlatform == null ? Codegen.empty() : this.instancePlatform;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="weight")
       private final @Nullable Output<Double> weight;
 
-    public Output<Double> getWeight() {
+    public Output<Double> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

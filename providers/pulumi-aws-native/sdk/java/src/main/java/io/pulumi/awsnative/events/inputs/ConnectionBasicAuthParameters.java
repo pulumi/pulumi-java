@@ -15,14 +15,14 @@ public final class ConnectionBasicAuthParameters extends io.pulumi.resources.Inv
     @Import(name="password", required=true)
       private final String password;
 
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
 
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

@@ -35,21 +35,21 @@ public final class WorkflowStepCopyStepDetailsProperties {
         this.overwriteExisting = overwriteExisting;
     }
 
-    public Optional<WorkflowInputFileLocation> getDestinationFileLocation() {
+    public Optional<WorkflowInputFileLocation> destinationFileLocation() {
         return Optional.ofNullable(this.destinationFileLocation);
     }
     /**
      * The name of the step, used as an identifier.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
      * 
     */
-    public Optional<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
+    public Optional<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting() {
         return Optional.ofNullable(this.overwriteExisting);
     }
 

@@ -19,14 +19,14 @@ public final class DeliveryStreamProcessor extends io.pulumi.resources.InvokeArg
     @Import(name="parameters")
       private final @Nullable List<DeliveryStreamProcessorParameter> parameters;
 
-    public List<DeliveryStreamProcessorParameter> getParameters() {
+    public List<DeliveryStreamProcessorParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
     @Import(name="type", required=true)
       private final DeliveryStreamProcessorType type;
 
-    public DeliveryStreamProcessorType getType() {
+    public DeliveryStreamProcessorType type() {
         return this.type;
     }
 

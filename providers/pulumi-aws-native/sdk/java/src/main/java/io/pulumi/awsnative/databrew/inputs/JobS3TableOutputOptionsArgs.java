@@ -17,7 +17,7 @@ public final class JobS3TableOutputOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="location", required=true)
       private final Output<JobS3LocationArgs> location;
 
-    public Output<JobS3LocationArgs> getLocation() {
+    public Output<JobS3LocationArgs> location() {
         return this.location;
     }
 

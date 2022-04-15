@@ -21,19 +21,19 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
     @Export(name="apiAssociationIdentifier", type=String.class, parameters={})
     private Output<String> apiAssociationIdentifier;
 
-    public Output<String> getApiAssociationIdentifier() {
+    public Output<String> apiAssociationIdentifier() {
         return this.apiAssociationIdentifier;
     }
     @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 

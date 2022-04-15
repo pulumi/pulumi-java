@@ -18,21 +18,21 @@ public final class InAppTemplateHeaderConfig extends io.pulumi.resources.InvokeA
     @Import(name="alignment")
       private final @Nullable InAppTemplateAlignment alignment;
 
-    public Optional<InAppTemplateAlignment> getAlignment() {
+    public Optional<InAppTemplateAlignment> alignment() {
         return this.alignment == null ? Optional.empty() : Optional.ofNullable(this.alignment);
     }
 
     @Import(name="header")
       private final @Nullable String header;
 
-    public Optional<String> getHeader() {
+    public Optional<String> header() {
         return this.header == null ? Optional.empty() : Optional.ofNullable(this.header);
     }
 
     @Import(name="textColor")
       private final @Nullable String textColor;
 
-    public Optional<String> getTextColor() {
+    public Optional<String> textColor() {
         return this.textColor == null ? Optional.empty() : Optional.ofNullable(this.textColor);
     }
 

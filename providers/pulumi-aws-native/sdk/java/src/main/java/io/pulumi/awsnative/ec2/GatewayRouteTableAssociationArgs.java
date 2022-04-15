@@ -21,7 +21,7 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
     @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
+    public Output<String> gatewayId() {
         return this.gatewayId;
     }
 
@@ -32,7 +32,7 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
     @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
+    public Output<String> routeTableId() {
         return this.routeTableId;
     }
 

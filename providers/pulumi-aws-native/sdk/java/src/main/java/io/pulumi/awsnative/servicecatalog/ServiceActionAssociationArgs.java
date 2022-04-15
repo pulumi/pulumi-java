@@ -17,21 +17,21 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     @Import(name="productId", required=true)
       private final Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="provisioningArtifactId", required=true)
       private final Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @Import(name="serviceActionId", required=true)
       private final Output<String> serviceActionId;
 
-    public Output<String> getServiceActionId() {
+    public Output<String> serviceActionId() {
         return this.serviceActionId;
     }
 

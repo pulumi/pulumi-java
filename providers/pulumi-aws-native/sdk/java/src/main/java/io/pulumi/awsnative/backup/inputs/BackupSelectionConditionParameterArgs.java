@@ -18,14 +18,14 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
     @Import(name="conditionKey")
       private final @Nullable Output<String> conditionKey;
 
-    public Output<String> getConditionKey() {
+    public Output<String> conditionKey() {
         return this.conditionKey == null ? Codegen.empty() : this.conditionKey;
     }
 
     @Import(name="conditionValue")
       private final @Nullable Output<String> conditionValue;
 
-    public Output<String> getConditionValue() {
+    public Output<String> conditionValue() {
         return this.conditionValue == null ? Codegen.empty() : this.conditionValue;
     }
 

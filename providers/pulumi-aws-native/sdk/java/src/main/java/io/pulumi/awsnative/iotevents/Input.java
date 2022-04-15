@@ -26,7 +26,7 @@ public class Input extends io.pulumi.resources.CustomResource {
     @Export(name="inputDefinition", type=InputDefinition.class, parameters={})
     private Output<InputDefinition> inputDefinition;
 
-    public Output<InputDefinition> getInputDefinition() {
+    public Output<InputDefinition> inputDefinition() {
         return this.inputDefinition;
     }
     /**
@@ -40,7 +40,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return A brief description of the input.
      * 
      */
-    public Output</* @Nullable */ String> getInputDescription() {
+    public Output</* @Nullable */ String> inputDescription() {
         return this.inputDescription;
     }
     /**
@@ -54,7 +54,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return The name of the input.
      * 
      */
-    public Output</* @Nullable */ String> getInputName() {
+    public Output</* @Nullable */ String> inputName() {
         return this.inputName;
     }
     /**
@@ -72,7 +72,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
      */
-    public Output</* @Nullable */ List<InputTag>> getTags() {
+    public Output</* @Nullable */ List<InputTag>> tags() {
         return this.tags;
     }
 

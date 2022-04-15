@@ -43,21 +43,21 @@ public final class DocumentAttachmentsSource {
      * The key of a key-value pair that identifies the location of an attachment to a document.
      * 
     */
-    public Optional<DocumentAttachmentsSourceKey> getKey() {
+    public Optional<DocumentAttachmentsSourceKey> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The name of the document attachment file.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

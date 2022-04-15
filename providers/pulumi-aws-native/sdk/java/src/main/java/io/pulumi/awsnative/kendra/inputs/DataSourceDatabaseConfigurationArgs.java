@@ -23,42 +23,42 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
     @Import(name="aclConfiguration")
       private final @Nullable Output<DataSourceAclConfigurationArgs> aclConfiguration;
 
-    public Output<DataSourceAclConfigurationArgs> getAclConfiguration() {
+    public Output<DataSourceAclConfigurationArgs> aclConfiguration() {
         return this.aclConfiguration == null ? Codegen.empty() : this.aclConfiguration;
     }
 
     @Import(name="columnConfiguration", required=true)
       private final Output<DataSourceColumnConfigurationArgs> columnConfiguration;
 
-    public Output<DataSourceColumnConfigurationArgs> getColumnConfiguration() {
+    public Output<DataSourceColumnConfigurationArgs> columnConfiguration() {
         return this.columnConfiguration;
     }
 
     @Import(name="connectionConfiguration", required=true)
       private final Output<DataSourceConnectionConfigurationArgs> connectionConfiguration;
 
-    public Output<DataSourceConnectionConfigurationArgs> getConnectionConfiguration() {
+    public Output<DataSourceConnectionConfigurationArgs> connectionConfiguration() {
         return this.connectionConfiguration;
     }
 
     @Import(name="databaseEngineType", required=true)
       private final Output<DataSourceDatabaseEngineType> databaseEngineType;
 
-    public Output<DataSourceDatabaseEngineType> getDatabaseEngineType() {
+    public Output<DataSourceDatabaseEngineType> databaseEngineType() {
         return this.databaseEngineType;
     }
 
     @Import(name="sqlConfiguration")
       private final @Nullable Output<DataSourceSqlConfigurationArgs> sqlConfiguration;
 
-    public Output<DataSourceSqlConfigurationArgs> getSqlConfiguration() {
+    public Output<DataSourceSqlConfigurationArgs> sqlConfiguration() {
         return this.sqlConfiguration == null ? Codegen.empty() : this.sqlConfiguration;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
+    public Output<DataSourceVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 

@@ -24,7 +24,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     @Import(name="data", required=true)
       private final Output<String> data;
 
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
 
@@ -35,7 +35,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
 
-    public Output<List<RuleGroupsNamespaceTagArgs>> getTags() {
+    public Output<List<RuleGroupsNamespaceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -57,7 +57,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     @Import(name="workspace", required=true)
       private final Output<String> workspace;
 
-    public Output<String> getWorkspace() {
+    public Output<String> workspace() {
         return this.workspace;
     }
 

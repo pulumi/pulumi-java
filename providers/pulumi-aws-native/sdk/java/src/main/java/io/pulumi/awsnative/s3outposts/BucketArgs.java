@@ -25,7 +25,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
@@ -36,7 +36,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleConfiguration")
       private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
-    public Output<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
+    public Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration() {
         return this.lifecycleConfiguration == null ? Codegen.empty() : this.lifecycleConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
-    public Output<String> getOutpostId() {
+    public Output<String> outpostId() {
         return this.outpostId;
     }
 
@@ -58,7 +58,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Output<List<BucketTagArgs>> getTags() {
+    public Output<List<BucketTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -21,7 +21,7 @@ public final class ResourceCollectionFilter extends io.pulumi.resources.InvokeAr
     @Import(name="cloudFormation")
       private final @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
 
-    public Optional<ResourceCollectionCloudFormationCollectionFilter> getCloudFormation() {
+    public Optional<ResourceCollectionCloudFormationCollectionFilter> cloudFormation() {
         return this.cloudFormation == null ? Optional.empty() : Optional.ofNullable(this.cloudFormation);
     }
 

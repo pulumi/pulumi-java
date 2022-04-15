@@ -26,13 +26,13 @@ public final class DataflowEndpointGroupSecurityDetails {
         this.subnetIds = subnetIds;
     }
 
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }
 

@@ -25,7 +25,7 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -36,7 +36,7 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
     @Import(name="vpcSecurityGroupId")
       private final @Nullable String vpcSecurityGroupId;
 
-    public Optional<String> getVpcSecurityGroupId() {
+    public Optional<String> vpcSecurityGroupId() {
         return this.vpcSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.vpcSecurityGroupId);
     }
 

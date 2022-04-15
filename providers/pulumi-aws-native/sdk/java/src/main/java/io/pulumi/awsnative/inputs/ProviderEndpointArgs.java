@@ -26,7 +26,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accessanalyzer")
       private final @Nullable Output<String> accessanalyzer;
 
-    public Output<String> getAccessanalyzer() {
+    public Output<String> accessanalyzer() {
         return this.accessanalyzer == null ? Codegen.empty() : this.accessanalyzer;
     }
 
@@ -37,7 +37,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="acm")
       private final @Nullable Output<String> acm;
 
-    public Output<String> getAcm() {
+    public Output<String> acm() {
         return this.acm == null ? Codegen.empty() : this.acm;
     }
 
@@ -48,7 +48,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="acmpca")
       private final @Nullable Output<String> acmpca;
 
-    public Output<String> getAcmpca() {
+    public Output<String> acmpca() {
         return this.acmpca == null ? Codegen.empty() : this.acmpca;
     }
 
@@ -59,7 +59,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="amplify")
       private final @Nullable Output<String> amplify;
 
-    public Output<String> getAmplify() {
+    public Output<String> amplify() {
         return this.amplify == null ? Codegen.empty() : this.amplify;
     }
 
@@ -70,7 +70,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="appconfig")
       private final @Nullable Output<String> appconfig;
 
-    public Output<String> getAppconfig() {
+    public Output<String> appconfig() {
         return this.appconfig == null ? Codegen.empty() : this.appconfig;
     }
 
@@ -81,7 +81,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="applicationautoscaling")
       private final @Nullable Output<String> applicationautoscaling;
 
-    public Output<String> getApplicationautoscaling() {
+    public Output<String> applicationautoscaling() {
         return this.applicationautoscaling == null ? Codegen.empty() : this.applicationautoscaling;
     }
 
@@ -92,7 +92,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="applicationinsights")
       private final @Nullable Output<String> applicationinsights;
 
-    public Output<String> getApplicationinsights() {
+    public Output<String> applicationinsights() {
         return this.applicationinsights == null ? Codegen.empty() : this.applicationinsights;
     }
 
@@ -103,7 +103,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="appmesh")
       private final @Nullable Output<String> appmesh;
 
-    public Output<String> getAppmesh() {
+    public Output<String> appmesh() {
         return this.appmesh == null ? Codegen.empty() : this.appmesh;
     }
 
@@ -114,7 +114,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="apprunner")
       private final @Nullable Output<String> apprunner;
 
-    public Output<String> getApprunner() {
+    public Output<String> apprunner() {
         return this.apprunner == null ? Codegen.empty() : this.apprunner;
     }
 
@@ -125,7 +125,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="appstream")
       private final @Nullable Output<String> appstream;
 
-    public Output<String> getAppstream() {
+    public Output<String> appstream() {
         return this.appstream == null ? Codegen.empty() : this.appstream;
     }
 
@@ -136,7 +136,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="appsync")
       private final @Nullable Output<String> appsync;
 
-    public Output<String> getAppsync() {
+    public Output<String> appsync() {
         return this.appsync == null ? Codegen.empty() : this.appsync;
     }
 
@@ -147,7 +147,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="athena")
       private final @Nullable Output<String> athena;
 
-    public Output<String> getAthena() {
+    public Output<String> athena() {
         return this.athena == null ? Codegen.empty() : this.athena;
     }
 
@@ -158,7 +158,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="auditmanager")
       private final @Nullable Output<String> auditmanager;
 
-    public Output<String> getAuditmanager() {
+    public Output<String> auditmanager() {
         return this.auditmanager == null ? Codegen.empty() : this.auditmanager;
     }
 
@@ -169,7 +169,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoscaling")
       private final @Nullable Output<String> autoscaling;
 
-    public Output<String> getAutoscaling() {
+    public Output<String> autoscaling() {
         return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
@@ -180,7 +180,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="backup")
       private final @Nullable Output<String> backup;
 
-    public Output<String> getBackup() {
+    public Output<String> backup() {
         return this.backup == null ? Codegen.empty() : this.backup;
     }
 
@@ -191,7 +191,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="batch")
       private final @Nullable Output<String> batch;
 
-    public Output<String> getBatch() {
+    public Output<String> batch() {
         return this.batch == null ? Codegen.empty() : this.batch;
     }
 
@@ -202,7 +202,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="budgets")
       private final @Nullable Output<String> budgets;
 
-    public Output<String> getBudgets() {
+    public Output<String> budgets() {
         return this.budgets == null ? Codegen.empty() : this.budgets;
     }
 
@@ -213,7 +213,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="chime")
       private final @Nullable Output<String> chime;
 
-    public Output<String> getChime() {
+    public Output<String> chime() {
         return this.chime == null ? Codegen.empty() : this.chime;
     }
 
@@ -224,7 +224,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloud9")
       private final @Nullable Output<String> cloud9;
 
-    public Output<String> getCloud9() {
+    public Output<String> cloud9() {
         return this.cloud9 == null ? Codegen.empty() : this.cloud9;
     }
 
@@ -235,7 +235,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudformation")
       private final @Nullable Output<String> cloudformation;
 
-    public Output<String> getCloudformation() {
+    public Output<String> cloudformation() {
         return this.cloudformation == null ? Codegen.empty() : this.cloudformation;
     }
 
@@ -246,7 +246,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudfront")
       private final @Nullable Output<String> cloudfront;
 
-    public Output<String> getCloudfront() {
+    public Output<String> cloudfront() {
         return this.cloudfront == null ? Codegen.empty() : this.cloudfront;
     }
 
@@ -257,7 +257,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudhsm")
       private final @Nullable Output<String> cloudhsm;
 
-    public Output<String> getCloudhsm() {
+    public Output<String> cloudhsm() {
         return this.cloudhsm == null ? Codegen.empty() : this.cloudhsm;
     }
 
@@ -268,7 +268,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudsearch")
       private final @Nullable Output<String> cloudsearch;
 
-    public Output<String> getCloudsearch() {
+    public Output<String> cloudsearch() {
         return this.cloudsearch == null ? Codegen.empty() : this.cloudsearch;
     }
 
@@ -279,7 +279,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudtrail")
       private final @Nullable Output<String> cloudtrail;
 
-    public Output<String> getCloudtrail() {
+    public Output<String> cloudtrail() {
         return this.cloudtrail == null ? Codegen.empty() : this.cloudtrail;
     }
 
@@ -290,7 +290,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudwatch")
       private final @Nullable Output<String> cloudwatch;
 
-    public Output<String> getCloudwatch() {
+    public Output<String> cloudwatch() {
         return this.cloudwatch == null ? Codegen.empty() : this.cloudwatch;
     }
 
@@ -301,7 +301,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudwatchevents")
       private final @Nullable Output<String> cloudwatchevents;
 
-    public Output<String> getCloudwatchevents() {
+    public Output<String> cloudwatchevents() {
         return this.cloudwatchevents == null ? Codegen.empty() : this.cloudwatchevents;
     }
 
@@ -312,7 +312,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudwatchlogs")
       private final @Nullable Output<String> cloudwatchlogs;
 
-    public Output<String> getCloudwatchlogs() {
+    public Output<String> cloudwatchlogs() {
         return this.cloudwatchlogs == null ? Codegen.empty() : this.cloudwatchlogs;
     }
 
@@ -323,7 +323,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="codeartifact")
       private final @Nullable Output<String> codeartifact;
 
-    public Output<String> getCodeartifact() {
+    public Output<String> codeartifact() {
         return this.codeartifact == null ? Codegen.empty() : this.codeartifact;
     }
 
@@ -334,7 +334,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="codebuild")
       private final @Nullable Output<String> codebuild;
 
-    public Output<String> getCodebuild() {
+    public Output<String> codebuild() {
         return this.codebuild == null ? Codegen.empty() : this.codebuild;
     }
 
@@ -345,7 +345,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="codecommit")
       private final @Nullable Output<String> codecommit;
 
-    public Output<String> getCodecommit() {
+    public Output<String> codecommit() {
         return this.codecommit == null ? Codegen.empty() : this.codecommit;
     }
 
@@ -356,7 +356,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="codedeploy")
       private final @Nullable Output<String> codedeploy;
 
-    public Output<String> getCodedeploy() {
+    public Output<String> codedeploy() {
         return this.codedeploy == null ? Codegen.empty() : this.codedeploy;
     }
 
@@ -367,7 +367,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="codepipeline")
       private final @Nullable Output<String> codepipeline;
 
-    public Output<String> getCodepipeline() {
+    public Output<String> codepipeline() {
         return this.codepipeline == null ? Codegen.empty() : this.codepipeline;
     }
 
@@ -378,7 +378,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="codestarconnections")
       private final @Nullable Output<String> codestarconnections;
 
-    public Output<String> getCodestarconnections() {
+    public Output<String> codestarconnections() {
         return this.codestarconnections == null ? Codegen.empty() : this.codestarconnections;
     }
 
@@ -389,7 +389,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cognitoidentity")
       private final @Nullable Output<String> cognitoidentity;
 
-    public Output<String> getCognitoidentity() {
+    public Output<String> cognitoidentity() {
         return this.cognitoidentity == null ? Codegen.empty() : this.cognitoidentity;
     }
 
@@ -400,7 +400,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configservice")
       private final @Nullable Output<String> configservice;
 
-    public Output<String> getConfigservice() {
+    public Output<String> configservice() {
         return this.configservice == null ? Codegen.empty() : this.configservice;
     }
 
@@ -411,7 +411,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connect")
       private final @Nullable Output<String> connect;
 
-    public Output<String> getConnect() {
+    public Output<String> connect() {
         return this.connect == null ? Codegen.empty() : this.connect;
     }
 
@@ -422,7 +422,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cur")
       private final @Nullable Output<String> cur;
 
-    public Output<String> getCur() {
+    public Output<String> cur() {
         return this.cur == null ? Codegen.empty() : this.cur;
     }
 
@@ -433,7 +433,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataexchange")
       private final @Nullable Output<String> dataexchange;
 
-    public Output<String> getDataexchange() {
+    public Output<String> dataexchange() {
         return this.dataexchange == null ? Codegen.empty() : this.dataexchange;
     }
 
@@ -444,7 +444,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="datapipeline")
       private final @Nullable Output<String> datapipeline;
 
-    public Output<String> getDatapipeline() {
+    public Output<String> datapipeline() {
         return this.datapipeline == null ? Codegen.empty() : this.datapipeline;
     }
 
@@ -455,7 +455,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="datasync")
       private final @Nullable Output<String> datasync;
 
-    public Output<String> getDatasync() {
+    public Output<String> datasync() {
         return this.datasync == null ? Codegen.empty() : this.datasync;
     }
 
@@ -466,7 +466,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dax")
       private final @Nullable Output<String> dax;
 
-    public Output<String> getDax() {
+    public Output<String> dax() {
         return this.dax == null ? Codegen.empty() : this.dax;
     }
 
@@ -477,7 +477,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="detective")
       private final @Nullable Output<String> detective;
 
-    public Output<String> getDetective() {
+    public Output<String> detective() {
         return this.detective == null ? Codegen.empty() : this.detective;
     }
 
@@ -488,7 +488,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="devicefarm")
       private final @Nullable Output<String> devicefarm;
 
-    public Output<String> getDevicefarm() {
+    public Output<String> devicefarm() {
         return this.devicefarm == null ? Codegen.empty() : this.devicefarm;
     }
 
@@ -499,7 +499,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="directconnect")
       private final @Nullable Output<String> directconnect;
 
-    public Output<String> getDirectconnect() {
+    public Output<String> directconnect() {
         return this.directconnect == null ? Codegen.empty() : this.directconnect;
     }
 
@@ -510,7 +510,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dlm")
       private final @Nullable Output<String> dlm;
 
-    public Output<String> getDlm() {
+    public Output<String> dlm() {
         return this.dlm == null ? Codegen.empty() : this.dlm;
     }
 
@@ -521,7 +521,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dms")
       private final @Nullable Output<String> dms;
 
-    public Output<String> getDms() {
+    public Output<String> dms() {
         return this.dms == null ? Codegen.empty() : this.dms;
     }
 
@@ -532,7 +532,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="docdb")
       private final @Nullable Output<String> docdb;
 
-    public Output<String> getDocdb() {
+    public Output<String> docdb() {
         return this.docdb == null ? Codegen.empty() : this.docdb;
     }
 
@@ -543,7 +543,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ds")
       private final @Nullable Output<String> ds;
 
-    public Output<String> getDs() {
+    public Output<String> ds() {
         return this.ds == null ? Codegen.empty() : this.ds;
     }
 
@@ -554,7 +554,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dynamodb")
       private final @Nullable Output<String> dynamodb;
 
-    public Output<String> getDynamodb() {
+    public Output<String> dynamodb() {
         return this.dynamodb == null ? Codegen.empty() : this.dynamodb;
     }
 
@@ -565,7 +565,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ec2")
       private final @Nullable Output<String> ec2;
 
-    public Output<String> getEc2() {
+    public Output<String> ec2() {
         return this.ec2 == null ? Codegen.empty() : this.ec2;
     }
 
@@ -576,7 +576,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ecr")
       private final @Nullable Output<String> ecr;
 
-    public Output<String> getEcr() {
+    public Output<String> ecr() {
         return this.ecr == null ? Codegen.empty() : this.ecr;
     }
 
@@ -587,7 +587,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ecrpublic")
       private final @Nullable Output<String> ecrpublic;
 
-    public Output<String> getEcrpublic() {
+    public Output<String> ecrpublic() {
         return this.ecrpublic == null ? Codegen.empty() : this.ecrpublic;
     }
 
@@ -598,7 +598,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ecs")
       private final @Nullable Output<String> ecs;
 
-    public Output<String> getEcs() {
+    public Output<String> ecs() {
         return this.ecs == null ? Codegen.empty() : this.ecs;
     }
 
@@ -609,7 +609,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="efs")
       private final @Nullable Output<String> efs;
 
-    public Output<String> getEfs() {
+    public Output<String> efs() {
         return this.efs == null ? Codegen.empty() : this.efs;
     }
 
@@ -620,7 +620,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eks")
       private final @Nullable Output<String> eks;
 
-    public Output<String> getEks() {
+    public Output<String> eks() {
         return this.eks == null ? Codegen.empty() : this.eks;
     }
 
@@ -631,7 +631,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="elasticache")
       private final @Nullable Output<String> elasticache;
 
-    public Output<String> getElasticache() {
+    public Output<String> elasticache() {
         return this.elasticache == null ? Codegen.empty() : this.elasticache;
     }
 
@@ -642,7 +642,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="elasticbeanstalk")
       private final @Nullable Output<String> elasticbeanstalk;
 
-    public Output<String> getElasticbeanstalk() {
+    public Output<String> elasticbeanstalk() {
         return this.elasticbeanstalk == null ? Codegen.empty() : this.elasticbeanstalk;
     }
 
@@ -653,7 +653,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="elastictranscoder")
       private final @Nullable Output<String> elastictranscoder;
 
-    public Output<String> getElastictranscoder() {
+    public Output<String> elastictranscoder() {
         return this.elastictranscoder == null ? Codegen.empty() : this.elastictranscoder;
     }
 
@@ -664,7 +664,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="elb")
       private final @Nullable Output<String> elb;
 
-    public Output<String> getElb() {
+    public Output<String> elb() {
         return this.elb == null ? Codegen.empty() : this.elb;
     }
 
@@ -675,7 +675,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="elbv2")
       private final @Nullable Output<String> elbv2;
 
-    public Output<String> getElbv2() {
+    public Output<String> elbv2() {
         return this.elbv2 == null ? Codegen.empty() : this.elbv2;
     }
 
@@ -686,7 +686,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="emr")
       private final @Nullable Output<String> emr;
 
-    public Output<String> getEmr() {
+    public Output<String> emr() {
         return this.emr == null ? Codegen.empty() : this.emr;
     }
 
@@ -697,7 +697,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="emrcontainers")
       private final @Nullable Output<String> emrcontainers;
 
-    public Output<String> getEmrcontainers() {
+    public Output<String> emrcontainers() {
         return this.emrcontainers == null ? Codegen.empty() : this.emrcontainers;
     }
 
@@ -708,7 +708,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="es")
       private final @Nullable Output<String> es;
 
-    public Output<String> getEs() {
+    public Output<String> es() {
         return this.es == null ? Codegen.empty() : this.es;
     }
 
@@ -719,7 +719,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="firehose")
       private final @Nullable Output<String> firehose;
 
-    public Output<String> getFirehose() {
+    public Output<String> firehose() {
         return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
@@ -730,7 +730,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fms")
       private final @Nullable Output<String> fms;
 
-    public Output<String> getFms() {
+    public Output<String> fms() {
         return this.fms == null ? Codegen.empty() : this.fms;
     }
 
@@ -741,7 +741,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="forecast")
       private final @Nullable Output<String> forecast;
 
-    public Output<String> getForecast() {
+    public Output<String> forecast() {
         return this.forecast == null ? Codegen.empty() : this.forecast;
     }
 
@@ -752,7 +752,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fsx")
       private final @Nullable Output<String> fsx;
 
-    public Output<String> getFsx() {
+    public Output<String> fsx() {
         return this.fsx == null ? Codegen.empty() : this.fsx;
     }
 
@@ -763,7 +763,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gamelift")
       private final @Nullable Output<String> gamelift;
 
-    public Output<String> getGamelift() {
+    public Output<String> gamelift() {
         return this.gamelift == null ? Codegen.empty() : this.gamelift;
     }
 
@@ -774,7 +774,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="glacier")
       private final @Nullable Output<String> glacier;
 
-    public Output<String> getGlacier() {
+    public Output<String> glacier() {
         return this.glacier == null ? Codegen.empty() : this.glacier;
     }
 
@@ -785,7 +785,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="globalaccelerator")
       private final @Nullable Output<String> globalaccelerator;
 
-    public Output<String> getGlobalaccelerator() {
+    public Output<String> globalaccelerator() {
         return this.globalaccelerator == null ? Codegen.empty() : this.globalaccelerator;
     }
 
@@ -796,7 +796,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="glue")
       private final @Nullable Output<String> glue;
 
-    public Output<String> getGlue() {
+    public Output<String> glue() {
         return this.glue == null ? Codegen.empty() : this.glue;
     }
 
@@ -807,7 +807,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="greengrass")
       private final @Nullable Output<String> greengrass;
 
-    public Output<String> getGreengrass() {
+    public Output<String> greengrass() {
         return this.greengrass == null ? Codegen.empty() : this.greengrass;
     }
 
@@ -818,7 +818,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="guardduty")
       private final @Nullable Output<String> guardduty;
 
-    public Output<String> getGuardduty() {
+    public Output<String> guardduty() {
         return this.guardduty == null ? Codegen.empty() : this.guardduty;
     }
 
@@ -829,7 +829,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="iam")
       private final @Nullable Output<String> iam;
 
-    public Output<String> getIam() {
+    public Output<String> iam() {
         return this.iam == null ? Codegen.empty() : this.iam;
     }
 
@@ -840,7 +840,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identitystore")
       private final @Nullable Output<String> identitystore;
 
-    public Output<String> getIdentitystore() {
+    public Output<String> identitystore() {
         return this.identitystore == null ? Codegen.empty() : this.identitystore;
     }
 
@@ -851,7 +851,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imagebuilder")
       private final @Nullable Output<String> imagebuilder;
 
-    public Output<String> getImagebuilder() {
+    public Output<String> imagebuilder() {
         return this.imagebuilder == null ? Codegen.empty() : this.imagebuilder;
     }
 
@@ -862,7 +862,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="inspector")
       private final @Nullable Output<String> inspector;
 
-    public Output<String> getInspector() {
+    public Output<String> inspector() {
         return this.inspector == null ? Codegen.empty() : this.inspector;
     }
 
@@ -873,7 +873,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="iot")
       private final @Nullable Output<String> iot;
 
-    public Output<String> getIot() {
+    public Output<String> iot() {
         return this.iot == null ? Codegen.empty() : this.iot;
     }
 
@@ -884,7 +884,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="iotanalytics")
       private final @Nullable Output<String> iotanalytics;
 
-    public Output<String> getIotanalytics() {
+    public Output<String> iotanalytics() {
         return this.iotanalytics == null ? Codegen.empty() : this.iotanalytics;
     }
 
@@ -895,7 +895,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="iotevents")
       private final @Nullable Output<String> iotevents;
 
-    public Output<String> getIotevents() {
+    public Output<String> iotevents() {
         return this.iotevents == null ? Codegen.empty() : this.iotevents;
     }
 
@@ -906,7 +906,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kafka")
       private final @Nullable Output<String> kafka;
 
-    public Output<String> getKafka() {
+    public Output<String> kafka() {
         return this.kafka == null ? Codegen.empty() : this.kafka;
     }
 
@@ -917,7 +917,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kinesis")
       private final @Nullable Output<String> kinesis;
 
-    public Output<String> getKinesis() {
+    public Output<String> kinesis() {
         return this.kinesis == null ? Codegen.empty() : this.kinesis;
     }
 
@@ -928,7 +928,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kinesisanalytics")
       private final @Nullable Output<String> kinesisanalytics;
 
-    public Output<String> getKinesisanalytics() {
+    public Output<String> kinesisanalytics() {
         return this.kinesisanalytics == null ? Codegen.empty() : this.kinesisanalytics;
     }
 
@@ -939,7 +939,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kinesisanalyticsv2")
       private final @Nullable Output<String> kinesisanalyticsv2;
 
-    public Output<String> getKinesisanalyticsv2() {
+    public Output<String> kinesisanalyticsv2() {
         return this.kinesisanalyticsv2 == null ? Codegen.empty() : this.kinesisanalyticsv2;
     }
 
@@ -950,7 +950,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kinesisvideo")
       private final @Nullable Output<String> kinesisvideo;
 
-    public Output<String> getKinesisvideo() {
+    public Output<String> kinesisvideo() {
         return this.kinesisvideo == null ? Codegen.empty() : this.kinesisvideo;
     }
 
@@ -961,7 +961,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kms")
       private final @Nullable Output<String> kms;
 
-    public Output<String> getKms() {
+    public Output<String> kms() {
         return this.kms == null ? Codegen.empty() : this.kms;
     }
 
@@ -972,7 +972,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lakeformation")
       private final @Nullable Output<String> lakeformation;
 
-    public Output<String> getLakeformation() {
+    public Output<String> lakeformation() {
         return this.lakeformation == null ? Codegen.empty() : this.lakeformation;
     }
 
@@ -983,7 +983,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lambda")
       private final @Nullable Output<String> lambda;
 
-    public Output<String> getLambda() {
+    public Output<String> lambda() {
         return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
@@ -994,7 +994,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lexmodels")
       private final @Nullable Output<String> lexmodels;
 
-    public Output<String> getLexmodels() {
+    public Output<String> lexmodels() {
         return this.lexmodels == null ? Codegen.empty() : this.lexmodels;
     }
 
@@ -1005,7 +1005,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="licensemanager")
       private final @Nullable Output<String> licensemanager;
 
-    public Output<String> getLicensemanager() {
+    public Output<String> licensemanager() {
         return this.licensemanager == null ? Codegen.empty() : this.licensemanager;
     }
 
@@ -1016,7 +1016,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lightsail")
       private final @Nullable Output<String> lightsail;
 
-    public Output<String> getLightsail() {
+    public Output<String> lightsail() {
         return this.lightsail == null ? Codegen.empty() : this.lightsail;
     }
 
@@ -1027,7 +1027,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -1038,7 +1038,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="macie")
       private final @Nullable Output<String> macie;
 
-    public Output<String> getMacie() {
+    public Output<String> macie() {
         return this.macie == null ? Codegen.empty() : this.macie;
     }
 
@@ -1049,7 +1049,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="macie2")
       private final @Nullable Output<String> macie2;
 
-    public Output<String> getMacie2() {
+    public Output<String> macie2() {
         return this.macie2 == null ? Codegen.empty() : this.macie2;
     }
 
@@ -1060,7 +1060,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="managedblockchain")
       private final @Nullable Output<String> managedblockchain;
 
-    public Output<String> getManagedblockchain() {
+    public Output<String> managedblockchain() {
         return this.managedblockchain == null ? Codegen.empty() : this.managedblockchain;
     }
 
@@ -1071,7 +1071,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="marketplacecatalog")
       private final @Nullable Output<String> marketplacecatalog;
 
-    public Output<String> getMarketplacecatalog() {
+    public Output<String> marketplacecatalog() {
         return this.marketplacecatalog == null ? Codegen.empty() : this.marketplacecatalog;
     }
 
@@ -1082,7 +1082,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mediaconnect")
       private final @Nullable Output<String> mediaconnect;
 
-    public Output<String> getMediaconnect() {
+    public Output<String> mediaconnect() {
         return this.mediaconnect == null ? Codegen.empty() : this.mediaconnect;
     }
 
@@ -1093,7 +1093,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mediaconvert")
       private final @Nullable Output<String> mediaconvert;
 
-    public Output<String> getMediaconvert() {
+    public Output<String> mediaconvert() {
         return this.mediaconvert == null ? Codegen.empty() : this.mediaconvert;
     }
 
@@ -1104,7 +1104,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="medialive")
       private final @Nullable Output<String> medialive;
 
-    public Output<String> getMedialive() {
+    public Output<String> medialive() {
         return this.medialive == null ? Codegen.empty() : this.medialive;
     }
 
@@ -1115,7 +1115,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mediapackage")
       private final @Nullable Output<String> mediapackage;
 
-    public Output<String> getMediapackage() {
+    public Output<String> mediapackage() {
         return this.mediapackage == null ? Codegen.empty() : this.mediapackage;
     }
 
@@ -1126,7 +1126,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mediastore")
       private final @Nullable Output<String> mediastore;
 
-    public Output<String> getMediastore() {
+    public Output<String> mediastore() {
         return this.mediastore == null ? Codegen.empty() : this.mediastore;
     }
 
@@ -1137,7 +1137,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mediastoredata")
       private final @Nullable Output<String> mediastoredata;
 
-    public Output<String> getMediastoredata() {
+    public Output<String> mediastoredata() {
         return this.mediastoredata == null ? Codegen.empty() : this.mediastoredata;
     }
 
@@ -1148,7 +1148,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="memorydb")
       private final @Nullable Output<String> memorydb;
 
-    public Output<String> getMemorydb() {
+    public Output<String> memorydb() {
         return this.memorydb == null ? Codegen.empty() : this.memorydb;
     }
 
@@ -1159,7 +1159,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mq")
       private final @Nullable Output<String> mq;
 
-    public Output<String> getMq() {
+    public Output<String> mq() {
         return this.mq == null ? Codegen.empty() : this.mq;
     }
 
@@ -1170,7 +1170,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mwaa")
       private final @Nullable Output<String> mwaa;
 
-    public Output<String> getMwaa() {
+    public Output<String> mwaa() {
         return this.mwaa == null ? Codegen.empty() : this.mwaa;
     }
 
@@ -1181,7 +1181,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="neptune")
       private final @Nullable Output<String> neptune;
 
-    public Output<String> getNeptune() {
+    public Output<String> neptune() {
         return this.neptune == null ? Codegen.empty() : this.neptune;
     }
 
@@ -1192,7 +1192,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="networkfirewall")
       private final @Nullable Output<String> networkfirewall;
 
-    public Output<String> getNetworkfirewall() {
+    public Output<String> networkfirewall() {
         return this.networkfirewall == null ? Codegen.empty() : this.networkfirewall;
     }
 
@@ -1203,7 +1203,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="networkmanager")
       private final @Nullable Output<String> networkmanager;
 
-    public Output<String> getNetworkmanager() {
+    public Output<String> networkmanager() {
         return this.networkmanager == null ? Codegen.empty() : this.networkmanager;
     }
 
@@ -1214,7 +1214,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="opsworks")
       private final @Nullable Output<String> opsworks;
 
-    public Output<String> getOpsworks() {
+    public Output<String> opsworks() {
         return this.opsworks == null ? Codegen.empty() : this.opsworks;
     }
 
@@ -1225,7 +1225,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="organizations")
       private final @Nullable Output<String> organizations;
 
-    public Output<String> getOrganizations() {
+    public Output<String> organizations() {
         return this.organizations == null ? Codegen.empty() : this.organizations;
     }
 
@@ -1236,7 +1236,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="outposts")
       private final @Nullable Output<String> outposts;
 
-    public Output<String> getOutposts() {
+    public Output<String> outposts() {
         return this.outposts == null ? Codegen.empty() : this.outposts;
     }
 
@@ -1247,7 +1247,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="personalize")
       private final @Nullable Output<String> personalize;
 
-    public Output<String> getPersonalize() {
+    public Output<String> personalize() {
         return this.personalize == null ? Codegen.empty() : this.personalize;
     }
 
@@ -1258,7 +1258,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pinpoint")
       private final @Nullable Output<String> pinpoint;
 
-    public Output<String> getPinpoint() {
+    public Output<String> pinpoint() {
         return this.pinpoint == null ? Codegen.empty() : this.pinpoint;
     }
 
@@ -1269,7 +1269,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pricing")
       private final @Nullable Output<String> pricing;
 
-    public Output<String> getPricing() {
+    public Output<String> pricing() {
         return this.pricing == null ? Codegen.empty() : this.pricing;
     }
 
@@ -1280,7 +1280,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="qldb")
       private final @Nullable Output<String> qldb;
 
-    public Output<String> getQldb() {
+    public Output<String> qldb() {
         return this.qldb == null ? Codegen.empty() : this.qldb;
     }
 
@@ -1291,7 +1291,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="quicksight")
       private final @Nullable Output<String> quicksight;
 
-    public Output<String> getQuicksight() {
+    public Output<String> quicksight() {
         return this.quicksight == null ? Codegen.empty() : this.quicksight;
     }
 
@@ -1302,7 +1302,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ram")
       private final @Nullable Output<String> ram;
 
-    public Output<String> getRam() {
+    public Output<String> ram() {
         return this.ram == null ? Codegen.empty() : this.ram;
     }
 
@@ -1313,7 +1313,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rds")
       private final @Nullable Output<String> rds;
 
-    public Output<String> getRds() {
+    public Output<String> rds() {
         return this.rds == null ? Codegen.empty() : this.rds;
     }
 
@@ -1324,7 +1324,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="redshift")
       private final @Nullable Output<String> redshift;
 
-    public Output<String> getRedshift() {
+    public Output<String> redshift() {
         return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
@@ -1335,7 +1335,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourcegroups")
       private final @Nullable Output<String> resourcegroups;
 
-    public Output<String> getResourcegroups() {
+    public Output<String> resourcegroups() {
         return this.resourcegroups == null ? Codegen.empty() : this.resourcegroups;
     }
 
@@ -1346,7 +1346,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourcegroupstaggingapi")
       private final @Nullable Output<String> resourcegroupstaggingapi;
 
-    public Output<String> getResourcegroupstaggingapi() {
+    public Output<String> resourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi == null ? Codegen.empty() : this.resourcegroupstaggingapi;
     }
 
@@ -1357,7 +1357,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="route53")
       private final @Nullable Output<String> route53;
 
-    public Output<String> getRoute53() {
+    public Output<String> route53() {
         return this.route53 == null ? Codegen.empty() : this.route53;
     }
 
@@ -1368,7 +1368,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="route53domains")
       private final @Nullable Output<String> route53domains;
 
-    public Output<String> getRoute53domains() {
+    public Output<String> route53domains() {
         return this.route53domains == null ? Codegen.empty() : this.route53domains;
     }
 
@@ -1379,7 +1379,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="route53recoverycontrolconfig")
       private final @Nullable Output<String> route53recoverycontrolconfig;
 
-    public Output<String> getRoute53recoverycontrolconfig() {
+    public Output<String> route53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig == null ? Codegen.empty() : this.route53recoverycontrolconfig;
     }
 
@@ -1390,7 +1390,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="route53recoveryreadiness")
       private final @Nullable Output<String> route53recoveryreadiness;
 
-    public Output<String> getRoute53recoveryreadiness() {
+    public Output<String> route53recoveryreadiness() {
         return this.route53recoveryreadiness == null ? Codegen.empty() : this.route53recoveryreadiness;
     }
 
@@ -1401,7 +1401,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="route53resolver")
       private final @Nullable Output<String> route53resolver;
 
-    public Output<String> getRoute53resolver() {
+    public Output<String> route53resolver() {
         return this.route53resolver == null ? Codegen.empty() : this.route53resolver;
     }
 
@@ -1412,7 +1412,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3")
       private final @Nullable Output<String> s3;
 
-    public Output<String> getS3() {
+    public Output<String> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
@@ -1423,7 +1423,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3control")
       private final @Nullable Output<String> s3control;
 
-    public Output<String> getS3control() {
+    public Output<String> s3control() {
         return this.s3control == null ? Codegen.empty() : this.s3control;
     }
 
@@ -1434,7 +1434,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="s3outposts")
       private final @Nullable Output<String> s3outposts;
 
-    public Output<String> getS3outposts() {
+    public Output<String> s3outposts() {
         return this.s3outposts == null ? Codegen.empty() : this.s3outposts;
     }
 
@@ -1445,7 +1445,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sagemaker")
       private final @Nullable Output<String> sagemaker;
 
-    public Output<String> getSagemaker() {
+    public Output<String> sagemaker() {
         return this.sagemaker == null ? Codegen.empty() : this.sagemaker;
     }
 
@@ -1456,7 +1456,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="schemas")
       private final @Nullable Output<String> schemas;
 
-    public Output<String> getSchemas() {
+    public Output<String> schemas() {
         return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
@@ -1467,7 +1467,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sdb")
       private final @Nullable Output<String> sdb;
 
-    public Output<String> getSdb() {
+    public Output<String> sdb() {
         return this.sdb == null ? Codegen.empty() : this.sdb;
     }
 
@@ -1478,7 +1478,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="secretsmanager")
       private final @Nullable Output<String> secretsmanager;
 
-    public Output<String> getSecretsmanager() {
+    public Output<String> secretsmanager() {
         return this.secretsmanager == null ? Codegen.empty() : this.secretsmanager;
     }
 
@@ -1489,7 +1489,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="securityhub")
       private final @Nullable Output<String> securityhub;
 
-    public Output<String> getSecurityhub() {
+    public Output<String> securityhub() {
         return this.securityhub == null ? Codegen.empty() : this.securityhub;
     }
 
@@ -1500,7 +1500,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverlessrepo")
       private final @Nullable Output<String> serverlessrepo;
 
-    public Output<String> getServerlessrepo() {
+    public Output<String> serverlessrepo() {
         return this.serverlessrepo == null ? Codegen.empty() : this.serverlessrepo;
     }
 
@@ -1511,7 +1511,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="servicecatalog")
       private final @Nullable Output<String> servicecatalog;
 
-    public Output<String> getServicecatalog() {
+    public Output<String> servicecatalog() {
         return this.servicecatalog == null ? Codegen.empty() : this.servicecatalog;
     }
 
@@ -1522,7 +1522,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="servicediscovery")
       private final @Nullable Output<String> servicediscovery;
 
-    public Output<String> getServicediscovery() {
+    public Output<String> servicediscovery() {
         return this.servicediscovery == null ? Codegen.empty() : this.servicediscovery;
     }
 
@@ -1533,7 +1533,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="servicequotas")
       private final @Nullable Output<String> servicequotas;
 
-    public Output<String> getServicequotas() {
+    public Output<String> servicequotas() {
         return this.servicequotas == null ? Codegen.empty() : this.servicequotas;
     }
 
@@ -1544,7 +1544,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ses")
       private final @Nullable Output<String> ses;
 
-    public Output<String> getSes() {
+    public Output<String> ses() {
         return this.ses == null ? Codegen.empty() : this.ses;
     }
 
@@ -1555,7 +1555,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="shield")
       private final @Nullable Output<String> shield;
 
-    public Output<String> getShield() {
+    public Output<String> shield() {
         return this.shield == null ? Codegen.empty() : this.shield;
     }
 
@@ -1566,7 +1566,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="signer")
       private final @Nullable Output<String> signer;
 
-    public Output<String> getSigner() {
+    public Output<String> signer() {
         return this.signer == null ? Codegen.empty() : this.signer;
     }
 
@@ -1577,7 +1577,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sns")
       private final @Nullable Output<String> sns;
 
-    public Output<String> getSns() {
+    public Output<String> sns() {
         return this.sns == null ? Codegen.empty() : this.sns;
     }
 
@@ -1588,7 +1588,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sqs")
       private final @Nullable Output<String> sqs;
 
-    public Output<String> getSqs() {
+    public Output<String> sqs() {
         return this.sqs == null ? Codegen.empty() : this.sqs;
     }
 
@@ -1599,7 +1599,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ssm")
       private final @Nullable Output<String> ssm;
 
-    public Output<String> getSsm() {
+    public Output<String> ssm() {
         return this.ssm == null ? Codegen.empty() : this.ssm;
     }
 
@@ -1610,7 +1610,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ssoadmin")
       private final @Nullable Output<String> ssoadmin;
 
-    public Output<String> getSsoadmin() {
+    public Output<String> ssoadmin() {
         return this.ssoadmin == null ? Codegen.empty() : this.ssoadmin;
     }
 
@@ -1621,7 +1621,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="stepfunctions")
       private final @Nullable Output<String> stepfunctions;
 
-    public Output<String> getStepfunctions() {
+    public Output<String> stepfunctions() {
         return this.stepfunctions == null ? Codegen.empty() : this.stepfunctions;
     }
 
@@ -1632,7 +1632,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="storagegateway")
       private final @Nullable Output<String> storagegateway;
 
-    public Output<String> getStoragegateway() {
+    public Output<String> storagegateway() {
         return this.storagegateway == null ? Codegen.empty() : this.storagegateway;
     }
 
@@ -1643,7 +1643,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sts")
       private final @Nullable Output<String> sts;
 
-    public Output<String> getSts() {
+    public Output<String> sts() {
         return this.sts == null ? Codegen.empty() : this.sts;
     }
 
@@ -1654,7 +1654,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="swf")
       private final @Nullable Output<String> swf;
 
-    public Output<String> getSwf() {
+    public Output<String> swf() {
         return this.swf == null ? Codegen.empty() : this.swf;
     }
 
@@ -1665,7 +1665,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="synthetics")
       private final @Nullable Output<String> synthetics;
 
-    public Output<String> getSynthetics() {
+    public Output<String> synthetics() {
         return this.synthetics == null ? Codegen.empty() : this.synthetics;
     }
 
@@ -1676,7 +1676,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timestreamwrite")
       private final @Nullable Output<String> timestreamwrite;
 
-    public Output<String> getTimestreamwrite() {
+    public Output<String> timestreamwrite() {
         return this.timestreamwrite == null ? Codegen.empty() : this.timestreamwrite;
     }
 
@@ -1687,7 +1687,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="transfer")
       private final @Nullable Output<String> transfer;
 
-    public Output<String> getTransfer() {
+    public Output<String> transfer() {
         return this.transfer == null ? Codegen.empty() : this.transfer;
     }
 
@@ -1698,7 +1698,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="waf")
       private final @Nullable Output<String> waf;
 
-    public Output<String> getWaf() {
+    public Output<String> waf() {
         return this.waf == null ? Codegen.empty() : this.waf;
     }
 
@@ -1709,7 +1709,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="wafregional")
       private final @Nullable Output<String> wafregional;
 
-    public Output<String> getWafregional() {
+    public Output<String> wafregional() {
         return this.wafregional == null ? Codegen.empty() : this.wafregional;
     }
 
@@ -1720,7 +1720,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="wafv2")
       private final @Nullable Output<String> wafv2;
 
-    public Output<String> getWafv2() {
+    public Output<String> wafv2() {
         return this.wafv2 == null ? Codegen.empty() : this.wafv2;
     }
 
@@ -1731,7 +1731,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="worklink")
       private final @Nullable Output<String> worklink;
 
-    public Output<String> getWorklink() {
+    public Output<String> worklink() {
         return this.worklink == null ? Codegen.empty() : this.worklink;
     }
 
@@ -1742,7 +1742,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="workmail")
       private final @Nullable Output<String> workmail;
 
-    public Output<String> getWorkmail() {
+    public Output<String> workmail() {
         return this.workmail == null ? Codegen.empty() : this.workmail;
     }
 
@@ -1753,7 +1753,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="workspaces")
       private final @Nullable Output<String> workspaces;
 
-    public Output<String> getWorkspaces() {
+    public Output<String> workspaces() {
         return this.workspaces == null ? Codegen.empty() : this.workspaces;
     }
 
@@ -1764,7 +1764,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="xray")
       private final @Nullable Output<String> xray;
 
-    public Output<String> getXray() {
+    public Output<String> xray() {
         return this.xray == null ? Codegen.empty() : this.xray;
     }
 

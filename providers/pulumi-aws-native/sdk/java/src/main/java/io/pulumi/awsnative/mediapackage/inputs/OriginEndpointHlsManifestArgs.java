@@ -33,7 +33,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="adMarkers")
       private final @Nullable Output<OriginEndpointHlsManifestAdMarkers> adMarkers;
 
-    public Output<OriginEndpointHlsManifestAdMarkers> getAdMarkers() {
+    public Output<OriginEndpointHlsManifestAdMarkers> adMarkers() {
         return this.adMarkers == null ? Codegen.empty() : this.adMarkers;
     }
 
@@ -44,14 +44,14 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="adTriggers")
       private final @Nullable Output<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers;
 
-    public Output<List<OriginEndpointHlsManifestAdTriggersItem>> getAdTriggers() {
+    public Output<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers() {
         return this.adTriggers == null ? Codegen.empty() : this.adTriggers;
     }
 
     @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
 
-    public Output<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
+    public Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Codegen.empty() : this.adsOnDeliveryRestrictions;
     }
 
@@ -62,7 +62,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -73,7 +73,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="includeIframeOnlyStream")
       private final @Nullable Output<Boolean> includeIframeOnlyStream;
 
-    public Output<Boolean> getIncludeIframeOnlyStream() {
+    public Output<Boolean> includeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Codegen.empty() : this.includeIframeOnlyStream;
     }
 
@@ -84,7 +84,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
-    public Output<String> getManifestName() {
+    public Output<String> manifestName() {
         return this.manifestName == null ? Codegen.empty() : this.manifestName;
     }
 
@@ -95,7 +95,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="playlistType")
       private final @Nullable Output<OriginEndpointHlsManifestPlaylistType> playlistType;
 
-    public Output<OriginEndpointHlsManifestPlaylistType> getPlaylistType() {
+    public Output<OriginEndpointHlsManifestPlaylistType> playlistType() {
         return this.playlistType == null ? Codegen.empty() : this.playlistType;
     }
 
@@ -106,7 +106,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="playlistWindowSeconds")
       private final @Nullable Output<Integer> playlistWindowSeconds;
 
-    public Output<Integer> getPlaylistWindowSeconds() {
+    public Output<Integer> playlistWindowSeconds() {
         return this.playlistWindowSeconds == null ? Codegen.empty() : this.playlistWindowSeconds;
     }
 
@@ -117,7 +117,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Output<Integer> programDateTimeIntervalSeconds;
 
-    public Output<Integer> getProgramDateTimeIntervalSeconds() {
+    public Output<Integer> programDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Codegen.empty() : this.programDateTimeIntervalSeconds;
     }
 
@@ -128,7 +128,7 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url == null ? Codegen.empty() : this.url;
     }
 

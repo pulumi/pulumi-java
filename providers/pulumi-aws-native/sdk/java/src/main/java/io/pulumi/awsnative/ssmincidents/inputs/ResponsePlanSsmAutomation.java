@@ -28,7 +28,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
     @Import(name="documentName", required=true)
       private final String documentName;
 
-    public String getDocumentName() {
+    public String documentName() {
         return this.documentName;
     }
 
@@ -39,7 +39,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
     @Import(name="documentVersion")
       private final @Nullable String documentVersion;
 
-    public Optional<String> getDocumentVersion() {
+    public Optional<String> documentVersion() {
         return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
     }
 
@@ -50,7 +50,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
     @Import(name="parameters")
       private final @Nullable List<ResponsePlanSsmParameter> parameters;
 
-    public List<ResponsePlanSsmParameter> getParameters() {
+    public List<ResponsePlanSsmParameter> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
 
@@ -61,7 +61,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
@@ -72,7 +72,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
     @Import(name="targetAccount")
       private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
-    public Optional<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
+    public Optional<ResponsePlanSsmAutomationTargetAccount> targetAccount() {
         return this.targetAccount == null ? Optional.empty() : Optional.ofNullable(this.targetAccount);
     }
 

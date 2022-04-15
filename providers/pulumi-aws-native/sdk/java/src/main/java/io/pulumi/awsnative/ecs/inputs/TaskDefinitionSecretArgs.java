@@ -17,14 +17,14 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="valueFrom", required=true)
       private final Output<String> valueFrom;
 
-    public Output<String> getValueFrom() {
+    public Output<String> valueFrom() {
         return this.valueFrom;
     }
 

@@ -24,7 +24,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
     @Import(name="key")
       private final @Nullable Output<DocumentAttachmentsSourceKey> key;
 
-    public Output<DocumentAttachmentsSourceKey> getKey() {
+    public Output<DocumentAttachmentsSourceKey> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
@@ -35,7 +35,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

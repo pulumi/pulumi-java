@@ -20,28 +20,28 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
 
-    public Output<List<VirtualMFADeviceTagArgs>> getTags() {
+    public Output<List<VirtualMFADeviceTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="users", required=true)
       private final Output<List<String>> users;
 
-    public Output<List<String>> getUsers() {
+    public Output<List<String>> users() {
         return this.users;
     }
 
     @Import(name="virtualMfaDeviceName")
       private final @Nullable Output<String> virtualMfaDeviceName;
 
-    public Output<String> getVirtualMfaDeviceName() {
+    public Output<String> virtualMfaDeviceName() {
         return this.virtualMfaDeviceName == null ? Codegen.empty() : this.virtualMfaDeviceName;
     }
 

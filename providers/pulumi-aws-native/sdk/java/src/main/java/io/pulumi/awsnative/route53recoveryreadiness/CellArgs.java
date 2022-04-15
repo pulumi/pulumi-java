@@ -24,7 +24,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cellName")
       private final @Nullable Output<String> cellName;
 
-    public Output<String> getCellName() {
+    public Output<String> cellName() {
         return this.cellName == null ? Codegen.empty() : this.cellName;
     }
 
@@ -35,7 +35,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> getCells() {
+    public Output<List<String>> cells() {
         return this.cells == null ? Codegen.empty() : this.cells;
     }
 
@@ -46,7 +46,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<CellTagArgs>> tags;
 
-    public Output<List<CellTagArgs>> getTags() {
+    public Output<List<CellTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

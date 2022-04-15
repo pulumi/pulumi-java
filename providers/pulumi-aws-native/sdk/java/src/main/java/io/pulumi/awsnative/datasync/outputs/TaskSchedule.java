@@ -24,7 +24,7 @@ public final class TaskSchedule {
      * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
      * 
     */
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
 

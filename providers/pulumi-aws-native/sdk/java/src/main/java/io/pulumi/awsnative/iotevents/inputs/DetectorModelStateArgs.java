@@ -25,21 +25,21 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="onEnter")
       private final @Nullable Output<DetectorModelOnEnterArgs> onEnter;
 
-    public Output<DetectorModelOnEnterArgs> getOnEnter() {
+    public Output<DetectorModelOnEnterArgs> onEnter() {
         return this.onEnter == null ? Codegen.empty() : this.onEnter;
     }
 
     @Import(name="onExit")
       private final @Nullable Output<DetectorModelOnExitArgs> onExit;
 
-    public Output<DetectorModelOnExitArgs> getOnExit() {
+    public Output<DetectorModelOnExitArgs> onExit() {
         return this.onExit == null ? Codegen.empty() : this.onExit;
     }
 
     @Import(name="onInput")
       private final @Nullable Output<DetectorModelOnInputArgs> onInput;
 
-    public Output<DetectorModelOnInputArgs> getOnInput() {
+    public Output<DetectorModelOnInputArgs> onInput() {
         return this.onInput == null ? Codegen.empty() : this.onInput;
     }
 
@@ -50,7 +50,7 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="stateName", required=true)
       private final Output<String> stateName;
 
-    public Output<String> getStateName() {
+    public Output<String> stateName() {
         return this.stateName;
     }
 

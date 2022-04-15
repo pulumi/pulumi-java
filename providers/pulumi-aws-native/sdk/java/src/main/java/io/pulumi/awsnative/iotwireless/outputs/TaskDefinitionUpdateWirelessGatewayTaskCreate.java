@@ -26,13 +26,13 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
         this.updateDataSource = updateDataSource;
     }
 
-    public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskCreate> getLoRaWAN() {
+    public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskCreate> loRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
-    public Optional<String> getUpdateDataRole() {
+    public Optional<String> updateDataRole() {
         return Optional.ofNullable(this.updateDataRole);
     }
-    public Optional<String> getUpdateDataSource() {
+    public Optional<String> updateDataSource() {
         return Optional.ofNullable(this.updateDataSource);
     }
 

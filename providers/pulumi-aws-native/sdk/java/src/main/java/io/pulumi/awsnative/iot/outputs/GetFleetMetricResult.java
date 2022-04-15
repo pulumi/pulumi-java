@@ -112,87 +112,87 @@ public final class GetFleetMetricResult {
      * The aggregation field to perform aggregation and metric emission
      * 
     */
-    public Optional<String> getAggregationField() {
+    public Optional<String> aggregationField() {
         return Optional.ofNullable(this.aggregationField);
     }
-    public Optional<FleetMetricAggregationType> getAggregationType() {
+    public Optional<FleetMetricAggregationType> aggregationType() {
         return Optional.ofNullable(this.aggregationType);
     }
     /**
      * The creation date of a fleet metric
      * 
     */
-    public Optional<Double> getCreationDate() {
+    public Optional<Double> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
      * The description of a fleet metric
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The index name of a fleet metric
      * 
     */
-    public Optional<String> getIndexName() {
+    public Optional<String> indexName() {
         return Optional.ofNullable(this.indexName);
     }
     /**
      * The last modified date of a fleet metric
      * 
     */
-    public Optional<Double> getLastModifiedDate() {
+    public Optional<Double> lastModifiedDate() {
         return Optional.ofNullable(this.lastModifiedDate);
     }
     /**
      * The Amazon Resource Number (ARN) of a fleet metric metric
      * 
     */
-    public Optional<String> getMetricArn() {
+    public Optional<String> metricArn() {
         return Optional.ofNullable(this.metricArn);
     }
     /**
      * The period of metric emission in seconds
      * 
     */
-    public Optional<Integer> getPeriod() {
+    public Optional<Integer> period() {
         return Optional.ofNullable(this.period);
     }
     /**
      * The Fleet Indexing query used by a fleet metric
      * 
     */
-    public Optional<String> getQueryString() {
+    public Optional<String> queryString() {
         return Optional.ofNullable(this.queryString);
     }
     /**
      * The version of a Fleet Indexing query used by a fleet metric
      * 
     */
-    public Optional<String> getQueryVersion() {
+    public Optional<String> queryVersion() {
         return Optional.ofNullable(this.queryVersion);
     }
     /**
      * An array of key-value pairs to apply to this resource
      * 
     */
-    public List<FleetMetricTag> getTags() {
+    public List<FleetMetricTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The unit of data points emitted by a fleet metric
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
     /**
      * The version of a fleet metric
      * 
     */
-    public Optional<Double> getVersion() {
+    public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }
 

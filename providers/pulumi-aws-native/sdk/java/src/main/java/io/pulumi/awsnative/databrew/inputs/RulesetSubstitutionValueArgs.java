@@ -25,7 +25,7 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -36,7 +36,7 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
     @Import(name="valueReference", required=true)
       private final Output<String> valueReference;
 
-    public Output<String> getValueReference() {
+    public Output<String> valueReference() {
         return this.valueReference;
     }
 

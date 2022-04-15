@@ -18,7 +18,7 @@ public final class BotExternalSourceSetting {
         this.grammarSlotTypeSetting = grammarSlotTypeSetting;
     }
 
-    public Optional<BotGrammarSlotTypeSetting> getGrammarSlotTypeSetting() {
+    public Optional<BotGrammarSlotTypeSetting> grammarSlotTypeSetting() {
         return Optional.ofNullable(this.grammarSlotTypeSetting);
     }
 

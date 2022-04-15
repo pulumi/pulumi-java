@@ -26,7 +26,7 @@ public final class TrailInsightSelector {
      * The type of insight to log on a trail.
      * 
     */
-    public Optional<String> getInsightType() {
+    public Optional<String> insightType() {
         return Optional.ofNullable(this.insightType);
     }
 

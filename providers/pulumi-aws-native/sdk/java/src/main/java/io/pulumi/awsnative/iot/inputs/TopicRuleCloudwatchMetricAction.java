@@ -17,42 +17,42 @@ public final class TopicRuleCloudwatchMetricAction extends io.pulumi.resources.I
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 
     @Import(name="metricNamespace", required=true)
       private final String metricNamespace;
 
-    public String getMetricNamespace() {
+    public String metricNamespace() {
         return this.metricNamespace;
     }
 
     @Import(name="metricTimestamp")
       private final @Nullable String metricTimestamp;
 
-    public Optional<String> getMetricTimestamp() {
+    public Optional<String> metricTimestamp() {
         return this.metricTimestamp == null ? Optional.empty() : Optional.ofNullable(this.metricTimestamp);
     }
 
     @Import(name="metricUnit", required=true)
       private final String metricUnit;
 
-    public String getMetricUnit() {
+    public String metricUnit() {
         return this.metricUnit;
     }
 
     @Import(name="metricValue", required=true)
       private final String metricValue;
 
-    public String getMetricValue() {
+    public String metricValue() {
         return this.metricValue;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

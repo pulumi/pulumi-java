@@ -21,7 +21,7 @@ public final class RepositoryImageScanningConfiguration extends io.pulumi.resour
     @Import(name="scanOnPush")
       private final @Nullable Boolean scanOnPush;
 
-    public Optional<Boolean> getScanOnPush() {
+    public Optional<Boolean> scanOnPush() {
         return this.scanOnPush == null ? Optional.empty() : Optional.ofNullable(this.scanOnPush);
     }
 

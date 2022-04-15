@@ -16,7 +16,7 @@ public final class MitigationActionUpdateCACertificateParams {
         this.action = action;
     }
 
-    public MitigationActionUpdateCACertificateParamsAction getAction() {
+    public MitigationActionUpdateCACertificateParamsAction action() {
         return this.action;
     }
 

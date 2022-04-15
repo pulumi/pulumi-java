@@ -25,7 +25,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alarms")
       private final @Nullable Output<AlarmsPropertiesArgs> alarms;
 
-    public Output<AlarmsPropertiesArgs> getAlarms() {
+    public Output<AlarmsPropertiesArgs> alarms() {
         return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
@@ -36,7 +36,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationSenderEmail")
       private final @Nullable Output<String> notificationSenderEmail;
 
-    public Output<String> getNotificationSenderEmail() {
+    public Output<String> notificationSenderEmail() {
         return this.notificationSenderEmail == null ? Codegen.empty() : this.notificationSenderEmail;
     }
 
@@ -47,7 +47,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portalAuthMode")
       private final @Nullable Output<String> portalAuthMode;
 
-    public Output<String> getPortalAuthMode() {
+    public Output<String> portalAuthMode() {
         return this.portalAuthMode == null ? Codegen.empty() : this.portalAuthMode;
     }
 
@@ -58,7 +58,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portalContactEmail", required=true)
       private final Output<String> portalContactEmail;
 
-    public Output<String> getPortalContactEmail() {
+    public Output<String> portalContactEmail() {
         return this.portalContactEmail;
     }
 
@@ -69,7 +69,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portalDescription")
       private final @Nullable Output<String> portalDescription;
 
-    public Output<String> getPortalDescription() {
+    public Output<String> portalDescription() {
         return this.portalDescription == null ? Codegen.empty() : this.portalDescription;
     }
 
@@ -80,7 +80,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portalName")
       private final @Nullable Output<String> portalName;
 
-    public Output<String> getPortalName() {
+    public Output<String> portalName() {
         return this.portalName == null ? Codegen.empty() : this.portalName;
     }
 
@@ -91,7 +91,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -102,7 +102,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<PortalTagArgs>> tags;
 
-    public Output<List<PortalTagArgs>> getTags() {
+    public Output<List<PortalTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

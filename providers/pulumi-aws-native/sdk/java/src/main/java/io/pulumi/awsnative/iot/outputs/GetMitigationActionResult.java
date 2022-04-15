@@ -38,23 +38,23 @@ public final class GetMitigationActionResult {
         this.tags = tags;
     }
 
-    public Optional<MitigationActionActionParams> getActionParams() {
+    public Optional<MitigationActionActionParams> actionParams() {
         return Optional.ofNullable(this.actionParams);
     }
-    public Optional<String> getMitigationActionArn() {
+    public Optional<String> mitigationActionArn() {
         return Optional.ofNullable(this.mitigationActionArn);
     }
-    public Optional<String> getMitigationActionId() {
+    public Optional<String> mitigationActionId() {
         return Optional.ofNullable(this.mitigationActionId);
     }
-    public Optional<String> getRoleArn() {
+    public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<MitigationActionTag> getTags() {
+    public List<MitigationActionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

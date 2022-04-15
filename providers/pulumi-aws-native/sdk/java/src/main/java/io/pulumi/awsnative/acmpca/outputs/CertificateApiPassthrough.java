@@ -23,10 +23,10 @@ public final class CertificateApiPassthrough {
         this.subject = subject;
     }
 
-    public Optional<CertificateExtensions> getExtensions() {
+    public Optional<CertificateExtensions> extensions() {
         return Optional.ofNullable(this.extensions);
     }
-    public Optional<CertificateSubject> getSubject() {
+    public Optional<CertificateSubject> subject() {
         return Optional.ofNullable(this.subject);
     }
 

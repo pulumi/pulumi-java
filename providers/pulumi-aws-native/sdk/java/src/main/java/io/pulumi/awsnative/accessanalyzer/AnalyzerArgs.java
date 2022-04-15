@@ -25,14 +25,14 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyzerName")
       private final @Nullable Output<String> analyzerName;
 
-    public Output<String> getAnalyzerName() {
+    public Output<String> analyzerName() {
         return this.analyzerName == null ? Codegen.empty() : this.analyzerName;
     }
 
     @Import(name="archiveRules")
       private final @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
 
-    public Output<List<AnalyzerArchiveRuleArgs>> getArchiveRules() {
+    public Output<List<AnalyzerArchiveRuleArgs>> archiveRules() {
         return this.archiveRules == null ? Codegen.empty() : this.archiveRules;
     }
 
@@ -43,7 +43,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AnalyzerTagArgs>> tags;
 
-    public Output<List<AnalyzerTagArgs>> getTags() {
+    public Output<List<AnalyzerTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -54,7 +54,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

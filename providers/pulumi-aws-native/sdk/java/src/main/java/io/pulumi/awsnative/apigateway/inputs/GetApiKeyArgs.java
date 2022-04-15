@@ -19,7 +19,7 @@ public final class GetApiKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="aPIKeyId", required=true)
       private final String aPIKeyId;
 
-    public String getAPIKeyId() {
+    public String aPIKeyId() {
         return this.aPIKeyId;
     }
 

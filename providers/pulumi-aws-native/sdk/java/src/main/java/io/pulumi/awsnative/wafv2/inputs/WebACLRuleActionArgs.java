@@ -25,28 +25,28 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="allow")
       private final @Nullable Output<WebACLAllowActionArgs> allow;
 
-    public Output<WebACLAllowActionArgs> getAllow() {
+    public Output<WebACLAllowActionArgs> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     @Import(name="block")
       private final @Nullable Output<WebACLBlockActionArgs> block;
 
-    public Output<WebACLBlockActionArgs> getBlock() {
+    public Output<WebACLBlockActionArgs> block() {
         return this.block == null ? Codegen.empty() : this.block;
     }
 
     @Import(name="captcha")
       private final @Nullable Output<WebACLCaptchaActionArgs> captcha;
 
-    public Output<WebACLCaptchaActionArgs> getCaptcha() {
+    public Output<WebACLCaptchaActionArgs> captcha() {
         return this.captcha == null ? Codegen.empty() : this.captcha;
     }
 
     @Import(name="count")
       private final @Nullable Output<WebACLCountActionArgs> count;
 
-    public Output<WebACLCountActionArgs> getCount() {
+    public Output<WebACLCountActionArgs> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 

@@ -23,7 +23,7 @@ public final class ApplicationAlarmMetric extends io.pulumi.resources.InvokeArgs
     @Import(name="alarmMetricName", required=true)
       private final String alarmMetricName;
 
-    public String getAlarmMetricName() {
+    public String alarmMetricName() {
         return this.alarmMetricName;
     }
 

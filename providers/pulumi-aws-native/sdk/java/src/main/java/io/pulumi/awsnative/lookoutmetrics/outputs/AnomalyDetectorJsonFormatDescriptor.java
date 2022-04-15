@@ -23,10 +23,10 @@ public final class AnomalyDetectorJsonFormatDescriptor {
         this.fileCompression = fileCompression;
     }
 
-    public Optional<String> getCharset() {
+    public Optional<String> charset() {
         return Optional.ofNullable(this.charset);
     }
-    public Optional<AnomalyDetectorJsonFormatDescriptorFileCompression> getFileCompression() {
+    public Optional<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression() {
         return Optional.ofNullable(this.fileCompression);
     }
 

@@ -18,7 +18,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
         this.sns = sns;
     }
 
-    public Optional<AccountAuditConfigurationAuditNotificationTarget> getSns() {
+    public Optional<AccountAuditConfigurationAuditNotificationTarget> sns() {
         return Optional.ofNullable(this.sns);
     }
 

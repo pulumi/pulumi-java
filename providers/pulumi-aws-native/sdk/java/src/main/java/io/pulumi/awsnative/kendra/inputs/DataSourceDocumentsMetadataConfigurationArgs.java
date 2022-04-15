@@ -18,7 +18,7 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
     @Import(name="s3Prefix")
       private final @Nullable Output<String> s3Prefix;
 
-    public Output<String> getS3Prefix() {
+    public Output<String> s3Prefix() {
         return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
     }
 

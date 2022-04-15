@@ -26,13 +26,13 @@ public final class DistributionLogging {
         this.prefix = prefix;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public Optional<Boolean> getIncludeCookies() {
+    public Optional<Boolean> includeCookies() {
         return Optional.ofNullable(this.includeCookies);
     }
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

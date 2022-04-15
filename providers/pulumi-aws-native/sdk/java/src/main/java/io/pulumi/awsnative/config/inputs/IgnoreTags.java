@@ -26,7 +26,7 @@ public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyPrefixes")
       private final @Nullable List<String> keyPrefixes;
 
-    public List<String> getKeyPrefixes() {
+    public List<String> keyPrefixes() {
         return this.keyPrefixes == null ? List.of() : this.keyPrefixes;
     }
 
@@ -37,7 +37,7 @@ public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
     @Import(name="keys")
       private final @Nullable List<String> keys;
 
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 

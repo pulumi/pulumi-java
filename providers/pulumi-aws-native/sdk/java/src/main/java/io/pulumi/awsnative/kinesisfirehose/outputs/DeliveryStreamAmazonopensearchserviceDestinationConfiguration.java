@@ -63,43 +63,43 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
         this.vpcConfiguration = vpcConfiguration;
     }
 
-    public Optional<DeliveryStreamAmazonopensearchserviceBufferingHints> getBufferingHints() {
+    public Optional<DeliveryStreamAmazonopensearchserviceBufferingHints> bufferingHints() {
         return Optional.ofNullable(this.bufferingHints);
     }
-    public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
+    public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
         return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
-    public Optional<String> getClusterEndpoint() {
+    public Optional<String> clusterEndpoint() {
         return Optional.ofNullable(this.clusterEndpoint);
     }
-    public Optional<String> getDomainARN() {
+    public Optional<String> domainARN() {
         return Optional.ofNullable(this.domainARN);
     }
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
-    public Optional<DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod> getIndexRotationPeriod() {
+    public Optional<DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod> indexRotationPeriod() {
         return Optional.ofNullable(this.indexRotationPeriod);
     }
-    public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
+    public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
-    public Optional<DeliveryStreamAmazonopensearchserviceRetryOptions> getRetryOptions() {
+    public Optional<DeliveryStreamAmazonopensearchserviceRetryOptions> retryOptions() {
         return Optional.ofNullable(this.retryOptions);
     }
-    public String getRoleARN() {
+    public String roleARN() {
         return this.roleARN;
     }
-    public Optional<DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode> getS3BackupMode() {
+    public Optional<DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode> s3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
-    public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
+    public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
-    public Optional<String> getTypeName() {
+    public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }
-    public Optional<DeliveryStreamVpcConfiguration> getVpcConfiguration() {
+    public Optional<DeliveryStreamVpcConfiguration> vpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }
 

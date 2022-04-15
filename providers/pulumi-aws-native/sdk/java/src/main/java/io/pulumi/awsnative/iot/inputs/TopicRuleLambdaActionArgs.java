@@ -18,7 +18,7 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
     @Import(name="functionArn")
       private final @Nullable Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn == null ? Codegen.empty() : this.functionArn;
     }
 

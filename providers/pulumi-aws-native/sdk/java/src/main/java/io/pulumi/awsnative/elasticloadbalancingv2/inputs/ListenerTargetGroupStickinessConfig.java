@@ -18,14 +18,14 @@ public final class ListenerTargetGroupStickinessConfig extends io.pulumi.resourc
     @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
-    public Optional<Integer> getDurationSeconds() {
+    public Optional<Integer> durationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 

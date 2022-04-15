@@ -19,21 +19,21 @@ public final class ServiceAwsVpcConfiguration extends io.pulumi.resources.Invoke
     @Import(name="assignPublicIp")
       private final @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp;
 
-    public Optional<ServiceAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
+    public Optional<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp() {
         return this.assignPublicIp == null ? Optional.empty() : Optional.ofNullable(this.assignPublicIp);
     }
 
     @Import(name="securityGroups")
       private final @Nullable List<String> securityGroups;
 
-    public List<String> getSecurityGroups() {
+    public List<String> securityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
     @Import(name="subnets")
       private final @Nullable List<String> subnets;
 
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
 

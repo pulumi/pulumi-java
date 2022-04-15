@@ -40,24 +40,24 @@ public final class PackagingConfigurationHlsPackage {
         this.useAudioRenditionGroup = useAudioRenditionGroup;
     }
 
-    public Optional<PackagingConfigurationHlsEncryption> getEncryption() {
+    public Optional<PackagingConfigurationHlsEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * A list of HLS manifest configurations.
      * 
     */
-    public List<PackagingConfigurationHlsManifest> getHlsManifests() {
+    public List<PackagingConfigurationHlsManifest> hlsManifests() {
         return this.hlsManifests;
     }
-    public Optional<Integer> getSegmentDurationSeconds() {
+    public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
     /**
      * When enabled, audio streams will be placed in rendition groups in the output.
      * 
     */
-    public Optional<Boolean> getUseAudioRenditionGroup() {
+    public Optional<Boolean> useAudioRenditionGroup() {
         return Optional.ofNullable(this.useAudioRenditionGroup);
     }
 

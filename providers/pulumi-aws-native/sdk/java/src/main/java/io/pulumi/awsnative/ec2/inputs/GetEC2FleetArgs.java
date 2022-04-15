@@ -15,7 +15,7 @@ public final class GetEC2FleetArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="fleetId", required=true)
       private final String fleetId;
 
-    public String getFleetId() {
+    public String fleetId() {
         return this.fleetId;
     }
 

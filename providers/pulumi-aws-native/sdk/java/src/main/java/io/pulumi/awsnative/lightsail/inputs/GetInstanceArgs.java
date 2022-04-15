@@ -19,7 +19,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceName", required=true)
       private final String instanceName;
 
-    public String getInstanceName() {
+    public String instanceName() {
         return this.instanceName;
     }
 

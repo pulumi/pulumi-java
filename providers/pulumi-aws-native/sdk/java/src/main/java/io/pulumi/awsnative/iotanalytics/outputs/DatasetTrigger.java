@@ -23,10 +23,10 @@ public final class DatasetTrigger {
         this.triggeringDataset = triggeringDataset;
     }
 
-    public Optional<DatasetSchedule> getSchedule() {
+    public Optional<DatasetSchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
-    public Optional<DatasetTriggeringDataset> getTriggeringDataset() {
+    public Optional<DatasetTriggeringDataset> triggeringDataset() {
         return Optional.ofNullable(this.triggeringDataset);
     }
 

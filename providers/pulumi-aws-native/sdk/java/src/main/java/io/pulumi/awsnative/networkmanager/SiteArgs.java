@@ -25,7 +25,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -47,7 +47,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<SiteLocationArgs> location;
 
-    public Output<SiteLocationArgs> getLocation() {
+    public Output<SiteLocationArgs> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -58,7 +58,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<SiteTagArgs>> tags;
 
-    public Output<List<SiteTagArgs>> getTags() {
+    public Output<List<SiteTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

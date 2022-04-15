@@ -36,7 +36,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The ARN of the detector.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -50,7 +50,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The models to associate with this detector.
      * 
      */
-    public Output</* @Nullable */ List<DetectorModel>> getAssociatedModels() {
+    public Output</* @Nullable */ List<DetectorModel>> associatedModels() {
         return this.associatedModels;
     }
     /**
@@ -64,7 +64,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The time when the detector was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -78,7 +78,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The description of the detector.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -92,7 +92,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The ID of the detector
      * 
      */
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
     /**
@@ -106,7 +106,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The active version ID of the detector
      * 
      */
-    public Output<String> getDetectorVersionId() {
+    public Output<String> detectorVersionId() {
         return this.detectorVersionId;
     }
     /**
@@ -120,7 +120,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The desired detector version status for the detector
      * 
      */
-    public Output</* @Nullable */ DetectorVersionStatus> getDetectorVersionStatus() {
+    public Output</* @Nullable */ DetectorVersionStatus> detectorVersionStatus() {
         return this.detectorVersionStatus;
     }
     /**
@@ -134,7 +134,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The event type to associate this detector with.
      * 
      */
-    public Output<DetectorEventType> getEventType() {
+    public Output<DetectorEventType> eventType() {
         return this.eventType;
     }
     /**
@@ -148,19 +148,19 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return The time when the detector was last updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     @Export(name="ruleExecutionMode", type=DetectorRuleExecutionMode.class, parameters={})
     private Output</* @Nullable */ DetectorRuleExecutionMode> ruleExecutionMode;
 
-    public Output</* @Nullable */ DetectorRuleExecutionMode> getRuleExecutionMode() {
+    public Output</* @Nullable */ DetectorRuleExecutionMode> ruleExecutionMode() {
         return this.ruleExecutionMode;
     }
     @Export(name="rules", type=List.class, parameters={DetectorRule.class})
     private Output<List<DetectorRule>> rules;
 
-    public Output<List<DetectorRule>> getRules() {
+    public Output<List<DetectorRule>> rules() {
         return this.rules;
     }
     /**
@@ -174,7 +174,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @return Tags associated with this detector.
      * 
      */
-    public Output</* @Nullable */ List<DetectorTag>> getTags() {
+    public Output</* @Nullable */ List<DetectorTag>> tags() {
         return this.tags;
     }
 

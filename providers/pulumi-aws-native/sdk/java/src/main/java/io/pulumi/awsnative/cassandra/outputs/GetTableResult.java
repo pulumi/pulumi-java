@@ -56,38 +56,38 @@ public final class GetTableResult {
         this.tags = tags;
     }
 
-    public Optional<TableBillingMode> getBillingMode() {
+    public Optional<TableBillingMode> billingMode() {
         return Optional.ofNullable(this.billingMode);
     }
     /**
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
     */
-    public Optional<Integer> getDefaultTimeToLive() {
+    public Optional<Integer> defaultTimeToLive() {
         return Optional.ofNullable(this.defaultTimeToLive);
     }
-    public Optional<TableEncryptionSpecification> getEncryptionSpecification() {
+    public Optional<TableEncryptionSpecification> encryptionSpecification() {
         return Optional.ofNullable(this.encryptionSpecification);
     }
     /**
      * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
     */
-    public Optional<Boolean> getPointInTimeRecoveryEnabled() {
+    public Optional<Boolean> pointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
     /**
      * Non-key columns of the table
      * 
     */
-    public List<TableColumn> getRegularColumns() {
+    public List<TableColumn> regularColumns() {
         return this.regularColumns == null ? List.of() : this.regularColumns;
     }
     /**
      * An array of key-value pairs to apply to this resource
      * 
     */
-    public List<TableTag> getTags() {
+    public List<TableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

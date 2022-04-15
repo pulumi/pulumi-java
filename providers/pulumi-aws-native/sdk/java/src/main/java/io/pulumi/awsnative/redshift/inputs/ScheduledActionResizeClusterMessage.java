@@ -23,35 +23,35 @@ public final class ScheduledActionResizeClusterMessage extends io.pulumi.resourc
     @Import(name="classic")
       private final @Nullable Boolean classic;
 
-    public Optional<Boolean> getClassic() {
+    public Optional<Boolean> classic() {
         return this.classic == null ? Optional.empty() : Optional.ofNullable(this.classic);
     }
 
     @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
     @Import(name="clusterType")
       private final @Nullable String clusterType;
 
-    public Optional<String> getClusterType() {
+    public Optional<String> clusterType() {
         return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
     }
 
     @Import(name="nodeType")
       private final @Nullable String nodeType;
 
-    public Optional<String> getNodeType() {
+    public Optional<String> nodeType() {
         return this.nodeType == null ? Optional.empty() : Optional.ofNullable(this.nodeType);
     }
 
     @Import(name="numberOfNodes")
       private final @Nullable Integer numberOfNodes;
 
-    public Optional<Integer> getNumberOfNodes() {
+    public Optional<Integer> numberOfNodes() {
         return this.numberOfNodes == null ? Optional.empty() : Optional.ofNullable(this.numberOfNodes);
     }
 

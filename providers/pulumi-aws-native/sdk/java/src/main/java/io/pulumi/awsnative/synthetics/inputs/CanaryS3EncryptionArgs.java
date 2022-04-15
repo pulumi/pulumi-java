@@ -22,7 +22,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="encryptionMode")
       private final @Nullable Output<String> encryptionMode;
 
-    public Output<String> getEncryptionMode() {
+    public Output<String> encryptionMode() {
         return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
     }
 
@@ -33,7 +33,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 

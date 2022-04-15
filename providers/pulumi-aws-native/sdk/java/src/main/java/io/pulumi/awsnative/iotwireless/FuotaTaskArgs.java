@@ -25,7 +25,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associateMulticastGroup")
       private final @Nullable Output<String> associateMulticastGroup;
 
-    public Output<String> getAssociateMulticastGroup() {
+    public Output<String> associateMulticastGroup() {
         return this.associateMulticastGroup == null ? Codegen.empty() : this.associateMulticastGroup;
     }
 
@@ -36,7 +36,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associateWirelessDevice")
       private final @Nullable Output<String> associateWirelessDevice;
 
-    public Output<String> getAssociateWirelessDevice() {
+    public Output<String> associateWirelessDevice() {
         return this.associateWirelessDevice == null ? Codegen.empty() : this.associateWirelessDevice;
     }
 
@@ -47,7 +47,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disassociateMulticastGroup")
       private final @Nullable Output<String> disassociateMulticastGroup;
 
-    public Output<String> getDisassociateMulticastGroup() {
+    public Output<String> disassociateMulticastGroup() {
         return this.disassociateMulticastGroup == null ? Codegen.empty() : this.disassociateMulticastGroup;
     }
 
@@ -69,7 +69,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disassociateWirelessDevice")
       private final @Nullable Output<String> disassociateWirelessDevice;
 
-    public Output<String> getDisassociateWirelessDevice() {
+    public Output<String> disassociateWirelessDevice() {
         return this.disassociateWirelessDevice == null ? Codegen.empty() : this.disassociateWirelessDevice;
     }
 
@@ -80,7 +80,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firmwareUpdateImage", required=true)
       private final Output<String> firmwareUpdateImage;
 
-    public Output<String> getFirmwareUpdateImage() {
+    public Output<String> firmwareUpdateImage() {
         return this.firmwareUpdateImage;
     }
 
@@ -91,7 +91,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firmwareUpdateRole", required=true)
       private final Output<String> firmwareUpdateRole;
 
-    public Output<String> getFirmwareUpdateRole() {
+    public Output<String> firmwareUpdateRole() {
         return this.firmwareUpdateRole;
     }
 
@@ -102,7 +102,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loRaWAN", required=true)
       private final Output<FuotaTaskLoRaWANArgs> loRaWAN;
 
-    public Output<FuotaTaskLoRaWANArgs> getLoRaWAN() {
+    public Output<FuotaTaskLoRaWANArgs> loRaWAN() {
         return this.loRaWAN;
     }
 
@@ -113,7 +113,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -124,7 +124,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<FuotaTaskTagArgs>> tags;
 
-    public Output<List<FuotaTaskTagArgs>> getTags() {
+    public Output<List<FuotaTaskTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

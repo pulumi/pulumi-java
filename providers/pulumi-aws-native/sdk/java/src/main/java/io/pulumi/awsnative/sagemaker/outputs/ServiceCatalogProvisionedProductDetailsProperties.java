@@ -22,10 +22,10 @@ public final class ServiceCatalogProvisionedProductDetailsProperties {
         this.provisionedProductStatusMessage = provisionedProductStatusMessage;
     }
 
-    public Optional<String> getProvisionedProductId() {
+    public Optional<String> provisionedProductId() {
         return Optional.ofNullable(this.provisionedProductId);
     }
-    public Optional<String> getProvisionedProductStatusMessage() {
+    public Optional<String> provisionedProductStatusMessage() {
         return Optional.ofNullable(this.provisionedProductStatusMessage);
     }
 

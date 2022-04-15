@@ -26,7 +26,7 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<SimulationApplicationRenderingEngineName> name;
 
-    public Output<SimulationApplicationRenderingEngineName> getName() {
+    public Output<SimulationApplicationRenderingEngineName> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class SimulationApplicationRenderingEngineArgs extends io.pulumi.re
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

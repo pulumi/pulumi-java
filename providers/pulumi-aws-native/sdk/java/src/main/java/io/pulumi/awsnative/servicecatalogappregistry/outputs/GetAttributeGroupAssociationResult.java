@@ -43,23 +43,23 @@ public final class GetAttributeGroupAssociationResult {
      * The name or the Id of the Application.
      * 
     */
-    public Optional<String> getApplication() {
+    public Optional<String> application() {
         return Optional.ofNullable(this.application);
     }
-    public Optional<String> getApplicationArn() {
+    public Optional<String> applicationArn() {
         return Optional.ofNullable(this.applicationArn);
     }
     /**
      * The name or the Id of the AttributeGroup.
      * 
     */
-    public Optional<String> getAttributeGroup() {
+    public Optional<String> attributeGroup() {
         return Optional.ofNullable(this.attributeGroup);
     }
-    public Optional<String> getAttributeGroupArn() {
+    public Optional<String> attributeGroupArn() {
         return Optional.ofNullable(this.attributeGroupArn);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

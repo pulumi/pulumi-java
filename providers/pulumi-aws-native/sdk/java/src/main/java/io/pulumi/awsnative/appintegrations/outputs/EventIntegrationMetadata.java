@@ -32,14 +32,14 @@ public final class EventIntegrationMetadata {
      * A key to identify the metadata.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Corresponding metadata value for the key.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

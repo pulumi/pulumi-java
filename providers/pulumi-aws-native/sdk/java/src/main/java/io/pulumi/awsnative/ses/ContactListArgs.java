@@ -25,7 +25,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contactListName")
       private final @Nullable Output<String> contactListName;
 
-    public Output<String> getContactListName() {
+    public Output<String> contactListName() {
         return this.contactListName == null ? Codegen.empty() : this.contactListName;
     }
 
@@ -36,7 +36,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ContactListTagArgs>> tags;
 
-    public Output<List<ContactListTagArgs>> getTags() {
+    public Output<List<ContactListTagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -58,7 +58,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topics")
       private final @Nullable Output<List<ContactListTopicArgs>> topics;
 
-    public Output<List<ContactListTopicArgs>> getTopics() {
+    public Output<List<ContactListTopicArgs>> topics() {
         return this.topics == null ? Codegen.empty() : this.topics;
     }
 

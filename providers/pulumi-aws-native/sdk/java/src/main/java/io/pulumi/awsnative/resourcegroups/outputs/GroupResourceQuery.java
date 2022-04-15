@@ -23,10 +23,10 @@ public final class GroupResourceQuery {
         this.type = type;
     }
 
-    public Optional<GroupQuery> getQuery() {
+    public Optional<GroupQuery> query() {
         return Optional.ofNullable(this.query);
     }
-    public Optional<GroupResourceQueryType> getType() {
+    public Optional<GroupResourceQueryType> type() {
         return Optional.ofNullable(this.type);
     }
 

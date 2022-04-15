@@ -20,10 +20,10 @@ public final class FunctionConfig {
         this.runtime = runtime;
     }
 
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
-    public String getRuntime() {
+    public String runtime() {
         return this.runtime;
     }
 

@@ -22,7 +22,7 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="multiLine")
       private final @Nullable Output<Boolean> multiLine;
 
-    public Output<Boolean> getMultiLine() {
+    public Output<Boolean> multiLine() {
         return this.multiLine == null ? Codegen.empty() : this.multiLine;
     }
 

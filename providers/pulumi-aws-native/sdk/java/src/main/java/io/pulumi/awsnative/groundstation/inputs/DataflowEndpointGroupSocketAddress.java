@@ -18,14 +18,14 @@ public final class DataflowEndpointGroupSocketAddress extends io.pulumi.resource
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 

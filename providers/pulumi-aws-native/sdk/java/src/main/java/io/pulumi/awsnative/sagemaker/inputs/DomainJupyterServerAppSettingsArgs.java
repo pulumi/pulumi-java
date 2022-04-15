@@ -22,7 +22,7 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
-    public Output<DomainResourceSpecArgs> getDefaultResourceSpec() {
+    public Output<DomainResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 

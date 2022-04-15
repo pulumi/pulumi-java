@@ -54,31 +54,31 @@ public final class GetSuiteDefinitionResult {
      * The Amazon Resource name for the suite definition.
      * 
     */
-    public Optional<String> getSuiteDefinitionArn() {
+    public Optional<String> suiteDefinitionArn() {
         return Optional.ofNullable(this.suiteDefinitionArn);
     }
-    public Optional<SuiteDefinitionConfigurationProperties> getSuiteDefinitionConfiguration() {
+    public Optional<SuiteDefinitionConfigurationProperties> suiteDefinitionConfiguration() {
         return Optional.ofNullable(this.suiteDefinitionConfiguration);
     }
     /**
      * The unique identifier for the suite definition.
      * 
     */
-    public Optional<String> getSuiteDefinitionId() {
+    public Optional<String> suiteDefinitionId() {
         return Optional.ofNullable(this.suiteDefinitionId);
     }
     /**
      * The suite definition version of a test suite.
      * 
     */
-    public Optional<String> getSuiteDefinitionVersion() {
+    public Optional<String> suiteDefinitionVersion() {
         return Optional.ofNullable(this.suiteDefinitionVersion);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<SuiteDefinitionTag> getTags() {
+    public List<SuiteDefinitionTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

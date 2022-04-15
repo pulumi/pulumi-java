@@ -21,70 +21,70 @@ public final class DeliveryStreamOrcSerDe extends io.pulumi.resources.InvokeArgs
     @Import(name="blockSizeBytes")
       private final @Nullable Integer blockSizeBytes;
 
-    public Optional<Integer> getBlockSizeBytes() {
+    public Optional<Integer> blockSizeBytes() {
         return this.blockSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.blockSizeBytes);
     }
 
     @Import(name="bloomFilterColumns")
       private final @Nullable List<String> bloomFilterColumns;
 
-    public List<String> getBloomFilterColumns() {
+    public List<String> bloomFilterColumns() {
         return this.bloomFilterColumns == null ? List.of() : this.bloomFilterColumns;
     }
 
     @Import(name="bloomFilterFalsePositiveProbability")
       private final @Nullable Double bloomFilterFalsePositiveProbability;
 
-    public Optional<Double> getBloomFilterFalsePositiveProbability() {
+    public Optional<Double> bloomFilterFalsePositiveProbability() {
         return this.bloomFilterFalsePositiveProbability == null ? Optional.empty() : Optional.ofNullable(this.bloomFilterFalsePositiveProbability);
     }
 
     @Import(name="compression")
       private final @Nullable String compression;
 
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
     @Import(name="dictionaryKeyThreshold")
       private final @Nullable Double dictionaryKeyThreshold;
 
-    public Optional<Double> getDictionaryKeyThreshold() {
+    public Optional<Double> dictionaryKeyThreshold() {
         return this.dictionaryKeyThreshold == null ? Optional.empty() : Optional.ofNullable(this.dictionaryKeyThreshold);
     }
 
     @Import(name="enablePadding")
       private final @Nullable Boolean enablePadding;
 
-    public Optional<Boolean> getEnablePadding() {
+    public Optional<Boolean> enablePadding() {
         return this.enablePadding == null ? Optional.empty() : Optional.ofNullable(this.enablePadding);
     }
 
     @Import(name="formatVersion")
       private final @Nullable String formatVersion;
 
-    public Optional<String> getFormatVersion() {
+    public Optional<String> formatVersion() {
         return this.formatVersion == null ? Optional.empty() : Optional.ofNullable(this.formatVersion);
     }
 
     @Import(name="paddingTolerance")
       private final @Nullable Double paddingTolerance;
 
-    public Optional<Double> getPaddingTolerance() {
+    public Optional<Double> paddingTolerance() {
         return this.paddingTolerance == null ? Optional.empty() : Optional.ofNullable(this.paddingTolerance);
     }
 
     @Import(name="rowIndexStride")
       private final @Nullable Integer rowIndexStride;
 
-    public Optional<Integer> getRowIndexStride() {
+    public Optional<Integer> rowIndexStride() {
         return this.rowIndexStride == null ? Optional.empty() : Optional.ofNullable(this.rowIndexStride);
     }
 
     @Import(name="stripeSizeBytes")
       private final @Nullable Integer stripeSizeBytes;
 
-    public Optional<Integer> getStripeSizeBytes() {
+    public Optional<Integer> stripeSizeBytes() {
         return this.stripeSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.stripeSizeBytes);
     }
 

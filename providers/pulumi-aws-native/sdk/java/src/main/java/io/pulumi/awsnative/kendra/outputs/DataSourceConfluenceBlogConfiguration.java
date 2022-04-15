@@ -18,7 +18,7 @@ public final class DataSourceConfluenceBlogConfiguration {
         this.blogFieldMappings = blogFieldMappings;
     }
 
-    public List<DataSourceConfluenceBlogToIndexFieldMapping> getBlogFieldMappings() {
+    public List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings() {
         return this.blogFieldMappings == null ? List.of() : this.blogFieldMappings;
     }
 

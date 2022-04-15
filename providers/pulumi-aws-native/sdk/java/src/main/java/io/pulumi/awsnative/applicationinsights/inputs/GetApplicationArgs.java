@@ -19,7 +19,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="applicationARN", required=true)
       private final String applicationARN;
 
-    public String getApplicationARN() {
+    public String applicationARN() {
         return this.applicationARN;
     }
 

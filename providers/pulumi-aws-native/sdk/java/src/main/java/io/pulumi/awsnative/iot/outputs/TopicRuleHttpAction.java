@@ -31,16 +31,16 @@ public final class TopicRuleHttpAction {
         this.url = url;
     }
 
-    public Optional<TopicRuleHttpAuthorization> getAuth() {
+    public Optional<TopicRuleHttpAuthorization> auth() {
         return Optional.ofNullable(this.auth);
     }
-    public Optional<String> getConfirmationUrl() {
+    public Optional<String> confirmationUrl() {
         return Optional.ofNullable(this.confirmationUrl);
     }
-    public List<TopicRuleHttpActionHeader> getHeaders() {
+    public List<TopicRuleHttpActionHeader> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

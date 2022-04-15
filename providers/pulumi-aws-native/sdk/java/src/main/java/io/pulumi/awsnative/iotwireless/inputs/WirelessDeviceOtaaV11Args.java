@@ -17,21 +17,21 @@ public final class WirelessDeviceOtaaV11Args extends io.pulumi.resources.Resourc
     @Import(name="appKey", required=true)
       private final Output<String> appKey;
 
-    public Output<String> getAppKey() {
+    public Output<String> appKey() {
         return this.appKey;
     }
 
     @Import(name="joinEui", required=true)
       private final Output<String> joinEui;
 
-    public Output<String> getJoinEui() {
+    public Output<String> joinEui() {
         return this.joinEui;
     }
 
     @Import(name="nwkKey", required=true)
       private final Output<String> nwkKey;
 
-    public Output<String> getNwkKey() {
+    public Output<String> nwkKey() {
         return this.nwkKey;
     }
 

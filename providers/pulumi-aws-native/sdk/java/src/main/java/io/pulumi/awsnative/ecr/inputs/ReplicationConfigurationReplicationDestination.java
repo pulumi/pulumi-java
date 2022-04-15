@@ -19,14 +19,14 @@ public final class ReplicationConfigurationReplicationDestination extends io.pul
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 
     @Import(name="registryId", required=true)
       private final String registryId;
 
-    public String getRegistryId() {
+    public String registryId() {
         return this.registryId;
     }
 

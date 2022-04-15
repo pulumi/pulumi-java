@@ -27,73 +27,73 @@ public class DomainName extends io.pulumi.resources.CustomResource {
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
-    public Output</* @Nullable */ String> getCertificateArn() {
+    public Output</* @Nullable */ String> certificateArn() {
         return this.certificateArn;
     }
     @Export(name="distributionDomainName", type=String.class, parameters={})
     private Output<String> distributionDomainName;
 
-    public Output<String> getDistributionDomainName() {
+    public Output<String> distributionDomainName() {
         return this.distributionDomainName;
     }
     @Export(name="distributionHostedZoneId", type=String.class, parameters={})
     private Output<String> distributionHostedZoneId;
 
-    public Output<String> getDistributionHostedZoneId() {
+    public Output<String> distributionHostedZoneId() {
         return this.distributionHostedZoneId;
     }
     @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
-    public Output</* @Nullable */ String> getDomainName() {
+    public Output</* @Nullable */ String> domainName() {
         return this.domainName;
     }
     @Export(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
     private Output</* @Nullable */ DomainNameEndpointConfiguration> endpointConfiguration;
 
-    public Output</* @Nullable */ DomainNameEndpointConfiguration> getEndpointConfiguration() {
+    public Output</* @Nullable */ DomainNameEndpointConfiguration> endpointConfiguration() {
         return this.endpointConfiguration;
     }
     @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
-    public Output</* @Nullable */ DomainNameMutualTlsAuthentication> getMutualTlsAuthentication() {
+    public Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication() {
         return this.mutualTlsAuthentication;
     }
     @Export(name="ownershipVerificationCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownershipVerificationCertificateArn;
 
-    public Output</* @Nullable */ String> getOwnershipVerificationCertificateArn() {
+    public Output</* @Nullable */ String> ownershipVerificationCertificateArn() {
         return this.ownershipVerificationCertificateArn;
     }
     @Export(name="regionalCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateArn;
 
-    public Output</* @Nullable */ String> getRegionalCertificateArn() {
+    public Output</* @Nullable */ String> regionalCertificateArn() {
         return this.regionalCertificateArn;
     }
     @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
-    public Output<String> getRegionalDomainName() {
+    public Output<String> regionalDomainName() {
         return this.regionalDomainName;
     }
     @Export(name="regionalHostedZoneId", type=String.class, parameters={})
     private Output<String> regionalHostedZoneId;
 
-    public Output<String> getRegionalHostedZoneId() {
+    public Output<String> regionalHostedZoneId() {
         return this.regionalHostedZoneId;
     }
     @Export(name="securityPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityPolicy;
 
-    public Output</* @Nullable */ String> getSecurityPolicy() {
+    public Output</* @Nullable */ String> securityPolicy() {
         return this.securityPolicy;
     }
     @Export(name="tags", type=List.class, parameters={DomainNameTag.class})
     private Output</* @Nullable */ List<DomainNameTag>> tags;
 
-    public Output</* @Nullable */ List<DomainNameTag>> getTags() {
+    public Output</* @Nullable */ List<DomainNameTag>> tags() {
         return this.tags;
     }
 

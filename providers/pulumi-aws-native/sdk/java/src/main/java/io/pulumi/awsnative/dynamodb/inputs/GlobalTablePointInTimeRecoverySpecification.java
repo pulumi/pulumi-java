@@ -17,7 +17,7 @@ public final class GlobalTablePointInTimeRecoverySpecification extends io.pulumi
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Boolean pointInTimeRecoveryEnabled;
 
-    public Optional<Boolean> getPointInTimeRecoveryEnabled() {
+    public Optional<Boolean> pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Optional.empty() : Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
 

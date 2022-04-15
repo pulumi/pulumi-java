@@ -19,7 +19,7 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="restApiId", required=true)
       private final String restApiId;
 
-    public String getRestApiId() {
+    public String restApiId() {
         return this.restApiId;
     }
 

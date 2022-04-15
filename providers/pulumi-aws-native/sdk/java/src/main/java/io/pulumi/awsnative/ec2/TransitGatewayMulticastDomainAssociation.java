@@ -29,7 +29,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The ID of the resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -43,7 +43,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The type of resource, for example a VPC attachment.
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -57,7 +57,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The state of the subnet association.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -71,7 +71,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The IDs of the subnets to associate with the transit gateway multicast domain.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -85,7 +85,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -99,7 +99,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 

@@ -18,7 +18,7 @@ public final class ManagedExecutionProperties {
         this.active = active;
     }
 
-    public Optional<Boolean> getActive() {
+    public Optional<Boolean> active() {
         return Optional.ofNullable(this.active);
     }
 

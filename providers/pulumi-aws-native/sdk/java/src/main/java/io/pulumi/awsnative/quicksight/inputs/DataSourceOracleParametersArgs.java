@@ -18,21 +18,21 @@ public final class DataSourceOracleParametersArgs extends io.pulumi.resources.Re
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
       private final Output<Double> port;
 
-    public Output<Double> getPort() {
+    public Output<Double> port() {
         return this.port;
     }
 

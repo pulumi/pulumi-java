@@ -20,42 +20,42 @@ public final class WorkGroupConfiguration extends io.pulumi.resources.InvokeArgs
     @Import(name="bytesScannedCutoffPerQuery")
       private final @Nullable Integer bytesScannedCutoffPerQuery;
 
-    public Optional<Integer> getBytesScannedCutoffPerQuery() {
+    public Optional<Integer> bytesScannedCutoffPerQuery() {
         return this.bytesScannedCutoffPerQuery == null ? Optional.empty() : Optional.ofNullable(this.bytesScannedCutoffPerQuery);
     }
 
     @Import(name="enforceWorkGroupConfiguration")
       private final @Nullable Boolean enforceWorkGroupConfiguration;
 
-    public Optional<Boolean> getEnforceWorkGroupConfiguration() {
+    public Optional<Boolean> enforceWorkGroupConfiguration() {
         return this.enforceWorkGroupConfiguration == null ? Optional.empty() : Optional.ofNullable(this.enforceWorkGroupConfiguration);
     }
 
     @Import(name="engineVersion")
       private final @Nullable WorkGroupEngineVersion engineVersion;
 
-    public Optional<WorkGroupEngineVersion> getEngineVersion() {
+    public Optional<WorkGroupEngineVersion> engineVersion() {
         return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
     }
 
     @Import(name="publishCloudWatchMetricsEnabled")
       private final @Nullable Boolean publishCloudWatchMetricsEnabled;
 
-    public Optional<Boolean> getPublishCloudWatchMetricsEnabled() {
+    public Optional<Boolean> publishCloudWatchMetricsEnabled() {
         return this.publishCloudWatchMetricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.publishCloudWatchMetricsEnabled);
     }
 
     @Import(name="requesterPaysEnabled")
       private final @Nullable Boolean requesterPaysEnabled;
 
-    public Optional<Boolean> getRequesterPaysEnabled() {
+    public Optional<Boolean> requesterPaysEnabled() {
         return this.requesterPaysEnabled == null ? Optional.empty() : Optional.ofNullable(this.requesterPaysEnabled);
     }
 
     @Import(name="resultConfiguration")
       private final @Nullable WorkGroupResultConfiguration resultConfiguration;
 
-    public Optional<WorkGroupResultConfiguration> getResultConfiguration() {
+    public Optional<WorkGroupResultConfiguration> resultConfiguration() {
         return this.resultConfiguration == null ? Optional.empty() : Optional.ofNullable(this.resultConfiguration);
     }
 

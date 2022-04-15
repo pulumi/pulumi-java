@@ -28,7 +28,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="andOperator")
       private final @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
 
-    public Output<BucketFilterAndOperatorArgs> getAndOperator() {
+    public Output<BucketFilterAndOperatorArgs> andOperator() {
         return this.andOperator == null ? Codegen.empty() : this.andOperator;
     }
 
@@ -39,7 +39,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -50,7 +50,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="tag")
       private final @Nullable Output<BucketFilterTagArgs> tag;
 
-    public Output<BucketFilterTagArgs> getTag() {
+    public Output<BucketFilterTagArgs> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

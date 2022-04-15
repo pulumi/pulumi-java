@@ -20,10 +20,10 @@ public final class TableProvisionedThroughput {
         this.writeCapacityUnits = writeCapacityUnits;
     }
 
-    public Integer getReadCapacityUnits() {
+    public Integer readCapacityUnits() {
         return this.readCapacityUnits;
     }
-    public Integer getWriteCapacityUnits() {
+    public Integer writeCapacityUnits() {
         return this.writeCapacityUnits;
     }
 

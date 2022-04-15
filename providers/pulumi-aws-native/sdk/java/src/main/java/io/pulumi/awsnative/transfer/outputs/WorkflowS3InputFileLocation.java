@@ -34,14 +34,14 @@ public final class WorkflowS3InputFileLocation {
      * Specifies the S3 bucket that contains the file being copied.
      * 
     */
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
 

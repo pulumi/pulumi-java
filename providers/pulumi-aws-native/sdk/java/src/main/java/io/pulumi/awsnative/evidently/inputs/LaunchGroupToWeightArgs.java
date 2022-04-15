@@ -18,14 +18,14 @@ public final class LaunchGroupToWeightArgs extends io.pulumi.resources.ResourceA
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
     @Import(name="splitWeight", required=true)
       private final Output<Integer> splitWeight;
 
-    public Output<Integer> getSplitWeight() {
+    public Output<Integer> splitWeight() {
         return this.splitWeight;
     }
 

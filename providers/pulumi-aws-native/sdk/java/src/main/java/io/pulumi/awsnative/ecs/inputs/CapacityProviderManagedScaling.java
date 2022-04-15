@@ -22,35 +22,35 @@ public final class CapacityProviderManagedScaling extends io.pulumi.resources.In
     @Import(name="instanceWarmupPeriod")
       private final @Nullable Integer instanceWarmupPeriod;
 
-    public Optional<Integer> getInstanceWarmupPeriod() {
+    public Optional<Integer> instanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Optional.empty() : Optional.ofNullable(this.instanceWarmupPeriod);
     }
 
     @Import(name="maximumScalingStepSize")
       private final @Nullable Integer maximumScalingStepSize;
 
-    public Optional<Integer> getMaximumScalingStepSize() {
+    public Optional<Integer> maximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Optional.empty() : Optional.ofNullable(this.maximumScalingStepSize);
     }
 
     @Import(name="minimumScalingStepSize")
       private final @Nullable Integer minimumScalingStepSize;
 
-    public Optional<Integer> getMinimumScalingStepSize() {
+    public Optional<Integer> minimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Optional.empty() : Optional.ofNullable(this.minimumScalingStepSize);
     }
 
     @Import(name="status")
       private final @Nullable CapacityProviderManagedScalingStatus status;
 
-    public Optional<CapacityProviderManagedScalingStatus> getStatus() {
+    public Optional<CapacityProviderManagedScalingStatus> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
     @Import(name="targetCapacity")
       private final @Nullable Integer targetCapacity;
 
-    public Optional<Integer> getTargetCapacity() {
+    public Optional<Integer> targetCapacity() {
         return this.targetCapacity == null ? Optional.empty() : Optional.ofNullable(this.targetCapacity);
     }
 

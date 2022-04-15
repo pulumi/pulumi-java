@@ -34,19 +34,19 @@ public final class DatasetVariable {
         this.variableName = variableName;
     }
 
-    public Optional<DatasetContentVersionValue> getDatasetContentVersionValue() {
+    public Optional<DatasetContentVersionValue> datasetContentVersionValue() {
         return Optional.ofNullable(this.datasetContentVersionValue);
     }
-    public Optional<Double> getDoubleValue() {
+    public Optional<Double> doubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
-    public Optional<DatasetOutputFileUriValue> getOutputFileUriValue() {
+    public Optional<DatasetOutputFileUriValue> outputFileUriValue() {
         return Optional.ofNullable(this.outputFileUriValue);
     }
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
 

@@ -96,73 +96,73 @@ public final class GetEnvironmentResult {
      * AWS account ID associated with the Environment
      * 
     */
-    public Optional<String> getAwsAccountId() {
+    public Optional<String> awsAccountId() {
         return Optional.ofNullable(this.awsAccountId);
     }
     /**
      * ID for FinSpace created account used to store Environment artifacts
      * 
     */
-    public Optional<String> getDedicatedServiceAccountId() {
+    public Optional<String> dedicatedServiceAccountId() {
         return Optional.ofNullable(this.dedicatedServiceAccountId);
     }
     /**
      * Description of the Environment
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * ARN of the Environment
      * 
     */
-    public Optional<String> getEnvironmentArn() {
+    public Optional<String> environmentArn() {
         return Optional.ofNullable(this.environmentArn);
     }
     /**
      * Unique identifier for representing FinSpace Environment
      * 
     */
-    public Optional<String> getEnvironmentId() {
+    public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * URL used to login to the Environment
      * 
     */
-    public Optional<String> getEnvironmentUrl() {
+    public Optional<String> environmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
     /**
      * Federation mode used with the Environment
      * 
     */
-    public Optional<EnvironmentFederationMode> getFederationMode() {
+    public Optional<EnvironmentFederationMode> federationMode() {
         return Optional.ofNullable(this.federationMode);
     }
-    public Optional<EnvironmentFederationParameters> getFederationParameters() {
+    public Optional<EnvironmentFederationParameters> federationParameters() {
         return Optional.ofNullable(this.federationParameters);
     }
     /**
      * Name of the Environment
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * SageMaker Studio Domain URL associated with the Environment
      * 
     */
-    public Optional<String> getSageMakerStudioDomainUrl() {
+    public Optional<String> sageMakerStudioDomainUrl() {
         return Optional.ofNullable(this.sageMakerStudioDomainUrl);
     }
     /**
      * State of the Environment
      * 
     */
-    public Optional<EnvironmentStatus> getStatus() {
+    public Optional<EnvironmentStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

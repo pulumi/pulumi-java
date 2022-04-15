@@ -27,7 +27,7 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     @Import(name="stackNames")
       private final @Nullable Output<List<String>> stackNames;
 
-    public Output<List<String>> getStackNames() {
+    public Output<List<String>> stackNames() {
         return this.stackNames == null ? Codegen.empty() : this.stackNames;
     }
 

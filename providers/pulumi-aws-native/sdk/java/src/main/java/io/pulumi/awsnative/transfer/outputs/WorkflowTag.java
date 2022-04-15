@@ -32,14 +32,14 @@ public final class WorkflowTag {
      * The name assigned to the tag that you create.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Contains one or more values that you assigned to the key name you create.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

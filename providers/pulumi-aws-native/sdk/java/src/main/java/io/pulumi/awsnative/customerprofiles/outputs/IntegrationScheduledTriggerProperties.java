@@ -40,25 +40,25 @@ public final class IntegrationScheduledTriggerProperties {
         this.timezone = timezone;
     }
 
-    public Optional<IntegrationScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
+    public Optional<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode() {
         return Optional.ofNullable(this.dataPullMode);
     }
-    public Optional<Double> getFirstExecutionFrom() {
+    public Optional<Double> firstExecutionFrom() {
         return Optional.ofNullable(this.firstExecutionFrom);
     }
-    public Optional<Double> getScheduleEndTime() {
+    public Optional<Double> scheduleEndTime() {
         return Optional.ofNullable(this.scheduleEndTime);
     }
-    public String getScheduleExpression() {
+    public String scheduleExpression() {
         return this.scheduleExpression;
     }
-    public Optional<Integer> getScheduleOffset() {
+    public Optional<Integer> scheduleOffset() {
         return Optional.ofNullable(this.scheduleOffset);
     }
-    public Optional<Double> getScheduleStartTime() {
+    public Optional<Double> scheduleStartTime() {
         return Optional.ofNullable(this.scheduleStartTime);
     }
-    public Optional<String> getTimezone() {
+    public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
 

@@ -17,7 +17,7 @@ public final class DeliveryStreamRetryOptions extends io.pulumi.resources.Invoke
     @Import(name="durationInSeconds")
       private final @Nullable Integer durationInSeconds;
 
-    public Optional<Integer> getDurationInSeconds() {
+    public Optional<Integer> durationInSeconds() {
         return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
     }
 

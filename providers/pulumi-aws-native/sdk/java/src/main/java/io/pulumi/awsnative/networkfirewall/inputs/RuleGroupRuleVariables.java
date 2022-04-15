@@ -17,14 +17,14 @@ public final class RuleGroupRuleVariables extends io.pulumi.resources.InvokeArgs
     @Import(name="iPSets")
       private final @Nullable Object iPSets;
 
-    public Optional<Object> getIPSets() {
+    public Optional<Object> iPSets() {
         return this.iPSets == null ? Optional.empty() : Optional.ofNullable(this.iPSets);
     }
 
     @Import(name="portSets")
       private final @Nullable Object portSets;
 
-    public Optional<Object> getPortSets() {
+    public Optional<Object> portSets() {
         return this.portSets == null ? Optional.empty() : Optional.ofNullable(this.portSets);
     }
 
