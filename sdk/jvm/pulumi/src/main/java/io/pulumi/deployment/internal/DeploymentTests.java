@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.Log;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.deployment.MockEngine;
 import io.pulumi.deployment.MockMonitor;
@@ -12,6 +11,7 @@ import io.pulumi.deployment.Mocks;
 import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
+import io.pulumi.resources.Stack;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 

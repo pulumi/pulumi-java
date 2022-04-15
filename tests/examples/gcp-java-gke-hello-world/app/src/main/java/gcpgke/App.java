@@ -1,16 +1,14 @@
 package gcpgke;
 
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.Pulumi;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
 import io.pulumi.core.Output;
-import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.container.Cluster;
 import io.pulumi.gcp.container.ClusterArgs;
 import io.pulumi.gcp.container.ContainerFunctions;
 import io.pulumi.gcp.container.NodePool;
 import io.pulumi.gcp.container.NodePoolArgs;
-import io.pulumi.gcp.container.inputs.GetEngineVersionsArgs;
 import io.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
 import io.pulumi.gcp.container.outputs.GetEngineVersionsResult;
@@ -43,7 +41,7 @@ public class App {
         System.exit(exitCode);
     }
 
-    private static ExportContext stack(StackContext ctx) {
+    private static Exports stack(Context ctx) {
         final String name = "helloworld";
 
         final var config = io.pulumi.Config.of();

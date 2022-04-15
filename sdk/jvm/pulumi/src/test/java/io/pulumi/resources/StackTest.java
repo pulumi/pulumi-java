@@ -1,4 +1,4 @@
-package io.pulumi;
+package io.pulumi.resources;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
@@ -9,7 +9,6 @@ import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.exceptions.RunException;
-import io.pulumi.resources.Resource;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;

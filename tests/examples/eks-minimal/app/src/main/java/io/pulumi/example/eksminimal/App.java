@@ -1,12 +1,12 @@
 package io.pulumi.example.eksminimal;
 
+import io.pulumi.Context;
+import io.pulumi.Exports;
 import io.pulumi.Pulumi;
 import io.pulumi.aws.ec2.Ec2Functions;
 import io.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
 import io.pulumi.aws.ec2.inputs.GetVpcArgs;
 import io.pulumi.aws.ec2.outputs.GetVpcResult;
-import io.pulumi.context.ExportContext;
-import io.pulumi.context.StackContext;
 import io.pulumi.core.Output;
 import io.pulumi.eks.Cluster;
 import io.pulumi.eks.ClusterArgs;
@@ -19,7 +19,7 @@ public class App {
         System.exit(exitCode);
     }
 
-    private static ExportContext stack(StackContext ctx) {
+    private static Exports stack(Context ctx) {
         var vpcIdOutput = Output.of(
                 Ec2Functions.getVpc(
                         GetVpcArgs.builder().default_(true).build()
