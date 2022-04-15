@@ -26,7 +26,7 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="required")
       private final @Nullable Output<NodeSelectorArgs> required;
 
-    public Output<NodeSelectorArgs> getRequired() {
+    public Output<NodeSelectorArgs> required() {
         return this.required == null ? Codegen.empty() : this.required;
     }
 

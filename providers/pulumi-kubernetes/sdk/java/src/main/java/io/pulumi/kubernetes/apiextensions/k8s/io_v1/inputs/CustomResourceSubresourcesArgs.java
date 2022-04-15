@@ -27,7 +27,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
     @Import(name="scale")
       private final @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
 
-    public Output<CustomResourceSubresourceScaleArgs> getScale() {
+    public Output<CustomResourceSubresourceScaleArgs> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 
@@ -38,7 +38,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
     @Import(name="status")
       private final @Nullable Output<JsonElement> status;
 
-    public Output<JsonElement> getStatus() {
+    public Output<JsonElement> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

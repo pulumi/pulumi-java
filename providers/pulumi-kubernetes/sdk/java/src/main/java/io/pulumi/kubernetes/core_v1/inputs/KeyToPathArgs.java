@@ -27,7 +27,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -38,7 +38,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
+    public Output<Integer> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -49,7 +49,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

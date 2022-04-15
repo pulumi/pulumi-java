@@ -27,7 +27,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="active")
       private final @Nullable Output<NodeConfigSourceArgs> active;
 
-    public Output<NodeConfigSourceArgs> getActive() {
+    public Output<NodeConfigSourceArgs> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -38,7 +38,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="assigned")
       private final @Nullable Output<NodeConfigSourceArgs> assigned;
 
-    public Output<NodeConfigSourceArgs> getAssigned() {
+    public Output<NodeConfigSourceArgs> assigned() {
         return this.assigned == null ? Codegen.empty() : this.assigned;
     }
 
@@ -49,7 +49,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="error")
       private final @Nullable Output<String> error;
 
-    public Output<String> getError() {
+    public Output<String> error() {
         return this.error == null ? Codegen.empty() : this.error;
     }
 
@@ -60,7 +60,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lastKnownGood")
       private final @Nullable Output<NodeConfigSourceArgs> lastKnownGood;
 
-    public Output<NodeConfigSourceArgs> getLastKnownGood() {
+    public Output<NodeConfigSourceArgs> lastKnownGood() {
         return this.lastKnownGood == null ? Codegen.empty() : this.lastKnownGood;
     }
 

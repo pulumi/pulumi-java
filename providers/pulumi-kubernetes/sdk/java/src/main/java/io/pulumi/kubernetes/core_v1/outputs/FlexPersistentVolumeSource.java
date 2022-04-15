@@ -58,35 +58,35 @@ public final class FlexPersistentVolumeSource {
      * Driver is the name of the driver to use for this volume.
      * 
     */
-    public String getDriver() {
+    public String driver() {
         return this.driver;
     }
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Optional: Extra command options if any.
      * 
     */
-    public Map<String,String> getOptions() {
+    public Map<String,String> options() {
         return this.options == null ? Map.of() : this.options;
     }
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
      * 
     */
-    public Optional<SecretReference> getSecretRef() {
+    public Optional<SecretReference> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
 

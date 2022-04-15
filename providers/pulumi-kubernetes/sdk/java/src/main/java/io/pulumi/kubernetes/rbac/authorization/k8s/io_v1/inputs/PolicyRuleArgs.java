@@ -27,7 +27,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiGroups")
       private final @Nullable Output<List<String>> apiGroups;
 
-    public Output<List<String>> getApiGroups() {
+    public Output<List<String>> apiGroups() {
         return this.apiGroups == null ? Codegen.empty() : this.apiGroups;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nonResourceURLs")
       private final @Nullable Output<List<String>> nonResourceURLs;
 
-    public Output<List<String>> getNonResourceURLs() {
+    public Output<List<String>> nonResourceURLs() {
         return this.nonResourceURLs == null ? Codegen.empty() : this.nonResourceURLs;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
       private final @Nullable Output<List<String>> resourceNames;
 
-    public Output<List<String>> getResourceNames() {
+    public Output<List<String>> resourceNames() {
         return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
     }
 
@@ -60,7 +60,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -71,7 +71,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
-    public Output<List<String>> getVerbs() {
+    public Output<List<String>> verbs() {
         return this.verbs;
     }
 

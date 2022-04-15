@@ -31,7 +31,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="additionalPrinterColumns")
       private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
-    public Output<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
+    public Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns() {
         return this.additionalPrinterColumns == null ? Codegen.empty() : this.additionalPrinterColumns;
     }
 
@@ -42,7 +42,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="deprecated")
       private final @Nullable Output<Boolean> deprecated;
 
-    public Output<Boolean> getDeprecated() {
+    public Output<Boolean> deprecated() {
         return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
@@ -53,7 +53,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="deprecationWarning")
       private final @Nullable Output<String> deprecationWarning;
 
-    public Output<String> getDeprecationWarning() {
+    public Output<String> deprecationWarning() {
         return this.deprecationWarning == null ? Codegen.empty() : this.deprecationWarning;
     }
 
@@ -64,7 +64,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -75,7 +75,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="schema")
       private final @Nullable Output<CustomResourceValidationArgs> schema;
 
-    public Output<CustomResourceValidationArgs> getSchema() {
+    public Output<CustomResourceValidationArgs> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -86,7 +86,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="served", required=true)
       private final Output<Boolean> served;
 
-    public Output<Boolean> getServed() {
+    public Output<Boolean> served() {
         return this.served;
     }
 
@@ -97,7 +97,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="storage", required=true)
       private final Output<Boolean> storage;
 
-    public Output<Boolean> getStorage() {
+    public Output<Boolean> storage() {
         return this.storage;
     }
 
@@ -108,7 +108,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     @Import(name="subresources")
       private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
-    public Output<CustomResourceSubresourcesArgs> getSubresources() {
+    public Output<CustomResourceSubresourcesArgs> subresources() {
         return this.subresources == null ? Codegen.empty() : this.subresources;
     }
 

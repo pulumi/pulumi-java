@@ -26,7 +26,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
-    public Output<Integer> getRevision() {
+    public Output<Integer> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 

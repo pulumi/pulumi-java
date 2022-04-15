@@ -30,42 +30,42 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="$ref")
       private final @Nullable Output<String> $ref;
 
-    public Output<String> get$ref() {
+    public Output<String> $ref() {
         return this.$ref == null ? Codegen.empty() : this.$ref;
     }
 
     @Import(name="$schema")
       private final @Nullable Output<String> $schema;
 
-    public Output<String> get$schema() {
+    public Output<String> $schema() {
         return this.$schema == null ? Codegen.empty() : this.$schema;
     }
 
     @Import(name="additionalItems")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
 
-    public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalItems() {
+    public Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems() {
         return this.additionalItems == null ? Codegen.empty() : this.additionalItems;
     }
 
     @Import(name="additionalProperties")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
 
-    public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalProperties() {
+    public Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties() {
         return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
     }
 
     @Import(name="allOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> allOf;
 
-    public Output<List<JSONSchemaPropsArgs>> getAllOf() {
+    public Output<List<JSONSchemaPropsArgs>> allOf() {
         return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
     @Import(name="anyOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> anyOf;
 
-    public Output<List<JSONSchemaPropsArgs>> getAnyOf() {
+    public Output<List<JSONSchemaPropsArgs>> anyOf() {
         return this.anyOf == null ? Codegen.empty() : this.anyOf;
     }
 
@@ -76,63 +76,63 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="default")
       private final @Nullable Output<JsonElement> default_;
 
-    public Output<JsonElement> getDefault_() {
+    public Output<JsonElement> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     @Import(name="definitions")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions;
 
-    public Output<Map<String,JSONSchemaPropsArgs>> getDefinitions() {
+    public Output<Map<String,JSONSchemaPropsArgs>> definitions() {
         return this.definitions == null ? Codegen.empty() : this.definitions;
     }
 
     @Import(name="dependencies")
       private final @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
 
-    public Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> getDependencies() {
+    public Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies() {
         return this.dependencies == null ? Codegen.empty() : this.dependencies;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="enum")
       private final @Nullable Output<List<JsonElement>> enum_;
 
-    public Output<List<JsonElement>> getEnum_() {
+    public Output<List<JsonElement>> enum_() {
         return this.enum_ == null ? Codegen.empty() : this.enum_;
     }
 
     @Import(name="example")
       private final @Nullable Output<JsonElement> example;
 
-    public Output<JsonElement> getExample() {
+    public Output<JsonElement> example() {
         return this.example == null ? Codegen.empty() : this.example;
     }
 
     @Import(name="exclusiveMaximum")
       private final @Nullable Output<Boolean> exclusiveMaximum;
 
-    public Output<Boolean> getExclusiveMaximum() {
+    public Output<Boolean> exclusiveMaximum() {
         return this.exclusiveMaximum == null ? Codegen.empty() : this.exclusiveMaximum;
     }
 
     @Import(name="exclusiveMinimum")
       private final @Nullable Output<Boolean> exclusiveMinimum;
 
-    public Output<Boolean> getExclusiveMinimum() {
+    public Output<Boolean> exclusiveMinimum() {
         return this.exclusiveMinimum == null ? Codegen.empty() : this.exclusiveMinimum;
     }
 
     @Import(name="externalDocs")
       private final @Nullable Output<ExternalDocumentationArgs> externalDocs;
 
-    public Output<ExternalDocumentationArgs> getExternalDocs() {
+    public Output<ExternalDocumentationArgs> externalDocs() {
         return this.externalDocs == null ? Codegen.empty() : this.externalDocs;
     }
 
@@ -145,154 +145,154 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="items")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
 
-    public Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> getItems() {
+    public Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="maxItems")
       private final @Nullable Output<Integer> maxItems;
 
-    public Output<Integer> getMaxItems() {
+    public Output<Integer> maxItems() {
         return this.maxItems == null ? Codegen.empty() : this.maxItems;
     }
 
     @Import(name="maxLength")
       private final @Nullable Output<Integer> maxLength;
 
-    public Output<Integer> getMaxLength() {
+    public Output<Integer> maxLength() {
         return this.maxLength == null ? Codegen.empty() : this.maxLength;
     }
 
     @Import(name="maxProperties")
       private final @Nullable Output<Integer> maxProperties;
 
-    public Output<Integer> getMaxProperties() {
+    public Output<Integer> maxProperties() {
         return this.maxProperties == null ? Codegen.empty() : this.maxProperties;
     }
 
     @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
 
-    public Output<Double> getMaximum() {
+    public Output<Double> maximum() {
         return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     @Import(name="minItems")
       private final @Nullable Output<Integer> minItems;
 
-    public Output<Integer> getMinItems() {
+    public Output<Integer> minItems() {
         return this.minItems == null ? Codegen.empty() : this.minItems;
     }
 
     @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
 
-    public Output<Integer> getMinLength() {
+    public Output<Integer> minLength() {
         return this.minLength == null ? Codegen.empty() : this.minLength;
     }
 
     @Import(name="minProperties")
       private final @Nullable Output<Integer> minProperties;
 
-    public Output<Integer> getMinProperties() {
+    public Output<Integer> minProperties() {
         return this.minProperties == null ? Codegen.empty() : this.minProperties;
     }
 
     @Import(name="minimum")
       private final @Nullable Output<Double> minimum;
 
-    public Output<Double> getMinimum() {
+    public Output<Double> minimum() {
         return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
     @Import(name="multipleOf")
       private final @Nullable Output<Double> multipleOf;
 
-    public Output<Double> getMultipleOf() {
+    public Output<Double> multipleOf() {
         return this.multipleOf == null ? Codegen.empty() : this.multipleOf;
     }
 
     @Import(name="not")
       private final @Nullable Output<JSONSchemaPropsArgs> not;
 
-    public Output<JSONSchemaPropsArgs> getNot() {
+    public Output<JSONSchemaPropsArgs> not() {
         return this.not == null ? Codegen.empty() : this.not;
     }
 
     @Import(name="nullable")
       private final @Nullable Output<Boolean> nullable;
 
-    public Output<Boolean> getNullable() {
+    public Output<Boolean> nullable() {
         return this.nullable == null ? Codegen.empty() : this.nullable;
     }
 
     @Import(name="oneOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> oneOf;
 
-    public Output<List<JSONSchemaPropsArgs>> getOneOf() {
+    public Output<List<JSONSchemaPropsArgs>> oneOf() {
         return this.oneOf == null ? Codegen.empty() : this.oneOf;
     }
 
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     @Import(name="patternProperties")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties;
 
-    public Output<Map<String,JSONSchemaPropsArgs>> getPatternProperties() {
+    public Output<Map<String,JSONSchemaPropsArgs>> patternProperties() {
         return this.patternProperties == null ? Codegen.empty() : this.patternProperties;
     }
 
     @Import(name="properties")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> properties;
 
-    public Output<Map<String,JSONSchemaPropsArgs>> getProperties() {
+    public Output<Map<String,JSONSchemaPropsArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     @Import(name="required")
       private final @Nullable Output<List<String>> required;
 
-    public Output<List<String>> getRequired() {
+    public Output<List<String>> required() {
         return this.required == null ? Codegen.empty() : this.required;
     }
 
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="uniqueItems")
       private final @Nullable Output<Boolean> uniqueItems;
 
-    public Output<Boolean> getUniqueItems() {
+    public Output<Boolean> uniqueItems() {
         return this.uniqueItems == null ? Codegen.empty() : this.uniqueItems;
     }
 
@@ -303,7 +303,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="x_kubernetes_embedded_resource")
       private final @Nullable Output<Boolean> x_kubernetes_embedded_resource;
 
-    public Output<Boolean> getX_kubernetes_embedded_resource() {
+    public Output<Boolean> x_kubernetes_embedded_resource() {
         return this.x_kubernetes_embedded_resource == null ? Codegen.empty() : this.x_kubernetes_embedded_resource;
     }
 
@@ -323,7 +323,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="x_kubernetes_int_or_string")
       private final @Nullable Output<Boolean> x_kubernetes_int_or_string;
 
-    public Output<Boolean> getX_kubernetes_int_or_string() {
+    public Output<Boolean> x_kubernetes_int_or_string() {
         return this.x_kubernetes_int_or_string == null ? Codegen.empty() : this.x_kubernetes_int_or_string;
     }
 
@@ -336,7 +336,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="x_kubernetes_list_map_keys")
       private final @Nullable Output<List<String>> x_kubernetes_list_map_keys;
 
-    public Output<List<String>> getX_kubernetes_list_map_keys() {
+    public Output<List<String>> x_kubernetes_list_map_keys() {
         return this.x_kubernetes_list_map_keys == null ? Codegen.empty() : this.x_kubernetes_list_map_keys;
     }
 
@@ -360,7 +360,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="x_kubernetes_list_type")
       private final @Nullable Output<String> x_kubernetes_list_type;
 
-    public Output<String> getX_kubernetes_list_type() {
+    public Output<String> x_kubernetes_list_type() {
         return this.x_kubernetes_list_type == null ? Codegen.empty() : this.x_kubernetes_list_type;
     }
 
@@ -378,7 +378,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="x_kubernetes_map_type")
       private final @Nullable Output<String> x_kubernetes_map_type;
 
-    public Output<String> getX_kubernetes_map_type() {
+    public Output<String> x_kubernetes_map_type() {
         return this.x_kubernetes_map_type == null ? Codegen.empty() : this.x_kubernetes_map_type;
     }
 
@@ -389,7 +389,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="x_kubernetes_preserve_unknown_fields")
       private final @Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields;
 
-    public Output<Boolean> getX_kubernetes_preserve_unknown_fields() {
+    public Output<Boolean> x_kubernetes_preserve_unknown_fields() {
         return this.x_kubernetes_preserve_unknown_fields == null ? Codegen.empty() : this.x_kubernetes_preserve_unknown_fields;
     }
 

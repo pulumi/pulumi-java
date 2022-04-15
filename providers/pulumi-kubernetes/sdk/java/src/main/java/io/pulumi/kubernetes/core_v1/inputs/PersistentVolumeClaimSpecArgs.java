@@ -30,7 +30,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
 
-    public Output<List<String>> getAccessModes() {
+    public Output<List<String>> accessModes() {
         return this.accessModes == null ? Codegen.empty() : this.accessModes;
     }
 
@@ -41,7 +41,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="dataSource")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
 
-    public Output<TypedLocalObjectReferenceArgs> getDataSource() {
+    public Output<TypedLocalObjectReferenceArgs> dataSource() {
         return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
@@ -57,7 +57,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="dataSourceRef")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
 
-    public Output<TypedLocalObjectReferenceArgs> getDataSourceRef() {
+    public Output<TypedLocalObjectReferenceArgs> dataSourceRef() {
         return this.dataSourceRef == null ? Codegen.empty() : this.dataSourceRef;
     }
 
@@ -68,7 +68,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="resources")
       private final @Nullable Output<ResourceRequirementsArgs> resources;
 
-    public Output<ResourceRequirementsArgs> getResources() {
+    public Output<ResourceRequirementsArgs> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 
@@ -79,7 +79,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -90,7 +90,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="storageClassName")
       private final @Nullable Output<String> storageClassName;
 
-    public Output<String> getStorageClassName() {
+    public Output<String> storageClassName() {
         return this.storageClassName == null ? Codegen.empty() : this.storageClassName;
     }
 
@@ -101,7 +101,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="volumeMode")
       private final @Nullable Output<String> volumeMode;
 
-    public Output<String> getVolumeMode() {
+    public Output<String> volumeMode() {
         return this.volumeMode == null ? Codegen.empty() : this.volumeMode;
     }
 
@@ -112,7 +112,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 

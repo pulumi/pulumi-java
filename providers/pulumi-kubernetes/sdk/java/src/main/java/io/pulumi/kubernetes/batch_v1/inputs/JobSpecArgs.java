@@ -30,7 +30,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<Integer> activeDeadlineSeconds;
 
-    public Output<Integer> getActiveDeadlineSeconds() {
+    public Output<Integer> activeDeadlineSeconds() {
         return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
     }
 
@@ -41,7 +41,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backoffLimit")
       private final @Nullable Output<Integer> backoffLimit;
 
-    public Output<Integer> getBackoffLimit() {
+    public Output<Integer> backoffLimit() {
         return this.backoffLimit == null ? Codegen.empty() : this.backoffLimit;
     }
 
@@ -58,7 +58,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completionMode")
       private final @Nullable Output<String> completionMode;
 
-    public Output<String> getCompletionMode() {
+    public Output<String> completionMode() {
         return this.completionMode == null ? Codegen.empty() : this.completionMode;
     }
 
@@ -69,7 +69,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="completions")
       private final @Nullable Output<Integer> completions;
 
-    public Output<Integer> getCompletions() {
+    public Output<Integer> completions() {
         return this.completions == null ? Codegen.empty() : this.completions;
     }
 
@@ -80,7 +80,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manualSelector")
       private final @Nullable Output<Boolean> manualSelector;
 
-    public Output<Boolean> getManualSelector() {
+    public Output<Boolean> manualSelector() {
         return this.manualSelector == null ? Codegen.empty() : this.manualSelector;
     }
 
@@ -91,7 +91,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> getParallelism() {
+    public Output<Integer> parallelism() {
         return this.parallelism == null ? Codegen.empty() : this.parallelism;
     }
 
@@ -102,7 +102,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -115,7 +115,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
-    public Output<Boolean> getSuspend() {
+    public Output<Boolean> suspend() {
         return this.suspend == null ? Codegen.empty() : this.suspend;
     }
 
@@ -126,7 +126,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -137,7 +137,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttlSecondsAfterFinished")
       private final @Nullable Output<Integer> ttlSecondsAfterFinished;
 
-    public Output<Integer> getTtlSecondsAfterFinished() {
+    public Output<Integer> ttlSecondsAfterFinished() {
         return this.ttlSecondsAfterFinished == null ? Codegen.empty() : this.ttlSecondsAfterFinished;
     }
 

@@ -27,7 +27,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="backend", required=true)
       private final Output<IngressBackendArgs> backend;
 
-    public Output<IngressBackendArgs> getBackend() {
+    public Output<IngressBackendArgs> backend() {
         return this.backend;
     }
 
@@ -38,7 +38,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -59,7 +59,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="pathType")
       private final @Nullable Output<String> pathType;
 
-    public Output<String> getPathType() {
+    public Output<String> pathType() {
         return this.pathType == null ? Codegen.empty() : this.pathType;
     }
 

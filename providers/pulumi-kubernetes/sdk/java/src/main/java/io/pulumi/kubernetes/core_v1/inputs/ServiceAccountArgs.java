@@ -31,7 +31,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automountServiceAccountToken")
       private final @Nullable Output<Boolean> automountServiceAccountToken;
 
-    public Output<Boolean> getAutomountServiceAccountToken() {
+    public Output<Boolean> automountServiceAccountToken() {
         return this.automountServiceAccountToken == null ? Codegen.empty() : this.automountServiceAccountToken;
     }
 
@@ -53,7 +53,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imagePullSecrets")
       private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
+    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
         return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
     }
 
@@ -64,7 +64,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -75,7 +75,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -86,7 +86,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<ObjectReferenceArgs>> secrets;
 
-    public Output<List<ObjectReferenceArgs>> getSecrets() {
+    public Output<List<ObjectReferenceArgs>> secrets() {
         return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 

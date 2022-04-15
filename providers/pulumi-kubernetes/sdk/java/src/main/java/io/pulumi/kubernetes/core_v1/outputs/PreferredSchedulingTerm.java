@@ -33,14 +33,14 @@ public final class PreferredSchedulingTerm {
      * A node selector term, associated with the corresponding weight.
      * 
     */
-    public NodeSelectorTerm getPreference() {
+    public NodeSelectorTerm preference() {
         return this.preference;
     }
     /**
      * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
      * 
     */
-    public Integer getWeight() {
+    public Integer weight() {
         return this.weight;
     }
 

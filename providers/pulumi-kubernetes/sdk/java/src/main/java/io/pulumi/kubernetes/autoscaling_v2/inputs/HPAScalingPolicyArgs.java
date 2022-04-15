@@ -26,7 +26,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="periodSeconds", required=true)
       private final Output<Integer> periodSeconds;
 
-    public Output<Integer> getPeriodSeconds() {
+    public Output<Integer> periodSeconds() {
         return this.periodSeconds;
     }
 
@@ -37,7 +37,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -48,7 +48,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 

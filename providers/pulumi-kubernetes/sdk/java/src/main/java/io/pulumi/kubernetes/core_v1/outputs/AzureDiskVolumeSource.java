@@ -63,42 +63,42 @@ public final class AzureDiskVolumeSource {
      * Host Caching mode: None, Read Only, Read Write.
      * 
     */
-    public Optional<String> getCachingMode() {
+    public Optional<String> cachingMode() {
         return Optional.ofNullable(this.cachingMode);
     }
     /**
      * The Name of the data disk in the blob storage
      * 
     */
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
     /**
      * The URI the data disk in the blob storage
      * 
     */
-    public String getDiskURI() {
+    public String diskURI() {
         return this.diskURI;
     }
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
 

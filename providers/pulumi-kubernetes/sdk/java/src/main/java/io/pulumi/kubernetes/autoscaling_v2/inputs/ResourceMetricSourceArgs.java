@@ -26,7 +26,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;
 
-    public Output<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> target() {
         return this.target;
     }
 

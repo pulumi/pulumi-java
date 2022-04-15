@@ -27,7 +27,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -38,7 +38,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="targetAverageUtilization")
       private final @Nullable Output<Integer> targetAverageUtilization;
 
-    public Output<Integer> getTargetAverageUtilization() {
+    public Output<Integer> targetAverageUtilization() {
         return this.targetAverageUtilization == null ? Codegen.empty() : this.targetAverageUtilization;
     }
 
@@ -60,7 +60,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
     @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
 
-    public Output<String> getTargetAverageValue() {
+    public Output<String> targetAverageValue() {
         return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
     }
 

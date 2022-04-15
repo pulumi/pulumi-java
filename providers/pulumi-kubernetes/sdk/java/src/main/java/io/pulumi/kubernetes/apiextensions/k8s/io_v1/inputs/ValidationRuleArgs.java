@@ -26,7 +26,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -61,7 +61,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rule", required=true)
       private final Output<String> rule;
 
-    public Output<String> getRule() {
+    public Output<String> rule() {
         return this.rule;
     }
 

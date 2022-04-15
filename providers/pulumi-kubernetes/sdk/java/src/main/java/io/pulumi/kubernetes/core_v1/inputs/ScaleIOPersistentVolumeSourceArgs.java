@@ -28,7 +28,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -39,7 +39,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="gateway", required=true)
       private final Output<String> gateway;
 
-    public Output<String> getGateway() {
+    public Output<String> gateway() {
         return this.gateway;
     }
 
@@ -50,7 +50,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="protectionDomain")
       private final @Nullable Output<String> protectionDomain;
 
-    public Output<String> getProtectionDomain() {
+    public Output<String> protectionDomain() {
         return this.protectionDomain == null ? Codegen.empty() : this.protectionDomain;
     }
 
@@ -61,7 +61,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -72,7 +72,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="secretRef", required=true)
       private final Output<SecretReferenceArgs> secretRef;
 
-    public Output<SecretReferenceArgs> getSecretRef() {
+    public Output<SecretReferenceArgs> secretRef() {
         return this.secretRef;
     }
 
@@ -83,7 +83,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
 
-    public Output<Boolean> getSslEnabled() {
+    public Output<Boolean> sslEnabled() {
         return this.sslEnabled == null ? Codegen.empty() : this.sslEnabled;
     }
 
@@ -94,7 +94,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="storageMode")
       private final @Nullable Output<String> storageMode;
 
-    public Output<String> getStorageMode() {
+    public Output<String> storageMode() {
         return this.storageMode == null ? Codegen.empty() : this.storageMode;
     }
 
@@ -105,7 +105,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="storagePool")
       private final @Nullable Output<String> storagePool;
 
-    public Output<String> getStoragePool() {
+    public Output<String> storagePool() {
         return this.storagePool == null ? Codegen.empty() : this.storagePool;
     }
 
@@ -116,7 +116,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="system", required=true)
       private final Output<String> system;
 
-    public Output<String> getSystem() {
+    public Output<String> system() {
         return this.system;
     }
 
@@ -127,7 +127,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends io.pulumi.resources
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 

@@ -65,42 +65,42 @@ public final class CephFSVolumeSource {
      * Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
     */
-    public List<String> getMonitors() {
+    public List<String> monitors() {
         return this.monitors;
     }
     /**
      * Optional: Used as the mounted root, rather than the full Ceph tree, default is /
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
     */
-    public Optional<String> getSecretFile() {
+    public Optional<String> secretFile() {
         return Optional.ofNullable(this.secretFile);
     }
     /**
      * Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
     */
-    public Optional<LocalObjectReference> getSecretRef() {
+    public Optional<LocalObjectReference> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
      * Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
     */
-    public Optional<String> getUser() {
+    public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }
 

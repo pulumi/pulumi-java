@@ -35,14 +35,14 @@ public final class SELinuxStrategyOptions {
      * rule is the strategy that will dictate the allowable labels that may be set.
      * 
     */
-    public String getRule() {
+    public String rule() {
         return this.rule;
     }
     /**
      * seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
      * 
     */
-    public Optional<SELinuxOptions> getSeLinuxOptions() {
+    public Optional<SELinuxOptions> seLinuxOptions() {
         return Optional.ofNullable(this.seLinuxOptions);
     }
 

@@ -27,7 +27,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPath", required=true)
       private final Output<String> mountPath;
 
-    public Output<String> getMountPath() {
+    public Output<String> mountPath() {
         return this.mountPath;
     }
 
@@ -38,7 +38,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPropagation")
       private final @Nullable Output<String> mountPropagation;
 
-    public Output<String> getMountPropagation() {
+    public Output<String> mountPropagation() {
         return this.mountPropagation == null ? Codegen.empty() : this.mountPropagation;
     }
 
@@ -49,7 +49,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -71,7 +71,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subPath")
       private final @Nullable Output<String> subPath;
 
-    public Output<String> getSubPath() {
+    public Output<String> subPath() {
         return this.subPath == null ? Codegen.empty() : this.subPath;
     }
 
@@ -82,7 +82,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subPathExpr")
       private final @Nullable Output<String> subPathExpr;
 
-    public Output<String> getSubPathExpr() {
+    public Output<String> subPathExpr() {
         return this.subPathExpr == null ? Codegen.empty() : this.subPathExpr;
     }
 

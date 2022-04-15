@@ -29,7 +29,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="controllerExpandSecretRef")
       private final @Nullable Output<SecretReferenceArgs> controllerExpandSecretRef;
 
-    public Output<SecretReferenceArgs> getControllerExpandSecretRef() {
+    public Output<SecretReferenceArgs> controllerExpandSecretRef() {
         return this.controllerExpandSecretRef == null ? Codegen.empty() : this.controllerExpandSecretRef;
     }
 
@@ -40,7 +40,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="controllerPublishSecretRef")
       private final @Nullable Output<SecretReferenceArgs> controllerPublishSecretRef;
 
-    public Output<SecretReferenceArgs> getControllerPublishSecretRef() {
+    public Output<SecretReferenceArgs> controllerPublishSecretRef() {
         return this.controllerPublishSecretRef == null ? Codegen.empty() : this.controllerPublishSecretRef;
     }
 
@@ -51,7 +51,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="driver", required=true)
       private final Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver;
     }
 
@@ -62,7 +62,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -73,7 +73,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="nodePublishSecretRef")
       private final @Nullable Output<SecretReferenceArgs> nodePublishSecretRef;
 
-    public Output<SecretReferenceArgs> getNodePublishSecretRef() {
+    public Output<SecretReferenceArgs> nodePublishSecretRef() {
         return this.nodePublishSecretRef == null ? Codegen.empty() : this.nodePublishSecretRef;
     }
 
@@ -84,7 +84,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="nodeStageSecretRef")
       private final @Nullable Output<SecretReferenceArgs> nodeStageSecretRef;
 
-    public Output<SecretReferenceArgs> getNodeStageSecretRef() {
+    public Output<SecretReferenceArgs> nodeStageSecretRef() {
         return this.nodeStageSecretRef == null ? Codegen.empty() : this.nodeStageSecretRef;
     }
 
@@ -95,7 +95,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -106,7 +106,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="volumeAttributes")
       private final @Nullable Output<Map<String,String>> volumeAttributes;
 
-    public Output<Map<String,String>> getVolumeAttributes() {
+    public Output<Map<String,String>> volumeAttributes() {
         return this.volumeAttributes == null ? Codegen.empty() : this.volumeAttributes;
     }
 
@@ -117,7 +117,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     @Import(name="volumeHandle", required=true)
       private final Output<String> volumeHandle;
 
-    public Output<String> getVolumeHandle() {
+    public Output<String> volumeHandle() {
         return this.volumeHandle;
     }
 

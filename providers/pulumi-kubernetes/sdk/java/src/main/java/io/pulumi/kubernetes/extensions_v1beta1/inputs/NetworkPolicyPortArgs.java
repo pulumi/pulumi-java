@@ -28,7 +28,7 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
     @Import(name="port")
       private final @Nullable Output<Either<Integer,String>> port;
 
-    public Output<Either<Integer,String>> getPort() {
+    public Output<Either<Integer,String>> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

@@ -29,7 +29,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hard")
       private final @Nullable Output<Map<String,String>> hard;
 
-    public Output<Map<String,String>> getHard() {
+    public Output<Map<String,String>> hard() {
         return this.hard == null ? Codegen.empty() : this.hard;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scopeSelector")
       private final @Nullable Output<ScopeSelectorArgs> scopeSelector;
 
-    public Output<ScopeSelectorArgs> getScopeSelector() {
+    public Output<ScopeSelectorArgs> scopeSelector() {
         return this.scopeSelector == null ? Codegen.empty() : this.scopeSelector;
     }
 
@@ -51,7 +51,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 

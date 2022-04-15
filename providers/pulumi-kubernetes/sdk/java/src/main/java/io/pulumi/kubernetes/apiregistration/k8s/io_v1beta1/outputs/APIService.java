@@ -54,31 +54,31 @@ public final class APIService {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
-    public Optional<ObjectMeta> getMetadata() {
+    public Optional<ObjectMeta> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Spec contains information for locating and communicating with a server
      * 
     */
-    public Optional<APIServiceSpec> getSpec() {
+    public Optional<APIServiceSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
      * Status contains derived information about an API server
      * 
     */
-    public Optional<APIServiceStatus> getStatus() {
+    public Optional<APIServiceStatus> status() {
         return Optional.ofNullable(this.status);
     }
 

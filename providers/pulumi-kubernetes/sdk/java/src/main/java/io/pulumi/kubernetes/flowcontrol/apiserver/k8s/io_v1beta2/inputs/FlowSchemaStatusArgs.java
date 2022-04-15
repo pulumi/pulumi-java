@@ -27,7 +27,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditions")
       private final @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
-    public Output<List<FlowSchemaConditionArgs>> getConditions() {
+    public Output<List<FlowSchemaConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 

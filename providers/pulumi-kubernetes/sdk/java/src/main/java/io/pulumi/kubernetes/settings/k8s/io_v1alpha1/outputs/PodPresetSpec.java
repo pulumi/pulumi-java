@@ -60,35 +60,35 @@ public final class PodPresetSpec {
      * Env defines the collection of EnvVar to inject into containers.
      * 
     */
-    public List<EnvVar> getEnv() {
+    public List<EnvVar> env() {
         return this.env == null ? List.of() : this.env;
     }
     /**
      * EnvFrom defines the collection of EnvFromSource to inject into containers.
      * 
     */
-    public List<EnvFromSource> getEnvFrom() {
+    public List<EnvFromSource> envFrom() {
         return this.envFrom == null ? List.of() : this.envFrom;
     }
     /**
      * Selector is a label query over a set of resources, in this case pods. Required.
      * 
     */
-    public Optional<LabelSelector> getSelector() {
+    public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * VolumeMounts defines the collection of VolumeMount to inject into containers.
      * 
     */
-    public List<VolumeMount> getVolumeMounts() {
+    public List<VolumeMount> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
     /**
      * Volumes defines the collection of Volume to inject into the pod.
      * 
     */
-    public List<Volume> getVolumes() {
+    public List<Volume> volumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
 

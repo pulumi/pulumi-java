@@ -30,7 +30,7 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -41,7 +41,7 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     @Import(name="partition")
       private final @Nullable Output<Integer> partition;
 
-    public Output<Integer> getPartition() {
+    public Output<Integer> partition() {
         return this.partition == null ? Codegen.empty() : this.partition;
     }
 
@@ -52,7 +52,7 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     @Import(name="pdName", required=true)
       private final Output<String> pdName;
 
-    public Output<String> getPdName() {
+    public Output<String> pdName() {
         return this.pdName;
     }
 
@@ -63,7 +63,7 @@ public final class GCEPersistentDiskVolumeSourceArgs extends io.pulumi.resources
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 

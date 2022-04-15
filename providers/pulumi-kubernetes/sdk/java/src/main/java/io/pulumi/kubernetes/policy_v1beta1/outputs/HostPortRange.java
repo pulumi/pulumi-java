@@ -32,14 +32,14 @@ public final class HostPortRange {
      * max is the end of the range, inclusive.
      * 
     */
-    public Integer getMax() {
+    public Integer max() {
         return this.max;
     }
     /**
      * min is the start of the range, inclusive.
      * 
     */
-    public Integer getMin() {
+    public Integer min() {
         return this.min;
     }
 

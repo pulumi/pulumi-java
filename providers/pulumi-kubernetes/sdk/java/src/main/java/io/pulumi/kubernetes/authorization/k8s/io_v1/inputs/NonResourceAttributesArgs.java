@@ -26,7 +26,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -37,7 +37,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
     @Import(name="verb")
       private final @Nullable Output<String> verb;
 
-    public Output<String> getVerb() {
+    public Output<String> verb() {
         return this.verb == null ? Codegen.empty() : this.verb;
     }
 

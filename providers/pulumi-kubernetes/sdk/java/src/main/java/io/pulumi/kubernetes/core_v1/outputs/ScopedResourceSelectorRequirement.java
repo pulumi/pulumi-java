@@ -61,7 +61,7 @@ public final class ScopedResourceSelectorRequirement {
      *  - `"NotIn"`
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
@@ -76,14 +76,14 @@ public final class ScopedResourceSelectorRequirement {
      *  - `"Terminating"` Match all pod objects where spec.activeDeadlineSeconds >=0
      * 
     */
-    public String getScopeName() {
+    public String scopeName() {
         return this.scopeName;
     }
     /**
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values == null ? List.of() : this.values;
     }
 

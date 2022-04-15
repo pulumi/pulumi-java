@@ -61,28 +61,28 @@ public final class ContainerPort {
      * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
      * 
     */
-    public Integer getContainerPort() {
+    public Integer containerPort() {
         return this.containerPort;
     }
     /**
      * What host IP to bind the external port to.
      * 
     */
-    public Optional<String> getHostIP() {
+    public Optional<String> hostIP() {
         return Optional.ofNullable(this.hostIP);
     }
     /**
      * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
      * 
     */
-    public Optional<Integer> getHostPort() {
+    public Optional<Integer> hostPort() {
         return Optional.ofNullable(this.hostPort);
     }
     /**
      * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -94,7 +94,7 @@ public final class ContainerPort {
      *  - `"UDP"` is the UDP protocol.
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
 

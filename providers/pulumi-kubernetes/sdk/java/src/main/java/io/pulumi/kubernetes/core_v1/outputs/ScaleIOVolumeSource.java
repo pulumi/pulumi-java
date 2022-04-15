@@ -92,70 +92,70 @@ public final class ScaleIOVolumeSource {
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * The host address of the ScaleIO API Gateway.
      * 
     */
-    public String getGateway() {
+    public String gateway() {
         return this.gateway;
     }
     /**
      * The name of the ScaleIO Protection Domain for the configured storage.
      * 
     */
-    public Optional<String> getProtectionDomain() {
+    public Optional<String> protectionDomain() {
         return Optional.ofNullable(this.protectionDomain);
     }
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
      * 
     */
-    public LocalObjectReference getSecretRef() {
+    public LocalObjectReference secretRef() {
         return this.secretRef;
     }
     /**
      * Flag to enable/disable SSL communication with Gateway, default false
      * 
     */
-    public Optional<Boolean> getSslEnabled() {
+    public Optional<Boolean> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
     /**
      * Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
      * 
     */
-    public Optional<String> getStorageMode() {
+    public Optional<String> storageMode() {
         return Optional.ofNullable(this.storageMode);
     }
     /**
      * The ScaleIO Storage Pool associated with the protection domain.
      * 
     */
-    public Optional<String> getStoragePool() {
+    public Optional<String> storagePool() {
         return Optional.ofNullable(this.storagePool);
     }
     /**
      * The name of the storage system as configured in ScaleIO.
      * 
     */
-    public String getSystem() {
+    public String system() {
         return this.system;
     }
     /**
      * The name of a volume already created in the ScaleIO system that is associated with this volume source.
      * 
     */
-    public Optional<String> getVolumeName() {
+    public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
 

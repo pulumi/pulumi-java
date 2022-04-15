@@ -41,10 +41,10 @@ public final class IngressRule {
      * Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
-    public Optional<HTTPIngressRuleValue> getHttp() {
+    public Optional<HTTPIngressRuleValue> http() {
         return Optional.ofNullable(this.http);
     }
 

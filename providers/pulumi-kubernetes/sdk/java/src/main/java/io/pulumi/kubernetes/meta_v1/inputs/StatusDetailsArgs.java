@@ -29,7 +29,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="causes")
       private final @Nullable Output<List<StatusCauseArgs>> causes;
 
-    public Output<List<StatusCauseArgs>> getCauses() {
+    public Output<List<StatusCauseArgs>> causes() {
         return this.causes == null ? Codegen.empty() : this.causes;
     }
 
@@ -40,7 +40,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group == null ? Codegen.empty() : this.group;
     }
 
@@ -51,7 +51,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -62,7 +62,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryAfterSeconds")
       private final @Nullable Output<Integer> retryAfterSeconds;
 
-    public Output<Integer> getRetryAfterSeconds() {
+    public Output<Integer> retryAfterSeconds() {
         return this.retryAfterSeconds == null ? Codegen.empty() : this.retryAfterSeconds;
     }
 
@@ -84,7 +84,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

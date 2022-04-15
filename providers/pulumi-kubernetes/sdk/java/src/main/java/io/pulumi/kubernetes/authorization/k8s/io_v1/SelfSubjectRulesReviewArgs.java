@@ -24,7 +24,7 @@ public final class SelfSubjectRulesReviewArgs extends io.pulumi.resources.Resour
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -35,7 +35,7 @@ public final class SelfSubjectRulesReviewArgs extends io.pulumi.resources.Resour
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -46,7 +46,7 @@ public final class SelfSubjectRulesReviewArgs extends io.pulumi.resources.Resour
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -57,7 +57,7 @@ public final class SelfSubjectRulesReviewArgs extends io.pulumi.resources.Resour
     @Import(name="spec", required=true)
       private final Output<SelfSubjectRulesReviewSpecArgs> spec;
 
-    public Output<SelfSubjectRulesReviewSpecArgs> getSpec() {
+    public Output<SelfSubjectRulesReviewSpecArgs> spec() {
         return this.spec;
     }
 

@@ -34,14 +34,14 @@ public final class VolumeError {
      * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Time the error was encountered.
      * 
     */
-    public Optional<String> getTime() {
+    public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
 

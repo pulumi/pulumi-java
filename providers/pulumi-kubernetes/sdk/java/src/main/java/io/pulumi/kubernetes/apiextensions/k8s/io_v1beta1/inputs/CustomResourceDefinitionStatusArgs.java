@@ -29,7 +29,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     @Import(name="acceptedNames", required=true)
       private final Output<CustomResourceDefinitionNamesArgs> acceptedNames;
 
-    public Output<CustomResourceDefinitionNamesArgs> getAcceptedNames() {
+    public Output<CustomResourceDefinitionNamesArgs> acceptedNames() {
         return this.acceptedNames;
     }
 
@@ -40,7 +40,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     @Import(name="conditions")
       private final @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
 
-    public Output<List<CustomResourceDefinitionConditionArgs>> getConditions() {
+    public Output<List<CustomResourceDefinitionConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -51,7 +51,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
     @Import(name="storedVersions", required=true)
       private final Output<List<String>> storedVersions;
 
-    public Output<List<String>> getStoredVersions() {
+    public Output<List<String>> storedVersions() {
         return this.storedVersions;
     }
 

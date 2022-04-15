@@ -28,7 +28,7 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -39,7 +39,7 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="port", required=true)
       private final Output<Either<Integer,String>> port;
 
-    public Output<Either<Integer,String>> getPort() {
+    public Output<Either<Integer,String>> port() {
         return this.port;
     }
 

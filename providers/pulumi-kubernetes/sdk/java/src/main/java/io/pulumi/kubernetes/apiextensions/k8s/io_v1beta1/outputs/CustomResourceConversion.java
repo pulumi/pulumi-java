@@ -44,7 +44,7 @@ public final class CustomResourceConversion {
      * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail. Defaults to `["v1beta1"]`.
      * 
     */
-    public List<String> getConversionReviewVersions() {
+    public List<String> conversionReviewVersions() {
         return this.conversionReviewVersions == null ? List.of() : this.conversionReviewVersions;
     }
     /**
@@ -52,14 +52,14 @@ public final class CustomResourceConversion {
      *   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhookClientConfig to be set.
      * 
     */
-    public String getStrategy() {
+    public String strategy() {
         return this.strategy;
     }
     /**
      * webhookClientConfig is the instructions for how to call the webhook if strategy is `Webhook`. Required when `strategy` is set to `Webhook`.
      * 
     */
-    public Optional<WebhookClientConfig> getWebhookClientConfig() {
+    public Optional<WebhookClientConfig> webhookClientConfig() {
         return Optional.ofNullable(this.webhookClientConfig);
     }
 

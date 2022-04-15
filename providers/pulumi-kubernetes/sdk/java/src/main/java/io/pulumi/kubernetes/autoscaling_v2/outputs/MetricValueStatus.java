@@ -42,21 +42,21 @@ public final class MetricValueStatus {
      * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
     */
-    public Optional<Integer> getAverageUtilization() {
+    public Optional<Integer> averageUtilization() {
         return Optional.ofNullable(this.averageUtilization);
     }
     /**
      * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
      * 
     */
-    public Optional<String> getAverageValue() {
+    public Optional<String> averageValue() {
         return Optional.ofNullable(this.averageValue);
     }
     /**
      * value is the current value of the metric (as a quantity).
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

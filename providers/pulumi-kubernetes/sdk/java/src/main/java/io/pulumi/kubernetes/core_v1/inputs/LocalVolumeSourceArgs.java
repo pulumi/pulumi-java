@@ -26,7 +26,7 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -37,7 +37,7 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 

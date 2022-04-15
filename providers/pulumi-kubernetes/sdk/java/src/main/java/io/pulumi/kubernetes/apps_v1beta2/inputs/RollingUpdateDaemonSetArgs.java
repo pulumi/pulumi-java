@@ -28,7 +28,7 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
     @Import(name="maxUnavailable")
       private final @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> getMaxUnavailable() {
+    public Output<Either<Integer,String>> maxUnavailable() {
         return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 

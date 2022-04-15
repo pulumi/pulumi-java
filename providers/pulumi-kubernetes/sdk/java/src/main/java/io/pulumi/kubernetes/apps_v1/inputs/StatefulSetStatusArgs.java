@@ -29,7 +29,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="availableReplicas", required=true)
       private final Output<Integer> availableReplicas;
 
-    public Output<Integer> getAvailableReplicas() {
+    public Output<Integer> availableReplicas() {
         return this.availableReplicas;
     }
 
@@ -40,7 +40,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
 
-    public Output<Integer> getCollisionCount() {
+    public Output<Integer> collisionCount() {
         return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
     }
 
@@ -51,7 +51,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="conditions")
       private final @Nullable Output<List<StatefulSetConditionArgs>> conditions;
 
-    public Output<List<StatefulSetConditionArgs>> getConditions() {
+    public Output<List<StatefulSetConditionArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -62,7 +62,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="currentReplicas")
       private final @Nullable Output<Integer> currentReplicas;
 
-    public Output<Integer> getCurrentReplicas() {
+    public Output<Integer> currentReplicas() {
         return this.currentReplicas == null ? Codegen.empty() : this.currentReplicas;
     }
 
@@ -73,7 +73,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="currentRevision")
       private final @Nullable Output<String> currentRevision;
 
-    public Output<String> getCurrentRevision() {
+    public Output<String> currentRevision() {
         return this.currentRevision == null ? Codegen.empty() : this.currentRevision;
     }
 
@@ -84,7 +84,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
+    public Output<Integer> observedGeneration() {
         return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
@@ -95,7 +95,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> getReadyReplicas() {
+    public Output<Integer> readyReplicas() {
         return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
     }
 
@@ -106,7 +106,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas;
     }
 
@@ -117,7 +117,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="updateRevision")
       private final @Nullable Output<String> updateRevision;
 
-    public Output<String> getUpdateRevision() {
+    public Output<String> updateRevision() {
         return this.updateRevision == null ? Codegen.empty() : this.updateRevision;
     }
 
@@ -128,7 +128,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     @Import(name="updatedReplicas")
       private final @Nullable Output<Integer> updatedReplicas;
 
-    public Output<Integer> getUpdatedReplicas() {
+    public Output<Integer> updatedReplicas() {
         return this.updatedReplicas == null ? Codegen.empty() : this.updatedReplicas;
     }
 

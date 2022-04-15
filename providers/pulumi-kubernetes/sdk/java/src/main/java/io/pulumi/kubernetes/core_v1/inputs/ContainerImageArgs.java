@@ -28,7 +28,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="names", required=true)
       private final Output<List<String>> names;
 
-    public Output<List<String>> getNames() {
+    public Output<List<String>> names() {
         return this.names;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> getSizeBytes() {
+    public Output<Integer> sizeBytes() {
         return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 

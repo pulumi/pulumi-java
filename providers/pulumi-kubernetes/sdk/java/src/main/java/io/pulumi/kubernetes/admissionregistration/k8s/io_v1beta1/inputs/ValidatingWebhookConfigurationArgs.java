@@ -29,7 +29,7 @@ public final class ValidatingWebhookConfigurationArgs extends io.pulumi.resource
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -40,7 +40,7 @@ public final class ValidatingWebhookConfigurationArgs extends io.pulumi.resource
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -51,7 +51,7 @@ public final class ValidatingWebhookConfigurationArgs extends io.pulumi.resource
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -62,7 +62,7 @@ public final class ValidatingWebhookConfigurationArgs extends io.pulumi.resource
     @Import(name="webhooks")
       private final @Nullable Output<List<ValidatingWebhookArgs>> webhooks;
 
-    public Output<List<ValidatingWebhookArgs>> getWebhooks() {
+    public Output<List<ValidatingWebhookArgs>> webhooks() {
         return this.webhooks == null ? Codegen.empty() : this.webhooks;
     }
 

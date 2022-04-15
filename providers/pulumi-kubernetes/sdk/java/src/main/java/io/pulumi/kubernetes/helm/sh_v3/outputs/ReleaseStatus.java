@@ -70,49 +70,49 @@ public final class ReleaseStatus {
      * The version number of the application being deployed.
      * 
     */
-    public Optional<String> getAppVersion() {
+    public Optional<String> appVersion() {
         return Optional.ofNullable(this.appVersion);
     }
     /**
      * The name of the chart.
      * 
     */
-    public Optional<String> getChart() {
+    public Optional<String> chart() {
         return Optional.ofNullable(this.chart);
     }
     /**
      * Name is the name of the release.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace is the kubernetes namespace of the release.
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * Version is an int32 which represents the version of the release.
      * 
     */
-    public Optional<Integer> getRevision() {
+    public Optional<Integer> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * Status of the release.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * A SemVer 2 conformant version string of the chart.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

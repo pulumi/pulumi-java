@@ -27,7 +27,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="add")
       private final @Nullable Output<List<String>> add;
 
-    public Output<List<String>> getAdd() {
+    public Output<List<String>> add() {
         return this.add == null ? Codegen.empty() : this.add;
     }
 
@@ -38,7 +38,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="drop")
       private final @Nullable Output<List<String>> drop;
 
-    public Output<List<String>> getDrop() {
+    public Output<List<String>> drop() {
         return this.drop == null ? Codegen.empty() : this.drop;
     }
 
