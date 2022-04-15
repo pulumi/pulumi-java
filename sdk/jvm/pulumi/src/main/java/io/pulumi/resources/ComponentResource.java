@@ -18,8 +18,6 @@ import static java.util.Objects.requireNonNull;
  */
 public class ComponentResource extends Resource {
 
-    private final ComponentResourceInternal internal = new ComponentResourceInternal(this);
-
     /**
      * Creates and registers a new component resource, @see {@link #ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, boolean)}.
      *
@@ -110,7 +108,7 @@ public class ComponentResource extends Resource {
         }
 
         public static ComponentResourceInternal from(ComponentResource r) {
-            return r.internal;
+            return new ComponentResourceInternal(r);
         }
     }
 }
