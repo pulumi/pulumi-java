@@ -27,7 +27,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     @Import(name="bitrateKbps")
       private final @Nullable Output<String> bitrateKbps;
 
-    public Output<String> getBitrateKbps() {
+    public Output<String> bitrateKbps() {
         return this.bitrateKbps == null ? Codegen.empty() : this.bitrateKbps;
     }
 
@@ -38,7 +38,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
 
-    public Output<String> getFrameRate() {
+    public Output<String> frameRate() {
         return this.frameRate == null ? Codegen.empty() : this.frameRate;
     }
 
@@ -49,7 +49,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     @Import(name="scale")
       private final @Nullable Output<VideoScaleArgs> scale;
 
-    public Output<VideoScaleArgs> getScale() {
+    public Output<VideoScaleArgs> scale() {
         return this.scale == null ? Codegen.empty() : this.scale;
     }
 
@@ -61,7 +61,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

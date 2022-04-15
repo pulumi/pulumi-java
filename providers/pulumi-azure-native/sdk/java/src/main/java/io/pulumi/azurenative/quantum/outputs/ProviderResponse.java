@@ -62,42 +62,42 @@ public final class ProviderResponse {
      * The provider's marketplace application display name.
      * 
     */
-    public Optional<String> getApplicationName() {
+    public Optional<String> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
     /**
      * A Uri identifying the specific instance of this provider.
      * 
     */
-    public Optional<String> getInstanceUri() {
+    public Optional<String> instanceUri() {
         return Optional.ofNullable(this.instanceUri);
     }
     /**
      * Unique id of this provider.
      * 
     */
-    public Optional<String> getProviderId() {
+    public Optional<String> providerId() {
         return Optional.ofNullable(this.providerId);
     }
     /**
      * The sku associated with pricing information for this provider.
      * 
     */
-    public Optional<String> getProviderSku() {
+    public Optional<String> providerSku() {
         return Optional.ofNullable(this.providerSku);
     }
     /**
      * Provisioning status field
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Id to track resource usage for the provider.
      * 
     */
-    public Optional<String> getResourceUsageId() {
+    public Optional<String> resourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }
 

@@ -28,7 +28,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
-    public Output<String> getDistributionType() {
+    public Output<String> distributionType() {
         return this.distributionType;
     }
 
@@ -39,7 +39,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterServerCount")
       private final @Nullable Output<Integer> parameterServerCount;
 
-    public Output<Integer> getParameterServerCount() {
+    public Output<Integer> parameterServerCount() {
         return this.parameterServerCount == null ? Codegen.empty() : this.parameterServerCount;
     }
 
@@ -50,7 +50,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerCount")
       private final @Nullable Output<Integer> workerCount;
 
-    public Output<Integer> getWorkerCount() {
+    public Output<Integer> workerCount() {
         return this.workerCount == null ? Codegen.empty() : this.workerCount;
     }
 

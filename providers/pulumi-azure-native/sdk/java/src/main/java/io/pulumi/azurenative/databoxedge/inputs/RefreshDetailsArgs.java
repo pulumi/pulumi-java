@@ -26,7 +26,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="errorManifestFile")
       private final @Nullable Output<String> errorManifestFile;
 
-    public Output<String> getErrorManifestFile() {
+    public Output<String> errorManifestFile() {
         return this.errorManifestFile == null ? Codegen.empty() : this.errorManifestFile;
     }
 
@@ -37,7 +37,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inProgressRefreshJobId")
       private final @Nullable Output<String> inProgressRefreshJobId;
 
-    public Output<String> getInProgressRefreshJobId() {
+    public Output<String> inProgressRefreshJobId() {
         return this.inProgressRefreshJobId == null ? Codegen.empty() : this.inProgressRefreshJobId;
     }
 
@@ -48,7 +48,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastCompletedRefreshJobTimeInUTC")
       private final @Nullable Output<String> lastCompletedRefreshJobTimeInUTC;
 
-    public Output<String> getLastCompletedRefreshJobTimeInUTC() {
+    public Output<String> lastCompletedRefreshJobTimeInUTC() {
         return this.lastCompletedRefreshJobTimeInUTC == null ? Codegen.empty() : this.lastCompletedRefreshJobTimeInUTC;
     }
 
@@ -59,7 +59,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastJob")
       private final @Nullable Output<String> lastJob;
 
-    public Output<String> getLastJob() {
+    public Output<String> lastJob() {
         return this.lastJob == null ? Codegen.empty() : this.lastJob;
     }
 

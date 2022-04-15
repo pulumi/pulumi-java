@@ -19,7 +19,7 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
     @Import(name="customEntityStoreAssignmentName", required=true)
       private final String customEntityStoreAssignmentName;
 
-    public String getCustomEntityStoreAssignmentName() {
+    public String customEntityStoreAssignmentName() {
         return this.customEntityStoreAssignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

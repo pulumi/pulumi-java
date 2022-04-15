@@ -33,7 +33,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disallowed")
       private final @Nullable Output<DisallowedArgs> disallowed;
 
-    public Output<DisallowedArgs> getDisallowed() {
+    public Output<DisallowedArgs> disallowed() {
         return this.disallowed == null ? Codegen.empty() : this.disallowed;
     }
 
@@ -55,7 +55,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
+    public Output<String> endOfLifeDate() {
         return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
@@ -66,7 +66,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eula")
       private final @Nullable Output<String> eula;
 
-    public Output<String> getEula() {
+    public Output<String> eula() {
         return this.eula == null ? Codegen.empty() : this.eula;
     }
 
@@ -77,7 +77,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<GalleryImageFeatureArgs>> features;
 
-    public Output<List<GalleryImageFeatureArgs>> getFeatures() {
+    public Output<List<GalleryImageFeatureArgs>> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -88,7 +88,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageName")
       private final @Nullable Output<String> galleryImageName;
 
-    public Output<String> getGalleryImageName() {
+    public Output<String> galleryImageName() {
         return this.galleryImageName == null ? Codegen.empty() : this.galleryImageName;
     }
 
@@ -99,7 +99,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
-    public Output<String> getGalleryName() {
+    public Output<String> galleryName() {
         return this.galleryName;
     }
 
@@ -110,7 +110,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
+    public Output<Either<String,HyperVGeneration>> hyperVGeneration() {
         return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
     }
 
@@ -121,7 +121,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identifier", required=true)
       private final Output<GalleryImageIdentifierArgs> identifier;
 
-    public Output<GalleryImageIdentifierArgs> getIdentifier() {
+    public Output<GalleryImageIdentifierArgs> identifier() {
         return this.identifier;
     }
 
@@ -132,7 +132,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -143,7 +143,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osState", required=true)
       private final Output<OperatingSystemStateTypes> osState;
 
-    public Output<OperatingSystemStateTypes> getOsState() {
+    public Output<OperatingSystemStateTypes> osState() {
         return this.osState;
     }
 
@@ -154,7 +154,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType", required=true)
       private final Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> getOsType() {
+    public Output<OperatingSystemTypes> osType() {
         return this.osType;
     }
 
@@ -165,7 +165,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privacyStatementUri")
       private final @Nullable Output<String> privacyStatementUri;
 
-    public Output<String> getPrivacyStatementUri() {
+    public Output<String> privacyStatementUri() {
         return this.privacyStatementUri == null ? Codegen.empty() : this.privacyStatementUri;
     }
 
@@ -176,7 +176,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="purchasePlan")
       private final @Nullable Output<ImagePurchasePlanArgs> purchasePlan;
 
-    public Output<ImagePurchasePlanArgs> getPurchasePlan() {
+    public Output<ImagePurchasePlanArgs> purchasePlan() {
         return this.purchasePlan == null ? Codegen.empty() : this.purchasePlan;
     }
 
@@ -187,7 +187,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recommended")
       private final @Nullable Output<RecommendedMachineConfigurationArgs> recommended;
 
-    public Output<RecommendedMachineConfigurationArgs> getRecommended() {
+    public Output<RecommendedMachineConfigurationArgs> recommended() {
         return this.recommended == null ? Codegen.empty() : this.recommended;
     }
 
@@ -198,7 +198,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="releaseNoteUri")
       private final @Nullable Output<String> releaseNoteUri;
 
-    public Output<String> getReleaseNoteUri() {
+    public Output<String> releaseNoteUri() {
         return this.releaseNoteUri == null ? Codegen.empty() : this.releaseNoteUri;
     }
 
@@ -209,7 +209,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -220,7 +220,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

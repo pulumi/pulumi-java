@@ -91,70 +91,70 @@ public final class AS2SecuritySettingsResponse {
      * The value indicating whether to enable NRR for inbound decoded messages.
      * 
     */
-    public Boolean getEnableNRRForInboundDecodedMessages() {
+    public Boolean enableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
     }
     /**
      * The value indicating whether to enable NRR for inbound encoded messages.
      * 
     */
-    public Boolean getEnableNRRForInboundEncodedMessages() {
+    public Boolean enableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
     }
     /**
      * The value indicating whether to enable NRR for inbound MDN.
      * 
     */
-    public Boolean getEnableNRRForInboundMDN() {
+    public Boolean enableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
     }
     /**
      * The value indicating whether to enable NRR for outbound decoded messages.
      * 
     */
-    public Boolean getEnableNRRForOutboundDecodedMessages() {
+    public Boolean enableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
     }
     /**
      * The value indicating whether to enable NRR for outbound encoded messages.
      * 
     */
-    public Boolean getEnableNRRForOutboundEncodedMessages() {
+    public Boolean enableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
     }
     /**
      * The value indicating whether to enable NRR for outbound MDN.
      * 
     */
-    public Boolean getEnableNRRForOutboundMDN() {
+    public Boolean enableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
     }
     /**
      * The name of the encryption certificate.
      * 
     */
-    public Optional<String> getEncryptionCertificateName() {
+    public Optional<String> encryptionCertificateName() {
         return Optional.ofNullable(this.encryptionCertificateName);
     }
     /**
      * The value indicating whether to send or request a MDN.
      * 
     */
-    public Boolean getOverrideGroupSigningCertificate() {
+    public Boolean overrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
     }
     /**
      * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
      * 
     */
-    public Optional<String> getSha2AlgorithmFormat() {
+    public Optional<String> sha2AlgorithmFormat() {
         return Optional.ofNullable(this.sha2AlgorithmFormat);
     }
     /**
      * The name of the signing certificate.
      * 
     */
-    public Optional<String> getSigningCertificateName() {
+    public Optional<String> signingCertificateName() {
         return Optional.ofNullable(this.signingCertificateName);
     }
 

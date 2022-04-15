@@ -30,7 +30,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
     @Import(name="items")
       private final @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
-    public Output<List<ConnectionMonitorEndpointFilterItemArgs>> getItems() {
+    public Output<List<ConnectionMonitorEndpointFilterItemArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
@@ -41,7 +41,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
     @Import(name="type")
       private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
-    public Output<Either<String,ConnectionMonitorEndpointFilterType>> getType() {
+    public Output<Either<String,ConnectionMonitorEndpointFilterType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -22,7 +22,7 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -33,7 +33,7 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -44,7 +44,7 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="groupId", required=true)
       private final String groupId;
 
-    public String getGroupId() {
+    public String groupId() {
         return this.groupId;
     }
 
@@ -55,7 +55,7 @@ public final class GetManagementGroupArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="recurse")
       private final @Nullable Boolean recurse;
 
-    public Optional<Boolean> getRecurse() {
+    public Optional<Boolean> recurse() {
         return this.recurse == null ? Optional.empty() : Optional.ofNullable(this.recurse);
     }
 

@@ -31,7 +31,7 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="crop")
       private final @Nullable RectangleResponse crop;
 
-    public Optional<RectangleResponse> getCrop() {
+    public Optional<RectangleResponse> crop() {
         return this.crop == null ? Optional.empty() : Optional.ofNullable(this.crop);
     }
 
@@ -42,7 +42,7 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="deinterlace")
       private final @Nullable DeinterlaceResponse deinterlace;
 
-    public Optional<DeinterlaceResponse> getDeinterlace() {
+    public Optional<DeinterlaceResponse> deinterlace() {
         return this.deinterlace == null ? Optional.empty() : Optional.ofNullable(this.deinterlace);
     }
 
@@ -53,7 +53,7 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="overlays")
       private final @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
 
-    public List<Either<AudioOverlayResponse,VideoOverlayResponse>> getOverlays() {
+    public List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays() {
         return this.overlays == null ? List.of() : this.overlays;
     }
 
@@ -64,7 +64,7 @@ public final class FiltersResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="rotation")
       private final @Nullable String rotation;
 
-    public Optional<String> getRotation() {
+    public Optional<String> rotation() {
         return this.rotation == null ? Optional.empty() : Optional.ofNullable(this.rotation);
     }
 

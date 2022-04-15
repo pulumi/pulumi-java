@@ -35,14 +35,14 @@ public final class RetentionPolicyParametersResponse {
      * Number of days to retain flow log records.
      * 
     */
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Flag to enable/disable retention.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

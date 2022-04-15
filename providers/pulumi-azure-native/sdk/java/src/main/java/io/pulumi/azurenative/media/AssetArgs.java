@@ -22,7 +22,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternateId")
       private final @Nullable Output<String> alternateId;
 
-    public Output<String> getAlternateId() {
+    public Output<String> alternateId() {
         return this.alternateId == null ? Codegen.empty() : this.alternateId;
     }
 
@@ -44,7 +44,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetName")
       private final @Nullable Output<String> assetName;
 
-    public Output<String> getAssetName() {
+    public Output<String> assetName() {
         return this.assetName == null ? Codegen.empty() : this.assetName;
     }
 
@@ -55,7 +55,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container")
       private final @Nullable Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container == null ? Codegen.empty() : this.container;
     }
 
@@ -66,7 +66,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -77,7 +77,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,7 +88,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 

@@ -27,7 +27,7 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs ex
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
+    public Output<List<String>> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 

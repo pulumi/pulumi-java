@@ -245,84 +245,84 @@ public final class WorkloadCrrAccessTokenResponse {
      * Access token used for authentication
      * 
     */
-    public Optional<String> getAccessTokenString() {
+    public Optional<String> accessTokenString() {
         return Optional.ofNullable(this.accessTokenString);
     }
     /**
      * Active region name of BMS Stamp
      * 
     */
-    public Optional<String> getBMSActiveRegion() {
+    public Optional<String> bMSActiveRegion() {
         return Optional.ofNullable(this.bMSActiveRegion);
     }
     /**
      * Backup Management Type
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Container Id
      * 
     */
-    public Optional<String> getContainerId() {
+    public Optional<String> containerId() {
         return Optional.ofNullable(this.containerId);
     }
     /**
      * Container Unique name
      * 
     */
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Container Type
      * 
     */
-    public Optional<String> getContainerType() {
+    public Optional<String> containerType() {
         return Optional.ofNullable(this.containerType);
     }
     /**
      * CoordinatorServiceStampId to be used by BCM in restore call
      * 
     */
-    public Optional<String> getCoordinatorServiceStampId() {
+    public Optional<String> coordinatorServiceStampId() {
         return Optional.ofNullable(this.coordinatorServiceStampId);
     }
     /**
      * CoordinatorServiceStampUri to be used by BCM in restore call
      * 
     */
-    public Optional<String> getCoordinatorServiceStampUri() {
+    public Optional<String> coordinatorServiceStampUri() {
         return Optional.ofNullable(this.coordinatorServiceStampUri);
     }
     /**
      * Datasource Container Unique Name
      * 
     */
-    public Optional<String> getDatasourceContainerName() {
+    public Optional<String> datasourceContainerName() {
         return Optional.ofNullable(this.datasourceContainerName);
     }
     /**
      * Datasource Id
      * 
     */
-    public Optional<String> getDatasourceId() {
+    public Optional<String> datasourceId() {
         return Optional.ofNullable(this.datasourceId);
     }
     /**
      * Datasource Friendly Name
      * 
     */
-    public Optional<String> getDatasourceName() {
+    public Optional<String> datasourceName() {
         return Optional.ofNullable(this.datasourceName);
     }
     /**
      * Datasource Type
      * 
     */
-    public Optional<String> getDatasourceType() {
+    public Optional<String> datasourceType() {
         return Optional.ofNullable(this.datasourceType);
     }
     /**
@@ -330,137 +330,137 @@ public final class WorkloadCrrAccessTokenResponse {
      * Expected value is 'WorkloadCrrAccessToken'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Policy Id
      * 
     */
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * Policy Name
      * 
     */
-    public Optional<String> getPolicyName() {
+    public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
-    public Optional<String> getProtectableObjectContainerHostOsName() {
+    public Optional<String> protectableObjectContainerHostOsName() {
         return Optional.ofNullable(this.protectableObjectContainerHostOsName);
     }
-    public Optional<String> getProtectableObjectFriendlyName() {
+    public Optional<String> protectableObjectFriendlyName() {
         return Optional.ofNullable(this.protectableObjectFriendlyName);
     }
-    public Optional<String> getProtectableObjectParentLogicalContainerName() {
+    public Optional<String> protectableObjectParentLogicalContainerName() {
         return Optional.ofNullable(this.protectableObjectParentLogicalContainerName);
     }
-    public Optional<String> getProtectableObjectProtectionState() {
+    public Optional<String> protectableObjectProtectionState() {
         return Optional.ofNullable(this.protectableObjectProtectionState);
     }
-    public Optional<String> getProtectableObjectUniqueName() {
+    public Optional<String> protectableObjectUniqueName() {
         return Optional.ofNullable(this.protectableObjectUniqueName);
     }
-    public Optional<String> getProtectableObjectWorkloadType() {
+    public Optional<String> protectableObjectWorkloadType() {
         return Optional.ofNullable(this.protectableObjectWorkloadType);
     }
     /**
      * Protected item container id
      * 
     */
-    public Optional<Double> getProtectionContainerId() {
+    public Optional<Double> protectionContainerId() {
         return Optional.ofNullable(this.protectionContainerId);
     }
     /**
      * ProtectionServiceStampId to be used by BCM in restore call
      * 
     */
-    public Optional<String> getProtectionServiceStampId() {
+    public Optional<String> protectionServiceStampId() {
         return Optional.ofNullable(this.protectionServiceStampId);
     }
     /**
      * ProtectionServiceStampUri to be used by BCM in restore call
      * 
     */
-    public Optional<String> getProtectionServiceStampUri() {
+    public Optional<String> protectionServiceStampUri() {
         return Optional.ofNullable(this.protectionServiceStampUri);
     }
     /**
      * Recovery Point Id
      * 
     */
-    public Optional<String> getRecoveryPointId() {
+    public Optional<String> recoveryPointId() {
         return Optional.ofNullable(this.recoveryPointId);
     }
     /**
      * Recovery Point Time
      * 
     */
-    public Optional<String> getRecoveryPointTime() {
+    public Optional<String> recoveryPointTime() {
         return Optional.ofNullable(this.recoveryPointTime);
     }
     /**
      * Resource Group name of the source vault
      * 
     */
-    public Optional<String> getResourceGroupName() {
+    public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
      * Resource Id of the source vault
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Resource Name of the source vault
      * 
     */
-    public Optional<String> getPropResourceName() {
+    public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * Recovery point information: Managed virtual machine
      * 
     */
-    public Optional<Boolean> getRpIsManagedVirtualMachine() {
+    public Optional<Boolean> rpIsManagedVirtualMachine() {
         return Optional.ofNullable(this.rpIsManagedVirtualMachine);
     }
     /**
      * Recovery point information: Original SA option
      * 
     */
-    public Optional<Boolean> getRpOriginalSAOption() {
+    public Optional<Boolean> rpOriginalSAOption() {
         return Optional.ofNullable(this.rpOriginalSAOption);
     }
     /**
      * Recovery point Tier Information
      * 
     */
-    public Map<String,String> getRpTierInformation() {
+    public Map<String,String> rpTierInformation() {
         return this.rpTierInformation == null ? Map.of() : this.rpTierInformation;
     }
     /**
      * Recovery point information: VM size description
      * 
     */
-    public Optional<String> getRpVMSizeDescription() {
+    public Optional<String> rpVMSizeDescription() {
         return Optional.ofNullable(this.rpVMSizeDescription);
     }
     /**
      * Subscription Id of the source vault
      * 
     */
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * Extended Information about the token like FileSpec etc.
      * 
     */
-    public Optional<String> getTokenExtendedInformation() {
+    public Optional<String> tokenExtendedInformation() {
         return Optional.ofNullable(this.tokenExtendedInformation);
     }
 

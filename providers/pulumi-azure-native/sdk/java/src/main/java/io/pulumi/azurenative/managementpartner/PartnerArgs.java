@@ -22,7 +22,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partnerId")
       private final @Nullable Output<String> partnerId;
 
-    public Output<String> getPartnerId() {
+    public Output<String> partnerId() {
         return this.partnerId == null ? Codegen.empty() : this.partnerId;
     }
 

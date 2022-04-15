@@ -74,49 +74,49 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
      * Analytical TTL.
      * 
     */
-    public Optional<Integer> getAnalyticalStorageTtl() {
+    public Optional<Integer> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB MongoDB collection
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of index keys
      * 
     */
-    public List<MongoIndexResponse> getIndexes() {
+    public List<MongoIndexResponse> indexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
     /**
      * A system generated property. A unique identifier.
      * 
     */
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
     /**
      * A key-value pair of shard keys to be applied for the request.
      * 
     */
-    public Map<String,String> getShardKey() {
+    public Map<String,String> shardKey() {
         return this.shardKey == null ? Map.of() : this.shardKey;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
     */
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

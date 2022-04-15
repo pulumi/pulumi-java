@@ -25,7 +25,7 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
     @Import(name="begin")
       private final @Nullable Integer begin;
 
-    public Optional<Integer> getBegin() {
+    public Optional<Integer> begin() {
         return this.begin == null ? Optional.empty() : Optional.ofNullable(this.begin);
     }
 
@@ -36,7 +36,7 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
     @Import(name="end")
       private final @Nullable Integer end;
 
-    public Optional<Integer> getEnd() {
+    public Optional<Integer> end() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
     }
 

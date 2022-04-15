@@ -30,7 +30,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final Output<Either<String,ApimIdentityType>> type;
 
-    public Output<Either<String,ApimIdentityType>> getType() {
+    public Output<Either<String,ApimIdentityType>> type() {
         return this.type;
     }
 
@@ -44,7 +44,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
-    public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
+    public Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

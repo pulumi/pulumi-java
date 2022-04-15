@@ -25,7 +25,7 @@ public final class ContainerGroupDiagnosticsResponse extends io.pulumi.resources
     @Import(name="logAnalytics")
       private final @Nullable LogAnalyticsResponse logAnalytics;
 
-    public Optional<LogAnalyticsResponse> getLogAnalytics() {
+    public Optional<LogAnalyticsResponse> logAnalytics() {
         return this.logAnalytics == null ? Optional.empty() : Optional.ofNullable(this.logAnalytics);
     }
 

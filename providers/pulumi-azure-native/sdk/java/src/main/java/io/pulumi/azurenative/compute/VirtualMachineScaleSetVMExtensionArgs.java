@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
+    public Output<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="enableAutomaticUpgrade")
       private final @Nullable Output<Boolean> enableAutomaticUpgrade;
 
-    public Output<Boolean> getEnableAutomaticUpgrade() {
+    public Output<Boolean> enableAutomaticUpgrade() {
         return this.enableAutomaticUpgrade == null ? Codegen.empty() : this.enableAutomaticUpgrade;
     }
 
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -69,7 +69,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="instanceView")
       private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
-    public Output<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
+    public Output<VirtualMachineExtensionInstanceViewArgs> instanceView() {
         return this.instanceView == null ? Codegen.empty() : this.instanceView;
     }
 
@@ -80,7 +80,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> getProtectedSettings() {
+    public Output<Object> protectedSettings() {
         return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
@@ -91,7 +91,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -102,7 +102,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
-    public Output<Object> getSettings() {
+    public Output<Object> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -124,7 +124,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -135,7 +135,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
+    public Output<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 
@@ -146,7 +146,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="vmExtensionName")
       private final @Nullable Output<String> vmExtensionName;
 
-    public Output<String> getVmExtensionName() {
+    public Output<String> vmExtensionName() {
         return this.vmExtensionName == null ? Codegen.empty() : this.vmExtensionName;
     }
 
@@ -157,7 +157,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
     @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;
 
-    public Output<String> getVmScaleSetName() {
+    public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 

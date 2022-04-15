@@ -26,7 +26,7 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
     @Import(name="imageName")
       private final @Nullable String imageName;
 
-    public Optional<String> getImageName() {
+    public Optional<String> imageName() {
         return this.imageName == null ? Optional.empty() : Optional.ofNullable(this.imageName);
     }
 
@@ -37,7 +37,7 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
     @Import(name="osType", required=true)
       private final String osType;
 
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
 
@@ -48,7 +48,7 @@ public final class CustomImagePropertiesCustomResponse extends io.pulumi.resourc
     @Import(name="sysPrep")
       private final @Nullable Boolean sysPrep;
 
-    public Optional<Boolean> getSysPrep() {
+    public Optional<Boolean> sysPrep() {
         return this.sysPrep == null ? Optional.empty() : Optional.ofNullable(this.sysPrep);
     }
 

@@ -26,7 +26,7 @@ public final class PatchSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="assessmentMode")
       private final @Nullable String assessmentMode;
 
-    public Optional<String> getAssessmentMode() {
+    public Optional<String> assessmentMode() {
         return this.assessmentMode == null ? Optional.empty() : Optional.ofNullable(this.assessmentMode);
     }
 
@@ -37,7 +37,7 @@ public final class PatchSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="enableHotpatching")
       private final @Nullable Boolean enableHotpatching;
 
-    public Optional<Boolean> getEnableHotpatching() {
+    public Optional<Boolean> enableHotpatching() {
         return this.enableHotpatching == null ? Optional.empty() : Optional.ofNullable(this.enableHotpatching);
     }
 
@@ -48,7 +48,7 @@ public final class PatchSettingsResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="patchMode")
       private final @Nullable String patchMode;
 
-    public Optional<String> getPatchMode() {
+    public Optional<String> patchMode() {
         return this.patchMode == null ? Optional.empty() : Optional.ofNullable(this.patchMode);
     }
 

@@ -19,14 +19,14 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
     @Import(name="preflightOptions")
       private final @Nullable List<String> preflightOptions;
 
-    public List<String> getPreflightOptions() {
+    public List<String> preflightOptions() {
         return this.preflightOptions == null ? List.of() : this.preflightOptions;
     }
 
     @Import(name="preflightSupported")
       private final @Nullable Boolean preflightSupported;
 
-    public Optional<Boolean> getPreflightSupported() {
+    public Optional<Boolean> preflightSupported() {
         return this.preflightSupported == null ? Optional.empty() : Optional.ofNullable(this.preflightSupported);
     }
 

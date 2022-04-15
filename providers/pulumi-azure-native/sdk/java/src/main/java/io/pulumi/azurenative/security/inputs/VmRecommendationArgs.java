@@ -26,7 +26,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configurationStatus")
       private final @Nullable Output<String> configurationStatus;
 
-    public Output<String> getConfigurationStatus() {
+    public Output<String> configurationStatus() {
         return this.configurationStatus == null ? Codegen.empty() : this.configurationStatus;
     }
 
@@ -37,7 +37,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enforcementSupport")
       private final @Nullable Output<String> enforcementSupport;
 
-    public Output<String> getEnforcementSupport() {
+    public Output<String> enforcementSupport() {
         return this.enforcementSupport == null ? Codegen.empty() : this.enforcementSupport;
     }
 
@@ -48,7 +48,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="recommendationAction")
       private final @Nullable Output<String> recommendationAction;
 
-    public Output<String> getRecommendationAction() {
+    public Output<String> recommendationAction() {
         return this.recommendationAction == null ? Codegen.empty() : this.recommendationAction;
     }
 
@@ -59,7 +59,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

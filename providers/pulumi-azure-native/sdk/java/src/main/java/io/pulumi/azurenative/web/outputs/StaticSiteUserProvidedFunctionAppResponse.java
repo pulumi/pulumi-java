@@ -69,49 +69,49 @@ public final class StaticSiteUserProvidedFunctionAppResponse {
      * The date and time on which the function app was registered with the static site.
      * 
     */
-    public String getCreatedOn() {
+    public String createdOn() {
         return this.createdOn;
     }
     /**
      * The region of the function app registered with the static site
      * 
     */
-    public Optional<String> getFunctionAppRegion() {
+    public Optional<String> functionAppRegion() {
         return Optional.ofNullable(this.functionAppRegion);
     }
     /**
      * The resource id of the function app registered with the static site
      * 
     */
-    public Optional<String> getFunctionAppResourceId() {
+    public Optional<String> functionAppResourceId() {
         return Optional.ofNullable(this.functionAppResourceId);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

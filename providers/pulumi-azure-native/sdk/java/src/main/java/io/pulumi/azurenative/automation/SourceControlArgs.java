@@ -26,7 +26,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoSync")
       private final @Nullable Output<Boolean> autoSync;
 
-    public Output<Boolean> getAutoSync() {
+    public Output<Boolean> autoSync() {
         return this.autoSync == null ? Codegen.empty() : this.autoSync;
     }
 
@@ -37,7 +37,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -48,7 +48,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -59,7 +59,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -70,7 +70,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
+    public Output<String> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -81,7 +81,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publishRunbook")
       private final @Nullable Output<Boolean> publishRunbook;
 
-    public Output<Boolean> getPublishRunbook() {
+    public Output<Boolean> publishRunbook() {
         return this.publishRunbook == null ? Codegen.empty() : this.publishRunbook;
     }
 
@@ -92,7 +92,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
 
-    public Output<String> getRepoUrl() {
+    public Output<String> repoUrl() {
         return this.repoUrl == null ? Codegen.empty() : this.repoUrl;
     }
 
@@ -103,7 +103,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityToken")
       private final @Nullable Output<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
-    public Output<SourceControlSecurityTokenPropertiesArgs> getSecurityToken() {
+    public Output<SourceControlSecurityTokenPropertiesArgs> securityToken() {
         return this.securityToken == null ? Codegen.empty() : this.securityToken;
     }
 
@@ -125,7 +125,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceControlName")
       private final @Nullable Output<String> sourceControlName;
 
-    public Output<String> getSourceControlName() {
+    public Output<String> sourceControlName() {
         return this.sourceControlName == null ? Codegen.empty() : this.sourceControlName;
     }
 
@@ -136,7 +136,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceType>> sourceType;
 
-    public Output<Either<String,SourceType>> getSourceType() {
+    public Output<Either<String,SourceType>> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 

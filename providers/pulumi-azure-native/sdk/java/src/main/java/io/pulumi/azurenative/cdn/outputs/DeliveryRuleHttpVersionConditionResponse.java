@@ -35,14 +35,14 @@ public final class DeliveryRuleHttpVersionConditionResponse {
      * Expected value is 'HttpVersion'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public HttpVersionMatchConditionParametersResponse getParameters() {
+    public HttpVersionMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

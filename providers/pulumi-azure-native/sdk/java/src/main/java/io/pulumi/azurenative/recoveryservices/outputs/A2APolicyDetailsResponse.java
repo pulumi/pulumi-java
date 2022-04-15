@@ -64,14 +64,14 @@ public final class A2APolicyDetailsResponse {
      * The app consistent snapshot frequency in minutes.
      * 
     */
-    public Optional<Integer> getAppConsistentFrequencyInMinutes() {
+    public Optional<Integer> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
      * The crash consistent snapshot frequency in minutes.
      * 
     */
-    public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
+    public Optional<Integer> crashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
     /**
@@ -79,28 +79,28 @@ public final class A2APolicyDetailsResponse {
      * Expected value is 'A2A'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating whether multi-VM sync has to be enabled.
      * 
     */
-    public Optional<String> getMultiVmSyncStatus() {
+    public Optional<String> multiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
      * 
     */
-    public Optional<Integer> getRecoveryPointHistory() {
+    public Optional<Integer> recoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
     /**
      * The recovery point threshold in minutes.
      * 
     */
-    public Optional<Integer> getRecoveryPointThresholdInMinutes() {
+    public Optional<Integer> recoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
 

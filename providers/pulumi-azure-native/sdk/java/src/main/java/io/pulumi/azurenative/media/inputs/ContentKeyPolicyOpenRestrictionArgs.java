@@ -26,7 +26,7 @@ public final class ContentKeyPolicyOpenRestrictionArgs extends io.pulumi.resourc
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

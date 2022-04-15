@@ -27,7 +27,7 @@ public final class PrivateLinkServicePropertiesVisibilityArgs extends io.pulumi.
     @Import(name="subscriptions")
       private final @Nullable Output<List<String>> subscriptions;
 
-    public Output<List<String>> getSubscriptions() {
+    public Output<List<String>> subscriptions() {
         return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 

@@ -137,112 +137,112 @@ public final class GetDscConfigurationResult {
      * Gets or sets the creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Gets or sets the description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the etag of the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gets or sets the job count of the configuration.
      * 
     */
-    public Optional<Integer> getJobCount() {
+    public Optional<Integer> jobCount() {
         return Optional.ofNullable(this.jobCount);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The Azure Region where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets or sets verbose log option.
      * 
     */
-    public Optional<Boolean> getLogVerbose() {
+    public Optional<Boolean> logVerbose() {
         return Optional.ofNullable(this.logVerbose);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the number of compiled node configurations.
      * 
     */
-    public Optional<Integer> getNodeConfigurationCount() {
+    public Optional<Integer> nodeConfigurationCount() {
         return Optional.ofNullable(this.nodeConfigurationCount);
     }
     /**
      * Gets or sets the configuration parameters.
      * 
     */
-    public Map<String,DscConfigurationParameterResponse> getParameters() {
+    public Map<String,DscConfigurationParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Gets or sets the provisioning state of the configuration.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Gets or sets the source.
      * 
     */
-    public Optional<ContentSourceResponse> getSource() {
+    public Optional<ContentSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Gets or sets the state of the configuration.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -21,7 +21,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="appName", required=true)
       private final String appName;
 
-    public String getAppName() {
+    public String appName() {
         return this.appName;
     }
 
@@ -32,7 +32,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 
@@ -54,7 +54,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="syncStatus")
       private final @Nullable String syncStatus;
 
-    public Optional<String> getSyncStatus() {
+    public Optional<String> syncStatus() {
         return this.syncStatus == null ? Optional.empty() : Optional.ofNullable(this.syncStatus);
     }
 

@@ -26,7 +26,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contentHash")
       private final @Nullable ContentHashResponse contentHash;
 
-    public Optional<ContentHashResponse> getContentHash() {
+    public Optional<ContentHashResponse> contentHash() {
         return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
     }
 
@@ -37,7 +37,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 
@@ -48,7 +48,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

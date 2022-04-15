@@ -26,7 +26,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertContext")
       private final @Nullable Output<ConditionArgs> alertContext;
 
-    public Output<ConditionArgs> getAlertContext() {
+    public Output<ConditionArgs> alertContext() {
         return this.alertContext == null ? Codegen.empty() : this.alertContext;
     }
 
@@ -37,7 +37,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alertRuleId")
       private final @Nullable Output<ConditionArgs> alertRuleId;
 
-    public Output<ConditionArgs> getAlertRuleId() {
+    public Output<ConditionArgs> alertRuleId() {
         return this.alertRuleId == null ? Codegen.empty() : this.alertRuleId;
     }
 
@@ -48,7 +48,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<ConditionArgs> description;
 
-    public Output<ConditionArgs> getDescription() {
+    public Output<ConditionArgs> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitorCondition")
       private final @Nullable Output<ConditionArgs> monitorCondition;
 
-    public Output<ConditionArgs> getMonitorCondition() {
+    public Output<ConditionArgs> monitorCondition() {
         return this.monitorCondition == null ? Codegen.empty() : this.monitorCondition;
     }
 
@@ -70,7 +70,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitorService")
       private final @Nullable Output<ConditionArgs> monitorService;
 
-    public Output<ConditionArgs> getMonitorService() {
+    public Output<ConditionArgs> monitorService() {
         return this.monitorService == null ? Codegen.empty() : this.monitorService;
     }
 
@@ -81,7 +81,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity")
       private final @Nullable Output<ConditionArgs> severity;
 
-    public Output<ConditionArgs> getSeverity() {
+    public Output<ConditionArgs> severity() {
         return this.severity == null ? Codegen.empty() : this.severity;
     }
 
@@ -92,7 +92,7 @@ public final class ConditionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceType")
       private final @Nullable Output<ConditionArgs> targetResourceType;
 
-    public Output<ConditionArgs> getTargetResourceType() {
+    public Output<ConditionArgs> targetResourceType() {
         return this.targetResourceType == null ? Codegen.empty() : this.targetResourceType;
     }
 

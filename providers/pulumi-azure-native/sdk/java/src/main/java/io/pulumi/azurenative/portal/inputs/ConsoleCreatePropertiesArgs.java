@@ -29,7 +29,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="osType", required=true)
       private final Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> getOsType() {
+    public Output<Either<String,OsType>> osType() {
         return this.osType;
     }
 
@@ -40,7 +40,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -51,7 +51,7 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

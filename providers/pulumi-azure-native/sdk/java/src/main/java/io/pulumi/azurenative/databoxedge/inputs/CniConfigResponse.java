@@ -23,7 +23,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="podSubnet", required=true)
       private final String podSubnet;
 
-    public String getPodSubnet() {
+    public String podSubnet() {
         return this.podSubnet;
     }
 
@@ -34,7 +34,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceSubnet", required=true)
       private final String serviceSubnet;
 
-    public String getServiceSubnet() {
+    public String serviceSubnet() {
         return this.serviceSubnet;
     }
 
@@ -45,7 +45,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -56,7 +56,7 @@ public final class CniConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

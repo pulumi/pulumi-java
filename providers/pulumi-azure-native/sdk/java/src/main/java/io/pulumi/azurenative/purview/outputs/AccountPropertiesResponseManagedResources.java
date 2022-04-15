@@ -39,21 +39,21 @@ public final class AccountPropertiesResponseManagedResources {
      * Gets the managed event hub namespace resource identifier.
      * 
     */
-    public String getEventHubNamespace() {
+    public String eventHubNamespace() {
         return this.eventHubNamespace;
     }
     /**
      * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
      * 
     */
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Gets the managed storage account resource identifier.
      * 
     */
-    public String getStorageAccount() {
+    public String storageAccount() {
         return this.storageAccount;
     }
 

@@ -29,7 +29,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     @Import(name="minimalSeverity")
       private final @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
 
-    public Output<Either<String,MinimalSeverity>> getMinimalSeverity() {
+    public Output<Either<String,MinimalSeverity>> minimalSeverity() {
         return this.minimalSeverity == null ? Codegen.empty() : this.minimalSeverity;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
     @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> getState() {
+    public Output<Either<String,State>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

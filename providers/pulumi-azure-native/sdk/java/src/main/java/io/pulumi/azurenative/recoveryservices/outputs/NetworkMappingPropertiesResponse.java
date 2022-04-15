@@ -87,63 +87,63 @@ public final class NetworkMappingPropertiesResponse {
      * The fabric specific settings.
      * 
     */
-    public Optional<Object> getFabricSpecificSettings() {
+    public Optional<Object> fabricSpecificSettings() {
         return Optional.ofNullable(this.fabricSpecificSettings);
     }
     /**
      * The primary fabric friendly name.
      * 
     */
-    public Optional<String> getPrimaryFabricFriendlyName() {
+    public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
      * The primary network friendly name.
      * 
     */
-    public Optional<String> getPrimaryNetworkFriendlyName() {
+    public Optional<String> primaryNetworkFriendlyName() {
         return Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
     /**
      * The primary network id for network mapping.
      * 
     */
-    public Optional<String> getPrimaryNetworkId() {
+    public Optional<String> primaryNetworkId() {
         return Optional.ofNullable(this.primaryNetworkId);
     }
     /**
      * The recovery fabric ARM id.
      * 
     */
-    public Optional<String> getRecoveryFabricArmId() {
+    public Optional<String> recoveryFabricArmId() {
         return Optional.ofNullable(this.recoveryFabricArmId);
     }
     /**
      * The recovery fabric friendly name.
      * 
     */
-    public Optional<String> getRecoveryFabricFriendlyName() {
+    public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
      * The recovery network friendly name.
      * 
     */
-    public Optional<String> getRecoveryNetworkFriendlyName() {
+    public Optional<String> recoveryNetworkFriendlyName() {
         return Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
     /**
      * The recovery network id for network mapping.
      * 
     */
-    public Optional<String> getRecoveryNetworkId() {
+    public Optional<String> recoveryNetworkId() {
         return Optional.ofNullable(this.recoveryNetworkId);
     }
     /**
      * The pairing state for network mapping.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

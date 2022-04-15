@@ -46,28 +46,28 @@ public final class ContainerRegistryCredentialsResponse {
      * The ACR login server name. User name is the first part of the FQDN.
      * 
     */
-    public String getLoginServer() {
+    public String loginServer() {
         return this.loginServer;
     }
     /**
      * The ACR primary password.
      * 
     */
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
     /**
      * The ACR secondary password.
      * 
     */
-    public String getPassword2() {
+    public String password2() {
         return this.password2;
     }
     /**
      * The ACR login username.
      * 
     */
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

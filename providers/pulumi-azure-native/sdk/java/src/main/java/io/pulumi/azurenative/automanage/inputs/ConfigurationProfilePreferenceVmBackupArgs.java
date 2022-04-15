@@ -27,7 +27,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
-    public Output<Integer> getInstantRpRetentionRangeInDays() {
+    public Output<Integer> instantRpRetentionRangeInDays() {
         return this.instantRpRetentionRangeInDays == null ? Codegen.empty() : this.instantRpRetentionRangeInDays;
     }
 
@@ -38,7 +38,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="retentionPolicy")
       private final @Nullable Output<String> retentionPolicy;
 
-    public Output<String> getRetentionPolicy() {
+    public Output<String> retentionPolicy() {
         return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
@@ -49,7 +49,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="schedulePolicy")
       private final @Nullable Output<String> schedulePolicy;
 
-    public Output<String> getSchedulePolicy() {
+    public Output<String> schedulePolicy() {
         return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
@@ -60,7 +60,7 @@ public final class ConfigurationProfilePreferenceVmBackupArgs extends io.pulumi.
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

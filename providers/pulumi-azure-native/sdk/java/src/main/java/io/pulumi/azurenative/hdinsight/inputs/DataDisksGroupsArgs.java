@@ -26,7 +26,7 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="disksPerNode")
       private final @Nullable Output<Integer> disksPerNode;
 
-    public Output<Integer> getDisksPerNode() {
+    public Output<Integer> disksPerNode() {
         return this.disksPerNode == null ? Codegen.empty() : this.disksPerNode;
     }
 

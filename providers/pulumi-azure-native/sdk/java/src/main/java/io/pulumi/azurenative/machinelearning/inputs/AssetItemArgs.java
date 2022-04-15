@@ -34,7 +34,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -45,7 +45,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputPorts")
       private final @Nullable Output<Map<String,InputPortArgs>> inputPorts;
 
-    public Output<Map<String,InputPortArgs>> getInputPorts() {
+    public Output<Map<String,InputPortArgs>> inputPorts() {
         return this.inputPorts == null ? Codegen.empty() : this.inputPorts;
     }
 
@@ -56,7 +56,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationInfo", required=true)
       private final Output<BlobLocationArgs> locationInfo;
 
-    public Output<BlobLocationArgs> getLocationInfo() {
+    public Output<BlobLocationArgs> locationInfo() {
         return this.locationInfo;
     }
 
@@ -67,7 +67,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -78,7 +78,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -89,7 +89,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputPorts")
       private final @Nullable Output<Map<String,OutputPortArgs>> outputPorts;
 
-    public Output<Map<String,OutputPortArgs>> getOutputPorts() {
+    public Output<Map<String,OutputPortArgs>> outputPorts() {
         return this.outputPorts == null ? Codegen.empty() : this.outputPorts;
     }
 
@@ -100,7 +100,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
-    public Output<List<ModuleAssetParameterArgs>> getParameters() {
+    public Output<List<ModuleAssetParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -111,7 +111,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,AssetType>> type;
 
-    public Output<Either<String,AssetType>> getType() {
+    public Output<Either<String,AssetType>> type() {
         return this.type;
     }
 

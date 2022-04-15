@@ -77,56 +77,56 @@ public final class GetDefenderSettingResult {
      * Size of the device quota. Value is required to be in multiples of 100.
      * 
     */
-    public Integer getDeviceQuota() {
+    public Integer deviceQuota() {
         return this.deviceQuota;
     }
     /**
      * End time of the evaluation period, if such exist
      * 
     */
-    public String getEvaluationEndTime() {
+    public String evaluationEndTime() {
         return this.evaluationEndTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * MDE integration configuration
      * 
     */
-    public DefenderSettingsPropertiesResponseMdeIntegration getMdeIntegration() {
+    public DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration() {
         return this.mdeIntegration;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The kind of onboarding for the subscription
      * 
     */
-    public String getOnboardingKind() {
+    public String onboardingKind() {
         return this.onboardingKind;
     }
     /**
      * Sentinel Workspace Resource Ids
      * 
     */
-    public List<String> getSentinelWorkspaceResourceIds() {
+    public List<String> sentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

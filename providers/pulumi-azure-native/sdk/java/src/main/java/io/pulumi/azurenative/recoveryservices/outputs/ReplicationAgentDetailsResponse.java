@@ -62,42 +62,42 @@ public final class ReplicationAgentDetailsResponse {
      * The health of the replication agent.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
      * The replication agent Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last heartbeat received from the replication agent.
      * 
     */
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The replication agent name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The replication agent version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

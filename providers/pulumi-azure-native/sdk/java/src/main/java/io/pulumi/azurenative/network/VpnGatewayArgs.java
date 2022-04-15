@@ -30,7 +30,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bgpSettings")
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
-    public Output<BgpSettingsArgs> getBgpSettings() {
+    public Output<BgpSettingsArgs> bgpSettings() {
         return this.bgpSettings == null ? Codegen.empty() : this.bgpSettings;
     }
 
@@ -41,7 +41,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connections")
       private final @Nullable Output<List<VpnConnectionArgs>> connections;
 
-    public Output<List<VpnConnectionArgs>> getConnections() {
+    public Output<List<VpnConnectionArgs>> connections() {
         return this.connections == null ? Codegen.empty() : this.connections;
     }
 
@@ -52,7 +52,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
+    public Output<String> gatewayName() {
         return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
@@ -63,7 +63,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -74,7 +74,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isRoutingPreferenceInternet")
       private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
-    public Output<Boolean> getIsRoutingPreferenceInternet() {
+    public Output<Boolean> isRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet == null ? Codegen.empty() : this.isRoutingPreferenceInternet;
     }
 
@@ -85,7 +85,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -96,7 +96,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="natRules")
       private final @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
 
-    public Output<List<VpnGatewayNatRuleArgs>> getNatRules() {
+    public Output<List<VpnGatewayNatRuleArgs>> natRules() {
         return this.natRules == null ? Codegen.empty() : this.natRules;
     }
 
@@ -107,7 +107,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -118,7 +118,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -129,7 +129,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Output<SubResourceArgs> getVirtualHub() {
+    public Output<SubResourceArgs> virtualHub() {
         return this.virtualHub == null ? Codegen.empty() : this.virtualHub;
     }
 
@@ -140,7 +140,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayScaleUnit")
       private final @Nullable Output<Integer> vpnGatewayScaleUnit;
 
-    public Output<Integer> getVpnGatewayScaleUnit() {
+    public Output<Integer> vpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit == null ? Codegen.empty() : this.vpnGatewayScaleUnit;
     }
 

@@ -19,7 +19,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
     @Import(name="premierAddOnName", required=true)
       private final String premierAddOnName;
 
-    public String getPremierAddOnName() {
+    public String premierAddOnName() {
         return this.premierAddOnName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

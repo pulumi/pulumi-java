@@ -26,7 +26,7 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
     @Import(name="syncProperties", required=true)
       private final SyncPropertiesResponse syncProperties;
 
-    public SyncPropertiesResponse getSyncProperties() {
+    public SyncPropertiesResponse syncProperties() {
         return this.syncProperties;
     }
 

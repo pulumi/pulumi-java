@@ -18,7 +18,7 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
         this.optInHeaders = optInHeaders;
     }
 
-    public Optional<String> getOptInHeaders() {
+    public Optional<String> optInHeaders() {
         return Optional.ofNullable(this.optInHeaders);
     }
 

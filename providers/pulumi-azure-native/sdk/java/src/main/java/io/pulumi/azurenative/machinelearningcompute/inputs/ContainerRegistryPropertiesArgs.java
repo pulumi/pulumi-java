@@ -26,7 +26,7 @@ public final class ContainerRegistryPropertiesArgs extends io.pulumi.resources.R
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

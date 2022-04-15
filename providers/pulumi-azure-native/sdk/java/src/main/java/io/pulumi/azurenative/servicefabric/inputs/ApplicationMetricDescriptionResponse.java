@@ -30,7 +30,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="maximumCapacity")
       private final @Nullable Double maximumCapacity;
 
-    public Optional<Double> getMaximumCapacity() {
+    public Optional<Double> maximumCapacity() {
         return this.maximumCapacity == null ? Optional.empty() : Optional.ofNullable(this.maximumCapacity);
     }
 
@@ -41,7 +41,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -56,7 +56,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="reservationCapacity")
       private final @Nullable Double reservationCapacity;
 
-    public Optional<Double> getReservationCapacity() {
+    public Optional<Double> reservationCapacity() {
         return this.reservationCapacity == null ? Optional.empty() : Optional.ofNullable(this.reservationCapacity);
     }
 
@@ -69,7 +69,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
     @Import(name="totalApplicationCapacity")
       private final @Nullable Double totalApplicationCapacity;
 
-    public Optional<Double> getTotalApplicationCapacity() {
+    public Optional<Double> totalApplicationCapacity() {
         return this.totalApplicationCapacity == null ? Optional.empty() : Optional.ofNullable(this.totalApplicationCapacity);
     }
 

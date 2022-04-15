@@ -25,7 +25,7 @@ public final class ManagementPolicyVersionResponse extends io.pulumi.resources.I
     @Import(name="delete")
       private final @Nullable DateAfterCreationResponse delete;
 
-    public Optional<DateAfterCreationResponse> getDelete() {
+    public Optional<DateAfterCreationResponse> delete() {
         return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
     }
 
@@ -36,7 +36,7 @@ public final class ManagementPolicyVersionResponse extends io.pulumi.resources.I
     @Import(name="tierToArchive")
       private final @Nullable DateAfterCreationResponse tierToArchive;
 
-    public Optional<DateAfterCreationResponse> getTierToArchive() {
+    public Optional<DateAfterCreationResponse> tierToArchive() {
         return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
     }
 
@@ -47,7 +47,7 @@ public final class ManagementPolicyVersionResponse extends io.pulumi.resources.I
     @Import(name="tierToCool")
       private final @Nullable DateAfterCreationResponse tierToCool;
 
-    public Optional<DateAfterCreationResponse> getTierToCool() {
+    public Optional<DateAfterCreationResponse> tierToCool() {
         return this.tierToCool == null ? Optional.empty() : Optional.ofNullable(this.tierToCool);
     }
 

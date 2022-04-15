@@ -28,7 +28,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
     @Import(name="domain", required=true)
       private final Output<Object> domain;
 
-    public Output<Object> getDomain() {
+    public Output<Object> domain() {
         return this.domain;
     }
 
@@ -39,7 +39,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
     @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
 
@@ -50,7 +50,7 @@ public final class SSISAccessCredentialArgs extends io.pulumi.resources.Resource
     @Import(name="userName", required=true)
       private final Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName;
     }
 

@@ -32,7 +32,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
-    public Output<String> getEndOfLifeDate() {
+    public Output<String> endOfLifeDate() {
         return this.endOfLifeDate == null ? Codegen.empty() : this.endOfLifeDate;
     }
 
@@ -43,7 +43,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
-    public Output<Boolean> getExcludeFromLatest() {
+    public Output<Boolean> excludeFromLatest() {
         return this.excludeFromLatest == null ? Codegen.empty() : this.excludeFromLatest;
     }
 
@@ -54,7 +54,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
@@ -65,7 +65,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> getStorageAccountType() {
+    public Output<Either<String,StorageAccountType>> storageAccountType() {
         return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
@@ -76,7 +76,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
     @Import(name="targetRegions")
       private final @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
-    public Output<List<TargetRegionArgs>> getTargetRegions() {
+    public Output<List<TargetRegionArgs>> targetRegions() {
         return this.targetRegions == null ? Codegen.empty() : this.targetRegions;
     }
 

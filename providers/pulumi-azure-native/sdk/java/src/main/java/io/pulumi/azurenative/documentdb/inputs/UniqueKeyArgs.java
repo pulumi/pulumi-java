@@ -27,7 +27,7 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
+    public Output<List<String>> paths() {
         return this.paths == null ? Codegen.empty() : this.paths;
     }
 

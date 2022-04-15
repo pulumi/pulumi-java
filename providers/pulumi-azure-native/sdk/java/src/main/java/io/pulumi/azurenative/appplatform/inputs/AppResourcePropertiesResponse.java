@@ -28,7 +28,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="activeDeploymentName")
       private final @Nullable String activeDeploymentName;
 
-    public Optional<String> getActiveDeploymentName() {
+    public Optional<String> activeDeploymentName() {
         return this.activeDeploymentName == null ? Optional.empty() : Optional.ofNullable(this.activeDeploymentName);
     }
 
@@ -39,7 +39,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="createdTime", required=true)
       private final String createdTime;
 
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
 
@@ -50,7 +50,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="fqdn")
       private final @Nullable String fqdn;
 
-    public Optional<String> getFqdn() {
+    public Optional<String> fqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
@@ -61,7 +61,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
 
-    public Optional<Boolean> getHttpsOnly() {
+    public Optional<Boolean> httpsOnly() {
         return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
     }
 
@@ -72,7 +72,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="persistentDisk")
       private final @Nullable PersistentDiskResponse persistentDisk;
 
-    public Optional<PersistentDiskResponse> getPersistentDisk() {
+    public Optional<PersistentDiskResponse> persistentDisk() {
         return this.persistentDisk == null ? Optional.empty() : Optional.ofNullable(this.persistentDisk);
     }
 
@@ -83,7 +83,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -94,7 +94,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="public")
       private final @Nullable Boolean public_;
 
-    public Optional<Boolean> getPublic_() {
+    public Optional<Boolean> public_() {
         return this.public_ == null ? Optional.empty() : Optional.ofNullable(this.public_);
     }
 
@@ -105,7 +105,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="temporaryDisk")
       private final @Nullable TemporaryDiskResponse temporaryDisk;
 
-    public Optional<TemporaryDiskResponse> getTemporaryDisk() {
+    public Optional<TemporaryDiskResponse> temporaryDisk() {
         return this.temporaryDisk == null ? Optional.empty() : Optional.ofNullable(this.temporaryDisk);
     }
 
@@ -116,7 +116,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

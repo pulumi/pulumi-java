@@ -45,7 +45,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return Host OS supported by the Kubernetes role.
      * 
      */
-    public Output<String> getHostPlatform() {
+    public Output<String> hostPlatform() {
         return this.hostPlatform;
     }
     /**
@@ -59,7 +59,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return Platform where the runtime is hosted.
      * 
      */
-    public Output<String> getHostPlatformType() {
+    public Output<String> hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
@@ -75,7 +75,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * Expected value is 'Kubernetes'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -89,7 +89,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return Kubernetes cluster configuration
      * 
      */
-    public Output<KubernetesClusterInfoResponse> getKubernetesClusterInfo() {
+    public Output<KubernetesClusterInfoResponse> kubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
     /**
@@ -103,7 +103,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return Kubernetes role resources
      * 
      */
-    public Output<KubernetesRoleResourcesResponse> getKubernetesRoleResources() {
+    public Output<KubernetesRoleResourcesResponse> kubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
     /**
@@ -117,7 +117,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +131,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return State of Kubernetes deployment
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +145,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return Role status.
      * 
      */
-    public Output<String> getRoleStatus() {
+    public Output<String> roleStatus() {
         return this.roleStatus;
     }
     /**
@@ -159,7 +159,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return Role configured on ASE resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -173,7 +173,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

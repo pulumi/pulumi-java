@@ -28,7 +28,7 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="headers")
       private final @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
 
-    public Output<List<HttpRouteMatchHeaderArgs>> getHeaders() {
+    public Output<List<HttpRouteMatchHeaderArgs>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -39,7 +39,7 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path", required=true)
       private final Output<HttpRouteMatchPathArgs> path;
 
-    public Output<HttpRouteMatchPathArgs> getPath() {
+    public Output<HttpRouteMatchPathArgs> path() {
         return this.path;
     }
 

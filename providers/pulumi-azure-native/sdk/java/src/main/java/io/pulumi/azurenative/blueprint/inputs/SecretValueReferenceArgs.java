@@ -27,7 +27,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="keyVault", required=true)
       private final Output<KeyVaultReferenceArgs> keyVault;
 
-    public Output<KeyVaultReferenceArgs> getKeyVault() {
+    public Output<KeyVaultReferenceArgs> keyVault() {
         return this.keyVault;
     }
 
@@ -38,7 +38,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -49,7 +49,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
+    public Output<String> secretVersion() {
         return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 

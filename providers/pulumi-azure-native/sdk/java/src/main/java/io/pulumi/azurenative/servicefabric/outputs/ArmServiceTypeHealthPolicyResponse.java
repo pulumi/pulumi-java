@@ -41,21 +41,21 @@ public final class ArmServiceTypeHealthPolicyResponse {
      * The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyPartitionsPerService() {
+    public Optional<Integer> maxPercentUnhealthyPartitionsPerService() {
         return Optional.ofNullable(this.maxPercentUnhealthyPartitionsPerService);
     }
     /**
      * The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
+    public Optional<Integer> maxPercentUnhealthyReplicasPerPartition() {
         return Optional.ofNullable(this.maxPercentUnhealthyReplicasPerPartition);
     }
     /**
      * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
      * 
     */
-    public Optional<Integer> getMaxPercentUnhealthyServices() {
+    public Optional<Integer> maxPercentUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
 

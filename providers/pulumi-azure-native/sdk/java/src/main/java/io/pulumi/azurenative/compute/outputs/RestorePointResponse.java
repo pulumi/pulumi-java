@@ -79,56 +79,56 @@ public final class RestorePointResponse {
      * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
      * 
     */
-    public String getConsistencyMode() {
+    public String consistencyMode() {
         return this.consistencyMode;
     }
     /**
      * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
     */
-    public List<ApiEntityReferenceResponse> getExcludeDisks() {
+    public List<ApiEntityReferenceResponse> excludeDisks() {
         return this.excludeDisks == null ? List.of() : this.excludeDisks;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the provisioning state of the restore point.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets the details of the VM captured at the time of the restore point creation.
      * 
     */
-    public RestorePointSourceMetadataResponse getSourceMetadata() {
+    public RestorePointSourceMetadataResponse sourceMetadata() {
         return this.sourceMetadata;
     }
     /**
      * Gets the creation time of the restore point.
      * 
     */
-    public Optional<String> getTimeCreated() {
+    public Optional<String> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

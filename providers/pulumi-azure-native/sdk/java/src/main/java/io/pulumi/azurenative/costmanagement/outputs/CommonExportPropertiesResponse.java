@@ -58,35 +58,35 @@ public final class CommonExportPropertiesResponse {
      * Has the definition for the export.
      * 
     */
-    public ExportDefinitionResponse getDefinition() {
+    public ExportDefinitionResponse definition() {
         return this.definition;
     }
     /**
      * Has delivery information for the export.
      * 
     */
-    public ExportDeliveryInfoResponse getDeliveryInfo() {
+    public ExportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
      * The format of the export being delivered. Currently only 'Csv' is supported.
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * If the export has an active schedule, provides an estimate of the next execution time.
      * 
     */
-    public String getNextRunTimeEstimate() {
+    public String nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
     /**
      * If requested, has the most recent execution history for the export.
      * 
     */
-    public Optional<ExportExecutionListResultResponse> getRunHistory() {
+    public Optional<ExportExecutionListResultResponse> runHistory() {
         return Optional.ofNullable(this.runHistory);
     }
 

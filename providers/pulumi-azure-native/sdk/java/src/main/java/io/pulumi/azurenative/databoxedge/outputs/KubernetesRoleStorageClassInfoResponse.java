@@ -39,21 +39,21 @@ public final class KubernetesRoleStorageClassInfoResponse {
      * Storage class name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * If provisioned storage is posix compliant.
      * 
     */
-    public String getPosixCompliant() {
+    public String posixCompliant() {
         return this.posixCompliant;
     }
     /**
      * Storage class type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -31,7 +31,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="accountKey")
       private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -42,7 +42,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -53,7 +53,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -64,7 +64,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
-    public Optional<Object> getConnectionString() {
+    public Optional<Object> connectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
@@ -75,7 +75,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -86,7 +86,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="encryptedCredential")
       private final @Nullable String encryptedCredential;
 
-    public Optional<String> getEncryptedCredential() {
+    public Optional<String> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -97,7 +97,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -108,7 +108,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="sasToken")
       private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
-    public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
+    public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
@@ -119,7 +119,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="sasUri")
       private final @Nullable Object sasUri;
 
-    public Optional<Object> getSasUri() {
+    public Optional<Object> sasUri() {
         return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
     }
 
@@ -131,7 +131,7 @@ public final class AzureTableStorageLinkedServiceResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -43,21 +43,21 @@ public final class TimelineResultsMetadataResponse {
      * timeline aggregation per kind
      * 
     */
-    public List<TimelineAggregationResponse> getAggregations() {
+    public List<TimelineAggregationResponse> aggregations() {
         return this.aggregations;
     }
     /**
      * information about the failure queries
      * 
     */
-    public List<TimelineErrorResponse> getErrors() {
+    public List<TimelineErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * the total items found for the timeline request
      * 
     */
-    public Integer getTotalCount() {
+    public Integer totalCount() {
         return this.totalCount;
     }
 

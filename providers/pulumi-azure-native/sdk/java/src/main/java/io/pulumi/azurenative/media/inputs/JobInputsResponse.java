@@ -31,7 +31,7 @@ public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputs")
       private final @Nullable List<Object> inputs;
 
-    public List<Object> getInputs() {
+    public List<Object> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
 
@@ -43,7 +43,7 @@ public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

@@ -19,7 +19,7 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="privateLinkHubName", required=true)
       private final String privateLinkHubName;
 
-    public String getPrivateLinkHubName() {
+    public String privateLinkHubName() {
         return this.privateLinkHubName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateLinkHubArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

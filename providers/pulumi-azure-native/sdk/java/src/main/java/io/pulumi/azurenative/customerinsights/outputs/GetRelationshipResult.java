@@ -129,105 +129,105 @@ public final class GetRelationshipResult {
      * The Relationship Cardinality.
      * 
     */
-    public Optional<String> getCardinality() {
+    public Optional<String> cardinality() {
         return Optional.ofNullable(this.cardinality);
     }
     /**
      * Localized descriptions for the Relationship.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name for the Relationship.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The expiry date time in UTC.
      * 
     */
-    public Optional<String> getExpiryDateTimeUtc() {
+    public Optional<String> expiryDateTimeUtc() {
         return Optional.ofNullable(this.expiryDateTimeUtc);
     }
     /**
      * The properties of the Relationship.
      * 
     */
-    public List<PropertyDefinitionResponse> getFields() {
+    public List<PropertyDefinitionResponse> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Optional property to be used to map fields in profile to their strong ids in related profile.
      * 
     */
-    public List<RelationshipTypeMappingResponse> getLookupMappings() {
+    public List<RelationshipTypeMappingResponse> lookupMappings() {
         return this.lookupMappings == null ? List.of() : this.lookupMappings;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Profile type.
      * 
     */
-    public String getProfileType() {
+    public String profileType() {
         return this.profileType;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Related profile being referenced.
      * 
     */
-    public String getRelatedProfileType() {
+    public String relatedProfileType() {
         return this.relatedProfileType;
     }
     /**
      * The relationship guid id.
      * 
     */
-    public String getRelationshipGuidId() {
+    public String relationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
      * The Relationship name.
      * 
     */
-    public String getRelationshipName() {
+    public String relationshipName() {
         return this.relationshipName;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

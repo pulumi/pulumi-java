@@ -95,28 +95,28 @@ public final class GetTemplateArtifactResult {
      * Artifacts which need to be deployed before the specified artifact.
      * 
     */
-    public List<String> getDependsOn() {
+    public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -124,42 +124,42 @@ public final class GetTemplateArtifactResult {
      * Expected value is 'template'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource Manager template blueprint artifact parameter values.
      * 
     */
-    public Map<String,ParameterValueResponse> getParameters() {
+    public Map<String,ParameterValueResponse> parameters() {
         return this.parameters;
     }
     /**
      * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
     */
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The Resource Manager template blueprint artifact body.
      * 
     */
-    public Object getTemplate() {
+    public Object template() {
         return this.template;
     }
     /**
      * Type of this resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

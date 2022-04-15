@@ -19,7 +19,7 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
     @Import(name="templateSpecName", required=true)
       private final String templateSpecName;
 
-    public String getTemplateSpecName() {
+    public String templateSpecName() {
         return this.templateSpecName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
     @Import(name="templateSpecVersion", required=true)
       private final String templateSpecVersion;
 
-    public String getTemplateSpecVersion() {
+    public String templateSpecVersion() {
         return this.templateSpecVersion;
     }
 

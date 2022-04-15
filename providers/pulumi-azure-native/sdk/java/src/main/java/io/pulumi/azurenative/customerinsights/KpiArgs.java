@@ -30,7 +30,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aliases")
       private final @Nullable Output<List<KpiAliasArgs>> aliases;
 
-    public Output<List<KpiAliasArgs>> getAliases() {
+    public Output<List<KpiAliasArgs>> aliases() {
         return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
@@ -41,7 +41,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="calculationWindow", required=true)
       private final Output<CalculationWindowTypes> calculationWindow;
 
-    public Output<CalculationWindowTypes> getCalculationWindow() {
+    public Output<CalculationWindowTypes> calculationWindow() {
         return this.calculationWindow;
     }
 
@@ -52,7 +52,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="calculationWindowFieldName")
       private final @Nullable Output<String> calculationWindowFieldName;
 
-    public Output<String> getCalculationWindowFieldName() {
+    public Output<String> calculationWindowFieldName() {
         return this.calculationWindowFieldName == null ? Codegen.empty() : this.calculationWindowFieldName;
     }
 
@@ -63,7 +63,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -74,7 +74,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -85,7 +85,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityType", required=true)
       private final Output<EntityTypes> entityType;
 
-    public Output<EntityTypes> getEntityType() {
+    public Output<EntityTypes> entityType() {
         return this.entityType;
     }
 
@@ -96,7 +96,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityTypeName", required=true)
       private final Output<String> entityTypeName;
 
-    public Output<String> getEntityTypeName() {
+    public Output<String> entityTypeName() {
         return this.entityTypeName;
     }
 
@@ -107,7 +107,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -118,7 +118,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extracts")
       private final @Nullable Output<List<KpiExtractArgs>> extracts;
 
-    public Output<List<KpiExtractArgs>> getExtracts() {
+    public Output<List<KpiExtractArgs>> extracts() {
         return this.extracts == null ? Codegen.empty() : this.extracts;
     }
 
@@ -129,7 +129,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -140,7 +140,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="function", required=true)
       private final Output<KpiFunctions> function;
 
-    public Output<KpiFunctions> getFunction() {
+    public Output<KpiFunctions> function() {
         return this.function;
     }
 
@@ -151,7 +151,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupBy")
       private final @Nullable Output<List<String>> groupBy;
 
-    public Output<List<String>> getGroupBy() {
+    public Output<List<String>> groupBy() {
         return this.groupBy == null ? Codegen.empty() : this.groupBy;
     }
 
@@ -162,7 +162,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -173,7 +173,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kpiName")
       private final @Nullable Output<String> kpiName;
 
-    public Output<String> getKpiName() {
+    public Output<String> kpiName() {
         return this.kpiName == null ? Codegen.empty() : this.kpiName;
     }
 
@@ -184,7 +184,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -195,7 +195,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresHolds")
       private final @Nullable Output<KpiThresholdsArgs> thresHolds;
 
-    public Output<KpiThresholdsArgs> getThresHolds() {
+    public Output<KpiThresholdsArgs> thresHolds() {
         return this.thresHolds == null ? Codegen.empty() : this.thresHolds;
     }
 
@@ -206,7 +206,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 

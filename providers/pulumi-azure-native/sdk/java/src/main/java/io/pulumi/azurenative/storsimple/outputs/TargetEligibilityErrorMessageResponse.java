@@ -41,21 +41,21 @@ public final class TargetEligibilityErrorMessageResponse {
      * The localized error message stating the reason why the device is not eligible as a target device.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The localized resolution message for the error.
      * 
     */
-    public Optional<String> getResolution() {
+    public Optional<String> resolution() {
         return Optional.ofNullable(this.resolution);
     }
     /**
      * The result code for the error, due to which the device does not qualify as a failover target device.
      * 
     */
-    public Optional<String> getResultCode() {
+    public Optional<String> resultCode() {
         return Optional.ofNullable(this.resultCode);
     }
 

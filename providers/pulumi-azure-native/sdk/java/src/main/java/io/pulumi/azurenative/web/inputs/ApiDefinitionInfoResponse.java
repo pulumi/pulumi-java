@@ -25,7 +25,7 @@ public final class ApiDefinitionInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="url")
       private final @Nullable String url;
 
-    public Optional<String> getUrl() {
+    public Optional<String> url() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
     }
 

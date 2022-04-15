@@ -25,7 +25,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="appId")
       private final @Nullable String appId;
 
-    public Optional<String> getAppId() {
+    public Optional<String> appId() {
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
@@ -36,7 +36,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objectId")
       private final @Nullable String objectId;
 
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
@@ -47,7 +47,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="principalId")
       private final @Nullable String principalId;
 
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
@@ -58,7 +58,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="principalName")
       private final @Nullable String principalName;
 
-    public Optional<String> getPrincipalName() {
+    public Optional<String> principalName() {
         return this.principalName == null ? Optional.empty() : Optional.ofNullable(this.principalName);
     }
 
@@ -69,7 +69,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

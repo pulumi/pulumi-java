@@ -25,7 +25,7 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
     @Import(name="encoding")
       private final @Nullable String encoding;
 
-    public Optional<String> getEncoding() {
+    public Optional<String> encoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
     }
 
@@ -36,7 +36,7 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
     @Import(name="format")
       private final @Nullable String format;
 
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
@@ -48,7 +48,7 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

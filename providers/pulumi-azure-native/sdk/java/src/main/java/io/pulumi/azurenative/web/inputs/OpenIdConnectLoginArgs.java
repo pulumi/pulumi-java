@@ -27,7 +27,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nameClaimType")
       private final @Nullable Output<String> nameClaimType;
 
-    public Output<String> getNameClaimType() {
+    public Output<String> nameClaimType() {
         return this.nameClaimType == null ? Codegen.empty() : this.nameClaimType;
     }
 
@@ -38,7 +38,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 

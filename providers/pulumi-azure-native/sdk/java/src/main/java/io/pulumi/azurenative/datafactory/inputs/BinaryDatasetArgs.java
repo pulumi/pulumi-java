@@ -46,7 +46,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -57,7 +57,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Output<DatasetCompressionArgs> getCompression() {
+    public Output<DatasetCompressionArgs> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -68,7 +68,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -79,7 +79,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
+    public Output<DatasetFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -90,7 +90,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -101,7 +101,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<Object> location;
 
-    public Output<Object> getLocation() {
+    public Output<Object> location() {
         return this.location;
     }
 
@@ -112,7 +112,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -123,7 +123,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
+    public Output<Object> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -134,7 +134,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
+    public Output<Object> structure() {
         return this.structure == null ? Codegen.empty() : this.structure;
     }
 
@@ -146,7 +146,7 @@ public final class BinaryDatasetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

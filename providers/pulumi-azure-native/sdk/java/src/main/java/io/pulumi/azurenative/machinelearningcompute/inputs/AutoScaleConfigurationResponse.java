@@ -27,7 +27,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
     @Import(name="maxReplicas")
       private final @Nullable Integer maxReplicas;
 
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
     }
 
@@ -38,7 +38,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
     @Import(name="minReplicas")
       private final @Nullable Integer minReplicas;
 
-    public Optional<Integer> getMinReplicas() {
+    public Optional<Integer> minReplicas() {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
     }
 
@@ -49,7 +49,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
     @Import(name="refreshPeriodInSeconds")
       private final @Nullable Integer refreshPeriodInSeconds;
 
-    public Optional<Integer> getRefreshPeriodInSeconds() {
+    public Optional<Integer> refreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
     }
 
@@ -60,7 +60,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -71,7 +71,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
     @Import(name="targetUtilization")
       private final @Nullable Double targetUtilization;
 
-    public Optional<Double> getTargetUtilization() {
+    public Optional<Double> targetUtilization() {
         return this.targetUtilization == null ? Optional.empty() : Optional.ofNullable(this.targetUtilization);
     }
 

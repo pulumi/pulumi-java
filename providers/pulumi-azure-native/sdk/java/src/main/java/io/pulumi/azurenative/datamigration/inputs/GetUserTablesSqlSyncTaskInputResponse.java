@@ -25,7 +25,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
     @Import(name="selectedSourceDatabases", required=true)
       private final List<String> selectedSourceDatabases;
 
-    public List<String> getSelectedSourceDatabases() {
+    public List<String> selectedSourceDatabases() {
         return this.selectedSourceDatabases;
     }
 
@@ -36,7 +36,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
     @Import(name="selectedTargetDatabases", required=true)
       private final List<String> selectedTargetDatabases;
 
-    public List<String> getSelectedTargetDatabases() {
+    public List<String> selectedTargetDatabases() {
         return this.selectedTargetDatabases;
     }
 
@@ -47,7 +47,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
     @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -58,7 +58,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
     @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

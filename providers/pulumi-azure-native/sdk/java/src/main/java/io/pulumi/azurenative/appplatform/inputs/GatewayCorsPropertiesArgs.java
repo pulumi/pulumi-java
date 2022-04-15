@@ -29,7 +29,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
-    public Output<Boolean> getAllowCredentials() {
+    public Output<Boolean> allowCredentials() {
         return this.allowCredentials == null ? Codegen.empty() : this.allowCredentials;
     }
 
@@ -40,7 +40,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedHeaders")
       private final @Nullable Output<List<String>> allowedHeaders;
 
-    public Output<List<String>> getAllowedHeaders() {
+    public Output<List<String>> allowedHeaders() {
         return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
     }
 
@@ -51,7 +51,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedMethods")
       private final @Nullable Output<List<String>> allowedMethods;
 
-    public Output<List<String>> getAllowedMethods() {
+    public Output<List<String>> allowedMethods() {
         return this.allowedMethods == null ? Codegen.empty() : this.allowedMethods;
     }
 
@@ -62,7 +62,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="allowedOrigins")
       private final @Nullable Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> getAllowedOrigins() {
+    public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins == null ? Codegen.empty() : this.allowedOrigins;
     }
 
@@ -73,7 +73,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="exposedHeaders")
       private final @Nullable Output<List<String>> exposedHeaders;
 
-    public Output<List<String>> getExposedHeaders() {
+    public Output<List<String>> exposedHeaders() {
         return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
     }
 
@@ -84,7 +84,7 @@ public final class GatewayCorsPropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
-    public Output<Integer> getMaxAge() {
+    public Output<Integer> maxAge() {
         return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 

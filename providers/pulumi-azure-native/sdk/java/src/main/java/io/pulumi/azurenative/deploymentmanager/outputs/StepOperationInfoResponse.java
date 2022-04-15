@@ -63,42 +63,42 @@ public final class StepOperationInfoResponse {
      * Unique identifier to track the request for ARM-based resources.
      * 
     */
-    public String getCorrelationId() {
+    public String correlationId() {
         return this.correlationId;
     }
     /**
      * The name of the ARM deployment initiated as part of the step.
      * 
     */
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
     /**
      * End time of the action in UTC.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * The errors, if any, for the action.
      * 
     */
-    public Optional<CloudErrorBodyResponse> getError() {
+    public Optional<CloudErrorBodyResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Last time in UTC this operation was updated.
      * 
     */
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
      * Start time of the action in UTC.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

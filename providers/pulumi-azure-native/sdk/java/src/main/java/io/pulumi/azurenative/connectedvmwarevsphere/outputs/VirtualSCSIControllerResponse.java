@@ -56,35 +56,35 @@ public final class VirtualSCSIControllerResponse {
      * Gets or sets the bus number of the controller.
      * 
     */
-    public Optional<Integer> getBusNumber() {
+    public Optional<Integer> busNumber() {
         return Optional.ofNullable(this.busNumber);
     }
     /**
      * Gets or sets the key of the controller.
      * 
     */
-    public Optional<Integer> getControllerKey() {
+    public Optional<Integer> controllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
     /**
      * Gets or sets the SCSI controller unit number.
      * 
     */
-    public Optional<Integer> getScsiCtlrUnitNumber() {
+    public Optional<Integer> scsiCtlrUnitNumber() {
         return Optional.ofNullable(this.scsiCtlrUnitNumber);
     }
     /**
      * Gets or sets the sharing mode.
      * 
     */
-    public Optional<String> getSharing() {
+    public Optional<String> sharing() {
         return Optional.ofNullable(this.sharing);
     }
     /**
      * Gets or sets the controller type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

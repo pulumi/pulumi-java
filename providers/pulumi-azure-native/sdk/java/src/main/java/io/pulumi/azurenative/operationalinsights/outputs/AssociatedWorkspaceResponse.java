@@ -46,28 +46,28 @@ public final class AssociatedWorkspaceResponse {
      * The time of workspace association.
      * 
     */
-    public String getAssociateDate() {
+    public String associateDate() {
         return this.associateDate;
     }
     /**
      * The ResourceId id the assigned workspace.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * The id of the assigned workspace.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
     /**
      * The name id the assigned workspace.
      * 
     */
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

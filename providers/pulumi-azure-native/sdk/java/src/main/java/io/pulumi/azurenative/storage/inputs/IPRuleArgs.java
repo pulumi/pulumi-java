@@ -27,7 +27,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<Action> action;
 
-    public Output<Action> getAction() {
+    public Output<Action> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -38,7 +38,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iPAddressOrRange", required=true)
       private final Output<String> iPAddressOrRange;
 
-    public Output<String> getIPAddressOrRange() {
+    public Output<String> iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
 

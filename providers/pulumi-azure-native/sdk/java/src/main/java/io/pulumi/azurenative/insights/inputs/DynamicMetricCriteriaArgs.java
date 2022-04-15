@@ -34,7 +34,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="alertSensitivity", required=true)
       private final Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity;
 
-    public Output<Either<String,DynamicThresholdSensitivity>> getAlertSensitivity() {
+    public Output<Either<String,DynamicThresholdSensitivity>> alertSensitivity() {
         return this.alertSensitivity;
     }
 
@@ -46,7 +46,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="criterionType", required=true)
       private final Output<String> criterionType;
 
-    public Output<String> getCriterionType() {
+    public Output<String> criterionType() {
         return this.criterionType;
     }
 
@@ -57,7 +57,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="dimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
-    public Output<List<MetricDimensionArgs>> getDimensions() {
+    public Output<List<MetricDimensionArgs>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -68,7 +68,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="failingPeriods", required=true)
       private final Output<DynamicThresholdFailingPeriodsArgs> failingPeriods;
 
-    public Output<DynamicThresholdFailingPeriodsArgs> getFailingPeriods() {
+    public Output<DynamicThresholdFailingPeriodsArgs> failingPeriods() {
         return this.failingPeriods;
     }
 
@@ -79,7 +79,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="ignoreDataBefore")
       private final @Nullable Output<String> ignoreDataBefore;
 
-    public Output<String> getIgnoreDataBefore() {
+    public Output<String> ignoreDataBefore() {
         return this.ignoreDataBefore == null ? Codegen.empty() : this.ignoreDataBefore;
     }
 
@@ -90,7 +90,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -101,7 +101,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
@@ -112,7 +112,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -123,7 +123,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="operator", required=true)
       private final Output<Either<String,DynamicThresholdOperator>> operator;
 
-    public Output<Either<String,DynamicThresholdOperator>> getOperator() {
+    public Output<Either<String,DynamicThresholdOperator>> operator() {
         return this.operator;
     }
 
@@ -134,7 +134,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="skipMetricValidation")
       private final @Nullable Output<Boolean> skipMetricValidation;
 
-    public Output<Boolean> getSkipMetricValidation() {
+    public Output<Boolean> skipMetricValidation() {
         return this.skipMetricValidation == null ? Codegen.empty() : this.skipMetricValidation;
     }
 
@@ -145,7 +145,7 @@ public final class DynamicMetricCriteriaArgs extends io.pulumi.resources.Resourc
     @Import(name="timeAggregation", required=true)
       private final Output<Either<String,AggregationTypeEnum>> timeAggregation;
 
-    public Output<Either<String,AggregationTypeEnum>> getTimeAggregation() {
+    public Output<Either<String,AggregationTypeEnum>> timeAggregation() {
         return this.timeAggregation;
     }
 

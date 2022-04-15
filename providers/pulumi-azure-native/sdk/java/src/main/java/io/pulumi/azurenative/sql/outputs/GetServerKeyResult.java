@@ -82,63 +82,63 @@ public final class GetServerKeyResult {
      * Key auto rotation opt-in flag. Either true or false.
      * 
     */
-    public Boolean getAutoRotationEnabled() {
+    public Boolean autoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
      * The server key creation date.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Subregion of the server key.
      * 
     */
-    public String getSubregion() {
+    public String subregion() {
         return this.subregion;
     }
     /**
      * Thumbprint of the server key.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

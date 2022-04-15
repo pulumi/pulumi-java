@@ -28,7 +28,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentDetails")
       private final @Nullable Output<SiteAgentPropertiesArgs> agentDetails;
 
-    public Output<SiteAgentPropertiesArgs> getAgentDetails() {
+    public Output<SiteAgentPropertiesArgs> agentDetails() {
         return this.agentDetails == null ? Codegen.empty() : this.agentDetails;
     }
 
@@ -39,7 +39,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applianceName")
       private final @Nullable Output<String> applianceName;
 
-    public Output<String> getApplianceName() {
+    public Output<String> applianceName() {
         return this.applianceName == null ? Codegen.empty() : this.applianceName;
     }
 
@@ -50,7 +50,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="discoverySolutionId")
       private final @Nullable Output<String> discoverySolutionId;
 
-    public Output<String> getDiscoverySolutionId() {
+    public Output<String> discoverySolutionId() {
         return this.discoverySolutionId == null ? Codegen.empty() : this.discoverySolutionId;
     }
 
@@ -61,7 +61,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePrincipalIdentityDetails")
       private final @Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 
-    public Output<SiteSpnPropertiesArgs> getServicePrincipalIdentityDetails() {
+    public Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails() {
         return this.servicePrincipalIdentityDetails == null ? Codegen.empty() : this.servicePrincipalIdentityDetails;
     }
 

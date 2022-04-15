@@ -27,7 +27,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minute")
       private final @Nullable Output<Integer> minute;
 
-    public Output<Integer> getMinute() {
+    public Output<Integer> minute() {
         return this.minute == null ? Codegen.empty() : this.minute;
     }
 
@@ -38,7 +38,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotsToKeep")
       private final @Nullable Output<Integer> snapshotsToKeep;
 
-    public Output<Integer> getSnapshotsToKeep() {
+    public Output<Integer> snapshotsToKeep() {
         return this.snapshotsToKeep == null ? Codegen.empty() : this.snapshotsToKeep;
     }
 
@@ -49,7 +49,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usedBytes")
       private final @Nullable Output<Double> usedBytes;
 
-    public Output<Double> getUsedBytes() {
+    public Output<Double> usedBytes() {
         return this.usedBytes == null ? Codegen.empty() : this.usedBytes;
     }
 

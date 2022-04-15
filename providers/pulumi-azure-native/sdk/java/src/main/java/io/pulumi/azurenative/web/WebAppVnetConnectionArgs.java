@@ -24,7 +24,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="certBlob")
       private final @Nullable Output<String> certBlob;
 
-    public Output<String> getCertBlob() {
+    public Output<String> certBlob() {
         return this.certBlob == null ? Codegen.empty() : this.certBlob;
     }
 
@@ -35,7 +35,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="dnsServers")
       private final @Nullable Output<String> dnsServers;
 
-    public Output<String> getDnsServers() {
+    public Output<String> dnsServers() {
         return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
@@ -46,7 +46,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="isSwift")
       private final @Nullable Output<Boolean> isSwift;
 
-    public Output<Boolean> getIsSwift() {
+    public Output<Boolean> isSwift() {
         return this.isSwift == null ? Codegen.empty() : this.isSwift;
     }
 
@@ -57,7 +57,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -68,7 +68,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;
 
-    public Output<String> getVnetName() {
+    public Output<String> vnetName() {
         return this.vnetName == null ? Codegen.empty() : this.vnetName;
     }
 
@@ -101,7 +101,7 @@ public final class WebAppVnetConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="vnetResourceId")
       private final @Nullable Output<String> vnetResourceId;
 
-    public Output<String> getVnetResourceId() {
+    public Output<String> vnetResourceId() {
         return this.vnetResourceId == null ? Codegen.empty() : this.vnetResourceId;
     }
 

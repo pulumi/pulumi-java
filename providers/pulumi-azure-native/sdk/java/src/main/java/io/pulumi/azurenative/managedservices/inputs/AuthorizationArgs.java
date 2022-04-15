@@ -27,7 +27,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegatedRoleDefinitionIds")
       private final @Nullable Output<List<String>> delegatedRoleDefinitionIds;
 
-    public Output<List<String>> getDelegatedRoleDefinitionIds() {
+    public Output<List<String>> delegatedRoleDefinitionIds() {
         return this.delegatedRoleDefinitionIds == null ? Codegen.empty() : this.delegatedRoleDefinitionIds;
     }
 
@@ -38,7 +38,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -49,7 +49,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principalIdDisplayName")
       private final @Nullable Output<String> principalIdDisplayName;
 
-    public Output<String> getPrincipalIdDisplayName() {
+    public Output<String> principalIdDisplayName() {
         return this.principalIdDisplayName == null ? Codegen.empty() : this.principalIdDisplayName;
     }
 
@@ -60,7 +60,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

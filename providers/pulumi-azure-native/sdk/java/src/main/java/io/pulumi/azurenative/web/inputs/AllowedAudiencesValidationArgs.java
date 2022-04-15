@@ -27,7 +27,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
     @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Output<List<String>> getAllowedAudiences() {
+    public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 

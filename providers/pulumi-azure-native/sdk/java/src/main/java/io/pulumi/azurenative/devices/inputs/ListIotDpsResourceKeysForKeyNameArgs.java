@@ -19,7 +19,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -30,7 +30,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
     @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
 
-    public String getProvisioningServiceName() {
+    public String provisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -41,7 +41,7 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

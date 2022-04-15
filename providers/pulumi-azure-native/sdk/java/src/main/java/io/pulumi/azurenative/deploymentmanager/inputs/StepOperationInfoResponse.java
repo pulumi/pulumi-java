@@ -26,7 +26,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="correlationId", required=true)
       private final String correlationId;
 
-    public String getCorrelationId() {
+    public String correlationId() {
         return this.correlationId;
     }
 
@@ -37,7 +37,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 
@@ -48,7 +48,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -59,7 +59,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="error")
       private final @Nullable CloudErrorBodyResponse error;
 
-    public Optional<CloudErrorBodyResponse> getError() {
+    public Optional<CloudErrorBodyResponse> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -70,7 +70,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="lastUpdatedTime", required=true)
       private final String lastUpdatedTime;
 
-    public String getLastUpdatedTime() {
+    public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
 
@@ -81,7 +81,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

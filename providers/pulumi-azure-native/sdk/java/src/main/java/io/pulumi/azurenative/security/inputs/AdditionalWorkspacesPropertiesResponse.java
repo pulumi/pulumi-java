@@ -26,7 +26,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
     @Import(name="dataTypes")
       private final @Nullable List<String> dataTypes;
 
-    public List<String> getDataTypes() {
+    public List<String> dataTypes() {
         return this.dataTypes == null ? List.of() : this.dataTypes;
     }
 
@@ -37,7 +37,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
@@ -48,7 +48,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
     @Import(name="workspace")
       private final @Nullable String workspace;
 
-    public Optional<String> getWorkspace() {
+    public Optional<String> workspace() {
         return this.workspace == null ? Optional.empty() : Optional.ofNullable(this.workspace);
     }
 

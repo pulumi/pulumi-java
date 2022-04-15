@@ -28,7 +28,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsAioMaxNr")
       private final @Nullable Output<Integer> fsAioMaxNr;
 
-    public Output<Integer> getFsAioMaxNr() {
+    public Output<Integer> fsAioMaxNr() {
         return this.fsAioMaxNr == null ? Codegen.empty() : this.fsAioMaxNr;
     }
 
@@ -39,7 +39,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsFileMax")
       private final @Nullable Output<Integer> fsFileMax;
 
-    public Output<Integer> getFsFileMax() {
+    public Output<Integer> fsFileMax() {
         return this.fsFileMax == null ? Codegen.empty() : this.fsFileMax;
     }
 
@@ -50,7 +50,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsInotifyMaxUserWatches")
       private final @Nullable Output<Integer> fsInotifyMaxUserWatches;
 
-    public Output<Integer> getFsInotifyMaxUserWatches() {
+    public Output<Integer> fsInotifyMaxUserWatches() {
         return this.fsInotifyMaxUserWatches == null ? Codegen.empty() : this.fsInotifyMaxUserWatches;
     }
 
@@ -61,7 +61,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsNrOpen")
       private final @Nullable Output<Integer> fsNrOpen;
 
-    public Output<Integer> getFsNrOpen() {
+    public Output<Integer> fsNrOpen() {
         return this.fsNrOpen == null ? Codegen.empty() : this.fsNrOpen;
     }
 
@@ -72,7 +72,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kernelThreadsMax")
       private final @Nullable Output<Integer> kernelThreadsMax;
 
-    public Output<Integer> getKernelThreadsMax() {
+    public Output<Integer> kernelThreadsMax() {
         return this.kernelThreadsMax == null ? Codegen.empty() : this.kernelThreadsMax;
     }
 
@@ -83,7 +83,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreNetdevMaxBacklog")
       private final @Nullable Output<Integer> netCoreNetdevMaxBacklog;
 
-    public Output<Integer> getNetCoreNetdevMaxBacklog() {
+    public Output<Integer> netCoreNetdevMaxBacklog() {
         return this.netCoreNetdevMaxBacklog == null ? Codegen.empty() : this.netCoreNetdevMaxBacklog;
     }
 
@@ -94,7 +94,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreOptmemMax")
       private final @Nullable Output<Integer> netCoreOptmemMax;
 
-    public Output<Integer> getNetCoreOptmemMax() {
+    public Output<Integer> netCoreOptmemMax() {
         return this.netCoreOptmemMax == null ? Codegen.empty() : this.netCoreOptmemMax;
     }
 
@@ -105,7 +105,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreRmemDefault")
       private final @Nullable Output<Integer> netCoreRmemDefault;
 
-    public Output<Integer> getNetCoreRmemDefault() {
+    public Output<Integer> netCoreRmemDefault() {
         return this.netCoreRmemDefault == null ? Codegen.empty() : this.netCoreRmemDefault;
     }
 
@@ -116,7 +116,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreRmemMax")
       private final @Nullable Output<Integer> netCoreRmemMax;
 
-    public Output<Integer> getNetCoreRmemMax() {
+    public Output<Integer> netCoreRmemMax() {
         return this.netCoreRmemMax == null ? Codegen.empty() : this.netCoreRmemMax;
     }
 
@@ -127,7 +127,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreSomaxconn")
       private final @Nullable Output<Integer> netCoreSomaxconn;
 
-    public Output<Integer> getNetCoreSomaxconn() {
+    public Output<Integer> netCoreSomaxconn() {
         return this.netCoreSomaxconn == null ? Codegen.empty() : this.netCoreSomaxconn;
     }
 
@@ -138,7 +138,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreWmemDefault")
       private final @Nullable Output<Integer> netCoreWmemDefault;
 
-    public Output<Integer> getNetCoreWmemDefault() {
+    public Output<Integer> netCoreWmemDefault() {
         return this.netCoreWmemDefault == null ? Codegen.empty() : this.netCoreWmemDefault;
     }
 
@@ -149,7 +149,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netCoreWmemMax")
       private final @Nullable Output<Integer> netCoreWmemMax;
 
-    public Output<Integer> getNetCoreWmemMax() {
+    public Output<Integer> netCoreWmemMax() {
         return this.netCoreWmemMax == null ? Codegen.empty() : this.netCoreWmemMax;
     }
 
@@ -160,7 +160,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4IpLocalPortRange")
       private final @Nullable Output<String> netIpv4IpLocalPortRange;
 
-    public Output<String> getNetIpv4IpLocalPortRange() {
+    public Output<String> netIpv4IpLocalPortRange() {
         return this.netIpv4IpLocalPortRange == null ? Codegen.empty() : this.netIpv4IpLocalPortRange;
     }
 
@@ -171,7 +171,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4NeighDefaultGcThresh1")
       private final @Nullable Output<Integer> netIpv4NeighDefaultGcThresh1;
 
-    public Output<Integer> getNetIpv4NeighDefaultGcThresh1() {
+    public Output<Integer> netIpv4NeighDefaultGcThresh1() {
         return this.netIpv4NeighDefaultGcThresh1 == null ? Codegen.empty() : this.netIpv4NeighDefaultGcThresh1;
     }
 
@@ -182,7 +182,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4NeighDefaultGcThresh2")
       private final @Nullable Output<Integer> netIpv4NeighDefaultGcThresh2;
 
-    public Output<Integer> getNetIpv4NeighDefaultGcThresh2() {
+    public Output<Integer> netIpv4NeighDefaultGcThresh2() {
         return this.netIpv4NeighDefaultGcThresh2 == null ? Codegen.empty() : this.netIpv4NeighDefaultGcThresh2;
     }
 
@@ -193,7 +193,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4NeighDefaultGcThresh3")
       private final @Nullable Output<Integer> netIpv4NeighDefaultGcThresh3;
 
-    public Output<Integer> getNetIpv4NeighDefaultGcThresh3() {
+    public Output<Integer> netIpv4NeighDefaultGcThresh3() {
         return this.netIpv4NeighDefaultGcThresh3 == null ? Codegen.empty() : this.netIpv4NeighDefaultGcThresh3;
     }
 
@@ -204,7 +204,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpFinTimeout")
       private final @Nullable Output<Integer> netIpv4TcpFinTimeout;
 
-    public Output<Integer> getNetIpv4TcpFinTimeout() {
+    public Output<Integer> netIpv4TcpFinTimeout() {
         return this.netIpv4TcpFinTimeout == null ? Codegen.empty() : this.netIpv4TcpFinTimeout;
     }
 
@@ -215,7 +215,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpKeepaliveProbes")
       private final @Nullable Output<Integer> netIpv4TcpKeepaliveProbes;
 
-    public Output<Integer> getNetIpv4TcpKeepaliveProbes() {
+    public Output<Integer> netIpv4TcpKeepaliveProbes() {
         return this.netIpv4TcpKeepaliveProbes == null ? Codegen.empty() : this.netIpv4TcpKeepaliveProbes;
     }
 
@@ -226,7 +226,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpKeepaliveTime")
       private final @Nullable Output<Integer> netIpv4TcpKeepaliveTime;
 
-    public Output<Integer> getNetIpv4TcpKeepaliveTime() {
+    public Output<Integer> netIpv4TcpKeepaliveTime() {
         return this.netIpv4TcpKeepaliveTime == null ? Codegen.empty() : this.netIpv4TcpKeepaliveTime;
     }
 
@@ -237,7 +237,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpMaxSynBacklog")
       private final @Nullable Output<Integer> netIpv4TcpMaxSynBacklog;
 
-    public Output<Integer> getNetIpv4TcpMaxSynBacklog() {
+    public Output<Integer> netIpv4TcpMaxSynBacklog() {
         return this.netIpv4TcpMaxSynBacklog == null ? Codegen.empty() : this.netIpv4TcpMaxSynBacklog;
     }
 
@@ -248,7 +248,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpMaxTwBuckets")
       private final @Nullable Output<Integer> netIpv4TcpMaxTwBuckets;
 
-    public Output<Integer> getNetIpv4TcpMaxTwBuckets() {
+    public Output<Integer> netIpv4TcpMaxTwBuckets() {
         return this.netIpv4TcpMaxTwBuckets == null ? Codegen.empty() : this.netIpv4TcpMaxTwBuckets;
     }
 
@@ -259,7 +259,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpTwReuse")
       private final @Nullable Output<Boolean> netIpv4TcpTwReuse;
 
-    public Output<Boolean> getNetIpv4TcpTwReuse() {
+    public Output<Boolean> netIpv4TcpTwReuse() {
         return this.netIpv4TcpTwReuse == null ? Codegen.empty() : this.netIpv4TcpTwReuse;
     }
 
@@ -270,7 +270,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netIpv4TcpkeepaliveIntvl")
       private final @Nullable Output<Integer> netIpv4TcpkeepaliveIntvl;
 
-    public Output<Integer> getNetIpv4TcpkeepaliveIntvl() {
+    public Output<Integer> netIpv4TcpkeepaliveIntvl() {
         return this.netIpv4TcpkeepaliveIntvl == null ? Codegen.empty() : this.netIpv4TcpkeepaliveIntvl;
     }
 
@@ -281,7 +281,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netNetfilterNfConntrackBuckets")
       private final @Nullable Output<Integer> netNetfilterNfConntrackBuckets;
 
-    public Output<Integer> getNetNetfilterNfConntrackBuckets() {
+    public Output<Integer> netNetfilterNfConntrackBuckets() {
         return this.netNetfilterNfConntrackBuckets == null ? Codegen.empty() : this.netNetfilterNfConntrackBuckets;
     }
 
@@ -292,7 +292,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="netNetfilterNfConntrackMax")
       private final @Nullable Output<Integer> netNetfilterNfConntrackMax;
 
-    public Output<Integer> getNetNetfilterNfConntrackMax() {
+    public Output<Integer> netNetfilterNfConntrackMax() {
         return this.netNetfilterNfConntrackMax == null ? Codegen.empty() : this.netNetfilterNfConntrackMax;
     }
 
@@ -303,7 +303,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmMaxMapCount")
       private final @Nullable Output<Integer> vmMaxMapCount;
 
-    public Output<Integer> getVmMaxMapCount() {
+    public Output<Integer> vmMaxMapCount() {
         return this.vmMaxMapCount == null ? Codegen.empty() : this.vmMaxMapCount;
     }
 
@@ -314,7 +314,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSwappiness")
       private final @Nullable Output<Integer> vmSwappiness;
 
-    public Output<Integer> getVmSwappiness() {
+    public Output<Integer> vmSwappiness() {
         return this.vmSwappiness == null ? Codegen.empty() : this.vmSwappiness;
     }
 
@@ -325,7 +325,7 @@ public final class SysctlConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmVfsCachePressure")
       private final @Nullable Output<Integer> vmVfsCachePressure;
 
-    public Output<Integer> getVmVfsCachePressure() {
+    public Output<Integer> vmVfsCachePressure() {
         return this.vmVfsCachePressure == null ? Codegen.empty() : this.vmVfsCachePressure;
     }
 

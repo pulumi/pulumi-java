@@ -50,7 +50,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * for creating the partner registration.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuthorizedAzureSubscriptionIds() {
+    public Output</* @Nullable */ List<String>> authorizedAzureSubscriptionIds() {
         return this.authorizedAzureSubscriptionIds;
     }
     /**
@@ -64,7 +64,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return The extension of the customer service URI of the publisher.
      * 
      */
-    public Output</* @Nullable */ String> getCustomerServiceUri() {
+    public Output</* @Nullable */ String> customerServiceUri() {
         return this.customerServiceUri;
     }
     /**
@@ -78,7 +78,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -92,7 +92,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return URI of the logo.
      * 
      */
-    public Output</* @Nullable */ String> getLogoUri() {
+    public Output</* @Nullable */ String> logoUri() {
         return this.logoUri;
     }
     /**
@@ -108,7 +108,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * Length of this description should not exceed 2048 characters.
      * 
      */
-    public Output</* @Nullable */ String> getLongDescription() {
+    public Output</* @Nullable */ String> longDescription() {
         return this.longDescription;
     }
     /**
@@ -122,7 +122,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -136,7 +136,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
      * 
      */
-    public Output</* @Nullable */ String> getPartnerCustomerServiceExtension() {
+    public Output</* @Nullable */ String> partnerCustomerServiceExtension() {
         return this.partnerCustomerServiceExtension;
     }
     /**
@@ -156,7 +156,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
      * 
      */
-    public Output</* @Nullable */ String> getPartnerCustomerServiceNumber() {
+    public Output</* @Nullable */ String> partnerCustomerServiceNumber() {
         return this.partnerCustomerServiceNumber;
     }
     /**
@@ -170,7 +170,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Official name of the partner name. For example: "Contoso".
      * 
      */
-    public Output</* @Nullable */ String> getPartnerName() {
+    public Output</* @Nullable */ String> partnerName() {
         return this.partnerName;
     }
     /**
@@ -184,7 +184,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Short description of the partner resource type. The length of this description should not exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getPartnerResourceTypeDescription() {
+    public Output</* @Nullable */ String> partnerResourceTypeDescription() {
         return this.partnerResourceTypeDescription;
     }
     /**
@@ -198,7 +198,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Display name of the partner resource type.
      * 
      */
-    public Output</* @Nullable */ String> getPartnerResourceTypeDisplayName() {
+    public Output</* @Nullable */ String> partnerResourceTypeDisplayName() {
         return this.partnerResourceTypeDisplayName;
     }
     /**
@@ -212,7 +212,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Name of the partner resource type.
      * 
      */
-    public Output</* @Nullable */ String> getPartnerResourceTypeName() {
+    public Output</* @Nullable */ String> partnerResourceTypeName() {
         return this.partnerResourceTypeName;
     }
     /**
@@ -226,7 +226,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the partner registration.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -242,7 +242,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * integration on an event source.
      * 
      */
-    public Output</* @Nullable */ String> getSetupUri() {
+    public Output</* @Nullable */ String> setupUri() {
         return this.setupUri;
     }
     /**
@@ -256,7 +256,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to Partner Registration resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -270,7 +270,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -284,7 +284,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -298,7 +298,7 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
      * @return Visibility state of the partner registration.
      * 
      */
-    public Output</* @Nullable */ String> getVisibilityState() {
+    public Output</* @Nullable */ String> visibilityState() {
         return this.visibilityState;
     }
 

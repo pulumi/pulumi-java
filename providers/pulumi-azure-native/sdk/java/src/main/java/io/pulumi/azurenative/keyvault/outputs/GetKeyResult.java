@@ -104,80 +104,80 @@ public final class GetKeyResult {
      * The attributes of the key.
      * 
     */
-    public Optional<KeyAttributesResponse> getAttributes() {
+    public Optional<KeyAttributesResponse> attributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
     */
-    public Optional<String> getCurveName() {
+    public Optional<String> curveName() {
         return Optional.ofNullable(this.curveName);
     }
     /**
      * Fully qualified identifier of the key vault resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getKeyOps() {
+    public List<String> keyOps() {
         return this.keyOps == null ? List.of() : this.keyOps;
     }
     /**
      * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
     */
-    public Optional<Integer> getKeySize() {
+    public Optional<Integer> keySize() {
         return Optional.ofNullable(this.keySize);
     }
     /**
      * The URI to retrieve the current version of the key.
      * 
     */
-    public String getKeyUri() {
+    public String keyUri() {
         return this.keyUri;
     }
     /**
      * The URI to retrieve the specific version of the key.
      * 
     */
-    public String getKeyUriWithVersion() {
+    public String keyUriWithVersion() {
         return this.keyUriWithVersion;
     }
     /**
      * The type of the key. For valid values, see JsonWebKeyType.
      * 
     */
-    public Optional<String> getKty() {
+    public Optional<String> kty() {
         return Optional.ofNullable(this.kty);
     }
     /**
      * Azure location of the key vault resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Tags assigned to the key vault resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

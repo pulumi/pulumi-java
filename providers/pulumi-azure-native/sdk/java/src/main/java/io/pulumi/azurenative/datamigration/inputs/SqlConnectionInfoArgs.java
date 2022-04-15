@@ -30,7 +30,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="additionalSettings")
       private final @Nullable Output<String> additionalSettings;
 
-    public Output<String> getAdditionalSettings() {
+    public Output<String> additionalSettings() {
         return this.additionalSettings == null ? Codegen.empty() : this.additionalSettings;
     }
 
@@ -41,7 +41,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="authentication")
       private final @Nullable Output<Either<String,AuthenticationType>> authentication;
 
-    public Output<Either<String,AuthenticationType>> getAuthentication() {
+    public Output<Either<String,AuthenticationType>> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -52,7 +52,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
-    public Output<String> getDataSource() {
+    public Output<String> dataSource() {
         return this.dataSource;
     }
 
@@ -63,7 +63,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="encryptConnection")
       private final @Nullable Output<Boolean> encryptConnection;
 
-    public Output<Boolean> getEncryptConnection() {
+    public Output<Boolean> encryptConnection() {
         return this.encryptConnection == null ? Codegen.empty() : this.encryptConnection;
     }
 
@@ -74,7 +74,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -85,7 +85,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="platform")
       private final @Nullable Output<Either<String,SqlSourcePlatform>> platform;
 
-    public Output<Either<String,SqlSourcePlatform>> getPlatform() {
+    public Output<Either<String,SqlSourcePlatform>> platform() {
         return this.platform == null ? Codegen.empty() : this.platform;
     }
 
@@ -96,7 +96,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="trustServerCertificate")
       private final @Nullable Output<Boolean> trustServerCertificate;
 
-    public Output<Boolean> getTrustServerCertificate() {
+    public Output<Boolean> trustServerCertificate() {
         return this.trustServerCertificate == null ? Codegen.empty() : this.trustServerCertificate;
     }
 
@@ -108,7 +108,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -119,7 +119,7 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

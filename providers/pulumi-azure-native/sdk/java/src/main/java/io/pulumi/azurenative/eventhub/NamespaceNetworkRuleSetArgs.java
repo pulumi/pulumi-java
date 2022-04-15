@@ -27,7 +27,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
-    public Output<Either<String,DefaultAction>> getDefaultAction() {
+    public Output<Either<String,DefaultAction>> defaultAction() {
         return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
     }
 
@@ -38,7 +38,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="ipRules")
       private final @Nullable Output<List<NWRuleSetIpRulesArgs>> ipRules;
 
-    public Output<List<NWRuleSetIpRulesArgs>> getIpRules() {
+    public Output<List<NWRuleSetIpRulesArgs>> ipRules() {
         return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
@@ -49,7 +49,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -60,7 +60,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,7 +71,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
-    public Output<List<NWRuleSetVirtualNetworkRulesArgs>> getVirtualNetworkRules() {
+    public Output<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 

@@ -98,77 +98,77 @@ public final class GetWebAppPremierAddOnSlotResult {
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Premier add on Marketplace offer.
      * 
     */
-    public Optional<String> getMarketplaceOffer() {
+    public Optional<String> marketplaceOffer() {
         return Optional.ofNullable(this.marketplaceOffer);
     }
     /**
      * Premier add on Marketplace publisher.
      * 
     */
-    public Optional<String> getMarketplacePublisher() {
+    public Optional<String> marketplacePublisher() {
         return Optional.ofNullable(this.marketplacePublisher);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Premier add on Product.
      * 
     */
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
      * Premier add on SKU.
      * 
     */
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Premier add on Vendor.
      * 
     */
-    public Optional<String> getVendor() {
+    public Optional<String> vendor() {
         return Optional.ofNullable(this.vendor);
     }
 

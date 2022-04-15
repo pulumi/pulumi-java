@@ -22,7 +22,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
     @Import(name="conditionalMembers")
       private final @Nullable String conditionalMembers;
 
-    public Optional<String> getConditionalMembers() {
+    public Optional<String> conditionalMembers() {
         return this.conditionalMembers == null ? Optional.empty() : Optional.ofNullable(this.conditionalMembers);
     }
 
@@ -33,7 +33,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
-    public String getNetworkManagerName() {
+    public String networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -44,7 +44,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
@@ -66,7 +66,7 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerArgs extends io.pu
     @Import(name="top")
       private final @Nullable Integer top;
 
-    public Optional<Integer> getTop() {
+    public Optional<Integer> top() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
     }
 

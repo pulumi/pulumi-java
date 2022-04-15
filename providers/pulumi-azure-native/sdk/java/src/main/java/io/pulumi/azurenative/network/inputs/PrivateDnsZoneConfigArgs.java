@@ -26,7 +26,7 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
     @Import(name="privateDnsZoneId")
       private final @Nullable Output<String> privateDnsZoneId;
 
-    public Output<String> getPrivateDnsZoneId() {
+    public Output<String> privateDnsZoneId() {
         return this.privateDnsZoneId == null ? Codegen.empty() : this.privateDnsZoneId;
     }
 

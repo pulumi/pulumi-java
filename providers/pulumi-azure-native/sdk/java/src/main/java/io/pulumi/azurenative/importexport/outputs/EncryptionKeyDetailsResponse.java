@@ -41,21 +41,21 @@ public final class EncryptionKeyDetailsResponse {
      * The type of kek encryption key
      * 
     */
-    public Optional<String> getKekType() {
+    public Optional<String> kekType() {
         return Optional.ofNullable(this.kekType);
     }
     /**
      * Specifies the url for kek encryption key.
      * 
     */
-    public Optional<String> getKekUrl() {
+    public Optional<String> kekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
     /**
      * Specifies the keyvault resource id for kek encryption key.
      * 
     */
-    public Optional<String> getKekVaultResourceID() {
+    public Optional<String> kekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
 

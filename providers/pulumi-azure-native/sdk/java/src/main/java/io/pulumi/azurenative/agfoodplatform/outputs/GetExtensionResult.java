@@ -89,70 +89,70 @@ public final class GetExtensionResult {
      * The ETag value to implement optimistic concurrency.
      * 
     */
-    public String getETag() {
+    public String eTag() {
         return this.eTag;
     }
     /**
      * Extension api docs link.
      * 
     */
-    public String getExtensionApiDocsLink() {
+    public String extensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
     /**
      * Extension auth link.
      * 
     */
-    public String getExtensionAuthLink() {
+    public String extensionAuthLink() {
         return this.extensionAuthLink;
     }
     /**
      * Extension category. e.g. weather/sensor/satellite.
      * 
     */
-    public String getExtensionCategory() {
+    public String extensionCategory() {
         return this.extensionCategory;
     }
     /**
      * Extension Id.
      * 
     */
-    public String getExtensionId() {
+    public String extensionId() {
         return this.extensionId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Installed extension version.
      * 
     */
-    public String getInstalledExtensionVersion() {
+    public String installedExtensionVersion() {
         return this.installedExtensionVersion;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

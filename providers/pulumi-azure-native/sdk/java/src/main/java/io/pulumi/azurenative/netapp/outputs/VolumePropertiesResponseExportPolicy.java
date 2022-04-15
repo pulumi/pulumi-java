@@ -26,7 +26,7 @@ public final class VolumePropertiesResponseExportPolicy {
      * Export policy rule
      * 
     */
-    public List<ExportPolicyRuleResponse> getRules() {
+    public List<ExportPolicyRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

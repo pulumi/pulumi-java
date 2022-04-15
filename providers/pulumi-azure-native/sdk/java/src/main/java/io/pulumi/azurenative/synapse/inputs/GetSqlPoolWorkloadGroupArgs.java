@@ -19,7 +19,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
     @Import(name="sqlPoolName", required=true)
       private final String sqlPoolName;
 
-    public String getSqlPoolName() {
+    public String sqlPoolName() {
         return this.sqlPoolName;
     }
 
@@ -41,7 +41,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
     @Import(name="workloadGroupName", required=true)
       private final String workloadGroupName;
 
-    public String getWorkloadGroupName() {
+    public String workloadGroupName() {
         return this.workloadGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
     @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
-    public String getWorkspaceName() {
+    public String workspaceName() {
         return this.workspaceName;
     }
 

@@ -31,7 +31,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deviceKey")
       private final @Nullable Output<Integer> deviceKey;
 
-    public Output<Integer> getDeviceKey() {
+    public Output<Integer> deviceKey() {
         return this.deviceKey == null ? Codegen.empty() : this.deviceKey;
     }
 
@@ -42,7 +42,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ipSettings")
       private final @Nullable Output<NicIPSettingsArgs> ipSettings;
 
-    public Output<NicIPSettingsArgs> getIpSettings() {
+    public Output<NicIPSettingsArgs> ipSettings() {
         return this.ipSettings == null ? Codegen.empty() : this.ipSettings;
     }
 
@@ -53,7 +53,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -64,7 +64,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="networkId")
       private final @Nullable Output<String> networkId;
 
-    public Output<String> getNetworkId() {
+    public Output<String> networkId() {
         return this.networkId == null ? Codegen.empty() : this.networkId;
     }
 
@@ -75,7 +75,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="nicType")
       private final @Nullable Output<Either<String,NICType>> nicType;
 
-    public Output<Either<String,NICType>> getNicType() {
+    public Output<Either<String,NICType>> nicType() {
         return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
@@ -86,7 +86,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="powerOnBoot")
       private final @Nullable Output<Either<String,PowerOnBootOption>> powerOnBoot;
 
-    public Output<Either<String,PowerOnBootOption>> getPowerOnBoot() {
+    public Output<Either<String,PowerOnBootOption>> powerOnBoot() {
         return this.powerOnBoot == null ? Codegen.empty() : this.powerOnBoot;
     }
 

@@ -25,7 +25,7 @@ public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

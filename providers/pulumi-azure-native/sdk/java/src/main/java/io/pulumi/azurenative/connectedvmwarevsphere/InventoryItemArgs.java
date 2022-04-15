@@ -24,7 +24,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inventoryItemName")
       private final @Nullable Output<String> inventoryItemName;
 
-    public Output<String> getInventoryItemName() {
+    public Output<String> inventoryItemName() {
         return this.inventoryItemName == null ? Codegen.empty() : this.inventoryItemName;
     }
 
@@ -35,7 +35,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inventoryType", required=true)
       private final Output<Either<String,InventoryType>> inventoryType;
 
-    public Output<Either<String,InventoryType>> getInventoryType() {
+    public Output<Either<String,InventoryType>> inventoryType() {
         return this.inventoryType;
     }
 
@@ -46,7 +46,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceId")
       private final @Nullable Output<String> managedResourceId;
 
-    public Output<String> getManagedResourceId() {
+    public Output<String> managedResourceId() {
         return this.managedResourceId == null ? Codegen.empty() : this.managedResourceId;
     }
 
@@ -68,7 +68,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moName")
       private final @Nullable Output<String> moName;
 
-    public Output<String> getMoName() {
+    public Output<String> moName() {
         return this.moName == null ? Codegen.empty() : this.moName;
     }
 
@@ -79,7 +79,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
 
-    public Output<String> getMoRefId() {
+    public Output<String> moRefId() {
         return this.moRefId == null ? Codegen.empty() : this.moRefId;
     }
 
@@ -90,7 +90,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,7 +101,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vcenterName", required=true)
       private final Output<String> vcenterName;
 
-    public Output<String> getVcenterName() {
+    public Output<String> vcenterName() {
         return this.vcenterName;
     }
 

@@ -22,7 +22,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pem")
       private final @Nullable Output<String> pem;
 
-    public Output<String> getPem() {
+    public Output<String> pem() {
         return this.pem == null ? Codegen.empty() : this.pem;
     }
 

@@ -32,14 +32,14 @@ public final class ConditionResponse {
      * The issue requiring attention.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * The time when the condition was raised.
      * 
     */
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 

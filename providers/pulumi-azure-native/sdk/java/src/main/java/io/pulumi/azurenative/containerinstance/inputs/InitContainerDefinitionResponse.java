@@ -29,7 +29,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
     @Import(name="command")
       private final @Nullable List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
 
@@ -40,7 +40,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
     @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
-    public List<EnvironmentVariableResponse> getEnvironmentVariables() {
+    public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
 
@@ -51,7 +51,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
     @Import(name="image")
       private final @Nullable String image;
 
-    public Optional<String> getImage() {
+    public Optional<String> image() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
     }
 
@@ -62,7 +62,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
     @Import(name="instanceView", required=true)
       private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
 
-    public InitContainerPropertiesDefinitionResponseInstanceView getInstanceView() {
+    public InitContainerPropertiesDefinitionResponseInstanceView instanceView() {
         return this.instanceView;
     }
 
@@ -73,7 +73,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -84,7 +84,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
     @Import(name="volumeMounts")
       private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    public List<VolumeMountResponse> getVolumeMounts() {
+    public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
 

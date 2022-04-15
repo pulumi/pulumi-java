@@ -42,21 +42,21 @@ public final class RadiusServerResponse {
      * The address of this radius server.
      * 
     */
-    public String getRadiusServerAddress() {
+    public String radiusServerAddress() {
         return this.radiusServerAddress;
     }
     /**
      * The initial score assigned to this radius server.
      * 
     */
-    public Optional<Double> getRadiusServerScore() {
+    public Optional<Double> radiusServerScore() {
         return Optional.ofNullable(this.radiusServerScore);
     }
     /**
      * The secret used for this radius server.
      * 
     */
-    public Optional<String> getRadiusServerSecret() {
+    public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
 

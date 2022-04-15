@@ -26,7 +26,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateData")
       private final @Nullable Output<String> certificateData;
 
-    public Output<String> getCertificateData() {
+    public Output<String> certificateData() {
         return this.certificateData == null ? Codegen.empty() : this.certificateData;
     }
 

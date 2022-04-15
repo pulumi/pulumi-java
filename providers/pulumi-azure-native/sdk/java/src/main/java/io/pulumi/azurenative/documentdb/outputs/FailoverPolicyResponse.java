@@ -42,21 +42,21 @@ public final class FailoverPolicyResponse {
      * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
     */
-    public Optional<Integer> getFailoverPriority() {
+    public Optional<Integer> failoverPriority() {
         return Optional.ofNullable(this.failoverPriority);
     }
     /**
      * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the region in which the database account exists.
      * 
     */
-    public Optional<String> getLocationName() {
+    public Optional<String> locationName() {
         return Optional.ofNullable(this.locationName);
     }
 

@@ -24,7 +24,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +57,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareKind")
       private final @Nullable Output<Either<String,ShareKind>> shareKind;
 
-    public Output<Either<String,ShareKind>> getShareKind() {
+    public Output<Either<String,ShareKind>> shareKind() {
         return this.shareKind == null ? Codegen.empty() : this.shareKind;
     }
 
@@ -68,7 +68,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
@@ -79,7 +79,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terms")
       private final @Nullable Output<String> terms;
 
-    public Output<String> getTerms() {
+    public Output<String> terms() {
         return this.terms == null ? Codegen.empty() : this.terms;
     }
 

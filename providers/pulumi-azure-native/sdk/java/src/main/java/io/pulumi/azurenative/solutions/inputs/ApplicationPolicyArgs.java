@@ -26,7 +26,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyDefinitionId")
       private final @Nullable Output<String> policyDefinitionId;
 
-    public Output<String> getPolicyDefinitionId() {
+    public Output<String> policyDefinitionId() {
         return this.policyDefinitionId == null ? Codegen.empty() : this.policyDefinitionId;
     }
 

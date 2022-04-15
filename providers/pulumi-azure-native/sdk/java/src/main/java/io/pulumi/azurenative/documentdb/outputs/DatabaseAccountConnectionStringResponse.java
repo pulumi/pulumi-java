@@ -32,14 +32,14 @@ public final class DatabaseAccountConnectionStringResponse {
      * Value of the connection string
      * 
     */
-    public String getConnectionString() {
+    public String connectionString() {
         return this.connectionString;
     }
     /**
      * Description of the connection string
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 

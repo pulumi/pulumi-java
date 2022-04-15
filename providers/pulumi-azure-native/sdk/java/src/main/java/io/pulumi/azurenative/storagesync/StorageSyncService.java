@@ -45,7 +45,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return Incoming Traffic Policy
      * 
      */
-    public Output</* @Nullable */ String> getIncomingTrafficPolicy() {
+    public Output</* @Nullable */ String> incomingTrafficPolicy() {
         return this.incomingTrafficPolicy;
     }
     /**
@@ -59,7 +59,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return Resource Last Operation Name
      * 
      */
-    public Output<String> getLastOperationName() {
+    public Output<String> lastOperationName() {
         return this.lastOperationName;
     }
     /**
@@ -73,7 +73,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return StorageSyncService lastWorkflowId
      * 
      */
-    public Output<String> getLastWorkflowId() {
+    public Output<String> lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
@@ -87,7 +87,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -101,7 +101,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return List of private endpoint connection associated with the specified storage sync service
      * 
      */
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -129,7 +129,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return StorageSyncService Provisioning State
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +143,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return Storage Sync service status.
      * 
      */
-    public Output<Integer> getStorageSyncServiceStatus() {
+    public Output<Integer> storageSyncServiceStatus() {
         return this.storageSyncServiceStatus;
     }
     /**
@@ -157,7 +157,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return Storage Sync service Uid
      * 
      */
-    public Output<String> getStorageSyncServiceUid() {
+    public Output<String> storageSyncServiceUid() {
         return this.storageSyncServiceUid;
     }
     /**
@@ -171,7 +171,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -185,7 +185,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

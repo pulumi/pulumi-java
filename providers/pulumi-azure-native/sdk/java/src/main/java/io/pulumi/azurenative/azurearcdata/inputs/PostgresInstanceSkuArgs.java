@@ -29,7 +29,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -40,7 +40,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="dev")
       private final @Nullable Output<Boolean> dev;
 
-    public Output<Boolean> getDev() {
+    public Output<Boolean> dev() {
         return this.dev == null ? Codegen.empty() : this.dev;
     }
 
@@ -51,7 +51,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
+    public Output<String> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -62,7 +62,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,7 +73,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
+    public Output<String> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -84,7 +84,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
     @Import(name="tier")
       private final @Nullable Output<PostgresInstanceSkuTier> tier;
 
-    public Output<PostgresInstanceSkuTier> getTier() {
+    public Output<PostgresInstanceSkuTier> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

@@ -33,7 +33,7 @@ public final class AzureResourceDetailsResponse {
      * Azure resource Id of the assessed resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -41,7 +41,7 @@ public final class AzureResourceDetailsResponse {
      * Expected value is 'Azure'.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

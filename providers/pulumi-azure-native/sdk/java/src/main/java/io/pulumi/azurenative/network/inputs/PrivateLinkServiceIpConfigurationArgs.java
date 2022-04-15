@@ -31,7 +31,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -42,7 +42,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -53,7 +53,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
+    public Output<Boolean> primary() {
         return this.primary == null ? Codegen.empty() : this.primary;
     }
 
@@ -64,7 +64,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
-    public Output<String> getPrivateIPAddress() {
+    public Output<String> privateIPAddress() {
         return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
@@ -75,7 +75,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
-    public Output<Either<String,IPVersion>> getPrivateIPAddressVersion() {
+    public Output<Either<String,IPVersion>> privateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Codegen.empty() : this.privateIPAddressVersion;
     }
 
@@ -86,7 +86,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
+    public Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
@@ -97,7 +97,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
     @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> getSubnet() {
+    public Output<SubnetArgs> subnet() {
         return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 

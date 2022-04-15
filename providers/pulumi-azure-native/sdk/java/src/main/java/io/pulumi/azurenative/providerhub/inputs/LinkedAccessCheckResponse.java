@@ -17,35 +17,35 @@ public final class LinkedAccessCheckResponse extends io.pulumi.resources.InvokeA
     @Import(name="actionName")
       private final @Nullable String actionName;
 
-    public Optional<String> getActionName() {
+    public Optional<String> actionName() {
         return this.actionName == null ? Optional.empty() : Optional.ofNullable(this.actionName);
     }
 
     @Import(name="linkedAction")
       private final @Nullable String linkedAction;
 
-    public Optional<String> getLinkedAction() {
+    public Optional<String> linkedAction() {
         return this.linkedAction == null ? Optional.empty() : Optional.ofNullable(this.linkedAction);
     }
 
     @Import(name="linkedActionVerb")
       private final @Nullable String linkedActionVerb;
 
-    public Optional<String> getLinkedActionVerb() {
+    public Optional<String> linkedActionVerb() {
         return this.linkedActionVerb == null ? Optional.empty() : Optional.ofNullable(this.linkedActionVerb);
     }
 
     @Import(name="linkedProperty")
       private final @Nullable String linkedProperty;
 
-    public Optional<String> getLinkedProperty() {
+    public Optional<String> linkedProperty() {
         return this.linkedProperty == null ? Optional.empty() : Optional.ofNullable(this.linkedProperty);
     }
 
     @Import(name="linkedType")
       private final @Nullable String linkedType;
 
-    public Optional<String> getLinkedType() {
+    public Optional<String> linkedType() {
         return this.linkedType == null ? Optional.empty() : Optional.ofNullable(this.linkedType);
     }
 

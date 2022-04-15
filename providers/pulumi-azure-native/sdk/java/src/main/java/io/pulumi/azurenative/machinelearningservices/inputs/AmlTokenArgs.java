@@ -26,7 +26,7 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identityType", required=true)
       private final Output<String> identityType;
 
-    public Output<String> getIdentityType() {
+    public Output<String> identityType() {
         return this.identityType;
     }
 

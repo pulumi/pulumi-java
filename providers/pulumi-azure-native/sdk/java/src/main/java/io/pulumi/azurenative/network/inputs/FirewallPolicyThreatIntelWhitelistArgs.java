@@ -27,7 +27,7 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
     @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
 
-    public Output<List<String>> getFqdns() {
+    public Output<List<String>> fqdns() {
         return this.fqdns == null ? Codegen.empty() : this.fqdns;
     }
 
@@ -38,7 +38,7 @@ public final class FirewallPolicyThreatIntelWhitelistArgs extends io.pulumi.reso
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 

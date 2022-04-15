@@ -27,7 +27,7 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
     @Import(name="allOf")
       private final @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
 
-    public Output<List<VmGuestHealthAlertCriterionArgs>> getAllOf() {
+    public Output<List<VmGuestHealthAlertCriterionArgs>> allOf() {
         return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 

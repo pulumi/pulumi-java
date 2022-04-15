@@ -91,70 +91,70 @@ public final class GetControllerDetailsResult {
      * dnc application id should be used by customer to authenticate with dnc gateway.
      * 
     */
-    public String getDncAppId() {
+    public String dncAppId() {
         return this.dncAppId;
     }
     /**
      * dnc endpoint url that customers can use to connect to
      * 
     */
-    public String getDncEndpoint() {
+    public String dncEndpoint() {
         return this.dncEndpoint;
     }
     /**
      * tenant id of dnc application id
      * 
     */
-    public String getDncTenantId() {
+    public String dncTenantId() {
         return this.dncTenantId;
     }
     /**
      * An identifier that represents the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of dnc controller resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource guid.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

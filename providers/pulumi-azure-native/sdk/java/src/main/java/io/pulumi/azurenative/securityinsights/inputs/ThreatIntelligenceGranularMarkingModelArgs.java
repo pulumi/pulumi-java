@@ -28,7 +28,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
+    public Output<String> language() {
         return this.language == null ? Codegen.empty() : this.language;
     }
 
@@ -39,7 +39,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
     @Import(name="markingRef")
       private final @Nullable Output<Integer> markingRef;
 
-    public Output<Integer> getMarkingRef() {
+    public Output<Integer> markingRef() {
         return this.markingRef == null ? Codegen.empty() : this.markingRef;
     }
 
@@ -50,7 +50,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
     @Import(name="selectors")
       private final @Nullable Output<List<String>> selectors;
 
-    public Output<List<String>> getSelectors() {
+    public Output<List<String>> selectors() {
         return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 

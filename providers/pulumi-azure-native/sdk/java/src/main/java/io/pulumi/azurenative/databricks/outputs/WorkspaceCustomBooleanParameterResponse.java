@@ -33,14 +33,14 @@ public final class WorkspaceCustomBooleanParameterResponse {
      * The type of variable that this is
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
      * 
     */
-    public Boolean getValue() {
+    public Boolean value() {
         return this.value;
     }
 

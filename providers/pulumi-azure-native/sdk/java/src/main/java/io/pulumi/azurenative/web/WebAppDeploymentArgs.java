@@ -24,7 +24,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -35,7 +35,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="author")
       private final @Nullable Output<String> author;
 
-    public Output<String> getAuthor() {
+    public Output<String> author() {
         return this.author == null ? Codegen.empty() : this.author;
     }
 
@@ -46,7 +46,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="authorEmail")
       private final @Nullable Output<String> authorEmail;
 
-    public Output<String> getAuthorEmail() {
+    public Output<String> authorEmail() {
         return this.authorEmail == null ? Codegen.empty() : this.authorEmail;
     }
 
@@ -57,7 +57,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deployer")
       private final @Nullable Output<String> deployer;
 
-    public Output<String> getDeployer() {
+    public Output<String> deployer() {
         return this.deployer == null ? Codegen.empty() : this.deployer;
     }
 
@@ -68,7 +68,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="details")
       private final @Nullable Output<String> details;
 
-    public Output<String> getDetails() {
+    public Output<String> details() {
         return this.details == null ? Codegen.empty() : this.details;
     }
 
@@ -79,7 +79,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -90,7 +90,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -101,7 +101,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -112,7 +112,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -123,7 +123,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -134,7 +134,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -145,7 +145,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -156,7 +156,7 @@ public final class WebAppDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<Integer> status;
 
-    public Output<Integer> getStatus() {
+    public Output<Integer> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

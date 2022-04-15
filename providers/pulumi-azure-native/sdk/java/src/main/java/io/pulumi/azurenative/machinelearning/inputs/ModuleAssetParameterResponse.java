@@ -27,7 +27,7 @@ public final class ModuleAssetParameterResponse extends io.pulumi.resources.Invo
     @Import(name="modeValuesInfo")
       private final @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
 
-    public Map<String,ModeValueInfoResponse> getModeValuesInfo() {
+    public Map<String,ModeValueInfoResponse> modeValuesInfo() {
         return this.modeValuesInfo == null ? Map.of() : this.modeValuesInfo;
     }
 
@@ -38,7 +38,7 @@ public final class ModuleAssetParameterResponse extends io.pulumi.resources.Invo
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -49,7 +49,7 @@ public final class ModuleAssetParameterResponse extends io.pulumi.resources.Invo
     @Import(name="parameterType")
       private final @Nullable String parameterType;
 
-    public Optional<String> getParameterType() {
+    public Optional<String> parameterType() {
         return this.parameterType == null ? Optional.empty() : Optional.ofNullable(this.parameterType);
     }
 

@@ -42,7 +42,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return An HTTP link or Base64-encoded binary data.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
      * 
      */
-    public Output<String> getContentFormat() {
+    public Output<String> contentFormat() {
         return this.contentFormat;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Filename by which the binary data will be saved.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiIssueAttachment extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

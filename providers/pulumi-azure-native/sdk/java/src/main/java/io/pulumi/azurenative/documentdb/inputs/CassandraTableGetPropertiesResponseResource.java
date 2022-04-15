@@ -24,7 +24,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="analyticalStorageTtl")
       private final @Nullable Integer analyticalStorageTtl;
 
-    public Optional<Integer> getAnalyticalStorageTtl() {
+    public Optional<Integer> analyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
     }
 
@@ -35,7 +35,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="defaultTtl")
       private final @Nullable Integer defaultTtl;
 
-    public Optional<Integer> getDefaultTtl() {
+    public Optional<Integer> defaultTtl() {
         return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
     }
 
@@ -46,7 +46,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -57,7 +57,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -68,7 +68,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="rid", required=true)
       private final String rid;
 
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
 
@@ -79,7 +79,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="schema")
       private final @Nullable CassandraSchemaResponse schema;
 
-    public Optional<CassandraSchemaResponse> getSchema() {
+    public Optional<CassandraSchemaResponse> schema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
@@ -90,7 +90,7 @@ public final class CassandraTableGetPropertiesResponseResource extends io.pulumi
     @Import(name="ts", required=true)
       private final Double ts;
 
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

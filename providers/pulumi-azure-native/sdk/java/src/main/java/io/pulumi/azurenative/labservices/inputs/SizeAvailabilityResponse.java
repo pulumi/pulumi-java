@@ -26,7 +26,7 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
     @Import(name="isAvailable")
       private final @Nullable Boolean isAvailable;
 
-    public Optional<Boolean> getIsAvailable() {
+    public Optional<Boolean> isAvailable() {
         return this.isAvailable == null ? Optional.empty() : Optional.ofNullable(this.isAvailable);
     }
 
@@ -37,7 +37,7 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sizeCategory")
       private final @Nullable String sizeCategory;
 
-    public Optional<String> getSizeCategory() {
+    public Optional<String> sizeCategory() {
         return this.sizeCategory == null ? Optional.empty() : Optional.ofNullable(this.sizeCategory);
     }
 

@@ -28,7 +28,7 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -39,7 +39,7 @@ public final class BuiltInStandardEncoderPresetArgs extends io.pulumi.resources.
     @Import(name="presetName", required=true)
       private final Output<Either<String,EncoderNamedPreset>> presetName;
 
-    public Output<Either<String,EncoderNamedPreset>> getPresetName() {
+    public Output<Either<String,EncoderNamedPreset>> presetName() {
         return this.presetName;
     }
 

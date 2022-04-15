@@ -25,7 +25,7 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 

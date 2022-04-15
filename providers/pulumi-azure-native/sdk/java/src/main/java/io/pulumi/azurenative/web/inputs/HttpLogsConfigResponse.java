@@ -26,7 +26,7 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="azureBlobStorage")
       private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
 
-    public Optional<AzureBlobStorageHttpLogsConfigResponse> getAzureBlobStorage() {
+    public Optional<AzureBlobStorageHttpLogsConfigResponse> azureBlobStorage() {
         return this.azureBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.azureBlobStorage);
     }
 
@@ -37,7 +37,7 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="fileSystem")
       private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
-    public Optional<FileSystemHttpLogsConfigResponse> getFileSystem() {
+    public Optional<FileSystemHttpLogsConfigResponse> fileSystem() {
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
     }
 

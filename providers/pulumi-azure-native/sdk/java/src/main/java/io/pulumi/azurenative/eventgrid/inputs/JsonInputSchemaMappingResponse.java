@@ -27,7 +27,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="dataVersion")
       private final @Nullable JsonFieldWithDefaultResponse dataVersion;
 
-    public Optional<JsonFieldWithDefaultResponse> getDataVersion() {
+    public Optional<JsonFieldWithDefaultResponse> dataVersion() {
         return this.dataVersion == null ? Optional.empty() : Optional.ofNullable(this.dataVersion);
     }
 
@@ -38,7 +38,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="eventTime")
       private final @Nullable JsonFieldResponse eventTime;
 
-    public Optional<JsonFieldResponse> getEventTime() {
+    public Optional<JsonFieldResponse> eventTime() {
         return this.eventTime == null ? Optional.empty() : Optional.ofNullable(this.eventTime);
     }
 
@@ -49,7 +49,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="eventType")
       private final @Nullable JsonFieldWithDefaultResponse eventType;
 
-    public Optional<JsonFieldWithDefaultResponse> getEventType() {
+    public Optional<JsonFieldWithDefaultResponse> eventType() {
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
     }
 
@@ -60,7 +60,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="id")
       private final @Nullable JsonFieldResponse id;
 
-    public Optional<JsonFieldResponse> getId() {
+    public Optional<JsonFieldResponse> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -72,7 +72,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="inputSchemaMappingType", required=true)
       private final String inputSchemaMappingType;
 
-    public String getInputSchemaMappingType() {
+    public String inputSchemaMappingType() {
         return this.inputSchemaMappingType;
     }
 
@@ -83,7 +83,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="subject")
       private final @Nullable JsonFieldWithDefaultResponse subject;
 
-    public Optional<JsonFieldWithDefaultResponse> getSubject() {
+    public Optional<JsonFieldWithDefaultResponse> subject() {
         return this.subject == null ? Optional.empty() : Optional.ofNullable(this.subject);
     }
 
@@ -94,7 +94,7 @@ public final class JsonInputSchemaMappingResponse extends io.pulumi.resources.In
     @Import(name="topic")
       private final @Nullable JsonFieldResponse topic;
 
-    public Optional<JsonFieldResponse> getTopic() {
+    public Optional<JsonFieldResponse> topic() {
         return this.topic == null ? Optional.empty() : Optional.ofNullable(this.topic);
     }
 

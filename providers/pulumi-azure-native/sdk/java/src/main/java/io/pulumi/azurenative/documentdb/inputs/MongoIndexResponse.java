@@ -26,7 +26,7 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="key")
       private final @Nullable MongoIndexKeysResponse key;
 
-    public Optional<MongoIndexKeysResponse> getKey() {
+    public Optional<MongoIndexKeysResponse> key() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
@@ -37,7 +37,7 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options")
       private final @Nullable MongoIndexOptionsResponse options;
 
-    public Optional<MongoIndexOptionsResponse> getOptions() {
+    public Optional<MongoIndexOptionsResponse> options() {
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
     }
 

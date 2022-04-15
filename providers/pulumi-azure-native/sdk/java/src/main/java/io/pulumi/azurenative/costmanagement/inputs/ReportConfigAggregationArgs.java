@@ -27,7 +27,7 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
     @Import(name="function", required=true)
       private final Output<Either<String,FunctionType>> function;
 
-    public Output<Either<String,FunctionType>> getFunction() {
+    public Output<Either<String,FunctionType>> function() {
         return this.function;
     }
 
@@ -38,7 +38,7 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

@@ -27,7 +27,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -38,7 +38,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluatorType")
       private final @Nullable Output<Either<String,PolicyEvaluatorType>> evaluatorType;
 
-    public Output<Either<String,PolicyEvaluatorType>> getEvaluatorType() {
+    public Output<Either<String,PolicyEvaluatorType>> evaluatorType() {
         return this.evaluatorType == null ? Codegen.empty() : this.evaluatorType;
     }
 
@@ -49,7 +49,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factData")
       private final @Nullable Output<String> factData;
 
-    public Output<String> getFactData() {
+    public Output<String> factData() {
         return this.factData == null ? Codegen.empty() : this.factData;
     }
 
@@ -60,7 +60,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factName")
       private final @Nullable Output<Either<String,PolicyFactName>> factName;
 
-    public Output<Either<String,PolicyFactName>> getFactName() {
+    public Output<Either<String,PolicyFactName>> factName() {
         return this.factName == null ? Codegen.empty() : this.factName;
     }
 
@@ -71,7 +71,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -82,7 +82,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -93,7 +93,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -104,7 +104,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policySetName", required=true)
       private final Output<String> policySetName;
 
-    public Output<String> getPolicySetName() {
+    public Output<String> policySetName() {
         return this.policySetName;
     }
 
@@ -115,7 +115,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,7 +126,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
+    public Output<Either<String,PolicyStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -137,7 +137,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -148,7 +148,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
-    public Output<String> getThreshold() {
+    public Output<String> threshold() {
         return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 

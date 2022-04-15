@@ -19,7 +19,7 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -30,7 +30,7 @@ public final class ApplicationUserAssignedIdentityResponse extends io.pulumi.res
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

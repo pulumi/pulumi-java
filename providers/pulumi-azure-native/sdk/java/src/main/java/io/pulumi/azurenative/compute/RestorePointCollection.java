@@ -45,7 +45,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the restore point collection.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -87,7 +87,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return The unique id of the restore point collection.
      * 
      */
-    public Output<String> getRestorePointCollectionId() {
+    public Output<String> restorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
@@ -101,7 +101,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return A list containing all restore points created under this restore point collection.
      * 
      */
-    public Output<List<RestorePointResponse>> getRestorePoints() {
+    public Output<List<RestorePointResponse>> restorePoints() {
         return this.restorePoints;
     }
     /**
@@ -115,7 +115,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return The properties of the source resource that this restore point collection is created from.
      * 
      */
-    public Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> getSource() {
+    public Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> source() {
         return this.source;
     }
     /**
@@ -129,7 +129,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

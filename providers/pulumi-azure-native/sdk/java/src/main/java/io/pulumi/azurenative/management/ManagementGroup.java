@@ -44,7 +44,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @return The list of children.
      * 
      */
-    public Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> getChildren() {
+    public Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> children() {
         return this.children;
     }
     /**
@@ -58,7 +58,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @return The details of a management group.
      * 
      */
-    public Output</* @Nullable */ ManagementGroupDetailsResponse> getDetails() {
+    public Output</* @Nullable */ ManagementGroupDetailsResponse> details() {
         return this.details;
     }
     /**
@@ -72,7 +72,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @return The friendly name of the management group.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -86,7 +86,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @return The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -114,7 +114,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.  For example, Microsoft.Management/managementGroups
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

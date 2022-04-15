@@ -18,7 +18,7 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="discoverySiteId")
       private final @Nullable Output<String> discoverySiteId;
 
-    public Output<String> getDiscoverySiteId() {
+    public Output<String> discoverySiteId() {
         return this.discoverySiteId == null ? Codegen.empty() : this.discoverySiteId;
     }
 

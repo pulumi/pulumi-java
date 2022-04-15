@@ -46,7 +46,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Last time the message was sent, or a request was received, for this topic.
      * 
      */
-    public Output<String> getAccessedAt() {
+    public Output<String> accessedAt() {
         return this.accessedAt;
     }
     /**
@@ -60,7 +60,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    public Output</* @Nullable */ String> getAutoDeleteOnIdle() {
+    public Output</* @Nullable */ String> autoDeleteOnIdle() {
         return this.autoDeleteOnIdle;
     }
     /**
@@ -74,7 +74,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Message count details
      * 
      */
-    public Output<MessageCountDetailsResponse> getCountDetails() {
+    public Output<MessageCountDetailsResponse> countDetails() {
         return this.countDetails;
     }
     /**
@@ -88,7 +88,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Exact time the message was created.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -102,7 +102,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultMessageTimeToLive() {
+    public Output</* @Nullable */ String> defaultMessageTimeToLive() {
         return this.defaultMessageTimeToLive;
     }
     /**
@@ -116,7 +116,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> getDuplicateDetectionHistoryTimeWindow() {
+    public Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow() {
         return this.duplicateDetectionHistoryTimeWindow;
     }
     /**
@@ -130,7 +130,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBatchedOperations() {
+    public Output</* @Nullable */ Boolean> enableBatchedOperations() {
         return this.enableBatchedOperations;
     }
     /**
@@ -144,7 +144,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableExpress() {
+    public Output</* @Nullable */ Boolean> enableExpress() {
         return this.enableExpress;
     }
     /**
@@ -158,7 +158,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnablePartitioning() {
+    public Output</* @Nullable */ Boolean> enablePartitioning() {
         return this.enablePartitioning;
     }
     /**
@@ -172,7 +172,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxSizeInMegabytes() {
+    public Output</* @Nullable */ Integer> maxSizeInMegabytes() {
         return this.maxSizeInMegabytes;
     }
     /**
@@ -186,7 +186,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -200,7 +200,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Value indicating if this topic requires duplicate detection.
      * 
      */
-    public Output</* @Nullable */ Boolean> getRequiresDuplicateDetection() {
+    public Output</* @Nullable */ Boolean> requiresDuplicateDetection() {
         return this.requiresDuplicateDetection;
     }
     /**
@@ -214,7 +214,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Size of the topic, in bytes.
      * 
      */
-    public Output<Double> getSizeInBytes() {
+    public Output<Double> sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
@@ -228,7 +228,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -242,7 +242,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Number of subscriptions.
      * 
      */
-    public Output<Integer> getSubscriptionCount() {
+    public Output<Integer> subscriptionCount() {
         return this.subscriptionCount;
     }
     /**
@@ -256,7 +256,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Value that indicates whether the topic supports ordering.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSupportOrdering() {
+    public Output</* @Nullable */ Boolean> supportOrdering() {
         return this.supportOrdering;
     }
     /**
@@ -270,7 +270,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -284,7 +284,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return The exact time the message was updated.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 

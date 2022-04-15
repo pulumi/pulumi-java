@@ -27,7 +27,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -38,7 +38,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 

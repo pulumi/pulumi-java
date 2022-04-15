@@ -23,7 +23,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="planId")
       private final @Nullable Output<String> planId;
 
-    public Output<String> getPlanId() {
+    public Output<String> planId() {
         return this.planId == null ? Codegen.empty() : this.planId;
     }
 
@@ -34,7 +34,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -45,7 +45,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 

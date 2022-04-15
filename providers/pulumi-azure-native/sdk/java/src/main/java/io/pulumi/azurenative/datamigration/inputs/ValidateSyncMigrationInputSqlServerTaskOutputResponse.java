@@ -25,7 +25,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -36,7 +36,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

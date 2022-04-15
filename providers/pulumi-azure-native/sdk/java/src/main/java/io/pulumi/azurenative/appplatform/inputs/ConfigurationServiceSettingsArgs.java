@@ -26,7 +26,7 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
     @Import(name="gitProperty")
       private final @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
 
-    public Output<ConfigurationServiceGitPropertyArgs> getGitProperty() {
+    public Output<ConfigurationServiceGitPropertyArgs> gitProperty() {
         return this.gitProperty == null ? Codegen.empty() : this.gitProperty;
     }
 

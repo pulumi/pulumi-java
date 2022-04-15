@@ -25,7 +25,7 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headerActionType", required=true)
       private final String headerActionType;
 
-    public String getHeaderActionType() {
+    public String headerActionType() {
         return this.headerActionType;
     }
 
@@ -36,7 +36,7 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headerName", required=true)
       private final String headerName;
 
-    public String getHeaderName() {
+    public String headerName() {
         return this.headerName;
     }
 
@@ -47,7 +47,7 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value")
       private final @Nullable String value;
 
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
     }
 

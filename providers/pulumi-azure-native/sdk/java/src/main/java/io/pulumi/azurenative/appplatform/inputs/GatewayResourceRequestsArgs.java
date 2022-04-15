@@ -26,7 +26,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
     @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
-    public Output<String> getCpu() {
+    public Output<String> cpu() {
         return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
@@ -37,7 +37,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
+    public Output<String> memory() {
         return this.memory == null ? Codegen.empty() : this.memory;
     }
 

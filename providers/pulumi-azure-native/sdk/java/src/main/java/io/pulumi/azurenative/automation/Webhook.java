@@ -45,7 +45,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -59,7 +59,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the expiry time.
      * 
      */
-    public Output</* @Nullable */ String> getExpiryTime() {
+    public Output</* @Nullable */ String> expiryTime() {
         return this.expiryTime;
     }
     /**
@@ -87,7 +87,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the value of the enabled flag of the webhook.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsEnabled() {
+    public Output</* @Nullable */ Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -101,7 +101,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last invoked time.
      * 
      */
-    public Output</* @Nullable */ String> getLastInvokedTime() {
+    public Output</* @Nullable */ String> lastInvokedTime() {
         return this.lastInvokedTime;
     }
     /**
@@ -115,7 +115,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Details of the user who last modified the Webhook
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -129,7 +129,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -143,7 +143,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +157,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -171,7 +171,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the name of the hybrid worker group the webhook job will run on.
      * 
      */
-    public Output</* @Nullable */ String> getRunOn() {
+    public Output</* @Nullable */ String> runOn() {
         return this.runOn;
     }
     /**
@@ -185,7 +185,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the runbook the webhook is associated with.
      * 
      */
-    public Output</* @Nullable */ RunbookAssociationPropertyResponse> getRunbook() {
+    public Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook() {
         return this.runbook;
     }
     /**
@@ -199,7 +199,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -213,7 +213,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the webhook uri.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
 

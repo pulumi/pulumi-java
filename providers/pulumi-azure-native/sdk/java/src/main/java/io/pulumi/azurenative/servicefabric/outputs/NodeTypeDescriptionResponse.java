@@ -105,21 +105,21 @@ public final class NodeTypeDescriptionResponse {
      * The range of ports from which cluster assigned port to Service Fabric applications.
      * 
     */
-    public Optional<EndpointRangeDescriptionResponse> getApplicationPorts() {
+    public Optional<EndpointRangeDescriptionResponse> applicationPorts() {
         return Optional.ofNullable(this.applicationPorts);
     }
     /**
      * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
     */
-    public Map<String,String> getCapacities() {
+    public Map<String,String> capacities() {
         return this.capacities == null ? Map.of() : this.capacities;
     }
     /**
      * The TCP cluster management endpoint port.
      * 
     */
-    public Integer getClientConnectionEndpointPort() {
+    public Integer clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
     }
     /**
@@ -130,56 +130,56 @@ public final class NodeTypeDescriptionResponse {
      *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
      * 
     */
-    public Optional<String> getDurabilityLevel() {
+    public Optional<String> durabilityLevel() {
         return Optional.ofNullable(this.durabilityLevel);
     }
     /**
      * The range of ephemeral ports that nodes in this node type should be configured with.
      * 
     */
-    public Optional<EndpointRangeDescriptionResponse> getEphemeralPorts() {
+    public Optional<EndpointRangeDescriptionResponse> ephemeralPorts() {
         return Optional.ofNullable(this.ephemeralPorts);
     }
     /**
      * The HTTP cluster management endpoint port.
      * 
     */
-    public Integer getHttpGatewayEndpointPort() {
+    public Integer httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
     /**
      * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
      * 
     */
-    public Boolean getIsPrimary() {
+    public Boolean isPrimary() {
         return this.isPrimary;
     }
     /**
      * The name of the node type.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
     */
-    public Map<String,String> getPlacementProperties() {
+    public Map<String,String> placementProperties() {
         return this.placementProperties == null ? Map.of() : this.placementProperties;
     }
     /**
      * The endpoint used by reverse proxy.
      * 
     */
-    public Optional<Integer> getReverseProxyEndpointPort() {
+    public Optional<Integer> reverseProxyEndpointPort() {
         return Optional.ofNullable(this.reverseProxyEndpointPort);
     }
     /**
      * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
      * 
     */
-    public Integer getVmInstanceCount() {
+    public Integer vmInstanceCount() {
         return this.vmInstanceCount;
     }
 

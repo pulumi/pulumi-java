@@ -209,182 +209,182 @@ public final class GetPoolResult {
         this.vmSize = vmSize;
     }
 
-    public String getAllocationState() {
+    public String allocationState() {
         return this.allocationState;
     }
-    public String getAllocationStateTransitionTime() {
+    public String allocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
     }
     /**
      * The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
      * 
     */
-    public List<String> getApplicationLicenses() {
+    public List<String> applicationLicenses() {
         return this.applicationLicenses == null ? List.of() : this.applicationLicenses;
     }
     /**
      * Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
      * 
     */
-    public List<ApplicationPackageReferenceResponse> getApplicationPackages() {
+    public List<ApplicationPackageReferenceResponse> applicationPackages() {
         return this.applicationPackages == null ? List.of() : this.applicationPackages;
     }
     /**
      * This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
      * 
     */
-    public AutoScaleRunResponse getAutoScaleRun() {
+    public AutoScaleRunResponse autoScaleRun() {
         return this.autoScaleRun;
     }
     /**
      * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
     */
-    public List<CertificateReferenceResponse> getCertificates() {
+    public List<CertificateReferenceResponse> certificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
-    public Integer getCurrentDedicatedNodes() {
+    public Integer currentDedicatedNodes() {
         return this.currentDedicatedNodes;
     }
-    public Integer getCurrentLowPriorityNodes() {
+    public Integer currentLowPriorityNodes() {
         return this.currentLowPriorityNodes;
     }
     /**
      * Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
      * 
     */
-    public Optional<DeploymentConfigurationResponse> getDeploymentConfiguration() {
+    public Optional<DeploymentConfigurationResponse> deploymentConfiguration() {
         return Optional.ofNullable(this.deploymentConfiguration);
     }
     /**
      * The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ETag of the resource, used for concurrency statements.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The type of identity used for the Batch Pool.
      * 
     */
-    public Optional<BatchPoolIdentityResponse> getIdentity() {
+    public Optional<BatchPoolIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
      * 
     */
-    public Optional<String> getInterNodeCommunication() {
+    public Optional<String> interNodeCommunication() {
         return Optional.ofNullable(this.interNodeCommunication);
     }
     /**
      * This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
      * 
     */
-    public String getLastModified() {
+    public String lastModified() {
         return this.lastModified;
     }
     /**
      * The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
      * 
     */
-    public List<MetadataItemResponse> getMetadata() {
+    public List<MetadataItemResponse> metadata() {
         return this.metadata == null ? List.of() : this.metadata;
     }
     /**
      * This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
      * 
     */
-    public List<MountConfigurationResponse> getMountConfiguration() {
+    public List<MountConfigurationResponse> mountConfiguration() {
         return this.mountConfiguration == null ? List.of() : this.mountConfiguration;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The network configuration for a pool.
      * 
     */
-    public Optional<NetworkConfigurationResponse> getNetworkConfiguration() {
+    public Optional<NetworkConfigurationResponse> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
-    public String getProvisioningStateTransitionTime() {
+    public String provisioningStateTransitionTime() {
         return this.provisioningStateTransitionTime;
     }
     /**
      * Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
      * 
     */
-    public ResizeOperationStatusResponse getResizeOperationStatus() {
+    public ResizeOperationStatusResponse resizeOperationStatus() {
         return this.resizeOperationStatus;
     }
     /**
      * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
     */
-    public Optional<ScaleSettingsResponse> getScaleSettings() {
+    public Optional<ScaleSettingsResponse> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
     /**
      * In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
      * 
     */
-    public Optional<StartTaskResponse> getStartTask() {
+    public Optional<StartTaskResponse> startTask() {
         return Optional.ofNullable(this.startTask);
     }
     /**
      * If not specified, the default is spread.
      * 
     */
-    public Optional<TaskSchedulingPolicyResponse> getTaskSchedulingPolicy() {
+    public Optional<TaskSchedulingPolicyResponse> taskSchedulingPolicy() {
         return Optional.ofNullable(this.taskSchedulingPolicy);
     }
     /**
      * The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
      * 
     */
-    public Optional<Integer> getTaskSlotsPerNode() {
+    public Optional<Integer> taskSlotsPerNode() {
         return Optional.ofNullable(this.taskSlotsPerNode);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public List<UserAccountResponse> getUserAccounts() {
+    public List<UserAccountResponse> userAccounts() {
         return this.userAccounts == null ? List.of() : this.userAccounts;
     }
     /**
      * For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
      * 
     */
-    public Optional<String> getVmSize() {
+    public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
 

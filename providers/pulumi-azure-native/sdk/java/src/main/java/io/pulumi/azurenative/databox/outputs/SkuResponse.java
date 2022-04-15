@@ -41,21 +41,21 @@ public final class SkuResponse {
      * The display name of the sku.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The sku family.
      * 
     */
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The sku name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

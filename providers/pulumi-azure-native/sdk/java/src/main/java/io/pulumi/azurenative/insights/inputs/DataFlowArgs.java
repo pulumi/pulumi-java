@@ -29,7 +29,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
+    public Output<List<String>> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
@@ -40,7 +40,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
 
-    public Output<List<Either<String,KnownDataFlowStreams>>> getStreams() {
+    public Output<List<Either<String,KnownDataFlowStreams>>> streams() {
         return this.streams == null ? Codegen.empty() : this.streams;
     }
 

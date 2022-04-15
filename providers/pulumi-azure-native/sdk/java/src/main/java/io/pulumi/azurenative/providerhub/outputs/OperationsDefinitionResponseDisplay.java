@@ -26,16 +26,16 @@ public final class OperationsDefinitionResponseDisplay {
         this.resource = resource;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getOperation() {
+    public String operation() {
         return this.operation;
     }
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

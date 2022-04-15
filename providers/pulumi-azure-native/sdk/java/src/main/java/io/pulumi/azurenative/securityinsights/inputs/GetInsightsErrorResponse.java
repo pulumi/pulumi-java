@@ -25,7 +25,7 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -36,7 +36,7 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -47,7 +47,7 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
     @Import(name="queryId")
       private final @Nullable String queryId;
 
-    public Optional<String> getQueryId() {
+    public Optional<String> queryId() {
         return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
     }
 

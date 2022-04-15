@@ -29,7 +29,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="customErrorConfigurations")
       private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
-    public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
+    public List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations() {
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="firewallPolicy")
       private final @Nullable SubResourceResponse firewallPolicy;
 
-    public Optional<SubResourceResponse> getFirewallPolicy() {
+    public Optional<SubResourceResponse> firewallPolicy() {
         return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="frontendIPConfiguration")
       private final @Nullable SubResourceResponse frontendIPConfiguration;
 
-    public Optional<SubResourceResponse> getFrontendIPConfiguration() {
+    public Optional<SubResourceResponse> frontendIPConfiguration() {
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
     }
 
@@ -73,7 +73,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="frontendPort")
       private final @Nullable SubResourceResponse frontendPort;
 
-    public Optional<SubResourceResponse> getFrontendPort() {
+    public Optional<SubResourceResponse> frontendPort() {
         return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
     }
 
@@ -84,7 +84,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="hostName")
       private final @Nullable String hostName;
 
-    public Optional<String> getHostName() {
+    public Optional<String> hostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
@@ -95,7 +95,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="hostNames")
       private final @Nullable List<String> hostNames;
 
-    public List<String> getHostNames() {
+    public List<String> hostNames() {
         return this.hostNames == null ? List.of() : this.hostNames;
     }
 
@@ -106,7 +106,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -117,7 +117,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -128,7 +128,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -139,7 +139,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -150,7 +150,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="requireServerNameIndication")
       private final @Nullable Boolean requireServerNameIndication;
 
-    public Optional<Boolean> getRequireServerNameIndication() {
+    public Optional<Boolean> requireServerNameIndication() {
         return this.requireServerNameIndication == null ? Optional.empty() : Optional.ofNullable(this.requireServerNameIndication);
     }
 
@@ -161,7 +161,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="sslCertificate")
       private final @Nullable SubResourceResponse sslCertificate;
 
-    public Optional<SubResourceResponse> getSslCertificate() {
+    public Optional<SubResourceResponse> sslCertificate() {
         return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
     }
 
@@ -172,7 +172,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="sslProfile")
       private final @Nullable SubResourceResponse sslProfile;
 
-    public Optional<SubResourceResponse> getSslProfile() {
+    public Optional<SubResourceResponse> sslProfile() {
         return this.sslProfile == null ? Optional.empty() : Optional.ofNullable(this.sslProfile);
     }
 
@@ -183,7 +183,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
     @Import(name="networkInterfaceConfigurations")
       private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
+    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? Codegen.empty() : this.networkInterfaceConfigurations;
     }
 

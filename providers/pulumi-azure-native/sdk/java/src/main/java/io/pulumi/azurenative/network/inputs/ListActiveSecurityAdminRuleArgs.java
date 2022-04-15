@@ -22,7 +22,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
-    public String getNetworkManagerName() {
+    public String networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -33,7 +33,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
     @Import(name="regions")
       private final @Nullable List<String> regions;
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
 
@@ -44,7 +44,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ListActiveSecurityAdminRuleArgs extends io.pulumi.resources.I
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 

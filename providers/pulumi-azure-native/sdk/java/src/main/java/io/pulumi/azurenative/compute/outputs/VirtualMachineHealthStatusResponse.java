@@ -24,7 +24,7 @@ public final class VirtualMachineHealthStatusResponse {
      * The health status information for the VM.
      * 
     */
-    public InstanceViewStatusResponse getStatus() {
+    public InstanceViewStatusResponse status() {
         return this.status;
     }
 

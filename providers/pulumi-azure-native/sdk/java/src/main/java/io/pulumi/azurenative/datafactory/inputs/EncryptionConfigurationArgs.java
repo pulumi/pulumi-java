@@ -27,7 +27,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="identity")
       private final @Nullable Output<CMKIdentityDefinitionArgs> identity;
 
-    public Output<CMKIdentityDefinitionArgs> getIdentity() {
+    public Output<CMKIdentityDefinitionArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -38,7 +38,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -49,7 +49,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
+    public Output<String> keyVersion() {
         return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
@@ -60,7 +60,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="vaultBaseUrl", required=true)
       private final Output<String> vaultBaseUrl;
 
-    public Output<String> getVaultBaseUrl() {
+    public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 

@@ -26,7 +26,7 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="encryptionScheme", required=true)
       private final String encryptionScheme;
 
-    public String getEncryptionScheme() {
+    public String encryptionScheme() {
         return this.encryptionScheme;
     }
 
@@ -37,7 +37,7 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="paths")
       private final @Nullable List<String> paths;
 
-    public List<String> getPaths() {
+    public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
 
@@ -48,7 +48,7 @@ public final class StreamingPathResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="streamingProtocol", required=true)
       private final String streamingProtocol;
 
-    public String getStreamingProtocol() {
+    public String streamingProtocol() {
         return this.streamingProtocol;
     }
 

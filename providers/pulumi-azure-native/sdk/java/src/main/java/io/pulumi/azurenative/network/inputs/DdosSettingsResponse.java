@@ -27,7 +27,7 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ddosCustomPolicy")
       private final @Nullable SubResourceResponse ddosCustomPolicy;
 
-    public Optional<SubResourceResponse> getDdosCustomPolicy() {
+    public Optional<SubResourceResponse> ddosCustomPolicy() {
         return this.ddosCustomPolicy == null ? Optional.empty() : Optional.ofNullable(this.ddosCustomPolicy);
     }
 
@@ -38,7 +38,7 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="protectedIP")
       private final @Nullable Boolean protectedIP;
 
-    public Optional<Boolean> getProtectedIP() {
+    public Optional<Boolean> protectedIP() {
         return this.protectedIP == null ? Optional.empty() : Optional.ofNullable(this.protectedIP);
     }
 
@@ -49,7 +49,7 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="protectionCoverage")
       private final @Nullable String protectionCoverage;
 
-    public Optional<String> getProtectionCoverage() {
+    public Optional<String> protectionCoverage() {
         return this.protectionCoverage == null ? Optional.empty() : Optional.ofNullable(this.protectionCoverage);
     }
 

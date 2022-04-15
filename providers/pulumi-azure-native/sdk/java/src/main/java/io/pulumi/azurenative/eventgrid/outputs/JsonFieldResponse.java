@@ -26,7 +26,7 @@ public final class JsonFieldResponse {
      * Name of a field in the input event schema that's to be used as the source of a mapping.
      * 
     */
-    public Optional<String> getSourceField() {
+    public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
 

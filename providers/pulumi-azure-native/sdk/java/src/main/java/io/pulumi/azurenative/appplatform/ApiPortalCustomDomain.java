@@ -44,7 +44,7 @@ public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The properties of custom domain for API portal
      * 
      */
-    public Output<ApiPortalCustomDomainPropertiesResponse> getProperties() {
+    public Output<ApiPortalCustomDomainPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class ApiPortalCustomDomain extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

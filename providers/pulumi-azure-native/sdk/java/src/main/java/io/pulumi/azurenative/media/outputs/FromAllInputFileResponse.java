@@ -42,7 +42,7 @@ public final class FromAllInputFileResponse {
      * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
     */
-    public List<Object> getIncludedTracks() {
+    public List<Object> includedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
     /**
@@ -50,7 +50,7 @@ public final class FromAllInputFileResponse {
      * Expected value is '#Microsoft.Media.FromAllInputFile'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

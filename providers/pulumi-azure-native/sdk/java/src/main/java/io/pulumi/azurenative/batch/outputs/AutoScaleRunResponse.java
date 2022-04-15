@@ -30,17 +30,17 @@ public final class AutoScaleRunResponse {
         this.results = results;
     }
 
-    public Optional<AutoScaleRunErrorResponse> getError() {
+    public Optional<AutoScaleRunErrorResponse> error() {
         return Optional.ofNullable(this.error);
     }
-    public String getEvaluationTime() {
+    public String evaluationTime() {
         return this.evaluationTime;
     }
     /**
      * Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
      * 
     */
-    public Optional<String> getResults() {
+    public Optional<String> results() {
         return Optional.ofNullable(this.results);
     }
 

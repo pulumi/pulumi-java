@@ -27,7 +27,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="alertRuleTemplateName")
       private final @Nullable Output<String> alertRuleTemplateName;
 
-    public Output<String> getAlertRuleTemplateName() {
+    public Output<String> alertRuleTemplateName() {
         return this.alertRuleTemplateName == null ? Codegen.empty() : this.alertRuleTemplateName;
     }
 
@@ -38,7 +38,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -49,7 +49,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -60,7 +60,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="displayNamesExcludeFilter")
       private final @Nullable Output<List<String>> displayNamesExcludeFilter;
 
-    public Output<List<String>> getDisplayNamesExcludeFilter() {
+    public Output<List<String>> displayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter == null ? Codegen.empty() : this.displayNamesExcludeFilter;
     }
 
@@ -71,7 +71,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="displayNamesFilter")
       private final @Nullable Output<List<String>> displayNamesFilter;
 
-    public Output<List<String>> getDisplayNamesFilter() {
+    public Output<List<String>> displayNamesFilter() {
         return this.displayNamesFilter == null ? Codegen.empty() : this.displayNamesFilter;
     }
 
@@ -82,7 +82,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -94,7 +94,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -105,7 +105,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="productFilter", required=true)
       private final Output<Either<String,MicrosoftSecurityProductName>> productFilter;
 
-    public Output<Either<String,MicrosoftSecurityProductName>> getProductFilter() {
+    public Output<Either<String,MicrosoftSecurityProductName>> productFilter() {
         return this.productFilter;
     }
 
@@ -116,7 +116,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -127,7 +127,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
@@ -138,7 +138,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="severitiesFilter")
       private final @Nullable Output<List<Either<String,AlertSeverity>>> severitiesFilter;
 
-    public Output<List<Either<String,AlertSeverity>>> getSeveritiesFilter() {
+    public Output<List<Either<String,AlertSeverity>>> severitiesFilter() {
         return this.severitiesFilter == null ? Codegen.empty() : this.severitiesFilter;
     }
 
@@ -149,7 +149,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

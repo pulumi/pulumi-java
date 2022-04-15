@@ -27,7 +27,7 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
     @Import(name="defaultTtlAsIso8601")
       private final @Nullable String defaultTtlAsIso8601;
 
-    public Optional<String> getDefaultTtlAsIso8601() {
+    public Optional<String> defaultTtlAsIso8601() {
         return this.defaultTtlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.defaultTtlAsIso8601);
     }
 
@@ -38,7 +38,7 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
     @Import(name="feedback")
       private final @Nullable FeedbackPropertiesResponse feedback;
 
-    public Optional<FeedbackPropertiesResponse> getFeedback() {
+    public Optional<FeedbackPropertiesResponse> feedback() {
         return this.feedback == null ? Optional.empty() : Optional.ofNullable(this.feedback);
     }
 
@@ -49,7 +49,7 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
     @Import(name="maxDeliveryCount")
       private final @Nullable Integer maxDeliveryCount;
 
-    public Optional<Integer> getMaxDeliveryCount() {
+    public Optional<Integer> maxDeliveryCount() {
         return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
     }
 

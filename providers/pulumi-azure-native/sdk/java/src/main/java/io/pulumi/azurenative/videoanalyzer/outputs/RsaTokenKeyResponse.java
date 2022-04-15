@@ -54,28 +54,28 @@ public final class RsaTokenKeyResponse {
      * RSA algorithm to be used: RS256, RS384 or RS512.
      * 
     */
-    public String getAlg() {
+    public String alg() {
         return this.alg;
     }
     /**
      * RSA public key exponent.
      * 
     */
-    public String getE() {
+    public String e() {
         return this.e;
     }
     /**
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
     */
-    public String getKid() {
+    public String kid() {
         return this.kid;
     }
     /**
      * RSA public key modulus.
      * 
     */
-    public String getN() {
+    public String n() {
         return this.n;
     }
     /**
@@ -83,7 +83,7 @@ public final class RsaTokenKeyResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

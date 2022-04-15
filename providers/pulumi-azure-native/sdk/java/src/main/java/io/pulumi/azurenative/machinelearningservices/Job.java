@@ -46,7 +46,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,7 +60,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Additional attributes of the entity.
      * 
      */
-    public Output<Either<CommandJobResponse,SweepJobResponse>> getProperties() {
+    public Output<Either<CommandJobResponse,SweepJobResponse>> properties() {
         return this.properties;
     }
     /**
@@ -74,7 +74,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return System data associated with resource provider
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -88,7 +88,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

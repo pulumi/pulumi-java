@@ -24,7 +24,7 @@ public final class PrivateEndpointResponse {
      * Gets or sets id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

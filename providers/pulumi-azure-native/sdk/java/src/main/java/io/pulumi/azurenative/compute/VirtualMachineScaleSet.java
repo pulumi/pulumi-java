@@ -55,7 +55,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
      * 
      */
-    public Output</* @Nullable */ AdditionalCapabilitiesResponse> getAdditionalCapabilities() {
+    public Output</* @Nullable */ AdditionalCapabilitiesResponse> additionalCapabilities() {
         return this.additionalCapabilities;
     }
     /**
@@ -69,7 +69,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Policy for automatic repairs.
      * 
      */
-    public Output</* @Nullable */ AutomaticRepairsPolicyResponse> getAutomaticRepairsPolicy() {
+    public Output</* @Nullable */ AutomaticRepairsPolicyResponse> automaticRepairsPolicy() {
         return this.automaticRepairsPolicy;
     }
     /**
@@ -83,7 +83,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDoNotRunExtensionsOnOverprovisionedVMs() {
+    public Output</* @Nullable */ Boolean> doNotRunExtensionsOnOverprovisionedVMs() {
         return this.doNotRunExtensionsOnOverprovisionedVMs;
     }
     /**
@@ -97,7 +97,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The extended location of the Virtual Machine Scale Set.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -111,7 +111,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getHostGroup() {
+    public Output</* @Nullable */ SubResourceResponse> hostGroup() {
         return this.hostGroup;
     }
     /**
@@ -125,7 +125,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The identity of the virtual machine scale set, if configured.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineScaleSetIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ VirtualMachineScaleSetIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -139,7 +139,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -153,7 +153,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -167,7 +167,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies the orchestration mode for the virtual machine scale set.
      * 
      */
-    public Output</* @Nullable */ String> getOrchestrationMode() {
+    public Output</* @Nullable */ String> orchestrationMode() {
         return this.orchestrationMode;
     }
     /**
@@ -181,7 +181,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the Virtual Machine Scale Set should be overprovisioned.
      * 
      */
-    public Output</* @Nullable */ Boolean> getOverprovision() {
+    public Output</* @Nullable */ Boolean> overprovision() {
         return this.overprovision;
     }
     /**
@@ -195,7 +195,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> getPlan() {
+    public Output</* @Nullable */ PlanResponse> plan() {
         return this.plan;
     }
     /**
@@ -209,7 +209,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Fault Domain count for each placement group.
      * 
      */
-    public Output</* @Nullable */ Integer> getPlatformFaultDomainCount() {
+    public Output</* @Nullable */ Integer> platformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
     /**
@@ -223,7 +223,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -237,7 +237,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getProximityPlacementGroup() {
+    public Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
@@ -251,7 +251,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
      * 
      */
-    public Output</* @Nullable */ ScaleInPolicyResponse> getScaleInPolicy() {
+    public Output</* @Nullable */ ScaleInPolicyResponse> scaleInPolicy() {
         return this.scaleInPolicy;
     }
     /**
@@ -265,7 +265,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSinglePlacementGroup() {
+    public Output</* @Nullable */ Boolean> singlePlacementGroup() {
         return this.singlePlacementGroup;
     }
     /**
@@ -279,7 +279,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The virtual machine scale set sku.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -293,7 +293,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -307,7 +307,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -321,7 +321,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Specifies the ID which uniquely identifies a Virtual Machine Scale Set.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -335,7 +335,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The upgrade policy.
      * 
      */
-    public Output</* @Nullable */ UpgradePolicyResponse> getUpgradePolicy() {
+    public Output</* @Nullable */ UpgradePolicyResponse> upgradePolicy() {
         return this.upgradePolicy;
     }
     /**
@@ -349,7 +349,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The virtual machine profile.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineScaleSetVMProfileResponse> getVirtualMachineProfile() {
+    public Output</* @Nullable */ VirtualMachineScaleSetVMProfileResponse> virtualMachineProfile() {
         return this.virtualMachineProfile;
     }
     /**
@@ -363,7 +363,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
      * 
      */
-    public Output</* @Nullable */ Boolean> getZoneBalance() {
+    public Output</* @Nullable */ Boolean> zoneBalance() {
         return this.zoneBalance;
     }
     /**
@@ -377,7 +377,7 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
      * @return The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
      * 
      */
-    public Output</* @Nullable */ List<String>> getZones() {
+    public Output</* @Nullable */ List<String>> zones() {
         return this.zones;
     }
 

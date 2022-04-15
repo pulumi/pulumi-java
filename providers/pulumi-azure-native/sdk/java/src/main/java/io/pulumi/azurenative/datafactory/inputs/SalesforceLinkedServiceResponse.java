@@ -33,7 +33,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="apiVersion")
       private final @Nullable Object apiVersion;
 
-    public Optional<Object> getApiVersion() {
+    public Optional<Object> apiVersion() {
         return this.apiVersion == null ? Optional.empty() : Optional.ofNullable(this.apiVersion);
     }
 
@@ -55,7 +55,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -77,7 +77,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -88,7 +88,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="environmentUrl")
       private final @Nullable Object environmentUrl;
 
-    public Optional<Object> getEnvironmentUrl() {
+    public Optional<Object> environmentUrl() {
         return this.environmentUrl == null ? Optional.empty() : Optional.ofNullable(this.environmentUrl);
     }
 
@@ -99,7 +99,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -110,7 +110,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -121,7 +121,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="securityToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecurityToken() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken() {
         return this.securityToken == null ? null : this.securityToken;
     }
 
@@ -133,7 +133,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -144,7 +144,7 @@ public final class SalesforceLinkedServiceResponse extends io.pulumi.resources.I
     @Import(name="username")
       private final @Nullable Object username;
 
-    public Optional<Object> getUsername() {
+    public Optional<Object> username() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 

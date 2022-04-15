@@ -117,91 +117,91 @@ public final class GetProfileResult {
      * The list of allowed endpoint record types.
      * 
     */
-    public List<String> getAllowedEndpointRecordTypes() {
+    public List<String> allowedEndpointRecordTypes() {
         return this.allowedEndpointRecordTypes == null ? List.of() : this.allowedEndpointRecordTypes;
     }
     /**
      * The DNS settings of the Traffic Manager profile.
      * 
     */
-    public Optional<DnsConfigResponse> getDnsConfig() {
+    public Optional<DnsConfigResponse> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
     /**
      * The list of endpoints in the Traffic Manager profile.
      * 
     */
-    public List<EndpointResponse> getEndpoints() {
+    public List<EndpointResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The Azure Region where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Maximum number of endpoints to be returned for MultiValue routing type.
      * 
     */
-    public Optional<Double> getMaxReturn() {
+    public Optional<Double> maxReturn() {
         return Optional.ofNullable(this.maxReturn);
     }
     /**
      * The endpoint monitoring settings of the Traffic Manager profile.
      * 
     */
-    public Optional<MonitorConfigResponse> getMonitorConfig() {
+    public Optional<MonitorConfigResponse> monitorConfig() {
         return Optional.ofNullable(this.monitorConfig);
     }
     /**
      * The name of the resource
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The status of the Traffic Manager profile.
      * 
     */
-    public Optional<String> getProfileStatus() {
+    public Optional<String> profileStatus() {
         return Optional.ofNullable(this.profileStatus);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The traffic routing method of the Traffic Manager profile.
      * 
     */
-    public Optional<String> getTrafficRoutingMethod() {
+    public Optional<String> trafficRoutingMethod() {
         return Optional.ofNullable(this.trafficRoutingMethod);
     }
     /**
      * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
     */
-    public Optional<String> getTrafficViewEnrollmentStatus() {
+    public Optional<String> trafficViewEnrollmentStatus() {
         return Optional.ofNullable(this.trafficViewEnrollmentStatus);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

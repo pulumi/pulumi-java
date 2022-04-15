@@ -19,7 +19,7 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
     @Import(name="storageType", required=true)
       private final String storageType;
 
-    public String getStorageType() {
+    public String storageType() {
         return this.storageType;
     }
 

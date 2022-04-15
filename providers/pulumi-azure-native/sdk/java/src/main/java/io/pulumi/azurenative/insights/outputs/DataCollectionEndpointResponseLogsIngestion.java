@@ -24,7 +24,7 @@ public final class DataCollectionEndpointResponseLogsIngestion {
      * The endpoint. This property is READ-ONLY.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 

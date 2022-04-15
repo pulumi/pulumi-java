@@ -27,7 +27,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="endDate")
       private final @Nullable String endDate;
 
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
     }
 
@@ -38,7 +38,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -49,7 +49,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="recurrenceValues")
       private final @Nullable List<Integer> recurrenceValues;
 
-    public List<Integer> getRecurrenceValues() {
+    public List<Integer> recurrenceValues() {
         return this.recurrenceValues == null ? List.of() : this.recurrenceValues;
     }
 
@@ -60,7 +60,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="startDate")
       private final @Nullable String startDate;
 
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
     }
 
@@ -71,7 +71,7 @@ public final class SuppressionScheduleResponse extends io.pulumi.resources.Invok
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

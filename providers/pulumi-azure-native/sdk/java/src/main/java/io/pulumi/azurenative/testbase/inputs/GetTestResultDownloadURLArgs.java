@@ -19,7 +19,7 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
     @Import(name="packageName", required=true)
       private final String packageName;
 
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
     @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
-    public String getTestBaseAccountName() {
+    public String testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -52,7 +52,7 @@ public final class GetTestResultDownloadURLArgs extends io.pulumi.resources.Invo
     @Import(name="testResultName", required=true)
       private final String testResultName;
 
-    public String getTestResultName() {
+    public String testResultName() {
         return this.testResultName;
     }
 

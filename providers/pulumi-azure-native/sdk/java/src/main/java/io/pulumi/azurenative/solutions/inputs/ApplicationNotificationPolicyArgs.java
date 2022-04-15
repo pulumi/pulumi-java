@@ -26,7 +26,7 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
     @Import(name="notificationEndpoints", required=true)
       private final Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
-    public Output<List<ApplicationNotificationEndpointArgs>> getNotificationEndpoints() {
+    public Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints() {
         return this.notificationEndpoints;
     }
 

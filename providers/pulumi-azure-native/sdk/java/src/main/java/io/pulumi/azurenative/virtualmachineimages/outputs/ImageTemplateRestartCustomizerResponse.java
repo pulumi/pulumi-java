@@ -56,28 +56,28 @@ public final class ImageTemplateRestartCustomizerResponse {
      * Friendly Name to provide context on what this customization step does
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Command to check if restart succeeded [Default: '']
      * 
     */
-    public Optional<String> getRestartCheckCommand() {
+    public Optional<String> restartCheckCommand() {
         return Optional.ofNullable(this.restartCheckCommand);
     }
     /**
      * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
      * 
     */
-    public Optional<String> getRestartCommand() {
+    public Optional<String> restartCommand() {
         return Optional.ofNullable(this.restartCommand);
     }
     /**
      * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
      * 
     */
-    public Optional<String> getRestartTimeout() {
+    public Optional<String> restartTimeout() {
         return Optional.ofNullable(this.restartTimeout);
     }
     /**
@@ -85,7 +85,7 @@ public final class ImageTemplateRestartCustomizerResponse {
      * Expected value is 'WindowsRestart'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

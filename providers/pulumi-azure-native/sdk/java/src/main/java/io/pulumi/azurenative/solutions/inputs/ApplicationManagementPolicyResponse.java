@@ -25,7 +25,7 @@ public final class ApplicationManagementPolicyResponse extends io.pulumi.resourc
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 

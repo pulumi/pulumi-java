@@ -26,7 +26,7 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 
@@ -37,7 +37,7 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
     @Import(name="recallErrors", required=true)
       private final List<ServerEndpointRecallErrorResponse> recallErrors;
 
-    public List<ServerEndpointRecallErrorResponse> getRecallErrors() {
+    public List<ServerEndpointRecallErrorResponse> recallErrors() {
         return this.recallErrors;
     }
 
@@ -48,7 +48,7 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
     @Import(name="totalRecallErrorsCount", required=true)
       private final Double totalRecallErrorsCount;
 
-    public Double getTotalRecallErrorsCount() {
+    public Double totalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }
 

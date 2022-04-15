@@ -42,14 +42,14 @@ public final class DynamicDeliveryAttributeMappingResponse {
      * Name of the delivery attribute or header.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * JSON path in the event which contains attribute value.
      * 
     */
-    public Optional<String> getSourceField() {
+    public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
     /**
@@ -57,7 +57,7 @@ public final class DynamicDeliveryAttributeMappingResponse {
      * Expected value is 'Dynamic'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

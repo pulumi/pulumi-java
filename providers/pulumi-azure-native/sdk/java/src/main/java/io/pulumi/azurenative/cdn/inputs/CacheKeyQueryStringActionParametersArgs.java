@@ -24,7 +24,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -35,7 +35,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     @Import(name="queryParameters")
       private final @Nullable Output<String> queryParameters;
 
-    public Output<String> getQueryParameters() {
+    public Output<String> queryParameters() {
         return this.queryParameters == null ? Codegen.empty() : this.queryParameters;
     }
 
@@ -46,7 +46,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     @Import(name="queryStringBehavior", required=true)
       private final Output<Either<String,QueryStringBehavior>> queryStringBehavior;
 
-    public Output<Either<String,QueryStringBehavior>> getQueryStringBehavior() {
+    public Output<Either<String,QueryStringBehavior>> queryStringBehavior() {
         return this.queryStringBehavior;
     }
 

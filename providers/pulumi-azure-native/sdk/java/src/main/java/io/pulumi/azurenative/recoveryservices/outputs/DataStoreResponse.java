@@ -55,35 +55,35 @@ public final class DataStoreResponse {
      * The capacity of data store in GBs.
      * 
     */
-    public Optional<String> getCapacity() {
+    public Optional<String> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The free space of data store in GBs.
      * 
     */
-    public Optional<String> getFreeSpace() {
+    public Optional<String> freeSpace() {
         return Optional.ofNullable(this.freeSpace);
     }
     /**
      * The symbolic name of data store.
      * 
     */
-    public Optional<String> getSymbolicName() {
+    public Optional<String> symbolicName() {
         return Optional.ofNullable(this.symbolicName);
     }
     /**
      * The type of data store.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The uuid of data store.
      * 
     */
-    public Optional<String> getUuid() {
+    public Optional<String> uuid() {
         return Optional.ofNullable(this.uuid);
     }
 

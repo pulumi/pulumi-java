@@ -27,7 +27,7 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
     @Import(name="count")
       private final @Nullable Integer count;
 
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
@@ -38,7 +38,7 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
     @Import(name="durationType")
       private final @Nullable String durationType;
 
-    public Optional<String> getDurationType() {
+    public Optional<String> durationType() {
         return this.durationType == null ? Optional.empty() : Optional.ofNullable(this.durationType);
     }
 

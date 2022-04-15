@@ -28,7 +28,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
@@ -39,7 +39,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
+    public Output<String> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 
@@ -50,7 +50,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customDataRequired")
       private final @Nullable Output<Boolean> customDataRequired;
 
-    public Output<Boolean> getCustomDataRequired() {
+    public Output<Boolean> customDataRequired() {
         return this.customDataRequired == null ? Codegen.empty() : this.customDataRequired;
     }
 
@@ -61,7 +61,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linuxConfiguration")
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
+    public Output<LinuxConfigurationArgs> linuxConfiguration() {
         return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
     }
 

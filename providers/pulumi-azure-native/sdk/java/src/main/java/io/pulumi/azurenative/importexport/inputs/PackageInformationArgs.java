@@ -26,7 +26,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
-    public Output<String> getCarrierName() {
+    public Output<String> carrierName() {
         return this.carrierName;
     }
 
@@ -37,7 +37,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="driveCount", required=true)
       private final Output<Double> driveCount;
 
-    public Output<Double> getDriveCount() {
+    public Output<Double> driveCount() {
         return this.driveCount;
     }
 
@@ -48,7 +48,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="shipDate", required=true)
       private final Output<String> shipDate;
 
-    public Output<String> getShipDate() {
+    public Output<String> shipDate() {
         return this.shipDate;
     }
 
@@ -59,7 +59,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="trackingNumber", required=true)
       private final Output<String> trackingNumber;
 
-    public Output<String> getTrackingNumber() {
+    public Output<String> trackingNumber() {
         return this.trackingNumber;
     }
 

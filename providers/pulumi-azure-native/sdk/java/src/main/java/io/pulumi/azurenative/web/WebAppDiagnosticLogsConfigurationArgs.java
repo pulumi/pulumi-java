@@ -25,7 +25,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="applicationLogs")
       private final @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
 
-    public Output<ApplicationLogsConfigArgs> getApplicationLogs() {
+    public Output<ApplicationLogsConfigArgs> applicationLogs() {
         return this.applicationLogs == null ? Codegen.empty() : this.applicationLogs;
     }
 
@@ -36,7 +36,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="detailedErrorMessages")
       private final @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
 
-    public Output<EnabledConfigArgs> getDetailedErrorMessages() {
+    public Output<EnabledConfigArgs> detailedErrorMessages() {
         return this.detailedErrorMessages == null ? Codegen.empty() : this.detailedErrorMessages;
     }
 
@@ -47,7 +47,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="failedRequestsTracing")
       private final @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
 
-    public Output<EnabledConfigArgs> getFailedRequestsTracing() {
+    public Output<EnabledConfigArgs> failedRequestsTracing() {
         return this.failedRequestsTracing == null ? Codegen.empty() : this.failedRequestsTracing;
     }
 
@@ -58,7 +58,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="httpLogs")
       private final @Nullable Output<HttpLogsConfigArgs> httpLogs;
 
-    public Output<HttpLogsConfigArgs> getHttpLogs() {
+    public Output<HttpLogsConfigArgs> httpLogs() {
         return this.httpLogs == null ? Codegen.empty() : this.httpLogs;
     }
 
@@ -69,7 +69,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -80,7 +80,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -91,7 +91,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

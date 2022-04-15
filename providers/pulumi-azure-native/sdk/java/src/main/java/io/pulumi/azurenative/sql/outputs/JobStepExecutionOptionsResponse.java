@@ -56,35 +56,35 @@ public final class JobStepExecutionOptionsResponse {
      * Initial delay between retries for job step execution.
      * 
     */
-    public Optional<Integer> getInitialRetryIntervalSeconds() {
+    public Optional<Integer> initialRetryIntervalSeconds() {
         return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
     /**
      * The maximum amount of time to wait between retries for job step execution.
      * 
     */
-    public Optional<Integer> getMaximumRetryIntervalSeconds() {
+    public Optional<Integer> maximumRetryIntervalSeconds() {
         return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
     /**
      * Maximum number of times the job step will be reattempted if the first attempt fails.
      * 
     */
-    public Optional<Integer> getRetryAttempts() {
+    public Optional<Integer> retryAttempts() {
         return Optional.ofNullable(this.retryAttempts);
     }
     /**
      * The backoff multiplier for the time between retries.
      * 
     */
-    public Optional<Double> getRetryIntervalBackoffMultiplier() {
+    public Optional<Double> retryIntervalBackoffMultiplier() {
         return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
     /**
      * Execution timeout for the job step.
      * 
     */
-    public Optional<Integer> getTimeoutSeconds() {
+    public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
 

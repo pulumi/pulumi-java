@@ -28,7 +28,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
@@ -39,7 +39,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     @Import(name="privateLink")
       private final @Nullable Output<ResourceReferenceArgs> privateLink;
 
-    public Output<ResourceReferenceArgs> getPrivateLink() {
+    public Output<ResourceReferenceArgs> privateLink() {
         return this.privateLink == null ? Codegen.empty() : this.privateLink;
     }
 
@@ -50,7 +50,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> getPrivateLinkLocation() {
+    public Output<String> privateLinkLocation() {
         return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
     }
 
@@ -61,7 +61,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
@@ -72,7 +72,7 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     @Import(name="status")
       private final @Nullable Output<SharedPrivateLinkResourceStatus> status;
 
-    public Output<SharedPrivateLinkResourceStatus> getStatus() {
+    public Output<SharedPrivateLinkResourceStatus> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

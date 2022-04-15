@@ -27,7 +27,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
-    public Output<Integer> getAppConsistentFrequencyInMinutes() {
+    public Output<Integer> appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Codegen.empty() : this.appConsistentFrequencyInMinutes;
     }
 
@@ -38,7 +38,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
 
-    public Output<Integer> getCrashConsistentFrequencyInMinutes() {
+    public Output<Integer> crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes == null ? Codegen.empty() : this.crashConsistentFrequencyInMinutes;
     }
 
@@ -49,7 +49,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     @Import(name="enableMultiVmSync")
       private final @Nullable Output<String> enableMultiVmSync;
 
-    public Output<String> getEnableMultiVmSync() {
+    public Output<String> enableMultiVmSync() {
         return this.enableMultiVmSync == null ? Codegen.empty() : this.enableMultiVmSync;
     }
 
@@ -61,7 +61,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -72,7 +72,7 @@ public final class InMageRcmPolicyCreationInputArgs extends io.pulumi.resources.
     @Import(name="recoveryPointHistoryInMinutes")
       private final @Nullable Output<Integer> recoveryPointHistoryInMinutes;
 
-    public Output<Integer> getRecoveryPointHistoryInMinutes() {
+    public Output<Integer> recoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes == null ? Codegen.empty() : this.recoveryPointHistoryInMinutes;
     }
 

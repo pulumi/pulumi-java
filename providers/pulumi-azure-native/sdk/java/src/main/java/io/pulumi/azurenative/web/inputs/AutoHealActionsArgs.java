@@ -28,7 +28,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="actionType")
       private final @Nullable Output<AutoHealActionType> actionType;
 
-    public Output<AutoHealActionType> getActionType() {
+    public Output<AutoHealActionType> actionType() {
         return this.actionType == null ? Codegen.empty() : this.actionType;
     }
 
@@ -39,7 +39,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="customAction")
       private final @Nullable Output<AutoHealCustomActionArgs> customAction;
 
-    public Output<AutoHealCustomActionArgs> getCustomAction() {
+    public Output<AutoHealCustomActionArgs> customAction() {
         return this.customAction == null ? Codegen.empty() : this.customAction;
     }
 
@@ -51,7 +51,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="minProcessExecutionTime")
       private final @Nullable Output<String> minProcessExecutionTime;
 
-    public Output<String> getMinProcessExecutionTime() {
+    public Output<String> minProcessExecutionTime() {
         return this.minProcessExecutionTime == null ? Codegen.empty() : this.minProcessExecutionTime;
     }
 

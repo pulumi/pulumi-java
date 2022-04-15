@@ -60,42 +60,42 @@ public final class ActiveDirectoryPropertiesResponse {
      * Specifies the security identifier (SID) for Azure Storage.
      * 
     */
-    public String getAzureStorageSid() {
+    public String azureStorageSid() {
         return this.azureStorageSid;
     }
     /**
      * Specifies the domain GUID.
      * 
     */
-    public String getDomainGuid() {
+    public String domainGuid() {
         return this.domainGuid;
     }
     /**
      * Specifies the primary domain that the AD DNS server is authoritative for.
      * 
     */
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
     /**
      * Specifies the security identifier (SID).
      * 
     */
-    public String getDomainSid() {
+    public String domainSid() {
         return this.domainSid;
     }
     /**
      * Specifies the Active Directory forest to get.
      * 
     */
-    public String getForestName() {
+    public String forestName() {
         return this.forestName;
     }
     /**
      * Specifies the NetBIOS domain name.
      * 
     */
-    public String getNetBiosDomainName() {
+    public String netBiosDomainName() {
         return this.netBiosDomainName;
     }
 

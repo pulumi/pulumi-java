@@ -27,7 +27,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="cpu")
       private final @Nullable Integer cpu;
 
-    public Optional<Integer> getCpu() {
+    public Optional<Integer> cpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
@@ -38,7 +38,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
-    public Map<String,String> getEnvironmentVariables() {
+    public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
@@ -49,7 +49,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="jvmOptions")
       private final @Nullable String jvmOptions;
 
-    public Optional<String> getJvmOptions() {
+    public Optional<String> jvmOptions() {
         return this.jvmOptions == null ? Optional.empty() : Optional.ofNullable(this.jvmOptions);
     }
 
@@ -60,7 +60,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="memoryInGB")
       private final @Nullable Integer memoryInGB;
 
-    public Optional<Integer> getMemoryInGB() {
+    public Optional<Integer> memoryInGB() {
         return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
     }
 
@@ -71,7 +71,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="netCoreMainEntryPath")
       private final @Nullable String netCoreMainEntryPath;
 
-    public Optional<String> getNetCoreMainEntryPath() {
+    public Optional<String> netCoreMainEntryPath() {
         return this.netCoreMainEntryPath == null ? Optional.empty() : Optional.ofNullable(this.netCoreMainEntryPath);
     }
 
@@ -82,7 +82,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="runtimeVersion")
       private final @Nullable String runtimeVersion;
 
-    public Optional<String> getRuntimeVersion() {
+    public Optional<String> runtimeVersion() {
         return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
     }
 

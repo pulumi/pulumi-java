@@ -26,7 +26,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="business")
       private final @Nullable Output<String> business;
 
-    public Output<String> getBusiness() {
+    public Output<String> business() {
         return this.business == null ? Codegen.empty() : this.business;
     }
 
@@ -37,7 +37,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="country")
       private final @Nullable Output<String> country;
 
-    public Output<String> getCountry() {
+    public Output<String> country() {
         return this.country == null ? Codegen.empty() : this.country;
     }
 
@@ -48,7 +48,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -59,7 +59,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="employeesNumber")
       private final @Nullable Output<String> employeesNumber;
 
-    public Output<String> getEmployeesNumber() {
+    public Output<String> employeesNumber() {
         return this.employeesNumber == null ? Codegen.empty() : this.employeesNumber;
     }
 
@@ -70,7 +70,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

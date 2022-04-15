@@ -46,7 +46,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The identity of the experiment resource.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -60,7 +60,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The properties of the experiment resource.
      * 
      */
-    public Output<ExperimentPropertiesResponse> getProperties() {
+    public Output<ExperimentPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -102,7 +102,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The system metadata of the experiment resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -116,7 +116,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -130,7 +130,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

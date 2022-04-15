@@ -23,7 +23,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="continuationToken")
       private final @Nullable String continuationToken;
 
-    public Optional<String> getContinuationToken() {
+    public Optional<String> continuationToken() {
         return this.continuationToken == null ? Optional.empty() : Optional.ofNullable(this.continuationToken);
     }
 
@@ -34,7 +34,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="downloadAs", required=true)
       private final String downloadAs;
 
-    public String getDownloadAs() {
+    public String downloadAs() {
         return this.downloadAs;
     }
 
@@ -45,7 +45,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="geoLocationId", required=true)
       private final String geoLocationId;
 
-    public String getGeoLocationId() {
+    public String geoLocationId() {
         return this.geoLocationId;
     }
 
@@ -56,7 +56,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="testSuccessfulCriteria")
       private final @Nullable Boolean testSuccessfulCriteria;
 
-    public Optional<Boolean> getTestSuccessfulCriteria() {
+    public Optional<Boolean> testSuccessfulCriteria() {
         return this.testSuccessfulCriteria == null ? Optional.empty() : Optional.ofNullable(this.testSuccessfulCriteria);
     }
 
@@ -78,7 +78,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="timeStamp", required=true)
       private final Integer timeStamp;
 
-    public Integer getTimeStamp() {
+    public Integer timeStamp() {
         return this.timeStamp;
     }
 
@@ -89,7 +89,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
     @Import(name="webTestName", required=true)
       private final String webTestName;
 
-    public String getWebTestName() {
+    public String webTestName() {
         return this.webTestName;
     }
 

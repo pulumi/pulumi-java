@@ -26,7 +26,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="appId")
       private final @Nullable Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId == null ? Codegen.empty() : this.appId;
     }
 
@@ -37,7 +37,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="appUserModelID")
       private final @Nullable Output<String> appUserModelID;
 
-    public Output<String> getAppUserModelID() {
+    public Output<String> appUserModelID() {
         return this.appUserModelID == null ? Codegen.empty() : this.appUserModelID;
     }
 
@@ -48,7 +48,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -70,7 +70,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="iconImageName")
       private final @Nullable Output<String> iconImageName;
 
-    public Output<String> getIconImageName() {
+    public Output<String> iconImageName() {
         return this.iconImageName == null ? Codegen.empty() : this.iconImageName;
     }
 
@@ -81,7 +81,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="rawIcon")
       private final @Nullable Output<String> rawIcon;
 
-    public Output<String> getRawIcon() {
+    public Output<String> rawIcon() {
         return this.rawIcon == null ? Codegen.empty() : this.rawIcon;
     }
 
@@ -92,7 +92,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     @Import(name="rawPng")
       private final @Nullable Output<String> rawPng;
 
-    public Output<String> getRawPng() {
+    public Output<String> rawPng() {
         return this.rawPng == null ? Codegen.empty() : this.rawPng;
     }
 

@@ -26,7 +26,7 @@ public final class SizeConfigurationPropertiesResponse extends io.pulumi.resourc
     @Import(name="environmentSizes")
       private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
-    public List<EnvironmentSizeResponse> getEnvironmentSizes() {
+    public List<EnvironmentSizeResponse> environmentSizes() {
         return this.environmentSizes == null ? List.of() : this.environmentSizes;
     }
 

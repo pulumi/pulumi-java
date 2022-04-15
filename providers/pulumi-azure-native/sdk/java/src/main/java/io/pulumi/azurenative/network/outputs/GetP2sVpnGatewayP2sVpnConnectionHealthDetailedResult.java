@@ -26,7 +26,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
      * Returned sas url of the blob to which the p2s vpn connection detailed health will be written.
      * 
     */
-    public Optional<String> getSasUrl() {
+    public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
 

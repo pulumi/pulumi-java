@@ -29,7 +29,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bitrate")
       private final @Nullable Output<Integer> bitrate;
 
-    public Output<Integer> getBitrate() {
+    public Output<Integer> bitrate() {
         return this.bitrate == null ? Codegen.empty() : this.bitrate;
     }
 
@@ -40,7 +40,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channels")
       private final @Nullable Output<Integer> channels;
 
-    public Output<Integer> getChannels() {
+    public Output<Integer> channels() {
         return this.channels == null ? Codegen.empty() : this.channels;
     }
 
@@ -51,7 +51,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -63,7 +63,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -74,7 +74,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profile")
       private final @Nullable Output<Either<String,AacAudioProfile>> profile;
 
-    public Output<Either<String,AacAudioProfile>> getProfile() {
+    public Output<Either<String,AacAudioProfile>> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -85,7 +85,7 @@ public final class AacAudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="samplingRate")
       private final @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> getSamplingRate() {
+    public Output<Integer> samplingRate() {
         return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
     }
 

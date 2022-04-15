@@ -28,7 +28,7 @@ public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="auth")
       private final @Nullable List<ScaleRuleAuthResponse> auth;
 
-    public List<ScaleRuleAuthResponse> getAuth() {
+    public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
 
@@ -39,7 +39,7 @@ public final class HttpScaleRuleResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 

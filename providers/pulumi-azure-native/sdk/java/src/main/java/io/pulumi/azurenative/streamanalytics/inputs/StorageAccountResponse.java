@@ -25,7 +25,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="accountKey")
       private final @Nullable String accountKey;
 
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
@@ -36,7 +36,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 

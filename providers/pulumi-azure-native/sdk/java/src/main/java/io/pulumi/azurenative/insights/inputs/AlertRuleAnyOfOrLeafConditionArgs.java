@@ -34,7 +34,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="anyOf")
       private final @Nullable Output<List<AlertRuleLeafConditionArgs>> anyOf;
 
-    public Output<List<AlertRuleLeafConditionArgs>> getAnyOf() {
+    public Output<List<AlertRuleLeafConditionArgs>> anyOf() {
         return this.anyOf == null ? Codegen.empty() : this.anyOf;
     }
 
@@ -45,7 +45,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="containsAny")
       private final @Nullable Output<List<String>> containsAny;
 
-    public Output<List<String>> getContainsAny() {
+    public Output<List<String>> containsAny() {
         return this.containsAny == null ? Codegen.empty() : this.containsAny;
     }
 
@@ -56,7 +56,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="equals")
       private final @Nullable Output<String> equals;
 
-    public Output<String> getEquals() {
+    public Output<String> equals_() {
         return this.equals == null ? Codegen.empty() : this.equals;
     }
 
@@ -68,7 +68,7 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -138,11 +138,11 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
         public Builder containsAny(String... containsAny) {
             return containsAny(List.of(containsAny));
         }
-        public Builder equals(@Nullable Output<String> equals) {
+        public Builder equals_(@Nullable Output<String> equals) {
             this.equals = equals;
             return this;
         }
-        public Builder equals(@Nullable String equals) {
+        public Builder equals_(@Nullable String equals) {
             this.equals = Codegen.ofNullable(equals);
             return this;
         }

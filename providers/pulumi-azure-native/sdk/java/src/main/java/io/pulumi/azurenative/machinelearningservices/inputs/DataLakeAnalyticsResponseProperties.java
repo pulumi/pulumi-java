@@ -21,7 +21,7 @@ public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resourc
     @Import(name="dataLakeStoreAccountName")
       private final @Nullable String dataLakeStoreAccountName;
 
-    public Optional<String> getDataLakeStoreAccountName() {
+    public Optional<String> dataLakeStoreAccountName() {
         return this.dataLakeStoreAccountName == null ? Optional.empty() : Optional.ofNullable(this.dataLakeStoreAccountName);
     }
 

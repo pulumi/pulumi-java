@@ -23,7 +23,7 @@ public final class UserAssignedIdentityPropertyResponse extends io.pulumi.resour
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 
@@ -34,7 +34,7 @@ public final class UserAssignedIdentityPropertyResponse extends io.pulumi.resour
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 

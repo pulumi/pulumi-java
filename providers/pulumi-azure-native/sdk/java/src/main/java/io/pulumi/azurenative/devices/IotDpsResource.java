@@ -45,7 +45,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return Service specific properties for a provisioning service
      * 
      */
-    public Output<IotDpsPropertiesDescriptionResponse> getProperties() {
+    public Output<IotDpsPropertiesDescriptionResponse> properties() {
         return this.properties;
     }
     /**
@@ -101,7 +101,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return Sku info for a provisioning Service.
      * 
      */
-    public Output<IotDpsSkuInfoResponse> getSku() {
+    public Output<IotDpsSkuInfoResponse> sku() {
         return this.sku;
     }
     /**
@@ -115,7 +115,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

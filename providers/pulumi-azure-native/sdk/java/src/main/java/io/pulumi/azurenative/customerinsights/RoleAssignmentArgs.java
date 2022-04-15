@@ -27,7 +27,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignmentName")
       private final @Nullable Output<String> assignmentName;
 
-    public Output<String> getAssignmentName() {
+    public Output<String> assignmentName() {
         return this.assignmentName == null ? Codegen.empty() : this.assignmentName;
     }
 
@@ -38,7 +38,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conflationPolicies")
       private final @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
 
-    public Output<ResourceSetDescriptionArgs> getConflationPolicies() {
+    public Output<ResourceSetDescriptionArgs> conflationPolicies() {
         return this.conflationPolicies == null ? Codegen.empty() : this.conflationPolicies;
     }
 
@@ -49,7 +49,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectors")
       private final @Nullable Output<ResourceSetDescriptionArgs> connectors;
 
-    public Output<ResourceSetDescriptionArgs> getConnectors() {
+    public Output<ResourceSetDescriptionArgs> connectors() {
         return this.connectors == null ? Codegen.empty() : this.connectors;
     }
 
@@ -60,7 +60,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -82,7 +82,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -93,7 +93,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="interactions")
       private final @Nullable Output<ResourceSetDescriptionArgs> interactions;
 
-    public Output<ResourceSetDescriptionArgs> getInteractions() {
+    public Output<ResourceSetDescriptionArgs> interactions() {
         return this.interactions == null ? Codegen.empty() : this.interactions;
     }
 
@@ -104,7 +104,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kpis")
       private final @Nullable Output<ResourceSetDescriptionArgs> kpis;
 
-    public Output<ResourceSetDescriptionArgs> getKpis() {
+    public Output<ResourceSetDescriptionArgs> kpis() {
         return this.kpis == null ? Codegen.empty() : this.kpis;
     }
 
@@ -115,7 +115,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="links")
       private final @Nullable Output<ResourceSetDescriptionArgs> links;
 
-    public Output<ResourceSetDescriptionArgs> getLinks() {
+    public Output<ResourceSetDescriptionArgs> links() {
         return this.links == null ? Codegen.empty() : this.links;
     }
 
@@ -126,7 +126,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principals", required=true)
       private final Output<List<AssignmentPrincipalArgs>> principals;
 
-    public Output<List<AssignmentPrincipalArgs>> getPrincipals() {
+    public Output<List<AssignmentPrincipalArgs>> principals() {
         return this.principals;
     }
 
@@ -137,7 +137,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profiles")
       private final @Nullable Output<ResourceSetDescriptionArgs> profiles;
 
-    public Output<ResourceSetDescriptionArgs> getProfiles() {
+    public Output<ResourceSetDescriptionArgs> profiles() {
         return this.profiles == null ? Codegen.empty() : this.profiles;
     }
 
@@ -148,7 +148,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationshipLinks")
       private final @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
 
-    public Output<ResourceSetDescriptionArgs> getRelationshipLinks() {
+    public Output<ResourceSetDescriptionArgs> relationshipLinks() {
         return this.relationshipLinks == null ? Codegen.empty() : this.relationshipLinks;
     }
 
@@ -159,7 +159,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="relationships")
       private final @Nullable Output<ResourceSetDescriptionArgs> relationships;
 
-    public Output<ResourceSetDescriptionArgs> getRelationships() {
+    public Output<ResourceSetDescriptionArgs> relationships() {
         return this.relationships == null ? Codegen.empty() : this.relationships;
     }
 
@@ -170,7 +170,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -181,7 +181,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<RoleTypes> role;
 
-    public Output<RoleTypes> getRole() {
+    public Output<RoleTypes> role() {
         return this.role;
     }
 
@@ -192,7 +192,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleAssignments")
       private final @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
 
-    public Output<ResourceSetDescriptionArgs> getRoleAssignments() {
+    public Output<ResourceSetDescriptionArgs> roleAssignments() {
         return this.roleAssignments == null ? Codegen.empty() : this.roleAssignments;
     }
 
@@ -203,7 +203,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sasPolicies")
       private final @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
 
-    public Output<ResourceSetDescriptionArgs> getSasPolicies() {
+    public Output<ResourceSetDescriptionArgs> sasPolicies() {
         return this.sasPolicies == null ? Codegen.empty() : this.sasPolicies;
     }
 
@@ -214,7 +214,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="segments")
       private final @Nullable Output<ResourceSetDescriptionArgs> segments;
 
-    public Output<ResourceSetDescriptionArgs> getSegments() {
+    public Output<ResourceSetDescriptionArgs> segments() {
         return this.segments == null ? Codegen.empty() : this.segments;
     }
 
@@ -225,7 +225,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="views")
       private final @Nullable Output<ResourceSetDescriptionArgs> views;
 
-    public Output<ResourceSetDescriptionArgs> getViews() {
+    public Output<ResourceSetDescriptionArgs> views() {
         return this.views == null ? Codegen.empty() : this.views;
     }
 
@@ -236,7 +236,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="widgetTypes")
       private final @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
 
-    public Output<ResourceSetDescriptionArgs> getWidgetTypes() {
+    public Output<ResourceSetDescriptionArgs> widgetTypes() {
         return this.widgetTypes == null ? Codegen.empty() : this.widgetTypes;
     }
 

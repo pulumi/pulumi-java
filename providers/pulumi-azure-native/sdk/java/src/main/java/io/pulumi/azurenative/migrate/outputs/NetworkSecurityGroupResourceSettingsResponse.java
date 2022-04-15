@@ -44,21 +44,21 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
      * Expected value is 'Microsoft.Network/networkSecurityGroups'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets Security rules of network security group.
      * 
     */
-    public List<NsgSecurityRuleResponse> getSecurityRules() {
+    public List<NsgSecurityRuleResponse> securityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
 

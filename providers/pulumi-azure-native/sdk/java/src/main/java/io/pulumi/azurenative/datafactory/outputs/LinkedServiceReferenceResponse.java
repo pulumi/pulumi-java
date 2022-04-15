@@ -42,21 +42,21 @@ public final class LinkedServiceReferenceResponse {
      * Arguments for LinkedService.
      * 
     */
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference LinkedService name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Linked service reference type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

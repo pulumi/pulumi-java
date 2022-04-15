@@ -23,7 +23,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="cloudServiceConfiguration")
       private final @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
-    public Output<CloudServiceConfigurationArgs> getCloudServiceConfiguration() {
+    public Output<CloudServiceConfigurationArgs> cloudServiceConfiguration() {
         return this.cloudServiceConfiguration == null ? Codegen.empty() : this.cloudServiceConfiguration;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="virtualMachineConfiguration")
       private final @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
-    public Output<VirtualMachineConfigurationArgs> getVirtualMachineConfiguration() {
+    public Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration() {
         return this.virtualMachineConfiguration == null ? Codegen.empty() : this.virtualMachineConfiguration;
     }
 

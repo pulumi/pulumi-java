@@ -24,7 +24,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="durationMs", required=true)
       private final Integer durationMs;
 
-    public Integer getDurationMs() {
+    public Integer durationMs() {
         return this.durationMs;
     }
 
@@ -35,7 +35,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -46,7 +46,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -57,7 +57,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -68,7 +68,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -79,7 +79,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="synchronizationId", required=true)
       private final String synchronizationId;
 
-    public String getSynchronizationId() {
+    public String synchronizationId() {
         return this.synchronizationId;
     }
 
@@ -90,7 +90,7 @@ public final class ShareSubscriptionSynchronizationResponse extends io.pulumi.re
     @Import(name="synchronizationMode", required=true)
       private final String synchronizationMode;
 
-    public String getSynchronizationMode() {
+    public String synchronizationMode() {
         return this.synchronizationMode;
     }
 

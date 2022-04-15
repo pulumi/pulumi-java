@@ -32,7 +32,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     @Import(name="alwaysEncryptedAkvAuthType", required=true)
       private final Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
 
-    public Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> getAlwaysEncryptedAkvAuthType() {
+    public Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
 
@@ -43,7 +43,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -54,7 +54,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -65,7 +65,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 

@@ -26,7 +26,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="blob")
       private final @Nullable Output<EncryptionServiceArgs> blob;
 
-    public Output<EncryptionServiceArgs> getBlob() {
+    public Output<EncryptionServiceArgs> blob() {
         return this.blob == null ? Codegen.empty() : this.blob;
     }
 
@@ -37,7 +37,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="file")
       private final @Nullable Output<EncryptionServiceArgs> file;
 
-    public Output<EncryptionServiceArgs> getFile() {
+    public Output<EncryptionServiceArgs> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -48,7 +48,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queue")
       private final @Nullable Output<EncryptionServiceArgs> queue;
 
-    public Output<EncryptionServiceArgs> getQueue() {
+    public Output<EncryptionServiceArgs> queue() {
         return this.queue == null ? Codegen.empty() : this.queue;
     }
 
@@ -59,7 +59,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="table")
       private final @Nullable Output<EncryptionServiceArgs> table;
 
-    public Output<EncryptionServiceArgs> getTable() {
+    public Output<EncryptionServiceArgs> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 

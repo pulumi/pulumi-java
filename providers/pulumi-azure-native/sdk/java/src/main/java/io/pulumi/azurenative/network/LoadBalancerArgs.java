@@ -33,7 +33,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendAddressPools")
       private final @Nullable Output<List<BackendAddressPoolArgs>> backendAddressPools;
 
-    public Output<List<BackendAddressPoolArgs>> getBackendAddressPools() {
+    public Output<List<BackendAddressPoolArgs>> backendAddressPools() {
         return this.backendAddressPools == null ? Codegen.empty() : this.backendAddressPools;
     }
 
@@ -44,7 +44,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -55,7 +55,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations;
 
-    public Output<List<FrontendIPConfigurationArgs>> getFrontendIPConfigurations() {
+    public Output<List<FrontendIPConfigurationArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? Codegen.empty() : this.frontendIPConfigurations;
     }
 
@@ -66,7 +66,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -77,7 +77,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inboundNatPools")
       private final @Nullable Output<List<InboundNatPoolArgs>> inboundNatPools;
 
-    public Output<List<InboundNatPoolArgs>> getInboundNatPools() {
+    public Output<List<InboundNatPoolArgs>> inboundNatPools() {
         return this.inboundNatPools == null ? Codegen.empty() : this.inboundNatPools;
     }
 
@@ -88,7 +88,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
-    public Output<List<InboundNatRuleArgs>> getInboundNatRules() {
+    public Output<List<InboundNatRuleArgs>> inboundNatRules() {
         return this.inboundNatRules == null ? Codegen.empty() : this.inboundNatRules;
     }
 
@@ -99,7 +99,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
     }
 
@@ -110,7 +110,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingRules")
       private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
-    public Output<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
+    public Output<List<LoadBalancingRuleArgs>> loadBalancingRules() {
         return this.loadBalancingRules == null ? Codegen.empty() : this.loadBalancingRules;
     }
 
@@ -121,7 +121,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -132,7 +132,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outboundRules")
       private final @Nullable Output<List<OutboundRuleArgs>> outboundRules;
 
-    public Output<List<OutboundRuleArgs>> getOutboundRules() {
+    public Output<List<OutboundRuleArgs>> outboundRules() {
         return this.outboundRules == null ? Codegen.empty() : this.outboundRules;
     }
 
@@ -143,7 +143,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="probes")
       private final @Nullable Output<List<ProbeArgs>> probes;
 
-    public Output<List<ProbeArgs>> getProbes() {
+    public Output<List<ProbeArgs>> probes() {
         return this.probes == null ? Codegen.empty() : this.probes;
     }
 
@@ -154,7 +154,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -165,7 +165,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<LoadBalancerSkuArgs> sku;
 
-    public Output<LoadBalancerSkuArgs> getSku() {
+    public Output<LoadBalancerSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -176,7 +176,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

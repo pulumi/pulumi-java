@@ -26,7 +26,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     @Import(name="operator")
       private final @Nullable String operator;
 
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
@@ -37,7 +37,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     @Import(name="propertyName")
       private final @Nullable String propertyName;
 
-    public Optional<String> getPropertyName() {
+    public Optional<String> propertyName() {
         return this.propertyName == null ? Optional.empty() : Optional.ofNullable(this.propertyName);
     }
 
@@ -48,7 +48,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     @Import(name="propertyValues")
       private final @Nullable List<String> propertyValues;
 
-    public List<String> getPropertyValues() {
+    public List<String> propertyValues() {
         return this.propertyValues == null ? List.of() : this.propertyValues;
     }
 

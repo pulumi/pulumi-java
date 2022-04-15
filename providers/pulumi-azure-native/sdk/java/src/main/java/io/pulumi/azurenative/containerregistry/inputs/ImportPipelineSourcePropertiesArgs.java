@@ -28,7 +28,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
+    public Output<String> keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -39,7 +39,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,PipelineSourceType>> type;
 
-    public Output<Either<String,PipelineSourceType>> getType() {
+    public Output<Either<String,PipelineSourceType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -52,7 +52,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

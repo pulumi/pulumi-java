@@ -35,14 +35,14 @@ public final class CloudServiceRoleProfilePropertiesResponse {
      * Resource name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Describes the cloud service role sku.
      * 
     */
-    public Optional<CloudServiceRoleSkuResponse> getSku() {
+    public Optional<CloudServiceRoleSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
 

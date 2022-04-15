@@ -23,7 +23,7 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
     @Import(name="macAddress", required=true)
       private final String macAddress;
 
-    public String getMacAddress() {
+    public String macAddress() {
         return this.macAddress;
     }
 
@@ -34,7 +34,7 @@ public final class ApplianceNetworkConfigurationResponse extends io.pulumi.resou
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

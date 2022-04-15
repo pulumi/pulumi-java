@@ -29,7 +29,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customization")
       private final @Nullable GuestOSNICCustomizationResponse customization;
 
-    public Optional<GuestOSNICCustomizationResponse> getCustomization() {
+    public Optional<GuestOSNICCustomizationResponse> customization() {
         return this.customization == null ? Optional.empty() : Optional.ofNullable(this.customization);
     }
 
@@ -40,7 +40,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="macAddress")
       private final @Nullable String macAddress;
 
-    public Optional<String> getMacAddress() {
+    public Optional<String> macAddress() {
         return this.macAddress == null ? Optional.empty() : Optional.ofNullable(this.macAddress);
     }
 
@@ -62,7 +62,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final VirtualNetworkResponse network;
 
-    public VirtualNetworkResponse getNetwork() {
+    public VirtualNetworkResponse network() {
         return this.network;
     }
 
@@ -73,7 +73,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nicType", required=true)
       private final String nicType;
 
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
 
@@ -84,7 +84,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="powerOnBoot")
       private final @Nullable Boolean powerOnBoot;
 
-    public Optional<Boolean> getPowerOnBoot() {
+    public Optional<Boolean> powerOnBoot() {
         return this.powerOnBoot == null ? Optional.empty() : Optional.ofNullable(this.powerOnBoot);
     }
 
@@ -95,7 +95,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualNicId")
       private final @Nullable String virtualNicId;
 
-    public Optional<String> getVirtualNicId() {
+    public Optional<String> virtualNicId() {
         return this.virtualNicId == null ? Optional.empty() : Optional.ofNullable(this.virtualNicId);
     }
 
@@ -106,7 +106,7 @@ public final class VirtualNicResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="virtualNicName", required=true)
       private final String virtualNicName;
 
-    public String getVirtualNicName() {
+    public String virtualNicName() {
         return this.virtualNicName;
     }
 

@@ -29,7 +29,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="action")
       private final @Nullable String action;
 
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -40,7 +40,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="common")
       private final @Nullable Boolean common;
 
-    public Optional<Boolean> getCommon() {
+    public Optional<Boolean> common() {
         return this.common == null ? Optional.empty() : Optional.ofNullable(this.common);
     }
 
@@ -51,7 +51,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="configurationStatus")
       private final @Nullable String configurationStatus;
 
-    public Optional<String> getConfigurationStatus() {
+    public Optional<String> configurationStatus() {
         return this.configurationStatus == null ? Optional.empty() : Optional.ofNullable(this.configurationStatus);
     }
 
@@ -62,7 +62,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="fileType")
       private final @Nullable String fileType;
 
-    public Optional<String> getFileType() {
+    public Optional<String> fileType() {
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
     }
 
@@ -73,7 +73,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -84,7 +84,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="publisherInfo")
       private final @Nullable PublisherInfoResponse publisherInfo;
 
-    public Optional<PublisherInfoResponse> getPublisherInfo() {
+    public Optional<PublisherInfoResponse> publisherInfo() {
         return this.publisherInfo == null ? Optional.empty() : Optional.ofNullable(this.publisherInfo);
     }
 
@@ -95,21 +95,21 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
     @Import(name="userSids")
       private final @Nullable List<String> userSids;
 
-    public List<String> getUserSids() {
+    public List<String> userSids() {
         return this.userSids == null ? List.of() : this.userSids;
     }
 
     @Import(name="usernames")
       private final @Nullable List<UserRecommendationResponse> usernames;
 
-    public List<UserRecommendationResponse> getUsernames() {
+    public List<UserRecommendationResponse> usernames() {
         return this.usernames == null ? List.of() : this.usernames;
     }
 

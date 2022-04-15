@@ -27,7 +27,7 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryption")
       private final @Nullable Output<DataPoolEncryptionArgs> encryption;
 
-    public Output<DataPoolEncryptionArgs> getEncryption() {
+    public Output<DataPoolEncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -38,7 +38,7 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

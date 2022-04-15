@@ -26,7 +26,7 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
     @Import(name="channelMapping")
       private final @Nullable String channelMapping;
 
-    public Optional<String> getChannelMapping() {
+    public Optional<String> channelMapping() {
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
     }
 
@@ -38,7 +38,7 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -49,7 +49,7 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
     @Import(name="trackId", required=true)
       private final Double trackId;
 
-    public Double getTrackId() {
+    public Double trackId() {
         return this.trackId;
     }
 

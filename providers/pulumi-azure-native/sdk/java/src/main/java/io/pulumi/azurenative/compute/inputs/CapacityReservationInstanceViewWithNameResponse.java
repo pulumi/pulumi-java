@@ -28,7 +28,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -39,7 +39,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
     @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
 
@@ -50,7 +50,7 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
     @Import(name="utilizationInfo")
       private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
-    public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {
+    public Optional<CapacityReservationUtilizationResponse> utilizationInfo() {
         return this.utilizationInfo == null ? Optional.empty() : Optional.ofNullable(this.utilizationInfo);
     }
 

@@ -26,7 +26,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initiatorIqn", required=true)
       private final Output<String> initiatorIqn;
 
-    public Output<String> getInitiatorIqn() {
+    public Output<String> initiatorIqn() {
         return this.initiatorIqn;
     }
 
@@ -37,7 +37,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mappedLuns", required=true)
       private final Output<List<String>> mappedLuns;
 
-    public Output<List<String>> getMappedLuns() {
+    public Output<List<String>> mappedLuns() {
         return this.mappedLuns;
     }
 
@@ -48,7 +48,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -59,7 +59,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

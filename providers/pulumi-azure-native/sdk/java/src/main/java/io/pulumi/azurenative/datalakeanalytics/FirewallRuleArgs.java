@@ -22,7 +22,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
+    public Output<String> endIpAddress() {
         return this.endIpAddress;
     }
 
@@ -44,7 +44,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
-    public Output<String> getFirewallRuleName() {
+    public Output<String> firewallRuleName() {
         return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
@@ -55,7 +55,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
+    public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
 

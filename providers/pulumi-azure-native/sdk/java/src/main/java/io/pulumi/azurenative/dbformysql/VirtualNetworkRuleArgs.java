@@ -23,7 +23,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Output<Boolean> ignoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> getVirtualNetworkRuleName() {
+    public Output<String> virtualNetworkRuleName() {
         return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
     }
 
@@ -67,7 +67,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkSubnetId", required=true)
       private final Output<String> virtualNetworkSubnetId;
 
-    public Output<String> getVirtualNetworkSubnetId() {
+    public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 

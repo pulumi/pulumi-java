@@ -22,7 +22,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="authorityUrl")
       private final @Nullable String authorityUrl;
 
-    public Optional<String> getAuthorityUrl() {
+    public Optional<String> authorityUrl() {
         return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
     }
 
@@ -33,7 +33,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="certificate")
       private final @Nullable String certificate;
 
-    public Optional<String> getCertificate() {
+    public Optional<String> certificate() {
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
     }
 
@@ -44,7 +44,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="clientId")
       private final @Nullable String clientId;
 
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
@@ -55,7 +55,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
@@ -66,7 +66,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="isCertAuth")
       private final @Nullable Boolean isCertAuth;
 
-    public Optional<Boolean> getIsCertAuth() {
+    public Optional<Boolean> isCertAuth() {
         return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
     }
 
@@ -77,7 +77,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
@@ -88,7 +88,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
-    public Optional<String> getResourceUri() {
+    public Optional<String> resourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
     }
 
@@ -99,7 +99,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="serviceDataAccessAuthIdentity")
       private final @Nullable String serviceDataAccessAuthIdentity;
 
-    public Optional<String> getServiceDataAccessAuthIdentity() {
+    public Optional<String> serviceDataAccessAuthIdentity() {
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
@@ -110,7 +110,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
@@ -121,7 +121,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
@@ -132,7 +132,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
     @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
     }
 

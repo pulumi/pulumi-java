@@ -44,7 +44,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return Optional Properties as JSON string
      * 
      */
-    public Output</* @Nullable */ String> getPropertyBag() {
+    public Output</* @Nullable */ String> propertyBag() {
         return this.propertyBag;
     }
     /**
@@ -86,7 +86,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return Resource Group Name
      * 
      */
-    public Output</* @Nullable */ String> getResourceGroup() {
+    public Output</* @Nullable */ String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -100,7 +100,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return Subscription Id
      * 
      */
-    public Output</* @Nullable */ String> getSubscriptionId() {
+    public Output</* @Nullable */ String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -114,7 +114,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +128,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +142,7 @@ public class SqlServerRegistration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

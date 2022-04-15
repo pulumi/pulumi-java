@@ -109,91 +109,91 @@ public final class InMageRcmNicDetailsResponse {
      * A value indicating whether this is the primary NIC.
      * 
     */
-    public String getIsPrimaryNic() {
+    public String isPrimaryNic() {
         return this.isPrimaryNic;
     }
     /**
      * A value indicating whether this NIC is selected for failover.
      * 
     */
-    public String getIsSelectedForFailover() {
+    public String isSelectedForFailover() {
         return this.isSelectedForFailover;
     }
     /**
      * The NIC Id.
      * 
     */
-    public String getNicId() {
+    public String nicId() {
         return this.nicId;
     }
     /**
      * The source IP address.
      * 
     */
-    public String getSourceIPAddress() {
+    public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
     /**
      * The source IP address type.
      * 
     */
-    public String getSourceIPAddressType() {
+    public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
     /**
      * Source network Id.
      * 
     */
-    public String getSourceNetworkId() {
+    public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
     /**
      * Source subnet name.
      * 
     */
-    public String getSourceSubnetName() {
+    public String sourceSubnetName() {
         return this.sourceSubnetName;
     }
     /**
      * The target IP address.
      * 
     */
-    public String getTargetIPAddress() {
+    public String targetIPAddress() {
         return this.targetIPAddress;
     }
     /**
      * The target IP address type.
      * 
     */
-    public String getTargetIPAddressType() {
+    public String targetIPAddressType() {
         return this.targetIPAddressType;
     }
     /**
      * Target subnet name.
      * 
     */
-    public String getTargetSubnetName() {
+    public String targetSubnetName() {
         return this.targetSubnetName;
     }
     /**
      * The test IP address.
      * 
     */
-    public String getTestIPAddress() {
+    public String testIPAddress() {
         return this.testIPAddress;
     }
     /**
      * The test IP address type.
      * 
     */
-    public String getTestIPAddressType() {
+    public String testIPAddressType() {
         return this.testIPAddressType;
     }
     /**
      * Test subnet name.
      * 
     */
-    public String getTestSubnetName() {
+    public String testSubnetName() {
         return this.testSubnetName;
     }
 

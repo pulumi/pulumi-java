@@ -21,7 +21,7 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
     @Import(name="labId")
       private final @Nullable String labId;
 
-    public Optional<String> getLabId() {
+    public Optional<String> labId() {
         return this.labId == null ? Optional.empty() : Optional.ofNullable(this.labId);
     }
 
@@ -32,7 +32,7 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

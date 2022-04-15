@@ -26,7 +26,7 @@ public final class ComputeProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="roles")
       private final @Nullable List<RoleResponse> roles;
 
-    public List<RoleResponse> getRoles() {
+    public List<RoleResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
 

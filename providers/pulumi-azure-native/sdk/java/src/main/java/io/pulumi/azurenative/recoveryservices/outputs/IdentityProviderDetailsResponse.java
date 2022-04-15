@@ -55,35 +55,35 @@ public final class IdentityProviderDetailsResponse {
      * The base authority for Azure Active Directory authentication.
      * 
     */
-    public Optional<String> getAadAuthority() {
+    public Optional<String> aadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
     /**
      * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getApplicationId() {
+    public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
 

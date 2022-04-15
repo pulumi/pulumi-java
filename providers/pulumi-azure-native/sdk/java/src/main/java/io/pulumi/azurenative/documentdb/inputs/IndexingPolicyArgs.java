@@ -34,7 +34,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automatic")
       private final @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> getAutomatic() {
+    public Output<Boolean> automatic() {
         return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
@@ -45,7 +45,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compositeIndexes")
       private final @Nullable Output<List<List<CompositePathArgs>>> compositeIndexes;
 
-    public Output<List<List<CompositePathArgs>>> getCompositeIndexes() {
+    public Output<List<List<CompositePathArgs>>> compositeIndexes() {
         return this.compositeIndexes == null ? Codegen.empty() : this.compositeIndexes;
     }
 
@@ -56,7 +56,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludedPaths")
       private final @Nullable Output<List<ExcludedPathArgs>> excludedPaths;
 
-    public Output<List<ExcludedPathArgs>> getExcludedPaths() {
+    public Output<List<ExcludedPathArgs>> excludedPaths() {
         return this.excludedPaths == null ? Codegen.empty() : this.excludedPaths;
     }
 
@@ -67,7 +67,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includedPaths")
       private final @Nullable Output<List<IncludedPathArgs>> includedPaths;
 
-    public Output<List<IncludedPathArgs>> getIncludedPaths() {
+    public Output<List<IncludedPathArgs>> includedPaths() {
         return this.includedPaths == null ? Codegen.empty() : this.includedPaths;
     }
 
@@ -78,7 +78,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="indexingMode")
       private final @Nullable Output<Either<String,IndexingMode>> indexingMode;
 
-    public Output<Either<String,IndexingMode>> getIndexingMode() {
+    public Output<Either<String,IndexingMode>> indexingMode() {
         return this.indexingMode == null ? Codegen.empty() : this.indexingMode;
     }
 
@@ -89,7 +89,7 @@ public final class IndexingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spatialIndexes")
       private final @Nullable Output<List<SpatialSpecArgs>> spatialIndexes;
 
-    public Output<List<SpatialSpecArgs>> getSpatialIndexes() {
+    public Output<List<SpatialSpecArgs>> spatialIndexes() {
         return this.spatialIndexes == null ? Codegen.empty() : this.spatialIndexes;
     }
 

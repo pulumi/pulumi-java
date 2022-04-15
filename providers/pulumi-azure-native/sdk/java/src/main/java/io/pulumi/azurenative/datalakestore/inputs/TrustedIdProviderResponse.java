@@ -23,7 +23,7 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -34,7 +34,7 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
     @Import(name="idProvider", required=true)
       private final String idProvider;
 
-    public String getIdProvider() {
+    public String idProvider() {
         return this.idProvider;
     }
 
@@ -45,7 +45,7 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class TrustedIdProviderResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -21,7 +21,7 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -32,7 +32,7 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="repository")
       private final @Nullable String repository;
 
-    public Optional<String> getRepository() {
+    public Optional<String> repository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
     }
 

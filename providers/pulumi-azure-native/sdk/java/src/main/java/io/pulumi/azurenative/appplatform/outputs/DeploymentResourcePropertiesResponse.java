@@ -81,56 +81,56 @@ public final class DeploymentResourcePropertiesResponse {
      * Indicates whether the Deployment is active
      * 
     */
-    public Boolean getActive() {
+    public Boolean active() {
         return this.active;
     }
     /**
      * App name of the deployment
      * 
     */
-    public String getAppName() {
+    public String appName() {
         return this.appName;
     }
     /**
      * Date time when the resource is created
      * 
     */
-    public String getCreatedTime() {
+    public String createdTime() {
         return this.createdTime;
     }
     /**
      * Deployment settings of the Deployment
      * 
     */
-    public Optional<DeploymentSettingsResponse> getDeploymentSettings() {
+    public Optional<DeploymentSettingsResponse> deploymentSettings() {
         return Optional.ofNullable(this.deploymentSettings);
     }
     /**
      * Collection of instances belong to the Deployment
      * 
     */
-    public List<DeploymentInstanceResponse> getInstances() {
+    public List<DeploymentInstanceResponse> instances() {
         return this.instances;
     }
     /**
      * Provisioning state of the Deployment
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Uploaded source information of the deployment.
      * 
     */
-    public Optional<UserSourceInfoResponse> getSource() {
+    public Optional<UserSourceInfoResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Status of the Deployment
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

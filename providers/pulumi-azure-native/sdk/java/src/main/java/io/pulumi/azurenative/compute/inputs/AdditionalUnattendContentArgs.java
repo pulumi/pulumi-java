@@ -29,7 +29,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     @Import(name="componentName")
       private final @Nullable Output<ComponentNames> componentName;
 
-    public Output<ComponentNames> getComponentName() {
+    public Output<ComponentNames> componentName() {
         return this.componentName == null ? Codegen.empty() : this.componentName;
     }
 
@@ -40,7 +40,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -51,7 +51,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     @Import(name="passName")
       private final @Nullable Output<PassNames> passName;
 
-    public Output<PassNames> getPassName() {
+    public Output<PassNames> passName() {
         return this.passName == null ? Codegen.empty() : this.passName;
     }
 
@@ -62,7 +62,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     @Import(name="settingName")
       private final @Nullable Output<SettingNames> settingName;
 
-    public Output<SettingNames> getSettingName() {
+    public Output<SettingNames> settingName() {
         return this.settingName == null ? Codegen.empty() : this.settingName;
     }
 

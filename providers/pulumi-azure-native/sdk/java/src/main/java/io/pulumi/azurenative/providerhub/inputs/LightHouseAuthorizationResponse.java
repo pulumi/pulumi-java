@@ -15,14 +15,14 @@ public final class LightHouseAuthorizationResponse extends io.pulumi.resources.I
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
     @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 

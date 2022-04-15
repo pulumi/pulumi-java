@@ -22,7 +22,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="brandColor")
       private final @Nullable String brandColor;
 
-    public Optional<String> getBrandColor() {
+    public Optional<String> brandColor() {
         return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
     }
 
@@ -33,7 +33,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -44,7 +44,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -55,7 +55,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="iconUri")
       private final @Nullable String iconUri;
 
-    public Optional<String> getIconUri() {
+    public Optional<String> iconUri() {
         return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
     }
 
@@ -66,7 +66,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -77,7 +77,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -88,7 +88,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="swagger")
       private final @Nullable Object swagger;
 
-    public Optional<Object> getSwagger() {
+    public Optional<Object> swagger() {
         return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
     }
 
@@ -99,7 +99,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

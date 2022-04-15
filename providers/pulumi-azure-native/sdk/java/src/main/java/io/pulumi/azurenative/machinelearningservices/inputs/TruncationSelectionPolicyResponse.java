@@ -26,7 +26,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
     @Import(name="delayEvaluation")
       private final @Nullable Integer delayEvaluation;
 
-    public Optional<Integer> getDelayEvaluation() {
+    public Optional<Integer> delayEvaluation() {
         return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
     }
 
@@ -37,7 +37,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
     @Import(name="evaluationInterval")
       private final @Nullable Integer evaluationInterval;
 
-    public Optional<Integer> getEvaluationInterval() {
+    public Optional<Integer> evaluationInterval() {
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
     }
 
@@ -48,7 +48,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
     @Import(name="policyType", required=true)
       private final String policyType;
 
-    public String getPolicyType() {
+    public String policyType() {
         return this.policyType;
     }
 
@@ -59,7 +59,7 @@ public final class TruncationSelectionPolicyResponse extends io.pulumi.resources
     @Import(name="truncationPercentage")
       private final @Nullable Integer truncationPercentage;
 
-    public Optional<Integer> getTruncationPercentage() {
+    public Optional<Integer> truncationPercentage() {
         return this.truncationPercentage == null ? Optional.empty() : Optional.ofNullable(this.truncationPercentage);
     }
 

@@ -23,7 +23,7 @@ public final class DataCollectionEndpointResponseLogsIngestion extends io.pulumi
     @Import(name="endpoint", required=true)
       private final String endpoint;
 
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 

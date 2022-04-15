@@ -108,84 +108,84 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
      * CreatedBy property, which only appears in the response.
      * 
     */
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
     /**
      * Creation time of the resource, which only appears in the response.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Details of provisioning error
      * 
     */
-    public Optional<ErrorResponseResponse> getError() {
+    public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * LastModifiedBy property, which only appears in the response.
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Last time resource was modified, which only appears in the response.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state for the software update configuration, which only appears in the response.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Schedule information for the Software update configuration
      * 
     */
-    public SUCSchedulePropertiesResponse getScheduleInfo() {
+    public SUCSchedulePropertiesResponse scheduleInfo() {
         return this.scheduleInfo;
     }
     /**
      * Tasks information for the Software update configuration.
      * 
     */
-    public Optional<SoftwareUpdateConfigurationTasksResponse> getTasks() {
+    public Optional<SoftwareUpdateConfigurationTasksResponse> tasks() {
         return Optional.ofNullable(this.tasks);
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * update specific properties for the Software update configuration
      * 
     */
-    public UpdateConfigurationResponse getUpdateConfiguration() {
+    public UpdateConfigurationResponse updateConfiguration() {
         return this.updateConfiguration;
     }
 

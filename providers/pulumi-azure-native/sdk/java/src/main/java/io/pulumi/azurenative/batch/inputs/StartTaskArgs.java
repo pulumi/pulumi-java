@@ -33,7 +33,7 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commandLine")
       private final @Nullable Output<String> commandLine;
 
-    public Output<String> getCommandLine() {
+    public Output<String> commandLine() {
         return this.commandLine == null ? Codegen.empty() : this.commandLine;
     }
 
@@ -44,14 +44,14 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerSettings")
       private final @Nullable Output<TaskContainerSettingsArgs> containerSettings;
 
-    public Output<TaskContainerSettingsArgs> getContainerSettings() {
+    public Output<TaskContainerSettingsArgs> containerSettings() {
         return this.containerSettings == null ? Codegen.empty() : this.containerSettings;
     }
 
     @Import(name="environmentSettings")
       private final @Nullable Output<List<EnvironmentSettingArgs>> environmentSettings;
 
-    public Output<List<EnvironmentSettingArgs>> getEnvironmentSettings() {
+    public Output<List<EnvironmentSettingArgs>> environmentSettings() {
         return this.environmentSettings == null ? Codegen.empty() : this.environmentSettings;
     }
 
@@ -62,14 +62,14 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxTaskRetryCount")
       private final @Nullable Output<Integer> maxTaskRetryCount;
 
-    public Output<Integer> getMaxTaskRetryCount() {
+    public Output<Integer> maxTaskRetryCount() {
         return this.maxTaskRetryCount == null ? Codegen.empty() : this.maxTaskRetryCount;
     }
 
     @Import(name="resourceFiles")
       private final @Nullable Output<List<ResourceFileArgs>> resourceFiles;
 
-    public Output<List<ResourceFileArgs>> getResourceFiles() {
+    public Output<List<ResourceFileArgs>> resourceFiles() {
         return this.resourceFiles == null ? Codegen.empty() : this.resourceFiles;
     }
 
@@ -80,7 +80,7 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userIdentity")
       private final @Nullable Output<UserIdentityArgs> userIdentity;
 
-    public Output<UserIdentityArgs> getUserIdentity() {
+    public Output<UserIdentityArgs> userIdentity() {
         return this.userIdentity == null ? Codegen.empty() : this.userIdentity;
     }
 
@@ -91,7 +91,7 @@ public final class StartTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForSuccess")
       private final @Nullable Output<Boolean> waitForSuccess;
 
-    public Output<Boolean> getWaitForSuccess() {
+    public Output<Boolean> waitForSuccess() {
         return this.waitForSuccess == null ? Codegen.empty() : this.waitForSuccess;
     }
 

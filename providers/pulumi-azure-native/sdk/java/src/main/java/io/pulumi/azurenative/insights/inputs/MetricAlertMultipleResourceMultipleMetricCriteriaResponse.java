@@ -29,7 +29,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
     @Import(name="allOf")
       private final @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf;
 
-    public List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> getAllOf() {
+    public List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf() {
         return this.allOf == null ? List.of() : this.allOf;
     }
 
@@ -41,7 +41,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

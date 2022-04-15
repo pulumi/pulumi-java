@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
     @Import(name="primarybytesIn")
       private final @Nullable Double primarybytesIn;
 
-    public Optional<Double> getPrimarybytesIn() {
+    public Optional<Double> primarybytesIn() {
         return this.primarybytesIn == null ? Optional.empty() : Optional.ofNullable(this.primarybytesIn);
     }
 
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
     @Import(name="primarybytesOut")
       private final @Nullable Double primarybytesOut;
 
-    public Optional<Double> getPrimarybytesOut() {
+    public Optional<Double> primarybytesOut() {
         return this.primarybytesOut == null ? Optional.empty() : Optional.ofNullable(this.primarybytesOut);
     }
 
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
     @Import(name="secondarybytesIn")
       private final @Nullable Double secondarybytesIn;
 
-    public Optional<Double> getSecondarybytesIn() {
+    public Optional<Double> secondarybytesIn() {
         return this.secondarybytesIn == null ? Optional.empty() : Optional.ofNullable(this.secondarybytesIn);
     }
 
@@ -58,7 +58,7 @@ public final class ExpressRouteCircuitStatsResponse extends io.pulumi.resources.
     @Import(name="secondarybytesOut")
       private final @Nullable Double secondarybytesOut;
 
-    public Optional<Double> getSecondarybytesOut() {
+    public Optional<Double> secondarybytesOut() {
         return this.secondarybytesOut == null ? Optional.empty() : Optional.ofNullable(this.secondarybytesOut);
     }
 

@@ -21,7 +21,7 @@ public final class ServiceManagedResourcesSettingsResponse extends io.pulumi.res
     @Import(name="cosmosDb")
       private final @Nullable CosmosDbSettingsResponse cosmosDb;
 
-    public Optional<CosmosDbSettingsResponse> getCosmosDb() {
+    public Optional<CosmosDbSettingsResponse> cosmosDb() {
         return this.cosmosDb == null ? Optional.empty() : Optional.ofNullable(this.cosmosDb);
     }
 

@@ -22,7 +22,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="allowAutoApprovals", required=true)
       private final Boolean allowAutoApprovals;
 
-    public Boolean getAllowAutoApprovals() {
+    public Boolean allowAutoApprovals() {
         return this.allowAutoApprovals;
     }
 
@@ -33,7 +33,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -55,7 +55,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="resourceGuardOperations", required=true)
       private final List<ResourceGuardOperationResponse> resourceGuardOperations;
 
-    public List<ResourceGuardOperationResponse> getResourceGuardOperations() {
+    public List<ResourceGuardOperationResponse> resourceGuardOperations() {
         return this.resourceGuardOperations;
     }
 
@@ -66,7 +66,7 @@ public final class ResourceGuardResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="vaultCriticalOperationExclusionList", required=true)
       private final List<String> vaultCriticalOperationExclusionList;
 
-    public List<String> getVaultCriticalOperationExclusionList() {
+    public List<String> vaultCriticalOperationExclusionList() {
         return this.vaultCriticalOperationExclusionList;
     }
 

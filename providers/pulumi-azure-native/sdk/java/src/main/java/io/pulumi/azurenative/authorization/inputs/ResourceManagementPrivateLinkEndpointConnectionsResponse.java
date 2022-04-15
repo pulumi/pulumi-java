@@ -22,7 +22,7 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
     @Import(name="privateEndpointConnections")
       private final @Nullable List<String> privateEndpointConnections;
 
-    public List<String> getPrivateEndpointConnections() {
+    public List<String> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 

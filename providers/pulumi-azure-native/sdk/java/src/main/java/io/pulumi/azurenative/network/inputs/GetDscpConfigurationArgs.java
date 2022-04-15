@@ -19,7 +19,7 @@ public final class GetDscpConfigurationArgs extends io.pulumi.resources.InvokeAr
     @Import(name="dscpConfigurationName", required=true)
       private final String dscpConfigurationName;
 
-    public String getDscpConfigurationName() {
+    public String dscpConfigurationName() {
         return this.dscpConfigurationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDscpConfigurationArgs extends io.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
     @Import(name="assignedUser")
       private final @Nullable Output<AssignedUserArgs> assignedUser;
 
-    public Output<AssignedUserArgs> getAssignedUser() {
+    public Output<AssignedUserArgs> assignedUser() {
         return this.assignedUser == null ? Codegen.empty() : this.assignedUser;
     }
 

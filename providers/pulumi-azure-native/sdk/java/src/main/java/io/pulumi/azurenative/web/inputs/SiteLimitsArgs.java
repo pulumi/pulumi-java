@@ -26,7 +26,7 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxDiskSizeInMb")
       private final @Nullable Output<Double> maxDiskSizeInMb;
 
-    public Output<Double> getMaxDiskSizeInMb() {
+    public Output<Double> maxDiskSizeInMb() {
         return this.maxDiskSizeInMb == null ? Codegen.empty() : this.maxDiskSizeInMb;
     }
 
@@ -37,7 +37,7 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxMemoryInMb")
       private final @Nullable Output<Double> maxMemoryInMb;
 
-    public Output<Double> getMaxMemoryInMb() {
+    public Output<Double> maxMemoryInMb() {
         return this.maxMemoryInMb == null ? Codegen.empty() : this.maxMemoryInMb;
     }
 
@@ -48,7 +48,7 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPercentageCpu")
       private final @Nullable Output<Double> maxPercentageCpu;
 
-    public Output<Double> getMaxPercentageCpu() {
+    public Output<Double> maxPercentageCpu() {
         return this.maxPercentageCpu == null ? Codegen.empty() : this.maxPercentageCpu;
     }
 

@@ -25,7 +25,7 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulu
     @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
 
-    public Optional<String> getActionsRequired() {
+    public Optional<String> actionsRequired() {
         return this.actionsRequired == null ? Optional.empty() : Optional.ofNullable(this.actionsRequired);
     }
 
@@ -36,7 +36,7 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulu
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -47,7 +47,7 @@ public final class MHSMPrivateLinkServiceConnectionStateResponse extends io.pulu
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

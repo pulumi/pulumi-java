@@ -35,14 +35,14 @@ public final class AssignmentInfoResponse {
      * Information about the configuration.
      * 
     */
-    public Optional<ConfigurationInfoResponse> getConfiguration() {
+    public Optional<ConfigurationInfoResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Name of the guest configuration assignment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

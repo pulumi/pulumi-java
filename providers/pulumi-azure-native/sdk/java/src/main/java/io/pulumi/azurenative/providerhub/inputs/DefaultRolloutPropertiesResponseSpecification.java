@@ -25,56 +25,56 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
     @Import(name="canary")
       private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
 
-    public Optional<DefaultRolloutSpecificationResponseCanary> getCanary() {
+    public Optional<DefaultRolloutSpecificationResponseCanary> canary() {
         return this.canary == null ? Optional.empty() : Optional.ofNullable(this.canary);
     }
 
     @Import(name="highTraffic")
       private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
 
-    public Optional<DefaultRolloutSpecificationResponseHighTraffic> getHighTraffic() {
+    public Optional<DefaultRolloutSpecificationResponseHighTraffic> highTraffic() {
         return this.highTraffic == null ? Optional.empty() : Optional.ofNullable(this.highTraffic);
     }
 
     @Import(name="lowTraffic")
       private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
 
-    public Optional<DefaultRolloutSpecificationResponseLowTraffic> getLowTraffic() {
+    public Optional<DefaultRolloutSpecificationResponseLowTraffic> lowTraffic() {
         return this.lowTraffic == null ? Optional.empty() : Optional.ofNullable(this.lowTraffic);
     }
 
     @Import(name="mediumTraffic")
       private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
 
-    public Optional<DefaultRolloutSpecificationResponseMediumTraffic> getMediumTraffic() {
+    public Optional<DefaultRolloutSpecificationResponseMediumTraffic> mediumTraffic() {
         return this.mediumTraffic == null ? Optional.empty() : Optional.ofNullable(this.mediumTraffic);
     }
 
     @Import(name="providerRegistration")
       private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
 
-    public Optional<DefaultRolloutSpecificationResponseProviderRegistration> getProviderRegistration() {
+    public Optional<DefaultRolloutSpecificationResponseProviderRegistration> providerRegistration() {
         return this.providerRegistration == null ? Optional.empty() : Optional.ofNullable(this.providerRegistration);
     }
 
     @Import(name="resourceTypeRegistrations")
       private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
 
-    public List<ResourceTypeRegistrationResponse> getResourceTypeRegistrations() {
+    public List<ResourceTypeRegistrationResponse> resourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
     }
 
     @Import(name="restOfTheWorldGroupOne")
       private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
 
-    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> getRestOfTheWorldGroupOne() {
+    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> restOfTheWorldGroupOne() {
         return this.restOfTheWorldGroupOne == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
 
     @Import(name="restOfTheWorldGroupTwo")
       private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
-    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> getRestOfTheWorldGroupTwo() {
+    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> restOfTheWorldGroupTwo() {
         return this.restOfTheWorldGroupTwo == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupTwo);
     }
 

@@ -26,7 +26,7 @@ public final class GatewayCustomDomainPropertiesResponse {
      * The thumbprint of bound certificate.
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
 

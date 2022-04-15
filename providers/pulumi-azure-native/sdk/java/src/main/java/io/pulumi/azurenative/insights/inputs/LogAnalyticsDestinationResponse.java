@@ -26,7 +26,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -37,7 +37,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
     @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
 
@@ -48,7 +48,7 @@ public final class LogAnalyticsDestinationResponse extends io.pulumi.resources.I
     @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
     }
 

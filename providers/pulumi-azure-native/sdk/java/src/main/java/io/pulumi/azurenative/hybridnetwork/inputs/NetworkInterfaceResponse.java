@@ -27,7 +27,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ipConfigurations")
       private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
-    public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
+    public List<NetworkInterfaceIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="macAddress")
       private final @Nullable String macAddress;
 
-    public Optional<String> getMacAddress() {
+    public Optional<String> macAddress() {
         return this.macAddress == null ? Optional.empty() : Optional.ofNullable(this.macAddress);
     }
 
@@ -49,7 +49,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="networkInterfaceName")
       private final @Nullable String networkInterfaceName;
 
-    public Optional<String> getNetworkInterfaceName() {
+    public Optional<String> networkInterfaceName() {
         return this.networkInterfaceName == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceName);
     }
 
@@ -60,7 +60,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="vmSwitchType")
       private final @Nullable String vmSwitchType;
 
-    public Optional<String> getVmSwitchType() {
+    public Optional<String> vmSwitchType() {
         return this.vmSwitchType == null ? Optional.empty() : Optional.ofNullable(this.vmSwitchType);
     }
 

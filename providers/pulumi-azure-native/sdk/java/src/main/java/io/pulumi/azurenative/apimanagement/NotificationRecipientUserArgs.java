@@ -22,7 +22,7 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
     @Import(name="notificationName", required=true)
       private final Output<String> notificationName;
 
-    public Output<String> getNotificationName() {
+    public Output<String> notificationName() {
         return this.notificationName;
     }
 
@@ -33,7 +33,7 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -55,7 +55,7 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
     @Import(name="userId")
       private final @Nullable Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId == null ? Codegen.empty() : this.userId;
     }
 

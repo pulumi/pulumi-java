@@ -29,7 +29,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -51,7 +51,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -62,7 +62,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -73,7 +73,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -84,7 +84,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -95,7 +95,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
 
@@ -106,7 +106,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="serviceEndpointPolicyDefinitions")
       private final @Nullable List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions;
 
-    public List<ServiceEndpointPolicyDefinitionResponse> getServiceEndpointPolicyDefinitions() {
+    public List<ServiceEndpointPolicyDefinitionResponse> serviceEndpointPolicyDefinitions() {
         return this.serviceEndpointPolicyDefinitions == null ? List.of() : this.serviceEndpointPolicyDefinitions;
     }
 
@@ -117,7 +117,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="subnets", required=true)
       private final List<SubnetResponse> subnets;
 
-    public List<SubnetResponse> getSubnets() {
+    public List<SubnetResponse> subnets() {
         return this.subnets;
     }
 
@@ -128,7 +128,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -139,7 +139,7 @@ public final class ServiceEndpointPolicyResponse extends io.pulumi.resources.Inv
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

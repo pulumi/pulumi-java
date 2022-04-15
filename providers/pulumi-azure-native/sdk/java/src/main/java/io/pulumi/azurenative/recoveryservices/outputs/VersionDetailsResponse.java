@@ -41,21 +41,21 @@ public final class VersionDetailsResponse {
      * Version expiry date.
      * 
     */
-    public Optional<String> getExpiryDate() {
+    public Optional<String> expiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
      * A value indicating whether security update required.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The agent version.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

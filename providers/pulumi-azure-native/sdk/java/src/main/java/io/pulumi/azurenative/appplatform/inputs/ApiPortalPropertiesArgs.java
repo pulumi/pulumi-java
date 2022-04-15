@@ -29,7 +29,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="gatewayIds")
       private final @Nullable Output<List<String>> gatewayIds;
 
-    public Output<List<String>> getGatewayIds() {
+    public Output<List<String>> gatewayIds() {
         return this.gatewayIds == null ? Codegen.empty() : this.gatewayIds;
     }
 
@@ -40,7 +40,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
-    public Output<Boolean> getHttpsOnly() {
+    public Output<Boolean> httpsOnly() {
         return this.httpsOnly == null ? Codegen.empty() : this.httpsOnly;
     }
 
@@ -51,7 +51,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="public")
       private final @Nullable Output<Boolean> public_;
 
-    public Output<Boolean> getPublic_() {
+    public Output<Boolean> public_() {
         return this.public_ == null ? Codegen.empty() : this.public_;
     }
 
@@ -62,7 +62,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceUrls")
       private final @Nullable Output<List<String>> sourceUrls;
 
-    public Output<List<String>> getSourceUrls() {
+    public Output<List<String>> sourceUrls() {
         return this.sourceUrls == null ? Codegen.empty() : this.sourceUrls;
     }
 
@@ -73,7 +73,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
-    public Output<SsoPropertiesArgs> getSsoProperties() {
+    public Output<SsoPropertiesArgs> ssoProperties() {
         return this.ssoProperties == null ? Codegen.empty() : this.ssoProperties;
     }
 

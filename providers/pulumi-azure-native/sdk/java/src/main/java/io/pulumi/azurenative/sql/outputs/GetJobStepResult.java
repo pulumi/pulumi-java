@@ -87,63 +87,63 @@ public final class GetJobStepResult {
      * The action payload of the job step.
      * 
     */
-    public JobStepActionResponse getAction() {
+    public JobStepActionResponse action() {
         return this.action;
     }
     /**
      * The resource ID of the job credential that will be used to connect to the targets.
      * 
     */
-    public String getCredential() {
+    public String credential() {
         return this.credential;
     }
     /**
      * Execution options for the job step.
      * 
     */
-    public Optional<JobStepExecutionOptionsResponse> getExecutionOptions() {
+    public Optional<JobStepExecutionOptionsResponse> executionOptions() {
         return Optional.ofNullable(this.executionOptions);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Output destination properties of the job step.
      * 
     */
-    public Optional<JobStepOutputResponse> getOutput() {
+    public Optional<JobStepOutputResponse> output() {
         return Optional.ofNullable(this.output);
     }
     /**
      * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
     */
-    public Optional<Integer> getStepId() {
+    public Optional<Integer> stepId() {
         return Optional.ofNullable(this.stepId);
     }
     /**
      * The resource ID of the target group that the job step will be executed on.
      * 
     */
-    public String getTargetGroup() {
+    public String targetGroup() {
         return this.targetGroup;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

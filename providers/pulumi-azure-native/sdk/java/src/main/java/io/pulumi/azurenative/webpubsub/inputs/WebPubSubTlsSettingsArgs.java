@@ -26,7 +26,7 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;
 
-    public Output<Boolean> getClientCertEnabled() {
+    public Output<Boolean> clientCertEnabled() {
         return this.clientCertEnabled == null ? Codegen.empty() : this.clientCertEnabled;
     }
 

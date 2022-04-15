@@ -25,7 +25,7 @@ public final class RecommendedMachineConfigurationResponse extends io.pulumi.res
     @Import(name="memory")
       private final @Nullable ResourceRangeResponse memory;
 
-    public Optional<ResourceRangeResponse> getMemory() {
+    public Optional<ResourceRangeResponse> memory() {
         return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
     }
 
@@ -36,7 +36,7 @@ public final class RecommendedMachineConfigurationResponse extends io.pulumi.res
     @Import(name="vCPUs")
       private final @Nullable ResourceRangeResponse vCPUs;
 
-    public Optional<ResourceRangeResponse> getVCPUs() {
+    public Optional<ResourceRangeResponse> vCPUs() {
         return this.vCPUs == null ? Optional.empty() : Optional.ofNullable(this.vCPUs);
     }
 

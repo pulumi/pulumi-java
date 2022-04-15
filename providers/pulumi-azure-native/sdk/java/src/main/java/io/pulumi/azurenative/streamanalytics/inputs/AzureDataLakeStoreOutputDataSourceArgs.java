@@ -26,7 +26,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="dateFormat")
       private final @Nullable Output<String> dateFormat;
 
-    public Output<String> getDateFormat() {
+    public Output<String> dateFormat() {
         return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
     }
 
@@ -48,7 +48,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="filePathPrefix")
       private final @Nullable Output<String> filePathPrefix;
 
-    public Output<String> getFilePathPrefix() {
+    public Output<String> filePathPrefix() {
         return this.filePathPrefix == null ? Codegen.empty() : this.filePathPrefix;
     }
 
@@ -59,7 +59,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
-    public Output<String> getRefreshToken() {
+    public Output<String> refreshToken() {
         return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
@@ -70,7 +70,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -81,7 +81,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="timeFormat")
       private final @Nullable Output<String> timeFormat;
 
-    public Output<String> getTimeFormat() {
+    public Output<String> timeFormat() {
         return this.timeFormat == null ? Codegen.empty() : this.timeFormat;
     }
 
@@ -92,7 +92,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="tokenUserDisplayName")
       private final @Nullable Output<String> tokenUserDisplayName;
 
-    public Output<String> getTokenUserDisplayName() {
+    public Output<String> tokenUserDisplayName() {
         return this.tokenUserDisplayName == null ? Codegen.empty() : this.tokenUserDisplayName;
     }
 
@@ -103,7 +103,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="tokenUserPrincipalName")
       private final @Nullable Output<String> tokenUserPrincipalName;
 
-    public Output<String> getTokenUserPrincipalName() {
+    public Output<String> tokenUserPrincipalName() {
         return this.tokenUserPrincipalName == null ? Codegen.empty() : this.tokenUserPrincipalName;
     }
 
@@ -115,7 +115,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

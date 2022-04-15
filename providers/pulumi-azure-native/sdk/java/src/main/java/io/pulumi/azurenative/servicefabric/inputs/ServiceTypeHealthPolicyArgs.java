@@ -26,7 +26,7 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
     @Import(name="maxPercentUnhealthyServices")
       private final @Nullable Output<Integer> maxPercentUnhealthyServices;
 
-    public Output<Integer> getMaxPercentUnhealthyServices() {
+    public Output<Integer> maxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Codegen.empty() : this.maxPercentUnhealthyServices;
     }
 

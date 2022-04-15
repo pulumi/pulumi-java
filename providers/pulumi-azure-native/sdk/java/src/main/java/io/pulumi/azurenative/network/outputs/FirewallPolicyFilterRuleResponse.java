@@ -63,28 +63,28 @@ public final class FirewallPolicyFilterRuleResponse {
      * The action type of a Filter rule.
      * 
     */
-    public Optional<FirewallPolicyFilterRuleActionResponse> getAction() {
+    public Optional<FirewallPolicyFilterRuleActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule resource.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Collection of rule conditions used by a rule.
      * 
     */
-    public List<Object> getRuleConditions() {
+    public List<Object> ruleConditions() {
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
     }
     /**
@@ -92,7 +92,7 @@ public final class FirewallPolicyFilterRuleResponse {
      * Expected value is 'FirewallPolicyFilterRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
 

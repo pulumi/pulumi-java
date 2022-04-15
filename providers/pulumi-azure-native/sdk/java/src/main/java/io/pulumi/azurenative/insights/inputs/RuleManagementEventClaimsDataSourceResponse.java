@@ -25,7 +25,7 @@ public final class RuleManagementEventClaimsDataSourceResponse extends io.pulumi
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 

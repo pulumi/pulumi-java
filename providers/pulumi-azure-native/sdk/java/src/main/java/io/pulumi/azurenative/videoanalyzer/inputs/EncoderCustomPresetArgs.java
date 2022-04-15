@@ -28,7 +28,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="audioEncoder")
       private final @Nullable Output<AudioEncoderAacArgs> audioEncoder;
 
-    public Output<AudioEncoderAacArgs> getAudioEncoder() {
+    public Output<AudioEncoderAacArgs> audioEncoder() {
         return this.audioEncoder == null ? Codegen.empty() : this.audioEncoder;
     }
 
@@ -40,7 +40,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -51,7 +51,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
     @Import(name="videoEncoder")
       private final @Nullable Output<VideoEncoderH264Args> videoEncoder;
 
-    public Output<VideoEncoderH264Args> getVideoEncoder() {
+    public Output<VideoEncoderH264Args> videoEncoder() {
         return this.videoEncoder == null ? Codegen.empty() : this.videoEncoder;
     }
 

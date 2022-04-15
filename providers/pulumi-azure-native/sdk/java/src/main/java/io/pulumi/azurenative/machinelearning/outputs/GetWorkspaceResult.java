@@ -112,91 +112,91 @@ public final class GetWorkspaceResult {
      * The creation time for this workspace resource.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The key vault identifier used for encrypted workspaces.
      * 
     */
-    public Optional<String> getKeyVaultIdentifierId() {
+    public Optional<String> keyVaultIdentifierId() {
         return Optional.ofNullable(this.keyVaultIdentifierId);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The email id of the owner for this workspace.
      * 
     */
-    public String getOwnerEmail() {
+    public String ownerEmail() {
         return this.ownerEmail;
     }
     /**
      * The regional endpoint for the machine learning studio service which hosts this workspace.
      * 
     */
-    public String getStudioEndpoint() {
+    public String studioEndpoint() {
         return this.studioEndpoint;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The fully qualified arm id of the storage account associated with this workspace.
      * 
     */
-    public String getUserStorageAccountId() {
+    public String userStorageAccountId() {
         return this.userStorageAccountId;
     }
     /**
      * The immutable id associated with this workspace.
      * 
     */
-    public String getWorkspaceId() {
+    public String workspaceId() {
         return this.workspaceId;
     }
     /**
      * The current state of workspace resource.
      * 
     */
-    public String getWorkspaceState() {
+    public String workspaceState() {
         return this.workspaceState;
     }
     /**
      * The type of this workspace.
      * 
     */
-    public String getWorkspaceType() {
+    public String workspaceType() {
         return this.workspaceType;
     }
 

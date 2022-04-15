@@ -29,7 +29,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedResources")
       private final @Nullable Output<List<String>> authorizedResources;
 
-    public Output<List<String>> getAuthorizedResources() {
+    public Output<List<String>> authorizedResources() {
         return this.authorizedResources == null ? Codegen.empty() : this.authorizedResources;
     }
 
@@ -40,7 +40,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
-    public Output<String> getDataSourceId() {
+    public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
 
@@ -51,7 +51,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query == null ? Codegen.empty() : this.query;
     }
 
@@ -62,7 +62,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queryType")
       private final @Nullable Output<Either<String,QueryType>> queryType;
 
-    public Output<Either<String,QueryType>> getQueryType() {
+    public Output<Either<String,QueryType>> queryType() {
         return this.queryType == null ? Codegen.empty() : this.queryType;
     }
 

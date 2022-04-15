@@ -27,7 +27,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
-    public Output<Object> getFileName() {
+    public Output<Object> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
@@ -38,7 +38,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="fileSystem")
       private final @Nullable Output<Object> fileSystem;
 
-    public Output<Object> getFileSystem() {
+    public Output<Object> fileSystem() {
         return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
@@ -49,7 +49,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
+    public Output<Object> folderPath() {
         return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
@@ -61,7 +61,7 @@ public final class AzureBlobFSLocationArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

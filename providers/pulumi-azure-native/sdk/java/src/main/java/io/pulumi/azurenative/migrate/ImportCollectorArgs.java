@@ -19,7 +19,7 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -30,7 +30,7 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="importCollectorName")
       private final @Nullable Output<String> importCollectorName;
 
-    public Output<String> getImportCollectorName() {
+    public Output<String> importCollectorName() {
         return this.importCollectorName == null ? Codegen.empty() : this.importCollectorName;
     }
 
@@ -41,14 +41,14 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
     @Import(name="properties")
       private final @Nullable Output<ImportCollectorPropertiesArgs> properties;
 
-    public Output<ImportCollectorPropertiesArgs> getProperties() {
+    public Output<ImportCollectorPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -59,7 +59,7 @@ public final class ImportCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

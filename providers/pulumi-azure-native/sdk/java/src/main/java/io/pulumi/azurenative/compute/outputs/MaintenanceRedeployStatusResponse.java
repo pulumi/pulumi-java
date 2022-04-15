@@ -70,49 +70,49 @@ public final class MaintenanceRedeployStatusResponse {
      * True, if customer is allowed to perform Maintenance.
      * 
     */
-    public Optional<Boolean> getIsCustomerInitiatedMaintenanceAllowed() {
+    public Optional<Boolean> isCustomerInitiatedMaintenanceAllowed() {
         return Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
     }
     /**
      * Message returned for the last Maintenance Operation.
      * 
     */
-    public Optional<String> getLastOperationMessage() {
+    public Optional<String> lastOperationMessage() {
         return Optional.ofNullable(this.lastOperationMessage);
     }
     /**
      * The Last Maintenance Operation Result Code.
      * 
     */
-    public Optional<String> getLastOperationResultCode() {
+    public Optional<String> lastOperationResultCode() {
         return Optional.ofNullable(this.lastOperationResultCode);
     }
     /**
      * End Time for the Maintenance Window.
      * 
     */
-    public Optional<String> getMaintenanceWindowEndTime() {
+    public Optional<String> maintenanceWindowEndTime() {
         return Optional.ofNullable(this.maintenanceWindowEndTime);
     }
     /**
      * Start Time for the Maintenance Window.
      * 
     */
-    public Optional<String> getMaintenanceWindowStartTime() {
+    public Optional<String> maintenanceWindowStartTime() {
         return Optional.ofNullable(this.maintenanceWindowStartTime);
     }
     /**
      * End Time for the Pre Maintenance Window.
      * 
     */
-    public Optional<String> getPreMaintenanceWindowEndTime() {
+    public Optional<String> preMaintenanceWindowEndTime() {
         return Optional.ofNullable(this.preMaintenanceWindowEndTime);
     }
     /**
      * Start Time for the Pre Maintenance Window.
      * 
     */
-    public Optional<String> getPreMaintenanceWindowStartTime() {
+    public Optional<String> preMaintenanceWindowStartTime() {
         return Optional.ofNullable(this.preMaintenanceWindowStartTime);
     }
 

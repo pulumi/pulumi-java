@@ -26,7 +26,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="capacityInBytes", required=true)
       private final Double capacityInBytes;
 
-    public Double getCapacityInBytes() {
+    public Double capacityInBytes() {
         return this.capacityInBytes;
     }
 
@@ -37,7 +37,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="diskId", required=true)
       private final String diskId;
 
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
 
@@ -48,7 +48,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="diskName", required=true)
       private final String diskName;
 
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
 
@@ -59,7 +59,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="diskPath", required=true)
       private final String diskPath;
 
-    public String getDiskPath() {
+    public String diskPath() {
         return this.diskPath;
     }
 
@@ -70,7 +70,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="diskType")
       private final @Nullable String diskType;
 
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
     }
 
@@ -81,7 +81,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="isOSDisk", required=true)
       private final String isOSDisk;
 
-    public String getIsOSDisk() {
+    public String isOSDisk() {
         return this.isOSDisk;
     }
 
@@ -92,7 +92,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="logStorageAccountId", required=true)
       private final String logStorageAccountId;
 
-    public String getLogStorageAccountId() {
+    public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
 
@@ -103,7 +103,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="logStorageAccountSasSecretName", required=true)
       private final String logStorageAccountSasSecretName;
 
-    public String getLogStorageAccountSasSecretName() {
+    public String logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
 
@@ -114,7 +114,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="seedManagedDiskId", required=true)
       private final String seedManagedDiskId;
 
-    public String getSeedManagedDiskId() {
+    public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
 
@@ -125,7 +125,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
     @Import(name="targetManagedDiskId", required=true)
       private final String targetManagedDiskId;
 
-    public String getTargetManagedDiskId() {
+    public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
 

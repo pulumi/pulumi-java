@@ -23,10 +23,10 @@ public final class DefaultRolloutSpecificationResponseHighTraffic {
         this.waitDuration = waitDuration;
     }
 
-    public List<String> getRegions() {
+    public List<String> regions() {
         return this.regions == null ? List.of() : this.regions;
     }
-    public Optional<String> getWaitDuration() {
+    public Optional<String> waitDuration() {
         return Optional.ofNullable(this.waitDuration);
     }
 

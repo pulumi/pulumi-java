@@ -27,7 +27,7 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
     @Import(name="hostCaching")
       private final @Nullable String hostCaching;
 
-    public Optional<String> getHostCaching() {
+    public Optional<String> hostCaching() {
         return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);
     }
 
@@ -38,7 +38,7 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
     @Import(name="sizeInGB", required=true)
       private final Integer sizeInGB;
 
-    public Integer getSizeInGB() {
+    public Integer sizeInGB() {
         return this.sizeInGB;
     }
 
@@ -49,7 +49,7 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
     @Import(name="source")
       private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    public Optional<GalleryArtifactVersionSourceResponse> getSource() {
+    public Optional<GalleryArtifactVersionSourceResponse> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 

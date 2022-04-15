@@ -30,7 +30,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     @Import(name="dataTypes")
       private final @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
 
-    public Output<List<Either<String,AdditionalWorkspaceDataType>>> getDataTypes() {
+    public Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes() {
         return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
     }
 
@@ -41,7 +41,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
 
-    public Output<Either<String,AdditionalWorkspaceType>> getType() {
+    public Output<Either<String,AdditionalWorkspaceType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -52,7 +52,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     @Import(name="workspace")
       private final @Nullable Output<String> workspace;
 
-    public Output<String> getWorkspace() {
+    public Output<String> workspace() {
         return this.workspace == null ? Codegen.empty() : this.workspace;
     }
 

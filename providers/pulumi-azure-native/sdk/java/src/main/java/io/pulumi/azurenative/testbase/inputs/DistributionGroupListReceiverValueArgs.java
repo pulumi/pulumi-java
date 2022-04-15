@@ -27,7 +27,7 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
     @Import(name="distributionGroups")
       private final @Nullable Output<List<String>> distributionGroups;
 
-    public Output<List<String>> getDistributionGroups() {
+    public Output<List<String>> distributionGroups() {
         return this.distributionGroups == null ? Codegen.empty() : this.distributionGroups;
     }
 

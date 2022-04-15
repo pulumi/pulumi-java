@@ -41,21 +41,21 @@ public final class UserAccountCredentialsResponse {
      * Name of the administrator user account which can be used to SSH to nodes.
      * 
     */
-    public String getAdminUserName() {
+    public String adminUserName() {
         return this.adminUserName;
     }
     /**
      * Password of the administrator user account.
      * 
     */
-    public Optional<String> getAdminUserPassword() {
+    public Optional<String> adminUserPassword() {
         return Optional.ofNullable(this.adminUserPassword);
     }
     /**
      * SSH public key of the administrator user account.
      * 
     */
-    public Optional<String> getAdminUserSshPublicKey() {
+    public Optional<String> adminUserSshPublicKey() {
         return Optional.ofNullable(this.adminUserSshPublicKey);
     }
 

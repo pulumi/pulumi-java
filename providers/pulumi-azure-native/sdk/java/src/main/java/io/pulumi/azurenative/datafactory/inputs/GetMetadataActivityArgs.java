@@ -50,7 +50,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> dataset() {
         return this.dataset;
     }
 
@@ -61,7 +61,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -72,7 +72,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -83,7 +83,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="fieldList")
       private final @Nullable Output<List<Object>> fieldList;
 
-    public Output<List<Object>> getFieldList() {
+    public Output<List<Object>> fieldList() {
         return this.fieldList == null ? Codegen.empty() : this.fieldList;
     }
 
@@ -94,7 +94,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="formatSettings")
       private final @Nullable Output<Object> formatSettings;
 
-    public Output<Object> getFormatSettings() {
+    public Output<Object> formatSettings() {
         return this.formatSettings == null ? Codegen.empty() : this.formatSettings;
     }
 
@@ -105,7 +105,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -116,7 +116,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -127,7 +127,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -138,7 +138,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
 
-    public Output<Object> getStoreSettings() {
+    public Output<Object> storeSettings() {
         return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
     }
 
@@ -150,7 +150,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -161,7 +161,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

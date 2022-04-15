@@ -48,28 +48,28 @@ public final class HybridRunbookWorkerLegacyResponse {
      * Gets or sets the assigned machine IP address.
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Last Heartbeat from the Worker
      * 
     */
-    public Optional<String> getLastSeenDateTime() {
+    public Optional<String> lastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
     /**
      * Gets or sets the worker machine name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the registration time of the worker machine.
      * 
     */
-    public Optional<String> getRegistrationTime() {
+    public Optional<String> registrationTime() {
         return Optional.ofNullable(this.registrationTime);
     }
 

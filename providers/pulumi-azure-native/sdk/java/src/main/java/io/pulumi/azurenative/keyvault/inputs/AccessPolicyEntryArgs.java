@@ -27,7 +27,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -38,7 +38,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -49,7 +49,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="permissions", required=true)
       private final Output<PermissionsArgs> permissions;
 
-    public Output<PermissionsArgs> getPermissions() {
+    public Output<PermissionsArgs> permissions() {
         return this.permissions;
     }
 
@@ -60,7 +60,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 

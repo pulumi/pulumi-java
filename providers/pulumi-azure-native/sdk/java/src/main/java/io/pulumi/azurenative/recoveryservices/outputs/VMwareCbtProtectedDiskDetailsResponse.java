@@ -91,70 +91,70 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
      * The disk capacity in bytes.
      * 
     */
-    public Double getCapacityInBytes() {
+    public Double capacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk id.
      * 
     */
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
     /**
      * The disk name.
      * 
     */
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
     /**
      * The disk path.
      * 
     */
-    public String getDiskPath() {
+    public String diskPath() {
         return this.diskPath;
     }
     /**
      * The disk type.
      * 
     */
-    public Optional<String> getDiskType() {
+    public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * A value indicating whether the disk is the OS disk.
      * 
     */
-    public String getIsOSDisk() {
+    public String isOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The log storage account ARM Id.
      * 
     */
-    public String getLogStorageAccountId() {
+    public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
     /**
      * The key vault secret name of the log storage account.
      * 
     */
-    public String getLogStorageAccountSasSecretName() {
+    public String logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
     /**
      * The ARM Id of the seed managed disk.
      * 
     */
-    public String getSeedManagedDiskId() {
+    public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
     /**
      * The ARM Id of the target managed disk.
      * 
     */
-    public String getTargetManagedDiskId() {
+    public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
 

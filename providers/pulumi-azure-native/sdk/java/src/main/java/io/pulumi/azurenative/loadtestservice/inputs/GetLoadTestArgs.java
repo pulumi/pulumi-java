@@ -19,7 +19,7 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="loadTestName", required=true)
       private final String loadTestName;
 
-    public String getLoadTestName() {
+    public String loadTestName() {
         return this.loadTestName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -27,7 +27,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
     @Import(name="ipConfigurations")
       private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
 
-    public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> getIpConfigurations() {
+    public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
@@ -60,7 +60,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -71,7 +71,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -82,7 +82,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

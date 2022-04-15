@@ -48,7 +48,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
      * 
      */
-    public Output<Integer> getArchiveRetentionInDays() {
+    public Output<Integer> archiveRetentionInDays() {
         return this.archiveRetentionInDays;
     }
     /**
@@ -62,7 +62,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The timestamp that table plan was last modified (UTC).
      * 
      */
-    public Output<String> getLastPlanModifiedDate() {
+    public Output<String> lastPlanModifiedDate() {
         return this.lastPlanModifiedDate;
     }
     /**
@@ -76,7 +76,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The table plan.
      * 
      */
-    public Output</* @Nullable */ String> getPlan() {
+    public Output</* @Nullable */ String> plan() {
         return this.plan;
     }
     /**
@@ -104,7 +104,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -118,7 +118,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Parameters of the restore operation that initiated this table.
      * 
      */
-    public Output</* @Nullable */ RestoredLogsResponse> getRestoredLogs() {
+    public Output</* @Nullable */ RestoredLogsResponse> restoredLogs() {
         return this.restoredLogs;
     }
     /**
@@ -132,7 +132,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Search job execution statistics.
      * 
      */
-    public Output</* @Nullable */ ResultStatisticsResponse> getResultStatistics() {
+    public Output</* @Nullable */ ResultStatisticsResponse> resultStatistics() {
         return this.resultStatistics;
     }
     /**
@@ -146,7 +146,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionInDays() {
+    public Output</* @Nullable */ Integer> retentionInDays() {
         return this.retentionInDays;
     }
     /**
@@ -160,7 +160,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Table schema.
      * 
      */
-    public Output</* @Nullable */ SchemaResponse> getSchema() {
+    public Output</* @Nullable */ SchemaResponse> schema() {
         return this.schema;
     }
     /**
@@ -174,7 +174,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Parameters of the search job that initiated this table.
      * 
      */
-    public Output</* @Nullable */ SearchResultsResponse> getSearchResults() {
+    public Output</* @Nullable */ SearchResultsResponse> searchResults() {
         return this.searchResults;
     }
     /**
@@ -188,7 +188,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -202,7 +202,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
      * 
      */
-    public Output</* @Nullable */ Integer> getTotalRetentionInDays() {
+    public Output</* @Nullable */ Integer> totalRetentionInDays() {
         return this.totalRetentionInDays;
     }
     /**
@@ -216,7 +216,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

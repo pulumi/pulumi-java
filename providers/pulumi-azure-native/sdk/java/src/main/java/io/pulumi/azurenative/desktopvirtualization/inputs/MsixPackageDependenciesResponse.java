@@ -25,7 +25,7 @@ public final class MsixPackageDependenciesResponse extends io.pulumi.resources.I
     @Import(name="dependencyName")
       private final @Nullable String dependencyName;
 
-    public Optional<String> getDependencyName() {
+    public Optional<String> dependencyName() {
         return this.dependencyName == null ? Optional.empty() : Optional.ofNullable(this.dependencyName);
     }
 
@@ -36,7 +36,7 @@ public final class MsixPackageDependenciesResponse extends io.pulumi.resources.I
     @Import(name="minVersion")
       private final @Nullable String minVersion;
 
-    public Optional<String> getMinVersion() {
+    public Optional<String> minVersion() {
         return this.minVersion == null ? Optional.empty() : Optional.ofNullable(this.minVersion);
     }
 
@@ -47,7 +47,7 @@ public final class MsixPackageDependenciesResponse extends io.pulumi.resources.I
     @Import(name="publisher")
       private final @Nullable String publisher;
 
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 

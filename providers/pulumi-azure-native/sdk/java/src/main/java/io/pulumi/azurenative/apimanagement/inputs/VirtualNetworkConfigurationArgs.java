@@ -26,7 +26,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
     @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
 
-    public Output<String> getSubnetResourceId() {
+    public Output<String> subnetResourceId() {
         return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
     }
 

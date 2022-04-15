@@ -28,7 +28,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configFilePath")
       private final @Nullable Output<String> configFilePath;
 
-    public Output<String> getConfigFilePath() {
+    public Output<String> configFilePath() {
         return this.configFilePath == null ? Codegen.empty() : this.configFilePath;
     }
 
@@ -39,7 +39,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -51,7 +51,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
-    public Output<String> getRuntimeVersion() {
+    public Output<String> runtimeVersion() {
         return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 

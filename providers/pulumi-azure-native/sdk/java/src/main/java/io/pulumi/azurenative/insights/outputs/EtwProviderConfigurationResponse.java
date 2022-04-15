@@ -22,10 +22,10 @@ public final class EtwProviderConfigurationResponse {
         this.id = id;
     }
 
-    public List<EtwEventConfigurationResponse> getEvents() {
+    public List<EtwEventConfigurationResponse> events() {
         return this.events;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

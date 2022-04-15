@@ -27,7 +27,7 @@ public final class AkamaiAccessControlArgs extends io.pulumi.resources.ResourceA
     @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
       private final @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
-    public Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> getAkamaiSignatureHeaderAuthenticationKeyList() {
+    public Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList() {
         return this.akamaiSignatureHeaderAuthenticationKeyList == null ? Codegen.empty() : this.akamaiSignatureHeaderAuthenticationKeyList;
     }
 

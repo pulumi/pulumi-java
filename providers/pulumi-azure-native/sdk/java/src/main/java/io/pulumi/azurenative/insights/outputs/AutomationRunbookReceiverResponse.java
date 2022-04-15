@@ -70,49 +70,49 @@ public final class AutomationRunbookReceiverResponse {
      * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
      * 
     */
-    public String getAutomationAccountId() {
+    public String automationAccountId() {
         return this.automationAccountId;
     }
     /**
      * Indicates whether this instance is global runbook.
      * 
     */
-    public Boolean getIsGlobalRunbook() {
+    public Boolean isGlobalRunbook() {
         return this.isGlobalRunbook;
     }
     /**
      * Indicates name of the webhook.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The name for this runbook.
      * 
     */
-    public String getRunbookName() {
+    public String runbookName() {
         return this.runbookName;
     }
     /**
      * The URI where webhooks should be sent.
      * 
     */
-    public Optional<String> getServiceUri() {
+    public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
     /**
      * Indicates whether to use common alert schema.
      * 
     */
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
     /**
      * The resource id for webhook linked to this runbook.
      * 
     */
-    public String getWebhookResourceId() {
+    public String webhookResourceId() {
         return this.webhookResourceId;
     }
 

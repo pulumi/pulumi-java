@@ -28,7 +28,7 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
     @Import(name="policies")
       private final @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
-    public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> getPolicies() {
+    public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies() {
         return this.policies == null ? Codegen.empty() : this.policies;
     }
 

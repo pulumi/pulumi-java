@@ -26,7 +26,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerVnetId")
       private final @Nullable Output<String> peerVnetId;
 
-    public Output<String> getPeerVnetId() {
+    public Output<String> peerVnetId() {
         return this.peerVnetId == null ? Codegen.empty() : this.peerVnetId;
     }
 
@@ -37,7 +37,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vnetCidr")
       private final @Nullable Output<String> vnetCidr;
 
-    public Output<String> getVnetCidr() {
+    public Output<String> vnetCidr() {
         return this.vnetCidr == null ? Codegen.empty() : this.vnetCidr;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vnetId")
       private final @Nullable Output<String> vnetId;
 
-    public Output<String> getVnetId() {
+    public Output<String> vnetId() {
         return this.vnetId == null ? Codegen.empty() : this.vnetId;
     }
 

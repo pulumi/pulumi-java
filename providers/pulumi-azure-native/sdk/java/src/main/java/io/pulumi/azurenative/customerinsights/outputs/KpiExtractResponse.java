@@ -32,14 +32,14 @@ public final class KpiExtractResponse {
      * The expression.
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
     /**
      * KPI extract name.
      * 
     */
-    public String getExtractName() {
+    public String extractName() {
         return this.extractName;
     }
 

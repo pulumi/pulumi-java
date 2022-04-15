@@ -24,7 +24,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -46,7 +46,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -57,7 +57,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
+    public Output<String> dataSetMappingName() {
         return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
@@ -68,7 +68,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="filePath", required=true)
       private final Output<String> filePath;
 
-    public Output<String> getFilePath() {
+    public Output<String> filePath() {
         return this.filePath;
     }
 
@@ -80,7 +80,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -91,7 +91,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="outputType")
       private final @Nullable Output<Either<String,OutputType>> outputType;
 
-    public Output<Either<String,OutputType>> getOutputType() {
+    public Output<Either<String,OutputType>> outputType() {
         return this.outputType == null ? Codegen.empty() : this.outputType;
     }
 
@@ -102,7 +102,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -113,7 +113,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -124,7 +124,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -135,7 +135,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -146,7 +146,7 @@ public final class BlobDataSetMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 

@@ -29,7 +29,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="encryptionAlgorithm")
       private final @Nullable Output<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
 
-    public Output<Either<String,JsonWebKeyEncryptionAlgorithm>> getEncryptionAlgorithm() {
+    public Output<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm() {
         return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
     }
 
@@ -40,7 +40,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="encryptionAtHost")
       private final @Nullable Output<Boolean> encryptionAtHost;
 
-    public Output<Boolean> getEncryptionAtHost() {
+    public Output<Boolean> encryptionAtHost() {
         return this.encryptionAtHost == null ? Codegen.empty() : this.encryptionAtHost;
     }
 
@@ -51,7 +51,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
@@ -62,7 +62,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
-    public Output<String> getKeyVersion() {
+    public Output<String> keyVersion() {
         return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
@@ -73,7 +73,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="msiResourceId")
       private final @Nullable Output<String> msiResourceId;
 
-    public Output<String> getMsiResourceId() {
+    public Output<String> msiResourceId() {
         return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
     }
 
@@ -84,7 +84,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="vaultUri")
       private final @Nullable Output<String> vaultUri;
 
-    public Output<String> getVaultUri() {
+    public Output<String> vaultUri() {
         return this.vaultUri == null ? Codegen.empty() : this.vaultUri;
     }
 

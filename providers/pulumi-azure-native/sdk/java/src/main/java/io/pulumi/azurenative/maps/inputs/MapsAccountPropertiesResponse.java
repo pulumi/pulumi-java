@@ -25,7 +25,7 @@ public final class MapsAccountPropertiesResponse extends io.pulumi.resources.Inv
     @Import(name="xMsClientId")
       private final @Nullable String xMsClientId;
 
-    public Optional<String> getXMsClientId() {
+    public Optional<String> xMsClientId() {
         return this.xMsClientId == null ? Optional.empty() : Optional.ofNullable(this.xMsClientId);
     }
 

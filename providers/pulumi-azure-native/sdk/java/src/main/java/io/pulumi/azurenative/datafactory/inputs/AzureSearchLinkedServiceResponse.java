@@ -33,7 +33,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -55,7 +55,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -66,7 +66,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -77,7 +77,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="key")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key() {
         return this.key == null ? null : this.key;
     }
 
@@ -88,7 +88,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -100,7 +100,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -111,7 +111,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
     @Import(name="url", required=true)
       private final Object url;
 
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 

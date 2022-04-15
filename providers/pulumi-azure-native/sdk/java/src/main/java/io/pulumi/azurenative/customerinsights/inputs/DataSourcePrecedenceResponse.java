@@ -26,7 +26,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
     @Import(name="dataSourceReferenceId", required=true)
       private final String dataSourceReferenceId;
 
-    public String getDataSourceReferenceId() {
+    public String dataSourceReferenceId() {
         return this.dataSourceReferenceId;
     }
 
@@ -37,7 +37,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
     @Import(name="dataSourceType", required=true)
       private final String dataSourceType;
 
-    public String getDataSourceType() {
+    public String dataSourceType() {
         return this.dataSourceType;
     }
 
@@ -48,7 +48,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
     @Import(name="id", required=true)
       private final Integer id;
 
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
 
@@ -59,7 +59,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -70,7 +70,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
     @Import(name="precedence")
       private final @Nullable Integer precedence;
 
-    public Optional<Integer> getPrecedence() {
+    public Optional<Integer> precedence() {
         return this.precedence == null ? Optional.empty() : Optional.ofNullable(this.precedence);
     }
 
@@ -81,7 +81,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

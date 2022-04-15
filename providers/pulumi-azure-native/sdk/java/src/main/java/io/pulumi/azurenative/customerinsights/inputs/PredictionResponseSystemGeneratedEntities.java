@@ -27,7 +27,7 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
     @Import(name="generatedInteractionTypes")
       private final @Nullable List<String> generatedInteractionTypes;
 
-    public List<String> getGeneratedInteractionTypes() {
+    public List<String> generatedInteractionTypes() {
         return this.generatedInteractionTypes == null ? List.of() : this.generatedInteractionTypes;
     }
 
@@ -38,7 +38,7 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
     @Import(name="generatedKpis")
       private final @Nullable Map<String,String> generatedKpis;
 
-    public Map<String,String> getGeneratedKpis() {
+    public Map<String,String> generatedKpis() {
         return this.generatedKpis == null ? Map.of() : this.generatedKpis;
     }
 
@@ -49,7 +49,7 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
     @Import(name="generatedLinks")
       private final @Nullable List<String> generatedLinks;
 
-    public List<String> getGeneratedLinks() {
+    public List<String> generatedLinks() {
         return this.generatedLinks == null ? List.of() : this.generatedLinks;
     }
 

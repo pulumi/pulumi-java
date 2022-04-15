@@ -31,7 +31,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOption>> createOption;
 
-    public Output<Either<String,DiskCreateOption>> getCreateOption() {
+    public Output<Either<String,DiskCreateOption>> createOption() {
         return this.createOption;
     }
 
@@ -42,7 +42,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageReference")
       private final @Nullable Output<ImageDiskReferenceArgs> galleryImageReference;
 
-    public Output<ImageDiskReferenceArgs> getGalleryImageReference() {
+    public Output<ImageDiskReferenceArgs> galleryImageReference() {
         return this.galleryImageReference == null ? Codegen.empty() : this.galleryImageReference;
     }
 
@@ -53,7 +53,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageReference")
       private final @Nullable Output<ImageDiskReferenceArgs> imageReference;
 
-    public Output<ImageDiskReferenceArgs> getImageReference() {
+    public Output<ImageDiskReferenceArgs> imageReference() {
         return this.imageReference == null ? Codegen.empty() : this.imageReference;
     }
 
@@ -64,7 +64,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logicalSectorSize")
       private final @Nullable Output<Integer> logicalSectorSize;
 
-    public Output<Integer> getLogicalSectorSize() {
+    public Output<Integer> logicalSectorSize() {
         return this.logicalSectorSize == null ? Codegen.empty() : this.logicalSectorSize;
     }
 
@@ -75,7 +75,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
-    public Output<String> getSourceResourceId() {
+    public Output<String> sourceResourceId() {
         return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
@@ -86,7 +86,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceUri")
       private final @Nullable Output<String> sourceUri;
 
-    public Output<String> getSourceUri() {
+    public Output<String> sourceUri() {
         return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
     }
 
@@ -97,7 +97,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
@@ -108,7 +108,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uploadSizeBytes")
       private final @Nullable Output<Double> uploadSizeBytes;
 
-    public Output<Double> getUploadSizeBytes() {
+    public Output<Double> uploadSizeBytes() {
         return this.uploadSizeBytes == null ? Codegen.empty() : this.uploadSizeBytes;
     }
 

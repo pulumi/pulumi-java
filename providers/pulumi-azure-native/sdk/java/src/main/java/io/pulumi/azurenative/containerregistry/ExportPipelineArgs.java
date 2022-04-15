@@ -27,7 +27,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportPipelineName")
       private final @Nullable Output<String> exportPipelineName;
 
-    public Output<String> getExportPipelineName() {
+    public Output<String> exportPipelineName() {
         return this.exportPipelineName == null ? Codegen.empty() : this.exportPipelineName;
     }
 
@@ -38,7 +38,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> getIdentity() {
+    public Output<IdentityPropertiesArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -49,7 +49,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -60,7 +60,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
-    public Output<List<Either<String,PipelineOptions>>> getOptions() {
+    public Output<List<Either<String,PipelineOptions>>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -71,7 +71,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -82,7 +82,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class ExportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="target", required=true)
       private final Output<ExportPipelineTargetPropertiesArgs> target;
 
-    public Output<ExportPipelineTargetPropertiesArgs> getTarget() {
+    public Output<ExportPipelineTargetPropertiesArgs> target() {
         return this.target;
     }
 

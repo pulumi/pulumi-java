@@ -59,35 +59,35 @@ public final class MonthlyRetentionScheduleResponse {
      * Retention duration of retention Policy.
      * 
     */
-    public Optional<RetentionDurationResponse> getRetentionDuration() {
+    public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
      * Daily retention format for monthly retention policy.
      * 
     */
-    public Optional<DailyRetentionFormatResponse> getRetentionScheduleDaily() {
+    public Optional<DailyRetentionFormatResponse> retentionScheduleDaily() {
         return Optional.ofNullable(this.retentionScheduleDaily);
     }
     /**
      * Retention schedule format type for monthly retention policy.
      * 
     */
-    public Optional<String> getRetentionScheduleFormatType() {
+    public Optional<String> retentionScheduleFormatType() {
         return Optional.ofNullable(this.retentionScheduleFormatType);
     }
     /**
      * Weekly retention format for monthly retention policy.
      * 
     */
-    public Optional<WeeklyRetentionFormatResponse> getRetentionScheduleWeekly() {
+    public Optional<WeeklyRetentionFormatResponse> retentionScheduleWeekly() {
         return Optional.ofNullable(this.retentionScheduleWeekly);
     }
     /**
      * Retention times of retention policy.
      * 
     */
-    public List<String> getRetentionTimes() {
+    public List<String> retentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }
 

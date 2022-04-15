@@ -82,63 +82,63 @@ public final class InMageRcmProtectedDiskDetailsResponse {
      * The disk capacity in bytes.
      * 
     */
-    public Double getCapacityInBytes() {
+    public Double capacityInBytes() {
         return this.capacityInBytes;
     }
     /**
      * The disk encryption set ARM Id.
      * 
     */
-    public String getDiskEncryptionSetId() {
+    public String diskEncryptionSetId() {
         return this.diskEncryptionSetId;
     }
     /**
      * The disk Id.
      * 
     */
-    public String getDiskId() {
+    public String diskId() {
         return this.diskId;
     }
     /**
      * The disk name.
      * 
     */
-    public String getDiskName() {
+    public String diskName() {
         return this.diskName;
     }
     /**
      * The disk type.
      * 
     */
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
     /**
      * A value indicating whether the disk is the OS disk.
      * 
     */
-    public String getIsOSDisk() {
+    public String isOSDisk() {
         return this.isOSDisk;
     }
     /**
      * The log storage account ARM Id.
      * 
     */
-    public String getLogStorageAccountId() {
+    public String logStorageAccountId() {
         return this.logStorageAccountId;
     }
     /**
      * The ARM Id of the seed managed disk.
      * 
     */
-    public String getSeedManagedDiskId() {
+    public String seedManagedDiskId() {
         return this.seedManagedDiskId;
     }
     /**
      * The ARM Id of the target managed disk.
      * 
     */
-    public String getTargetManagedDiskId() {
+    public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
 

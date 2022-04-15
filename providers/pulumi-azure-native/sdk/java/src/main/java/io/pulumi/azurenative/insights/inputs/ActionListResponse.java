@@ -26,7 +26,7 @@ public final class ActionListResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="actionGroups")
       private final @Nullable List<ActionGroupResponse> actionGroups;
 
-    public List<ActionGroupResponse> getActionGroups() {
+    public List<ActionGroupResponse> actionGroups() {
         return this.actionGroups == null ? List.of() : this.actionGroups;
     }
 

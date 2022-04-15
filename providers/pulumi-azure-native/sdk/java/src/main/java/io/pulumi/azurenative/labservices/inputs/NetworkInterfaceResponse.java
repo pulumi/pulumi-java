@@ -23,7 +23,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
 
-    public String getRdpAuthority() {
+    public String rdpAuthority() {
         return this.rdpAuthority;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
 
-    public String getSshAuthority() {
+    public String sshAuthority() {
         return this.sshAuthority;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

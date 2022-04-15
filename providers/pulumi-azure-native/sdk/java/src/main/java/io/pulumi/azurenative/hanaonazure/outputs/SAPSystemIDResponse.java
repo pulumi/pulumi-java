@@ -55,35 +55,35 @@ public final class SAPSystemIDResponse {
      * Group ID of the HANA database user.
      * 
     */
-    public Optional<String> getGid() {
+    public Optional<String> gid() {
         return Optional.ofNullable(this.gid);
     }
     /**
      * Percent of memory to allocate to this SID.
      * 
     */
-    public String getMemoryAllocation() {
+    public String memoryAllocation() {
         return this.memoryAllocation;
     }
     /**
      * SAP system ID as database identifier.
      * 
     */
-    public Optional<String> getSid() {
+    public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
     /**
      * User ID of the HANA database user.
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
      * Name of the HANA database user.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 

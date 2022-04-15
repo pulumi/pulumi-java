@@ -28,7 +28,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
-    public Output<Either<String,ManagedIdentityTypes>> getType() {
+    public Output<Either<String,ManagedIdentityTypes>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

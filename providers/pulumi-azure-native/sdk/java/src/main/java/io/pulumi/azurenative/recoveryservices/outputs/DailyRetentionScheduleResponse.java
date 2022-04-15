@@ -36,14 +36,14 @@ public final class DailyRetentionScheduleResponse {
      * Retention duration of retention Policy.
      * 
     */
-    public Optional<RetentionDurationResponse> getRetentionDuration() {
+    public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
      * Retention times of retention policy.
      * 
     */
-    public List<String> getRetentionTimes() {
+    public List<String> retentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }
 

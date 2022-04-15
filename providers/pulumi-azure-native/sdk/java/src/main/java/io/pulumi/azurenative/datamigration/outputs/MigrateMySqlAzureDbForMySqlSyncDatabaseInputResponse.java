@@ -56,35 +56,35 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse {
      * Migration settings which tune the migration behavior
      * 
     */
-    public Map<String,String> getMigrationSetting() {
+    public Map<String,String> migrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
     /**
      * Name of the database
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Source settings to tune source endpoint migration behavior
      * 
     */
-    public Map<String,String> getSourceSetting() {
+    public Map<String,String> sourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
     /**
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
     */
-    public Optional<String> getTargetDatabaseName() {
+    public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
     /**
      * Target settings to tune target endpoint migration behavior
      * 
     */
-    public Map<String,String> getTargetSetting() {
+    public Map<String,String> targetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }
 

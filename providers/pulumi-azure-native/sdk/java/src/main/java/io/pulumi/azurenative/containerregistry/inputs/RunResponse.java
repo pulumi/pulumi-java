@@ -34,7 +34,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="agentConfiguration")
       private final @Nullable AgentPropertiesResponse agentConfiguration;
 
-    public Optional<AgentPropertiesResponse> getAgentConfiguration() {
+    public Optional<AgentPropertiesResponse> agentConfiguration() {
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
     }
 
@@ -45,7 +45,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
 
-    public Optional<String> getAgentPoolName() {
+    public Optional<String> agentPoolName() {
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
@@ -56,7 +56,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createTime")
       private final @Nullable String createTime;
 
-    public Optional<String> getCreateTime() {
+    public Optional<String> createTime() {
         return this.createTime == null ? Optional.empty() : Optional.ofNullable(this.createTime);
     }
 
@@ -67,7 +67,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customRegistries")
       private final @Nullable List<String> customRegistries;
 
-    public List<String> getCustomRegistries() {
+    public List<String> customRegistries() {
         return this.customRegistries == null ? List.of() : this.customRegistries;
     }
 
@@ -78,7 +78,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="finishTime")
       private final @Nullable String finishTime;
 
-    public Optional<String> getFinishTime() {
+    public Optional<String> finishTime() {
         return this.finishTime == null ? Optional.empty() : Optional.ofNullable(this.finishTime);
     }
 
@@ -89,7 +89,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -100,7 +100,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imageUpdateTrigger")
       private final @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
 
-    public Optional<ImageUpdateTriggerResponse> getImageUpdateTrigger() {
+    public Optional<ImageUpdateTriggerResponse> imageUpdateTrigger() {
         return this.imageUpdateTrigger == null ? Optional.empty() : Optional.ofNullable(this.imageUpdateTrigger);
     }
 
@@ -111,7 +111,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
 
-    public Optional<Boolean> getIsArchiveEnabled() {
+    public Optional<Boolean> isArchiveEnabled() {
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
@@ -122,7 +122,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
-    public Optional<String> getLastUpdatedTime() {
+    public Optional<String> lastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
@@ -133,7 +133,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="logArtifact", required=true)
       private final ImageDescriptorResponse logArtifact;
 
-    public ImageDescriptorResponse getLogArtifact() {
+    public ImageDescriptorResponse logArtifact() {
         return this.logArtifact;
     }
 
@@ -144,7 +144,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -155,7 +155,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="outputImages")
       private final @Nullable List<ImageDescriptorResponse> outputImages;
 
-    public List<ImageDescriptorResponse> getOutputImages() {
+    public List<ImageDescriptorResponse> outputImages() {
         return this.outputImages == null ? List.of() : this.outputImages;
     }
 
@@ -166,7 +166,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="platform")
       private final @Nullable PlatformPropertiesResponse platform;
 
-    public Optional<PlatformPropertiesResponse> getPlatform() {
+    public Optional<PlatformPropertiesResponse> platform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
     }
 
@@ -177,7 +177,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
@@ -188,7 +188,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="runErrorMessage", required=true)
       private final String runErrorMessage;
 
-    public String getRunErrorMessage() {
+    public String runErrorMessage() {
         return this.runErrorMessage;
     }
 
@@ -199,7 +199,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="runId")
       private final @Nullable String runId;
 
-    public Optional<String> getRunId() {
+    public Optional<String> runId() {
         return this.runId == null ? Optional.empty() : Optional.ofNullable(this.runId);
     }
 
@@ -210,7 +210,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="runType")
       private final @Nullable String runType;
 
-    public Optional<String> getRunType() {
+    public Optional<String> runType() {
         return this.runType == null ? Optional.empty() : Optional.ofNullable(this.runType);
     }
 
@@ -221,7 +221,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceRegistryAuth")
       private final @Nullable String sourceRegistryAuth;
 
-    public Optional<String> getSourceRegistryAuth() {
+    public Optional<String> sourceRegistryAuth() {
         return this.sourceRegistryAuth == null ? Optional.empty() : Optional.ofNullable(this.sourceRegistryAuth);
     }
 
@@ -232,7 +232,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceTrigger")
       private final @Nullable SourceTriggerDescriptorResponse sourceTrigger;
 
-    public Optional<SourceTriggerDescriptorResponse> getSourceTrigger() {
+    public Optional<SourceTriggerDescriptorResponse> sourceTrigger() {
         return this.sourceTrigger == null ? Optional.empty() : Optional.ofNullable(this.sourceTrigger);
     }
 
@@ -243,7 +243,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -254,7 +254,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
@@ -265,7 +265,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 
@@ -276,7 +276,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="task")
       private final @Nullable String task;
 
-    public Optional<String> getTask() {
+    public Optional<String> task() {
         return this.task == null ? Optional.empty() : Optional.ofNullable(this.task);
     }
 
@@ -287,7 +287,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timerTrigger")
       private final @Nullable TimerTriggerDescriptorResponse timerTrigger;
 
-    public Optional<TimerTriggerDescriptorResponse> getTimerTrigger() {
+    public Optional<TimerTriggerDescriptorResponse> timerTrigger() {
         return this.timerTrigger == null ? Optional.empty() : Optional.ofNullable(this.timerTrigger);
     }
 
@@ -298,7 +298,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -309,7 +309,7 @@ public final class RunResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="updateTriggerToken")
       private final @Nullable String updateTriggerToken;
 
-    public Optional<String> getUpdateTriggerToken() {
+    public Optional<String> updateTriggerToken() {
         return this.updateTriggerToken == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerToken);
     }
 

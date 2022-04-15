@@ -32,7 +32,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="accessCredential")
       private final @Nullable SSISAccessCredentialResponse accessCredential;
 
-    public Optional<SSISAccessCredentialResponse> getAccessCredential() {
+    public Optional<SSISAccessCredentialResponse> accessCredential() {
         return this.accessCredential == null ? Optional.empty() : Optional.ofNullable(this.accessCredential);
     }
 
@@ -43,7 +43,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="childPackages")
       private final @Nullable List<SSISChildPackageResponse> childPackages;
 
-    public List<SSISChildPackageResponse> getChildPackages() {
+    public List<SSISChildPackageResponse> childPackages() {
         return this.childPackages == null ? List.of() : this.childPackages;
     }
 
@@ -54,7 +54,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="configurationAccessCredential")
       private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
 
-    public Optional<SSISAccessCredentialResponse> getConfigurationAccessCredential() {
+    public Optional<SSISAccessCredentialResponse> configurationAccessCredential() {
         return this.configurationAccessCredential == null ? Optional.empty() : Optional.ofNullable(this.configurationAccessCredential);
     }
 
@@ -65,7 +65,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="configurationPath")
       private final @Nullable Object configurationPath;
 
-    public Optional<Object> getConfigurationPath() {
+    public Optional<Object> configurationPath() {
         return this.configurationPath == null ? Optional.empty() : Optional.ofNullable(this.configurationPath);
     }
 
@@ -76,7 +76,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="packageContent")
       private final @Nullable Object packageContent;
 
-    public Optional<Object> getPackageContent() {
+    public Optional<Object> packageContent() {
         return this.packageContent == null ? Optional.empty() : Optional.ofNullable(this.packageContent);
     }
 
@@ -87,7 +87,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="packageLastModifiedDate")
       private final @Nullable String packageLastModifiedDate;
 
-    public Optional<String> getPackageLastModifiedDate() {
+    public Optional<String> packageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
     }
 
@@ -98,7 +98,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="packageName")
       private final @Nullable String packageName;
 
-    public Optional<String> getPackageName() {
+    public Optional<String> packageName() {
         return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
     }
 
@@ -109,7 +109,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="packagePassword")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPackagePassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword() {
         return this.packagePassword == null ? null : this.packagePassword;
     }
 
@@ -120,7 +120,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="packagePath")
       private final @Nullable Object packagePath;
 
-    public Optional<Object> getPackagePath() {
+    public Optional<Object> packagePath() {
         return this.packagePath == null ? Optional.empty() : Optional.ofNullable(this.packagePath);
     }
 
@@ -131,7 +131,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

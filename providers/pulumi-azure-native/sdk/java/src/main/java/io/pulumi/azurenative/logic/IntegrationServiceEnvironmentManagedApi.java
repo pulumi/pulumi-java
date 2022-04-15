@@ -51,7 +51,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The API definition.
      * 
      */
-    public Output<String> getApiDefinitionUrl() {
+    public Output<String> apiDefinitionUrl() {
         return this.apiDefinitionUrl;
     }
     /**
@@ -65,7 +65,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The api definitions.
      * 
      */
-    public Output<ApiResourceDefinitionsResponse> getApiDefinitions() {
+    public Output<ApiResourceDefinitionsResponse> apiDefinitions() {
         return this.apiDefinitions;
     }
     /**
@@ -79,7 +79,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The backend service.
      * 
      */
-    public Output<ApiResourceBackendServiceResponse> getBackendService() {
+    public Output<ApiResourceBackendServiceResponse> backendService() {
         return this.backendService;
     }
     /**
@@ -93,7 +93,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The capabilities.
      * 
      */
-    public Output<List<String>> getCapabilities() {
+    public Output<List<String>> capabilities() {
         return this.capabilities;
     }
     /**
@@ -107,7 +107,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The category.
      * 
      */
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
     /**
@@ -121,7 +121,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The connection parameters.
      * 
      */
-    public Output<Map<String,Object>> getConnectionParameters() {
+    public Output<Map<String,Object>> connectionParameters() {
         return this.connectionParameters;
     }
     /**
@@ -135,7 +135,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The integration service environment managed api deployment parameters.
      * 
      */
-    public Output</* @Nullable */ IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> getDeploymentParameters() {
+    public Output</* @Nullable */ IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> deploymentParameters() {
         return this.deploymentParameters;
     }
     /**
@@ -149,7 +149,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The api general information.
      * 
      */
-    public Output<ApiResourceGeneralInformationResponse> getGeneralInformation() {
+    public Output<ApiResourceGeneralInformationResponse> generalInformation() {
         return this.generalInformation;
     }
     /**
@@ -163,7 +163,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The integration service environment reference.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
+    public Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
     /**
@@ -177,7 +177,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -191,7 +191,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The metadata.
      * 
      */
-    public Output<ApiResourceMetadataResponse> getMetadata() {
+    public Output<ApiResourceMetadataResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -205,7 +205,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -219,7 +219,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The policies for the API.
      * 
      */
-    public Output<ApiResourcePoliciesResponse> getPolicies() {
+    public Output<ApiResourcePoliciesResponse> policies() {
         return this.policies;
     }
     /**
@@ -233,7 +233,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -247,7 +247,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The runtime urls.
      * 
      */
-    public Output<List<String>> getRuntimeUrls() {
+    public Output<List<String>> runtimeUrls() {
         return this.runtimeUrls;
     }
     /**
@@ -261,7 +261,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -275,7 +275,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

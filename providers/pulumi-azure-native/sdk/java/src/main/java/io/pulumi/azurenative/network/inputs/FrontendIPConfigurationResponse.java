@@ -29,7 +29,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -40,7 +40,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -51,7 +51,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="inboundNatPools", required=true)
       private final List<SubResourceResponse> inboundNatPools;
 
-    public List<SubResourceResponse> getInboundNatPools() {
+    public List<SubResourceResponse> inboundNatPools() {
         return this.inboundNatPools;
     }
 
@@ -62,7 +62,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="inboundNatRules", required=true)
       private final List<SubResourceResponse> inboundNatRules;
 
-    public List<SubResourceResponse> getInboundNatRules() {
+    public List<SubResourceResponse> inboundNatRules() {
         return this.inboundNatRules;
     }
 
@@ -73,7 +73,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="loadBalancingRules", required=true)
       private final List<SubResourceResponse> loadBalancingRules;
 
-    public List<SubResourceResponse> getLoadBalancingRules() {
+    public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
     }
 
@@ -84,7 +84,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -95,7 +95,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="outboundRules", required=true)
       private final List<SubResourceResponse> outboundRules;
 
-    public List<SubResourceResponse> getOutboundRules() {
+    public List<SubResourceResponse> outboundRules() {
         return this.outboundRules;
     }
 
@@ -106,7 +106,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -117,7 +117,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
     }
 
@@ -128,7 +128,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
@@ -139,7 +139,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -150,7 +150,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="publicIPAddress")
       private final @Nullable PublicIPAddressResponse publicIPAddress;
 
-    public Optional<PublicIPAddressResponse> getPublicIPAddress() {
+    public Optional<PublicIPAddressResponse> publicIPAddress() {
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
@@ -161,7 +161,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
 
-    public Optional<SubResourceResponse> getPublicIPPrefix() {
+    public Optional<SubResourceResponse> publicIPPrefix() {
         return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
     }
 
@@ -172,7 +172,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
-    public Optional<SubnetResponse> getSubnet() {
+    public Optional<SubnetResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
@@ -183,7 +183,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -194,7 +194,7 @@ public final class FrontendIPConfigurationResponse extends io.pulumi.resources.I
     @Import(name="zones")
       private final @Nullable List<String> zones;
 
-    public List<String> getZones() {
+    public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }
 

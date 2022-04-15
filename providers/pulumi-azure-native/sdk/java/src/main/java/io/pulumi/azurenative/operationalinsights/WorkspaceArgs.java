@@ -31,7 +31,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -42,7 +42,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<WorkspaceFeaturesArgs> features;
 
-    public Output<WorkspaceFeaturesArgs> getFeatures() {
+    public Output<WorkspaceFeaturesArgs> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -53,7 +53,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceCmkForQuery")
       private final @Nullable Output<Boolean> forceCmkForQuery;
 
-    public Output<Boolean> getForceCmkForQuery() {
+    public Output<Boolean> forceCmkForQuery() {
         return this.forceCmkForQuery == null ? Codegen.empty() : this.forceCmkForQuery;
     }
 
@@ -64,7 +64,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -75,7 +75,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
 
-    public Output<Either<String,WorkspaceEntityStatus>> getProvisioningState() {
+    public Output<Either<String,WorkspaceEntityStatus>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -86,7 +86,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccessForIngestion")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
-    public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForIngestion() {
+    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion() {
         return this.publicNetworkAccessForIngestion == null ? Codegen.empty() : this.publicNetworkAccessForIngestion;
     }
 
@@ -97,7 +97,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccessForQuery")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
-    public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForQuery() {
+    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery() {
         return this.publicNetworkAccessForQuery == null ? Codegen.empty() : this.publicNetworkAccessForQuery;
     }
 
@@ -108,7 +108,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -119,7 +119,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
+    public Output<Integer> retentionInDays() {
         return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
@@ -130,7 +130,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<WorkspaceSkuArgs> sku;
 
-    public Output<WorkspaceSkuArgs> getSku() {
+    public Output<WorkspaceSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -141,7 +141,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -152,7 +152,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceCapping")
       private final @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
 
-    public Output<WorkspaceCappingArgs> getWorkspaceCapping() {
+    public Output<WorkspaceCappingArgs> workspaceCapping() {
         return this.workspaceCapping == null ? Codegen.empty() : this.workspaceCapping;
     }
 
@@ -163,7 +163,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 

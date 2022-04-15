@@ -27,7 +27,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="and")
       private final @Nullable Output<List<ReportFilterArgs>> and;
 
-    public Output<List<ReportFilterArgs>> getAnd() {
+    public Output<List<ReportFilterArgs>> and() {
         return this.and == null ? Codegen.empty() : this.and;
     }
 
@@ -38,7 +38,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimension")
       private final @Nullable Output<ReportComparisonExpressionArgs> dimension;
 
-    public Output<ReportComparisonExpressionArgs> getDimension() {
+    public Output<ReportComparisonExpressionArgs> dimension() {
         return this.dimension == null ? Codegen.empty() : this.dimension;
     }
 
@@ -49,7 +49,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="not")
       private final @Nullable Output<ReportFilterArgs> not;
 
-    public Output<ReportFilterArgs> getNot() {
+    public Output<ReportFilterArgs> not() {
         return this.not == null ? Codegen.empty() : this.not;
     }
 
@@ -60,7 +60,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="or")
       private final @Nullable Output<List<ReportFilterArgs>> or;
 
-    public Output<List<ReportFilterArgs>> getOr() {
+    public Output<List<ReportFilterArgs>> or() {
         return this.or == null ? Codegen.empty() : this.or;
     }
 
@@ -71,7 +71,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag")
       private final @Nullable Output<ReportComparisonExpressionArgs> tag;
 
-    public Output<ReportComparisonExpressionArgs> getTag() {
+    public Output<ReportComparisonExpressionArgs> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

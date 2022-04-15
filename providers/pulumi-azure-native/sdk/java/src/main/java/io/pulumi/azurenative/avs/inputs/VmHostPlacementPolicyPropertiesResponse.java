@@ -26,7 +26,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="affinityType", required=true)
       private final String affinityType;
 
-    public String getAffinityType() {
+    public String affinityType() {
         return this.affinityType;
     }
 
@@ -37,7 +37,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -48,7 +48,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="hostMembers", required=true)
       private final List<String> hostMembers;
 
-    public List<String> getHostMembers() {
+    public List<String> hostMembers() {
         return this.hostMembers;
     }
 
@@ -59,7 +59,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -70,7 +70,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
@@ -82,7 +82,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -93,7 +93,7 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
     @Import(name="vmMembers", required=true)
       private final List<String> vmMembers;
 
-    public List<String> getVmMembers() {
+    public List<String> vmMembers() {
         return this.vmMembers;
     }
 

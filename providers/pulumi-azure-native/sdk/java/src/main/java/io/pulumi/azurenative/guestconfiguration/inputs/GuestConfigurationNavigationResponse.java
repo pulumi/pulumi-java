@@ -28,7 +28,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="assignmentType")
       private final @Nullable String assignmentType;
 
-    public Optional<String> getAssignmentType() {
+    public Optional<String> assignmentType() {
         return this.assignmentType == null ? Optional.empty() : Optional.ofNullable(this.assignmentType);
     }
 
@@ -39,7 +39,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="configurationParameter")
       private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
 
-    public List<ConfigurationParameterResponse> getConfigurationParameter() {
+    public List<ConfigurationParameterResponse> configurationParameter() {
         return this.configurationParameter == null ? List.of() : this.configurationParameter;
     }
 
@@ -50,7 +50,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="configurationProtectedParameter")
       private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
 
-    public List<ConfigurationParameterResponse> getConfigurationProtectedParameter() {
+    public List<ConfigurationParameterResponse> configurationProtectedParameter() {
         return this.configurationProtectedParameter == null ? List.of() : this.configurationProtectedParameter;
     }
 
@@ -61,7 +61,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="configurationSetting")
       private final @Nullable ConfigurationSettingResponse configurationSetting;
 
-    public Optional<ConfigurationSettingResponse> getConfigurationSetting() {
+    public Optional<ConfigurationSettingResponse> configurationSetting() {
         return this.configurationSetting == null ? Optional.empty() : Optional.ofNullable(this.configurationSetting);
     }
 
@@ -72,7 +72,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="contentHash")
       private final @Nullable String contentHash;
 
-    public Optional<String> getContentHash() {
+    public Optional<String> contentHash() {
         return this.contentHash == null ? Optional.empty() : Optional.ofNullable(this.contentHash);
     }
 
@@ -83,7 +83,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="contentType", required=true)
       private final String contentType;
 
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
 
@@ -94,7 +94,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="contentUri")
       private final @Nullable String contentUri;
 
-    public Optional<String> getContentUri() {
+    public Optional<String> contentUri() {
         return this.contentUri == null ? Optional.empty() : Optional.ofNullable(this.contentUri);
     }
 
@@ -105,7 +105,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -116,7 +116,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -127,7 +127,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

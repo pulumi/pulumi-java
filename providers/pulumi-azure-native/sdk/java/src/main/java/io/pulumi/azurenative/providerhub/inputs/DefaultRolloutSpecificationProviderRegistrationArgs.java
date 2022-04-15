@@ -18,7 +18,7 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     @Import(name="properties")
       private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Output<ProviderRegistrationPropertiesArgs> getProperties() {
+    public Output<ProviderRegistrationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

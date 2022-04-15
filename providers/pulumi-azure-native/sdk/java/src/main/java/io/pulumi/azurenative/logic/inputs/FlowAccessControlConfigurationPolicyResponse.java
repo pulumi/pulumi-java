@@ -27,7 +27,7 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
     @Import(name="allowedCallerIpAddresses")
       private final @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses;
 
-    public List<IpAddressRangeResponse> getAllowedCallerIpAddresses() {
+    public List<IpAddressRangeResponse> allowedCallerIpAddresses() {
         return this.allowedCallerIpAddresses == null ? List.of() : this.allowedCallerIpAddresses;
     }
 
@@ -38,7 +38,7 @@ public final class FlowAccessControlConfigurationPolicyResponse extends io.pulum
     @Import(name="openAuthenticationPolicies")
       private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
-    public Optional<OpenAuthenticationAccessPoliciesResponse> getOpenAuthenticationPolicies() {
+    public Optional<OpenAuthenticationAccessPoliciesResponse> openAuthenticationPolicies() {
         return this.openAuthenticationPolicies == null ? Optional.empty() : Optional.ofNullable(this.openAuthenticationPolicies);
     }
 

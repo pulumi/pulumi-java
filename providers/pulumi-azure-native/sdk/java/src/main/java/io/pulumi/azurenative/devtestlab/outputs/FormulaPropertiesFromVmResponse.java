@@ -26,7 +26,7 @@ public final class FormulaPropertiesFromVmResponse {
      * The identifier of the VM from which a formula is to be created.
      * 
     */
-    public Optional<String> getLabVmId() {
+    public Optional<String> labVmId() {
         return Optional.ofNullable(this.labVmId);
     }
 

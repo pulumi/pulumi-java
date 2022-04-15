@@ -72,49 +72,49 @@ public final class ConnectionGatewayDefinitionResponseProperties {
      * The URI of the backend
      * 
     */
-    public Optional<String> getBackendUri() {
+    public Optional<String> backendUri() {
         return Optional.ofNullable(this.backendUri);
     }
     /**
      * The gateway installation reference
      * 
     */
-    public Optional<ConnectionGatewayReferenceResponse> getConnectionGatewayInstallation() {
+    public Optional<ConnectionGatewayReferenceResponse> connectionGatewayInstallation() {
         return Optional.ofNullable(this.connectionGatewayInstallation);
     }
     /**
      * The gateway admin
      * 
     */
-    public List<String> getContactInformation() {
+    public List<String> contactInformation() {
         return this.contactInformation == null ? List.of() : this.contactInformation;
     }
     /**
      * The gateway description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The gateway display name
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The machine name of the gateway
      * 
     */
-    public Optional<String> getMachineName() {
+    public Optional<String> machineName() {
         return Optional.ofNullable(this.machineName);
     }
     /**
      * The gateway status
      * 
     */
-    public Optional<Object> getStatus() {
+    public Optional<Object> status() {
         return Optional.ofNullable(this.status);
     }
 

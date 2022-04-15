@@ -62,42 +62,42 @@ public final class SystemMetadataResponse {
      * The timestamp of resource creation (UTC).
      * 
     */
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * A string identifier for the identity that created the resource.
      * 
     */
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The type of identity that created the resource: user, application, managedIdentity.
      * 
     */
-    public Optional<String> getCreatedByType() {
+    public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
      * The timestamp of resource last modification (UTC).
      * 
     */
-    public Optional<String> getLastModifiedAt() {
+    public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
      * A string identifier for the identity that last modified the resource.
      * 
     */
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource: user, application, managedIdentity.
      * 
     */
-    public Optional<String> getLastModifiedByType() {
+    public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
 

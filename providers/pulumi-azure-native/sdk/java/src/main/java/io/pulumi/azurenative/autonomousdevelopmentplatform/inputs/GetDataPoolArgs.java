@@ -19,7 +19,7 @@ public final class GetDataPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDataPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="dataPoolName", required=true)
       private final String dataPoolName;
 
-    public String getDataPoolName() {
+    public String dataPoolName() {
         return this.dataPoolName;
     }
 
@@ -41,7 +41,7 @@ public final class GetDataPoolArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

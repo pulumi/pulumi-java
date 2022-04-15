@@ -27,7 +27,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
     @Import(name="destinations", required=true)
       private final List<String> destinations;
 
-    public List<String> getDestinations() {
+    public List<String> destinations() {
         return this.destinations;
     }
 
@@ -38,7 +38,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
     @Import(name="disable")
       private final @Nullable Boolean disable;
 
-    public Optional<Boolean> getDisable() {
+    public Optional<Boolean> disable() {
         return this.disable == null ? Optional.empty() : Optional.ofNullable(this.disable);
     }
 
@@ -49,7 +49,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
     @Import(name="sources", required=true)
       private final List<String> sources;
 
-    public List<String> getSources() {
+    public List<String> sources() {
         return this.sources;
     }
 
@@ -71,7 +71,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
     @Import(name="testConfigurations", required=true)
       private final List<String> testConfigurations;
 
-    public List<String> getTestConfigurations() {
+    public List<String> testConfigurations() {
         return this.testConfigurations;
     }
 

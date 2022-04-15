@@ -25,7 +25,7 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="jobId")
       private final @Nullable String jobId;
 
-    public Optional<String> getJobId() {
+    public Optional<String> jobId() {
         return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
     }
 
@@ -36,7 +36,7 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="jobName")
       private final @Nullable String jobName;
 
-    public Optional<String> getJobName() {
+    public Optional<String> jobName() {
         return this.jobName == null ? Optional.empty() : Optional.ofNullable(this.jobName);
     }
 
@@ -47,7 +47,7 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

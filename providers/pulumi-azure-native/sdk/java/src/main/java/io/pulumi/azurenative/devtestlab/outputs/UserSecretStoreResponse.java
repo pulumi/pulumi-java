@@ -34,14 +34,14 @@ public final class UserSecretStoreResponse {
      * The ID of the user's Key vault.
      * 
     */
-    public Optional<String> getKeyVaultId() {
+    public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
      * The URI of the user's Key vault.
      * 
     */
-    public Optional<String> getKeyVaultUri() {
+    public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
 

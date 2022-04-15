@@ -116,84 +116,84 @@ public final class SqlServerSourceResponse {
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
     */
-    public Optional<Object> getAdditionalColumns() {
+    public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
      * 
     */
-    public Optional<Object> getPartitionOption() {
+    public Optional<Object> partitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
     /**
      * The settings that will be leveraged for Sql source partitioning.
      * 
     */
-    public Optional<SqlPartitionSettingsResponse> getPartitionSettings() {
+    public Optional<SqlPartitionSettingsResponse> partitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
     /**
      * Which additional types to produce.
      * 
     */
-    public Optional<Object> getProduceAdditionalTypes() {
+    public Optional<Object> produceAdditionalTypes() {
         return Optional.ofNullable(this.produceAdditionalTypes);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getQueryTimeout() {
+    public Optional<Object> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getSourceRetryCount() {
+    public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
     */
-    public Optional<Object> getSourceRetryWait() {
+    public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
      * SQL reader query. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSqlReaderQuery() {
+    public Optional<Object> sqlReaderQuery() {
         return Optional.ofNullable(this.sqlReaderQuery);
     }
     /**
      * Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getSqlReaderStoredProcedureName() {
+    public Optional<Object> sqlReaderStoredProcedureName() {
         return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
     /**
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
      * 
     */
-    public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
+    public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
     /**
@@ -201,7 +201,7 @@ public final class SqlServerSourceResponse {
      * Expected value is 'SqlServerSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

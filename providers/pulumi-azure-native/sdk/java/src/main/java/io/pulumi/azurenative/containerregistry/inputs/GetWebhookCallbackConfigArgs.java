@@ -19,7 +19,7 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
     @Import(name="webhookName", required=true)
       private final String webhookName;
 
-    public String getWebhookName() {
+    public String webhookName() {
         return this.webhookName;
     }
 

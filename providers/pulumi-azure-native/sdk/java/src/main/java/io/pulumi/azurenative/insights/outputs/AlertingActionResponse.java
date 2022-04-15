@@ -59,7 +59,7 @@ public final class AlertingActionResponse {
      * Azure action group reference.
      * 
     */
-    public Optional<AzNsActionGroupResponse> getAznsAction() {
+    public Optional<AzNsActionGroupResponse> aznsAction() {
         return Optional.ofNullable(this.aznsAction);
     }
     /**
@@ -67,28 +67,28 @@ public final class AlertingActionResponse {
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Severity of the alert
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * time (in minutes) for which Alerts should be throttled or suppressed.
      * 
     */
-    public Optional<Integer> getThrottlingInMin() {
+    public Optional<Integer> throttlingInMin() {
         return Optional.ofNullable(this.throttlingInMin);
     }
     /**
      * The trigger condition that results in the alert rule being.
      * 
     */
-    public TriggerConditionResponse getTrigger() {
+    public TriggerConditionResponse trigger() {
         return this.trigger;
     }
 

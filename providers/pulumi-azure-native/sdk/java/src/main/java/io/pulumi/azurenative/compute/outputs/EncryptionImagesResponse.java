@@ -36,14 +36,14 @@ public final class EncryptionImagesResponse {
      * A list of encryption specifications for data disk images.
      * 
     */
-    public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
+    public List<DataDiskImageEncryptionResponse> dataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
     /**
      * Contains encryption settings for an OS disk image.
      * 
     */
-    public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {
+    public Optional<OSDiskImageEncryptionResponse> osDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
 

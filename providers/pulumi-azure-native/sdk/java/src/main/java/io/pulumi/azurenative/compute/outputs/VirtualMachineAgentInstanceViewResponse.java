@@ -44,21 +44,21 @@ public final class VirtualMachineAgentInstanceViewResponse {
      * The virtual machine extension handler instance view.
      * 
     */
-    public List<VirtualMachineExtensionHandlerInstanceViewResponse> getExtensionHandlers() {
+    public List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers() {
         return this.extensionHandlers == null ? List.of() : this.extensionHandlers;
     }
     /**
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * The VM Agent full version.
      * 
     */
-    public Optional<String> getVmAgentVersion() {
+    public Optional<String> vmAgentVersion() {
         return Optional.ofNullable(this.vmAgentVersion);
     }
 

@@ -26,7 +26,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="migrationSetting")
       private final @Nullable Map<String,String> migrationSetting;
 
-    public Map<String,String> getMigrationSetting() {
+    public Map<String,String> migrationSetting() {
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
 
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="schemaName")
       private final @Nullable String schemaName;
 
-    public Optional<String> getSchemaName() {
+    public Optional<String> schemaName() {
         return this.schemaName == null ? Optional.empty() : Optional.ofNullable(this.schemaName);
     }
 
@@ -70,7 +70,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="sourceSetting")
       private final @Nullable Map<String,String> sourceSetting;
 
-    public Map<String,String> getSourceSetting() {
+    public Map<String,String> sourceSetting() {
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
 
@@ -81,7 +81,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="tableMap")
       private final @Nullable Map<String,String> tableMap;
 
-    public Map<String,String> getTableMap() {
+    public Map<String,String> tableMap() {
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
 
@@ -92,7 +92,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
 
-    public Optional<String> getTargetDatabaseName() {
+    public Optional<String> targetDatabaseName() {
         return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
     }
 
@@ -103,7 +103,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
     @Import(name="targetSetting")
       private final @Nullable Map<String,String> targetSetting;
 
-    public Map<String,String> getTargetSetting() {
+    public Map<String,String> targetSetting() {
         return this.targetSetting == null ? Map.of() : this.targetSetting;
     }
 

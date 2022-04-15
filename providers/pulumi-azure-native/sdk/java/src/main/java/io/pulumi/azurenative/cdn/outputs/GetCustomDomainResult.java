@@ -101,77 +101,77 @@ public final class GetCustomDomainResult {
      * Certificate parameters for securing custom HTTPS
      * 
     */
-    public Optional<Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> getCustomHttpsParameters() {
+    public Optional<Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> customHttpsParameters() {
         return Optional.ofNullable(this.customHttpsParameters);
     }
     /**
      * Provisioning status of Custom Https of the custom domain.
      * 
     */
-    public String getCustomHttpsProvisioningState() {
+    public String customHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
      * 
     */
-    public String getCustomHttpsProvisioningSubstate() {
+    public String customHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
     /**
      * The host name of the custom domain. Must be a domain name.
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning status of the custom domain.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the custom domain.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
      * 
     */
-    public Optional<String> getValidationData() {
+    public Optional<String> validationData() {
         return Optional.ofNullable(this.validationData);
     }
 

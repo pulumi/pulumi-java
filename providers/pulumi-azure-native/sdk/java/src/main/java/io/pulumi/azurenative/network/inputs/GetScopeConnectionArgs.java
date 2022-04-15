@@ -19,7 +19,7 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
-    public String getNetworkManagerName() {
+    public String networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -30,7 +30,7 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="scopeConnectionName", required=true)
       private final String scopeConnectionName;
 
-    public String getScopeConnectionName() {
+    public String scopeConnectionName() {
         return this.scopeConnectionName;
     }
 

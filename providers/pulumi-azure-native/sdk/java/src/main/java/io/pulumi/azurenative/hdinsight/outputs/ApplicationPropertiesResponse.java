@@ -103,77 +103,77 @@ public final class ApplicationPropertiesResponse {
      * The application state.
      * 
     */
-    public String getApplicationState() {
+    public String applicationState() {
         return this.applicationState;
     }
     /**
      * The application type.
      * 
     */
-    public Optional<String> getApplicationType() {
+    public Optional<String> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
     /**
      * The list of roles in the cluster.
      * 
     */
-    public Optional<ComputeProfileResponse> getComputeProfile() {
+    public Optional<ComputeProfileResponse> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
     /**
      * The application create date time.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The list of errors.
      * 
     */
-    public List<ErrorsResponse> getErrors() {
+    public List<ErrorsResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The list of application HTTPS endpoints.
      * 
     */
-    public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
+    public List<ApplicationGetHttpsEndpointResponse> httpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
     /**
      * The list of install script actions.
      * 
     */
-    public List<RuntimeScriptActionResponse> getInstallScriptActions() {
+    public List<RuntimeScriptActionResponse> installScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
     /**
      * The marketplace identifier.
      * 
     */
-    public String getMarketplaceIdentifier() {
+    public String marketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
     /**
      * The provisioning state of the application.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of application SSH endpoints.
      * 
     */
-    public List<ApplicationGetEndpointResponse> getSshEndpoints() {
+    public List<ApplicationGetEndpointResponse> sshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
     /**
      * The list of uninstall script actions.
      * 
     */
-    public List<RuntimeScriptActionResponse> getUninstallScriptActions() {
+    public List<RuntimeScriptActionResponse> uninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
     }
 

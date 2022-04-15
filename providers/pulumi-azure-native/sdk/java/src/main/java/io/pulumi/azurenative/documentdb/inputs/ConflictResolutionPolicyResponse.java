@@ -25,7 +25,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
     @Import(name="conflictResolutionPath")
       private final @Nullable String conflictResolutionPath;
 
-    public Optional<String> getConflictResolutionPath() {
+    public Optional<String> conflictResolutionPath() {
         return this.conflictResolutionPath == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPath);
     }
 
@@ -36,7 +36,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
     @Import(name="conflictResolutionProcedure")
       private final @Nullable String conflictResolutionProcedure;
 
-    public Optional<String> getConflictResolutionProcedure() {
+    public Optional<String> conflictResolutionProcedure() {
         return this.conflictResolutionProcedure == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionProcedure);
     }
 
@@ -47,7 +47,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 

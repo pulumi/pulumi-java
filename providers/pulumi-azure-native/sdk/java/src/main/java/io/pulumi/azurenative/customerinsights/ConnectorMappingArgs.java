@@ -26,7 +26,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectorName", required=true)
       private final Output<String> connectorName;
 
-    public Output<String> getConnectorName() {
+    public Output<String> connectorName() {
         return this.connectorName;
     }
 
@@ -37,7 +37,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="connectorType")
       private final @Nullable Output<Either<String,ConnectorTypes>> connectorType;
 
-    public Output<Either<String,ConnectorTypes>> getConnectorType() {
+    public Output<Either<String,ConnectorTypes>> connectorType() {
         return this.connectorType == null ? Codegen.empty() : this.connectorType;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -70,7 +70,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="entityType", required=true)
       private final Output<EntityTypes> entityType;
 
-    public Output<EntityTypes> getEntityType() {
+    public Output<EntityTypes> entityType() {
         return this.entityType;
     }
 
@@ -81,7 +81,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="entityTypeName", required=true)
       private final Output<String> entityTypeName;
 
-    public Output<String> getEntityTypeName() {
+    public Output<String> entityTypeName() {
         return this.entityTypeName;
     }
 
@@ -92,7 +92,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -103,7 +103,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mappingName")
       private final @Nullable Output<String> mappingName;
 
-    public Output<String> getMappingName() {
+    public Output<String> mappingName() {
         return this.mappingName == null ? Codegen.empty() : this.mappingName;
     }
 
@@ -114,7 +114,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mappingProperties", required=true)
       private final Output<ConnectorMappingPropertiesArgs> mappingProperties;
 
-    public Output<ConnectorMappingPropertiesArgs> getMappingProperties() {
+    public Output<ConnectorMappingPropertiesArgs> mappingProperties() {
         return this.mappingProperties;
     }
 
@@ -125,7 +125,7 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

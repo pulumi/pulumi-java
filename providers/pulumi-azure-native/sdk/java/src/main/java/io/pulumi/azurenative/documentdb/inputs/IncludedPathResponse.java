@@ -27,7 +27,7 @@ public final class IncludedPathResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="indexes")
       private final @Nullable List<IndexesResponse> indexes;
 
-    public List<IndexesResponse> getIndexes() {
+    public List<IndexesResponse> indexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
 
@@ -38,7 +38,7 @@ public final class IncludedPathResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 

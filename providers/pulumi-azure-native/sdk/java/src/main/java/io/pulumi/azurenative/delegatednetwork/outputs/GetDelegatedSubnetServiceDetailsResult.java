@@ -86,63 +86,63 @@ public final class GetDelegatedSubnetServiceDetailsResult {
      * Properties of the controller.
      * 
     */
-    public Optional<ControllerDetailsResponse> getControllerDetails() {
+    public Optional<ControllerDetailsResponse> controllerDetails() {
         return Optional.ofNullable(this.controllerDetails);
     }
     /**
      * An identifier that represents the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The current state of dnc delegated subnet resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource guid.
      * 
     */
-    public String getResourceGuid() {
+    public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
      * subnet details
      * 
     */
-    public Optional<SubnetDetailsResponse> getSubnetDetails() {
+    public Optional<SubnetDetailsResponse> subnetDetails() {
         return Optional.ofNullable(this.subnetDetails);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

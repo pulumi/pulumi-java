@@ -26,7 +26,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="automationAccountId", required=true)
       private final String automationAccountId;
 
-    public String getAutomationAccountId() {
+    public String automationAccountId() {
         return this.automationAccountId;
     }
 
@@ -37,7 +37,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="isGlobalRunbook", required=true)
       private final Boolean isGlobalRunbook;
 
-    public Boolean getIsGlobalRunbook() {
+    public Boolean isGlobalRunbook() {
         return this.isGlobalRunbook;
     }
 
@@ -48,7 +48,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="runbookName", required=true)
       private final String runbookName;
 
-    public String getRunbookName() {
+    public String runbookName() {
         return this.runbookName;
     }
 
@@ -70,7 +70,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="serviceUri")
       private final @Nullable String serviceUri;
 
-    public Optional<String> getServiceUri() {
+    public Optional<String> serviceUri() {
         return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
     }
 
@@ -81,7 +81,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
-    public Optional<Boolean> getUseCommonAlertSchema() {
+    public Optional<Boolean> useCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
     }
 
@@ -92,7 +92,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
     @Import(name="webhookResourceId", required=true)
       private final String webhookResourceId;
 
-    public String getWebhookResourceId() {
+    public String webhookResourceId() {
         return this.webhookResourceId;
     }
 

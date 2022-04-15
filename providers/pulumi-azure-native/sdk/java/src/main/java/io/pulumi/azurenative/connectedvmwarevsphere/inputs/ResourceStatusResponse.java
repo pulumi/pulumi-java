@@ -23,7 +23,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="lastUpdatedAt", required=true)
       private final String lastUpdatedAt;
 
-    public String getLastUpdatedAt() {
+    public String lastUpdatedAt() {
         return this.lastUpdatedAt;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 
@@ -56,7 +56,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="severity", required=true)
       private final String severity;
 
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
 
@@ -67,7 +67,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -78,7 +78,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

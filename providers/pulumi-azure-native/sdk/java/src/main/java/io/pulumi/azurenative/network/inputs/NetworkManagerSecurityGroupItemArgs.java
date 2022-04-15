@@ -26,7 +26,7 @@ public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resourc
     @Import(name="networkGroupId")
       private final @Nullable Output<String> networkGroupId;
 
-    public Output<String> getNetworkGroupId() {
+    public Output<String> networkGroupId() {
         return this.networkGroupId == null ? Codegen.empty() : this.networkGroupId;
     }
 

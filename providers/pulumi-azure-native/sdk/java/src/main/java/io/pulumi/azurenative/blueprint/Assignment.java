@@ -48,7 +48,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return ID of the published version of a blueprint definition.
      * 
      */
-    public Output</* @Nullable */ String> getBlueprintId() {
+    public Output</* @Nullable */ String> blueprintId() {
         return this.blueprintId;
     }
     /**
@@ -62,7 +62,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Multi-line explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -76,7 +76,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return One-liner string explain this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -90,7 +90,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Managed identity for this blueprint assignment.
      * 
      */
-    public Output<ManagedServiceIdentityResponse> getIdentity() {
+    public Output<ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -104,7 +104,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The location of this blueprint assignment.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -118,7 +118,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Defines how resources deployed by a blueprint assignment are locked.
      * 
      */
-    public Output</* @Nullable */ AssignmentLockSettingsResponse> getLocks() {
+    public Output</* @Nullable */ AssignmentLockSettingsResponse> locks() {
         return this.locks;
     }
     /**
@@ -132,7 +132,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Blueprint assignment parameter values.
      * 
      */
-    public Output<Map<String,ParameterValueResponse>> getParameters() {
+    public Output<Map<String,ParameterValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -160,7 +160,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return State of the blueprint assignment.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -174,7 +174,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Names and locations of resource group placeholders.
      * 
      */
-    public Output<Map<String,ResourceGroupValueResponse>> getResourceGroups() {
+    public Output<Map<String,ResourceGroupValueResponse>> resourceGroups() {
         return this.resourceGroups;
     }
     /**
@@ -188,7 +188,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
      * 
      */
-    public Output</* @Nullable */ String> getScope() {
+    public Output</* @Nullable */ String> scope() {
         return this.scope;
     }
     /**
@@ -202,7 +202,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Status of blueprint assignment. This field is readonly.
      * 
      */
-    public Output<AssignmentStatusResponse> getStatus() {
+    public Output<AssignmentStatusResponse> status() {
         return this.status;
     }
     /**
@@ -216,7 +216,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

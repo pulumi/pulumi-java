@@ -26,7 +26,7 @@ public final class KeyVaultCredentialSettingsResponse extends io.pulumi.resource
     @Import(name="azureKeyVaultUrl")
       private final @Nullable String azureKeyVaultUrl;
 
-    public Optional<String> getAzureKeyVaultUrl() {
+    public Optional<String> azureKeyVaultUrl() {
         return this.azureKeyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.azureKeyVaultUrl);
     }
 
@@ -37,7 +37,7 @@ public final class KeyVaultCredentialSettingsResponse extends io.pulumi.resource
     @Import(name="credentialName")
       private final @Nullable String credentialName;
 
-    public Optional<String> getCredentialName() {
+    public Optional<String> credentialName() {
         return this.credentialName == null ? Optional.empty() : Optional.ofNullable(this.credentialName);
     }
 
@@ -48,7 +48,7 @@ public final class KeyVaultCredentialSettingsResponse extends io.pulumi.resource
     @Import(name="enable")
       private final @Nullable Boolean enable;
 
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
     }
 
@@ -59,7 +59,7 @@ public final class KeyVaultCredentialSettingsResponse extends io.pulumi.resource
     @Import(name="servicePrincipalName")
       private final @Nullable String servicePrincipalName;
 
-    public Optional<String> getServicePrincipalName() {
+    public Optional<String> servicePrincipalName() {
         return this.servicePrincipalName == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalName);
     }
 

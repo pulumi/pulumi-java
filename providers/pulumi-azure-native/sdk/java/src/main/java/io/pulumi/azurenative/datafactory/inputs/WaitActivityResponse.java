@@ -29,7 +29,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
@@ -40,7 +40,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -51,7 +51,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -63,7 +63,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -74,7 +74,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
@@ -85,7 +85,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="waitTimeInSeconds", required=true)
       private final Object waitTimeInSeconds;
 
-    public Object getWaitTimeInSeconds() {
+    public Object waitTimeInSeconds() {
         return this.waitTimeInSeconds;
     }
 

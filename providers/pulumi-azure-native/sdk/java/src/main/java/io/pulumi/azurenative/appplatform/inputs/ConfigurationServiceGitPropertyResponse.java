@@ -26,7 +26,7 @@ public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.res
     @Import(name="repositories")
       private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 
-    public List<ConfigurationServiceGitRepositoryResponse> getRepositories() {
+    public List<ConfigurationServiceGitRepositoryResponse> repositories() {
         return this.repositories == null ? List.of() : this.repositories;
     }
 

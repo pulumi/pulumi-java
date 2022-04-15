@@ -50,7 +50,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return client certificates for the cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAddonFeatures() {
+    public Output</* @Nullable */ List<String>> addonFeatures() {
         return this.addonFeatures;
     }
     /**
@@ -64,7 +64,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return vm admin user password.
      * 
      */
-    public Output</* @Nullable */ String> getAdminPassword() {
+    public Output</* @Nullable */ String> adminPassword() {
         return this.adminPassword;
     }
     /**
@@ -78,7 +78,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return vm admin user name.
      * 
      */
-    public Output<String> getAdminUserName() {
+    public Output<String> adminUserName() {
         return this.adminUserName;
     }
     /**
@@ -92,7 +92,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Azure active directory.
      * 
      */
-    public Output</* @Nullable */ AzureActiveDirectoryResponse> getAzureActiveDirectory() {
+    public Output</* @Nullable */ AzureActiveDirectoryResponse> azureActiveDirectory() {
         return this.azureActiveDirectory;
     }
     /**
@@ -106,7 +106,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The port used for client connections to the cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> getClientConnectionPort() {
+    public Output</* @Nullable */ Integer> clientConnectionPort() {
         return this.clientConnectionPort;
     }
     /**
@@ -120,7 +120,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return client certificates for the cluster.
      * 
      */
-    public Output</* @Nullable */ List<ClientCertificateResponse>> getClients() {
+    public Output</* @Nullable */ List<ClientCertificateResponse>> clients() {
         return this.clients;
     }
     /**
@@ -134,7 +134,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The cluster certificate thumbprint used node to node communication.
      * 
      */
-    public Output<String> getClusterCertificateThumbprint() {
+    public Output<String> clusterCertificateThumbprint() {
         return this.clusterCertificateThumbprint;
     }
     /**
@@ -148,7 +148,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
      */
-    public Output</* @Nullable */ String> getClusterCodeVersion() {
+    public Output</* @Nullable */ String> clusterCodeVersion() {
         return this.clusterCodeVersion;
     }
     /**
@@ -162,7 +162,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return A service generated unique identifier for the cluster resource.
      * 
      */
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
     /**
@@ -176,7 +176,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The current state of the cluster.
      * 
      */
-    public Output<String> getClusterState() {
+    public Output<String> clusterState() {
         return this.clusterState;
     }
     /**
@@ -190,7 +190,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The cluster dns name.
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -204,7 +204,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Azure resource etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -218,7 +218,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The list of custom fabric settings to configure the cluster.
      * 
      */
-    public Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> getFabricSettings() {
+    public Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> fabricSettings() {
         return this.fabricSettings;
     }
     /**
@@ -232,7 +232,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return the cluster Fully qualified domain name.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -246,7 +246,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The port used for http connections to the cluster.
      * 
      */
-    public Output</* @Nullable */ Integer> getHttpGatewayConnectionPort() {
+    public Output</* @Nullable */ Integer> httpGatewayConnectionPort() {
         return this.httpGatewayConnectionPort;
     }
     /**
@@ -260,7 +260,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Describes load balancing rules.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancingRuleResponse>> getLoadBalancingRules() {
+    public Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
@@ -274,7 +274,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Azure resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -288,7 +288,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Azure resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -302,7 +302,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the managed cluster resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -316,7 +316,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return The sku of the managed cluster
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -330,7 +330,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Azure resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -344,7 +344,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * @return Azure resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

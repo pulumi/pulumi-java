@@ -109,84 +109,84 @@ public final class GetGuestAgentResult {
      * Username / Password Credentials to provision guest agent.
      * 
     */
-    public Optional<GuestCredentialResponse> getCredentials() {
+    public Optional<GuestCredentialResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * Gets the name of the corresponding resource in Kubernetes.
      * 
     */
-    public String getCustomResourceName() {
+    public String customResourceName() {
         return this.customResourceName;
     }
     /**
      * HTTP Proxy configuration for the VM.
      * 
     */
-    public Optional<HttpProxyConfigurationResponse> getHttpProxyConfig() {
+    public Optional<HttpProxyConfigurationResponse> httpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets or sets the guest agent provisioning action.
      * 
     */
-    public Optional<String> getProvisioningAction() {
+    public Optional<String> provisioningAction() {
         return Optional.ofNullable(this.provisioningAction);
     }
     /**
      * Gets or sets the provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the guest agent status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The resource status information.
      * 
     */
-    public List<ResourceStatusResponse> getStatuses() {
+    public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
      * The system data.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Gets or sets a unique identifier for this resource.
      * 
     */
-    public String getUuid() {
+    public String uuid() {
         return this.uuid;
     }
 

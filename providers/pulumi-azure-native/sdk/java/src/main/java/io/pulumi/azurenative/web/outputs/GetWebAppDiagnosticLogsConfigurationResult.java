@@ -79,56 +79,56 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
      * Application logs configuration.
      * 
     */
-    public Optional<ApplicationLogsConfigResponse> getApplicationLogs() {
+    public Optional<ApplicationLogsConfigResponse> applicationLogs() {
         return Optional.ofNullable(this.applicationLogs);
     }
     /**
      * Detailed error messages configuration.
      * 
     */
-    public Optional<EnabledConfigResponse> getDetailedErrorMessages() {
+    public Optional<EnabledConfigResponse> detailedErrorMessages() {
         return Optional.ofNullable(this.detailedErrorMessages);
     }
     /**
      * Failed requests tracing configuration.
      * 
     */
-    public Optional<EnabledConfigResponse> getFailedRequestsTracing() {
+    public Optional<EnabledConfigResponse> failedRequestsTracing() {
         return Optional.ofNullable(this.failedRequestsTracing);
     }
     /**
      * HTTP logs configuration.
      * 
     */
-    public Optional<HttpLogsConfigResponse> getHttpLogs() {
+    public Optional<HttpLogsConfigResponse> httpLogs() {
         return Optional.ofNullable(this.httpLogs);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -78,52 +78,52 @@ public final class DataControllerPropertiesResponse {
      * Username and password for basic login authentication.
      * 
     */
-    public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
+    public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
      * The raw kubernetes information
      * 
     */
-    public Optional<Object> getK8sRaw() {
+    public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
     */
-    public Optional<String> getLastUploadedDate() {
+    public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
     /**
      * Log analytics workspace id and primary key
      * 
     */
-    public Optional<LogAnalyticsWorkspaceConfigResponse> getLogAnalyticsWorkspaceConfig() {
+    public Optional<LogAnalyticsWorkspaceConfigResponse> logAnalyticsWorkspaceConfig() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
     /**
      * Properties from the Kubernetes data controller
      * 
     */
-    public Optional<OnPremisePropertyResponse> getOnPremiseProperty() {
+    public Optional<OnPremisePropertyResponse> onPremiseProperty() {
         return Optional.ofNullable(this.onPremiseProperty);
     }
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Service principal for uploading billing, metrics and logs.
      * 
     */
-    public Optional<UploadServicePrincipalResponse> getUploadServicePrincipal() {
+    public Optional<UploadServicePrincipalResponse> uploadServicePrincipal() {
         return Optional.ofNullable(this.uploadServicePrincipal);
     }
     /**
      * Properties on upload watermark.  Mostly timestamp for each upload data type
      * 
     */
-    public Optional<UploadWatermarkResponse> getUploadWatermark() {
+    public Optional<UploadWatermarkResponse> uploadWatermark() {
         return Optional.ofNullable(this.uploadWatermark);
     }
 

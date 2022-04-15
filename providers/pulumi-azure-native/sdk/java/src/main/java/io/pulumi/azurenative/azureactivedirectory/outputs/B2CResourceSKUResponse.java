@@ -34,14 +34,14 @@ public final class B2CResourceSKUResponse {
      * The name of the SKU for the tenant.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The tier of the tenant.
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

@@ -20,10 +20,10 @@ public final class SubscriptionStateOverrideActionResponse {
         this.state = state;
     }
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

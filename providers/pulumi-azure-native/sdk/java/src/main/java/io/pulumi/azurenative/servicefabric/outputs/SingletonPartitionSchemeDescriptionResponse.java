@@ -26,7 +26,7 @@ public final class SingletonPartitionSchemeDescriptionResponse {
      * Expected value is 'Singleton'.
      * 
     */
-    public String getPartitionScheme() {
+    public String partitionScheme() {
         return this.partitionScheme;
     }
 

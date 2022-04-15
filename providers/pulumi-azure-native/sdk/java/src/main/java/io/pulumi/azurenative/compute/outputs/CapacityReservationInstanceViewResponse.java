@@ -36,14 +36,14 @@ public final class CapacityReservationInstanceViewResponse {
      * The resource status information.
      * 
     */
-    public List<InstanceViewStatusResponse> getStatuses() {
+    public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Unutilized capacity of the capacity reservation.
      * 
     */
-    public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {
+    public Optional<CapacityReservationUtilizationResponse> utilizationInfo() {
         return Optional.ofNullable(this.utilizationInfo);
     }
 

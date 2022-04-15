@@ -24,7 +24,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="endedOn", required=true)
       private final String endedOn;
 
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
 
@@ -35,7 +35,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
 
-    public String getErrorPrefix() {
+    public String errorPrefix() {
         return this.errorPrefix;
     }
 
@@ -46,7 +46,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="itemsCompletedCount", required=true)
       private final Double itemsCompletedCount;
 
-    public Double getItemsCompletedCount() {
+    public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
 
@@ -57,7 +57,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="itemsCount", required=true)
       private final Double itemsCount;
 
-    public Double getItemsCount() {
+    public Double itemsCount() {
         return this.itemsCount;
     }
 
@@ -68,7 +68,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -79,7 +79,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="resultPrefix", required=true)
       private final String resultPrefix;
 
-    public String getResultPrefix() {
+    public String resultPrefix() {
         return this.resultPrefix;
     }
 
@@ -90,7 +90,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="sizeMB", required=true)
       private final Double sizeMB;
 
-    public Double getSizeMB() {
+    public Double sizeMB() {
         return this.sizeMB;
     }
 
@@ -101,7 +101,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="startedOn", required=true)
       private final String startedOn;
 
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
 
@@ -112,7 +112,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -123,7 +123,7 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
     @Import(name="statusMessage", required=true)
       private final String statusMessage;
 
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

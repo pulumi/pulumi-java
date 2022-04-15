@@ -28,7 +28,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="accessControl")
       private final @Nullable LiveEventInputAccessControlResponse accessControl;
 
-    public Optional<LiveEventInputAccessControlResponse> getAccessControl() {
+    public Optional<LiveEventInputAccessControlResponse> accessControl() {
         return this.accessControl == null ? Optional.empty() : Optional.ofNullable(this.accessControl);
     }
 
@@ -39,7 +39,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="accessToken")
       private final @Nullable String accessToken;
 
-    public Optional<String> getAccessToken() {
+    public Optional<String> accessToken() {
         return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
     }
 
@@ -50,7 +50,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="endpoints")
       private final @Nullable List<LiveEventEndpointResponse> endpoints;
 
-    public List<LiveEventEndpointResponse> getEndpoints() {
+    public List<LiveEventEndpointResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
@@ -61,7 +61,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="keyFrameIntervalDuration")
       private final @Nullable String keyFrameIntervalDuration;
 
-    public Optional<String> getKeyFrameIntervalDuration() {
+    public Optional<String> keyFrameIntervalDuration() {
         return this.keyFrameIntervalDuration == null ? Optional.empty() : Optional.ofNullable(this.keyFrameIntervalDuration);
     }
 
@@ -72,7 +72,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="streamingProtocol", required=true)
       private final String streamingProtocol;
 
-    public String getStreamingProtocol() {
+    public String streamingProtocol() {
         return this.streamingProtocol;
     }
 

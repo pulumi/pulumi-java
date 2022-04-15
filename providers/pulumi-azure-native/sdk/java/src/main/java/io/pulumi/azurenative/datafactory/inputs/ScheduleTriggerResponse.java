@@ -29,7 +29,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -40,7 +40,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -51,7 +51,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
-    public List<TriggerPipelineReferenceResponse> getPipelines() {
+    public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
@@ -62,7 +62,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="recurrence", required=true)
       private final ScheduleTriggerRecurrenceResponse recurrence;
 
-    public ScheduleTriggerRecurrenceResponse getRecurrence() {
+    public ScheduleTriggerRecurrenceResponse recurrence() {
         return this.recurrence;
     }
 
@@ -73,7 +73,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
 
@@ -85,7 +85,7 @@ public final class ScheduleTriggerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

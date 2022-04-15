@@ -28,7 +28,7 @@ public final class AudioTrackDescriptorArgs extends io.pulumi.resources.Resource
     @Import(name="channelMapping")
       private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Output<Either<String,ChannelMapping>> getChannelMapping() {
+    public Output<Either<String,ChannelMapping>> channelMapping() {
         return this.channelMapping == null ? Codegen.empty() : this.channelMapping;
     }
 
@@ -40,7 +40,7 @@ public final class AudioTrackDescriptorArgs extends io.pulumi.resources.Resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

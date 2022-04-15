@@ -31,7 +31,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="automatic")
       private final @Nullable Boolean automatic;
 
-    public Optional<Boolean> getAutomatic() {
+    public Optional<Boolean> automatic() {
         return this.automatic == null ? Optional.empty() : Optional.ofNullable(this.automatic);
     }
 
@@ -42,7 +42,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="compositeIndexes")
       private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
-    public List<List<CompositePathResponse>> getCompositeIndexes() {
+    public List<List<CompositePathResponse>> compositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }
 
@@ -53,7 +53,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="excludedPaths")
       private final @Nullable List<ExcludedPathResponse> excludedPaths;
 
-    public List<ExcludedPathResponse> getExcludedPaths() {
+    public List<ExcludedPathResponse> excludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
 
@@ -64,7 +64,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="includedPaths")
       private final @Nullable List<IncludedPathResponse> includedPaths;
 
-    public List<IncludedPathResponse> getIncludedPaths() {
+    public List<IncludedPathResponse> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
 
@@ -75,7 +75,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="indexingMode")
       private final @Nullable String indexingMode;
 
-    public Optional<String> getIndexingMode() {
+    public Optional<String> indexingMode() {
         return this.indexingMode == null ? Optional.empty() : Optional.ofNullable(this.indexingMode);
     }
 
@@ -86,7 +86,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="spatialIndexes")
       private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
-    public List<SpatialSpecResponse> getSpatialIndexes() {
+    public List<SpatialSpecResponse> spatialIndexes() {
         return this.spatialIndexes == null ? List.of() : this.spatialIndexes;
     }
 

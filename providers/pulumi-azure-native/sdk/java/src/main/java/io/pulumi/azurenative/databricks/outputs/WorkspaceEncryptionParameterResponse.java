@@ -35,14 +35,14 @@ public final class WorkspaceEncryptionParameterResponse {
      * The type of variable that this is
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
      * 
     */
-    public Optional<EncryptionResponse> getValue() {
+    public Optional<EncryptionResponse> value() {
         return Optional.ofNullable(this.value);
     }
 

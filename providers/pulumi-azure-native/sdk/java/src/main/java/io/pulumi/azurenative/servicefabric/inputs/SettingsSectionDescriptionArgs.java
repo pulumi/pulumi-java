@@ -27,7 +27,7 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class SettingsSectionDescriptionArgs extends io.pulumi.resources.Re
     @Import(name="parameters", required=true)
       private final Output<List<SettingsParameterDescriptionArgs>> parameters;
 
-    public Output<List<SettingsParameterDescriptionArgs>> getParameters() {
+    public Output<List<SettingsParameterDescriptionArgs>> parameters() {
         return this.parameters;
     }
 

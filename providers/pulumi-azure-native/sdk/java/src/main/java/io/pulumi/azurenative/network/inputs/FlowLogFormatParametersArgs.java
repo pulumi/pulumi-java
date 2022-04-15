@@ -29,7 +29,7 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<Either<String,FlowLogFormatType>> type;
 
-    public Output<Either<String,FlowLogFormatType>> getType() {
+    public Output<Either<String,FlowLogFormatType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -40,7 +40,7 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

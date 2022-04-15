@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="authorizationKey")
       private final @Nullable String authorizationKey;
 
-    public Optional<String> getAuthorizationKey() {
+    public Optional<String> authorizationKey() {
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
     }
 
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="authorizationUseStatus")
       private final @Nullable String authorizationUseStatus;
 
-    public Optional<String> getAuthorizationUseStatus() {
+    public Optional<String> authorizationUseStatus() {
         return this.authorizationUseStatus == null ? Optional.empty() : Optional.ofNullable(this.authorizationUseStatus);
     }
 
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -58,7 +58,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -69,7 +69,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -80,7 +80,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -91,7 +91,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

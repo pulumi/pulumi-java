@@ -26,7 +26,7 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
@@ -37,7 +37,7 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> getKeyVaultSecretName() {
+    public Output<String> keyVaultSecretName() {
         return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
     }
 

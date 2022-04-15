@@ -32,14 +32,14 @@ public final class RecommendedActionImplementationInfoResponse {
      * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
      * 
     */
-    public String getMethod() {
+    public String method() {
         return this.method;
     }
     /**
      * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
      * 
     */
-    public String getScript() {
+    public String script() {
         return this.script;
     }
 

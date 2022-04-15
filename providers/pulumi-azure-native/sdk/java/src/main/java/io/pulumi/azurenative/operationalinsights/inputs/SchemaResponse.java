@@ -29,7 +29,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="categories", required=true)
       private final List<String> categories;
 
-    public List<String> getCategories() {
+    public List<String> categories() {
         return this.categories;
     }
 
@@ -40,7 +40,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="columns")
       private final @Nullable List<ColumnResponse> columns;
 
-    public List<ColumnResponse> getColumns() {
+    public List<ColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
 
@@ -51,7 +51,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -62,7 +62,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
       private final @Nullable String displayName;
 
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
@@ -73,7 +73,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
       private final List<String> labels;
 
-    public List<String> getLabels() {
+    public List<String> labels() {
         return this.labels;
     }
 
@@ -84,7 +84,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -95,7 +95,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="restoredLogs", required=true)
       private final RestoredLogsResponse restoredLogs;
 
-    public RestoredLogsResponse getRestoredLogs() {
+    public RestoredLogsResponse restoredLogs() {
         return this.restoredLogs;
     }
 
@@ -106,7 +106,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="searchResults", required=true)
       private final SearchResultsResponse searchResults;
 
-    public SearchResultsResponse getSearchResults() {
+    public SearchResultsResponse searchResults() {
         return this.searchResults;
     }
 
@@ -117,7 +117,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="solutions", required=true)
       private final List<String> solutions;
 
-    public List<String> getSolutions() {
+    public List<String> solutions() {
         return this.solutions;
     }
 
@@ -128,7 +128,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 
@@ -139,7 +139,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="standardColumns", required=true)
       private final List<ColumnResponse> standardColumns;
 
-    public List<ColumnResponse> getStandardColumns() {
+    public List<ColumnResponse> standardColumns() {
         return this.standardColumns;
     }
 
@@ -150,7 +150,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableSubType", required=true)
       private final String tableSubType;
 
-    public String getTableSubType() {
+    public String tableSubType() {
         return this.tableSubType;
     }
 
@@ -161,7 +161,7 @@ public final class SchemaResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tableType", required=true)
       private final String tableType;
 
-    public String getTableType() {
+    public String tableType() {
         return this.tableType;
     }
 

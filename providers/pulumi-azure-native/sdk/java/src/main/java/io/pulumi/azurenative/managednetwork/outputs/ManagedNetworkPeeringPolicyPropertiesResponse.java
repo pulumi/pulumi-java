@@ -64,42 +64,42 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Gets or sets the hub virtual network ID
      * 
     */
-    public Optional<ResourceIdResponse> getHub() {
+    public Optional<ResourceIdResponse> hub() {
         return Optional.ofNullable(this.hub);
     }
     /**
      * Gets or sets the mesh group IDs
      * 
     */
-    public List<ResourceIdResponse> getMesh() {
+    public List<ResourceIdResponse> mesh() {
         return this.mesh == null ? List.of() : this.mesh;
     }
     /**
      * Provisioning state of the ManagedNetwork resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the spokes group IDs
      * 
     */
-    public List<ResourceIdResponse> getSpokes() {
+    public List<ResourceIdResponse> spokes() {
         return this.spokes == null ? List.of() : this.spokes;
     }
     /**
      * Gets or sets the connectivity type of a network structure policy
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

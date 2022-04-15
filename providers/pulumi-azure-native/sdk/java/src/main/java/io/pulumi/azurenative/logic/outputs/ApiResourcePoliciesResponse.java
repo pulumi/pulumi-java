@@ -34,14 +34,14 @@ public final class ApiResourcePoliciesResponse {
      * The API level only policies XML as embedded content.
      * 
     */
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The content link to the policies.
      * 
     */
-    public Optional<String> getContentLink() {
+    public Optional<String> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
 

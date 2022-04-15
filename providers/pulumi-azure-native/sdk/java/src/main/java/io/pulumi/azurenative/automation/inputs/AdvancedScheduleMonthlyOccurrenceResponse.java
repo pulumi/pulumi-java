@@ -26,7 +26,7 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends io.pulumi.r
     @Import(name="day")
       private final @Nullable String day;
 
-    public Optional<String> getDay() {
+    public Optional<String> day() {
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
     }
 
@@ -37,7 +37,7 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends io.pulumi.r
     @Import(name="occurrence")
       private final @Nullable Integer occurrence;
 
-    public Optional<Integer> getOccurrence() {
+    public Optional<Integer> occurrence() {
         return this.occurrence == null ? Optional.empty() : Optional.ofNullable(this.occurrence);
     }
 

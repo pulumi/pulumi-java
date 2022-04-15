@@ -46,28 +46,28 @@ public final class StorageAccountKeyResponse {
      * Creation time of the key, in round trip date format.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * Name of the key.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * Permissions for the key -- read-only or full permissions.
      * 
     */
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
     /**
      * Base 64-encoded value of the key.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

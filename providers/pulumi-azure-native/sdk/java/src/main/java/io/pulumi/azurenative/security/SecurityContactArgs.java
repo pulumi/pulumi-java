@@ -24,7 +24,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="alertNotifications")
       private final @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
-    public Output<SecurityContactPropertiesAlertNotificationsArgs> getAlertNotifications() {
+    public Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications() {
         return this.alertNotifications == null ? Codegen.empty() : this.alertNotifications;
     }
 
@@ -35,7 +35,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="emails")
       private final @Nullable Output<String> emails;
 
-    public Output<String> getEmails() {
+    public Output<String> emails() {
         return this.emails == null ? Codegen.empty() : this.emails;
     }
 
@@ -46,7 +46,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="notificationsByRole")
       private final @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
-    public Output<SecurityContactPropertiesNotificationsByRoleArgs> getNotificationsByRole() {
+    public Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole() {
         return this.notificationsByRole == null ? Codegen.empty() : this.notificationsByRole;
     }
 
@@ -57,7 +57,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone == null ? Codegen.empty() : this.phone;
     }
 
@@ -68,7 +68,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityContactName")
       private final @Nullable Output<String> securityContactName;
 
-    public Output<String> getSecurityContactName() {
+    public Output<String> securityContactName() {
         return this.securityContactName == null ? Codegen.empty() : this.securityContactName;
     }
 

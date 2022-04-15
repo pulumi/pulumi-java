@@ -18,7 +18,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesResult {
         this.inputs = inputs;
     }
 
-    public List<ExpressionRootResponse> getInputs() {
+    public List<ExpressionRootResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
 

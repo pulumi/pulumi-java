@@ -27,7 +27,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="backupEnabled")
       private final @Nullable Output<Boolean> backupEnabled;
 
-    public Output<Boolean> getBackupEnabled() {
+    public Output<Boolean> backupEnabled() {
         return this.backupEnabled == null ? Codegen.empty() : this.backupEnabled;
     }
 
@@ -38,7 +38,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="backupPolicyId")
       private final @Nullable Output<String> backupPolicyId;
 
-    public Output<String> getBackupPolicyId() {
+    public Output<String> backupPolicyId() {
         return this.backupPolicyId == null ? Codegen.empty() : this.backupPolicyId;
     }
 
@@ -49,7 +49,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="policyEnforced")
       private final @Nullable Output<Boolean> policyEnforced;
 
-    public Output<Boolean> getPolicyEnforced() {
+    public Output<Boolean> policyEnforced() {
         return this.policyEnforced == null ? Codegen.empty() : this.policyEnforced;
     }
 
@@ -60,7 +60,7 @@ public final class VolumeBackupPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="vaultId")
       private final @Nullable Output<String> vaultId;
 
-    public Output<String> getVaultId() {
+    public Output<String> vaultId() {
         return this.vaultId == null ? Codegen.empty() : this.vaultId;
     }
 

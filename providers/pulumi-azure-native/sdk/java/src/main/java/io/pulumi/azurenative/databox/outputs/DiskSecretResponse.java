@@ -32,14 +32,14 @@ public final class DiskSecretResponse {
      * Bit Locker key of the disk which can be used to unlock the disk to copy data.
      * 
     */
-    public String getBitLockerKey() {
+    public String bitLockerKey() {
         return this.bitLockerKey;
     }
     /**
      * Serial number of the assigned disk.
      * 
     */
-    public String getDiskSerialNumber() {
+    public String diskSerialNumber() {
         return this.diskSerialNumber;
     }
 

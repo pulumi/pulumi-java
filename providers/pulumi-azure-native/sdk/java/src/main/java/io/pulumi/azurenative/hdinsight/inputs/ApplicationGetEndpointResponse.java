@@ -26,7 +26,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
     @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
 
-    public Optional<Integer> getDestinationPort() {
+    public Optional<Integer> destinationPort() {
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
     @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
     @Import(name="publicPort")
       private final @Nullable Integer publicPort;
 
-    public Optional<Integer> getPublicPort() {
+    public Optional<Integer> publicPort() {
         return this.publicPort == null ? Optional.empty() : Optional.ofNullable(this.publicPort);
     }
 

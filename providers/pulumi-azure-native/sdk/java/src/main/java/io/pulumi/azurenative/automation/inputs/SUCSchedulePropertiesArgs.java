@@ -31,7 +31,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="advancedSchedule")
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
-    public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
+    public Output<AdvancedScheduleArgs> advancedSchedule() {
         return this.advancedSchedule == null ? Codegen.empty() : this.advancedSchedule;
     }
 
@@ -42,7 +42,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
@@ -53,7 +53,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -64,7 +64,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
-    public Output<String> getExpiryTime() {
+    public Output<String> expiryTime() {
         return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
     }
 
@@ -75,7 +75,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="expiryTimeOffsetMinutes")
       private final @Nullable Output<Double> expiryTimeOffsetMinutes;
 
-    public Output<Double> getExpiryTimeOffsetMinutes() {
+    public Output<Double> expiryTimeOffsetMinutes() {
         return this.expiryTimeOffsetMinutes == null ? Codegen.empty() : this.expiryTimeOffsetMinutes;
     }
 
@@ -86,7 +86,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="frequency")
       private final @Nullable Output<Either<String,ScheduleFrequency>> frequency;
 
-    public Output<Either<String,ScheduleFrequency>> getFrequency() {
+    public Output<Either<String,ScheduleFrequency>> frequency() {
         return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
@@ -97,7 +97,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="interval")
       private final @Nullable Output<Double> interval;
 
-    public Output<Double> getInterval() {
+    public Output<Double> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -108,7 +108,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -119,7 +119,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
 
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
     }
 
@@ -130,7 +130,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="nextRun")
       private final @Nullable Output<String> nextRun;
 
-    public Output<String> getNextRun() {
+    public Output<String> nextRun() {
         return this.nextRun == null ? Codegen.empty() : this.nextRun;
     }
 
@@ -141,7 +141,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="nextRunOffsetMinutes")
       private final @Nullable Output<Double> nextRunOffsetMinutes;
 
-    public Output<Double> getNextRunOffsetMinutes() {
+    public Output<Double> nextRunOffsetMinutes() {
         return this.nextRunOffsetMinutes == null ? Codegen.empty() : this.nextRunOffsetMinutes;
     }
 
@@ -152,7 +152,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -163,7 +163,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 

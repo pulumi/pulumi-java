@@ -28,7 +28,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="addressType")
       private final @Nullable Output<Either<String,AddressType>> addressType;
 
-    public Output<Either<String,AddressType>> getAddressType() {
+    public Output<Either<String,AddressType>> addressType() {
         return this.addressType == null ? Codegen.empty() : this.addressType;
     }
 
@@ -39,7 +39,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="city")
       private final @Nullable Output<String> city;
 
-    public Output<String> getCity() {
+    public Output<String> city() {
         return this.city == null ? Codegen.empty() : this.city;
     }
 
@@ -50,7 +50,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="companyName")
       private final @Nullable Output<String> companyName;
 
-    public Output<String> getCompanyName() {
+    public Output<String> companyName() {
         return this.companyName == null ? Codegen.empty() : this.companyName;
     }
 
@@ -61,7 +61,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="country", required=true)
       private final Output<String> country;
 
-    public Output<String> getCountry() {
+    public Output<String> country() {
         return this.country;
     }
 
@@ -72,7 +72,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
+    public Output<String> postalCode() {
         return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
@@ -83,7 +83,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="stateOrProvince")
       private final @Nullable Output<String> stateOrProvince;
 
-    public Output<String> getStateOrProvince() {
+    public Output<String> stateOrProvince() {
         return this.stateOrProvince == null ? Codegen.empty() : this.stateOrProvince;
     }
 
@@ -94,7 +94,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="streetAddress1", required=true)
       private final Output<String> streetAddress1;
 
-    public Output<String> getStreetAddress1() {
+    public Output<String> streetAddress1() {
         return this.streetAddress1;
     }
 
@@ -105,7 +105,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="streetAddress2")
       private final @Nullable Output<String> streetAddress2;
 
-    public Output<String> getStreetAddress2() {
+    public Output<String> streetAddress2() {
         return this.streetAddress2 == null ? Codegen.empty() : this.streetAddress2;
     }
 
@@ -116,7 +116,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="streetAddress3")
       private final @Nullable Output<String> streetAddress3;
 
-    public Output<String> getStreetAddress3() {
+    public Output<String> streetAddress3() {
         return this.streetAddress3 == null ? Codegen.empty() : this.streetAddress3;
     }
 
@@ -127,7 +127,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="zipExtendedCode")
       private final @Nullable Output<String> zipExtendedCode;
 
-    public Output<String> getZipExtendedCode() {
+    public Output<String> zipExtendedCode() {
         return this.zipExtendedCode == null ? Codegen.empty() : this.zipExtendedCode;
     }
 

@@ -27,7 +27,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
 
-    public Output<List<RoleArgs>> getRoles() {
+    public Output<List<RoleArgs>> roles() {
         return this.roles == null ? Codegen.empty() : this.roles;
     }
 

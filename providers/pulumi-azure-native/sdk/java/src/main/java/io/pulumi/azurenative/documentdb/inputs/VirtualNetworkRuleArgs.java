@@ -27,7 +27,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ignoreMissingVNetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVNetServiceEndpoint;
 
-    public Output<Boolean> getIgnoreMissingVNetServiceEndpoint() {
+    public Output<Boolean> ignoreMissingVNetServiceEndpoint() {
         return this.ignoreMissingVNetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVNetServiceEndpoint;
     }
 

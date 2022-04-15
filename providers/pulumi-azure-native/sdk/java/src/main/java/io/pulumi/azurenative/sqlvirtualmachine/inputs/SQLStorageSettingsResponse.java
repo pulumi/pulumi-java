@@ -27,7 +27,7 @@ public final class SQLStorageSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="defaultFilePath")
       private final @Nullable String defaultFilePath;
 
-    public Optional<String> getDefaultFilePath() {
+    public Optional<String> defaultFilePath() {
         return this.defaultFilePath == null ? Optional.empty() : Optional.ofNullable(this.defaultFilePath);
     }
 
@@ -38,7 +38,7 @@ public final class SQLStorageSettingsResponse extends io.pulumi.resources.Invoke
     @Import(name="luns")
       private final @Nullable List<Integer> luns;
 
-    public List<Integer> getLuns() {
+    public List<Integer> luns() {
         return this.luns == null ? List.of() : this.luns;
     }
 

@@ -45,7 +45,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * @return The set of properties specific to EnterpriseKnowledgeGraph resource
      * 
      */
-    public Output<EnterpriseKnowledgeGraphPropertiesResponse> getProperties() {
+    public Output<EnterpriseKnowledgeGraphPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -87,7 +87,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * @return Gets or sets the SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +101,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

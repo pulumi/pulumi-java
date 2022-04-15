@@ -29,7 +29,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="bypass")
       private final @Nullable String bypass;
 
-    public Optional<String> getBypass() {
+    public Optional<String> bypass() {
         return this.bypass == null ? Optional.empty() : Optional.ofNullable(this.bypass);
     }
 
@@ -40,7 +40,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="defaultAction", required=true)
       private final String defaultAction;
 
-    public String getDefaultAction() {
+    public String defaultAction() {
         return this.defaultAction;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="ipRules")
       private final @Nullable List<IPRuleResponse> ipRules;
 
-    public List<IPRuleResponse> getIpRules() {
+    public List<IPRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceAccessRules")
       private final @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
 
-    public List<ResourceAccessRuleResponse> getResourceAccessRules() {
+    public List<ResourceAccessRuleResponse> resourceAccessRules() {
         return this.resourceAccessRules == null ? List.of() : this.resourceAccessRules;
     }
 
@@ -73,7 +73,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="virtualNetworkRules")
       private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
 

@@ -31,7 +31,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="azureVirtualMachines")
       private final @Nullable Output<List<String>> azureVirtualMachines;
 
-    public Output<List<String>> getAzureVirtualMachines() {
+    public Output<List<String>> azureVirtualMachines() {
         return this.azureVirtualMachines == null ? Codegen.empty() : this.azureVirtualMachines;
     }
 
@@ -42,7 +42,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -53,7 +53,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="linux")
       private final @Nullable Output<LinuxPropertiesArgs> linux;
 
-    public Output<LinuxPropertiesArgs> getLinux() {
+    public Output<LinuxPropertiesArgs> linux() {
         return this.linux == null ? Codegen.empty() : this.linux;
     }
 
@@ -64,7 +64,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="nonAzureComputerNames")
       private final @Nullable Output<List<String>> nonAzureComputerNames;
 
-    public Output<List<String>> getNonAzureComputerNames() {
+    public Output<List<String>> nonAzureComputerNames() {
         return this.nonAzureComputerNames == null ? Codegen.empty() : this.nonAzureComputerNames;
     }
 
@@ -75,7 +75,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="operatingSystem", required=true)
       private final Output<OperatingSystemType> operatingSystem;
 
-    public Output<OperatingSystemType> getOperatingSystem() {
+    public Output<OperatingSystemType> operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -86,7 +86,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="targets")
       private final @Nullable Output<TargetPropertiesArgs> targets;
 
-    public Output<TargetPropertiesArgs> getTargets() {
+    public Output<TargetPropertiesArgs> targets() {
         return this.targets == null ? Codegen.empty() : this.targets;
     }
 
@@ -97,7 +97,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     @Import(name="windows")
       private final @Nullable Output<WindowsPropertiesArgs> windows;
 
-    public Output<WindowsPropertiesArgs> getWindows() {
+    public Output<WindowsPropertiesArgs> windows() {
         return this.windows == null ? Codegen.empty() : this.windows;
     }
 

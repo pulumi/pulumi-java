@@ -50,21 +50,21 @@ public final class SsisFolderResponse {
      * Metadata description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Metadata id.
      * 
     */
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -72,7 +72,7 @@ public final class SsisFolderResponse {
      * Expected value is 'Folder'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

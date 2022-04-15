@@ -22,7 +22,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,7 +33,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
 
-    public Output<String> getManagedPrivateEndpointName() {
+    public Output<String> managedPrivateEndpointName() {
         return this.managedPrivateEndpointName == null ? Codegen.empty() : this.managedPrivateEndpointName;
     }
 
@@ -55,7 +55,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="privateLinkResourceId", required=true)
       private final Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
 
@@ -66,7 +66,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="privateLinkResourceRegion")
       private final @Nullable Output<String> privateLinkResourceRegion;
 
-    public Output<String> getPrivateLinkResourceRegion() {
+    public Output<String> privateLinkResourceRegion() {
         return this.privateLinkResourceRegion == null ? Codegen.empty() : this.privateLinkResourceRegion;
     }
 
@@ -77,7 +77,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
-    public Output<String> getRequestMessage() {
+    public Output<String> requestMessage() {
         return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
@@ -88,7 +88,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

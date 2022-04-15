@@ -27,7 +27,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -38,7 +38,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -49,7 +49,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
+    public Output<String> integrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -60,7 +60,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -71,7 +71,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="mapName")
       private final @Nullable Output<String> mapName;
 
-    public Output<String> getMapName() {
+    public Output<String> mapName() {
         return this.mapName == null ? Codegen.empty() : this.mapName;
     }
 
@@ -82,7 +82,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="mapType", required=true)
       private final Output<Either<String,MapType>> mapType;
 
-    public Output<Either<String,MapType>> getMapType() {
+    public Output<Either<String,MapType>> mapType() {
         return this.mapType;
     }
 
@@ -93,7 +93,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
-    public Output<Object> getMetadata() {
+    public Output<Object> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -104,7 +104,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="parametersSchema")
       private final @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
-    public Output<IntegrationAccountMapPropertiesParametersSchemaArgs> getParametersSchema() {
+    public Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema() {
         return this.parametersSchema == null ? Codegen.empty() : this.parametersSchema;
     }
 
@@ -115,7 +115,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -126,7 +126,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

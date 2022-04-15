@@ -26,7 +26,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
     @Import(name="autoscaleEnabled")
       private final @Nullable Boolean autoscaleEnabled;
 
-    public Optional<Boolean> getAutoscaleEnabled() {
+    public Optional<Boolean> autoscaleEnabled() {
         return this.autoscaleEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoscaleEnabled);
     }
 
@@ -37,7 +37,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
     @Import(name="maxReplicas")
       private final @Nullable Integer maxReplicas;
 
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
     }
 
@@ -48,7 +48,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
     @Import(name="minReplicas")
       private final @Nullable Integer minReplicas;
 
-    public Optional<Integer> getMinReplicas() {
+    public Optional<Integer> minReplicas() {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
     }
 
@@ -59,7 +59,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
     @Import(name="refreshPeriodInSeconds")
       private final @Nullable Integer refreshPeriodInSeconds;
 
-    public Optional<Integer> getRefreshPeriodInSeconds() {
+    public Optional<Integer> refreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
     }
 
@@ -70,7 +70,7 @@ public final class AKSServiceResponseResponseAutoScaler extends io.pulumi.resour
     @Import(name="targetUtilization")
       private final @Nullable Integer targetUtilization;
 
-    public Optional<Integer> getTargetUtilization() {
+    public Optional<Integer> targetUtilization() {
         return this.targetUtilization == null ? Optional.empty() : Optional.ofNullable(this.targetUtilization);
     }
 

@@ -43,21 +43,21 @@ public final class BackupPolicyResponse {
      * Type of datasource for the backup management
      * 
     */
-    public List<String> getDatasourceTypes() {
+    public List<String> datasourceTypes() {
         return this.datasourceTypes;
     }
     /**
      * Expected value is 'BackupPolicy'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
      * 
     */
-    public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> getPolicyRules() {
+    public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules() {
         return this.policyRules;
     }
 

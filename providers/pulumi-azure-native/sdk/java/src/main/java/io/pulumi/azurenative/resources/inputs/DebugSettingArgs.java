@@ -26,7 +26,7 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detailLevel")
       private final @Nullable Output<String> detailLevel;
 
-    public Output<String> getDetailLevel() {
+    public Output<String> detailLevel() {
         return this.detailLevel == null ? Codegen.empty() : this.detailLevel;
     }
 

@@ -38,7 +38,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="compute")
       private final @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
 
-    public Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> getCompute() {
+    public Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute() {
         return this.compute == null ? Codegen.empty() : this.compute;
     }
 
@@ -49,7 +49,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="continueOnError")
       private final @Nullable Output<Object> continueOnError;
 
-    public Output<Object> getContinueOnError() {
+    public Output<Object> continueOnError() {
         return this.continueOnError == null ? Codegen.empty() : this.continueOnError;
     }
 
@@ -60,7 +60,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="dataFlow", required=true)
       private final Output<DataFlowReferenceArgs> dataFlow;
 
-    public Output<DataFlowReferenceArgs> getDataFlow() {
+    public Output<DataFlowReferenceArgs> dataFlow() {
         return this.dataFlow;
     }
 
@@ -71,7 +71,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -82,7 +82,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -93,7 +93,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="integrationRuntime")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
 
-    public Output<IntegrationRuntimeReferenceArgs> getIntegrationRuntime() {
+    public Output<IntegrationRuntimeReferenceArgs> integrationRuntime() {
         return this.integrationRuntime == null ? Codegen.empty() : this.integrationRuntime;
     }
 
@@ -104,7 +104,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -115,7 +115,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -126,7 +126,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="queries")
       private final @Nullable Output<List<PowerQuerySinkMappingArgs>> queries;
 
-    public Output<List<PowerQuerySinkMappingArgs>> getQueries() {
+    public Output<List<PowerQuerySinkMappingArgs>> queries() {
         return this.queries == null ? Codegen.empty() : this.queries;
     }
 
@@ -137,7 +137,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="runConcurrently")
       private final @Nullable Output<Object> runConcurrently;
 
-    public Output<Object> getRunConcurrently() {
+    public Output<Object> runConcurrently() {
         return this.runConcurrently == null ? Codegen.empty() : this.runConcurrently;
     }
 
@@ -148,7 +148,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="sinks")
       private final @Nullable Output<Map<String,PowerQuerySinkArgs>> sinks;
 
-    public Output<Map<String,PowerQuerySinkArgs>> getSinks() {
+    public Output<Map<String,PowerQuerySinkArgs>> sinks() {
         return this.sinks == null ? Codegen.empty() : this.sinks;
     }
 
@@ -159,7 +159,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="staging")
       private final @Nullable Output<DataFlowStagingInfoArgs> staging;
 
-    public Output<DataFlowStagingInfoArgs> getStaging() {
+    public Output<DataFlowStagingInfoArgs> staging() {
         return this.staging == null ? Codegen.empty() : this.staging;
     }
 
@@ -170,7 +170,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="traceLevel")
       private final @Nullable Output<Object> traceLevel;
 
-    public Output<Object> getTraceLevel() {
+    public Output<Object> traceLevel() {
         return this.traceLevel == null ? Codegen.empty() : this.traceLevel;
     }
 
@@ -182,7 +182,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -193,7 +193,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

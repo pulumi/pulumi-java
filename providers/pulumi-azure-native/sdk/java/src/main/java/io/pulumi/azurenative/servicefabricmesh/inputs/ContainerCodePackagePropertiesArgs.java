@@ -37,7 +37,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
-    public Output<List<String>> getCommands() {
+    public Output<List<String>> commands() {
         return this.commands == null ? Codegen.empty() : this.commands;
     }
 
@@ -48,7 +48,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
-    public Output<DiagnosticsRefArgs> getDiagnostics() {
+    public Output<DiagnosticsRefArgs> diagnostics() {
         return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
@@ -59,7 +59,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="endpoints")
       private final @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
 
-    public Output<List<EndpointPropertiesArgs>> getEndpoints() {
+    public Output<List<EndpointPropertiesArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -70,7 +70,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="entrypoint")
       private final @Nullable Output<String> entrypoint;
 
-    public Output<String> getEntrypoint() {
+    public Output<String> entrypoint() {
         return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
     }
 
@@ -81,7 +81,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
+    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
         return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
@@ -92,7 +92,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -103,7 +103,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="imageRegistryCredential")
       private final @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
 
-    public Output<ImageRegistryCredentialArgs> getImageRegistryCredential() {
+    public Output<ImageRegistryCredentialArgs> imageRegistryCredential() {
         return this.imageRegistryCredential == null ? Codegen.empty() : this.imageRegistryCredential;
     }
 
@@ -114,7 +114,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="labels")
       private final @Nullable Output<List<ContainerLabelArgs>> labels;
 
-    public Output<List<ContainerLabelArgs>> getLabels() {
+    public Output<List<ContainerLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -125,7 +125,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -136,7 +136,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="reliableCollectionsRefs")
       private final @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
-    public Output<List<ReliableCollectionsRefArgs>> getReliableCollectionsRefs() {
+    public Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs() {
         return this.reliableCollectionsRefs == null ? Codegen.empty() : this.reliableCollectionsRefs;
     }
 
@@ -147,7 +147,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="resources", required=true)
       private final Output<ResourceRequirementsArgs> resources;
 
-    public Output<ResourceRequirementsArgs> getResources() {
+    public Output<ResourceRequirementsArgs> resources() {
         return this.resources;
     }
 
@@ -158,7 +158,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="settings")
       private final @Nullable Output<List<SettingArgs>> settings;
 
-    public Output<List<SettingArgs>> getSettings() {
+    public Output<List<SettingArgs>> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -169,7 +169,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="volumeRefs")
       private final @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
 
-    public Output<List<VolumeReferenceArgs>> getVolumeRefs() {
+    public Output<List<VolumeReferenceArgs>> volumeRefs() {
         return this.volumeRefs == null ? Codegen.empty() : this.volumeRefs;
     }
 
@@ -180,7 +180,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     @Import(name="volumes")
       private final @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
 
-    public Output<List<ApplicationScopedVolumeArgs>> getVolumes() {
+    public Output<List<ApplicationScopedVolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

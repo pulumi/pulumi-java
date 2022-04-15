@@ -28,7 +28,7 @@ public final class ManagedIdentitySettingsResponse {
      * It also appears in the aud (audience) claim of the issued token.
      * 
     */
-    public Optional<String> getResource() {
+    public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
 

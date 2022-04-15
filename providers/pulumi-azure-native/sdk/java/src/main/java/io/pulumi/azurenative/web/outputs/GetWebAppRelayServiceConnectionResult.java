@@ -66,53 +66,53 @@ public final class GetWebAppRelayServiceConnectionResult {
         this.type = type;
     }
 
-    public Optional<String> getBiztalkUri() {
+    public Optional<String> biztalkUri() {
         return Optional.ofNullable(this.biztalkUri);
     }
-    public Optional<String> getEntityConnectionString() {
+    public Optional<String> entityConnectionString() {
         return Optional.ofNullable(this.entityConnectionString);
     }
-    public Optional<String> getEntityName() {
+    public Optional<String> entityName() {
         return Optional.ofNullable(this.entityName);
     }
-    public Optional<String> getHostname() {
+    public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
-    public Optional<String> getResourceConnectionString() {
+    public Optional<String> resourceConnectionString() {
         return Optional.ofNullable(this.resourceConnectionString);
     }
-    public Optional<String> getPropResourceType() {
+    public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

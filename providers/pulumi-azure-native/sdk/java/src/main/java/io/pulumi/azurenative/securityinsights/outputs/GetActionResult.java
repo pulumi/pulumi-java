@@ -62,42 +62,42 @@ public final class GetActionResult {
      * Etag of the action.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
     */
-    public String getLogicAppResourceId() {
+    public String logicAppResourceId() {
         return this.logicAppResourceId;
     }
     /**
      * Azure resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The name of the logic app's workflow.
      * 
     */
-    public Optional<String> getWorkflowId() {
+    public Optional<String> workflowId() {
         return Optional.ofNullable(this.workflowId);
     }
 

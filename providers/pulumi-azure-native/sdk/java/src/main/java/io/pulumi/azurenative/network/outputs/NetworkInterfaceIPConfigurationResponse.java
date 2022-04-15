@@ -149,119 +149,119 @@ public final class NetworkInterfaceIPConfigurationResponse {
      * The reference to ApplicationGatewayBackendAddressPool resource.
      * 
     */
-    public List<ApplicationGatewayBackendAddressPoolResponse> getApplicationGatewayBackendAddressPools() {
+    public List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
     /**
      * Application security groups in which the IP configuration is included.
      * 
     */
-    public List<ApplicationSecurityGroupResponse> getApplicationSecurityGroups() {
+    public List<ApplicationSecurityGroupResponse> applicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The reference to LoadBalancerBackendAddressPool resource.
      * 
     */
-    public List<BackendAddressPoolResponse> getLoadBalancerBackendAddressPools() {
+    public List<BackendAddressPoolResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
     /**
      * A list of references of LoadBalancerInboundNatRules.
      * 
     */
-    public List<InboundNatRuleResponse> getLoadBalancerInboundNatRules() {
+    public List<InboundNatRuleResponse> loadBalancerInboundNatRules() {
         return this.loadBalancerInboundNatRules == null ? List.of() : this.loadBalancerInboundNatRules;
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Whether this is a primary customer address on the network interface.
      * 
     */
-    public Optional<Boolean> getPrimary() {
+    public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * Private IP address of the IP configuration.
      * 
     */
-    public Optional<String> getPrivateIPAddress() {
+    public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
      * 
     */
-    public Optional<String> getPrivateIPAddressVersion() {
+    public Optional<String> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
     /**
      * The private IP address allocation method.
      * 
     */
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * PrivateLinkConnection properties for the network interface.
      * 
     */
-    public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse getPrivateLinkConnectionProperties() {
+    public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties() {
         return this.privateLinkConnectionProperties;
     }
     /**
      * The provisioning state of the network interface IP configuration.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Public IP address bound to the IP configuration.
      * 
     */
-    public Optional<PublicIPAddressResponse> getPublicIPAddress() {
+    public Optional<PublicIPAddressResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * Subnet bound to the IP configuration.
      * 
     */
-    public Optional<SubnetResponse> getSubnet() {
+    public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Resource type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The reference to Virtual Network Taps.
      * 
     */
-    public List<VirtualNetworkTapResponse> getVirtualNetworkTaps() {
+    public List<VirtualNetworkTapResponse> virtualNetworkTaps() {
         return this.virtualNetworkTaps == null ? List.of() : this.virtualNetworkTaps;
     }
 

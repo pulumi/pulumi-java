@@ -26,7 +26,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
     @Import(name="cipherSuites")
       private final @Nullable List<String> cipherSuites;
 
-    public List<String> getCipherSuites() {
+    public List<String> cipherSuites() {
         return this.cipherSuites == null ? List.of() : this.cipherSuites;
     }
 
@@ -37,7 +37,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
     @Import(name="disabledSslProtocols")
       private final @Nullable List<String> disabledSslProtocols;
 
-    public List<String> getDisabledSslProtocols() {
+    public List<String> disabledSslProtocols() {
         return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
     @Import(name="minProtocolVersion")
       private final @Nullable String minProtocolVersion;
 
-    public Optional<String> getMinProtocolVersion() {
+    public Optional<String> minProtocolVersion() {
         return this.minProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.minProtocolVersion);
     }
 
@@ -59,7 +59,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
     @Import(name="policyName")
       private final @Nullable String policyName;
 
-    public Optional<String> getPolicyName() {
+    public Optional<String> policyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 
@@ -70,7 +70,7 @@ public final class ApplicationGatewaySslPolicyResponse extends io.pulumi.resourc
     @Import(name="policyType")
       private final @Nullable String policyType;
 
-    public Optional<String> getPolicyType() {
+    public Optional<String> policyType() {
         return this.policyType == null ? Optional.empty() : Optional.ofNullable(this.policyType);
     }
 

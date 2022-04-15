@@ -18,7 +18,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
-    public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {
+    public Output<ResourceTypeRegistrationPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

@@ -32,14 +32,14 @@ public final class ResourceRequestsResponse {
      * Requested number of CPU cores. At present, only full cores are supported.
      * 
     */
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
     /**
      * The memory request in GB for this container.
      * 
     */
-    public Double getMemoryInGB() {
+    public Double memoryInGB() {
         return this.memoryInGB;
     }
 

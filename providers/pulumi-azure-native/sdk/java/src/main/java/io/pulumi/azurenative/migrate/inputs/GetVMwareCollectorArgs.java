@@ -19,7 +19,7 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="vmWareCollectorName", required=true)
       private final String vmWareCollectorName;
 
-    public String getVmWareCollectorName() {
+    public String vmWareCollectorName() {
         return this.vmWareCollectorName;
     }
 

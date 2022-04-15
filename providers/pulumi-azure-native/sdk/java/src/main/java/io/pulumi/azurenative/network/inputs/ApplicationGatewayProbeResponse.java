@@ -28,7 +28,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="host")
       private final @Nullable String host;
 
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -61,7 +61,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="interval")
       private final @Nullable Integer interval;
 
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
@@ -72,7 +72,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="match")
       private final @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
 
-    public Optional<ApplicationGatewayProbeHealthResponseMatchResponse> getMatch() {
+    public Optional<ApplicationGatewayProbeHealthResponseMatchResponse> match() {
         return this.match == null ? Optional.empty() : Optional.ofNullable(this.match);
     }
 
@@ -83,7 +83,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="minServers")
       private final @Nullable Integer minServers;
 
-    public Optional<Integer> getMinServers() {
+    public Optional<Integer> minServers() {
         return this.minServers == null ? Optional.empty() : Optional.ofNullable(this.minServers);
     }
 
@@ -94,7 +94,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -105,7 +105,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -116,7 +116,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="pickHostNameFromBackendHttpSettings")
       private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
-    public Optional<Boolean> getPickHostNameFromBackendHttpSettings() {
+    public Optional<Boolean> pickHostNameFromBackendHttpSettings() {
         return this.pickHostNameFromBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
 
@@ -127,7 +127,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="port")
       private final @Nullable Integer port;
 
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
@@ -138,7 +138,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -149,7 +149,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -160,7 +160,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="timeout")
       private final @Nullable Integer timeout;
 
-    public Optional<Integer> getTimeout() {
+    public Optional<Integer> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
@@ -171,7 +171,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -182,7 +182,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
     @Import(name="unhealthyThreshold")
       private final @Nullable Integer unhealthyThreshold;
 
-    public Optional<Integer> getUnhealthyThreshold() {
+    public Optional<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
     }
 

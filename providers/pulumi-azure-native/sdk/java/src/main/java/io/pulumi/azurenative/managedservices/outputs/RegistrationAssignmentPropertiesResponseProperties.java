@@ -78,56 +78,56 @@ public final class RegistrationAssignmentPropertiesResponseProperties {
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
     */
-    public List<AuthorizationResponse> getAuthorizations() {
+    public List<AuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
      * Description of the registration definition.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Id of the managedBy tenant.
      * 
     */
-    public Optional<String> getManagedByTenantId() {
+    public Optional<String> managedByTenantId() {
         return Optional.ofNullable(this.managedByTenantId);
     }
     /**
      * Name of the managedBy tenant.
      * 
     */
-    public Optional<String> getManagedByTenantName() {
+    public Optional<String> managedByTenantName() {
         return Optional.ofNullable(this.managedByTenantName);
     }
     /**
      * Id of the home tenant.
      * 
     */
-    public Optional<String> getManageeTenantId() {
+    public Optional<String> manageeTenantId() {
         return Optional.ofNullable(this.manageeTenantId);
     }
     /**
      * Name of the home tenant.
      * 
     */
-    public Optional<String> getManageeTenantName() {
+    public Optional<String> manageeTenantName() {
         return Optional.ofNullable(this.manageeTenantName);
     }
     /**
      * Current state of the registration definition.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Name of the registration definition.
      * 
     */
-    public Optional<String> getRegistrationDefinitionName() {
+    public Optional<String> registrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }
 

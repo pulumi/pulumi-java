@@ -45,7 +45,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -56,14 +56,14 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="avroCompressionCodec")
       private final @Nullable Object avroCompressionCodec;
 
-    public Optional<Object> getAvroCompressionCodec() {
+    public Optional<Object> avroCompressionCodec() {
         return this.avroCompressionCodec == null ? Optional.empty() : Optional.ofNullable(this.avroCompressionCodec);
     }
 
     @Import(name="avroCompressionLevel")
       private final @Nullable Integer avroCompressionLevel;
 
-    public Optional<Integer> getAvroCompressionLevel() {
+    public Optional<Integer> avroCompressionLevel() {
         return this.avroCompressionLevel == null ? Optional.empty() : Optional.ofNullable(this.avroCompressionLevel);
     }
 
@@ -74,7 +74,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -85,7 +85,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
-    public Optional<DatasetResponseFolder> getFolder() {
+    public Optional<DatasetResponseFolder> folder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
@@ -96,7 +96,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
-    public LinkedServiceReferenceResponse getLinkedServiceName() {
+    public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -107,7 +107,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final Object location;
 
-    public Object getLocation() {
+    public Object location() {
         return this.location;
     }
 
@@ -118,7 +118,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -129,7 +129,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="schema")
       private final @Nullable Object schema;
 
-    public Optional<Object> getSchema() {
+    public Optional<Object> schema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
@@ -140,7 +140,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="structure")
       private final @Nullable Object structure;
 
-    public Optional<Object> getStructure() {
+    public Optional<Object> structure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
@@ -152,7 +152,7 @@ public final class AvroDatasetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

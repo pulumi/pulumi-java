@@ -28,7 +28,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupsCount")
       private final @Nullable Output<Integer> backupsCount;
 
-    public Output<Integer> getBackupsCount() {
+    public Output<Integer> backupsCount() {
         return this.backupsCount == null ? Codegen.empty() : this.backupsCount;
     }
 
@@ -39,7 +39,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyEnabled")
       private final @Nullable Output<Boolean> policyEnabled;
 
-    public Output<Boolean> getPolicyEnabled() {
+    public Output<Boolean> policyEnabled() {
         return this.policyEnabled == null ? Codegen.empty() : this.policyEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 

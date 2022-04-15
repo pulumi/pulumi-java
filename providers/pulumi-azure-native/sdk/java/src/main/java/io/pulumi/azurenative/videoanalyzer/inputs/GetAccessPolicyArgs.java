@@ -19,7 +19,7 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accessPolicyName", required=true)
       private final String accessPolicyName;
 
-    public String getAccessPolicyName() {
+    public String accessPolicyName() {
         return this.accessPolicyName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -41,7 +41,7 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

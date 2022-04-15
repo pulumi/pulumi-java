@@ -33,7 +33,7 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     @Import(name="catalogInfo")
       private final @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
 
-    public Optional<IntegrationRuntimeSsisCatalogInfoResponse> getCatalogInfo() {
+    public Optional<IntegrationRuntimeSsisCatalogInfoResponse> catalogInfo() {
         return this.catalogInfo == null ? Optional.empty() : Optional.ofNullable(this.catalogInfo);
     }
 
@@ -44,7 +44,7 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     @Import(name="customSetupScriptProperties")
       private final @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
 
-    public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> getCustomSetupScriptProperties() {
+    public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> customSetupScriptProperties() {
         return this.customSetupScriptProperties == null ? Optional.empty() : Optional.ofNullable(this.customSetupScriptProperties);
     }
 
@@ -55,7 +55,7 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     @Import(name="dataProxyProperties")
       private final @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
 
-    public Optional<IntegrationRuntimeDataProxyPropertiesResponse> getDataProxyProperties() {
+    public Optional<IntegrationRuntimeDataProxyPropertiesResponse> dataProxyProperties() {
         return this.dataProxyProperties == null ? Optional.empty() : Optional.ofNullable(this.dataProxyProperties);
     }
 
@@ -66,7 +66,7 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     @Import(name="edition")
       private final @Nullable String edition;
 
-    public Optional<String> getEdition() {
+    public Optional<String> edition() {
         return this.edition == null ? Optional.empty() : Optional.ofNullable(this.edition);
     }
 
@@ -77,7 +77,7 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     @Import(name="expressCustomSetupProperties")
       private final @Nullable List<Object> expressCustomSetupProperties;
 
-    public List<Object> getExpressCustomSetupProperties() {
+    public List<Object> expressCustomSetupProperties() {
         return this.expressCustomSetupProperties == null ? List.of() : this.expressCustomSetupProperties;
     }
 
@@ -88,7 +88,7 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends io.pulumi.re
     @Import(name="licenseType")
       private final @Nullable String licenseType;
 
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 

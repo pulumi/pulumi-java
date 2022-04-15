@@ -27,7 +27,7 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     @Import(name="akamai")
       private final @Nullable Output<AkamaiAccessControlArgs> akamai;
 
-    public Output<AkamaiAccessControlArgs> getAkamai() {
+    public Output<AkamaiAccessControlArgs> akamai() {
         return this.akamai == null ? Codegen.empty() : this.akamai;
     }
 
@@ -38,7 +38,7 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     @Import(name="ip")
       private final @Nullable Output<IPAccessControlArgs> ip;
 
-    public Output<IPAccessControlArgs> getIp() {
+    public Output<IPAccessControlArgs> ip() {
         return this.ip == null ? Codegen.empty() : this.ip;
     }
 

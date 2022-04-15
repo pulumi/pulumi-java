@@ -28,7 +28,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
@@ -39,7 +39,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="diskExclusionInput")
       private final @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
 
-    public Output<InMageDiskExclusionInputArgs> getDiskExclusionInput() {
+    public Output<InMageDiskExclusionInputArgs> diskExclusionInput() {
         return this.diskExclusionInput == null ? Codegen.empty() : this.diskExclusionInput;
     }
 
@@ -50,7 +50,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="disksToInclude")
       private final @Nullable Output<List<String>> disksToInclude;
 
-    public Output<List<String>> getDisksToInclude() {
+    public Output<List<String>> disksToInclude() {
         return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
     }
 
@@ -62,7 +62,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
@@ -73,7 +73,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="masterTargetId", required=true)
       private final Output<String> masterTargetId;
 
-    public Output<String> getMasterTargetId() {
+    public Output<String> masterTargetId() {
         return this.masterTargetId;
     }
 
@@ -84,7 +84,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="multiVmGroupId", required=true)
       private final Output<String> multiVmGroupId;
 
-    public Output<String> getMultiVmGroupId() {
+    public Output<String> multiVmGroupId() {
         return this.multiVmGroupId;
     }
 
@@ -95,7 +95,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="multiVmGroupName", required=true)
       private final Output<String> multiVmGroupName;
 
-    public Output<String> getMultiVmGroupName() {
+    public Output<String> multiVmGroupName() {
         return this.multiVmGroupName;
     }
 
@@ -106,7 +106,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="processServerId", required=true)
       private final Output<String> processServerId;
 
-    public Output<String> getProcessServerId() {
+    public Output<String> processServerId() {
         return this.processServerId;
     }
 
@@ -117,7 +117,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="retentionDrive", required=true)
       private final Output<String> retentionDrive;
 
-    public Output<String> getRetentionDrive() {
+    public Output<String> retentionDrive() {
         return this.retentionDrive;
     }
 
@@ -128,7 +128,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
-    public Output<String> getRunAsAccountId() {
+    public Output<String> runAsAccountId() {
         return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
     }
 
@@ -139,7 +139,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     @Import(name="vmFriendlyName")
       private final @Nullable Output<String> vmFriendlyName;
 
-    public Output<String> getVmFriendlyName() {
+    public Output<String> vmFriendlyName() {
         return this.vmFriendlyName == null ? Codegen.empty() : this.vmFriendlyName;
     }
 

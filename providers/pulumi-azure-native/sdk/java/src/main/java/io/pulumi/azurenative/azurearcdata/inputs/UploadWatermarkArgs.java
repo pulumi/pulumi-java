@@ -26,7 +26,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="logs")
       private final @Nullable Output<String> logs;
 
-    public Output<String> getLogs() {
+    public Output<String> logs() {
         return this.logs == null ? Codegen.empty() : this.logs;
     }
 
@@ -37,7 +37,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metrics")
       private final @Nullable Output<String> metrics;
 
-    public Output<String> getMetrics() {
+    public Output<String> metrics() {
         return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
@@ -48,7 +48,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="usages")
       private final @Nullable Output<String> usages;
 
-    public Output<String> getUsages() {
+    public Output<String> usages() {
         return this.usages == null ? Codegen.empty() : this.usages;
     }
 

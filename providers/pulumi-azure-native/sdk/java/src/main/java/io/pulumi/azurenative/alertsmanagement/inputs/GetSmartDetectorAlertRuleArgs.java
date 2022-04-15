@@ -22,7 +22,7 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
     @Import(name="alertRuleName", required=true)
       private final String alertRuleName;
 
-    public String getAlertRuleName() {
+    public String alertRuleName() {
         return this.alertRuleName;
     }
 
@@ -33,7 +33,7 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
     @Import(name="expandDetector")
       private final @Nullable Boolean expandDetector;
 
-    public Optional<Boolean> getExpandDetector() {
+    public Optional<Boolean> expandDetector() {
         return this.expandDetector == null ? Optional.empty() : Optional.ofNullable(this.expandDetector);
     }
 
@@ -44,7 +44,7 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

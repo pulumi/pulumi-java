@@ -35,14 +35,14 @@ public final class AutoPausePropertiesResponse {
      * Number of minutes of idle time before the Big Data pool is automatically paused.
      * 
     */
-    public Optional<Integer> getDelayInMinutes() {
+    public Optional<Integer> delayInMinutes() {
         return Optional.ofNullable(this.delayInMinutes);
     }
     /**
      * Whether auto-pausing is enabled for the Big Data pool.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

@@ -35,14 +35,14 @@ public final class DeploymentConfigurationResponse {
      * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
      * 
     */
-    public Optional<CloudServiceConfigurationResponse> getCloudServiceConfiguration() {
+    public Optional<CloudServiceConfigurationResponse> cloudServiceConfiguration() {
         return Optional.ofNullable(this.cloudServiceConfiguration);
     }
     /**
      * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
      * 
     */
-    public Optional<VirtualMachineConfigurationResponse> getVirtualMachineConfiguration() {
+    public Optional<VirtualMachineConfigurationResponse> virtualMachineConfiguration() {
         return Optional.ofNullable(this.virtualMachineConfiguration);
     }
 

@@ -28,7 +28,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
     @Import(name="dataDiskImages")
       private final @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
 
-    public List<GalleryDataDiskImageResponse> getDataDiskImages() {
+    public List<GalleryDataDiskImageResponse> dataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
 
@@ -39,7 +39,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
     @Import(name="osDiskImage")
       private final @Nullable GalleryOSDiskImageResponse osDiskImage;
 
-    public Optional<GalleryOSDiskImageResponse> getOsDiskImage() {
+    public Optional<GalleryOSDiskImageResponse> osDiskImage() {
         return this.osDiskImage == null ? Optional.empty() : Optional.ofNullable(this.osDiskImage);
     }
 
@@ -50,7 +50,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
     @Import(name="source")
       private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    public Optional<GalleryArtifactVersionSourceResponse> getSource() {
+    public Optional<GalleryArtifactVersionSourceResponse> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 

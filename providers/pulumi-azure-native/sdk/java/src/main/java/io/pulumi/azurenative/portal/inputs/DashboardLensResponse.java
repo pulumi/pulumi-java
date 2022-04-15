@@ -30,7 +30,7 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metadata")
       private final @Nullable Map<String,Object> metadata;
 
-    public Map<String,Object> getMetadata() {
+    public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 
@@ -41,7 +41,7 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="order", required=true)
       private final Integer order;
 
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 
@@ -52,7 +52,7 @@ public final class DashboardLensResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="parts", required=true)
       private final List<DashboardPartsResponse> parts;
 
-    public List<DashboardPartsResponse> getParts() {
+    public List<DashboardPartsResponse> parts() {
         return this.parts;
     }
 

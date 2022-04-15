@@ -26,7 +26,7 @@ public final class DPMContainerExtendedInfoResponse {
      * Last refresh time of the DPMContainer.
      * 
     */
-    public Optional<String> getLastRefreshedAt() {
+    public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
 

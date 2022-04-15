@@ -70,35 +70,35 @@ public final class TimeWindowCustomAlertRuleResponse {
      * The description of the custom alert.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The display name of the custom alert.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Status of the custom alert.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The maximum threshold.
      * 
     */
-    public Integer getMaxThreshold() {
+    public Integer maxThreshold() {
         return this.maxThreshold;
     }
     /**
      * The minimum threshold.
      * 
     */
-    public Integer getMinThreshold() {
+    public Integer minThreshold() {
         return this.minThreshold;
     }
     /**
@@ -106,14 +106,14 @@ public final class TimeWindowCustomAlertRuleResponse {
      * Expected value is 'TimeWindowCustomAlertRule'.
      * 
     */
-    public String getRuleType() {
+    public String ruleType() {
         return this.ruleType;
     }
     /**
      * The time window size in iso8601 format.
      * 
     */
-    public String getTimeWindowSize() {
+    public String timeWindowSize() {
         return this.timeWindowSize;
     }
 

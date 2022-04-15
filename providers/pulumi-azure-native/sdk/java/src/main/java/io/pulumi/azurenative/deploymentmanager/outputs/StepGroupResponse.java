@@ -56,35 +56,35 @@ public final class StepGroupResponse {
      * The list of step group names on which this step group depends on.
      * 
     */
-    public List<String> getDependsOnStepGroups() {
+    public List<String> dependsOnStepGroups() {
         return this.dependsOnStepGroups == null ? List.of() : this.dependsOnStepGroups;
     }
     /**
      * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
      * 
     */
-    public String getDeploymentTargetId() {
+    public String deploymentTargetId() {
         return this.deploymentTargetId;
     }
     /**
      * The name of the step group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of steps to be run after deploying the target.
      * 
     */
-    public List<PrePostStepResponse> getPostDeploymentSteps() {
+    public List<PrePostStepResponse> postDeploymentSteps() {
         return this.postDeploymentSteps == null ? List.of() : this.postDeploymentSteps;
     }
     /**
      * The list of steps to be run before deploying the target.
      * 
     */
-    public List<PrePostStepResponse> getPreDeploymentSteps() {
+    public List<PrePostStepResponse> preDeploymentSteps() {
         return this.preDeploymentSteps == null ? List.of() : this.preDeploymentSteps;
     }
 

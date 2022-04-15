@@ -26,7 +26,7 @@ public final class VideoTrackDescriptorResponse {
      * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

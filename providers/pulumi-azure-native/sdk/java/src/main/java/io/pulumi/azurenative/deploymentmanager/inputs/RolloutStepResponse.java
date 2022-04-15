@@ -29,7 +29,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="messages", required=true)
       private final List<MessageResponse> messages;
 
-    public List<MessageResponse> getMessages() {
+    public List<MessageResponse> messages() {
         return this.messages;
     }
 
@@ -40,7 +40,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -51,7 +51,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operationInfo", required=true)
       private final StepOperationInfoResponse operationInfo;
 
-    public StepOperationInfoResponse getOperationInfo() {
+    public StepOperationInfoResponse operationInfo() {
         return this.operationInfo;
     }
 
@@ -62,7 +62,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceOperations", required=true)
       private final List<ResourceOperationResponse> resourceOperations;
 
-    public List<ResourceOperationResponse> getResourceOperations() {
+    public List<ResourceOperationResponse> resourceOperations() {
         return this.resourceOperations;
     }
 
@@ -73,7 +73,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -84,7 +84,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="stepGroup")
       private final @Nullable String stepGroup;
 
-    public Optional<String> getStepGroup() {
+    public Optional<String> stepGroup() {
         return this.stepGroup == null ? Optional.empty() : Optional.ofNullable(this.stepGroup);
     }
 

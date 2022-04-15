@@ -26,7 +26,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> getArguments() {
+    public Output<List<ArgumentArgs>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -37,7 +37,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
-    public Output<String> getContextPath() {
+    public Output<String> contextPath() {
         return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
@@ -48,7 +48,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="file")
       private final @Nullable Output<String> file;
 
-    public Output<String> getFile() {
+    public Output<String> file() {
         return this.file == null ? Codegen.empty() : this.file;
     }
 
@@ -59,7 +59,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -70,7 +70,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="updateTriggerToken")
       private final @Nullable Output<String> updateTriggerToken;
 
-    public Output<String> getUpdateTriggerToken() {
+    public Output<String> updateTriggerToken() {
         return this.updateTriggerToken == null ? Codegen.empty() : this.updateTriggerToken;
     }
 
@@ -81,7 +81,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> getValues() {
+    public Output<List<SetValueArgs>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

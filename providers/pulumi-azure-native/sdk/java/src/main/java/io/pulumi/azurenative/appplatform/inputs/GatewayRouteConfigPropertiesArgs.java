@@ -28,7 +28,7 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
     @Import(name="appResourceId")
       private final @Nullable Output<String> appResourceId;
 
-    public Output<String> getAppResourceId() {
+    public Output<String> appResourceId() {
         return this.appResourceId == null ? Codegen.empty() : this.appResourceId;
     }
 
@@ -39,7 +39,7 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
     @Import(name="routes")
       private final @Nullable Output<List<GatewayApiRouteArgs>> routes;
 
-    public Output<List<GatewayApiRouteArgs>> getRoutes() {
+    public Output<List<GatewayApiRouteArgs>> routes() {
         return this.routes == null ? Codegen.empty() : this.routes;
     }
 

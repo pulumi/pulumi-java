@@ -27,7 +27,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -38,7 +38,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -49,7 +49,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideItem")
       private final @Nullable Output<Boolean> overrideItem;
 
-    public Output<Boolean> getOverrideItem() {
+    public Output<Boolean> overrideItem() {
         return this.overrideItem == null ? Codegen.empty() : this.overrideItem;
     }
 
@@ -71,7 +71,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
-    public Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> getProperties() {
+    public Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -82,7 +82,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -93,7 +93,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -104,7 +104,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<Either<String,ItemScope>> scope;
 
-    public Output<Either<String,ItemScope>> getScope() {
+    public Output<Either<String,ItemScope>> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -115,7 +115,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopePath", required=true)
       private final Output<String> scopePath;
 
-    public Output<String> getScopePath() {
+    public Output<String> scopePath() {
         return this.scopePath;
     }
 
@@ -126,7 +126,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,ItemType>> type;
 
-    public Output<Either<String,ItemType>> getType() {
+    public Output<Either<String,ItemType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

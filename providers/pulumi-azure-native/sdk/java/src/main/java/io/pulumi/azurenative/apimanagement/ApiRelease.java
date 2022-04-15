@@ -42,7 +42,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * @return Identifier of the API the release belongs to.
      * 
      */
-    public Output</* @Nullable */ String> getApiId() {
+    public Output</* @Nullable */ String> apiId() {
         return this.apiId;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * @return The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
      * 
      */
-    public Output<String> getCreatedDateTime() {
+    public Output<String> createdDateTime() {
         return this.createdDateTime;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * @return Release Notes
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -112,7 +112,7 @@ public class ApiRelease extends io.pulumi.resources.CustomResource {
      * @return The time the API release was updated.
      * 
      */
-    public Output<String> getUpdatedDateTime() {
+    public Output<String> updatedDateTime() {
         return this.updatedDateTime;
     }
 

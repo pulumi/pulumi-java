@@ -72,49 +72,49 @@ public final class GetDashboardResult {
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The dashboard lenses.
      * 
     */
-    public List<DashboardLensResponse> getLenses() {
+    public List<DashboardLensResponse> lenses() {
         return this.lenses == null ? List.of() : this.lenses;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The dashboard metadata.
      * 
     */
-    public Map<String,Object> getMetadata() {
+    public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

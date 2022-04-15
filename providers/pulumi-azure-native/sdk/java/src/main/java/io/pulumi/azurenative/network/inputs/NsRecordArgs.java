@@ -26,7 +26,7 @@ public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nsdname")
       private final @Nullable Output<String> nsdname;
 
-    public Output<String> getNsdname() {
+    public Output<String> nsdname() {
         return this.nsdname == null ? Codegen.empty() : this.nsdname;
     }
 

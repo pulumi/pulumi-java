@@ -28,7 +28,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,SourceKind>> kind;
 
-    public Output<Either<String,SourceKind>> getKind() {
+    public Output<Either<String,SourceKind>> kind() {
         return this.kind;
     }
 
@@ -39,7 +39,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
-    public Output<String> getSourceId() {
+    public Output<String> sourceId() {
         return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 

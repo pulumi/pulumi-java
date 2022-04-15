@@ -19,7 +19,7 @@ public final class GetAzureFirewallArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="azureFirewallName", required=true)
       private final String azureFirewallName;
 
-    public String getAzureFirewallName() {
+    public String azureFirewallName() {
         return this.azureFirewallName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAzureFirewallArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

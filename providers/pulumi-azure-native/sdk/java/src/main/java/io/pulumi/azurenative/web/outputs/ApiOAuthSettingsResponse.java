@@ -73,49 +73,49 @@ public final class ApiOAuthSettingsResponse {
      * Resource provider client id
      * 
     */
-    public Optional<String> getClientId() {
+    public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Client Secret needed for OAuth
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * OAuth parameters key is the name of parameter
      * 
     */
-    public Map<String,ApiOAuthSettingsParameterResponse> getCustomParameters() {
+    public Map<String,ApiOAuthSettingsParameterResponse> customParameters() {
         return this.customParameters == null ? Map.of() : this.customParameters;
     }
     /**
      * Identity provider
      * 
     */
-    public Optional<String> getIdentityProvider() {
+    public Optional<String> identityProvider() {
         return Optional.ofNullable(this.identityProvider);
     }
     /**
      * Read only properties for this oauth setting.
      * 
     */
-    public Optional<Object> getProperties() {
+    public Optional<Object> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Url
      * 
     */
-    public Optional<String> getRedirectUrl() {
+    public Optional<String> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
     /**
      * OAuth scopes
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
 

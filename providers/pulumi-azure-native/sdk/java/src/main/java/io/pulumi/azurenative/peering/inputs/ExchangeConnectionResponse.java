@@ -27,7 +27,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
     @Import(name="bgpSession")
       private final @Nullable BgpSessionResponse bgpSession;
 
-    public Optional<BgpSessionResponse> getBgpSession() {
+    public Optional<BgpSessionResponse> bgpSession() {
         return this.bgpSession == null ? Optional.empty() : Optional.ofNullable(this.bgpSession);
     }
 
@@ -38,7 +38,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
     @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
 
-    public Optional<String> getConnectionIdentifier() {
+    public Optional<String> connectionIdentifier() {
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
     }
 
@@ -49,7 +49,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
     @Import(name="connectionState", required=true)
       private final String connectionState;
 
-    public String getConnectionState() {
+    public String connectionState() {
         return this.connectionState;
     }
 
@@ -60,7 +60,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
     @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
-    public String getErrorMessage() {
+    public String errorMessage() {
         return this.errorMessage;
     }
 
@@ -71,7 +71,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
     @Import(name="peeringDBFacilityId")
       private final @Nullable Integer peeringDBFacilityId;
 
-    public Optional<Integer> getPeeringDBFacilityId() {
+    public Optional<Integer> peeringDBFacilityId() {
         return this.peeringDBFacilityId == null ? Optional.empty() : Optional.ofNullable(this.peeringDBFacilityId);
     }
 

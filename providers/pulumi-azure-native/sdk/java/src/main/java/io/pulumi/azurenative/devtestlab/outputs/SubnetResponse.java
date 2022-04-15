@@ -41,21 +41,21 @@ public final class SubnetResponse {
      * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
      * 
     */
-    public Optional<String> getAllowPublicIp() {
+    public Optional<String> allowPublicIp() {
         return Optional.ofNullable(this.allowPublicIp);
     }
     /**
      * The name of the subnet as seen in the lab.
      * 
     */
-    public Optional<String> getLabSubnetName() {
+    public Optional<String> labSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
     /**
      * The resource ID of the subnet.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
 

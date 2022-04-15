@@ -34,7 +34,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="alternateVerificationKeys")
       private final @Nullable Output<List<Object>> alternateVerificationKeys;
 
-    public Output<List<Object>> getAlternateVerificationKeys() {
+    public Output<List<Object>> alternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? Codegen.empty() : this.alternateVerificationKeys;
     }
 
@@ -45,7 +45,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="audience", required=true)
       private final Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience;
     }
 
@@ -56,7 +56,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
@@ -68,7 +68,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -79,7 +79,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="openIdConnectDiscoveryDocument")
       private final @Nullable Output<String> openIdConnectDiscoveryDocument;
 
-    public Output<String> getOpenIdConnectDiscoveryDocument() {
+    public Output<String> openIdConnectDiscoveryDocument() {
         return this.openIdConnectDiscoveryDocument == null ? Codegen.empty() : this.openIdConnectDiscoveryDocument;
     }
 
@@ -90,7 +90,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="primaryVerificationKey", required=true)
       private final Output<Object> primaryVerificationKey;
 
-    public Output<Object> getPrimaryVerificationKey() {
+    public Output<Object> primaryVerificationKey() {
         return this.primaryVerificationKey;
     }
 
@@ -101,7 +101,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="requiredClaims")
       private final @Nullable Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
 
-    public Output<List<ContentKeyPolicyTokenClaimArgs>> getRequiredClaims() {
+    public Output<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims() {
         return this.requiredClaims == null ? Codegen.empty() : this.requiredClaims;
     }
 
@@ -112,7 +112,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
     @Import(name="restrictionTokenType", required=true)
       private final Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
 
-    public Output<Either<String,ContentKeyPolicyRestrictionTokenType>> getRestrictionTokenType() {
+    public Output<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType() {
         return this.restrictionTokenType;
     }
 

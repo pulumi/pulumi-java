@@ -73,49 +73,49 @@ public final class ObjectStatusDefinitionResponse {
      * Object reference to the Kustomization that applied this object
      * 
     */
-    public Optional<ObjectReferenceDefinitionResponse> getAppliedBy() {
+    public Optional<ObjectReferenceDefinitionResponse> appliedBy() {
         return Optional.ofNullable(this.appliedBy);
     }
     /**
      * Compliance state of the applied object showing whether the applied object has come into a ready state on the cluster.
      * 
     */
-    public Optional<String> getComplianceState() {
+    public Optional<String> complianceState() {
         return Optional.ofNullable(this.complianceState);
     }
     /**
      * Additional properties that are provided from objects of the HelmRelease kind
      * 
     */
-    public Optional<HelmReleasePropertiesDefinitionResponse> getHelmReleaseProperties() {
+    public Optional<HelmReleasePropertiesDefinitionResponse> helmReleaseProperties() {
         return Optional.ofNullable(this.helmReleaseProperties);
     }
     /**
      * Kind of the applied object
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Name of the applied object
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace of the applied object
      * 
     */
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * List of Kubernetes object status conditions present on the cluster
      * 
     */
-    public List<ObjectStatusConditionDefinitionResponse> getStatusConditions() {
+    public List<ObjectStatusConditionDefinitionResponse> statusConditions() {
         return this.statusConditions == null ? List.of() : this.statusConditions;
     }
 

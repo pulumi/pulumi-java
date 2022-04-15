@@ -26,7 +26,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
     @Import(name="environmentFolderName")
       private final @Nullable String environmentFolderName;
 
-    public Optional<String> getEnvironmentFolderName() {
+    public Optional<String> environmentFolderName() {
         return this.environmentFolderName == null ? Optional.empty() : Optional.ofNullable(this.environmentFolderName);
     }
 
@@ -37,7 +37,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
     @Import(name="environmentName")
       private final @Nullable String environmentName;
 
-    public Optional<String> getEnvironmentName() {
+    public Optional<String> environmentName() {
         return this.environmentName == null ? Optional.empty() : Optional.ofNullable(this.environmentName);
     }
 
@@ -48,7 +48,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable Double id;
 
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -59,7 +59,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
     @Import(name="referenceType")
       private final @Nullable String referenceType;
 
-    public Optional<String> getReferenceType() {
+    public Optional<String> referenceType() {
         return this.referenceType == null ? Optional.empty() : Optional.ofNullable(this.referenceType);
     }
 

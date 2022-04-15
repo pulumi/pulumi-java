@@ -34,14 +34,14 @@ public final class StorageAccountResponse {
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getAccountKey() {
+    public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
 

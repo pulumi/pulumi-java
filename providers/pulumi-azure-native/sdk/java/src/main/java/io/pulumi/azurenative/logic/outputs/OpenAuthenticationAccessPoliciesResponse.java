@@ -27,7 +27,7 @@ public final class OpenAuthenticationAccessPoliciesResponse {
      * Open authentication policies.
      * 
     */
-    public Map<String,OpenAuthenticationAccessPolicyResponse> getPolicies() {
+    public Map<String,OpenAuthenticationAccessPolicyResponse> policies() {
         return this.policies == null ? Map.of() : this.policies;
     }
 

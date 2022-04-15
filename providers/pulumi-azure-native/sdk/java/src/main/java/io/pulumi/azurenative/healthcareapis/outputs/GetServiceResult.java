@@ -94,70 +94,70 @@ public final class GetServiceResult {
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
      * 
     */
-    public Optional<ServicesResourceResponseIdentity> getIdentity() {
+    public Optional<ServicesResourceResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the service.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The common properties of a service.
      * 
     */
-    public ServicesPropertiesResponse getProperties() {
+    public ServicesPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -33,14 +33,14 @@ public final class KeyVaultSecretReferenceResponse {
      * The URL referencing a secret in a Key Vault.
      * 
     */
-    public String getSecretUrl() {
+    public String secretUrl() {
         return this.secretUrl;
     }
     /**
      * The relative URL of the Key Vault containing the secret.
      * 
     */
-    public SubResourceResponse getSourceVault() {
+    public SubResourceResponse sourceVault() {
         return this.sourceVault;
     }
 

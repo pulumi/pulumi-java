@@ -31,7 +31,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
-    public Output<Map<String,Object>> getMetadata() {
+    public Output<Map<String,Object>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -42,7 +42,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 
@@ -53,7 +53,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parts", required=true)
       private final Output<List<DashboardPartsArgs>> parts;
 
-    public Output<List<DashboardPartsArgs>> getParts() {
+    public Output<List<DashboardPartsArgs>> parts() {
         return this.parts;
     }
 

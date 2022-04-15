@@ -25,7 +25,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="categories", required=true)
       private final Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
+    public Output<List<String>> categories() {
         return this.categories;
     }
 
@@ -36,7 +36,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -47,7 +47,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locations", required=true)
       private final Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
+    public Output<List<String>> locations() {
         return this.locations;
     }
 
@@ -58,7 +58,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logProfileName")
       private final @Nullable Output<String> logProfileName;
 
-    public Output<String> getLogProfileName() {
+    public Output<String> logProfileName() {
         return this.logProfileName == null ? Codegen.empty() : this.logProfileName;
     }
 
@@ -69,7 +69,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy", required=true)
       private final Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+    public Output<RetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy;
     }
 
@@ -80,7 +80,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
 
-    public Output<String> getServiceBusRuleId() {
+    public Output<String> serviceBusRuleId() {
         return this.serviceBusRuleId == null ? Codegen.empty() : this.serviceBusRuleId;
     }
 
@@ -91,7 +91,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
-    public Output<String> getStorageAccountId() {
+    public Output<String> storageAccountId() {
         return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
     }
 
@@ -102,7 +102,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

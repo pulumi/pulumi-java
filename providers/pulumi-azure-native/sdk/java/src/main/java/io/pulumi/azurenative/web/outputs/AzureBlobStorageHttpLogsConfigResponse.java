@@ -45,7 +45,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
@@ -54,14 +54,14 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
      * 0 or lower means no retention.
      * 
     */
-    public Optional<Integer> getRetentionInDays() {
+    public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
      * SAS url to a azure blob container with read/write/list/delete permissions.
      * 
     */
-    public Optional<String> getSasUrl() {
+    public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }
 

@@ -22,7 +22,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="body")
       private final @Nullable String body;
 
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
@@ -33,7 +33,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -44,7 +44,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -55,7 +55,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="rid", required=true)
       private final String rid;
 
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
 
@@ -66,7 +66,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="triggerOperation")
       private final @Nullable String triggerOperation;
 
-    public Optional<String> getTriggerOperation() {
+    public Optional<String> triggerOperation() {
         return this.triggerOperation == null ? Optional.empty() : Optional.ofNullable(this.triggerOperation);
     }
 
@@ -77,7 +77,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="triggerType")
       private final @Nullable String triggerType;
 
-    public Optional<String> getTriggerType() {
+    public Optional<String> triggerType() {
         return this.triggerType == null ? Optional.empty() : Optional.ofNullable(this.triggerType);
     }
 
@@ -88,7 +88,7 @@ public final class SqlTriggerGetPropertiesResponseResource extends io.pulumi.res
     @Import(name="ts", required=true)
       private final Double ts;
 
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

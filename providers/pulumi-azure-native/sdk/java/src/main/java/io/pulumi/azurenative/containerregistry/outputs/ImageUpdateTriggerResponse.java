@@ -43,21 +43,21 @@ public final class ImageUpdateTriggerResponse {
      * The unique ID of the trigger.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The list of image updates that caused the build.
      * 
     */
-    public List<ImageDescriptorResponse> getImages() {
+    public List<ImageDescriptorResponse> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
      * The timestamp when the image update happened.
      * 
     */
-    public Optional<String> getTimestamp() {
+    public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
 

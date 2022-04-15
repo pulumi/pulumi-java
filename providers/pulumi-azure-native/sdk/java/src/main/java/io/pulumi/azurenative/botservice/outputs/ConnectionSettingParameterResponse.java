@@ -34,14 +34,14 @@ public final class ConnectionSettingParameterResponse {
      * Key for the Connection Setting Parameter.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Value associated with the Connection Setting Parameter.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

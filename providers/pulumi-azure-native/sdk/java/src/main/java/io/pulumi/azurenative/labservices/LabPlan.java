@@ -48,7 +48,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The allowed regions for the lab creator to use when creating labs using this lab plan.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAllowedRegions() {
+    public Output</* @Nullable */ List<String>> allowedRegions() {
         return this.allowedRegions;
     }
     /**
@@ -62,7 +62,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
      * 
      */
-    public Output</* @Nullable */ AutoShutdownProfileResponse> getDefaultAutoShutdownProfile() {
+    public Output</* @Nullable */ AutoShutdownProfileResponse> defaultAutoShutdownProfile() {
         return this.defaultAutoShutdownProfile;
     }
     /**
@@ -76,7 +76,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
      * 
      */
-    public Output</* @Nullable */ ConnectionProfileResponse> getDefaultConnectionProfile() {
+    public Output</* @Nullable */ ConnectionProfileResponse> defaultConnectionProfile() {
         return this.defaultConnectionProfile;
     }
     /**
@@ -90,7 +90,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
      * 
      */
-    public Output</* @Nullable */ LabPlanNetworkProfileResponse> getDefaultNetworkProfile() {
+    public Output</* @Nullable */ LabPlanNetworkProfileResponse> defaultNetworkProfile() {
         return this.defaultNetworkProfile;
     }
     /**
@@ -104,7 +104,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return Base Url of the lms instance this lab plan can link lab rosters against.
      * 
      */
-    public Output</* @Nullable */ String> getLinkedLmsInstance() {
+    public Output</* @Nullable */ String> linkedLmsInstance() {
         return this.linkedLmsInstance;
     }
     /**
@@ -118,7 +118,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -132,7 +132,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return Current provisioning state of the lab plan.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -160,7 +160,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
      * 
      */
-    public Output</* @Nullable */ String> getSharedGalleryId() {
+    public Output</* @Nullable */ String> sharedGalleryId() {
         return this.sharedGalleryId;
     }
     /**
@@ -174,7 +174,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
      * 
      */
-    public Output</* @Nullable */ SupportInfoResponse> getSupportInfo() {
+    public Output</* @Nullable */ SupportInfoResponse> supportInfo() {
         return this.supportInfo;
     }
     /**
@@ -188,7 +188,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the lab plan.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -202,7 +202,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -216,7 +216,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

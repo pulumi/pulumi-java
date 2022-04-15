@@ -42,7 +42,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return The type of private cloud addon
      * 
      */
-    public Output</* @Nullable */ String> getAddonType() {
+    public Output</* @Nullable */ String> addonType() {
         return this.addonType;
     }
     /**
@@ -56,7 +56,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return The SRM license
      * 
      */
-    public Output</* @Nullable */ String> getLicenseKey() {
+    public Output</* @Nullable */ String> licenseKey() {
         return this.licenseKey;
     }
     /**
@@ -70,7 +70,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return The state of the addon provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -98,7 +98,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

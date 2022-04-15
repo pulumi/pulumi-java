@@ -35,14 +35,14 @@ public final class AdaptiveApplicationControlIssueSummaryResponse {
      * An alert that machines within a group can have
      * 
     */
-    public Optional<String> getIssue() {
+    public Optional<String> issue() {
         return Optional.ofNullable(this.issue);
     }
     /**
      * The number of machines in the group that have this alert
      * 
     */
-    public Optional<Double> getNumberOfVms() {
+    public Optional<Double> numberOfVms() {
         return Optional.ofNullable(this.numberOfVms);
     }
 

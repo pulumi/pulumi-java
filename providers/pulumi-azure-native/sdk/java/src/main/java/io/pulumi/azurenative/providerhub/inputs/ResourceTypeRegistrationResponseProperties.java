@@ -36,203 +36,203 @@ public final class ResourceTypeRegistrationResponseProperties extends io.pulumi.
     @Import(name="allowedUnauthorizedActions")
       private final @Nullable List<String> allowedUnauthorizedActions;
 
-    public List<String> getAllowedUnauthorizedActions() {
+    public List<String> allowedUnauthorizedActions() {
         return this.allowedUnauthorizedActions == null ? List.of() : this.allowedUnauthorizedActions;
     }
 
     @Import(name="authorizationActionMappings")
       private final @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings;
 
-    public List<AuthorizationActionMappingResponse> getAuthorizationActionMappings() {
+    public List<AuthorizationActionMappingResponse> authorizationActionMappings() {
         return this.authorizationActionMappings == null ? List.of() : this.authorizationActionMappings;
     }
 
     @Import(name="checkNameAvailabilitySpecifications")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications> getCheckNameAvailabilitySpecifications() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications> checkNameAvailabilitySpecifications() {
         return this.checkNameAvailabilitySpecifications == null ? Optional.empty() : Optional.ofNullable(this.checkNameAvailabilitySpecifications);
     }
 
     @Import(name="defaultApiVersion")
       private final @Nullable String defaultApiVersion;
 
-    public Optional<String> getDefaultApiVersion() {
+    public Optional<String> defaultApiVersion() {
         return this.defaultApiVersion == null ? Optional.empty() : Optional.ofNullable(this.defaultApiVersion);
     }
 
     @Import(name="disallowedActionVerbs")
       private final @Nullable List<String> disallowedActionVerbs;
 
-    public List<String> getDisallowedActionVerbs() {
+    public List<String> disallowedActionVerbs() {
         return this.disallowedActionVerbs == null ? List.of() : this.disallowedActionVerbs;
     }
 
     @Import(name="enableAsyncOperation")
       private final @Nullable Boolean enableAsyncOperation;
 
-    public Optional<Boolean> getEnableAsyncOperation() {
+    public Optional<Boolean> enableAsyncOperation() {
         return this.enableAsyncOperation == null ? Optional.empty() : Optional.ofNullable(this.enableAsyncOperation);
     }
 
     @Import(name="enableThirdPartyS2S")
       private final @Nullable Boolean enableThirdPartyS2S;
 
-    public Optional<Boolean> getEnableThirdPartyS2S() {
+    public Optional<Boolean> enableThirdPartyS2S() {
         return this.enableThirdPartyS2S == null ? Optional.empty() : Optional.ofNullable(this.enableThirdPartyS2S);
     }
 
     @Import(name="endpoints")
       private final @Nullable List<ResourceTypeEndpointResponse> endpoints;
 
-    public List<ResourceTypeEndpointResponse> getEndpoints() {
+    public List<ResourceTypeEndpointResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
     @Import(name="extendedLocations")
       private final @Nullable List<ExtendedLocationOptionsResponse> extendedLocations;
 
-    public List<ExtendedLocationOptionsResponse> getExtendedLocations() {
+    public List<ExtendedLocationOptionsResponse> extendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
 
     @Import(name="extensionOptions")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseExtensionOptions> getExtensionOptions() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseExtensionOptions> extensionOptions() {
         return this.extensionOptions == null ? Optional.empty() : Optional.ofNullable(this.extensionOptions);
     }
 
     @Import(name="featuresRule")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseFeaturesRule> getFeaturesRule() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseFeaturesRule> featuresRule() {
         return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
     }
 
     @Import(name="identityManagement")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseIdentityManagement> getIdentityManagement() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseIdentityManagement> identityManagement() {
         return this.identityManagement == null ? Optional.empty() : Optional.ofNullable(this.identityManagement);
     }
 
     @Import(name="isPureProxy")
       private final @Nullable Boolean isPureProxy;
 
-    public Optional<Boolean> getIsPureProxy() {
+    public Optional<Boolean> isPureProxy() {
         return this.isPureProxy == null ? Optional.empty() : Optional.ofNullable(this.isPureProxy);
     }
 
     @Import(name="linkedAccessChecks")
       private final @Nullable List<LinkedAccessCheckResponse> linkedAccessChecks;
 
-    public List<LinkedAccessCheckResponse> getLinkedAccessChecks() {
+    public List<LinkedAccessCheckResponse> linkedAccessChecks() {
         return this.linkedAccessChecks == null ? List.of() : this.linkedAccessChecks;
     }
 
     @Import(name="loggingRules")
       private final @Nullable List<LoggingRuleResponse> loggingRules;
 
-    public List<LoggingRuleResponse> getLoggingRules() {
+    public List<LoggingRuleResponse> loggingRules() {
         return this.loggingRules == null ? List.of() : this.loggingRules;
     }
 
     @Import(name="marketplaceType")
       private final @Nullable String marketplaceType;
 
-    public Optional<String> getMarketplaceType() {
+    public Optional<String> marketplaceType() {
         return this.marketplaceType == null ? Optional.empty() : Optional.ofNullable(this.marketplaceType);
     }
 
     @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="regionality")
       private final @Nullable String regionality;
 
-    public Optional<String> getRegionality() {
+    public Optional<String> regionality() {
         return this.regionality == null ? Optional.empty() : Optional.ofNullable(this.regionality);
     }
 
     @Import(name="requestHeaderOptions")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions> getRequestHeaderOptions() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions> requestHeaderOptions() {
         return this.requestHeaderOptions == null ? Optional.empty() : Optional.ofNullable(this.requestHeaderOptions);
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
-    public List<String> getRequiredFeatures() {
+    public List<String> requiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
     @Import(name="resourceDeletionPolicy")
       private final @Nullable String resourceDeletionPolicy;
 
-    public Optional<String> getResourceDeletionPolicy() {
+    public Optional<String> resourceDeletionPolicy() {
         return this.resourceDeletionPolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceDeletionPolicy);
     }
 
     @Import(name="resourceMovePolicy")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseResourceMovePolicy> getResourceMovePolicy() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseResourceMovePolicy> resourceMovePolicy() {
         return this.resourceMovePolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceMovePolicy);
     }
 
     @Import(name="routingType")
       private final @Nullable String routingType;
 
-    public Optional<String> getRoutingType() {
+    public Optional<String> routingType() {
         return this.routingType == null ? Optional.empty() : Optional.ofNullable(this.routingType);
     }
 
     @Import(name="serviceTreeInfos")
       private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
-    public List<ServiceTreeInfoResponse> getServiceTreeInfos() {
+    public List<ServiceTreeInfoResponse> serviceTreeInfos() {
         return this.serviceTreeInfos == null ? List.of() : this.serviceTreeInfos;
     }
 
     @Import(name="subscriptionLifecycleNotificationSpecifications")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> getSubscriptionLifecycleNotificationSpecifications() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> subscriptionLifecycleNotificationSpecifications() {
         return this.subscriptionLifecycleNotificationSpecifications == null ? Optional.empty() : Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
 
     @Import(name="subscriptionStateRules")
       private final @Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules;
 
-    public List<SubscriptionStateRuleResponse> getSubscriptionStateRules() {
+    public List<SubscriptionStateRuleResponse> subscriptionStateRules() {
         return this.subscriptionStateRules == null ? List.of() : this.subscriptionStateRules;
     }
 
     @Import(name="swaggerSpecifications")
       private final @Nullable List<SwaggerSpecificationResponse> swaggerSpecifications;
 
-    public List<SwaggerSpecificationResponse> getSwaggerSpecifications() {
+    public List<SwaggerSpecificationResponse> swaggerSpecifications() {
         return this.swaggerSpecifications == null ? List.of() : this.swaggerSpecifications;
     }
 
     @Import(name="templateDeploymentOptions")
       private final @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
-    public Optional<ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions> getTemplateDeploymentOptions() {
+    public Optional<ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions> templateDeploymentOptions() {
         return this.templateDeploymentOptions == null ? Optional.empty() : Optional.ofNullable(this.templateDeploymentOptions);
     }
 
     @Import(name="throttlingRules")
       private final @Nullable List<ThrottlingRuleResponse> throttlingRules;
 
-    public List<ThrottlingRuleResponse> getThrottlingRules() {
+    public List<ThrottlingRuleResponse> throttlingRules() {
         return this.throttlingRules == null ? List.of() : this.throttlingRules;
     }
 

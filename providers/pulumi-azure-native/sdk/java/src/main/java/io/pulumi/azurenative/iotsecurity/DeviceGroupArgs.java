@@ -22,7 +22,7 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceGroupName")
       private final @Nullable Output<String> deviceGroupName;
 
-    public Output<String> getDeviceGroupName() {
+    public Output<String> deviceGroupName() {
         return this.deviceGroupName == null ? Codegen.empty() : this.deviceGroupName;
     }
 
@@ -33,7 +33,7 @@ public final class DeviceGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iotDefenderLocation", required=true)
       private final Output<String> iotDefenderLocation;
 
-    public Output<String> getIotDefenderLocation() {
+    public Output<String> iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
 

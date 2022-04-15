@@ -23,7 +23,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="frequencyInMinutes", required=true)
       private final Integer frequencyInMinutes;
 
-    public Integer getFrequencyInMinutes() {
+    public Integer frequencyInMinutes() {
         return this.frequencyInMinutes;
     }
 
@@ -34,7 +34,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeWindowInMinutes", required=true)
       private final Integer timeWindowInMinutes;
 
-    public Integer getTimeWindowInMinutes() {
+    public Integer timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
 

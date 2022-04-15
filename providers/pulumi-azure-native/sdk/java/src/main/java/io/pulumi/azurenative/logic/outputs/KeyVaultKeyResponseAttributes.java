@@ -42,21 +42,21 @@ public final class KeyVaultKeyResponseAttributes {
      * When the key was created.
      * 
     */
-    public Optional<Double> getCreated() {
+    public Optional<Double> created() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Whether the key is enabled or not.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * When the key was updated.
      * 
     */
-    public Optional<Double> getUpdated() {
+    public Optional<Double> updated() {
         return Optional.ofNullable(this.updated);
     }
 

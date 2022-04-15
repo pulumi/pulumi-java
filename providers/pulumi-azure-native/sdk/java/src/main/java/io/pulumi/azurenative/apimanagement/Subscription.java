@@ -43,7 +43,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Determines whether tracing is enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowTracing() {
+    public Output</* @Nullable */ Boolean> allowTracing() {
         return this.allowTracing;
     }
     /**
@@ -57,7 +57,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -71,7 +71,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The name of the subscription, or null if the subscription has no name.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +85,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     /**
@@ -99,7 +99,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationDate() {
+    public Output</* @Nullable */ String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -113,7 +113,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> getNotificationDate() {
+    public Output</* @Nullable */ String> notificationDate() {
         return this.notificationDate;
     }
     /**
@@ -141,7 +141,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
      * 
      */
-    public Output</* @Nullable */ String> getOwnerId() {
+    public Output</* @Nullable */ String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -155,7 +155,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryKey() {
+    public Output</* @Nullable */ String> primaryKey() {
         return this.primaryKey;
     }
     /**
@@ -169,7 +169,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Scope like /products/{productId} or /apis or /apis/{apiId}.
      * 
      */
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
     /**
@@ -183,7 +183,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryKey() {
+    public Output</* @Nullable */ String> secondaryKey() {
         return this.secondaryKey;
     }
     /**
@@ -197,7 +197,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> getStartDate() {
+    public Output</* @Nullable */ String> startDate() {
         return this.startDate;
     }
     /**
@@ -211,7 +211,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -225,7 +225,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
      * 
      */
-    public Output</* @Nullable */ String> getStateComment() {
+    public Output</* @Nullable */ String> stateComment() {
         return this.stateComment;
     }
     /**
@@ -239,7 +239,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

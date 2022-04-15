@@ -94,70 +94,70 @@ public final class GetProximityPlacementGroupResult {
      * A list of references to all availability sets in the proximity placement group.
      * 
     */
-    public List<SubResourceWithColocationStatusResponse> getAvailabilitySets() {
+    public List<SubResourceWithColocationStatusResponse> availabilitySets() {
         return this.availabilitySets;
     }
     /**
      * Describes colocation status of the Proximity Placement Group.
      * 
     */
-    public Optional<InstanceViewStatusResponse> getColocationStatus() {
+    public Optional<InstanceViewStatusResponse> colocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
      * 
     */
-    public Optional<String> getProximityPlacementGroupType() {
+    public Optional<String> proximityPlacementGroupType() {
         return Optional.ofNullable(this.proximityPlacementGroupType);
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of references to all virtual machine scale sets in the proximity placement group.
      * 
     */
-    public List<SubResourceWithColocationStatusResponse> getVirtualMachineScaleSets() {
+    public List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets() {
         return this.virtualMachineScaleSets;
     }
     /**
      * A list of references to all virtual machines in the proximity placement group.
      * 
     */
-    public List<SubResourceWithColocationStatusResponse> getVirtualMachines() {
+    public List<SubResourceWithColocationStatusResponse> virtualMachines() {
         return this.virtualMachines;
     }
 

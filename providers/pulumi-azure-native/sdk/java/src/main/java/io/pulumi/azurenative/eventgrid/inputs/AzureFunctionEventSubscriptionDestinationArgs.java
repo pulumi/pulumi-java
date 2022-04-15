@@ -28,7 +28,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -39,7 +39,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
     @Import(name="maxEventsPerBatch")
       private final @Nullable Output<Integer> maxEventsPerBatch;
 
-    public Output<Integer> getMaxEventsPerBatch() {
+    public Output<Integer> maxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Codegen.empty() : this.maxEventsPerBatch;
     }
 
@@ -50,7 +50,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
     @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Output<Integer> preferredBatchSizeInKilobytes;
 
-    public Output<Integer> getPreferredBatchSizeInKilobytes() {
+    public Output<Integer> preferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Codegen.empty() : this.preferredBatchSizeInKilobytes;
     }
 
@@ -61,7 +61,7 @@ public final class AzureFunctionEventSubscriptionDestinationArgs extends io.pulu
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 

@@ -34,14 +34,14 @@ public final class ListAccountKeysResult {
      * Gets or sets the primary connection string.
      * 
     */
-    public Optional<String> getAtlasKafkaPrimaryEndpoint() {
+    public Optional<String> atlasKafkaPrimaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaPrimaryEndpoint);
     }
     /**
      * Gets or sets the secondary connection string.
      * 
     */
-    public Optional<String> getAtlasKafkaSecondaryEndpoint() {
+    public Optional<String> atlasKafkaSecondaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaSecondaryEndpoint);
     }
 

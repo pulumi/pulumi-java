@@ -111,91 +111,91 @@ public final class GetWebAppHostNameBindingResult {
      * Azure resource name.
      * 
     */
-    public Optional<String> getAzureResourceName() {
+    public Optional<String> azureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
     /**
      * Azure resource type.
      * 
     */
-    public Optional<String> getAzureResourceType() {
+    public Optional<String> azureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
     /**
      * Custom DNS record type.
      * 
     */
-    public Optional<String> getCustomHostNameDnsRecordType() {
+    public Optional<String> customHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
     /**
      * Fully qualified ARM domain resource URI.
      * 
     */
-    public Optional<String> getDomainId() {
+    public Optional<String> domainId() {
         return Optional.ofNullable(this.domainId);
     }
     /**
      * Hostname type.
      * 
     */
-    public Optional<String> getHostNameType() {
+    public Optional<String> hostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * App Service app name.
      * 
     */
-    public Optional<String> getSiteName() {
+    public Optional<String> siteName() {
         return Optional.ofNullable(this.siteName);
     }
     /**
      * SSL type
      * 
     */
-    public Optional<String> getSslState() {
+    public Optional<String> sslState() {
         return Optional.ofNullable(this.sslState);
     }
     /**
      * SSL certificate thumbprint
      * 
     */
-    public Optional<String> getThumbprint() {
+    public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
     */
-    public String getVirtualIP() {
+    public String virtualIP() {
         return this.virtualIP;
     }
 

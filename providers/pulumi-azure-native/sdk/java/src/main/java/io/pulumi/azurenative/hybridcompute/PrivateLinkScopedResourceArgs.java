@@ -22,7 +22,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     @Import(name="linkedResourceId")
       private final @Nullable Output<String> linkedResourceId;
 
-    public Output<String> getLinkedResourceId() {
+    public Output<String> linkedResourceId() {
         return this.linkedResourceId == null ? Codegen.empty() : this.linkedResourceId;
     }
 
@@ -33,7 +33,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -44,7 +44,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     @Import(name="scopeName", required=true)
       private final Output<String> scopeName;
 
-    public Output<String> getScopeName() {
+    public Output<String> scopeName() {
         return this.scopeName;
     }
 

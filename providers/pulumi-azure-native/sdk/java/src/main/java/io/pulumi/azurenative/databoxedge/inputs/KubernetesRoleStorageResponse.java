@@ -27,7 +27,7 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
     @Import(name="endpoints")
       private final @Nullable List<MountPointMapResponse> endpoints;
 
-    public List<MountPointMapResponse> getEndpoints() {
+    public List<MountPointMapResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
@@ -38,7 +38,7 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
     @Import(name="storageClasses", required=true)
       private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
-    public List<KubernetesRoleStorageClassInfoResponse> getStorageClasses() {
+    public List<KubernetesRoleStorageClassInfoResponse> storageClasses() {
         return this.storageClasses;
     }
 

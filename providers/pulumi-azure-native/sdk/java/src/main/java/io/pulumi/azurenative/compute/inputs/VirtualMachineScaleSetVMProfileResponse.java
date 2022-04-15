@@ -33,7 +33,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="billingProfile")
       private final @Nullable BillingProfileResponse billingProfile;
 
-    public Optional<BillingProfileResponse> getBillingProfile() {
+    public Optional<BillingProfileResponse> billingProfile() {
         return this.billingProfile == null ? Optional.empty() : Optional.ofNullable(this.billingProfile);
     }
 
@@ -44,7 +44,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="diagnosticsProfile")
       private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
-    public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
+    public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return this.diagnosticsProfile == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsProfile);
     }
 
@@ -55,7 +55,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="evictionPolicy")
       private final @Nullable String evictionPolicy;
 
-    public Optional<String> getEvictionPolicy() {
+    public Optional<String> evictionPolicy() {
         return this.evictionPolicy == null ? Optional.empty() : Optional.ofNullable(this.evictionPolicy);
     }
 
@@ -66,7 +66,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="extensionProfile")
       private final @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile;
 
-    public Optional<VirtualMachineScaleSetExtensionProfileResponse> getExtensionProfile() {
+    public Optional<VirtualMachineScaleSetExtensionProfileResponse> extensionProfile() {
         return this.extensionProfile == null ? Optional.empty() : Optional.ofNullable(this.extensionProfile);
     }
 
@@ -77,7 +77,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="licenseType")
       private final @Nullable String licenseType;
 
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
@@ -88,7 +88,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="networkProfile")
       private final @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile;
 
-    public Optional<VirtualMachineScaleSetNetworkProfileResponse> getNetworkProfile() {
+    public Optional<VirtualMachineScaleSetNetworkProfileResponse> networkProfile() {
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
     }
 
@@ -99,7 +99,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="osProfile")
       private final @Nullable VirtualMachineScaleSetOSProfileResponse osProfile;
 
-    public Optional<VirtualMachineScaleSetOSProfileResponse> getOsProfile() {
+    public Optional<VirtualMachineScaleSetOSProfileResponse> osProfile() {
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
@@ -110,7 +110,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="priority")
       private final @Nullable String priority;
 
-    public Optional<String> getPriority() {
+    public Optional<String> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -121,7 +121,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="scheduledEventsProfile")
       private final @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
 
-    public Optional<ScheduledEventsProfileResponse> getScheduledEventsProfile() {
+    public Optional<ScheduledEventsProfileResponse> scheduledEventsProfile() {
         return this.scheduledEventsProfile == null ? Optional.empty() : Optional.ofNullable(this.scheduledEventsProfile);
     }
 
@@ -132,7 +132,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="securityProfile")
       private final @Nullable SecurityProfileResponse securityProfile;
 
-    public Optional<SecurityProfileResponse> getSecurityProfile() {
+    public Optional<SecurityProfileResponse> securityProfile() {
         return this.securityProfile == null ? Optional.empty() : Optional.ofNullable(this.securityProfile);
     }
 
@@ -143,7 +143,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="storageProfile")
       private final @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile;
 
-    public Optional<VirtualMachineScaleSetStorageProfileResponse> getStorageProfile() {
+    public Optional<VirtualMachineScaleSetStorageProfileResponse> storageProfile() {
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
     }
 
@@ -154,7 +154,7 @@ public final class VirtualMachineScaleSetVMProfileResponse extends io.pulumi.res
     @Import(name="userData")
       private final @Nullable String userData;
 
-    public Optional<String> getUserData() {
+    public Optional<String> userData() {
         return this.userData == null ? Optional.empty() : Optional.ofNullable(this.userData);
     }
 

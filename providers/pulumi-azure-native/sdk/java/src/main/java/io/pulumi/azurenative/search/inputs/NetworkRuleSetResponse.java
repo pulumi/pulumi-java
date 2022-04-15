@@ -26,7 +26,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="ipRules")
       private final @Nullable List<IpRuleResponse> ipRules;
 
-    public List<IpRuleResponse> getIpRules() {
+    public List<IpRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
 

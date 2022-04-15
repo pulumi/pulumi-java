@@ -22,7 +22,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
 
-    public Output<String> getBackupPolicyName() {
+    public Output<String> backupPolicyName() {
         return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
     }
 
@@ -33,7 +33,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties;
 
-    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> getProperties() {
+    public Output<io.pulumi.azurenative.dataprotection.inputs.BackupPolicyArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -44,7 +44,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
-    public Output<String> getVaultName() {
+    public Output<String> vaultName() {
         return this.vaultName;
     }
 

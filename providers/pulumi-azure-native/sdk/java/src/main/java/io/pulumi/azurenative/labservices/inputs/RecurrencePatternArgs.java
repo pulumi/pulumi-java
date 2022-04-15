@@ -30,7 +30,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="expirationDate", required=true)
       private final Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
 
@@ -41,7 +41,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frequency", required=true)
       private final Output<RecurrenceFrequency> frequency;
 
-    public Output<RecurrenceFrequency> getFrequency() {
+    public Output<RecurrenceFrequency> frequency() {
         return this.frequency;
     }
 
@@ -52,7 +52,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
@@ -63,7 +63,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
     @Import(name="weekDays")
       private final @Nullable Output<List<WeekDay>> weekDays;
 
-    public Output<List<WeekDay>> getWeekDays() {
+    public Output<List<WeekDay>> weekDays() {
         return this.weekDays == null ? Codegen.empty() : this.weekDays;
     }
 

@@ -41,7 +41,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -55,7 +55,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +69,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * @return The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetResourceId() {
+    public Output</* @Nullable */ String> subnetResourceId() {
         return this.subnetResourceId;
     }
     /**
@@ -83,7 +83,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * @return A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSwiftSupported() {
+    public Output</* @Nullable */ Boolean> swiftSupported() {
         return this.swiftSupported;
     }
     /**
@@ -97,7 +97,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * @return The system metadata relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -111,7 +111,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

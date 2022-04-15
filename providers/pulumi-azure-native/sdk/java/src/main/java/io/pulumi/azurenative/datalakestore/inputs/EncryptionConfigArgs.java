@@ -27,7 +27,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyVaultMetaInfo")
       private final @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
-    public Output<KeyVaultMetaInfoArgs> getKeyVaultMetaInfo() {
+    public Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo() {
         return this.keyVaultMetaInfo == null ? Codegen.empty() : this.keyVaultMetaInfo;
     }
 
@@ -38,7 +38,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<EncryptionConfigType> type;
 
-    public Output<EncryptionConfigType> getType() {
+    public Output<EncryptionConfigType> type() {
         return this.type;
     }
 

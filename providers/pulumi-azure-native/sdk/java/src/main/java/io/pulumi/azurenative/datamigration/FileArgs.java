@@ -23,7 +23,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
-    public Output<String> getFileName() {
+    public Output<String> fileName() {
         return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
@@ -34,7 +34,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
@@ -45,7 +45,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -56,7 +56,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ProjectFilePropertiesArgs> properties;
 
-    public Output<ProjectFilePropertiesArgs> getProperties() {
+    public Output<ProjectFilePropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -67,7 +67,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 

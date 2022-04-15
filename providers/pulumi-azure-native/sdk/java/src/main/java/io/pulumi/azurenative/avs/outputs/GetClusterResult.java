@@ -77,56 +77,56 @@ public final class GetClusterResult {
      * The identity
      * 
     */
-    public Integer getClusterId() {
+    public Integer clusterId() {
         return this.clusterId;
     }
     /**
      * The cluster size
      * 
     */
-    public Integer getClusterSize() {
+    public Integer clusterSize() {
         return this.clusterSize;
     }
     /**
      * The hosts
      * 
     */
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The state of the cluster provisioning
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The cluster SKU
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

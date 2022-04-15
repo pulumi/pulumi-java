@@ -26,7 +26,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="authentication")
       private final @Nullable Object authentication;
 
-    public Object getAuthentication() {
+    public Object authentication() {
         return this.authentication == null ? null : this.authentication;
     }
 
@@ -37,7 +37,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="body")
       private final @Nullable String body;
 
-    public Optional<String> getBody() {
+    public Optional<String> body() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
@@ -48,7 +48,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="headers")
       private final @Nullable Map<String,String> headers;
 
-    public Map<String,String> getHeaders() {
+    public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
 
@@ -59,7 +59,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="method")
       private final @Nullable String method;
 
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
@@ -70,7 +70,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="uri")
       private final @Nullable String uri;
 
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
     }
 

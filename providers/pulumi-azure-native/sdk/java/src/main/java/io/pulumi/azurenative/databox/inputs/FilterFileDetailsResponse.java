@@ -23,7 +23,7 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="filterFilePath", required=true)
       private final String filterFilePath;
 
-    public String getFilterFilePath() {
+    public String filterFilePath() {
         return this.filterFilePath;
     }
 
@@ -34,7 +34,7 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
     @Import(name="filterFileType", required=true)
       private final String filterFileType;
 
-    public String getFilterFileType() {
+    public String filterFileType() {
         return this.filterFileType;
     }
 

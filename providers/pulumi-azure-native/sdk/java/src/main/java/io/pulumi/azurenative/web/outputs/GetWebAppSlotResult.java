@@ -366,28 +366,28 @@ public final class GetWebAppSlotResult {
      * Management information availability state for the app.
      * 
     */
-    public String getAvailabilityState() {
+    public String availabilityState() {
         return this.availabilityState;
     }
     /**
      * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
      * 
     */
-    public Optional<Boolean> getClientAffinityEnabled() {
+    public Optional<Boolean> clientAffinityEnabled() {
         return Optional.ofNullable(this.clientAffinityEnabled);
     }
     /**
      * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
      * 
     */
-    public Optional<Boolean> getClientCertEnabled() {
+    public Optional<Boolean> clientCertEnabled() {
         return Optional.ofNullable(this.clientCertEnabled);
     }
     /**
      * client certificate authentication comma-separated exclusion paths
      * 
     */
-    public Optional<String> getClientCertExclusionPaths() {
+    public Optional<String> clientCertExclusionPaths() {
         return Optional.ofNullable(this.clientCertExclusionPaths);
     }
     /**
@@ -397,42 +397,42 @@ public final class GetWebAppSlotResult {
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
      * 
     */
-    public Optional<String> getClientCertMode() {
+    public Optional<String> clientCertMode() {
         return Optional.ofNullable(this.clientCertMode);
     }
     /**
      * Size of the function container.
      * 
     */
-    public Optional<Integer> getContainerSize() {
+    public Optional<Integer> containerSize() {
         return Optional.ofNullable(this.containerSize);
     }
     /**
      * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
     */
-    public Optional<String> getCustomDomainVerificationId() {
+    public Optional<String> customDomainVerificationId() {
         return Optional.ofNullable(this.customDomainVerificationId);
     }
     /**
      * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
     */
-    public Optional<Integer> getDailyMemoryTimeQuota() {
+    public Optional<Integer> dailyMemoryTimeQuota() {
         return Optional.ofNullable(this.dailyMemoryTimeQuota);
     }
     /**
      * Default hostname of the app. Read-only.
      * 
     */
-    public String getDefaultHostName() {
+    public String defaultHostName() {
         return this.defaultHostName;
     }
     /**
      * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
@@ -440,21 +440,21 @@ public final class GetWebAppSlotResult {
      * the app is not served on those hostnames.
      * 
     */
-    public List<String> getEnabledHostNames() {
+    public List<String> enabledHostNames() {
         return this.enabledHostNames;
     }
     /**
      * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
      * 
     */
-    public List<HostNameSslStateResponse> getHostNameSslStates() {
+    public List<HostNameSslStateResponse> hostNameSslStates() {
         return this.hostNameSslStates == null ? List.of() : this.hostNameSslStates;
     }
     /**
      * Hostnames associated with the app.
      * 
     */
-    public List<String> getHostNames() {
+    public List<String> hostNames() {
         return this.hostNames;
     }
     /**
@@ -462,14 +462,14 @@ public final class GetWebAppSlotResult {
      *  If <code>true</code>, the app is only accessible via API management process.
      * 
     */
-    public Optional<Boolean> getHostNamesDisabled() {
+    public Optional<Boolean> hostNamesDisabled() {
         return Optional.ofNullable(this.hostNamesDisabled);
     }
     /**
      * App Service Environment to use for the app.
      * 
     */
-    public Optional<HostingEnvironmentProfileResponse> getHostingEnvironmentProfile() {
+    public Optional<HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
         return Optional.ofNullable(this.hostingEnvironmentProfile);
     }
     /**
@@ -477,77 +477,77 @@ public final class GetWebAppSlotResult {
      * http requests
      * 
     */
-    public Optional<Boolean> getHttpsOnly() {
+    public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Hyper-V sandbox.
      * 
     */
-    public Optional<Boolean> getHyperV() {
+    public Optional<Boolean> hyperV() {
         return Optional.ofNullable(this.hyperV);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Managed service identity.
      * 
     */
-    public Optional<ManagedServiceIdentityResponse> getIdentity() {
+    public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Specifies an operation id if this site has a pending operation.
      * 
     */
-    public String getInProgressOperationId() {
+    public String inProgressOperationId() {
         return this.inProgressOperationId;
     }
     /**
      * <code>true</code> if the app is a default container; otherwise, <code>false</code>.
      * 
     */
-    public Boolean getIsDefaultContainer() {
+    public Boolean isDefaultContainer() {
         return this.isDefaultContainer;
     }
     /**
      * Obsolete: Hyper-V sandbox.
      * 
     */
-    public Optional<Boolean> getIsXenon() {
+    public Optional<Boolean> isXenon() {
         return Optional.ofNullable(this.isXenon);
     }
     /**
      * Identity to use for Key Vault Reference authentication.
      * 
     */
-    public Optional<String> getKeyVaultReferenceIdentity() {
+    public Optional<String> keyVaultReferenceIdentity() {
         return Optional.ofNullable(this.keyVaultReferenceIdentity);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Last time the app was modified, in UTC. Read-only.
      * 
     */
-    public String getLastModifiedTimeUtc() {
+    public String lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Resource Location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
@@ -555,140 +555,140 @@ public final class GetWebAppSlotResult {
      * This only applies to Functions container.
      * 
     */
-    public Integer getMaxNumberOfWorkers() {
+    public Integer maxNumberOfWorkers() {
         return this.maxNumberOfWorkers;
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
      * 
     */
-    public String getOutboundIpAddresses() {
+    public String outboundIpAddresses() {
         return this.outboundIpAddresses;
     }
     /**
      * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
      * 
     */
-    public String getPossibleOutboundIpAddresses() {
+    public String possibleOutboundIpAddresses() {
         return this.possibleOutboundIpAddresses;
     }
     /**
      * Site redundancy mode
      * 
     */
-    public Optional<String> getRedundancyMode() {
+    public Optional<String> redundancyMode() {
         return Optional.ofNullable(this.redundancyMode);
     }
     /**
      * Name of the repository site.
      * 
     */
-    public String getRepositorySiteName() {
+    public String repositorySiteName() {
         return this.repositorySiteName;
     }
     /**
      * <code>true</code> if reserved; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getReserved() {
+    public Optional<Boolean> reserved() {
         return Optional.ofNullable(this.reserved);
     }
     /**
      * Name of the resource group the app belongs to. Read-only.
      * 
     */
-    public String getResourceGroup() {
+    public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
      * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
      * 
     */
-    public Optional<Boolean> getScmSiteAlsoStopped() {
+    public Optional<Boolean> scmSiteAlsoStopped() {
         return Optional.ofNullable(this.scmSiteAlsoStopped);
     }
     /**
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
     */
-    public Optional<String> getServerFarmId() {
+    public Optional<String> serverFarmId() {
         return Optional.ofNullable(this.serverFarmId);
     }
     /**
      * Configuration of the app.
      * 
     */
-    public Optional<SiteConfigResponse> getSiteConfig() {
+    public Optional<SiteConfigResponse> siteConfig() {
         return Optional.ofNullable(this.siteConfig);
     }
     /**
      * Status of the last deployment slot swap operation.
      * 
     */
-    public SlotSwapStatusResponse getSlotSwapStatus() {
+    public SlotSwapStatusResponse slotSwapStatus() {
         return this.slotSwapStatus;
     }
     /**
      * Current state of the app.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Checks if Customer provided storage account is required
      * 
     */
-    public Optional<Boolean> getStorageAccountRequired() {
+    public Optional<Boolean> storageAccountRequired() {
         return Optional.ofNullable(this.storageAccountRequired);
     }
     /**
      * App suspended till in case memory-time quota is exceeded.
      * 
     */
-    public String getSuspendedTill() {
+    public String suspendedTill() {
         return this.suspendedTill;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Specifies which deployment slot this app will swap into. Read-only.
      * 
     */
-    public String getTargetSwapSlot() {
+    public String targetSwapSlot() {
         return this.targetSwapSlot;
     }
     /**
      * Azure Traffic Manager hostnames associated with the app. Read-only.
      * 
     */
-    public List<String> getTrafficManagerHostNames() {
+    public List<String> trafficManagerHostNames() {
         return this.trafficManagerHostNames;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * State indicating whether the app has exceeded its quota usage. Read-only.
      * 
     */
-    public String getUsageState() {
+    public String usageState() {
         return this.usageState;
     }
     /**
@@ -696,7 +696,7 @@ public final class GetWebAppSlotResult {
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
     */
-    public Optional<String> getVirtualNetworkSubnetId() {
+    public Optional<String> virtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }
 

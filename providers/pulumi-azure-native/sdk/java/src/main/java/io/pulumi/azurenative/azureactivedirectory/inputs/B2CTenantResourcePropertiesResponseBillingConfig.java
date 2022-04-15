@@ -25,7 +25,7 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends io.p
     @Import(name="billingType")
       private final @Nullable String billingType;
 
-    public Optional<String> getBillingType() {
+    public Optional<String> billingType() {
         return this.billingType == null ? Optional.empty() : Optional.ofNullable(this.billingType);
     }
 
@@ -36,7 +36,7 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends io.p
     @Import(name="effectiveStartDateUtc", required=true)
       private final String effectiveStartDateUtc;
 
-    public String getEffectiveStartDateUtc() {
+    public String effectiveStartDateUtc() {
         return this.effectiveStartDateUtc;
     }
 

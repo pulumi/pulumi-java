@@ -25,7 +25,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
     @Import(name="code", required=true)
       private final Integer code;
 
-    public Integer getCode() {
+    public Integer code() {
         return this.code;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
     @Import(name="recommendations", required=true)
       private final List<String> recommendations;
 
-    public List<String> getRecommendations() {
+    public List<String> recommendations() {
         return this.recommendations;
     }
 
@@ -58,7 +58,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

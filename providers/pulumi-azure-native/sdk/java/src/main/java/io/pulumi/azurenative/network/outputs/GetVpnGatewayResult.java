@@ -127,98 +127,98 @@ public final class GetVpnGatewayResult {
      * Local network gateway's BGP speaker settings.
      * 
     */
-    public Optional<BgpSettingsResponse> getBgpSettings() {
+    public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
      * List of all vpn connections to the gateway.
      * 
     */
-    public List<VpnConnectionResponse> getConnections() {
+    public List<VpnConnectionResponse> connections() {
         return this.connections == null ? List.of() : this.connections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of all IPs configured on the gateway.
      * 
     */
-    public List<VpnGatewayIpConfigurationResponse> getIpConfigurations() {
+    public List<VpnGatewayIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
      * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
      * 
     */
-    public Optional<Boolean> getIsRoutingPreferenceInternet() {
+    public Optional<Boolean> isRoutingPreferenceInternet() {
         return Optional.ofNullable(this.isRoutingPreferenceInternet);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of all the nat Rules associated with the gateway.
      * 
     */
-    public List<VpnGatewayNatRuleResponse> getNatRules() {
+    public List<VpnGatewayNatRuleResponse> natRules() {
         return this.natRules == null ? List.of() : this.natRules;
     }
     /**
      * The provisioning state of the VPN gateway resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The VirtualHub to which the gateway belongs.
      * 
     */
-    public Optional<SubResourceResponse> getVirtualHub() {
+    public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
      * The scale unit for this vpn gateway.
      * 
     */
-    public Optional<Integer> getVpnGatewayScaleUnit() {
+    public Optional<Integer> vpnGatewayScaleUnit() {
         return Optional.ofNullable(this.vpnGatewayScaleUnit);
     }
 

@@ -164,133 +164,133 @@ public final class GetAccountResult {
      * External cloud identifier used as part of scanning configuration.
      * 
     */
-    public Optional<CloudConnectorsResponse> getCloudConnectors() {
+    public Optional<CloudConnectorsResponse> cloudConnectors() {
         return Optional.ofNullable(this.cloudConnectors);
     }
     /**
      * Gets the time at which the entity was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Gets the creator of the entity.
      * 
     */
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
     /**
      * Gets the creators of the entity's object id.
      * 
     */
-    public String getCreatedByObjectId() {
+    public String createdByObjectId() {
         return this.createdByObjectId;
     }
     /**
      * The URIs that are the public endpoints of the account.
      * 
     */
-    public AccountPropertiesResponseEndpoints getEndpoints() {
+    public AccountPropertiesResponseEndpoints endpoints() {
         return this.endpoints;
     }
     /**
      * Gets or sets the friendly name.
      * 
     */
-    public String getFriendlyName() {
+    public String friendlyName() {
         return this.friendlyName;
     }
     /**
      * Gets or sets the identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity Info on the tracked resource
      * 
     */
-    public Optional<IdentityResponse> getIdentity() {
+    public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Gets or sets the location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Gets or sets the managed resource group name
      * 
     */
-    public Optional<String> getManagedResourceGroupName() {
+    public Optional<String> managedResourceGroupName() {
         return Optional.ofNullable(this.managedResourceGroupName);
     }
     /**
      * Gets the resource identifiers of the managed resources.
      * 
     */
-    public AccountPropertiesResponseManagedResources getManagedResources() {
+    public AccountPropertiesResponseManagedResources managedResources() {
         return this.managedResources;
     }
     /**
      * Gets or sets the name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Gets the private endpoint connections information.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Gets or sets the state of the provisioning.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the public network access.
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Gets or sets the Sku.
      * 
     */
-    public AccountResponseSku getSku() {
+    public AccountResponseSku sku() {
         return this.sku;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public AccountPropertiesResponseSystemData getSystemData() {
+    public AccountPropertiesResponseSystemData systemData() {
         return this.systemData;
     }
     /**
      * Tags on the azure resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets or sets the type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -61,42 +61,42 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
      * The activity id for the operation request.
      * 
     */
-    public String getActivityId() {
+    public String activityId() {
         return this.activityId;
     }
     /**
      * The error code.
      * 
     */
-    public String getErrorCode() {
+    public String errorCode() {
         return this.errorCode;
     }
     /**
      * Managed integration runtime error parameters.
      * 
     */
-    public List<String> getParameters() {
+    public List<String> parameters() {
         return this.parameters;
     }
     /**
      * The operation result.
      * 
     */
-    public String getResult() {
+    public String result() {
         return this.result;
     }
     /**
      * The start time of the operation.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * The operation type. Could be start or stop.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

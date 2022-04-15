@@ -67,42 +67,42 @@ public final class WindowsConfigurationResponse {
      * Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
      * 
     */
-    public List<AdditionalUnattendContentResponse> getAdditionalUnattendContent() {
+    public List<AdditionalUnattendContentResponse> additionalUnattendContent() {
         return this.additionalUnattendContent == null ? List.of() : this.additionalUnattendContent;
     }
     /**
      * Indicates whether Automatic Updates is enabled for the Windows virtual machine. Default value is true. <br><br> For virtual machine scale sets, this property can be updated and updates will take effect on OS reprovisioning.
      * 
     */
-    public Optional<Boolean> getEnableAutomaticUpdates() {
+    public Optional<Boolean> enableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);
     }
     /**
      * [Preview Feature] Specifies settings related to VM Guest Patching on Windows.
      * 
     */
-    public Optional<PatchSettingsResponse> getPatchSettings() {
+    public Optional<PatchSettingsResponse> patchSettings() {
         return Optional.ofNullable(this.patchSettings);
     }
     /**
      * Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
      * 
     */
-    public Optional<Boolean> getProvisionVMAgent() {
+    public Optional<Boolean> provisionVMAgent() {
         return Optional.ofNullable(this.provisionVMAgent);
     }
     /**
      * Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time". <br><br> Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
      * 
     */
-    public Optional<String> getTimeZone() {
+    public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
     /**
      * Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.
      * 
     */
-    public Optional<WinRMConfigurationResponse> getWinRM() {
+    public Optional<WinRMConfigurationResponse> winRM() {
         return Optional.ofNullable(this.winRM);
     }
 

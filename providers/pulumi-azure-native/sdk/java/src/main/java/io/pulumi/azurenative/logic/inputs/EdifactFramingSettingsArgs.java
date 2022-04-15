@@ -31,7 +31,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="characterEncoding")
       private final @Nullable Output<String> characterEncoding;
 
-    public Output<String> getCharacterEncoding() {
+    public Output<String> characterEncoding() {
         return this.characterEncoding == null ? Codegen.empty() : this.characterEncoding;
     }
 
@@ -42,7 +42,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="characterSet", required=true)
       private final Output<Either<String,EdifactCharacterSet>> characterSet;
 
-    public Output<Either<String,EdifactCharacterSet>> getCharacterSet() {
+    public Output<Either<String,EdifactCharacterSet>> characterSet() {
         return this.characterSet;
     }
 
@@ -53,7 +53,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
-    public Output<Integer> getComponentSeparator() {
+    public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -64,7 +64,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
-    public Output<Integer> getDataElementSeparator() {
+    public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -75,7 +75,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
-    public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
+    public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -86,7 +86,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="protocolVersion", required=true)
       private final Output<Integer> protocolVersion;
 
-    public Output<Integer> getProtocolVersion() {
+    public Output<Integer> protocolVersion() {
         return this.protocolVersion;
     }
 
@@ -97,7 +97,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
 
-    public Output<Integer> getReleaseIndicator() {
+    public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -108,7 +108,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
 
-    public Output<Integer> getRepetitionSeparator() {
+    public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -119,7 +119,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
-    public Output<Integer> getSegmentTerminator() {
+    public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -130,7 +130,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -141,7 +141,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="serviceCodeListDirectoryVersion")
       private final @Nullable Output<String> serviceCodeListDirectoryVersion;
 
-    public Output<String> getServiceCodeListDirectoryVersion() {
+    public Output<String> serviceCodeListDirectoryVersion() {
         return this.serviceCodeListDirectoryVersion == null ? Codegen.empty() : this.serviceCodeListDirectoryVersion;
     }
 

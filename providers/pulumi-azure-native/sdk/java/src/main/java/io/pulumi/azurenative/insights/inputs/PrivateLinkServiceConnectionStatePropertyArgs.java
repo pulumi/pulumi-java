@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

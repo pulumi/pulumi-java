@@ -23,7 +23,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="networkVirtualApplianceName", required=true)
       private final Output<String> networkVirtualApplianceName;
 
-    public Output<String> getNetworkVirtualApplianceName() {
+    public Output<String> networkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
 
@@ -67,7 +67,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="o365Policy")
       private final @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
 
-    public Output<Office365PolicyPropertiesArgs> getO365Policy() {
+    public Output<Office365PolicyPropertiesArgs> o365Policy() {
         return this.o365Policy == null ? Codegen.empty() : this.o365Policy;
     }
 
@@ -78,7 +78,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,7 +89,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     @Import(name="siteName")
       private final @Nullable Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName == null ? Codegen.empty() : this.siteName;
     }
 

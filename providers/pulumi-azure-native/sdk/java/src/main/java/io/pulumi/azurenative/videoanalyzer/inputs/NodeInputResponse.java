@@ -23,7 +23,7 @@ public final class NodeInputResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeName", required=true)
       private final String nodeName;
 
-    public String getNodeName() {
+    public String nodeName() {
         return this.nodeName;
     }
 

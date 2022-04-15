@@ -27,7 +27,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="gradeName")
       private final @Nullable Output<String> gradeName;
 
-    public Output<String> getGradeName() {
+    public Output<String> gradeName() {
         return this.gradeName == null ? Codegen.empty() : this.gradeName;
     }
 
@@ -38,7 +38,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxScoreThreshold")
       private final @Nullable Output<Integer> maxScoreThreshold;
 
-    public Output<Integer> getMaxScoreThreshold() {
+    public Output<Integer> maxScoreThreshold() {
         return this.maxScoreThreshold == null ? Codegen.empty() : this.maxScoreThreshold;
     }
 
@@ -49,7 +49,7 @@ public final class PredictionGradesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="minScoreThreshold")
       private final @Nullable Output<Integer> minScoreThreshold;
 
-    public Output<Integer> getMinScoreThreshold() {
+    public Output<Integer> minScoreThreshold() {
         return this.minScoreThreshold == null ? Codegen.empty() : this.minScoreThreshold;
     }
 

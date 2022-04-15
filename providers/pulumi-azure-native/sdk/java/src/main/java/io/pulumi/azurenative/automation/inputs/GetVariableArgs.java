@@ -19,7 +19,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
-    public String getAutomationAccountName() {
+    public String automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="variableName", required=true)
       private final String variableName;
 
-    public String getVariableName() {
+    public String variableName() {
         return this.variableName;
     }
 

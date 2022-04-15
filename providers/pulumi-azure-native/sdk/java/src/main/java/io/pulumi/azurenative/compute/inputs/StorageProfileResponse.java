@@ -28,7 +28,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="dataDisks")
       private final @Nullable List<DataDiskResponse> dataDisks;
 
-    public List<DataDiskResponse> getDataDisks() {
+    public List<DataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
@@ -39,7 +39,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="imageReference")
       private final @Nullable ImageReferenceResponse imageReference;
 
-    public Optional<ImageReferenceResponse> getImageReference() {
+    public Optional<ImageReferenceResponse> imageReference() {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
     }
 
@@ -50,7 +50,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="osDisk")
       private final @Nullable OSDiskResponse osDisk;
 
-    public Optional<OSDiskResponse> getOsDisk() {
+    public Optional<OSDiskResponse> osDisk() {
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
     }
 

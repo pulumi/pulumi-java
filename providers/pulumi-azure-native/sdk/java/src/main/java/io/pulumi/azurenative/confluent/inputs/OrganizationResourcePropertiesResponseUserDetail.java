@@ -25,7 +25,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
     @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
-    public Optional<String> getEmailAddress() {
+    public Optional<String> emailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
     }
 
@@ -36,7 +36,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
     @Import(name="firstName")
       private final @Nullable String firstName;
 
-    public Optional<String> getFirstName() {
+    public Optional<String> firstName() {
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
     }
 
@@ -47,7 +47,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
     @Import(name="lastName")
       private final @Nullable String lastName;
 
-    public Optional<String> getLastName() {
+    public Optional<String> lastName() {
         return this.lastName == null ? Optional.empty() : Optional.ofNullable(this.lastName);
     }
 

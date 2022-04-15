@@ -26,7 +26,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
     @Import(name="availableReplicas")
       private final @Nullable Integer availableReplicas;
 
-    public Optional<Integer> getAvailableReplicas() {
+    public Optional<Integer> availableReplicas() {
         return this.availableReplicas == null ? Optional.empty() : Optional.ofNullable(this.availableReplicas);
     }
 
@@ -37,7 +37,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
     @Import(name="desiredReplicas")
       private final @Nullable Integer desiredReplicas;
 
-    public Optional<Integer> getDesiredReplicas() {
+    public Optional<Integer> desiredReplicas() {
         return this.desiredReplicas == null ? Optional.empty() : Optional.ofNullable(this.desiredReplicas);
     }
 
@@ -48,7 +48,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
     @Import(name="error")
       private final @Nullable AKSReplicaStatusResponseError error;
 
-    public Optional<AKSReplicaStatusResponseError> getError() {
+    public Optional<AKSReplicaStatusResponseError> error() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
@@ -59,7 +59,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
     @Import(name="updatedReplicas")
       private final @Nullable Integer updatedReplicas;
 
-    public Optional<Integer> getUpdatedReplicas() {
+    public Optional<Integer> updatedReplicas() {
         return this.updatedReplicas == null ? Optional.empty() : Optional.ofNullable(this.updatedReplicas);
     }
 

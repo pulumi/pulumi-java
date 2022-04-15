@@ -25,7 +25,7 @@ public final class AKSServiceResponseResponseDataCollection extends io.pulumi.re
     @Import(name="eventHubEnabled")
       private final @Nullable Boolean eventHubEnabled;
 
-    public Optional<Boolean> getEventHubEnabled() {
+    public Optional<Boolean> eventHubEnabled() {
         return this.eventHubEnabled == null ? Optional.empty() : Optional.ofNullable(this.eventHubEnabled);
     }
 
@@ -36,7 +36,7 @@ public final class AKSServiceResponseResponseDataCollection extends io.pulumi.re
     @Import(name="storageEnabled")
       private final @Nullable Boolean storageEnabled;
 
-    public Optional<Boolean> getStorageEnabled() {
+    public Optional<Boolean> storageEnabled() {
         return this.storageEnabled == null ? Optional.empty() : Optional.ofNullable(this.storageEnabled);
     }
 

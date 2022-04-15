@@ -41,21 +41,21 @@ public final class LiveEventInputTrackSelectionResponse {
      * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
      * 
     */
-    public Optional<String> getOperation() {
+    public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
     /**
      * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
     */
-    public Optional<String> getProperty() {
+    public Optional<String> property() {
         return Optional.ofNullable(this.property);
     }
     /**
      * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

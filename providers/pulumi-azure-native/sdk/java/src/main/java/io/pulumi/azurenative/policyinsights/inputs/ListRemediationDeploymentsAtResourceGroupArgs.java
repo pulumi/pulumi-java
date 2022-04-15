@@ -22,7 +22,7 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
     @Import(name="remediationName", required=true)
       private final String remediationName;
 
-    public String getRemediationName() {
+    public String remediationName() {
         return this.remediationName;
     }
 
@@ -33,7 +33,7 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
     @Import(name="top")
       private final @Nullable Integer top;
 
-    public Optional<Integer> getTop() {
+    public Optional<Integer> top() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
     }
 

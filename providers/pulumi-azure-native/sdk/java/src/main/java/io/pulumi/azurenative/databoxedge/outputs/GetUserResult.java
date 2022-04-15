@@ -73,49 +73,49 @@ public final class GetUserResult {
      * The password details.
      * 
     */
-    public Optional<AsymmetricEncryptedSecretResponse> getEncryptedPassword() {
+    public Optional<AsymmetricEncryptedSecretResponse> encryptedPassword() {
         return Optional.ofNullable(this.encryptedPassword);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of shares that the user has rights on. This field should not be specified during user creation.
      * 
     */
-    public List<ShareAccessRightResponse> getShareAccessRights() {
+    public List<ShareAccessRightResponse> shareAccessRights() {
         return this.shareAccessRights;
     }
     /**
      * User in DataBoxEdge Resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Type of the user.
      * 
     */
-    public String getUserType() {
+    public String userType() {
         return this.userType;
     }
 

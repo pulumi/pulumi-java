@@ -22,7 +22,7 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="configuration", required=true)
       private final DataSourceConfigurationResponse configuration;
 
-    public DataSourceConfigurationResponse getConfiguration() {
+    public DataSourceConfigurationResponse configuration() {
         return this.configuration;
     }
 
@@ -33,14 +33,14 @@ public final class DataSourceResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
     @Import(name="sinks", required=true)
       private final List<SinkConfigurationResponse> sinks;
 
-    public List<SinkConfigurationResponse> getSinks() {
+    public List<SinkConfigurationResponse> sinks() {
         return this.sinks;
     }
 

@@ -92,70 +92,70 @@ public final class CommandResponse {
      * The action of the command.
      * 
     */
-    public String getAction() {
+    public String action() {
         return this.action;
     }
     /**
      * Specifies whether to run the command even if a previous command is failed.
      * 
     */
-    public Optional<Boolean> getAlwaysRun() {
+    public Optional<Boolean> alwaysRun() {
         return Optional.ofNullable(this.alwaysRun);
     }
     /**
      * Specifies whether to apply update before the command.
      * 
     */
-    public Optional<Boolean> getApplyUpdateBefore() {
+    public Optional<Boolean> applyUpdateBefore() {
         return Optional.ofNullable(this.applyUpdateBefore);
     }
     /**
      * The content of the command. The content depends on source type.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * The type of command content.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * Specifies the max run time of the command.
      * 
     */
-    public Optional<Integer> getMaxRunTime() {
+    public Optional<Integer> maxRunTime() {
         return Optional.ofNullable(this.maxRunTime);
     }
     /**
      * The name of the command.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies whether to restart the VM after the command executed.
      * 
     */
-    public Optional<Boolean> getRestartAfter() {
+    public Optional<Boolean> restartAfter() {
         return Optional.ofNullable(this.restartAfter);
     }
     /**
      * Specifies whether to run the command in interactive mode.
      * 
     */
-    public Optional<Boolean> getRunAsInteractive() {
+    public Optional<Boolean> runAsInteractive() {
         return Optional.ofNullable(this.runAsInteractive);
     }
     /**
      * Specifies whether to run the command as administrator.
      * 
     */
-    public Optional<Boolean> getRunElevated() {
+    public Optional<Boolean> runElevated() {
         return Optional.ofNullable(this.runElevated);
     }
 

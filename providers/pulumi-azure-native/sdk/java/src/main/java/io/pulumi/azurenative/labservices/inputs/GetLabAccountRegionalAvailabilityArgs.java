@@ -19,7 +19,7 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
     @Import(name="labAccountName", required=true)
       private final String labAccountName;
 
-    public String getLabAccountName() {
+    public String labAccountName() {
         return this.labAccountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

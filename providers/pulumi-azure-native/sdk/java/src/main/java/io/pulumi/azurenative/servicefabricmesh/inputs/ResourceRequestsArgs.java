@@ -25,7 +25,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cpu", required=true)
       private final Output<Double> cpu;
 
-    public Output<Double> getCpu() {
+    public Output<Double> cpu() {
         return this.cpu;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="memoryInGB", required=true)
       private final Output<Double> memoryInGB;
 
-    public Output<Double> getMemoryInGB() {
+    public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 

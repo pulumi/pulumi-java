@@ -48,28 +48,28 @@ public final class DataBoxDiskCopyProgressResponse {
      * Bytes copied during the copy of disk.
      * 
     */
-    public Double getBytesCopied() {
+    public Double bytesCopied() {
         return this.bytesCopied;
     }
     /**
      * Indicates the percentage completed for the copy of the disk.
      * 
     */
-    public Integer getPercentComplete() {
+    public Integer percentComplete() {
         return this.percentComplete;
     }
     /**
      * The serial number of the disk
      * 
     */
-    public String getSerialNumber() {
+    public String serialNumber() {
         return this.serialNumber;
     }
     /**
      * The Status of the copy
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

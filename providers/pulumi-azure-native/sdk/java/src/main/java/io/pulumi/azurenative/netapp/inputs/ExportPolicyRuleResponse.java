@@ -27,7 +27,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="allowedClients")
       private final @Nullable String allowedClients;
 
-    public Optional<String> getAllowedClients() {
+    public Optional<String> allowedClients() {
         return this.allowedClients == null ? Optional.empty() : Optional.ofNullable(this.allowedClients);
     }
 
@@ -38,7 +38,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="cifs")
       private final @Nullable Boolean cifs;
 
-    public Optional<Boolean> getCifs() {
+    public Optional<Boolean> cifs() {
         return this.cifs == null ? Optional.empty() : Optional.ofNullable(this.cifs);
     }
 
@@ -49,7 +49,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="hasRootAccess")
       private final @Nullable Boolean hasRootAccess;
 
-    public Optional<Boolean> getHasRootAccess() {
+    public Optional<Boolean> hasRootAccess() {
         return this.hasRootAccess == null ? Optional.empty() : Optional.ofNullable(this.hasRootAccess);
     }
 
@@ -60,7 +60,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kerberos5ReadOnly")
       private final @Nullable Boolean kerberos5ReadOnly;
 
-    public Optional<Boolean> getKerberos5ReadOnly() {
+    public Optional<Boolean> kerberos5ReadOnly() {
         return this.kerberos5ReadOnly == null ? Optional.empty() : Optional.ofNullable(this.kerberos5ReadOnly);
     }
 
@@ -71,7 +71,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kerberos5ReadWrite")
       private final @Nullable Boolean kerberos5ReadWrite;
 
-    public Optional<Boolean> getKerberos5ReadWrite() {
+    public Optional<Boolean> kerberos5ReadWrite() {
         return this.kerberos5ReadWrite == null ? Optional.empty() : Optional.ofNullable(this.kerberos5ReadWrite);
     }
 
@@ -82,7 +82,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kerberos5iReadOnly")
       private final @Nullable Boolean kerberos5iReadOnly;
 
-    public Optional<Boolean> getKerberos5iReadOnly() {
+    public Optional<Boolean> kerberos5iReadOnly() {
         return this.kerberos5iReadOnly == null ? Optional.empty() : Optional.ofNullable(this.kerberos5iReadOnly);
     }
 
@@ -93,7 +93,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kerberos5iReadWrite")
       private final @Nullable Boolean kerberos5iReadWrite;
 
-    public Optional<Boolean> getKerberos5iReadWrite() {
+    public Optional<Boolean> kerberos5iReadWrite() {
         return this.kerberos5iReadWrite == null ? Optional.empty() : Optional.ofNullable(this.kerberos5iReadWrite);
     }
 
@@ -104,7 +104,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kerberos5pReadOnly")
       private final @Nullable Boolean kerberos5pReadOnly;
 
-    public Optional<Boolean> getKerberos5pReadOnly() {
+    public Optional<Boolean> kerberos5pReadOnly() {
         return this.kerberos5pReadOnly == null ? Optional.empty() : Optional.ofNullable(this.kerberos5pReadOnly);
     }
 
@@ -115,7 +115,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="kerberos5pReadWrite")
       private final @Nullable Boolean kerberos5pReadWrite;
 
-    public Optional<Boolean> getKerberos5pReadWrite() {
+    public Optional<Boolean> kerberos5pReadWrite() {
         return this.kerberos5pReadWrite == null ? Optional.empty() : Optional.ofNullable(this.kerberos5pReadWrite);
     }
 
@@ -126,7 +126,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="nfsv3")
       private final @Nullable Boolean nfsv3;
 
-    public Optional<Boolean> getNfsv3() {
+    public Optional<Boolean> nfsv3() {
         return this.nfsv3 == null ? Optional.empty() : Optional.ofNullable(this.nfsv3);
     }
 
@@ -137,7 +137,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="nfsv41")
       private final @Nullable Boolean nfsv41;
 
-    public Optional<Boolean> getNfsv41() {
+    public Optional<Boolean> nfsv41() {
         return this.nfsv41 == null ? Optional.empty() : Optional.ofNullable(this.nfsv41);
     }
 
@@ -148,7 +148,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="ruleIndex")
       private final @Nullable Integer ruleIndex;
 
-    public Optional<Integer> getRuleIndex() {
+    public Optional<Integer> ruleIndex() {
         return this.ruleIndex == null ? Optional.empty() : Optional.ofNullable(this.ruleIndex);
     }
 
@@ -159,7 +159,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="unixReadOnly")
       private final @Nullable Boolean unixReadOnly;
 
-    public Optional<Boolean> getUnixReadOnly() {
+    public Optional<Boolean> unixReadOnly() {
         return this.unixReadOnly == null ? Optional.empty() : Optional.ofNullable(this.unixReadOnly);
     }
 
@@ -170,7 +170,7 @@ public final class ExportPolicyRuleResponse extends io.pulumi.resources.InvokeAr
     @Import(name="unixReadWrite")
       private final @Nullable Boolean unixReadWrite;
 
-    public Optional<Boolean> getUnixReadWrite() {
+    public Optional<Boolean> unixReadWrite() {
         return this.unixReadWrite == null ? Optional.empty() : Optional.ofNullable(this.unixReadWrite);
     }
 

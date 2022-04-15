@@ -27,7 +27,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
 
-    public String getDataFactoryName() {
+    public String dataFactoryName() {
         return this.dataFactoryName;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="lastOperation", required=true)
       private final ManagedIntegrationRuntimeOperationResultResponse lastOperation;
 
-    public ManagedIntegrationRuntimeOperationResultResponse getLastOperation() {
+    public ManagedIntegrationRuntimeOperationResultResponse lastOperation() {
         return this.lastOperation;
     }
 
@@ -60,7 +60,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="nodes", required=true)
       private final List<ManagedIntegrationRuntimeNodeResponse> nodes;
 
-    public List<ManagedIntegrationRuntimeNodeResponse> getNodes() {
+    public List<ManagedIntegrationRuntimeNodeResponse> nodes() {
         return this.nodes;
     }
 
@@ -71,7 +71,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="otherErrors", required=true)
       private final List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
 
-    public List<ManagedIntegrationRuntimeErrorResponse> getOtherErrors() {
+    public List<ManagedIntegrationRuntimeErrorResponse> otherErrors() {
         return this.otherErrors;
     }
 
@@ -82,7 +82,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 
@@ -94,7 +94,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

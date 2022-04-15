@@ -21,7 +21,7 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="enableAutomaticUpdates")
       private final @Nullable Boolean enableAutomaticUpdates;
 
-    public Optional<Boolean> getEnableAutomaticUpdates() {
+    public Optional<Boolean> enableAutomaticUpdates() {
         return this.enableAutomaticUpdates == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpdates);
     }
 

@@ -28,7 +28,7 @@ public final class JsonFieldWithDefaultResponse extends io.pulumi.resources.Invo
     @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
-    public Optional<String> getDefaultValue() {
+    public Optional<String> defaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
@@ -39,7 +39,7 @@ public final class JsonFieldWithDefaultResponse extends io.pulumi.resources.Invo
     @Import(name="sourceField")
       private final @Nullable String sourceField;
 
-    public Optional<String> getSourceField() {
+    public Optional<String> sourceField() {
         return this.sourceField == null ? Optional.empty() : Optional.ofNullable(this.sourceField);
     }
 

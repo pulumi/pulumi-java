@@ -27,7 +27,7 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowedOrigins")
       private final @Nullable Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> getAllowedOrigins() {
+    public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins == null ? Codegen.empty() : this.allowedOrigins;
     }
 

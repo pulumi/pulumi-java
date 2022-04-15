@@ -26,7 +26,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -37,7 +37,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="commit")
       private final @Nullable Output<String> commit;
 
-    public Output<String> getCommit() {
+    public Output<String> commit() {
         return this.commit == null ? Codegen.empty() : this.commit;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="semver")
       private final @Nullable Output<String> semver;
 
-    public Output<String> getSemver() {
+    public Output<String> semver() {
         return this.semver == null ? Codegen.empty() : this.semver;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag == null ? Codegen.empty() : this.tag;
     }
 

@@ -42,7 +42,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Config information.
      * 
      */
-    public Output</* @Nullable */ Object> getConfig() {
+    public Output</* @Nullable */ Object> config() {
         return this.config;
     }
     /**
@@ -56,7 +56,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Config URI.
      * 
      */
-    public Output</* @Nullable */ String> getConfigHref() {
+    public Output</* @Nullable */ String> configHref() {
         return this.configHref;
     }
     /**
@@ -70,7 +70,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return File list.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getFiles() {
+    public Output</* @Nullable */ Map<String,String>> files() {
         return this.files;
     }
     /**
@@ -84,7 +84,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Function App ID.
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAppId() {
+    public Output</* @Nullable */ String> functionAppId() {
         return this.functionAppId;
     }
     /**
@@ -98,7 +98,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Function URI.
      * 
      */
-    public Output</* @Nullable */ String> getHref() {
+    public Output</* @Nullable */ String> href() {
         return this.href;
     }
     /**
@@ -112,7 +112,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return The invocation URL
      * 
      */
-    public Output</* @Nullable */ String> getInvokeUrlTemplate() {
+    public Output</* @Nullable */ String> invokeUrlTemplate() {
         return this.invokeUrlTemplate;
     }
     /**
@@ -126,7 +126,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a value indicating whether the function is disabled
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsDisabled() {
+    public Output</* @Nullable */ Boolean> isDisabled() {
         return this.isDisabled;
     }
     /**
@@ -140,7 +140,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -154,7 +154,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return The function language
      * 
      */
-    public Output</* @Nullable */ String> getLanguage() {
+    public Output</* @Nullable */ String> language() {
         return this.language;
     }
     /**
@@ -168,7 +168,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -182,7 +182,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Script URI.
      * 
      */
-    public Output</* @Nullable */ String> getScriptHref() {
+    public Output</* @Nullable */ String> scriptHref() {
         return this.scriptHref;
     }
     /**
@@ -196,7 +196,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Script root path URI.
      * 
      */
-    public Output</* @Nullable */ String> getScriptRootPathHref() {
+    public Output</* @Nullable */ String> scriptRootPathHref() {
         return this.scriptRootPathHref;
     }
     /**
@@ -210,7 +210,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Secrets file URI.
      * 
      */
-    public Output</* @Nullable */ String> getSecretsFileHref() {
+    public Output</* @Nullable */ String> secretsFileHref() {
         return this.secretsFileHref;
     }
     /**
@@ -224,7 +224,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Test data used when testing via the Azure Portal.
      * 
      */
-    public Output</* @Nullable */ String> getTestData() {
+    public Output</* @Nullable */ String> testData() {
         return this.testData;
     }
     /**
@@ -238,7 +238,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Test data URI.
      * 
      */
-    public Output</* @Nullable */ String> getTestDataHref() {
+    public Output</* @Nullable */ String> testDataHref() {
         return this.testDataHref;
     }
     /**
@@ -252,7 +252,7 @@ public class WebAppFunction extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

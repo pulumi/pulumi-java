@@ -26,7 +26,7 @@ public final class MongoIndexKeysResponse {
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
      * 
     */
-    public List<String> getKeys() {
+    public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
 

@@ -27,7 +27,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endPointName", required=true)
       private final Output<String> endPointName;
 
-    public Output<String> getEndPointName() {
+    public Output<String> endPointName() {
         return this.endPointName;
     }
 
@@ -38,7 +38,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress", required=true)
       private final Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
 
@@ -49,7 +49,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port;
     }
 
@@ -60,7 +60,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
-    public Output<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 

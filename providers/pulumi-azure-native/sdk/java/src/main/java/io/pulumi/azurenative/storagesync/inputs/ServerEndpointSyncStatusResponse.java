@@ -26,7 +26,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="combinedHealth", required=true)
       private final String combinedHealth;
 
-    public String getCombinedHealth() {
+    public String combinedHealth() {
         return this.combinedHealth;
     }
 
@@ -37,7 +37,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="downloadActivity", required=true)
       private final ServerEndpointSyncActivityStatusResponse downloadActivity;
 
-    public ServerEndpointSyncActivityStatusResponse getDownloadActivity() {
+    public ServerEndpointSyncActivityStatusResponse downloadActivity() {
         return this.downloadActivity;
     }
 
@@ -48,7 +48,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="downloadHealth", required=true)
       private final String downloadHealth;
 
-    public String getDownloadHealth() {
+    public String downloadHealth() {
         return this.downloadHealth;
     }
 
@@ -59,7 +59,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="downloadStatus", required=true)
       private final ServerEndpointSyncSessionStatusResponse downloadStatus;
 
-    public ServerEndpointSyncSessionStatusResponse getDownloadStatus() {
+    public ServerEndpointSyncSessionStatusResponse downloadStatus() {
         return this.downloadStatus;
     }
 
@@ -70,7 +70,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 
@@ -81,7 +81,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="offlineDataTransferStatus", required=true)
       private final String offlineDataTransferStatus;
 
-    public String getOfflineDataTransferStatus() {
+    public String offlineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
 
@@ -92,7 +92,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="syncActivity", required=true)
       private final String syncActivity;
 
-    public String getSyncActivity() {
+    public String syncActivity() {
         return this.syncActivity;
     }
 
@@ -103,7 +103,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="totalPersistentFilesNotSyncingCount", required=true)
       private final Double totalPersistentFilesNotSyncingCount;
 
-    public Double getTotalPersistentFilesNotSyncingCount() {
+    public Double totalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
 
@@ -114,7 +114,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="uploadActivity", required=true)
       private final ServerEndpointSyncActivityStatusResponse uploadActivity;
 
-    public ServerEndpointSyncActivityStatusResponse getUploadActivity() {
+    public ServerEndpointSyncActivityStatusResponse uploadActivity() {
         return this.uploadActivity;
     }
 
@@ -125,7 +125,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="uploadHealth", required=true)
       private final String uploadHealth;
 
-    public String getUploadHealth() {
+    public String uploadHealth() {
         return this.uploadHealth;
     }
 
@@ -136,7 +136,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
     @Import(name="uploadStatus", required=true)
       private final ServerEndpointSyncSessionStatusResponse uploadStatus;
 
-    public ServerEndpointSyncSessionStatusResponse getUploadStatus() {
+    public ServerEndpointSyncSessionStatusResponse uploadStatus() {
         return this.uploadStatus;
     }
 

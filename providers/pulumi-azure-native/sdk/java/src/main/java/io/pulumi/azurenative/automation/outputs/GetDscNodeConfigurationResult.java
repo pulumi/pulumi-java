@@ -86,63 +86,63 @@ public final class GetDscNodeConfigurationResult {
      * Gets or sets the configuration of the node.
      * 
     */
-    public Optional<DscConfigurationAssociationPropertyResponse> getConfiguration() {
+    public Optional<DscConfigurationAssociationPropertyResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Gets or sets creation time.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * Fully qualified resource Id for the resource
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * If a new build version of NodeConfiguration is required.
      * 
     */
-    public Optional<Boolean> getIncrementNodeConfigurationBuild() {
+    public Optional<Boolean> incrementNodeConfigurationBuild() {
         return Optional.ofNullable(this.incrementNodeConfigurationBuild);
     }
     /**
      * Gets or sets the last modified time.
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Number of nodes with this node configuration assigned
      * 
     */
-    public Optional<Double> getNodeCount() {
+    public Optional<Double> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
      * Source of node configuration.
      * 
     */
-    public Optional<String> getSource() {
+    public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

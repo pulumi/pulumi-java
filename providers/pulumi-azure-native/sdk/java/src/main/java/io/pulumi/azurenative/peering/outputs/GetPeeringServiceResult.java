@@ -99,77 +99,77 @@ public final class GetPeeringServiceResult {
      * The ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The location (state/province) of the customer.
      * 
     */
-    public Optional<String> getPeeringServiceLocation() {
+    public Optional<String> peeringServiceLocation() {
         return Optional.ofNullable(this.peeringServiceLocation);
     }
     /**
      * The name of the service provider.
      * 
     */
-    public Optional<String> getPeeringServiceProvider() {
+    public Optional<String> peeringServiceProvider() {
         return Optional.ofNullable(this.peeringServiceProvider);
     }
     /**
      * The backup peering (Microsoft/service provider) location to be used for customer traffic.
      * 
     */
-    public Optional<String> getProviderBackupPeeringLocation() {
+    public Optional<String> providerBackupPeeringLocation() {
         return Optional.ofNullable(this.providerBackupPeeringLocation);
     }
     /**
      * The primary peering (Microsoft/service provider) location to be used for customer traffic.
      * 
     */
-    public Optional<String> getProviderPrimaryPeeringLocation() {
+    public Optional<String> providerPrimaryPeeringLocation() {
         return Optional.ofNullable(this.providerPrimaryPeeringLocation);
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The SKU that defines the type of the peering service.
      * 
     */
-    public Optional<PeeringServiceSkuResponse> getSku() {
+    public Optional<PeeringServiceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

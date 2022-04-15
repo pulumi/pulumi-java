@@ -29,16 +29,16 @@ public final class LoggingRuleResponse {
         this.hiddenPropertyPaths = hiddenPropertyPaths;
     }
 
-    public String getAction() {
+    public String action() {
         return this.action;
     }
-    public String getDetailLevel() {
+    public String detailLevel() {
         return this.detailLevel;
     }
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
-    public Optional<LoggingRuleResponseHiddenPropertyPaths> getHiddenPropertyPaths() {
+    public Optional<LoggingRuleResponseHiddenPropertyPaths> hiddenPropertyPaths() {
         return Optional.ofNullable(this.hiddenPropertyPaths);
     }
 

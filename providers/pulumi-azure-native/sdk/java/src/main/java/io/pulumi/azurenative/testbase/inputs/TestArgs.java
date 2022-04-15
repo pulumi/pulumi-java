@@ -31,7 +31,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commands", required=true)
       private final Output<List<CommandArgs>> commands;
 
-    public Output<List<CommandArgs>> getCommands() {
+    public Output<List<CommandArgs>> commands() {
         return this.commands;
     }
 
@@ -42,7 +42,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
+    public Output<Boolean> isActive() {
         return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
@@ -53,7 +53,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testType", required=true)
       private final Output<Either<String,TestType>> testType;
 
-    public Output<Either<String,TestType>> getTestType() {
+    public Output<Either<String,TestType>> testType() {
         return this.testType;
     }
 

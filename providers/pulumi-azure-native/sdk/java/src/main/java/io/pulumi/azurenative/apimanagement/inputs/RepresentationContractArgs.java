@@ -28,7 +28,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -39,7 +39,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     @Import(name="formParameters")
       private final @Nullable Output<List<ParameterContractArgs>> formParameters;
 
-    public Output<List<ParameterContractArgs>> getFormParameters() {
+    public Output<List<ParameterContractArgs>> formParameters() {
         return this.formParameters == null ? Codegen.empty() : this.formParameters;
     }
 
@@ -50,7 +50,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     @Import(name="sample")
       private final @Nullable Output<String> sample;
 
-    public Output<String> getSample() {
+    public Output<String> sample() {
         return this.sample == null ? Codegen.empty() : this.sample;
     }
 
@@ -61,7 +61,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
-    public Output<String> getSchemaId() {
+    public Output<String> schemaId() {
         return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
@@ -72,7 +72,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 

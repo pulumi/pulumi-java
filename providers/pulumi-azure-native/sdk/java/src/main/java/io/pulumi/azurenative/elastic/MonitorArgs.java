@@ -26,7 +26,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> getIdentity() {
+    public Output<IdentityPropertiesArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -37,7 +37,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -48,7 +48,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitorName")
       private final @Nullable Output<String> monitorName;
 
-    public Output<String> getMonitorName() {
+    public Output<String> monitorName() {
         return this.monitorName == null ? Codegen.empty() : this.monitorName;
     }
 
@@ -59,7 +59,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<MonitorPropertiesArgs> properties;
 
-    public Output<MonitorPropertiesArgs> getProperties() {
+    public Output<MonitorPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -70,7 +70,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> getSku() {
+    public Output<ResourceSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -92,7 +92,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -22,7 +22,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="collectionsThroughput")
       private final @Nullable Output<Integer> collectionsThroughput;
 
-    public Output<Integer> getCollectionsThroughput() {
+    public Output<Integer> collectionsThroughput() {
         return this.collectionsThroughput == null ? Codegen.empty() : this.collectionsThroughput;
     }
 

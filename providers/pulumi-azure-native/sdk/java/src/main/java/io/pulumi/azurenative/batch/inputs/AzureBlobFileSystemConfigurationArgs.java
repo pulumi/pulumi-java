@@ -22,14 +22,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -40,14 +40,14 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
     @Import(name="blobfuseOptions")
       private final @Nullable Output<String> blobfuseOptions;
 
-    public Output<String> getBlobfuseOptions() {
+    public Output<String> blobfuseOptions() {
         return this.blobfuseOptions == null ? Codegen.empty() : this.blobfuseOptions;
     }
 
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -58,7 +58,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
     @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
 
-    public Output<String> getRelativeMountPath() {
+    public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
 
@@ -69,7 +69,7 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
     @Import(name="sasKey")
       private final @Nullable Output<String> sasKey;
 
-    public Output<String> getSasKey() {
+    public Output<String> sasKey() {
         return this.sasKey == null ? Codegen.empty() : this.sasKey;
     }
 

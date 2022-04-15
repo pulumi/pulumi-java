@@ -30,7 +30,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
+    public Output<Integer> backendPort() {
         return this.backendPort;
     }
 
@@ -41,7 +41,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frontendPort", required=true)
       private final Output<Integer> frontendPort;
 
-    public Output<Integer> getFrontendPort() {
+    public Output<Integer> frontendPort() {
         return this.frontendPort;
     }
 
@@ -52,7 +52,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="probeProtocol", required=true)
       private final Output<Either<String,ProbeProtocol>> probeProtocol;
 
-    public Output<Either<String,ProbeProtocol>> getProbeProtocol() {
+    public Output<Either<String,ProbeProtocol>> probeProtocol() {
         return this.probeProtocol;
     }
 
@@ -63,7 +63,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="probeRequestPath")
       private final @Nullable Output<String> probeRequestPath;
 
-    public Output<String> getProbeRequestPath() {
+    public Output<String> probeRequestPath() {
         return this.probeRequestPath == null ? Codegen.empty() : this.probeRequestPath;
     }
 
@@ -74,7 +74,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
-    public Output<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 

@@ -30,7 +30,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="amount", required=true)
       private final Output<Double> amount;
 
-    public Output<Double> getAmount() {
+    public Output<Double> amount() {
         return this.amount;
     }
 
@@ -41,7 +41,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="budgetName")
       private final @Nullable Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName == null ? Codegen.empty() : this.budgetName;
     }
 
@@ -52,7 +52,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category", required=true)
       private final Output<Either<String,CategoryType>> category;
 
-    public Output<Either<String,CategoryType>> getCategory() {
+    public Output<Either<String,CategoryType>> category() {
         return this.category;
     }
 
@@ -63,7 +63,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -74,7 +74,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<BudgetFilterArgs> filter;
 
-    public Output<BudgetFilterArgs> getFilter() {
+    public Output<BudgetFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -85,7 +85,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
       private final @Nullable Output<Map<String,NotificationArgs>> notifications;
 
-    public Output<Map<String,NotificationArgs>> getNotifications() {
+    public Output<Map<String,NotificationArgs>> notifications() {
         return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
@@ -96,7 +96,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -107,7 +107,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeGrain", required=true)
       private final Output<Either<String,TimeGrainType>> timeGrain;
 
-    public Output<Either<String,TimeGrainType>> getTimeGrain() {
+    public Output<Either<String,TimeGrainType>> timeGrain() {
         return this.timeGrain;
     }
 
@@ -118,7 +118,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timePeriod", required=true)
       private final Output<BudgetTimePeriodArgs> timePeriod;
 
-    public Output<BudgetTimePeriodArgs> getTimePeriod() {
+    public Output<BudgetTimePeriodArgs> timePeriod() {
         return this.timePeriod;
     }
 

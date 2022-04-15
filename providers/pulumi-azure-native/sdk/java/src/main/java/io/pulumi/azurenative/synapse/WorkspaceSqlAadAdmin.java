@@ -44,7 +44,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @return Workspace active directory administrator type
      * 
      */
-    public Output</* @Nullable */ String> getAdministratorType() {
+    public Output</* @Nullable */ String> administratorType() {
         return this.administratorType;
     }
     /**
@@ -58,7 +58,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @return Login of the workspace active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> getLogin() {
+    public Output</* @Nullable */ String> login() {
         return this.login;
     }
     /**
@@ -72,7 +72,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @return Object ID of the workspace active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> getSid() {
+    public Output</* @Nullable */ String> sid() {
         return this.sid;
     }
     /**
@@ -100,7 +100,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @return Tenant ID of the workspace active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -114,7 +114,7 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

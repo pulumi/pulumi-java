@@ -26,7 +26,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> getDescription() {
+    public Output<Map<String,String>> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> getDisplayName() {
+    public Output<Map<String,String>> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
-    public Output<String> getHubName() {
+    public Output<String> hubName() {
         return this.hubName;
     }
 
@@ -59,7 +59,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="interactionType", required=true)
       private final Output<String> interactionType;
 
-    public Output<String> getInteractionType() {
+    public Output<String> interactionType() {
         return this.interactionType;
     }
 
@@ -70,7 +70,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mappings")
       private final @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
 
-    public Output<List<RelationshipLinkFieldMappingArgs>> getMappings() {
+    public Output<List<RelationshipLinkFieldMappingArgs>> mappings() {
         return this.mappings == null ? Codegen.empty() : this.mappings;
     }
 
@@ -81,7 +81,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="profilePropertyReferences", required=true)
       private final Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
 
-    public Output<List<ParticipantProfilePropertyReferenceArgs>> getProfilePropertyReferences() {
+    public Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences() {
         return this.profilePropertyReferences;
     }
 
@@ -92,7 +92,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="relatedProfilePropertyReferences", required=true)
       private final Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
 
-    public Output<List<ParticipantProfilePropertyReferenceArgs>> getRelatedProfilePropertyReferences() {
+    public Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
 
@@ -103,7 +103,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="relationshipLinkName")
       private final @Nullable Output<String> relationshipLinkName;
 
-    public Output<String> getRelationshipLinkName() {
+    public Output<String> relationshipLinkName() {
         return this.relationshipLinkName == null ? Codegen.empty() : this.relationshipLinkName;
     }
 
@@ -114,7 +114,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="relationshipName", required=true)
       private final Output<String> relationshipName;
 
-    public Output<String> getRelationshipName() {
+    public Output<String> relationshipName() {
         return this.relationshipName;
     }
 
@@ -125,7 +125,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

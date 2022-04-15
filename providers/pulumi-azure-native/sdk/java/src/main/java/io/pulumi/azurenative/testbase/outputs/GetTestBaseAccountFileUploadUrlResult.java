@@ -32,14 +32,14 @@ public final class GetTestBaseAccountFileUploadUrlResult {
      * The blob path of the uploaded package. It will be used as the 'blobPath' property of PackageResource.
      * 
     */
-    public String getBlobPath() {
+    public String blobPath() {
         return this.blobPath;
     }
     /**
      * The URL used for uploading the package.
      * 
     */
-    public String getUploadUrl() {
+    public String uploadUrl() {
         return this.uploadUrl;
     }
 

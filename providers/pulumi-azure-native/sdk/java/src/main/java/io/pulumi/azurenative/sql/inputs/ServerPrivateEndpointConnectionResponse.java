@@ -24,7 +24,7 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -35,7 +35,7 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
     @Import(name="properties", required=true)
       private final PrivateEndpointConnectionPropertiesResponse properties;
 
-    public PrivateEndpointConnectionPropertiesResponse getProperties() {
+    public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
 

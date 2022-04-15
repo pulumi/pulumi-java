@@ -28,7 +28,7 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     @Import(name="ids")
       private final @Nullable Output<List<SubResourceArgs>> ids;
 
-    public Output<List<SubResourceArgs>> getIds() {
+    public Output<List<SubResourceArgs>> ids() {
         return this.ids == null ? Codegen.empty() : this.ids;
     }
 
@@ -39,7 +39,7 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

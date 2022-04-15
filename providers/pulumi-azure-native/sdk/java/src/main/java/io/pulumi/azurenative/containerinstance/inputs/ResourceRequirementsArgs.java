@@ -27,7 +27,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     @Import(name="limits")
       private final @Nullable Output<ResourceLimitsArgs> limits;
 
-    public Output<ResourceLimitsArgs> getLimits() {
+    public Output<ResourceLimitsArgs> limits() {
         return this.limits == null ? Codegen.empty() : this.limits;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     @Import(name="requests", required=true)
       private final Output<ResourceRequestsArgs> requests;
 
-    public Output<ResourceRequestsArgs> getRequests() {
+    public Output<ResourceRequestsArgs> requests() {
         return this.requests;
     }
 

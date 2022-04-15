@@ -19,7 +19,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
     @Import(name="collectionId", required=true)
       private final String collectionId;
 
-    public String getCollectionId() {
+    public String collectionId() {
         return this.collectionId;
     }
 
@@ -30,7 +30,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
     @Import(name="offerId", required=true)
       private final String offerId;
 
-    public String getOfferId() {
+    public String offerId() {
         return this.offerId;
     }
 
@@ -41,7 +41,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
     @Import(name="privateStoreId", required=true)
       private final String privateStoreId;
 
-    public String getPrivateStoreId() {
+    public String privateStoreId() {
         return this.privateStoreId;
     }
 

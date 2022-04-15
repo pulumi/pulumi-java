@@ -27,7 +27,7 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="corsRules")
       private final @Nullable Output<List<CorsRuleArgs>> corsRules;
 
-    public Output<List<CorsRuleArgs>> getCorsRules() {
+    public Output<List<CorsRuleArgs>> corsRules() {
         return this.corsRules == null ? Codegen.empty() : this.corsRules;
     }
 

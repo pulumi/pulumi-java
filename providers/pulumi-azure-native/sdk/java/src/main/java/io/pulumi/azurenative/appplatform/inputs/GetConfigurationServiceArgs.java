@@ -19,7 +19,7 @@ public final class GetConfigurationServiceArgs extends io.pulumi.resources.Invok
     @Import(name="configurationServiceName", required=true)
       private final String configurationServiceName;
 
-    public String getConfigurationServiceName() {
+    public String configurationServiceName() {
         return this.configurationServiceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConfigurationServiceArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetConfigurationServiceArgs extends io.pulumi.resources.Invok
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

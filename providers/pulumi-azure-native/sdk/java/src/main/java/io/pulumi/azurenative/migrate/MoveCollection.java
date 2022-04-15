@@ -45,7 +45,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return The etag of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -59,7 +59,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return Defines the MSI properties of the Move Collection.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -73,7 +73,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return Defines the move collection properties.
      * 
      */
-    public Output<MoveCollectionPropertiesResponse> getProperties() {
+    public Output<MoveCollectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -115,7 +115,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

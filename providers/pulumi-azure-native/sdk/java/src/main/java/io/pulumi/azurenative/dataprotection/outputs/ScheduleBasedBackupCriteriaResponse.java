@@ -73,28 +73,28 @@ public final class ScheduleBasedBackupCriteriaResponse {
      * and should be part of AbsoluteMarker enum
      * 
     */
-    public List<String> getAbsoluteCriteria() {
+    public List<String> absoluteCriteria() {
         return this.absoluteCriteria == null ? List.of() : this.absoluteCriteria;
     }
     /**
      * This is day of the month from 1 to 28 other wise last of month
      * 
     */
-    public List<DayResponse> getDaysOfMonth() {
+    public List<DayResponse> daysOfMonth() {
         return this.daysOfMonth == null ? List.of() : this.daysOfMonth;
     }
     /**
      * It should be Sunday/Monday/T..../Saturday
      * 
     */
-    public List<String> getDaysOfTheWeek() {
+    public List<String> daysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
     /**
      * It should be January/February/....../December
      * 
     */
-    public List<String> getMonthsOfYear() {
+    public List<String> monthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
     /**
@@ -102,21 +102,21 @@ public final class ScheduleBasedBackupCriteriaResponse {
      * Expected value is 'ScheduleBasedBackupCriteria'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * List of schedule times for backup
      * 
     */
-    public List<String> getScheduleTimes() {
+    public List<String> scheduleTimes() {
         return this.scheduleTimes == null ? List.of() : this.scheduleTimes;
     }
     /**
      * It should be First/Second/Third/Fourth/Last
      * 
     */
-    public List<String> getWeeksOfTheMonth() {
+    public List<String> weeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
     }
 

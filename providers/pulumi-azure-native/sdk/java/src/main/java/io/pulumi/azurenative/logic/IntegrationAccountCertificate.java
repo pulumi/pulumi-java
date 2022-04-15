@@ -45,7 +45,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -59,7 +59,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -73,7 +73,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The key details in the key vault.
      * 
      */
-    public Output</* @Nullable */ KeyVaultKeyReferenceResponse> getKey() {
+    public Output</* @Nullable */ KeyVaultKeyReferenceResponse> key() {
         return this.key;
     }
     /**
@@ -87,7 +87,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -101,7 +101,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -115,7 +115,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The public certificate.
      * 
      */
-    public Output</* @Nullable */ String> getPublicCertificate() {
+    public Output</* @Nullable */ String> publicCertificate() {
         return this.publicCertificate;
     }
     /**
@@ -143,7 +143,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +157,7 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

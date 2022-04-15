@@ -41,7 +41,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * @return Azure location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -55,7 +55,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * @return Workspace collection name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -69,19 +69,19 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * @return Properties
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     @Export(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output</* @Nullable */ AzureSkuResponse> sku;
 
-    public Output</* @Nullable */ AzureSkuResponse> getSku() {
+    public Output</* @Nullable */ AzureSkuResponse> sku() {
         return this.sku;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -95,7 +95,7 @@ public class WorkspaceCollection extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

@@ -27,7 +27,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="hostCaching")
       private final @Nullable Output<HostCaching> hostCaching;
 
-    public Output<HostCaching> getHostCaching() {
+    public Output<HostCaching> hostCaching() {
         return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
     }
 
@@ -38,7 +38,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="source")
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> getSource() {
+    public Output<GalleryArtifactVersionSourceArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 

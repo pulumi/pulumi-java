@@ -48,28 +48,28 @@ public final class ServiceUnitArtifactsResponse {
      * The path to the ARM parameters file relative to the artifact source.
      * 
     */
-    public Optional<String> getParametersArtifactSourceRelativePath() {
+    public Optional<String> parametersArtifactSourceRelativePath() {
         return Optional.ofNullable(this.parametersArtifactSourceRelativePath);
     }
     /**
      * The full URI of the ARM parameters file with the SAS token.
      * 
     */
-    public Optional<String> getParametersUri() {
+    public Optional<String> parametersUri() {
         return Optional.ofNullable(this.parametersUri);
     }
     /**
      * The path to the ARM template file relative to the artifact source.
      * 
     */
-    public Optional<String> getTemplateArtifactSourceRelativePath() {
+    public Optional<String> templateArtifactSourceRelativePath() {
         return Optional.ofNullable(this.templateArtifactSourceRelativePath);
     }
     /**
      * The full URI of the ARM template file with the SAS token.
      * 
     */
-    public Optional<String> getTemplateUri() {
+    public Optional<String> templateUri() {
         return Optional.ofNullable(this.templateUri);
     }
 

@@ -26,7 +26,7 @@ public final class ExportScheduleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="recurrence")
       private final @Nullable String recurrence;
 
-    public Optional<String> getRecurrence() {
+    public Optional<String> recurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
     }
 
@@ -37,7 +37,7 @@ public final class ExportScheduleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="recurrencePeriod")
       private final @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
 
-    public Optional<ExportRecurrencePeriodResponse> getRecurrencePeriod() {
+    public Optional<ExportRecurrencePeriodResponse> recurrencePeriod() {
         return this.recurrencePeriod == null ? Optional.empty() : Optional.ofNullable(this.recurrencePeriod);
     }
 
@@ -48,7 +48,7 @@ public final class ExportScheduleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="status")
       private final @Nullable String status;
 
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 

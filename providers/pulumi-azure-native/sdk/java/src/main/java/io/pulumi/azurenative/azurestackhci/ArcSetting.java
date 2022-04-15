@@ -43,7 +43,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return Aggregate state of Arc agent across the nodes in this HCI cluster.
      * 
      */
-    public Output<String> getAggregateState() {
+    public Output<String> aggregateState() {
         return this.aggregateState;
     }
     /**
@@ -57,7 +57,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
      * 
      */
-    public Output<String> getArcInstanceResourceGroup() {
+    public Output<String> arcInstanceResourceGroup() {
         return this.arcInstanceResourceGroup;
     }
     /**
@@ -71,7 +71,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> getCreatedAt() {
+    public Output</* @Nullable */ String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -85,7 +85,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedBy() {
+    public Output</* @Nullable */ String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -99,7 +99,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedByType() {
+    public Output</* @Nullable */ String> createdByType() {
         return this.createdByType;
     }
     /**
@@ -113,7 +113,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedAt() {
+    public Output</* @Nullable */ String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -127,7 +127,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -141,7 +141,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedByType() {
+    public Output</* @Nullable */ String> lastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
@@ -155,7 +155,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -169,7 +169,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return State of Arc agent in each of the nodes.
      * 
      */
-    public Output<List<PerNodeStateResponse>> getPerNodeDetails() {
+    public Output<List<PerNodeStateResponse>> perNodeDetails() {
         return this.perNodeDetails;
     }
     /**
@@ -183,7 +183,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the ArcSetting proxy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -197,7 +197,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

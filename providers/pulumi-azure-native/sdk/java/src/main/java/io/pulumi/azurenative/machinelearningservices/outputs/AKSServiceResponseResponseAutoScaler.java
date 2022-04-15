@@ -56,35 +56,35 @@ public final class AKSServiceResponseResponseAutoScaler {
      * Option to enable/disable auto scaling.
      * 
     */
-    public Optional<Boolean> getAutoscaleEnabled() {
+    public Optional<Boolean> autoscaleEnabled() {
         return Optional.ofNullable(this.autoscaleEnabled);
     }
     /**
      * The maximum number of replicas in the cluster.
      * 
     */
-    public Optional<Integer> getMaxReplicas() {
+    public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
     /**
      * The minimum number of replicas to scale down to.
      * 
     */
-    public Optional<Integer> getMinReplicas() {
+    public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
     /**
      * The amount of seconds to wait between auto scale updates.
      * 
     */
-    public Optional<Integer> getRefreshPeriodInSeconds() {
+    public Optional<Integer> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
     /**
      * The target utilization percentage to use for determining whether to scale the cluster.
      * 
     */
-    public Optional<Integer> getTargetUtilization() {
+    public Optional<Integer> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
 

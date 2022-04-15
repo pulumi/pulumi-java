@@ -24,7 +24,7 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
       private final List<DiagnosticConditionResponse> conditions;
 
-    public List<DiagnosticConditionResponse> getConditions() {
+    public List<DiagnosticConditionResponse> conditions() {
         return this.conditions;
     }
 

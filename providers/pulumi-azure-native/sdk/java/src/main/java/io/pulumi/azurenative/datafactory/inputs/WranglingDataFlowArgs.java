@@ -30,7 +30,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -52,7 +52,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="documentLocale")
       private final @Nullable Output<String> documentLocale;
 
-    public Output<String> getDocumentLocale() {
+    public Output<String> documentLocale() {
         return this.documentLocale == null ? Codegen.empty() : this.documentLocale;
     }
 
@@ -63,7 +63,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Output<DataFlowFolderArgs> getFolder() {
+    public Output<DataFlowFolderArgs> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -74,7 +74,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -85,7 +85,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sources")
       private final @Nullable Output<List<PowerQuerySourceArgs>> sources;
 
-    public Output<List<PowerQuerySourceArgs>> getSources() {
+    public Output<List<PowerQuerySourceArgs>> sources() {
         return this.sources == null ? Codegen.empty() : this.sources;
     }
 
@@ -97,7 +97,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -28,7 +28,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -39,7 +39,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
+    public Output<String> phone() {
         return this.phone == null ? Codegen.empty() : this.phone;
     }
 
@@ -50,7 +50,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<Either<String,Role>> role;
 
-    public Output<Either<String,Role>> getRole() {
+    public Output<Either<String,Role>> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

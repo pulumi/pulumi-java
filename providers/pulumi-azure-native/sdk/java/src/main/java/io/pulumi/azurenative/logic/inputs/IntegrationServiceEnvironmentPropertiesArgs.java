@@ -32,7 +32,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> getEncryptionConfiguration() {
+    public Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -43,7 +43,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     @Import(name="endpointsConfiguration")
       private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
-    public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
+    public Output<FlowEndpointsConfigurationArgs> endpointsConfiguration() {
         return this.endpointsConfiguration == null ? Codegen.empty() : this.endpointsConfiguration;
     }
 
@@ -54,7 +54,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     @Import(name="integrationServiceEnvironmentId")
       private final @Nullable Output<String> integrationServiceEnvironmentId;
 
-    public Output<String> getIntegrationServiceEnvironmentId() {
+    public Output<String> integrationServiceEnvironmentId() {
         return this.integrationServiceEnvironmentId == null ? Codegen.empty() : this.integrationServiceEnvironmentId;
     }
 
@@ -65,7 +65,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     @Import(name="networkConfiguration")
       private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
-    public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
+    public Output<NetworkConfigurationArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
@@ -76,7 +76,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
 
-    public Output<Either<String,WorkflowProvisioningState>> getProvisioningState() {
+    public Output<Either<String,WorkflowProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -87,7 +87,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> getState() {
+    public Output<Either<String,WorkflowState>> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 

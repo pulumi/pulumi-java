@@ -30,7 +30,7 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="edges")
       private final @Nullable List<GraphEdgeResponse> edges;
 
-    public List<GraphEdgeResponse> getEdges() {
+    public List<GraphEdgeResponse> edges() {
         return this.edges == null ? List.of() : this.edges;
     }
 
@@ -41,7 +41,7 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="graphParameters")
       private final @Nullable Map<String,GraphParameterResponse> graphParameters;
 
-    public Map<String,GraphParameterResponse> getGraphParameters() {
+    public Map<String,GraphParameterResponse> graphParameters() {
         return this.graphParameters == null ? Map.of() : this.graphParameters;
     }
 
@@ -52,7 +52,7 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodes")
       private final @Nullable Map<String,GraphNodeResponse> nodes;
 
-    public Map<String,GraphNodeResponse> getNodes() {
+    public Map<String,GraphNodeResponse> nodes() {
         return this.nodes == null ? Map.of() : this.nodes;
     }
 

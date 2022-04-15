@@ -91,35 +91,35 @@ public final class SecurityAlertTimelineItemResponse {
      * The name of the alert type.
      * 
     */
-    public String getAlertType() {
+    public String alertType() {
         return this.alertType;
     }
     /**
      * The alert azure resource id.
      * 
     */
-    public String getAzureResourceId() {
+    public String azureResourceId() {
         return this.azureResourceId;
     }
     /**
      * The alert description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The alert name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The alert end time.
      * 
     */
-    public String getEndTimeUtc() {
+    public String endTimeUtc() {
         return this.endTimeUtc;
     }
     /**
@@ -127,35 +127,35 @@ public final class SecurityAlertTimelineItemResponse {
      * Expected value is 'SecurityAlert'.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The alert product name.
      * 
     */
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * The alert severity.
      * 
     */
-    public String getSeverity() {
+    public String severity() {
         return this.severity;
     }
     /**
      * The alert start time.
      * 
     */
-    public String getStartTimeUtc() {
+    public String startTimeUtc() {
         return this.startTimeUtc;
     }
     /**
      * The alert generated time.
      * 
     */
-    public String getTimeGenerated() {
+    public String timeGenerated() {
         return this.timeGenerated;
     }
 

@@ -33,14 +33,14 @@ public final class IdentityResponse {
      * The list of identities.
      * 
     */
-    public List<String> getIdentityIds() {
+    public List<String> identityIds() {
         return this.identityIds;
     }
     /**
      * The identity type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

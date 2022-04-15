@@ -28,7 +28,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -39,7 +39,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
     @Import(name="ipConfigurations")
       private final @Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
 
-    public Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> getIpConfigurations() {
+    public Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations() {
         return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

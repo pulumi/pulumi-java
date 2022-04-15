@@ -29,7 +29,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     @Import(name="type")
       private final @Nullable Output<Either<String,OutputType>> type;
 
-    public Output<Either<String,OutputType>> getType() {
+    public Output<Either<String,OutputType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -40,7 +40,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
     @Import(name="workspaceSettings")
       private final @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
-    public Output<ConnectionMonitorWorkspaceSettingsArgs> getWorkspaceSettings() {
+    public Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings() {
         return this.workspaceSettings == null ? Codegen.empty() : this.workspaceSettings;
     }
 

@@ -26,7 +26,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="enabledState")
       private final @Nullable String enabledState;
 
-    public Optional<String> getEnabledState() {
+    public Optional<String> enabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
@@ -37,7 +37,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="healthProbeMethod")
       private final @Nullable String healthProbeMethod;
 
-    public Optional<String> getHealthProbeMethod() {
+    public Optional<String> healthProbeMethod() {
         return this.healthProbeMethod == null ? Optional.empty() : Optional.ofNullable(this.healthProbeMethod);
     }
 
@@ -48,7 +48,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -59,7 +59,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
-    public Optional<Integer> getIntervalInSeconds() {
+    public Optional<Integer> intervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
@@ -70,7 +70,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -81,7 +81,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="path")
       private final @Nullable String path;
 
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
@@ -92,7 +92,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="protocol")
       private final @Nullable String protocol;
 
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
@@ -103,7 +103,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="resourceState", required=true)
       private final String resourceState;
 
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
 
@@ -114,7 +114,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

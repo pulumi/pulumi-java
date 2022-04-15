@@ -42,21 +42,21 @@ public final class IntegrationRuntimeReferenceResponse {
      * Arguments for integration runtime.
      * 
     */
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Reference integration runtime name.
      * 
     */
-    public String getReferenceName() {
+    public String referenceName() {
         return this.referenceName;
     }
     /**
      * Type of integration runtime.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

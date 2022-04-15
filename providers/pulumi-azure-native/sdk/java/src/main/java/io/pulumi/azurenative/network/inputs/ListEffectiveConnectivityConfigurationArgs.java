@@ -21,7 +21,7 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,7 +32,7 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
     @Import(name="skipToken")
       private final @Nullable String skipToken;
 
-    public Optional<String> getSkipToken() {
+    public Optional<String> skipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
@@ -43,7 +43,7 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
     @Import(name="virtualNetworkName", required=true)
       private final String virtualNetworkName;
 
-    public String getVirtualNetworkName() {
+    public String virtualNetworkName() {
         return this.virtualNetworkName;
     }
 

@@ -33,7 +33,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="complexity")
       private final @Nullable Output<Either<String,H264Complexity>> complexity;
 
-    public Output<Either<String,H264Complexity>> getComplexity() {
+    public Output<Either<String,H264Complexity>> complexity() {
         return this.complexity == null ? Codegen.empty() : this.complexity;
     }
 
@@ -44,7 +44,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFrameInterval")
       private final @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> getKeyFrameInterval() {
+    public Output<String> keyFrameInterval() {
         return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
@@ -55,7 +55,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label == null ? Codegen.empty() : this.label;
     }
 
@@ -66,7 +66,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="layers")
       private final @Nullable Output<List<H264LayerArgs>> layers;
 
-    public Output<List<H264LayerArgs>> getLayers() {
+    public Output<List<H264LayerArgs>> layers() {
         return this.layers == null ? Codegen.empty() : this.layers;
     }
 
@@ -78,7 +78,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -89,7 +89,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sceneChangeDetection")
       private final @Nullable Output<Boolean> sceneChangeDetection;
 
-    public Output<Boolean> getSceneChangeDetection() {
+    public Output<Boolean> sceneChangeDetection() {
         return this.sceneChangeDetection == null ? Codegen.empty() : this.sceneChangeDetection;
     }
 
@@ -100,7 +100,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stretchMode")
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> getStretchMode() {
+    public Output<Either<String,StretchMode>> stretchMode() {
         return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 
@@ -111,7 +111,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncMode")
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> getSyncMode() {
+    public Output<Either<String,VideoSyncMode>> syncMode() {
         return this.syncMode == null ? Codegen.empty() : this.syncMode;
     }
 

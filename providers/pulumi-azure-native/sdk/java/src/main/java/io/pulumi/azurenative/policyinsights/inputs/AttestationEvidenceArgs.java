@@ -26,7 +26,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -37,7 +37,7 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     @Import(name="sourceUri")
       private final @Nullable Output<String> sourceUri;
 
-    public Output<String> getSourceUri() {
+    public Output<String> sourceUri() {
         return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
     }
 

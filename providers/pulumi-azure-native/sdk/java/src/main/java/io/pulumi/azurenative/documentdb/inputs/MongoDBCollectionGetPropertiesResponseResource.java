@@ -26,7 +26,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="analyticalStorageTtl")
       private final @Nullable Integer analyticalStorageTtl;
 
-    public Optional<Integer> getAnalyticalStorageTtl() {
+    public Optional<Integer> analyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
     }
 
@@ -37,7 +37,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -48,7 +48,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -59,7 +59,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="indexes")
       private final @Nullable List<MongoIndexResponse> indexes;
 
-    public List<MongoIndexResponse> getIndexes() {
+    public List<MongoIndexResponse> indexes() {
         return this.indexes == null ? List.of() : this.indexes;
     }
 
@@ -70,7 +70,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="rid", required=true)
       private final String rid;
 
-    public String getRid() {
+    public String rid() {
         return this.rid;
     }
 
@@ -81,7 +81,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="shardKey")
       private final @Nullable Map<String,String> shardKey;
 
-    public Map<String,String> getShardKey() {
+    public Map<String,String> shardKey() {
         return this.shardKey == null ? Map.of() : this.shardKey;
     }
 
@@ -92,7 +92,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
     @Import(name="ts", required=true)
       private final Double ts;
 
-    public Double getTs() {
+    public Double ts() {
         return this.ts;
     }
 

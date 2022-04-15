@@ -22,7 +22,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -33,7 +33,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
 
-    public Output<String> getManagedPrivateEndpointName() {
+    public Output<String> managedPrivateEndpointName() {
         return this.managedPrivateEndpointName == null ? Codegen.empty() : this.managedPrivateEndpointName;
     }
 
@@ -44,7 +44,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="managedVirtualNetworkName", required=true)
       private final Output<String> managedVirtualNetworkName;
 
-    public Output<String> getManagedVirtualNetworkName() {
+    public Output<String> managedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
     }
 
@@ -55,7 +55,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
 
-    public Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> getProperties() {
+    public Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties() {
         return this.properties;
     }
 
@@ -66,7 +66,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

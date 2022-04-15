@@ -101,77 +101,77 @@ public final class GetApiOperationResult {
      * Description of the operation. May include HTML formatting tags.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Operation Name.
      * 
     */
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
      * 
     */
-    public String getMethod() {
+    public String method() {
         return this.method;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Operation Policies
      * 
     */
-    public Optional<String> getPolicies() {
+    public Optional<String> policies() {
         return Optional.ofNullable(this.policies);
     }
     /**
      * An entity containing request details.
      * 
     */
-    public Optional<RequestContractResponse> getRequest() {
+    public Optional<RequestContractResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
      * Array of Operation responses.
      * 
     */
-    public List<ResponseContractResponse> getResponses() {
+    public List<ResponseContractResponse> responses() {
         return this.responses == null ? List.of() : this.responses;
     }
     /**
      * Collection of URL template parameters.
      * 
     */
-    public List<ParameterContractResponse> getTemplateParameters() {
+    public List<ParameterContractResponse> templateParameters() {
         return this.templateParameters == null ? List.of() : this.templateParameters;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
      * 
     */
-    public String getUrlTemplate() {
+    public String urlTemplate() {
         return this.urlTemplate;
     }
 

@@ -25,7 +25,7 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
     @Import(name="dataSize")
       private final @Nullable String dataSize;
 
-    public Optional<String> getDataSize() {
+    public Optional<String> dataSize() {
         return this.dataSize == null ? Optional.empty() : Optional.ofNullable(this.dataSize);
     }
 
@@ -36,7 +36,7 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
     @Import(name="dataType")
       private final @Nullable String dataType;
 
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
@@ -47,7 +47,7 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
     @Import(name="quotedName")
       private final @Nullable String quotedName;
 
-    public Optional<String> getQuotedName() {
+    public Optional<String> quotedName() {
         return this.quotedName == null ? Optional.empty() : Optional.ofNullable(this.quotedName);
     }
 

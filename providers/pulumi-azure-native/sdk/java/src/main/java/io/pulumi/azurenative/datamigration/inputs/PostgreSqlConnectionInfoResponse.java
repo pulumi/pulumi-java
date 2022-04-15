@@ -26,7 +26,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
     @Import(name="databaseName")
       private final @Nullable String databaseName;
 
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
@@ -37,7 +37,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -48,7 +48,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 
@@ -59,7 +59,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 
@@ -71,7 +71,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class PostgreSqlConnectionInfoResponse extends io.pulumi.resources.
     @Import(name="userName")
       private final @Nullable String userName;
 
-    public Optional<String> getUserName() {
+    public Optional<String> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

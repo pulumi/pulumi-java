@@ -44,21 +44,21 @@ public final class WebPubSubNetworkACLsResponse {
      * Default action when no other rule matches
      * 
     */
-    public Optional<String> getDefaultAction() {
+    public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * ACLs for requests from private endpoints
      * 
     */
-    public List<PrivateEndpointACLResponse> getPrivateEndpoints() {
+    public List<PrivateEndpointACLResponse> privateEndpoints() {
         return this.privateEndpoints == null ? List.of() : this.privateEndpoints;
     }
     /**
      * ACL for requests from public network
      * 
     */
-    public Optional<NetworkACLResponse> getPublicNetwork() {
+    public Optional<NetworkACLResponse> publicNetwork() {
         return Optional.ofNullable(this.publicNetwork);
     }
 

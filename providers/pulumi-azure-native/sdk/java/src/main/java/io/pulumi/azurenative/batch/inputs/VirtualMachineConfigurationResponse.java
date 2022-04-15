@@ -29,7 +29,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="containerConfiguration")
       private final @Nullable ContainerConfigurationResponse containerConfiguration;
 
-    public Optional<ContainerConfigurationResponse> getContainerConfiguration() {
+    public Optional<ContainerConfigurationResponse> containerConfiguration() {
         return this.containerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerConfiguration);
     }
 
@@ -40,7 +40,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="dataDisks")
       private final @Nullable List<DataDiskResponse> dataDisks;
 
-    public List<DataDiskResponse> getDataDisks() {
+    public List<DataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
@@ -51,7 +51,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="diskEncryptionConfiguration")
       private final @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
 
-    public Optional<DiskEncryptionConfigurationResponse> getDiskEncryptionConfiguration() {
+    public Optional<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionConfiguration);
     }
 
@@ -62,14 +62,14 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="extensions")
       private final @Nullable List<VMExtensionResponse> extensions;
 
-    public List<VMExtensionResponse> getExtensions() {
+    public List<VMExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
 
     @Import(name="imageReference", required=true)
       private final ImageReferenceResponse imageReference;
 
-    public ImageReferenceResponse getImageReference() {
+    public ImageReferenceResponse imageReference() {
         return this.imageReference;
     }
 
@@ -83,7 +83,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="licenseType")
       private final @Nullable String licenseType;
 
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
@@ -94,7 +94,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="nodeAgentSkuId", required=true)
       private final String nodeAgentSkuId;
 
-    public String getNodeAgentSkuId() {
+    public String nodeAgentSkuId() {
         return this.nodeAgentSkuId;
     }
 
@@ -105,7 +105,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="nodePlacementConfiguration")
       private final @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration;
 
-    public Optional<NodePlacementConfigurationResponse> getNodePlacementConfiguration() {
+    public Optional<NodePlacementConfigurationResponse> nodePlacementConfiguration() {
         return this.nodePlacementConfiguration == null ? Optional.empty() : Optional.ofNullable(this.nodePlacementConfiguration);
     }
 
@@ -116,7 +116,7 @@ public final class VirtualMachineConfigurationResponse extends io.pulumi.resourc
     @Import(name="windowsConfiguration")
       private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    public Optional<WindowsConfigurationResponse> getWindowsConfiguration() {
+    public Optional<WindowsConfigurationResponse> windowsConfiguration() {
         return this.windowsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsConfiguration);
     }
 

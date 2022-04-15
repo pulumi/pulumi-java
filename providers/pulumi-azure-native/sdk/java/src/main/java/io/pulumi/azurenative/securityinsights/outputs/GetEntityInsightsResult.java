@@ -36,14 +36,14 @@ public final class GetEntityInsightsResult {
      * The metadata from the get insights operation results.
      * 
     */
-    public Optional<GetInsightsResultsMetadataResponse> getMetaData() {
+    public Optional<GetInsightsResultsMetadataResponse> metaData() {
         return Optional.ofNullable(this.metaData);
     }
     /**
      * The insights result values.
      * 
     */
-    public List<EntityInsightItemResponse> getValue() {
+    public List<EntityInsightItemResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

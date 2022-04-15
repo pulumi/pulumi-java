@@ -26,7 +26,7 @@ public final class WatchlistUserInfoArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 

@@ -26,7 +26,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
 
-    public Optional<Object> getAdditionalHeaders() {
+    public Optional<Object> additionalHeaders() {
         return this.additionalHeaders == null ? Optional.empty() : Optional.ofNullable(this.additionalHeaders);
     }
 
@@ -37,7 +37,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
@@ -48,7 +48,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpCompressionType")
       private final @Nullable Object httpCompressionType;
 
-    public Optional<Object> getHttpCompressionType() {
+    public Optional<Object> httpCompressionType() {
         return this.httpCompressionType == null ? Optional.empty() : Optional.ofNullable(this.httpCompressionType);
     }
 
@@ -59,7 +59,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="httpRequestTimeout")
       private final @Nullable Object httpRequestTimeout;
 
-    public Optional<Object> getHttpRequestTimeout() {
+    public Optional<Object> httpRequestTimeout() {
         return this.httpRequestTimeout == null ? Optional.empty() : Optional.ofNullable(this.httpRequestTimeout);
     }
 
@@ -70,7 +70,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
@@ -81,7 +81,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestInterval")
       private final @Nullable Object requestInterval;
 
-    public Optional<Object> getRequestInterval() {
+    public Optional<Object> requestInterval() {
         return this.requestInterval == null ? Optional.empty() : Optional.ofNullable(this.requestInterval);
     }
 
@@ -92,7 +92,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
 
-    public Optional<Object> getRequestMethod() {
+    public Optional<Object> requestMethod() {
         return this.requestMethod == null ? Optional.empty() : Optional.ofNullable(this.requestMethod);
     }
 
@@ -103,7 +103,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
-    public Optional<Object> getSinkRetryCount() {
+    public Optional<Object> sinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
@@ -114,7 +114,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
-    public Optional<Object> getSinkRetryWait() {
+    public Optional<Object> sinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
@@ -126,7 +126,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -137,7 +137,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
-    public Optional<Object> getWriteBatchSize() {
+    public Optional<Object> writeBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
@@ -148,7 +148,7 @@ public final class RestSinkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
-    public Optional<Object> getWriteBatchTimeout() {
+    public Optional<Object> writeBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 

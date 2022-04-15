@@ -27,7 +27,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoReplaceOnFailure")
       private final @Nullable Output<Boolean> autoReplaceOnFailure;
 
-    public Output<Boolean> getAutoReplaceOnFailure() {
+    public Output<Boolean> autoReplaceOnFailure() {
         return this.autoReplaceOnFailure == null ? Codegen.empty() : this.autoReplaceOnFailure;
     }
 
@@ -38,7 +38,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostGroupName", required=true)
       private final Output<String> hostGroupName;
 
-    public Output<String> getHostGroupName() {
+    public Output<String> hostGroupName() {
         return this.hostGroupName;
     }
 
@@ -49,7 +49,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -60,7 +60,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseType")
       private final @Nullable Output<DedicatedHostLicenseTypes> licenseType;
 
-    public Output<DedicatedHostLicenseTypes> getLicenseType() {
+    public Output<DedicatedHostLicenseTypes> licenseType() {
         return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
@@ -71,7 +71,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -82,7 +82,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformFaultDomain")
       private final @Nullable Output<Integer> platformFaultDomain;
 
-    public Output<Integer> getPlatformFaultDomain() {
+    public Output<Integer> platformFaultDomain() {
         return this.platformFaultDomain == null ? Codegen.empty() : this.platformFaultDomain;
     }
 
@@ -93,7 +93,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,7 +104,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -115,7 +115,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

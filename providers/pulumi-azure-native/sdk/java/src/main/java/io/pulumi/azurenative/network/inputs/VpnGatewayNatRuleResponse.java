@@ -28,7 +28,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="egressVpnSiteLinkConnections", required=true)
       private final List<SubResourceResponse> egressVpnSiteLinkConnections;
 
-    public List<SubResourceResponse> getEgressVpnSiteLinkConnections() {
+    public List<SubResourceResponse> egressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
 
@@ -39,7 +39,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -50,7 +50,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="externalMappings")
       private final @Nullable List<VpnNatRuleMappingResponse> externalMappings;
 
-    public List<VpnNatRuleMappingResponse> getExternalMappings() {
+    public List<VpnNatRuleMappingResponse> externalMappings() {
         return this.externalMappings == null ? List.of() : this.externalMappings;
     }
 
@@ -61,7 +61,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -72,7 +72,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="ingressVpnSiteLinkConnections", required=true)
       private final List<SubResourceResponse> ingressVpnSiteLinkConnections;
 
-    public List<SubResourceResponse> getIngressVpnSiteLinkConnections() {
+    public List<SubResourceResponse> ingressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
 
@@ -83,7 +83,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="internalMappings")
       private final @Nullable List<VpnNatRuleMappingResponse> internalMappings;
 
-    public List<VpnNatRuleMappingResponse> getInternalMappings() {
+    public List<VpnNatRuleMappingResponse> internalMappings() {
         return this.internalMappings == null ? List.of() : this.internalMappings;
     }
 
@@ -94,7 +94,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="ipConfigurationId")
       private final @Nullable String ipConfigurationId;
 
-    public Optional<String> getIpConfigurationId() {
+    public Optional<String> ipConfigurationId() {
         return this.ipConfigurationId == null ? Optional.empty() : Optional.ofNullable(this.ipConfigurationId);
     }
 
@@ -105,7 +105,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
@@ -116,7 +116,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -127,7 +127,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -138,7 +138,7 @@ public final class VpnGatewayNatRuleResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
