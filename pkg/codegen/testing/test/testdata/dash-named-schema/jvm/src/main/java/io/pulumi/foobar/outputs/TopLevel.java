@@ -18,7 +18,7 @@ public final class TopLevel {
         this.buzz = buzz;
     }
 
-    public Optional<String> getBuzz() {
+    public Optional<String> buzz() {
         return Optional.ofNullable(this.buzz);
     }
 

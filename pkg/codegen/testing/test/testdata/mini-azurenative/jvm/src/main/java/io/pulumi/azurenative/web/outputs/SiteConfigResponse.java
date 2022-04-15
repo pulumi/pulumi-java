@@ -26,7 +26,7 @@ public final class SiteConfigResponse {
      * .NET Framework version.
      * 
     */
-    public Optional<String> getNetFrameworkVersion() {
+    public Optional<String> netFrameworkVersion() {
         return Optional.ofNullable(this.netFrameworkVersion);
     }
 

@@ -23,7 +23,7 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
     @Import(name="imageType", required=true)
       private final String imageType;
 
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
 
@@ -34,7 +34,7 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
     @Import(name="imageUrl", required=true)
       private final String imageUrl;
 
-    public String getImageUrl() {
+    public String imageUrl() {
         return this.imageUrl;
     }
 

@@ -17,7 +17,7 @@ public class Dog extends io.pulumi.resources.CustomResource {
     @Export(name="bone", type=String.class, parameters={})
     private Output</* @Nullable */ String> bone;
 
-    public Output</* @Nullable */ String> getBone() {
+    public Output</* @Nullable */ String> bone() {
         return this.bone;
     }
 

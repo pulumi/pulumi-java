@@ -24,7 +24,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -35,7 +35,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -46,7 +46,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeClientSettings", json=true)
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
-    public Output<KubeClientSettingsArgs> getKubeClientSettings() {
+    public Output<KubeClientSettingsArgs> kubeClientSettings() {
         return this.kubeClientSettings == null ? Codegen.empty() : this.kubeClientSettings;
     }
 
@@ -57,7 +57,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeconfig")
       private final @Nullable Output<String> kubeconfig;
 
-    public Output<String> getKubeconfig() {
+    public Output<String> kubeconfig() {
         return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
     }
 

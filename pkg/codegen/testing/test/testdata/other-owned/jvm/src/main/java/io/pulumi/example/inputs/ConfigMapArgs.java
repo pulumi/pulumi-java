@@ -18,7 +18,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 

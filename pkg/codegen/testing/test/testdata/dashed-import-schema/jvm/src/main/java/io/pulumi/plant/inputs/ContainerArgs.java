@@ -22,28 +22,28 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="brightness")
       private final @Nullable Output<ContainerBrightness> brightness;
 
-    public Output<ContainerBrightness> getBrightness() {
+    public Output<ContainerBrightness> brightness() {
         return this.brightness == null ? Codegen.empty() : this.brightness;
     }
 
     @Import(name="color")
       private final @Nullable Output<Either<ContainerColor,String>> color;
 
-    public Output<Either<ContainerColor,String>> getColor() {
+    public Output<Either<ContainerColor,String>> color() {
         return this.color == null ? Codegen.empty() : this.color;
     }
 
     @Import(name="material")
       private final @Nullable Output<String> material;
 
-    public Output<String> getMaterial() {
+    public Output<String> material() {
         return this.material == null ? Codegen.empty() : this.material;
     }
 
     @Import(name="size", required=true)
       private final Output<ContainerSize> size;
 
-    public Output<ContainerSize> getSize() {
+    public Output<ContainerSize> size() {
         return this.size;
     }
 

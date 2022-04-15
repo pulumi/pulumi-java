@@ -21,28 +21,28 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bar")
       private final @Nullable Output<SomeOtherObjectArgs> bar;
 
-    public Output<SomeOtherObjectArgs> getBar() {
+    public Output<SomeOtherObjectArgs> bar() {
         return this.bar == null ? Codegen.empty() : this.bar;
     }
 
     @Import(name="baz")
       private final @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
 
-    public Output<ObjectWithNodeOptionalInputsArgs> getBaz() {
+    public Output<ObjectWithNodeOptionalInputsArgs> baz() {
         return this.baz == null ? Codegen.empty() : this.baz;
     }
 
     @Import(name="foo")
       private final @Nullable Output<ObjectArgs> foo;
 
-    public Output<ObjectArgs> getFoo() {
+    public Output<ObjectArgs> foo() {
         return this.foo == null ? Codegen.empty() : this.foo;
     }
 
     @Import(name="qux")
       private final @Nullable Output<RubberTreeVariety> qux;
 
-    public Output<RubberTreeVariety> getQux() {
+    public Output<RubberTreeVariety> qux() {
         return this.qux == null ? Codegen.empty() : this.qux;
     }
 

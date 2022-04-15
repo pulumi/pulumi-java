@@ -63,42 +63,42 @@ public final class PurchaseMeterDetailsResponse {
      * Expected value is 'Purchase'.
      * 
     */
-    public String getBillingType() {
+    public String billingType() {
         return this.billingType;
     }
     /**
      * Charging type.
      * 
     */
-    public String getChargingType() {
+    public String chargingType() {
         return this.chargingType;
     }
     /**
      * Billing unit applicable for Pav2 billing
      * 
     */
-    public Double getMultiplier() {
+    public Double multiplier() {
         return this.multiplier;
     }
     /**
      * Product Id
      * 
     */
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
     /**
      * Sku Id
      * 
     */
-    public String getSkuId() {
+    public String skuId() {
         return this.skuId;
     }
     /**
      * Term Id
      * 
     */
-    public String getTermId() {
+    public String termId() {
         return this.termId;
     }
 

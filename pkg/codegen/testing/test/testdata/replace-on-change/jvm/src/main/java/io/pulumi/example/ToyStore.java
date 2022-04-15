@@ -20,25 +20,25 @@ public class ToyStore extends io.pulumi.resources.CustomResource {
     @Export(name="chew", type=Chew.class, parameters={})
     private Output</* @Nullable */ Chew> chew;
 
-    public Output</* @Nullable */ Chew> getChew() {
+    public Output</* @Nullable */ Chew> chew() {
         return this.chew;
     }
     @Export(name="laser", type=Laser.class, parameters={})
     private Output</* @Nullable */ Laser> laser;
 
-    public Output</* @Nullable */ Laser> getLaser() {
+    public Output</* @Nullable */ Laser> laser() {
         return this.laser;
     }
     @Export(name="stuff", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> stuff;
 
-    public Output</* @Nullable */ List<Toy>> getStuff() {
+    public Output</* @Nullable */ List<Toy>> stuff() {
         return this.stuff;
     }
     @Export(name="wanted", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> wanted;
 
-    public Output</* @Nullable */ List<Toy>> getWanted() {
+    public Output</* @Nullable */ List<Toy>> wanted() {
         return this.wanted;
     }
 

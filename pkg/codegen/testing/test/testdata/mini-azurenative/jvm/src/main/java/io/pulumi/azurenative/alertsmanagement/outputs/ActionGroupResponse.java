@@ -77,49 +77,49 @@ public final class ActionGroupResponse {
      * Action group to trigger if action rule matches
      * 
     */
-    public String getActionGroupId() {
+    public String actionGroupId() {
         return this.actionGroupId;
     }
     /**
      * Creation time of action rule. Date-Time in ISO-8601 format.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Created by user name.
      * 
     */
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
     /**
      * Description of action rule
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Last updated time of action rule. Date-Time in ISO-8601 format.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * Last modified by user name.
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Indicates if the given action rule is enabled or disabled
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
@@ -127,7 +127,7 @@ public final class ActionGroupResponse {
      * Expected value is 'ActionGroup'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
