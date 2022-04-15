@@ -2,7 +2,6 @@ package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Status;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
@@ -20,6 +19,7 @@ import io.pulumi.resources.CustomResource;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.resources.InvokeArgs;
 import io.pulumi.resources.ResourceArgs;
+import io.pulumi.resources.Stack;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

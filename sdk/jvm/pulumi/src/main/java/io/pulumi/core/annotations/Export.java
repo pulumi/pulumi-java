@@ -1,5 +1,7 @@
 package io.pulumi.core.annotations;
 
+import io.pulumi.resources.Stack;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -9,7 +11,7 @@ import java.lang.annotation.Target;
  * Annotation used by a mark @see {@link io.pulumi.resources.Resource} output properties.
  * <p/>
  * Use this annotation in your Pulumi programs to mark outputs of @see {@link io.pulumi.resources.ComponentResource}
- * and @see {@link io.pulumi.Stack} resources.<br/>
+ * and @see {@link Stack} resources.<br/>
  * Requirements:
  * <ul>
  *     <li>annotate a field of type @see {@link io.pulumi.core.Output}</li>
