@@ -20,35 +20,35 @@ public final class ServiceTaskSpecContainerSpecHealthcheckGetArgs extends io.pul
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="retries")
       private final @Nullable Output<Integer> retries;
 
-    public Output<Integer> getRetries() {
+    public Output<Integer> retries() {
         return this.retries == null ? Codegen.empty() : this.retries;
     }
 
     @Import(name="startPeriod")
       private final @Nullable Output<String> startPeriod;
 
-    public Output<String> getStartPeriod() {
+    public Output<String> startPeriod() {
         return this.startPeriod == null ? Codegen.empty() : this.startPeriod;
     }
 
     @Import(name="tests", required=true)
       private final Output<List<String>> tests;
 
-    public Output<List<String>> getTests() {
+    public Output<List<String>> tests() {
         return this.tests;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
+    public Output<String> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 

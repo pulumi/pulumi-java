@@ -28,7 +28,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachable")
       private final @Nullable Output<Boolean> attachable;
 
-    public Output<Boolean> getAttachable() {
+    public Output<Boolean> attachable() {
         return this.attachable == null ? Codegen.empty() : this.attachable;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkDuplicate")
       private final @Nullable Output<Boolean> checkDuplicate;
 
-    public Output<Boolean> getCheckDuplicate() {
+    public Output<Boolean> checkDuplicate() {
         return this.checkDuplicate == null ? Codegen.empty() : this.checkDuplicate;
     }
 
@@ -51,7 +51,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver == null ? Codegen.empty() : this.driver;
     }
 
@@ -62,7 +62,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ingress")
       private final @Nullable Output<Boolean> ingress;
 
-    public Output<Boolean> getIngress() {
+    public Output<Boolean> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -73,7 +73,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
-    public Output<Boolean> getInternal() {
+    public Output<Boolean> internal() {
         return this.internal == null ? Codegen.empty() : this.internal;
     }
 
@@ -84,7 +84,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamConfigs")
       private final @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs;
 
-    public Output<List<NetworkIpamConfigGetArgs>> getIpamConfigs() {
+    public Output<List<NetworkIpamConfigGetArgs>> ipamConfigs() {
         return this.ipamConfigs == null ? Codegen.empty() : this.ipamConfigs;
     }
 
@@ -95,7 +95,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipamDriver")
       private final @Nullable Output<String> ipamDriver;
 
-    public Output<String> getIpamDriver() {
+    public Output<String> ipamDriver() {
         return this.ipamDriver == null ? Codegen.empty() : this.ipamDriver;
     }
 
@@ -106,7 +106,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6")
       private final @Nullable Output<Boolean> ipv6;
 
-    public Output<Boolean> getIpv6() {
+    public Output<Boolean> ipv6() {
         return this.ipv6 == null ? Codegen.empty() : this.ipv6;
     }
 
@@ -117,7 +117,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<NetworkLabelGetArgs>> labels;
 
-    public Output<List<NetworkLabelGetArgs>> getLabels() {
+    public Output<List<NetworkLabelGetArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -128,7 +128,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -140,7 +140,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<Map<String,Object>> options;
 
-    public Output<Map<String,Object>> getOptions() {
+    public Output<Map<String,Object>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -151,7 +151,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

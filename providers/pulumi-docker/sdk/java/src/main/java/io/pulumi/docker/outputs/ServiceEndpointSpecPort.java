@@ -32,19 +32,19 @@ public final class ServiceEndpointSpecPort {
         this.targetPort = targetPort;
     }
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
-    public Optional<String> getPublishMode() {
+    public Optional<String> publishMode() {
         return Optional.ofNullable(this.publishMode);
     }
-    public Optional<Integer> getPublishedPort() {
+    public Optional<Integer> publishedPort() {
         return Optional.ofNullable(this.publishedPort);
     }
-    public Integer getTargetPort() {
+    public Integer targetPort() {
         return this.targetPort;
     }
 
