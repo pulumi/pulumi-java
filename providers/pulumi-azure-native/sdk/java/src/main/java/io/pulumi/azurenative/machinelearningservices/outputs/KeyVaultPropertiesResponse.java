@@ -41,21 +41,21 @@ public final class KeyVaultPropertiesResponse {
      * For future use - The client id of the identity which will be used to access key vault.
      * 
     */
-    public Optional<String> getIdentityClientId() {
+    public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
      * Key vault uri to access the encryption key.
      * 
     */
-    public String getKeyIdentifier() {
+    public String keyIdentifier() {
         return this.keyIdentifier;
     }
     /**
      * The ArmId of the keyVault where the customer owned encryption key is present.
      * 
     */
-    public String getKeyVaultArmId() {
+    public String keyVaultArmId() {
         return this.keyVaultArmId;
     }
 

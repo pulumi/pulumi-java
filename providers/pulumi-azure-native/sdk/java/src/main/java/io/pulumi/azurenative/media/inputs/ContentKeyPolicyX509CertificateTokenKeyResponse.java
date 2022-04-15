@@ -24,7 +24,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -35,7 +35,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
     @Import(name="rawBody", required=true)
       private final String rawBody;
 
-    public String getRawBody() {
+    public String rawBody() {
         return this.rawBody;
     }
 

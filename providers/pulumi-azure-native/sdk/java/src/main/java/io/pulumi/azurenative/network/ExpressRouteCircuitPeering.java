@@ -51,7 +51,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The Azure ASN.
      * 
      */
-    public Output</* @Nullable */ Integer> getAzureASN() {
+    public Output</* @Nullable */ Integer> azureASN() {
         return this.azureASN;
     }
     /**
@@ -65,7 +65,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The list of circuit connections associated with Azure Private Peering for this circuit.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteCircuitConnectionResponse>> getConnections() {
+    public Output</* @Nullable */ List<ExpressRouteCircuitConnectionResponse>> connections() {
         return this.connections;
     }
     /**
@@ -79,7 +79,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -93,7 +93,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The ExpressRoute connection.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteConnectionIdResponse> getExpressRouteConnection() {
+    public Output</* @Nullable */ ExpressRouteConnectionIdResponse> expressRouteConnection() {
         return this.expressRouteConnection;
     }
     /**
@@ -107,7 +107,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The GatewayManager Etag.
      * 
      */
-    public Output</* @Nullable */ String> getGatewayManagerEtag() {
+    public Output</* @Nullable */ String> gatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
     /**
@@ -121,7 +121,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The IPv6 peering configuration.
      * 
      */
-    public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> getIpv6PeeringConfig() {
+    public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
         return this.ipv6PeeringConfig;
     }
     /**
@@ -135,7 +135,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return Who was the last to modify the peering.
      * 
      */
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -149,7 +149,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The Microsoft peering configuration.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
+    public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return this.microsoftPeeringConfig;
     }
     /**
@@ -163,7 +163,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -177,7 +177,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The peer ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getPeerASN() {
+    public Output</* @Nullable */ Double> peerASN() {
         return this.peerASN;
     }
     /**
@@ -191,7 +191,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The list of peered circuit connections associated with Azure Private Peering for this circuit.
      * 
      */
-    public Output<List<PeerExpressRouteCircuitConnectionResponse>> getPeeredConnections() {
+    public Output<List<PeerExpressRouteCircuitConnectionResponse>> peeredConnections() {
         return this.peeredConnections;
     }
     /**
@@ -205,7 +205,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The peering type.
      * 
      */
-    public Output</* @Nullable */ String> getPeeringType() {
+    public Output</* @Nullable */ String> peeringType() {
         return this.peeringType;
     }
     /**
@@ -219,7 +219,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The primary port.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryAzurePort() {
+    public Output</* @Nullable */ String> primaryAzurePort() {
         return this.primaryAzurePort;
     }
     /**
@@ -233,7 +233,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The primary address prefix.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryPeerAddressPrefix() {
+    public Output</* @Nullable */ String> primaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix;
     }
     /**
@@ -247,7 +247,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The provisioning state of the express route circuit peering resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -261,7 +261,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The reference to the RouteFilter resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getRouteFilter() {
+    public Output</* @Nullable */ SubResourceResponse> routeFilter() {
         return this.routeFilter;
     }
     /**
@@ -275,7 +275,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The secondary port.
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryAzurePort() {
+    public Output</* @Nullable */ String> secondaryAzurePort() {
         return this.secondaryAzurePort;
     }
     /**
@@ -289,7 +289,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The secondary address prefix.
      * 
      */
-    public Output</* @Nullable */ String> getSecondaryPeerAddressPrefix() {
+    public Output</* @Nullable */ String> secondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix;
     }
     /**
@@ -303,7 +303,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The shared key.
      * 
      */
-    public Output</* @Nullable */ String> getSharedKey() {
+    public Output</* @Nullable */ String> sharedKey() {
         return this.sharedKey;
     }
     /**
@@ -317,7 +317,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The peering state.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -331,7 +331,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The peering stats of express route circuit.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitStatsResponse> getStats() {
+    public Output</* @Nullable */ ExpressRouteCircuitStatsResponse> stats() {
         return this.stats;
     }
     /**
@@ -345,7 +345,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -359,7 +359,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * @return The VLAN ID.
      * 
      */
-    public Output</* @Nullable */ Integer> getVlanId() {
+    public Output</* @Nullable */ Integer> vlanId() {
         return this.vlanId;
     }
 

@@ -50,28 +50,28 @@ public final class AccountEncryptionResponse {
      * The Key Vault identity.
      * 
     */
-    public Optional<ResourceIdentityResponse> getIdentity() {
+    public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The properties of the key used to encrypt the account.
      * 
     */
-    public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
+    public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * The current status of the Key Vault mapping.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The type of key used to encrypt the Account Key.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -70,42 +70,42 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
      * The default database for the login.
      * 
     */
-    public String getDefaultDatabase() {
+    public String defaultDatabase() {
         return this.defaultDatabase;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The state of the login.
      * 
     */
-    public Boolean getIsEnabled() {
+    public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
      * The type of login.
      * 
     */
-    public String getLoginType() {
+    public String loginType() {
         return this.loginType;
     }
     /**
      * Information about eligibility of login for migration.
      * 
     */
-    public MigrationEligibilityInfoResponse getMigrationEligibility() {
+    public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
     /**
      * Login name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
      * Expected value is 'LoginLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
 

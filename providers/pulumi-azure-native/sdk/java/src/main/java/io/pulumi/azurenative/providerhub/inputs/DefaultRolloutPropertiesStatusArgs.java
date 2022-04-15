@@ -24,35 +24,35 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
     @Import(name="completedRegions")
       private final @Nullable Output<List<String>> completedRegions;
 
-    public Output<List<String>> getCompletedRegions() {
+    public Output<List<String>> completedRegions() {
         return this.completedRegions == null ? Codegen.empty() : this.completedRegions;
     }
 
     @Import(name="failedOrSkippedRegions")
       private final @Nullable Output<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions;
 
-    public Output<Map<String,ExtendedErrorInfoArgs>> getFailedOrSkippedRegions() {
+    public Output<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Codegen.empty() : this.failedOrSkippedRegions;
     }
 
     @Import(name="nextTrafficRegion")
       private final @Nullable Output<Either<String,TrafficRegionCategory>> nextTrafficRegion;
 
-    public Output<Either<String,TrafficRegionCategory>> getNextTrafficRegion() {
+    public Output<Either<String,TrafficRegionCategory>> nextTrafficRegion() {
         return this.nextTrafficRegion == null ? Codegen.empty() : this.nextTrafficRegion;
     }
 
     @Import(name="nextTrafficRegionScheduledTime")
       private final @Nullable Output<String> nextTrafficRegionScheduledTime;
 
-    public Output<String> getNextTrafficRegionScheduledTime() {
+    public Output<String> nextTrafficRegionScheduledTime() {
         return this.nextTrafficRegionScheduledTime == null ? Codegen.empty() : this.nextTrafficRegionScheduledTime;
     }
 
     @Import(name="subscriptionReregistrationResult")
       private final @Nullable Output<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult;
 
-    public Output<Either<String,SubscriptionReregistrationResult>> getSubscriptionReregistrationResult() {
+    public Output<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult() {
         return this.subscriptionReregistrationResult == null ? Codegen.empty() : this.subscriptionReregistrationResult;
     }
 

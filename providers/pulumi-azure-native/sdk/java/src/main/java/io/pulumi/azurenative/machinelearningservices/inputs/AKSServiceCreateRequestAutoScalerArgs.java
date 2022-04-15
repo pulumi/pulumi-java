@@ -27,7 +27,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
     @Import(name="autoscaleEnabled")
       private final @Nullable Output<Boolean> autoscaleEnabled;
 
-    public Output<Boolean> getAutoscaleEnabled() {
+    public Output<Boolean> autoscaleEnabled() {
         return this.autoscaleEnabled == null ? Codegen.empty() : this.autoscaleEnabled;
     }
 
@@ -38,7 +38,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
     @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> getMaxReplicas() {
+    public Output<Integer> maxReplicas() {
         return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
     }
 
@@ -49,7 +49,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
     @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> getMinReplicas() {
+    public Output<Integer> minReplicas() {
         return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
@@ -60,7 +60,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
     @Import(name="refreshPeriodInSeconds")
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
 
-    public Output<Integer> getRefreshPeriodInSeconds() {
+    public Output<Integer> refreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Codegen.empty() : this.refreshPeriodInSeconds;
     }
 
@@ -71,7 +71,7 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends io.pulumi.resou
     @Import(name="targetUtilization")
       private final @Nullable Output<Integer> targetUtilization;
 
-    public Output<Integer> getTargetUtilization() {
+    public Output<Integer> targetUtilization() {
         return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
     }
 

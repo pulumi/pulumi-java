@@ -26,7 +26,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -37,7 +37,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical == null ? Codegen.empty() : this.critical;
     }
 
@@ -48,7 +48,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataCenter")
       private final @Nullable Output<String> dataCenter;
 
-    public Output<String> getDataCenter() {
+    public Output<String> dataCenter() {
         return this.dataCenter == null ? Codegen.empty() : this.dataCenter;
     }
 
@@ -59,7 +59,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -70,7 +70,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -92,7 +92,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName")
       private final @Nullable Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName == null ? Codegen.empty() : this.namespaceName;
     }
 
@@ -103,7 +103,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceType")
       private final @Nullable Output<NamespaceType> namespaceType;
 
-    public Output<NamespaceType> getNamespaceType() {
+    public Output<NamespaceType> namespaceType() {
         return this.namespaceType == null ? Codegen.empty() : this.namespaceType;
     }
 
@@ -114,7 +114,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -125,7 +125,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -136,7 +136,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -147,7 +147,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scaleUnit")
       private final @Nullable Output<String> scaleUnit;
 
-    public Output<String> getScaleUnit() {
+    public Output<String> scaleUnit() {
         return this.scaleUnit == null ? Codegen.empty() : this.scaleUnit;
     }
 
@@ -158,7 +158,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceBusEndpoint")
       private final @Nullable Output<String> serviceBusEndpoint;
 
-    public Output<String> getServiceBusEndpoint() {
+    public Output<String> serviceBusEndpoint() {
         return this.serviceBusEndpoint == null ? Codegen.empty() : this.serviceBusEndpoint;
     }
 
@@ -169,7 +169,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -180,7 +180,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -191,7 +191,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
@@ -202,7 +202,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -213,7 +213,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;
 
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 

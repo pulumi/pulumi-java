@@ -23,7 +23,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="cpu", required=true)
       private final Double cpu;
 
-    public Double getCpu() {
+    public Double cpu() {
         return this.cpu;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="memoryInGB", required=true)
       private final Double memoryInGB;
 
-    public Double getMemoryInGB() {
+    public Double memoryInGB() {
         return this.memoryInGB;
     }
 

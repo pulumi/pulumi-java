@@ -28,7 +28,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
+    public Output<String> referenceName() {
         return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 
@@ -39,7 +39,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
-    public Output<Either<String,IntegrationRuntimeEntityReferenceType>> getType() {
+    public Output<Either<String,IntegrationRuntimeEntityReferenceType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -43,7 +43,7 @@ public final class SelectAudioTrackByIdResponse {
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
      * 
     */
-    public Optional<String> getChannelMapping() {
+    public Optional<String> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
     /**
@@ -51,14 +51,14 @@ public final class SelectAudioTrackByIdResponse {
      * Expected value is '#Microsoft.Media.SelectAudioTrackById'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Track identifier to select
      * 
     */
-    public Double getTrackId() {
+    public Double trackId() {
         return this.trackId;
     }
 

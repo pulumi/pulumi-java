@@ -37,17 +37,17 @@ public final class AutoScaleRunErrorResponse {
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
-    public List<AutoScaleRunErrorResponse> getDetails() {
+    public List<AutoScaleRunErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

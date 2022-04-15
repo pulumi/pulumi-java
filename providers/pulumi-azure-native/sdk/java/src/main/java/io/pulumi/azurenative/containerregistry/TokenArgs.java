@@ -25,7 +25,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
 
-    public Output<TokenCredentialsPropertiesArgs> getCredentials() {
+    public Output<TokenCredentialsPropertiesArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -36,7 +36,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -47,7 +47,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopeMapId")
       private final @Nullable Output<String> scopeMapId;
 
-    public Output<String> getScopeMapId() {
+    public Output<String> scopeMapId() {
         return this.scopeMapId == null ? Codegen.empty() : this.scopeMapId;
     }
 
@@ -69,7 +69,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,TokenStatus>> status;
 
-    public Output<Either<String,TokenStatus>> getStatus() {
+    public Output<Either<String,TokenStatus>> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -80,7 +80,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenName")
       private final @Nullable Output<String> tokenName;
 
-    public Output<String> getTokenName() {
+    public Output<String> tokenName() {
         return this.tokenName == null ? Codegen.empty() : this.tokenName;
     }
 

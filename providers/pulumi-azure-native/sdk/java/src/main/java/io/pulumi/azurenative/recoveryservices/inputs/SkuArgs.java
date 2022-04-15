@@ -28,7 +28,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> name() {
         return this.name;
     }
 
@@ -39,7 +39,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

@@ -26,7 +26,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
     @Import(name="destinationContainer", required=true)
       private final String destinationContainer;
 
-    public String getDestinationContainer() {
+    public String destinationContainer() {
         return this.destinationContainer;
     }
 
@@ -37,7 +37,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
     @Import(name="filters")
       private final @Nullable ObjectReplicationPolicyFilterResponse filters;
 
-    public Optional<ObjectReplicationPolicyFilterResponse> getFilters() {
+    public Optional<ObjectReplicationPolicyFilterResponse> filters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
     }
 
@@ -48,7 +48,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
     @Import(name="ruleId")
       private final @Nullable String ruleId;
 
-    public Optional<String> getRuleId() {
+    public Optional<String> ruleId() {
         return this.ruleId == null ? Optional.empty() : Optional.ofNullable(this.ruleId);
     }
 
@@ -59,7 +59,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
     @Import(name="sourceContainer", required=true)
       private final String sourceContainer;
 
-    public String getSourceContainer() {
+    public String sourceContainer() {
         return this.sourceContainer;
     }
 

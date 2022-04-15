@@ -30,7 +30,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHandler")
       private final @Nullable Output<EventHandlerSettingsArgs> eventHandler;
 
-    public Output<EventHandlerSettingsArgs> getEventHandler() {
+    public Output<EventHandlerSettingsArgs> eventHandler() {
         return this.eventHandler == null ? Codegen.empty() : this.eventHandler;
     }
 
@@ -46,7 +46,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<WebPubSubFeatureArgs>> features;
 
-    public Output<List<WebPubSubFeatureArgs>> getFeatures() {
+    public Output<List<WebPubSubFeatureArgs>> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -57,7 +57,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Output<ManagedIdentityArgs> getIdentity() {
+    public Output<ManagedIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -68,7 +68,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -79,7 +79,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkACLs")
       private final @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
 
-    public Output<WebPubSubNetworkACLsArgs> getNetworkACLs() {
+    public Output<WebPubSubNetworkACLsArgs> networkACLs() {
         return this.networkACLs == null ? Codegen.empty() : this.networkACLs;
     }
 
@@ -92,7 +92,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> getPublicNetworkAccess() {
+    public Output<String> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -103,7 +103,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -125,7 +125,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> getSku() {
+    public Output<ResourceSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -136,7 +136,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -147,7 +147,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tls")
       private final @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
-    public Output<WebPubSubTlsSettingsArgs> getTls() {
+    public Output<WebPubSubTlsSettingsArgs> tls() {
         return this.tls == null ? Codegen.empty() : this.tls;
     }
 

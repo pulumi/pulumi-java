@@ -25,7 +25,7 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
     @Import(name="subnet")
       private final @Nullable String subnet;
 
-    public Optional<String> getSubnet() {
+    public Optional<String> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

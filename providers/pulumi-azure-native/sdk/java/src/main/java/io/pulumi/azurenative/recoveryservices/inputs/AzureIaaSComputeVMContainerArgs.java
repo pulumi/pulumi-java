@@ -28,7 +28,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+    public Output<Either<String,BackupManagementType>> backupManagementType() {
         return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
@@ -43,7 +43,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
-    public Output<String> getContainerType() {
+    public Output<String> containerType() {
         return this.containerType;
     }
 
@@ -54,7 +54,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -65,7 +65,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
-    public Output<String> getHealthStatus() {
+    public Output<String> healthStatus() {
         return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
@@ -76,7 +76,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
-    public Output<String> getRegistrationStatus() {
+    public Output<String> registrationStatus() {
         return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
@@ -87,7 +87,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
@@ -98,7 +98,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;
 
-    public Output<String> getVirtualMachineId() {
+    public Output<String> virtualMachineId() {
         return this.virtualMachineId == null ? Codegen.empty() : this.virtualMachineId;
     }
 
@@ -109,7 +109,7 @@ public final class AzureIaaSComputeVMContainerArgs extends io.pulumi.resources.R
     @Import(name="virtualMachineVersion")
       private final @Nullable Output<String> virtualMachineVersion;
 
-    public Output<String> getVirtualMachineVersion() {
+    public Output<String> virtualMachineVersion() {
         return this.virtualMachineVersion == null ? Codegen.empty() : this.virtualMachineVersion;
     }
 

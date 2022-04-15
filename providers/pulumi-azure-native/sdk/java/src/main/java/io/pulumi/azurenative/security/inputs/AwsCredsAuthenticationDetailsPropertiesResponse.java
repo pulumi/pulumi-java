@@ -24,7 +24,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     @Import(name="accountId", required=true)
       private final String accountId;
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 
@@ -35,7 +35,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     @Import(name="authenticationProvisioningState", required=true)
       private final String authenticationProvisioningState;
 
-    public String getAuthenticationProvisioningState() {
+    public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
 
@@ -47,7 +47,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
 
@@ -58,7 +58,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     @Import(name="awsAccessKeyId", required=true)
       private final String awsAccessKeyId;
 
-    public String getAwsAccessKeyId() {
+    public String awsAccessKeyId() {
         return this.awsAccessKeyId;
     }
 
@@ -69,7 +69,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     @Import(name="awsSecretAccessKey", required=true)
       private final String awsSecretAccessKey;
 
-    public String getAwsSecretAccessKey() {
+    public String awsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
 
@@ -80,7 +80,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends io.pu
     @Import(name="grantedPermissions", required=true)
       private final List<String> grantedPermissions;
 
-    public List<String> getGrantedPermissions() {
+    public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
 

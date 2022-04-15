@@ -30,7 +30,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authInfo")
       private final @Nullable Output<Object> authInfo;
 
-    public Output<Object> getAuthInfo() {
+    public Output<Object> authInfo() {
         return this.authInfo == null ? Codegen.empty() : this.authInfo;
     }
 
@@ -41,7 +41,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientType")
       private final @Nullable Output<Either<String,ClientType>> clientType;
 
-    public Output<Either<String,ClientType>> getClientType() {
+    public Output<Either<String,ClientType>> clientType() {
         return this.clientType == null ? Codegen.empty() : this.clientType;
     }
 
@@ -52,7 +52,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkerName")
       private final @Nullable Output<String> linkerName;
 
-    public Output<String> getLinkerName() {
+    public Output<String> linkerName() {
         return this.linkerName == null ? Codegen.empty() : this.linkerName;
     }
 
@@ -63,7 +63,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -74,7 +74,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 

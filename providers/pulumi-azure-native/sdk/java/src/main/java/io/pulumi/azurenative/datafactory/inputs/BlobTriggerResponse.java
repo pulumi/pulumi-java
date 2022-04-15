@@ -30,7 +30,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -41,7 +41,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -52,7 +52,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="folderPath", required=true)
       private final String folderPath;
 
-    public String getFolderPath() {
+    public String folderPath() {
         return this.folderPath;
     }
 
@@ -63,7 +63,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="linkedService", required=true)
       private final LinkedServiceReferenceResponse linkedService;
 
-    public LinkedServiceReferenceResponse getLinkedService() {
+    public LinkedServiceReferenceResponse linkedService() {
         return this.linkedService;
     }
 
@@ -74,7 +74,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrency", required=true)
       private final Integer maxConcurrency;
 
-    public Integer getMaxConcurrency() {
+    public Integer maxConcurrency() {
         return this.maxConcurrency;
     }
 
@@ -85,7 +85,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
-    public List<TriggerPipelineReferenceResponse> getPipelines() {
+    public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
@@ -96,7 +96,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
 
@@ -108,7 +108,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

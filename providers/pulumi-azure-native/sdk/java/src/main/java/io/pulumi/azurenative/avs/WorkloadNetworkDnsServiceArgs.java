@@ -26,7 +26,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="defaultDnsZone")
       private final @Nullable Output<String> defaultDnsZone;
 
-    public Output<String> getDefaultDnsZone() {
+    public Output<String> defaultDnsZone() {
         return this.defaultDnsZone == null ? Codegen.empty() : this.defaultDnsZone;
     }
 
@@ -37,7 +37,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="dnsServiceId")
       private final @Nullable Output<String> dnsServiceId;
 
-    public Output<String> getDnsServiceId() {
+    public Output<String> dnsServiceId() {
         return this.dnsServiceId == null ? Codegen.empty() : this.dnsServiceId;
     }
 
@@ -59,7 +59,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="dnsServiceIp")
       private final @Nullable Output<String> dnsServiceIp;
 
-    public Output<String> getDnsServiceIp() {
+    public Output<String> dnsServiceIp() {
         return this.dnsServiceIp == null ? Codegen.empty() : this.dnsServiceIp;
     }
 
@@ -70,7 +70,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="fqdnZones")
       private final @Nullable Output<List<String>> fqdnZones;
 
-    public Output<List<String>> getFqdnZones() {
+    public Output<List<String>> fqdnZones() {
         return this.fqdnZones == null ? Codegen.empty() : this.fqdnZones;
     }
 
@@ -81,7 +81,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="logLevel")
       private final @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
-    public Output<Either<String,DnsServiceLogLevelEnum>> getLogLevel() {
+    public Output<Either<String,DnsServiceLogLevelEnum>> logLevel() {
         return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
@@ -92,7 +92,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -103,7 +103,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,7 +114,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
+    public Output<Double> revision() {
         return this.revision == null ? Codegen.empty() : this.revision;
     }
 

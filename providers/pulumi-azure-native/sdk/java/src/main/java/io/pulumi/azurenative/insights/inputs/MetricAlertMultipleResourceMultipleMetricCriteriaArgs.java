@@ -30,7 +30,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     @Import(name="allOf")
       private final @Nullable Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
-    public Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> getAllOf() {
+    public Output<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf() {
         return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
@@ -42,7 +42,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 

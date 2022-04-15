@@ -22,7 +22,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -33,7 +33,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 

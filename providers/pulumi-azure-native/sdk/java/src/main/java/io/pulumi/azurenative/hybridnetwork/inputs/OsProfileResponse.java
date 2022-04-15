@@ -27,7 +27,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="adminUsername")
       private final @Nullable String adminUsername;
 
-    public Optional<String> getAdminUsername() {
+    public Optional<String> adminUsername() {
         return this.adminUsername == null ? Optional.empty() : Optional.ofNullable(this.adminUsername);
     }
 
@@ -38,7 +38,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customData")
       private final @Nullable String customData;
 
-    public Optional<String> getCustomData() {
+    public Optional<String> customData() {
         return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
     }
 
@@ -49,7 +49,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="customDataRequired")
       private final @Nullable Boolean customDataRequired;
 
-    public Optional<Boolean> getCustomDataRequired() {
+    public Optional<Boolean> customDataRequired() {
         return this.customDataRequired == null ? Optional.empty() : Optional.ofNullable(this.customDataRequired);
     }
 
@@ -60,7 +60,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="linuxConfiguration")
       private final @Nullable LinuxConfigurationResponse linuxConfiguration;
 
-    public Optional<LinuxConfigurationResponse> getLinuxConfiguration() {
+    public Optional<LinuxConfigurationResponse> linuxConfiguration() {
         return this.linuxConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxConfiguration);
     }
 

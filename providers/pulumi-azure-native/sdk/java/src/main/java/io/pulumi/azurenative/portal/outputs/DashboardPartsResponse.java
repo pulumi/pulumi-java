@@ -35,14 +35,14 @@ public final class DashboardPartsResponse {
      * The dashboard part's metadata.
      * 
     */
-    public Optional<MarkdownPartMetadataResponse> getMetadata() {
+    public Optional<MarkdownPartMetadataResponse> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The dashboard's part position.
      * 
     */
-    public DashboardPartsResponsePosition getPosition() {
+    public DashboardPartsResponsePosition position() {
         return this.position;
     }
 

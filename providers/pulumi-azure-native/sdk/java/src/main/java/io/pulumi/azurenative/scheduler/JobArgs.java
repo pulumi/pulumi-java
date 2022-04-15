@@ -23,7 +23,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobCollectionName", required=true)
       private final Output<String> jobCollectionName;
 
-    public Output<String> getJobCollectionName() {
+    public Output<String> jobCollectionName() {
         return this.jobCollectionName;
     }
 
@@ -34,7 +34,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
@@ -45,7 +45,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<JobPropertiesArgs> properties;
 
-    public Output<JobPropertiesArgs> getProperties() {
+    public Output<JobPropertiesArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -56,7 +56,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

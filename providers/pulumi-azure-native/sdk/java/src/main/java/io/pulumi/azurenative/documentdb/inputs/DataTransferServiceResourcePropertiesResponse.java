@@ -28,7 +28,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     @Import(name="creationTime", required=true)
       private final String creationTime;
 
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
 
@@ -39,7 +39,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
@@ -50,7 +50,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     @Import(name="instanceSize")
       private final @Nullable String instanceSize;
 
-    public Optional<String> getInstanceSize() {
+    public Optional<String> instanceSize() {
         return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
     }
 
@@ -61,7 +61,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     @Import(name="locations", required=true)
       private final List<DataTransferRegionalServiceResourceResponse> locations;
 
-    public List<DataTransferRegionalServiceResourceResponse> getLocations() {
+    public List<DataTransferRegionalServiceResourceResponse> locations() {
         return this.locations;
     }
 
@@ -73,7 +73,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     @Import(name="serviceType", required=true)
       private final String serviceType;
 
-    public String getServiceType() {
+    public String serviceType() {
         return this.serviceType;
     }
 
@@ -84,7 +84,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

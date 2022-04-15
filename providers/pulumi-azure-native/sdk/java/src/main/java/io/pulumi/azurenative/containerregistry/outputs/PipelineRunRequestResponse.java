@@ -64,35 +64,35 @@ public final class PipelineRunRequestResponse {
      * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
      * 
     */
-    public List<String> getArtifacts() {
+    public List<String> artifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
     /**
      * The digest of the tar used to transfer the artifacts.
      * 
     */
-    public Optional<String> getCatalogDigest() {
+    public Optional<String> catalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
     /**
      * The resource ID of the pipeline to run.
      * 
     */
-    public Optional<String> getPipelineResourceId() {
+    public Optional<String> pipelineResourceId() {
         return Optional.ofNullable(this.pipelineResourceId);
     }
     /**
      * The source properties of the pipeline run.
      * 
     */
-    public Optional<PipelineRunSourcePropertiesResponse> getSource() {
+    public Optional<PipelineRunSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The target properties of the pipeline run.
      * 
     */
-    public Optional<PipelineRunTargetPropertiesResponse> getTarget() {
+    public Optional<PipelineRunTargetPropertiesResponse> target() {
         return Optional.ofNullable(this.target);
     }
 

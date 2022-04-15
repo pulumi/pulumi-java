@@ -26,7 +26,7 @@ public final class ServiceAcrConfigurationInfoResponse {
      * The list of the ACR login servers.
      * 
     */
-    public List<String> getLoginServers() {
+    public List<String> loginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }
 

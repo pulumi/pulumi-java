@@ -34,14 +34,14 @@ public final class ApiResourceDefinitionsResponse {
      * The modified swagger URL
      * 
     */
-    public Optional<String> getModifiedSwaggerUrl() {
+    public Optional<String> modifiedSwaggerUrl() {
         return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
     /**
      * The original swagger URL
      * 
     */
-    public Optional<String> getOriginalSwaggerUrl() {
+    public Optional<String> originalSwaggerUrl() {
         return Optional.ofNullable(this.originalSwaggerUrl);
     }
 

@@ -26,7 +26,7 @@ public final class CustomProfileResponse {
      * Path for metadata configuration.
      * 
     */
-    public Optional<String> getMetadataConfigurationPath() {
+    public Optional<String> metadataConfigurationPath() {
         return Optional.ofNullable(this.metadataConfigurationPath);
     }
 

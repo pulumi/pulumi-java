@@ -19,7 +19,7 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="nodeTypeName", required=true)
       private final String nodeTypeName;
 
-    public String getNodeTypeName() {
+    public String nodeTypeName() {
         return this.nodeTypeName;
     }
 
@@ -41,7 +41,7 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

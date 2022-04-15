@@ -27,7 +27,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageContent", required=true)
       private final Output<Object> packageContent;
 
-    public Output<Object> getPackageContent() {
+    public Output<Object> packageContent() {
         return this.packageContent;
     }
 
@@ -38,7 +38,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageLastModifiedDate")
       private final @Nullable Output<String> packageLastModifiedDate;
 
-    public Output<String> getPackageLastModifiedDate() {
+    public Output<String> packageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Codegen.empty() : this.packageLastModifiedDate;
     }
 
@@ -49,7 +49,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
@@ -60,7 +60,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="packagePath", required=true)
       private final Output<Object> packagePath;
 
-    public Output<Object> getPackagePath() {
+    public Output<Object> packagePath() {
         return this.packagePath;
     }
 

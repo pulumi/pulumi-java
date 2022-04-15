@@ -24,7 +24,7 @@ public final class ContentKeyPolicyUnknownRestrictionResponse extends io.pulumi.
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

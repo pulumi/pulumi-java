@@ -83,63 +83,63 @@ public final class GetWorkloadClassifierResult {
      * The workload classifier context.
      * 
     */
-    public Optional<String> getContext() {
+    public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
      * The workload classifier end time for classification.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The workload classifier importance.
      * 
     */
-    public Optional<String> getImportance() {
+    public Optional<String> importance() {
         return Optional.ofNullable(this.importance);
     }
     /**
      * The workload classifier label.
      * 
     */
-    public Optional<String> getLabel() {
+    public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
      * The workload classifier member name.
      * 
     */
-    public String getMemberName() {
+    public String memberName() {
         return this.memberName;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The workload classifier start time for classification.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

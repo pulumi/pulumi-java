@@ -20,14 +20,14 @@ public final class ProviderRegistrationPropertiesSubscriptionLifecycleNotificati
     @Import(name="softDeleteTTL")
       private final @Nullable Output<String> softDeleteTTL;
 
-    public Output<String> getSoftDeleteTTL() {
+    public Output<String> softDeleteTTL() {
         return this.softDeleteTTL == null ? Codegen.empty() : this.softDeleteTTL;
     }
 
     @Import(name="subscriptionStateOverrideActions")
       private final @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
-    public Output<List<SubscriptionStateOverrideActionArgs>> getSubscriptionStateOverrideActions() {
+    public Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions() {
         return this.subscriptionStateOverrideActions == null ? Codegen.empty() : this.subscriptionStateOverrideActions;
     }
 

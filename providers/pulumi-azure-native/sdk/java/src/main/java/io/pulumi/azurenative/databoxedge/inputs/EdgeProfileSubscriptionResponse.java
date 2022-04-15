@@ -27,35 +27,35 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @Import(name="locationPlacementId")
       private final @Nullable String locationPlacementId;
 
-    public Optional<String> getLocationPlacementId() {
+    public Optional<String> locationPlacementId() {
         return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
     }
 
     @Import(name="quotaId")
       private final @Nullable String quotaId;
 
-    public Optional<String> getQuotaId() {
+    public Optional<String> quotaId() {
         return this.quotaId == null ? Optional.empty() : Optional.ofNullable(this.quotaId);
     }
 
     @Import(name="registeredFeatures")
       private final @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures;
 
-    public List<SubscriptionRegisteredFeaturesResponse> getRegisteredFeatures() {
+    public List<SubscriptionRegisteredFeaturesResponse> registeredFeatures() {
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
     }
 
     @Import(name="registrationDate")
       private final @Nullable String registrationDate;
 
-    public Optional<String> getRegistrationDate() {
+    public Optional<String> registrationDate() {
         return this.registrationDate == null ? Optional.empty() : Optional.ofNullable(this.registrationDate);
     }
 
@@ -66,35 +66,35 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
     @Import(name="registrationId")
       private final @Nullable String registrationId;
 
-    public Optional<String> getRegistrationId() {
+    public Optional<String> registrationId() {
         return this.registrationId == null ? Optional.empty() : Optional.ofNullable(this.registrationId);
     }
 
     @Import(name="serializedDetails")
       private final @Nullable String serializedDetails;
 
-    public Optional<String> getSerializedDetails() {
+    public Optional<String> serializedDetails() {
         return this.serializedDetails == null ? Optional.empty() : Optional.ofNullable(this.serializedDetails);
     }
 
     @Import(name="state")
       private final @Nullable String state;
 
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
     @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
-    public Optional<String> getSubscriptionId() {
+    public Optional<String> subscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

@@ -23,7 +23,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -34,7 +34,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="functionAppName")
       private final @Nullable Output<String> functionAppName;
 
-    public Output<String> getFunctionAppName() {
+    public Output<String> functionAppName() {
         return this.functionAppName == null ? Codegen.empty() : this.functionAppName;
     }
 
@@ -45,7 +45,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="functionAppRegion")
       private final @Nullable Output<String> functionAppRegion;
 
-    public Output<String> getFunctionAppRegion() {
+    public Output<String> functionAppRegion() {
         return this.functionAppRegion == null ? Codegen.empty() : this.functionAppRegion;
     }
 
@@ -56,7 +56,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="functionAppResourceId")
       private final @Nullable Output<String> functionAppResourceId;
 
-    public Output<String> getFunctionAppResourceId() {
+    public Output<String> functionAppResourceId() {
         return this.functionAppResourceId == null ? Codegen.empty() : this.functionAppResourceId;
     }
 
@@ -67,7 +67,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="isForced")
       private final @Nullable Output<Boolean> isForced;
 
-    public Output<Boolean> getIsForced() {
+    public Output<Boolean> isForced() {
         return this.isForced == null ? Codegen.empty() : this.isForced;
     }
 
@@ -78,7 +78,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -89,7 +89,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -100,7 +100,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

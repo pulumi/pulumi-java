@@ -68,49 +68,49 @@ public final class ComputePolicyResponse {
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The maximum degree of parallelism per job this user can use to submit jobs.
      * 
     */
-    public Integer getMaxDegreeOfParallelismPerJob() {
+    public Integer maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
      * The minimum priority per job this user can use to submit jobs.
      * 
     */
-    public Integer getMinPriorityPerJob() {
+    public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The AAD object identifier for the entity to create a policy for.
      * 
     */
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
     /**
      * The type of AAD object the object identifier refers to.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

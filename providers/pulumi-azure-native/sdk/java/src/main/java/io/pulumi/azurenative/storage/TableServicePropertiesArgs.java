@@ -23,7 +23,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,7 +34,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> getCors() {
+    public Output<CorsRulesArgs> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -45,7 +45,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +56,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="tableServiceName")
       private final @Nullable Output<String> tableServiceName;
 
-    public Output<String> getTableServiceName() {
+    public Output<String> tableServiceName() {
         return this.tableServiceName == null ? Codegen.empty() : this.tableServiceName;
     }
 

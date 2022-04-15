@@ -30,7 +30,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
     }
 
@@ -41,7 +41,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
@@ -52,7 +52,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Output<UserInfoArgs> getUserInfo() {
+    public Output<UserInfoArgs> userInfo() {
         return this.userInfo == null ? Codegen.empty() : this.userInfo;
     }
 

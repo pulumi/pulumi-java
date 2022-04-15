@@ -26,7 +26,7 @@ public final class DynamicExecutorAllocationResponse {
      * Indicates whether Dynamic Executor Allocation is enabled or not.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

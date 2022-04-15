@@ -62,42 +62,42 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
      * List of agent jobs on the target server.
      * 
     */
-    public List<String> getAgentJobs() {
+    public List<String> agentJobs() {
         return this.agentJobs;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * List of logins on the target server.
      * 
     */
-    public List<String> getLogins() {
+    public List<String> logins() {
         return this.logins;
     }
     /**
      * Target server brand version
      * 
     */
-    public String getTargetServerBrandVersion() {
+    public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server version
      * 
     */
-    public String getTargetServerVersion() {
+    public String targetServerVersion() {
         return this.targetServerVersion;
     }
     /**
      * Validation errors
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

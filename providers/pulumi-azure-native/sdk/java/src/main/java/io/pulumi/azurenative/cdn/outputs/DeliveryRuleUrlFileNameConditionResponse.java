@@ -35,14 +35,14 @@ public final class DeliveryRuleUrlFileNameConditionResponse {
      * Expected value is 'UrlFileName'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
     */
-    public UrlFileNameMatchConditionParametersResponse getParameters() {
+    public UrlFileNameMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 

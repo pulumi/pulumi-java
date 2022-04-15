@@ -44,7 +44,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return Location of the target resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return The properties of the target resource.
      * 
      */
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
     /**
@@ -86,7 +86,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return The system metadata of the target resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -100,7 +100,7 @@ public class Target extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -56,35 +56,35 @@ public final class GetGatewayResult {
      * Gateway description
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Gateway location.
      * 
     */
-    public Optional<ResourceLocationDataContractResponse> getLocationData() {
+    public Optional<ResourceLocationDataContractResponse> locationData() {
         return Optional.ofNullable(this.locationData);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -26,7 +26,7 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
     @Import(name="minApiVersion")
       private final @Nullable Output<String> minApiVersion;
 
-    public Output<String> getMinApiVersion() {
+    public Output<String> minApiVersion() {
         return this.minApiVersion == null ? Codegen.empty() : this.minApiVersion;
     }
 

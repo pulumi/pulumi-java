@@ -41,21 +41,21 @@ public final class DiagnosticStoragePropertiesResponse {
      * Authentication Type
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * ConnectionString of the diagnostic storage account
      * 
     */
-    public Optional<String> getConnectionString() {
+    public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * ResourceId of the diagnostic storage account
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

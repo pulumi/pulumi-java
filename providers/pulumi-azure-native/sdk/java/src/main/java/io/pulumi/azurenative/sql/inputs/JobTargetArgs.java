@@ -29,7 +29,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
@@ -40,7 +40,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
 
-    public Output<String> getElasticPoolName() {
+    public Output<String> elasticPoolName() {
         return this.elasticPoolName == null ? Codegen.empty() : this.elasticPoolName;
     }
 
@@ -51,7 +51,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="membershipType")
       private final @Nullable Output<JobTargetGroupMembershipType> membershipType;
 
-    public Output<JobTargetGroupMembershipType> getMembershipType() {
+    public Output<JobTargetGroupMembershipType> membershipType() {
         return this.membershipType == null ? Codegen.empty() : this.membershipType;
     }
 
@@ -62,7 +62,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="refreshCredential")
       private final @Nullable Output<String> refreshCredential;
 
-    public Output<String> getRefreshCredential() {
+    public Output<String> refreshCredential() {
         return this.refreshCredential == null ? Codegen.empty() : this.refreshCredential;
     }
 
@@ -73,7 +73,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
@@ -84,7 +84,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shardMapName")
       private final @Nullable Output<String> shardMapName;
 
-    public Output<String> getShardMapName() {
+    public Output<String> shardMapName() {
         return this.shardMapName == null ? Codegen.empty() : this.shardMapName;
     }
 
@@ -95,7 +95,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,JobTargetType>> type;
 
-    public Output<Either<String,JobTargetType>> getType() {
+    public Output<Either<String,JobTargetType>> type() {
         return this.type;
     }
 

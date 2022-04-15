@@ -24,7 +24,7 @@ public final class ListManagerActivationKeyResult {
      * The activation key for the device.
      * 
     */
-    public String getActivationKey() {
+    public String activationKey() {
         return this.activationKey;
     }
 

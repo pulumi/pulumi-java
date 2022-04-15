@@ -27,7 +27,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentHash")
       private final @Nullable Output<ContentHashArgs> contentHash;
 
-    public Output<ContentHashArgs> getContentHash() {
+    public Output<ContentHashArgs> contentHash() {
         return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
@@ -38,7 +38,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 
@@ -49,7 +49,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

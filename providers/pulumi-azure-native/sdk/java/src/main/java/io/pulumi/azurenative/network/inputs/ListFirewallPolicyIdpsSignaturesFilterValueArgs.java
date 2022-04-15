@@ -21,7 +21,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
     @Import(name="filterName")
       private final @Nullable String filterName;
 
-    public Optional<String> getFilterName() {
+    public Optional<String> filterName() {
         return this.filterName == null ? Optional.empty() : Optional.ofNullable(this.filterName);
     }
 
@@ -32,7 +32,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
     @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
 
-    public String getFirewallPolicyName() {
+    public String firewallPolicyName() {
         return this.firewallPolicyName;
     }
 
@@ -43,7 +43,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

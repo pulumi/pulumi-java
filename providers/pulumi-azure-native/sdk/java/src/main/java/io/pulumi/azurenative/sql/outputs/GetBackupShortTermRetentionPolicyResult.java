@@ -49,28 +49,28 @@ public final class GetBackupShortTermRetentionPolicyResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
     */
-    public Optional<Integer> getRetentionDays() {
+    public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

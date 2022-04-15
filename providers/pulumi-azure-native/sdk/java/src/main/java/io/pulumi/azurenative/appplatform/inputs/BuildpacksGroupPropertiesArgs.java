@@ -28,7 +28,7 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="buildpacks")
       private final @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
 
-    public Output<List<BuildpackPropertiesArgs>> getBuildpacks() {
+    public Output<List<BuildpackPropertiesArgs>> buildpacks() {
         return this.buildpacks == null ? Codegen.empty() : this.buildpacks;
     }
 
@@ -39,7 +39,7 @@ public final class BuildpacksGroupPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

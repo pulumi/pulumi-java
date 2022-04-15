@@ -52,21 +52,21 @@ public final class IdentityInfoResponse {
      * The principal ID of resource identity.
      * 
     */
-    public Optional<String> getPrincipalId() {
+    public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The tenant ID of resource.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
@@ -75,7 +75,7 @@ public final class IdentityInfoResponse {
      * This property is currently not used and reserved for future usage.
      * 
     */
-    public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
+    public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }
 

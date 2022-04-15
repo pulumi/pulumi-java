@@ -21,7 +21,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
     @Import(name="peer")
       private final @Nullable String peer;
 
-    public Optional<String> getPeer() {
+    public Optional<String> peer() {
         return this.peer == null ? Optional.empty() : Optional.ofNullable(this.peer);
     }
 
@@ -32,7 +32,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
-    public String getVirtualNetworkGatewayName() {
+    public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 

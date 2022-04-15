@@ -64,42 +64,42 @@ public final class GetVirtualHubRouteTableV2Result {
      * List of all connections attached to this route table v2.
      * 
     */
-    public List<String> getAttachedConnections() {
+    public List<String> attachedConnections() {
         return this.attachedConnections == null ? List.of() : this.attachedConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the virtual hub route table v2 resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * List of all routes.
      * 
     */
-    public List<VirtualHubRouteV2Response> getRoutes() {
+    public List<VirtualHubRouteV2Response> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
 

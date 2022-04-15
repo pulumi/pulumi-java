@@ -62,42 +62,42 @@ public final class PushInstallerDetailsResponse {
      * The health of the push installer.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
      * The push installer Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The last heartbeat received from the push installer.
      * 
     */
-    public String getLastHeartbeatUtc() {
+    public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The push installer name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The push installer version.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

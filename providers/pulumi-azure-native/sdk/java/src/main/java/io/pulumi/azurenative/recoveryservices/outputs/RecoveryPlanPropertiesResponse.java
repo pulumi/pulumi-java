@@ -136,112 +136,112 @@ public final class RecoveryPlanPropertiesResponse {
      * The list of allowed operations.
      * 
     */
-    public List<String> getAllowedOperations() {
+    public List<String> allowedOperations() {
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
     /**
      * The current scenario details.
      * 
     */
-    public Optional<CurrentScenarioDetailsResponse> getCurrentScenario() {
+    public Optional<CurrentScenarioDetailsResponse> currentScenario() {
         return Optional.ofNullable(this.currentScenario);
     }
     /**
      * The recovery plan status.
      * 
     */
-    public Optional<String> getCurrentScenarioStatus() {
+    public Optional<String> currentScenarioStatus() {
         return Optional.ofNullable(this.currentScenarioStatus);
     }
     /**
      * The recovery plan status description.
      * 
     */
-    public Optional<String> getCurrentScenarioStatusDescription() {
+    public Optional<String> currentScenarioStatusDescription() {
         return Optional.ofNullable(this.currentScenarioStatusDescription);
     }
     /**
      * The failover deployment model.
      * 
     */
-    public Optional<String> getFailoverDeploymentModel() {
+    public Optional<String> failoverDeploymentModel() {
         return Optional.ofNullable(this.failoverDeploymentModel);
     }
     /**
      * The friendly name.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The recovery plan groups.
      * 
     */
-    public List<RecoveryPlanGroupResponse> getGroups() {
+    public List<RecoveryPlanGroupResponse> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * The start time of the last planned failover.
      * 
     */
-    public Optional<String> getLastPlannedFailoverTime() {
+    public Optional<String> lastPlannedFailoverTime() {
         return Optional.ofNullable(this.lastPlannedFailoverTime);
     }
     /**
      * The start time of the last test failover.
      * 
     */
-    public Optional<String> getLastTestFailoverTime() {
+    public Optional<String> lastTestFailoverTime() {
         return Optional.ofNullable(this.lastTestFailoverTime);
     }
     /**
      * The start time of the last unplanned failover.
      * 
     */
-    public Optional<String> getLastUnplannedFailoverTime() {
+    public Optional<String> lastUnplannedFailoverTime() {
         return Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
     /**
      * The primary fabric friendly name.
      * 
     */
-    public Optional<String> getPrimaryFabricFriendlyName() {
+    public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
      * The primary fabric Id.
      * 
     */
-    public Optional<String> getPrimaryFabricId() {
+    public Optional<String> primaryFabricId() {
         return Optional.ofNullable(this.primaryFabricId);
     }
     /**
      * The provider id and provider specific details.
      * 
     */
-    public List<RecoveryPlanA2ADetailsResponse> getProviderSpecificDetails() {
+    public List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails() {
         return this.providerSpecificDetails;
     }
     /**
      * The recovery fabric friendly name.
      * 
     */
-    public Optional<String> getRecoveryFabricFriendlyName() {
+    public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
      * The recovery fabric Id.
      * 
     */
-    public Optional<String> getRecoveryFabricId() {
+    public Optional<String> recoveryFabricId() {
         return Optional.ofNullable(this.recoveryFabricId);
     }
     /**
      * The list of replication providers.
      * 
     */
-    public List<String> getReplicationProviders() {
+    public List<String> replicationProviders() {
         return this.replicationProviders == null ? List.of() : this.replicationProviders;
     }
 

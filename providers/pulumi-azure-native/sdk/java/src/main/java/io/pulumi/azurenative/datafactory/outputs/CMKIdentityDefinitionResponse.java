@@ -26,7 +26,7 @@ public final class CMKIdentityDefinitionResponse {
      * The resource id of the user assigned identity to authenticate to customer's key vault.
      * 
     */
-    public Optional<String> getUserAssignedIdentity() {
+    public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
 

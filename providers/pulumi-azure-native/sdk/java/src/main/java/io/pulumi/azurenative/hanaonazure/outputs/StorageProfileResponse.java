@@ -43,21 +43,21 @@ public final class StorageProfileResponse {
      * Specifies information related to SAP system IDs for the hana instance.
      * 
     */
-    public List<SAPSystemIDResponse> getHanaSids() {
+    public List<SAPSystemIDResponse> hanaSids() {
         return this.hanaSids == null ? List.of() : this.hanaSids;
     }
     /**
      * IP Address to connect to storage.
      * 
     */
-    public String getNfsIpAddress() {
+    public String nfsIpAddress() {
         return this.nfsIpAddress;
     }
     /**
      * Specifies information about the operating system disk used by the hana instance.
      * 
     */
-    public List<DiskResponse> getOsDisks() {
+    public List<DiskResponse> osDisks() {
         return this.osDisks == null ? List.of() : this.osDisks;
     }
 

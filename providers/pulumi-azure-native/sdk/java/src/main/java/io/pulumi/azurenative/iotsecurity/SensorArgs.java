@@ -25,7 +25,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -36,7 +36,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sensorName")
       private final @Nullable Output<String> sensorName;
 
-    public Output<String> getSensorName() {
+    public Output<String> sensorName() {
         return this.sensorName == null ? Codegen.empty() : this.sensorName;
     }
 
@@ -47,7 +47,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sensorType")
       private final @Nullable Output<Either<String,SensorType>> sensorType;
 
-    public Output<Either<String,SensorType>> getSensorType() {
+    public Output<Either<String,SensorType>> sensorType() {
         return this.sensorType == null ? Codegen.empty() : this.sensorType;
     }
 
@@ -58,7 +58,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tiAutomaticUpdates")
       private final @Nullable Output<Boolean> tiAutomaticUpdates;
 
-    public Output<Boolean> getTiAutomaticUpdates() {
+    public Output<Boolean> tiAutomaticUpdates() {
         return this.tiAutomaticUpdates == null ? Codegen.empty() : this.tiAutomaticUpdates;
     }
 
@@ -69,7 +69,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

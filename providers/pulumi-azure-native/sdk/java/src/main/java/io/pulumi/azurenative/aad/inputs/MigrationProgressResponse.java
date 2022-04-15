@@ -26,7 +26,7 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
     @Import(name="completionPercentage")
       private final @Nullable Double completionPercentage;
 
-    public Optional<Double> getCompletionPercentage() {
+    public Optional<Double> completionPercentage() {
         return this.completionPercentage == null ? Optional.empty() : Optional.ofNullable(this.completionPercentage);
     }
 
@@ -37,7 +37,7 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
     @Import(name="progressMessage")
       private final @Nullable String progressMessage;
 
-    public Optional<String> getProgressMessage() {
+    public Optional<String> progressMessage() {
         return this.progressMessage == null ? Optional.empty() : Optional.ofNullable(this.progressMessage);
     }
 

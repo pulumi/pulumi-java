@@ -28,7 +28,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action", required=true)
       private final Output<IpFilterActionType> action;
 
-    public Output<IpFilterActionType> getAction() {
+    public Output<IpFilterActionType> action() {
         return this.action;
     }
 
@@ -39,7 +39,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="filterName", required=true)
       private final Output<String> filterName;
 
-    public Output<String> getFilterName() {
+    public Output<String> filterName() {
         return this.filterName;
     }
 
@@ -50,7 +50,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ipMask", required=true)
       private final Output<String> ipMask;
 
-    public Output<String> getIpMask() {
+    public Output<String> ipMask() {
         return this.ipMask;
     }
 
@@ -61,7 +61,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="target")
       private final @Nullable Output<IpFilterTargetType> target;
 
-    public Output<IpFilterTargetType> getTarget() {
+    public Output<IpFilterTargetType> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 

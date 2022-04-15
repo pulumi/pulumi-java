@@ -57,35 +57,35 @@ public final class RepresentationContractResponse {
      * Specifies a registered or custom content type for this representation, e.g. application/xml.
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
      * 
     */
-    public List<ParameterContractResponse> getFormParameters() {
+    public List<ParameterContractResponse> formParameters() {
         return this.formParameters == null ? List.of() : this.formParameters;
     }
     /**
      * An example of the representation.
      * 
     */
-    public Optional<String> getSample() {
+    public Optional<String> sample() {
         return Optional.ofNullable(this.sample);
     }
     /**
      * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
      * 
     */
-    public Optional<String> getSchemaId() {
+    public Optional<String> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
     /**
      * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
      * 
     */
-    public Optional<String> getTypeName() {
+    public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }
 

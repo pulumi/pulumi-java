@@ -23,7 +23,7 @@ public final class Gen2StorageConfigurationOutputResponse extends io.pulumi.reso
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 

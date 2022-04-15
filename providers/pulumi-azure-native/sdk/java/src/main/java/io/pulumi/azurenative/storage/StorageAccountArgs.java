@@ -39,7 +39,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessTier")
       private final @Nullable Output<AccessTier> accessTier;
 
-    public Output<AccessTier> getAccessTier() {
+    public Output<AccessTier> accessTier() {
         return this.accessTier == null ? Codegen.empty() : this.accessTier;
     }
 
@@ -50,7 +50,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -61,7 +61,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowBlobPublicAccess")
       private final @Nullable Output<Boolean> allowBlobPublicAccess;
 
-    public Output<Boolean> getAllowBlobPublicAccess() {
+    public Output<Boolean> allowBlobPublicAccess() {
         return this.allowBlobPublicAccess == null ? Codegen.empty() : this.allowBlobPublicAccess;
     }
 
@@ -72,7 +72,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowSharedKeyAccess")
       private final @Nullable Output<Boolean> allowSharedKeyAccess;
 
-    public Output<Boolean> getAllowSharedKeyAccess() {
+    public Output<Boolean> allowSharedKeyAccess() {
         return this.allowSharedKeyAccess == null ? Codegen.empty() : this.allowSharedKeyAccess;
     }
 
@@ -83,7 +83,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFilesIdentityBasedAuthentication")
       private final @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
 
-    public Output<AzureFilesIdentityBasedAuthenticationArgs> getAzureFilesIdentityBasedAuthentication() {
+    public Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication() {
         return this.azureFilesIdentityBasedAuthentication == null ? Codegen.empty() : this.azureFilesIdentityBasedAuthentication;
     }
 
@@ -94,7 +94,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customDomain")
       private final @Nullable Output<CustomDomainArgs> customDomain;
 
-    public Output<CustomDomainArgs> getCustomDomain() {
+    public Output<CustomDomainArgs> customDomain() {
         return this.customDomain == null ? Codegen.empty() : this.customDomain;
     }
 
@@ -105,7 +105,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableHttpsTrafficOnly")
       private final @Nullable Output<Boolean> enableHttpsTrafficOnly;
 
-    public Output<Boolean> getEnableHttpsTrafficOnly() {
+    public Output<Boolean> enableHttpsTrafficOnly() {
         return this.enableHttpsTrafficOnly == null ? Codegen.empty() : this.enableHttpsTrafficOnly;
     }
 
@@ -116,7 +116,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableNfsV3")
       private final @Nullable Output<Boolean> enableNfsV3;
 
-    public Output<Boolean> getEnableNfsV3() {
+    public Output<Boolean> enableNfsV3() {
         return this.enableNfsV3 == null ? Codegen.empty() : this.enableNfsV3;
     }
 
@@ -127,7 +127,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> getEncryption() {
+    public Output<EncryptionArgs> encryption() {
         return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
@@ -138,7 +138,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -149,7 +149,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
+    public Output<IdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -160,7 +160,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isHnsEnabled")
       private final @Nullable Output<Boolean> isHnsEnabled;
 
-    public Output<Boolean> getIsHnsEnabled() {
+    public Output<Boolean> isHnsEnabled() {
         return this.isHnsEnabled == null ? Codegen.empty() : this.isHnsEnabled;
     }
 
@@ -171,7 +171,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPolicy")
       private final @Nullable Output<KeyPolicyArgs> keyPolicy;
 
-    public Output<KeyPolicyArgs> getKeyPolicy() {
+    public Output<KeyPolicyArgs> keyPolicy() {
         return this.keyPolicy == null ? Codegen.empty() : this.keyPolicy;
     }
 
@@ -182,7 +182,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
 
@@ -193,7 +193,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="largeFileSharesState")
       private final @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
 
-    public Output<Either<String,LargeFileSharesState>> getLargeFileSharesState() {
+    public Output<Either<String,LargeFileSharesState>> largeFileSharesState() {
         return this.largeFileSharesState == null ? Codegen.empty() : this.largeFileSharesState;
     }
 
@@ -204,7 +204,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -215,7 +215,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
 
-    public Output<Either<String,MinimumTlsVersion>> getMinimumTlsVersion() {
+    public Output<Either<String,MinimumTlsVersion>> minimumTlsVersion() {
         return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
@@ -226,7 +226,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleSet")
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
+    public Output<NetworkRuleSetArgs> networkRuleSet() {
         return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
     }
 
@@ -237,7 +237,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -248,7 +248,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingPreference")
       private final @Nullable Output<RoutingPreferenceArgs> routingPreference;
 
-    public Output<RoutingPreferenceArgs> getRoutingPreference() {
+    public Output<RoutingPreferenceArgs> routingPreference() {
         return this.routingPreference == null ? Codegen.empty() : this.routingPreference;
     }
 
@@ -259,7 +259,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sasPolicy")
       private final @Nullable Output<SasPolicyArgs> sasPolicy;
 
-    public Output<SasPolicyArgs> getSasPolicy() {
+    public Output<SasPolicyArgs> sasPolicy() {
         return this.sasPolicy == null ? Codegen.empty() : this.sasPolicy;
     }
 
@@ -270,7 +270,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -281,7 +281,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

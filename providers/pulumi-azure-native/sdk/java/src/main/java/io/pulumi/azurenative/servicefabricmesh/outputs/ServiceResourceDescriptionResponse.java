@@ -131,105 +131,105 @@ public final class ServiceResourceDescriptionResponse {
      * Auto scaling policies
      * 
     */
-    public List<AutoScalingPolicyResponse> getAutoScalingPolicies() {
+    public List<AutoScalingPolicyResponse> autoScalingPolicies() {
         return this.autoScalingPolicies == null ? List.of() : this.autoScalingPolicies;
     }
     /**
      * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
      * 
     */
-    public List<ContainerCodePackagePropertiesResponse> getCodePackages() {
+    public List<ContainerCodePackagePropertiesResponse> codePackages() {
         return this.codePackages;
     }
     /**
      * User readable description of the service.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Reference to sinks in DiagnosticsDescription.
      * 
     */
-    public Optional<DiagnosticsRefResponse> getDiagnostics() {
+    public Optional<DiagnosticsRefResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
      * Describes the health state of an application resource.
      * 
     */
-    public String getHealthState() {
+    public String healthState() {
         return this.healthState;
     }
     /**
      * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The names of the private networks that this service needs to be part of.
      * 
     */
-    public List<NetworkRefResponse> getNetworkRefs() {
+    public List<NetworkRefResponse> networkRefs() {
         return this.networkRefs == null ? List.of() : this.networkRefs;
     }
     /**
      * The operation system required by the code in service.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * State of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The number of replicas of the service to create. Defaults to 1 if not specified.
      * 
     */
-    public Optional<Integer> getReplicaCount() {
+    public Optional<Integer> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
     /**
      * Status of the service.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the service.
      * 
     */
-    public String getStatusDetails() {
+    public String statusDetails() {
         return this.statusDetails;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * When the service's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the service is marked unhealthy.
      * 
     */
-    public String getUnhealthyEvaluation() {
+    public String unhealthyEvaluation() {
         return this.unhealthyEvaluation;
     }
 

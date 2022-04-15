@@ -19,7 +19,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
     @Import(name="networkInterfaceName", required=true)
       private final String networkInterfaceName;
 
-    public String getNetworkInterfaceName() {
+    public String networkInterfaceName() {
         return this.networkInterfaceName;
     }
 
@@ -30,7 +30,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
     @Import(name="tapConfigurationName", required=true)
       private final String tapConfigurationName;
 
-    public String getTapConfigurationName() {
+    public String tapConfigurationName() {
         return this.tapConfigurationName;
     }
 

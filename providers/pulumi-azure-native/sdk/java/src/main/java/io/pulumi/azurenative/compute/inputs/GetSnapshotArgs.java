@@ -19,7 +19,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="snapshotName", required=true)
       private final String snapshotName;
 
-    public String getSnapshotName() {
+    public String snapshotName() {
         return this.snapshotName;
     }
 

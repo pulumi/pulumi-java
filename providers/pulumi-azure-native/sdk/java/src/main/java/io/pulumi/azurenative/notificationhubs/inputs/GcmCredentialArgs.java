@@ -26,7 +26,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcmEndpoint")
       private final @Nullable Output<String> gcmEndpoint;
 
-    public Output<String> getGcmEndpoint() {
+    public Output<String> gcmEndpoint() {
         return this.gcmEndpoint == null ? Codegen.empty() : this.gcmEndpoint;
     }
 
@@ -37,7 +37,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="googleApiKey")
       private final @Nullable Output<String> googleApiKey;
 
-    public Output<String> getGoogleApiKey() {
+    public Output<String> googleApiKey() {
         return this.googleApiKey == null ? Codegen.empty() : this.googleApiKey;
     }
 

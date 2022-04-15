@@ -25,7 +25,7 @@ public final class CloudServiceVaultCertificateResponse extends io.pulumi.resour
     @Import(name="certificateUrl")
       private final @Nullable String certificateUrl;
 
-    public Optional<String> getCertificateUrl() {
+    public Optional<String> certificateUrl() {
         return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
     }
 

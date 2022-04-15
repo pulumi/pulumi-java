@@ -57,35 +57,35 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
      * Flag to enable/disable traffic analytics.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The interval in minutes which would decide how frequently TA service should do flow analytics.
      * 
     */
-    public Optional<Integer> getTrafficAnalyticsInterval() {
+    public Optional<Integer> trafficAnalyticsInterval() {
         return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
     /**
      * The resource guid of the attached workspace.
      * 
     */
-    public Optional<String> getWorkspaceId() {
+    public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
     /**
      * The location of the attached workspace.
      * 
     */
-    public Optional<String> getWorkspaceRegion() {
+    public Optional<String> workspaceRegion() {
         return Optional.ofNullable(this.workspaceRegion);
     }
     /**
      * Resource Id of the attached workspace.
      * 
     */
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
 

@@ -23,7 +23,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="keyName", required=true)
       private final String keyName;
 
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
 
@@ -34,7 +34,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="permissions", required=true)
       private final String permissions;
 
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 
@@ -45,7 +45,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

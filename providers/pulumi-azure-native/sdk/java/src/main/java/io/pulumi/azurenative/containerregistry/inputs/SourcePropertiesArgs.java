@@ -29,7 +29,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -40,7 +40,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -52,7 +52,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceControlAuthProperties")
       private final @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
 
-    public Output<AuthInfoArgs> getSourceControlAuthProperties() {
+    public Output<AuthInfoArgs> sourceControlAuthProperties() {
         return this.sourceControlAuthProperties == null ? Codegen.empty() : this.sourceControlAuthProperties;
     }
 
@@ -63,7 +63,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceControlType", required=true)
       private final Output<Either<String,SourceControlType>> sourceControlType;
 
-    public Output<Either<String,SourceControlType>> getSourceControlType() {
+    public Output<Either<String,SourceControlType>> sourceControlType() {
         return this.sourceControlType;
     }
 

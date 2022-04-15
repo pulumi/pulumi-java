@@ -56,35 +56,35 @@ public final class GetManagementAssociationResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
      * 
     */
-    public ManagementAssociationPropertiesResponse getProperties() {
+    public ManagementAssociationPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

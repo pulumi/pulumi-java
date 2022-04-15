@@ -25,7 +25,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdAt")
       private final @Nullable String createdAt;
 
-    public Optional<String> getCreatedAt() {
+    public Optional<String> createdAt() {
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
     }
 
@@ -36,7 +36,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdBy")
       private final @Nullable String createdBy;
 
-    public Optional<String> getCreatedBy() {
+    public Optional<String> createdBy() {
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
@@ -47,7 +47,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="createdByType")
       private final @Nullable String createdByType;
 
-    public Optional<String> getCreatedByType() {
+    public Optional<String> createdByType() {
         return this.createdByType == null ? Optional.empty() : Optional.ofNullable(this.createdByType);
     }
 
@@ -58,7 +58,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable String lastModifiedAt;
 
-    public Optional<String> getLastModifiedAt() {
+    public Optional<String> lastModifiedAt() {
         return this.lastModifiedAt == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedAt);
     }
 
@@ -69,7 +69,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable String lastModifiedBy;
 
-    public Optional<String> getLastModifiedBy() {
+    public Optional<String> lastModifiedBy() {
         return this.lastModifiedBy == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedBy);
     }
 
@@ -80,7 +80,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable String lastModifiedByType;
 
-    public Optional<String> getLastModifiedByType() {
+    public Optional<String> lastModifiedByType() {
         return this.lastModifiedByType == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedByType);
     }
 

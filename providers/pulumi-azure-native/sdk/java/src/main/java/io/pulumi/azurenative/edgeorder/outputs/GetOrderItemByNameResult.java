@@ -93,70 +93,70 @@ public final class GetOrderItemByNameResult {
      * Represents shipping and return address for order item
      * 
     */
-    public AddressDetailsResponse getAddressDetails() {
+    public AddressDetailsResponse addressDetails() {
         return this.addressDetails;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Id of the order to which order item belongs to
      * 
     */
-    public String getOrderId() {
+    public String orderId() {
         return this.orderId;
     }
     /**
      * Represents order item details.
      * 
     */
-    public OrderItemDetailsResponse getOrderItemDetails() {
+    public OrderItemDetailsResponse orderItemDetails() {
         return this.orderItemDetails;
     }
     /**
      * Start time of order item
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * Represents resource creation and update time
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

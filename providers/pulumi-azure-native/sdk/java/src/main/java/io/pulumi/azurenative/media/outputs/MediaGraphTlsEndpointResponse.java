@@ -59,7 +59,7 @@ public final class MediaGraphTlsEndpointResponse {
      * Polymorphic credentials to present to the endpoint.
      * 
     */
-    public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
+    public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
@@ -67,28 +67,28 @@ public final class MediaGraphTlsEndpointResponse {
      * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
      * 
     */
-    public Optional<MediaGraphPemCertificateListResponse> getTrustedCertificates() {
+    public Optional<MediaGraphPemCertificateListResponse> trustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
     /**
      * Url for the endpoint.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
     /**
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
      * 
     */
-    public Optional<MediaGraphTlsValidationOptionsResponse> getValidationOptions() {
+    public Optional<MediaGraphTlsValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }
 

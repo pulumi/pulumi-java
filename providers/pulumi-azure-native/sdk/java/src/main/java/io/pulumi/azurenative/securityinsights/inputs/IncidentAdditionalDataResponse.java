@@ -25,7 +25,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
     @Import(name="alertProductNames", required=true)
       private final List<String> alertProductNames;
 
-    public List<String> getAlertProductNames() {
+    public List<String> alertProductNames() {
         return this.alertProductNames;
     }
 
@@ -36,7 +36,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
     @Import(name="alertsCount", required=true)
       private final Integer alertsCount;
 
-    public Integer getAlertsCount() {
+    public Integer alertsCount() {
         return this.alertsCount;
     }
 
@@ -47,7 +47,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
     @Import(name="bookmarksCount", required=true)
       private final Integer bookmarksCount;
 
-    public Integer getBookmarksCount() {
+    public Integer bookmarksCount() {
         return this.bookmarksCount;
     }
 
@@ -58,7 +58,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
     @Import(name="commentsCount", required=true)
       private final Integer commentsCount;
 
-    public Integer getCommentsCount() {
+    public Integer commentsCount() {
         return this.commentsCount;
     }
 
@@ -69,7 +69,7 @@ public final class IncidentAdditionalDataResponse extends io.pulumi.resources.In
     @Import(name="tactics", required=true)
       private final List<String> tactics;
 
-    public List<String> getTactics() {
+    public List<String> tactics() {
         return this.tactics;
     }
 

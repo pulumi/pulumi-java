@@ -22,14 +22,14 @@ public final class ResourceProviderManifestPropertiesTemplateDeploymentOptionsAr
     @Import(name="preflightOptions")
       private final @Nullable Output<List<Either<String,PreflightOption>>> preflightOptions;
 
-    public Output<List<Either<String,PreflightOption>>> getPreflightOptions() {
+    public Output<List<Either<String,PreflightOption>>> preflightOptions() {
         return this.preflightOptions == null ? Codegen.empty() : this.preflightOptions;
     }
 
     @Import(name="preflightSupported")
       private final @Nullable Output<Boolean> preflightSupported;
 
-    public Output<Boolean> getPreflightSupported() {
+    public Output<Boolean> preflightSupported() {
         return this.preflightSupported == null ? Codegen.empty() : this.preflightSupported;
     }
 

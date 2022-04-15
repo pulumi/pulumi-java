@@ -35,14 +35,14 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
      * Expected value is 'Key'.
      * 
     */
-    public String getAuthorizationType() {
+    public String authorizationType() {
         return this.authorizationType;
     }
     /**
      * The key used for authorization.
      * 
     */
-    public SecureStringResponse getKey() {
+    public SecureStringResponse key() {
         return this.key;
     }
 

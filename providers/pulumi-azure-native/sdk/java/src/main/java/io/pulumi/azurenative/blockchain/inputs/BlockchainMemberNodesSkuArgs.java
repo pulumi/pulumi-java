@@ -26,7 +26,7 @@ public final class BlockchainMemberNodesSkuArgs extends io.pulumi.resources.Reso
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
+    public Output<Integer> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 

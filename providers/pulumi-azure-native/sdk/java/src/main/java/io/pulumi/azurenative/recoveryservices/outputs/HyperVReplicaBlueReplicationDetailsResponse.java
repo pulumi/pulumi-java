@@ -81,7 +81,7 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
      * Initial replication details.
      * 
     */
-    public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
+    public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
     /**
@@ -89,49 +89,49 @@ public final class HyperVReplicaBlueReplicationDetailsResponse {
      * Expected value is 'HyperVReplica2012R2'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The Last replication time.
      * 
     */
-    public Optional<String> getLastReplicatedTime() {
+    public Optional<String> lastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
      * VM disk details.
      * 
     */
-    public List<DiskDetailsResponse> getVMDiskDetails() {
+    public List<DiskDetailsResponse> vMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
     /**
      * The virtual machine Id.
      * 
     */
-    public Optional<String> getVmId() {
+    public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
      * 
     */
-    public List<VMNicDetailsResponse> getVmNics() {
+    public List<VMNicDetailsResponse> vmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
      * 
     */
-    public Optional<String> getVmProtectionState() {
+    public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
      * 
     */
-    public Optional<String> getVmProtectionStateDescription() {
+    public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 

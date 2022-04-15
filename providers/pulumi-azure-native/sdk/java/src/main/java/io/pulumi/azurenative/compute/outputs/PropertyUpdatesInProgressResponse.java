@@ -26,7 +26,7 @@ public final class PropertyUpdatesInProgressResponse {
      * The target performance tier of the disk if a tier change operation is in progress.
      * 
     */
-    public Optional<String> getTargetTier() {
+    public Optional<String> targetTier() {
         return Optional.ofNullable(this.targetTier);
     }
 

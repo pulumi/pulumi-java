@@ -29,7 +29,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="address")
       private final @Nullable Output<String> address;
 
-    public Output<String> getAddress() {
+    public Output<String> address() {
         return this.address == null ? Codegen.empty() : this.address;
     }
 
@@ -40,7 +40,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendHostHeader")
       private final @Nullable Output<String> backendHostHeader;
 
-    public Output<String> getBackendHostHeader() {
+    public Output<String> backendHostHeader() {
         return this.backendHostHeader == null ? Codegen.empty() : this.backendHostHeader;
     }
 
@@ -51,7 +51,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,BackendEnabledState>> enabledState;
 
-    public Output<Either<String,BackendEnabledState>> getEnabledState() {
+    public Output<Either<String,BackendEnabledState>> enabledState() {
         return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
@@ -62,7 +62,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
-    public Output<Integer> getHttpPort() {
+    public Output<Integer> httpPort() {
         return this.httpPort == null ? Codegen.empty() : this.httpPort;
     }
 
@@ -73,7 +73,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
-    public Output<Integer> getHttpsPort() {
+    public Output<Integer> httpsPort() {
         return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
     }
 
@@ -84,7 +84,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -95,7 +95,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkAlias")
       private final @Nullable Output<String> privateLinkAlias;
 
-    public Output<String> getPrivateLinkAlias() {
+    public Output<String> privateLinkAlias() {
         return this.privateLinkAlias == null ? Codegen.empty() : this.privateLinkAlias;
     }
 
@@ -106,7 +106,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkApprovalMessage")
       private final @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Output<String> getPrivateLinkApprovalMessage() {
+    public Output<String> privateLinkApprovalMessage() {
         return this.privateLinkApprovalMessage == null ? Codegen.empty() : this.privateLinkApprovalMessage;
     }
 
@@ -117,7 +117,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> getPrivateLinkLocation() {
+    public Output<String> privateLinkLocation() {
         return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
     }
 
@@ -128,7 +128,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
@@ -139,7 +139,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight == null ? Codegen.empty() : this.weight;
     }
 

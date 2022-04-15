@@ -27,7 +27,7 @@ public final class AzureMachineLearningWebServiceInputsResponse extends io.pulum
     @Import(name="columnNames")
       private final @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
 
-    public List<AzureMachineLearningWebServiceInputColumnResponse> getColumnNames() {
+    public List<AzureMachineLearningWebServiceInputColumnResponse> columnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
 
@@ -38,7 +38,7 @@ public final class AzureMachineLearningWebServiceInputsResponse extends io.pulum
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

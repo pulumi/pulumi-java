@@ -19,7 +19,7 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
     @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
-    public String getDeploymentName() {
+    public String deploymentName() {
         return this.deploymentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetDeploymentAtScopeArgs extends io.pulumi.resources.InvokeAr
     @Import(name="scope", required=true)
       private final String scope;
 
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
 

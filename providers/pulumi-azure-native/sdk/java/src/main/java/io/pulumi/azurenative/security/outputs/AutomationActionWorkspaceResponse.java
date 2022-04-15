@@ -36,14 +36,14 @@ public final class AutomationActionWorkspaceResponse {
      * Expected value is 'Workspace'.
      * 
     */
-    public String getActionType() {
+    public String actionType() {
         return this.actionType;
     }
     /**
      * The fully qualified Log Analytics Workspace Azure Resource ID.
      * 
     */
-    public Optional<String> getWorkspaceResourceId() {
+    public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }
 

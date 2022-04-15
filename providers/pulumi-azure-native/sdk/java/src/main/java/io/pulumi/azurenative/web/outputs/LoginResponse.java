@@ -72,42 +72,42 @@ public final class LoginResponse {
      * Note that URLs within the current domain are always implicitly allowed.
      * 
     */
-    public List<String> getAllowedExternalRedirectUrls() {
+    public List<String> allowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? List.of() : this.allowedExternalRedirectUrls;
     }
     /**
      * The configuration settings of the session cookie's expiration.
      * 
     */
-    public Optional<CookieExpirationResponse> getCookieExpiration() {
+    public Optional<CookieExpirationResponse> cookieExpiration() {
         return Optional.ofNullable(this.cookieExpiration);
     }
     /**
      * The configuration settings of the nonce used in the login flow.
      * 
     */
-    public Optional<NonceResponse> getNonce() {
+    public Optional<NonceResponse> nonce() {
         return Optional.ofNullable(this.nonce);
     }
     /**
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
      * 
     */
-    public Optional<Boolean> getPreserveUrlFragmentsForLogins() {
+    public Optional<Boolean> preserveUrlFragmentsForLogins() {
         return Optional.ofNullable(this.preserveUrlFragmentsForLogins);
     }
     /**
      * The routes that specify the endpoints used for login and logout requests.
      * 
     */
-    public Optional<LoginRoutesResponse> getRoutes() {
+    public Optional<LoginRoutesResponse> routes() {
         return Optional.ofNullable(this.routes);
     }
     /**
      * The configuration settings of the token store.
      * 
     */
-    public Optional<TokenStoreResponse> getTokenStore() {
+    public Optional<TokenStoreResponse> tokenStore() {
         return Optional.ofNullable(this.tokenStore);
     }
 

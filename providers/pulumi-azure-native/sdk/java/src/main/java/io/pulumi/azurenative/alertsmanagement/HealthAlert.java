@@ -46,7 +46,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    public Output</* @Nullable */ List<HealthAlertActionResponse>> getActions() {
+    public Output</* @Nullable */ List<HealthAlertActionResponse>> actions() {
         return this.actions;
     }
     /**
@@ -60,7 +60,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return defines the specific alert criteria information.
      * 
      */
-    public Output<HealthAlertCriteriaResponse> getCriteria() {
+    public Output<HealthAlertCriteriaResponse> criteria() {
         return this.criteria;
     }
     /**
@@ -74,7 +74,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return the description of the health alert that will be included in the alert email.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -88,7 +88,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return the flag that indicates whether the health alert is enabled.
      * 
      */
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -102,7 +102,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return Last time the rule was updated in ISO8601 format.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -116,7 +116,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -130,7 +130,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +144,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return the list of resource id's that this health alert is scoped to.
      * 
      */
-    public Output</* @Nullable */ List<String>> getScopes() {
+    public Output</* @Nullable */ List<String>> scopes() {
         return this.scopes;
     }
     /**
@@ -158,7 +158,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +172,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

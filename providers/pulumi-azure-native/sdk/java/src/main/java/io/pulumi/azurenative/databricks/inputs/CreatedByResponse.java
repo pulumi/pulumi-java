@@ -23,7 +23,7 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="applicationId", required=true)
       private final String applicationId;
 
-    public String getApplicationId() {
+    public String applicationId() {
         return this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oid", required=true)
       private final String oid;
 
-    public String getOid() {
+    public String oid() {
         return this.oid;
     }
 
@@ -45,7 +45,7 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="puid", required=true)
       private final String puid;
 
-    public String getPuid() {
+    public String puid() {
         return this.puid;
     }
 

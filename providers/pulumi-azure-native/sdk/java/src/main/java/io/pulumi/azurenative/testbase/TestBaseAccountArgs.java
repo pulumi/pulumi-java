@@ -25,7 +25,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -36,7 +36,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -47,7 +47,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="restore")
       private final @Nullable Output<Boolean> restore;
 
-    public Output<Boolean> getRestore() {
+    public Output<Boolean> restore() {
         return this.restore == null ? Codegen.empty() : this.restore;
     }
 
@@ -58,7 +58,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
       private final Output<TestBaseAccountSKUArgs> sku;
 
-    public Output<TestBaseAccountSKUArgs> getSku() {
+    public Output<TestBaseAccountSKUArgs> sku() {
         return this.sku;
     }
 
@@ -69,7 +69,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="testBaseAccountName")
       private final @Nullable Output<String> testBaseAccountName;
 
-    public Output<String> getTestBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName == null ? Codegen.empty() : this.testBaseAccountName;
     }
 

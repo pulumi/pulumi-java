@@ -19,7 +19,7 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="labName", required=true)
       private final String labName;
 
-    public String getLabName() {
+    public String labName() {
         return this.labName;
     }
 
@@ -30,7 +30,7 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="scheduleName", required=true)
       private final String scheduleName;
 
-    public String getScheduleName() {
+    public String scheduleName() {
         return this.scheduleName;
     }
 

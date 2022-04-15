@@ -29,7 +29,7 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<Either<String,AzureFirewallSkuName>> name;
 
-    public Output<Either<String,AzureFirewallSkuName>> getName() {
+    public Output<Either<String,AzureFirewallSkuName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -40,7 +40,7 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;
 
-    public Output<Either<String,AzureFirewallSkuTier>> getTier() {
+    public Output<Either<String,AzureFirewallSkuTier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

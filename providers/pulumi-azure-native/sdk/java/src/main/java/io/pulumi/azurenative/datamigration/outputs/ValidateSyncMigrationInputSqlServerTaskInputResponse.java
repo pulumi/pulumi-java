@@ -41,21 +41,21 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
      * Databases to migrate
      * 
     */
-    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Information for connecting to source SQL server
      * 
     */
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
     */
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

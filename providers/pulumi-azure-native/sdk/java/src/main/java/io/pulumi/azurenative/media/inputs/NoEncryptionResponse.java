@@ -25,7 +25,7 @@ public final class NoEncryptionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabledProtocols")
       private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
+    public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);
     }
 

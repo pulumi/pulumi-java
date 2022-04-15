@@ -43,21 +43,21 @@ public final class KubernetesRoleResourcesResponse {
      * Kubernetes role compute resource
      * 
     */
-    public KubernetesRoleComputeResponse getCompute() {
+    public KubernetesRoleComputeResponse compute() {
         return this.compute;
     }
     /**
      * Kubernetes role network resource
      * 
     */
-    public KubernetesRoleNetworkResponse getNetwork() {
+    public KubernetesRoleNetworkResponse network() {
         return this.network;
     }
     /**
      * Kubernetes role storage resource
      * 
     */
-    public Optional<KubernetesRoleStorageResponse> getStorage() {
+    public Optional<KubernetesRoleStorageResponse> storage() {
         return Optional.ofNullable(this.storage);
     }
 

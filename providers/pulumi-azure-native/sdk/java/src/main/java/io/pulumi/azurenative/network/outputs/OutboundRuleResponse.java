@@ -101,77 +101,77 @@ public final class OutboundRuleResponse {
      * The number of outbound ports to be used for NAT.
      * 
     */
-    public Optional<Integer> getAllocatedOutboundPorts() {
+    public Optional<Integer> allocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
     /**
      * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
     */
-    public SubResourceResponse getBackendAddressPool() {
+    public SubResourceResponse backendAddressPool() {
         return this.backendAddressPool;
     }
     /**
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
     */
-    public Optional<Boolean> getEnableTcpReset() {
+    public Optional<Boolean> enableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The Frontend IP addresses of the load balancer.
      * 
     */
-    public List<SubResourceResponse> getFrontendIPConfigurations() {
+    public List<SubResourceResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The timeout for the TCP idle connection.
      * 
     */
-    public Optional<Integer> getIdleTimeoutInMinutes() {
+    public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The protocol for the outbound rule in load balancer.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the outbound rule resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

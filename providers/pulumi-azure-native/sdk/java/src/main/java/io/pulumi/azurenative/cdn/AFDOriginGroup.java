@@ -39,7 +39,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -53,7 +53,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    public Output</* @Nullable */ HealthProbeParametersResponse> getHealthProbeSettings() {
+    public Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings() {
         return this.healthProbeSettings;
     }
     /**
@@ -67,7 +67,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Load balancing settings for a backend pool
      * 
      */
-    public Output</* @Nullable */ LoadBalancingSettingsParametersResponse> getLoadBalancingSettings() {
+    public Output</* @Nullable */ LoadBalancingSettingsParametersResponse> loadBalancingSettings() {
         return this.loadBalancingSettings;
     }
     /**
@@ -81,7 +81,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +95,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -109,7 +109,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedAfdOriginErrorDetectionSettings() {
+    public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings() {
         return this.responseBasedAfdOriginErrorDetectionSettings;
     }
     /**
@@ -123,7 +123,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
      */
-    public Output</* @Nullable */ String> getSessionAffinityState() {
+    public Output</* @Nullable */ String> sessionAffinityState() {
         return this.sessionAffinityState;
     }
     /**
@@ -137,7 +137,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -151,7 +151,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+    public Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }
     /**
@@ -165,7 +165,7 @@ public class AFDOriginGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

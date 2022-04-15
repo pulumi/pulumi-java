@@ -70,49 +70,49 @@ public final class GetCertificateResult {
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
     */
-    public String getExpirationDate() {
+    public String expirationDate() {
         return this.expirationDate;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * KeyVault location details of the certificate.
      * 
     */
-    public Optional<KeyVaultContractPropertiesResponse> getKeyVault() {
+    public Optional<KeyVaultContractPropertiesResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Subject attribute of the certificate.
      * 
     */
-    public String getSubject() {
+    public String subject() {
         return this.subject;
     }
     /**
      * Thumbprint of the certificate.
      * 
     */
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

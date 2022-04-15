@@ -28,7 +28,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -39,7 +39,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<Either<String,HeaderMatchType>> type;
 
-    public Output<Either<String,HeaderMatchType>> getType() {
+    public Output<Either<String,HeaderMatchType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -50,7 +50,7 @@ public final class HttpRouteMatchHeaderArgs extends io.pulumi.resources.Resource
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

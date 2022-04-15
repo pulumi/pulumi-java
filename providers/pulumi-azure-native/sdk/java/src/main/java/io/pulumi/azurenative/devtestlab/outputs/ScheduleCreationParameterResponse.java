@@ -102,77 +102,77 @@ public final class ScheduleCreationParameterResponse {
      * If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
     */
-    public Optional<DayDetailsResponse> getDailyRecurrence() {
+    public Optional<DayDetailsResponse> dailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
     /**
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
     */
-    public Optional<HourDetailsResponse> getHourlyRecurrence() {
+    public Optional<HourDetailsResponse> hourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
     /**
      * The location of the new virtual machine or environment
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the virtual machine or environment
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Notification settings.
      * 
     */
-    public Optional<NotificationSettingsResponse> getNotificationSettings() {
+    public Optional<NotificationSettingsResponse> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
      * The status of the schedule (i.e. Enabled, Disabled)
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource ID to which the schedule belongs
      * 
     */
-    public Optional<String> getTargetResourceId() {
+    public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
     */
-    public Optional<String> getTaskType() {
+    public Optional<String> taskType() {
         return Optional.ofNullable(this.taskType);
     }
     /**
      * The time zone ID (e.g. Pacific Standard time).
      * 
     */
-    public Optional<String> getTimeZoneId() {
+    public Optional<String> timeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
     /**
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
     */
-    public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
+    public Optional<WeekDetailsResponse> weeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);
     }
 

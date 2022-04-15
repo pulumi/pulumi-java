@@ -77,56 +77,56 @@ public final class GetVirtualHubBgpConnectionResult {
      * The current state of the VirtualHub to Peer.
      * 
     */
-    public String getConnectionState() {
+    public String connectionState() {
         return this.connectionState;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the connection.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Peer ASN.
      * 
     */
-    public Optional<Double> getPeerAsn() {
+    public Optional<Double> peerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
     /**
      * Peer IP.
      * 
     */
-    public Optional<String> getPeerIp() {
+    public Optional<String> peerIp() {
         return Optional.ofNullable(this.peerIp);
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Connection type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -29,7 +29,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
     @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
-    public Output<Boolean> getAllowCredentials() {
+    public Output<Boolean> allowCredentials() {
         return this.allowCredentials == null ? Codegen.empty() : this.allowCredentials;
     }
 
@@ -40,7 +40,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
+    public Output<List<String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -51,7 +51,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
     @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
-    public Output<Integer> getMaxAge() {
+    public Output<Integer> maxAge() {
         return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 
@@ -62,7 +62,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
     @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> getMethods() {
+    public Output<List<String>> methods() {
         return this.methods == null ? Codegen.empty() : this.methods;
     }
 
@@ -73,7 +73,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
     @Import(name="origins")
       private final @Nullable Output<List<String>> origins;
 
-    public Output<List<String>> getOrigins() {
+    public Output<List<String>> origins() {
         return this.origins == null ? Codegen.empty() : this.origins;
     }
 

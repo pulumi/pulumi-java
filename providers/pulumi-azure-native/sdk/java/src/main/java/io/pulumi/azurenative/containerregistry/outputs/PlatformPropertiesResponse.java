@@ -41,21 +41,21 @@ public final class PlatformPropertiesResponse {
      * The OS architecture.
      * 
     */
-    public Optional<String> getArchitecture() {
+    public Optional<String> architecture() {
         return Optional.ofNullable(this.architecture);
     }
     /**
      * The operating system type required for the run.
      * 
     */
-    public String getOs() {
+    public String os() {
         return this.os;
     }
     /**
      * Variant of the CPU.
      * 
     */
-    public Optional<String> getVariant() {
+    public Optional<String> variant() {
         return Optional.ofNullable(this.variant);
     }
 

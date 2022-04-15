@@ -28,7 +28,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encodedPemCertificate")
       private final @Nullable Output<String> encodedPemCertificate;
 
-    public Output<String> getEncodedPemCertificate() {
+    public Output<String> encodedPemCertificate() {
         return this.encodedPemCertificate == null ? Codegen.empty() : this.encodedPemCertificate;
     }
 
@@ -39,14 +39,14 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expiry")
       private final @Nullable Output<String> expiry;
 
-    public Output<String> getExpiry() {
+    public Output<String> expiry() {
         return this.expiry == null ? Codegen.empty() : this.expiry;
     }
 
     @Import(name="name")
       private final @Nullable Output<Either<String,TokenCertificateName>> name;
 
-    public Output<Either<String,TokenCertificateName>> getName() {
+    public Output<Either<String,TokenCertificateName>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -57,7 +57,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 

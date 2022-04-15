@@ -35,14 +35,14 @@ public final class DataFlowStagingInfoResponse {
      * Folder path for staging blob. Type: string (or Expression with resultType string)
      * 
     */
-    public Optional<Object> getFolderPath() {
+    public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * Staging linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
 

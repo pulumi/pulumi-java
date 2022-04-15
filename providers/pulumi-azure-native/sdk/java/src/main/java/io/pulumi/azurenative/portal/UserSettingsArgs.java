@@ -23,7 +23,7 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<UserPropertiesArgs> properties;
 
-    public Output<UserPropertiesArgs> getProperties() {
+    public Output<UserPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSettingsName")
       private final @Nullable Output<String> userSettingsName;
 
-    public Output<String> getUserSettingsName() {
+    public Output<String> userSettingsName() {
         return this.userSettingsName == null ? Codegen.empty() : this.userSettingsName;
     }
 

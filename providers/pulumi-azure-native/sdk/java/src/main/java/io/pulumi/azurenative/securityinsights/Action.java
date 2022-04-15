@@ -42,7 +42,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * @return Etag of the action.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -56,7 +56,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * @return Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
      */
-    public Output<String> getLogicAppResourceId() {
+    public Output<String> logicAppResourceId() {
         return this.logicAppResourceId;
     }
     /**
@@ -70,7 +70,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -84,7 +84,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +98,7 @@ public class Action extends io.pulumi.resources.CustomResource {
      * @return The name of the logic app's workflow.
      * 
      */
-    public Output</* @Nullable */ String> getWorkflowId() {
+    public Output</* @Nullable */ String> workflowId() {
         return this.workflowId;
     }
 

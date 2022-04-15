@@ -42,21 +42,21 @@ public final class TransferAllDetailsResponse {
      * Type of the account of data
      * 
     */
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
      * To indicate if all Azure blobs have to be transferred
      * 
     */
-    public Optional<Boolean> getTransferAllBlobs() {
+    public Optional<Boolean> transferAllBlobs() {
         return Optional.ofNullable(this.transferAllBlobs);
     }
     /**
      * To indicate if all Azure Files have to be transferred
      * 
     */
-    public Optional<Boolean> getTransferAllFiles() {
+    public Optional<Boolean> transferAllFiles() {
         return Optional.ofNullable(this.transferAllFiles);
     }
 

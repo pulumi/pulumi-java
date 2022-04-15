@@ -27,7 +27,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -38,7 +38,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -49,7 +49,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -60,7 +60,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="landingPageUrl")
       private final @Nullable Output<String> landingPageUrl;
 
-    public Output<String> getLandingPageUrl() {
+    public Output<String> landingPageUrl() {
         return this.landingPageUrl == null ? Codegen.empty() : this.landingPageUrl;
     }
 
@@ -71,7 +71,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="signingSecret")
       private final @Nullable Output<String> signingSecret;
 
-    public Output<String> getSigningSecret() {
+    public Output<String> signingSecret() {
         return this.signingSecret == null ? Codegen.empty() : this.signingSecret;
     }
 
@@ -82,7 +82,7 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="verificationToken")
       private final @Nullable Output<String> verificationToken;
 
-    public Output<String> getVerificationToken() {
+    public Output<String> verificationToken() {
         return this.verificationToken == null ? Codegen.empty() : this.verificationToken;
     }
 

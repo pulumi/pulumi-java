@@ -34,14 +34,14 @@ public final class BudgetFilterPropertiesResponse {
      * Has comparison expression for a dimension
      * 
     */
-    public Optional<BudgetComparisonExpressionResponse> getDimensions() {
+    public Optional<BudgetComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
      * Has comparison expression for a tag
      * 
     */
-    public Optional<BudgetComparisonExpressionResponse> getTags() {
+    public Optional<BudgetComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }
 

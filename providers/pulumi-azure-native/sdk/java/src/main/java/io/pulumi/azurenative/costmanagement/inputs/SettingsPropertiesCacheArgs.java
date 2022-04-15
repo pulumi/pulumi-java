@@ -22,7 +22,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     @Import(name="channel", required=true)
       private final Output<String> channel;
 
-    public Output<String> getChannel() {
+    public Output<String> channel() {
         return this.channel;
     }
 
@@ -33,7 +33,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -44,7 +44,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,7 +55,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -66,7 +66,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -77,7 +77,7 @@ public final class SettingsPropertiesCacheArgs extends io.pulumi.resources.Resou
     @Import(name="subchannel", required=true)
       private final Output<String> subchannel;
 
-    public Output<String> getSubchannel() {
+    public Output<String> subchannel() {
         return this.subchannel;
     }
 

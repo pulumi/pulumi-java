@@ -27,7 +27,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="contactName", required=true)
       private final String contactName;
 
-    public String getContactName() {
+    public String contactName() {
         return this.contactName;
     }
 
@@ -38,7 +38,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="emailList", required=true)
       private final List<String> emailList;
 
-    public List<String> getEmailList() {
+    public List<String> emailList() {
         return this.emailList;
     }
 
@@ -49,7 +49,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="mobile")
       private final @Nullable String mobile;
 
-    public Optional<String> getMobile() {
+    public Optional<String> mobile() {
         return this.mobile == null ? Optional.empty() : Optional.ofNullable(this.mobile);
     }
 
@@ -60,7 +60,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="notificationPreference")
       private final @Nullable List<NotificationPreferenceResponse> notificationPreference;
 
-    public List<NotificationPreferenceResponse> getNotificationPreference() {
+    public List<NotificationPreferenceResponse> notificationPreference() {
         return this.notificationPreference == null ? List.of() : this.notificationPreference;
     }
 
@@ -71,7 +71,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="phone", required=true)
       private final String phone;
 
-    public String getPhone() {
+    public String phone() {
         return this.phone;
     }
 
@@ -82,7 +82,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="phoneExtension")
       private final @Nullable String phoneExtension;
 
-    public Optional<String> getPhoneExtension() {
+    public Optional<String> phoneExtension() {
         return this.phoneExtension == null ? Optional.empty() : Optional.ofNullable(this.phoneExtension);
     }
 

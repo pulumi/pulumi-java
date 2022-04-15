@@ -19,7 +19,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -30,7 +30,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -41,7 +41,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
     @Import(name="slot", required=true)
       private final String slot;
 
-    public String getSlot() {
+    public String slot() {
         return this.slot;
     }
 

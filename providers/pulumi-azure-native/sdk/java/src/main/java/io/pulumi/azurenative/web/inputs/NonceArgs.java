@@ -27,7 +27,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nonceExpirationInterval")
       private final @Nullable Output<String> nonceExpirationInterval;
 
-    public Output<String> getNonceExpirationInterval() {
+    public Output<String> nonceExpirationInterval() {
         return this.nonceExpirationInterval == null ? Codegen.empty() : this.nonceExpirationInterval;
     }
 
@@ -38,7 +38,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validateNonce")
       private final @Nullable Output<Boolean> validateNonce;
 
-    public Output<Boolean> getValidateNonce() {
+    public Output<Boolean> validateNonce() {
         return this.validateNonce == null ? Codegen.empty() : this.validateNonce;
     }
 

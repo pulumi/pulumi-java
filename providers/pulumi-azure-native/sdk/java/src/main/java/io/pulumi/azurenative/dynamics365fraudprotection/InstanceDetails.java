@@ -45,7 +45,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return A collection of DFP instance administrators
      * 
      */
-    public Output</* @Nullable */ DFPInstanceAdministratorsResponse> getAdministration() {
+    public Output</* @Nullable */ DFPInstanceAdministratorsResponse> administration() {
         return this.administration;
     }
     /**
@@ -59,7 +59,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return Location of the DFP resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +73,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -101,7 +101,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +115,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +129,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

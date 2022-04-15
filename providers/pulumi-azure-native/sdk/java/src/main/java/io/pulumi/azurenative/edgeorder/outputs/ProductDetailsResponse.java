@@ -60,35 +60,35 @@ public final class ProductDetailsResponse {
      * Quantity of the product
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * list of device details
      * 
     */
-    public List<DeviceDetailsResponse> getDeviceDetails() {
+    public List<DeviceDetailsResponse> deviceDetails() {
         return this.deviceDetails;
     }
     /**
      * Display details of the product
      * 
     */
-    public Optional<DisplayInfoResponse> getDisplayInfo() {
+    public Optional<DisplayInfoResponse> displayInfo() {
         return Optional.ofNullable(this.displayInfo);
     }
     /**
      * Hierarchy of the product which uniquely identifies the product
      * 
     */
-    public HierarchyInformationResponse getHierarchyInformation() {
+    public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Double encryption status of the configuration. Read-only field.
      * 
     */
-    public String getProductDoubleEncryptionStatus() {
+    public String productDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }
 

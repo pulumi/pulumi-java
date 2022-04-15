@@ -28,7 +28,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
     @Import(name="upgradeChannel")
       private final @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
-    public Output<Either<String,UpgradeChannel>> getUpgradeChannel() {
+    public Output<Either<String,UpgradeChannel>> upgradeChannel() {
         return this.upgradeChannel == null ? Codegen.empty() : this.upgradeChannel;
     }
 

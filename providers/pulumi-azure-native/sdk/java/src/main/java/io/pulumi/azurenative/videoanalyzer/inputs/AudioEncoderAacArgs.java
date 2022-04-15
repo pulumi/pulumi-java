@@ -26,7 +26,7 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bitrateKbps")
       private final @Nullable Output<String> bitrateKbps;
 
-    public Output<String> getBitrateKbps() {
+    public Output<String> bitrateKbps() {
         return this.bitrateKbps == null ? Codegen.empty() : this.bitrateKbps;
     }
 
@@ -38,7 +38,7 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

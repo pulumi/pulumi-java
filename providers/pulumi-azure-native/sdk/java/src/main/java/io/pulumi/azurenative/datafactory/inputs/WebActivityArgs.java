@@ -37,7 +37,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
-    public Output<WebActivityAuthenticationArgs> getAuthentication() {
+    public Output<WebActivityAuthenticationArgs> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -48,7 +48,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<Object> body;
 
-    public Output<Object> getBody() {
+    public Output<Object> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -59,7 +59,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -70,7 +70,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasets")
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Output<List<DatasetReferenceArgs>> getDatasets() {
+    public Output<List<DatasetReferenceArgs>> datasets() {
         return this.datasets == null ? Codegen.empty() : this.datasets;
     }
 
@@ -81,7 +81,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -92,7 +92,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -103,7 +103,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<Object> headers;
 
-    public Output<Object> getHeaders() {
+    public Output<Object> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -114,7 +114,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -125,7 +125,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServices")
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> getLinkedServices() {
+    public Output<List<LinkedServiceReferenceArgs>> linkedServices() {
         return this.linkedServices == null ? Codegen.empty() : this.linkedServices;
     }
 
@@ -136,7 +136,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method", required=true)
       private final Output<Either<String,WebActivityMethod>> method;
 
-    public Output<Either<String,WebActivityMethod>> getMethod() {
+    public Output<Either<String,WebActivityMethod>> method() {
         return this.method;
     }
 
@@ -147,7 +147,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -158,7 +158,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -170,7 +170,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +181,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -192,7 +192,7 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

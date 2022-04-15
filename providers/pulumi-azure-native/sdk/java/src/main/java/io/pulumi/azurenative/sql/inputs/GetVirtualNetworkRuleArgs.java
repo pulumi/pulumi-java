@@ -19,7 +19,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 
@@ -41,7 +41,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
     @Import(name="virtualNetworkRuleName", required=true)
       private final String virtualNetworkRuleName;
 
-    public String getVirtualNetworkRuleName() {
+    public String virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
 

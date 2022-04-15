@@ -48,7 +48,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Application name
      * 
      */
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
     /**
@@ -62,7 +62,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The file path of the package.
      * 
      */
-    public Output<String> getBlobPath() {
+    public Output<String> blobPath() {
         return this.blobPath;
     }
     /**
@@ -76,7 +76,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Resource Etag.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +90,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The flighting ring for feature update.
      * 
      */
-    public Output<String> getFlightingRing() {
+    public Output<String> flightingRing() {
         return this.flightingRing;
     }
     /**
@@ -104,7 +104,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
      * 
      */
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
     /**
@@ -118,7 +118,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The UTC timestamp when the package was last modified.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -132,7 +132,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -146,7 +146,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +160,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The status of the package.
      * 
      */
-    public Output<String> getPackageStatus() {
+    public Output<String> packageStatus() {
         return this.packageStatus;
     }
     /**
@@ -174,7 +174,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -188,7 +188,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -202,7 +202,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -216,7 +216,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Specifies the target OSs of specific OS Update types.
      * 
      */
-    public Output<List<TargetOSInfoResponse>> getTargetOSList() {
+    public Output<List<TargetOSInfoResponse>> targetOSList() {
         return this.targetOSList;
     }
     /**
@@ -230,7 +230,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return OOB, functional or both. Mapped to the data in 'tests' property.
      * 
      */
-    public Output<List<String>> getTestTypes() {
+    public Output<List<String>> testTypes() {
         return this.testTypes;
     }
     /**
@@ -244,7 +244,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The detailed test information.
      * 
      */
-    public Output<List<TestResponse>> getTests() {
+    public Output<List<TestResponse>> tests() {
         return this.tests;
     }
     /**
@@ -258,7 +258,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -272,7 +272,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return The validation results. There's validation on package when it's created or updated.
      * 
      */
-    public Output<List<PackageValidationResultResponse>> getValidationResults() {
+    public Output<List<PackageValidationResultResponse>> validationResults() {
         return this.validationResults;
     }
     /**
@@ -286,7 +286,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @return Application version
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

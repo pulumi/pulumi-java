@@ -25,7 +25,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
     @Import(name="fabricLocation", required=true)
       private final String fabricLocation;
 
-    public String getFabricLocation() {
+    public String fabricLocation() {
         return this.fabricLocation;
     }
 
@@ -37,7 +37,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
     @Import(name="instanceType", required=true)
       private final String instanceType;
 
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 
@@ -48,7 +48,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
     @Import(name="runbookId")
       private final @Nullable String runbookId;
 
-    public Optional<String> getRunbookId() {
+    public Optional<String> runbookId() {
         return this.runbookId == null ? Optional.empty() : Optional.ofNullable(this.runbookId);
     }
 
@@ -59,7 +59,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 

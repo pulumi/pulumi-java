@@ -48,28 +48,28 @@ public final class DefaultRolloutPropertiesResponseSpecification {
         this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
     }
 
-    public Optional<DefaultRolloutSpecificationResponseCanary> getCanary() {
+    public Optional<DefaultRolloutSpecificationResponseCanary> canary() {
         return Optional.ofNullable(this.canary);
     }
-    public Optional<DefaultRolloutSpecificationResponseHighTraffic> getHighTraffic() {
+    public Optional<DefaultRolloutSpecificationResponseHighTraffic> highTraffic() {
         return Optional.ofNullable(this.highTraffic);
     }
-    public Optional<DefaultRolloutSpecificationResponseLowTraffic> getLowTraffic() {
+    public Optional<DefaultRolloutSpecificationResponseLowTraffic> lowTraffic() {
         return Optional.ofNullable(this.lowTraffic);
     }
-    public Optional<DefaultRolloutSpecificationResponseMediumTraffic> getMediumTraffic() {
+    public Optional<DefaultRolloutSpecificationResponseMediumTraffic> mediumTraffic() {
         return Optional.ofNullable(this.mediumTraffic);
     }
-    public Optional<DefaultRolloutSpecificationResponseProviderRegistration> getProviderRegistration() {
+    public Optional<DefaultRolloutSpecificationResponseProviderRegistration> providerRegistration() {
         return Optional.ofNullable(this.providerRegistration);
     }
-    public List<ResourceTypeRegistrationResponse> getResourceTypeRegistrations() {
+    public List<ResourceTypeRegistrationResponse> resourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
     }
-    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> getRestOfTheWorldGroupOne() {
+    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> restOfTheWorldGroupOne() {
         return Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
-    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> getRestOfTheWorldGroupTwo() {
+    public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> restOfTheWorldGroupTwo() {
         return Optional.ofNullable(this.restOfTheWorldGroupTwo);
     }
 

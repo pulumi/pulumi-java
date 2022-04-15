@@ -45,7 +45,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Internal - used by Visual Studio to setup the debugging session on the local development environment.
      * 
      */
-    public Output</* @Nullable */ String> getDebugParams() {
+    public Output</* @Nullable */ String> debugParams() {
         return this.debugParams;
     }
     /**
@@ -59,7 +59,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return User readable description of the application.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Describes the diagnostics definition and usage for an application resource.
      * 
      */
-    public Output</* @Nullable */ DiagnosticsDescriptionResponse> getDiagnostics() {
+    public Output</* @Nullable */ DiagnosticsDescriptionResponse> diagnostics() {
         return this.diagnostics;
     }
     /**
@@ -87,7 +87,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Describes the health state of an application resource.
      * 
      */
-    public Output<String> getHealthState() {
+    public Output<String> healthState() {
         return this.healthState;
     }
     /**
@@ -101,7 +101,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return State of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +143,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Names of the services in the application.
      * 
      */
-    public Output<List<String>> getServiceNames() {
+    public Output<List<String>> serviceNames() {
         return this.serviceNames;
     }
     /**
@@ -157,7 +157,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.
      * 
      */
-    public Output</* @Nullable */ List<ServiceResourceDescriptionResponse>> getServices() {
+    public Output</* @Nullable */ List<ServiceResourceDescriptionResponse>> services() {
         return this.services;
     }
     /**
@@ -171,7 +171,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Status of the application.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -185,7 +185,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Gives additional information about the current status of the application.
      * 
      */
-    public Output<String> getStatusDetails() {
+    public Output<String> statusDetails() {
         return this.statusDetails;
     }
     /**
@@ -199,7 +199,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -213,7 +213,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -227,7 +227,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return When the application's health state is not 'Ok', this additional details from service fabric Health Manager for the user to know why the application is marked unhealthy.
      * 
      */
-    public Output<String> getUnhealthyEvaluation() {
+    public Output<String> unhealthyEvaluation() {
         return this.unhealthyEvaluation;
     }
 

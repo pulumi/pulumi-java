@@ -35,22 +35,22 @@ public final class ArcConfigurationResponse {
         this.frontEndServiceConfiguration = frontEndServiceConfiguration;
     }
 
-    public Optional<String> getArtifactStorageAccessMode() {
+    public Optional<String> artifactStorageAccessMode() {
         return Optional.ofNullable(this.artifactStorageAccessMode);
     }
-    public Optional<String> getArtifactStorageClassName() {
+    public Optional<String> artifactStorageClassName() {
         return Optional.ofNullable(this.artifactStorageClassName);
     }
-    public Optional<String> getArtifactStorageMountPath() {
+    public Optional<String> artifactStorageMountPath() {
         return Optional.ofNullable(this.artifactStorageMountPath);
     }
-    public Optional<String> getArtifactStorageNodeName() {
+    public Optional<String> artifactStorageNodeName() {
         return Optional.ofNullable(this.artifactStorageNodeName);
     }
-    public Optional<String> getArtifactsStorageType() {
+    public Optional<String> artifactsStorageType() {
         return Optional.ofNullable(this.artifactsStorageType);
     }
-    public Optional<FrontEndConfigurationResponse> getFrontEndServiceConfiguration() {
+    public Optional<FrontEndConfigurationResponse> frontEndServiceConfiguration() {
         return Optional.ofNullable(this.frontEndServiceConfiguration);
     }
 

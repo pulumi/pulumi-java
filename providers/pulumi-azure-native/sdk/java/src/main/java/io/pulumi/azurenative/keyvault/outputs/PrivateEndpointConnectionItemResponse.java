@@ -57,35 +57,35 @@ public final class PrivateEndpointConnectionItemResponse {
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Id of private endpoint connection.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Properties of the private endpoint object.
      * 
     */
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
     */
-    public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

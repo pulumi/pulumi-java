@@ -53,31 +53,31 @@ public final class JobRecurrenceResponse {
      * Gets or sets the maximum number of times that the job should run.
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Gets or sets the time at which the job will complete.
      * 
     */
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
     */
-    public Optional<String> getFrequency() {
+    public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * Gets or sets the interval between retries.
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
-    public Optional<JobRecurrenceScheduleResponse> getSchedule() {
+    public Optional<JobRecurrenceScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 

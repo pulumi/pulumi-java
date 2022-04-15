@@ -48,14 +48,14 @@ public final class VideoSourceResponse {
      * Node name. Must be unique within the topology.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
      * 
     */
-    public VideoSequenceAbsoluteTimeMarkersResponse getTimeSequences() {
+    public VideoSequenceAbsoluteTimeMarkersResponse timeSequences() {
         return this.timeSequences;
     }
     /**
@@ -63,14 +63,14 @@ public final class VideoSourceResponse {
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSource'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Name of the Video Analyzer video resource to be used as the source.
      * 
     */
-    public String getVideoName() {
+    public String videoName() {
         return this.videoName;
     }
 

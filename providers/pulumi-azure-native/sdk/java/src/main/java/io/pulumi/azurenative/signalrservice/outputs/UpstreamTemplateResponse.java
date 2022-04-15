@@ -65,7 +65,7 @@ public final class UpstreamTemplateResponse {
      *     3. The single category name, for example, "connections", it matches the category "connections"
      * 
     */
-    public Optional<String> getCategoryPattern() {
+    public Optional<String> categoryPattern() {
         return Optional.ofNullable(this.categoryPattern);
     }
     /**
@@ -76,7 +76,7 @@ public final class UpstreamTemplateResponse {
      *     3. The single event name, for example, "connect", it matches "connect"
      * 
     */
-    public Optional<String> getEventPattern() {
+    public Optional<String> eventPattern() {
         return Optional.ofNullable(this.eventPattern);
     }
     /**
@@ -87,7 +87,7 @@ public final class UpstreamTemplateResponse {
      *     3. The single hub name, for example, "hub1", it matches "hub1"
      * 
     */
-    public Optional<String> getHubPattern() {
+    public Optional<String> hubPattern() {
         return Optional.ofNullable(this.hubPattern);
     }
     /**
@@ -95,7 +95,7 @@ public final class UpstreamTemplateResponse {
      * For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
      * 
     */
-    public String getUrlTemplate() {
+    public String urlTemplate() {
         return this.urlTemplate;
     }
 

@@ -30,7 +30,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="autoDownloadCertificate")
       private final @Nullable Output<Boolean> autoDownloadCertificate;
 
-    public Output<Boolean> getAutoDownloadCertificate() {
+    public Output<Boolean> autoDownloadCertificate() {
         return this.autoDownloadCertificate == null ? Codegen.empty() : this.autoDownloadCertificate;
     }
 
@@ -41,7 +41,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="caCertificateURI")
       private final @Nullable Output<String> caCertificateURI;
 
-    public Output<String> getCaCertificateURI() {
+    public Output<String> caCertificateURI() {
         return this.caCertificateURI == null ? Codegen.empty() : this.caCertificateURI;
     }
 
@@ -52,7 +52,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="credentials")
       private final @Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
 
-    public Output<CacheUsernameDownloadSettingsCredentialsArgs> getCredentials() {
+    public Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -63,7 +63,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="encryptLdapConnection")
       private final @Nullable Output<Boolean> encryptLdapConnection;
 
-    public Output<Boolean> getEncryptLdapConnection() {
+    public Output<Boolean> encryptLdapConnection() {
         return this.encryptLdapConnection == null ? Codegen.empty() : this.encryptLdapConnection;
     }
 
@@ -74,7 +74,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="extendedGroups")
       private final @Nullable Output<Boolean> extendedGroups;
 
-    public Output<Boolean> getExtendedGroups() {
+    public Output<Boolean> extendedGroups() {
         return this.extendedGroups == null ? Codegen.empty() : this.extendedGroups;
     }
 
@@ -85,7 +85,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="groupFileURI")
       private final @Nullable Output<String> groupFileURI;
 
-    public Output<String> getGroupFileURI() {
+    public Output<String> groupFileURI() {
         return this.groupFileURI == null ? Codegen.empty() : this.groupFileURI;
     }
 
@@ -96,7 +96,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="ldapBaseDN")
       private final @Nullable Output<String> ldapBaseDN;
 
-    public Output<String> getLdapBaseDN() {
+    public Output<String> ldapBaseDN() {
         return this.ldapBaseDN == null ? Codegen.empty() : this.ldapBaseDN;
     }
 
@@ -107,7 +107,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="ldapServer")
       private final @Nullable Output<String> ldapServer;
 
-    public Output<String> getLdapServer() {
+    public Output<String> ldapServer() {
         return this.ldapServer == null ? Codegen.empty() : this.ldapServer;
     }
 
@@ -118,7 +118,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="requireValidCertificate")
       private final @Nullable Output<Boolean> requireValidCertificate;
 
-    public Output<Boolean> getRequireValidCertificate() {
+    public Output<Boolean> requireValidCertificate() {
         return this.requireValidCertificate == null ? Codegen.empty() : this.requireValidCertificate;
     }
 
@@ -129,7 +129,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="userFileURI")
       private final @Nullable Output<String> userFileURI;
 
-    public Output<String> getUserFileURI() {
+    public Output<String> userFileURI() {
         return this.userFileURI == null ? Codegen.empty() : this.userFileURI;
     }
 
@@ -140,7 +140,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
     @Import(name="usernameSource")
       private final @Nullable Output<Either<String,UsernameSource>> usernameSource;
 
-    public Output<Either<String,UsernameSource>> getUsernameSource() {
+    public Output<Either<String,UsernameSource>> usernameSource() {
         return this.usernameSource == null ? Codegen.empty() : this.usernameSource;
     }
 

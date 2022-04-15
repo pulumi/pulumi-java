@@ -81,56 +81,56 @@ public final class MigrateSqlServerSqlMITaskInputResponse {
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
      * 
     */
-    public BlobShareResponse getBackupBlobShare() {
+    public BlobShareResponse backupBlobShare() {
         return this.backupBlobShare;
     }
     /**
      * Backup file share information for all selected databases.
      * 
     */
-    public Optional<FileShareResponse> getBackupFileShare() {
+    public Optional<FileShareResponse> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
      * 
     */
-    public Optional<String> getBackupMode() {
+    public Optional<String> backupMode() {
         return Optional.ofNullable(this.backupMode);
     }
     /**
      * Agent Jobs to migrate.
      * 
     */
-    public List<String> getSelectedAgentJobs() {
+    public List<String> selectedAgentJobs() {
         return this.selectedAgentJobs == null ? List.of() : this.selectedAgentJobs;
     }
     /**
      * Databases to migrate
      * 
     */
-    public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Logins to migrate.
      * 
     */
-    public List<String> getSelectedLogins() {
+    public List<String> selectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
     }
     /**
      * Information for connecting to source
      * 
     */
-    public SqlConnectionInfoResponse getSourceConnectionInfo() {
+    public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
     */
-    public SqlConnectionInfoResponse getTargetConnectionInfo() {
+    public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

@@ -19,7 +19,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     @Import(name="dataPath")
       private final @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
 
-    public Output<DatasetCreateRequestDataPathArgs> getDataPath() {
+    public Output<DatasetCreateRequestDataPathArgs> dataPath() {
         return this.dataPath == null ? Codegen.empty() : this.dataPath;
     }
 
@@ -30,7 +30,7 @@ public final class DatasetCreateRequestPathArgs extends io.pulumi.resources.Reso
     @Import(name="httpUrl")
       private final @Nullable Output<String> httpUrl;
 
-    public Output<String> getHttpUrl() {
+    public Output<String> httpUrl() {
         return this.httpUrl == null ? Codegen.empty() : this.httpUrl;
     }
 

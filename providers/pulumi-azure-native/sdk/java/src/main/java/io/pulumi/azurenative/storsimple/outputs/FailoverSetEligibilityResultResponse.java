@@ -35,14 +35,14 @@ public final class FailoverSetEligibilityResultResponse {
      * The error message, if the failover set is not eligible for failover.
      * 
     */
-    public Optional<String> getErrorMessage() {
+    public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * Represents if this failover set is eligible for failover or not.
      * 
     */
-    public Optional<Boolean> getIsEligibleForFailover() {
+    public Optional<Boolean> isEligibleForFailover() {
         return Optional.ofNullable(this.isEligibleForFailover);
     }
 

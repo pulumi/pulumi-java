@@ -43,21 +43,21 @@ public final class DdosSettingsResponse {
      * The DDoS custom policy associated with the public IP.
      * 
     */
-    public Optional<SubResourceResponse> getDdosCustomPolicy() {
+    public Optional<SubResourceResponse> ddosCustomPolicy() {
         return Optional.ofNullable(this.ddosCustomPolicy);
     }
     /**
      * Enables DDoS protection on the public IP.
      * 
     */
-    public Optional<Boolean> getProtectedIP() {
+    public Optional<Boolean> protectedIP() {
         return Optional.ofNullable(this.protectedIP);
     }
     /**
      * The DDoS protection policy customizability of the public IP. Only standard coverage will have the ability to be customized.
      * 
     */
-    public Optional<String> getProtectionCoverage() {
+    public Optional<String> protectionCoverage() {
         return Optional.ofNullable(this.protectionCoverage);
     }
 

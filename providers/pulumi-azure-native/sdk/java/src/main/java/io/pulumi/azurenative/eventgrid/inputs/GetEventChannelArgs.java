@@ -19,7 +19,7 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="eventChannelName", required=true)
       private final String eventChannelName;
 
-    public String getEventChannelName() {
+    public String eventChannelName() {
         return this.eventChannelName;
     }
 
@@ -30,7 +30,7 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="partnerNamespaceName", required=true)
       private final String partnerNamespaceName;
 
-    public String getPartnerNamespaceName() {
+    public String partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
 
@@ -41,7 +41,7 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

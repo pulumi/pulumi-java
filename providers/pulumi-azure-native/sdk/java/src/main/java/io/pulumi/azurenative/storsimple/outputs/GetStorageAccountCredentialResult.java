@@ -78,56 +78,56 @@ public final class GetStorageAccountCredentialResult {
      * The details of the storage account password.
      * 
     */
-    public Optional<AsymmetricEncryptedSecretResponse> getAccessKey() {
+    public Optional<AsymmetricEncryptedSecretResponse> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
      * The storage endpoint
      * 
     */
-    public String getEndPoint() {
+    public String endPoint() {
         return this.endPoint;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Signifies whether SSL needs to be enabled or not.
      * 
     */
-    public String getSslStatus() {
+    public String sslStatus() {
         return this.sslStatus;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The count of volumes using this storage account credential.
      * 
     */
-    public Integer getVolumesCount() {
+    public Integer volumesCount() {
         return this.volumesCount;
     }
 

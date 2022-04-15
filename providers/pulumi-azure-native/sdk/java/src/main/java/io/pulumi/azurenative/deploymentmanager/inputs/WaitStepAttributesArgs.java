@@ -25,7 +25,7 @@ public final class WaitStepAttributesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 

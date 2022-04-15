@@ -21,14 +21,14 @@ public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArg
     @Import(name="key1")
       private final @Nullable String key1;
 
-    public Optional<String> getKey1() {
+    public Optional<String> key1() {
         return this.key1 == null ? Optional.empty() : Optional.ofNullable(this.key1);
     }
 
     @Import(name="key2")
       private final @Nullable String key2;
 
-    public Optional<String> getKey2() {
+    public Optional<String> key2() {
         return this.key2 == null ? Optional.empty() : Optional.ofNullable(this.key2);
     }
 

@@ -28,7 +28,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -39,7 +39,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targets", required=true)
       private final Output<List<TargetReferenceArgs>> targets;
 
-    public Output<List<TargetReferenceArgs>> getTargets() {
+    public Output<List<TargetReferenceArgs>> targets() {
         return this.targets;
     }
 
@@ -50,7 +50,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<SelectorType> type;
 
-    public Output<SelectorType> getType() {
+    public Output<SelectorType> type() {
         return this.type;
     }
 

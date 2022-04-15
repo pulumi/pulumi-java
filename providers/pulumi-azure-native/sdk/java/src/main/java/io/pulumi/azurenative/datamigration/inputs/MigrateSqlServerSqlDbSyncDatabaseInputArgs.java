@@ -27,7 +27,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="migrationSetting")
       private final @Nullable Output<Map<String,String>> migrationSetting;
 
-    public Output<Map<String,String>> getMigrationSetting() {
+    public Output<Map<String,String>> migrationSetting() {
         return this.migrationSetting == null ? Codegen.empty() : this.migrationSetting;
     }
 
@@ -49,7 +49,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
-    public Output<String> getSchemaName() {
+    public Output<String> schemaName() {
         return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
@@ -71,7 +71,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="sourceSetting")
       private final @Nullable Output<Map<String,String>> sourceSetting;
 
-    public Output<Map<String,String>> getSourceSetting() {
+    public Output<Map<String,String>> sourceSetting() {
         return this.sourceSetting == null ? Codegen.empty() : this.sourceSetting;
     }
 
@@ -82,7 +82,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="tableMap")
       private final @Nullable Output<Map<String,String>> tableMap;
 
-    public Output<Map<String,String>> getTableMap() {
+    public Output<Map<String,String>> tableMap() {
         return this.tableMap == null ? Codegen.empty() : this.tableMap;
     }
 
@@ -93,7 +93,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
-    public Output<String> getTargetDatabaseName() {
+    public Output<String> targetDatabaseName() {
         return this.targetDatabaseName == null ? Codegen.empty() : this.targetDatabaseName;
     }
 
@@ -104,7 +104,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
     @Import(name="targetSetting")
       private final @Nullable Output<Map<String,String>> targetSetting;
 
-    public Output<Map<String,String>> getTargetSetting() {
+    public Output<Map<String,String>> targetSetting() {
         return this.targetSetting == null ? Codegen.empty() : this.targetSetting;
     }
 

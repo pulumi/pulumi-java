@@ -25,7 +25,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     @Import(name="appKey", required=true)
       private final Output<String> appKey;
 
-    public Output<String> getAppKey() {
+    public Output<String> appKey() {
         return this.appKey;
     }
 
@@ -36,7 +36,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -47,7 +47,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 

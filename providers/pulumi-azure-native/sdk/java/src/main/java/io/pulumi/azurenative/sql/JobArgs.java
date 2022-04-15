@@ -23,7 +23,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
 
-    public Output<String> getJobAgentName() {
+    public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
 
@@ -45,7 +45,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
@@ -56,7 +56,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<JobScheduleArgs> schedule;
 
-    public Output<JobScheduleArgs> getSchedule() {
+    public Output<JobScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
@@ -78,7 +78,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

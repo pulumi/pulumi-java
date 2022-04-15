@@ -44,7 +44,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Encrypted storage key.
      * 
      */
-    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getAccountKey() {
+    public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accountKey() {
         return this.accountKey;
     }
     /**
@@ -58,7 +58,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Type of storage accessed on the storage account.
      * 
      */
-    public Output<String> getAccountType() {
+    public Output<String> accountType() {
         return this.accountType;
     }
     /**
@@ -72,7 +72,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Alias for the storage account.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -86,7 +86,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Blob end point for private clouds.
      * 
      */
-    public Output</* @Nullable */ String> getBlobDomainName() {
+    public Output</* @Nullable */ String> blobDomainName() {
         return this.blobDomainName;
     }
     /**
@@ -100,7 +100,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Connection string for the storage account. Use this string if username and account key are not specified.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionString() {
+    public Output</* @Nullable */ String> connectionString() {
         return this.connectionString;
     }
     /**
@@ -114,7 +114,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +128,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Signifies whether SSL needs to be enabled or not.
      * 
      */
-    public Output<String> getSslStatus() {
+    public Output<String> sslStatus() {
         return this.sslStatus;
     }
     /**
@@ -142,7 +142,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Id of the storage account.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountId() {
+    public Output</* @Nullable */ String> storageAccountId() {
         return this.storageAccountId;
     }
     /**
@@ -156,7 +156,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return StorageAccountCredential object
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -170,7 +170,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -184,7 +184,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * @return Username for the storage account.
      * 
      */
-    public Output</* @Nullable */ String> getUserName() {
+    public Output</* @Nullable */ String> userName() {
         return this.userName;
     }
 

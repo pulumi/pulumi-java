@@ -86,56 +86,56 @@ public final class FabricPropertiesResponse {
      * BCDR state of the fabric.
      * 
     */
-    public Optional<String> getBcdrState() {
+    public Optional<String> bcdrState() {
         return Optional.ofNullable(this.bcdrState);
     }
     /**
      * Fabric specific settings.
      * 
     */
-    public Optional<Object> getCustomDetails() {
+    public Optional<Object> customDetails() {
         return Optional.ofNullable(this.customDetails);
     }
     /**
      * Encryption details for the fabric.
      * 
     */
-    public Optional<EncryptionDetailsResponse> getEncryptionDetails() {
+    public Optional<EncryptionDetailsResponse> encryptionDetails() {
         return Optional.ofNullable(this.encryptionDetails);
     }
     /**
      * Friendly name of the fabric.
      * 
     */
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Health of fabric.
      * 
     */
-    public Optional<String> getHealth() {
+    public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
     /**
      * Fabric health error details.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrorDetails() {
+    public List<HealthErrorResponse> healthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
     /**
      * Dra Registration Id.
      * 
     */
-    public Optional<String> getInternalIdentifier() {
+    public Optional<String> internalIdentifier() {
         return Optional.ofNullable(this.internalIdentifier);
     }
     /**
      * Rollover encryption details for the fabric.
      * 
     */
-    public Optional<EncryptionDetailsResponse> getRolloverEncryptionDetails() {
+    public Optional<EncryptionDetailsResponse> rolloverEncryptionDetails() {
         return Optional.ofNullable(this.rolloverEncryptionDetails);
     }
 

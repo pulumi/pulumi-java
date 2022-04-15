@@ -52,28 +52,28 @@ public final class WebClientCertificateAuthenticationResponse {
      * Expected value is 'ClientCertificate'.
      * 
     */
-    public String getAuthenticationType() {
+    public String authenticationType() {
         return this.authenticationType;
     }
     /**
      * Password for the PFX file.
      * 
     */
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
      * Base64-encoded contents of a PFX file.
      * 
     */
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx() {
         return this.pfx;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
     */
-    public Object getUrl() {
+    public Object url() {
         return this.url;
     }
 

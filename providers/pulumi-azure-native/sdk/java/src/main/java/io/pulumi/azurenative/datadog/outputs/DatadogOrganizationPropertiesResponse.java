@@ -32,14 +32,14 @@ public final class DatadogOrganizationPropertiesResponse {
      * Id of the Datadog organization.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the Datadog organization.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

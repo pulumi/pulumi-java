@@ -20,14 +20,14 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Output<List<SkuCapabilityArgs>> getCapabilities() {
+    public Output<List<SkuCapabilityArgs>> capabilities() {
         return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="name")
       private final @Nullable Output<List<String>> name;
 
-    public Output<List<String>> getName() {
+    public Output<List<String>> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

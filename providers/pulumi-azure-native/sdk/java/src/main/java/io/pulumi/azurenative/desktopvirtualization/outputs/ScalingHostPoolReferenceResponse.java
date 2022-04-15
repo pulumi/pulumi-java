@@ -35,14 +35,14 @@ public final class ScalingHostPoolReferenceResponse {
      * Arm path of referenced hostpool.
      * 
     */
-    public Optional<String> getHostPoolArmPath() {
+    public Optional<String> hostPoolArmPath() {
         return Optional.ofNullable(this.hostPoolArmPath);
     }
     /**
      * Is the scaling plan enabled for this hostpool.
      * 
     */
-    public Optional<Boolean> getScalingPlanEnabled() {
+    public Optional<Boolean> scalingPlanEnabled() {
         return Optional.ofNullable(this.scalingPlanEnabled);
     }
 

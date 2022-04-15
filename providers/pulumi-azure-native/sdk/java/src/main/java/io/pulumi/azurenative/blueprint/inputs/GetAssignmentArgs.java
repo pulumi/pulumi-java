@@ -19,7 +19,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="assignmentName", required=true)
       private final String assignmentName;
 
-    public String getAssignmentName() {
+    public String assignmentName() {
         return this.assignmentName;
     }
 
@@ -30,7 +30,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceScope", required=true)
       private final String resourceScope;
 
-    public String getResourceScope() {
+    public String resourceScope() {
         return this.resourceScope;
     }
 

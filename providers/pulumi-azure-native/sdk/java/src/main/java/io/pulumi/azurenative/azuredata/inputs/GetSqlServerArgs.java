@@ -21,7 +21,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,7 +43,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sqlServerName", required=true)
       private final String sqlServerName;
 
-    public String getSqlServerName() {
+    public String sqlServerName() {
         return this.sqlServerName;
     }
 
@@ -54,7 +54,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sqlServerRegistrationName", required=true)
       private final String sqlServerRegistrationName;
 
-    public String getSqlServerRegistrationName() {
+    public String sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
     }
 

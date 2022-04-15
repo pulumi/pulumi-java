@@ -26,7 +26,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     @Import(name="secureValue")
       private final @Nullable Output<String> secureValue;
 
-    public Output<String> getSecureValue() {
+    public Output<String> secureValue() {
         return this.secureValue == null ? Codegen.empty() : this.secureValue;
     }
 
@@ -49,7 +49,7 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -29,7 +29,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> getArguments() {
+    public Output<List<ArgumentArgs>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -40,7 +40,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
 
-    public Output<String> getContextAccessToken() {
+    public Output<String> contextAccessToken() {
         return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
     }
 
@@ -51,7 +51,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
-    public Output<String> getContextPath() {
+    public Output<String> contextPath() {
         return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
@@ -62,7 +62,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dockerFilePath", required=true)
       private final Output<String> dockerFilePath;
 
-    public Output<String> getDockerFilePath() {
+    public Output<String> dockerFilePath() {
         return this.dockerFilePath;
     }
 
@@ -73,7 +73,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="imageNames")
       private final @Nullable Output<List<String>> imageNames;
 
-    public Output<List<String>> getImageNames() {
+    public Output<List<String>> imageNames() {
         return this.imageNames == null ? Codegen.empty() : this.imageNames;
     }
 
@@ -84,7 +84,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isPushEnabled")
       private final @Nullable Output<Boolean> isPushEnabled;
 
-    public Output<Boolean> getIsPushEnabled() {
+    public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled == null ? Codegen.empty() : this.isPushEnabled;
     }
 
@@ -95,7 +95,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> getNoCache() {
+    public Output<Boolean> noCache() {
         return this.noCache == null ? Codegen.empty() : this.noCache;
     }
 
@@ -106,7 +106,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -118,7 +118,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

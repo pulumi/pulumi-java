@@ -27,7 +27,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
     @Import(name="receiverType")
       private final @Nullable Output<String> receiverType;
 
-    public Output<String> getReceiverType() {
+    public Output<String> receiverType() {
         return this.receiverType == null ? Codegen.empty() : this.receiverType;
     }
 
@@ -38,7 +38,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
     @Import(name="receiverValue")
       private final @Nullable Output<NotificationReceiverValueArgs> receiverValue;
 
-    public Output<NotificationReceiverValueArgs> getReceiverValue() {
+    public Output<NotificationReceiverValueArgs> receiverValue() {
         return this.receiverValue == null ? Codegen.empty() : this.receiverValue;
     }
 

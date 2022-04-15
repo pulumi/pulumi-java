@@ -24,7 +24,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountResourceName", required=true)
       private final Output<String> accountResourceName;
 
-    public Output<String> getAccountResourceName() {
+    public Output<String> accountResourceName() {
         return this.accountResourceName;
     }
 
@@ -35,7 +35,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensionResourceName")
       private final @Nullable Output<String> extensionResourceName;
 
-    public Output<String> getExtensionResourceName() {
+    public Output<String> extensionResourceName() {
         return this.extensionResourceName == null ? Codegen.empty() : this.extensionResourceName;
     }
 
@@ -46,7 +46,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -57,7 +57,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="plan")
       private final @Nullable Output<ExtensionResourcePlanArgs> plan;
 
-    public Output<ExtensionResourcePlanArgs> getPlan() {
+    public Output<ExtensionResourcePlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -68,7 +68,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -79,7 +79,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,7 +90,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

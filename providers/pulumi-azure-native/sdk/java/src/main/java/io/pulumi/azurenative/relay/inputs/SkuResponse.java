@@ -25,7 +25,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tier")
       private final @Nullable String tier;
 
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
     }
 

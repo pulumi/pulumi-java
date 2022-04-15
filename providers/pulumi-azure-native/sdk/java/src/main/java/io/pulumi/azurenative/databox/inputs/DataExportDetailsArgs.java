@@ -31,7 +31,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accountDetails", required=true)
       private final Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
-    public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
+    public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails() {
         return this.accountDetails;
     }
 
@@ -42,7 +42,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logCollectionLevel")
       private final @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
 
-    public Output<Either<String,LogCollectionLevel>> getLogCollectionLevel() {
+    public Output<Either<String,LogCollectionLevel>> logCollectionLevel() {
         return this.logCollectionLevel == null ? Codegen.empty() : this.logCollectionLevel;
     }
 
@@ -53,7 +53,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="transferConfiguration", required=true)
       private final Output<TransferConfigurationArgs> transferConfiguration;
 
-    public Output<TransferConfigurationArgs> getTransferConfiguration() {
+    public Output<TransferConfigurationArgs> transferConfiguration() {
         return this.transferConfiguration;
     }
 

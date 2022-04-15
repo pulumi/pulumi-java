@@ -62,42 +62,42 @@ public final class GetApiIssueCommentResult {
      * Date and time when the comment was created.
      * 
     */
-    public Optional<String> getCreatedDate() {
+    public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Comment text.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A resource identifier for the user who left the comment.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 

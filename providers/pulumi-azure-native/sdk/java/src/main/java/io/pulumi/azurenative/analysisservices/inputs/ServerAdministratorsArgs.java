@@ -27,7 +27,7 @@ public final class ServerAdministratorsArgs extends io.pulumi.resources.Resource
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 

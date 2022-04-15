@@ -107,84 +107,84 @@ public final class GetContainerAppResult {
      * Non versioned Container App configuration properties.
      * 
     */
-    public Optional<ConfigurationResponse> getConfiguration() {
+    public Optional<ConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource ID of the Container App's KubeEnvironment.
      * 
     */
-    public Optional<String> getKubeEnvironmentId() {
+    public Optional<String> kubeEnvironmentId() {
         return Optional.ofNullable(this.kubeEnvironmentId);
     }
     /**
      * Fully Qualified Domain Name of the latest revision of the Container App.
      * 
     */
-    public String getLatestRevisionFqdn() {
+    public String latestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
     /**
      * Name of the latest revision of the Container App.
      * 
     */
-    public String getLatestRevisionName() {
+    public String latestRevisionName() {
         return this.latestRevisionName;
     }
     /**
      * Resource Location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the Container App.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Container App versioned application definition.
      * 
     */
-    public Optional<TemplateResponse> getTemplate() {
+    public Optional<TemplateResponse> template() {
         return Optional.ofNullable(this.template);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

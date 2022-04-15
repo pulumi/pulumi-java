@@ -28,7 +28,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -39,7 +39,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dailySchedule")
       private final @Nullable Output<DailyScheduleArgs> dailySchedule;
 
-    public Output<DailyScheduleArgs> getDailySchedule() {
+    public Output<DailyScheduleArgs> dailySchedule() {
         return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
     }
 
@@ -50,7 +50,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -61,7 +61,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hourlySchedule")
       private final @Nullable Output<HourlyScheduleArgs> hourlySchedule;
 
-    public Output<HourlyScheduleArgs> getHourlySchedule() {
+    public Output<HourlyScheduleArgs> hourlySchedule() {
         return this.hourlySchedule == null ? Codegen.empty() : this.hourlySchedule;
     }
 
@@ -72,7 +72,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -83,7 +83,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monthlySchedule")
       private final @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
 
-    public Output<MonthlyScheduleArgs> getMonthlySchedule() {
+    public Output<MonthlyScheduleArgs> monthlySchedule() {
         return this.monthlySchedule == null ? Codegen.empty() : this.monthlySchedule;
     }
 
@@ -94,7 +94,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +105,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshotPolicyName")
       private final @Nullable Output<String> snapshotPolicyName;
 
-    public Output<String> getSnapshotPolicyName() {
+    public Output<String> snapshotPolicyName() {
         return this.snapshotPolicyName == null ? Codegen.empty() : this.snapshotPolicyName;
     }
 
@@ -116,7 +116,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -127,7 +127,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weeklySchedule")
       private final @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
 
-    public Output<WeeklyScheduleArgs> getWeeklySchedule() {
+    public Output<WeeklyScheduleArgs> weeklySchedule() {
         return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
     }
 

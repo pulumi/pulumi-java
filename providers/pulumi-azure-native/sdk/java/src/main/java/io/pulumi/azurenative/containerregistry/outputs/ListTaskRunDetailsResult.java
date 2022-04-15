@@ -98,70 +98,70 @@ public final class ListTaskRunDetailsResult {
      * How the run should be forced to rerun even if the run request configuration has not changed
      * 
     */
-    public Optional<String> getForceUpdateTag() {
+    public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
     */
-    public Optional<IdentityPropertiesResponse> getIdentity() {
+    public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the resource
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of this task run
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The request (parameters) for the run
      * 
     */
-    public Optional<Object> getRunRequest() {
+    public Optional<Object> runRequest() {
         return Optional.ofNullable(this.runRequest);
     }
     /**
      * The result of this task run
      * 
     */
-    public RunResponse getRunResult() {
+    public RunResponse runResult() {
         return this.runResult;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

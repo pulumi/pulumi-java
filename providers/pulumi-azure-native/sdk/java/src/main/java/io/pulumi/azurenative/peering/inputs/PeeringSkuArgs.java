@@ -30,7 +30,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="family")
       private final @Nullable Output<Either<String,Family>> family;
 
-    public Output<Either<String,Family>> getFamily() {
+    public Output<Either<String,Family>> family() {
         return this.family == null ? Codegen.empty() : this.family;
     }
 
@@ -41,7 +41,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -52,7 +52,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Either<String,Size>> size;
 
-    public Output<Either<String,Size>> getSize() {
+    public Output<Either<String,Size>> size() {
         return this.size == null ? Codegen.empty() : this.size;
     }
 
@@ -63,7 +63,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<Either<String,Tier>> tier;
 
-    public Output<Either<String,Tier>> getTier() {
+    public Output<Either<String,Tier>> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 

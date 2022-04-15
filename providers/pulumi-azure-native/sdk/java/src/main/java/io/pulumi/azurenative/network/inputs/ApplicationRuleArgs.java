@@ -29,7 +29,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -40,7 +40,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
+    public Output<List<String>> destinationAddresses() {
         return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
@@ -51,7 +51,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fqdnTags")
       private final @Nullable Output<List<String>> fqdnTags;
 
-    public Output<List<String>> getFqdnTags() {
+    public Output<List<String>> fqdnTags() {
         return this.fqdnTags == null ? Codegen.empty() : this.fqdnTags;
     }
 
@@ -62,7 +62,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -73,7 +73,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="protocols")
       private final @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
 
-    public Output<List<FirewallPolicyRuleApplicationProtocolArgs>> getProtocols() {
+    public Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols() {
         return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
@@ -85,7 +85,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -96,7 +96,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
+    public Output<List<String>> sourceAddresses() {
         return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
@@ -107,7 +107,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
+    public Output<List<String>> sourceIpGroups() {
         return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
@@ -118,7 +118,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetFqdns")
       private final @Nullable Output<List<String>> targetFqdns;
 
-    public Output<List<String>> getTargetFqdns() {
+    public Output<List<String>> targetFqdns() {
         return this.targetFqdns == null ? Codegen.empty() : this.targetFqdns;
     }
 
@@ -129,7 +129,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetUrls")
       private final @Nullable Output<List<String>> targetUrls;
 
-    public Output<List<String>> getTargetUrls() {
+    public Output<List<String>> targetUrls() {
         return this.targetUrls == null ? Codegen.empty() : this.targetUrls;
     }
 
@@ -140,7 +140,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="terminateTLS")
       private final @Nullable Output<Boolean> terminateTLS;
 
-    public Output<Boolean> getTerminateTLS() {
+    public Output<Boolean> terminateTLS() {
         return this.terminateTLS == null ? Codegen.empty() : this.terminateTLS;
     }
 
@@ -151,7 +151,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="webCategories")
       private final @Nullable Output<List<String>> webCategories;
 
-    public Output<List<String>> getWebCategories() {
+    public Output<List<String>> webCategories() {
         return this.webCategories == null ? Codegen.empty() : this.webCategories;
     }
 

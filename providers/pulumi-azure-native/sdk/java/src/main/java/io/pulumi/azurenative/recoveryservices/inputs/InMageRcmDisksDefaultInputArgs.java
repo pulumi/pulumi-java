@@ -28,7 +28,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
     @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Output<String> getDiskEncryptionSetId() {
+    public Output<String> diskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
@@ -39,7 +39,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
     @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Output<Either<String,DiskAccountType>> getDiskType() {
+    public Output<Either<String,DiskAccountType>> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -50,7 +50,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
     @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
 
-    public Output<String> getLogStorageAccountId() {
+    public Output<String> logStorageAccountId() {
         return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
     }
 

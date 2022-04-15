@@ -34,14 +34,14 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
      * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
      * 
     */
-    public Optional<Boolean> getProtectFromScaleIn() {
+    public Optional<Boolean> protectFromScaleIn() {
         return Optional.ofNullable(this.protectFromScaleIn);
     }
     /**
      * Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
      * 
     */
-    public Optional<Boolean> getProtectFromScaleSetActions() {
+    public Optional<Boolean> protectFromScaleSetActions() {
         return Optional.ofNullable(this.protectFromScaleSetActions);
     }
 

@@ -23,7 +23,7 @@ public final class EdifactMessageIdentifierResponse extends io.pulumi.resources.
     @Import(name="messageId", required=true)
       private final String messageId;
 
-    public String getMessageId() {
+    public String messageId() {
         return this.messageId;
     }
 

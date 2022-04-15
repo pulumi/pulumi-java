@@ -49,28 +49,28 @@ public final class StorageProfileResponse {
      * Backup retention days for the server.
      * 
     */
-    public Optional<Integer> getBackupRetentionDays() {
+    public Optional<Integer> backupRetentionDays() {
         return Optional.ofNullable(this.backupRetentionDays);
     }
     /**
      * Enable Geo-redundant or not for server backup.
      * 
     */
-    public Optional<String> getGeoRedundantBackup() {
+    public Optional<String> geoRedundantBackup() {
         return Optional.ofNullable(this.geoRedundantBackup);
     }
     /**
      * Enable Storage Auto Grow.
      * 
     */
-    public Optional<String> getStorageAutogrow() {
+    public Optional<String> storageAutogrow() {
         return Optional.ofNullable(this.storageAutogrow);
     }
     /**
      * Max storage allowed for a server.
      * 
     */
-    public Optional<Integer> getStorageMB() {
+    public Optional<Integer> storageMB() {
         return Optional.ofNullable(this.storageMB);
     }
 

@@ -33,7 +33,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="createMode", required=true)
       private final Output<String> createMode;
 
-    public Output<String> getCreateMode() {
+    public Output<String> createMode() {
         return this.createMode;
     }
 
@@ -44,7 +44,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
-    public Output<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
+    public Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion() {
         return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
     }
 
@@ -55,7 +55,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
+    public Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess() {
         return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
@@ -66,7 +66,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="sourceServerId", required=true)
       private final Output<String> sourceServerId;
 
-    public Output<String> getSourceServerId() {
+    public Output<String> sourceServerId() {
         return this.sourceServerId;
     }
 
@@ -77,7 +77,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
-    public Output<SslEnforcementEnum> getSslEnforcement() {
+    public Output<SslEnforcementEnum> sslEnforcement() {
         return this.sslEnforcement == null ? Codegen.empty() : this.sslEnforcement;
     }
 
@@ -88,7 +88,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> getStorageProfile() {
+    public Output<StorageProfileArgs> storageProfile() {
         return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
@@ -99,7 +99,7 @@ public final class ServerPropertiesForReplicaArgs extends io.pulumi.resources.Re
     @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;
 
-    public Output<Either<String,ServerVersion>> getVersion() {
+    public Output<Either<String,ServerVersion>> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

@@ -49,28 +49,28 @@ public final class ManagedClusterWindowsProfileResponse {
      * Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
      * 
     */
-    public Optional<String> getAdminPassword() {
+    public Optional<String> adminPassword() {
         return Optional.ofNullable(this.adminPassword);
     }
     /**
      * Specifies the name of the administrator account. <br><br> **restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length:** 1 character <br><br> **Max-length:** 20 characters
      * 
     */
-    public String getAdminUsername() {
+    public String adminUsername() {
         return this.adminUsername;
     }
     /**
      * Whether to enable CSI proxy.
      * 
     */
-    public Optional<Boolean> getEnableCSIProxy() {
+    public Optional<Boolean> enableCSIProxy() {
         return Optional.ofNullable(this.enableCSIProxy);
     }
     /**
      * The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
 

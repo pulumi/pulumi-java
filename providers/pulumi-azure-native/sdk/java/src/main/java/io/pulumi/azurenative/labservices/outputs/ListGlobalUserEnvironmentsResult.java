@@ -26,7 +26,7 @@ public final class ListGlobalUserEnvironmentsResult {
      * List of all the environments
      * 
     */
-    public List<EnvironmentDetailsResponse> getEnvironments() {
+    public List<EnvironmentDetailsResponse> environments() {
         return this.environments == null ? List.of() : this.environments;
     }
 

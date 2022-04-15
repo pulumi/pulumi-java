@@ -19,7 +19,7 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
     @Import(name="failoverGroupName", required=true)
       private final String failoverGroupName;
 
-    public String getFailoverGroupName() {
+    public String failoverGroupName() {
         return this.failoverGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
     @Import(name="locationName", required=true)
       private final String locationName;
 
-    public String getLocationName() {
+    public String locationName() {
         return this.locationName;
     }
 
@@ -41,7 +41,7 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

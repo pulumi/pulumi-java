@@ -30,7 +30,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alwaysLog")
       private final @Nullable Output<Either<String,AlwaysLog>> alwaysLog;
 
-    public Output<Either<String,AlwaysLog>> getAlwaysLog() {
+    public Output<Either<String,AlwaysLog>> alwaysLog() {
         return this.alwaysLog == null ? Codegen.empty() : this.alwaysLog;
     }
 
@@ -41,7 +41,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -52,7 +52,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backend")
       private final @Nullable Output<PipelineDiagnosticSettingsArgs> backend;
 
-    public Output<PipelineDiagnosticSettingsArgs> getBackend() {
+    public Output<PipelineDiagnosticSettingsArgs> backend() {
         return this.backend == null ? Codegen.empty() : this.backend;
     }
 
@@ -63,7 +63,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnosticId")
       private final @Nullable Output<String> diagnosticId;
 
-    public Output<String> getDiagnosticId() {
+    public Output<String> diagnosticId() {
         return this.diagnosticId == null ? Codegen.empty() : this.diagnosticId;
     }
 
@@ -74,7 +74,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frontend")
       private final @Nullable Output<PipelineDiagnosticSettingsArgs> frontend;
 
-    public Output<PipelineDiagnosticSettingsArgs> getFrontend() {
+    public Output<PipelineDiagnosticSettingsArgs> frontend() {
         return this.frontend == null ? Codegen.empty() : this.frontend;
     }
 
@@ -85,7 +85,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpCorrelationProtocol")
       private final @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
 
-    public Output<Either<String,HttpCorrelationProtocol>> getHttpCorrelationProtocol() {
+    public Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol() {
         return this.httpCorrelationProtocol == null ? Codegen.empty() : this.httpCorrelationProtocol;
     }
 
@@ -96,7 +96,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logClientIp")
       private final @Nullable Output<Boolean> logClientIp;
 
-    public Output<Boolean> getLogClientIp() {
+    public Output<Boolean> logClientIp() {
         return this.logClientIp == null ? Codegen.empty() : this.logClientIp;
     }
 
@@ -107,7 +107,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggerId", required=true)
       private final Output<String> loggerId;
 
-    public Output<String> getLoggerId() {
+    public Output<String> loggerId() {
         return this.loggerId;
     }
 
@@ -118,7 +118,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationNameFormat")
       private final @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat;
 
-    public Output<Either<String,OperationNameFormat>> getOperationNameFormat() {
+    public Output<Either<String,OperationNameFormat>> operationNameFormat() {
         return this.operationNameFormat == null ? Codegen.empty() : this.operationNameFormat;
     }
 
@@ -129,7 +129,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -140,7 +140,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampling")
       private final @Nullable Output<SamplingSettingsArgs> sampling;
 
-    public Output<SamplingSettingsArgs> getSampling() {
+    public Output<SamplingSettingsArgs> sampling() {
         return this.sampling == null ? Codegen.empty() : this.sampling;
     }
 
@@ -151,7 +151,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -162,7 +162,7 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="verbosity")
       private final @Nullable Output<Either<String,Verbosity>> verbosity;
 
-    public Output<Either<String,Verbosity>> getVerbosity() {
+    public Output<Either<String,Verbosity>> verbosity() {
         return this.verbosity == null ? Codegen.empty() : this.verbosity;
     }
 

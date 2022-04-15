@@ -25,7 +25,7 @@ public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
 

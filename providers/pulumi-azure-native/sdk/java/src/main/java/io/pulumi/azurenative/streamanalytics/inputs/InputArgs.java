@@ -29,7 +29,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -40,7 +40,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
-    public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {
+    public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

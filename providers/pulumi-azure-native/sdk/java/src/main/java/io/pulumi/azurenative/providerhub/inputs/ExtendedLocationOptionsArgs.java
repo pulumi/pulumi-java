@@ -18,14 +18,14 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     @Import(name="supportedPolicy")
       private final @Nullable Output<String> supportedPolicy;
 
-    public Output<String> getSupportedPolicy() {
+    public Output<String> supportedPolicy() {
         return this.supportedPolicy == null ? Codegen.empty() : this.supportedPolicy;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

@@ -41,21 +41,21 @@ public final class ListAuthorizationServerSecretsResult {
      * oAuth Authorization Server Secrets.
      * 
     */
-    public Optional<String> getClientSecret() {
+    public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
      * 
     */
-    public Optional<String> getResourceOwnerPassword() {
+    public Optional<String> resourceOwnerPassword() {
         return Optional.ofNullable(this.resourceOwnerPassword);
     }
     /**
      * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
      * 
     */
-    public Optional<String> getResourceOwnerUsername() {
+    public Optional<String> resourceOwnerUsername() {
         return Optional.ofNullable(this.resourceOwnerUsername);
     }
 

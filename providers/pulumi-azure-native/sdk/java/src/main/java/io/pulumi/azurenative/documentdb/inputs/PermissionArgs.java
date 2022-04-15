@@ -27,7 +27,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataActions")
       private final @Nullable Output<List<String>> dataActions;
 
-    public Output<List<String>> getDataActions() {
+    public Output<List<String>> dataActions() {
         return this.dataActions == null ? Codegen.empty() : this.dataActions;
     }
 
@@ -38,7 +38,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notDataActions")
       private final @Nullable Output<List<String>> notDataActions;
 
-    public Output<List<String>> getNotDataActions() {
+    public Output<List<String>> notDataActions() {
         return this.notDataActions == null ? Codegen.empty() : this.notDataActions;
     }
 

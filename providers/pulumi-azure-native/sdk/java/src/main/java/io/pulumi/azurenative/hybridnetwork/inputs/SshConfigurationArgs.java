@@ -27,7 +27,7 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="publicKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
-    public Output<List<SshPublicKeyArgs>> getPublicKeys() {
+    public Output<List<SshPublicKeyArgs>> publicKeys() {
         return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 

@@ -26,7 +26,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -37,7 +37,7 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     @Import(name="querySubscriptions", required=true)
       private final Output<List<String>> querySubscriptions;
 
-    public Output<List<String>> getQuerySubscriptions() {
+    public Output<List<String>> querySubscriptions() {
         return this.querySubscriptions;
     }
 

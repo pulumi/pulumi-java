@@ -63,14 +63,14 @@ public final class ApplicationMetricDescriptionResponse {
      * When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
      * 
     */
-    public Optional<Double> getMaximumCapacity() {
+    public Optional<Double> maximumCapacity() {
         return Optional.ofNullable(this.maximumCapacity);
     }
     /**
      * The name of the metric.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -81,7 +81,7 @@ public final class ApplicationMetricDescriptionResponse {
      * When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
      * 
     */
-    public Optional<Double> getReservationCapacity() {
+    public Optional<Double> reservationCapacity() {
         return Optional.ofNullable(this.reservationCapacity);
     }
     /**
@@ -90,7 +90,7 @@ public final class ApplicationMetricDescriptionResponse {
      * When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
      * 
     */
-    public Optional<Double> getTotalApplicationCapacity() {
+    public Optional<Double> totalApplicationCapacity() {
         return Optional.ofNullable(this.totalApplicationCapacity);
     }
 

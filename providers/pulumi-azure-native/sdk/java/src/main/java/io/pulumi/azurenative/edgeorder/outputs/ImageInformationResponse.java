@@ -32,14 +32,14 @@ public final class ImageInformationResponse {
      * Type of the image
      * 
     */
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
     /**
      * Url of the image
      * 
     */
-    public String getImageUrl() {
+    public String imageUrl() {
         return this.imageUrl;
     }
 

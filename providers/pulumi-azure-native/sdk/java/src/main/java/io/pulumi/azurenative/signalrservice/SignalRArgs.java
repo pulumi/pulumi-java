@@ -31,7 +31,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cors")
       private final @Nullable Output<SignalRCorsSettingsArgs> cors;
 
-    public Output<SignalRCorsSettingsArgs> getCors() {
+    public Output<SignalRCorsSettingsArgs> cors() {
         return this.cors == null ? Codegen.empty() : this.cors;
     }
 
@@ -47,7 +47,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<SignalRFeatureArgs>> features;
 
-    public Output<List<SignalRFeatureArgs>> getFeatures() {
+    public Output<List<SignalRFeatureArgs>> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -58,7 +58,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Either<String,ServiceKind>> kind;
 
-    public Output<Either<String,ServiceKind>> getKind() {
+    public Output<Either<String,ServiceKind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -69,7 +69,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkACLs")
       private final @Nullable Output<SignalRNetworkACLsArgs> networkACLs;
 
-    public Output<SignalRNetworkACLsArgs> getNetworkACLs() {
+    public Output<SignalRNetworkACLsArgs> networkACLs() {
         return this.networkACLs == null ? Codegen.empty() : this.networkACLs;
     }
 
@@ -91,7 +91,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
@@ -113,7 +113,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> getSku() {
+    public Output<ResourceSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -124,7 +124,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -135,7 +135,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upstream")
       private final @Nullable Output<ServerlessUpstreamSettingsArgs> upstream;
 
-    public Output<ServerlessUpstreamSettingsArgs> getUpstream() {
+    public Output<ServerlessUpstreamSettingsArgs> upstream() {
         return this.upstream == null ? Codegen.empty() : this.upstream;
     }
 

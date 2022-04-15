@@ -25,7 +25,7 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends io.pu
     @Import(name="provider")
       private final @Nullable String provider;
 
-    public Optional<String> getProvider() {
+    public Optional<String> provider() {
         return this.provider == null ? Optional.empty() : Optional.ofNullable(this.provider);
     }
 

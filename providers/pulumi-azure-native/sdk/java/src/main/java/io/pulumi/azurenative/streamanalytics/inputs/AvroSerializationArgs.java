@@ -26,7 +26,7 @@ public final class AvroSerializationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

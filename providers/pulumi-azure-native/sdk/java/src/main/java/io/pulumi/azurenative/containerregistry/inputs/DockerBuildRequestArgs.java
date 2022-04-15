@@ -33,7 +33,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="agentConfiguration")
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Output<AgentPropertiesArgs> getAgentConfiguration() {
+    public Output<AgentPropertiesArgs> agentConfiguration() {
         return this.agentConfiguration == null ? Codegen.empty() : this.agentConfiguration;
     }
 
@@ -44,7 +44,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
@@ -55,7 +55,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> getArguments() {
+    public Output<List<ArgumentArgs>> arguments() {
         return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
@@ -66,7 +66,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="credentials")
       private final @Nullable Output<CredentialsArgs> credentials;
 
-    public Output<CredentialsArgs> getCredentials() {
+    public Output<CredentialsArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -77,7 +77,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dockerFilePath", required=true)
       private final Output<String> dockerFilePath;
 
-    public Output<String> getDockerFilePath() {
+    public Output<String> dockerFilePath() {
         return this.dockerFilePath;
     }
 
@@ -88,7 +88,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="imageNames")
       private final @Nullable Output<List<String>> imageNames;
 
-    public Output<List<String>> getImageNames() {
+    public Output<List<String>> imageNames() {
         return this.imageNames == null ? Codegen.empty() : this.imageNames;
     }
 
@@ -99,7 +99,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Output<Boolean> getIsArchiveEnabled() {
+    public Output<Boolean> isArchiveEnabled() {
         return this.isArchiveEnabled == null ? Codegen.empty() : this.isArchiveEnabled;
     }
 
@@ -110,7 +110,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="isPushEnabled")
       private final @Nullable Output<Boolean> isPushEnabled;
 
-    public Output<Boolean> getIsPushEnabled() {
+    public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled == null ? Codegen.empty() : this.isPushEnabled;
     }
 
@@ -121,7 +121,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
-    public Output<String> getLogTemplate() {
+    public Output<String> logTemplate() {
         return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
     }
 
@@ -132,7 +132,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> getNoCache() {
+    public Output<Boolean> noCache() {
         return this.noCache == null ? Codegen.empty() : this.noCache;
     }
 
@@ -143,7 +143,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="platform", required=true)
       private final Output<PlatformPropertiesArgs> platform;
 
-    public Output<PlatformPropertiesArgs> getPlatform() {
+    public Output<PlatformPropertiesArgs> platform() {
         return this.platform;
     }
 
@@ -155,7 +155,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sourceLocation")
       private final @Nullable Output<String> sourceLocation;
 
-    public Output<String> getSourceLocation() {
+    public Output<String> sourceLocation() {
         return this.sourceLocation == null ? Codegen.empty() : this.sourceLocation;
     }
 
@@ -166,7 +166,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
+    public Output<String> target() {
         return this.target == null ? Codegen.empty() : this.target;
     }
 
@@ -177,7 +177,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
-    public Output<Integer> getTimeout() {
+    public Output<Integer> timeout() {
         return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
@@ -189,7 +189,7 @@ public final class DockerBuildRequestArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -137,112 +137,112 @@ public final class GetNetworkFunctionResult {
      * The reference to the device resource.
      * 
     */
-    public Optional<SubResourceResponse> getDevice() {
+    public Optional<SubResourceResponse> device() {
         return Optional.ofNullable(this.device);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The resource URI of the managed application.
      * 
     */
-    public SubResourceResponse getManagedApplication() {
+    public SubResourceResponse managedApplication() {
         return this.managedApplication;
     }
     /**
      * The parameters for the managed application.
      * 
     */
-    public Optional<Object> getManagedApplicationParameters() {
+    public Optional<Object> managedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The network function configurations from the user.
      * 
     */
-    public List<NetworkFunctionUserConfigurationResponse> getNetworkFunctionUserConfigurations() {
+    public List<NetworkFunctionUserConfigurationResponse> networkFunctionUserConfigurations() {
         return this.networkFunctionUserConfigurations == null ? List.of() : this.networkFunctionUserConfigurations;
     }
     /**
      * The provisioning state of the network function resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The service key for the network function resource.
      * 
     */
-    public String getServiceKey() {
+    public String serviceKey() {
         return this.serviceKey;
     }
     /**
      * The sku name for the network function.
      * 
     */
-    public Optional<String> getSkuName() {
+    public Optional<String> skuName() {
         return Optional.ofNullable(this.skuName);
     }
     /**
      * The sku type for the network function.
      * 
     */
-    public String getSkuType() {
+    public String skuType() {
         return this.skuType;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The vendor name for the network function.
      * 
     */
-    public Optional<String> getVendorName() {
+    public Optional<String> vendorName() {
         return Optional.ofNullable(this.vendorName);
     }
     /**
      * The vendor provisioning state for the network function resource.
      * 
     */
-    public String getVendorProvisioningState() {
+    public String vendorProvisioningState() {
         return this.vendorProvisioningState;
     }
 

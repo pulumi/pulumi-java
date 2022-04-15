@@ -67,7 +67,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
      */
-    public Output<List<Object>> getActions() {
+    public Output<List<Object>> actions() {
         return this.actions;
     }
     /**
@@ -81,13 +81,13 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return A list of conditions that must be matched for the actions to be executed
      * 
      */
-    public Output</* @Nullable */ List<Object>> getConditions() {
+    public Output</* @Nullable */ List<Object>> conditions() {
         return this.conditions;
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
-    public Output<String> getDeploymentStatus() {
+    public Output<String> deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
@@ -101,7 +101,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
-    public Output</* @Nullable */ String> getMatchProcessingBehavior() {
+    public Output</* @Nullable */ String> matchProcessingBehavior() {
         return this.matchProcessingBehavior;
     }
     /**
@@ -115,7 +115,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
      */
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
     /**
@@ -143,7 +143,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Provisioning status
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -157,7 +157,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Read only system data
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -171,7 +171,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

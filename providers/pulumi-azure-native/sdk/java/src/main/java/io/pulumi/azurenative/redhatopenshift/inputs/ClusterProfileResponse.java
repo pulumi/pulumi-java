@@ -25,7 +25,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="domain")
       private final @Nullable String domain;
 
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
     }
 
@@ -36,7 +36,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="pullSecret")
       private final @Nullable String pullSecret;
 
-    public Optional<String> getPullSecret() {
+    public Optional<String> pullSecret() {
         return this.pullSecret == null ? Optional.empty() : Optional.ofNullable(this.pullSecret);
     }
 
@@ -47,7 +47,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupId")
       private final @Nullable String resourceGroupId;
 
-    public Optional<String> getResourceGroupId() {
+    public Optional<String> resourceGroupId() {
         return this.resourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupId);
     }
 
@@ -58,7 +58,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

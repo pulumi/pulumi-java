@@ -26,7 +26,7 @@ public final class StandardComponentPropertiesArgs extends io.pulumi.resources.R
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

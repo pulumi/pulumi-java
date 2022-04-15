@@ -27,7 +27,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="actions")
       private final @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
 
-    public Output<List<CustomRPActionRouteDefinitionArgs>> getActions() {
+    public Output<List<CustomRPActionRouteDefinitionArgs>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -49,7 +49,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -60,7 +60,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="resourceProviderName")
       private final @Nullable Output<String> resourceProviderName;
 
-    public Output<String> getResourceProviderName() {
+    public Output<String> resourceProviderName() {
         return this.resourceProviderName == null ? Codegen.empty() : this.resourceProviderName;
     }
 
@@ -71,7 +71,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="resourceTypes")
       private final @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
-    public Output<List<CustomRPResourceTypeRouteDefinitionArgs>> getResourceTypes() {
+    public Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes() {
         return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
@@ -82,7 +82,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="validations")
       private final @Nullable Output<List<CustomRPValidationsArgs>> validations;
 
-    public Output<List<CustomRPValidationsArgs>> getValidations() {
+    public Output<List<CustomRPValidationsArgs>> validations() {
         return this.validations == null ? Codegen.empty() : this.validations;
     }
 

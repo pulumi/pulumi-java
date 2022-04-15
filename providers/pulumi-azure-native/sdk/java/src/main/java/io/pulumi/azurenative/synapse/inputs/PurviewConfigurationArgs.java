@@ -26,7 +26,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="purviewResourceId")
       private final @Nullable Output<String> purviewResourceId;
 
-    public Output<String> getPurviewResourceId() {
+    public Output<String> purviewResourceId() {
         return this.purviewResourceId == null ? Codegen.empty() : this.purviewResourceId;
     }
 

@@ -26,7 +26,7 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cname")
       private final @Nullable Output<String> cname;
 
-    public Output<String> getCname() {
+    public Output<String> cname() {
         return this.cname == null ? Codegen.empty() : this.cname;
     }
 

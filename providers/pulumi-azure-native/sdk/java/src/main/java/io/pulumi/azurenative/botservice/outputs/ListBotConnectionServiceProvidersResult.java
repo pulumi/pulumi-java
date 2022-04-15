@@ -36,14 +36,14 @@ public final class ListBotConnectionServiceProvidersResult {
      * The link used to get the next page of bot service providers.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Gets the list of bot service providers and their properties.
      * 
     */
-    public List<ServiceProviderResponse> getValue() {
+    public List<ServiceProviderResponse> value() {
         return this.value;
     }
 

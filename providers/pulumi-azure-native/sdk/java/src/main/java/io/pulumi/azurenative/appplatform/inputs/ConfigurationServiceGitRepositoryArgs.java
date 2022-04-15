@@ -28,7 +28,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="hostKey")
       private final @Nullable Output<String> hostKey;
 
-    public Output<String> getHostKey() {
+    public Output<String> hostKey() {
         return this.hostKey == null ? Codegen.empty() : this.hostKey;
     }
 
@@ -39,7 +39,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="hostKeyAlgorithm")
       private final @Nullable Output<String> hostKeyAlgorithm;
 
-    public Output<String> getHostKeyAlgorithm() {
+    public Output<String> hostKeyAlgorithm() {
         return this.hostKeyAlgorithm == null ? Codegen.empty() : this.hostKeyAlgorithm;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="label", required=true)
       private final Output<String> label;
 
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label;
     }
 
@@ -61,7 +61,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,7 +72,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -83,7 +83,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="patterns", required=true)
       private final Output<List<String>> patterns;
 
-    public Output<List<String>> getPatterns() {
+    public Output<List<String>> patterns() {
         return this.patterns;
     }
 
@@ -94,7 +94,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -105,7 +105,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="searchPaths")
       private final @Nullable Output<List<String>> searchPaths;
 
-    public Output<List<String>> getSearchPaths() {
+    public Output<List<String>> searchPaths() {
         return this.searchPaths == null ? Codegen.empty() : this.searchPaths;
     }
 
@@ -116,7 +116,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="strictHostKeyChecking")
       private final @Nullable Output<Boolean> strictHostKeyChecking;
 
-    public Output<Boolean> getStrictHostKeyChecking() {
+    public Output<Boolean> strictHostKeyChecking() {
         return this.strictHostKeyChecking == null ? Codegen.empty() : this.strictHostKeyChecking;
     }
 
@@ -127,7 +127,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -138,7 +138,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

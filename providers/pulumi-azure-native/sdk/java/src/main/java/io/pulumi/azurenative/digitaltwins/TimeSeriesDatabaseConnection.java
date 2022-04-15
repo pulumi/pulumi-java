@@ -44,7 +44,7 @@ public class TimeSeriesDatabaseConnection extends io.pulumi.resources.CustomReso
      * @return Extension resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -58,7 +58,7 @@ public class TimeSeriesDatabaseConnection extends io.pulumi.resources.CustomReso
      * @return Properties of a specific time series database connection.
      * 
      */
-    public Output<AzureDataExplorerConnectionPropertiesResponse> getProperties() {
+    public Output<AzureDataExplorerConnectionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +72,7 @@ public class TimeSeriesDatabaseConnection extends io.pulumi.resources.CustomReso
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -86,7 +86,7 @@ public class TimeSeriesDatabaseConnection extends io.pulumi.resources.CustomReso
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -29,7 +29,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
+    public Output<Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
@@ -44,7 +44,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
+    public Output<String> forceUpdateTag() {
         return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
@@ -55,14 +55,14 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="protectedSettings")
       private final @Nullable Output<String> protectedSettings;
 
-    public Output<String> getProtectedSettings() {
+    public Output<String> protectedSettings() {
         return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
     @Import(name="protectedSettingsFromKeyVault")
       private final @Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
 
-    public Output<CloudServiceVaultAndSecretReferenceArgs> getProtectedSettingsFromKeyVault() {
+    public Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault() {
         return this.protectedSettingsFromKeyVault == null ? Codegen.empty() : this.protectedSettingsFromKeyVault;
     }
 
@@ -73,7 +73,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
@@ -84,7 +84,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="rolesAppliedTo")
       private final @Nullable Output<List<String>> rolesAppliedTo;
 
-    public Output<List<String>> getRolesAppliedTo() {
+    public Output<List<String>> rolesAppliedTo() {
         return this.rolesAppliedTo == null ? Codegen.empty() : this.rolesAppliedTo;
     }
 
@@ -95,7 +95,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="settings")
       private final @Nullable Output<String> settings;
 
-    public Output<String> getSettings() {
+    public Output<String> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -106,7 +106,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -117,7 +117,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
+    public Output<String> typeHandlerVersion() {
         return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 

@@ -63,42 +63,42 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse {
      * Number of agents (VMs) to host docker containers.
      * 
     */
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
     /**
      * Unique name of the pool profile in the context of the subscription and resource group.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Define the role of the AgentPoolProfile.
      * 
     */
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
      * Subnet CIDR for the peering.
      * 
     */
-    public Optional<String> getSubnetCidr() {
+    public Optional<String> subnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
     /**
      * Size of agent VMs.
      * 
     */
-    public String getVmSize() {
+    public String vmSize() {
         return this.vmSize;
     }
 

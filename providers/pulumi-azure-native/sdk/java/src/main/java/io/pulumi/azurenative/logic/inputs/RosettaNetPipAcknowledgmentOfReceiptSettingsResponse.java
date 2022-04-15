@@ -24,7 +24,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
     @Import(name="isNonRepudiationRequired", required=true)
       private final Boolean isNonRepudiationRequired;
 
-    public Boolean getIsNonRepudiationRequired() {
+    public Boolean isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
 
@@ -35,7 +35,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
     @Import(name="timeToAcknowledgeInSeconds", required=true)
       private final Integer timeToAcknowledgeInSeconds;
 
-    public Integer getTimeToAcknowledgeInSeconds() {
+    public Integer timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }
 

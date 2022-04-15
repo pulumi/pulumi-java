@@ -39,17 +39,17 @@ public final class UrlSigningActionParametersResponse {
      * Algorithm to use for URL signing
      * 
     */
-    public Optional<String> getAlgorithm() {
+    public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * Defines which query string parameters in the url to be considered for expires, key id etc.
      * 
     */
-    public List<UrlSigningParamIdentifierResponse> getParameterNameOverride() {
+    public List<UrlSigningParamIdentifierResponse> parameterNameOverride() {
         return this.parameterNameOverride == null ? List.of() : this.parameterNameOverride;
     }
 

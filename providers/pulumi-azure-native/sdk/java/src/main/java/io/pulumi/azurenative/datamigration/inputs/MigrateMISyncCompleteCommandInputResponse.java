@@ -23,7 +23,7 @@ public final class MigrateMISyncCompleteCommandInputResponse extends io.pulumi.r
     @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
 
-    public String getSourceDatabaseName() {
+    public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
 

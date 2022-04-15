@@ -29,7 +29,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
     @Import(name="dailySchedule")
       private final @Nullable DailyRetentionScheduleResponse dailySchedule;
 
-    public Optional<DailyRetentionScheduleResponse> getDailySchedule() {
+    public Optional<DailyRetentionScheduleResponse> dailySchedule() {
         return this.dailySchedule == null ? Optional.empty() : Optional.ofNullable(this.dailySchedule);
     }
 
@@ -40,7 +40,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
     @Import(name="monthlySchedule")
       private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
 
-    public Optional<MonthlyRetentionScheduleResponse> getMonthlySchedule() {
+    public Optional<MonthlyRetentionScheduleResponse> monthlySchedule() {
         return this.monthlySchedule == null ? Optional.empty() : Optional.ofNullable(this.monthlySchedule);
     }
 
@@ -52,7 +52,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
     @Import(name="retentionPolicyType", required=true)
       private final String retentionPolicyType;
 
-    public String getRetentionPolicyType() {
+    public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
 
@@ -63,7 +63,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
     @Import(name="weeklySchedule")
       private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
 
-    public Optional<WeeklyRetentionScheduleResponse> getWeeklySchedule() {
+    public Optional<WeeklyRetentionScheduleResponse> weeklySchedule() {
         return this.weeklySchedule == null ? Optional.empty() : Optional.ofNullable(this.weeklySchedule);
     }
 
@@ -74,7 +74,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
     @Import(name="yearlySchedule")
       private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
-    public Optional<YearlyRetentionScheduleResponse> getYearlySchedule() {
+    public Optional<YearlyRetentionScheduleResponse> yearlySchedule() {
         return this.yearlySchedule == null ? Optional.empty() : Optional.ofNullable(this.yearlySchedule);
     }
 

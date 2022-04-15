@@ -42,7 +42,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -56,7 +56,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +70,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return The status of the database transparent data encryption.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -84,7 +84,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

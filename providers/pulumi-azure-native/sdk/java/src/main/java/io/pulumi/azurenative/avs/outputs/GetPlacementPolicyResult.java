@@ -49,28 +49,28 @@ public final class GetPlacementPolicyResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * placement policy properties
      * 
     */
-    public Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> getProperties() {
+    public Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> properties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

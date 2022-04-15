@@ -181,154 +181,154 @@ public final class GetKpiResult {
      * The aliases.
      * 
     */
-    public List<KpiAliasResponse> getAliases() {
+    public List<KpiAliasResponse> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
      * The calculation window.
      * 
     */
-    public String getCalculationWindow() {
+    public String calculationWindow() {
         return this.calculationWindow;
     }
     /**
      * Name of calculation window field.
      * 
     */
-    public Optional<String> getCalculationWindowFieldName() {
+    public Optional<String> calculationWindowFieldName() {
         return Optional.ofNullable(this.calculationWindowFieldName);
     }
     /**
      * Localized description for the KPI.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name for the KPI.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * The mapping entity type.
      * 
     */
-    public String getEntityType() {
+    public String entityType() {
         return this.entityType;
     }
     /**
      * The mapping entity name.
      * 
     */
-    public String getEntityTypeName() {
+    public String entityTypeName() {
         return this.entityTypeName;
     }
     /**
      * The computation expression for the KPI.
      * 
     */
-    public String getExpression() {
+    public String expression() {
         return this.expression;
     }
     /**
      * The KPI extracts.
      * 
     */
-    public List<KpiExtractResponse> getExtracts() {
+    public List<KpiExtractResponse> extracts() {
         return this.extracts == null ? List.of() : this.extracts;
     }
     /**
      * The filter expression for the KPI.
      * 
     */
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The computation function for the KPI.
      * 
     */
-    public String getFunction() {
+    public String function() {
         return this.function;
     }
     /**
      * the group by properties for the KPI.
      * 
     */
-    public List<String> getGroupBy() {
+    public List<String> groupBy() {
         return this.groupBy == null ? List.of() : this.groupBy;
     }
     /**
      * The KPI GroupByMetadata.
      * 
     */
-    public List<KpiGroupByMetadataResponse> getGroupByMetadata() {
+    public List<KpiGroupByMetadataResponse> groupByMetadata() {
         return this.groupByMetadata;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The KPI name.
      * 
     */
-    public String getKpiName() {
+    public String kpiName() {
         return this.kpiName;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The participant profiles.
      * 
     */
-    public List<KpiParticipantProfilesMetadataResponse> getParticipantProfilesMetadata() {
+    public List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata() {
         return this.participantProfilesMetadata;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * The KPI thresholds.
      * 
     */
-    public Optional<KpiThresholdsResponse> getThresHolds() {
+    public Optional<KpiThresholdsResponse> thresHolds() {
         return Optional.ofNullable(this.thresHolds);
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unit of measurement for the KPI.
      * 
     */
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
 

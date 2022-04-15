@@ -25,7 +25,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="allowPublicIp")
       private final @Nullable String allowPublicIp;
 
-    public Optional<String> getAllowPublicIp() {
+    public Optional<String> allowPublicIp() {
         return this.allowPublicIp == null ? Optional.empty() : Optional.ofNullable(this.allowPublicIp);
     }
 
@@ -36,7 +36,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="labSubnetName")
       private final @Nullable String labSubnetName;
 
-    public Optional<String> getLabSubnetName() {
+    public Optional<String> labSubnetName() {
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
     }
 
@@ -47,7 +47,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 

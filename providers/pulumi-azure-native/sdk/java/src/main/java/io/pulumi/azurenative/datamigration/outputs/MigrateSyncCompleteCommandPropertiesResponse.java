@@ -61,35 +61,35 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
      * Expected value is 'Migrate.Sync.Complete.Database'.
      * 
     */
-    public String getCommandType() {
+    public String commandType() {
         return this.commandType;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
     */
-    public List<ODataErrorResponse> getErrors() {
+    public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
      * Command input
      * 
     */
-    public Optional<MigrateSyncCompleteCommandInputResponse> getInput() {
+    public Optional<MigrateSyncCompleteCommandInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Command output. This is ignored if submitted.
      * 
     */
-    public MigrateSyncCompleteCommandOutputResponse getOutput() {
+    public MigrateSyncCompleteCommandOutputResponse output() {
         return this.output;
     }
     /**
      * The state of the command. This is ignored if submitted.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

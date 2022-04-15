@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
     @Import(name="domainNameLabel", required=true)
       private final Output<String> domainNameLabel;
 
-    public Output<String> getDomainNameLabel() {
+    public Output<String> domainNameLabel() {
         return this.domainNameLabel;
     }
 

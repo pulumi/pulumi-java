@@ -28,7 +28,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automaticOSUpgradePolicy")
       private final @Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
 
-    public Output<AutomaticOSUpgradePolicyArgs> getAutomaticOSUpgradePolicy() {
+    public Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy() {
         return this.automaticOSUpgradePolicy == null ? Codegen.empty() : this.automaticOSUpgradePolicy;
     }
 
@@ -39,7 +39,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<UpgradeMode> mode;
 
-    public Output<UpgradeMode> getMode() {
+    public Output<UpgradeMode> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -50,7 +50,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rollingUpgradePolicy")
       private final @Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 
-    public Output<RollingUpgradePolicyArgs> getRollingUpgradePolicy() {
+    public Output<RollingUpgradePolicyArgs> rollingUpgradePolicy() {
         return this.rollingUpgradePolicy == null ? Codegen.empty() : this.rollingUpgradePolicy;
     }
 

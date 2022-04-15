@@ -28,7 +28,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="blueprint")
       private final @Nullable Output<String> blueprint;
 
-    public Output<String> getBlueprint() {
+    public Output<String> blueprint() {
         return this.blueprint == null ? Codegen.empty() : this.blueprint;
     }
 
@@ -39,7 +39,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="componentVersion")
       private final @Nullable Output<Map<String,String>> componentVersion;
 
-    public Output<Map<String,String>> getComponentVersion() {
+    public Output<Map<String,String>> componentVersion() {
         return this.componentVersion == null ? Codegen.empty() : this.componentVersion;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="configurations")
       private final @Nullable Output<Object> configurations;
 
-    public Output<Object> getConfigurations() {
+    public Output<Object> configurations() {
         return this.configurations == null ? Codegen.empty() : this.configurations;
     }
 
@@ -61,7 +61,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 

@@ -64,35 +64,35 @@ public final class ServiceBusQueueOutputDataSourceResponse {
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
      * 
     */
-    public List<String> getPropertyColumns() {
+    public List<String> propertyColumns() {
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
     }
     /**
      * The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getQueueName() {
+    public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getServiceBusNamespace() {
+    public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getSharedAccessPolicyKey() {
+    public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
     */
-    public Optional<String> getSharedAccessPolicyName() {
+    public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
     /**
@@ -100,7 +100,7 @@ public final class ServiceBusQueueOutputDataSourceResponse {
      * Expected value is 'Microsoft.ServiceBus/Queue'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

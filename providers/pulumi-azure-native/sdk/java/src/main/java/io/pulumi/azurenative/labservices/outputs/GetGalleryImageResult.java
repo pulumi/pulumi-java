@@ -143,119 +143,119 @@ public final class GetGalleryImageResult {
      * The author of the gallery image.
      * 
     */
-    public String getAuthor() {
+    public String author() {
         return this.author;
     }
     /**
      * The creation date of the gallery image.
      * 
     */
-    public String getCreatedDate() {
+    public String createdDate() {
         return this.createdDate;
     }
     /**
      * The description of the gallery image.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The icon of the gallery image.
      * 
     */
-    public String getIcon() {
+    public String icon() {
         return this.icon;
     }
     /**
      * The identifier of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The image reference of the gallery image.
      * 
     */
-    public GalleryImageReferenceResponse getImageReference() {
+    public GalleryImageReferenceResponse imageReference() {
         return this.imageReference;
     }
     /**
      * Indicates whether this gallery image is enabled.
      * 
     */
-    public Optional<Boolean> getIsEnabled() {
+    public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Indicates whether this gallery has been overridden for this lab account
      * 
     */
-    public Optional<Boolean> getIsOverride() {
+    public Optional<Boolean> isOverride() {
         return Optional.ofNullable(this.isOverride);
     }
     /**
      * Indicates if the plan has been authorized for programmatic deployment.
      * 
     */
-    public Optional<Boolean> getIsPlanAuthorized() {
+    public Optional<Boolean> isPlanAuthorized() {
         return Optional.ofNullable(this.isPlanAuthorized);
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
     */
-    public LatestOperationResultResponse getLatestOperationResult() {
+    public LatestOperationResultResponse latestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The third party plan that applies to this image
      * 
     */
-    public String getPlanId() {
+    public String planId() {
         return this.planId;
     }
     /**
      * The provisioning status of the resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
     */
-    public Optional<String> getUniqueIdentifier() {
+    public Optional<String> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
 

@@ -28,7 +28,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactEmails", required=true)
       private final List<String> contactEmails;
 
-    public List<String> getContactEmails() {
+    public List<String> contactEmails() {
         return this.contactEmails;
     }
 
@@ -39,7 +39,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactGroups")
       private final @Nullable List<String> contactGroups;
 
-    public List<String> getContactGroups() {
+    public List<String> contactGroups() {
         return this.contactGroups == null ? List.of() : this.contactGroups;
     }
 
@@ -50,7 +50,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="contactRoles")
       private final @Nullable List<String> contactRoles;
 
-    public List<String> getContactRoles() {
+    public List<String> contactRoles() {
         return this.contactRoles == null ? List.of() : this.contactRoles;
     }
 
@@ -61,7 +61,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -72,7 +72,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="locale")
       private final @Nullable String locale;
 
-    public Optional<String> getLocale() {
+    public Optional<String> locale() {
         return this.locale == null ? Optional.empty() : Optional.ofNullable(this.locale);
     }
 
@@ -83,7 +83,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -94,7 +94,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="threshold", required=true)
       private final Double threshold;
 
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 
@@ -105,7 +105,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="thresholdType")
       private final @Nullable String thresholdType;
 
-    public Optional<String> getThresholdType() {
+    public Optional<String> thresholdType() {
         return this.thresholdType == null ? Optional.empty() : Optional.ofNullable(this.thresholdType);
     }
 

@@ -27,7 +27,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -38,7 +38,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
+    public Output<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
@@ -49,7 +49,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -60,7 +60,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -71,7 +71,7 @@ public final class WorkerProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
+    public Output<String> vmSize() {
         return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 

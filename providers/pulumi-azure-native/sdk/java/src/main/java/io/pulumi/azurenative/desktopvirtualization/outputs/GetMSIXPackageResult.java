@@ -122,98 +122,98 @@ public final class GetMSIXPackageResult {
      * User friendly Name to be displayed in the portal.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * VHD/CIM image path on Network Share.
      * 
     */
-    public Optional<String> getImagePath() {
+    public Optional<String> imagePath() {
         return Optional.ofNullable(this.imagePath);
     }
     /**
      * Make this version of the package the active one across the hostpool.
      * 
     */
-    public Optional<Boolean> getIsActive() {
+    public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
      * Specifies how to register Package in feed.
      * 
     */
-    public Optional<Boolean> getIsRegularRegistration() {
+    public Optional<Boolean> isRegularRegistration() {
         return Optional.ofNullable(this.isRegularRegistration);
     }
     /**
      * Date Package was last updated, found in the appxmanifest.xml.
      * 
     */
-    public Optional<String> getLastUpdated() {
+    public Optional<String> lastUpdated() {
         return Optional.ofNullable(this.lastUpdated);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of package applications.
      * 
     */
-    public List<MsixPackageApplicationsResponse> getPackageApplications() {
+    public List<MsixPackageApplicationsResponse> packageApplications() {
         return this.packageApplications == null ? List.of() : this.packageApplications;
     }
     /**
      * List of package dependencies.
      * 
     */
-    public List<MsixPackageDependenciesResponse> getPackageDependencies() {
+    public List<MsixPackageDependenciesResponse> packageDependencies() {
         return this.packageDependencies == null ? List.of() : this.packageDependencies;
     }
     /**
      * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
      * 
     */
-    public Optional<String> getPackageFamilyName() {
+    public Optional<String> packageFamilyName() {
         return Optional.ofNullable(this.packageFamilyName);
     }
     /**
      * Package Name from appxmanifest.xml.
      * 
     */
-    public Optional<String> getPackageName() {
+    public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
      * Relative Path to the package inside the image.
      * 
     */
-    public Optional<String> getPackageRelativePath() {
+    public Optional<String> packageRelativePath() {
         return Optional.ofNullable(this.packageRelativePath);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Package Version found in the appxmanifest.xml.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

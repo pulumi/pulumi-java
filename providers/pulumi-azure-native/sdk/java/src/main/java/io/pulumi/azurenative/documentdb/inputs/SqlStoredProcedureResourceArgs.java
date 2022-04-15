@@ -26,7 +26,7 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -37,7 +37,7 @@ public final class SqlStoredProcedureResourceArgs extends io.pulumi.resources.Re
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 

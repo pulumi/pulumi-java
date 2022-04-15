@@ -23,7 +23,7 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="destinationSlotName", required=true)
       private final String destinationSlotName;
 
-    public String getDestinationSlotName() {
+    public String destinationSlotName() {
         return this.destinationSlotName;
     }
 
@@ -34,7 +34,7 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sourceSlotName", required=true)
       private final String sourceSlotName;
 
-    public String getSourceSlotName() {
+    public String sourceSlotName() {
         return this.sourceSlotName;
     }
 
@@ -45,7 +45,7 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="timestampUtc", required=true)
       private final String timestampUtc;
 
-    public String getTimestampUtc() {
+    public String timestampUtc() {
         return this.timestampUtc;
     }
 

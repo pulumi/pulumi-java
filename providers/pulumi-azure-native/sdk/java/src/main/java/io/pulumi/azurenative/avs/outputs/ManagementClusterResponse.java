@@ -48,28 +48,28 @@ public final class ManagementClusterResponse {
      * The identity
      * 
     */
-    public Integer getClusterId() {
+    public Integer clusterId() {
         return this.clusterId;
     }
     /**
      * The cluster size
      * 
     */
-    public Integer getClusterSize() {
+    public Integer clusterSize() {
         return this.clusterSize;
     }
     /**
      * The hosts
      * 
     */
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
     /**
      * The state of the cluster provisioning
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 

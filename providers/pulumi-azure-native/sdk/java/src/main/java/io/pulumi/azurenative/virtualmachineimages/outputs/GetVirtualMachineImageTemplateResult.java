@@ -137,98 +137,98 @@ public final class GetVirtualMachineImageTemplateResult {
      * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
      * 
     */
-    public Optional<Integer> getBuildTimeoutInMinutes() {
+    public Optional<Integer> buildTimeoutInMinutes() {
         return Optional.ofNullable(this.buildTimeoutInMinutes);
     }
     /**
      * Specifies the properties used to describe the customization steps of the image, like Image source etc
      * 
     */
-    public List<Object> getCustomize() {
+    public List<Object> customize() {
         return this.customize == null ? List.of() : this.customize;
     }
     /**
      * The distribution targets where the image output needs to go to.
      * 
     */
-    public List<Object> getDistribute() {
+    public List<Object> distribute() {
         return this.distribute;
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the image template, if configured.
      * 
     */
-    public ImageTemplateIdentityResponse getIdentity() {
+    public ImageTemplateIdentityResponse identity() {
         return this.identity;
     }
     /**
      * State of 'run' that is currently executing or was last executed.
      * 
     */
-    public ImageTemplateLastRunStatusResponse getLastRunStatus() {
+    public ImageTemplateLastRunStatusResponse lastRunStatus() {
         return this.lastRunStatus;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning error, if any
      * 
     */
-    public ProvisioningErrorResponse getProvisioningError() {
+    public ProvisioningErrorResponse provisioningError() {
         return this.provisioningError;
     }
     /**
      * Provisioning state of the resource
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Specifies the properties used to describe the source image.
      * 
     */
-    public Object getSource() {
+    public Object source() {
         return this.source;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Describes how virtual machine is set up to build images
      * 
     */
-    public Optional<ImageTemplateVmProfileResponse> getVmProfile() {
+    public Optional<ImageTemplateVmProfileResponse> vmProfile() {
         return Optional.ofNullable(this.vmProfile);
     }
 

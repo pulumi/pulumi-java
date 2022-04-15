@@ -42,21 +42,21 @@ public final class SkuResponse {
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
      * 
     */
-    public Optional<Integer> getCapacity() {
+    public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The SKU name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The service tier
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
 

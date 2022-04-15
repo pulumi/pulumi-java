@@ -26,7 +26,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     @Import(name="commandId")
       private final @Nullable Output<String> commandId;
 
-    public Output<String> getCommandId() {
+    public Output<String> commandId() {
         return this.commandId == null ? Codegen.empty() : this.commandId;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
+    public Output<String> script() {
         return this.script == null ? Codegen.empty() : this.script;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
-    public Output<String> getScriptUri() {
+    public Output<String> scriptUri() {
         return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
     }
 

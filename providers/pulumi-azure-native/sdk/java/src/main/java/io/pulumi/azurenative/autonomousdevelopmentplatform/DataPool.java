@@ -44,7 +44,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * @return The Data Pool's data-plane ID
      * 
      */
-    public Output<String> getDataPoolId() {
+    public Output<String> dataPoolId() {
         return this.dataPoolId;
     }
     /**
@@ -58,7 +58,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the collection of locations where Data Pool resources should be created
      * 
      */
-    public Output<List<DataPoolLocationResponse>> getLocations() {
+    public Output<List<DataPoolLocationResponse>> locations() {
         return this.locations;
     }
     /**
@@ -72,7 +72,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +86,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * @return Gets the status of the data pool at the time the operation was called
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -100,7 +100,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +114,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

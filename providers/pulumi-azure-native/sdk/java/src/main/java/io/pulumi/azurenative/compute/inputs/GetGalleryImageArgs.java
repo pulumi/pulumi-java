@@ -19,7 +19,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
 
-    public String getGalleryImageName() {
+    public String galleryImageName() {
         return this.galleryImageName;
     }
 
@@ -30,7 +30,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="galleryName", required=true)
       private final String galleryName;
 
-    public String getGalleryName() {
+    public String galleryName() {
         return this.galleryName;
     }
 
@@ -41,7 +41,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

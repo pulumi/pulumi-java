@@ -26,7 +26,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -37,7 +37,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="identity")
       private final @Nullable ResourceIdentityResponse identity;
 
-    public Optional<ResourceIdentityResponse> getIdentity() {
+    public Optional<ResourceIdentityResponse> identity() {
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
@@ -48,7 +48,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

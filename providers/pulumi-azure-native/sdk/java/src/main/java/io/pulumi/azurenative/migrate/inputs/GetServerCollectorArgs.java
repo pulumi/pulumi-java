@@ -19,7 +19,7 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="projectName", required=true)
       private final String projectName;
 
-    public String getProjectName() {
+    public String projectName() {
         return this.projectName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetServerCollectorArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="serverCollectorName", required=true)
       private final String serverCollectorName;
 
-    public String getServerCollectorName() {
+    public String serverCollectorName() {
         return this.serverCollectorName;
     }
 

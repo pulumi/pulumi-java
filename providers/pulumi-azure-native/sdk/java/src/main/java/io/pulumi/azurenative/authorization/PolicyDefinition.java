@@ -45,7 +45,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy definition description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The display name of the policy definition.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +73,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -87,7 +87,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -101,7 +101,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The name of the policy definition.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +115,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -129,7 +129,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy rule.
      * 
      */
-    public Output</* @Nullable */ Object> getPolicyRule() {
+    public Output</* @Nullable */ Object> policyRule() {
         return this.policyRule;
     }
     /**
@@ -143,7 +143,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyType() {
+    public Output</* @Nullable */ String> policyType() {
         return this.policyType;
     }
     /**
@@ -157,7 +157,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * @return The type of the resource (Microsoft.Authorization/policyDefinitions).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -55,35 +55,35 @@ public final class JobErrorResponse {
      * Helps with categorization of errors.
      * 
     */
-    public String getCategory() {
+    public String category() {
         return this.category;
     }
     /**
      * Error code describing the error.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * An array of details about specific errors that led to this reported error.
      * 
     */
-    public List<JobErrorDetailResponse> getDetails() {
+    public List<JobErrorDetailResponse> details() {
         return this.details;
     }
     /**
      * A human-readable language-dependent representation of the error.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
     /**
      * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
      * 
     */
-    public String getRetry() {
+    public String retry() {
         return this.retry;
     }
 

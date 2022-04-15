@@ -119,42 +119,42 @@ public final class IfConditionActivityResponse {
      * Activity depends on condition.
      * 
     */
-    public List<ActivityDependencyResponse> getDependsOn() {
+    public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
      * 
     */
-    public ExpressionResponse getExpression() {
+    public ExpressionResponse expression() {
         return this.expression;
     }
     /**
      * List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
      * 
     */
-    public List<Object> getIfFalseActivities() {
+    public List<Object> ifFalseActivities() {
         return this.ifFalseActivities == null ? List.of() : this.ifFalseActivities;
     }
     /**
      * List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
      * 
     */
-    public List<Object> getIfTrueActivities() {
+    public List<Object> ifTrueActivities() {
         return this.ifTrueActivities == null ? List.of() : this.ifTrueActivities;
     }
     /**
      * Activity name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -162,14 +162,14 @@ public final class IfConditionActivityResponse {
      * Expected value is 'IfCondition'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
     */
-    public List<UserPropertyResponse> getUserProperties() {
+    public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 

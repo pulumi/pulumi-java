@@ -43,14 +43,14 @@ public final class ExportPipelineTargetPropertiesResponse {
      * They key vault secret uri to obtain the target storage SAS token.
      * 
     */
-    public String getKeyVaultUri() {
+    public String keyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The type of target for the export pipeline.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
@@ -59,7 +59,7 @@ public final class ExportPipelineTargetPropertiesResponse {
      * When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/containerName"
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

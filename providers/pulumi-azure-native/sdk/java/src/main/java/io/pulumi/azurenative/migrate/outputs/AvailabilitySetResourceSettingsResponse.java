@@ -50,7 +50,7 @@ public final class AvailabilitySetResourceSettingsResponse {
      * Gets or sets the target fault domain.
      * 
     */
-    public Optional<Integer> getFaultDomain() {
+    public Optional<Integer> faultDomain() {
         return Optional.ofNullable(this.faultDomain);
     }
     /**
@@ -58,21 +58,21 @@ public final class AvailabilitySetResourceSettingsResponse {
      * Expected value is 'Microsoft.Compute/availabilitySets'.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets the target Resource name.
      * 
     */
-    public String getTargetResourceName() {
+    public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
      * Gets or sets the target update domain.
      * 
     */
-    public Optional<Integer> getUpdateDomain() {
+    public Optional<Integer> updateDomain() {
         return Optional.ofNullable(this.updateDomain);
     }
 

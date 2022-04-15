@@ -28,7 +28,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
     @Import(name="specification", required=true)
       private final Output<String> specification;
 
-    public Output<String> getSpecification() {
+    public Output<String> specification() {
         return this.specification;
     }
 
@@ -39,7 +39,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
     @Import(name="validationType")
       private final @Nullable Output<Either<String,ValidationType>> validationType;
 
-    public Output<Either<String,ValidationType>> getValidationType() {
+    public Output<Either<String,ValidationType>> validationType() {
         return this.validationType == null ? Codegen.empty() : this.validationType;
     }
 

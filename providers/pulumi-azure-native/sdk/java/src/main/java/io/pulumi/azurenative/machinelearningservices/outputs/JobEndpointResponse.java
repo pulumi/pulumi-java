@@ -50,28 +50,28 @@ public final class JobEndpointResponse {
      * Url for endpoint.
      * 
     */
-    public Optional<String> getEndpoint() {
+    public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * Endpoint type.
      * 
     */
-    public Optional<String> getJobEndpointType() {
+    public Optional<String> jobEndpointType() {
         return Optional.ofNullable(this.jobEndpointType);
     }
     /**
      * Port for endpoint.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Additional properties to set on the endpoint.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 

@@ -28,7 +28,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -39,7 +39,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

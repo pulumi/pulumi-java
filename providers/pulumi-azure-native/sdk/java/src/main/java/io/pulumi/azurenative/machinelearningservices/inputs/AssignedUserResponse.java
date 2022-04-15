@@ -23,7 +23,7 @@ public final class AssignedUserResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objectId", required=true)
       private final String objectId;
 
-    public String getObjectId() {
+    public String objectId() {
         return this.objectId;
     }
 
@@ -34,7 +34,7 @@ public final class AssignedUserResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 

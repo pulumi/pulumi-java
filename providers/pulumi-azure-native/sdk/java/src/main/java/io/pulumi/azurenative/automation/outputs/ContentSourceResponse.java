@@ -49,28 +49,28 @@ public final class ContentSourceResponse {
      * Gets or sets the hash.
      * 
     */
-    public Optional<ContentHashResponse> getHash() {
+    public Optional<ContentHashResponse> hash() {
         return Optional.ofNullable(this.hash);
     }
     /**
      * Gets or sets the content source type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Gets or sets the value of the content. This is based on the content source type.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Gets or sets the version of the content.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

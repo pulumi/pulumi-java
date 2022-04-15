@@ -45,7 +45,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Aggregate state of Arc Extensions across the nodes in this HCI cluster.
      * 
      */
-    public Output<String> getAggregateState() {
+    public Output<String> aggregateState() {
         return this.aggregateState;
     }
     /**
@@ -59,7 +59,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoUpgradeMinorVersion() {
+    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion;
     }
     /**
@@ -73,7 +73,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> getCreatedAt() {
+    public Output</* @Nullable */ String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -87,7 +87,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedBy() {
+    public Output</* @Nullable */ String> createdBy() {
         return this.createdBy;
     }
     /**
@@ -101,7 +101,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedByType() {
+    public Output</* @Nullable */ String> createdByType() {
         return this.createdByType;
     }
     /**
@@ -115,7 +115,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> getForceUpdateTag() {
+    public Output</* @Nullable */ String> forceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
@@ -129,7 +129,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedAt() {
+    public Output</* @Nullable */ String> lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
@@ -143,7 +143,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -157,7 +157,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedByType() {
+    public Output</* @Nullable */ String> lastModifiedByType() {
         return this.lastModifiedByType;
     }
     /**
@@ -171,7 +171,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -185,7 +185,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return State of Arc Extension in each of the nodes.
      * 
      */
-    public Output<List<PerNodeExtensionStateResponse>> getPerNodeExtensionDetails() {
+    public Output<List<PerNodeExtensionStateResponse>> perNodeExtensionDetails() {
         return this.perNodeExtensionDetails;
     }
     /**
@@ -199,7 +199,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Protected settings (may contain secrets).
      * 
      */
-    public Output</* @Nullable */ Object> getProtectedSettings() {
+    public Output</* @Nullable */ Object> protectedSettings() {
         return this.protectedSettings;
     }
     /**
@@ -213,7 +213,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the Extension proxy resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -227,7 +227,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The name of the extension handler publisher.
      * 
      */
-    public Output</* @Nullable */ String> getPublisher() {
+    public Output</* @Nullable */ String> publisher() {
         return this.publisher;
     }
     /**
@@ -241,7 +241,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Json formatted public settings for the extension.
      * 
      */
-    public Output</* @Nullable */ Object> getSettings() {
+    public Output</* @Nullable */ Object> settings() {
         return this.settings;
     }
     /**
@@ -255,7 +255,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -269,7 +269,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * @return Specifies the version of the script handler.
      * 
      */
-    public Output</* @Nullable */ String> getTypeHandlerVersion() {
+    public Output</* @Nullable */ String> typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
 

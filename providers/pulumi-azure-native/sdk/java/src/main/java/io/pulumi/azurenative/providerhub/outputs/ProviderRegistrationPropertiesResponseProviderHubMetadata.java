@@ -28,13 +28,13 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
         this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
     }
 
-    public Optional<ProviderHubMetadataResponseProviderAuthentication> getProviderAuthentication() {
+    public Optional<ProviderHubMetadataResponseProviderAuthentication> providerAuthentication() {
         return Optional.ofNullable(this.providerAuthentication);
     }
-    public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
+    public List<ResourceProviderAuthorizationResponse> providerAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
-    public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> getThirdPartyProviderAuthorization() {
+    public Optional<ProviderHubMetadataResponseThirdPartyProviderAuthorization> thirdPartyProviderAuthorization() {
         return Optional.ofNullable(this.thirdPartyProviderAuthorization);
     }
 

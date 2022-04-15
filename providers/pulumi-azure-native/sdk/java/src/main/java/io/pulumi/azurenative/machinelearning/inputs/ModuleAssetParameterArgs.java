@@ -28,7 +28,7 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
     @Import(name="modeValuesInfo")
       private final @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
 
-    public Output<Map<String,ModeValueInfoArgs>> getModeValuesInfo() {
+    public Output<Map<String,ModeValueInfoArgs>> modeValuesInfo() {
         return this.modeValuesInfo == null ? Codegen.empty() : this.modeValuesInfo;
     }
 
@@ -39,7 +39,7 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -50,7 +50,7 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
     @Import(name="parameterType")
       private final @Nullable Output<String> parameterType;
 
-    public Output<String> getParameterType() {
+    public Output<String> parameterType() {
         return this.parameterType == null ? Codegen.empty() : this.parameterType;
     }
 

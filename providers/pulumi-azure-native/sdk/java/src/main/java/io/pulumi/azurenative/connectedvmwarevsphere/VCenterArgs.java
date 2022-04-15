@@ -26,7 +26,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<VICredentialArgs> credentials;
 
-    public Output<VICredentialArgs> getCredentials() {
+    public Output<VICredentialArgs> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -37,7 +37,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> getExtendedLocation() {
+    public Output<ExtendedLocationArgs> extendedLocation() {
         return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
@@ -48,7 +48,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fqdn", required=true)
       private final Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
 
@@ -59,7 +59,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -70,7 +70,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -81,7 +81,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -92,7 +92,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,7 +103,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -114,7 +114,7 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vcenterName")
       private final @Nullable Output<String> vcenterName;
 
-    public Output<String> getVcenterName() {
+    public Output<String> vcenterName() {
         return this.vcenterName == null ? Codegen.empty() : this.vcenterName;
     }
 

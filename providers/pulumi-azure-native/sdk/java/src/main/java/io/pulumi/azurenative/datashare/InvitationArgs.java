@@ -22,7 +22,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
@@ -44,7 +44,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="invitationName")
       private final @Nullable Output<String> invitationName;
 
-    public Output<String> getInvitationName() {
+    public Output<String> invitationName() {
         return this.invitationName == null ? Codegen.empty() : this.invitationName;
     }
 
@@ -55,7 +55,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +66,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -77,7 +77,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetActiveDirectoryId")
       private final @Nullable Output<String> targetActiveDirectoryId;
 
-    public Output<String> getTargetActiveDirectoryId() {
+    public Output<String> targetActiveDirectoryId() {
         return this.targetActiveDirectoryId == null ? Codegen.empty() : this.targetActiveDirectoryId;
     }
 
@@ -88,7 +88,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetEmail")
       private final @Nullable Output<String> targetEmail;
 
-    public Output<String> getTargetEmail() {
+    public Output<String> targetEmail() {
         return this.targetEmail == null ? Codegen.empty() : this.targetEmail;
     }
 
@@ -101,7 +101,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetObjectId")
       private final @Nullable Output<String> targetObjectId;
 
-    public Output<String> getTargetObjectId() {
+    public Output<String> targetObjectId() {
         return this.targetObjectId == null ? Codegen.empty() : this.targetObjectId;
     }
 

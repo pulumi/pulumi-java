@@ -25,7 +25,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category", required=true)
       private final Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category;
     }
 
@@ -36,7 +36,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -47,7 +47,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionAlias")
       private final @Nullable Output<String> functionAlias;
 
-    public Output<String> getFunctionAlias() {
+    public Output<String> functionAlias() {
         return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
     }
 
@@ -58,7 +58,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionParameters")
       private final @Nullable Output<String> functionParameters;
 
-    public Output<String> getFunctionParameters() {
+    public Output<String> functionParameters() {
         return this.functionParameters == null ? Codegen.empty() : this.functionParameters;
     }
 
@@ -69,7 +69,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -80,7 +80,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="savedSearchId")
       private final @Nullable Output<String> savedSearchId;
 
-    public Output<String> getSavedSearchId() {
+    public Output<String> savedSearchId() {
         return this.savedSearchId == null ? Codegen.empty() : this.savedSearchId;
     }
 
@@ -102,7 +102,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<TagArgs>> tags;
 
-    public Output<List<TagArgs>> getTags() {
+    public Output<List<TagArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Double> version;
 
-    public Output<Double> getVersion() {
+    public Output<Double> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -124,7 +124,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

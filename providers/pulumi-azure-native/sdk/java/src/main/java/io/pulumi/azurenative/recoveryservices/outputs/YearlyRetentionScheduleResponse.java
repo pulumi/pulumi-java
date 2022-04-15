@@ -66,42 +66,42 @@ public final class YearlyRetentionScheduleResponse {
      * List of months of year of yearly retention policy.
      * 
     */
-    public List<String> getMonthsOfYear() {
+    public List<String> monthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
     /**
      * Retention duration of retention Policy.
      * 
     */
-    public Optional<RetentionDurationResponse> getRetentionDuration() {
+    public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
      * Daily retention format for yearly retention policy.
      * 
     */
-    public Optional<DailyRetentionFormatResponse> getRetentionScheduleDaily() {
+    public Optional<DailyRetentionFormatResponse> retentionScheduleDaily() {
         return Optional.ofNullable(this.retentionScheduleDaily);
     }
     /**
      * Retention schedule format for yearly retention policy.
      * 
     */
-    public Optional<String> getRetentionScheduleFormatType() {
+    public Optional<String> retentionScheduleFormatType() {
         return Optional.ofNullable(this.retentionScheduleFormatType);
     }
     /**
      * Weekly retention format for yearly retention policy.
      * 
     */
-    public Optional<WeeklyRetentionFormatResponse> getRetentionScheduleWeekly() {
+    public Optional<WeeklyRetentionFormatResponse> retentionScheduleWeekly() {
         return Optional.ofNullable(this.retentionScheduleWeekly);
     }
     /**
      * Retention times of retention policy.
      * 
     */
-    public List<String> getRetentionTimes() {
+    public List<String> retentionTimes() {
         return this.retentionTimes == null ? List.of() : this.retentionTimes;
     }
 

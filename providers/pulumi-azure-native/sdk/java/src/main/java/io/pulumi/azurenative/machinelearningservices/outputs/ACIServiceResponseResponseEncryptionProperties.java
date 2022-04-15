@@ -39,21 +39,21 @@ public final class ACIServiceResponseResponseEncryptionProperties {
      * Encryption Key name
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * Encryption Key Version
      * 
     */
-    public String getKeyVersion() {
+    public String keyVersion() {
         return this.keyVersion;
     }
     /**
      * vault base Url
      * 
     */
-    public String getVaultBaseUrl() {
+    public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
 

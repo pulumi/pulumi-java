@@ -51,7 +51,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Deployment Id
      * 
      */
-    public Output<String> getDeploymentId() {
+    public Output<String> deploymentId() {
         return this.deploymentId;
     }
     /**
@@ -65,7 +65,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Domain Configuration Type
      * 
      */
-    public Output</* @Nullable */ String> getDomainConfigurationType() {
+    public Output</* @Nullable */ String> domainConfigurationType() {
         return this.domainConfigurationType;
     }
     /**
@@ -79,7 +79,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
      */
-    public Output</* @Nullable */ String> getDomainName() {
+    public Output</* @Nullable */ String> domainName() {
         return this.domainName;
     }
     /**
@@ -93,7 +93,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return DomainSecurity Settings
      * 
      */
-    public Output</* @Nullable */ DomainSecuritySettingsResponse> getDomainSecuritySettings() {
+    public Output</* @Nullable */ DomainSecuritySettingsResponse> domainSecuritySettings() {
         return this.domainSecuritySettings;
     }
     /**
@@ -107,7 +107,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -121,7 +121,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Enabled or Disabled flag to turn on Group-based filtered sync
      * 
      */
-    public Output</* @Nullable */ String> getFilteredSync() {
+    public Output</* @Nullable */ String> filteredSync() {
         return this.filteredSync;
     }
     /**
@@ -135,7 +135,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Secure LDAP Settings
      * 
      */
-    public Output</* @Nullable */ LdapsSettingsResponse> getLdapsSettings() {
+    public Output</* @Nullable */ LdapsSettingsResponse> ldapsSettings() {
         return this.ldapsSettings;
     }
     /**
@@ -149,7 +149,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -163,7 +163,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Migration Properties
      * 
      */
-    public Output<MigrationPropertiesResponse> getMigrationProperties() {
+    public Output<MigrationPropertiesResponse> migrationProperties() {
         return this.migrationProperties;
     }
     /**
@@ -177,7 +177,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -191,7 +191,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Notification Settings
      * 
      */
-    public Output</* @Nullable */ NotificationSettingsResponse> getNotificationSettings() {
+    public Output</* @Nullable */ NotificationSettingsResponse> notificationSettings() {
         return this.notificationSettings;
     }
     /**
@@ -205,7 +205,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return the current deployment or provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -219,7 +219,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return List of ReplicaSets
      * 
      */
-    public Output</* @Nullable */ List<ReplicaSetResponse>> getReplicaSets() {
+    public Output</* @Nullable */ List<ReplicaSetResponse>> replicaSets() {
         return this.replicaSets;
     }
     /**
@@ -233,7 +233,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Resource Forest Settings
      * 
      */
-    public Output</* @Nullable */ ResourceForestSettingsResponse> getResourceForestSettings() {
+    public Output</* @Nullable */ ResourceForestSettingsResponse> resourceForestSettings() {
         return this.resourceForestSettings;
     }
     /**
@@ -247,7 +247,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Sku Type
      * 
      */
-    public Output</* @Nullable */ String> getSku() {
+    public Output</* @Nullable */ String> sku() {
         return this.sku;
     }
     /**
@@ -261,7 +261,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return SyncOwner ReplicaSet Id
      * 
      */
-    public Output<String> getSyncOwner() {
+    public Output<String> syncOwner() {
         return this.syncOwner;
     }
     /**
@@ -275,7 +275,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -289,7 +289,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -303,7 +303,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Azure Active Directory Tenant Id
      * 
      */
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -317,7 +317,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -331,7 +331,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * @return Data Model Version
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 

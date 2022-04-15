@@ -26,7 +26,7 @@ public final class KubernetesClusterPropertiesResponse {
      * The Azure Service Principal used by Kubernetes
      * 
     */
-    public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {
+    public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
 

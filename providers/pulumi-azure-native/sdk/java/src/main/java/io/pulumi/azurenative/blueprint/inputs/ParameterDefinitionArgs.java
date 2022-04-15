@@ -30,7 +30,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowedValues")
       private final @Nullable Output<List<Object>> allowedValues;
 
-    public Output<List<Object>> getAllowedValues() {
+    public Output<List<Object>> allowedValues() {
         return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
@@ -41,7 +41,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
+    public Output<Object> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -52,7 +52,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -63,7 +63,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -74,7 +74,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="strongType")
       private final @Nullable Output<String> strongType;
 
-    public Output<String> getStrongType() {
+    public Output<String> strongType() {
         return this.strongType == null ? Codegen.empty() : this.strongType;
     }
 
@@ -85,7 +85,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<Either<String,TemplateParameterType>> type;
 
-    public Output<Either<String,TemplateParameterType>> getType() {
+    public Output<Either<String,TemplateParameterType>> type() {
         return this.type;
     }
 

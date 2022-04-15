@@ -29,7 +29,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recurrenceType", required=true)
       private final Output<Either<String,SuppressionType>> recurrenceType;
 
-    public Output<Either<String,SuppressionType>> getRecurrenceType() {
+    public Output<Either<String,SuppressionType>> recurrenceType() {
         return this.recurrenceType;
     }
 
@@ -40,7 +40,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="schedule")
       private final @Nullable Output<SuppressionScheduleArgs> schedule;
 
-    public Output<SuppressionScheduleArgs> getSchedule() {
+    public Output<SuppressionScheduleArgs> schedule() {
         return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 

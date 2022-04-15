@@ -32,7 +32,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="command")
       private final @Nullable List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command == null ? List.of() : this.command;
     }
 
@@ -43,7 +43,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
-    public List<EnvironmentVariableResponse> getEnvironmentVariables() {
+    public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
 
@@ -54,7 +54,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -65,7 +65,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceView", required=true)
       private final ContainerPropertiesResponseInstanceView instanceView;
 
-    public ContainerPropertiesResponseInstanceView getInstanceView() {
+    public ContainerPropertiesResponseInstanceView instanceView() {
         return this.instanceView;
     }
 
@@ -76,7 +76,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="livenessProbe")
       private final @Nullable ContainerProbeResponse livenessProbe;
 
-    public Optional<ContainerProbeResponse> getLivenessProbe() {
+    public Optional<ContainerProbeResponse> livenessProbe() {
         return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
     }
 
@@ -87,7 +87,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -98,7 +98,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ports")
       private final @Nullable List<ContainerPortResponse> ports;
 
-    public List<ContainerPortResponse> getPorts() {
+    public List<ContainerPortResponse> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 
@@ -109,7 +109,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="readinessProbe")
       private final @Nullable ContainerProbeResponse readinessProbe;
 
-    public Optional<ContainerProbeResponse> getReadinessProbe() {
+    public Optional<ContainerProbeResponse> readinessProbe() {
         return this.readinessProbe == null ? Optional.empty() : Optional.ofNullable(this.readinessProbe);
     }
 
@@ -120,7 +120,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
 
-    public ResourceRequirementsResponse getResources() {
+    public ResourceRequirementsResponse resources() {
         return this.resources;
     }
 
@@ -131,7 +131,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumeMounts")
       private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    public List<VolumeMountResponse> getVolumeMounts() {
+    public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
 

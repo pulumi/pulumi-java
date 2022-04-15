@@ -25,7 +25,7 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
     @Import(name="computeSubnetId")
       private final @Nullable String computeSubnetId;
 
-    public Optional<String> getComputeSubnetId() {
+    public Optional<String> computeSubnetId() {
         return this.computeSubnetId == null ? Optional.empty() : Optional.ofNullable(this.computeSubnetId);
     }
 

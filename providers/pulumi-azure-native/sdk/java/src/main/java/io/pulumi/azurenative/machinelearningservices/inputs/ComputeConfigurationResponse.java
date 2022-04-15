@@ -28,7 +28,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
-    public Optional<Integer> getInstanceCount() {
+    public Optional<Integer> instanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
@@ -39,7 +39,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="instanceType")
       private final @Nullable String instanceType;
 
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
@@ -50,7 +50,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="isLocal")
       private final @Nullable Boolean isLocal;
 
-    public Optional<Boolean> getIsLocal() {
+    public Optional<Boolean> isLocal() {
         return this.isLocal == null ? Optional.empty() : Optional.ofNullable(this.isLocal);
     }
 
@@ -61,7 +61,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -72,7 +72,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -83,7 +83,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
     @Import(name="target")
       private final @Nullable String target;
 
-    public Optional<String> getTarget() {
+    public Optional<String> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 

@@ -45,7 +45,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The attributes of the key.
      * 
      */
-    public Output</* @Nullable */ KeyAttributesResponse> getAttributes() {
+    public Output</* @Nullable */ KeyAttributesResponse> attributes() {
         return this.attributes;
     }
     /**
@@ -59,13 +59,13 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
      */
-    public Output</* @Nullable */ String> getCurveName() {
+    public Output</* @Nullable */ String> curveName() {
         return this.curveName;
     }
     @Export(name="keyOps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keyOps;
 
-    public Output</* @Nullable */ List<String>> getKeyOps() {
+    public Output</* @Nullable */ List<String>> keyOps() {
         return this.keyOps;
     }
     /**
@@ -79,7 +79,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
      */
-    public Output</* @Nullable */ Integer> getKeySize() {
+    public Output</* @Nullable */ Integer> keySize() {
         return this.keySize;
     }
     /**
@@ -93,7 +93,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The URI to retrieve the current version of the key.
      * 
      */
-    public Output<String> getKeyUri() {
+    public Output<String> keyUri() {
         return this.keyUri;
     }
     /**
@@ -107,7 +107,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The URI to retrieve the specific version of the key.
      * 
      */
-    public Output<String> getKeyUriWithVersion() {
+    public Output<String> keyUriWithVersion() {
         return this.keyUriWithVersion;
     }
     /**
@@ -121,7 +121,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return The type of the key. For valid values, see JsonWebKeyType.
      * 
      */
-    public Output</* @Nullable */ String> getKty() {
+    public Output</* @Nullable */ String> kty() {
         return this.kty;
     }
     /**
@@ -135,7 +135,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Azure location of the key vault resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -149,7 +149,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Name of the key vault resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +163,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Tags assigned to the key vault resource.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -177,7 +177,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * @return Resource type of the key vault resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

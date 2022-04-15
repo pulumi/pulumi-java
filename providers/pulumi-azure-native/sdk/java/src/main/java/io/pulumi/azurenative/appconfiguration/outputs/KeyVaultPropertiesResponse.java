@@ -34,14 +34,14 @@ public final class KeyVaultPropertiesResponse {
      * The client id of the identity which will be used to access key vault.
      * 
     */
-    public Optional<String> getIdentityClientId() {
+    public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
      * The URI of the key vault key used to encrypt data.
      * 
     */
-    public Optional<String> getKeyIdentifier() {
+    public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
 

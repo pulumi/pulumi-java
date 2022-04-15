@@ -26,7 +26,7 @@ public final class ResourceIdResponse {
      * Resource Id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 

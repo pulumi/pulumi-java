@@ -26,7 +26,7 @@ public final class SshConfigurationResponse {
      * The list of SSH public keys used to authenticate with linux based VMs.
      * 
     */
-    public List<SshPublicKeyResponse> getPublicKeys() {
+    public List<SshPublicKeyResponse> publicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }
 

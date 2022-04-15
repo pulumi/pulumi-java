@@ -27,7 +27,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
     @Import(name="networkProfile")
       private final @Nullable NetworkProfileResponse networkProfile;
 
-    public Optional<NetworkProfileResponse> getNetworkProfile() {
+    public Optional<NetworkProfileResponse> networkProfile() {
         return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
     }
 
@@ -38,7 +38,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
     @Import(name="serviceId", required=true)
       private final String serviceId;
 
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
 
@@ -60,7 +60,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
     @Import(name="version", required=true)
       private final Integer version;
 
-    public Integer getVersion() {
+    public Integer version() {
         return this.version;
     }
 

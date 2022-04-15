@@ -26,7 +26,7 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="quantity")
       private final @Nullable Double quantity;
 
-    public Optional<Double> getQuantity() {
+    public Optional<Double> quantity() {
         return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
     }
 
@@ -37,7 +37,7 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="unit")
       private final @Nullable String unit;
 
-    public Optional<String> getUnit() {
+    public Optional<String> unit() {
         return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
     }
 

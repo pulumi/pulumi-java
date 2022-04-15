@@ -105,84 +105,84 @@ public final class GetManagedDatabaseResult {
      * Collation of the metadata catalog.
      * 
     */
-    public Optional<String> getCatalogCollation() {
+    public Optional<String> catalogCollation() {
         return Optional.ofNullable(this.catalogCollation);
     }
     /**
      * Collation of the managed database.
      * 
     */
-    public Optional<String> getCollation() {
+    public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * Creation date of the database.
      * 
     */
-    public String getCreationDate() {
+    public String creationDate() {
         return this.creationDate;
     }
     /**
      * Geo paired region.
      * 
     */
-    public String getDefaultSecondaryLocation() {
+    public String defaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
     /**
      * Earliest restore point in time for point in time restore.
      * 
     */
-    public String getEarliestRestorePoint() {
+    public String earliestRestorePoint() {
         return this.earliestRestorePoint;
     }
     /**
      * Instance Failover Group resource identifier that this managed database belongs to.
      * 
     */
-    public String getFailoverGroupId() {
+    public String failoverGroupId() {
         return this.failoverGroupId;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Status of the database.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

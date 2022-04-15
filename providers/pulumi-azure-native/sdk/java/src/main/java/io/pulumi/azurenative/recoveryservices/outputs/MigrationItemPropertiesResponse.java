@@ -115,91 +115,91 @@ public final class MigrationItemPropertiesResponse {
      * The allowed operations on the migration item, based on the current migration state of the item.
      * 
     */
-    public List<String> getAllowedOperations() {
+    public List<String> allowedOperations() {
         return this.allowedOperations;
     }
     /**
      * The current job details.
      * 
     */
-    public CurrentJobDetailsResponse getCurrentJob() {
+    public CurrentJobDetailsResponse currentJob() {
         return this.currentJob;
     }
     /**
      * The consolidated health.
      * 
     */
-    public String getHealth() {
+    public String health() {
         return this.health;
     }
     /**
      * The list of health errors.
      * 
     */
-    public List<HealthErrorResponse> getHealthErrors() {
+    public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
      * The on-premise virtual machine name.
      * 
     */
-    public String getMachineName() {
+    public String machineName() {
         return this.machineName;
     }
     /**
      * The migration status.
      * 
     */
-    public String getMigrationState() {
+    public String migrationState() {
         return this.migrationState;
     }
     /**
      * The migration state description.
      * 
     */
-    public String getMigrationStateDescription() {
+    public String migrationStateDescription() {
         return this.migrationStateDescription;
     }
     /**
      * The name of policy governing this item.
      * 
     */
-    public String getPolicyFriendlyName() {
+    public String policyFriendlyName() {
         return this.policyFriendlyName;
     }
     /**
      * The ARM Id of policy governing this item.
      * 
     */
-    public String getPolicyId() {
+    public String policyId() {
         return this.policyId;
     }
     /**
      * The migration provider custom settings.
      * 
     */
-    public Optional<VMwareCbtMigrationDetailsResponse> getProviderSpecificDetails() {
+    public Optional<VMwareCbtMigrationDetailsResponse> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
      * The recovery services provider ARM Id.
      * 
     */
-    public String getRecoveryServicesProviderId() {
+    public String recoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
     }
     /**
      * The test migrate state.
      * 
     */
-    public String getTestMigrateState() {
+    public String testMigrateState() {
         return this.testMigrateState;
     }
     /**
      * The test migrate state description.
      * 
     */
-    public String getTestMigrateStateDescription() {
+    public String testMigrateStateDescription() {
         return this.testMigrateStateDescription;
     }
 

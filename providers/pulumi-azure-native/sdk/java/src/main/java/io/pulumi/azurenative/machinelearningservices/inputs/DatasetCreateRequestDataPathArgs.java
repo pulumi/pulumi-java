@@ -22,7 +22,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
@@ -33,7 +33,7 @@ public final class DatasetCreateRequestDataPathArgs extends io.pulumi.resources.
     @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
-    public Output<String> getRelativePath() {
+    public Output<String> relativePath() {
         return this.relativePath == null ? Codegen.empty() : this.relativePath;
     }
 

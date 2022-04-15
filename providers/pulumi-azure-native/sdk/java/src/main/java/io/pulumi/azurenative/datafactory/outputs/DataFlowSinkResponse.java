@@ -65,42 +65,42 @@ public final class DataFlowSinkResponse {
      * Dataset reference.
      * 
     */
-    public Optional<DatasetReferenceResponse> getDataset() {
+    public Optional<DatasetReferenceResponse> dataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * Transformation description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Flowlet Reference
      * 
     */
-    public Optional<DataFlowReferenceResponse> getFlowlet() {
+    public Optional<DataFlowReferenceResponse> flowlet() {
         return Optional.ofNullable(this.flowlet);
     }
     /**
      * Linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
     /**
      * Transformation name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Schema linked service reference.
      * 
     */
-    public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {
+    public Optional<LinkedServiceReferenceResponse> schemaLinkedService() {
         return Optional.ofNullable(this.schemaLinkedService);
     }
 

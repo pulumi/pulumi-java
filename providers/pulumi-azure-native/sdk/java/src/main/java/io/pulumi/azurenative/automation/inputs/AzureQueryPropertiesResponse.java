@@ -27,7 +27,7 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="locations")
       private final @Nullable List<String> locations;
 
-    public List<String> getLocations() {
+    public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
@@ -38,7 +38,7 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="scope")
       private final @Nullable List<String> scope;
 
-    public List<String> getScope() {
+    public List<String> scope() {
         return this.scope == null ? List.of() : this.scope;
     }
 
@@ -49,7 +49,7 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="tagSettings")
       private final @Nullable TagSettingsPropertiesResponse tagSettings;
 
-    public Optional<TagSettingsPropertiesResponse> getTagSettings() {
+    public Optional<TagSettingsPropertiesResponse> tagSettings() {
         return this.tagSettings == null ? Optional.empty() : Optional.ofNullable(this.tagSettings);
     }
 

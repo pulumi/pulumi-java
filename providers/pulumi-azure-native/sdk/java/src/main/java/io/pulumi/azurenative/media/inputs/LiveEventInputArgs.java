@@ -31,7 +31,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessControl")
       private final @Nullable Output<LiveEventInputAccessControlArgs> accessControl;
 
-    public Output<LiveEventInputAccessControlArgs> getAccessControl() {
+    public Output<LiveEventInputAccessControlArgs> accessControl() {
         return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
@@ -42,7 +42,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
-    public Output<String> getAccessToken() {
+    public Output<String> accessToken() {
         return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
@@ -53,7 +53,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoints")
       private final @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
-    public Output<List<LiveEventEndpointArgs>> getEndpoints() {
+    public Output<List<LiveEventEndpointArgs>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
@@ -64,7 +64,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFrameIntervalDuration")
       private final @Nullable Output<String> keyFrameIntervalDuration;
 
-    public Output<String> getKeyFrameIntervalDuration() {
+    public Output<String> keyFrameIntervalDuration() {
         return this.keyFrameIntervalDuration == null ? Codegen.empty() : this.keyFrameIntervalDuration;
     }
 
@@ -75,7 +75,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streamingProtocol", required=true)
       private final Output<Either<String,LiveEventInputProtocol>> streamingProtocol;
 
-    public Output<Either<String,LiveEventInputProtocol>> getStreamingProtocol() {
+    public Output<Either<String,LiveEventInputProtocol>> streamingProtocol() {
         return this.streamingProtocol;
     }
 

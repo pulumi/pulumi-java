@@ -40,21 +40,21 @@ public final class ScaleRuleMetricDimensionResponse {
      * Name of the dimension.
      * 
     */
-    public String getDimensionName() {
+    public String dimensionName() {
         return this.dimensionName;
     }
     /**
      * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * list of dimension values. For example: ["App1","App2"].
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

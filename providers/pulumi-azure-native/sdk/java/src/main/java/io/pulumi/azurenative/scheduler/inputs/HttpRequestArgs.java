@@ -27,7 +27,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<Object> authentication;
 
-    public Output<Object> getAuthentication() {
+    public Output<Object> authentication() {
         return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
@@ -38,7 +38,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -49,7 +49,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> getHeaders() {
+    public Output<Map<String,String>> headers() {
         return this.headers == null ? Codegen.empty() : this.headers;
     }
 
@@ -60,7 +60,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method")
       private final @Nullable Output<String> method;
 
-    public Output<String> getMethod() {
+    public Output<String> method() {
         return this.method == null ? Codegen.empty() : this.method;
     }
 
@@ -71,7 +71,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri == null ? Codegen.empty() : this.uri;
     }
 

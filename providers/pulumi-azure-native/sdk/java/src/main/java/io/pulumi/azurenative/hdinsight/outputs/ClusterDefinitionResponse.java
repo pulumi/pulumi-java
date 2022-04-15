@@ -50,28 +50,28 @@ public final class ClusterDefinitionResponse {
      * The link to the blueprint.
      * 
     */
-    public Optional<String> getBlueprint() {
+    public Optional<String> blueprint() {
         return Optional.ofNullable(this.blueprint);
     }
     /**
      * The versions of different services in the cluster.
      * 
     */
-    public Map<String,String> getComponentVersion() {
+    public Map<String,String> componentVersion() {
         return this.componentVersion == null ? Map.of() : this.componentVersion;
     }
     /**
      * The cluster configurations.
      * 
     */
-    public Optional<Object> getConfigurations() {
+    public Optional<Object> configurations() {
         return Optional.ofNullable(this.configurations);
     }
     /**
      * The type of cluster.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
 

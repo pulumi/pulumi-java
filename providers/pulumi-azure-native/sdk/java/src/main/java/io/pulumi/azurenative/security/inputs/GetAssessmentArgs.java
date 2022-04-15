@@ -21,7 +21,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="assessmentName", required=true)
       private final String assessmentName;
 
-    public String getAssessmentName() {
+    public String assessmentName() {
         return this.assessmentName;
     }
 
@@ -32,7 +32,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -43,7 +43,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

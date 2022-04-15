@@ -26,7 +26,7 @@ public final class ProtocolSettingsResponse {
      * Setting for SMB protocol
      * 
     */
-    public Optional<SmbSettingResponse> getSmb() {
+    public Optional<SmbSettingResponse> smb() {
         return Optional.ofNullable(this.smb);
     }
 

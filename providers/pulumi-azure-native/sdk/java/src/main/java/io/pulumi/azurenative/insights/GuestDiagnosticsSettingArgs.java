@@ -25,7 +25,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     @Import(name="dataSources")
       private final @Nullable Output<List<DataSourceArgs>> dataSources;
 
-    public Output<List<DataSourceArgs>> getDataSources() {
+    public Output<List<DataSourceArgs>> dataSources() {
         return this.dataSources == null ? Codegen.empty() : this.dataSources;
     }
 
@@ -36,7 +36,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     @Import(name="diagnosticSettingsName")
       private final @Nullable Output<String> diagnosticSettingsName;
 
-    public Output<String> getDiagnosticSettingsName() {
+    public Output<String> diagnosticSettingsName() {
         return this.diagnosticSettingsName == null ? Codegen.empty() : this.diagnosticSettingsName;
     }
 
@@ -47,7 +47,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -58,14 +58,14 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     @Import(name="osType")
       private final @Nullable Output<String> osType;
 
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     @Import(name="proxySetting")
       private final @Nullable Output<String> proxySetting;
 
-    public Output<String> getProxySetting() {
+    public Output<String> proxySetting() {
         return this.proxySetting == null ? Codegen.empty() : this.proxySetting;
     }
 
@@ -76,7 +76,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,7 +87,7 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

@@ -41,21 +41,21 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateLinkService
      * A description of any extra actions that may be required.
      * 
     */
-    public Optional<String> getActionsRequired() {
+    public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
      * The description for the private link service connection state.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
 

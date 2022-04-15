@@ -39,21 +39,21 @@ public final class VaultPrivateLinkServiceConnectionStateResponse {
      * Gets or sets actions required.
      * 
     */
-    public String getActionsRequired() {
+    public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
      * Gets or sets description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Gets or sets the status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

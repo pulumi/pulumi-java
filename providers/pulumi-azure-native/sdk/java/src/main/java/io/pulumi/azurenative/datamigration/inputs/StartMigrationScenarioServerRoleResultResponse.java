@@ -25,7 +25,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
     @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
-    public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
+    public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
 
@@ -36,7 +36,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
     @Import(name="state", required=true)
       private final String state;
 
-    public String getState() {
+    public String state() {
         return this.state;
     }
 

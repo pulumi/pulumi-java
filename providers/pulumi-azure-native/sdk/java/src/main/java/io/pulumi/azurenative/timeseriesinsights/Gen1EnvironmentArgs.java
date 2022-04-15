@@ -28,7 +28,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataRetentionTime", required=true)
       private final Output<String> dataRetentionTime;
 
-    public Output<String> getDataRetentionTime() {
+    public Output<String> dataRetentionTime() {
         return this.dataRetentionTime;
     }
 
@@ -39,7 +39,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName == null ? Codegen.empty() : this.environmentName;
     }
 
@@ -51,7 +51,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -62,7 +62,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -73,7 +73,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="partitionKeyProperties")
       private final @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
-    public Output<List<TimeSeriesIdPropertyArgs>> getPartitionKeyProperties() {
+    public Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties() {
         return this.partitionKeyProperties == null ? Codegen.empty() : this.partitionKeyProperties;
     }
 
@@ -84,7 +84,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -95,7 +95,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -106,7 +106,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="storageLimitExceededBehavior")
       private final @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
-    public Output<Either<String,StorageLimitExceededBehavior>> getStorageLimitExceededBehavior() {
+    public Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior() {
         return this.storageLimitExceededBehavior == null ? Codegen.empty() : this.storageLimitExceededBehavior;
     }
 
@@ -117,7 +117,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

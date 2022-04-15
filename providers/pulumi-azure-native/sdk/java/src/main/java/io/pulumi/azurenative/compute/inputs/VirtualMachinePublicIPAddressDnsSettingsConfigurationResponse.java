@@ -23,7 +23,7 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse
     @Import(name="domainNameLabel", required=true)
       private final String domainNameLabel;
 
-    public String getDomainNameLabel() {
+    public String domainNameLabel() {
         return this.domainNameLabel;
     }
 

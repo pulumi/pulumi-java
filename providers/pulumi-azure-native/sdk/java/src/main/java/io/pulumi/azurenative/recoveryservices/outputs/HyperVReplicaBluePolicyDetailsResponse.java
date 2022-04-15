@@ -106,28 +106,28 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
      * A value indicating the authentication type.
      * 
     */
-    public Optional<Integer> getAllowedAuthenticationType() {
+    public Optional<Integer> allowedAuthenticationType() {
         return Optional.ofNullable(this.allowedAuthenticationType);
     }
     /**
      * A value indicating the application consistent frequency.
      * 
     */
-    public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
+    public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
     /**
      * A value indicating whether compression has to be enabled.
      * 
     */
-    public Optional<String> getCompression() {
+    public Optional<String> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * A value indicating whether IR is online.
      * 
     */
-    public Optional<String> getInitialReplicationMethod() {
+    public Optional<String> initialReplicationMethod() {
         return Optional.ofNullable(this.initialReplicationMethod);
     }
     /**
@@ -135,56 +135,56 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
      * Expected value is 'HyperVReplica2012R2'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating the offline IR export path.
      * 
     */
-    public Optional<String> getOfflineReplicationExportPath() {
+    public Optional<String> offlineReplicationExportPath() {
         return Optional.ofNullable(this.offlineReplicationExportPath);
     }
     /**
      * A value indicating the offline IR import path.
      * 
     */
-    public Optional<String> getOfflineReplicationImportPath() {
+    public Optional<String> offlineReplicationImportPath() {
         return Optional.ofNullable(this.offlineReplicationImportPath);
     }
     /**
      * A value indicating the online IR start time.
      * 
     */
-    public Optional<String> getOnlineReplicationStartTime() {
+    public Optional<String> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
     /**
      * A value indicating the number of recovery points.
      * 
     */
-    public Optional<Integer> getRecoveryPoints() {
+    public Optional<Integer> recoveryPoints() {
         return Optional.ofNullable(this.recoveryPoints);
     }
     /**
      * A value indicating whether the VM has to be auto deleted. Supported Values: String.Empty, None, OnRecoveryCloud
      * 
     */
-    public Optional<String> getReplicaDeletionOption() {
+    public Optional<String> replicaDeletionOption() {
         return Optional.ofNullable(this.replicaDeletionOption);
     }
     /**
      * A value indicating the replication interval.
      * 
     */
-    public Optional<Integer> getReplicationFrequencyInSeconds() {
+    public Optional<Integer> replicationFrequencyInSeconds() {
         return Optional.ofNullable(this.replicationFrequencyInSeconds);
     }
     /**
      * A value indicating the recovery HTTPS port.
      * 
     */
-    public Optional<Integer> getReplicationPort() {
+    public Optional<Integer> replicationPort() {
         return Optional.ofNullable(this.replicationPort);
     }
 

@@ -26,7 +26,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
     @Import(name="base64Key")
       private final @Nullable Output<String> base64Key;
 
-    public Output<String> getBase64Key() {
+    public Output<String> base64Key() {
         return this.base64Key == null ? Codegen.empty() : this.base64Key;
     }
 
@@ -37,7 +37,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
     @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
-    public Output<String> getExpiration() {
+    public Output<String> expiration() {
         return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
@@ -48,7 +48,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends io.pulumi.
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 

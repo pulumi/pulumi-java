@@ -26,7 +26,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     @Import(name="adminUserName", required=true)
       private final Output<String> adminUserName;
 
-    public Output<String> getAdminUserName() {
+    public Output<String> adminUserName() {
         return this.adminUserName;
     }
 
@@ -37,7 +37,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     @Import(name="adminUserPassword")
       private final @Nullable Output<String> adminUserPassword;
 
-    public Output<String> getAdminUserPassword() {
+    public Output<String> adminUserPassword() {
         return this.adminUserPassword == null ? Codegen.empty() : this.adminUserPassword;
     }
 
@@ -48,7 +48,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
     @Import(name="adminUserSshPublicKey")
       private final @Nullable Output<String> adminUserSshPublicKey;
 
-    public Output<String> getAdminUserSshPublicKey() {
+    public Output<String> adminUserSshPublicKey() {
         return this.adminUserSshPublicKey == null ? Codegen.empty() : this.adminUserSshPublicKey;
     }
 

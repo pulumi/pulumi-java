@@ -23,7 +23,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -34,7 +34,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
     @Import(name="correlationId", required=true)
       private final String correlationId;
 
-    public String getCorrelationId() {
+    public String correlationId() {
         return this.correlationId;
     }
 
@@ -45,7 +45,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -56,7 +56,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
     @Import(name="timestamp", required=true)
       private final String timestamp;
 
-    public String getTimestamp() {
+    public String timestamp() {
         return this.timestamp;
     }
 
@@ -67,7 +67,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

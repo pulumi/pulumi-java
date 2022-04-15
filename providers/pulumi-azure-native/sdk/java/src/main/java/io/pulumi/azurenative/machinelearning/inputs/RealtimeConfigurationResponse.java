@@ -25,7 +25,7 @@ public final class RealtimeConfigurationResponse extends io.pulumi.resources.Inv
     @Import(name="maxConcurrentCalls")
       private final @Nullable Integer maxConcurrentCalls;
 
-    public Optional<Integer> getMaxConcurrentCalls() {
+    public Optional<Integer> maxConcurrentCalls() {
         return this.maxConcurrentCalls == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentCalls);
     }
 

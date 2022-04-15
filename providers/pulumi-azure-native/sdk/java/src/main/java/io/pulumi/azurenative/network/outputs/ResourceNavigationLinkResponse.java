@@ -69,49 +69,49 @@ public final class ResourceNavigationLinkResponse {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Link to the external resource.
      * 
     */
-    public Optional<String> getLink() {
+    public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Resource type of the linked resource.
      * 
     */
-    public Optional<String> getLinkedResourceType() {
+    public Optional<String> linkedResourceType() {
         return Optional.ofNullable(this.linkedResourceType);
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the resource navigation link resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

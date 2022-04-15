@@ -27,7 +27,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
     @Import(name="errors")
       private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
 
-    public List<ManagedIntegrationRuntimeErrorResponse> getErrors() {
+    public List<ManagedIntegrationRuntimeErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
@@ -38,7 +38,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
     @Import(name="nodeId", required=true)
       private final String nodeId;
 
-    public String getNodeId() {
+    public String nodeId() {
         return this.nodeId;
     }
 
@@ -49,7 +49,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

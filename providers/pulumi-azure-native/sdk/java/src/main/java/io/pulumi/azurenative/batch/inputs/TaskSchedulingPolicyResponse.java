@@ -15,7 +15,7 @@ public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.Invo
     @Import(name="nodeFillType", required=true)
       private final String nodeFillType;
 
-    public String getNodeFillType() {
+    public String nodeFillType() {
         return this.nodeFillType;
     }
 

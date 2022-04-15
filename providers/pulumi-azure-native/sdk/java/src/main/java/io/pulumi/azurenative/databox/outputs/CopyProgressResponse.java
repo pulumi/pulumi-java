@@ -126,63 +126,63 @@ public final class CopyProgressResponse {
      * Id of the account where the data needs to be uploaded.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * To indicate bytes transferred.
      * 
     */
-    public Double getBytesProcessed() {
+    public Double bytesProcessed() {
         return this.bytesProcessed;
     }
     /**
      * Data Account Type.
      * 
     */
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
      * To indicate directories errored out in the job.
      * 
     */
-    public Double getDirectoriesErroredOut() {
+    public Double directoriesErroredOut() {
         return this.directoriesErroredOut;
     }
     /**
      * Number of files which could not be copied
      * 
     */
-    public Double getFilesErroredOut() {
+    public Double filesErroredOut() {
         return this.filesErroredOut;
     }
     /**
      * Number of files processed
      * 
     */
-    public Double getFilesProcessed() {
+    public Double filesProcessed() {
         return this.filesProcessed;
     }
     /**
      * To indicate directories renamed
      * 
     */
-    public Double getInvalidDirectoriesProcessed() {
+    public Double invalidDirectoriesProcessed() {
         return this.invalidDirectoriesProcessed;
     }
     /**
      * Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
      * 
     */
-    public Double getInvalidFileBytesUploaded() {
+    public Double invalidFileBytesUploaded() {
         return this.invalidFileBytesUploaded;
     }
     /**
      * Number of files not adhering to azure naming conventions which were processed by automatic renaming
      * 
     */
-    public Double getInvalidFilesProcessed() {
+    public Double invalidFilesProcessed() {
         return this.invalidFilesProcessed;
     }
     /**
@@ -190,42 +190,42 @@ public final class CopyProgressResponse {
      * Until this is true, the TotalBytesToProcess may not be valid.
      * 
     */
-    public Boolean getIsEnumerationInProgress() {
+    public Boolean isEnumerationInProgress() {
         return this.isEnumerationInProgress;
     }
     /**
      * Number of folders not adhering to azure naming conventions which were processed by automatic renaming
      * 
     */
-    public Double getRenamedContainerCount() {
+    public Double renamedContainerCount() {
         return this.renamedContainerCount;
     }
     /**
      * Name of the storage account. This will be empty for data account types other than storage account.
      * 
     */
-    public String getStorageAccountName() {
+    public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Total amount of data to be processed by the job.
      * 
     */
-    public Double getTotalBytesToProcess() {
+    public Double totalBytesToProcess() {
         return this.totalBytesToProcess;
     }
     /**
      * Total files to process
      * 
     */
-    public Double getTotalFilesToProcess() {
+    public Double totalFilesToProcess() {
         return this.totalFilesToProcess;
     }
     /**
      * Transfer type of data
      * 
     */
-    public String getTransferType() {
+    public String transferType() {
         return this.transferType;
     }
 

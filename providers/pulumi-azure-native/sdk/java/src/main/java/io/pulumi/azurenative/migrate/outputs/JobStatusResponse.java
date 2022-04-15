@@ -32,14 +32,14 @@ public final class JobStatusResponse {
      * Defines the job name.
      * 
     */
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
     /**
      * Gets or sets the monitoring job percentage.
      * 
     */
-    public String getJobProgress() {
+    public String jobProgress() {
         return this.jobProgress;
     }
 

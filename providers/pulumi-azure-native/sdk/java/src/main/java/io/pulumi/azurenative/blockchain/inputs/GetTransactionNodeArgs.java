@@ -19,7 +19,7 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="blockchainMemberName", required=true)
       private final String blockchainMemberName;
 
-    public String getBlockchainMemberName() {
+    public String blockchainMemberName() {
         return this.blockchainMemberName;
     }
 
@@ -30,7 +30,7 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetTransactionNodeArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="transactionNodeName", required=true)
       private final String transactionNodeName;
 
-    public String getTransactionNodeName() {
+    public String transactionNodeName() {
         return this.transactionNodeName;
     }
 

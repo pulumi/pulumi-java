@@ -45,7 +45,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
      */
-    public Output</* @Nullable */ String> getCustomContextTag() {
+    public Output</* @Nullable */ String> customContextTag() {
         return this.customContextTag;
     }
     /**
@@ -61,7 +61,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * Expected value is 'FileEvent'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -75,7 +75,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +89,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * @return Role sink info.
      * 
      */
-    public Output<RoleSinkInfoResponse> getSinkInfo() {
+    public Output<RoleSinkInfoResponse> sinkInfo() {
         return this.sinkInfo;
     }
     /**
@@ -103,7 +103,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * @return File event source details.
      * 
      */
-    public Output<FileSourceInfoResponse> getSourceInfo() {
+    public Output<FileSourceInfoResponse> sourceInfo() {
         return this.sourceInfo;
     }
     /**
@@ -117,7 +117,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * @return Trigger in DataBoxEdge Resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -131,7 +131,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

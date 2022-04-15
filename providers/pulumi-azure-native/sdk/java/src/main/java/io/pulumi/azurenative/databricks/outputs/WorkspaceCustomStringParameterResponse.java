@@ -32,14 +32,14 @@ public final class WorkspaceCustomStringParameterResponse {
      * The type of variable that this is
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The value which should be used for this field.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

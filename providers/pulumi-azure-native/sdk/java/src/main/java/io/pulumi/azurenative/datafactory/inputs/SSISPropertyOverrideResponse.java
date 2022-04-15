@@ -26,7 +26,7 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
     @Import(name="isSensitive")
       private final @Nullable Boolean isSensitive;
 
-    public Optional<Boolean> getIsSensitive() {
+    public Optional<Boolean> isSensitive() {
         return this.isSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSensitive);
     }
 
@@ -37,7 +37,7 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
     @Import(name="value", required=true)
       private final Object value;
 
-    public Object getValue() {
+    public Object value() {
         return this.value;
     }
 

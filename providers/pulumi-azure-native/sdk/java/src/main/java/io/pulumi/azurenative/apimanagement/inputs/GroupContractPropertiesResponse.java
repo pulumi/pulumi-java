@@ -26,7 +26,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
     @Import(name="builtIn", required=true)
       private final Boolean builtIn;
 
-    public Boolean getBuiltIn() {
+    public Boolean builtIn() {
         return this.builtIn;
     }
 
@@ -37,7 +37,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -48,7 +48,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
     @Import(name="externalId")
       private final @Nullable String externalId;
 
-    public Optional<String> getExternalId() {
+    public Optional<String> externalId() {
         return this.externalId == null ? Optional.empty() : Optional.ofNullable(this.externalId);
     }
 
@@ -70,7 +70,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

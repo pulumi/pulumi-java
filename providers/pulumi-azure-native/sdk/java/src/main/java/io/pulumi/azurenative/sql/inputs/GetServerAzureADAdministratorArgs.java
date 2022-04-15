@@ -19,7 +19,7 @@ public final class GetServerAzureADAdministratorArgs extends io.pulumi.resources
     @Import(name="administratorName", required=true)
       private final String administratorName;
 
-    public String getAdministratorName() {
+    public String administratorName() {
         return this.administratorName;
     }
 
@@ -30,7 +30,7 @@ public final class GetServerAzureADAdministratorArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetServerAzureADAdministratorArgs extends io.pulumi.resources
     @Import(name="serverName", required=true)
       private final String serverName;
 
-    public String getServerName() {
+    public String serverName() {
         return this.serverName;
     }
 

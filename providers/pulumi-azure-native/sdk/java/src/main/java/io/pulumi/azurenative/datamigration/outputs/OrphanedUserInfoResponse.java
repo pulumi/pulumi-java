@@ -34,14 +34,14 @@ public final class OrphanedUserInfoResponse {
      * Parent database of the user
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Name of the orphaned user
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

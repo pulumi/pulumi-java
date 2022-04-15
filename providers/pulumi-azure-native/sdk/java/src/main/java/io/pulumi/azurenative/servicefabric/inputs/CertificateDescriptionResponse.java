@@ -25,7 +25,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
     @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
-    public String getThumbprint() {
+    public String thumbprint() {
         return this.thumbprint;
     }
 
@@ -36,7 +36,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
     @Import(name="thumbprintSecondary")
       private final @Nullable String thumbprintSecondary;
 
-    public Optional<String> getThumbprintSecondary() {
+    public Optional<String> thumbprintSecondary() {
         return this.thumbprintSecondary == null ? Optional.empty() : Optional.ofNullable(this.thumbprintSecondary);
     }
 
@@ -47,7 +47,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
     @Import(name="x509StoreName")
       private final @Nullable String x509StoreName;
 
-    public Optional<String> getX509StoreName() {
+    public Optional<String> x509StoreName() {
         return this.x509StoreName == null ? Optional.empty() : Optional.ofNullable(this.x509StoreName);
     }
 

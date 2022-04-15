@@ -79,56 +79,56 @@ public final class GetIotDpsResourceResult {
      * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Service specific properties for a provisioning service
      * 
     */
-    public IotDpsPropertiesDescriptionResponse getProperties() {
+    public IotDpsPropertiesDescriptionResponse properties() {
         return this.properties;
     }
     /**
      * Sku info for a provisioning Service.
      * 
     */
-    public IotDpsSkuInfoResponse getSku() {
+    public IotDpsSkuInfoResponse sku() {
         return this.sku;
     }
     /**
      * The resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

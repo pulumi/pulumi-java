@@ -24,7 +24,7 @@ public final class AssessmentLinksResponse {
      * Link to assessment in Azure Portal
      * 
     */
-    public String getAzurePortalUri() {
+    public String azurePortalUri() {
         return this.azurePortalUri;
     }
 

@@ -43,7 +43,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -57,7 +57,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return The provisioning state of the application security group resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +99,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return The resource GUID property of the application security group resource. It uniquely identifies a resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -113,7 +113,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -127,7 +127,7 @@ public class ApplicationSecurityGroup extends io.pulumi.resources.CustomResource
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

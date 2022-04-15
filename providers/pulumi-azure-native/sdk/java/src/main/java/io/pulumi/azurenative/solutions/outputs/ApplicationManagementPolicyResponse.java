@@ -26,7 +26,7 @@ public final class ApplicationManagementPolicyResponse {
      * The managed application management mode.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
 

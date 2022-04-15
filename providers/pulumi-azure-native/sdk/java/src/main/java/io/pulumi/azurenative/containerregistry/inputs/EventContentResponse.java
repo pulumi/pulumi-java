@@ -29,7 +29,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="action")
       private final @Nullable String action;
 
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
@@ -40,7 +40,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="actor")
       private final @Nullable ActorResponse actor;
 
-    public Optional<ActorResponse> getActor() {
+    public Optional<ActorResponse> actor() {
         return this.actor == null ? Optional.empty() : Optional.ofNullable(this.actor);
     }
 
@@ -51,7 +51,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -62,7 +62,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="request")
       private final @Nullable RequestResponse request;
 
-    public Optional<RequestResponse> getRequest() {
+    public Optional<RequestResponse> request() {
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
     }
 
@@ -73,7 +73,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source")
       private final @Nullable SourceResponse source;
 
-    public Optional<SourceResponse> getSource() {
+    public Optional<SourceResponse> source() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
@@ -84,7 +84,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="target")
       private final @Nullable TargetResponse target;
 
-    public Optional<TargetResponse> getTarget() {
+    public Optional<TargetResponse> target() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
@@ -95,7 +95,7 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timestamp")
       private final @Nullable String timestamp;
 
-    public Optional<String> getTimestamp() {
+    public Optional<String> timestamp() {
         return this.timestamp == null ? Optional.empty() : Optional.ofNullable(this.timestamp);
     }
 

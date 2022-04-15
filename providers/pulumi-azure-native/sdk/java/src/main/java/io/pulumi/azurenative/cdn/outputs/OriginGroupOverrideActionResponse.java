@@ -35,14 +35,14 @@ public final class OriginGroupOverrideActionResponse {
      * Expected value is 'OriginGroupOverride'.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
     */
-    public OriginGroupOverrideActionParametersResponse getParameters() {
+    public OriginGroupOverrideActionParametersResponse parameters() {
         return this.parameters;
     }
 

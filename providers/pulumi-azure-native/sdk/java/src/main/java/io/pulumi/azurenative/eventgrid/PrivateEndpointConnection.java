@@ -43,7 +43,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return GroupIds from the private link service resource.
      * 
      */
-    public Output</* @Nullable */ List<String>> getGroupIds() {
+    public Output</* @Nullable */ List<String>> groupIds() {
         return this.groupIds;
     }
     /**
@@ -57,7 +57,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return The Private Endpoint resource for this Connection.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
+    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
@@ -85,7 +85,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Details about the state of the connection.
      * 
      */
-    public Output</* @Nullable */ ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
+    public Output</* @Nullable */ ConnectionStateResponse> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
@@ -99,7 +99,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Provisioning state of the Private Endpoint Connection.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +113,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

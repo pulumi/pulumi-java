@@ -35,7 +35,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscaleConfiguration")
       private final @Nullable Output<AutoscaleArgs> autoscaleConfiguration;
 
-    public Output<AutoscaleArgs> getAutoscaleConfiguration() {
+    public Output<AutoscaleArgs> autoscaleConfiguration() {
         return this.autoscaleConfiguration == null ? Codegen.empty() : this.autoscaleConfiguration;
     }
 
@@ -46,7 +46,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDisksGroups")
       private final @Nullable Output<List<DataDisksGroupsArgs>> dataDisksGroups;
 
-    public Output<List<DataDisksGroupsArgs>> getDataDisksGroups() {
+    public Output<List<DataDisksGroupsArgs>> dataDisksGroups() {
         return this.dataDisksGroups == null ? Codegen.empty() : this.dataDisksGroups;
     }
 
@@ -57,7 +57,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptDataDisks")
       private final @Nullable Output<Boolean> encryptDataDisks;
 
-    public Output<Boolean> getEncryptDataDisks() {
+    public Output<Boolean> encryptDataDisks() {
         return this.encryptDataDisks == null ? Codegen.empty() : this.encryptDataDisks;
     }
 
@@ -68,7 +68,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> getHardwareProfile() {
+    public Output<HardwareProfileArgs> hardwareProfile() {
         return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
     }
 
@@ -79,7 +79,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
 
-    public Output<Integer> getMinInstanceCount() {
+    public Output<Integer> minInstanceCount() {
         return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
     }
 
@@ -90,7 +90,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osProfile")
       private final @Nullable Output<OsProfileArgs> osProfile;
 
-    public Output<OsProfileArgs> getOsProfile() {
+    public Output<OsProfileArgs> osProfile() {
         return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
@@ -112,7 +112,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptActions")
       private final @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
-    public Output<List<ScriptActionArgs>> getScriptActions() {
+    public Output<List<ScriptActionArgs>> scriptActions() {
         return this.scriptActions == null ? Codegen.empty() : this.scriptActions;
     }
 
@@ -123,7 +123,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetInstanceCount")
       private final @Nullable Output<Integer> targetInstanceCount;
 
-    public Output<Integer> getTargetInstanceCount() {
+    public Output<Integer> targetInstanceCount() {
         return this.targetInstanceCount == null ? Codegen.empty() : this.targetInstanceCount;
     }
 
@@ -134,7 +134,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vMGroupName")
       private final @Nullable Output<String> vMGroupName;
 
-    public Output<String> getVMGroupName() {
+    public Output<String> vMGroupName() {
         return this.vMGroupName == null ? Codegen.empty() : this.vMGroupName;
     }
 
@@ -145,7 +145,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkProfile")
       private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
-    public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
+    public Output<VirtualNetworkProfileArgs> virtualNetworkProfile() {
         return this.virtualNetworkProfile == null ? Codegen.empty() : this.virtualNetworkProfile;
     }
 

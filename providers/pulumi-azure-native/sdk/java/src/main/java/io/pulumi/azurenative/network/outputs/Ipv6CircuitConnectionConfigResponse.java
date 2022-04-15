@@ -34,14 +34,14 @@ public final class Ipv6CircuitConnectionConfigResponse {
      * /125 IP address space to carve out customer addresses for global reach.
      * 
     */
-    public Optional<String> getAddressPrefix() {
+    public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Express Route Circuit connection state.
      * 
     */
-    public String getCircuitConnectionStatus() {
+    public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
 

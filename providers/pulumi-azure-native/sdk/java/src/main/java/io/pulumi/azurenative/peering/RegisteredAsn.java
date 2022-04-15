@@ -43,7 +43,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @return The customer's ASN from which traffic originates.
      * 
      */
-    public Output</* @Nullable */ Integer> getAsn() {
+    public Output</* @Nullable */ Integer> asn() {
         return this.asn;
     }
     /**
@@ -57,7 +57,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @return The peering service prefix key that is to be shared with the customer.
      * 
      */
-    public Output<String> getPeeringServicePrefixKey() {
+    public Output<String> peeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
@@ -85,7 +85,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -99,7 +99,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

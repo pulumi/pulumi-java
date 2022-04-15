@@ -48,7 +48,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
 
-    public Output<DatasetReferenceArgs> getDataset() {
+    public Output<DatasetReferenceArgs> dataset() {
         return this.dataset;
     }
 
@@ -59,7 +59,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -70,7 +70,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -81,7 +81,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableLogging")
       private final @Nullable Output<Object> enableLogging;
 
-    public Output<Object> getEnableLogging() {
+    public Output<Object> enableLogging() {
         return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
@@ -92,7 +92,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -103,7 +103,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logStorageSettings")
       private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
-    public Output<LogStorageSettingsArgs> getLogStorageSettings() {
+    public Output<LogStorageSettingsArgs> logStorageSettings() {
         return this.logStorageSettings == null ? Codegen.empty() : this.logStorageSettings;
     }
 
@@ -114,7 +114,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Integer> maxConcurrentConnections;
 
-    public Output<Integer> getMaxConcurrentConnections() {
+    public Output<Integer> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -125,7 +125,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -136,7 +136,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -147,7 +147,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
 
-    public Output<Object> getRecursive() {
+    public Output<Object> recursive() {
         return this.recursive == null ? Codegen.empty() : this.recursive;
     }
 
@@ -158,7 +158,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
 
-    public Output<Object> getStoreSettings() {
+    public Output<Object> storeSettings() {
         return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
     }
 
@@ -170,7 +170,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +181,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 

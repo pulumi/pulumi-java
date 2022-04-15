@@ -49,7 +49,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Configuration of OpenShift cluster VMs.
      * 
      */
-    public Output</* @Nullable */ List<OpenShiftManagedClusterAgentPoolProfileResponse>> getAgentPoolProfiles() {
+    public Output</* @Nullable */ List<OpenShiftManagedClusterAgentPoolProfileResponse>> agentPoolProfiles() {
         return this.agentPoolProfiles;
     }
     /**
@@ -63,7 +63,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Configures OpenShift authentication.
      * 
      */
-    public Output</* @Nullable */ OpenShiftManagedClusterAuthProfileResponse> getAuthProfile() {
+    public Output</* @Nullable */ OpenShiftManagedClusterAuthProfileResponse> authProfile() {
         return this.authProfile;
     }
     /**
@@ -77,7 +77,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Version of OpenShift specified when creating the cluster.
      * 
      */
-    public Output<String> getClusterVersion() {
+    public Output<String> clusterVersion() {
         return this.clusterVersion;
     }
     /**
@@ -91,7 +91,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Service generated FQDN for OpenShift API server loadbalancer internal hostname.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -105,7 +105,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -119,7 +119,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Configuration for OpenShift master VMs.
      * 
      */
-    public Output</* @Nullable */ OpenShiftManagedClusterMasterPoolProfileResponse> getMasterPoolProfile() {
+    public Output</* @Nullable */ OpenShiftManagedClusterMasterPoolProfileResponse> masterPoolProfile() {
         return this.masterPoolProfile;
     }
     /**
@@ -133,7 +133,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +147,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Configuration for OpenShift networking.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> getNetworkProfile() {
+    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
         return this.networkProfile;
     }
     /**
@@ -161,7 +161,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Version of OpenShift specified when creating the cluster.
      * 
      */
-    public Output<String> getOpenShiftVersion() {
+    public Output<String> openShiftVersion() {
         return this.openShiftVersion;
     }
     /**
@@ -175,7 +175,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Define the resource plan as required by ARM for billing purposes
      * 
      */
-    public Output</* @Nullable */ PurchasePlanResponse> getPlan() {
+    public Output</* @Nullable */ PurchasePlanResponse> plan() {
         return this.plan;
     }
     /**
@@ -189,7 +189,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -203,7 +203,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Service generated FQDN for OpenShift API server.
      * 
      */
-    public Output<String> getPublicHostname() {
+    public Output<String> publicHostname() {
         return this.publicHostname;
     }
     /**
@@ -217,7 +217,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Configuration for OpenShift router(s).
      * 
      */
-    public Output</* @Nullable */ List<OpenShiftRouterProfileResponse>> getRouterProfiles() {
+    public Output</* @Nullable */ List<OpenShiftRouterProfileResponse>> routerProfiles() {
         return this.routerProfiles;
     }
     /**
@@ -231,7 +231,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -245,7 +245,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

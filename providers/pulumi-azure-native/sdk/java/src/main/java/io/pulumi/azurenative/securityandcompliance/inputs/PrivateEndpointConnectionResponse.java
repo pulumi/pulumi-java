@@ -28,7 +28,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -39,7 +39,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -50,7 +50,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
-    public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
+    public Optional<PrivateEndpointResponse> privateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
@@ -61,7 +61,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
-    public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
+    public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
@@ -72,7 +72,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -83,7 +83,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
 
@@ -94,7 +94,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

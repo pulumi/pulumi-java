@@ -26,7 +26,7 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     @Import(name="keyVaultSecretId")
       private final @Nullable Output<String> keyVaultSecretId;
 
-    public Output<String> getKeyVaultSecretId() {
+    public Output<String> keyVaultSecretId() {
         return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
     }
 
@@ -37,7 +37,7 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

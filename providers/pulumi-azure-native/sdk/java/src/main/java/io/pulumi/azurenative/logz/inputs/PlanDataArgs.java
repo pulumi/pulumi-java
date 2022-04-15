@@ -22,7 +22,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingCycle")
       private final @Nullable Output<String> billingCycle;
 
-    public Output<String> getBillingCycle() {
+    public Output<String> billingCycle() {
         return this.billingCycle == null ? Codegen.empty() : this.billingCycle;
     }
 
@@ -33,7 +33,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="effectiveDate")
       private final @Nullable Output<String> effectiveDate;
 
-    public Output<String> getEffectiveDate() {
+    public Output<String> effectiveDate() {
         return this.effectiveDate == null ? Codegen.empty() : this.effectiveDate;
     }
 
@@ -44,7 +44,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="planDetails")
       private final @Nullable Output<String> planDetails;
 
-    public Output<String> getPlanDetails() {
+    public Output<String> planDetails() {
         return this.planDetails == null ? Codegen.empty() : this.planDetails;
     }
 
@@ -55,7 +55,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usageType")
       private final @Nullable Output<String> usageType;
 
-    public Output<String> getUsageType() {
+    public Output<String> usageType() {
         return this.usageType == null ? Codegen.empty() : this.usageType;
     }
 

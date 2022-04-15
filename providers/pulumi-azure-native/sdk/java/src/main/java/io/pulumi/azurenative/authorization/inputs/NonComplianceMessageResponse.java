@@ -25,7 +25,7 @@ public final class NonComplianceMessageResponse extends io.pulumi.resources.Invo
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -36,7 +36,7 @@ public final class NonComplianceMessageResponse extends io.pulumi.resources.Invo
     @Import(name="policyDefinitionReferenceId")
       private final @Nullable String policyDefinitionReferenceId;
 
-    public Optional<String> getPolicyDefinitionReferenceId() {
+    public Optional<String> policyDefinitionReferenceId() {
         return this.policyDefinitionReferenceId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 

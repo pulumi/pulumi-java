@@ -22,7 +22,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="billingAccountName", required=true)
       private final Output<String> billingAccountName;
 
-    public Output<String> getBillingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -33,7 +33,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="billingRoleAssignmentName")
       private final @Nullable Output<String> billingRoleAssignmentName;
 
-    public Output<String> getBillingRoleAssignmentName() {
+    public Output<String> billingRoleAssignmentName() {
         return this.billingRoleAssignmentName == null ? Codegen.empty() : this.billingRoleAssignmentName;
     }
 
@@ -44,7 +44,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
@@ -55,7 +55,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="principalTenantId")
       private final @Nullable Output<String> principalTenantId;
 
-    public Output<String> getPrincipalTenantId() {
+    public Output<String> principalTenantId() {
         return this.principalTenantId == null ? Codegen.empty() : this.principalTenantId;
     }
 
@@ -66,7 +66,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
+    public Output<String> roleDefinitionId() {
         return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
@@ -77,7 +77,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="userAuthenticationType")
       private final @Nullable Output<String> userAuthenticationType;
 
-    public Output<String> getUserAuthenticationType() {
+    public Output<String> userAuthenticationType() {
         return this.userAuthenticationType == null ? Codegen.empty() : this.userAuthenticationType;
     }
 
@@ -88,7 +88,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="userEmailAddress")
       private final @Nullable Output<String> userEmailAddress;
 
-    public Output<String> getUserEmailAddress() {
+    public Output<String> userEmailAddress() {
         return this.userEmailAddress == null ? Codegen.empty() : this.userEmailAddress;
     }
 

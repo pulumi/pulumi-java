@@ -31,7 +31,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -42,7 +42,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -53,7 +53,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="folder")
       private final @Nullable DataFlowResponseFolder folder;
 
-    public Optional<DataFlowResponseFolder> getFolder() {
+    public Optional<DataFlowResponseFolder> folder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
@@ -64,7 +64,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="script")
       private final @Nullable String script;
 
-    public Optional<String> getScript() {
+    public Optional<String> script() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
     }
 
@@ -75,7 +75,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scriptLines")
       private final @Nullable List<String> scriptLines;
 
-    public List<String> getScriptLines() {
+    public List<String> scriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
     }
 
@@ -86,7 +86,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sinks")
       private final @Nullable List<DataFlowSinkResponse> sinks;
 
-    public List<DataFlowSinkResponse> getSinks() {
+    public List<DataFlowSinkResponse> sinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
 
@@ -97,7 +97,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sources")
       private final @Nullable List<DataFlowSourceResponse> sources;
 
-    public List<DataFlowSourceResponse> getSources() {
+    public List<DataFlowSourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
 
@@ -108,7 +108,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="transformations")
       private final @Nullable List<TransformationResponse> transformations;
 
-    public List<TransformationResponse> getTransformations() {
+    public List<TransformationResponse> transformations() {
         return this.transformations == null ? List.of() : this.transformations;
     }
 
@@ -120,7 +120,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

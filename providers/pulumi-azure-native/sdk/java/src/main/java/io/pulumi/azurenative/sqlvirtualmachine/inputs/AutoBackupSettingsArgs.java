@@ -31,7 +31,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backupScheduleType")
       private final @Nullable Output<Either<String,BackupScheduleType>> backupScheduleType;
 
-    public Output<Either<String,BackupScheduleType>> getBackupScheduleType() {
+    public Output<Either<String,BackupScheduleType>> backupScheduleType() {
         return this.backupScheduleType == null ? Codegen.empty() : this.backupScheduleType;
     }
 
@@ -42,7 +42,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="backupSystemDbs")
       private final @Nullable Output<Boolean> backupSystemDbs;
 
-    public Output<Boolean> getBackupSystemDbs() {
+    public Output<Boolean> backupSystemDbs() {
         return this.backupSystemDbs == null ? Codegen.empty() : this.backupSystemDbs;
     }
 
@@ -53,7 +53,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -64,7 +64,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enableEncryption")
       private final @Nullable Output<Boolean> enableEncryption;
 
-    public Output<Boolean> getEnableEncryption() {
+    public Output<Boolean> enableEncryption() {
         return this.enableEncryption == null ? Codegen.empty() : this.enableEncryption;
     }
 
@@ -75,7 +75,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fullBackupFrequency")
       private final @Nullable Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency;
 
-    public Output<Either<String,FullBackupFrequencyType>> getFullBackupFrequency() {
+    public Output<Either<String,FullBackupFrequencyType>> fullBackupFrequency() {
         return this.fullBackupFrequency == null ? Codegen.empty() : this.fullBackupFrequency;
     }
 
@@ -86,7 +86,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fullBackupStartTime")
       private final @Nullable Output<Integer> fullBackupStartTime;
 
-    public Output<Integer> getFullBackupStartTime() {
+    public Output<Integer> fullBackupStartTime() {
         return this.fullBackupStartTime == null ? Codegen.empty() : this.fullBackupStartTime;
     }
 
@@ -97,7 +97,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fullBackupWindowHours")
       private final @Nullable Output<Integer> fullBackupWindowHours;
 
-    public Output<Integer> getFullBackupWindowHours() {
+    public Output<Integer> fullBackupWindowHours() {
         return this.fullBackupWindowHours == null ? Codegen.empty() : this.fullBackupWindowHours;
     }
 
@@ -108,7 +108,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logBackupFrequency")
       private final @Nullable Output<Integer> logBackupFrequency;
 
-    public Output<Integer> getLogBackupFrequency() {
+    public Output<Integer> logBackupFrequency() {
         return this.logBackupFrequency == null ? Codegen.empty() : this.logBackupFrequency;
     }
 
@@ -119,7 +119,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -130,7 +130,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="retentionPeriod")
       private final @Nullable Output<Integer> retentionPeriod;
 
-    public Output<Integer> getRetentionPeriod() {
+    public Output<Integer> retentionPeriod() {
         return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
@@ -141,7 +141,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageAccessKey")
       private final @Nullable Output<String> storageAccessKey;
 
-    public Output<String> getStorageAccessKey() {
+    public Output<String> storageAccessKey() {
         return this.storageAccessKey == null ? Codegen.empty() : this.storageAccessKey;
     }
 
@@ -152,7 +152,7 @@ public final class AutoBackupSettingsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageAccountUrl")
       private final @Nullable Output<String> storageAccountUrl;
 
-    public Output<String> getStorageAccountUrl() {
+    public Output<String> storageAccountUrl() {
         return this.storageAccountUrl == null ? Codegen.empty() : this.storageAccountUrl;
     }
 

@@ -28,7 +28,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -39,7 +39,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,StorageAccountType>> type;
 
-    public Output<Either<String,StorageAccountType>> getType() {
+    public Output<Either<String,StorageAccountType>> type() {
         return this.type;
     }
 

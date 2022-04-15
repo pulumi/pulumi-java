@@ -34,7 +34,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="accountKey")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> getAccountKey() {
+    public Output<AzureKeyVaultSecretReferenceArgs> accountKey() {
         return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
@@ -45,7 +45,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -56,7 +56,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -67,7 +67,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
-    public Output<Object> getConnectionString() {
+    public Output<Object> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -78,7 +78,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -89,7 +89,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -100,7 +100,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="fileShare")
       private final @Nullable Output<Object> fileShare;
 
-    public Output<Object> getFileShare() {
+    public Output<Object> fileShare() {
         return this.fileShare == null ? Codegen.empty() : this.fileShare;
     }
 
@@ -111,7 +111,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="host")
       private final @Nullable Output<Object> host;
 
-    public Output<Object> getHost() {
+    public Output<Object> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -122,7 +122,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -133,7 +133,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -144,7 +144,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="sasToken")
       private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> getSasToken() {
+    public Output<AzureKeyVaultSecretReferenceArgs> sasToken() {
         return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 
@@ -155,7 +155,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="sasUri")
       private final @Nullable Output<Object> sasUri;
 
-    public Output<Object> getSasUri() {
+    public Output<Object> sasUri() {
         return this.sasUri == null ? Codegen.empty() : this.sasUri;
     }
 
@@ -166,7 +166,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="snapshot")
       private final @Nullable Output<Object> snapshot;
 
-    public Output<Object> getSnapshot() {
+    public Output<Object> snapshot() {
         return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
@@ -178,7 +178,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -189,7 +189,7 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     @Import(name="userId")
       private final @Nullable Output<Object> userId;
 
-    public Output<Object> getUserId() {
+    public Output<Object> userId() {
         return this.userId == null ? Codegen.empty() : this.userId;
     }
 

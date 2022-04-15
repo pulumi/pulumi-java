@@ -127,98 +127,98 @@ public final class CognitiveServicesAccountPropertiesResponse {
      * The api properties for special APIs.
      * 
     */
-    public Optional<CognitiveServicesAccountApiPropertiesResponse> getApiProperties() {
+    public Optional<CognitiveServicesAccountApiPropertiesResponse> apiProperties() {
         return Optional.ofNullable(this.apiProperties);
     }
     /**
      * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
      * 
     */
-    public List<SkuCapabilityResponse> getCapabilities() {
+    public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities;
     }
     /**
      * Optional subdomain name used for token-based authentication.
      * 
     */
-    public Optional<String> getCustomSubDomainName() {
+    public Optional<String> customSubDomainName() {
         return Optional.ofNullable(this.customSubDomainName);
     }
     /**
      * Gets the date of cognitive services account creation.
      * 
     */
-    public String getDateCreated() {
+    public String dateCreated() {
         return this.dateCreated;
     }
     /**
      * The encryption properties for this resource.
      * 
     */
-    public Optional<EncryptionResponse> getEncryption() {
+    public Optional<EncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Endpoint of the created account.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The internal identifier.
      * 
     */
-    public String getInternalId() {
+    public String internalId() {
         return this.internalId;
     }
     /**
      * If the resource is migrated from an existing key.
      * 
     */
-    public Boolean getIsMigrated() {
+    public Boolean isMigrated() {
         return this.isMigrated;
     }
     /**
      * A collection of rules governing the accessibility from specific network locations.
      * 
     */
-    public Optional<NetworkRuleSetResponse> getNetworkAcls() {
+    public Optional<NetworkRuleSetResponse> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
     /**
      * The private endpoint connection associated with the Cognitive Services account.
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * Gets the status of the cognitive services account at the time the operation was called.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Sku change info of account.
      * 
     */
-    public CognitiveServicesAccountSkuChangeInfoResponse getSkuChangeInfo() {
+    public CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo() {
         return this.skuChangeInfo;
     }
     /**
      * The storage accounts for this resource.
      * 
     */
-    public List<UserOwnedStorageResponse> getUserOwnedStorage() {
+    public List<UserOwnedStorageResponse> userOwnedStorage() {
         return this.userOwnedStorage == null ? List.of() : this.userOwnedStorage;
     }
 

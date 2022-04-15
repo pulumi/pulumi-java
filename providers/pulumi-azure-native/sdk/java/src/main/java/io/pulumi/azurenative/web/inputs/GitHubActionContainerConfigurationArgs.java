@@ -26,7 +26,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
@@ -37,7 +37,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -48,7 +48,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     @Import(name="serverUrl")
       private final @Nullable Output<String> serverUrl;
 
-    public Output<String> getServerUrl() {
+    public Output<String> serverUrl() {
         return this.serverUrl == null ? Codegen.empty() : this.serverUrl;
     }
 
@@ -59,7 +59,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

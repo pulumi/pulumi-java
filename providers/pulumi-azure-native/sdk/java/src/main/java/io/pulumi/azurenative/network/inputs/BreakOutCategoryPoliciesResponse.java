@@ -25,7 +25,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
     @Import(name="allow")
       private final @Nullable Boolean allow;
 
-    public Optional<Boolean> getAllow() {
+    public Optional<Boolean> allow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
     }
 
@@ -36,7 +36,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
     @Import(name="default")
       private final @Nullable Boolean default_;
 
-    public Optional<Boolean> getDefault_() {
+    public Optional<Boolean> default_() {
         return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
     }
 
@@ -47,7 +47,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
     @Import(name="optimize")
       private final @Nullable Boolean optimize;
 
-    public Optional<Boolean> getOptimize() {
+    public Optional<Boolean> optimize() {
         return this.optimize == null ? Optional.empty() : Optional.ofNullable(this.optimize);
     }
 

@@ -21,7 +21,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
     @Import(name="expand")
       private final @Nullable String expand;
 
-    public Optional<String> getExpand() {
+    public Optional<String> expand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
@@ -32,7 +32,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -43,7 +43,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +54,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
     @Import(name="runCommandName", required=true)
       private final String runCommandName;
 
-    public String getRunCommandName() {
+    public String runCommandName() {
         return this.runCommandName;
     }
 
@@ -65,7 +65,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
     @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;
 
-    public String getVmScaleSetName() {
+    public String vmScaleSetName() {
         return this.vmScaleSetName;
     }
 

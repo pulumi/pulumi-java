@@ -24,7 +24,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +35,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelFunctions")
       private final @Nullable Output<List<String>> channelFunctions;
 
-    public Output<List<String>> getChannelFunctions() {
+    public Output<List<String>> channelFunctions() {
         return this.channelFunctions == null ? Codegen.empty() : this.channelFunctions;
     }
 
@@ -46,7 +46,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
-    public Output<String> getChannelName() {
+    public Output<String> channelName() {
         return this.channelName == null ? Codegen.empty() : this.channelName;
     }
 
@@ -57,7 +57,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelType", required=true)
       private final Output<String> channelType;
 
-    public Output<String> getChannelType() {
+    public Output<String> channelType() {
         return this.channelType;
     }
 
@@ -68,7 +68,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<Map<String,String>> credentials;
 
-    public Output<Map<String,String>> getCredentials() {
+    public Output<Map<String,String>> credentials() {
         return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
@@ -79,7 +79,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -28,7 +28,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="adminGroupObjectIDs")
       private final @Nullable Output<List<String>> adminGroupObjectIDs;
 
-    public Output<List<String>> getAdminGroupObjectIDs() {
+    public Output<List<String>> adminGroupObjectIDs() {
         return this.adminGroupObjectIDs == null ? Codegen.empty() : this.adminGroupObjectIDs;
     }
 
@@ -39,7 +39,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="clientAppID")
       private final @Nullable Output<String> clientAppID;
 
-    public Output<String> getClientAppID() {
+    public Output<String> clientAppID() {
         return this.clientAppID == null ? Codegen.empty() : this.clientAppID;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="enableAzureRBAC")
       private final @Nullable Output<Boolean> enableAzureRBAC;
 
-    public Output<Boolean> getEnableAzureRBAC() {
+    public Output<Boolean> enableAzureRBAC() {
         return this.enableAzureRBAC == null ? Codegen.empty() : this.enableAzureRBAC;
     }
 
@@ -61,7 +61,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="managed")
       private final @Nullable Output<Boolean> managed;
 
-    public Output<Boolean> getManaged() {
+    public Output<Boolean> managed() {
         return this.managed == null ? Codegen.empty() : this.managed;
     }
 
@@ -72,7 +72,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="serverAppID")
       private final @Nullable Output<String> serverAppID;
 
-    public Output<String> getServerAppID() {
+    public Output<String> serverAppID() {
         return this.serverAppID == null ? Codegen.empty() : this.serverAppID;
     }
 
@@ -83,7 +83,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="serverAppSecret")
       private final @Nullable Output<String> serverAppSecret;
 
-    public Output<String> getServerAppSecret() {
+    public Output<String> serverAppSecret() {
         return this.serverAppSecret == null ? Codegen.empty() : this.serverAppSecret;
     }
 
@@ -94,7 +94,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
     @Import(name="tenantID")
       private final @Nullable Output<String> tenantID;
 
-    public Output<String> getTenantID() {
+    public Output<String> tenantID() {
         return this.tenantID == null ? Codegen.empty() : this.tenantID;
     }
 

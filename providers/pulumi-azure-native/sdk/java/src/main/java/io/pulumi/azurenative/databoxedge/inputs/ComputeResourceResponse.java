@@ -24,7 +24,7 @@ public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="memoryInGB", required=true)
       private final Double memoryInGB;
 
-    public Double getMemoryInGB() {
+    public Double memoryInGB() {
         return this.memoryInGB;
     }
 
@@ -35,7 +35,7 @@ public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArg
     @Import(name="processorCount", required=true)
       private final Integer processorCount;
 
-    public Integer getProcessorCount() {
+    public Integer processorCount() {
         return this.processorCount;
     }
 

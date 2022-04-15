@@ -26,7 +26,7 @@ public final class ListNamedValueResult {
      * This is secret value of the NamedValue entity.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

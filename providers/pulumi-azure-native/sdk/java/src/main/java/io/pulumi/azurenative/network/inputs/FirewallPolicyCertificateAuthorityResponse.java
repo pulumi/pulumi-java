@@ -25,7 +25,7 @@ public final class FirewallPolicyCertificateAuthorityResponse extends io.pulumi.
     @Import(name="keyVaultSecretId")
       private final @Nullable String keyVaultSecretId;
 
-    public Optional<String> getKeyVaultSecretId() {
+    public Optional<String> keyVaultSecretId() {
         return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
     }
 
@@ -36,7 +36,7 @@ public final class FirewallPolicyCertificateAuthorityResponse extends io.pulumi.
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

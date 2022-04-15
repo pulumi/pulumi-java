@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
 
-    public Output<String> getPeConnectionName() {
+    public Output<String> peConnectionName() {
         return this.peConnectionName == null ? Codegen.empty() : this.peConnectionName;
     }
 
@@ -33,7 +33,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +44,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 

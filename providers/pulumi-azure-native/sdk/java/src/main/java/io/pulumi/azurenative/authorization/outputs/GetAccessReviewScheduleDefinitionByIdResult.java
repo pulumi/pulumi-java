@@ -242,217 +242,217 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
      * The role assignment state eligible/active to review
      * 
     */
-    public String getAssignmentState() {
+    public String assignmentState() {
         return this.assignmentState;
     }
     /**
      * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
      * 
     */
-    public Optional<Boolean> getAutoApplyDecisionsEnabled() {
+    public Optional<Boolean> autoApplyDecisionsEnabled() {
         return Optional.ofNullable(this.autoApplyDecisionsEnabled);
     }
     /**
      * This is the collection of backup reviewers.
      * 
     */
-    public List<AccessReviewReviewerResponse> getBackupReviewers() {
+    public List<AccessReviewReviewerResponse> backupReviewers() {
         return this.backupReviewers == null ? List.of() : this.backupReviewers;
     }
     /**
      * This specifies the behavior for the autoReview feature when an access review completes.
      * 
     */
-    public Optional<String> getDefaultDecision() {
+    public Optional<String> defaultDecision() {
         return Optional.ofNullable(this.defaultDecision);
     }
     /**
      * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
      * 
     */
-    public Optional<Boolean> getDefaultDecisionEnabled() {
+    public Optional<Boolean> defaultDecisionEnabled() {
         return Optional.ofNullable(this.defaultDecisionEnabled);
     }
     /**
      * The description provided by the access review creator and visible to admins.
      * 
     */
-    public Optional<String> getDescriptionForAdmins() {
+    public Optional<String> descriptionForAdmins() {
         return Optional.ofNullable(this.descriptionForAdmins);
     }
     /**
      * The description provided by the access review creator to be shown to reviewers.
      * 
     */
-    public Optional<String> getDescriptionForReviewers() {
+    public Optional<String> descriptionForReviewers() {
         return Optional.ofNullable(this.descriptionForReviewers);
     }
     /**
      * The display name for the schedule definition.
      * 
     */
-    public Optional<String> getDisplayName() {
+    public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The DateTime when the review is scheduled to end. Required if type is endDate
      * 
     */
-    public Optional<String> getEndDate() {
+    public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
      * The access review schedule definition id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
     */
-    public Optional<String> getInactiveDuration() {
+    public Optional<String> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
     /**
      * The duration in days for an instance.
      * 
     */
-    public Optional<Integer> getInstanceDurationInDays() {
+    public Optional<Integer> instanceDurationInDays() {
         return Optional.ofNullable(this.instanceDurationInDays);
     }
     /**
      * This is the collection of instances returned when one does an expand on it.
      * 
     */
-    public List<AccessReviewInstanceResponse> getInstances() {
+    public List<AccessReviewInstanceResponse> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
     */
-    public Optional<Integer> getInterval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
      * 
     */
-    public Optional<Boolean> getJustificationRequiredOnApproval() {
+    public Optional<Boolean> justificationRequiredOnApproval() {
         return Optional.ofNullable(this.justificationRequiredOnApproval);
     }
     /**
      * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
      * 
     */
-    public Optional<Boolean> getMailNotificationsEnabled() {
+    public Optional<Boolean> mailNotificationsEnabled() {
         return Optional.ofNullable(this.mailNotificationsEnabled);
     }
     /**
      * The access review schedule definition unique id.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
     */
-    public Optional<Integer> getNumberOfOccurrences() {
+    public Optional<Integer> numberOfOccurrences() {
         return Optional.ofNullable(this.numberOfOccurrences);
     }
     /**
      * The identity id
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * The identity display name
      * 
     */
-    public String getPrincipalName() {
+    public String principalName() {
         return this.principalName;
     }
     /**
      * The identity type user/servicePrincipal to review
      * 
     */
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
     /**
      * Flag to indicate whether showing recommendations to reviewers is enabled.
      * 
     */
-    public Optional<Boolean> getRecommendationsEnabled() {
+    public Optional<Boolean> recommendationsEnabled() {
         return Optional.ofNullable(this.recommendationsEnabled);
     }
     /**
      * Flag to indicate whether sending reminder emails to reviewers are enabled.
      * 
     */
-    public Optional<Boolean> getReminderNotificationsEnabled() {
+    public Optional<Boolean> reminderNotificationsEnabled() {
         return Optional.ofNullable(this.reminderNotificationsEnabled);
     }
     /**
      * ResourceId in which this review is getting created
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * This is the collection of reviewers.
      * 
     */
-    public List<AccessReviewReviewerResponse> getReviewers() {
+    public List<AccessReviewReviewerResponse> reviewers() {
         return this.reviewers == null ? List.of() : this.reviewers;
     }
     /**
      * This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
      * 
     */
-    public String getReviewersType() {
+    public String reviewersType() {
         return this.reviewersType;
     }
     /**
      * This is used to indicate the role being reviewed
      * 
     */
-    public String getRoleDefinitionId() {
+    public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
     */
-    public Optional<String> getStartDate() {
+    public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
      * This read-only field specifies the status of an accessReview.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The user principal name(if valid)
      * 
     */
-    public String getUserPrincipalName() {
+    public String userPrincipalName() {
         return this.userPrincipalName;
     }
 

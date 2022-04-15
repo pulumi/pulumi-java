@@ -27,7 +27,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -38,7 +38,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -49,7 +49,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -61,7 +61,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,7 +72,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

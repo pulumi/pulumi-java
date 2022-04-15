@@ -26,7 +26,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database == null ? Codegen.empty() : this.database;
     }
 
@@ -37,7 +37,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -48,7 +48,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="server")
       private final @Nullable Output<String> server;
 
-    public Output<String> getServer() {
+    public Output<String> server() {
         return this.server == null ? Codegen.empty() : this.server;
     }
 
@@ -59,7 +59,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="table")
       private final @Nullable Output<String> table;
 
-    public Output<String> getTable() {
+    public Output<String> table() {
         return this.table == null ? Codegen.empty() : this.table;
     }
 
@@ -71,7 +71,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,7 +82,7 @@ public final class AzureSqlDatabaseOutputDataSourceArgs extends io.pulumi.resour
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user == null ? Codegen.empty() : this.user;
     }
 

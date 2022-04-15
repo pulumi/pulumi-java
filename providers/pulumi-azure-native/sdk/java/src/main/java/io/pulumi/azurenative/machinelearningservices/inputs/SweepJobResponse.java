@@ -39,7 +39,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -50,7 +50,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="compute", required=true)
       private final ComputeConfigurationResponse compute;
 
-    public ComputeConfigurationResponse getCompute() {
+    public ComputeConfigurationResponse compute() {
         return this.compute;
     }
 
@@ -61,7 +61,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -72,7 +72,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="earlyTermination")
       private final @Nullable Object earlyTermination;
 
-    public Object getEarlyTermination() {
+    public Object earlyTermination() {
         return this.earlyTermination == null ? null : this.earlyTermination;
     }
 
@@ -83,7 +83,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="experimentName")
       private final @Nullable String experimentName;
 
-    public Optional<String> getExperimentName() {
+    public Optional<String> experimentName() {
         return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
     }
 
@@ -95,7 +95,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="identity")
       private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
-    public Either<AmlTokenResponse,ManagedIdentityResponse> getIdentity() {
+    public Either<AmlTokenResponse,ManagedIdentityResponse> identity() {
         return this.identity == null ? null : this.identity;
     }
 
@@ -107,7 +107,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="interactionEndpoints", required=true)
       private final Map<String,JobEndpointResponse> interactionEndpoints;
 
-    public Map<String,JobEndpointResponse> getInteractionEndpoints() {
+    public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
 
@@ -119,7 +119,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobType", required=true)
       private final String jobType;
 
-    public String getJobType() {
+    public String jobType() {
         return this.jobType;
     }
 
@@ -130,7 +130,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxConcurrentTrials")
       private final @Nullable Integer maxConcurrentTrials;
 
-    public Optional<Integer> getMaxConcurrentTrials() {
+    public Optional<Integer> maxConcurrentTrials() {
         return this.maxConcurrentTrials == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentTrials);
     }
 
@@ -141,7 +141,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxTotalTrials")
       private final @Nullable Integer maxTotalTrials;
 
-    public Optional<Integer> getMaxTotalTrials() {
+    public Optional<Integer> maxTotalTrials() {
         return this.maxTotalTrials == null ? Optional.empty() : Optional.ofNullable(this.maxTotalTrials);
     }
 
@@ -152,7 +152,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="objective", required=true)
       private final ObjectiveResponse objective;
 
-    public ObjectiveResponse getObjective() {
+    public ObjectiveResponse objective() {
         return this.objective;
     }
 
@@ -163,7 +163,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="output", required=true)
       private final JobOutputResponse output;
 
-    public JobOutputResponse getOutput() {
+    public JobOutputResponse output() {
         return this.output;
     }
 
@@ -175,7 +175,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="priority")
       private final @Nullable Integer priority;
 
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
@@ -186,7 +186,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -197,7 +197,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -208,7 +208,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="searchSpace", required=true)
       private final Map<String,Object> searchSpace;
 
-    public Map<String,Object> getSearchSpace() {
+    public Map<String,Object> searchSpace() {
         return this.searchSpace;
     }
 
@@ -219,7 +219,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 
@@ -230,7 +230,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -241,7 +241,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="timeout")
       private final @Nullable String timeout;
 
-    public Optional<String> getTimeout() {
+    public Optional<String> timeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
@@ -252,7 +252,7 @@ public final class SweepJobResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="trial")
       private final @Nullable TrialComponentResponse trial;
 
-    public Optional<TrialComponentResponse> getTrial() {
+    public Optional<TrialComponentResponse> trial() {
         return this.trial == null ? Optional.empty() : Optional.ofNullable(this.trial);
     }
 

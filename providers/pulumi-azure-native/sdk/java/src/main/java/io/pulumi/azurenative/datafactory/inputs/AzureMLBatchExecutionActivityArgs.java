@@ -34,7 +34,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> getDependsOn() {
+    public Output<List<ActivityDependencyArgs>> dependsOn() {
         return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
@@ -45,7 +45,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="globalParameters")
       private final @Nullable Output<Map<String,Object>> globalParameters;
 
-    public Output<Map<String,Object>> getGlobalParameters() {
+    public Output<Map<String,Object>> globalParameters() {
         return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
     }
 
@@ -67,7 +67,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
@@ -78,7 +78,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -89,7 +89,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> getPolicy() {
+    public Output<ActivityPolicyArgs> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -101,7 +101,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -112,7 +112,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> getUserProperties() {
+    public Output<List<UserPropertyArgs>> userProperties() {
         return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
@@ -123,7 +123,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="webServiceInputs")
       private final @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs;
 
-    public Output<Map<String,AzureMLWebServiceFileArgs>> getWebServiceInputs() {
+    public Output<Map<String,AzureMLWebServiceFileArgs>> webServiceInputs() {
         return this.webServiceInputs == null ? Codegen.empty() : this.webServiceInputs;
     }
 
@@ -134,7 +134,7 @@ public final class AzureMLBatchExecutionActivityArgs extends io.pulumi.resources
     @Import(name="webServiceOutputs")
       private final @Nullable Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs;
 
-    public Output<Map<String,AzureMLWebServiceFileArgs>> getWebServiceOutputs() {
+    public Output<Map<String,AzureMLWebServiceFileArgs>> webServiceOutputs() {
         return this.webServiceOutputs == null ? Codegen.empty() : this.webServiceOutputs;
     }
 

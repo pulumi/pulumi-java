@@ -32,7 +32,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="assignmentType")
       private final @Nullable Output<Either<String,AssignmentType>> assignmentType;
 
-    public Output<Either<String,AssignmentType>> getAssignmentType() {
+    public Output<Either<String,AssignmentType>> assignmentType() {
         return this.assignmentType == null ? Codegen.empty() : this.assignmentType;
     }
 
@@ -43,7 +43,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="configurationParameter")
       private final @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
 
-    public Output<List<ConfigurationParameterArgs>> getConfigurationParameter() {
+    public Output<List<ConfigurationParameterArgs>> configurationParameter() {
         return this.configurationParameter == null ? Codegen.empty() : this.configurationParameter;
     }
 
@@ -54,7 +54,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="configurationProtectedParameter")
       private final @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
-    public Output<List<ConfigurationParameterArgs>> getConfigurationProtectedParameter() {
+    public Output<List<ConfigurationParameterArgs>> configurationProtectedParameter() {
         return this.configurationProtectedParameter == null ? Codegen.empty() : this.configurationProtectedParameter;
     }
 
@@ -65,7 +65,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="configurationSetting")
       private final @Nullable Output<ConfigurationSettingArgs> configurationSetting;
 
-    public Output<ConfigurationSettingArgs> getConfigurationSetting() {
+    public Output<ConfigurationSettingArgs> configurationSetting() {
         return this.configurationSetting == null ? Codegen.empty() : this.configurationSetting;
     }
 
@@ -76,7 +76,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
-    public Output<String> getContentHash() {
+    public Output<String> contentHash() {
         return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
@@ -87,7 +87,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="contentUri")
       private final @Nullable Output<String> contentUri;
 
-    public Output<String> getContentUri() {
+    public Output<String> contentUri() {
         return this.contentUri == null ? Codegen.empty() : this.contentUri;
     }
 
@@ -98,7 +98,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -109,7 +109,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -120,7 +120,7 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

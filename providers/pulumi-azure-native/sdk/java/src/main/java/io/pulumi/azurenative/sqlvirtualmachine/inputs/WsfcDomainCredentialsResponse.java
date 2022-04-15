@@ -25,7 +25,7 @@ public final class WsfcDomainCredentialsResponse extends io.pulumi.resources.Inv
     @Import(name="clusterBootstrapAccountPassword")
       private final @Nullable String clusterBootstrapAccountPassword;
 
-    public Optional<String> getClusterBootstrapAccountPassword() {
+    public Optional<String> clusterBootstrapAccountPassword() {
         return this.clusterBootstrapAccountPassword == null ? Optional.empty() : Optional.ofNullable(this.clusterBootstrapAccountPassword);
     }
 
@@ -36,7 +36,7 @@ public final class WsfcDomainCredentialsResponse extends io.pulumi.resources.Inv
     @Import(name="clusterOperatorAccountPassword")
       private final @Nullable String clusterOperatorAccountPassword;
 
-    public Optional<String> getClusterOperatorAccountPassword() {
+    public Optional<String> clusterOperatorAccountPassword() {
         return this.clusterOperatorAccountPassword == null ? Optional.empty() : Optional.ofNullable(this.clusterOperatorAccountPassword);
     }
 
@@ -47,7 +47,7 @@ public final class WsfcDomainCredentialsResponse extends io.pulumi.resources.Inv
     @Import(name="sqlServiceAccountPassword")
       private final @Nullable String sqlServiceAccountPassword;
 
-    public Optional<String> getSqlServiceAccountPassword() {
+    public Optional<String> sqlServiceAccountPassword() {
         return this.sqlServiceAccountPassword == null ? Optional.empty() : Optional.ofNullable(this.sqlServiceAccountPassword);
     }
 

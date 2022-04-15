@@ -127,105 +127,105 @@ public final class X12AcknowledgementSettingsResponse {
      * The acknowledgement control number lower bound.
      * 
     */
-    public Integer getAcknowledgementControlNumberLowerBound() {
+    public Integer acknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
     }
     /**
      * The acknowledgement control number prefix.
      * 
     */
-    public Optional<String> getAcknowledgementControlNumberPrefix() {
+    public Optional<String> acknowledgementControlNumberPrefix() {
         return Optional.ofNullable(this.acknowledgementControlNumberPrefix);
     }
     /**
      * The acknowledgement control number suffix.
      * 
     */
-    public Optional<String> getAcknowledgementControlNumberSuffix() {
+    public Optional<String> acknowledgementControlNumberSuffix() {
         return Optional.ofNullable(this.acknowledgementControlNumberSuffix);
     }
     /**
      * The acknowledgement control number upper bound.
      * 
     */
-    public Integer getAcknowledgementControlNumberUpperBound() {
+    public Integer acknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
     }
     /**
      * The value indicating whether to batch functional acknowledgements.
      * 
     */
-    public Boolean getBatchFunctionalAcknowledgements() {
+    public Boolean batchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
     }
     /**
      * The value indicating whether to batch implementation acknowledgements.
      * 
     */
-    public Boolean getBatchImplementationAcknowledgements() {
+    public Boolean batchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
     }
     /**
      * The value indicating whether to batch the technical acknowledgements.
      * 
     */
-    public Boolean getBatchTechnicalAcknowledgements() {
+    public Boolean batchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
     }
     /**
      * The functional acknowledgement version.
      * 
     */
-    public Optional<String> getFunctionalAcknowledgementVersion() {
+    public Optional<String> functionalAcknowledgementVersion() {
         return Optional.ofNullable(this.functionalAcknowledgementVersion);
     }
     /**
      * The implementation acknowledgement version.
      * 
     */
-    public Optional<String> getImplementationAcknowledgementVersion() {
+    public Optional<String> implementationAcknowledgementVersion() {
         return Optional.ofNullable(this.implementationAcknowledgementVersion);
     }
     /**
      * The value indicating whether functional acknowledgement is needed.
      * 
     */
-    public Boolean getNeedFunctionalAcknowledgement() {
+    public Boolean needFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
     }
     /**
      * The value indicating whether implementation acknowledgement is needed.
      * 
     */
-    public Boolean getNeedImplementationAcknowledgement() {
+    public Boolean needImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
     }
     /**
      * The value indicating whether a loop is needed for valid messages.
      * 
     */
-    public Boolean getNeedLoopForValidMessages() {
+    public Boolean needLoopForValidMessages() {
         return this.needLoopForValidMessages;
     }
     /**
      * The value indicating whether technical acknowledgement is needed.
      * 
     */
-    public Boolean getNeedTechnicalAcknowledgement() {
+    public Boolean needTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
     }
     /**
      * The value indicating whether to rollover acknowledgement control number.
      * 
     */
-    public Boolean getRolloverAcknowledgementControlNumber() {
+    public Boolean rolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
     }
     /**
      * The value indicating whether to send synchronous acknowledgement.
      * 
     */
-    public Boolean getSendSynchronousAcknowledgement() {
+    public Boolean sendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
     }
 

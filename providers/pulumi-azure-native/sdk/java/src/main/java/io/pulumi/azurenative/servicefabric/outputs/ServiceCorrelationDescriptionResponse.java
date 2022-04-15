@@ -32,14 +32,14 @@ public final class ServiceCorrelationDescriptionResponse {
      * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
      * 
     */
-    public String getScheme() {
+    public String scheme() {
         return this.scheme;
     }
     /**
      * The name of the service that the correlation relationship is established with.
      * 
     */
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

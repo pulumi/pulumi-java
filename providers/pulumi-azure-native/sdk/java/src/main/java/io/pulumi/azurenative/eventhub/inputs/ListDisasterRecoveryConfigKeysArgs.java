@@ -19,7 +19,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
     @Import(name="alias", required=true)
       private final String alias;
 
-    public String getAlias() {
+    public String alias() {
         return this.alias;
     }
 
@@ -30,7 +30,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
     @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
 
-    public String getAuthorizationRuleName() {
+    public String authorizationRuleName() {
         return this.authorizationRuleName;
     }
 
@@ -41,7 +41,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
     @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
-    public String getNamespaceName() {
+    public String namespaceName() {
         return this.namespaceName;
     }
 
@@ -52,7 +52,7 @@ public final class ListDisasterRecoveryConfigKeysArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -26,7 +26,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="accountName")
       private final @Nullable String accountName;
 
-    public Optional<String> getAccountName() {
+    public Optional<String> accountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
@@ -37,7 +37,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="autoKeyConfigUrl")
       private final @Nullable String autoKeyConfigUrl;
 
-    public Optional<String> getAutoKeyConfigUrl() {
+    public Optional<String> autoKeyConfigUrl() {
         return this.autoKeyConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.autoKeyConfigUrl);
     }
 
@@ -48,7 +48,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -59,7 +59,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="fluentdConfigUrl")
       private final @Nullable Object fluentdConfigUrl;
 
-    public Optional<Object> getFluentdConfigUrl() {
+    public Optional<Object> fluentdConfigUrl() {
         return this.fluentdConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.fluentdConfigUrl);
     }
 
@@ -71,7 +71,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -82,7 +82,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="maConfigUrl")
       private final @Nullable String maConfigUrl;
 
-    public Optional<String> getMaConfigUrl() {
+    public Optional<String> maConfigUrl() {
         return this.maConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.maConfigUrl);
     }
 
@@ -93,7 +93,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -104,7 +104,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
     @Import(name="namespace")
       private final @Nullable String namespace;
 
-    public Optional<String> getNamespace() {
+    public Optional<String> namespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 

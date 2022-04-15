@@ -43,7 +43,7 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +57,7 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
      * @return Properties of the configuration profile assignment.
      * 
      */
-    public Output<ConfigurationProfileAssignmentPropertiesResponse> getProperties() {
+    public Output<ConfigurationProfileAssignmentPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +71,7 @@ public class ConfigurationProfileAssignment extends io.pulumi.resources.CustomRe
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

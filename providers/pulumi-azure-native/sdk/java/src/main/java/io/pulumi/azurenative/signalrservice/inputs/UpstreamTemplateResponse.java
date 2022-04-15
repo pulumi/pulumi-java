@@ -30,7 +30,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="categoryPattern")
       private final @Nullable String categoryPattern;
 
-    public Optional<String> getCategoryPattern() {
+    public Optional<String> categoryPattern() {
         return this.categoryPattern == null ? Optional.empty() : Optional.ofNullable(this.categoryPattern);
     }
 
@@ -45,7 +45,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="eventPattern")
       private final @Nullable String eventPattern;
 
-    public Optional<String> getEventPattern() {
+    public Optional<String> eventPattern() {
         return this.eventPattern == null ? Optional.empty() : Optional.ofNullable(this.eventPattern);
     }
 
@@ -60,7 +60,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="hubPattern")
       private final @Nullable String hubPattern;
 
-    public Optional<String> getHubPattern() {
+    public Optional<String> hubPattern() {
         return this.hubPattern == null ? Optional.empty() : Optional.ofNullable(this.hubPattern);
     }
 
@@ -72,7 +72,7 @@ public final class UpstreamTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="urlTemplate", required=true)
       private final String urlTemplate;
 
-    public String getUrlTemplate() {
+    public String urlTemplate() {
         return this.urlTemplate;
     }
 

@@ -25,7 +25,7 @@ public final class ResourceAccessRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -36,7 +36,7 @@ public final class ResourceAccessRuleResponse extends io.pulumi.resources.Invoke
     @Import(name="tenantId")
       private final @Nullable String tenantId;
 
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 

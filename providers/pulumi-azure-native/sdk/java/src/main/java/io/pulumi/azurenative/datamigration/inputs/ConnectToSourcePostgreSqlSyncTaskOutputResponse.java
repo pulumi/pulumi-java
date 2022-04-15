@@ -25,7 +25,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
     @Import(name="databases", required=true)
       private final List<String> databases;
 
-    public List<String> getDatabases() {
+    public List<String> databases() {
         return this.databases;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
     @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
 
-    public String getSourceServerBrandVersion() {
+    public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
 
@@ -58,7 +58,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
     @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
-    public String getSourceServerVersion() {
+    public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
 
@@ -69,7 +69,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse extends io.pu
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

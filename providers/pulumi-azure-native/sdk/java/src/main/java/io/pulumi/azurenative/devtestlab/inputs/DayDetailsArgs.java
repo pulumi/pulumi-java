@@ -26,7 +26,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="time")
       private final @Nullable Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time == null ? Codegen.empty() : this.time;
     }
 

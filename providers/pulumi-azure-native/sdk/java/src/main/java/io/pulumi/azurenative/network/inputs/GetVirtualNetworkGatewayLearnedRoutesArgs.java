@@ -19,7 +19,7 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends io.pulumi.r
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVirtualNetworkGatewayLearnedRoutesArgs extends io.pulumi.r
     @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
-    public String getVirtualNetworkGatewayName() {
+    public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
 

@@ -108,84 +108,84 @@ public final class GetVirtualRouterResult {
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The Gateway on which VirtualRouter is hosted.
      * 
     */
-    public Optional<SubResourceResponse> getHostedGateway() {
+    public Optional<SubResourceResponse> hostedGateway() {
         return Optional.ofNullable(this.hostedGateway);
     }
     /**
      * The Subnet on which VirtualRouter is hosted.
      * 
     */
-    public Optional<SubResourceResponse> getHostedSubnet() {
+    public Optional<SubResourceResponse> hostedSubnet() {
         return Optional.ofNullable(this.hostedSubnet);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of references to VirtualRouterPeerings.
      * 
     */
-    public List<SubResourceResponse> getPeerings() {
+    public List<SubResourceResponse> peerings() {
         return this.peerings;
     }
     /**
      * The provisioning state of the resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * VirtualRouter ASN.
      * 
     */
-    public Optional<Double> getVirtualRouterAsn() {
+    public Optional<Double> virtualRouterAsn() {
         return Optional.ofNullable(this.virtualRouterAsn);
     }
     /**
      * VirtualRouter IPs.
      * 
     */
-    public List<String> getVirtualRouterIps() {
+    public List<String> virtualRouterIps() {
         return this.virtualRouterIps == null ? List.of() : this.virtualRouterIps;
     }
 

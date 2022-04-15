@@ -25,7 +25,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="exactVersion")
       private final @Nullable String exactVersion;
 
-    public Optional<String> getExactVersion() {
+    public Optional<String> exactVersion() {
         return this.exactVersion == null ? Optional.empty() : Optional.ofNullable(this.exactVersion);
     }
 
@@ -36,7 +36,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="offer")
       private final @Nullable String offer;
 
-    public Optional<String> getOffer() {
+    public Optional<String> offer() {
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
@@ -47,7 +47,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="publisher")
       private final @Nullable String publisher;
 
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
@@ -58,7 +58,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="sku")
       private final @Nullable String sku;
 
-    public Optional<String> getSku() {
+    public Optional<String> sku() {
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
@@ -69,7 +69,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="version")
       private final @Nullable String version;
 
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
     }
 

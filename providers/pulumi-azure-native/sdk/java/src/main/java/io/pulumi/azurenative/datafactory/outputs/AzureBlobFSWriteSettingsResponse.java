@@ -57,28 +57,28 @@ public final class AzureBlobFSWriteSettingsResponse {
      * Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getBlockSizeInMB() {
+    public Optional<Object> blockSizeInMB() {
         return Optional.ofNullable(this.blockSizeInMB);
     }
     /**
      * The type of copy behavior for copy sink.
      * 
     */
-    public Optional<Object> getCopyBehavior() {
+    public Optional<Object> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
     */
-    public Optional<Object> getDisableMetricsCollection() {
+    public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxConcurrentConnections() {
+    public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
@@ -86,7 +86,7 @@ public final class AzureBlobFSWriteSettingsResponse {
      * Expected value is 'AzureBlobFSWriteSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

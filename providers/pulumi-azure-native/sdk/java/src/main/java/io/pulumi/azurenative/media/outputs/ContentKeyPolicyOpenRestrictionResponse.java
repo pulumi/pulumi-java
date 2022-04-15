@@ -26,7 +26,7 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
      * Expected value is '#Microsoft.Media.ContentKeyPolicyOpenRestriction'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 

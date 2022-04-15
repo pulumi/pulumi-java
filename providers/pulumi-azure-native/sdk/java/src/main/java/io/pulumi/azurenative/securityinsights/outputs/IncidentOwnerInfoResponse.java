@@ -48,28 +48,28 @@ public final class IncidentOwnerInfoResponse {
      * The name of the user the incident is assigned to.
      * 
     */
-    public Optional<String> getAssignedTo() {
+    public Optional<String> assignedTo() {
         return Optional.ofNullable(this.assignedTo);
     }
     /**
      * The email of the user the incident is assigned to.
      * 
     */
-    public Optional<String> getEmail() {
+    public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The object id of the user the incident is assigned to.
      * 
     */
-    public Optional<String> getObjectId() {
+    public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The user principal name of the user the incident is assigned to.
      * 
     */
-    public Optional<String> getUserPrincipalName() {
+    public Optional<String> userPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }
 

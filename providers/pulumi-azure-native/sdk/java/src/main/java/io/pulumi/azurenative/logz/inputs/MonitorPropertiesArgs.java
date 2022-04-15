@@ -28,7 +28,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logzOrganizationProperties")
       private final @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
 
-    public Output<LogzOrganizationPropertiesArgs> getLogzOrganizationProperties() {
+    public Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties() {
         return this.logzOrganizationProperties == null ? Codegen.empty() : this.logzOrganizationProperties;
     }
 
@@ -39,7 +39,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="marketplaceSubscriptionStatus")
       private final @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
-    public Output<Either<String,MarketplaceSubscriptionStatus>> getMarketplaceSubscriptionStatus() {
+    public Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus == null ? Codegen.empty() : this.marketplaceSubscriptionStatus;
     }
 
@@ -50,21 +50,21 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
     }
 
     @Import(name="planData")
       private final @Nullable Output<PlanDataArgs> planData;
 
-    public Output<PlanDataArgs> getPlanData() {
+    public Output<PlanDataArgs> planData() {
         return this.planData == null ? Codegen.empty() : this.planData;
     }
 
     @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
-    public Output<UserInfoArgs> getUserInfo() {
+    public Output<UserInfoArgs> userInfo() {
         return this.userInfo == null ? Codegen.empty() : this.userInfo;
     }
 

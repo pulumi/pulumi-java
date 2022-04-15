@@ -19,7 +19,7 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="agentProperties")
       private final @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
 
-    public Output<CollectorAgentPropertiesArgs> getAgentProperties() {
+    public Output<CollectorAgentPropertiesArgs> agentProperties() {
         return this.agentProperties == null ? Codegen.empty() : this.agentProperties;
     }
 
@@ -30,7 +30,7 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
     @Import(name="discoverySiteId")
       private final @Nullable Output<String> discoverySiteId;
 
-    public Output<String> getDiscoverySiteId() {
+    public Output<String> discoverySiteId() {
         return this.discoverySiteId == null ? Codegen.empty() : this.discoverySiteId;
     }
 

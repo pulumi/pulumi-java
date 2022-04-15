@@ -26,7 +26,7 @@ public final class FirewallPolicyNatRuleActionResponse {
      * The type of action.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

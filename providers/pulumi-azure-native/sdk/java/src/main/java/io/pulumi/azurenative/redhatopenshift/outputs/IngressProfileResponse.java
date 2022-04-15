@@ -41,21 +41,21 @@ public final class IngressProfileResponse {
      * The IP of the ingress (immutable).
      * 
     */
-    public Optional<String> getIp() {
+    public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * The ingress profile name.  Must be "default" (immutable).
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Ingress visibility (immutable).
      * 
     */
-    public Optional<String> getVisibility() {
+    public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }
 

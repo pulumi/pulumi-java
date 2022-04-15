@@ -35,14 +35,14 @@ public final class DnsResourceReferenceResponse {
      * A list of dns Records
      * 
     */
-    public List<SubResourceResponse> getDnsResources() {
+    public List<SubResourceResponse> dnsResources() {
         return this.dnsResources == null ? List.of() : this.dnsResources;
     }
     /**
      * A reference to an azure resource from where the dns resource value is taken.
      * 
     */
-    public Optional<SubResourceResponse> getTargetResource() {
+    public Optional<SubResourceResponse> targetResource() {
         return Optional.ofNullable(this.targetResource);
     }
 

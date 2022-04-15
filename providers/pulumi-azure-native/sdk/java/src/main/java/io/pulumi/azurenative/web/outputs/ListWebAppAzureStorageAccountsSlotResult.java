@@ -57,35 +57,35 @@ public final class ListWebAppAzureStorageAccountsSlotResult {
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure storage accounts.
      * 
     */
-    public Map<String,AzureStorageInfoValueResponse> getProperties() {
+    public Map<String,AzureStorageInfoValueResponse> properties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

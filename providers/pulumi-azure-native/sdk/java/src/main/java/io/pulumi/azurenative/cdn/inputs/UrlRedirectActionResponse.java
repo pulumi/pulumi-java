@@ -25,7 +25,7 @@ public final class UrlRedirectActionResponse extends io.pulumi.resources.InvokeA
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class UrlRedirectActionResponse extends io.pulumi.resources.InvokeA
     @Import(name="parameters", required=true)
       private final UrlRedirectActionParametersResponse parameters;
 
-    public UrlRedirectActionParametersResponse getParameters() {
+    public UrlRedirectActionParametersResponse parameters() {
         return this.parameters;
     }
 

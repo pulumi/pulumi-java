@@ -25,7 +25,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="fhirDestinationName")
       private final @Nullable Output<String> fhirDestinationName;
 
-    public Output<String> getFhirDestinationName() {
+    public Output<String> fhirDestinationName() {
         return this.fhirDestinationName == null ? Codegen.empty() : this.fhirDestinationName;
     }
 
@@ -36,7 +36,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="fhirMapping", required=true)
       private final Output<IotMappingPropertiesArgs> fhirMapping;
 
-    public Output<IotMappingPropertiesArgs> getFhirMapping() {
+    public Output<IotMappingPropertiesArgs> fhirMapping() {
         return this.fhirMapping;
     }
 
@@ -47,7 +47,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="fhirServiceResourceId", required=true)
       private final Output<String> fhirServiceResourceId;
 
-    public Output<String> getFhirServiceResourceId() {
+    public Output<String> fhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
 
@@ -58,7 +58,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="iotConnectorName", required=true)
       private final Output<String> iotConnectorName;
 
-    public Output<String> getIotConnectorName() {
+    public Output<String> iotConnectorName() {
         return this.iotConnectorName;
     }
 
@@ -69,7 +69,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -80,7 +80,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,7 +91,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="resourceIdentityResolutionType", required=true)
       private final Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
-    public Output<Either<String,IotIdentityResolutionType>> getResourceIdentityResolutionType() {
+    public Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
 
@@ -102,7 +102,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

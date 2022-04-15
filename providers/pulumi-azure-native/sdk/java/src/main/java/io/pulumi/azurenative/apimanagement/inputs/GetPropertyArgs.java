@@ -19,7 +19,7 @@ public final class GetPropertyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="propId", required=true)
       private final String propId;
 
-    public String getPropId() {
+    public String propId() {
         return this.propId;
     }
 
@@ -30,7 +30,7 @@ public final class GetPropertyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetPropertyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
       private final String serviceName;
 
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
 

@@ -43,7 +43,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return Default DNS zone of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultDnsZone() {
+    public Output</* @Nullable */ String> defaultDnsZone() {
         return this.defaultDnsZone;
     }
     /**
@@ -57,7 +57,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return Display name of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +71,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return DNS service IP of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ String> getDnsServiceIp() {
+    public Output</* @Nullable */ String> dnsServiceIp() {
         return this.dnsServiceIp;
     }
     /**
@@ -85,7 +85,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return FQDN zones of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ List<String>> getFqdnZones() {
+    public Output</* @Nullable */ List<String>> fqdnZones() {
         return this.fqdnZones;
     }
     /**
@@ -99,7 +99,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return DNS Service log level.
      * 
      */
-    public Output</* @Nullable */ String> getLogLevel() {
+    public Output</* @Nullable */ String> logLevel() {
         return this.logLevel;
     }
     /**
@@ -113,7 +113,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return The provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -141,7 +141,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> getRevision() {
+    public Output</* @Nullable */ Double> revision() {
         return this.revision;
     }
     /**
@@ -155,7 +155,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return DNS Service status.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -169,7 +169,7 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

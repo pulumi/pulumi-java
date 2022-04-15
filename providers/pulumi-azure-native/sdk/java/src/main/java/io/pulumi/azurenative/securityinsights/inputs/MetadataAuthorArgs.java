@@ -26,7 +26,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -37,7 +37,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="link")
       private final @Nullable Output<String> link;
 
-    public Output<String> getLink() {
+    public Output<String> link() {
         return this.link == null ? Codegen.empty() : this.link;
     }
 
@@ -48,7 +48,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

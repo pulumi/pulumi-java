@@ -19,7 +19,7 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
     @Import(name="partnerRegistrationName", required=true)
       private final String partnerRegistrationName;
 
-    public String getPartnerRegistrationName() {
+    public String partnerRegistrationName() {
         return this.partnerRegistrationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

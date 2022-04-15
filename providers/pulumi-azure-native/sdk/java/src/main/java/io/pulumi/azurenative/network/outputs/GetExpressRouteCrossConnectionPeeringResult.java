@@ -150,126 +150,126 @@ public final class GetExpressRouteCrossConnectionPeeringResult {
      * The Azure ASN.
      * 
     */
-    public Integer getAzureASN() {
+    public Integer azureASN() {
         return this.azureASN;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * The GatewayManager Etag.
      * 
     */
-    public Optional<String> getGatewayManagerEtag() {
+    public Optional<String> gatewayManagerEtag() {
         return Optional.ofNullable(this.gatewayManagerEtag);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The IPv6 peering configuration.
      * 
     */
-    public Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse> getIpv6PeeringConfig() {
+    public Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
         return Optional.ofNullable(this.ipv6PeeringConfig);
     }
     /**
      * Who was the last to modify the peering.
      * 
     */
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The Microsoft peering configuration.
      * 
     */
-    public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
+    public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The peer ASN.
      * 
     */
-    public Optional<Double> getPeerASN() {
+    public Optional<Double> peerASN() {
         return Optional.ofNullable(this.peerASN);
     }
     /**
      * The peering type.
      * 
     */
-    public Optional<String> getPeeringType() {
+    public Optional<String> peeringType() {
         return Optional.ofNullable(this.peeringType);
     }
     /**
      * The primary port.
      * 
     */
-    public String getPrimaryAzurePort() {
+    public String primaryAzurePort() {
         return this.primaryAzurePort;
     }
     /**
      * The primary address prefix.
      * 
     */
-    public Optional<String> getPrimaryPeerAddressPrefix() {
+    public Optional<String> primaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
     /**
      * The provisioning state of the express route cross connection peering resource.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * The secondary port.
      * 
     */
-    public String getSecondaryAzurePort() {
+    public String secondaryAzurePort() {
         return this.secondaryAzurePort;
     }
     /**
      * The secondary address prefix.
      * 
     */
-    public Optional<String> getSecondaryPeerAddressPrefix() {
+    public Optional<String> secondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
     /**
      * The shared key.
      * 
     */
-    public Optional<String> getSharedKey() {
+    public Optional<String> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
     /**
      * The peering state.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The VLAN ID.
      * 
     */
-    public Optional<Integer> getVlanId() {
+    public Optional<Integer> vlanId() {
         return Optional.ofNullable(this.vlanId);
     }
 

@@ -28,7 +28,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="domainControllerIpAddress", required=true)
       private final List<String> domainControllerIpAddress;
 
-    public List<String> getDomainControllerIpAddress() {
+    public List<String> domainControllerIpAddress() {
         return this.domainControllerIpAddress;
     }
 
@@ -39,7 +39,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="externalAccessIpAddress", required=true)
       private final String externalAccessIpAddress;
 
-    public String getExternalAccessIpAddress() {
+    public String externalAccessIpAddress() {
         return this.externalAccessIpAddress;
     }
 
@@ -50,7 +50,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthAlerts", required=true)
       private final List<HealthAlertResponse> healthAlerts;
 
-    public List<HealthAlertResponse> getHealthAlerts() {
+    public List<HealthAlertResponse> healthAlerts() {
         return this.healthAlerts;
     }
 
@@ -61,7 +61,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthLastEvaluated", required=true)
       private final String healthLastEvaluated;
 
-    public String getHealthLastEvaluated() {
+    public String healthLastEvaluated() {
         return this.healthLastEvaluated;
     }
 
@@ -72,7 +72,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="healthMonitors", required=true)
       private final List<HealthMonitorResponse> healthMonitors;
 
-    public List<HealthMonitorResponse> getHealthMonitors() {
+    public List<HealthMonitorResponse> healthMonitors() {
         return this.healthMonitors;
     }
 
@@ -83,7 +83,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location")
       private final @Nullable String location;
 
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
@@ -94,7 +94,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="replicaSetId", required=true)
       private final String replicaSetId;
 
-    public String getReplicaSetId() {
+    public String replicaSetId() {
         return this.replicaSetId;
     }
 
@@ -105,7 +105,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceStatus", required=true)
       private final String serviceStatus;
 
-    public String getServiceStatus() {
+    public String serviceStatus() {
         return this.serviceStatus;
     }
 
@@ -116,7 +116,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
@@ -127,7 +127,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vnetSiteId", required=true)
       private final String vnetSiteId;
 
-    public String getVnetSiteId() {
+    public String vnetSiteId() {
         return this.vnetSiteId;
     }
 

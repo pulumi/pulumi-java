@@ -43,7 +43,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Gets the creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -57,7 +57,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Gets the expiry time of the certificate.
      * 
      */
-    public Output<String> getExpiryTime() {
+    public Output<String> expiryTime() {
         return this.expiryTime;
     }
     /**
@@ -85,7 +85,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Gets the is exportable flag of the certificate.
      * 
      */
-    public Output<Boolean> getIsExportable() {
+    public Output<Boolean> isExportable() {
         return this.isExportable;
     }
     /**
@@ -99,7 +99,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Gets the last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -113,7 +113,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return Gets the thumbprint of the certificate.
      * 
      */
-    public Output<String> getThumbprint() {
+    public Output<String> thumbprint() {
         return this.thumbprint;
     }
     /**
@@ -141,7 +141,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

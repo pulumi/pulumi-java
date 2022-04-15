@@ -27,7 +27,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefixes")
       private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> getAddressPrefixes() {
+    public Output<List<String>> addressPrefixes() {
         return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 
@@ -38,7 +38,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -49,7 +49,7 @@ public final class StaticRouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIpAddress")
       private final @Nullable Output<String> nextHopIpAddress;
 
-    public Output<String> getNextHopIpAddress() {
+    public Output<String> nextHopIpAddress() {
         return this.nextHopIpAddress == null ? Codegen.empty() : this.nextHopIpAddress;
     }
 

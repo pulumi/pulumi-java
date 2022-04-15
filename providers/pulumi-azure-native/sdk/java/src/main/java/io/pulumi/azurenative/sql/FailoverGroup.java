@@ -46,7 +46,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return List of databases in the failover group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDatabases() {
+    public Output</* @Nullable */ List<String>> databases() {
         return this.databases;
     }
     /**
@@ -60,7 +60,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -74,7 +74,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +88,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return List of partner server information for the failover group.
      * 
      */
-    public Output<List<PartnerInfoResponse>> getPartnerServers() {
+    public Output<List<PartnerInfoResponse>> partnerServers() {
         return this.partnerServers;
     }
     /**
@@ -102,7 +102,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Read-only endpoint of the failover group instance.
      * 
      */
-    public Output</* @Nullable */ FailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
+    public Output</* @Nullable */ FailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return this.readOnlyEndpoint;
     }
     /**
@@ -116,7 +116,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Read-write endpoint of the failover group instance.
      * 
      */
-    public Output<FailoverGroupReadWriteEndpointResponse> getReadWriteEndpoint() {
+    public Output<FailoverGroupReadWriteEndpointResponse> readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
@@ -130,7 +130,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Local replication role of the failover group instance.
      * 
      */
-    public Output<String> getReplicationRole() {
+    public Output<String> replicationRole() {
         return this.replicationRole;
     }
     /**
@@ -144,7 +144,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Replication state of the failover group instance.
      * 
      */
-    public Output<String> getReplicationState() {
+    public Output<String> replicationState() {
         return this.replicationState;
     }
     /**
@@ -158,7 +158,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +172,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

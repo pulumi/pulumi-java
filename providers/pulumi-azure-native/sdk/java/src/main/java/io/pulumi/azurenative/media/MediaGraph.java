@@ -44,7 +44,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return Date the Media Graph was created.
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -58,7 +58,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return Media Graph description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return Date the Media Graph was last modified.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -86,7 +86,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +100,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return Media Graph sinks.
      * 
      */
-    public Output<List<MediaGraphAssetSinkResponse>> getSinks() {
+    public Output<List<MediaGraphAssetSinkResponse>> sinks() {
         return this.sinks;
     }
     /**
@@ -114,7 +114,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return Media Graph sources.
      * 
      */
-    public Output<List<MediaGraphRtspSourceResponse>> getSources() {
+    public Output<List<MediaGraphRtspSourceResponse>> sources() {
         return this.sources;
     }
     /**
@@ -128,7 +128,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return Media Graph state which indicates the resource allocation status for running the media graph pipeline.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -142,7 +142,7 @@ public class MediaGraph extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

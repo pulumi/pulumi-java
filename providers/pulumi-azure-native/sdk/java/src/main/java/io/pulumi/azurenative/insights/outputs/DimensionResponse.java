@@ -40,21 +40,21 @@ public final class DimensionResponse {
      * Name of the dimension
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Operator for dimension values
      * 
     */
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
     /**
      * List of dimension values
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

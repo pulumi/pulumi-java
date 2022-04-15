@@ -97,49 +97,49 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
      * Migration end time
      * 
     */
-    public String getEndedOn() {
+    public String endedOn() {
         return this.endedOn;
     }
     /**
      * Wildcard string prefix to use for querying all errors of the item
      * 
     */
-    public String getErrorPrefix() {
+    public String errorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Number of successfully completed items
      * 
     */
-    public Double getItemsCompletedCount() {
+    public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
     /**
      * Number of items
      * 
     */
-    public Double getItemsCount() {
+    public Double itemsCount() {
         return this.itemsCount;
     }
     /**
      * Name of the item
      * 
     */
-    public String getObjectName() {
+    public String objectName() {
         return this.objectName;
     }
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
     */
-    public String getResultPrefix() {
+    public String resultPrefix() {
         return this.resultPrefix;
     }
     /**
@@ -147,28 +147,28 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
      * Expected value is 'TableLevelOutput'.
      * 
     */
-    public String getResultType() {
+    public String resultType() {
         return this.resultType;
     }
     /**
      * Migration start time
      * 
     */
-    public String getStartedOn() {
+    public String startedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
     /**
      * Status message
      * 
     */
-    public String getStatusMessage() {
+    public String statusMessage() {
         return this.statusMessage;
     }
 

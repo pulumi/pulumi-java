@@ -43,21 +43,21 @@ public final class GetUserTablesSqlTaskOutputResponse {
      * Mapping from database name to list of tables
      * 
     */
-    public Map<String,List<DatabaseTableResponse>> getDatabasesToTables() {
+    public Map<String,List<DatabaseTableResponse>> databasesToTables() {
         return this.databasesToTables;
     }
     /**
      * Result identifier
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Validation errors
      * 
     */
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

@@ -45,7 +45,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return The description of this Shared Image Gallery resource. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +59,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Describes the gallery unique name.
      * 
      */
-    public Output</* @Nullable */ GalleryIdentifierResponse> getIdentifier() {
+    public Output</* @Nullable */ GalleryIdentifierResponse> identifier() {
         return this.identifier;
     }
     /**
@@ -73,7 +73,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +87,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +101,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +115,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Profile for gallery sharing to subscription or tenant
      * 
      */
-    public Output</* @Nullable */ SharingProfileResponse> getSharingProfile() {
+    public Output</* @Nullable */ SharingProfileResponse> sharingProfile() {
         return this.sharingProfile;
     }
     /**
@@ -129,7 +129,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +143,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

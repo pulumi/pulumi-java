@@ -27,7 +27,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -38,7 +38,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="lun")
       private final @Nullable Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun == null ? Codegen.empty() : this.lun;
     }
 

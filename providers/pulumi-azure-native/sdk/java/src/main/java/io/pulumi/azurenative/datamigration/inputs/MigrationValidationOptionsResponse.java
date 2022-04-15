@@ -25,7 +25,7 @@ public final class MigrationValidationOptionsResponse extends io.pulumi.resource
     @Import(name="enableDataIntegrityValidation")
       private final @Nullable Boolean enableDataIntegrityValidation;
 
-    public Optional<Boolean> getEnableDataIntegrityValidation() {
+    public Optional<Boolean> enableDataIntegrityValidation() {
         return this.enableDataIntegrityValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDataIntegrityValidation);
     }
 
@@ -36,7 +36,7 @@ public final class MigrationValidationOptionsResponse extends io.pulumi.resource
     @Import(name="enableQueryAnalysisValidation")
       private final @Nullable Boolean enableQueryAnalysisValidation;
 
-    public Optional<Boolean> getEnableQueryAnalysisValidation() {
+    public Optional<Boolean> enableQueryAnalysisValidation() {
         return this.enableQueryAnalysisValidation == null ? Optional.empty() : Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
 
@@ -47,7 +47,7 @@ public final class MigrationValidationOptionsResponse extends io.pulumi.resource
     @Import(name="enableSchemaValidation")
       private final @Nullable Boolean enableSchemaValidation;
 
-    public Optional<Boolean> getEnableSchemaValidation() {
+    public Optional<Boolean> enableSchemaValidation() {
         return this.enableSchemaValidation == null ? Optional.empty() : Optional.ofNullable(this.enableSchemaValidation);
     }
 

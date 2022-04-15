@@ -28,7 +28,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format == null ? Codegen.empty() : this.format;
     }
 
@@ -50,7 +50,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
 
-    public Output<Map<String,ColumnSpecificationArgs>> getProperties() {
+    public Output<Map<String,ColumnSpecificationArgs>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -61,7 +61,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title == null ? Codegen.empty() : this.title;
     }
 
@@ -72,7 +72,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

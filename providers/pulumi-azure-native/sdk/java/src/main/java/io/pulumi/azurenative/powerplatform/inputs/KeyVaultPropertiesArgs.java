@@ -27,7 +27,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -38,7 +38,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="key")
       private final @Nullable Output<KeyPropertiesArgs> key;
 
-    public Output<KeyPropertiesArgs> getKey() {
+    public Output<KeyPropertiesArgs> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 

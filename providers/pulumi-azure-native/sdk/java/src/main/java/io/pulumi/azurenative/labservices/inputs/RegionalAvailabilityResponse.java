@@ -27,7 +27,7 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
     @Import(name="region")
       private final @Nullable String region;
 
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
@@ -38,7 +38,7 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
     @Import(name="sizeAvailabilities")
       private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
 
-    public List<SizeAvailabilityResponse> getSizeAvailabilities() {
+    public List<SizeAvailabilityResponse> sizeAvailabilities() {
         return this.sizeAvailabilities == null ? List.of() : this.sizeAvailabilities;
     }
 

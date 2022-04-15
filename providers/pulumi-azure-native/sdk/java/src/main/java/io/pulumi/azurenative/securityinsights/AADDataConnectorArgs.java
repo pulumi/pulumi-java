@@ -23,7 +23,7 @@ public final class AADDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
-    public Output<String> getDataConnectorId() {
+    public Output<String> dataConnectorId() {
         return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
     }
 
@@ -34,7 +34,7 @@ public final class AADDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataTypes")
       private final @Nullable Output<AlertsDataTypeOfDataConnectorArgs> dataTypes;
 
-    public Output<AlertsDataTypeOfDataConnectorArgs> getDataTypes() {
+    public Output<AlertsDataTypeOfDataConnectorArgs> dataTypes() {
         return this.dataTypes == null ? Codegen.empty() : this.dataTypes;
     }
 
@@ -46,7 +46,7 @@ public final class AADDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class AADDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class AADDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -79,7 +79,7 @@ public final class AADDataConnectorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

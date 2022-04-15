@@ -41,21 +41,21 @@ public final class AssignmentPrincipalResponse {
      * The principal id being assigned to.
      * 
     */
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
     /**
      * Other metadata for the principal.
      * 
     */
-    public Map<String,String> getPrincipalMetadata() {
+    public Map<String,String> principalMetadata() {
         return this.principalMetadata == null ? Map.of() : this.principalMetadata;
     }
     /**
      * The Type of the principal ID.
      * 
     */
-    public String getPrincipalType() {
+    public String principalType() {
         return this.principalType;
     }
 

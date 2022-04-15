@@ -47,7 +47,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Compliance Status of the Configuration
      * 
      */
-    public Output<ComplianceStatusResponse> getComplianceStatus() {
+    public Output<ComplianceStatusResponse> complianceStatus() {
         return this.complianceStatus;
     }
     /**
@@ -61,7 +61,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Name-value pairs of protected configuration settings for the configuration
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getConfigurationProtectedSettings() {
+    public Output</* @Nullable */ Map<String,String>> configurationProtectedSettings() {
         return this.configurationProtectedSettings;
     }
     /**
@@ -75,7 +75,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Option to enable Helm Operator for this git configuration.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableHelmOperator() {
+    public Output</* @Nullable */ Boolean> enableHelmOperator() {
         return this.enableHelmOperator;
     }
     /**
@@ -89,7 +89,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Properties for Helm operator.
      * 
      */
-    public Output</* @Nullable */ HelmOperatorPropertiesResponse> getHelmOperatorProperties() {
+    public Output</* @Nullable */ HelmOperatorPropertiesResponse> helmOperatorProperties() {
         return this.helmOperatorProperties;
     }
     /**
@@ -103,7 +103,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +117,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Instance name of the operator - identifying the specific configuration.
      * 
      */
-    public Output</* @Nullable */ String> getOperatorInstanceName() {
+    public Output</* @Nullable */ String> operatorInstanceName() {
         return this.operatorInstanceName;
     }
     /**
@@ -131,7 +131,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    public Output</* @Nullable */ String> getOperatorNamespace() {
+    public Output</* @Nullable */ String> operatorNamespace() {
         return this.operatorNamespace;
     }
     /**
@@ -145,7 +145,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Any Parameters for the Operator instance in string format.
      * 
      */
-    public Output</* @Nullable */ String> getOperatorParams() {
+    public Output</* @Nullable */ String> operatorParams() {
         return this.operatorParams;
     }
     /**
@@ -159,7 +159,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Scope at which the operator will be installed.
      * 
      */
-    public Output</* @Nullable */ String> getOperatorScope() {
+    public Output</* @Nullable */ String> operatorScope() {
         return this.operatorScope;
     }
     /**
@@ -173,7 +173,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Type of the operator
      * 
      */
-    public Output</* @Nullable */ String> getOperatorType() {
+    public Output</* @Nullable */ String> operatorType() {
         return this.operatorType;
     }
     /**
@@ -187,7 +187,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return The provisioning state of the resource provider.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -201,7 +201,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Public Key associated with this SourceControl configuration (either generated within the cluster or provided by the user).
      * 
      */
-    public Output<String> getRepositoryPublicKey() {
+    public Output<String> repositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
@@ -215,7 +215,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Url of the SourceControl Repository.
      * 
      */
-    public Output</* @Nullable */ String> getRepositoryUrl() {
+    public Output</* @Nullable */ String> repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
@@ -229,7 +229,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
      * 
      */
-    public Output</* @Nullable */ String> getSshKnownHostsContents() {
+    public Output</* @Nullable */ String> sshKnownHostsContents() {
         return this.sshKnownHostsContents;
     }
     /**
@@ -243,7 +243,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -257,7 +257,7 @@ public class SourceControlConfiguration extends io.pulumi.resources.CustomResour
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

@@ -25,7 +25,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
     @Import(name="cacheHitBytes", required=true)
       private final Double cacheHitBytes;
 
-    public Double getCacheHitBytes() {
+    public Double cacheHitBytes() {
         return this.cacheHitBytes;
     }
 
@@ -36,7 +36,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
     @Import(name="cacheHitBytesPercent", required=true)
       private final Integer cacheHitBytesPercent;
 
-    public Integer getCacheHitBytesPercent() {
+    public Integer cacheHitBytesPercent() {
         return this.cacheHitBytesPercent;
     }
 
@@ -47,7 +47,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
     @Import(name="cacheMissBytes", required=true)
       private final Double cacheMissBytes;
 
-    public Double getCacheMissBytes() {
+    public Double cacheMissBytes() {
         return this.cacheMissBytes;
     }
 
@@ -58,7 +58,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
     @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
-    public String getLastUpdatedTimestamp() {
+    public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 

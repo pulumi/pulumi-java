@@ -84,63 +84,63 @@ public final class NetworkInterfacePropertiesResponse {
      * The DNS name.
      * 
     */
-    public Optional<String> getDnsName() {
+    public Optional<String> dnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * The private IP address.
      * 
     */
-    public Optional<String> getPrivateIpAddress() {
+    public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The public IP address.
      * 
     */
-    public Optional<String> getPublicIpAddress() {
+    public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }
     /**
      * The resource ID of the public IP address.
      * 
     */
-    public Optional<String> getPublicIpAddressId() {
+    public Optional<String> publicIpAddressId() {
         return Optional.ofNullable(this.publicIpAddressId);
     }
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
     */
-    public Optional<String> getRdpAuthority() {
+    public Optional<String> rdpAuthority() {
         return Optional.ofNullable(this.rdpAuthority);
     }
     /**
      * The configuration for sharing a public IP address across multiple virtual machines.
      * 
     */
-    public Optional<SharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
+    public Optional<SharedPublicIpAddressConfigurationResponse> sharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
     */
-    public Optional<String> getSshAuthority() {
+    public Optional<String> sshAuthority() {
         return Optional.ofNullable(this.sshAuthority);
     }
     /**
      * The resource ID of the sub net.
      * 
     */
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The resource ID of the virtual network.
      * 
     */
-    public Optional<String> getVirtualNetworkId() {
+    public Optional<String> virtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);
     }
 

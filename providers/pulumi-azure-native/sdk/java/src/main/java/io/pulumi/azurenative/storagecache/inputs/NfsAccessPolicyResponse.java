@@ -25,7 +25,7 @@ public final class NfsAccessPolicyResponse extends io.pulumi.resources.InvokeArg
     @Import(name="accessRules", required=true)
       private final List<NfsAccessRuleResponse> accessRules;
 
-    public List<NfsAccessRuleResponse> getAccessRules() {
+    public List<NfsAccessRuleResponse> accessRules() {
         return this.accessRules;
     }
 
@@ -36,7 +36,7 @@ public final class NfsAccessPolicyResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

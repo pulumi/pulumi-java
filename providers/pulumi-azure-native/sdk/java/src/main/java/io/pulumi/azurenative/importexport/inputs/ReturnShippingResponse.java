@@ -23,7 +23,7 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="carrierAccountNumber", required=true)
       private final String carrierAccountNumber;
 
-    public String getCarrierAccountNumber() {
+    public String carrierAccountNumber() {
         return this.carrierAccountNumber;
     }
 
@@ -34,7 +34,7 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="carrierName", required=true)
       private final String carrierName;
 
-    public String getCarrierName() {
+    public String carrierName() {
         return this.carrierName;
     }
 

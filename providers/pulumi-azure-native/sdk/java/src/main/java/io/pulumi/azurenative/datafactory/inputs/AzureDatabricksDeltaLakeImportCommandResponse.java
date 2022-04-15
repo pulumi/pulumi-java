@@ -26,7 +26,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
     @Import(name="dateFormat")
       private final @Nullable Object dateFormat;
 
-    public Optional<Object> getDateFormat() {
+    public Optional<Object> dateFormat() {
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
     }
 
@@ -37,7 +37,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
     @Import(name="timestampFormat")
       private final @Nullable Object timestampFormat;
 
-    public Optional<Object> getTimestampFormat() {
+    public Optional<Object> timestampFormat() {
         return this.timestampFormat == null ? Optional.empty() : Optional.ofNullable(this.timestampFormat);
     }
 
@@ -49,7 +49,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

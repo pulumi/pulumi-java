@@ -81,7 +81,7 @@ public final class RampUpRuleResponse {
      * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
      * 
     */
-    public Optional<String> getActionHostName() {
+    public Optional<String> actionHostName() {
         return Optional.ofNullable(this.actionHostName);
     }
     /**
@@ -89,14 +89,14 @@ public final class RampUpRuleResponse {
      * https://www.siteextensions.net/packages/TiPCallback/
      * 
     */
-    public Optional<String> getChangeDecisionCallbackUrl() {
+    public Optional<String> changeDecisionCallbackUrl() {
         return Optional.ofNullable(this.changeDecisionCallbackUrl);
     }
     /**
      * Specifies interval in minutes to reevaluate ReroutePercentage.
      * 
     */
-    public Optional<Integer> getChangeIntervalInMinutes() {
+    public Optional<Integer> changeIntervalInMinutes() {
         return Optional.ofNullable(this.changeIntervalInMinutes);
     }
     /**
@@ -105,35 +105,35 @@ public final class RampUpRuleResponse {
      * can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
      * 
     */
-    public Optional<Double> getChangeStep() {
+    public Optional<Double> changeStep() {
         return Optional.ofNullable(this.changeStep);
     }
     /**
      * Specifies upper boundary below which ReroutePercentage will stay.
      * 
     */
-    public Optional<Double> getMaxReroutePercentage() {
+    public Optional<Double> maxReroutePercentage() {
         return Optional.ofNullable(this.maxReroutePercentage);
     }
     /**
      * Specifies lower boundary above which ReroutePercentage will stay.
      * 
     */
-    public Optional<Double> getMinReroutePercentage() {
+    public Optional<Double> minReroutePercentage() {
         return Optional.ofNullable(this.minReroutePercentage);
     }
     /**
      * Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Percentage of the traffic which will be redirected to <code>ActionHostName</code>.
      * 
     */
-    public Optional<Double> getReroutePercentage() {
+    public Optional<Double> reroutePercentage() {
         return Optional.ofNullable(this.reroutePercentage);
     }
 

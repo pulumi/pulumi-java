@@ -25,7 +25,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
     @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
-    public Output<String> getAuthorizationRuleName() {
+    public Output<String> authorizationRuleName() {
         return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
@@ -36,7 +36,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -47,7 +47,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
     @Import(name="rights", required=true)
       private final Output<List<Either<String,AccessRights>>> rights;
 
-    public Output<List<Either<String,AccessRights>>> getRights() {
+    public Output<List<Either<String,AccessRights>>> rights() {
         return this.rights;
     }
 

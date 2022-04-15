@@ -58,35 +58,35 @@ public final class ServiceCorsConfigurationInfoResponse {
      * If credentials are allowed via CORS.
      * 
     */
-    public Optional<Boolean> getAllowCredentials() {
+    public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * The headers to be allowed via CORS.
      * 
     */
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * The max age to be allowed via CORS.
      * 
     */
-    public Optional<Double> getMaxAge() {
+    public Optional<Double> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
     /**
      * The methods to be allowed via CORS.
      * 
     */
-    public List<String> getMethods() {
+    public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
      * The origins to be allowed via CORS.
      * 
     */
-    public List<String> getOrigins() {
+    public List<String> origins() {
         return this.origins == null ? List.of() : this.origins;
     }
 

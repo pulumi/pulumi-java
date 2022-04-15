@@ -25,7 +25,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bandwidthSettingName")
       private final @Nullable Output<String> bandwidthSettingName;
 
-    public Output<String> getBandwidthSettingName() {
+    public Output<String> bandwidthSettingName() {
         return this.bandwidthSettingName == null ? Codegen.empty() : this.bandwidthSettingName;
     }
 
@@ -36,7 +36,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
+    public Output<Kind> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -47,7 +47,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -58,7 +58,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,7 +69,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="schedules", required=true)
       private final Output<List<BandwidthScheduleArgs>> schedules;
 
-    public Output<List<BandwidthScheduleArgs>> getSchedules() {
+    public Output<List<BandwidthScheduleArgs>> schedules() {
         return this.schedules;
     }
 

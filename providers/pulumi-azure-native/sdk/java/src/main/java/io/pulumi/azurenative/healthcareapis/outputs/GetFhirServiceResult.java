@@ -134,105 +134,105 @@ public final class GetFhirServiceResult {
      * Fhir Service access policies.
      * 
     */
-    public List<FhirServiceAccessPolicyEntryResponse> getAccessPolicies() {
+    public List<FhirServiceAccessPolicyEntryResponse> accessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
     /**
      * Fhir Service Azure container registry configuration.
      * 
     */
-    public Optional<FhirServiceAcrConfigurationResponse> getAcrConfiguration() {
+    public Optional<FhirServiceAcrConfigurationResponse> acrConfiguration() {
         return Optional.ofNullable(this.acrConfiguration);
     }
     /**
      * Fhir Service authentication configuration.
      * 
     */
-    public Optional<FhirServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
+    public Optional<FhirServiceAuthenticationConfigurationResponse> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
      * Fhir Service Cors configuration.
      * 
     */
-    public Optional<FhirServiceCorsConfigurationResponse> getCorsConfiguration() {
+    public Optional<FhirServiceCorsConfigurationResponse> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fhir Service export configuration.
      * 
     */
-    public Optional<FhirServiceExportConfigurationResponse> getExportConfiguration() {
+    public Optional<FhirServiceExportConfigurationResponse> exportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
     /**
      * The resource identifier.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
      * 
     */
-    public Optional<ServiceManagedIdentityResponseIdentity> getIdentity() {
+    public Optional<ServiceManagedIdentityResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the service.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

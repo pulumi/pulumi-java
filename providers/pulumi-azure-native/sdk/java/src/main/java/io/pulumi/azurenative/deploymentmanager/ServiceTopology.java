@@ -43,7 +43,7 @@ public class ServiceTopology extends io.pulumi.resources.CustomResource {
      * @return The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
      * 
      */
-    public Output</* @Nullable */ String> getArtifactSourceId() {
+    public Output</* @Nullable */ String> artifactSourceId() {
         return this.artifactSourceId;
     }
     /**
@@ -57,7 +57,7 @@ public class ServiceTopology extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -71,7 +71,7 @@ public class ServiceTopology extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +85,7 @@ public class ServiceTopology extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class ServiceTopology extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

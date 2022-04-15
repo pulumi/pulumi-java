@@ -25,7 +25,7 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
     @Import(name="sourcePropertyName", required=true)
       private final Output<String> sourcePropertyName;
 
-    public Output<String> getSourcePropertyName() {
+    public Output<String> sourcePropertyName() {
         return this.sourcePropertyName;
     }
 
@@ -36,7 +36,7 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
     @Import(name="targetPropertyName", required=true)
       private final Output<String> targetPropertyName;
 
-    public Output<String> getTargetPropertyName() {
+    public Output<String> targetPropertyName() {
         return this.targetPropertyName;
     }
 

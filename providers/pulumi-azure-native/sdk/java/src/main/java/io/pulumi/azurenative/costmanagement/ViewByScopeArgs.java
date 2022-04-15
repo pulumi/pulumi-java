@@ -33,7 +33,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accumulated")
       private final @Nullable Output<Either<String,AccumulatedType>> accumulated;
 
-    public Output<Either<String,AccumulatedType>> getAccumulated() {
+    public Output<Either<String,AccumulatedType>> accumulated() {
         return this.accumulated == null ? Codegen.empty() : this.accumulated;
     }
 
@@ -44,7 +44,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chart")
       private final @Nullable Output<Either<String,ChartType>> chart;
 
-    public Output<Either<String,ChartType>> getChart() {
+    public Output<Either<String,ChartType>> chart() {
         return this.chart == null ? Codegen.empty() : this.chart;
     }
 
@@ -55,7 +55,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSet")
       private final @Nullable Output<ReportConfigDatasetArgs> dataSet;
 
-    public Output<ReportConfigDatasetArgs> getDataSet() {
+    public Output<ReportConfigDatasetArgs> dataSet() {
         return this.dataSet == null ? Codegen.empty() : this.dataSet;
     }
 
@@ -66,7 +66,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -77,7 +77,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
@@ -88,7 +88,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kpis")
       private final @Nullable Output<List<KpiPropertiesArgs>> kpis;
 
-    public Output<List<KpiPropertiesArgs>> getKpis() {
+    public Output<List<KpiPropertiesArgs>> kpis() {
         return this.kpis == null ? Codegen.empty() : this.kpis;
     }
 
@@ -99,7 +99,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metric")
       private final @Nullable Output<Either<String,MetricType>> metric;
 
-    public Output<Either<String,MetricType>> getMetric() {
+    public Output<Either<String,MetricType>> metric() {
         return this.metric == null ? Codegen.empty() : this.metric;
     }
 
@@ -110,7 +110,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pivots")
       private final @Nullable Output<List<PivotPropertiesArgs>> pivots;
 
-    public Output<List<PivotPropertiesArgs>> getPivots() {
+    public Output<List<PivotPropertiesArgs>> pivots() {
         return this.pivots == null ? Codegen.empty() : this.pivots;
     }
 
@@ -121,7 +121,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -132,7 +132,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timePeriod")
       private final @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
 
-    public Output<ReportConfigTimePeriodArgs> getTimePeriod() {
+    public Output<ReportConfigTimePeriodArgs> timePeriod() {
         return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
     }
 
@@ -143,7 +143,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeframe", required=true)
       private final Output<Either<String,ReportTimeframeType>> timeframe;
 
-    public Output<Either<String,ReportTimeframeType>> getTimeframe() {
+    public Output<Either<String,ReportTimeframeType>> timeframe() {
         return this.timeframe;
     }
 
@@ -154,7 +154,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;
 
-    public Output<Either<String,ReportType>> getType() {
+    public Output<Either<String,ReportType>> type() {
         return this.type;
     }
 
@@ -165,7 +165,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
-    public Output<String> getViewName() {
+    public Output<String> viewName() {
         return this.viewName == null ? Codegen.empty() : this.viewName;
     }
 

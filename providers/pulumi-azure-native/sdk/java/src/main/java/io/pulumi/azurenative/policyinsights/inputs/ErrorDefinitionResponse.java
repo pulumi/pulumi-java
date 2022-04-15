@@ -25,7 +25,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="additionalInfo", required=true)
       private final List<TypedErrorInfoResponse> additionalInfo;
 
-    public List<TypedErrorInfoResponse> getAdditionalInfo() {
+    public List<TypedErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
 
@@ -36,7 +36,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -47,7 +47,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="details", required=true)
       private final List<ErrorDefinitionResponse> details;
 
-    public List<ErrorDefinitionResponse> getDetails() {
+    public List<ErrorDefinitionResponse> details() {
         return this.details;
     }
 
@@ -58,7 +58,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 
@@ -69,7 +69,7 @@ public final class ErrorDefinitionResponse extends io.pulumi.resources.InvokeArg
     @Import(name="target", required=true)
       private final String target;
 
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
 

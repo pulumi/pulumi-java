@@ -43,7 +43,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return They inventory type.
      * 
      */
-    public Output<String> getInventoryType() {
+    public Output<String> inventoryType() {
         return this.inventoryType;
     }
     /**
@@ -57,7 +57,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -71,7 +71,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedResourceId() {
+    public Output</* @Nullable */ String> managedResourceId() {
         return this.managedResourceId;
     }
     /**
@@ -85,7 +85,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter Managed Object name for the inventory item.
      * 
      */
-    public Output</* @Nullable */ String> getMoName() {
+    public Output</* @Nullable */ String> moName() {
         return this.moName;
     }
     /**
@@ -99,7 +99,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
      */
-    public Output</* @Nullable */ String> getMoRefId() {
+    public Output</* @Nullable */ String> moRefId() {
         return this.moRefId;
     }
     /**
@@ -113,7 +113,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +127,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -141,7 +141,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -155,7 +155,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

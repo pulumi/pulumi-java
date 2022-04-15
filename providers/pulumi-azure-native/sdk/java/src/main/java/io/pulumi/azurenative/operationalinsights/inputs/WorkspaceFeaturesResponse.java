@@ -26,7 +26,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
     @Import(name="clusterResourceId")
       private final @Nullable String clusterResourceId;
 
-    public Optional<String> getClusterResourceId() {
+    public Optional<String> clusterResourceId() {
         return this.clusterResourceId == null ? Optional.empty() : Optional.ofNullable(this.clusterResourceId);
     }
 
@@ -37,7 +37,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
     @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
 
-    public Optional<Boolean> getDisableLocalAuth() {
+    public Optional<Boolean> disableLocalAuth() {
         return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
     }
 
@@ -48,7 +48,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
     @Import(name="enableDataExport")
       private final @Nullable Boolean enableDataExport;
 
-    public Optional<Boolean> getEnableDataExport() {
+    public Optional<Boolean> enableDataExport() {
         return this.enableDataExport == null ? Optional.empty() : Optional.ofNullable(this.enableDataExport);
     }
 
@@ -59,7 +59,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
     @Import(name="enableLogAccessUsingOnlyResourcePermissions")
       private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
 
-    public Optional<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
+    public Optional<Boolean> enableLogAccessUsingOnlyResourcePermissions() {
         return this.enableLogAccessUsingOnlyResourcePermissions == null ? Optional.empty() : Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
 
@@ -70,7 +70,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
     @Import(name="immediatePurgeDataOn30Days")
       private final @Nullable Boolean immediatePurgeDataOn30Days;
 
-    public Optional<Boolean> getImmediatePurgeDataOn30Days() {
+    public Optional<Boolean> immediatePurgeDataOn30Days() {
         return this.immediatePurgeDataOn30Days == null ? Optional.empty() : Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }
 

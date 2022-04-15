@@ -28,7 +28,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="buildpackGroups")
       private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
 
-    public List<BuildpacksGroupPropertiesResponse> getBuildpackGroups() {
+    public List<BuildpacksGroupPropertiesResponse> buildpackGroups() {
         return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
     }
 
@@ -39,7 +39,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -50,7 +50,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
     @Import(name="stack")
       private final @Nullable StackPropertiesResponse stack;
 
-    public Optional<StackPropertiesResponse> getStack() {
+    public Optional<StackPropertiesResponse> stack() {
         return this.stack == null ? Optional.empty() : Optional.ofNullable(this.stack);
     }
 

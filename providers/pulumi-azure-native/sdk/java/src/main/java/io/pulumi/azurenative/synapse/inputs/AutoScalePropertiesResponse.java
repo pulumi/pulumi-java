@@ -26,7 +26,7 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -37,7 +37,7 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="maxNodeCount")
       private final @Nullable Integer maxNodeCount;
 
-    public Optional<Integer> getMaxNodeCount() {
+    public Optional<Integer> maxNodeCount() {
         return this.maxNodeCount == null ? Optional.empty() : Optional.ofNullable(this.maxNodeCount);
     }
 
@@ -48,7 +48,7 @@ public final class AutoScalePropertiesResponse extends io.pulumi.resources.Invok
     @Import(name="minNodeCount")
       private final @Nullable Integer minNodeCount;
 
-    public Optional<Integer> getMinNodeCount() {
+    public Optional<Integer> minNodeCount() {
         return this.minNodeCount == null ? Optional.empty() : Optional.ofNullable(this.minNodeCount);
     }
 

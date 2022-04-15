@@ -26,7 +26,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="password")
       private final @Nullable String password;
 
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
@@ -37,7 +37,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 
@@ -48,7 +48,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId", required=true)
       private final String vmResourceId;
 
-    public String getVmResourceId() {
+    public String vmResourceId() {
         return this.vmResourceId;
     }
 
@@ -59,7 +59,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="vmStateDetails", required=true)
       private final VmStateDetailsResponse vmStateDetails;
 
-    public VmStateDetailsResponse getVmStateDetails() {
+    public VmStateDetailsResponse vmStateDetails() {
         return this.vmStateDetails;
     }
 

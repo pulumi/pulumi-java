@@ -34,14 +34,14 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
      * Expected value is '#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey'.
      * 
     */
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
     /**
      * The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
      * 
     */
-    public String getRawBody() {
+    public String rawBody() {
         return this.rawBody;
     }
 

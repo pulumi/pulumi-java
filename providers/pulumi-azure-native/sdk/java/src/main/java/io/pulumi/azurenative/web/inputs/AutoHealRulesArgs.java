@@ -27,7 +27,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<AutoHealActionsArgs> actions;
 
-    public Output<AutoHealActionsArgs> getActions() {
+    public Output<AutoHealActionsArgs> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
       private final @Nullable Output<AutoHealTriggersArgs> triggers;
 
-    public Output<AutoHealTriggersArgs> getTriggers() {
+    public Output<AutoHealTriggersArgs> triggers() {
         return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 

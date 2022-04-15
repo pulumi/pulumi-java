@@ -103,14 +103,14 @@ public final class NsgSecurityRuleResponse {
      * Possible values are “Allow” and “Deny”.
      * 
     */
-    public Optional<String> getAccess() {
+    public Optional<String> access() {
         return Optional.ofNullable(this.access);
     }
     /**
      * Gets or sets a description for this rule. Restricted to 140 chars.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -119,7 +119,7 @@ public final class NsgSecurityRuleResponse {
      * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
      * 
     */
-    public Optional<String> getDestinationAddressPrefix() {
+    public Optional<String> destinationAddressPrefix() {
         return Optional.ofNullable(this.destinationAddressPrefix);
     }
     /**
@@ -127,7 +127,7 @@ public final class NsgSecurityRuleResponse {
      * 0 and 65535. A “*” can also be used to match all ports.
      * 
     */
-    public Optional<String> getDestinationPortRange() {
+    public Optional<String> destinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
     /**
@@ -135,14 +135,14 @@ public final class NsgSecurityRuleResponse {
      * direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
     */
-    public Optional<String> getDirection() {
+    public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * Gets or sets the Security rule name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -151,14 +151,14 @@ public final class NsgSecurityRuleResponse {
      * The lower the priority number, the higher the priority of the rule.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
      * 
     */
-    public Optional<String> getProtocol() {
+    public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
@@ -168,7 +168,7 @@ public final class NsgSecurityRuleResponse {
      * rule, specifies where network traffic originates from.
      * 
     */
-    public Optional<String> getSourceAddressPrefix() {
+    public Optional<String> sourceAddressPrefix() {
         return Optional.ofNullable(this.sourceAddressPrefix);
     }
     /**
@@ -176,7 +176,7 @@ public final class NsgSecurityRuleResponse {
      * 65535. A “*” can also be used to match all ports.
      * 
     */
-    public Optional<String> getSourcePortRange() {
+    public Optional<String> sourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }
 

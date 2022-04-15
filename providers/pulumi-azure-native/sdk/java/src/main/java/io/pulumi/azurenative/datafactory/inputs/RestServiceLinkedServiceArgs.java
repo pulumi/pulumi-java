@@ -36,7 +36,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="aadResourceId")
       private final @Nullable Output<Object> aadResourceId;
 
-    public Output<Object> getAadResourceId() {
+    public Output<Object> aadResourceId() {
         return this.aadResourceId == null ? Codegen.empty() : this.aadResourceId;
     }
 
@@ -47,7 +47,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
+    public Output<List<Object>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -58,7 +58,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="authHeaders")
       private final @Nullable Output<Object> authHeaders;
 
-    public Output<Object> getAuthHeaders() {
+    public Output<Object> authHeaders() {
         return this.authHeaders == null ? Codegen.empty() : this.authHeaders;
     }
 
@@ -69,7 +69,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,RestServiceAuthenticationType>> authenticationType;
 
-    public Output<Either<String,RestServiceAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,RestServiceAuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -80,7 +80,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> getAzureCloudType() {
+    public Output<Object> azureCloudType() {
         return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
@@ -91,7 +91,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
         return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
@@ -102,7 +102,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
+    public Output<CredentialReferenceArgs> credential() {
         return this.credential == null ? Codegen.empty() : this.credential;
     }
 
@@ -113,7 +113,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -124,7 +124,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="enableServerCertificateValidation")
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
-    public Output<Object> getEnableServerCertificateValidation() {
+    public Output<Object> enableServerCertificateValidation() {
         return this.enableServerCertificateValidation == null ? Codegen.empty() : this.enableServerCertificateValidation;
     }
 
@@ -135,7 +135,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
+    public Output<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
@@ -146,7 +146,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -157,7 +157,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -168,7 +168,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
@@ -179,7 +179,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
@@ -190,7 +190,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
@@ -202,7 +202,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -213,7 +213,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -224,7 +224,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName == null ? Codegen.empty() : this.userName;
     }
 

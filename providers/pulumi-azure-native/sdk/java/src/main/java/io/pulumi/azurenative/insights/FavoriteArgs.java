@@ -25,7 +25,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="category")
       private final @Nullable Output<String> category;
 
-    public Output<String> getCategory() {
+    public Output<String> category() {
         return this.category == null ? Codegen.empty() : this.category;
     }
 
@@ -36,7 +36,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<String> config;
 
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -47,7 +47,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="favoriteId")
       private final @Nullable Output<String> favoriteId;
 
-    public Output<String> getFavoriteId() {
+    public Output<String> favoriteId() {
         return this.favoriteId == null ? Codegen.empty() : this.favoriteId;
     }
 
@@ -58,7 +58,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="favoriteType")
       private final @Nullable Output<FavoriteType> favoriteType;
 
-    public Output<FavoriteType> getFavoriteType() {
+    public Output<FavoriteType> favoriteType() {
         return this.favoriteType == null ? Codegen.empty() : this.favoriteType;
     }
 
@@ -69,7 +69,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isGeneratedFromTemplate")
       private final @Nullable Output<Boolean> isGeneratedFromTemplate;
 
-    public Output<Boolean> getIsGeneratedFromTemplate() {
+    public Output<Boolean> isGeneratedFromTemplate() {
         return this.isGeneratedFromTemplate == null ? Codegen.empty() : this.isGeneratedFromTemplate;
     }
 
@@ -80,7 +80,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -91,7 +91,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +102,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -113,7 +113,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
@@ -124,7 +124,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -135,7 +135,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

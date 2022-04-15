@@ -26,7 +26,7 @@ public final class StreamingPolicyFairPlayConfigurationResponse extends io.pulum
     @Import(name="allowPersistentLicense", required=true)
       private final Boolean allowPersistentLicense;
 
-    public Boolean getAllowPersistentLicense() {
+    public Boolean allowPersistentLicense() {
         return this.allowPersistentLicense;
     }
 
@@ -37,7 +37,7 @@ public final class StreamingPolicyFairPlayConfigurationResponse extends io.pulum
     @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
-    public Optional<String> getCustomLicenseAcquisitionUrlTemplate() {
+    public Optional<String> customLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 

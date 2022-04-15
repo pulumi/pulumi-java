@@ -123,98 +123,98 @@ public final class GetFlowLogResult {
      * Flag to enable/disable flow logging.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * Parameters that define the configuration of traffic analytics.
      * 
     */
-    public Optional<TrafficAnalyticsPropertiesResponse> getFlowAnalyticsConfiguration() {
+    public Optional<TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration() {
         return Optional.ofNullable(this.flowAnalyticsConfiguration);
     }
     /**
      * Parameters that define the flow log format.
      * 
     */
-    public Optional<FlowLogFormatParametersResponse> getFormat() {
+    public Optional<FlowLogFormatParametersResponse> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource ID.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The provisioning state of the flow log.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Parameters that define the retention policy for flow log.
      * 
     */
-    public Optional<RetentionPolicyParametersResponse> getRetentionPolicy() {
+    public Optional<RetentionPolicyParametersResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * ID of the storage account which is used to store the flow log.
      * 
     */
-    public String getStorageId() {
+    public String storageId() {
         return this.storageId;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Guid of network security group to which flow log will be applied.
      * 
     */
-    public String getTargetResourceGuid() {
+    public String targetResourceGuid() {
         return this.targetResourceGuid;
     }
     /**
      * ID of network security group to which flow log will be applied.
      * 
     */
-    public String getTargetResourceId() {
+    public String targetResourceId() {
         return this.targetResourceId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

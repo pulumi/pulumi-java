@@ -28,7 +28,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Output<Object> deleteFilesAfterCompletion;
 
-    public Output<Object> getDeleteFilesAfterCompletion() {
+    public Output<Object> deleteFilesAfterCompletion() {
         return this.deleteFilesAfterCompletion == null ? Codegen.empty() : this.deleteFilesAfterCompletion;
     }
 
@@ -39,7 +39,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="disableChunking")
       private final @Nullable Output<Object> disableChunking;
 
-    public Output<Object> getDisableChunking() {
+    public Output<Object> disableChunking() {
         return this.disableChunking == null ? Codegen.empty() : this.disableChunking;
     }
 
@@ -50,7 +50,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
+    public Output<Object> disableMetricsCollection() {
         return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
@@ -61,7 +61,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Output<Boolean> getEnablePartitionDiscovery() {
+    public Output<Boolean> enablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
     }
 
@@ -72,7 +72,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fileListPath")
       private final @Nullable Output<Object> fileListPath;
 
-    public Output<Object> getFileListPath() {
+    public Output<Object> fileListPath() {
         return this.fileListPath == null ? Codegen.empty() : this.fileListPath;
     }
 
@@ -83,7 +83,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
+    public Output<Object> maxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
@@ -94,7 +94,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="partitionRootPath")
       private final @Nullable Output<Object> partitionRootPath;
 
-    public Output<Object> getPartitionRootPath() {
+    public Output<Object> partitionRootPath() {
         return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
     }
 
@@ -105,7 +105,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
 
-    public Output<Object> getRecursive() {
+    public Output<Object> recursive() {
         return this.recursive == null ? Codegen.empty() : this.recursive;
     }
 
@@ -117,7 +117,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -128,7 +128,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="useBinaryTransfer")
       private final @Nullable Output<Boolean> useBinaryTransfer;
 
-    public Output<Boolean> getUseBinaryTransfer() {
+    public Output<Boolean> useBinaryTransfer() {
         return this.useBinaryTransfer == null ? Codegen.empty() : this.useBinaryTransfer;
     }
 
@@ -139,7 +139,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="wildcardFileName")
       private final @Nullable Output<Object> wildcardFileName;
 
-    public Output<Object> getWildcardFileName() {
+    public Output<Object> wildcardFileName() {
         return this.wildcardFileName == null ? Codegen.empty() : this.wildcardFileName;
     }
 
@@ -150,7 +150,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="wildcardFolderPath")
       private final @Nullable Output<Object> wildcardFolderPath;
 
-    public Output<Object> getWildcardFolderPath() {
+    public Output<Object> wildcardFolderPath() {
         return this.wildcardFolderPath == null ? Codegen.empty() : this.wildcardFolderPath;
     }
 

@@ -32,14 +32,14 @@ public final class JobErrorDetailResponse {
      * Code describing the error detail.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * A human-readable representation of the error.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

@@ -26,7 +26,7 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     @Import(name="domainNameLabel")
       private final @Nullable Output<String> domainNameLabel;
 
-    public Output<String> getDomainNameLabel() {
+    public Output<String> domainNameLabel() {
         return this.domainNameLabel == null ? Codegen.empty() : this.domainNameLabel;
     }
 
@@ -37,7 +37,7 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
@@ -48,7 +48,7 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     @Import(name="reverseFqdn")
       private final @Nullable Output<String> reverseFqdn;
 
-    public Output<String> getReverseFqdn() {
+    public Output<String> reverseFqdn() {
         return this.reverseFqdn == null ? Codegen.empty() : this.reverseFqdn;
     }
 

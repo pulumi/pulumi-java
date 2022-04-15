@@ -40,21 +40,21 @@ public final class AS2OneWayAgreementResponse {
      * The AS2 protocol settings.
      * 
     */
-    public AS2ProtocolSettingsResponse getProtocolSettings() {
+    public AS2ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
     /**
      * The receiver business identity
      * 
     */
-    public BusinessIdentityResponse getReceiverBusinessIdentity() {
+    public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
      * The sender business identity
      * 
     */
-    public BusinessIdentityResponse getSenderBusinessIdentity() {
+    public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 

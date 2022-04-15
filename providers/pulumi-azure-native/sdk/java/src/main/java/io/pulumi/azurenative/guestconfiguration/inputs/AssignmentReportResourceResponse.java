@@ -28,7 +28,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
     @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
 
-    public String getComplianceStatus() {
+    public String complianceStatus() {
         return this.complianceStatus;
     }
 
@@ -39,7 +39,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
     @Import(name="properties", required=true)
       private final Object properties;
 
-    public Object getProperties() {
+    public Object properties() {
         return this.properties;
     }
 
@@ -50,7 +50,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
     @Import(name="reasons")
       private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
 
-    public List<AssignmentReportResourceComplianceReasonResponse> getReasons() {
+    public List<AssignmentReportResourceComplianceReasonResponse> reasons() {
         return this.reasons == null ? List.of() : this.reasons;
     }
 
@@ -61,7 +61,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

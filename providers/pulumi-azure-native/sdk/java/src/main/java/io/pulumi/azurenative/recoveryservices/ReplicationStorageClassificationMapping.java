@@ -43,7 +43,7 @@ public class ReplicationStorageClassificationMapping extends io.pulumi.resources
      * @return Resource Location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -57,7 +57,7 @@ public class ReplicationStorageClassificationMapping extends io.pulumi.resources
      * @return Resource Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +71,7 @@ public class ReplicationStorageClassificationMapping extends io.pulumi.resources
      * @return Properties of the storage mapping object.
      * 
      */
-    public Output<StorageClassificationMappingPropertiesResponse> getProperties() {
+    public Output<StorageClassificationMappingPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -85,7 +85,7 @@ public class ReplicationStorageClassificationMapping extends io.pulumi.resources
      * @return Resource Type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

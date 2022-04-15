@@ -18,14 +18,14 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="componentId")
       private final @Nullable Output<String> componentId;
 
-    public Output<String> getComponentId() {
+    public Output<String> componentId() {
         return this.componentId == null ? Codegen.empty() : this.componentId;
     }
 
     @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId == null ? Codegen.empty() : this.serviceId;
     }
 

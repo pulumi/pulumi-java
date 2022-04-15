@@ -64,41 +64,41 @@ public final class GetWorkspaceCollectionResult {
      * Resource id
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Azure location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Workspace collection name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Properties
      * 
     */
-    public Object getProperties() {
+    public Object properties() {
         return this.properties;
     }
-    public Optional<AzureSkuResponse> getSku() {
+    public Optional<AzureSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

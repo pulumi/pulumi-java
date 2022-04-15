@@ -30,7 +30,7 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
     @Import(name="loginMode")
       private final @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
 
-    public Output<Either<String,SourceRegistryLoginMode>> getLoginMode() {
+    public Output<Either<String,SourceRegistryLoginMode>> loginMode() {
         return this.loginMode == null ? Codegen.empty() : this.loginMode;
     }
 

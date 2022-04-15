@@ -25,7 +25,7 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionKeyName", required=true)
       private final Output<String> encryptionKeyName;
 
-    public Output<String> getEncryptionKeyName() {
+    public Output<String> encryptionKeyName() {
         return this.encryptionKeyName;
     }
 
@@ -36,7 +36,7 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encryptionKeyVersion", required=true)
       private final Output<String> encryptionKeyVersion;
 
-    public Output<String> getEncryptionKeyVersion() {
+    public Output<String> encryptionKeyVersion() {
         return this.encryptionKeyVersion;
     }
 
@@ -47,7 +47,7 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="keyVaultResourceId", required=true)
       private final Output<String> keyVaultResourceId;
 
-    public Output<String> getKeyVaultResourceId() {
+    public Output<String> keyVaultResourceId() {
         return this.keyVaultResourceId;
     }
 

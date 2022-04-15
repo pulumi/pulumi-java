@@ -29,7 +29,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="dimensions")
       private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
 
-    public List<ScaleRuleMetricDimensionResponse> getDimensions() {
+    public List<ScaleRuleMetricDimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
 
@@ -40,7 +40,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="dividePerInstance")
       private final @Nullable Boolean dividePerInstance;
 
-    public Optional<Boolean> getDividePerInstance() {
+    public Optional<Boolean> dividePerInstance() {
         return this.dividePerInstance == null ? Optional.empty() : Optional.ofNullable(this.dividePerInstance);
     }
 
@@ -51,7 +51,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metricName", required=true)
       private final String metricName;
 
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
 
@@ -62,7 +62,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
 
-    public Optional<String> getMetricNamespace() {
+    public Optional<String> metricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
     }
 
@@ -73,7 +73,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metricResourceLocation")
       private final @Nullable String metricResourceLocation;
 
-    public Optional<String> getMetricResourceLocation() {
+    public Optional<String> metricResourceLocation() {
         return this.metricResourceLocation == null ? Optional.empty() : Optional.ofNullable(this.metricResourceLocation);
     }
 
@@ -84,7 +84,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="metricResourceUri", required=true)
       private final String metricResourceUri;
 
-    public String getMetricResourceUri() {
+    public String metricResourceUri() {
         return this.metricResourceUri;
     }
 
@@ -95,7 +95,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="operator", required=true)
       private final String operator;
 
-    public String getOperator() {
+    public String operator() {
         return this.operator;
     }
 
@@ -106,7 +106,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="statistic", required=true)
       private final String statistic;
 
-    public String getStatistic() {
+    public String statistic() {
         return this.statistic;
     }
 
@@ -117,7 +117,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="threshold", required=true)
       private final Double threshold;
 
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
 
@@ -128,7 +128,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timeAggregation", required=true)
       private final String timeAggregation;
 
-    public String getTimeAggregation() {
+    public String timeAggregation() {
         return this.timeAggregation;
     }
 
@@ -139,7 +139,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timeGrain", required=true)
       private final String timeGrain;
 
-    public String getTimeGrain() {
+    public String timeGrain() {
         return this.timeGrain;
     }
 
@@ -150,7 +150,7 @@ public final class MetricTriggerResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="timeWindow", required=true)
       private final String timeWindow;
 
-    public String getTimeWindow() {
+    public String timeWindow() {
         return this.timeWindow;
     }
 

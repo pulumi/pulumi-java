@@ -48,28 +48,28 @@ public final class GetMonitoringConfigResult {
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The metrics configuration details
      * 
     */
-    public List<MetricConfigurationResponse> getMetricConfigurations() {
+    public List<MetricConfigurationResponse> metricConfigurations() {
         return this.metricConfigurations;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

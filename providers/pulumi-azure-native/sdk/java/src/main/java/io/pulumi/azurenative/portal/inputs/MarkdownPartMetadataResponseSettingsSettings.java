@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
     @Import(name="content")
       private final @Nullable String content;
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -37,7 +37,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
     @Import(name="markdownSource")
       private final @Nullable Integer markdownSource;
 
-    public Optional<Integer> getMarkdownSource() {
+    public Optional<Integer> markdownSource() {
         return this.markdownSource == null ? Optional.empty() : Optional.ofNullable(this.markdownSource);
     }
 
@@ -48,7 +48,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
     @Import(name="markdownUri")
       private final @Nullable String markdownUri;
 
-    public Optional<String> getMarkdownUri() {
+    public Optional<String> markdownUri() {
         return this.markdownUri == null ? Optional.empty() : Optional.ofNullable(this.markdownUri);
     }
 
@@ -59,7 +59,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
     @Import(name="subtitle")
       private final @Nullable String subtitle;
 
-    public Optional<String> getSubtitle() {
+    public Optional<String> subtitle() {
         return this.subtitle == null ? Optional.empty() : Optional.ofNullable(this.subtitle);
     }
 
@@ -70,7 +70,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
     @Import(name="title")
       private final @Nullable String title;
 
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
     }
 

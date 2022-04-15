@@ -32,14 +32,14 @@ public final class KeyVaultReferenceResponse {
      * The resource ID of the Azure key vault associated with the Batch account.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The URL of the Azure key vault associated with the Batch account.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

@@ -26,7 +26,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     @Import(name="allow")
       private final @Nullable Output<Boolean> allow;
 
-    public Output<Boolean> getAllow() {
+    public Output<Boolean> allow() {
         return this.allow == null ? Codegen.empty() : this.allow;
     }
 
@@ -37,7 +37,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     @Import(name="default")
       private final @Nullable Output<Boolean> default_;
 
-    public Output<Boolean> getDefault_() {
+    public Output<Boolean> default_() {
         return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
@@ -48,7 +48,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
     @Import(name="optimize")
       private final @Nullable Output<Boolean> optimize;
 
-    public Output<Boolean> getOptimize() {
+    public Output<Boolean> optimize() {
         return this.optimize == null ? Codegen.empty() : this.optimize;
     }
 

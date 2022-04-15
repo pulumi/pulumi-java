@@ -27,7 +27,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
 
@@ -38,7 +38,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
@@ -49,7 +49,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     @Import(name="eventHubResourceId")
       private final @Nullable Output<String> eventHubResourceId;
 
-    public Output<String> getEventHubResourceId() {
+    public Output<String> eventHubResourceId() {
         return this.eventHubResourceId == null ? Codegen.empty() : this.eventHubResourceId;
     }
 

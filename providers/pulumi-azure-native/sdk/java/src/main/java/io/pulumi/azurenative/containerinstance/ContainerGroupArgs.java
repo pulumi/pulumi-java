@@ -38,7 +38,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerGroupName")
       private final @Nullable Output<String> containerGroupName;
 
-    public Output<String> getContainerGroupName() {
+    public Output<String> containerGroupName() {
         return this.containerGroupName == null ? Codegen.empty() : this.containerGroupName;
     }
 
@@ -49,7 +49,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containers", required=true)
       private final Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> containers() {
         return this.containers;
     }
 
@@ -60,7 +60,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diagnostics")
       private final @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
 
-    public Output<ContainerGroupDiagnosticsArgs> getDiagnostics() {
+    public Output<ContainerGroupDiagnosticsArgs> diagnostics() {
         return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
@@ -71,7 +71,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
       private final @Nullable Output<DnsConfigurationArgs> dnsConfig;
 
-    public Output<DnsConfigurationArgs> getDnsConfig() {
+    public Output<DnsConfigurationArgs> dnsConfig() {
         return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
@@ -82,7 +82,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionProperties")
       private final @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
 
-    public Output<EncryptionPropertiesArgs> getEncryptionProperties() {
+    public Output<EncryptionPropertiesArgs> encryptionProperties() {
         return this.encryptionProperties == null ? Codegen.empty() : this.encryptionProperties;
     }
 
@@ -93,7 +93,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<ContainerGroupIdentityArgs> identity;
 
-    public Output<ContainerGroupIdentityArgs> getIdentity() {
+    public Output<ContainerGroupIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -104,7 +104,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageRegistryCredentials")
       private final @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
 
-    public Output<List<ImageRegistryCredentialArgs>> getImageRegistryCredentials() {
+    public Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials() {
         return this.imageRegistryCredentials == null ? Codegen.empty() : this.imageRegistryCredentials;
     }
 
@@ -115,7 +115,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initContainers")
       private final @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
 
-    public Output<List<InitContainerDefinitionArgs>> getInitContainers() {
+    public Output<List<InitContainerDefinitionArgs>> initContainers() {
         return this.initContainers == null ? Codegen.empty() : this.initContainers;
     }
 
@@ -126,7 +126,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<IpAddressArgs> ipAddress;
 
-    public Output<IpAddressArgs> getIpAddress() {
+    public Output<IpAddressArgs> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -137,7 +137,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -148,7 +148,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
       private final @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
 
-    public Output<ContainerGroupNetworkProfileArgs> getNetworkProfile() {
+    public Output<ContainerGroupNetworkProfileArgs> networkProfile() {
         return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
@@ -159,7 +159,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType", required=true)
       private final Output<Either<String,OperatingSystemTypes>> osType;
 
-    public Output<Either<String,OperatingSystemTypes>> getOsType() {
+    public Output<Either<String,OperatingSystemTypes>> osType() {
         return this.osType;
     }
 
@@ -170,7 +170,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -184,7 +184,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restartPolicy")
       private final @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
 
-    public Output<Either<String,ContainerGroupRestartPolicy>> getRestartPolicy() {
+    public Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy() {
         return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
     }
 
@@ -195,7 +195,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<Either<String,ContainerGroupSku>> sku;
 
-    public Output<Either<String,ContainerGroupSku>> getSku() {
+    public Output<Either<String,ContainerGroupSku>> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -206,7 +206,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -217,7 +217,7 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
+    public Output<List<VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

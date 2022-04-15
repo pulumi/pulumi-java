@@ -26,7 +26,7 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -37,7 +37,7 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="endTime")
       private final @Nullable String endTime;
 
-    public Optional<String> getEndTime() {
+    public Optional<String> endTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
@@ -48,7 +48,7 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="interval")
       private final @Nullable String interval;
 
-    public Optional<String> getInterval() {
+    public Optional<String> interval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
@@ -59,7 +59,7 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
@@ -70,7 +70,7 @@ public final class JobScheduleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

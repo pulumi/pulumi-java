@@ -57,28 +57,28 @@ public final class ContentKeyPolicyOptionResponse {
      * The key delivery configuration.
      * 
     */
-    public Object getConfiguration() {
+    public Object configuration() {
         return this.configuration;
     }
     /**
      * The Policy Option description.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The legacy Policy Option ID.
      * 
     */
-    public String getPolicyOptionId() {
+    public String policyOptionId() {
         return this.policyOptionId;
     }
     /**
      * The requirements that must be met to deliver keys with this configuration
      * 
     */
-    public Object getRestriction() {
+    public Object restriction() {
         return this.restriction;
     }
 

@@ -25,7 +25,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="packageSid")
       private final @Nullable String packageSid;
 
-    public Optional<String> getPackageSid() {
+    public Optional<String> packageSid() {
         return this.packageSid == null ? Optional.empty() : Optional.ofNullable(this.packageSid);
     }
 
@@ -36,7 +36,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="secretKey")
       private final @Nullable String secretKey;
 
-    public Optional<String> getSecretKey() {
+    public Optional<String> secretKey() {
         return this.secretKey == null ? Optional.empty() : Optional.ofNullable(this.secretKey);
     }
 
@@ -47,7 +47,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="windowsLiveEndpoint")
       private final @Nullable String windowsLiveEndpoint;
 
-    public Optional<String> getWindowsLiveEndpoint() {
+    public Optional<String> windowsLiveEndpoint() {
         return this.windowsLiveEndpoint == null ? Optional.empty() : Optional.ofNullable(this.windowsLiveEndpoint);
     }
 

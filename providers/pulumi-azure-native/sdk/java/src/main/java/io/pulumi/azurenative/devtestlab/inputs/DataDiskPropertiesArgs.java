@@ -29,7 +29,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="attachNewDataDiskOptions")
       private final @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
 
-    public Output<AttachNewDataDiskOptionsArgs> getAttachNewDataDiskOptions() {
+    public Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions() {
         return this.attachNewDataDiskOptions == null ? Codegen.empty() : this.attachNewDataDiskOptions;
     }
 
@@ -40,7 +40,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="existingLabDiskId")
       private final @Nullable Output<String> existingLabDiskId;
 
-    public Output<String> getExistingLabDiskId() {
+    public Output<String> existingLabDiskId() {
         return this.existingLabDiskId == null ? Codegen.empty() : this.existingLabDiskId;
     }
 
@@ -51,7 +51,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="hostCaching")
       private final @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
-    public Output<Either<String,HostCachingOptions>> getHostCaching() {
+    public Output<Either<String,HostCachingOptions>> hostCaching() {
         return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
     }
 

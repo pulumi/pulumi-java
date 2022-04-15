@@ -58,35 +58,35 @@ public final class ContactProfileLinkResponse {
      * Contact Profile Link Channel
      * 
     */
-    public List<ContactProfileLinkChannelResponse> getChannels() {
+    public List<ContactProfileLinkChannelResponse> channels() {
         return this.channels;
     }
     /**
      * Direction (uplink or downlink)
      * 
     */
-    public String getDirection() {
+    public String direction() {
         return this.direction;
     }
     /**
      * Effective Isotropic Radiated Power (EIRP) in dBW.
      * 
     */
-    public Optional<Double> getEirpdBW() {
+    public Optional<Double> eirpdBW() {
         return Optional.ofNullable(this.eirpdBW);
     }
     /**
      * Gain To Noise Temperature in db/K.
      * 
     */
-    public Optional<Double> getGainOverTemperature() {
+    public Optional<Double> gainOverTemperature() {
         return Optional.ofNullable(this.gainOverTemperature);
     }
     /**
      * polarization. eg (RHCP, LHCP)
      * 
     */
-    public String getPolarization() {
+    public String polarization() {
         return this.polarization;
     }
 

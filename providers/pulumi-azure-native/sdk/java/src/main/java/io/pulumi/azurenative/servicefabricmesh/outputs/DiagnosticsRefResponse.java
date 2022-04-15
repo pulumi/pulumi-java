@@ -36,14 +36,14 @@ public final class DiagnosticsRefResponse {
      * Status of whether or not sinks are enabled.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
      * 
     */
-    public List<String> getSinkRefs() {
+    public List<String> sinkRefs() {
         return this.sinkRefs == null ? List.of() : this.sinkRefs;
     }
 

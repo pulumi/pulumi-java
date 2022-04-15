@@ -26,7 +26,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
     @Import(name="excludedActions")
       private final @Nullable List<String> excludedActions;
 
-    public List<String> getExcludedActions() {
+    public List<String> excludedActions() {
         return this.excludedActions == null ? List.of() : this.excludedActions;
     }
 
@@ -37,7 +37,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
     @Import(name="excludedPrincipals")
       private final @Nullable List<String> excludedPrincipals;
 
-    public List<String> getExcludedPrincipals() {
+    public List<String> excludedPrincipals() {
         return this.excludedPrincipals == null ? List.of() : this.excludedPrincipals;
     }
 
@@ -48,7 +48,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 

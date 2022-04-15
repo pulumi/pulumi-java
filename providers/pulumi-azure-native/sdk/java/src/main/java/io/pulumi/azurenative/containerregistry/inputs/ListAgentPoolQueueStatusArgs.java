@@ -19,7 +19,7 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
     @Import(name="agentPoolName", required=true)
       private final String agentPoolName;
 
-    public String getAgentPoolName() {
+    public String agentPoolName() {
         return this.agentPoolName;
     }
 
@@ -30,7 +30,7 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
     @Import(name="registryName", required=true)
       private final String registryName;
 
-    public String getRegistryName() {
+    public String registryName() {
         return this.registryName;
     }
 
@@ -41,7 +41,7 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

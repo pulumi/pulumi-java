@@ -26,7 +26,7 @@ public final class VirtualHardDiskResponse {
      * Specifies the virtual hard disk's uri.
      * 
     */
-    public Optional<String> getUri() {
+    public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
 

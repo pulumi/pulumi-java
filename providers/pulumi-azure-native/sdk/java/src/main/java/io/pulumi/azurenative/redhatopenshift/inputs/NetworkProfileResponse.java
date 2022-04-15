@@ -25,7 +25,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="podCidr")
       private final @Nullable String podCidr;
 
-    public Optional<String> getPodCidr() {
+    public Optional<String> podCidr() {
         return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
     }
 
@@ -36,7 +36,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
-    public Optional<String> getServiceCidr() {
+    public Optional<String> serviceCidr() {
         return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
     }
 

@@ -42,7 +42,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return A resource identifier for the API the issue was created for.
      * 
      */
-    public Output</* @Nullable */ String> getApiId() {
+    public Output</* @Nullable */ String> apiId() {
         return this.apiId;
     }
     /**
@@ -56,7 +56,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return Date and time when the issue was created.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedDate() {
+    public Output</* @Nullable */ String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -70,7 +70,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return Text describing the issue.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -84,7 +84,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return Status of the issue.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -112,7 +112,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return The issue title.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -126,7 +126,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -140,7 +140,7 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
      * @return A resource identifier for the user created the issue.
      * 
      */
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 

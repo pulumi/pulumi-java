@@ -26,7 +26,7 @@ public final class ListConnectionConsentLinksResult {
      * Collection of resources
      * 
     */
-    public List<ConsentLinkDefinitionResponse> getValue() {
+    public List<ConsentLinkDefinitionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }
 

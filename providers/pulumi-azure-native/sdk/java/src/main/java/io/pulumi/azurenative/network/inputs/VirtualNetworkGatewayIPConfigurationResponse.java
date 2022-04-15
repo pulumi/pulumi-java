@@ -26,7 +26,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="etag", required=true)
       private final String etag;
 
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -59,7 +59,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="privateIPAddress", required=true)
       private final String privateIPAddress;
 
-    public String getPrivateIPAddress() {
+    public String privateIPAddress() {
         return this.privateIPAddress;
     }
 
@@ -70,7 +70,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
-    public Optional<String> getPrivateIPAllocationMethod() {
+    public Optional<String> privateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
@@ -81,7 +81,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -92,7 +92,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
 
-    public Optional<SubResourceResponse> getPublicIPAddress() {
+    public Optional<SubResourceResponse> publicIPAddress() {
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
@@ -103,7 +103,7 @@ public final class VirtualNetworkGatewayIPConfigurationResponse extends io.pulum
     @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
-    public Optional<SubResourceResponse> getSubnet() {
+    public Optional<SubResourceResponse> subnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 

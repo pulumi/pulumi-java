@@ -28,7 +28,7 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="resourceForest")
       private final @Nullable Output<String> resourceForest;
 
-    public Output<String> getResourceForest() {
+    public Output<String> resourceForest() {
         return this.resourceForest == null ? Codegen.empty() : this.resourceForest;
     }
 
@@ -39,7 +39,7 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="settings")
       private final @Nullable Output<List<ForestTrustArgs>> settings;
 
-    public Output<List<ForestTrustArgs>> getSettings() {
+    public Output<List<ForestTrustArgs>> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 

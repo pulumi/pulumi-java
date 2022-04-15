@@ -27,7 +27,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     @Import(name="interactionFieldName", required=true)
       private final Output<String> interactionFieldName;
 
-    public Output<String> getInteractionFieldName() {
+    public Output<String> interactionFieldName() {
         return this.interactionFieldName;
     }
 
@@ -38,7 +38,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     @Import(name="linkType")
       private final @Nullable Output<LinkTypes> linkType;
 
-    public Output<LinkTypes> getLinkType() {
+    public Output<LinkTypes> linkType() {
         return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
@@ -49,7 +49,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
     @Import(name="relationshipFieldName", required=true)
       private final Output<String> relationshipFieldName;
 
-    public Output<String> getRelationshipFieldName() {
+    public Output<String> relationshipFieldName() {
         return this.relationshipFieldName;
     }
 

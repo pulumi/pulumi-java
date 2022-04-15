@@ -22,7 +22,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,7 +33,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="idProvider", required=true)
       private final Output<String> idProvider;
 
-    public Output<String> getIdProvider() {
+    public Output<String> idProvider() {
         return this.idProvider;
     }
 
@@ -44,7 +44,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
     @Import(name="trustedIdProviderName")
       private final @Nullable Output<String> trustedIdProviderName;
 
-    public Output<String> getTrustedIdProviderName() {
+    public Output<String> trustedIdProviderName() {
         return this.trustedIdProviderName == null ? Codegen.empty() : this.trustedIdProviderName;
     }
 

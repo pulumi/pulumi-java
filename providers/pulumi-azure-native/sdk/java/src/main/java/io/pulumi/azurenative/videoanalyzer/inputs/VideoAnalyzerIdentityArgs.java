@@ -28,7 +28,7 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -39,7 +39,7 @@ public final class VideoAnalyzerIdentityArgs extends io.pulumi.resources.Resourc
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
+    public Output<Map<String,Object>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 

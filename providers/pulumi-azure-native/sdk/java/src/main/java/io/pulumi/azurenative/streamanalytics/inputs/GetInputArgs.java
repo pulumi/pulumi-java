@@ -19,7 +19,7 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="inputName", required=true)
       private final String inputName;
 
-    public String getInputName() {
+    public String inputName() {
         return this.inputName;
     }
 
@@ -30,7 +30,7 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="jobName", required=true)
       private final String jobName;
 
-    public String getJobName() {
+    public String jobName() {
         return this.jobName;
     }
 
@@ -41,7 +41,7 @@ public final class GetInputArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

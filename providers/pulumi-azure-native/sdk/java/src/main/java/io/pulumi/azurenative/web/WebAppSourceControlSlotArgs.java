@@ -24,7 +24,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
+    public Output<String> branch() {
         return this.branch == null ? Codegen.empty() : this.branch;
     }
 
@@ -35,7 +35,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="deploymentRollbackEnabled")
       private final @Nullable Output<Boolean> deploymentRollbackEnabled;
 
-    public Output<Boolean> getDeploymentRollbackEnabled() {
+    public Output<Boolean> deploymentRollbackEnabled() {
         return this.deploymentRollbackEnabled == null ? Codegen.empty() : this.deploymentRollbackEnabled;
     }
 
@@ -46,7 +46,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="gitHubActionConfiguration")
       private final @Nullable Output<GitHubActionConfigurationArgs> gitHubActionConfiguration;
 
-    public Output<GitHubActionConfigurationArgs> getGitHubActionConfiguration() {
+    public Output<GitHubActionConfigurationArgs> gitHubActionConfiguration() {
         return this.gitHubActionConfiguration == null ? Codegen.empty() : this.gitHubActionConfiguration;
     }
 
@@ -57,7 +57,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="isGitHubAction")
       private final @Nullable Output<Boolean> isGitHubAction;
 
-    public Output<Boolean> getIsGitHubAction() {
+    public Output<Boolean> isGitHubAction() {
         return this.isGitHubAction == null ? Codegen.empty() : this.isGitHubAction;
     }
 
@@ -68,7 +68,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="isManualIntegration")
       private final @Nullable Output<Boolean> isManualIntegration;
 
-    public Output<Boolean> getIsManualIntegration() {
+    public Output<Boolean> isManualIntegration() {
         return this.isManualIntegration == null ? Codegen.empty() : this.isManualIntegration;
     }
 
@@ -79,7 +79,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="isMercurial")
       private final @Nullable Output<Boolean> isMercurial;
 
-    public Output<Boolean> getIsMercurial() {
+    public Output<Boolean> isMercurial() {
         return this.isMercurial == null ? Codegen.empty() : this.isMercurial;
     }
 
@@ -90,7 +90,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -101,7 +101,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -112,7 +112,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="repoUrl")
       private final @Nullable Output<String> repoUrl;
 
-    public Output<String> getRepoUrl() {
+    public Output<String> repoUrl() {
         return this.repoUrl == null ? Codegen.empty() : this.repoUrl;
     }
 
@@ -123,7 +123,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -134,7 +134,7 @@ public final class WebAppSourceControlSlotArgs extends io.pulumi.resources.Resou
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 

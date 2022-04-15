@@ -29,7 +29,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="inferencingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> inferencingComputeBinding;
 
-    public Output<ComputeBindingArgs> getInferencingComputeBinding() {
+    public Output<ComputeBindingArgs> inferencingComputeBinding() {
         return this.inferencingComputeBinding;
     }
 
@@ -40,7 +40,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="mlAssistEnabled")
       private final @Nullable Output<Boolean> mlAssistEnabled;
 
-    public Output<Boolean> getMlAssistEnabled() {
+    public Output<Boolean> mlAssistEnabled() {
         return this.mlAssistEnabled == null ? Codegen.empty() : this.mlAssistEnabled;
     }
 
@@ -51,7 +51,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="modelNamePrefix", required=true)
       private final Output<String> modelNamePrefix;
 
-    public Output<String> getModelNamePrefix() {
+    public Output<String> modelNamePrefix() {
         return this.modelNamePrefix;
     }
 
@@ -62,7 +62,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="prelabelAccuracyThreshold")
       private final @Nullable Output<Double> prelabelAccuracyThreshold;
 
-    public Output<Double> getPrelabelAccuracyThreshold() {
+    public Output<Double> prelabelAccuracyThreshold() {
         return this.prelabelAccuracyThreshold == null ? Codegen.empty() : this.prelabelAccuracyThreshold;
     }
 
@@ -73,7 +73,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="trainingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> trainingComputeBinding;
 
-    public Output<ComputeBindingArgs> getTrainingComputeBinding() {
+    public Output<ComputeBindingArgs> trainingComputeBinding() {
         return this.trainingComputeBinding;
     }
 

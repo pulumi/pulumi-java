@@ -28,7 +28,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     @Import(name="containerIdentityInfo")
       private final @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
 
-    public Output<ContainerIdentityInfoArgs> getContainerIdentityInfo() {
+    public Output<ContainerIdentityInfoArgs> containerIdentityInfo() {
         return this.containerIdentityInfo == null ? Codegen.empty() : this.containerIdentityInfo;
     }
 
@@ -39,7 +39,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     @Import(name="rawCertData")
       private final @Nullable Output<String> rawCertData;
 
-    public Output<String> getRawCertData() {
+    public Output<String> rawCertData() {
         return this.rawCertData == null ? Codegen.empty() : this.rawCertData;
     }
 
@@ -50,7 +50,7 @@ public final class GenericContainerExtendedInfoArgs extends io.pulumi.resources.
     @Import(name="serviceEndpoints")
       private final @Nullable Output<Map<String,String>> serviceEndpoints;
 
-    public Output<Map<String,String>> getServiceEndpoints() {
+    public Output<Map<String,String>> serviceEndpoints() {
         return this.serviceEndpoints == null ? Codegen.empty() : this.serviceEndpoints;
     }
 

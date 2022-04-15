@@ -25,7 +25,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse e
     @Import(name="functionAlias")
       private final @Nullable String functionAlias;
 
-    public Optional<String> getFunctionAlias() {
+    public Optional<String> functionAlias() {
         return this.functionAlias == null ? Optional.empty() : Optional.ofNullable(this.functionAlias);
     }
 

@@ -27,7 +27,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="datasetType")
       private final @Nullable String datasetType;
 
-    public Optional<String> getDatasetType() {
+    public Optional<String> datasetType() {
         return this.datasetType == null ? Optional.empty() : Optional.ofNullable(this.datasetType);
     }
 
@@ -38,7 +38,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="datastoreId")
       private final @Nullable String datastoreId;
 
-    public Optional<String> getDatastoreId() {
+    public Optional<String> datastoreId() {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
@@ -49,7 +49,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -60,7 +60,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="isAnonymous")
       private final @Nullable Boolean isAnonymous;
 
-    public Optional<Boolean> getIsAnonymous() {
+    public Optional<Boolean> isAnonymous() {
         return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
     }
 
@@ -71,7 +71,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -82,7 +82,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
 
@@ -93,7 +93,7 @@ public final class DataVersionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

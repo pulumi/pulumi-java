@@ -33,14 +33,14 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
      * The core quota for the VM family for the Batch account.
      * 
     */
-    public Integer getCoreQuota() {
+    public Integer coreQuota() {
         return this.coreQuota;
     }
     /**
      * The Virtual Machine family name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

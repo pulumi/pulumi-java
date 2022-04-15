@@ -30,7 +30,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="amountOfRam", required=true)
       private final Output<Integer> amountOfRam;
 
-    public Output<Integer> getAmountOfRam() {
+    public Output<Integer> amountOfRam() {
         return this.amountOfRam;
     }
 
@@ -41,7 +41,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customization")
       private final @Nullable Output<GuestOSCustomizationArgs> customization;
 
-    public Output<GuestOSCustomizationArgs> getCustomization() {
+    public Output<GuestOSCustomizationArgs> customization() {
         return this.customization == null ? Codegen.empty() : this.customization;
     }
 
@@ -52,7 +52,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disks")
       private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
-    public Output<List<VirtualDiskArgs>> getDisks() {
+    public Output<List<VirtualDiskArgs>> disks() {
         return this.disks == null ? Codegen.empty() : this.disks;
     }
 
@@ -63,7 +63,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exposeToGuestVM")
       private final @Nullable Output<Boolean> exposeToGuestVM;
 
-    public Output<Boolean> getExposeToGuestVM() {
+    public Output<Boolean> exposeToGuestVM() {
         return this.exposeToGuestVM == null ? Codegen.empty() : this.exposeToGuestVM;
     }
 
@@ -74,7 +74,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -85,7 +85,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nics")
       private final @Nullable Output<List<VirtualNicArgs>> nics;
 
-    public Output<List<VirtualNicArgs>> getNics() {
+    public Output<List<VirtualNicArgs>> nics() {
         return this.nics == null ? Codegen.empty() : this.nics;
     }
 
@@ -96,7 +96,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfCores", required=true)
       private final Output<Integer> numberOfCores;
 
-    public Output<Integer> getNumberOfCores() {
+    public Output<Integer> numberOfCores() {
         return this.numberOfCores;
     }
 
@@ -107,7 +107,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -118,7 +118,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudId", required=true)
       private final Output<String> privateCloudId;
 
-    public Output<String> getPrivateCloudId() {
+    public Output<String> privateCloudId() {
         return this.privateCloudId;
     }
 
@@ -129,7 +129,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -140,7 +140,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourcePool")
       private final @Nullable Output<ResourcePoolArgs> resourcePool;
 
-    public Output<ResourcePoolArgs> getResourcePool() {
+    public Output<ResourcePoolArgs> resourcePool() {
         return this.resourcePool == null ? Codegen.empty() : this.resourcePool;
     }
 
@@ -151,7 +151,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -162,7 +162,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
-    public Output<String> getTemplateId() {
+    public Output<String> templateId() {
         return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 
@@ -173,7 +173,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 
@@ -184,7 +184,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vSphereNetworks")
       private final @Nullable Output<List<String>> vSphereNetworks;
 
-    public Output<List<String>> getVSphereNetworks() {
+    public Output<List<String>> vSphereNetworks() {
         return this.vSphereNetworks == null ? Codegen.empty() : this.vSphereNetworks;
     }
 
@@ -195,7 +195,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualMachineName")
       private final @Nullable Output<String> virtualMachineName;
 
-    public Output<String> getVirtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName == null ? Codegen.empty() : this.virtualMachineName;
     }
 

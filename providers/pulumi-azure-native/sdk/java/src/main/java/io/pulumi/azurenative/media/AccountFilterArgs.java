@@ -26,7 +26,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
-    public Output<String> getFilterName() {
+    public Output<String> filterName() {
         return this.filterName == null ? Codegen.empty() : this.filterName;
     }
 
@@ -48,7 +48,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstQuality")
       private final @Nullable Output<FirstQualityArgs> firstQuality;
 
-    public Output<FirstQualityArgs> getFirstQuality() {
+    public Output<FirstQualityArgs> firstQuality() {
         return this.firstQuality == null ? Codegen.empty() : this.firstQuality;
     }
 
@@ -59,7 +59,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="presentationTimeRange")
       private final @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
 
-    public Output<PresentationTimeRangeArgs> getPresentationTimeRange() {
+    public Output<PresentationTimeRangeArgs> presentationTimeRange() {
         return this.presentationTimeRange == null ? Codegen.empty() : this.presentationTimeRange;
     }
 
@@ -70,7 +70,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +81,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracks")
       private final @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
-    public Output<List<FilterTrackSelectionArgs>> getTracks() {
+    public Output<List<FilterTrackSelectionArgs>> tracks() {
         return this.tracks == null ? Codegen.empty() : this.tracks;
     }
 

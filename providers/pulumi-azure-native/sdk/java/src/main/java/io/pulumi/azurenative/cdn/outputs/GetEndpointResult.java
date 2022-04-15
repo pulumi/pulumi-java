@@ -206,175 +206,175 @@ public final class GetEndpointResult {
      * List of content types on which compression applies. The value should be a valid MIME type.
      * 
     */
-    public List<String> getContentTypesToCompress() {
+    public List<String> contentTypesToCompress() {
         return this.contentTypesToCompress == null ? List.of() : this.contentTypesToCompress;
     }
     /**
      * A reference to the origin group.
      * 
     */
-    public Optional<ResourceReferenceResponse> getDefaultOriginGroup() {
+    public Optional<ResourceReferenceResponse> defaultOriginGroup() {
         return Optional.ofNullable(this.defaultOriginGroup);
     }
     /**
      * A policy that specifies the delivery rules to be used for an endpoint.
      * 
     */
-    public Optional<EndpointPropertiesUpdateParametersResponseDeliveryPolicy> getDeliveryPolicy() {
+    public Optional<EndpointPropertiesUpdateParametersResponseDeliveryPolicy> deliveryPolicy() {
         return Optional.ofNullable(this.deliveryPolicy);
     }
     /**
      * List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
      * 
     */
-    public List<GeoFilterResponse> getGeoFilters() {
+    public List<GeoFilterResponse> geoFilters() {
         return this.geoFilters == null ? List.of() : this.geoFilters;
     }
     /**
      * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
     */
-    public String getHostName() {
+    public String hostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
      * 
     */
-    public Optional<Boolean> getIsCompressionEnabled() {
+    public Optional<Boolean> isCompressionEnabled() {
         return Optional.ofNullable(this.isCompressionEnabled);
     }
     /**
      * Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
     */
-    public Optional<Boolean> getIsHttpAllowed() {
+    public Optional<Boolean> isHttpAllowed() {
         return Optional.ofNullable(this.isHttpAllowed);
     }
     /**
      * Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
     */
-    public Optional<Boolean> getIsHttpsAllowed() {
+    public Optional<Boolean> isHttpsAllowed() {
         return Optional.ofNullable(this.isHttpsAllowed);
     }
     /**
      * Resource location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
      * 
     */
-    public Optional<String> getOptimizationType() {
+    public Optional<String> optimizationType() {
         return Optional.ofNullable(this.optimizationType);
     }
     /**
      * The origin groups comprising of origins that are used for load balancing the traffic based on availability.
      * 
     */
-    public List<DeepCreatedOriginGroupResponse> getOriginGroups() {
+    public List<DeepCreatedOriginGroupResponse> originGroups() {
         return this.originGroups == null ? List.of() : this.originGroups;
     }
     /**
      * The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
     */
-    public Optional<String> getOriginHostHeader() {
+    public Optional<String> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
     /**
      * A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
     */
-    public Optional<String> getOriginPath() {
+    public Optional<String> originPath() {
         return Optional.ofNullable(this.originPath);
     }
     /**
      * The source of the content being delivered via CDN.
      * 
     */
-    public List<DeepCreatedOriginResponse> getOrigins() {
+    public List<DeepCreatedOriginResponse> origins() {
         return this.origins;
     }
     /**
      * Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
      * 
     */
-    public Optional<String> getProbePath() {
+    public Optional<String> probePath() {
         return Optional.ofNullable(this.probePath);
     }
     /**
      * Provisioning status of the endpoint.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
     */
-    public Optional<String> getQueryStringCachingBehavior() {
+    public Optional<String> queryStringCachingBehavior() {
         return Optional.ofNullable(this.queryStringCachingBehavior);
     }
     /**
      * Resource status of the endpoint.
      * 
     */
-    public String getResourceState() {
+    public String resourceState() {
         return this.resourceState;
     }
     /**
      * Read only system data
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * List of keys used to validate the signed URL hashes.
      * 
     */
-    public List<UrlSigningKeyResponse> getUrlSigningKeys() {
+    public List<UrlSigningKeyResponse> urlSigningKeys() {
         return this.urlSigningKeys == null ? List.of() : this.urlSigningKeys;
     }
     /**
      * Defines the Web Application Firewall policy for the endpoint (if applicable)
      * 
     */
-    public Optional<EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
+    public Optional<EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }
 

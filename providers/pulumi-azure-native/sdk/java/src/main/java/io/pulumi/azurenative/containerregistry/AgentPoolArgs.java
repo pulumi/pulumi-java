@@ -26,7 +26,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
+    public Output<String> agentPoolName() {
         return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
@@ -37,7 +37,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count == null ? Codegen.empty() : this.count;
     }
 
@@ -48,7 +48,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -59,7 +59,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="os")
       private final @Nullable Output<Either<String,OS>> os;
 
-    public Output<Either<String,OS>> getOs() {
+    public Output<Either<String,OS>> os() {
         return this.os == null ? Codegen.empty() : this.os;
     }
 
@@ -70,7 +70,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
 
@@ -81,7 +81,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,7 +92,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -103,7 +103,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier == null ? Codegen.empty() : this.tier;
     }
 
@@ -114,7 +114,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkSubnetResourceId")
       private final @Nullable Output<String> virtualNetworkSubnetResourceId;
 
-    public Output<String> getVirtualNetworkSubnetResourceId() {
+    public Output<String> virtualNetworkSubnetResourceId() {
         return this.virtualNetworkSubnetResourceId == null ? Codegen.empty() : this.virtualNetworkSubnetResourceId;
     }
 

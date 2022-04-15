@@ -36,7 +36,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customRdpProperty")
       private final @Nullable Output<String> customRdpProperty;
 
-    public Output<String> getCustomRdpProperty() {
+    public Output<String> customRdpProperty() {
         return this.customRdpProperty == null ? Codegen.empty() : this.customRdpProperty;
     }
 
@@ -47,7 +47,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -58,7 +58,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
+    public Output<String> friendlyName() {
         return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
@@ -69,7 +69,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolName")
       private final @Nullable Output<String> hostPoolName;
 
-    public Output<String> getHostPoolName() {
+    public Output<String> hostPoolName() {
         return this.hostPoolName == null ? Codegen.empty() : this.hostPoolName;
     }
 
@@ -80,14 +80,14 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPoolType", required=true)
       private final Output<Either<String,HostPoolType>> hostPoolType;
 
-    public Output<Either<String,HostPoolType>> getHostPoolType() {
+    public Output<Either<String,HostPoolType>> hostPoolType() {
         return this.hostPoolType;
     }
 
     @Import(name="identity")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
+    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity() {
         return this.identity == null ? Codegen.empty() : this.identity;
     }
 
@@ -98,7 +98,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -109,7 +109,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancerType", required=true)
       private final Output<Either<String,LoadBalancerType>> loadBalancerType;
 
-    public Output<Either<String,LoadBalancerType>> getLoadBalancerType() {
+    public Output<Either<String,LoadBalancerType>> loadBalancerType() {
         return this.loadBalancerType;
     }
 
@@ -120,7 +120,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -131,7 +131,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
@@ -142,7 +142,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxSessionLimit")
       private final @Nullable Output<Integer> maxSessionLimit;
 
-    public Output<Integer> getMaxSessionLimit() {
+    public Output<Integer> maxSessionLimit() {
         return this.maxSessionLimit == null ? Codegen.empty() : this.maxSessionLimit;
     }
 
@@ -153,7 +153,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="migrationRequest")
       private final @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
-    public Output<MigrationRequestPropertiesArgs> getMigrationRequest() {
+    public Output<MigrationRequestPropertiesArgs> migrationRequest() {
         return this.migrationRequest == null ? Codegen.empty() : this.migrationRequest;
     }
 
@@ -164,14 +164,14 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="personalDesktopAssignmentType")
       private final @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
 
-    public Output<Either<String,PersonalDesktopAssignmentType>> getPersonalDesktopAssignmentType() {
+    public Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType() {
         return this.personalDesktopAssignmentType == null ? Codegen.empty() : this.personalDesktopAssignmentType;
     }
 
     @Import(name="plan")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
+    public Output<ResourceModelWithAllowedPropertySetPlanArgs> plan() {
         return this.plan == null ? Codegen.empty() : this.plan;
     }
 
@@ -182,7 +182,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preferredAppGroupType", required=true)
       private final Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
 
-    public Output<Either<String,PreferredAppGroupType>> getPreferredAppGroupType() {
+    public Output<Either<String,PreferredAppGroupType>> preferredAppGroupType() {
         return this.preferredAppGroupType;
     }
 
@@ -193,7 +193,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationInfo")
       private final @Nullable Output<RegistrationInfoArgs> registrationInfo;
 
-    public Output<RegistrationInfoArgs> getRegistrationInfo() {
+    public Output<RegistrationInfoArgs> registrationInfo() {
         return this.registrationInfo == null ? Codegen.empty() : this.registrationInfo;
     }
 
@@ -204,7 +204,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -215,14 +215,14 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ring")
       private final @Nullable Output<Integer> ring;
 
-    public Output<Integer> getRing() {
+    public Output<Integer> ring() {
         return this.ring == null ? Codegen.empty() : this.ring;
     }
 
     @Import(name="sku")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
+    public Output<ResourceModelWithAllowedPropertySetSkuArgs> sku() {
         return this.sku == null ? Codegen.empty() : this.sku;
     }
 
@@ -233,7 +233,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ssoClientId")
       private final @Nullable Output<String> ssoClientId;
 
-    public Output<String> getSsoClientId() {
+    public Output<String> ssoClientId() {
         return this.ssoClientId == null ? Codegen.empty() : this.ssoClientId;
     }
 
@@ -244,7 +244,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ssoClientSecretKeyVaultPath")
       private final @Nullable Output<String> ssoClientSecretKeyVaultPath;
 
-    public Output<String> getSsoClientSecretKeyVaultPath() {
+    public Output<String> ssoClientSecretKeyVaultPath() {
         return this.ssoClientSecretKeyVaultPath == null ? Codegen.empty() : this.ssoClientSecretKeyVaultPath;
     }
 
@@ -255,7 +255,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ssoSecretType")
       private final @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
 
-    public Output<Either<String,SSOSecretType>> getSsoSecretType() {
+    public Output<Either<String,SSOSecretType>> ssoSecretType() {
         return this.ssoSecretType == null ? Codegen.empty() : this.ssoSecretType;
     }
 
@@ -266,7 +266,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ssoadfsAuthority")
       private final @Nullable Output<String> ssoadfsAuthority;
 
-    public Output<String> getSsoadfsAuthority() {
+    public Output<String> ssoadfsAuthority() {
         return this.ssoadfsAuthority == null ? Codegen.empty() : this.ssoadfsAuthority;
     }
 
@@ -277,7 +277,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startVMOnConnect")
       private final @Nullable Output<Boolean> startVMOnConnect;
 
-    public Output<Boolean> getStartVMOnConnect() {
+    public Output<Boolean> startVMOnConnect() {
         return this.startVMOnConnect == null ? Codegen.empty() : this.startVMOnConnect;
     }
 
@@ -288,7 +288,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -299,7 +299,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationEnvironment")
       private final @Nullable Output<Boolean> validationEnvironment;
 
-    public Output<Boolean> getValidationEnvironment() {
+    public Output<Boolean> validationEnvironment() {
         return this.validationEnvironment == null ? Codegen.empty() : this.validationEnvironment;
     }
 
@@ -310,7 +310,7 @@ public final class HostPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vmTemplate")
       private final @Nullable Output<String> vmTemplate;
 
-    public Output<String> getVmTemplate() {
+    public Output<String> vmTemplate() {
         return this.vmTemplate == null ? Codegen.empty() : this.vmTemplate;
     }
 

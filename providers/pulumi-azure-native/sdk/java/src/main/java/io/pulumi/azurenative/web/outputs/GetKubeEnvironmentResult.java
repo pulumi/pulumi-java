@@ -126,7 +126,7 @@ public final class GetKubeEnvironmentResult {
         this.type = type;
     }
 
-    public Optional<String> getAksResourceID() {
+    public Optional<String> aksResourceID() {
         return Optional.ofNullable(this.aksResourceID);
     }
     /**
@@ -135,7 +135,7 @@ public final class GetKubeEnvironmentResult {
      * supported
      * 
     */
-    public Optional<AppLogsConfigurationResponse> getAppLogsConfiguration() {
+    public Optional<AppLogsConfigurationResponse> appLogsConfiguration() {
         return Optional.ofNullable(this.appLogsConfiguration);
     }
     /**
@@ -144,91 +144,91 @@ public final class GetKubeEnvironmentResult {
      * FrontEnd Service ArtifactsStorageType etc.
      * 
     */
-    public Optional<ArcConfigurationResponse> getArcConfiguration() {
+    public Optional<ArcConfigurationResponse> arcConfiguration() {
         return Optional.ofNullable(this.arcConfiguration);
     }
     /**
      * Default Domain Name for the cluster
      * 
     */
-    public String getDefaultDomain() {
+    public String defaultDomain() {
         return this.defaultDomain;
     }
     /**
      * Any errors that occurred during deployment or deployment validation
      * 
     */
-    public String getDeploymentErrors() {
+    public String deploymentErrors() {
         return this.deploymentErrors;
     }
     /**
      * Extended Location.
      * 
     */
-    public Optional<ExtendedLocationResponse> getExtendedLocation() {
+    public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Only visible within Vnet/Subnet
      * 
     */
-    public Optional<Boolean> getInternalLoadBalancerEnabled() {
+    public Optional<Boolean> internalLoadBalancerEnabled() {
         return Optional.ofNullable(this.internalLoadBalancerEnabled);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the Kubernetes Environment.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Static IP of the KubeEnvironment
      * 
     */
-    public Optional<String> getStaticIp() {
+    public Optional<String> staticIp() {
         return Optional.ofNullable(this.staticIp);
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

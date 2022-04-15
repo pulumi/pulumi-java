@@ -28,7 +28,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetId")
       private final @Nullable Output<String> assetId;
 
-    public Output<String> getAssetId() {
+    public Output<String> assetId() {
         return this.assetId == null ? Codegen.empty() : this.assetId;
     }
 
@@ -39,7 +39,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputId")
       private final @Nullable Output<String> inputId;
 
-    public Output<String> getInputId() {
+    public Output<String> inputId() {
         return this.inputId == null ? Codegen.empty() : this.inputId;
     }
 
@@ -50,7 +50,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputId")
       private final @Nullable Output<String> outputId;
 
-    public Output<String> getOutputId() {
+    public Output<String> outputId() {
         return this.outputId == null ? Codegen.empty() : this.outputId;
     }
 
@@ -61,7 +61,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
-    public Output<Map<String,WebServiceParameterArgs>> getParameters() {
+    public Output<Map<String,WebServiceParameterArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 

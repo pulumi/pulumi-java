@@ -25,7 +25,7 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
     @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
-    public Optional<String> getIpAddress() {
+    public Optional<String> ipAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
@@ -36,7 +36,7 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
     @Import(name="port", required=true)
       private final String port;
 
-    public String getPort() {
+    public String port() {
         return this.port;
     }
 

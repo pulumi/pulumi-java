@@ -60,42 +60,42 @@ public final class GetApiIssueAttachmentResult {
      * An HTTP link or Base64-encoded binary data.
      * 
     */
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
      * 
     */
-    public String getContentFormat() {
+    public String contentFormat() {
         return this.contentFormat;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Filename by which the binary data will be saved.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

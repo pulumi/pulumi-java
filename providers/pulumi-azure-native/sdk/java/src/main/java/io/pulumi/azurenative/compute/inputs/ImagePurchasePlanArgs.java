@@ -26,7 +26,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -37,7 +37,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     @Import(name="product")
       private final @Nullable Output<String> product;
 
-    public Output<String> getProduct() {
+    public Output<String> product() {
         return this.product == null ? Codegen.empty() : this.product;
     }
 
@@ -48,7 +48,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
+    public Output<String> publisher() {
         return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 

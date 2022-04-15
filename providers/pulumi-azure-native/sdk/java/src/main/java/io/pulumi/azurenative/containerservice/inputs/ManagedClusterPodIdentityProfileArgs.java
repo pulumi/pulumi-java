@@ -25,7 +25,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
     @Import(name="allowNetworkPluginKubenet")
       private final @Nullable Output<Boolean> allowNetworkPluginKubenet;
 
-    public Output<Boolean> getAllowNetworkPluginKubenet() {
+    public Output<Boolean> allowNetworkPluginKubenet() {
         return this.allowNetworkPluginKubenet == null ? Codegen.empty() : this.allowNetworkPluginKubenet;
     }
 
@@ -36,7 +36,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -47,7 +47,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<List<ManagedClusterPodIdentityArgs>> userAssignedIdentities;
 
-    public Output<List<ManagedClusterPodIdentityArgs>> getUserAssignedIdentities() {
+    public Output<List<ManagedClusterPodIdentityArgs>> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
@@ -58,7 +58,7 @@ public final class ManagedClusterPodIdentityProfileArgs extends io.pulumi.resour
     @Import(name="userAssignedIdentityExceptions")
       private final @Nullable Output<List<ManagedClusterPodIdentityExceptionArgs>> userAssignedIdentityExceptions;
 
-    public Output<List<ManagedClusterPodIdentityExceptionArgs>> getUserAssignedIdentityExceptions() {
+    public Output<List<ManagedClusterPodIdentityExceptionArgs>> userAssignedIdentityExceptions() {
         return this.userAssignedIdentityExceptions == null ? Codegen.empty() : this.userAssignedIdentityExceptions;
     }
 

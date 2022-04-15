@@ -48,7 +48,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return The time the resource was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -62,7 +62,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    public Output<String> getDataAccessFqdn() {
+    public Output<String> dataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
@@ -76,7 +76,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    public Output<String> getDataAccessId() {
+    public Output<String> dataAccessId() {
         return this.dataAccessId;
     }
     /**
@@ -92,7 +92,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Expected value is 'Gen2'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -106,7 +106,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -120,7 +120,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -134,7 +134,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -148,7 +148,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -162,7 +162,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
      */
-    public Output<EnvironmentStatusResponse> getStatus() {
+    public Output<EnvironmentStatusResponse> status() {
         return this.status;
     }
     /**
@@ -176,7 +176,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
      * 
      */
-    public Output<Gen2StorageConfigurationOutputResponse> getStorageConfiguration() {
+    public Output<Gen2StorageConfigurationOutputResponse> storageConfiguration() {
         return this.storageConfiguration;
     }
     /**
@@ -190,7 +190,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -204,7 +204,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return The list of event properties which will be used to define the environment's time series id.
      * 
      */
-    public Output<List<TimeSeriesIdPropertyResponse>> getTimeSeriesIdProperties() {
+    public Output<List<TimeSeriesIdPropertyResponse>> timeSeriesIdProperties() {
         return this.timeSeriesIdProperties;
     }
     /**
@@ -218,7 +218,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -232,7 +232,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * @return The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
      * 
      */
-    public Output</* @Nullable */ WarmStoreConfigurationPropertiesResponse> getWarmStoreConfiguration() {
+    public Output</* @Nullable */ WarmStoreConfigurationPropertiesResponse> warmStoreConfiguration() {
         return this.warmStoreConfiguration;
     }
 

@@ -44,7 +44,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The creation date of the disk.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -58,7 +58,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return When backed by a blob, the name of the VHD blob without extension.
      * 
      */
-    public Output</* @Nullable */ String> getDiskBlobName() {
+    public Output</* @Nullable */ String> diskBlobName() {
         return this.diskBlobName;
     }
     /**
@@ -72,7 +72,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The size of the disk in Gibibytes.
      * 
      */
-    public Output</* @Nullable */ Integer> getDiskSizeGiB() {
+    public Output</* @Nullable */ Integer> diskSizeGiB() {
         return this.diskSizeGiB;
     }
     /**
@@ -86,7 +86,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The storage type for the disk (i.e. Standard, Premium).
      * 
      */
-    public Output</* @Nullable */ String> getDiskType() {
+    public Output</* @Nullable */ String> diskType() {
         return this.diskType;
     }
     /**
@@ -100,7 +100,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return When backed by a blob, the URI of underlying blob.
      * 
      */
-    public Output</* @Nullable */ String> getDiskUri() {
+    public Output</* @Nullable */ String> diskUri() {
         return this.diskUri;
     }
     /**
@@ -114,7 +114,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
      * 
      */
-    public Output</* @Nullable */ String> getHostCaching() {
+    public Output</* @Nullable */ String> hostCaching() {
         return this.hostCaching;
     }
     /**
@@ -128,7 +128,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the VM to which this disk is leased.
      * 
      */
-    public Output</* @Nullable */ String> getLeasedByLabVmId() {
+    public Output</* @Nullable */ String> leasedByLabVmId() {
         return this.leasedByLabVmId;
     }
     /**
@@ -142,7 +142,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -156,7 +156,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return When backed by managed disk, this is the ID of the compute disk resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedDiskId() {
+    public Output</* @Nullable */ String> managedDiskId() {
         return this.managedDiskId;
     }
     /**
@@ -170,7 +170,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -184,7 +184,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -198,7 +198,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return When backed by a blob, the storage account where the blob is.
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountId() {
+    public Output</* @Nullable */ String> storageAccountId() {
         return this.storageAccountId;
     }
     /**
@@ -212,7 +212,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -226,7 +226,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -240,7 +240,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 

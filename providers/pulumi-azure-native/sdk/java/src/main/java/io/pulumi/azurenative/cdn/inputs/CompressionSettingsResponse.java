@@ -27,7 +27,7 @@ public final class CompressionSettingsResponse extends io.pulumi.resources.Invok
     @Import(name="contentTypesToCompress")
       private final @Nullable List<String> contentTypesToCompress;
 
-    public List<String> getContentTypesToCompress() {
+    public List<String> contentTypesToCompress() {
         return this.contentTypesToCompress == null ? List.of() : this.contentTypesToCompress;
     }
 
@@ -38,7 +38,7 @@ public final class CompressionSettingsResponse extends io.pulumi.resources.Invok
     @Import(name="isCompressionEnabled")
       private final @Nullable Boolean isCompressionEnabled;
 
-    public Optional<Boolean> getIsCompressionEnabled() {
+    public Optional<Boolean> isCompressionEnabled() {
         return this.isCompressionEnabled == null ? Optional.empty() : Optional.ofNullable(this.isCompressionEnabled);
     }
 

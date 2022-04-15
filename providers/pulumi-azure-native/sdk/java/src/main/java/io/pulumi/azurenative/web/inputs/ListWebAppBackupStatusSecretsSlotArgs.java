@@ -25,7 +25,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="backupId", required=true)
       private final String backupId;
 
-    public String getBackupId() {
+    public String backupId() {
         return this.backupId;
     }
 
@@ -36,7 +36,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="backupName")
       private final @Nullable String backupName;
 
-    public Optional<String> getBackupName() {
+    public Optional<String> backupName() {
         return this.backupName == null ? Optional.empty() : Optional.ofNullable(this.backupName);
     }
 
@@ -47,7 +47,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="backupSchedule")
       private final @Nullable BackupSchedule backupSchedule;
 
-    public Optional<BackupSchedule> getBackupSchedule() {
+    public Optional<BackupSchedule> backupSchedule() {
         return this.backupSchedule == null ? Optional.empty() : Optional.ofNullable(this.backupSchedule);
     }
 
@@ -58,7 +58,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="databases")
       private final @Nullable List<DatabaseBackupSetting> databases;
 
-    public List<DatabaseBackupSetting> getDatabases() {
+    public List<DatabaseBackupSetting> databases() {
         return this.databases == null ? List.of() : this.databases;
     }
 
@@ -69,7 +69,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -80,7 +80,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="kind")
       private final @Nullable String kind;
 
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
@@ -91,7 +91,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -102,7 +102,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,7 +113,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="slot", required=true)
       private final String slot;
 
-    public String getSlot() {
+    public String slot() {
         return this.slot;
     }
 
@@ -124,7 +124,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends io.pulumi.resou
     @Import(name="storageAccountUrl", required=true)
       private final String storageAccountUrl;
 
-    public String getStorageAccountUrl() {
+    public String storageAccountUrl() {
         return this.storageAccountUrl;
     }
 

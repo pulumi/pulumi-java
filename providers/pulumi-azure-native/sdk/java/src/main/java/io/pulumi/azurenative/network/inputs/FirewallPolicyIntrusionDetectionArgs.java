@@ -29,7 +29,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
     @Import(name="configuration")
       private final @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
-    public Output<FirewallPolicyIntrusionDetectionConfigurationArgs> getConfiguration() {
+    public Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration() {
         return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
@@ -40,7 +40,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
     @Import(name="mode")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
-    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
+    public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 

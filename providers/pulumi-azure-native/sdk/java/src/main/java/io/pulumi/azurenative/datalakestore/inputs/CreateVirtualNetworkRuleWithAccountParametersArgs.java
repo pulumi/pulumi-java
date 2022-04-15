@@ -25,7 +25,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 

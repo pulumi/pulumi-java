@@ -63,42 +63,42 @@ public final class PresentationTimeRangeResponse {
      * The absolute end time boundary.
      * 
     */
-    public Optional<Double> getEndTimestamp() {
+    public Optional<Double> endTimestamp() {
         return Optional.ofNullable(this.endTimestamp);
     }
     /**
      * The indicator of forcing existing of end time stamp.
      * 
     */
-    public Optional<Boolean> getForceEndTimestamp() {
+    public Optional<Boolean> forceEndTimestamp() {
         return Optional.ofNullable(this.forceEndTimestamp);
     }
     /**
      * The relative to end right edge.
      * 
     */
-    public Optional<Double> getLiveBackoffDuration() {
+    public Optional<Double> liveBackoffDuration() {
         return Optional.ofNullable(this.liveBackoffDuration);
     }
     /**
      * The relative to end sliding window.
      * 
     */
-    public Optional<Double> getPresentationWindowDuration() {
+    public Optional<Double> presentationWindowDuration() {
         return Optional.ofNullable(this.presentationWindowDuration);
     }
     /**
      * The absolute start time boundary.
      * 
     */
-    public Optional<Double> getStartTimestamp() {
+    public Optional<Double> startTimestamp() {
         return Optional.ofNullable(this.startTimestamp);
     }
     /**
      * The time scale of time stamps.
      * 
     */
-    public Optional<Double> getTimescale() {
+    public Optional<Double> timescale() {
         return Optional.ofNullable(this.timescale);
     }
 

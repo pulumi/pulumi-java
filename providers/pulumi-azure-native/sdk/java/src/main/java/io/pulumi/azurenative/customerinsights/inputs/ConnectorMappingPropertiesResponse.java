@@ -32,7 +32,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="availability", required=true)
       private final ConnectorMappingAvailabilityResponse availability;
 
-    public ConnectorMappingAvailabilityResponse getAvailability() {
+    public ConnectorMappingAvailabilityResponse availability() {
         return this.availability;
     }
 
@@ -43,7 +43,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="completeOperation", required=true)
       private final ConnectorMappingCompleteOperationResponse completeOperation;
 
-    public ConnectorMappingCompleteOperationResponse getCompleteOperation() {
+    public ConnectorMappingCompleteOperationResponse completeOperation() {
         return this.completeOperation;
     }
 
@@ -54,7 +54,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="errorManagement", required=true)
       private final ConnectorMappingErrorManagementResponse errorManagement;
 
-    public ConnectorMappingErrorManagementResponse getErrorManagement() {
+    public ConnectorMappingErrorManagementResponse errorManagement() {
         return this.errorManagement;
     }
 
@@ -65,7 +65,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="fileFilter")
       private final @Nullable String fileFilter;
 
-    public Optional<String> getFileFilter() {
+    public Optional<String> fileFilter() {
         return this.fileFilter == null ? Optional.empty() : Optional.ofNullable(this.fileFilter);
     }
 
@@ -76,7 +76,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="folderPath")
       private final @Nullable String folderPath;
 
-    public Optional<String> getFolderPath() {
+    public Optional<String> folderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
@@ -87,7 +87,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="format", required=true)
       private final ConnectorMappingFormatResponse format;
 
-    public ConnectorMappingFormatResponse getFormat() {
+    public ConnectorMappingFormatResponse format() {
         return this.format;
     }
 
@@ -98,7 +98,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="hasHeader")
       private final @Nullable Boolean hasHeader;
 
-    public Optional<Boolean> getHasHeader() {
+    public Optional<Boolean> hasHeader() {
         return this.hasHeader == null ? Optional.empty() : Optional.ofNullable(this.hasHeader);
     }
 
@@ -109,7 +109,7 @@ public final class ConnectorMappingPropertiesResponse extends io.pulumi.resource
     @Import(name="structure", required=true)
       private final List<ConnectorMappingStructureResponse> structure;
 
-    public List<ConnectorMappingStructureResponse> getStructure() {
+    public List<ConnectorMappingStructureResponse> structure() {
         return this.structure;
     }
 

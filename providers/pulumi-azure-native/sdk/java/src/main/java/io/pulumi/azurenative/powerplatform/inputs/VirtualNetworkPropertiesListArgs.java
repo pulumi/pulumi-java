@@ -28,7 +28,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     @Import(name="nextLink")
       private final @Nullable Output<String> nextLink;
 
-    public Output<String> getNextLink() {
+    public Output<String> nextLink() {
         return this.nextLink == null ? Codegen.empty() : this.nextLink;
     }
 
@@ -39,7 +39,7 @@ public final class VirtualNetworkPropertiesListArgs extends io.pulumi.resources.
     @Import(name="value")
       private final @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
-    public Output<List<VirtualNetworkPropertiesArgs>> getValue() {
+    public Output<List<VirtualNetworkPropertiesArgs>> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

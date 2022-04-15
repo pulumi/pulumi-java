@@ -157,133 +157,133 @@ public final class GetConnectedClusterResult {
      * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
      * 
     */
-    public String getAgentPublicKeyCertificate() {
+    public String agentPublicKeyCertificate() {
         return this.agentPublicKeyCertificate;
     }
     /**
      * Version of the agent running on the connected cluster resource
      * 
     */
-    public String getAgentVersion() {
+    public String agentVersion() {
         return this.agentVersion;
     }
     /**
      * Represents the connectivity status of the connected cluster.
      * 
     */
-    public String getConnectivityStatus() {
+    public String connectivityStatus() {
         return this.connectivityStatus;
     }
     /**
      * The Kubernetes distribution running on this connected cluster.
      * 
     */
-    public Optional<String> getDistribution() {
+    public Optional<String> distribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the connected cluster.
      * 
     */
-    public ConnectedClusterIdentityResponse getIdentity() {
+    public ConnectedClusterIdentityResponse identity() {
         return this.identity;
     }
     /**
      * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
      * 
     */
-    public Optional<String> getInfrastructure() {
+    public Optional<String> infrastructure() {
         return Optional.ofNullable(this.infrastructure);
     }
     /**
      * The Kubernetes version of the connected cluster resource
      * 
     */
-    public String getKubernetesVersion() {
+    public String kubernetesVersion() {
         return this.kubernetesVersion;
     }
     /**
      * Time representing the last instance when heart beat was received from the cluster
      * 
     */
-    public String getLastConnectivityTime() {
+    public String lastConnectivityTime() {
         return this.lastConnectivityTime;
     }
     /**
      * The geo-location where the resource lives
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Expiration time of the managed identity certificate
      * 
     */
-    public String getManagedIdentityCertificateExpirationTime() {
+    public String managedIdentityCertificateExpirationTime() {
         return this.managedIdentityCertificateExpirationTime;
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Connected cluster offering
      * 
     */
-    public String getOffering() {
+    public String offering() {
         return this.offering;
     }
     /**
      * Provisioning state of the connected cluster resource.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Number of CPU cores present in the connected cluster resource
      * 
     */
-    public Integer getTotalCoreCount() {
+    public Integer totalCoreCount() {
         return this.totalCoreCount;
     }
     /**
      * Number of nodes present in the connected cluster resource
      * 
     */
-    public Integer getTotalNodeCount() {
+    public Integer totalNodeCount() {
         return this.totalNodeCount;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

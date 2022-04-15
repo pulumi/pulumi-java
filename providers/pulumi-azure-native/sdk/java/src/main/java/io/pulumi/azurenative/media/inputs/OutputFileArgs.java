@@ -26,7 +26,7 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels", required=true)
       private final Output<List<String>> labels;
 
-    public Output<List<String>> getLabels() {
+    public Output<List<String>> labels() {
         return this.labels;
     }
 

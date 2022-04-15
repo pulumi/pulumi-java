@@ -36,14 +36,14 @@ public final class ListProductFamiliesResult {
      * Link for the next set of product families.
      * 
     */
-    public Optional<String> getNextLink() {
+    public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of product families.
      * 
     */
-    public List<ProductFamilyResponse> getValue() {
+    public List<ProductFamilyResponse> value() {
         return this.value;
     }
 

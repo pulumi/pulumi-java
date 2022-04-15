@@ -31,7 +31,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="allowedValues")
       private final @Nullable Output<List<Object>> allowedValues;
 
-    public Output<List<Object>> getAllowedValues() {
+    public Output<List<Object>> allowedValues() {
         return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
@@ -42,7 +42,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
+    public Output<Object> defaultValue() {
         return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
@@ -53,7 +53,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="metadata")
       private final @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
 
-    public Output<ParameterDefinitionsValueMetadataArgs> getMetadata() {
+    public Output<ParameterDefinitionsValueMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -64,7 +64,7 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> getType() {
+    public Output<Either<String,ParameterType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

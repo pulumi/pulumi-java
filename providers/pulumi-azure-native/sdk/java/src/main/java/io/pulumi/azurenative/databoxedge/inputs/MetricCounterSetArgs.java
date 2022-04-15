@@ -26,7 +26,7 @@ public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="counters", required=true)
       private final Output<List<MetricCounterArgs>> counters;
 
-    public Output<List<MetricCounterArgs>> getCounters() {
+    public Output<List<MetricCounterArgs>> counters() {
         return this.counters;
     }
 

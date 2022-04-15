@@ -137,112 +137,112 @@ public final class GetLinkResult {
      * Localized descriptions for the Link.
      * 
     */
-    public Map<String,String> getDescription() {
+    public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
      * Localized display name for the Link.
      * 
     */
-    public Map<String,String> getDisplayName() {
+    public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The link name.
      * 
     */
-    public String getLinkName() {
+    public String linkName() {
         return this.linkName;
     }
     /**
      * The set of properties mappings between the source and target Types.
      * 
     */
-    public List<TypePropertiesMappingResponse> getMappings() {
+    public List<TypePropertiesMappingResponse> mappings() {
         return this.mappings == null ? List.of() : this.mappings;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
      * 
     */
-    public Optional<String> getOperationType() {
+    public Optional<String> operationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * The properties that represent the participating profile.
      * 
     */
-    public List<ParticipantPropertyReferenceResponse> getParticipantPropertyReferences() {
+    public List<ParticipantPropertyReferenceResponse> participantPropertyReferences() {
         return this.participantPropertyReferences;
     }
     /**
      * Provisioning state.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
      * 
     */
-    public Optional<Boolean> getReferenceOnly() {
+    public Optional<Boolean> referenceOnly() {
         return Optional.ofNullable(this.referenceOnly);
     }
     /**
      * Type of source entity.
      * 
     */
-    public String getSourceEntityType() {
+    public String sourceEntityType() {
         return this.sourceEntityType;
     }
     /**
      * Name of the source Entity Type.
      * 
     */
-    public String getSourceEntityTypeName() {
+    public String sourceEntityTypeName() {
         return this.sourceEntityTypeName;
     }
     /**
      * Type of target entity.
      * 
     */
-    public String getTargetEntityType() {
+    public String targetEntityType() {
         return this.targetEntityType;
     }
     /**
      * Name of the target Entity Type.
      * 
     */
-    public String getTargetEntityTypeName() {
+    public String targetEntityTypeName() {
         return this.targetEntityTypeName;
     }
     /**
      * The hub name.
      * 
     */
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

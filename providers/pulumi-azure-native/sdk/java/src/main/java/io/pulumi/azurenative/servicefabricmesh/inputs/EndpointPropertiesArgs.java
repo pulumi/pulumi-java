@@ -27,7 +27,7 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

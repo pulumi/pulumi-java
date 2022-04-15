@@ -29,7 +29,7 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     @Import(name="type")
       private final @Nullable Output<Either<String,StoredProcedureParameterType>> type;
 
-    public Output<Either<String,StoredProcedureParameterType>> getType() {
+    public Output<Either<String,StoredProcedureParameterType>> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -40,7 +40,7 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     @Import(name="value")
       private final @Nullable Output<Object> value;
 
-    public Output<Object> getValue() {
+    public Output<Object> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

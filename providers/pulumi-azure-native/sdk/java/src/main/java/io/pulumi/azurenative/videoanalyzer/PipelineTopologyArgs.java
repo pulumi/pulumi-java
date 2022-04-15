@@ -31,7 +31,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -42,7 +42,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -53,7 +53,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
-    public Output<Either<String,Kind>> getKind() {
+    public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
 
@@ -64,7 +64,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<List<ParameterDeclarationArgs>> parameters;
 
-    public Output<List<ParameterDeclarationArgs>> getParameters() {
+    public Output<List<ParameterDeclarationArgs>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -75,7 +75,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pipelineTopologyName")
       private final @Nullable Output<String> pipelineTopologyName;
 
-    public Output<String> getPipelineTopologyName() {
+    public Output<String> pipelineTopologyName() {
         return this.pipelineTopologyName == null ? Codegen.empty() : this.pipelineTopologyName;
     }
 
@@ -86,7 +86,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="processors")
       private final @Nullable Output<List<EncoderProcessorArgs>> processors;
 
-    public Output<List<EncoderProcessorArgs>> getProcessors() {
+    public Output<List<EncoderProcessorArgs>> processors() {
         return this.processors == null ? Codegen.empty() : this.processors;
     }
 
@@ -97,7 +97,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -108,7 +108,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sinks", required=true)
       private final Output<List<VideoSinkArgs>> sinks;
 
-    public Output<List<VideoSinkArgs>> getSinks() {
+    public Output<List<VideoSinkArgs>> sinks() {
         return this.sinks;
     }
 
@@ -119,7 +119,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -130,7 +130,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sources", required=true)
       private final Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources;
 
-    public Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> getSources() {
+    public Output<List<Either<RtspSourceArgs,VideoSourceArgs>>> sources() {
         return this.sources;
     }
 

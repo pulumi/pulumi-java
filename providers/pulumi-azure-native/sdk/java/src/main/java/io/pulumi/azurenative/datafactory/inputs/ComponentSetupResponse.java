@@ -28,7 +28,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="componentName", required=true)
       private final String componentName;
 
-    public String getComponentName() {
+    public String componentName() {
         return this.componentName;
     }
 
@@ -39,7 +39,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="licenseKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getLicenseKey() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey() {
         return this.licenseKey == null ? null : this.licenseKey;
     }
 
@@ -51,7 +51,7 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

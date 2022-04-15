@@ -64,42 +64,42 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
      * The communities of bgp peering. Specified for microsoft peering.
      * 
     */
-    public List<String> getAdvertisedCommunities() {
+    public List<String> advertisedCommunities() {
         return this.advertisedCommunities == null ? List.of() : this.advertisedCommunities;
     }
     /**
      * The reference to AdvertisedPublicPrefixes.
      * 
     */
-    public List<String> getAdvertisedPublicPrefixes() {
+    public List<String> advertisedPublicPrefixes() {
         return this.advertisedPublicPrefixes == null ? List.of() : this.advertisedPublicPrefixes;
     }
     /**
      * The advertised public prefix state of the Peering resource.
      * 
     */
-    public String getAdvertisedPublicPrefixesState() {
+    public String advertisedPublicPrefixesState() {
         return this.advertisedPublicPrefixesState;
     }
     /**
      * The CustomerASN of the peering.
      * 
     */
-    public Optional<Integer> getCustomerASN() {
+    public Optional<Integer> customerASN() {
         return Optional.ofNullable(this.customerASN);
     }
     /**
      * The legacy mode of the peering.
      * 
     */
-    public Optional<Integer> getLegacyMode() {
+    public Optional<Integer> legacyMode() {
         return Optional.ofNullable(this.legacyMode);
     }
     /**
      * The RoutingRegistryName of the configuration.
      * 
     */
-    public Optional<String> getRoutingRegistryName() {
+    public Optional<String> routingRegistryName() {
         return Optional.ofNullable(this.routingRegistryName);
     }
 

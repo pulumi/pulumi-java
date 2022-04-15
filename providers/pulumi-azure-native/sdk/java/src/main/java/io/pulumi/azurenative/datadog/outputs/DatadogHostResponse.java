@@ -46,24 +46,24 @@ public final class DatadogHostResponse {
      * The aliases for the host.
      * 
     */
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
      * The Datadog integrations reporting metrics for the host.
      * 
     */
-    public List<String> getApps() {
+    public List<String> apps() {
         return this.apps == null ? List.of() : this.apps;
     }
-    public Optional<DatadogHostMetadataResponse> getMeta() {
+    public Optional<DatadogHostMetadataResponse> meta() {
         return Optional.ofNullable(this.meta);
     }
     /**
      * The name of the host.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

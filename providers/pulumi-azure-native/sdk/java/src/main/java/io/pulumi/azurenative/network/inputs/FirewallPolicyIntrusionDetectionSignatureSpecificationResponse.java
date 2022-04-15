@@ -25,7 +25,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     @Import(name="id")
       private final @Nullable String id;
 
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -36,7 +36,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     @Import(name="mode")
       private final @Nullable String mode;
 
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 

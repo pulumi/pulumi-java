@@ -25,7 +25,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
     @Import(name="componentName")
       private final @Nullable String componentName;
 
-    public Optional<String> getComponentName() {
+    public Optional<String> componentName() {
         return this.componentName == null ? Optional.empty() : Optional.ofNullable(this.componentName);
     }
 
@@ -36,7 +36,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
     @Import(name="content")
       private final @Nullable String content;
 
-    public Optional<String> getContent() {
+    public Optional<String> content() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
@@ -47,7 +47,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
     @Import(name="passName")
       private final @Nullable String passName;
 
-    public Optional<String> getPassName() {
+    public Optional<String> passName() {
         return this.passName == null ? Optional.empty() : Optional.ofNullable(this.passName);
     }
 
@@ -58,7 +58,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
     @Import(name="settingName")
       private final @Nullable String settingName;
 
-    public Optional<String> getSettingName() {
+    public Optional<String> settingName() {
         return this.settingName == null ? Optional.empty() : Optional.ofNullable(this.settingName);
     }
 

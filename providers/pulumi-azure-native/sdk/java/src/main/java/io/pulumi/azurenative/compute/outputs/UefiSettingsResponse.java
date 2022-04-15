@@ -34,14 +34,14 @@ public final class UefiSettingsResponse {
      * Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
     */
-    public Optional<Boolean> getSecureBootEnabled() {
+    public Optional<Boolean> secureBootEnabled() {
         return Optional.ofNullable(this.secureBootEnabled);
     }
     /**
      * Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01
      * 
     */
-    public Optional<Boolean> getVTpmEnabled() {
+    public Optional<Boolean> vTpmEnabled() {
         return Optional.ofNullable(this.vTpmEnabled);
     }
 

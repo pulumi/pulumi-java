@@ -26,7 +26,7 @@ public final class ManagementEventAggregationConditionResponse extends io.pulumi
     @Import(name="operator")
       private final @Nullable String operator;
 
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
@@ -37,7 +37,7 @@ public final class ManagementEventAggregationConditionResponse extends io.pulumi
     @Import(name="threshold")
       private final @Nullable Double threshold;
 
-    public Optional<Double> getThreshold() {
+    public Optional<Double> threshold() {
         return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
     }
 
@@ -48,7 +48,7 @@ public final class ManagementEventAggregationConditionResponse extends io.pulumi
     @Import(name="windowSize")
       private final @Nullable String windowSize;
 
-    public Optional<String> getWindowSize() {
+    public Optional<String> windowSize() {
         return this.windowSize == null ? Optional.empty() : Optional.ofNullable(this.windowSize);
     }
 

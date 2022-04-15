@@ -30,7 +30,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionPreferences")
       private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
-    public Output<EncryptionPreferencesArgs> getEncryptionPreferences() {
+    public Output<EncryptionPreferencesArgs> encryptionPreferences() {
         return this.encryptionPreferences == null ? Codegen.empty() : this.encryptionPreferences;
     }
 
@@ -41,7 +41,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managementResourcePreferences")
       private final @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
 
-    public Output<ManagementResourcePreferencesArgs> getManagementResourcePreferences() {
+    public Output<ManagementResourcePreferencesArgs> managementResourcePreferences() {
         return this.managementResourcePreferences == null ? Codegen.empty() : this.managementResourcePreferences;
     }
 
@@ -52,7 +52,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationPreferences")
       private final @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
 
-    public Output<List<NotificationPreferenceArgs>> getNotificationPreferences() {
+    public Output<List<NotificationPreferenceArgs>> notificationPreferences() {
         return this.notificationPreferences == null ? Codegen.empty() : this.notificationPreferences;
     }
 
@@ -63,7 +63,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transportPreferences")
       private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
-    public Output<TransportPreferencesArgs> getTransportPreferences() {
+    public Output<TransportPreferencesArgs> transportPreferences() {
         return this.transportPreferences == null ? Codegen.empty() : this.transportPreferences;
     }
 

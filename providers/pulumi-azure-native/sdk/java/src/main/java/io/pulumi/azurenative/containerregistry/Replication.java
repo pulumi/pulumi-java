@@ -44,7 +44,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -58,7 +58,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +72,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the replication at the time the operation was called.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -86,7 +86,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * @return The status of the replication at the time the operation was called.
      * 
      */
-    public Output<StatusResponse> getStatus() {
+    public Output<StatusResponse> status() {
         return this.status;
     }
     /**
@@ -100,7 +100,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -114,7 +114,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

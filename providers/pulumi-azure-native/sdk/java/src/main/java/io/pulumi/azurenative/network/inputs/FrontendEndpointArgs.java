@@ -30,7 +30,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -41,7 +41,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -52,7 +52,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -63,7 +63,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sessionAffinityEnabledState")
       private final @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
-    public Output<Either<String,SessionAffinityEnabledState>> getSessionAffinityEnabledState() {
+    public Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState() {
         return this.sessionAffinityEnabledState == null ? Codegen.empty() : this.sessionAffinityEnabledState;
     }
 
@@ -74,7 +74,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sessionAffinityTtlSeconds")
       private final @Nullable Output<Integer> sessionAffinityTtlSeconds;
 
-    public Output<Integer> getSessionAffinityTtlSeconds() {
+    public Output<Integer> sessionAffinityTtlSeconds() {
         return this.sessionAffinityTtlSeconds == null ? Codegen.empty() : this.sessionAffinityTtlSeconds;
     }
 
@@ -85,7 +85,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
+    public Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Codegen.empty() : this.webApplicationFirewallPolicyLink;
     }
 

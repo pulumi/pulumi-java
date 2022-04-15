@@ -26,7 +26,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="blobEndpoint", required=true)
       private final Output<String> blobEndpoint;
 
-    public Output<String> getBlobEndpoint() {
+    public Output<String> blobEndpoint() {
         return this.blobEndpoint;
     }
 
@@ -37,7 +37,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="protectedAccountKeyName", required=true)
       private final Output<String> protectedAccountKeyName;
 
-    public Output<String> getProtectedAccountKeyName() {
+    public Output<String> protectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
 
@@ -48,7 +48,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="protectedAccountKeyName2")
       private final @Nullable Output<String> protectedAccountKeyName2;
 
-    public Output<String> getProtectedAccountKeyName2() {
+    public Output<String> protectedAccountKeyName2() {
         return this.protectedAccountKeyName2 == null ? Codegen.empty() : this.protectedAccountKeyName2;
     }
 
@@ -59,7 +59,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="queueEndpoint", required=true)
       private final Output<String> queueEndpoint;
 
-    public Output<String> getQueueEndpoint() {
+    public Output<String> queueEndpoint() {
         return this.queueEndpoint;
     }
 
@@ -70,7 +70,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
 
@@ -81,7 +81,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     @Import(name="tableEndpoint", required=true)
       private final Output<String> tableEndpoint;
 
-    public Output<String> getTableEndpoint() {
+    public Output<String> tableEndpoint() {
         return this.tableEndpoint;
     }
 

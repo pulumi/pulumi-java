@@ -41,21 +41,21 @@ public final class ApplicationPolicyResponse {
      * The policy name
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The policy parameters.
      * 
     */
-    public Optional<String> getParameters() {
+    public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * The policy definition Id.
      * 
     */
-    public Optional<String> getPolicyDefinitionId() {
+    public Optional<String> policyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }
 

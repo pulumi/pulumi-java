@@ -19,7 +19,7 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="hubName", required=true)
       private final String hubName;
 
-    public String getHubName() {
+    public String hubName() {
         return this.hubName;
     }
 
@@ -30,7 +30,7 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
       private final String userId;
 
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
 
@@ -52,7 +52,7 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="viewName", required=true)
       private final String viewName;
 
-    public String getViewName() {
+    public String viewName() {
         return this.viewName;
     }
 

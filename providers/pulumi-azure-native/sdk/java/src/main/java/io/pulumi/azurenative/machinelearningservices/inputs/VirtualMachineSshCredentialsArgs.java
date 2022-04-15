@@ -26,7 +26,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -37,7 +37,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
     @Import(name="privateKeyData")
       private final @Nullable Output<String> privateKeyData;
 
-    public Output<String> getPrivateKeyData() {
+    public Output<String> privateKeyData() {
         return this.privateKeyData == null ? Codegen.empty() : this.privateKeyData;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
     @Import(name="publicKeyData")
       private final @Nullable Output<String> publicKeyData;
 
-    public Output<String> getPublicKeyData() {
+    public Output<String> publicKeyData() {
         return this.publicKeyData == null ? Codegen.empty() : this.publicKeyData;
     }
 
@@ -59,7 +59,7 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

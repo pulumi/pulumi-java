@@ -35,14 +35,14 @@ public final class ConnectionMonitorSourceResponse {
      * The source port used by connection monitor.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The ID of the resource used as the source by connection monitor.
      * 
     */
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

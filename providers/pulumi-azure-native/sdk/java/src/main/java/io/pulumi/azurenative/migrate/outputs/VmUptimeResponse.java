@@ -34,14 +34,14 @@ public final class VmUptimeResponse {
      * Number of days in a month for VM uptime.
      * 
     */
-    public Optional<Double> getDaysPerMonth() {
+    public Optional<Double> daysPerMonth() {
         return Optional.ofNullable(this.daysPerMonth);
     }
     /**
      * Number of hours per day for VM uptime.
      * 
     */
-    public Optional<Double> getHoursPerDay() {
+    public Optional<Double> hoursPerDay() {
         return Optional.ofNullable(this.hoursPerDay);
     }
 

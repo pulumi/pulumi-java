@@ -67,42 +67,42 @@ public final class AutoHealTriggersResponse {
      * A rule based on private bytes.
      * 
     */
-    public Optional<Integer> getPrivateBytesInKB() {
+    public Optional<Integer> privateBytesInKB() {
         return Optional.ofNullable(this.privateBytesInKB);
     }
     /**
      * A rule based on total requests.
      * 
     */
-    public Optional<RequestsBasedTriggerResponse> getRequests() {
+    public Optional<RequestsBasedTriggerResponse> requests() {
         return Optional.ofNullable(this.requests);
     }
     /**
      * A rule based on request execution time.
      * 
     */
-    public Optional<SlowRequestsBasedTriggerResponse> getSlowRequests() {
+    public Optional<SlowRequestsBasedTriggerResponse> slowRequests() {
         return Optional.ofNullable(this.slowRequests);
     }
     /**
      * A rule based on multiple Slow Requests Rule with path
      * 
     */
-    public List<SlowRequestsBasedTriggerResponse> getSlowRequestsWithPath() {
+    public List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? List.of() : this.slowRequestsWithPath;
     }
     /**
      * A rule based on status codes.
      * 
     */
-    public List<StatusCodesBasedTriggerResponse> getStatusCodes() {
+    public List<StatusCodesBasedTriggerResponse> statusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
     /**
      * A rule based on status codes ranges.
      * 
     */
-    public List<StatusCodesRangeBasedTriggerResponse> getStatusCodesRange() {
+    public List<StatusCodesRangeBasedTriggerResponse> statusCodesRange() {
         return this.statusCodesRange == null ? List.of() : this.statusCodesRange;
     }
 

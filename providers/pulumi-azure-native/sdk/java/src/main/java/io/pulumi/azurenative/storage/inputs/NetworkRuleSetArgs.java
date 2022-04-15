@@ -33,7 +33,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bypass")
       private final @Nullable Output<Either<String,Bypass>> bypass;
 
-    public Output<Either<String,Bypass>> getBypass() {
+    public Output<Either<String,Bypass>> bypass() {
         return this.bypass == null ? Codegen.empty() : this.bypass;
     }
 
@@ -44,7 +44,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultAction", required=true)
       private final Output<DefaultAction> defaultAction;
 
-    public Output<DefaultAction> getDefaultAction() {
+    public Output<DefaultAction> defaultAction() {
         return this.defaultAction;
     }
 
@@ -55,7 +55,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipRules")
       private final @Nullable Output<List<IPRuleArgs>> ipRules;
 
-    public Output<List<IPRuleArgs>> getIpRules() {
+    public Output<List<IPRuleArgs>> ipRules() {
         return this.ipRules == null ? Codegen.empty() : this.ipRules;
     }
 
@@ -66,7 +66,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceAccessRules")
       private final @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules;
 
-    public Output<List<ResourceAccessRuleArgs>> getResourceAccessRules() {
+    public Output<List<ResourceAccessRuleArgs>> resourceAccessRules() {
         return this.resourceAccessRules == null ? Codegen.empty() : this.resourceAccessRules;
     }
 
@@ -77,7 +77,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
+    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 

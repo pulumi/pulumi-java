@@ -25,7 +25,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     @Import(name="selectedDatabases", required=true)
       private final List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
 
-    public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> getSelectedDatabases() {
+    public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -36,7 +36,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     @Import(name="sourceConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
-    public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -47,7 +47,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     @Import(name="targetConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
-    public PostgreSqlConnectionInfoResponse getTargetConnectionInfo() {
+    public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 

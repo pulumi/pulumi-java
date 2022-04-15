@@ -23,7 +23,7 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="serverAddress", required=true)
       private final String serverAddress;
 
-    public String getServerAddress() {
+    public String serverAddress() {
         return this.serverAddress;
     }
 
@@ -34,7 +34,7 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
     @Import(name="volumeName", required=true)
       private final String volumeName;
 
-    public String getVolumeName() {
+    public String volumeName() {
         return this.volumeName;
     }
 

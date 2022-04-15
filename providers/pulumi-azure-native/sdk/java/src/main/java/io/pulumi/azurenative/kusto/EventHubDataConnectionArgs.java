@@ -26,7 +26,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -37,7 +37,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="compression")
       private final @Nullable Output<Either<String,Compression>> compression;
 
-    public Output<Either<String,Compression>> getCompression() {
+    public Output<Either<String,Compression>> compression() {
         return this.compression == null ? Codegen.empty() : this.compression;
     }
 
@@ -48,7 +48,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
 
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
 
@@ -59,7 +59,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
+    public Output<String> dataConnectionName() {
         return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
@@ -70,7 +70,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,EventHubDataFormat>> dataFormat;
 
-    public Output<Either<String,EventHubDataFormat>> getDataFormat() {
+    public Output<Either<String,EventHubDataFormat>> dataFormat() {
         return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
@@ -81,7 +81,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -92,7 +92,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
 
-    public Output<String> getEventHubResourceId() {
+    public Output<String> eventHubResourceId() {
         return this.eventHubResourceId;
     }
 
@@ -103,7 +103,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="eventSystemProperties")
       private final @Nullable Output<List<String>> eventSystemProperties;
 
-    public Output<List<String>> getEventSystemProperties() {
+    public Output<List<String>> eventSystemProperties() {
         return this.eventSystemProperties == null ? Codegen.empty() : this.eventSystemProperties;
     }
 
@@ -115,7 +115,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -126,7 +126,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -137,7 +137,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="managedIdentityResourceId")
       private final @Nullable Output<String> managedIdentityResourceId;
 
-    public Output<String> getManagedIdentityResourceId() {
+    public Output<String> managedIdentityResourceId() {
         return this.managedIdentityResourceId == null ? Codegen.empty() : this.managedIdentityResourceId;
     }
 
@@ -148,7 +148,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
 
-    public Output<String> getMappingRuleName() {
+    public Output<String> mappingRuleName() {
         return this.mappingRuleName == null ? Codegen.empty() : this.mappingRuleName;
     }
 
@@ -159,7 +159,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -170,7 +170,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

@@ -45,14 +45,14 @@ public final class SelfHostedIntegrationRuntimeResponse {
      * Integration runtime description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The base definition of a linked integration runtime.
      * 
     */
-    public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> getLinkedInfo() {
+    public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> linkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
     /**
@@ -60,7 +60,7 @@ public final class SelfHostedIntegrationRuntimeResponse {
      * Expected value is 'SelfHosted'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

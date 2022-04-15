@@ -26,7 +26,7 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
     @Import(name="domain", required=true)
       private final Object domain;
 
-    public Object getDomain() {
+    public Object domain() {
         return this.domain;
     }
 
@@ -37,7 +37,7 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
     @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
 
@@ -48,7 +48,7 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
     @Import(name="userName", required=true)
       private final Object userName;
 
-    public Object getUserName() {
+    public Object userName() {
         return this.userName;
     }
 

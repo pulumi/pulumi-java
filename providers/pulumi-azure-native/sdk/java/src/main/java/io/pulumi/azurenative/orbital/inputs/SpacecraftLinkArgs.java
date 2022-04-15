@@ -29,7 +29,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bandwidthMHz", required=true)
       private final Output<Double> bandwidthMHz;
 
-    public Output<Double> getBandwidthMHz() {
+    public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
     }
 
@@ -40,7 +40,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="centerFrequencyMHz", required=true)
       private final Output<Double> centerFrequencyMHz;
 
-    public Output<Double> getCenterFrequencyMHz() {
+    public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
 
@@ -51,7 +51,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="direction", required=true)
       private final Output<Either<String,Direction>> direction;
 
-    public Output<Either<String,Direction>> getDirection() {
+    public Output<Either<String,Direction>> direction() {
         return this.direction;
     }
 
@@ -62,7 +62,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="polarization", required=true)
       private final Output<Either<String,Polarization>> polarization;
 
-    public Output<Either<String,Polarization>> getPolarization() {
+    public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
 

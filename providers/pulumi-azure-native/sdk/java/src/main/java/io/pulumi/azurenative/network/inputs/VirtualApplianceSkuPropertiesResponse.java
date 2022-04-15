@@ -25,7 +25,7 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
     @Import(name="bundledScaleUnit")
       private final @Nullable String bundledScaleUnit;
 
-    public Optional<String> getBundledScaleUnit() {
+    public Optional<String> bundledScaleUnit() {
         return this.bundledScaleUnit == null ? Optional.empty() : Optional.ofNullable(this.bundledScaleUnit);
     }
 
@@ -36,7 +36,7 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
     @Import(name="marketPlaceVersion")
       private final @Nullable String marketPlaceVersion;
 
-    public Optional<String> getMarketPlaceVersion() {
+    public Optional<String> marketPlaceVersion() {
         return this.marketPlaceVersion == null ? Optional.empty() : Optional.ofNullable(this.marketPlaceVersion);
     }
 
@@ -47,7 +47,7 @@ public final class VirtualApplianceSkuPropertiesResponse extends io.pulumi.resou
     @Import(name="vendor")
       private final @Nullable String vendor;
 
-    public Optional<String> getVendor() {
+    public Optional<String> vendor() {
         return this.vendor == null ? Optional.empty() : Optional.ofNullable(this.vendor);
     }
 

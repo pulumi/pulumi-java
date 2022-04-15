@@ -26,7 +26,7 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
+    public Output<String> customData() {
         return this.customData == null ? Codegen.empty() : this.customData;
     }
 

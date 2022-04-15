@@ -28,7 +28,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -39,7 +39,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     @Import(name="configurationProfile")
       private final @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
 
-    public Output<Either<String,ConfigurationProfile>> getConfigurationProfile() {
+    public Output<Either<String,ConfigurationProfile>> configurationProfile() {
         return this.configurationProfile == null ? Codegen.empty() : this.configurationProfile;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     @Import(name="configurationProfilePreferenceId")
       private final @Nullable Output<String> configurationProfilePreferenceId;
 
-    public Output<String> getConfigurationProfilePreferenceId() {
+    public Output<String> configurationProfilePreferenceId() {
         return this.configurationProfilePreferenceId == null ? Codegen.empty() : this.configurationProfilePreferenceId;
     }
 
@@ -61,7 +61,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 

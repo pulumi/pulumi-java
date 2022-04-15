@@ -22,14 +22,14 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+    public Output<Either<String,ProvisioningState>> provisioningState() {
         return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     @Import(name="skuSettings", required=true)
       private final Output<List<SkuSettingArgs>> skuSettings;
 
-    public Output<List<SkuSettingArgs>> getSkuSettings() {
+    public Output<List<SkuSettingArgs>> skuSettings() {
         return this.skuSettings;
     }
 

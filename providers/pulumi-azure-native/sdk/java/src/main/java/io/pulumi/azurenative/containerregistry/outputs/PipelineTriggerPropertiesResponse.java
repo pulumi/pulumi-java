@@ -26,7 +26,7 @@ public final class PipelineTriggerPropertiesResponse {
      * The source trigger properties of the pipeline.
      * 
     */
-    public Optional<PipelineSourceTriggerPropertiesResponse> getSourceTrigger() {
+    public Optional<PipelineSourceTriggerPropertiesResponse> sourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }
 

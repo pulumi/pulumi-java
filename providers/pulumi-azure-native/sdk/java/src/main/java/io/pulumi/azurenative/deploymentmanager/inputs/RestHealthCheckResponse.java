@@ -27,7 +27,7 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
     @Import(name="request", required=true)
       private final RestRequestResponse request;
 
-    public RestRequestResponse getRequest() {
+    public RestRequestResponse request() {
         return this.request;
     }
 
@@ -49,7 +49,7 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
     @Import(name="response")
       private final @Nullable RestResponseResponse response;
 
-    public Optional<RestResponseResponse> getResponse() {
+    public Optional<RestResponseResponse> response() {
         return this.response == null ? Optional.empty() : Optional.ofNullable(this.response);
     }
 

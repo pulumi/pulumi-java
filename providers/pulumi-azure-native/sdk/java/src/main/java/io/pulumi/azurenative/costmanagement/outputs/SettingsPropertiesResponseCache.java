@@ -62,42 +62,42 @@ public final class SettingsPropertiesResponseCache {
      * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
      * 
     */
-    public String getChannel() {
+    public String channel() {
         return this.channel;
     }
     /**
      * Resource ID used by Resource Manager to uniquely identify the scope.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Display name for the scope.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
      * 
     */
-    public Optional<String> getParent() {
+    public Optional<String> parent() {
         return Optional.ofNullable(this.parent);
     }
     /**
      * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
      * 
     */
-    public String getSubchannel() {
+    public String subchannel() {
         return this.subchannel;
     }
 

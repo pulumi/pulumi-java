@@ -26,7 +26,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
@@ -37,7 +37,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="collaborationBranch")
       private final @Nullable Output<String> collaborationBranch;
 
-    public Output<String> getCollaborationBranch() {
+    public Output<String> collaborationBranch() {
         return this.collaborationBranch == null ? Codegen.empty() : this.collaborationBranch;
     }
 
@@ -48,7 +48,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
@@ -59,7 +59,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="lastCommitId")
       private final @Nullable Output<String> lastCommitId;
 
-    public Output<String> getLastCommitId() {
+    public Output<String> lastCommitId() {
         return this.lastCommitId == null ? Codegen.empty() : this.lastCommitId;
     }
 
@@ -70,7 +70,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
@@ -81,7 +81,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -92,7 +92,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="rootFolder")
       private final @Nullable Output<String> rootFolder;
 
-    public Output<String> getRootFolder() {
+    public Output<String> rootFolder() {
         return this.rootFolder == null ? Codegen.empty() : this.rootFolder;
     }
 
@@ -103,7 +103,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
@@ -114,7 +114,7 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

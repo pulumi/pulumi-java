@@ -55,35 +55,35 @@ public final class GetBuildServiceBuilderResult {
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Property of the Builder resource.
      * 
     */
-    public BuilderPropertiesResponse getProperties() {
+    public BuilderPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

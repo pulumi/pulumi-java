@@ -43,21 +43,21 @@ public final class ManagedVirtualNetworkSettingsResponse {
      * Allowed Aad Tenant Ids For Linking
      * 
     */
-    public List<String> getAllowedAadTenantIdsForLinking() {
+    public List<String> allowedAadTenantIdsForLinking() {
         return this.allowedAadTenantIdsForLinking == null ? List.of() : this.allowedAadTenantIdsForLinking;
     }
     /**
      * Linked Access Check On Target Resource
      * 
     */
-    public Optional<Boolean> getLinkedAccessCheckOnTargetResource() {
+    public Optional<Boolean> linkedAccessCheckOnTargetResource() {
         return Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
     }
     /**
      * Prevent Data Exfiltration
      * 
     */
-    public Optional<Boolean> getPreventDataExfiltration() {
+    public Optional<Boolean> preventDataExfiltration() {
         return Optional.ofNullable(this.preventDataExfiltration);
     }
 

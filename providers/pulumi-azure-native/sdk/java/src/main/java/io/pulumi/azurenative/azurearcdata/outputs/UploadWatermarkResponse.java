@@ -41,21 +41,21 @@ public final class UploadWatermarkResponse {
      * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
      * 
     */
-    public Optional<String> getLogs() {
+    public Optional<String> logs() {
         return Optional.ofNullable(this.logs);
     }
     /**
      * Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
      * 
     */
-    public Optional<String> getMetrics() {
+    public Optional<String> metrics() {
         return Optional.ofNullable(this.metrics);
     }
     /**
      * Last uploaded date for usages from kubernetes cluster. Defaults to current date time
      * 
     */
-    public Optional<String> getUsages() {
+    public Optional<String> usages() {
         return Optional.ofNullable(this.usages);
     }
 

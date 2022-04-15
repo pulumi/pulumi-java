@@ -96,70 +96,70 @@ public final class VirtualMachineScaleSetOSDiskResponse {
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
     */
-    public Optional<String> getCaching() {
+    public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
     */
-    public String getCreateOption() {
+    public String createOption() {
         return this.createOption;
     }
     /**
      * Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
      * 
     */
-    public Optional<DiffDiskSettingsResponse> getDiffDiskSettings() {
+    public Optional<DiffDiskSettingsResponse> diffDiskSettings() {
         return Optional.ofNullable(this.diffDiskSettings);
     }
     /**
      * Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
     */
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Specifies information about the unmanaged user image to base the scale set on.
      * 
     */
-    public Optional<VirtualHardDiskResponse> getImage() {
+    public Optional<VirtualHardDiskResponse> image() {
         return Optional.ofNullable(this.image);
     }
     /**
      * The managed disk parameters.
      * 
     */
-    public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> getManagedDisk() {
+    public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * The disk name.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
     */
-    public Optional<String> getOsType() {
+    public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Specifies the container urls that are used to store operating system disks for the scale set.
      * 
     */
-    public List<String> getVhdContainers() {
+    public List<String> vhdContainers() {
         return this.vhdContainers == null ? List.of() : this.vhdContainers;
     }
     /**
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
     */
-    public Optional<Boolean> getWriteAcceleratorEnabled() {
+    public Optional<Boolean> writeAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 

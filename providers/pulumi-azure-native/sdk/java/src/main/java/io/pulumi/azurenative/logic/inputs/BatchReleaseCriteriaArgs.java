@@ -27,7 +27,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> getBatchSize() {
+    public Output<Integer> batchSize() {
         return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
@@ -38,7 +38,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     @Import(name="messageCount")
       private final @Nullable Output<Integer> messageCount;
 
-    public Output<Integer> getMessageCount() {
+    public Output<Integer> messageCount() {
         return this.messageCount == null ? Codegen.empty() : this.messageCount;
     }
 
@@ -49,7 +49,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     @Import(name="recurrence")
       private final @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
 
-    public Output<WorkflowTriggerRecurrenceArgs> getRecurrence() {
+    public Output<WorkflowTriggerRecurrenceArgs> recurrence() {
         return this.recurrence == null ? Codegen.empty() : this.recurrence;
     }
 

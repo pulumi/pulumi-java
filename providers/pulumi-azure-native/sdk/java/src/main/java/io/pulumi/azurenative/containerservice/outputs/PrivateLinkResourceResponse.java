@@ -63,42 +63,42 @@ public final class PrivateLinkResourceResponse {
      * The group ID of the resource.
      * 
     */
-    public Optional<String> getGroupId() {
+    public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The ID of the private link resource.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the private link resource.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The private link service ID of the resource, this field is exposed only to NRP internally.
      * 
     */
-    public String getPrivateLinkServiceID() {
+    public String privateLinkServiceID() {
         return this.privateLinkServiceID;
     }
     /**
      * RequiredMembers of the resource
      * 
     */
-    public List<String> getRequiredMembers() {
+    public List<String> requiredMembers() {
         return this.requiredMembers == null ? List.of() : this.requiredMembers;
     }
     /**
      * The resource type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

@@ -31,7 +31,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
     @Import(name="matchValues")
       private final @Nullable Output<List<String>> matchValues;
 
-    public Output<List<String>> getMatchValues() {
+    public Output<List<String>> matchValues() {
         return this.matchValues == null ? Codegen.empty() : this.matchValues;
     }
 
@@ -42,14 +42,14 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> getNegateCondition() {
+    public Output<Boolean> negateCondition() {
         return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -60,7 +60,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
     @Import(name="operator", required=true)
       private final Output<Either<String,CookiesOperator>> operator;
 
-    public Output<Either<String,CookiesOperator>> getOperator() {
+    public Output<Either<String,CookiesOperator>> operator() {
         return this.operator;
     }
 
@@ -71,7 +71,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -82,7 +82,7 @@ public final class CookiesMatchConditionParametersArgs extends io.pulumi.resourc
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
-    public Output<List<Either<String,Transform>>> getTransforms() {
+    public Output<List<Either<String,Transform>>> transforms() {
         return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 

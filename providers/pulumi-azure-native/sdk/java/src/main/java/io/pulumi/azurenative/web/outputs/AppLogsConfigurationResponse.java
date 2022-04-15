@@ -23,10 +23,10 @@ public final class AppLogsConfigurationResponse {
         this.logAnalyticsConfiguration = logAnalyticsConfiguration;
     }
 
-    public Optional<String> getDestination() {
+    public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
-    public Optional<LogAnalyticsConfigurationResponse> getLogAnalyticsConfiguration() {
+    public Optional<LogAnalyticsConfigurationResponse> logAnalyticsConfiguration() {
         return Optional.ofNullable(this.logAnalyticsConfiguration);
     }
 

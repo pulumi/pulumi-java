@@ -32,7 +32,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessProtocol", required=true)
       private final Output<Either<String,ShareAccessProtocol>> accessProtocol;
 
-    public Output<Either<String,ShareAccessProtocol>> getAccessProtocol() {
+    public Output<Either<String,ShareAccessProtocol>> accessProtocol() {
         return this.accessProtocol;
     }
 
@@ -43,7 +43,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureContainerInfo")
       private final @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
 
-    public Output<AzureContainerInfoArgs> getAzureContainerInfo() {
+    public Output<AzureContainerInfoArgs> azureContainerInfo() {
         return this.azureContainerInfo == null ? Codegen.empty() : this.azureContainerInfo;
     }
 
@@ -54,7 +54,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAccessRights")
       private final @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
 
-    public Output<List<ClientAccessRightArgs>> getClientAccessRights() {
+    public Output<List<ClientAccessRightArgs>> clientAccessRights() {
         return this.clientAccessRights == null ? Codegen.empty() : this.clientAccessRights;
     }
 
@@ -65,7 +65,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataPolicy")
       private final @Nullable Output<Either<String,DataPolicy>> dataPolicy;
 
-    public Output<Either<String,DataPolicy>> getDataPolicy() {
+    public Output<Either<String,DataPolicy>> dataPolicy() {
         return this.dataPolicy == null ? Codegen.empty() : this.dataPolicy;
     }
 
@@ -76,7 +76,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -87,7 +87,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -98,7 +98,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoringStatus", required=true)
       private final Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
+    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
         return this.monitoringStatus;
     }
 
@@ -109,7 +109,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -120,7 +120,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="refreshDetails")
       private final @Nullable Output<RefreshDetailsArgs> refreshDetails;
 
-    public Output<RefreshDetailsArgs> getRefreshDetails() {
+    public Output<RefreshDetailsArgs> refreshDetails() {
         return this.refreshDetails == null ? Codegen.empty() : this.refreshDetails;
     }
 
@@ -131,7 +131,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -142,7 +142,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareStatus", required=true)
       private final Output<Either<String,ShareStatus>> shareStatus;
 
-    public Output<Either<String,ShareStatus>> getShareStatus() {
+    public Output<Either<String,ShareStatus>> shareStatus() {
         return this.shareStatus;
     }
 
@@ -153,7 +153,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAccessRights")
       private final @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
-    public Output<List<UserAccessRightArgs>> getUserAccessRights() {
+    public Output<List<UserAccessRightArgs>> userAccessRights() {
         return this.userAccessRights == null ? Codegen.empty() : this.userAccessRights;
     }
 

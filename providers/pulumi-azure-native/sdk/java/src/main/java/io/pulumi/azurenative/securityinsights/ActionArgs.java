@@ -22,7 +22,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionId")
       private final @Nullable Output<String> actionId;
 
-    public Output<String> getActionId() {
+    public Output<String> actionId() {
         return this.actionId == null ? Codegen.empty() : this.actionId;
     }
 
@@ -33,7 +33,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logicAppResourceId", required=true)
       private final Output<String> logicAppResourceId;
 
-    public Output<String> getLogicAppResourceId() {
+    public Output<String> logicAppResourceId() {
         return this.logicAppResourceId;
     }
 
@@ -44,7 +44,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +55,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
 
@@ -66,7 +66,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="triggerUri", required=true)
       private final Output<String> triggerUri;
 
-    public Output<String> getTriggerUri() {
+    public Output<String> triggerUri() {
         return this.triggerUri;
     }
 
@@ -77,7 +77,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

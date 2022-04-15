@@ -26,7 +26,7 @@ public final class VmmDetailsResponse {
      * Expected value is 'VMM'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
 

@@ -23,7 +23,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<StorageAccountArgs> properties;
 
-    public Output<StorageAccountArgs> getProperties() {
+    public Output<StorageAccountArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -34,7 +34,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +45,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -56,7 +56,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageName")
       private final @Nullable Output<String> storageName;
 
-    public Output<String> getStorageName() {
+    public Output<String> storageName() {
         return this.storageName == null ? Codegen.empty() : this.storageName;
     }
 

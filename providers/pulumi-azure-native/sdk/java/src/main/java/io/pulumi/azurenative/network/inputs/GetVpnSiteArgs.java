@@ -19,7 +19,7 @@ public final class GetVpnSiteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetVpnSiteArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpnSiteName", required=true)
       private final String vpnSiteName;
 
-    public String getVpnSiteName() {
+    public String vpnSiteName() {
         return this.vpnSiteName;
     }
 

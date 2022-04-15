@@ -48,28 +48,28 @@ public final class TokenPasswordResponse {
      * The creation datetime of the password.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The expiry datetime of the password.
      * 
     */
-    public Optional<String> getExpiry() {
+    public Optional<String> expiry() {
         return Optional.ofNullable(this.expiry);
     }
     /**
      * The password name "password1" or "password2"
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The password value.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

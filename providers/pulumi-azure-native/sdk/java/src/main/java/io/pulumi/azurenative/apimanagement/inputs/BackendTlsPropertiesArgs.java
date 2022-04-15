@@ -26,7 +26,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="validateCertificateChain")
       private final @Nullable Output<Boolean> validateCertificateChain;
 
-    public Output<Boolean> getValidateCertificateChain() {
+    public Output<Boolean> validateCertificateChain() {
         return this.validateCertificateChain == null ? Codegen.empty() : this.validateCertificateChain;
     }
 
@@ -37,7 +37,7 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     @Import(name="validateCertificateName")
       private final @Nullable Output<Boolean> validateCertificateName;
 
-    public Output<Boolean> getValidateCertificateName() {
+    public Output<Boolean> validateCertificateName() {
         return this.validateCertificateName == null ? Codegen.empty() : this.validateCertificateName;
     }
 

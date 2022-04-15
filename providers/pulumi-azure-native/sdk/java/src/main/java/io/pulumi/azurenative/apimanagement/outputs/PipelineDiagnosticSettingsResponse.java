@@ -34,14 +34,14 @@ public final class PipelineDiagnosticSettingsResponse {
      * Diagnostic settings for request.
      * 
     */
-    public Optional<HttpMessageDiagnosticResponse> getRequest() {
+    public Optional<HttpMessageDiagnosticResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
      * Diagnostic settings for response.
      * 
     */
-    public Optional<HttpMessageDiagnosticResponse> getResponse() {
+    public Optional<HttpMessageDiagnosticResponse> response() {
         return Optional.ofNullable(this.response);
     }
 

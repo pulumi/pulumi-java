@@ -102,77 +102,77 @@ public final class IotDpsPropertiesDescriptionResponse {
      * Allocation policy to be used by this provisioning service.
      * 
     */
-    public Optional<String> getAllocationPolicy() {
+    public Optional<String> allocationPolicy() {
         return Optional.ofNullable(this.allocationPolicy);
     }
     /**
      * List of authorization keys for a provisioning service.
      * 
     */
-    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> getAuthorizationPolicies() {
+    public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
     }
     /**
      * Device endpoint for this provisioning service.
      * 
     */
-    public String getDeviceProvisioningHostName() {
+    public String deviceProvisioningHostName() {
         return this.deviceProvisioningHostName;
     }
     /**
      * Unique identifier of this provisioning service.
      * 
     */
-    public String getIdScope() {
+    public String idScope() {
         return this.idScope;
     }
     /**
      * List of IoT hubs associated with this provisioning service.
      * 
     */
-    public List<IotHubDefinitionDescriptionResponse> getIotHubs() {
+    public List<IotHubDefinitionDescriptionResponse> iotHubs() {
         return this.iotHubs == null ? List.of() : this.iotHubs;
     }
     /**
      * The IP filter rules.
      * 
     */
-    public List<TargetIpFilterRuleResponse> getIpFilterRules() {
+    public List<TargetIpFilterRuleResponse> ipFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
     }
     /**
      * Private endpoint connections created on this IotHub
      * 
     */
-    public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
      * The ARM provisioning state of the provisioning service.
      * 
     */
-    public Optional<String> getProvisioningState() {
+    public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Whether requests from Public Network are allowed
      * 
     */
-    public Optional<String> getPublicNetworkAccess() {
+    public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Service endpoint for provisioning service.
      * 
     */
-    public String getServiceOperationsHostName() {
+    public String serviceOperationsHostName() {
         return this.serviceOperationsHostName;
     }
     /**
      * Current state of the provisioning service.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

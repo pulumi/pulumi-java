@@ -31,7 +31,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="agcAndColorStripeRestriction")
       private final @Nullable Output<Integer> agcAndColorStripeRestriction;
 
-    public Output<Integer> getAgcAndColorStripeRestriction() {
+    public Output<Integer> agcAndColorStripeRestriction() {
         return this.agcAndColorStripeRestriction == null ? Codegen.empty() : this.agcAndColorStripeRestriction;
     }
 
@@ -42,7 +42,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="allowPassingVideoContentToUnknownOutput", required=true)
       private final Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput;
 
-    public Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> getAllowPassingVideoContentToUnknownOutput() {
+    public Output<Either<String,ContentKeyPolicyPlayReadyUnknownOutputPassingOption>> allowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
     }
 
@@ -53,7 +53,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="analogVideoOpl")
       private final @Nullable Output<Integer> analogVideoOpl;
 
-    public Output<Integer> getAnalogVideoOpl() {
+    public Output<Integer> analogVideoOpl() {
         return this.analogVideoOpl == null ? Codegen.empty() : this.analogVideoOpl;
     }
 
@@ -64,7 +64,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="compressedDigitalAudioOpl")
       private final @Nullable Output<Integer> compressedDigitalAudioOpl;
 
-    public Output<Integer> getCompressedDigitalAudioOpl() {
+    public Output<Integer> compressedDigitalAudioOpl() {
         return this.compressedDigitalAudioOpl == null ? Codegen.empty() : this.compressedDigitalAudioOpl;
     }
 
@@ -75,7 +75,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="compressedDigitalVideoOpl")
       private final @Nullable Output<Integer> compressedDigitalVideoOpl;
 
-    public Output<Integer> getCompressedDigitalVideoOpl() {
+    public Output<Integer> compressedDigitalVideoOpl() {
         return this.compressedDigitalVideoOpl == null ? Codegen.empty() : this.compressedDigitalVideoOpl;
     }
 
@@ -86,7 +86,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="digitalVideoOnlyContentRestriction", required=true)
       private final Output<Boolean> digitalVideoOnlyContentRestriction;
 
-    public Output<Boolean> getDigitalVideoOnlyContentRestriction() {
+    public Output<Boolean> digitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
     }
 
@@ -97,7 +97,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="explicitAnalogTelevisionOutputRestriction")
       private final @Nullable Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction;
 
-    public Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> getExplicitAnalogTelevisionOutputRestriction() {
+    public Output<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionArgs> explicitAnalogTelevisionOutputRestriction() {
         return this.explicitAnalogTelevisionOutputRestriction == null ? Codegen.empty() : this.explicitAnalogTelevisionOutputRestriction;
     }
 
@@ -108,7 +108,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="firstPlayExpiration")
       private final @Nullable Output<String> firstPlayExpiration;
 
-    public Output<String> getFirstPlayExpiration() {
+    public Output<String> firstPlayExpiration() {
         return this.firstPlayExpiration == null ? Codegen.empty() : this.firstPlayExpiration;
     }
 
@@ -119,7 +119,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
       private final Output<Boolean> imageConstraintForAnalogComponentVideoRestriction;
 
-    public Output<Boolean> getImageConstraintForAnalogComponentVideoRestriction() {
+    public Output<Boolean> imageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
 
@@ -130,7 +130,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
       private final Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction;
 
-    public Output<Boolean> getImageConstraintForAnalogComputerMonitorRestriction() {
+    public Output<Boolean> imageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
 
@@ -141,7 +141,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="scmsRestriction")
       private final @Nullable Output<Integer> scmsRestriction;
 
-    public Output<Integer> getScmsRestriction() {
+    public Output<Integer> scmsRestriction() {
         return this.scmsRestriction == null ? Codegen.empty() : this.scmsRestriction;
     }
 
@@ -152,7 +152,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="uncompressedDigitalAudioOpl")
       private final @Nullable Output<Integer> uncompressedDigitalAudioOpl;
 
-    public Output<Integer> getUncompressedDigitalAudioOpl() {
+    public Output<Integer> uncompressedDigitalAudioOpl() {
         return this.uncompressedDigitalAudioOpl == null ? Codegen.empty() : this.uncompressedDigitalAudioOpl;
     }
 
@@ -163,7 +163,7 @@ public final class ContentKeyPolicyPlayReadyPlayRightArgs extends io.pulumi.reso
     @Import(name="uncompressedDigitalVideoOpl")
       private final @Nullable Output<Integer> uncompressedDigitalVideoOpl;
 
-    public Output<Integer> getUncompressedDigitalVideoOpl() {
+    public Output<Integer> uncompressedDigitalVideoOpl() {
         return this.uncompressedDigitalVideoOpl == null ? Codegen.empty() : this.uncompressedDigitalVideoOpl;
     }
 

@@ -79,56 +79,56 @@ public final class GetClusterResult {
      * The ETag for the resource
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The identity of the cluster, if configured.
      * 
     */
-    public Optional<ClusterIdentityResponse> getIdentity() {
+    public Optional<ClusterIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The Azure Region where the resource lives
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The properties of the cluster.
      * 
     */
-    public ClusterGetPropertiesResponse getProperties() {
+    public ClusterGetPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

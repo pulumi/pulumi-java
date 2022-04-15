@@ -26,7 +26,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="fileNamePrefix")
       private final @Nullable Object fileNamePrefix;
 
-    public Optional<Object> getFileNamePrefix() {
+    public Optional<Object> fileNamePrefix() {
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
     }
 
@@ -37,7 +37,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxRowsPerFile")
       private final @Nullable Object maxRowsPerFile;
 
-    public Optional<Object> getMaxRowsPerFile() {
+    public Optional<Object> maxRowsPerFile() {
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
     }
 
@@ -48,7 +48,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="recordName")
       private final @Nullable String recordName;
 
-    public Optional<String> getRecordName() {
+    public Optional<String> recordName() {
         return this.recordName == null ? Optional.empty() : Optional.ofNullable(this.recordName);
     }
 
@@ -59,7 +59,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="recordNamespace")
       private final @Nullable String recordNamespace;
 
-    public Optional<String> getRecordNamespace() {
+    public Optional<String> recordNamespace() {
         return this.recordNamespace == null ? Optional.empty() : Optional.ofNullable(this.recordNamespace);
     }
 
@@ -71,7 +71,7 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

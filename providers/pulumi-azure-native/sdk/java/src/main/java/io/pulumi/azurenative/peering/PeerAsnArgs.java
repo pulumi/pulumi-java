@@ -27,7 +27,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerAsn")
       private final @Nullable Output<Integer> peerAsn;
 
-    public Output<Integer> getPeerAsn() {
+    public Output<Integer> peerAsn() {
         return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
     }
 
@@ -38,7 +38,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerAsnName")
       private final @Nullable Output<String> peerAsnName;
 
-    public Output<String> getPeerAsnName() {
+    public Output<String> peerAsnName() {
         return this.peerAsnName == null ? Codegen.empty() : this.peerAsnName;
     }
 
@@ -49,7 +49,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerContactDetail")
       private final @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
 
-    public Output<List<ContactDetailArgs>> getPeerContactDetail() {
+    public Output<List<ContactDetailArgs>> peerContactDetail() {
         return this.peerContactDetail == null ? Codegen.empty() : this.peerContactDetail;
     }
 
@@ -60,7 +60,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerName")
       private final @Nullable Output<String> peerName;
 
-    public Output<String> getPeerName() {
+    public Output<String> peerName() {
         return this.peerName == null ? Codegen.empty() : this.peerName;
     }
 
@@ -71,7 +71,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationState")
       private final @Nullable Output<Either<String,ValidationState>> validationState;
 
-    public Output<Either<String,ValidationState>> getValidationState() {
+    public Output<Either<String,ValidationState>> validationState() {
         return this.validationState == null ? Codegen.empty() : this.validationState;
     }
 

@@ -93,70 +93,70 @@ public final class BackupSetInfoResponse {
      * Date and time that the backup operation finished
      * 
     */
-    public Optional<String> getBackupFinishedDate() {
+    public Optional<String> backupFinishedDate() {
         return Optional.ofNullable(this.backupFinishedDate);
     }
     /**
      * Id for the set of backup files
      * 
     */
-    public Optional<String> getBackupSetId() {
+    public Optional<String> backupSetId() {
         return Optional.ofNullable(this.backupSetId);
     }
     /**
      * Date and time that the backup operation began
      * 
     */
-    public Optional<String> getBackupStartDate() {
+    public Optional<String> backupStartDate() {
         return Optional.ofNullable(this.backupStartDate);
     }
     /**
      * Enum of the different backup types
      * 
     */
-    public Optional<String> getBackupType() {
+    public Optional<String> backupType() {
         return Optional.ofNullable(this.backupType);
     }
     /**
      * Name of the database to which the backup set belongs
      * 
     */
-    public Optional<String> getDatabaseName() {
+    public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * First log sequence number of the backup file
      * 
     */
-    public Optional<String> getFirstLsn() {
+    public Optional<String> firstLsn() {
         return Optional.ofNullable(this.firstLsn);
     }
     /**
      * Whether the backup set is restored or not
      * 
     */
-    public Optional<Boolean> getIsBackupRestored() {
+    public Optional<Boolean> isBackupRestored() {
         return Optional.ofNullable(this.isBackupRestored);
     }
     /**
      * Last log sequence number of the backup file
      * 
     */
-    public Optional<String> getLastLsn() {
+    public Optional<String> lastLsn() {
         return Optional.ofNullable(this.lastLsn);
     }
     /**
      * Last modified time of the backup file in share location
      * 
     */
-    public Optional<String> getLastModifiedTime() {
+    public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * List of files in the backup set
      * 
     */
-    public List<BackupFileInfoResponse> getListOfBackupFiles() {
+    public List<BackupFileInfoResponse> listOfBackupFiles() {
         return this.listOfBackupFiles == null ? List.of() : this.listOfBackupFiles;
     }
 

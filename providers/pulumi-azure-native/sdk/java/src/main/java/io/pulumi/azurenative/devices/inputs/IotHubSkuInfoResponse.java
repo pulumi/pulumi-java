@@ -26,7 +26,7 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="capacity")
       private final @Nullable Double capacity;
 
-    public Optional<Double> getCapacity() {
+    public Optional<Double> capacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
@@ -37,7 +37,7 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="tier", required=true)
       private final String tier;
 
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

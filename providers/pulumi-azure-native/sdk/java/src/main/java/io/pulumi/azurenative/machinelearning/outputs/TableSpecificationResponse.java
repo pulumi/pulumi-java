@@ -57,35 +57,35 @@ public final class TableSpecificationResponse {
      * Swagger schema description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The format, if 'type' is not 'object'
      * 
     */
-    public Optional<String> getFormat() {
+    public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
      * The set of columns within the data table.
      * 
     */
-    public Map<String,ColumnSpecificationResponse> getProperties() {
+    public Map<String,ColumnSpecificationResponse> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Swagger schema title.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the entity described in swagger.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

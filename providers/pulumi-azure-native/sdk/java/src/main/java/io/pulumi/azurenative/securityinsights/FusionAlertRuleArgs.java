@@ -23,7 +23,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="alertRuleTemplateName", required=true)
       private final Output<String> alertRuleTemplateName;
 
-    public Output<String> getAlertRuleTemplateName() {
+    public Output<String> alertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
 
@@ -34,7 +34,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -46,7 +46,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -57,7 +57,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +68,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
@@ -79,7 +79,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 

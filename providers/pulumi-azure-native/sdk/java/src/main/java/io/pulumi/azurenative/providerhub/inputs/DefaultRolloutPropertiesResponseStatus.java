@@ -20,35 +20,35 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
     @Import(name="completedRegions")
       private final @Nullable List<String> completedRegions;
 
-    public List<String> getCompletedRegions() {
+    public List<String> completedRegions() {
         return this.completedRegions == null ? List.of() : this.completedRegions;
     }
 
     @Import(name="failedOrSkippedRegions")
       private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
 
-    public Map<String,ExtendedErrorInfoResponse> getFailedOrSkippedRegions() {
+    public Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
     }
 
     @Import(name="nextTrafficRegion")
       private final @Nullable String nextTrafficRegion;
 
-    public Optional<String> getNextTrafficRegion() {
+    public Optional<String> nextTrafficRegion() {
         return this.nextTrafficRegion == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegion);
     }
 
     @Import(name="nextTrafficRegionScheduledTime")
       private final @Nullable String nextTrafficRegionScheduledTime;
 
-    public Optional<String> getNextTrafficRegionScheduledTime() {
+    public Optional<String> nextTrafficRegionScheduledTime() {
         return this.nextTrafficRegionScheduledTime == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
 
     @Import(name="subscriptionReregistrationResult")
       private final @Nullable String subscriptionReregistrationResult;
 
-    public Optional<String> getSubscriptionReregistrationResult() {
+    public Optional<String> subscriptionReregistrationResult() {
         return this.subscriptionReregistrationResult == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReregistrationResult);
     }
 

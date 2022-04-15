@@ -45,7 +45,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="dependsOn", required=true)
       private final List<MoveResourceDependencyResponse> dependsOn;
 
-    public List<MoveResourceDependencyResponse> getDependsOn() {
+    public List<MoveResourceDependencyResponse> dependsOn() {
         return this.dependsOn;
     }
 
@@ -56,7 +56,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="dependsOnOverrides")
       private final @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
 
-    public List<MoveResourceDependencyOverrideResponse> getDependsOnOverrides() {
+    public List<MoveResourceDependencyOverrideResponse> dependsOnOverrides() {
         return this.dependsOnOverrides == null ? List.of() : this.dependsOnOverrides;
     }
 
@@ -67,7 +67,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="errors", required=true)
       private final MoveResourcePropertiesResponseErrors errors;
 
-    public MoveResourcePropertiesResponseErrors getErrors() {
+    public MoveResourcePropertiesResponseErrors errors() {
         return this.errors;
     }
 
@@ -78,7 +78,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="existingTargetId")
       private final @Nullable String existingTargetId;
 
-    public Optional<String> getExistingTargetId() {
+    public Optional<String> existingTargetId() {
         return this.existingTargetId == null ? Optional.empty() : Optional.ofNullable(this.existingTargetId);
     }
 
@@ -89,7 +89,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="isResolveRequired", required=true)
       private final Boolean isResolveRequired;
 
-    public Boolean getIsResolveRequired() {
+    public Boolean isResolveRequired() {
         return this.isResolveRequired;
     }
 
@@ -100,7 +100,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="moveStatus", required=true)
       private final MoveResourcePropertiesResponseMoveStatus moveStatus;
 
-    public MoveResourcePropertiesResponseMoveStatus getMoveStatus() {
+    public MoveResourcePropertiesResponseMoveStatus moveStatus() {
         return this.moveStatus;
     }
 
@@ -111,7 +111,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -122,7 +122,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="resourceSettings")
       private final @Nullable Object resourceSettings;
 
-    public Object getResourceSettings() {
+    public Object resourceSettings() {
         return this.resourceSettings == null ? null : this.resourceSettings;
     }
 
@@ -133,7 +133,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="sourceId", required=true)
       private final String sourceId;
 
-    public String getSourceId() {
+    public String sourceId() {
         return this.sourceId;
     }
 
@@ -144,7 +144,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="sourceResourceSettings", required=true)
       private final Object sourceResourceSettings;
 
-    public Object getSourceResourceSettings() {
+    public Object sourceResourceSettings() {
         return this.sourceResourceSettings;
     }
 
@@ -155,7 +155,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
     @Import(name="targetId", required=true)
       private final String targetId;
 
-    public String getTargetId() {
+    public String targetId() {
         return this.targetId;
     }
 

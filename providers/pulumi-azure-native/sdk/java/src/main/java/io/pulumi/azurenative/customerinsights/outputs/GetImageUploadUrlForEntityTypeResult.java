@@ -42,21 +42,21 @@ public final class GetImageUploadUrlForEntityTypeResult {
      * Content URL for the image blob.
      * 
     */
-    public Optional<String> getContentUrl() {
+    public Optional<String> contentUrl() {
         return Optional.ofNullable(this.contentUrl);
     }
     /**
      * Whether image exists already.
      * 
     */
-    public Optional<Boolean> getImageExists() {
+    public Optional<Boolean> imageExists() {
         return Optional.ofNullable(this.imageExists);
     }
     /**
      * Relative path of the image.
      * 
     */
-    public Optional<String> getRelativePath() {
+    public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
 

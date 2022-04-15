@@ -34,7 +34,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
-    public Output<String> getBackupManagementType() {
+    public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
 
@@ -45,7 +45,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     @Import(name="makePolicyConsistent")
       private final @Nullable Output<Boolean> makePolicyConsistent;
 
-    public Output<Boolean> getMakePolicyConsistent() {
+    public Output<Boolean> makePolicyConsistent() {
         return this.makePolicyConsistent == null ? Codegen.empty() : this.makePolicyConsistent;
     }
 
@@ -56,7 +56,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> getProtectedItemsCount() {
+    public Output<Integer> protectedItemsCount() {
         return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
@@ -67,7 +67,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     @Import(name="settings")
       private final @Nullable Output<SettingsArgs> settings;
 
-    public Output<SettingsArgs> getSettings() {
+    public Output<SettingsArgs> settings() {
         return this.settings == null ? Codegen.empty() : this.settings;
     }
 
@@ -78,7 +78,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     @Import(name="subProtectionPolicy")
       private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
-    public Output<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
+    public Output<List<SubProtectionPolicyArgs>> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? Codegen.empty() : this.subProtectionPolicy;
     }
 
@@ -89,7 +89,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
     @Import(name="workLoadType")
       private final @Nullable Output<Either<String,WorkloadType>> workLoadType;
 
-    public Output<Either<String,WorkloadType>> getWorkLoadType() {
+    public Output<Either<String,WorkloadType>> workLoadType() {
         return this.workLoadType == null ? Codegen.empty() : this.workLoadType;
     }
 

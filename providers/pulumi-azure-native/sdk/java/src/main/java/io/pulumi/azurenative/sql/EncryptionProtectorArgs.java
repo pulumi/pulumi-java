@@ -25,7 +25,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="autoRotationEnabled")
       private final @Nullable Output<Boolean> autoRotationEnabled;
 
-    public Output<Boolean> getAutoRotationEnabled() {
+    public Output<Boolean> autoRotationEnabled() {
         return this.autoRotationEnabled == null ? Codegen.empty() : this.autoRotationEnabled;
     }
 
@@ -36,7 +36,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="encryptionProtectorName")
       private final @Nullable Output<String> encryptionProtectorName;
 
-    public Output<String> getEncryptionProtectorName() {
+    public Output<String> encryptionProtectorName() {
         return this.encryptionProtectorName == null ? Codegen.empty() : this.encryptionProtectorName;
     }
 
@@ -47,7 +47,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,7 +58,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverKeyName")
       private final @Nullable Output<String> serverKeyName;
 
-    public Output<String> getServerKeyName() {
+    public Output<String> serverKeyName() {
         return this.serverKeyName == null ? Codegen.empty() : this.serverKeyName;
     }
 
@@ -69,7 +69,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
 
-    public Output<Either<String,ServerKeyType>> getServerKeyType() {
+    public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
     }
 
@@ -80,7 +80,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 

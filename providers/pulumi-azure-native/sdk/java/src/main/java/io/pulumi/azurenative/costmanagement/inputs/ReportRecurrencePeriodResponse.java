@@ -25,7 +25,7 @@ public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.In
     @Import(name="from", required=true)
       private final String from;
 
-    public String getFrom() {
+    public String from() {
         return this.from;
     }
 
@@ -36,7 +36,7 @@ public final class ReportRecurrencePeriodResponse extends io.pulumi.resources.In
     @Import(name="to")
       private final @Nullable String to;
 
-    public Optional<String> getTo() {
+    public Optional<String> to() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
     }
 

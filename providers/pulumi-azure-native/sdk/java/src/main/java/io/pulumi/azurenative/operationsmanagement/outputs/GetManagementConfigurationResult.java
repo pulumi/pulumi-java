@@ -56,35 +56,35 @@ public final class GetManagementConfigurationResult {
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
      * 
     */
-    public ManagementConfigurationPropertiesResponse getProperties() {
+    public ManagementConfigurationPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

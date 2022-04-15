@@ -45,7 +45,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -59,7 +59,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Plan for solution object supported by the OperationsManagement resource provider.
      * 
      */
-    public Output</* @Nullable */ SolutionPlanResponse> getPlan() {
+    public Output</* @Nullable */ SolutionPlanResponse> plan() {
         return this.plan;
     }
     /**
@@ -87,7 +87,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Properties for solution object supported by the OperationsManagement resource provider.
      * 
      */
-    public Output<SolutionPropertiesResponse> getProperties() {
+    public Output<SolutionPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -101,7 +101,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -115,7 +115,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

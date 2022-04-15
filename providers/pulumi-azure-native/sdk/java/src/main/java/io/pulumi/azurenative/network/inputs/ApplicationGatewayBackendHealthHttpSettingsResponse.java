@@ -27,7 +27,7 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
     @Import(name="backendHttpSettings")
       private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
 
-    public Optional<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettings() {
+    public Optional<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettings() {
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
@@ -38,7 +38,7 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
     @Import(name="servers")
       private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
-    public List<ApplicationGatewayBackendHealthServerResponse> getServers() {
+    public List<ApplicationGatewayBackendHealthServerResponse> servers() {
         return this.servers == null ? List.of() : this.servers;
     }
 

@@ -29,7 +29,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="defaultSinkRefs")
       private final @Nullable Output<List<String>> defaultSinkRefs;
 
-    public Output<List<String>> getDefaultSinkRefs() {
+    public Output<List<String>> defaultSinkRefs() {
         return this.defaultSinkRefs == null ? Codegen.empty() : this.defaultSinkRefs;
     }
 
@@ -40,7 +40,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -51,7 +51,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
     @Import(name="sinks")
       private final @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
-    public Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> getSinks() {
+    public Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks() {
         return this.sinks == null ? Codegen.empty() : this.sinks;
     }
 

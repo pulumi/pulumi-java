@@ -26,7 +26,7 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
     @Import(name="oAuth2")
       private final @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
 
-    public Optional<OAuth2AuthenticationSettingsContractResponse> getOAuth2() {
+    public Optional<OAuth2AuthenticationSettingsContractResponse> oAuth2() {
         return this.oAuth2 == null ? Optional.empty() : Optional.ofNullable(this.oAuth2);
     }
 
@@ -37,7 +37,7 @@ public final class AuthenticationSettingsContractResponse extends io.pulumi.reso
     @Import(name="openid")
       private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 
-    public Optional<OpenIdAuthenticationSettingsContractResponse> getOpenid() {
+    public Optional<OpenIdAuthenticationSettingsContractResponse> openid() {
         return this.openid == null ? Optional.empty() : Optional.ofNullable(this.openid);
     }
 

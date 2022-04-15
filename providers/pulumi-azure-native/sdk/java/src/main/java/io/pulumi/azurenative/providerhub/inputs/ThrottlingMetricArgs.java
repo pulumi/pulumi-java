@@ -21,21 +21,21 @@ public final class ThrottlingMetricArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
-    public Output<String> getInterval() {
+    public Output<String> interval() {
         return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="limit", required=true)
       private final Output<Double> limit;
 
-    public Output<Double> getLimit() {
+    public Output<Double> limit() {
         return this.limit;
     }
 
     @Import(name="type", required=true)
       private final Output<Either<String,ThrottlingMetricType>> type;
 
-    public Output<Either<String,ThrottlingMetricType>> getType() {
+    public Output<Either<String,ThrottlingMetricType>> type() {
         return this.type;
     }
 

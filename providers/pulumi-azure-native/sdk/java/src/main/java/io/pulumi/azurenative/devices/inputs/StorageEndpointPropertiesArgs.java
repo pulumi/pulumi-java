@@ -28,7 +28,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,AuthenticationType>> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -39,7 +39,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
 
@@ -50,7 +50,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
 
@@ -61,7 +61,7 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="sasTtlAsIso8601")
       private final @Nullable Output<String> sasTtlAsIso8601;
 
-    public Output<String> getSasTtlAsIso8601() {
+    public Output<String> sasTtlAsIso8601() {
         return this.sasTtlAsIso8601 == null ? Codegen.empty() : this.sasTtlAsIso8601;
     }
 

@@ -26,7 +26,7 @@ public final class ContainerResourcesResponse extends io.pulumi.resources.Invoke
     @Import(name="cpu")
       private final @Nullable Double cpu;
 
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
@@ -37,7 +37,7 @@ public final class ContainerResourcesResponse extends io.pulumi.resources.Invoke
     @Import(name="memory")
       private final @Nullable String memory;
 
-    public Optional<String> getMemory() {
+    public Optional<String> memory() {
         return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
     }
 

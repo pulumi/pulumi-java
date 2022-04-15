@@ -27,7 +27,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
+    public Output<String> destinationType() {
         return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
@@ -38,7 +38,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
+    public Output<List<String>> destinations() {
         return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="nextHopType")
       private final @Nullable Output<String> nextHopType;
 
-    public Output<String> getNextHopType() {
+    public Output<String> nextHopType() {
         return this.nextHopType == null ? Codegen.empty() : this.nextHopType;
     }
 
@@ -60,7 +60,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="nextHops")
       private final @Nullable Output<List<String>> nextHops;
 
-    public Output<List<String>> getNextHops() {
+    public Output<List<String>> nextHops() {
         return this.nextHops == null ? Codegen.empty() : this.nextHops;
     }
 

@@ -48,28 +48,28 @@ public final class PublisherInfoResponse {
      * The "OriginalName" field taken from the file's version resource
      * 
     */
-    public Optional<String> getBinaryName() {
+    public Optional<String> binaryName() {
         return Optional.ofNullable(this.binaryName);
     }
     /**
      * The product name taken from the file's version resource
      * 
     */
-    public Optional<String> getProductName() {
+    public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
      * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
      * 
     */
-    public Optional<String> getPublisherName() {
+    public Optional<String> publisherName() {
         return Optional.ofNullable(this.publisherName);
     }
     /**
      * The binary file version taken from the file's version resource
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 
