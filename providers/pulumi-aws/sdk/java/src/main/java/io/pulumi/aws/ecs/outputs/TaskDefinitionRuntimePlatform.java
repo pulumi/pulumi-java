@@ -34,14 +34,14 @@ public final class TaskDefinitionRuntimePlatform {
      * Must be set to either `X86_64` or `ARM64`; see [cpu architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
      * 
     */
-    public Optional<String> getCpuArchitecture() {
+    public Optional<String> cpuArchitecture() {
         return Optional.ofNullable(this.cpuArchitecture);
     }
     /**
      * If the `requires_compatibilities` is `FARGATE` this field is required; must be set to a valid option from the [operating system family in the runtime platform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform) setting
      * 
     */
-    public Optional<String> getOperatingSystemFamily() {
+    public Optional<String> operatingSystemFamily() {
         return Optional.ofNullable(this.operatingSystemFamily);
     }
 

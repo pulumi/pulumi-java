@@ -26,7 +26,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfigurations")
       private final @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
 
-    public Output<List<RepositoryEncryptionConfigurationArgs>> getEncryptionConfigurations() {
+    public Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations() {
         return this.encryptionConfigurations == null ? Codegen.empty() : this.encryptionConfigurations;
     }
 
@@ -37,7 +37,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageScanningConfiguration")
       private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
-    public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
+    public Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration() {
         return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageTagMutability")
       private final @Nullable Output<String> imageTagMutability;
 
-    public Output<String> getImageTagMutability() {
+    public Output<String> imageTagMutability() {
         return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
     }
 
@@ -59,7 +59,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

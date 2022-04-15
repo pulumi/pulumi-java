@@ -21,7 +21,7 @@ public final class InsightFiltersKeywordGetArgs extends io.pulumi.resources.Reso
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

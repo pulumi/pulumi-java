@@ -22,7 +22,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="creationToken")
       private final @Nullable String creationToken;
 
-    public Optional<String> getCreationToken() {
+    public Optional<String> creationToken() {
         return this.creationToken == null ? Optional.empty() : Optional.ofNullable(this.creationToken);
     }
 
@@ -33,7 +33,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="fileSystemId")
       private final @Nullable String fileSystemId;
 
-    public Optional<String> getFileSystemId() {
+    public Optional<String> fileSystemId() {
         return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
     }
 
@@ -44,7 +44,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

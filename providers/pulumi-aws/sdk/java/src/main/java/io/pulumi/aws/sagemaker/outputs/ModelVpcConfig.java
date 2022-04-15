@@ -21,10 +21,10 @@ public final class ModelVpcConfig {
         this.subnets = subnets;
     }
 
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
-    public List<String> getSubnets() {
+    public List<String> subnets() {
         return this.subnets;
     }
 

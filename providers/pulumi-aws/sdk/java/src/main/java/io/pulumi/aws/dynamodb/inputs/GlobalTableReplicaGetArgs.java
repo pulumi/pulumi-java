@@ -21,7 +21,7 @@ public final class GlobalTableReplicaGetArgs extends io.pulumi.resources.Resourc
     @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName;
     }
 

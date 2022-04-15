@@ -23,7 +23,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="awsServiceName", required=true)
       private final Output<String> awsServiceName;
 
-    public Output<String> getAwsServiceName() {
+    public Output<String> awsServiceName() {
         return this.awsServiceName;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="customSuffix")
       private final @Nullable Output<String> customSuffix;
 
-    public Output<String> getCustomSuffix() {
+    public Output<String> customSuffix() {
         return this.customSuffix == null ? Codegen.empty() : this.customSuffix;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

@@ -21,7 +21,7 @@ public final class EventSourceMappingDestinationConfigOnFailureArgs extends io.p
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 

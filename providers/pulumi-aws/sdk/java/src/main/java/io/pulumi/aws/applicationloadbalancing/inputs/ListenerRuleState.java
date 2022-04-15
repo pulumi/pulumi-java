@@ -27,7 +27,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<ListenerRuleActionGetArgs>> actions;
 
-    public Output<List<ListenerRuleActionGetArgs>> getActions() {
+    public Output<List<ListenerRuleActionGetArgs>> actions() {
         return this.actions == null ? Codegen.empty() : this.actions;
     }
 
@@ -38,7 +38,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -49,7 +49,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<ListenerRuleConditionGetArgs>> conditions;
 
-    public Output<List<ListenerRuleConditionGetArgs>> getConditions() {
+    public Output<List<ListenerRuleConditionGetArgs>> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -60,7 +60,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="listenerArn")
       private final @Nullable Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn == null ? Codegen.empty() : this.listenerArn;
     }
 
@@ -71,7 +71,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -82,7 +82,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

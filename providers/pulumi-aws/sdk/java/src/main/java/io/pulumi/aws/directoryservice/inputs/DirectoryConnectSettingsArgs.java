@@ -19,7 +19,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -30,7 +30,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="connectIps")
       private final @Nullable Output<List<String>> connectIps;
 
-    public Output<List<String>> getConnectIps() {
+    public Output<List<String>> connectIps() {
         return this.connectIps == null ? Codegen.empty() : this.connectIps;
     }
 
@@ -41,7 +41,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="customerDnsIps", required=true)
       private final Output<List<String>> customerDnsIps;
 
-    public Output<List<String>> getCustomerDnsIps() {
+    public Output<List<String>> customerDnsIps() {
         return this.customerDnsIps;
     }
 
@@ -52,7 +52,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="customerUsername", required=true)
       private final Output<String> customerUsername;
 
-    public Output<String> getCustomerUsername() {
+    public Output<String> customerUsername() {
         return this.customerUsername;
     }
 
@@ -63,7 +63,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -74,7 +74,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

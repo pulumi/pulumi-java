@@ -23,7 +23,7 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
     @Import(name="clientConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> getClientConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig() {
         return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
     }
 
@@ -34,7 +34,7 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
     @Import(name="outputConfig", required=true)
       private final Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig;
 
-    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> getOutputConfig() {
+    public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 

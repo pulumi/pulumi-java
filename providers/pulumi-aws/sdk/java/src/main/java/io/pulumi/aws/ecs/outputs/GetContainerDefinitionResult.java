@@ -86,73 +86,73 @@ public final class GetContainerDefinitionResult {
         this.taskDefinition = taskDefinition;
     }
 
-    public String getContainerName() {
+    public String containerName() {
         return this.containerName;
     }
     /**
      * The CPU limit for this container definition
      * 
     */
-    public Integer getCpu() {
+    public Integer cpu() {
         return this.cpu;
     }
     /**
      * Indicator if networking is disabled
      * 
     */
-    public Boolean getDisableNetworking() {
+    public Boolean disableNetworking() {
         return this.disableNetworking;
     }
     /**
      * Set docker labels
      * 
     */
-    public Map<String,String> getDockerLabels() {
+    public Map<String,String> dockerLabels() {
         return this.dockerLabels;
     }
     /**
      * The environment in use
      * 
     */
-    public Map<String,String> getEnvironment() {
+    public Map<String,String> environment() {
         return this.environment;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The docker image in use, including the digest
      * 
     */
-    public String getImage() {
+    public String image() {
         return this.image;
     }
     /**
      * The digest of the docker image in use
      * 
     */
-    public String getImageDigest() {
+    public String imageDigest() {
         return this.imageDigest;
     }
     /**
      * The memory limit for this container definition
      * 
     */
-    public Integer getMemory() {
+    public Integer memory() {
         return this.memory;
     }
     /**
      * The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
      * 
     */
-    public Integer getMemoryReservation() {
+    public Integer memoryReservation() {
         return this.memoryReservation;
     }
-    public String getTaskDefinition() {
+    public String taskDefinition() {
         return this.taskDefinition;
     }
 

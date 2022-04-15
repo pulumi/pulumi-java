@@ -28,10 +28,10 @@ public final class GetTableAttribute {
      * The name of the DynamoDB table.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

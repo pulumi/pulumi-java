@@ -23,7 +23,7 @@ public final class GlobalSettingsState extends io.pulumi.resources.ResourceArgs 
     @Import(name="globalSettings")
       private final @Nullable Output<Map<String,String>> globalSettings;
 
-    public Output<Map<String,String>> getGlobalSettings() {
+    public Output<Map<String,String>> globalSettings() {
         return this.globalSettings == null ? Codegen.empty() : this.globalSettings;
     }
 

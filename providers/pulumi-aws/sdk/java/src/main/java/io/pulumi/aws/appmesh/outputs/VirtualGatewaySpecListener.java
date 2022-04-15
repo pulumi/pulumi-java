@@ -51,28 +51,28 @@ public final class VirtualGatewaySpecListener {
      * The connection pool information for the listener.
      * 
     */
-    public Optional<VirtualGatewaySpecListenerConnectionPool> getConnectionPool() {
+    public Optional<VirtualGatewaySpecListenerConnectionPool> connectionPool() {
         return Optional.ofNullable(this.connectionPool);
     }
     /**
      * The health check information for the listener.
      * 
     */
-    public Optional<VirtualGatewaySpecListenerHealthCheck> getHealthCheck() {
+    public Optional<VirtualGatewaySpecListenerHealthCheck> healthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
     /**
      * The port mapping information for the listener.
      * 
     */
-    public VirtualGatewaySpecListenerPortMapping getPortMapping() {
+    public VirtualGatewaySpecListenerPortMapping portMapping() {
         return this.portMapping;
     }
     /**
      * The Transport Layer Security (TLS) properties for the listener
      * 
     */
-    public Optional<VirtualGatewaySpecListenerTls> getTls() {
+    public Optional<VirtualGatewaySpecListenerTls> tls() {
         return Optional.ofNullable(this.tls);
     }
 

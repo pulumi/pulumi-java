@@ -21,7 +21,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -32,7 +32,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -43,7 +43,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

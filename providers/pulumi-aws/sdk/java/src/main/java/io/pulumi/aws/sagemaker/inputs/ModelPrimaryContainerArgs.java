@@ -24,7 +24,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="containerHostname")
       private final @Nullable Output<String> containerHostname;
 
-    public Output<String> getContainerHostname() {
+    public Output<String> containerHostname() {
         return this.containerHostname == null ? Codegen.empty() : this.containerHostname;
     }
 
@@ -36,7 +36,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="environment")
       private final @Nullable Output<Map<String,String>> environment;
 
-    public Output<Map<String,String>> getEnvironment() {
+    public Output<Map<String,String>> environment() {
         return this.environment == null ? Codegen.empty() : this.environment;
     }
 
@@ -47,7 +47,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="image", required=true)
       private final Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image;
     }
 
@@ -58,7 +58,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="imageConfig")
       private final @Nullable Output<ModelPrimaryContainerImageConfigArgs> imageConfig;
 
-    public Output<ModelPrimaryContainerImageConfigArgs> getImageConfig() {
+    public Output<ModelPrimaryContainerImageConfigArgs> imageConfig() {
         return this.imageConfig == null ? Codegen.empty() : this.imageConfig;
     }
 
@@ -69,7 +69,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -80,7 +80,7 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     @Import(name="modelDataUrl")
       private final @Nullable Output<String> modelDataUrl;
 
-    public Output<String> getModelDataUrl() {
+    public Output<String> modelDataUrl() {
         return this.modelDataUrl == null ? Codegen.empty() : this.modelDataUrl;
     }
 

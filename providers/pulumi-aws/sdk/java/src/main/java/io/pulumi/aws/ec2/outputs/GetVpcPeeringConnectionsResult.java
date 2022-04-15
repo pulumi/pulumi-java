@@ -38,24 +38,24 @@ public final class GetVpcPeeringConnectionsResult {
         this.tags = tags;
     }
 
-    public List<GetVpcPeeringConnectionsFilter> getFilters() {
+    public List<GetVpcPeeringConnectionsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The IDs of the VPC Peering Connections.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

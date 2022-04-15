@@ -34,7 +34,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -48,19 +48,19 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The current supported value is `REDIS`.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -74,7 +74,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the user group.
      * 
      */
-    public Output<String> getUserGroupId() {
+    public Output<String> userGroupId() {
         return this.userGroupId;
     }
     /**
@@ -88,7 +88,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @return The list of user IDs that belong to the user group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getUserIds() {
+    public Output</* @Nullable */ List<String>> userIds() {
         return this.userIds;
     }
 

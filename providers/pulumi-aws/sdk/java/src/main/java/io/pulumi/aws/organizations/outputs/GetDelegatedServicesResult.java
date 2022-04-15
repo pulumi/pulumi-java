@@ -33,21 +33,21 @@ public final class GetDelegatedServicesResult {
         this.id = id;
     }
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
     /**
      * The services for which the account is a delegated administrator, which have the following attributes:
      * 
     */
-    public List<GetDelegatedServicesDelegatedService> getDelegatedServices() {
+    public List<GetDelegatedServicesDelegatedService> delegatedServices() {
         return this.delegatedServices;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

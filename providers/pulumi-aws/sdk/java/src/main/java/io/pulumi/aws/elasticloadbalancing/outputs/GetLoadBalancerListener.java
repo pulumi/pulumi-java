@@ -30,19 +30,19 @@ public final class GetLoadBalancerListener {
         this.sslCertificateId = sslCertificateId;
     }
 
-    public Integer getInstancePort() {
+    public Integer instancePort() {
         return this.instancePort;
     }
-    public String getInstanceProtocol() {
+    public String instanceProtocol() {
         return this.instanceProtocol;
     }
-    public Integer getLbPort() {
+    public Integer lbPort() {
         return this.lbPort;
     }
-    public String getLbProtocol() {
+    public String lbProtocol() {
         return this.lbProtocol;
     }
-    public String getSslCertificateId() {
+    public String sslCertificateId() {
         return this.sslCertificateId;
     }
 

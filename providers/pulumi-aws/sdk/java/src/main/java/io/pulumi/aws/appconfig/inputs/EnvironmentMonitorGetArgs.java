@@ -22,7 +22,7 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
     @Import(name="alarmArn", required=true)
       private final Output<String> alarmArn;
 
-    public Output<String> getAlarmArn() {
+    public Output<String> alarmArn() {
         return this.alarmArn;
     }
 
@@ -33,7 +33,7 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
     @Import(name="alarmRoleArn")
       private final @Nullable Output<String> alarmRoleArn;
 
-    public Output<String> getAlarmRoleArn() {
+    public Output<String> alarmRoleArn() {
         return this.alarmRoleArn == null ? Codegen.empty() : this.alarmRoleArn;
     }
 

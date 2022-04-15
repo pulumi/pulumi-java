@@ -30,7 +30,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -41,7 +41,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokers")
       private final @Nullable Output<String> bootstrapBrokers;
 
-    public Output<String> getBootstrapBrokers() {
+    public Output<String> bootstrapBrokers() {
         return this.bootstrapBrokers == null ? Codegen.empty() : this.bootstrapBrokers;
     }
 
@@ -52,7 +52,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokersSaslIam")
       private final @Nullable Output<String> bootstrapBrokersSaslIam;
 
-    public Output<String> getBootstrapBrokersSaslIam() {
+    public Output<String> bootstrapBrokersSaslIam() {
         return this.bootstrapBrokersSaslIam == null ? Codegen.empty() : this.bootstrapBrokersSaslIam;
     }
 
@@ -63,7 +63,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokersSaslScram")
       private final @Nullable Output<String> bootstrapBrokersSaslScram;
 
-    public Output<String> getBootstrapBrokersSaslScram() {
+    public Output<String> bootstrapBrokersSaslScram() {
         return this.bootstrapBrokersSaslScram == null ? Codegen.empty() : this.bootstrapBrokersSaslScram;
     }
 
@@ -74,7 +74,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapBrokersTls")
       private final @Nullable Output<String> bootstrapBrokersTls;
 
-    public Output<String> getBootstrapBrokersTls() {
+    public Output<String> bootstrapBrokersTls() {
         return this.bootstrapBrokersTls == null ? Codegen.empty() : this.bootstrapBrokersTls;
     }
 
@@ -85,7 +85,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="brokerNodeGroupInfo")
       private final @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
 
-    public Output<ClusterBrokerNodeGroupInfoGetArgs> getBrokerNodeGroupInfo() {
+    public Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo() {
         return this.brokerNodeGroupInfo == null ? Codegen.empty() : this.brokerNodeGroupInfo;
     }
 
@@ -96,7 +96,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientAuthentication")
       private final @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
 
-    public Output<ClusterClientAuthenticationGetArgs> getClientAuthentication() {
+    public Output<ClusterClientAuthenticationGetArgs> clientAuthentication() {
         return this.clientAuthentication == null ? Codegen.empty() : this.clientAuthentication;
     }
 
@@ -107,7 +107,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
@@ -118,7 +118,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationInfo")
       private final @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
 
-    public Output<ClusterConfigurationInfoGetArgs> getConfigurationInfo() {
+    public Output<ClusterConfigurationInfoGetArgs> configurationInfo() {
         return this.configurationInfo == null ? Codegen.empty() : this.configurationInfo;
     }
 
@@ -130,7 +130,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="currentVersion")
       private final @Nullable Output<String> currentVersion;
 
-    public Output<String> getCurrentVersion() {
+    public Output<String> currentVersion() {
         return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
     }
 
@@ -141,7 +141,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionInfo")
       private final @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
 
-    public Output<ClusterEncryptionInfoGetArgs> getEncryptionInfo() {
+    public Output<ClusterEncryptionInfoGetArgs> encryptionInfo() {
         return this.encryptionInfo == null ? Codegen.empty() : this.encryptionInfo;
     }
 
@@ -152,7 +152,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enhancedMonitoring")
       private final @Nullable Output<String> enhancedMonitoring;
 
-    public Output<String> getEnhancedMonitoring() {
+    public Output<String> enhancedMonitoring() {
         return this.enhancedMonitoring == null ? Codegen.empty() : this.enhancedMonitoring;
     }
 
@@ -163,7 +163,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kafkaVersion")
       private final @Nullable Output<String> kafkaVersion;
 
-    public Output<String> getKafkaVersion() {
+    public Output<String> kafkaVersion() {
         return this.kafkaVersion == null ? Codegen.empty() : this.kafkaVersion;
     }
 
@@ -174,7 +174,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingInfo")
       private final @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
 
-    public Output<ClusterLoggingInfoGetArgs> getLoggingInfo() {
+    public Output<ClusterLoggingInfoGetArgs> loggingInfo() {
         return this.loggingInfo == null ? Codegen.empty() : this.loggingInfo;
     }
 
@@ -185,7 +185,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfBrokerNodes")
       private final @Nullable Output<Integer> numberOfBrokerNodes;
 
-    public Output<Integer> getNumberOfBrokerNodes() {
+    public Output<Integer> numberOfBrokerNodes() {
         return this.numberOfBrokerNodes == null ? Codegen.empty() : this.numberOfBrokerNodes;
     }
 
@@ -196,7 +196,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="openMonitoring")
       private final @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
 
-    public Output<ClusterOpenMonitoringGetArgs> getOpenMonitoring() {
+    public Output<ClusterOpenMonitoringGetArgs> openMonitoring() {
         return this.openMonitoring == null ? Codegen.empty() : this.openMonitoring;
     }
 
@@ -207,7 +207,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -218,7 +218,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -229,7 +229,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zookeeperConnectString")
       private final @Nullable Output<String> zookeeperConnectString;
 
-    public Output<String> getZookeeperConnectString() {
+    public Output<String> zookeeperConnectString() {
         return this.zookeeperConnectString == null ? Codegen.empty() : this.zookeeperConnectString;
     }
 
@@ -240,7 +240,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zookeeperConnectStringTls")
       private final @Nullable Output<String> zookeeperConnectStringTls;
 
-    public Output<String> getZookeeperConnectStringTls() {
+    public Output<String> zookeeperConnectStringTls() {
         return this.zookeeperConnectStringTls == null ? Codegen.empty() : this.zookeeperConnectStringTls;
     }
 

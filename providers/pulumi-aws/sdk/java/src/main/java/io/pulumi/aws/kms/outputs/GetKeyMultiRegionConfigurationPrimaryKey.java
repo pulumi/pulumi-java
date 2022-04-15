@@ -20,10 +20,10 @@ public final class GetKeyMultiRegionConfigurationPrimaryKey {
         this.region = region;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

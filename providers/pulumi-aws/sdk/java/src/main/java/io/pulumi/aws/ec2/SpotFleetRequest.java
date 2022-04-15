@@ -47,13 +47,13 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * `lowestPrice`.
      * 
      */
-    public Output</* @Nullable */ String> getAllocationStrategy() {
+    public Output</* @Nullable */ String> allocationStrategy() {
         return this.allocationStrategy;
     }
     @Export(name="clientToken", type=String.class, parameters={})
     private Output<String> clientToken;
 
-    public Output<String> getClientToken() {
+    public Output<String> clientToken() {
         return this.clientToken;
     }
     /**
@@ -71,7 +71,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * request is decreased below the current size of the Spot fleet.
      * 
      */
-    public Output</* @Nullable */ String> getExcessCapacityTerminationPolicy() {
+    public Output</* @Nullable */ String> excessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
     }
     /**
@@ -87,7 +87,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * capacity or also attempts to maintain it. Default is `maintain`.
      * 
      */
-    public Output</* @Nullable */ String> getFleetType() {
+    public Output</* @Nullable */ String> fleetType() {
         return this.fleetType;
     }
     /**
@@ -107,7 +107,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * terminateInstancesWithExpiration.
      * 
      */
-    public Output<String> getIamFleetRole() {
+    public Output<String> iamFleetRole() {
         return this.iamFleetRole;
     }
     /**
@@ -125,7 +125,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * `terminate`.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceInterruptionBehaviour() {
+    public Output</* @Nullable */ String> instanceInterruptionBehaviour() {
         return this.instanceInterruptionBehaviour;
     }
     /**
@@ -145,7 +145,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * the number of Spot pools that you specify.
      * 
      */
-    public Output</* @Nullable */ Integer> getInstancePoolsToUseCount() {
+    public Output</* @Nullable */ Integer> instancePoolsToUseCount() {
         return this.instancePoolsToUseCount;
     }
     /**
@@ -163,7 +163,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    public Output</* @Nullable */ List<SpotFleetRequestLaunchSpecification>> getLaunchSpecifications() {
+    public Output</* @Nullable */ List<SpotFleetRequestLaunchSpecification>> launchSpecifications() {
         return this.launchSpecifications;
     }
     /**
@@ -177,7 +177,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    public Output</* @Nullable */ List<SpotFleetRequestLaunchTemplateConfig>> getLaunchTemplateConfigs() {
+    public Output</* @Nullable */ List<SpotFleetRequestLaunchTemplateConfig>> launchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
     /**
@@ -191,7 +191,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return A list of elastic load balancer names to add to the Spot fleet.
      * 
      */
-    public Output<List<String>> getLoadBalancers() {
+    public Output<List<String>> loadBalancers() {
         return this.loadBalancers;
     }
     /**
@@ -205,7 +205,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
      * 
      */
-    public Output</* @Nullable */ String> getOnDemandAllocationStrategy() {
+    public Output</* @Nullable */ String> onDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy;
     }
     /**
@@ -219,7 +219,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
      * 
      */
-    public Output</* @Nullable */ String> getOnDemandMaxTotalPrice() {
+    public Output</* @Nullable */ String> onDemandMaxTotalPrice() {
         return this.onDemandMaxTotalPrice;
     }
     /**
@@ -233,7 +233,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
      * 
      */
-    public Output</* @Nullable */ Integer> getOnDemandTargetCapacity() {
+    public Output</* @Nullable */ Integer> onDemandTargetCapacity() {
         return this.onDemandTargetCapacity;
     }
     /**
@@ -247,7 +247,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getReplaceUnhealthyInstances() {
+    public Output</* @Nullable */ Boolean> replaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances;
     }
     /**
@@ -261,7 +261,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
      */
-    public Output</* @Nullable */ SpotFleetRequestSpotMaintenanceStrategies> getSpotMaintenanceStrategies() {
+    public Output</* @Nullable */ SpotFleetRequestSpotMaintenanceStrategies> spotMaintenanceStrategies() {
         return this.spotMaintenanceStrategies;
     }
     /**
@@ -275,7 +275,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The maximum spot bid for this override request.
      * 
      */
-    public Output</* @Nullable */ String> getSpotPrice() {
+    public Output</* @Nullable */ String> spotPrice() {
         return this.spotPrice;
     }
     /**
@@ -289,7 +289,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The state of the Spot fleet request.
      * 
      */
-    public Output<String> getSpotRequestState() {
+    public Output<String> spotRequestState() {
         return this.spotRequestState;
     }
     /**
@@ -303,7 +303,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -317,7 +317,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -335,7 +335,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * important to your application workload, such as vCPUs, memory, or I/O.
      * 
      */
-    public Output<Integer> getTargetCapacity() {
+    public Output<Integer> targetCapacity() {
         return this.targetCapacity;
     }
     /**
@@ -349,7 +349,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
      * 
      */
-    public Output<List<String>> getTargetGroupArns() {
+    public Output<List<String>> targetGroupArns() {
         return this.targetGroupArns;
     }
     /**
@@ -365,7 +365,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * instances should be terminated when the Spot fleet request expires.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTerminateInstancesWithExpiration() {
+    public Output</* @Nullable */ Boolean> terminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration;
     }
     /**
@@ -379,7 +379,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
      * 
      */
-    public Output</* @Nullable */ String> getValidFrom() {
+    public Output</* @Nullable */ String> validFrom() {
         return this.validFrom;
     }
     /**
@@ -393,7 +393,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * @return The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
      * 
      */
-    public Output</* @Nullable */ String> getValidUntil() {
+    public Output</* @Nullable */ String> validUntil() {
         return this.validUntil;
     }
     /**
@@ -411,7 +411,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * timeout of 10m is reached.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForFulfillment() {
+    public Output</* @Nullable */ Boolean> waitForFulfillment() {
         return this.waitForFulfillment;
     }
 

@@ -44,7 +44,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,7 +60,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -74,7 +74,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -88,7 +88,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * @return The IAM role to attach to the policy.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

@@ -21,7 +21,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
+    public Output<String> graphArn() {
         return this.graphArn;
     }
 

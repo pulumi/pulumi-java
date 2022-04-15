@@ -23,7 +23,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bgpAsn", required=true)
       private final Output<String> bgpAsn;
 
-    public Output<String> getBgpAsn() {
+    public Output<String> bgpAsn() {
         return this.bgpAsn;
     }
 
@@ -34,7 +34,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
@@ -45,7 +45,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -56,7 +56,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipAddress", required=true)
       private final Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
 
@@ -67,7 +67,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

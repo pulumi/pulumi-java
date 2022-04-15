@@ -23,7 +23,7 @@ public final class GetPipelineDefinitionArgs extends io.pulumi.resources.InvokeA
     @Import(name="parameterValues")
       private final @Nullable List<GetPipelineDefinitionParameterValue> parameterValues;
 
-    public List<GetPipelineDefinitionParameterValue> getParameterValues() {
+    public List<GetPipelineDefinitionParameterValue> parameterValues() {
         return this.parameterValues == null ? List.of() : this.parameterValues;
     }
 
@@ -34,7 +34,7 @@ public final class GetPipelineDefinitionArgs extends io.pulumi.resources.InvokeA
     @Import(name="pipelineId", required=true)
       private final String pipelineId;
 
-    public String getPipelineId() {
+    public String pipelineId() {
         return this.pipelineId;
     }
 

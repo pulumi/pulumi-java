@@ -40,7 +40,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of group
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +54,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    public Output<String> getAwsAccountId() {
+    public Output<String> awsAccountId() {
         return this.awsAccountId;
     }
     /**
@@ -68,7 +68,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return A description for the group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +82,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return A name for the group.
      * 
      */
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
     /**
@@ -96,7 +96,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The namespace. Currently, you should set this to `default`.
      * 
      */
-    public Output</* @Nullable */ String> getNamespace() {
+    public Output</* @Nullable */ String> namespace() {
         return this.namespace;
     }
 

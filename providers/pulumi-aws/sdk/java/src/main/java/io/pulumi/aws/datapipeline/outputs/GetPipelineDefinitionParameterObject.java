@@ -26,14 +26,14 @@ public final class GetPipelineDefinitionParameterObject {
         this.id = id;
     }
 
-    public List<GetPipelineDefinitionParameterObjectAttribute> getAttributes() {
+    public List<GetPipelineDefinitionParameterObjectAttribute> attributes() {
         return this.attributes;
     }
     /**
      * ID of the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

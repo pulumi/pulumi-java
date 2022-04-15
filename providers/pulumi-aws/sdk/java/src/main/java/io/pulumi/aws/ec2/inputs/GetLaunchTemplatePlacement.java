@@ -16,56 +16,56 @@ public final class GetLaunchTemplatePlacement extends io.pulumi.resources.Invoke
     @Import(name="affinity", required=true)
       private final String affinity;
 
-    public String getAffinity() {
+    public String affinity() {
         return this.affinity;
     }
 
     @Import(name="availabilityZone", required=true)
       private final String availabilityZone;
 
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
 
     @Import(name="groupName", required=true)
       private final String groupName;
 
-    public String getGroupName() {
+    public String groupName() {
         return this.groupName;
     }
 
     @Import(name="hostId", required=true)
       private final String hostId;
 
-    public String getHostId() {
+    public String hostId() {
         return this.hostId;
     }
 
     @Import(name="hostResourceGroupArn", required=true)
       private final String hostResourceGroupArn;
 
-    public String getHostResourceGroupArn() {
+    public String hostResourceGroupArn() {
         return this.hostResourceGroupArn;
     }
 
     @Import(name="partitionNumber", required=true)
       private final Integer partitionNumber;
 
-    public Integer getPartitionNumber() {
+    public Integer partitionNumber() {
         return this.partitionNumber;
     }
 
     @Import(name="spreadDomain", required=true)
       private final String spreadDomain;
 
-    public String getSpreadDomain() {
+    public String spreadDomain() {
         return this.spreadDomain;
     }
 
     @Import(name="tenancy", required=true)
       private final String tenancy;
 
-    public String getTenancy() {
+    public String tenancy() {
         return this.tenancy;
     }
 

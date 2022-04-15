@@ -67,42 +67,42 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfig {
      * Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
      * 
     */
-    public Optional<String> getBidPrice() {
+    public Optional<String> bidPrice() {
         return Optional.ofNullable(this.bidPrice);
     }
     /**
      * Bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
      * 
     */
-    public Optional<Double> getBidPriceAsPercentageOfOnDemandPrice() {
+    public Optional<Double> bidPriceAsPercentageOfOnDemandPrice() {
         return Optional.ofNullable(this.bidPriceAsPercentageOfOnDemandPrice);
     }
     /**
      * Configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
      * 
     */
-    public List<ClusterCoreInstanceFleetInstanceTypeConfigConfiguration> getConfigurations() {
+    public List<ClusterCoreInstanceFleetInstanceTypeConfigConfiguration> configurations() {
         return this.configurations == null ? List.of() : this.configurations;
     }
     /**
      * Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
      * 
     */
-    public List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig> getEbsConfigs() {
+    public List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs() {
         return this.ebsConfigs == null ? List.of() : this.ebsConfigs;
     }
     /**
      * EC2 instance type for all instances in the instance group.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * Number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
      * 
     */
-    public Optional<Integer> getWeightedCapacity() {
+    public Optional<Integer> weightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }
 

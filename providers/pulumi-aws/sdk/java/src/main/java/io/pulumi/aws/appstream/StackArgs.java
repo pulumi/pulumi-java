@@ -24,7 +24,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessEndpoints")
       private final @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
 
-    public Output<List<StackAccessEndpointArgs>> getAccessEndpoints() {
+    public Output<List<StackAccessEndpointArgs>> accessEndpoints() {
         return this.accessEndpoints == null ? Codegen.empty() : this.accessEndpoints;
     }
 
@@ -35,7 +35,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationSettings")
       private final @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
 
-    public Output<StackApplicationSettingsArgs> getApplicationSettings() {
+    public Output<StackApplicationSettingsArgs> applicationSettings() {
         return this.applicationSettings == null ? Codegen.empty() : this.applicationSettings;
     }
 
@@ -46,7 +46,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -57,7 +57,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -68,7 +68,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="embedHostDomains")
       private final @Nullable Output<List<String>> embedHostDomains;
 
-    public Output<List<String>> getEmbedHostDomains() {
+    public Output<List<String>> embedHostDomains() {
         return this.embedHostDomains == null ? Codegen.empty() : this.embedHostDomains;
     }
 
@@ -79,7 +79,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="feedbackUrl")
       private final @Nullable Output<String> feedbackUrl;
 
-    public Output<String> getFeedbackUrl() {
+    public Output<String> feedbackUrl() {
         return this.feedbackUrl == null ? Codegen.empty() : this.feedbackUrl;
     }
 
@@ -90,7 +90,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -101,7 +101,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="redirectUrl")
       private final @Nullable Output<String> redirectUrl;
 
-    public Output<String> getRedirectUrl() {
+    public Output<String> redirectUrl() {
         return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
     }
 
@@ -112,14 +112,14 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageConnectors")
       private final @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
 
-    public Output<List<StackStorageConnectorArgs>> getStorageConnectors() {
+    public Output<List<StackStorageConnectorArgs>> storageConnectors() {
         return this.storageConnectors == null ? Codegen.empty() : this.storageConnectors;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -130,7 +130,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSettings")
       private final @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
-    public Output<List<StackUserSettingArgs>> getUserSettings() {
+    public Output<List<StackUserSettingArgs>> userSettings() {
         return this.userSettings == null ? Codegen.empty() : this.userSettings;
     }
 

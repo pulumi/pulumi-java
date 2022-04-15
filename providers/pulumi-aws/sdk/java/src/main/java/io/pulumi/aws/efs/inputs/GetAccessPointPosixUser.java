@@ -20,7 +20,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
     @Import(name="gid", required=true)
       private final Integer gid;
 
-    public Integer getGid() {
+    public Integer gid() {
         return this.gid;
     }
 
@@ -31,7 +31,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
     @Import(name="secondaryGids", required=true)
       private final List<Integer> secondaryGids;
 
-    public List<Integer> getSecondaryGids() {
+    public List<Integer> secondaryGids() {
         return this.secondaryGids;
     }
 
@@ -43,7 +43,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
     @Import(name="uid", required=true)
       private final Integer uid;
 
-    public Integer getUid() {
+    public Integer uid() {
         return this.uid;
     }
 

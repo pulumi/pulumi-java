@@ -25,7 +25,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cognitoConfig")
       private final @Nullable Output<WorkforceCognitoConfigArgs> cognitoConfig;
 
-    public Output<WorkforceCognitoConfigArgs> getCognitoConfig() {
+    public Output<WorkforceCognitoConfigArgs> cognitoConfig() {
         return this.cognitoConfig == null ? Codegen.empty() : this.cognitoConfig;
     }
 
@@ -36,7 +36,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcConfig")
       private final @Nullable Output<WorkforceOidcConfigArgs> oidcConfig;
 
-    public Output<WorkforceOidcConfigArgs> getOidcConfig() {
+    public Output<WorkforceOidcConfigArgs> oidcConfig() {
         return this.oidcConfig == null ? Codegen.empty() : this.oidcConfig;
     }
 
@@ -47,7 +47,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceIpConfig")
       private final @Nullable Output<WorkforceSourceIpConfigArgs> sourceIpConfig;
 
-    public Output<WorkforceSourceIpConfigArgs> getSourceIpConfig() {
+    public Output<WorkforceSourceIpConfigArgs> sourceIpConfig() {
         return this.sourceIpConfig == null ? Codegen.empty() : this.sourceIpConfig;
     }
 
@@ -58,7 +58,7 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workforceName", required=true)
       private final Output<String> workforceName;
 
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName;
     }
 

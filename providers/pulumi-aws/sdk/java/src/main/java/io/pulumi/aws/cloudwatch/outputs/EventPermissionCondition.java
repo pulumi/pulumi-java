@@ -39,21 +39,21 @@ public final class EventPermissionCondition {
      * Key for the condition. Valid values: `aws:PrincipalOrgID`.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * Type of condition. Value values: `StringEquals`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Value for the key.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

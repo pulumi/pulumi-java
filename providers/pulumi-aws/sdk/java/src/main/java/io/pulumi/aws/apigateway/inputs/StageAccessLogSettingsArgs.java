@@ -21,7 +21,7 @@ public final class StageAccessLogSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
@@ -33,7 +33,7 @@ public final class StageAccessLogSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 

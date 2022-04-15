@@ -23,7 +23,7 @@ public final class ProxyProtocolPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="instancePorts", required=true)
       private final Output<List<String>> instancePorts;
 
-    public Output<List<String>> getInstancePorts() {
+    public Output<List<String>> instancePorts() {
         return this.instancePorts;
     }
 
@@ -35,7 +35,7 @@ public final class ProxyProtocolPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="loadBalancer", required=true)
       private final Output<String> loadBalancer;
 
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
 

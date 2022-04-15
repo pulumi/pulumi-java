@@ -38,17 +38,17 @@ public final class FunctionVpcConfig {
      * List of security group IDs associated with the Lambda function.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * List of subnet IDs associated with the Lambda function.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return Optional.ofNullable(this.vpcId);
     }
 

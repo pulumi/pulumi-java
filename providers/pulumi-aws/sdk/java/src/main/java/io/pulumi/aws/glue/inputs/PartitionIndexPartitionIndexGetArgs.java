@@ -23,14 +23,14 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
     @Import(name="indexName")
       private final @Nullable Output<String> indexName;
 
-    public Output<String> getIndexName() {
+    public Output<String> indexName() {
         return this.indexName == null ? Codegen.empty() : this.indexName;
     }
 
     @Import(name="indexStatus")
       private final @Nullable Output<String> indexStatus;
 
-    public Output<String> getIndexStatus() {
+    public Output<String> indexStatus() {
         return this.indexStatus == null ? Codegen.empty() : this.indexStatus;
     }
 
@@ -41,7 +41,7 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
     @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
-    public Output<List<String>> getKeys() {
+    public Output<List<String>> keys() {
         return this.keys == null ? Codegen.empty() : this.keys;
     }
 

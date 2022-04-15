@@ -48,28 +48,28 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * Bucket name of the customer S3 bucket.
      * 
     */
-    public Optional<String> getBucketName() {
+    public Optional<String> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Encryption option for the customer s3 location. Options are S3 server side encryption with an S3-managed key or KMS managed key. Valid values are `SSE_KMS` and `SSE_S3`.
      * 
     */
-    public Optional<String> getEncryptionOption() {
+    public Optional<String> encryptionOption() {
         return Optional.ofNullable(this.encryptionOption);
     }
     /**
      * KMS key arn for the customer s3 location when encrypting with a KMS managed key.
      * 
     */
-    public Optional<String> getKmsKeyId() {
+    public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * Object key prefix for the customer S3 location.
      * 
     */
-    public Optional<String> getObjectKeyPrefix() {
+    public Optional<String> objectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }
 

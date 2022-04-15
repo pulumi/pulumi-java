@@ -23,7 +23,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchArgs extends io.pulumi.res
     @Import(name="exact")
       private final @Nullable Output<String> exact;
 
-    public Output<String> getExact() {
+    public Output<String> exact() {
         return this.exact == null ? Codegen.empty() : this.exact;
     }
 
@@ -35,7 +35,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchArgs extends io.pulumi.res
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -46,7 +46,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchArgs extends io.pulumi.res
     @Import(name="range")
       private final @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeArgs> range;
 
-    public Output<RouteSpecHttp2RouteMatchHeaderMatchRangeArgs> getRange() {
+    public Output<RouteSpecHttp2RouteMatchHeaderMatchRangeArgs> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 
@@ -57,7 +57,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchArgs extends io.pulumi.res
     @Import(name="regex")
       private final @Nullable Output<String> regex;
 
-    public Output<String> getRegex() {
+    public Output<String> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -68,7 +68,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchArgs extends io.pulumi.res
     @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
-    public Output<String> getSuffix() {
+    public Output<String> suffix() {
         return this.suffix == null ? Codegen.empty() : this.suffix;
     }
 

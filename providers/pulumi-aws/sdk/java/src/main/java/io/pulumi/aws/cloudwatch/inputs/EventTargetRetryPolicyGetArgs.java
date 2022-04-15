@@ -22,7 +22,7 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
     @Import(name="maximumEventAgeInSeconds")
       private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Output<Integer> getMaximumEventAgeInSeconds() {
+    public Output<Integer> maximumEventAgeInSeconds() {
         return this.maximumEventAgeInSeconds == null ? Codegen.empty() : this.maximumEventAgeInSeconds;
     }
 
@@ -33,7 +33,7 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
     @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> getMaximumRetryAttempts() {
+    public Output<Integer> maximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
     }
 

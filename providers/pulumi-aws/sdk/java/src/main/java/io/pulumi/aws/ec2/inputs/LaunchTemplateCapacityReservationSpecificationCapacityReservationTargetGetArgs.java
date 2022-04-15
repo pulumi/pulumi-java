@@ -22,7 +22,7 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
     @Import(name="capacityReservationId")
       private final @Nullable Output<String> capacityReservationId;
 
-    public Output<String> getCapacityReservationId() {
+    public Output<String> capacityReservationId() {
         return this.capacityReservationId == null ? Codegen.empty() : this.capacityReservationId;
     }
 

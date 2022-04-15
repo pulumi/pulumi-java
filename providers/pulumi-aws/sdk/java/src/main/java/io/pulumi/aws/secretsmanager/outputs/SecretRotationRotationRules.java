@@ -24,7 +24,7 @@ public final class SecretRotationRotationRules {
      * Specifies the number of days between automatic scheduled rotations of the secret.
      * 
     */
-    public Integer getAutomaticallyAfterDays() {
+    public Integer automaticallyAfterDays() {
         return this.automaticallyAfterDays;
     }
 

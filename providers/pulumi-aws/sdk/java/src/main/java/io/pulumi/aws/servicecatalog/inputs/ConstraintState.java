@@ -22,7 +22,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
-    public Output<String> getAcceptLanguage() {
+    public Output<String> acceptLanguage() {
         return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
@@ -33,7 +33,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -55,7 +55,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -66,7 +66,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="portfolioId")
       private final @Nullable Output<String> portfolioId;
 
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
     }
 
@@ -77,14 +77,14 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="productId")
       private final @Nullable Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId == null ? Codegen.empty() : this.productId;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -95,7 +95,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

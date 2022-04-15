@@ -23,7 +23,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
     @Import(name="modeBlock")
       private final @Nullable Output<Boolean> modeBlock;
 
-    public Output<Boolean> getModeBlock() {
+    public Output<Boolean> modeBlock() {
         return this.modeBlock == null ? Codegen.empty() : this.modeBlock;
     }
 
@@ -34,7 +34,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
@@ -45,7 +45,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
     @Import(name="protection", required=true)
       private final Output<Boolean> protection;
 
-    public Output<Boolean> getProtection() {
+    public Output<Boolean> protection() {
         return this.protection;
     }
 
@@ -56,7 +56,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
     @Import(name="reportUri")
       private final @Nullable Output<String> reportUri;
 
-    public Output<String> getReportUri() {
+    public Output<String> reportUri() {
         return this.reportUri == null ? Codegen.empty() : this.reportUri;
     }
 

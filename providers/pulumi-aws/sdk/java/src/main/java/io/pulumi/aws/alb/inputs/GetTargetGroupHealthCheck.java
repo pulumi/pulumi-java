@@ -17,63 +17,63 @@ public final class GetTargetGroupHealthCheck extends io.pulumi.resources.InvokeA
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="healthyThreshold", required=true)
       private final Integer healthyThreshold;
 
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
 
     @Import(name="interval", required=true)
       private final Integer interval;
 
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
 
     @Import(name="matcher", required=true)
       private final String matcher;
 
-    public String getMatcher() {
+    public String matcher() {
         return this.matcher;
     }
 
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
     @Import(name="port", required=true)
       private final String port;
 
-    public String getPort() {
+    public String port() {
         return this.port;
     }
 
     @Import(name="protocol", required=true)
       private final String protocol;
 
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 
     @Import(name="timeout", required=true)
       private final Integer timeout;
 
-    public Integer getTimeout() {
+    public Integer timeout() {
         return this.timeout;
     }
 
     @Import(name="unhealthyThreshold", required=true)
       private final Integer unhealthyThreshold;
 
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

@@ -22,7 +22,7 @@ public final class WebAclRuleActionCountCustomRequestHandlingArgs extends io.pul
     @Import(name="insertHeaders", required=true)
       private final Output<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> insertHeaders;
 
-    public Output<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> getInsertHeaders() {
+    public Output<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> insertHeaders() {
         return this.insertHeaders;
     }
 

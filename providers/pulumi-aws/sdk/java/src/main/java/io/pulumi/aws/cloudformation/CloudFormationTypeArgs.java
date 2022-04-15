@@ -23,7 +23,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
@@ -34,7 +34,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="loggingConfig")
       private final @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
 
-    public Output<CloudFormationTypeLoggingConfigArgs> getLoggingConfig() {
+    public Output<CloudFormationTypeLoggingConfigArgs> loggingConfig() {
         return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
@@ -45,7 +45,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="schemaHandlerPackage", required=true)
       private final Output<String> schemaHandlerPackage;
 
-    public Output<String> getSchemaHandlerPackage() {
+    public Output<String> schemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
 
@@ -56,7 +56,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -67,7 +67,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="typeName", required=true)
       private final Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
 

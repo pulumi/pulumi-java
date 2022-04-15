@@ -21,7 +21,7 @@ public final class DomainPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies", required=true)
       private final Output<String> accessPolicies;
 
-    public Output<String> getAccessPolicies() {
+    public Output<String> accessPolicies() {
         return this.accessPolicies;
     }
 
@@ -32,7 +32,7 @@ public final class DomainPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 

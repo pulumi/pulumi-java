@@ -24,7 +24,7 @@ public final class GatewayRouteSpecHttp2RouteActionTarget {
      * The virtual service gateway route target.
      * 
     */
-    public GatewayRouteSpecHttp2RouteActionTargetVirtualService getVirtualService() {
+    public GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService() {
         return this.virtualService;
     }
 

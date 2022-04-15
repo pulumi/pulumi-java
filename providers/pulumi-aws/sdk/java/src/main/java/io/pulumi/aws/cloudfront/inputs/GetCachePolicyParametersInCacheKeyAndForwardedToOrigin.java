@@ -23,7 +23,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin extend
     @Import(name="cookiesConfigs", required=true)
       private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs;
 
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> getCookiesConfigs() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs() {
         return this.cookiesConfigs;
     }
 
@@ -34,7 +34,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin extend
     @Import(name="enableAcceptEncodingBrotli", required=true)
       private final Boolean enableAcceptEncodingBrotli;
 
-    public Boolean getEnableAcceptEncodingBrotli() {
+    public Boolean enableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli;
     }
 
@@ -45,7 +45,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin extend
     @Import(name="enableAcceptEncodingGzip", required=true)
       private final Boolean enableAcceptEncodingGzip;
 
-    public Boolean getEnableAcceptEncodingGzip() {
+    public Boolean enableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
 
@@ -56,7 +56,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin extend
     @Import(name="headersConfigs", required=true)
       private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs;
 
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> getHeadersConfigs() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs() {
         return this.headersConfigs;
     }
 
@@ -67,7 +67,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin extend
     @Import(name="queryStringsConfigs", required=true)
       private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs;
 
-    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> getQueryStringsConfigs() {
+    public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs() {
         return this.queryStringsConfigs;
     }
 

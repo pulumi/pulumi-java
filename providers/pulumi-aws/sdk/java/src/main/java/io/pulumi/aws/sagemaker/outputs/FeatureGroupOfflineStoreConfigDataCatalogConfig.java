@@ -41,21 +41,21 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
      * The name of the Glue table catalog.
      * 
     */
-    public Optional<String> getCatalog() {
+    public Optional<String> catalog() {
         return Optional.ofNullable(this.catalog);
     }
     /**
      * The name of the Glue table database.
      * 
     */
-    public Optional<String> getDatabase() {
+    public Optional<String> database() {
         return Optional.ofNullable(this.database);
     }
     /**
      * The name of the Glue table.
      * 
     */
-    public Optional<String> getTableName() {
+    public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
 

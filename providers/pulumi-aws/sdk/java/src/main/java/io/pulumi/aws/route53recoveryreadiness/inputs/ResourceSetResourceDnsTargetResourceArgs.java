@@ -23,7 +23,7 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -34,7 +34,7 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     @Import(name="hostedZoneArn")
       private final @Nullable Output<String> hostedZoneArn;
 
-    public Output<String> getHostedZoneArn() {
+    public Output<String> hostedZoneArn() {
         return this.hostedZoneArn == null ? Codegen.empty() : this.hostedZoneArn;
     }
 
@@ -45,7 +45,7 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
-    public Output<String> getRecordSetId() {
+    public Output<String> recordSetId() {
         return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 
@@ -56,7 +56,7 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     @Import(name="recordType")
       private final @Nullable Output<String> recordType;
 
-    public Output<String> getRecordType() {
+    public Output<String> recordType() {
         return this.recordType == null ? Codegen.empty() : this.recordType;
     }
 
@@ -67,7 +67,7 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends io.pulumi.re
     @Import(name="targetResource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> getTargetResource() {
+    public Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource() {
         return this.targetResource == null ? Codegen.empty() : this.targetResource;
     }
 

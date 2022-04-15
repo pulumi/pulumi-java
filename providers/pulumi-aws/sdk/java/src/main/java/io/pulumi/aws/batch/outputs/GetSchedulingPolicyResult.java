@@ -44,31 +44,31 @@ public final class GetSchedulingPolicyResult {
         this.tags = tags;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public List<GetSchedulingPolicyFairSharePolicy> getFairSharePolicies() {
+    public List<GetSchedulingPolicyFairSharePolicy> fairSharePolicies() {
         return this.fairSharePolicies;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies the name of the scheduling policy.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Key-value map of resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

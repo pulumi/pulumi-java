@@ -24,7 +24,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="attributeMapping")
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Output<Map<String,String>> getAttributeMapping() {
+    public Output<Map<String,String>> attributeMapping() {
         return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
     }
 
@@ -35,7 +35,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="idpIdentifiers")
       private final @Nullable Output<List<String>> idpIdentifiers;
 
-    public Output<List<String>> getIdpIdentifiers() {
+    public Output<List<String>> idpIdentifiers() {
         return this.idpIdentifiers == null ? Codegen.empty() : this.idpIdentifiers;
     }
 
@@ -46,7 +46,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="providerDetails", required=true)
       private final Output<Map<String,String>> providerDetails;
 
-    public Output<Map<String,String>> getProviderDetails() {
+    public Output<Map<String,String>> providerDetails() {
         return this.providerDetails;
     }
 
@@ -57,7 +57,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -68,7 +68,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="providerType", required=true)
       private final Output<String> providerType;
 
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
 
@@ -79,7 +79,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
-    public Output<String> getUserPoolId() {
+    public Output<String> userPoolId() {
         return this.userPoolId;
     }
 

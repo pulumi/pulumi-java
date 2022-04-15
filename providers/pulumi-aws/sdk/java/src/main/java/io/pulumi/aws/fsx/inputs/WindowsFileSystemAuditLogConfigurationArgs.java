@@ -22,7 +22,7 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
     @Import(name="auditLogDestination")
       private final @Nullable Output<String> auditLogDestination;
 
-    public Output<String> getAuditLogDestination() {
+    public Output<String> auditLogDestination() {
         return this.auditLogDestination == null ? Codegen.empty() : this.auditLogDestination;
     }
 
@@ -33,7 +33,7 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
     @Import(name="fileAccessAuditLogLevel")
       private final @Nullable Output<String> fileAccessAuditLogLevel;
 
-    public Output<String> getFileAccessAuditLogLevel() {
+    public Output<String> fileAccessAuditLogLevel() {
         return this.fileAccessAuditLogLevel == null ? Codegen.empty() : this.fileAccessAuditLogLevel;
     }
 
@@ -44,7 +44,7 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
     @Import(name="fileShareAccessAuditLogLevel")
       private final @Nullable Output<String> fileShareAccessAuditLogLevel;
 
-    public Output<String> getFileShareAccessAuditLogLevel() {
+    public Output<String> fileShareAccessAuditLogLevel() {
         return this.fileShareAccessAuditLogLevel == null ? Codegen.empty() : this.fileShareAccessAuditLogLevel;
     }
 

@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="healthyThreshold", required=true)
       private final Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
+    public Output<Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
 
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="intervalMillis", required=true)
       private final Output<Integer> intervalMillis;
 
-    public Output<Integer> getIntervalMillis() {
+    public Output<Integer> intervalMillis() {
         return this.intervalMillis;
     }
 
@@ -45,7 +45,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -56,7 +56,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -67,7 +67,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -78,7 +78,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="timeoutMillis", required=true)
       private final Output<Integer> timeoutMillis;
 
-    public Output<Integer> getTimeoutMillis() {
+    public Output<Integer> timeoutMillis() {
         return this.timeoutMillis;
     }
 
@@ -89,7 +89,7 @@ public final class VirtualNodeSpecListenerHealthCheckGetArgs extends io.pulumi.r
     @Import(name="unhealthyThreshold", required=true)
       private final Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
+    public Output<Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

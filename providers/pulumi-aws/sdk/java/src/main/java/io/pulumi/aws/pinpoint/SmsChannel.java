@@ -42,7 +42,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -56,7 +56,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -70,7 +70,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * @return Promotional messages per second that can be sent.
      * 
      */
-    public Output<Integer> getPromotionalMessagesPerSecond() {
+    public Output<Integer> promotionalMessagesPerSecond() {
         return this.promotionalMessagesPerSecond;
     }
     /**
@@ -84,7 +84,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * @return Sender identifier of your messages.
      * 
      */
-    public Output</* @Nullable */ String> getSenderId() {
+    public Output</* @Nullable */ String> senderId() {
         return this.senderId;
     }
     /**
@@ -98,7 +98,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * @return The Short Code registered with the phone provider.
      * 
      */
-    public Output</* @Nullable */ String> getShortCode() {
+    public Output</* @Nullable */ String> shortCode() {
         return this.shortCode;
     }
     /**
@@ -112,7 +112,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * @return Transactional messages per second that can be sent.
      * 
      */
-    public Output<Integer> getTransactionalMessagesPerSecond() {
+    public Output<Integer> transactionalMessagesPerSecond() {
         return this.transactionalMessagesPerSecond;
     }
 

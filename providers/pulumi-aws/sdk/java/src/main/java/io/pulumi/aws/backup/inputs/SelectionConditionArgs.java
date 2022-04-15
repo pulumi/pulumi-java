@@ -22,28 +22,28 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="stringEquals")
       private final @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
 
-    public Output<List<SelectionConditionStringEqualArgs>> getStringEquals() {
+    public Output<List<SelectionConditionStringEqualArgs>> stringEquals() {
         return this.stringEquals == null ? Codegen.empty() : this.stringEquals;
     }
 
     @Import(name="stringLikes")
       private final @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
 
-    public Output<List<SelectionConditionStringLikeArgs>> getStringLikes() {
+    public Output<List<SelectionConditionStringLikeArgs>> stringLikes() {
         return this.stringLikes == null ? Codegen.empty() : this.stringLikes;
     }
 
     @Import(name="stringNotEquals")
       private final @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
 
-    public Output<List<SelectionConditionStringNotEqualArgs>> getStringNotEquals() {
+    public Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals() {
         return this.stringNotEquals == null ? Codegen.empty() : this.stringNotEquals;
     }
 
     @Import(name="stringNotLikes")
       private final @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
 
-    public Output<List<SelectionConditionStringNotLikeArgs>> getStringNotLikes() {
+    public Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes() {
         return this.stringNotLikes == null ? Codegen.empty() : this.stringNotLikes;
     }
 

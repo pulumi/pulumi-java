@@ -22,7 +22,7 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -33,7 +33,7 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
     @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
-    public Output<String> getImageId() {
+    public Output<String> imageId() {
         return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 

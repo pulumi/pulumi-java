@@ -55,7 +55,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * the peering connection (a maximum of one).
      * 
      */
-    public Output<PeeringConnectionOptionsAccepter> getAccepter() {
+    public Output<PeeringConnectionOptionsAccepter> accepter() {
         return this.accepter;
     }
     /**
@@ -73,7 +73,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * the peering connection (a maximum of one).
      * 
      */
-    public Output<PeeringConnectionOptionsRequester> getRequester() {
+    public Output<PeeringConnectionOptionsRequester> requester() {
         return this.requester;
     }
     /**
@@ -87,7 +87,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * @return The ID of the requester VPC peering connection.
      * 
      */
-    public Output<String> getVpcPeeringConnectionId() {
+    public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 

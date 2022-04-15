@@ -26,7 +26,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="additionalCodeRepositories")
       private final @Nullable Output<List<String>> additionalCodeRepositories;
 
-    public Output<List<String>> getAdditionalCodeRepositories() {
+    public Output<List<String>> additionalCodeRepositories() {
         return this.additionalCodeRepositories == null ? Codegen.empty() : this.additionalCodeRepositories;
     }
 
@@ -37,7 +37,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="defaultCodeRepository")
       private final @Nullable Output<String> defaultCodeRepository;
 
-    public Output<String> getDefaultCodeRepository() {
+    public Output<String> defaultCodeRepository() {
         return this.defaultCodeRepository == null ? Codegen.empty() : this.defaultCodeRepository;
     }
 
@@ -48,7 +48,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="directInternetAccess")
       private final @Nullable Output<String> directInternetAccess;
 
-    public Output<String> getDirectInternetAccess() {
+    public Output<String> directInternetAccess() {
         return this.directInternetAccess == null ? Codegen.empty() : this.directInternetAccess;
     }
 
@@ -59,7 +59,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -70,7 +70,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
@@ -81,7 +81,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lifecycleConfigName")
       private final @Nullable Output<String> lifecycleConfigName;
 
-    public Output<String> getLifecycleConfigName() {
+    public Output<String> lifecycleConfigName() {
         return this.lifecycleConfigName == null ? Codegen.empty() : this.lifecycleConfigName;
     }
 
@@ -92,7 +92,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="platformIdentifier")
       private final @Nullable Output<String> platformIdentifier;
 
-    public Output<String> getPlatformIdentifier() {
+    public Output<String> platformIdentifier() {
         return this.platformIdentifier == null ? Codegen.empty() : this.platformIdentifier;
     }
 
@@ -114,7 +114,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -125,7 +125,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="rootAccess")
       private final @Nullable Output<String> rootAccess;
 
-    public Output<String> getRootAccess() {
+    public Output<String> rootAccess() {
         return this.rootAccess == null ? Codegen.empty() : this.rootAccess;
     }
 
@@ -136,7 +136,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
@@ -147,7 +147,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
@@ -158,7 +158,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -169,7 +169,7 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
+    public Output<Integer> volumeSize() {
         return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 

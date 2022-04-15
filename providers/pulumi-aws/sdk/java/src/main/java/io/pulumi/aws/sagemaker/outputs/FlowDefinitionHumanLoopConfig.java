@@ -86,63 +86,63 @@ public final class FlowDefinitionHumanLoopConfig {
      * The Amazon Resource Name (ARN) of the human task user interface.
      * 
     */
-    public String getHumanTaskUiArn() {
+    public String humanTaskUiArn() {
         return this.humanTaskUiArn;
     }
     /**
      * Defines the amount of money paid to an Amazon Mechanical Turk worker for each task performed. See Public Workforce Task Price details below.
      * 
     */
-    public Optional<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice> getPublicWorkforceTaskPrice() {
+    public Optional<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice> publicWorkforceTaskPrice() {
         return Optional.ofNullable(this.publicWorkforceTaskPrice);
     }
     /**
      * The length of time that a task remains available for review by human workers. Valid value range between `1` and `864000`.
      * 
     */
-    public Optional<Integer> getTaskAvailabilityLifetimeInSeconds() {
+    public Optional<Integer> taskAvailabilityLifetimeInSeconds() {
         return Optional.ofNullable(this.taskAvailabilityLifetimeInSeconds);
     }
     /**
      * The number of distinct workers who will perform the same task on each object. Valid value range between `1` and `3`.
      * 
     */
-    public Integer getTaskCount() {
+    public Integer taskCount() {
         return this.taskCount;
     }
     /**
      * A description for the human worker task.
      * 
     */
-    public String getTaskDescription() {
+    public String taskDescription() {
         return this.taskDescription;
     }
     /**
      * An array of keywords used to describe the task so that workers can discover the task.
      * 
     */
-    public List<String> getTaskKeywords() {
+    public List<String> taskKeywords() {
         return this.taskKeywords == null ? List.of() : this.taskKeywords;
     }
     /**
      * The amount of time that a worker has to complete a task. The default value is `3600` seconds.
      * 
     */
-    public Optional<Integer> getTaskTimeLimitInSeconds() {
+    public Optional<Integer> taskTimeLimitInSeconds() {
         return Optional.ofNullable(this.taskTimeLimitInSeconds);
     }
     /**
      * A title for the human worker task.
      * 
     */
-    public String getTaskTitle() {
+    public String taskTitle() {
         return this.taskTitle;
     }
     /**
      * The Amazon Resource Name (ARN) of the human task user interface. Amazon Resource Name (ARN) of a team of workers. For Public workforces see [AWS Docs](https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-management-public.html).
      * 
     */
-    public String getWorkteamArn() {
+    public String workteamArn() {
         return this.workteamArn;
     }
 

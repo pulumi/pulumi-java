@@ -22,7 +22,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hashKey")
       private final @Nullable Output<String> hashKey;
 
-    public Output<String> getHashKey() {
+    public Output<String> hashKey() {
         return this.hashKey == null ? Codegen.empty() : this.hashKey;
     }
 
@@ -34,7 +34,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="item")
       private final @Nullable Output<String> item;
 
-    public Output<String> getItem() {
+    public Output<String> item() {
         return this.item == null ? Codegen.empty() : this.item;
     }
 
@@ -45,7 +45,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
-    public Output<String> getRangeKey() {
+    public Output<String> rangeKey() {
         return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
     }
 
@@ -56,7 +56,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 

@@ -22,7 +22,7 @@ public final class GetDomainNameArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -33,7 +33,7 @@ public final class GetDomainNameArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

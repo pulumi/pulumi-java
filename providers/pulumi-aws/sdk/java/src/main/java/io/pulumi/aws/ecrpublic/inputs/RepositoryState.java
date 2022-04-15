@@ -24,7 +24,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,14 +35,14 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="catalogData")
       private final @Nullable Output<RepositoryCatalogDataGetArgs> catalogData;
 
-    public Output<RepositoryCatalogDataGetArgs> getCatalogData() {
+    public Output<RepositoryCatalogDataGetArgs> catalogData() {
         return this.catalogData == null ? Codegen.empty() : this.catalogData;
     }
 
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -53,7 +53,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
@@ -64,7 +64,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
@@ -75,7 +75,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryUri")
       private final @Nullable Output<String> repositoryUri;
 
-    public Output<String> getRepositoryUri() {
+    public Output<String> repositoryUri() {
         return this.repositoryUri == null ? Codegen.empty() : this.repositoryUri;
     }
 

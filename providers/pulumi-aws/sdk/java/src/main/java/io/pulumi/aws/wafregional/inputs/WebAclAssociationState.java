@@ -22,7 +22,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
@@ -33,7 +33,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
     @Import(name="webAclId")
       private final @Nullable Output<String> webAclId;
 
-    public Output<String> getWebAclId() {
+    public Output<String> webAclId() {
         return this.webAclId == null ? Codegen.empty() : this.webAclId;
     }
 

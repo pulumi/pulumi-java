@@ -26,7 +26,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
@@ -48,7 +48,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="flexcacheEndpointType")
       private final @Nullable Output<String> flexcacheEndpointType;
 
-    public Output<String> getFlexcacheEndpointType() {
+    public Output<String> flexcacheEndpointType() {
         return this.flexcacheEndpointType == null ? Codegen.empty() : this.flexcacheEndpointType;
     }
 
@@ -59,7 +59,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="junctionPath")
       private final @Nullable Output<String> junctionPath;
 
-    public Output<String> getJunctionPath() {
+    public Output<String> junctionPath() {
         return this.junctionPath == null ? Codegen.empty() : this.junctionPath;
     }
 
@@ -70,7 +70,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -81,7 +81,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ontapVolumeType")
       private final @Nullable Output<String> ontapVolumeType;
 
-    public Output<String> getOntapVolumeType() {
+    public Output<String> ontapVolumeType() {
         return this.ontapVolumeType == null ? Codegen.empty() : this.ontapVolumeType;
     }
 
@@ -92,7 +92,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityStyle")
       private final @Nullable Output<String> securityStyle;
 
-    public Output<String> getSecurityStyle() {
+    public Output<String> securityStyle() {
         return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
     }
 
@@ -103,7 +103,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizeInMegabytes")
       private final @Nullable Output<Integer> sizeInMegabytes;
 
-    public Output<Integer> getSizeInMegabytes() {
+    public Output<Integer> sizeInMegabytes() {
         return this.sizeInMegabytes == null ? Codegen.empty() : this.sizeInMegabytes;
     }
 
@@ -114,7 +114,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageEfficiencyEnabled")
       private final @Nullable Output<Boolean> storageEfficiencyEnabled;
 
-    public Output<Boolean> getStorageEfficiencyEnabled() {
+    public Output<Boolean> storageEfficiencyEnabled() {
         return this.storageEfficiencyEnabled == null ? Codegen.empty() : this.storageEfficiencyEnabled;
     }
 
@@ -125,7 +125,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageVirtualMachineId")
       private final @Nullable Output<String> storageVirtualMachineId;
 
-    public Output<String> getStorageVirtualMachineId() {
+    public Output<String> storageVirtualMachineId() {
         return this.storageVirtualMachineId == null ? Codegen.empty() : this.storageVirtualMachineId;
     }
 
@@ -136,7 +136,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -147,14 +147,14 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="tieringPolicy")
       private final @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
 
-    public Output<OntapVolumeTieringPolicyGetArgs> getTieringPolicy() {
+    public Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy() {
         return this.tieringPolicy == null ? Codegen.empty() : this.tieringPolicy;
     }
 
@@ -165,7 +165,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid == null ? Codegen.empty() : this.uuid;
     }
 
@@ -176,7 +176,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
+    public Output<String> volumeType() {
         return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 

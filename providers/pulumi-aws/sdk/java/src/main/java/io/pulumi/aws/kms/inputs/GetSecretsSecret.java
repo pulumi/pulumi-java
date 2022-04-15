@@ -23,7 +23,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
     @Import(name="context")
       private final @Nullable Map<String,String> context;
 
-    public Map<String,String> getContext() {
+    public Map<String,String> context() {
         return this.context == null ? Map.of() : this.context;
     }
 
@@ -34,7 +34,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
     @Import(name="grantTokens")
       private final @Nullable List<String> grantTokens;
 
-    public List<String> getGrantTokens() {
+    public List<String> grantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
     }
 
@@ -45,7 +45,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -56,7 +56,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
     @Import(name="payload", required=true)
       private final String payload;
 
-    public String getPayload() {
+    public String payload() {
         return this.payload;
     }
 

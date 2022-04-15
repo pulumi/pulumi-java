@@ -24,10 +24,10 @@ public final class StaticWebLayerCloudwatchConfiguration {
         this.logStreams = logStreams;
     }
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
-    public List<StaticWebLayerCloudwatchConfigurationLogStream> getLogStreams() {
+    public List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }
 

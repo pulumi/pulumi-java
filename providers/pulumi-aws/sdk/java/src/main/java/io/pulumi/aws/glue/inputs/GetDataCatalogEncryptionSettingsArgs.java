@@ -19,7 +19,7 @@ public final class GetDataCatalogEncryptionSettingsArgs extends io.pulumi.resour
     @Import(name="catalogId", required=true)
       private final String catalogId;
 
-    public String getCatalogId() {
+    public String catalogId() {
         return this.catalogId;
     }
 

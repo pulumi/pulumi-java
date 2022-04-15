@@ -23,7 +23,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
@@ -34,7 +34,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -45,7 +45,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="configurationProfileId")
       private final @Nullable Output<String> configurationProfileId;
 
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId == null ? Codegen.empty() : this.configurationProfileId;
     }
 
@@ -56,7 +56,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content == null ? Codegen.empty() : this.content;
     }
 
@@ -67,7 +67,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
@@ -78,7 +78,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -89,7 +89,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 

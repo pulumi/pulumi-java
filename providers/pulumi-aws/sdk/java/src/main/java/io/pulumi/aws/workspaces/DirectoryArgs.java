@@ -27,7 +27,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
 
@@ -38,7 +38,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipGroupIds")
       private final @Nullable Output<List<String>> ipGroupIds;
 
-    public Output<List<String>> getIpGroupIds() {
+    public Output<List<String>> ipGroupIds() {
         return this.ipGroupIds == null ? Codegen.empty() : this.ipGroupIds;
     }
 
@@ -49,7 +49,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfServicePermissions")
       private final @Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions;
 
-    public Output<DirectorySelfServicePermissionsArgs> getSelfServicePermissions() {
+    public Output<DirectorySelfServicePermissionsArgs> selfServicePermissions() {
         return this.selfServicePermissions == null ? Codegen.empty() : this.selfServicePermissions;
     }
 
@@ -60,7 +60,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -71,7 +71,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -82,7 +82,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceAccessProperties")
       private final @Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
 
-    public Output<DirectoryWorkspaceAccessPropertiesArgs> getWorkspaceAccessProperties() {
+    public Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties() {
         return this.workspaceAccessProperties == null ? Codegen.empty() : this.workspaceAccessProperties;
     }
 
@@ -93,7 +93,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceCreationProperties")
       private final @Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
 
-    public Output<DirectoryWorkspaceCreationPropertiesArgs> getWorkspaceCreationProperties() {
+    public Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties() {
         return this.workspaceCreationProperties == null ? Codegen.empty() : this.workspaceCreationProperties;
     }
 

@@ -23,7 +23,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
-    public Output<String> getAwsRegion() {
+    public Output<String> awsRegion() {
         return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
     }
 
@@ -34,7 +34,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requireEncryption", required=true)
       private final Output<Boolean> requireEncryption;
 
-    public Output<Boolean> getRequireEncryption() {
+    public Output<Boolean> requireEncryption() {
         return this.requireEncryption;
     }
 

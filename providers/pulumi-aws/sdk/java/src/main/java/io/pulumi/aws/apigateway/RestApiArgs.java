@@ -27,7 +27,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKeySource")
       private final @Nullable Output<String> apiKeySource;
 
-    public Output<String> getApiKeySource() {
+    public Output<String> apiKeySource() {
         return this.apiKeySource == null ? Codegen.empty() : this.apiKeySource;
     }
 
@@ -38,7 +38,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryMediaTypes")
       private final @Nullable Output<List<String>> binaryMediaTypes;
 
-    public Output<List<String>> getBinaryMediaTypes() {
+    public Output<List<String>> binaryMediaTypes() {
         return this.binaryMediaTypes == null ? Codegen.empty() : this.binaryMediaTypes;
     }
 
@@ -49,7 +49,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body == null ? Codegen.empty() : this.body;
     }
 
@@ -60,7 +60,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableExecuteApiEndpoint")
       private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Output<Boolean> getDisableExecuteApiEndpoint() {
+    public Output<Boolean> disableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint == null ? Codegen.empty() : this.disableExecuteApiEndpoint;
     }
 
@@ -82,7 +82,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfiguration")
       private final @Nullable Output<RestApiEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<RestApiEndpointConfigurationArgs> getEndpointConfiguration() {
+    public Output<RestApiEndpointConfigurationArgs> endpointConfiguration() {
         return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
@@ -93,7 +93,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumCompressionSize")
       private final @Nullable Output<Integer> minimumCompressionSize;
 
-    public Output<Integer> getMinimumCompressionSize() {
+    public Output<Integer> minimumCompressionSize() {
         return this.minimumCompressionSize == null ? Codegen.empty() : this.minimumCompressionSize;
     }
 
@@ -104,7 +104,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
+    public Output<Map<String,String>> parameters() {
         return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
@@ -126,7 +126,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy == null ? Codegen.empty() : this.policy;
     }
 
@@ -137,7 +137,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

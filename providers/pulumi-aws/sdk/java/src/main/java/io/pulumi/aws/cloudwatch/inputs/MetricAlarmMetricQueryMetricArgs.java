@@ -24,7 +24,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
+    public Output<Map<String,String>> dimensions() {
         return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
@@ -36,7 +36,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -48,7 +48,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -59,7 +59,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
     @Import(name="period", required=true)
       private final Output<Integer> period;
 
-    public Output<Integer> getPeriod() {
+    public Output<Integer> period() {
         return this.period;
     }
 
@@ -71,7 +71,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
     @Import(name="stat", required=true)
       private final Output<String> stat;
 
-    public Output<String> getStat() {
+    public Output<String> stat() {
         return this.stat;
     }
 
@@ -82,7 +82,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 

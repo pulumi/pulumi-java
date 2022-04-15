@@ -22,7 +22,7 @@ public final class EventTargetKinesisTargetArgs extends io.pulumi.resources.Reso
     @Import(name="partitionKeyPath")
       private final @Nullable Output<String> partitionKeyPath;
 
-    public Output<String> getPartitionKeyPath() {
+    public Output<String> partitionKeyPath() {
         return this.partitionKeyPath == null ? Codegen.empty() : this.partitionKeyPath;
     }
 

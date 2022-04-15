@@ -24,7 +24,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -38,7 +38,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="forceDetach")
       private final @Nullable Output<Boolean> forceDetach;
 
-    public Output<Boolean> getForceDetach() {
+    public Output<Boolean> forceDetach() {
         return this.forceDetach == null ? Codegen.empty() : this.forceDetach;
     }
 
@@ -49,7 +49,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -64,7 +64,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="skipDestroy")
       private final @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> getSkipDestroy() {
+    public Output<Boolean> skipDestroy() {
         return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
     }
 
@@ -76,7 +76,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="stopInstanceBeforeDetaching")
       private final @Nullable Output<Boolean> stopInstanceBeforeDetaching;
 
-    public Output<Boolean> getStopInstanceBeforeDetaching() {
+    public Output<Boolean> stopInstanceBeforeDetaching() {
         return this.stopInstanceBeforeDetaching == null ? Codegen.empty() : this.stopInstanceBeforeDetaching;
     }
 
@@ -87,7 +87,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="volumeId", required=true)
       private final Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
+    public Output<String> volumeId() {
         return this.volumeId;
     }
 

@@ -23,7 +23,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -34,7 +34,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="awsServiceName")
       private final @Nullable Output<String> awsServiceName;
 
-    public Output<String> getAwsServiceName() {
+    public Output<String> awsServiceName() {
         return this.awsServiceName == null ? Codegen.empty() : this.awsServiceName;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
-    public Output<String> getCreateDate() {
+    public Output<String> createDate() {
         return this.createDate == null ? Codegen.empty() : this.createDate;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="customSuffix")
       private final @Nullable Output<String> customSuffix;
 
-    public Output<String> getCustomSuffix() {
+    public Output<String> customSuffix() {
         return this.customSuffix == null ? Codegen.empty() : this.customSuffix;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -100,7 +100,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -111,7 +111,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -122,7 +122,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
     @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 

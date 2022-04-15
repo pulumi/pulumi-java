@@ -22,7 +22,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     @Import(name="catalogEncryptionMode", required=true)
       private final Output<String> catalogEncryptionMode;
 
-    public Output<String> getCatalogEncryptionMode() {
+    public Output<String> catalogEncryptionMode() {
         return this.catalogEncryptionMode;
     }
 
@@ -33,7 +33,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     @Import(name="sseAwsKmsKeyId")
       private final @Nullable Output<String> sseAwsKmsKeyId;
 
-    public Output<String> getSseAwsKmsKeyId() {
+    public Output<String> sseAwsKmsKeyId() {
         return this.sseAwsKmsKeyId == null ? Codegen.empty() : this.sseAwsKmsKeyId;
     }
 

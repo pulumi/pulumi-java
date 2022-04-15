@@ -22,7 +22,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     @Import(name="predefinedScalingMetricType", required=true)
       private final Output<String> predefinedScalingMetricType;
 
-    public Output<String> getPredefinedScalingMetricType() {
+    public Output<String> predefinedScalingMetricType() {
         return this.predefinedScalingMetricType;
     }
 
@@ -33,7 +33,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
-    public Output<String> getResourceLabel() {
+    public Output<String> resourceLabel() {
         return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
     }
 

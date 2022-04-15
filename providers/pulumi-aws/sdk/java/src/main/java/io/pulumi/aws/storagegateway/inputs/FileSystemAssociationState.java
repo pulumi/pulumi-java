@@ -24,7 +24,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -35,7 +35,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
-    public Output<String> getAuditDestinationArn() {
+    public Output<String> auditDestinationArn() {
         return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
     }
 
@@ -46,7 +46,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="cacheAttributes")
       private final @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
 
-    public Output<FileSystemAssociationCacheAttributesGetArgs> getCacheAttributes() {
+    public Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes() {
         return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
     }
 
@@ -57,7 +57,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="gatewayArn")
       private final @Nullable Output<String> gatewayArn;
 
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
     }
 
@@ -68,7 +68,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="locationArn")
       private final @Nullable Output<String> locationArn;
 
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn == null ? Codegen.empty() : this.locationArn;
     }
 
@@ -79,7 +79,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -90,7 +90,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -101,7 +101,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -112,7 +112,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username == null ? Codegen.empty() : this.username;
     }
 

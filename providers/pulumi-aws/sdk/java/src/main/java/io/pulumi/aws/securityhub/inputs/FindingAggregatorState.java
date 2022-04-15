@@ -23,7 +23,7 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
     @Import(name="linkingMode")
       private final @Nullable Output<String> linkingMode;
 
-    public Output<String> getLinkingMode() {
+    public Output<String> linkingMode() {
         return this.linkingMode == null ? Codegen.empty() : this.linkingMode;
     }
 
@@ -34,7 +34,7 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
     @Import(name="specifiedRegions")
       private final @Nullable Output<List<String>> specifiedRegions;
 
-    public Output<List<String>> getSpecifiedRegions() {
+    public Output<List<String>> specifiedRegions() {
         return this.specifiedRegions == null ? Codegen.empty() : this.specifiedRegions;
     }
 

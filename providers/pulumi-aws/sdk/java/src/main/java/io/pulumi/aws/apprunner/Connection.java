@@ -43,7 +43,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return ARN of the connection.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Name of the connection.
      * 
      */
-    public Output<String> getConnectionName() {
+    public Output<String> connectionName() {
         return this.connectionName;
     }
     /**
@@ -71,7 +71,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The source repository provider. Valid values: `GITHUB`.
      * 
      */
-    public Output<String> getProviderType() {
+    public Output<String> providerType() {
         return this.providerType;
     }
     /**
@@ -85,7 +85,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return The current state of the App Runner connection. When the state is `AVAILABLE`, you can use the connection to create an `aws.apprunner.Service` resource.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -99,7 +99,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +113,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

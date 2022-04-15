@@ -27,7 +27,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledClusterLogTypes")
       private final @Nullable Output<List<String>> enabledClusterLogTypes;
 
-    public Output<List<String>> getEnabledClusterLogTypes() {
+    public Output<List<String>> enabledClusterLogTypes() {
         return this.enabledClusterLogTypes == null ? Codegen.empty() : this.enabledClusterLogTypes;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
 
-    public Output<ClusterEncryptionConfigArgs> getEncryptionConfig() {
+    public Output<ClusterEncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
-    public Output<ClusterKubernetesNetworkConfigArgs> getKubernetesNetworkConfig() {
+    public Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig == null ? Codegen.empty() : this.kubernetesNetworkConfig;
     }
 
@@ -60,7 +60,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -82,7 +82,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -93,7 +93,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 
@@ -104,7 +104,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig", required=true)
       private final Output<ClusterVpcConfigArgs> vpcConfig;
 
-    public Output<ClusterVpcConfigArgs> getVpcConfig() {
+    public Output<ClusterVpcConfigArgs> vpcConfig() {
         return this.vpcConfig;
     }
 

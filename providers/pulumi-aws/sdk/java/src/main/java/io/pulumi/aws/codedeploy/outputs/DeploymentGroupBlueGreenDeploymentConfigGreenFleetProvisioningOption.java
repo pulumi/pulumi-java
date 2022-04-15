@@ -30,7 +30,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
      * * `COPY_AUTO_SCALING_GROUP`: Use settings from a specified **Auto Scaling** group to define and create instances in a new Auto Scaling group. _Exactly one Auto Scaling group must be specified_ when selecting `COPY_AUTO_SCALING_GROUP`. Use `autoscaling_groups` to specify the Auto Scaling group.
      * 
     */
-    public Optional<String> getAction() {
+    public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
 

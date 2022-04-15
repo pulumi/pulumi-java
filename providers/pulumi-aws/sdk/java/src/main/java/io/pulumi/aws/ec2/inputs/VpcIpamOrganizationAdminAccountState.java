@@ -22,14 +22,14 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="delegatedAdminAccountId")
       private final @Nullable Output<String> delegatedAdminAccountId;
 
-    public Output<String> getDelegatedAdminAccountId() {
+    public Output<String> delegatedAdminAccountId() {
         return this.delegatedAdminAccountId == null ? Codegen.empty() : this.delegatedAdminAccountId;
     }
 
@@ -40,7 +40,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -51,7 +51,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -62,7 +62,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     @Import(name="servicePrincipal")
       private final @Nullable Output<String> servicePrincipal;
 
-    public Output<String> getServicePrincipal() {
+    public Output<String> servicePrincipal() {
         return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 

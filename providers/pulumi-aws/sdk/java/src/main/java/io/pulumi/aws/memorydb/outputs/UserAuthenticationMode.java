@@ -43,21 +43,21 @@ public final class UserAuthenticationMode {
      * The number of passwords belonging to the user.
      * 
     */
-    public Optional<Integer> getPasswordCount() {
+    public Optional<Integer> passwordCount() {
         return Optional.ofNullable(this.passwordCount);
     }
     /**
      * The set of passwords used for authentication. You can create up to two passwords for each user.
      * 
     */
-    public List<String> getPasswords() {
+    public List<String> passwords() {
         return this.passwords;
     }
     /**
      * Indicates whether the user requires a password to authenticate. Must be set to `password`.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

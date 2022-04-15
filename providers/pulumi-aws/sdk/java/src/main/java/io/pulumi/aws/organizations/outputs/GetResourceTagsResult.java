@@ -36,17 +36,17 @@ public final class GetResourceTagsResult {
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
     /**
      * Map of key=value pairs for each tag set on the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

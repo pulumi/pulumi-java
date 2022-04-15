@@ -23,7 +23,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<SecurityConfigurationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
+    public Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
@@ -34,7 +34,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

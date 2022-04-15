@@ -32,14 +32,14 @@ public final class DataSourceParametersS3ManifestFileLocation {
      * The name of the bucket that contains the manifest file.
      * 
     */
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
     /**
      * The key of the manifest file within the bucket.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
 

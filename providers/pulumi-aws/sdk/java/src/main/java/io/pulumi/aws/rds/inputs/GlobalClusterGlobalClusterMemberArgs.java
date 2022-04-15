@@ -23,7 +23,7 @@ public final class GlobalClusterGlobalClusterMemberArgs extends io.pulumi.resour
     @Import(name="dbClusterArn")
       private final @Nullable Output<String> dbClusterArn;
 
-    public Output<String> getDbClusterArn() {
+    public Output<String> dbClusterArn() {
         return this.dbClusterArn == null ? Codegen.empty() : this.dbClusterArn;
     }
 
@@ -34,7 +34,7 @@ public final class GlobalClusterGlobalClusterMemberArgs extends io.pulumi.resour
     @Import(name="isWriter")
       private final @Nullable Output<Boolean> isWriter;
 
-    public Output<Boolean> getIsWriter() {
+    public Output<Boolean> isWriter() {
         return this.isWriter == null ? Codegen.empty() : this.isWriter;
     }
 

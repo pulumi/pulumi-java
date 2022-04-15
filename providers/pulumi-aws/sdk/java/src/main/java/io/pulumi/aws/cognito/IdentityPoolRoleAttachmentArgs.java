@@ -25,7 +25,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
     @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
 
@@ -36,7 +36,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
     @Import(name="roleMappings")
       private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> getRoleMappings() {
+    public Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings() {
         return this.roleMappings == null ? Codegen.empty() : this.roleMappings;
     }
 
@@ -47,7 +47,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
     @Import(name="roles", required=true)
       private final Output<Map<String,String>> roles;
 
-    public Output<Map<String,String>> getRoles() {
+    public Output<Map<String,String>> roles() {
         return this.roles;
     }
 

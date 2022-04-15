@@ -23,7 +23,7 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active == null ? Codegen.empty() : this.active;
     }
 
@@ -34,14 +34,14 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner == null ? Codegen.empty() : this.owner;
     }
 
@@ -52,7 +52,7 @@ public final class TagOptionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value == null ? Codegen.empty() : this.value;
     }
 

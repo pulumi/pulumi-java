@@ -19,7 +19,7 @@ public final class GetDomainAdvancedSecurityOption extends io.pulumi.resources.I
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
@@ -30,7 +30,7 @@ public final class GetDomainAdvancedSecurityOption extends io.pulumi.resources.I
     @Import(name="internalUserDatabaseEnabled", required=true)
       private final Boolean internalUserDatabaseEnabled;
 
-    public Boolean getInternalUserDatabaseEnabled() {
+    public Boolean internalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled;
     }
 

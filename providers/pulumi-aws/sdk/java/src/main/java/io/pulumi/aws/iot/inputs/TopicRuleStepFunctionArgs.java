@@ -22,7 +22,7 @@ public final class TopicRuleStepFunctionArgs extends io.pulumi.resources.Resourc
     @Import(name="executionNamePrefix")
       private final @Nullable Output<String> executionNamePrefix;
 
-    public Output<String> getExecutionNamePrefix() {
+    public Output<String> executionNamePrefix() {
         return this.executionNamePrefix == null ? Codegen.empty() : this.executionNamePrefix;
     }
 
@@ -33,7 +33,7 @@ public final class TopicRuleStepFunctionArgs extends io.pulumi.resources.Resourc
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -44,7 +44,7 @@ public final class TopicRuleStepFunctionArgs extends io.pulumi.resources.Resourc
     @Import(name="stateMachineName", required=true)
       private final Output<String> stateMachineName;
 
-    public Output<String> getStateMachineName() {
+    public Output<String> stateMachineName() {
         return this.stateMachineName;
     }
 

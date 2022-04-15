@@ -18,14 +18,14 @@ public final class ModelVpcConfigGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 

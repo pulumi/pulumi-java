@@ -25,7 +25,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
     @Import(name="adjustmentType")
       private final @Nullable Output<String> adjustmentType;
 
-    public Output<String> getAdjustmentType() {
+    public Output<String> adjustmentType() {
         return this.adjustmentType == null ? Codegen.empty() : this.adjustmentType;
     }
 
@@ -36,7 +36,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
     @Import(name="cooldown")
       private final @Nullable Output<Integer> cooldown;
 
-    public Output<Integer> getCooldown() {
+    public Output<Integer> cooldown() {
         return this.cooldown == null ? Codegen.empty() : this.cooldown;
     }
 
@@ -47,7 +47,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
     @Import(name="metricAggregationType")
       private final @Nullable Output<String> metricAggregationType;
 
-    public Output<String> getMetricAggregationType() {
+    public Output<String> metricAggregationType() {
         return this.metricAggregationType == null ? Codegen.empty() : this.metricAggregationType;
     }
 
@@ -58,7 +58,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
     @Import(name="minAdjustmentMagnitude")
       private final @Nullable Output<Integer> minAdjustmentMagnitude;
 
-    public Output<Integer> getMinAdjustmentMagnitude() {
+    public Output<Integer> minAdjustmentMagnitude() {
         return this.minAdjustmentMagnitude == null ? Codegen.empty() : this.minAdjustmentMagnitude;
     }
 
@@ -69,7 +69,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
     @Import(name="stepAdjustments")
       private final @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
 
-    public Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> getStepAdjustments() {
+    public Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments() {
         return this.stepAdjustments == null ? Codegen.empty() : this.stepAdjustments;
     }
 

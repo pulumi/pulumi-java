@@ -33,7 +33,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
     @Export(name="localGatewayId", type=String.class, parameters={})
     private Output<String> localGatewayId;
 
-    public Output<String> getLocalGatewayId() {
+    public Output<String> localGatewayId() {
         return this.localGatewayId;
     }
     /**
@@ -47,7 +47,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return Identifier of EC2 Local Gateway Route Table.
      * 
      */
-    public Output<String> getLocalGatewayRouteTableId() {
+    public Output<String> localGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
     }
     /**
@@ -61,7 +61,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -75,7 +75,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -89,7 +89,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * @return Identifier of EC2 VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 

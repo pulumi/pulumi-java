@@ -42,7 +42,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -56,7 +56,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Description of the constraint.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -70,7 +70,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Owner of the constraint.
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -84,7 +84,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Constraint parameters in JSON format. The syntax depends on the constraint type. See details below.
      * 
      */
-    public Output<String> getParameters() {
+    public Output<String> parameters() {
         return this.parameters;
     }
     /**
@@ -98,7 +98,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Portfolio identifier.
      * 
      */
-    public Output<String> getPortfolioId() {
+    public Output<String> portfolioId() {
         return this.portfolioId;
     }
     /**
@@ -112,13 +112,13 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Product identifier.
      * 
      */
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -132,7 +132,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @return Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

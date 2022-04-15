@@ -27,14 +27,14 @@ public final class PipelineDefinitionParameterObject {
         this.id = id;
     }
 
-    public List<PipelineDefinitionParameterObjectAttribute> getAttributes() {
+    public List<PipelineDefinitionParameterObjectAttribute> attributes() {
         return this.attributes == null ? List.of() : this.attributes;
     }
     /**
      * ID of the parameter value.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

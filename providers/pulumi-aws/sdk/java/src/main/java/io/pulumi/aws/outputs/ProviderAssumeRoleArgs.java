@@ -43,28 +43,28 @@ public final class ProviderAssumeRoleArgs {
         this.transitiveTagKeys = transitiveTagKeys;
     }
 
-    public @Nullable Output<Integer> getDurationSeconds() {
+    public @Nullable Output<Integer> durationSeconds() {
         return this.durationSeconds;
     }
-    public @Nullable Output<String> getExternalId() {
+    public @Nullable Output<String> externalId() {
         return this.externalId;
     }
-    public @Nullable Output<String> getPolicy() {
+    public @Nullable Output<String> policy() {
         return this.policy;
     }
-    public @Nullable Output<List<String>> getPolicyArns() {
+    public @Nullable Output<List<String>> policyArns() {
         return this.policyArns;
     }
-    public @Nullable Output<String> getRoleArn() {
+    public @Nullable Output<String> roleArn() {
         return this.roleArn;
     }
-    public @Nullable Output<String> getSessionName() {
+    public @Nullable Output<String> sessionName() {
         return this.sessionName;
     }
-    public @Nullable Output<Map<String,String>> getTags() {
+    public @Nullable Output<Map<String,String>> tags() {
         return this.tags;
     }
-    public @Nullable Output<List<String>> getTransitiveTagKeys() {
+    public @Nullable Output<List<String>> transitiveTagKeys() {
         return this.transitiveTagKeys;
     }
 

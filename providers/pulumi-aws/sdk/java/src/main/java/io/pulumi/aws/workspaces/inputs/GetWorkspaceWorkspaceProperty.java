@@ -20,7 +20,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
     @Import(name="computeTypeName", required=true)
       private final String computeTypeName;
 
-    public String getComputeTypeName() {
+    public String computeTypeName() {
         return this.computeTypeName;
     }
 
@@ -31,7 +31,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
     @Import(name="rootVolumeSizeGib", required=true)
       private final Integer rootVolumeSizeGib;
 
-    public Integer getRootVolumeSizeGib() {
+    public Integer rootVolumeSizeGib() {
         return this.rootVolumeSizeGib;
     }
 
@@ -42,7 +42,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
     @Import(name="runningMode", required=true)
       private final String runningMode;
 
-    public String getRunningMode() {
+    public String runningMode() {
         return this.runningMode;
     }
 
@@ -53,7 +53,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
     @Import(name="runningModeAutoStopTimeoutInMinutes", required=true)
       private final Integer runningModeAutoStopTimeoutInMinutes;
 
-    public Integer getRunningModeAutoStopTimeoutInMinutes() {
+    public Integer runningModeAutoStopTimeoutInMinutes() {
         return this.runningModeAutoStopTimeoutInMinutes;
     }
 
@@ -64,7 +64,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
     @Import(name="userVolumeSizeGib", required=true)
       private final Integer userVolumeSizeGib;
 
-    public Integer getUserVolumeSizeGib() {
+    public Integer userVolumeSizeGib() {
         return this.userVolumeSizeGib;
     }
 

@@ -22,7 +22,7 @@ public final class ClusterClusterNodeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeRole")
       private final @Nullable Output<String> nodeRole;
 
-    public Output<String> getNodeRole() {
+    public Output<String> nodeRole() {
         return this.nodeRole == null ? Codegen.empty() : this.nodeRole;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterClusterNodeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
+    public Output<String> privateIpAddress() {
         return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
@@ -44,7 +44,7 @@ public final class ClusterClusterNodeArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
+    public Output<String> publicIpAddress() {
         return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 

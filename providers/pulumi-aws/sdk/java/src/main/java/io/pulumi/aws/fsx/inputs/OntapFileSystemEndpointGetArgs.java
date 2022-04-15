@@ -24,7 +24,7 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
     @Import(name="interclusters")
       private final @Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters;
 
-    public Output<List<OntapFileSystemEndpointInterclusterGetArgs>> getInterclusters() {
+    public Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters() {
         return this.interclusters == null ? Codegen.empty() : this.interclusters;
     }
 
@@ -35,7 +35,7 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
     @Import(name="managements")
       private final @Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements;
 
-    public Output<List<OntapFileSystemEndpointManagementGetArgs>> getManagements() {
+    public Output<List<OntapFileSystemEndpointManagementGetArgs>> managements() {
         return this.managements == null ? Codegen.empty() : this.managements;
     }
 

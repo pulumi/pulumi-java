@@ -22,7 +22,7 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -33,7 +33,7 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

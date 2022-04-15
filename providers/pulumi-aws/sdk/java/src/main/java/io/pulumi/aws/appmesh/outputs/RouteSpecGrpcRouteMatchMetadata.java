@@ -43,21 +43,21 @@ public final class RouteSpecGrpcRouteMatchMetadata {
      * If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
      * 
     */
-    public Optional<Boolean> getInvert() {
+    public Optional<Boolean> invert() {
         return Optional.ofNullable(this.invert);
     }
     /**
      * The data to match from the request.
      * 
     */
-    public Optional<RouteSpecGrpcRouteMatchMetadataMatch> getMatch() {
+    public Optional<RouteSpecGrpcRouteMatchMetadataMatch> match() {
         return Optional.ofNullable(this.match);
     }
     /**
      * The name of the route. Must be between 1 and 50 characters in length.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

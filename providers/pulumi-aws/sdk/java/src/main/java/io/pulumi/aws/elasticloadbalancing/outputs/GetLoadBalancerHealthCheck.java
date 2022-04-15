@@ -30,19 +30,19 @@ public final class GetLoadBalancerHealthCheck {
         this.unhealthyThreshold = unhealthyThreshold;
     }
 
-    public Integer getHealthyThreshold() {
+    public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
-    public String getTarget() {
+    public String target() {
         return this.target;
     }
-    public Integer getTimeout() {
+    public Integer timeout() {
         return this.timeout;
     }
-    public Integer getUnhealthyThreshold() {
+    public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 

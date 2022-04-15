@@ -42,7 +42,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @return The ARN of the SNS topic
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @return The AWS Account ID of the SNS topic owner
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -70,7 +70,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * @return The fully-formed AWS policy as JSON.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 

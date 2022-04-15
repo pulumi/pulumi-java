@@ -23,7 +23,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -34,7 +34,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
-    public Output<String> getEncryptionKey() {
+    public Output<String> encryptionKey() {
         return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
@@ -45,7 +45,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

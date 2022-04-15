@@ -26,7 +26,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="batchImportMetaDataOnCreate")
       private final @Nullable Output<Boolean> batchImportMetaDataOnCreate;
 
-    public Output<Boolean> getBatchImportMetaDataOnCreate() {
+    public Output<Boolean> batchImportMetaDataOnCreate() {
         return this.batchImportMetaDataOnCreate == null ? Codegen.empty() : this.batchImportMetaDataOnCreate;
     }
 
@@ -37,7 +37,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="dataRepositoryPath", required=true)
       private final Output<String> dataRepositoryPath;
 
-    public Output<String> getDataRepositoryPath() {
+    public Output<String> dataRepositoryPath() {
         return this.dataRepositoryPath;
     }
 
@@ -48,7 +48,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="deleteDataInFilesystem")
       private final @Nullable Output<Boolean> deleteDataInFilesystem;
 
-    public Output<Boolean> getDeleteDataInFilesystem() {
+    public Output<Boolean> deleteDataInFilesystem() {
         return this.deleteDataInFilesystem == null ? Codegen.empty() : this.deleteDataInFilesystem;
     }
 
@@ -59,7 +59,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
@@ -70,7 +70,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="fileSystemPath", required=true)
       private final Output<String> fileSystemPath;
 
-    public Output<String> getFileSystemPath() {
+    public Output<String> fileSystemPath() {
         return this.fileSystemPath;
     }
 
@@ -81,7 +81,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="importedFileChunkSize")
       private final @Nullable Output<Integer> importedFileChunkSize;
 
-    public Output<Integer> getImportedFileChunkSize() {
+    public Output<Integer> importedFileChunkSize() {
         return this.importedFileChunkSize == null ? Codegen.empty() : this.importedFileChunkSize;
     }
 
@@ -93,7 +93,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="s3")
       private final @Nullable Output<DataRepositoryAssociationS3Args> s3;
 
-    public Output<DataRepositoryAssociationS3Args> getS3() {
+    public Output<DataRepositoryAssociationS3Args> s3() {
         return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
@@ -104,7 +104,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -115,7 +115,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

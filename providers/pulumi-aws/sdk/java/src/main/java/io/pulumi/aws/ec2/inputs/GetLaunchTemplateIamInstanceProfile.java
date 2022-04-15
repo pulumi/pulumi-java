@@ -19,7 +19,7 @@ public final class GetLaunchTemplateIamInstanceProfile extends io.pulumi.resourc
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
@@ -30,7 +30,7 @@ public final class GetLaunchTemplateIamInstanceProfile extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

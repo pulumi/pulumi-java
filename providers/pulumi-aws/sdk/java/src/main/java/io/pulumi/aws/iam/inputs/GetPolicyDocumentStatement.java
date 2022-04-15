@@ -25,7 +25,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="actions")
       private final @Nullable List<String> actions;
 
-    public List<String> getActions() {
+    public List<String> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
 
@@ -36,7 +36,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="conditions")
       private final @Nullable List<GetPolicyDocumentStatementCondition> conditions;
 
-    public List<GetPolicyDocumentStatementCondition> getConditions() {
+    public List<GetPolicyDocumentStatementCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
 
@@ -47,7 +47,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="effect")
       private final @Nullable String effect;
 
-    public Optional<String> getEffect() {
+    public Optional<String> effect() {
         return this.effect == null ? Optional.empty() : Optional.ofNullable(this.effect);
     }
 
@@ -58,7 +58,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="notActions")
       private final @Nullable List<String> notActions;
 
-    public List<String> getNotActions() {
+    public List<String> notActions() {
         return this.notActions == null ? List.of() : this.notActions;
     }
 
@@ -69,7 +69,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="notPrincipals")
       private final @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
 
-    public List<GetPolicyDocumentStatementNotPrincipal> getNotPrincipals() {
+    public List<GetPolicyDocumentStatementNotPrincipal> notPrincipals() {
         return this.notPrincipals == null ? List.of() : this.notPrincipals;
     }
 
@@ -80,7 +80,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="notResources")
       private final @Nullable List<String> notResources;
 
-    public List<String> getNotResources() {
+    public List<String> notResources() {
         return this.notResources == null ? List.of() : this.notResources;
     }
 
@@ -91,7 +91,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="principals")
       private final @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
 
-    public List<GetPolicyDocumentStatementPrincipal> getPrincipals() {
+    public List<GetPolicyDocumentStatementPrincipal> principals() {
         return this.principals == null ? List.of() : this.principals;
     }
 
@@ -102,7 +102,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="resources")
       private final @Nullable List<String> resources;
 
-    public List<String> getResources() {
+    public List<String> resources() {
         return this.resources == null ? List.of() : this.resources;
     }
 
@@ -113,7 +113,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
     @Import(name="sid")
       private final @Nullable String sid;
 
-    public Optional<String> getSid() {
+    public Optional<String> sid() {
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);
     }
 

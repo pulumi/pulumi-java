@@ -23,7 +23,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="hiveJsonSerDe")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs> hiveJsonSerDe;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs> getHiveJsonSerDe() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs> hiveJsonSerDe() {
         return this.hiveJsonSerDe == null ? Codegen.empty() : this.hiveJsonSerDe;
     }
 
@@ -34,7 +34,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="openXJsonSerDe")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs> openXJsonSerDe;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs> getOpenXJsonSerDe() {
+    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs> openXJsonSerDe() {
         return this.openXJsonSerDe == null ? Codegen.empty() : this.openXJsonSerDe;
     }
 

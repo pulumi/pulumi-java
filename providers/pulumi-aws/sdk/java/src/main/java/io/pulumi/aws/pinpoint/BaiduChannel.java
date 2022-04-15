@@ -41,7 +41,7 @@ public class BaiduChannel extends io.pulumi.resources.CustomResource {
      * @return Platform credential API key from Baidu.
      * 
      */
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
     /**
@@ -55,7 +55,7 @@ public class BaiduChannel extends io.pulumi.resources.CustomResource {
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -69,7 +69,7 @@ public class BaiduChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies whether to enable the channel. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -83,7 +83,7 @@ public class BaiduChannel extends io.pulumi.resources.CustomResource {
      * @return Platform credential Secret key from Baidu.
      * 
      */
-    public Output<String> getSecretKey() {
+    public Output<String> secretKey() {
         return this.secretKey;
     }
 

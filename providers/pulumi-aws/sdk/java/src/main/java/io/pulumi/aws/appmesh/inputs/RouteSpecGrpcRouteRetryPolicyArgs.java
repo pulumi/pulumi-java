@@ -26,7 +26,7 @@ public final class RouteSpecGrpcRouteRetryPolicyArgs extends io.pulumi.resources
     @Import(name="grpcRetryEvents")
       private final @Nullable Output<List<String>> grpcRetryEvents;
 
-    public Output<List<String>> getGrpcRetryEvents() {
+    public Output<List<String>> grpcRetryEvents() {
         return this.grpcRetryEvents == null ? Codegen.empty() : this.grpcRetryEvents;
     }
 
@@ -39,7 +39,7 @@ public final class RouteSpecGrpcRouteRetryPolicyArgs extends io.pulumi.resources
     @Import(name="httpRetryEvents")
       private final @Nullable Output<List<String>> httpRetryEvents;
 
-    public Output<List<String>> getHttpRetryEvents() {
+    public Output<List<String>> httpRetryEvents() {
         return this.httpRetryEvents == null ? Codegen.empty() : this.httpRetryEvents;
     }
 
@@ -50,7 +50,7 @@ public final class RouteSpecGrpcRouteRetryPolicyArgs extends io.pulumi.resources
     @Import(name="maxRetries", required=true)
       private final Output<Integer> maxRetries;
 
-    public Output<Integer> getMaxRetries() {
+    public Output<Integer> maxRetries() {
         return this.maxRetries;
     }
 
@@ -61,7 +61,7 @@ public final class RouteSpecGrpcRouteRetryPolicyArgs extends io.pulumi.resources
     @Import(name="perRetryTimeout", required=true)
       private final Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutArgs> perRetryTimeout;
 
-    public Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutArgs> getPerRetryTimeout() {
+    public Output<RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutArgs> perRetryTimeout() {
         return this.perRetryTimeout;
     }
 
@@ -72,7 +72,7 @@ public final class RouteSpecGrpcRouteRetryPolicyArgs extends io.pulumi.resources
     @Import(name="tcpRetryEvents")
       private final @Nullable Output<List<String>> tcpRetryEvents;
 
-    public Output<List<String>> getTcpRetryEvents() {
+    public Output<List<String>> tcpRetryEvents() {
         return this.tcpRetryEvents == null ? Codegen.empty() : this.tcpRetryEvents;
     }
 

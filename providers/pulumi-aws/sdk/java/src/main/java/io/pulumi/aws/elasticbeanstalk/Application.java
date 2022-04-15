@@ -39,7 +39,7 @@ public class Application extends io.pulumi.resources.CustomResource {
     @Export(name="appversionLifecycle", type=ApplicationAppversionLifecycle.class, parameters={})
     private Output</* @Nullable */ ApplicationAppversionLifecycle> appversionLifecycle;
 
-    public Output</* @Nullable */ ApplicationAppversionLifecycle> getAppversionLifecycle() {
+    public Output</* @Nullable */ ApplicationAppversionLifecycle> appversionLifecycle() {
         return this.appversionLifecycle;
     }
     /**
@@ -53,7 +53,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS for this Elastic Beanstalk Application.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -67,7 +67,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Short description of the application
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -81,7 +81,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the application, must be unique within your account
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +95,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return Key-value map of tags for the Elastic Beanstalk Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -109,7 +109,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

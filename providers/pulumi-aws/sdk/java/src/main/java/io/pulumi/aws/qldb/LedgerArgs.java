@@ -24,7 +24,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
+    public Output<Boolean> deletionProtection() {
         return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
@@ -35,7 +35,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -46,7 +46,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissionsMode", required=true)
       private final Output<String> permissionsMode;
 
-    public Output<String> getPermissionsMode() {
+    public Output<String> permissionsMode() {
         return this.permissionsMode;
     }
 
@@ -57,7 +57,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

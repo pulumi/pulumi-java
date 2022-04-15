@@ -27,7 +27,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     @Import(name="captureContentTypeHeader")
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader;
 
-    public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> getCaptureContentTypeHeader() {
+    public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader() {
         return this.captureContentTypeHeader == null ? Codegen.empty() : this.captureContentTypeHeader;
     }
 
@@ -38,7 +38,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     @Import(name="captureOptions", required=true)
       private final Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions;
 
-    public Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> getCaptureOptions() {
+    public Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions() {
         return this.captureOptions;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     @Import(name="destinationS3Uri", required=true)
       private final Output<String> destinationS3Uri;
 
-    public Output<String> getDestinationS3Uri() {
+    public Output<String> destinationS3Uri() {
         return this.destinationS3Uri;
     }
 
@@ -60,7 +60,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     @Import(name="enableCapture")
       private final @Nullable Output<Boolean> enableCapture;
 
-    public Output<Boolean> getEnableCapture() {
+    public Output<Boolean> enableCapture() {
         return this.enableCapture == null ? Codegen.empty() : this.enableCapture;
     }
 
@@ -71,7 +71,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     @Import(name="initialSamplingPercentage", required=true)
       private final Output<Integer> initialSamplingPercentage;
 
-    public Output<Integer> getInitialSamplingPercentage() {
+    public Output<Integer> initialSamplingPercentage() {
         return this.initialSamplingPercentage;
     }
 
@@ -82,7 +82,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 

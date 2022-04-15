@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     @Import(name="processors")
       private final @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors;
 
-    public Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
+    public Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs>> processors() {
         return this.processors == null ? Codegen.empty() : this.processors;
     }
 

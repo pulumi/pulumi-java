@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="mappingParameters", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> getMappingParameters() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters() {
         return this.mappingParameters;
     }
 
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordFormatType", required=true)
       private final Output<String> recordFormatType;
 
-    public Output<String> getRecordFormatType() {
+    public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
 

@@ -125,101 +125,101 @@ public final class GetClusterResult {
      * The Amazon Resource Name (ARN) of the cluster.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Nested attribute containing `certificate-authority-data` for your cluster.
      * 
     */
-    public GetClusterCertificateAuthority getCertificateAuthority() {
+    public GetClusterCertificateAuthority certificateAuthority() {
         return this.certificateAuthority;
     }
     /**
      * The Unix epoch time stamp in seconds for when the cluster was created.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * The enabled control plane logs.
      * 
     */
-    public List<String> getEnabledClusterLogTypes() {
+    public List<String> enabledClusterLogTypes() {
         return this.enabledClusterLogTypes;
     }
     /**
      * The endpoint for your Kubernetes API server.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
      * 
     */
-    public List<GetClusterIdentity> getIdentities() {
+    public List<GetClusterIdentity> identities() {
         return this.identities;
     }
     /**
      * Nested list containing Kubernetes Network Configuration.
      * 
     */
-    public List<GetClusterKubernetesNetworkConfig> getKubernetesNetworkConfigs() {
+    public List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs() {
         return this.kubernetesNetworkConfigs;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The platform version for the cluster.
      * 
     */
-    public String getPlatformVersion() {
+    public String platformVersion() {
         return this.platformVersion;
     }
     /**
      * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * The status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Key-value map of resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The Kubernetes server version for the cluster.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
     /**
      * Nested list containing VPC configuration for the cluster.
      * 
     */
-    public GetClusterVpcConfig getVpcConfig() {
+    public GetClusterVpcConfig vpcConfig() {
         return this.vpcConfig;
     }
 

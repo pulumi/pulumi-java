@@ -24,7 +24,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="clientIdLists", required=true)
       private final Output<List<String>> clientIdLists;
 
-    public Output<List<String>> getClientIdLists() {
+    public Output<List<String>> clientIdLists() {
         return this.clientIdLists;
     }
 
@@ -35,7 +35,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -46,7 +46,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="thumbprintLists", required=true)
       private final Output<List<String>> thumbprintLists;
 
-    public Output<List<String>> getThumbprintLists() {
+    public Output<List<String>> thumbprintLists() {
         return this.thumbprintLists;
     }
 
@@ -57,7 +57,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

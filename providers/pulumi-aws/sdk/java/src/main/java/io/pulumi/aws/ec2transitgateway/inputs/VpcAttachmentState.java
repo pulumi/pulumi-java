@@ -25,7 +25,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applianceModeSupport")
       private final @Nullable Output<String> applianceModeSupport;
 
-    public Output<String> getApplianceModeSupport() {
+    public Output<String> applianceModeSupport() {
         return this.applianceModeSupport == null ? Codegen.empty() : this.applianceModeSupport;
     }
 
@@ -36,7 +36,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
-    public Output<String> getDnsSupport() {
+    public Output<String> dnsSupport() {
         return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
@@ -47,7 +47,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Support")
       private final @Nullable Output<String> ipv6Support;
 
-    public Output<String> getIpv6Support() {
+    public Output<String> ipv6Support() {
         return this.ipv6Support == null ? Codegen.empty() : this.ipv6Support;
     }
 
@@ -58,7 +58,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
@@ -69,7 +69,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -91,7 +91,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayDefaultRouteTableAssociation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
-    public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
+    public Output<Boolean> transitGatewayDefaultRouteTableAssociation() {
         return this.transitGatewayDefaultRouteTableAssociation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTableAssociation;
     }
 
@@ -102,7 +102,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayDefaultRouteTablePropagation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
-    public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
+    public Output<Boolean> transitGatewayDefaultRouteTablePropagation() {
         return this.transitGatewayDefaultRouteTablePropagation == null ? Codegen.empty() : this.transitGatewayDefaultRouteTablePropagation;
     }
 
@@ -113,7 +113,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
@@ -124,7 +124,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
@@ -135,7 +135,7 @@ public final class VpcAttachmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcOwnerId")
       private final @Nullable Output<String> vpcOwnerId;
 
-    public Output<String> getVpcOwnerId() {
+    public Output<String> vpcOwnerId() {
         return this.vpcOwnerId == null ? Codegen.empty() : this.vpcOwnerId;
     }
 

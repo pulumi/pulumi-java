@@ -33,14 +33,14 @@ public final class GetInstanceTypeOfferingsFilter {
      * Name of the filter. The `location` filter depends on the top-level `location_type` argument and if not specified, defaults to the current region.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * List of one or more values for the filter.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

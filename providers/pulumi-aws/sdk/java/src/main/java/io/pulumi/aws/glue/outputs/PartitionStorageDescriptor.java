@@ -112,84 +112,84 @@ public final class PartitionStorageDescriptor {
      * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
      * 
     */
-    public List<String> getBucketColumns() {
+    public List<String> bucketColumns() {
         return this.bucketColumns == null ? List.of() : this.bucketColumns;
     }
     /**
      * A list of the Columns in the table.
      * 
     */
-    public List<PartitionStorageDescriptorColumn> getColumns() {
+    public List<PartitionStorageDescriptorColumn> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * True if the data in the table is compressed, or False if not.
      * 
     */
-    public Optional<Boolean> getCompressed() {
+    public Optional<Boolean> compressed() {
         return Optional.ofNullable(this.compressed);
     }
     /**
      * The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
      * 
     */
-    public Optional<String> getInputFormat() {
+    public Optional<String> inputFormat() {
         return Optional.ofNullable(this.inputFormat);
     }
     /**
      * The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
      * 
     */
-    public Optional<String> getLocation() {
+    public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Must be specified if the table contains any dimension columns.
      * 
     */
-    public Optional<Integer> getNumberOfBuckets() {
+    public Optional<Integer> numberOfBuckets() {
         return Optional.ofNullable(this.numberOfBuckets);
     }
     /**
      * The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
      * 
     */
-    public Optional<String> getOutputFormat() {
+    public Optional<String> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
      * A map of initialization parameters for the SerDe, in key-value form.
      * 
     */
-    public Map<String,String> getParameters() {
+    public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Serialization/deserialization (SerDe) information.
      * 
     */
-    public Optional<PartitionStorageDescriptorSerDeInfo> getSerDeInfo() {
+    public Optional<PartitionStorageDescriptorSerDeInfo> serDeInfo() {
         return Optional.ofNullable(this.serDeInfo);
     }
     /**
      * Information about values that appear very frequently in a column (skewed values).
      * 
     */
-    public Optional<PartitionStorageDescriptorSkewedInfo> getSkewedInfo() {
+    public Optional<PartitionStorageDescriptorSkewedInfo> skewedInfo() {
         return Optional.ofNullable(this.skewedInfo);
     }
     /**
      * A list of Order objects specifying the sort order of each bucket in the table.
      * 
     */
-    public List<PartitionStorageDescriptorSortColumn> getSortColumns() {
+    public List<PartitionStorageDescriptorSortColumn> sortColumns() {
         return this.sortColumns == null ? List.of() : this.sortColumns;
     }
     /**
      * True if the table data is stored in subdirectories, or False if not.
      * 
     */
-    public Optional<Boolean> getStoredAsSubDirectories() {
+    public Optional<Boolean> storedAsSubDirectories() {
         return Optional.ofNullable(this.storedAsSubDirectories);
     }
 

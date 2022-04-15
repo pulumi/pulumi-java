@@ -44,21 +44,21 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
      * Valid values: `viewer-request` or `viewer-response`
      * 
     */
-    public String getEventType() {
+    public String eventType() {
         return this.eventType;
     }
     /**
      * When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
      * 
     */
-    public Optional<Boolean> getIncludeBody() {
+    public Optional<Boolean> includeBody() {
         return Optional.ofNullable(this.includeBody);
     }
     /**
      * ARN of the Lambda function.
      * 
     */
-    public String getLambdaArn() {
+    public String lambdaArn() {
         return this.lambdaArn;
     }
 

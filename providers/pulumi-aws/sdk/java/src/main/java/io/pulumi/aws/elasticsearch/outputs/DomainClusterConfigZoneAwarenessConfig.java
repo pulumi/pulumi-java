@@ -26,7 +26,7 @@ public final class DomainClusterConfigZoneAwarenessConfig {
      * Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
      * 
     */
-    public Optional<Integer> getAvailabilityZoneCount() {
+    public Optional<Integer> availabilityZoneCount() {
         return Optional.ofNullable(this.availabilityZoneCount);
     }
 

@@ -34,14 +34,14 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfig {
      * See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role) for more information.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
     /**
      * The ARN of the Kinesis data stream.
      * 
     */
-    public String getStreamArn() {
+    public String streamArn() {
         return this.streamArn;
     }
 

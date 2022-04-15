@@ -33,7 +33,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return Whether users can specify their own SSH public key through the My Settings page
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowSelfManagement() {
+    public Output</* @Nullable */ Boolean> allowSelfManagement() {
         return this.allowSelfManagement;
     }
     /**
@@ -47,7 +47,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return The users public key
      * 
      */
-    public Output</* @Nullable */ String> getSshPublicKey() {
+    public Output</* @Nullable */ String> sshPublicKey() {
         return this.sshPublicKey;
     }
     /**
@@ -61,7 +61,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return The ssh username, with witch this user wants to log in
      * 
      */
-    public Output<String> getSshUsername() {
+    public Output<String> sshUsername() {
         return this.sshUsername;
     }
     /**
@@ -75,7 +75,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return The user's IAM ARN
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 

@@ -30,7 +30,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalAuthenticationProviders")
       private final @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
 
-    public Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> getAdditionalAuthenticationProviders() {
+    public Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders() {
         return this.additionalAuthenticationProviders == null ? Codegen.empty() : this.additionalAuthenticationProviders;
     }
 
@@ -41,7 +41,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -52,7 +52,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
@@ -63,7 +63,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lambdaAuthorizerConfig")
       private final @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
-    public Output<GraphQLApiLambdaAuthorizerConfigGetArgs> getLambdaAuthorizerConfig() {
+    public Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig == null ? Codegen.empty() : this.lambdaAuthorizerConfig;
     }
 
@@ -74,7 +74,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logConfig")
       private final @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig;
 
-    public Output<GraphQLApiLogConfigGetArgs> getLogConfig() {
+    public Output<GraphQLApiLogConfigGetArgs> logConfig() {
         return this.logConfig == null ? Codegen.empty() : this.logConfig;
     }
 
@@ -85,7 +85,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,7 +96,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="openidConnectConfig")
       private final @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
 
-    public Output<GraphQLApiOpenidConnectConfigGetArgs> getOpenidConnectConfig() {
+    public Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig() {
         return this.openidConnectConfig == null ? Codegen.empty() : this.openidConnectConfig;
     }
 
@@ -107,7 +107,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -118,7 +118,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -129,7 +129,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -140,7 +140,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="uris")
       private final @Nullable Output<Map<String,String>> uris;
 
-    public Output<Map<String,String>> getUris() {
+    public Output<Map<String,String>> uris() {
         return this.uris == null ? Codegen.empty() : this.uris;
     }
 
@@ -151,7 +151,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userPoolConfig")
       private final @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
 
-    public Output<GraphQLApiUserPoolConfigGetArgs> getUserPoolConfig() {
+    public Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig() {
         return this.userPoolConfig == null ? Codegen.empty() : this.userPoolConfig;
     }
 
@@ -162,7 +162,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
     @Import(name="xrayEnabled")
       private final @Nullable Output<Boolean> xrayEnabled;
 
-    public Output<Boolean> getXrayEnabled() {
+    public Output<Boolean> xrayEnabled() {
         return this.xrayEnabled == null ? Codegen.empty() : this.xrayEnabled;
     }
 

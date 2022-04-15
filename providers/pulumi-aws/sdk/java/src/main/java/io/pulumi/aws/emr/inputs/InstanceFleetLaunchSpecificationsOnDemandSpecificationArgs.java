@@ -21,7 +21,7 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs ex
     @Import(name="allocationStrategy", required=true)
       private final Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy;
     }
 

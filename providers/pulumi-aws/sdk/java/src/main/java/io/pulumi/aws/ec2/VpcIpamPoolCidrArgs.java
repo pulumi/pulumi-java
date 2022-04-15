@@ -23,7 +23,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
@@ -34,7 +34,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="cidrAuthorizationContext")
       private final @Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext;
 
-    public Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> getCidrAuthorizationContext() {
+    public Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext() {
         return this.cidrAuthorizationContext == null ? Codegen.empty() : this.cidrAuthorizationContext;
     }
 
@@ -45,7 +45,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 

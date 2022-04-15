@@ -22,7 +22,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -33,7 +33,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     @Import(name="resourceValue")
       private final @Nullable Output<String> resourceValue;
 
-    public Output<String> getResourceValue() {
+    public Output<String> resourceValue() {
         return this.resourceValue == null ? Codegen.empty() : this.resourceValue;
     }
 
@@ -44,7 +44,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     @Import(name="staticValue")
       private final @Nullable Output<String> staticValue;
 
-    public Output<String> getStaticValue() {
+    public Output<String> staticValue() {
         return this.staticValue == null ? Codegen.empty() : this.staticValue;
     }
 

@@ -22,7 +22,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -33,7 +33,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -44,7 +44,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -55,7 +55,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -66,7 +66,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -77,7 +77,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
+    public Output<String> versionId() {
         return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 

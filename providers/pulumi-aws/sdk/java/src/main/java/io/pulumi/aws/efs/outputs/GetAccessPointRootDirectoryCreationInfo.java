@@ -40,21 +40,21 @@ public final class GetAccessPointRootDirectoryCreationInfo {
      * POSIX owner group ID
      * 
     */
-    public Integer getOwnerGid() {
+    public Integer ownerGid() {
         return this.ownerGid;
     }
     /**
      * POSIX owner user ID
      * 
     */
-    public Integer getOwnerUid() {
+    public Integer ownerUid() {
         return this.ownerUid;
     }
     /**
      * POSIX permissions mode
      * 
     */
-    public String getPermissions() {
+    public String permissions() {
         return this.permissions;
     }
 

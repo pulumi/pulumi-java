@@ -24,7 +24,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
      * The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
     */
-    public String getSecretName() {
+    public String secretName() {
         return this.secretName;
     }
 

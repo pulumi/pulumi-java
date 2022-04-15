@@ -21,7 +21,7 @@ public final class TagOptionResourceAssociationArgs extends io.pulumi.resources.
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -32,7 +32,7 @@ public final class TagOptionResourceAssociationArgs extends io.pulumi.resources.
     @Import(name="tagOptionId", required=true)
       private final Output<String> tagOptionId;
 
-    public Output<String> getTagOptionId() {
+    public Output<String> tagOptionId() {
         return this.tagOptionId;
     }
 

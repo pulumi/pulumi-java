@@ -95,14 +95,14 @@ public final class IntentSlot {
      * A description of the bot. Must be less than or equal to 200 characters in length.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public final class IntentSlot {
      * values is arbitrary. Must be between 1 and 100.
      * 
     */
-    public Optional<Integer> getPriority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
@@ -121,7 +121,7 @@ public final class IntentSlot {
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
     */
-    public Optional<String> getResponseCard() {
+    public Optional<String> responseCard() {
         return Optional.ofNullable(this.responseCard);
     }
     /**
@@ -130,14 +130,14 @@ public final class IntentSlot {
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
     */
-    public List<String> getSampleUtterances() {
+    public List<String> sampleUtterances() {
         return this.sampleUtterances == null ? List.of() : this.sampleUtterances;
     }
     /**
      * Specifies whether the slot is required or optional.
      * 
     */
-    public String getSlotConstraint() {
+    public String slotConstraint() {
         return this.slotConstraint;
     }
     /**
@@ -145,14 +145,14 @@ public final class IntentSlot {
      * the built-in slot types. Must be less than or equal to 100 characters in length.
      * 
     */
-    public String getSlotType() {
+    public String slotType() {
         return this.slotType;
     }
     /**
      * The version of the slot type. Must be less than or equal to 64 characters in length.
      * 
     */
-    public Optional<String> getSlotTypeVersion() {
+    public Optional<String> slotTypeVersion() {
         return Optional.ofNullable(this.slotTypeVersion);
     }
     /**
@@ -160,7 +160,7 @@ public final class IntentSlot {
      * from the user. Attributes are documented under prompt.
      * 
     */
-    public Optional<IntentSlotValueElicitationPrompt> getValueElicitationPrompt() {
+    public Optional<IntentSlotValueElicitationPrompt> valueElicitationPrompt() {
         return Optional.ofNullable(this.valueElicitationPrompt);
     }
 

@@ -43,7 +43,7 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
      * @return When origination settings are disabled, inbound calls are not enabled for your Amazon Chime Voice Connector.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -57,7 +57,7 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
      * @return Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.
      * 
      */
-    public Output<List<VoiceConnectorOrganizationRoute>> getRoutes() {
+    public Output<List<VoiceConnectorOrganizationRoute>> routes() {
         return this.routes;
     }
     /**
@@ -71,7 +71,7 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
      * @return The Amazon Chime Voice Connector ID.
      * 
      */
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

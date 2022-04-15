@@ -42,7 +42,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return ARN of the control panel.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +56,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return ARN of the cluster in which this control panel will reside.
      * 
      */
-    public Output<String> getClusterArn() {
+    public Output<String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -70,7 +70,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return Whether a control panel is default.
      * 
      */
-    public Output<Boolean> getDefaultControlPanel() {
+    public Output<Boolean> defaultControlPanel() {
         return this.defaultControlPanel;
     }
     /**
@@ -84,7 +84,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return Name describing the control panel.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +98,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return Number routing controls in a control panel.
      * 
      */
-    public Output<Integer> getRoutingControlCount() {
+    public Output<Integer> routingControlCount() {
         return this.routingControlCount;
     }
     /**
@@ -112,7 +112,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @return Status of control panel: `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

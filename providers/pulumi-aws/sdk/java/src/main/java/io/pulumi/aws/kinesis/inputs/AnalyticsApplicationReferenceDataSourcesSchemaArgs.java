@@ -26,7 +26,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaArgs extends io
     @Import(name="recordColumns", required=true)
       private final Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs>> recordColumns;
 
-    public Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs>> getRecordColumns() {
+    public Output<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs>> recordColumns() {
         return this.recordColumns;
     }
 
@@ -37,7 +37,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaArgs extends io
     @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
-    public Output<String> getRecordEncoding() {
+    public Output<String> recordEncoding() {
         return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
@@ -49,7 +49,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaArgs extends io
     @Import(name="recordFormat", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs> recordFormat;
 
-    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs> getRecordFormat() {
+    public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs> recordFormat() {
         return this.recordFormat;
     }
 

@@ -36,7 +36,7 @@ public final class TableServerSideEncryption {
      * Indicates whether ttl is enabled (true) or disabled (false).
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
     /**
@@ -44,7 +44,7 @@ public final class TableServerSideEncryption {
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
     */
-    public Optional<String> getKmsKeyArn() {
+    public Optional<String> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
 

@@ -22,7 +22,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
     @Import(name="adDomainJoinPassword")
       private final @Nullable Output<String> adDomainJoinPassword;
 
-    public Output<String> getAdDomainJoinPassword() {
+    public Output<String> adDomainJoinPassword() {
         return this.adDomainJoinPassword == null ? Codegen.empty() : this.adDomainJoinPassword;
     }
 
@@ -33,7 +33,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
     @Import(name="adDomainJoinUser")
       private final @Nullable Output<String> adDomainJoinUser;
 
-    public Output<String> getAdDomainJoinUser() {
+    public Output<String> adDomainJoinUser() {
         return this.adDomainJoinUser == null ? Codegen.empty() : this.adDomainJoinUser;
     }
 
@@ -44,7 +44,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
     @Import(name="crossRealmTrustPrincipalPassword")
       private final @Nullable Output<String> crossRealmTrustPrincipalPassword;
 
-    public Output<String> getCrossRealmTrustPrincipalPassword() {
+    public Output<String> crossRealmTrustPrincipalPassword() {
         return this.crossRealmTrustPrincipalPassword == null ? Codegen.empty() : this.crossRealmTrustPrincipalPassword;
     }
 
@@ -55,7 +55,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
     @Import(name="kdcAdminPassword", required=true)
       private final Output<String> kdcAdminPassword;
 
-    public Output<String> getKdcAdminPassword() {
+    public Output<String> kdcAdminPassword() {
         return this.kdcAdminPassword;
     }
 
@@ -66,7 +66,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
     @Import(name="realm", required=true)
       private final Output<String> realm;
 
-    public Output<String> getRealm() {
+    public Output<String> realm() {
         return this.realm;
     }
 

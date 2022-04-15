@@ -24,7 +24,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends io.p
     @Import(name="mappingParameters")
       private final @Nullable Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> getMappingParameters() {
+    public Output<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs> mappingParameters() {
         return this.mappingParameters == null ? Codegen.empty() : this.mappingParameters;
     }
 
@@ -35,7 +35,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatArgs extends io.p
     @Import(name="recordFormatType")
       private final @Nullable Output<String> recordFormatType;
 
-    public Output<String> getRecordFormatType() {
+    public Output<String> recordFormatType() {
         return this.recordFormatType == null ? Codegen.empty() : this.recordFormatType;
     }
 

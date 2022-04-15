@@ -24,7 +24,7 @@ public final class ScheduledActionTargetActionPauseCluster {
      * The identifier of the cluster to be resumed.
      * 
     */
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
 

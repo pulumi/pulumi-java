@@ -29,7 +29,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<WebAclRuleActionGetArgs> action;
 
-    public Output<WebAclRuleActionGetArgs> getAction() {
+    public Output<WebAclRuleActionGetArgs> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -40,7 +40,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,7 +51,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideAction")
       private final @Nullable Output<WebAclRuleOverrideActionGetArgs> overrideAction;
 
-    public Output<WebAclRuleOverrideActionGetArgs> getOverrideAction() {
+    public Output<WebAclRuleOverrideActionGetArgs> overrideAction() {
         return this.overrideAction == null ? Codegen.empty() : this.overrideAction;
     }
 
@@ -62,7 +62,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -73,7 +73,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleLabels")
       private final @Nullable Output<List<WebAclRuleRuleLabelGetArgs>> ruleLabels;
 
-    public Output<List<WebAclRuleRuleLabelGetArgs>> getRuleLabels() {
+    public Output<List<WebAclRuleRuleLabelGetArgs>> ruleLabels() {
         return this.ruleLabels == null ? Codegen.empty() : this.ruleLabels;
     }
 
@@ -84,7 +84,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statement", required=true)
       private final Output<WebAclRuleStatementGetArgs> statement;
 
-    public Output<WebAclRuleStatementGetArgs> getStatement() {
+    public Output<WebAclRuleStatementGetArgs> statement() {
         return this.statement;
     }
 
@@ -95,7 +95,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="visibilityConfig", required=true)
       private final Output<WebAclRuleVisibilityConfigGetArgs> visibilityConfig;
 
-    public Output<WebAclRuleVisibilityConfigGetArgs> getVisibilityConfig() {
+    public Output<WebAclRuleVisibilityConfigGetArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 

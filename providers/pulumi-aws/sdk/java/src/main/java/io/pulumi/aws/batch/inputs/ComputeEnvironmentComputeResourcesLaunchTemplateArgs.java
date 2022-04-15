@@ -22,7 +22,7 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateArgs extends 
     @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
-    public Output<String> getLaunchTemplateId() {
+    public Output<String> launchTemplateId() {
         return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
     }
 
@@ -33,7 +33,7 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateArgs extends 
     @Import(name="launchTemplateName")
       private final @Nullable Output<String> launchTemplateName;
 
-    public Output<String> getLaunchTemplateName() {
+    public Output<String> launchTemplateName() {
         return this.launchTemplateName == null ? Codegen.empty() : this.launchTemplateName;
     }
 
@@ -44,7 +44,7 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateArgs extends 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

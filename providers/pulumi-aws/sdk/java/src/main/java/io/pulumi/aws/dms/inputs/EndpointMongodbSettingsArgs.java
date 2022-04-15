@@ -22,7 +22,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="authMechanism")
       private final @Nullable Output<String> authMechanism;
 
-    public Output<String> getAuthMechanism() {
+    public Output<String> authMechanism() {
         return this.authMechanism == null ? Codegen.empty() : this.authMechanism;
     }
 
@@ -33,7 +33,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="authSource")
       private final @Nullable Output<String> authSource;
 
-    public Output<String> getAuthSource() {
+    public Output<String> authSource() {
         return this.authSource == null ? Codegen.empty() : this.authSource;
     }
 
@@ -44,7 +44,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="authType")
       private final @Nullable Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType == null ? Codegen.empty() : this.authType;
     }
 
@@ -55,7 +55,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="docsToInvestigate")
       private final @Nullable Output<String> docsToInvestigate;
 
-    public Output<String> getDocsToInvestigate() {
+    public Output<String> docsToInvestigate() {
         return this.docsToInvestigate == null ? Codegen.empty() : this.docsToInvestigate;
     }
 
@@ -66,7 +66,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="extractDocId")
       private final @Nullable Output<String> extractDocId;
 
-    public Output<String> getExtractDocId() {
+    public Output<String> extractDocId() {
         return this.extractDocId == null ? Codegen.empty() : this.extractDocId;
     }
 
@@ -77,7 +77,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     @Import(name="nestingLevel")
       private final @Nullable Output<String> nestingLevel;
 
-    public Output<String> getNestingLevel() {
+    public Output<String> nestingLevel() {
         return this.nestingLevel == null ? Codegen.empty() : this.nestingLevel;
     }
 

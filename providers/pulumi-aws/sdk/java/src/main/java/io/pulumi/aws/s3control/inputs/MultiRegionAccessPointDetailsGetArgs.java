@@ -25,7 +25,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -36,7 +36,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
     @Import(name="publicAccessBlock")
       private final @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
 
-    public Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> getPublicAccessBlock() {
+    public Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock() {
         return this.publicAccessBlock == null ? Codegen.empty() : this.publicAccessBlock;
     }
 
@@ -47,7 +47,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
     @Import(name="regions", required=true)
       private final Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
 
-    public Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> getRegions() {
+    public Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions() {
         return this.regions;
     }
 

@@ -23,7 +23,7 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
-    public Optional<Boolean> getMostRecent() {
+    public Optional<Boolean> mostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
     }
 
@@ -36,7 +36,7 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="nameRegex", required=true)
       private final String nameRegex;
 
-    public String getNameRegex() {
+    public String nameRegex() {
         return this.nameRegex;
     }
 

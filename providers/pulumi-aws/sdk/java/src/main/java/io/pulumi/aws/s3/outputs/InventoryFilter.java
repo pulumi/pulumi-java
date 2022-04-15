@@ -26,7 +26,7 @@ public final class InventoryFilter {
      * The prefix that an object must have to be included in the inventory results.
      * 
     */
-    public Optional<String> getPrefix() {
+    public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
 

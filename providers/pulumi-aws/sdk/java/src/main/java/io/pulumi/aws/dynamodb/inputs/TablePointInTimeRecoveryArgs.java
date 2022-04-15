@@ -21,7 +21,7 @@ public final class TablePointInTimeRecoveryArgs extends io.pulumi.resources.Reso
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 

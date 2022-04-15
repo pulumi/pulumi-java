@@ -34,7 +34,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -45,7 +45,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
@@ -56,7 +56,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityRebalance")
       private final @Nullable Output<Boolean> capacityRebalance;
 
-    public Output<Boolean> getCapacityRebalance() {
+    public Output<Boolean> capacityRebalance() {
         return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
@@ -67,7 +67,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultCooldown")
       private final @Nullable Output<Integer> defaultCooldown;
 
-    public Output<Integer> getDefaultCooldown() {
+    public Output<Integer> defaultCooldown() {
         return this.defaultCooldown == null ? Codegen.empty() : this.defaultCooldown;
     }
 
@@ -80,7 +80,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> getDesiredCapacity() {
+    public Output<Integer> desiredCapacity() {
         return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
     }
 
@@ -91,7 +91,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledMetrics")
       private final @Nullable Output<List<String>> enabledMetrics;
 
-    public Output<List<String>> getEnabledMetrics() {
+    public Output<List<String>> enabledMetrics() {
         return this.enabledMetrics == null ? Codegen.empty() : this.enabledMetrics;
     }
 
@@ -106,14 +106,14 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> getForceDelete() {
+    public Output<Boolean> forceDelete() {
         return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
     @Import(name="forceDeleteWarmPool")
       private final @Nullable Output<Boolean> forceDeleteWarmPool;
 
-    public Output<Boolean> getForceDeleteWarmPool() {
+    public Output<Boolean> forceDeleteWarmPool() {
         return this.forceDeleteWarmPool == null ? Codegen.empty() : this.forceDeleteWarmPool;
     }
 
@@ -124,7 +124,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckGracePeriod")
       private final @Nullable Output<Integer> healthCheckGracePeriod;
 
-    public Output<Integer> getHealthCheckGracePeriod() {
+    public Output<Integer> healthCheckGracePeriod() {
         return this.healthCheckGracePeriod == null ? Codegen.empty() : this.healthCheckGracePeriod;
     }
 
@@ -135,7 +135,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckType")
       private final @Nullable Output<String> healthCheckType;
 
-    public Output<String> getHealthCheckType() {
+    public Output<String> healthCheckType() {
         return this.healthCheckType == null ? Codegen.empty() : this.healthCheckType;
     }
 
@@ -152,7 +152,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="initialLifecycleHooks")
       private final @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
 
-    public Output<List<GroupInitialLifecycleHookGetArgs>> getInitialLifecycleHooks() {
+    public Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks() {
         return this.initialLifecycleHooks == null ? Codegen.empty() : this.initialLifecycleHooks;
     }
 
@@ -165,7 +165,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceRefresh")
       private final @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
 
-    public Output<GroupInstanceRefreshGetArgs> getInstanceRefresh() {
+    public Output<GroupInstanceRefreshGetArgs> instanceRefresh() {
         return this.instanceRefresh == null ? Codegen.empty() : this.instanceRefresh;
     }
 
@@ -176,7 +176,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="launchConfiguration")
       private final @Nullable Output<String> launchConfiguration;
 
-    public Output<String> getLaunchConfiguration() {
+    public Output<String> launchConfiguration() {
         return this.launchConfiguration == null ? Codegen.empty() : this.launchConfiguration;
     }
 
@@ -187,7 +187,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="launchTemplate")
       private final @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
 
-    public Output<GroupLaunchTemplateGetArgs> getLaunchTemplate() {
+    public Output<GroupLaunchTemplateGetArgs> launchTemplate() {
         return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
@@ -199,7 +199,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
       private final @Nullable Output<List<String>> loadBalancers;
 
-    public Output<List<String>> getLoadBalancers() {
+    public Output<List<String>> loadBalancers() {
         return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
@@ -210,7 +210,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxInstanceLifetime")
       private final @Nullable Output<Integer> maxInstanceLifetime;
 
-    public Output<Integer> getMaxInstanceLifetime() {
+    public Output<Integer> maxInstanceLifetime() {
         return this.maxInstanceLifetime == null ? Codegen.empty() : this.maxInstanceLifetime;
     }
 
@@ -221,7 +221,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
@@ -232,7 +232,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricsGranularity")
       private final @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
 
-    public Output<Either<String,MetricsGranularity>> getMetricsGranularity() {
+    public Output<Either<String,MetricsGranularity>> metricsGranularity() {
         return this.metricsGranularity == null ? Codegen.empty() : this.metricsGranularity;
     }
 
@@ -246,7 +246,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minElbCapacity")
       private final @Nullable Output<Integer> minElbCapacity;
 
-    public Output<Integer> getMinElbCapacity() {
+    public Output<Integer> minElbCapacity() {
         return this.minElbCapacity == null ? Codegen.empty() : this.minElbCapacity;
     }
 
@@ -257,7 +257,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
@@ -268,7 +268,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="mixedInstancesPolicy")
       private final @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
 
-    public Output<GroupMixedInstancesPolicyGetArgs> getMixedInstancesPolicy() {
+    public Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy() {
         return this.mixedInstancesPolicy == null ? Codegen.empty() : this.mixedInstancesPolicy;
     }
 
@@ -279,7 +279,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -291,7 +291,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -302,7 +302,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementGroup")
       private final @Nullable Output<String> placementGroup;
 
-    public Output<String> getPlacementGroup() {
+    public Output<String> placementGroup() {
         return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
     }
 
@@ -315,7 +315,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectFromScaleIn")
       private final @Nullable Output<Boolean> protectFromScaleIn;
 
-    public Output<Boolean> getProtectFromScaleIn() {
+    public Output<Boolean> protectFromScaleIn() {
         return this.protectFromScaleIn == null ? Codegen.empty() : this.protectFromScaleIn;
     }
 
@@ -326,7 +326,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceLinkedRoleArn")
       private final @Nullable Output<String> serviceLinkedRoleArn;
 
-    public Output<String> getServiceLinkedRoleArn() {
+    public Output<String> serviceLinkedRoleArn() {
         return this.serviceLinkedRoleArn == null ? Codegen.empty() : this.serviceLinkedRoleArn;
     }
 
@@ -338,7 +338,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="suspendedProcesses")
       private final @Nullable Output<List<String>> suspendedProcesses;
 
-    public Output<List<String>> getSuspendedProcesses() {
+    public Output<List<String>> suspendedProcesses() {
         return this.suspendedProcesses == null ? Codegen.empty() : this.suspendedProcesses;
     }
 
@@ -349,7 +349,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<GroupTagGetArgs>> tags;
 
-    public Output<List<GroupTagGetArgs>> getTags() {
+    public Output<List<GroupTagGetArgs>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -360,7 +360,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsCollection")
       private final @Nullable Output<List<Map<String,String>>> tagsCollection;
 
-    public Output<List<Map<String,String>>> getTagsCollection() {
+    public Output<List<Map<String,String>>> tagsCollection() {
         return this.tagsCollection == null ? Codegen.empty() : this.tagsCollection;
     }
 
@@ -371,7 +371,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetGroupArns")
       private final @Nullable Output<List<String>> targetGroupArns;
 
-    public Output<List<String>> getTargetGroupArns() {
+    public Output<List<String>> targetGroupArns() {
         return this.targetGroupArns == null ? Codegen.empty() : this.targetGroupArns;
     }
 
@@ -382,7 +382,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminationPolicies")
       private final @Nullable Output<List<String>> terminationPolicies;
 
-    public Output<List<String>> getTerminationPolicies() {
+    public Output<List<String>> terminationPolicies() {
         return this.terminationPolicies == null ? Codegen.empty() : this.terminationPolicies;
     }
 
@@ -393,7 +393,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcZoneIdentifiers")
       private final @Nullable Output<List<String>> vpcZoneIdentifiers;
 
-    public Output<List<String>> getVpcZoneIdentifiers() {
+    public Output<List<String>> vpcZoneIdentifiers() {
         return this.vpcZoneIdentifiers == null ? Codegen.empty() : this.vpcZoneIdentifiers;
     }
 
@@ -408,7 +408,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForCapacityTimeout")
       private final @Nullable Output<String> waitForCapacityTimeout;
 
-    public Output<String> getWaitForCapacityTimeout() {
+    public Output<String> waitForCapacityTimeout() {
         return this.waitForCapacityTimeout == null ? Codegen.empty() : this.waitForCapacityTimeout;
     }
 
@@ -423,7 +423,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForElbCapacity")
       private final @Nullable Output<Integer> waitForElbCapacity;
 
-    public Output<Integer> getWaitForElbCapacity() {
+    public Output<Integer> waitForElbCapacity() {
         return this.waitForElbCapacity == null ? Codegen.empty() : this.waitForElbCapacity;
     }
 
@@ -435,7 +435,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="warmPool")
       private final @Nullable Output<GroupWarmPoolGetArgs> warmPool;
 
-    public Output<GroupWarmPoolGetArgs> getWarmPool() {
+    public Output<GroupWarmPoolGetArgs> warmPool() {
         return this.warmPool == null ? Codegen.empty() : this.warmPool;
     }
 

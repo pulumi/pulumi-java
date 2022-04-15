@@ -19,7 +19,7 @@ public final class GetPromptArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceId", required=true)
       private final String instanceId;
 
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 
@@ -30,7 +30,7 @@ public final class GetPromptArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

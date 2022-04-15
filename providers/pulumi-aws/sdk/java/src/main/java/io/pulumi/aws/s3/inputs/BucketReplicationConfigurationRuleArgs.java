@@ -26,7 +26,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="deleteMarkerReplicationStatus")
       private final @Nullable Output<String> deleteMarkerReplicationStatus;
 
-    public Output<String> getDeleteMarkerReplicationStatus() {
+    public Output<String> deleteMarkerReplicationStatus() {
         return this.deleteMarkerReplicationStatus == null ? Codegen.empty() : this.deleteMarkerReplicationStatus;
     }
 
@@ -37,7 +37,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="destination", required=true)
       private final Output<BucketReplicationConfigurationRuleDestinationArgs> destination;
 
-    public Output<BucketReplicationConfigurationRuleDestinationArgs> getDestination() {
+    public Output<BucketReplicationConfigurationRuleDestinationArgs> destination() {
         return this.destination;
     }
 
@@ -48,7 +48,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="filter")
       private final @Nullable Output<BucketReplicationConfigurationRuleFilterArgs> filter;
 
-    public Output<BucketReplicationConfigurationRuleFilterArgs> getFilter() {
+    public Output<BucketReplicationConfigurationRuleFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -59,7 +59,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id == null ? Codegen.empty() : this.id;
     }
 
@@ -70,7 +70,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -81,7 +81,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority == null ? Codegen.empty() : this.priority;
     }
 
@@ -92,7 +92,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="sourceSelectionCriteria")
       private final @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria;
 
-    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs> getSourceSelectionCriteria() {
+    public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria() {
         return this.sourceSelectionCriteria == null ? Codegen.empty() : this.sourceSelectionCriteria;
     }
 
@@ -103,7 +103,7 @@ public final class BucketReplicationConfigurationRuleArgs extends io.pulumi.reso
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 

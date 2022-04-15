@@ -38,7 +38,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Lightsail domain
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -52,7 +52,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @return The name of the Lightsail domain to manage
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 

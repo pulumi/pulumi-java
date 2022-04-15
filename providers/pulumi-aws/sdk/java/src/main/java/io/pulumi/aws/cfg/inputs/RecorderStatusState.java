@@ -23,7 +23,7 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
@@ -34,7 +34,7 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

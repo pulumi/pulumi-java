@@ -43,7 +43,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Workforce.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @return Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
      * 
      */
-    public Output</* @Nullable */ WorkforceCognitoConfig> getCognitoConfig() {
+    public Output</* @Nullable */ WorkforceCognitoConfig> cognitoConfig() {
         return this.cognitoConfig;
     }
     /**
@@ -71,7 +71,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @return Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
      * 
      */
-    public Output</* @Nullable */ WorkforceOidcConfig> getOidcConfig() {
+    public Output</* @Nullable */ WorkforceOidcConfig> oidcConfig() {
         return this.oidcConfig;
     }
     /**
@@ -85,7 +85,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @return A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
      * 
      */
-    public Output<WorkforceSourceIpConfig> getSourceIpConfig() {
+    public Output<WorkforceSourceIpConfig> sourceIpConfig() {
         return this.sourceIpConfig;
     }
     /**
@@ -99,7 +99,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @return The subdomain for your OIDC Identity Provider.
      * 
      */
-    public Output<String> getSubdomain() {
+    public Output<String> subdomain() {
         return this.subdomain;
     }
     /**
@@ -113,7 +113,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @return The name of the Workforce (must be unique).
      * 
      */
-    public Output<String> getWorkforceName() {
+    public Output<String> workforceName() {
         return this.workforceName;
     }
 

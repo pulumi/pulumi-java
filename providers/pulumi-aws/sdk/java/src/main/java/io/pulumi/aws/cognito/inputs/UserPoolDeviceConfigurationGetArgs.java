@@ -22,7 +22,7 @@ public final class UserPoolDeviceConfigurationGetArgs extends io.pulumi.resource
     @Import(name="challengeRequiredOnNewDevice")
       private final @Nullable Output<Boolean> challengeRequiredOnNewDevice;
 
-    public Output<Boolean> getChallengeRequiredOnNewDevice() {
+    public Output<Boolean> challengeRequiredOnNewDevice() {
         return this.challengeRequiredOnNewDevice == null ? Codegen.empty() : this.challengeRequiredOnNewDevice;
     }
 
@@ -33,7 +33,7 @@ public final class UserPoolDeviceConfigurationGetArgs extends io.pulumi.resource
     @Import(name="deviceOnlyRememberedOnUserPrompt")
       private final @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
 
-    public Output<Boolean> getDeviceOnlyRememberedOnUserPrompt() {
+    public Output<Boolean> deviceOnlyRememberedOnUserPrompt() {
         return this.deviceOnlyRememberedOnUserPrompt == null ? Codegen.empty() : this.deviceOnlyRememberedOnUserPrompt;
     }
 

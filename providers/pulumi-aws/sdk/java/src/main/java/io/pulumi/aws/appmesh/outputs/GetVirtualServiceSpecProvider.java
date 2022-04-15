@@ -34,14 +34,14 @@ public final class GetVirtualServiceSpecProvider {
      * The virtual node associated with the virtual service.
      * 
     */
-    public List<GetVirtualServiceSpecProviderVirtualNode> getVirtualNodes() {
+    public List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes() {
         return this.virtualNodes;
     }
     /**
      * The virtual router associated with the virtual service.
      * 
     */
-    public List<GetVirtualServiceSpecProviderVirtualRouter> getVirtualRouters() {
+    public List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters() {
         return this.virtualRouters;
     }
 

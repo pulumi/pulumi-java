@@ -21,7 +21,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -32,7 +32,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     @Import(name="registryId", required=true)
       private final Output<String> registryId;
 
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
 

@@ -16,7 +16,7 @@ public final class GetFunctionEnvironment extends io.pulumi.resources.InvokeArgs
     @Import(name="variables", required=true)
       private final Map<String,String> variables;
 
-    public Map<String,String> getVariables() {
+    public Map<String,String> variables() {
         return this.variables;
     }
 

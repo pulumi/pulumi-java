@@ -43,7 +43,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -57,7 +57,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the domain association.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +71,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The DNS record for certificate verification.
      * 
      */
-    public Output<String> getCertificateVerificationDnsRecord() {
+    public Output<String> certificateVerificationDnsRecord() {
         return this.certificateVerificationDnsRecord;
     }
     /**
@@ -85,7 +85,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The domain name for the domain association.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -99,7 +99,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The setting for the subdomain. Documented below.
      * 
      */
-    public Output<List<DomainAssociationSubDomain>> getSubDomains() {
+    public Output<List<DomainAssociationSubDomain>> subDomains() {
         return this.subDomains;
     }
     /**
@@ -113,7 +113,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForVerification() {
+    public Output</* @Nullable */ Boolean> waitForVerification() {
         return this.waitForVerification;
     }
 

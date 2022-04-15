@@ -26,7 +26,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetInstancesFilter> filters;
 
-    public List<GetInstancesFilter> getFilters() {
+    public List<GetInstancesFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -37,7 +37,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceStateNames")
       private final @Nullable List<String> instanceStateNames;
 
-    public List<String> getInstanceStateNames() {
+    public List<String> instanceStateNames() {
         return this.instanceStateNames == null ? List.of() : this.instanceStateNames;
     }
 
@@ -49,7 +49,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="instanceTags")
       private final @Nullable Map<String,String> instanceTags;
 
-    public Map<String,String> getInstanceTags() {
+    public Map<String,String> instanceTags() {
         return this.instanceTags == null ? Map.of() : this.instanceTags;
     }
 

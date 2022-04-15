@@ -24,7 +24,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      * The name of the query header to inspect. This setting must be provided as lower case characters.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

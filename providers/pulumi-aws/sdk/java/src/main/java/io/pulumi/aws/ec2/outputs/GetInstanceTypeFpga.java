@@ -31,20 +31,20 @@ public final class GetInstanceTypeFpga {
         this.name = name;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public String getManufacturer() {
+    public String manufacturer() {
         return this.manufacturer;
     }
     /**
      * Size of the instance memory, in MiB.
      * 
     */
-    public Integer getMemorySize() {
+    public Integer memorySize() {
         return this.memorySize;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

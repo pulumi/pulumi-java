@@ -44,7 +44,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return The retention period, in hours, for the Amazon Kinesis data.
      * 
      */
-    public Output<Integer> getDataRetention() {
+    public Output<Integer> dataRetention() {
         return this.dataRetention;
     }
     /**
@@ -58,7 +58,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return When true, media streaming to Amazon Kinesis is turned off. Default: `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -72,7 +72,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return The streaming notification targets. Valid Values: `EventBridge | SNS | SQS`
      * 
      */
-    public Output</* @Nullable */ List<String>> getStreamingNotificationTargets() {
+    public Output</* @Nullable */ List<String>> streamingNotificationTargets() {
         return this.streamingNotificationTargets;
     }
     /**
@@ -86,7 +86,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * @return The Amazon Chime Voice Connector ID.
      * 
      */
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

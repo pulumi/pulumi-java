@@ -24,7 +24,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="filters")
       private final @Nullable List<GetRouteTableFilter> filters;
 
-    public List<GetRouteTableFilter> getFilters() {
+    public List<GetRouteTableFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
 
@@ -35,7 +35,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="gatewayId")
       private final @Nullable String gatewayId;
 
-    public Optional<String> getGatewayId() {
+    public Optional<String> gatewayId() {
         return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
     }
 
@@ -46,7 +46,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="routeTableId")
       private final @Nullable String routeTableId;
 
-    public Optional<String> getRouteTableId() {
+    public Optional<String> routeTableId() {
         return this.routeTableId == null ? Optional.empty() : Optional.ofNullable(this.routeTableId);
     }
 
@@ -57,7 +57,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetId")
       private final @Nullable String subnetId;
 
-    public Optional<String> getSubnetId() {
+    public Optional<String> subnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
@@ -68,7 +68,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
@@ -79,7 +79,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="vpcId")
       private final @Nullable String vpcId;
 
-    public Optional<String> getVpcId() {
+    public Optional<String> vpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
     }
 

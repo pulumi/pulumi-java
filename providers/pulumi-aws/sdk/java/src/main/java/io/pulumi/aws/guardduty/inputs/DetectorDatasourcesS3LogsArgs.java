@@ -21,7 +21,7 @@ public final class DetectorDatasourcesS3LogsArgs extends io.pulumi.resources.Res
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 

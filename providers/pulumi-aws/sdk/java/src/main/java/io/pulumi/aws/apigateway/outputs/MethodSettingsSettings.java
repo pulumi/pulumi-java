@@ -93,70 +93,70 @@ public final class MethodSettingsSettings {
      * Specifies whether the cached responses are encrypted.
      * 
     */
-    public Optional<Boolean> getCacheDataEncrypted() {
+    public Optional<Boolean> cacheDataEncrypted() {
         return Optional.ofNullable(this.cacheDataEncrypted);
     }
     /**
      * Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
      * 
     */
-    public Optional<Integer> getCacheTtlInSeconds() {
+    public Optional<Integer> cacheTtlInSeconds() {
         return Optional.ofNullable(this.cacheTtlInSeconds);
     }
     /**
      * Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
      * 
     */
-    public Optional<Boolean> getCachingEnabled() {
+    public Optional<Boolean> cachingEnabled() {
         return Optional.ofNullable(this.cachingEnabled);
     }
     /**
      * Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
      * 
     */
-    public Optional<Boolean> getDataTraceEnabled() {
+    public Optional<Boolean> dataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
     /**
      * Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
      * 
     */
-    public Optional<String> getLoggingLevel() {
+    public Optional<String> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
      * Specifies whether Amazon CloudWatch metrics are enabled for this method.
      * 
     */
-    public Optional<Boolean> getMetricsEnabled() {
+    public Optional<Boolean> metricsEnabled() {
         return Optional.ofNullable(this.metricsEnabled);
     }
     /**
      * Specifies whether authorization is required for a cache invalidation request.
      * 
     */
-    public Optional<Boolean> getRequireAuthorizationForCacheControl() {
+    public Optional<Boolean> requireAuthorizationForCacheControl() {
         return Optional.ofNullable(this.requireAuthorizationForCacheControl);
     }
     /**
      * Specifies the throttling burst limit. Default: `-1` (throttling disabled).
      * 
     */
-    public Optional<Integer> getThrottlingBurstLimit() {
+    public Optional<Integer> throttlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
     /**
      * Specifies the throttling rate limit. Default: `-1` (throttling disabled).
      * 
     */
-    public Optional<Double> getThrottlingRateLimit() {
+    public Optional<Double> throttlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }
     /**
      * Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
      * 
     */
-    public Optional<String> getUnauthorizedCacheControlHeaderStrategy() {
+    public Optional<String> unauthorizedCacheControlHeaderStrategy() {
         return Optional.ofNullable(this.unauthorizedCacheControlHeaderStrategy);
     }
 

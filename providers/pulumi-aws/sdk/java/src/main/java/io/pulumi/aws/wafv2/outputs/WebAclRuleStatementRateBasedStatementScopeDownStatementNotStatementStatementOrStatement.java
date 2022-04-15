@@ -25,7 +25,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
     */
-    public List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatement> getStatements() {
+    public List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatement> statements() {
         return this.statements;
     }
 

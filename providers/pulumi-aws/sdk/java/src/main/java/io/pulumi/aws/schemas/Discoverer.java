@@ -43,7 +43,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the discoverer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +57,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @return The description of the discoverer. Maximum of 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +71,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @return The ARN of the event bus to discover event schemas on.
      * 
      */
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
     /**
@@ -85,7 +85,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -99,7 +99,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

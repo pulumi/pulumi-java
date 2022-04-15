@@ -62,42 +62,42 @@ public final class GetBrokerNodesNodeInfoList {
      * The attached elastic network interface of the broker
      * 
     */
-    public String getAttachedEniId() {
+    public String attachedEniId() {
         return this.attachedEniId;
     }
     /**
      * The ID of the broker
      * 
     */
-    public Double getBrokerId() {
+    public Double brokerId() {
         return this.brokerId;
     }
     /**
      * The client subnet to which this broker node belongs
      * 
     */
-    public String getClientSubnet() {
+    public String clientSubnet() {
         return this.clientSubnet;
     }
     /**
      * The client virtual private cloud (VPC) IP address
      * 
     */
-    public String getClientVpcIpAddress() {
+    public String clientVpcIpAddress() {
         return this.clientVpcIpAddress;
     }
     /**
      * Set of endpoints for accessing the broker. This does not include ports
      * 
     */
-    public List<String> getEndpoints() {
+    public List<String> endpoints() {
         return this.endpoints;
     }
     /**
      * The Amazon Resource Name (ARN) of the node
      * 
     */
-    public String getNodeArn() {
+    public String nodeArn() {
         return this.nodeArn;
     }
 

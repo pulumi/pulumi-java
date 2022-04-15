@@ -22,7 +22,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -44,7 +44,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
@@ -55,7 +55,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

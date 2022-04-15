@@ -22,7 +22,7 @@ public final class RouteSpecTcpRouteTimeoutGetArgs extends io.pulumi.resources.R
     @Import(name="idle")
       private final @Nullable Output<RouteSpecTcpRouteTimeoutIdleGetArgs> idle;
 
-    public Output<RouteSpecTcpRouteTimeoutIdleGetArgs> getIdle() {
+    public Output<RouteSpecTcpRouteTimeoutIdleGetArgs> idle() {
         return this.idle == null ? Codegen.empty() : this.idle;
     }
 

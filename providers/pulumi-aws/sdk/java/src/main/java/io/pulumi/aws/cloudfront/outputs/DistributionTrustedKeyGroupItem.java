@@ -35,14 +35,14 @@ public final class DistributionTrustedKeyGroupItem {
      * The ID of the key group that contains the public keys
      * 
     */
-    public Optional<String> getKeyGroupId() {
+    public Optional<String> keyGroupId() {
         return Optional.ofNullable(this.keyGroupId);
     }
     /**
      * Set of active CloudFront key pairs associated with the signer account
      * 
     */
-    public List<String> getKeyPairIds() {
+    public List<String> keyPairIds() {
         return this.keyPairIds == null ? List.of() : this.keyPairIds;
     }
 

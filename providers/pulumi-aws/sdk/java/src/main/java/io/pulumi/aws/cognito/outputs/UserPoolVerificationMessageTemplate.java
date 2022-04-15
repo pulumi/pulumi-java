@@ -62,42 +62,42 @@ public final class UserPoolVerificationMessageTemplate {
      * Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
      * 
     */
-    public Optional<String> getDefaultEmailOption() {
+    public Optional<String> defaultEmailOption() {
         return Optional.ofNullable(this.defaultEmailOption);
     }
     /**
      * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
      * 
     */
-    public Optional<String> getEmailMessage() {
+    public Optional<String> emailMessage() {
         return Optional.ofNullable(this.emailMessage);
     }
     /**
      * Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
      * 
     */
-    public Optional<String> getEmailMessageByLink() {
+    public Optional<String> emailMessageByLink() {
         return Optional.ofNullable(this.emailMessageByLink);
     }
     /**
      * Subject line for the email message template. Conflicts with `email_verification_subject` argument.
      * 
     */
-    public Optional<String> getEmailSubject() {
+    public Optional<String> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
     /**
      * Subject line for the email message template for sending a confirmation link to the user.
      * 
     */
-    public Optional<String> getEmailSubjectByLink() {
+    public Optional<String> emailSubjectByLink() {
         return Optional.ofNullable(this.emailSubjectByLink);
     }
     /**
      * SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
      * 
     */
-    public Optional<String> getSmsMessage() {
+    public Optional<String> smsMessage() {
         return Optional.ofNullable(this.smsMessage);
     }
 

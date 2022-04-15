@@ -25,7 +25,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="assertedControls")
       private final @Nullable Output<List<String>> assertedControls;
 
-    public Output<List<String>> getAssertedControls() {
+    public Output<List<String>> assertedControls() {
         return this.assertedControls == null ? Codegen.empty() : this.assertedControls;
     }
 
@@ -47,7 +47,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
-    public Output<String> getControlPanelArn() {
+    public Output<String> controlPanelArn() {
         return this.controlPanelArn == null ? Codegen.empty() : this.controlPanelArn;
     }
 
@@ -58,7 +58,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatingControls")
       private final @Nullable Output<List<String>> gatingControls;
 
-    public Output<List<String>> getGatingControls() {
+    public Output<List<String>> gatingControls() {
         return this.gatingControls == null ? Codegen.empty() : this.gatingControls;
     }
 
@@ -69,7 +69,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleConfig")
       private final @Nullable Output<SafetyRuleRuleConfigGetArgs> ruleConfig;
 
-    public Output<SafetyRuleRuleConfigGetArgs> getRuleConfig() {
+    public Output<SafetyRuleRuleConfigGetArgs> ruleConfig() {
         return this.ruleConfig == null ? Codegen.empty() : this.ruleConfig;
     }
 
@@ -91,7 +91,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -102,7 +102,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetControls")
       private final @Nullable Output<List<String>> targetControls;
 
-    public Output<List<String>> getTargetControls() {
+    public Output<List<String>> targetControls() {
         return this.targetControls == null ? Codegen.empty() : this.targetControls;
     }
 
@@ -113,7 +113,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitPeriodMs")
       private final @Nullable Output<Integer> waitPeriodMs;
 
-    public Output<Integer> getWaitPeriodMs() {
+    public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs == null ? Codegen.empty() : this.waitPeriodMs;
     }
 

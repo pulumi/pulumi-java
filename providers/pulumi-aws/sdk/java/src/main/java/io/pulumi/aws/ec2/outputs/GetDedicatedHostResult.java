@@ -109,86 +109,86 @@ public final class GetDedicatedHostResult {
      * The ARN of the Dedicated Host.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Whether auto-placement is on or off.
      * 
     */
-    public String getAutoPlacement() {
+    public String autoPlacement() {
         return this.autoPlacement;
     }
     /**
      * The Availability Zone of the Dedicated Host.
      * 
     */
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
     /**
      * The number of cores on the Dedicated Host.
      * 
     */
-    public Integer getCores() {
+    public Integer cores() {
         return this.cores;
     }
-    public List<GetDedicatedHostFilter> getFilters() {
+    public List<GetDedicatedHostFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getHostId() {
+    public String hostId() {
         return this.hostId;
     }
     /**
      * Indicates whether host recovery is enabled or disabled for the Dedicated Host.
      * 
     */
-    public String getHostRecovery() {
+    public String hostRecovery() {
         return this.hostRecovery;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The instance family supported by the Dedicated Host. For example, "m5".
      * 
     */
-    public String getInstanceFamily() {
+    public String instanceFamily() {
         return this.instanceFamily;
     }
     /**
      * The instance type supported by the Dedicated Host. For example, "m5.large". If the host supports multiple instance types, no instanceType is returned.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * The ID of the AWS account that owns the Dedicated Host.
      * 
     */
-    public String getOwnerId() {
+    public String ownerId() {
         return this.ownerId;
     }
     /**
      * The number of sockets on the Dedicated Host.
      * 
     */
-    public Integer getSockets() {
+    public Integer sockets() {
         return this.sockets;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * The total number of vCPUs on the Dedicated Host.
      * 
     */
-    public Integer getTotalVcpus() {
+    public Integer totalVcpus() {
         return this.totalVcpus;
     }
 

@@ -20,7 +20,7 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends io
     @Import(name="unit", required=true)
       private final String unit;
 
-    public String getUnit() {
+    public String unit() {
         return this.unit;
     }
 
@@ -31,7 +31,7 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends io
     @Import(name="value", required=true)
       private final Integer value;
 
-    public Integer getValue() {
+    public Integer value() {
         return this.value;
     }
 

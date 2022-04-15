@@ -23,7 +23,7 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
     @Import(name="includeExecutionData")
       private final @Nullable Output<Boolean> includeExecutionData;
 
-    public Output<Boolean> getIncludeExecutionData() {
+    public Output<Boolean> includeExecutionData() {
         return this.includeExecutionData == null ? Codegen.empty() : this.includeExecutionData;
     }
 
@@ -34,7 +34,7 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level == null ? Codegen.empty() : this.level;
     }
 
@@ -45,7 +45,7 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
     @Import(name="logDestination")
       private final @Nullable Output<String> logDestination;
 
-    public Output<String> getLogDestination() {
+    public Output<String> logDestination() {
         return this.logDestination == null ? Codegen.empty() : this.logDestination;
     }
 

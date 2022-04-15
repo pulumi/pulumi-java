@@ -24,7 +24,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
 
-    public Output<Map<String,String>> getAuthenticationRequestExtraParams() {
+    public Output<Map<String,String>> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Codegen.empty() : this.authenticationRequestExtraParams;
     }
 
@@ -35,7 +35,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
-    public Output<String> getAuthorizationEndpoint() {
+    public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
@@ -46,7 +46,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -57,7 +57,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
@@ -68,7 +68,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 
@@ -79,7 +79,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
-    public Output<String> getOnUnauthenticatedRequest() {
+    public Output<String> onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Codegen.empty() : this.onUnauthenticatedRequest;
     }
 
@@ -90,7 +90,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 
@@ -101,7 +101,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
-    public Output<String> getSessionCookieName() {
+    public Output<String> sessionCookieName() {
         return this.sessionCookieName == null ? Codegen.empty() : this.sessionCookieName;
     }
 
@@ -112,7 +112,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
-    public Output<Integer> getSessionTimeout() {
+    public Output<Integer> sessionTimeout() {
         return this.sessionTimeout == null ? Codegen.empty() : this.sessionTimeout;
     }
 
@@ -123,7 +123,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
-    public Output<String> getTokenEndpoint() {
+    public Output<String> tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
@@ -134,7 +134,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
     @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
-    public Output<String> getUserInfoEndpoint() {
+    public Output<String> userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 

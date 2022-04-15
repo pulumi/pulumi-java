@@ -47,28 +47,28 @@ public final class GetDomainVpcOption {
      * The availability zones used by the domain.
      * 
     */
-    public List<String> getAvailabilityZones() {
+    public List<String> availabilityZones() {
         return this.availabilityZones;
     }
     /**
      * The security groups used by the domain.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * The subnets used by the domain.
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
      * The VPC used by the domain.
      * 
     */
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
 

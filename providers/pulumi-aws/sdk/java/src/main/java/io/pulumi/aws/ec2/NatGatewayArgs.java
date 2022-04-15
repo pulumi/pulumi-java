@@ -23,7 +23,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
-    public Output<String> getAllocationId() {
+    public Output<String> allocationId() {
         return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
@@ -34,7 +34,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectivityType")
       private final @Nullable Output<String> connectivityType;
 
-    public Output<String> getConnectivityType() {
+    public Output<String> connectivityType() {
         return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
     }
 
@@ -45,7 +45,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -56,7 +56,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 

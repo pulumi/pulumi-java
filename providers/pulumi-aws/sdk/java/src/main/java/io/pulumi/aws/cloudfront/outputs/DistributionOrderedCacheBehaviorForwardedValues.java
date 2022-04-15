@@ -58,7 +58,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValues {
      * that specifies how CloudFront handles cookies (maximum one).
      * 
     */
-    public DistributionOrderedCacheBehaviorForwardedValuesCookies getCookies() {
+    public DistributionOrderedCacheBehaviorForwardedValuesCookies cookies() {
         return this.cookies;
     }
     /**
@@ -67,7 +67,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValues {
      * headers.
      * 
     */
-    public List<String> getHeaders() {
+    public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
@@ -75,7 +75,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValues {
      * query strings to the origin that is associated with this cache behavior.
      * 
     */
-    public Boolean getQueryString() {
+    public Boolean queryString() {
         return this.queryString;
     }
     /**
@@ -85,7 +85,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValues {
      * value of `true` for `query_string`, all query string keys are cached.
      * 
     */
-    public List<String> getQueryStringCacheKeys() {
+    public List<String> queryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? List.of() : this.queryStringCacheKeys;
     }
 

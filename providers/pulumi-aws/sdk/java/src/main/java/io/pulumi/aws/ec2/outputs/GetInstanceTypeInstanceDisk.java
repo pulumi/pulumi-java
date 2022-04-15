@@ -24,13 +24,13 @@ public final class GetInstanceTypeInstanceDisk {
         this.type = type;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

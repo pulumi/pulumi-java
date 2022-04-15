@@ -95,71 +95,71 @@ public final class GetZoneResult {
      * The Amazon Resource Name (ARN) of the Hosted Zone.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * Caller Reference of the Hosted Zone.
      * 
     */
-    public String getCallerReference() {
+    public String callerReference() {
         return this.callerReference;
     }
     /**
      * The comment field of the Hosted Zone.
      * 
     */
-    public String getComment() {
+    public String comment() {
         return this.comment;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
      * 
     */
-    public String getLinkedServiceDescription() {
+    public String linkedServiceDescription() {
         return this.linkedServiceDescription;
     }
     /**
      * The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
      * 
     */
-    public String getLinkedServicePrincipal() {
+    public String linkedServicePrincipal() {
         return this.linkedServicePrincipal;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The list of DNS name servers for the Hosted Zone.
      * 
     */
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
-    public Optional<Boolean> getPrivateZone() {
+    public Optional<Boolean> privateZone() {
         return Optional.ofNullable(this.privateZone);
     }
     /**
      * The number of Record Set in the Hosted Zone.
      * 
     */
-    public Integer getResourceRecordSetCount() {
+    public Integer resourceRecordSetCount() {
         return this.resourceRecordSetCount;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
-    public String getVpcId() {
+    public String vpcId() {
         return this.vpcId;
     }
-    public String getZoneId() {
+    public String zoneId() {
         return this.zoneId;
     }
 

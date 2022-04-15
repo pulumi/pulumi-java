@@ -19,7 +19,7 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig extends io.pulum
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
 

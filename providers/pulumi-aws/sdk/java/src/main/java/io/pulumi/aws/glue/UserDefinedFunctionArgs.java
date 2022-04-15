@@ -24,7 +24,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
@@ -35,7 +35,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="className", required=true)
       private final Output<String> className;
 
-    public Output<String> getClassName() {
+    public Output<String> className() {
         return this.className;
     }
 
@@ -46,7 +46,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -57,7 +57,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -68,7 +68,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="ownerName", required=true)
       private final Output<String> ownerName;
 
-    public Output<String> getOwnerName() {
+    public Output<String> ownerName() {
         return this.ownerName;
     }
 
@@ -79,7 +79,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="ownerType", required=true)
       private final Output<String> ownerType;
 
-    public Output<String> getOwnerType() {
+    public Output<String> ownerType() {
         return this.ownerType;
     }
 
@@ -90,7 +90,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceUris")
       private final @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
-    public Output<List<UserDefinedFunctionResourceUriArgs>> getResourceUris() {
+    public Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris() {
         return this.resourceUris == null ? Codegen.empty() : this.resourceUris;
     }
 

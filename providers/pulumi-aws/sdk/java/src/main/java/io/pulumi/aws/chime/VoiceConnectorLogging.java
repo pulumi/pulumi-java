@@ -41,7 +41,7 @@ public class VoiceConnectorLogging extends io.pulumi.resources.CustomResource {
      * @return When true, enables SIP message logs for sending to Amazon CloudWatch Logs.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableSipLogs() {
+    public Output</* @Nullable */ Boolean> enableSipLogs() {
         return this.enableSipLogs;
     }
     /**
@@ -55,7 +55,7 @@ public class VoiceConnectorLogging extends io.pulumi.resources.CustomResource {
      * @return The Amazon Chime Voice Connector ID.
      * 
      */
-    public Output<String> getVoiceConnectorId() {
+    public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 

@@ -67,48 +67,48 @@ public final class GetServiceResult {
      * The ARN of the ECS Service
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getClusterArn() {
+    public String clusterArn() {
         return this.clusterArn;
     }
     /**
      * The number of tasks for the ECS Service
      * 
     */
-    public Integer getDesiredCount() {
+    public Integer desiredCount() {
         return this.desiredCount;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The launch type for the ECS Service
      * 
     */
-    public String getLaunchType() {
+    public String launchType() {
         return this.launchType;
     }
     /**
      * The scheduling strategy for the ECS Service
      * 
     */
-    public String getSchedulingStrategy() {
+    public String schedulingStrategy() {
         return this.schedulingStrategy;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
     /**
      * The family for the latest ACTIVE revision
      * 
     */
-    public String getTaskDefinition() {
+    public String taskDefinition() {
         return this.taskDefinition;
     }
 

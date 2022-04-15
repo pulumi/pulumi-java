@@ -19,7 +19,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="encoding", required=true)
       private final String encoding;
 
-    public String getEncoding() {
+    public String encoding() {
         return this.encoding;
     }
 
@@ -30,7 +30,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="sshPublicKeyId", required=true)
       private final String sshPublicKeyId;
 
-    public String getSshPublicKeyId() {
+    public String sshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
@@ -41,7 +41,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="username", required=true)
       private final String username;
 
-    public String getUsername() {
+    public String username() {
         return this.username;
     }
 

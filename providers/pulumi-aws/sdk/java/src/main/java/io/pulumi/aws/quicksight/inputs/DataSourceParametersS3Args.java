@@ -21,7 +21,7 @@ public final class DataSourceParametersS3Args extends io.pulumi.resources.Resour
     @Import(name="manifestFileLocation", required=true)
       private final Output<DataSourceParametersS3ManifestFileLocationArgs> manifestFileLocation;
 
-    public Output<DataSourceParametersS3ManifestFileLocationArgs> getManifestFileLocation() {
+    public Output<DataSourceParametersS3ManifestFileLocationArgs> manifestFileLocation() {
         return this.manifestFileLocation;
     }
 

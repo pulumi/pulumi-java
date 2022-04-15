@@ -40,27 +40,27 @@ public final class GetSnapshotIdsResult {
         this.restorableByUserIds = restorableByUserIds;
     }
 
-    public List<GetSnapshotIdsFilter> getFilters() {
+    public List<GetSnapshotIdsFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of EBS snapshot IDs, sorted by creation time in descending order.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
-    public List<String> getOwners() {
+    public List<String> owners() {
         return this.owners == null ? List.of() : this.owners;
     }
-    public List<String> getRestorableByUserIds() {
+    public List<String> restorableByUserIds() {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
     }
 

@@ -25,7 +25,7 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatement {
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
     */
-    public List<RuleGroupRuleStatementAndStatementStatementNotStatementStatement> getStatements() {
+    public List<RuleGroupRuleStatementAndStatementStatementNotStatementStatement> statements() {
         return this.statements;
     }
 

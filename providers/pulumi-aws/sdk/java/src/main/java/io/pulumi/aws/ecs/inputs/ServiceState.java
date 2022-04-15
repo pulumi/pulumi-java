@@ -34,7 +34,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacityProviderStrategies")
       private final @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
-    public Output<List<ServiceCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
+    public Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies() {
         return this.capacityProviderStrategies == null ? Codegen.empty() : this.capacityProviderStrategies;
     }
 
@@ -45,7 +45,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -56,7 +56,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentCircuitBreaker")
       private final @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
 
-    public Output<ServiceDeploymentCircuitBreakerGetArgs> getDeploymentCircuitBreaker() {
+    public Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker() {
         return this.deploymentCircuitBreaker == null ? Codegen.empty() : this.deploymentCircuitBreaker;
     }
 
@@ -67,7 +67,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentController")
       private final @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
 
-    public Output<ServiceDeploymentControllerGetArgs> getDeploymentController() {
+    public Output<ServiceDeploymentControllerGetArgs> deploymentController() {
         return this.deploymentController == null ? Codegen.empty() : this.deploymentController;
     }
 
@@ -78,7 +78,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMaximumPercent")
       private final @Nullable Output<Integer> deploymentMaximumPercent;
 
-    public Output<Integer> getDeploymentMaximumPercent() {
+    public Output<Integer> deploymentMaximumPercent() {
         return this.deploymentMaximumPercent == null ? Codegen.empty() : this.deploymentMaximumPercent;
     }
 
@@ -89,7 +89,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentMinimumHealthyPercent")
       private final @Nullable Output<Integer> deploymentMinimumHealthyPercent;
 
-    public Output<Integer> getDeploymentMinimumHealthyPercent() {
+    public Output<Integer> deploymentMinimumHealthyPercent() {
         return this.deploymentMinimumHealthyPercent == null ? Codegen.empty() : this.deploymentMinimumHealthyPercent;
     }
 
@@ -100,7 +100,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredCount")
       private final @Nullable Output<Integer> desiredCount;
 
-    public Output<Integer> getDesiredCount() {
+    public Output<Integer> desiredCount() {
         return this.desiredCount == null ? Codegen.empty() : this.desiredCount;
     }
 
@@ -111,7 +111,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableEcsManagedTags")
       private final @Nullable Output<Boolean> enableEcsManagedTags;
 
-    public Output<Boolean> getEnableEcsManagedTags() {
+    public Output<Boolean> enableEcsManagedTags() {
         return this.enableEcsManagedTags == null ? Codegen.empty() : this.enableEcsManagedTags;
     }
 
@@ -122,7 +122,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> getEnableExecuteCommand() {
+    public Output<Boolean> enableExecuteCommand() {
         return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
     }
 
@@ -133,7 +133,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceNewDeployment")
       private final @Nullable Output<Boolean> forceNewDeployment;
 
-    public Output<Boolean> getForceNewDeployment() {
+    public Output<Boolean> forceNewDeployment() {
         return this.forceNewDeployment == null ? Codegen.empty() : this.forceNewDeployment;
     }
 
@@ -144,7 +144,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckGracePeriodSeconds")
       private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
-    public Output<Integer> getHealthCheckGracePeriodSeconds() {
+    public Output<Integer> healthCheckGracePeriodSeconds() {
         return this.healthCheckGracePeriodSeconds == null ? Codegen.empty() : this.healthCheckGracePeriodSeconds;
     }
 
@@ -155,7 +155,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
 
-    public Output<String> getIamRole() {
+    public Output<String> iamRole() {
         return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
@@ -166,7 +166,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
-    public Output<String> getLaunchType() {
+    public Output<String> launchType() {
         return this.launchType == null ? Codegen.empty() : this.launchType;
     }
 
@@ -177,7 +177,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancers")
       private final @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
 
-    public Output<List<ServiceLoadBalancerGetArgs>> getLoadBalancers() {
+    public Output<List<ServiceLoadBalancerGetArgs>> loadBalancers() {
         return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
@@ -188,7 +188,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -199,7 +199,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkConfiguration")
       private final @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
 
-    public Output<ServiceNetworkConfigurationGetArgs> getNetworkConfiguration() {
+    public Output<ServiceNetworkConfigurationGetArgs> networkConfiguration() {
         return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
@@ -210,7 +210,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orderedPlacementStrategies")
       private final @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
 
-    public Output<List<ServiceOrderedPlacementStrategyGetArgs>> getOrderedPlacementStrategies() {
+    public Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies() {
         return this.orderedPlacementStrategies == null ? Codegen.empty() : this.orderedPlacementStrategies;
     }
 
@@ -221,7 +221,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementConstraints")
       private final @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
 
-    public Output<List<ServicePlacementConstraintGetArgs>> getPlacementConstraints() {
+    public Output<List<ServicePlacementConstraintGetArgs>> placementConstraints() {
         return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
@@ -232,7 +232,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
-    public Output<String> getPlatformVersion() {
+    public Output<String> platformVersion() {
         return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
     }
 
@@ -243,7 +243,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="propagateTags")
       private final @Nullable Output<String> propagateTags;
 
-    public Output<String> getPropagateTags() {
+    public Output<String> propagateTags() {
         return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
     }
 
@@ -254,7 +254,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingStrategy")
       private final @Nullable Output<String> schedulingStrategy;
 
-    public Output<String> getSchedulingStrategy() {
+    public Output<String> schedulingStrategy() {
         return this.schedulingStrategy == null ? Codegen.empty() : this.schedulingStrategy;
     }
 
@@ -265,7 +265,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRegistries")
       private final @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
 
-    public Output<ServiceServiceRegistriesGetArgs> getServiceRegistries() {
+    public Output<ServiceServiceRegistriesGetArgs> serviceRegistries() {
         return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
     }
 
@@ -276,7 +276,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -287,7 +287,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -298,7 +298,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskDefinition")
       private final @Nullable Output<String> taskDefinition;
 
-    public Output<String> getTaskDefinition() {
+    public Output<String> taskDefinition() {
         return this.taskDefinition == null ? Codegen.empty() : this.taskDefinition;
     }
 
@@ -309,7 +309,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="waitForSteadyState")
       private final @Nullable Output<Boolean> waitForSteadyState;
 
-    public Output<Boolean> getWaitForSteadyState() {
+    public Output<Boolean> waitForSteadyState() {
         return this.waitForSteadyState == null ? Codegen.empty() : this.waitForSteadyState;
     }
 

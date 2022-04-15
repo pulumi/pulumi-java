@@ -28,16 +28,16 @@ public final class GetLoadBalancerAccessLogs {
         this.interval = interval;
     }
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
-    public String getBucketPrefix() {
+    public String bucketPrefix() {
         return this.bucketPrefix;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public Integer getInterval() {
+    public Integer interval() {
         return this.interval;
     }
 

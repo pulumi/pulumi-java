@@ -31,16 +31,16 @@ public final class SelectionCondition {
         this.stringNotLikes = stringNotLikes;
     }
 
-    public List<SelectionConditionStringEqual> getStringEquals() {
+    public List<SelectionConditionStringEqual> stringEquals() {
         return this.stringEquals == null ? List.of() : this.stringEquals;
     }
-    public List<SelectionConditionStringLike> getStringLikes() {
+    public List<SelectionConditionStringLike> stringLikes() {
         return this.stringLikes == null ? List.of() : this.stringLikes;
     }
-    public List<SelectionConditionStringNotEqual> getStringNotEquals() {
+    public List<SelectionConditionStringNotEqual> stringNotEquals() {
         return this.stringNotEquals == null ? List.of() : this.stringNotEquals;
     }
-    public List<SelectionConditionStringNotLike> getStringNotLikes() {
+    public List<SelectionConditionStringNotLike> stringNotLikes() {
         return this.stringNotLikes == null ? List.of() : this.stringNotLikes;
     }
 

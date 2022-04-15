@@ -24,7 +24,7 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     @Import(name="launchTemplateSpecification", required=true)
       private final Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
-    public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
+    public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
 
@@ -35,7 +35,7 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
     @Import(name="overrides")
       private final @Nullable Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
 
-    public Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
+    public Output<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides() {
         return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 

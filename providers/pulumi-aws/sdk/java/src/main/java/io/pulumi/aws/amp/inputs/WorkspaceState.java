@@ -22,7 +22,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="alias")
       private final @Nullable Output<String> alias;
 
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias == null ? Codegen.empty() : this.alias;
     }
 
@@ -33,7 +33,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -44,7 +44,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="prometheusEndpoint")
       private final @Nullable Output<String> prometheusEndpoint;
 
-    public Output<String> getPrometheusEndpoint() {
+    public Output<String> prometheusEndpoint() {
         return this.prometheusEndpoint == null ? Codegen.empty() : this.prometheusEndpoint;
     }
 

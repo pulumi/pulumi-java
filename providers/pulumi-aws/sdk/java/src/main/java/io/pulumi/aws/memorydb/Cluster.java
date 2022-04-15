@@ -48,7 +48,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the Access Control List to associate with the cluster.
      * 
      */
-    public Output<String> getAclName() {
+    public Output<String> aclName() {
         return this.aclName;
     }
     /**
@@ -64,7 +64,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * * `cluster_endpoint`
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -78,19 +78,19 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return When set to `true`, the cluster will automatically receive minor engine version upgrades after launch. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoMinorVersionUpgrade() {
+    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade;
     }
     @Export(name="clusterEndpoints", type=List.class, parameters={ClusterClusterEndpoint.class})
     private Output<List<ClusterClusterEndpoint>> clusterEndpoints;
 
-    public Output<List<ClusterClusterEndpoint>> getClusterEndpoints() {
+    public Output<List<ClusterClusterEndpoint>> clusterEndpoints() {
         return this.clusterEndpoints;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +104,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Patch version number of the Redis engine used by the cluster.
      * 
      */
-    public Output<String> getEnginePatchVersion() {
+    public Output<String> enginePatchVersion() {
         return this.enginePatchVersion;
     }
     /**
@@ -118,7 +118,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Version number of the Redis engine to be used for the cluster. Downgrades are not supported.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -132,7 +132,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Name of the final cluster snapshot to be created when this resource is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> getFinalSnapshotName() {
+    public Output</* @Nullable */ String> finalSnapshotName() {
         return this.finalSnapshotName;
     }
     /**
@@ -146,7 +146,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return ARN of the KMS key used to encrypt the cluster at rest.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyArn() {
+    public Output</* @Nullable */ String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -160,7 +160,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:23:00-mon:01:30`.
      * 
      */
-    public Output<String> getMaintenanceWindow() {
+    public Output<String> maintenanceWindow() {
         return this.maintenanceWindow;
     }
     /**
@@ -176,7 +176,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * * `endpoint`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +190,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -204,7 +204,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The compute and memory capacity of the nodes in the cluster. See AWS documentation on [supported node types](https://docs.aws.amazon.com/memorydb/latest/devguide/nodes.supportedtypes.html) as well as [vertical scaling](https://docs.aws.amazon.com/memorydb/latest/devguide/cluster-vertical-scaling.html).
      * 
      */
-    public Output<String> getNodeType() {
+    public Output<String> nodeType() {
         return this.nodeType;
     }
     /**
@@ -218,7 +218,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The number of replicas to apply to each shard, up to a maximum of 5. Defaults to `1` (i.e. 2 nodes per shard).
      * 
      */
-    public Output</* @Nullable */ Integer> getNumReplicasPerShard() {
+    public Output</* @Nullable */ Integer> numReplicasPerShard() {
         return this.numReplicasPerShard;
     }
     /**
@@ -232,7 +232,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The number of shards in the cluster. Defaults to `1`.
      * 
      */
-    public Output</* @Nullable */ Integer> getNumShards() {
+    public Output</* @Nullable */ Integer> numShards() {
         return this.numShards;
     }
     /**
@@ -246,7 +246,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter group associated with the cluster.
      * 
      */
-    public Output<String> getParameterGroupName() {
+    public Output<String> parameterGroupName() {
         return this.parameterGroupName;
     }
     /**
@@ -260,7 +260,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The port number on which each of the nodes accepts connections. Defaults to `6379`.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -274,7 +274,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Set of VPC Security Group ID-s to associate with this cluster.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
     /**
@@ -288,7 +288,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Set of shards in this cluster.
      * 
      */
-    public Output<List<ClusterShard>> getShards() {
+    public Output<List<ClusterShard>> shards() {
         return this.shards;
     }
     /**
@@ -302,7 +302,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return List of ARN-s that uniquely identify RDB snapshot files stored in S3. The snapshot files will be used to populate the new cluster. Object names in the ARN-s cannot contain any commas.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotArns() {
+    public Output</* @Nullable */ String> snapshotArns() {
         return this.snapshotArns;
     }
     /**
@@ -316,7 +316,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of a snapshot from which to restore data into the new cluster.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotName() {
+    public Output</* @Nullable */ String> snapshotName() {
         return this.snapshotName;
     }
     /**
@@ -330,7 +330,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The number of days for which MemoryDB retains automatic snapshots before deleting them. When set to `0`, automatic backups are disabled. Defaults to `0`.
      * 
      */
-    public Output<Integer> getSnapshotRetentionLimit() {
+    public Output<Integer> snapshotRetentionLimit() {
         return this.snapshotRetentionLimit;
     }
     /**
@@ -344,7 +344,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your shard. Example: `05:00-09:00`.
      * 
      */
-    public Output<String> getSnapshotWindow() {
+    public Output<String> snapshotWindow() {
         return this.snapshotWindow;
     }
     /**
@@ -358,7 +358,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return ARN of the SNS topic to which cluster notifications are sent.
      * 
      */
-    public Output</* @Nullable */ String> getSnsTopicArn() {
+    public Output</* @Nullable */ String> snsTopicArn() {
         return this.snsTopicArn;
     }
     /**
@@ -372,7 +372,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the subnet group to be used for the cluster. Defaults to a subnet group consisting of default VPC subnets.
      * 
      */
-    public Output<String> getSubnetGroupName() {
+    public Output<String> subnetGroupName() {
         return this.subnetGroupName;
     }
     /**
@@ -386,7 +386,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -400,7 +400,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -414,7 +414,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A flag to enable in-transit encryption on the cluster. When set to `false`, the `acl_name` must be `open-access`. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTlsEnabled() {
+    public Output</* @Nullable */ Boolean> tlsEnabled() {
         return this.tlsEnabled;
     }
 

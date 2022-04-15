@@ -23,7 +23,7 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     @Import(name="autoExportPolicy")
       private final @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy;
 
-    public Output<DataRepositoryAssociationS3AutoExportPolicyArgs> getAutoExportPolicy() {
+    public Output<DataRepositoryAssociationS3AutoExportPolicyArgs> autoExportPolicy() {
         return this.autoExportPolicy == null ? Codegen.empty() : this.autoExportPolicy;
     }
 
@@ -34,7 +34,7 @@ public final class DataRepositoryAssociationS3Args extends io.pulumi.resources.R
     @Import(name="autoImportPolicy")
       private final @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy;
 
-    public Output<DataRepositoryAssociationS3AutoImportPolicyArgs> getAutoImportPolicy() {
+    public Output<DataRepositoryAssociationS3AutoImportPolicyArgs> autoImportPolicy() {
         return this.autoImportPolicy == null ? Codegen.empty() : this.autoImportPolicy;
     }
 

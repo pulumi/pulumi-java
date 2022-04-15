@@ -23,7 +23,7 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
     @Import(name="mappings", required=true)
       private final Output<Map<String,String>> mappings;
 
-    public Output<Map<String,String>> getMappings() {
+    public Output<Map<String,String>> mappings() {
         return this.mappings;
     }
 
@@ -34,7 +34,7 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 

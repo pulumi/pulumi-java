@@ -22,7 +22,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -33,7 +33,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encodedKey", required=true)
       private final Output<String> encodedKey;
 
-    public Output<String> getEncodedKey() {
+    public Output<String> encodedKey() {
         return this.encodedKey;
     }
 
@@ -44,7 +44,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 

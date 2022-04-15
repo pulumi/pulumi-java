@@ -26,7 +26,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> getCreateVersion() {
+    public Output<Boolean> createVersion() {
         return this.createVersion == null ? Codegen.empty() : this.createVersion;
     }
 
@@ -37,7 +37,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enumerationValues", required=true)
       private final Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
 
-    public Output<List<SlotTypeEnumerationValueArgs>> getEnumerationValues() {
+    public Output<List<SlotTypeEnumerationValueArgs>> enumerationValues() {
         return this.enumerationValues;
     }
 
@@ -62,7 +62,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="valueSelectionStrategy")
       private final @Nullable Output<String> valueSelectionStrategy;
 
-    public Output<String> getValueSelectionStrategy() {
+    public Output<String> valueSelectionStrategy() {
         return this.valueSelectionStrategy == null ? Codegen.empty() : this.valueSelectionStrategy;
     }
 

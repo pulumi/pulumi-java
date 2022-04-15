@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="caseInsensitive")
       private final @Nullable Output<Boolean> caseInsensitive;
 
-    public Output<Boolean> getCaseInsensitive() {
+    public Output<Boolean> caseInsensitive() {
         return this.caseInsensitive == null ? Codegen.empty() : this.caseInsensitive;
     }
 
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="columnToJsonKeyMappings")
       private final @Nullable Output<Map<String,String>> columnToJsonKeyMappings;
 
-    public Output<Map<String,String>> getColumnToJsonKeyMappings() {
+    public Output<Map<String,String>> columnToJsonKeyMappings() {
         return this.columnToJsonKeyMappings == null ? Codegen.empty() : this.columnToJsonKeyMappings;
     }
 
@@ -46,7 +46,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     @Import(name="convertDotsInJsonKeysToUnderscores")
       private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
-    public Output<Boolean> getConvertDotsInJsonKeysToUnderscores() {
+    public Output<Boolean> convertDotsInJsonKeysToUnderscores() {
         return this.convertDotsInJsonKeysToUnderscores == null ? Codegen.empty() : this.convertDotsInJsonKeysToUnderscores;
     }
 

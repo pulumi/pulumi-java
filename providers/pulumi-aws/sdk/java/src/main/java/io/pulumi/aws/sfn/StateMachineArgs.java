@@ -25,7 +25,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
 
@@ -36,7 +36,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
       private final @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<StateMachineLoggingConfigurationArgs> getLoggingConfiguration() {
+    public Output<StateMachineLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
@@ -47,7 +47,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -69,7 +69,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -80,7 +80,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracingConfiguration")
       private final @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
-    public Output<StateMachineTracingConfigurationArgs> getTracingConfiguration() {
+    public Output<StateMachineTracingConfigurationArgs> tracingConfiguration() {
         return this.tracingConfiguration == null ? Codegen.empty() : this.tracingConfiguration;
     }
 
@@ -91,7 +91,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

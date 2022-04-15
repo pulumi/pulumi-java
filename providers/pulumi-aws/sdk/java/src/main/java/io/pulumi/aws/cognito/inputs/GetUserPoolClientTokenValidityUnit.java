@@ -19,7 +19,7 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
     @Import(name="accessToken", required=true)
       private final String accessToken;
 
-    public String getAccessToken() {
+    public String accessToken() {
         return this.accessToken;
     }
 
@@ -30,7 +30,7 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
     @Import(name="idToken", required=true)
       private final String idToken;
 
-    public String getIdToken() {
+    public String idToken() {
         return this.idToken;
     }
 
@@ -41,7 +41,7 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
     @Import(name="refreshToken", required=true)
       private final String refreshToken;
 
-    public String getRefreshToken() {
+    public String refreshToken() {
         return this.refreshToken;
     }
 

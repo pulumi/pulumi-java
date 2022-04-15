@@ -25,7 +25,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -36,7 +36,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate == null ? Codegen.empty() : this.creationDate;
     }
 
@@ -47,7 +47,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition")
       private final @Nullable Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition == null ? Codegen.empty() : this.definition;
     }
 
@@ -58,7 +58,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
       private final @Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<StateMachineLoggingConfigurationGetArgs> getLoggingConfiguration() {
+    public Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration() {
         return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
@@ -69,7 +69,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
@@ -91,7 +91,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -102,7 +102,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -113,7 +113,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -124,7 +124,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracingConfiguration")
       private final @Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
 
-    public Output<StateMachineTracingConfigurationGetArgs> getTracingConfiguration() {
+    public Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration() {
         return this.tracingConfiguration == null ? Codegen.empty() : this.tracingConfiguration;
     }
 
@@ -135,7 +135,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

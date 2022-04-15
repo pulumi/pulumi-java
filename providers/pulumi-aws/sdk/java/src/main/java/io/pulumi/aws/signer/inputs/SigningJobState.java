@@ -28,7 +28,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="completedAt")
       private final @Nullable Output<String> completedAt;
 
-    public Output<String> getCompletedAt() {
+    public Output<String> completedAt() {
         return this.completedAt == null ? Codegen.empty() : this.completedAt;
     }
 
@@ -39,7 +39,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
@@ -50,7 +50,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination")
       private final @Nullable Output<SigningJobDestinationGetArgs> destination;
 
-    public Output<SigningJobDestinationGetArgs> getDestination() {
+    public Output<SigningJobDestinationGetArgs> destination() {
         return this.destination == null ? Codegen.empty() : this.destination;
     }
 
@@ -61,7 +61,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreSigningJobFailure")
       private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
-    public Output<Boolean> getIgnoreSigningJobFailure() {
+    public Output<Boolean> ignoreSigningJobFailure() {
         return this.ignoreSigningJobFailure == null ? Codegen.empty() : this.ignoreSigningJobFailure;
     }
 
@@ -72,7 +72,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
@@ -83,7 +83,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobInvoker")
       private final @Nullable Output<String> jobInvoker;
 
-    public Output<String> getJobInvoker() {
+    public Output<String> jobInvoker() {
         return this.jobInvoker == null ? Codegen.empty() : this.jobInvoker;
     }
 
@@ -94,7 +94,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobOwner")
       private final @Nullable Output<String> jobOwner;
 
-    public Output<String> getJobOwner() {
+    public Output<String> jobOwner() {
         return this.jobOwner == null ? Codegen.empty() : this.jobOwner;
     }
 
@@ -105,7 +105,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformDisplayName")
       private final @Nullable Output<String> platformDisplayName;
 
-    public Output<String> getPlatformDisplayName() {
+    public Output<String> platformDisplayName() {
         return this.platformDisplayName == null ? Codegen.empty() : this.platformDisplayName;
     }
 
@@ -116,7 +116,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformId")
       private final @Nullable Output<String> platformId;
 
-    public Output<String> getPlatformId() {
+    public Output<String> platformId() {
         return this.platformId == null ? Codegen.empty() : this.platformId;
     }
 
@@ -127,7 +127,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
@@ -138,7 +138,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileVersion")
       private final @Nullable Output<String> profileVersion;
 
-    public Output<String> getProfileVersion() {
+    public Output<String> profileVersion() {
         return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
     }
 
@@ -149,7 +149,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestedBy")
       private final @Nullable Output<String> requestedBy;
 
-    public Output<String> getRequestedBy() {
+    public Output<String> requestedBy() {
         return this.requestedBy == null ? Codegen.empty() : this.requestedBy;
     }
 
@@ -160,7 +160,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="revocationRecords")
       private final @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
 
-    public Output<List<SigningJobRevocationRecordGetArgs>> getRevocationRecords() {
+    public Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords() {
         return this.revocationRecords == null ? Codegen.empty() : this.revocationRecords;
     }
 
@@ -171,7 +171,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="signatureExpiresAt")
       private final @Nullable Output<String> signatureExpiresAt;
 
-    public Output<String> getSignatureExpiresAt() {
+    public Output<String> signatureExpiresAt() {
         return this.signatureExpiresAt == null ? Codegen.empty() : this.signatureExpiresAt;
     }
 
@@ -182,7 +182,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="signedObjects")
       private final @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
 
-    public Output<List<SigningJobSignedObjectGetArgs>> getSignedObjects() {
+    public Output<List<SigningJobSignedObjectGetArgs>> signedObjects() {
         return this.signedObjects == null ? Codegen.empty() : this.signedObjects;
     }
 
@@ -193,7 +193,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<SigningJobSourceGetArgs> source;
 
-    public Output<SigningJobSourceGetArgs> getSource() {
+    public Output<SigningJobSourceGetArgs> source() {
         return this.source == null ? Codegen.empty() : this.source;
     }
 
@@ -204,7 +204,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -215,7 +215,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     @Import(name="statusReason")
       private final @Nullable Output<String> statusReason;
 
-    public Output<String> getStatusReason() {
+    public Output<String> statusReason() {
         return this.statusReason == null ? Codegen.empty() : this.statusReason;
     }
 

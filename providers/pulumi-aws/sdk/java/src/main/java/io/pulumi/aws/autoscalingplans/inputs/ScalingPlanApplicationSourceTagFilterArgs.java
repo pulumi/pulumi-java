@@ -23,7 +23,7 @@ public final class ScalingPlanApplicationSourceTagFilterArgs extends io.pulumi.r
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -34,7 +34,7 @@ public final class ScalingPlanApplicationSourceTagFilterArgs extends io.pulumi.r
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values == null ? Codegen.empty() : this.values;
     }
 

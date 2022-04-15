@@ -26,7 +26,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGet
       private final Output<String> name;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

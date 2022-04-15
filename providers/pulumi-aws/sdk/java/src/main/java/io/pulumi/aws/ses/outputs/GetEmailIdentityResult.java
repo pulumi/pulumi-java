@@ -39,21 +39,21 @@ public final class GetEmailIdentityResult {
      * The ARN of the email identity.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The email identity.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

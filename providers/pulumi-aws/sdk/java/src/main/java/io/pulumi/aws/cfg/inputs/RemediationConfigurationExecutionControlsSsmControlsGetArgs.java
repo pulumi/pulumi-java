@@ -22,7 +22,7 @@ public final class RemediationConfigurationExecutionControlsSsmControlsGetArgs e
     @Import(name="concurrentExecutionRatePercentage")
       private final @Nullable Output<Integer> concurrentExecutionRatePercentage;
 
-    public Output<Integer> getConcurrentExecutionRatePercentage() {
+    public Output<Integer> concurrentExecutionRatePercentage() {
         return this.concurrentExecutionRatePercentage == null ? Codegen.empty() : this.concurrentExecutionRatePercentage;
     }
 
@@ -33,7 +33,7 @@ public final class RemediationConfigurationExecutionControlsSsmControlsGetArgs e
     @Import(name="errorPercentage")
       private final @Nullable Output<Integer> errorPercentage;
 
-    public Output<Integer> getErrorPercentage() {
+    public Output<Integer> errorPercentage() {
         return this.errorPercentage == null ? Codegen.empty() : this.errorPercentage;
     }
 

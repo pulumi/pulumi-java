@@ -22,7 +22,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -33,7 +33,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyManagementServiceArn", required=true)
       private final Output<String> keyManagementServiceArn;
 
-    public Output<String> getKeyManagementServiceArn() {
+    public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
 
@@ -44,7 +44,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -55,7 +55,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 

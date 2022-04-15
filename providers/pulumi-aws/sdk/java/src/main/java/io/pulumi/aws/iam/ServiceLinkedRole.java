@@ -41,7 +41,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the role.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +55,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
      * 
      */
-    public Output<String> getAwsServiceName() {
+    public Output<String> awsServiceName() {
         return this.awsServiceName;
     }
     /**
@@ -69,7 +69,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The creation date of the IAM role.
      * 
      */
-    public Output<String> getCreateDate() {
+    public Output<String> createDate() {
         return this.createDate;
     }
     /**
@@ -83,7 +83,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return Additional string appended to the role name. Not all AWS services support custom suffixes.
      * 
      */
-    public Output</* @Nullable */ String> getCustomSuffix() {
+    public Output</* @Nullable */ String> customSuffix() {
         return this.customSuffix;
     }
     /**
@@ -97,7 +97,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The description of the role.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -111,7 +111,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The name of the role.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +125,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The path of the role.
      * 
      */
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
     /**
@@ -139,7 +139,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of tags for the IAM role. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -153,7 +153,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -167,7 +167,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * @return The stable and unique string identifying the role.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 

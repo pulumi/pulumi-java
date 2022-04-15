@@ -35,14 +35,14 @@ public final class FeatureGroupOnlineStoreConfig {
      * Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
      * 
     */
-    public Optional<Boolean> getEnableOnlineStore() {
+    public Optional<Boolean> enableOnlineStore() {
         return Optional.ofNullable(this.enableOnlineStore);
     }
     /**
      * Security config for at-rest encryption of your OnlineStore. See Security Config Below.
      * 
     */
-    public Optional<FeatureGroupOnlineStoreConfigSecurityConfig> getSecurityConfig() {
+    public Optional<FeatureGroupOnlineStoreConfigSecurityConfig> securityConfig() {
         return Optional.ofNullable(this.securityConfig);
     }
 

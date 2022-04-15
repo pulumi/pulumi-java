@@ -22,7 +22,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="device", required=true)
       private final Output<DeviceDeviceArgs> device;
 
-    public Output<DeviceDeviceArgs> getDevice() {
+    public Output<DeviceDeviceArgs> device() {
         return this.device;
     }
 
@@ -33,7 +33,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
 

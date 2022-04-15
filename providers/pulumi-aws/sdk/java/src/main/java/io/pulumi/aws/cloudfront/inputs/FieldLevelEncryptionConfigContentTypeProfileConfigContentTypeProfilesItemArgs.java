@@ -22,7 +22,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
 
@@ -33,7 +33,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -44,7 +44,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     @Import(name="profileId")
       private final @Nullable Output<String> profileId;
 
-    public Output<String> getProfileId() {
+    public Output<String> profileId() {
         return this.profileId == null ? Codegen.empty() : this.profileId;
     }
 

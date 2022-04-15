@@ -43,24 +43,24 @@ public final class GetAccessPointsResult {
      * Set of Amazon Resource Names (ARNs).
      * 
     */
-    public List<String> getArns() {
+    public List<String> arns() {
         return this.arns;
     }
-    public String getFileSystemId() {
+    public String fileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Set of identifiers.
      * 
     */
-    public List<String> getIds() {
+    public List<String> ids() {
         return this.ids;
     }
 

@@ -22,7 +22,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -33,7 +33,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
@@ -44,7 +44,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 

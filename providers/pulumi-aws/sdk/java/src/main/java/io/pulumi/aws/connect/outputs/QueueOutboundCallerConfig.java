@@ -41,21 +41,21 @@ public final class QueueOutboundCallerConfig {
      * Specifies the caller ID name.
      * 
     */
-    public Optional<String> getOutboundCallerIdName() {
+    public Optional<String> outboundCallerIdName() {
         return Optional.ofNullable(this.outboundCallerIdName);
     }
     /**
      * Specifies the caller ID number.
      * 
     */
-    public Optional<String> getOutboundCallerIdNumberId() {
+    public Optional<String> outboundCallerIdNumberId() {
         return Optional.ofNullable(this.outboundCallerIdNumberId);
     }
     /**
      * Specifies outbound whisper flow to be used during an outbound call.
      * 
     */
-    public Optional<String> getOutboundFlowId() {
+    public Optional<String> outboundFlowId() {
         return Optional.ofNullable(this.outboundFlowId);
     }
 

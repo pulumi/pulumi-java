@@ -25,7 +25,7 @@ public final class GetImageOutputResource {
      * Set of objects with each Amazon Machine Image (AMI) created.
      * 
     */
-    public List<GetImageOutputResourceAmi> getAmis() {
+    public List<GetImageOutputResourceAmi> amis() {
         return this.amis;
     }
 

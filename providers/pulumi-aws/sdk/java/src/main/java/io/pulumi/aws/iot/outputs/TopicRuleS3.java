@@ -39,21 +39,21 @@ public final class TopicRuleS3 {
      * The Amazon S3 bucket name.
      * 
     */
-    public String getBucketName() {
+    public String bucketName() {
         return this.bucketName;
     }
     /**
      * The object key.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * The IAM role ARN that allows access to the CloudWatch alarm.
      * 
     */
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 

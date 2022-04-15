@@ -57,35 +57,35 @@ public final class ScheduledActionTargetActionResizeCluster {
      * A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
      * 
     */
-    public Optional<Boolean> getClassic() {
+    public Optional<Boolean> classic() {
         return Optional.ofNullable(this.classic);
     }
     /**
      * The identifier of the cluster to be resumed.
      * 
     */
-    public String getClusterIdentifier() {
+    public String clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
      * The new cluster type for the specified cluster.
      * 
     */
-    public Optional<String> getClusterType() {
+    public Optional<String> clusterType() {
         return Optional.ofNullable(this.clusterType);
     }
     /**
      * The new node type for the nodes you are adding.
      * 
     */
-    public Optional<String> getNodeType() {
+    public Optional<String> nodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
      * The new number of nodes for the cluster.
      * 
     */
-    public Optional<Integer> getNumberOfNodes() {
+    public Optional<Integer> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
 

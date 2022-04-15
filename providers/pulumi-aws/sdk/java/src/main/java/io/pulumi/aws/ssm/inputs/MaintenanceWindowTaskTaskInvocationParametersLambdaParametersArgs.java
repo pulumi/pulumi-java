@@ -22,7 +22,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     @Import(name="clientContext")
       private final @Nullable Output<String> clientContext;
 
-    public Output<String> getClientContext() {
+    public Output<String> clientContext() {
         return this.clientContext == null ? Codegen.empty() : this.clientContext;
     }
 
@@ -33,7 +33,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     @Import(name="payload")
       private final @Nullable Output<String> payload;
 
-    public Output<String> getPayload() {
+    public Output<String> payload() {
         return this.payload == null ? Codegen.empty() : this.payload;
     }
 
@@ -44,7 +44,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
+    public Output<String> qualifier() {
         return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 

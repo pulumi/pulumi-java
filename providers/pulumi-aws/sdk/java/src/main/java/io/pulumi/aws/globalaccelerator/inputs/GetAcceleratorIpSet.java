@@ -16,14 +16,14 @@ public final class GetAcceleratorIpSet extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
-    public List<String> getIpAddresses() {
+    public List<String> ipAddresses() {
         return this.ipAddresses;
     }
 
     @Import(name="ipFamily", required=true)
       private final String ipFamily;
 
-    public String getIpFamily() {
+    public String ipFamily() {
         return this.ipFamily;
     }
 

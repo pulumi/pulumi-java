@@ -22,7 +22,7 @@ public final class CodeSigningConfigAllowedPublishersArgs extends io.pulumi.reso
     @Import(name="signingProfileVersionArns", required=true)
       private final Output<List<String>> signingProfileVersionArns;
 
-    public Output<List<String>> getSigningProfileVersionArns() {
+    public Output<List<String>> signingProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 

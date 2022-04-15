@@ -24,7 +24,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -35,7 +35,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     @Import(name="stage", required=true)
       private final Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -46,7 +46,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     @Import(name="throttles")
       private final @Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles;
 
-    public Output<List<UsagePlanApiStageThrottleGetArgs>> getThrottles() {
+    public Output<List<UsagePlanApiStageThrottleGetArgs>> throttles() {
         return this.throttles == null ? Codegen.empty() : this.throttles;
     }
 

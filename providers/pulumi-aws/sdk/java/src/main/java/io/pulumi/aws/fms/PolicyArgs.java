@@ -28,7 +28,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteAllPolicyResources")
       private final @Nullable Output<Boolean> deleteAllPolicyResources;
 
-    public Output<Boolean> getDeleteAllPolicyResources() {
+    public Output<Boolean> deleteAllPolicyResources() {
         return this.deleteAllPolicyResources == null ? Codegen.empty() : this.deleteAllPolicyResources;
     }
 
@@ -39,7 +39,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludeMap")
       private final @Nullable Output<PolicyExcludeMapArgs> excludeMap;
 
-    public Output<PolicyExcludeMapArgs> getExcludeMap() {
+    public Output<PolicyExcludeMapArgs> excludeMap() {
         return this.excludeMap == null ? Codegen.empty() : this.excludeMap;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="excludeResourceTags", required=true)
       private final Output<Boolean> excludeResourceTags;
 
-    public Output<Boolean> getExcludeResourceTags() {
+    public Output<Boolean> excludeResourceTags() {
         return this.excludeResourceTags;
     }
 
@@ -61,7 +61,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="includeMap")
       private final @Nullable Output<PolicyIncludeMapArgs> includeMap;
 
-    public Output<PolicyIncludeMapArgs> getIncludeMap() {
+    public Output<PolicyIncludeMapArgs> includeMap() {
         return this.includeMap == null ? Codegen.empty() : this.includeMap;
     }
 
@@ -72,7 +72,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -83,7 +83,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="remediationEnabled")
       private final @Nullable Output<Boolean> remediationEnabled;
 
-    public Output<Boolean> getRemediationEnabled() {
+    public Output<Boolean> remediationEnabled() {
         return this.remediationEnabled == null ? Codegen.empty() : this.remediationEnabled;
     }
 
@@ -94,7 +94,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceTags")
       private final @Nullable Output<Map<String,String>> resourceTags;
 
-    public Output<Map<String,String>> getResourceTags() {
+    public Output<Map<String,String>> resourceTags() {
         return this.resourceTags == null ? Codegen.empty() : this.resourceTags;
     }
 
@@ -105,7 +105,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
@@ -116,7 +116,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceTypeLists")
       private final @Nullable Output<List<String>> resourceTypeLists;
 
-    public Output<List<String>> getResourceTypeLists() {
+    public Output<List<String>> resourceTypeLists() {
         return this.resourceTypeLists == null ? Codegen.empty() : this.resourceTypeLists;
     }
 
@@ -127,7 +127,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityServicePolicyData", required=true)
       private final Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
 
-    public Output<PolicySecurityServicePolicyDataArgs> getSecurityServicePolicyData() {
+    public Output<PolicySecurityServicePolicyDataArgs> securityServicePolicyData() {
         return this.securityServicePolicyData;
     }
 

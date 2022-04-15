@@ -45,28 +45,28 @@ public final class GetListenerDefaultAction {
         this.type = type;
     }
 
-    public List<GetListenerDefaultActionAuthenticateCognito> getAuthenticateCognitos() {
+    public List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos() {
         return this.authenticateCognitos;
     }
-    public List<GetListenerDefaultActionAuthenticateOidc> getAuthenticateOidcs() {
+    public List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs() {
         return this.authenticateOidcs;
     }
-    public List<GetListenerDefaultActionFixedResponse> getFixedResponses() {
+    public List<GetListenerDefaultActionFixedResponse> fixedResponses() {
         return this.fixedResponses;
     }
-    public List<GetListenerDefaultActionForward> getForwards() {
+    public List<GetListenerDefaultActionForward> forwards() {
         return this.forwards;
     }
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
-    public List<GetListenerDefaultActionRedirect> getRedirects() {
+    public List<GetListenerDefaultActionRedirect> redirects() {
         return this.redirects;
     }
-    public String getTargetGroupArn() {
+    public String targetGroupArn() {
         return this.targetGroupArn;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

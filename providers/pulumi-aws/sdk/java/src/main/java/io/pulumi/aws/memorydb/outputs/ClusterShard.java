@@ -53,28 +53,28 @@ public final class ClusterShard {
      * * `endpoint`
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Set of nodes in this shard.
      * 
     */
-    public List<ClusterShardNode> getNodes() {
+    public List<ClusterShardNode> nodes() {
         return this.nodes == null ? List.of() : this.nodes;
     }
     /**
      * Number of individual nodes in this shard.
      * 
     */
-    public Optional<Integer> getNumNodes() {
+    public Optional<Integer> numNodes() {
         return Optional.ofNullable(this.numNodes);
     }
     /**
      * Keyspace for this shard. Example: `0-16383`.
      * 
     */
-    public Optional<String> getSlots() {
+    public Optional<String> slots() {
         return Optional.ofNullable(this.slots);
     }
 

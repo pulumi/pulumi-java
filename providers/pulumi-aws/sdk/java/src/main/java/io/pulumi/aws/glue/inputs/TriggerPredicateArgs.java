@@ -24,7 +24,7 @@ public final class TriggerPredicateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditions", required=true)
       private final Output<List<TriggerPredicateConditionArgs>> conditions;
 
-    public Output<List<TriggerPredicateConditionArgs>> getConditions() {
+    public Output<List<TriggerPredicateConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -35,7 +35,7 @@ public final class TriggerPredicateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="logical")
       private final @Nullable Output<String> logical;
 
-    public Output<String> getLogical() {
+    public Output<String> logical() {
         return this.logical == null ? Codegen.empty() : this.logical;
     }
 

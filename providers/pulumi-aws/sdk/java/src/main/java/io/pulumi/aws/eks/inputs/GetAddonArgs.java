@@ -23,7 +23,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="addonName", required=true)
       private final String addonName;
 
-    public String getAddonName() {
+    public String addonName() {
         return this.addonName;
     }
 
@@ -34,14 +34,14 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
     @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

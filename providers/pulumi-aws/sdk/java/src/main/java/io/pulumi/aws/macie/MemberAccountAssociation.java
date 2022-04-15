@@ -36,7 +36,7 @@ public class MemberAccountAssociation extends io.pulumi.resources.CustomResource
      * @return The ID of the AWS account that you want to associate with Amazon Macie as a member account.
      * 
      */
-    public Output<String> getMemberAccountId() {
+    public Output<String> memberAccountId() {
         return this.memberAccountId;
     }
 

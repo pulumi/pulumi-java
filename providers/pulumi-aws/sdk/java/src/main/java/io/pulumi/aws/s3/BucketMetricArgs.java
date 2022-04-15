@@ -23,7 +23,7 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,7 +34,7 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<BucketMetricFilterArgs> filter;
 
-    public Output<BucketMetricFilterArgs> getFilter() {
+    public Output<BucketMetricFilterArgs> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -45,7 +45,7 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

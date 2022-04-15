@@ -16,14 +16,14 @@ public final class GetSlotTypeEnumerationValue extends io.pulumi.resources.Invok
     @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

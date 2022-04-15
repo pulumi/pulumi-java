@@ -42,7 +42,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -56,7 +56,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the AppConfig Deployment.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +70,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The configuration profile ID. Must be between 4 and 7 characters in length.
      * 
      */
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId;
     }
     /**
@@ -84,7 +84,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The configuration version to deploy. Can be at most 1024 characters.
      * 
      */
-    public Output<String> getConfigurationVersion() {
+    public Output<String> configurationVersion() {
         return this.configurationVersion;
     }
     /**
@@ -98,7 +98,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The deployment number.
      * 
      */
-    public Output<Integer> getDeploymentNumber() {
+    public Output<Integer> deploymentNumber() {
         return this.deploymentNumber;
     }
     /**
@@ -112,7 +112,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
      * 
      */
-    public Output<String> getDeploymentStrategyId() {
+    public Output<String> deploymentStrategyId() {
         return this.deploymentStrategyId;
     }
     /**
@@ -126,7 +126,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The description of the deployment. Can be at most 1024 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -140,7 +140,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The environment ID. Must be between 4 and 7 characters in length.
      * 
      */
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -154,7 +154,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The state of the deployment.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -168,7 +168,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -182,7 +182,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 

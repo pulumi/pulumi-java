@@ -29,7 +29,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audio")
       private final @Nullable Output<PresetAudioArgs> audio;
 
-    public Output<PresetAudioArgs> getAudio() {
+    public Output<PresetAudioArgs> audio() {
         return this.audio == null ? Codegen.empty() : this.audio;
     }
 
@@ -40,7 +40,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audioCodecOptions")
       private final @Nullable Output<PresetAudioCodecOptionsArgs> audioCodecOptions;
 
-    public Output<PresetAudioCodecOptionsArgs> getAudioCodecOptions() {
+    public Output<PresetAudioCodecOptionsArgs> audioCodecOptions() {
         return this.audioCodecOptions == null ? Codegen.empty() : this.audioCodecOptions;
     }
 
@@ -51,7 +51,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -62,7 +62,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -73,7 +73,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -84,14 +84,14 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thumbnails")
       private final @Nullable Output<PresetThumbnailsArgs> thumbnails;
 
-    public Output<PresetThumbnailsArgs> getThumbnails() {
+    public Output<PresetThumbnailsArgs> thumbnails() {
         return this.thumbnails == null ? Codegen.empty() : this.thumbnails;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -102,7 +102,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="video")
       private final @Nullable Output<PresetVideoArgs> video;
 
-    public Output<PresetVideoArgs> getVideo() {
+    public Output<PresetVideoArgs> video() {
         return this.video == null ? Codegen.empty() : this.video;
     }
 
@@ -113,7 +113,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="videoCodecOptions")
       private final @Nullable Output<Map<String,String>> videoCodecOptions;
 
-    public Output<Map<String,String>> getVideoCodecOptions() {
+    public Output<Map<String,String>> videoCodecOptions() {
         return this.videoCodecOptions == null ? Codegen.empty() : this.videoCodecOptions;
     }
 
@@ -124,7 +124,7 @@ public final class PresetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="videoWatermarks")
       private final @Nullable Output<List<PresetVideoWatermarkArgs>> videoWatermarks;
 
-    public Output<List<PresetVideoWatermarkArgs>> getVideoWatermarks() {
+    public Output<List<PresetVideoWatermarkArgs>> videoWatermarks() {
         return this.videoWatermarks == null ? Codegen.empty() : this.videoWatermarks;
     }
 

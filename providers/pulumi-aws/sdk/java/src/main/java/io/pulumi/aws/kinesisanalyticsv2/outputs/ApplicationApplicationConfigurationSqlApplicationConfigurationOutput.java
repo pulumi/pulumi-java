@@ -62,38 +62,38 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the data format when records are written to the destination.
      * 
     */
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema getDestinationSchema() {
+    public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema() {
         return this.destinationSchema;
     }
     /**
      * Identifies a Kinesis Data Firehose delivery stream as the destination.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput> getKinesisFirehoseOutput() {
+    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput> kinesisFirehoseOutput() {
         return Optional.ofNullable(this.kinesisFirehoseOutput);
     }
     /**
      * Identifies a Kinesis data stream as the destination.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput> getKinesisStreamsOutput() {
+    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput> kinesisStreamsOutput() {
         return Optional.ofNullable(this.kinesisStreamsOutput);
     }
     /**
      * Identifies a Lambda function as the destination.
      * 
     */
-    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput> getLambdaOutput() {
+    public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput> lambdaOutput() {
         return Optional.ofNullable(this.lambdaOutput);
     }
     /**
      * The name of the in-application stream.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getOutputId() {
+    public Optional<String> outputId() {
         return Optional.ofNullable(this.outputId);
     }
 

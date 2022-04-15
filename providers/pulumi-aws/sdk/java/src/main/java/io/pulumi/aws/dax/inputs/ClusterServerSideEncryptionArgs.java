@@ -22,7 +22,7 @@ public final class ClusterServerSideEncryptionArgs extends io.pulumi.resources.R
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 

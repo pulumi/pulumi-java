@@ -23,7 +23,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -45,7 +45,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="validateRequestBody")
       private final @Nullable Output<Boolean> validateRequestBody;
 
-    public Output<Boolean> getValidateRequestBody() {
+    public Output<Boolean> validateRequestBody() {
         return this.validateRequestBody == null ? Codegen.empty() : this.validateRequestBody;
     }
 
@@ -56,7 +56,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="validateRequestParameters")
       private final @Nullable Output<Boolean> validateRequestParameters;
 
-    public Output<Boolean> getValidateRequestParameters() {
+    public Output<Boolean> validateRequestParameters() {
         return this.validateRequestParameters == null ? Codegen.empty() : this.validateRequestParameters;
     }
 

@@ -49,21 +49,21 @@ public final class SecurityGroupIngress {
      * The CIDR block to accept
      * 
     */
-    public Optional<String> getCidr() {
+    public Optional<String> cidr() {
         return Optional.ofNullable(this.cidr);
     }
     /**
      * The ID of the security group to authorize
      * 
     */
-    public Optional<String> getSecurityGroupId() {
+    public Optional<String> securityGroupId() {
         return Optional.ofNullable(this.securityGroupId);
     }
     /**
      * The name of the security group to authorize
      * 
     */
-    public Optional<String> getSecurityGroupName() {
+    public Optional<String> securityGroupName() {
         return Optional.ofNullable(this.securityGroupName);
     }
     /**
@@ -71,7 +71,7 @@ public final class SecurityGroupIngress {
      * by `security_group_name`.
      * 
     */
-    public Optional<String> getSecurityGroupOwnerId() {
+    public Optional<String> securityGroupOwnerId() {
         return Optional.ofNullable(this.securityGroupOwnerId);
     }
 

@@ -21,7 +21,7 @@ public final class DataSourceParametersServiceNowArgs extends io.pulumi.resource
     @Import(name="siteBaseUrl", required=true)
       private final Output<String> siteBaseUrl;
 
-    public Output<String> getSiteBaseUrl() {
+    public Output<String> siteBaseUrl() {
         return this.siteBaseUrl;
     }
 

@@ -25,7 +25,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -36,7 +36,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -48,7 +48,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolverEndpointId")
       private final @Nullable Output<String> resolverEndpointId;
 
-    public Output<String> getResolverEndpointId() {
+    public Output<String> resolverEndpointId() {
         return this.resolverEndpointId == null ? Codegen.empty() : this.resolverEndpointId;
     }
 
@@ -59,7 +59,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -70,7 +70,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -82,7 +82,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetIps")
       private final @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps;
 
-    public Output<List<ResolverRuleTargetIpArgs>> getTargetIps() {
+    public Output<List<ResolverRuleTargetIpArgs>> targetIps() {
         return this.targetIps == null ? Codegen.empty() : this.targetIps;
     }
 

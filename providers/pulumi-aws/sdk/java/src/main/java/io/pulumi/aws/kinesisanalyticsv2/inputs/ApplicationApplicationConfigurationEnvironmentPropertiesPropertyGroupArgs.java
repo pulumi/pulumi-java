@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     @Import(name="propertyGroupId", required=true)
       private final Output<String> propertyGroupId;
 
-    public Output<String> getPropertyGroupId() {
+    public Output<String> propertyGroupId() {
         return this.propertyGroupId;
     }
 
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     @Import(name="propertyMap", required=true)
       private final Output<Map<String,String>> propertyMap;
 
-    public Output<Map<String,String>> getPropertyMap() {
+    public Output<Map<String,String>> propertyMap() {
         return this.propertyMap;
     }
 

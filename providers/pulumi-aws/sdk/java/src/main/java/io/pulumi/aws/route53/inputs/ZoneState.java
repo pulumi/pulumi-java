@@ -26,7 +26,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -37,7 +37,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
+    public Output<String> comment() {
         return this.comment == null ? Codegen.empty() : this.comment;
     }
 
@@ -48,7 +48,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="delegationSetId")
       private final @Nullable Output<String> delegationSetId;
 
-    public Output<String> getDelegationSetId() {
+    public Output<String> delegationSetId() {
         return this.delegationSetId == null ? Codegen.empty() : this.delegationSetId;
     }
 
@@ -59,7 +59,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
+    public Output<Boolean> forceDestroy() {
         return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
@@ -70,7 +70,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -82,7 +82,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameServers")
       private final @Nullable Output<List<String>> nameServers;
 
-    public Output<List<String>> getNameServers() {
+    public Output<List<String>> nameServers() {
         return this.nameServers == null ? Codegen.empty() : this.nameServers;
     }
 
@@ -93,7 +93,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -104,7 +104,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -115,7 +115,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcs")
       private final @Nullable Output<List<ZoneVpcGetArgs>> vpcs;
 
-    public Output<List<ZoneVpcGetArgs>> getVpcs() {
+    public Output<List<ZoneVpcGetArgs>> vpcs() {
         return this.vpcs == null ? Codegen.empty() : this.vpcs;
     }
 
@@ -126,7 +126,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId == null ? Codegen.empty() : this.zoneId;
     }
 

@@ -49,37 +49,37 @@ public final class GetBrokerLdapServerMetadata {
         this.userSearchSubtree = userSearchSubtree;
     }
 
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
-    public String getRoleBase() {
+    public String roleBase() {
         return this.roleBase;
     }
-    public String getRoleName() {
+    public String roleName() {
         return this.roleName;
     }
-    public String getRoleSearchMatching() {
+    public String roleSearchMatching() {
         return this.roleSearchMatching;
     }
-    public Boolean getRoleSearchSubtree() {
+    public Boolean roleSearchSubtree() {
         return this.roleSearchSubtree;
     }
-    public String getServiceAccountPassword() {
+    public String serviceAccountPassword() {
         return this.serviceAccountPassword;
     }
-    public String getServiceAccountUsername() {
+    public String serviceAccountUsername() {
         return this.serviceAccountUsername;
     }
-    public String getUserBase() {
+    public String userBase() {
         return this.userBase;
     }
-    public String getUserRoleName() {
+    public String userRoleName() {
         return this.userRoleName;
     }
-    public String getUserSearchMatching() {
+    public String userSearchMatching() {
         return this.userSearchMatching;
     }
-    public Boolean getUserSearchSubtree() {
+    public Boolean userSearchSubtree() {
         return this.userSearchSubtree;
     }
 

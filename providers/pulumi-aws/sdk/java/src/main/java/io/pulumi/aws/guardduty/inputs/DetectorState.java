@@ -25,7 +25,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
@@ -36,7 +36,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
@@ -47,7 +47,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasources")
       private final @Nullable Output<DetectorDatasourcesGetArgs> datasources;
 
-    public Output<DetectorDatasourcesGetArgs> getDatasources() {
+    public Output<DetectorDatasourcesGetArgs> datasources() {
         return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
@@ -58,7 +58,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable == null ? Codegen.empty() : this.enable;
     }
 
@@ -69,7 +69,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> getFindingPublishingFrequency() {
+    public Output<String> findingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
@@ -80,7 +80,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 

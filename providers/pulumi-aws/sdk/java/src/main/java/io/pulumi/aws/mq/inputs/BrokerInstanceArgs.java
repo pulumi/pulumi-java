@@ -19,21 +19,21 @@ public final class BrokerInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consoleUrl")
       private final @Nullable Output<String> consoleUrl;
 
-    public Output<String> getConsoleUrl() {
+    public Output<String> consoleUrl() {
         return this.consoleUrl == null ? Codegen.empty() : this.consoleUrl;
     }
 
     @Import(name="endpoints")
       private final @Nullable Output<List<String>> endpoints;
 
-    public Output<List<String>> getEndpoints() {
+    public Output<List<String>> endpoints() {
         return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 

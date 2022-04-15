@@ -22,7 +22,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
     @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
-    public Output<String> getEndpointId() {
+    public Output<String> endpointId() {
         return this.endpointId == null ? Codegen.empty() : this.endpointId;
     }
 
@@ -33,7 +33,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 

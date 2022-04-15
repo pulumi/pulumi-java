@@ -23,7 +23,7 @@ public final class AppImageConfigKernelGatewayImageConfigGetArgs extends io.pulu
     @Import(name="fileSystemConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> fileSystemConfig;
 
-    public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> getFileSystemConfig() {
+    public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> fileSystemConfig() {
         return this.fileSystemConfig == null ? Codegen.empty() : this.fileSystemConfig;
     }
 
@@ -34,7 +34,7 @@ public final class AppImageConfigKernelGatewayImageConfigGetArgs extends io.pulu
     @Import(name="kernelSpec", required=true)
       private final Output<AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs> kernelSpec;
 
-    public Output<AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs> getKernelSpec() {
+    public Output<AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs> kernelSpec() {
         return this.kernelSpec;
     }
 

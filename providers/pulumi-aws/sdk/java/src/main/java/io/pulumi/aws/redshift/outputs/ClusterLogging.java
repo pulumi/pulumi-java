@@ -44,21 +44,21 @@ public final class ClusterLogging {
      * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
      * 
     */
-    public Optional<String> getBucketName() {
+    public Optional<String> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
      * 
     */
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
     /**
      * The prefix applied to the log file names.
      * 
     */
-    public Optional<String> getS3KeyPrefix() {
+    public Optional<String> s3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
 

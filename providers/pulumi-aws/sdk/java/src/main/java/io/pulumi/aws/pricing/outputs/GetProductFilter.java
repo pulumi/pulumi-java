@@ -32,14 +32,14 @@ public final class GetProductFilter {
      * The product attribute name that you want to filter on.
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
      * The product attribute value that you want to filter on.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

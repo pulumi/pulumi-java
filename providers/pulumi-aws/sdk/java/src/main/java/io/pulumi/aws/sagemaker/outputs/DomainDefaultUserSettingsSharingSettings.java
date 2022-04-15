@@ -41,21 +41,21 @@ public final class DomainDefaultUserSettingsSharingSettings {
      * Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
      * 
     */
-    public Optional<String> getNotebookOutputOption() {
+    public Optional<String> notebookOutputOption() {
         return Optional.ofNullable(this.notebookOutputOption);
     }
     /**
      * When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
      * 
     */
-    public Optional<String> getS3KmsKeyId() {
+    public Optional<String> s3KmsKeyId() {
         return Optional.ofNullable(this.s3KmsKeyId);
     }
     /**
      * When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
      * 
     */
-    public Optional<String> getS3OutputPath() {
+    public Optional<String> s3OutputPath() {
         return Optional.ofNullable(this.s3OutputPath);
     }
 

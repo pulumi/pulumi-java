@@ -25,7 +25,7 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     @Import(name="field")
       private final @Nullable Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field == null ? Codegen.empty() : this.field;
     }
 
@@ -36,7 +36,7 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

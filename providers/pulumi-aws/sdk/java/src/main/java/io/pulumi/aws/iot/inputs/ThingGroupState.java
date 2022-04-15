@@ -27,14 +27,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="metadatas")
       private final @Nullable Output<List<ThingGroupMetadataGetArgs>> metadatas;
 
-    public Output<List<ThingGroupMetadataGetArgs>> getMetadatas() {
+    public Output<List<ThingGroupMetadataGetArgs>> metadatas() {
         return this.metadatas == null ? Codegen.empty() : this.metadatas;
     }
 
@@ -45,7 +45,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentGroupName")
       private final @Nullable Output<String> parentGroupName;
 
-    public Output<String> getParentGroupName() {
+    public Output<String> parentGroupName() {
         return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
     }
 
@@ -67,7 +67,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ThingGroupPropertiesGetArgs> properties;
 
-    public Output<ThingGroupPropertiesGetArgs> getProperties() {
+    public Output<ThingGroupPropertiesGetArgs> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 
@@ -78,14 +78,14 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
@@ -96,7 +96,7 @@ public final class ThingGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

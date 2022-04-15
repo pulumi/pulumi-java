@@ -46,28 +46,28 @@ public final class GetGroupUser {
      * The Amazon Resource Name (ARN) specifying the iam user.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * The path to the iam user.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
      * The stable and unique string identifying the iam user.
      * 
     */
-    public String getUserId() {
+    public String userId() {
         return this.userId;
     }
     /**
      * The name of the iam user.
      * 
     */
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

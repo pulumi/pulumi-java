@@ -24,7 +24,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
 
@@ -35,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blueprintId", required=true)
       private final Output<String> blueprintId;
 
-    public Output<String> getBlueprintId() {
+    public Output<String> blueprintId() {
         return this.blueprintId;
     }
 
@@ -46,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
 
-    public Output<String> getBundleId() {
+    public Output<String> bundleId() {
         return this.bundleId;
     }
 
@@ -58,7 +58,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
-    public Output<String> getKeyPairName() {
+    public Output<String> keyPairName() {
         return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
     }
 
@@ -69,7 +69,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -91,7 +91,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
+    public Output<String> userData() {
         return this.userData == null ? Codegen.empty() : this.userData;
     }
 

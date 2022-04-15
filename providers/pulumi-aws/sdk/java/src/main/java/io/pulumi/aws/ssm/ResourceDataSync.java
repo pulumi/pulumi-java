@@ -41,7 +41,7 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
      * @return Name for the configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -55,7 +55,7 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
      * @return Amazon S3 configuration details for the sync.
      * 
      */
-    public Output<ResourceDataSyncS3Destination> getS3Destination() {
+    public Output<ResourceDataSyncS3Destination> s3Destination() {
         return this.s3Destination;
     }
 

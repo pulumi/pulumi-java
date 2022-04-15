@@ -21,7 +21,7 @@ public final class GetVirtualServiceSpecProvider extends io.pulumi.resources.Inv
     @Import(name="virtualNodes", required=true)
       private final List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes;
 
-    public List<GetVirtualServiceSpecProviderVirtualNode> getVirtualNodes() {
+    public List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes() {
         return this.virtualNodes;
     }
 
@@ -32,7 +32,7 @@ public final class GetVirtualServiceSpecProvider extends io.pulumi.resources.Inv
     @Import(name="virtualRouters", required=true)
       private final List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
 
-    public List<GetVirtualServiceSpecProviderVirtualRouter> getVirtualRouters() {
+    public List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters() {
         return this.virtualRouters;
     }
 
