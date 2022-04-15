@@ -28,7 +28,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nameservers")
       private final @Nullable Output<List<String>> nameservers;
 
-    public Output<List<String>> getNameservers() {
+    public Output<List<String>> nameservers() {
         return this.nameservers == null ? Codegen.empty() : this.nameservers;
     }
 
@@ -39,7 +39,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="options")
       private final @Nullable Output<List<PodDNSConfigOptionArgs>> options;
 
-    public Output<List<PodDNSConfigOptionArgs>> getOptions() {
+    public Output<List<PodDNSConfigOptionArgs>> options() {
         return this.options == null ? Codegen.empty() : this.options;
     }
 
@@ -50,7 +50,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="searches")
       private final @Nullable Output<List<String>> searches;
 
-    public Output<List<String>> getSearches() {
+    public Output<List<String>> searches() {
         return this.searches == null ? Codegen.empty() : this.searches;
     }
 

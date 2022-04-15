@@ -58,7 +58,7 @@ public final class ValidationRule {
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
@@ -89,7 +89,7 @@ public final class ValidationRule {
      *     non-intersecting keys are appended, retaining their partial order.
      * 
     */
-    public String getRule() {
+    public String rule() {
         return this.rule;
     }
 

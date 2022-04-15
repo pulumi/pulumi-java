@@ -67,35 +67,35 @@ public final class JobCondition {
      * Last time the condition was checked.
      * 
     */
-    public Optional<String> getLastProbeTime() {
+    public Optional<String> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
      * Last time the condition transit from one status to another.
      * 
     */
-    public Optional<String> getLastTransitionTime() {
+    public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * Human readable message indicating details about last transition.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason for the condition's last transition.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * Status of the condition, one of True, False, Unknown.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
@@ -107,7 +107,7 @@ public final class JobCondition {
      *  - `"Suspended"` means the job has been suspended.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

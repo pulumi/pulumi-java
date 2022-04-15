@@ -58,35 +58,35 @@ public final class FCVolumeSource {
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
     */
-    public Optional<String> getFsType() {
+    public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * Optional: FC target lun number
      * 
     */
-    public Optional<Integer> getLun() {
+    public Optional<Integer> lun() {
         return Optional.ofNullable(this.lun);
     }
     /**
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
     */
-    public Optional<Boolean> getReadOnly() {
+    public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Optional: FC target worldwide names (WWNs)
      * 
     */
-    public List<String> getTargetWWNs() {
+    public List<String> targetWWNs() {
         return this.targetWWNs == null ? List.of() : this.targetWWNs;
     }
     /**
      * Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
     */
-    public List<String> getWwids() {
+    public List<String> wwids() {
         return this.wwids == null ? List.of() : this.wwids;
     }
 

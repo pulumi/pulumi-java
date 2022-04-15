@@ -28,7 +28,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     @Import(name="strategy", required=true)
       private final Output<String> strategy;
 
-    public Output<String> getStrategy() {
+    public Output<String> strategy() {
         return this.strategy;
     }
 
@@ -39,7 +39,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     @Import(name="webhook")
       private final @Nullable Output<WebhookConversionArgs> webhook;
 
-    public Output<WebhookConversionArgs> getWebhook() {
+    public Output<WebhookConversionArgs> webhook() {
         return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 

@@ -24,7 +24,7 @@ public final class AllowedFlexVolume {
      * driver is the name of the Flexvolume driver.
      * 
     */
-    public String getDriver() {
+    public String driver() {
         return this.driver;
     }
 

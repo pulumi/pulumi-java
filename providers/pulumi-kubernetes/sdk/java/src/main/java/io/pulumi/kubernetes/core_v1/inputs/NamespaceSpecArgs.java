@@ -27,7 +27,7 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="finalizers")
       private final @Nullable Output<List<String>> finalizers;
 
-    public Output<List<String>> getFinalizers() {
+    public Output<List<String>> finalizers() {
         return this.finalizers == null ? Codegen.empty() : this.finalizers;
     }
 

@@ -26,7 +26,7 @@ public final class TopologySelectorTerm {
      * A list of topology selector requirements by labels.
      * 
     */
-    public List<TopologySelectorLabelRequirement> getMatchLabelExpressions() {
+    public List<TopologySelectorLabelRequirement> matchLabelExpressions() {
         return this.matchLabelExpressions == null ? List.of() : this.matchLabelExpressions;
     }
 

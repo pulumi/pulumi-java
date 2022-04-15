@@ -36,7 +36,7 @@ public final class PodReadinessGate {
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
     */
-    public String getConditionType() {
+    public String conditionType() {
         return this.conditionType;
     }
 

@@ -27,14 +27,14 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
 
-    public Output<MetricValueStatusArgs> getCurrent() {
+    public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
 
     @Import(name="describedObject", required=true)
       private final Output<CrossVersionObjectReferenceArgs> describedObject;
 
-    public Output<CrossVersionObjectReferenceArgs> getDescribedObject() {
+    public Output<CrossVersionObjectReferenceArgs> describedObject() {
         return this.describedObject;
     }
 
@@ -45,7 +45,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
-    public Output<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 

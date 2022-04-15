@@ -31,7 +31,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="admissionReviewVersions", required=true)
       private final Output<List<String>> admissionReviewVersions;
 
-    public Output<List<String>> getAdmissionReviewVersions() {
+    public Output<List<String>> admissionReviewVersions() {
         return this.admissionReviewVersions;
     }
 
@@ -42,7 +42,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="clientConfig", required=true)
       private final Output<WebhookClientConfigArgs> clientConfig;
 
-    public Output<WebhookClientConfigArgs> getClientConfig() {
+    public Output<WebhookClientConfigArgs> clientConfig() {
         return this.clientConfig;
     }
 
@@ -53,7 +53,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="failurePolicy")
       private final @Nullable Output<String> failurePolicy;
 
-    public Output<String> getFailurePolicy() {
+    public Output<String> failurePolicy() {
         return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
@@ -70,7 +70,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="matchPolicy")
       private final @Nullable Output<String> matchPolicy;
 
-    public Output<String> getMatchPolicy() {
+    public Output<String> matchPolicy() {
         return this.matchPolicy == null ? Codegen.empty() : this.matchPolicy;
     }
 
@@ -81,7 +81,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -122,7 +122,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Output<LabelSelectorArgs> getNamespaceSelector() {
+    public Output<LabelSelectorArgs> namespaceSelector() {
         return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
     }
 
@@ -133,7 +133,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectSelector")
       private final @Nullable Output<LabelSelectorArgs> objectSelector;
 
-    public Output<LabelSelectorArgs> getObjectSelector() {
+    public Output<LabelSelectorArgs> objectSelector() {
         return this.objectSelector == null ? Codegen.empty() : this.objectSelector;
     }
 
@@ -144,7 +144,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rules")
       private final @Nullable Output<List<RuleWithOperationsArgs>> rules;
 
-    public Output<List<RuleWithOperationsArgs>> getRules() {
+    public Output<List<RuleWithOperationsArgs>> rules() {
         return this.rules == null ? Codegen.empty() : this.rules;
     }
 
@@ -155,7 +155,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sideEffects", required=true)
       private final Output<String> sideEffects;
 
-    public Output<String> getSideEffects() {
+    public Output<String> sideEffects() {
         return this.sideEffects;
     }
 
@@ -166,7 +166,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

@@ -29,7 +29,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="concurrencyPolicy")
       private final @Nullable Output<String> concurrencyPolicy;
 
-    public Output<String> getConcurrencyPolicy() {
+    public Output<String> concurrencyPolicy() {
         return this.concurrencyPolicy == null ? Codegen.empty() : this.concurrencyPolicy;
     }
 
@@ -40,7 +40,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failedJobsHistoryLimit")
       private final @Nullable Output<Integer> failedJobsHistoryLimit;
 
-    public Output<Integer> getFailedJobsHistoryLimit() {
+    public Output<Integer> failedJobsHistoryLimit() {
         return this.failedJobsHistoryLimit == null ? Codegen.empty() : this.failedJobsHistoryLimit;
     }
 
@@ -51,7 +51,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobTemplate", required=true)
       private final Output<JobTemplateSpecArgs> jobTemplate;
 
-    public Output<JobTemplateSpecArgs> getJobTemplate() {
+    public Output<JobTemplateSpecArgs> jobTemplate() {
         return this.jobTemplate;
     }
 
@@ -62,7 +62,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
 
@@ -73,7 +73,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startingDeadlineSeconds")
       private final @Nullable Output<Integer> startingDeadlineSeconds;
 
-    public Output<Integer> getStartingDeadlineSeconds() {
+    public Output<Integer> startingDeadlineSeconds() {
         return this.startingDeadlineSeconds == null ? Codegen.empty() : this.startingDeadlineSeconds;
     }
 
@@ -84,7 +84,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="successfulJobsHistoryLimit")
       private final @Nullable Output<Integer> successfulJobsHistoryLimit;
 
-    public Output<Integer> getSuccessfulJobsHistoryLimit() {
+    public Output<Integer> successfulJobsHistoryLimit() {
         return this.successfulJobsHistoryLimit == null ? Codegen.empty() : this.successfulJobsHistoryLimit;
     }
 
@@ -95,7 +95,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
-    public Output<Boolean> getSuspend() {
+    public Output<Boolean> suspend() {
         return this.suspend == null ? Codegen.empty() : this.suspend;
     }
 

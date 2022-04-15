@@ -31,7 +31,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action == null ? Codegen.empty() : this.action;
     }
 
@@ -42,7 +42,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -53,7 +53,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedCount")
       private final @Nullable Output<Integer> deprecatedCount;
 
-    public Output<Integer> getDeprecatedCount() {
+    public Output<Integer> deprecatedCount() {
         return this.deprecatedCount == null ? Codegen.empty() : this.deprecatedCount;
     }
 
@@ -64,7 +64,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedFirstTimestamp")
       private final @Nullable Output<String> deprecatedFirstTimestamp;
 
-    public Output<String> getDeprecatedFirstTimestamp() {
+    public Output<String> deprecatedFirstTimestamp() {
         return this.deprecatedFirstTimestamp == null ? Codegen.empty() : this.deprecatedFirstTimestamp;
     }
 
@@ -75,7 +75,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedLastTimestamp")
       private final @Nullable Output<String> deprecatedLastTimestamp;
 
-    public Output<String> getDeprecatedLastTimestamp() {
+    public Output<String> deprecatedLastTimestamp() {
         return this.deprecatedLastTimestamp == null ? Codegen.empty() : this.deprecatedLastTimestamp;
     }
 
@@ -86,7 +86,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedSource")
       private final @Nullable Output<EventSourceArgs> deprecatedSource;
 
-    public Output<EventSourceArgs> getDeprecatedSource() {
+    public Output<EventSourceArgs> deprecatedSource() {
         return this.deprecatedSource == null ? Codegen.empty() : this.deprecatedSource;
     }
 
@@ -97,7 +97,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTime", required=true)
       private final Output<String> eventTime;
 
-    public Output<String> getEventTime() {
+    public Output<String> eventTime() {
         return this.eventTime;
     }
 
@@ -108,7 +108,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -119,7 +119,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -130,7 +130,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="note")
       private final @Nullable Output<String> note;
 
-    public Output<String> getNote() {
+    public Output<String> note() {
         return this.note == null ? Codegen.empty() : this.note;
     }
 
@@ -141,7 +141,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -152,7 +152,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regarding")
       private final @Nullable Output<ObjectReferenceArgs> regarding;
 
-    public Output<ObjectReferenceArgs> getRegarding() {
+    public Output<ObjectReferenceArgs> regarding() {
         return this.regarding == null ? Codegen.empty() : this.regarding;
     }
 
@@ -163,7 +163,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="related")
       private final @Nullable Output<ObjectReferenceArgs> related;
 
-    public Output<ObjectReferenceArgs> getRelated() {
+    public Output<ObjectReferenceArgs> related() {
         return this.related == null ? Codegen.empty() : this.related;
     }
 
@@ -174,7 +174,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingController")
       private final @Nullable Output<String> reportingController;
 
-    public Output<String> getReportingController() {
+    public Output<String> reportingController() {
         return this.reportingController == null ? Codegen.empty() : this.reportingController;
     }
 
@@ -185,7 +185,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportingInstance")
       private final @Nullable Output<String> reportingInstance;
 
-    public Output<String> getReportingInstance() {
+    public Output<String> reportingInstance() {
         return this.reportingInstance == null ? Codegen.empty() : this.reportingInstance;
     }
 
@@ -196,7 +196,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="series")
       private final @Nullable Output<EventSeriesArgs> series;
 
-    public Output<EventSeriesArgs> getSeries() {
+    public Output<EventSeriesArgs> series() {
         return this.series == null ? Codegen.empty() : this.series;
     }
 
@@ -207,7 +207,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

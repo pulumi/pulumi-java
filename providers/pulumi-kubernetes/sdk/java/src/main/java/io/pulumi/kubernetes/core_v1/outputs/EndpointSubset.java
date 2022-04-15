@@ -42,21 +42,21 @@ public final class EndpointSubset {
      * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
      * 
     */
-    public List<EndpointAddress> getAddresses() {
+    public List<EndpointAddress> addresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
     /**
      * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
      * 
     */
-    public List<EndpointAddress> getNotReadyAddresses() {
+    public List<EndpointAddress> notReadyAddresses() {
         return this.notReadyAddresses == null ? List.of() : this.notReadyAddresses;
     }
     /**
      * Port numbers available on the related IP addresses.
      * 
     */
-    public List<EndpointPort> getPorts() {
+    public List<EndpointPort> ports() {
         return this.ports == null ? List.of() : this.ports;
     }
 

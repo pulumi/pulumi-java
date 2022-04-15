@@ -27,7 +27,7 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     @Import(name="failed")
       private final @Nullable Output<List<String>> failed;
 
-    public Output<List<String>> getFailed() {
+    public Output<List<String>> failed() {
         return this.failed == null ? Codegen.empty() : this.failed;
     }
 
@@ -38,7 +38,7 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     @Import(name="succeeded")
       private final @Nullable Output<List<String>> succeeded;
 
-    public Output<List<String>> getSucceeded() {
+    public Output<List<String>> succeeded() {
         return this.succeeded == null ? Codegen.empty() : this.succeeded;
     }
 

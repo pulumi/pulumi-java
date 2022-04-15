@@ -26,7 +26,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -37,7 +37,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
-    public Output<String> getFieldPath() {
+    public Output<String> fieldPath() {
         return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
@@ -48,7 +48,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -59,7 +59,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -70,7 +70,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -81,7 +81,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
-    public Output<String> getResourceVersion() {
+    public Output<String> resourceVersion() {
         return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
@@ -92,7 +92,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid == null ? Codegen.empty() : this.uid;
     }
 

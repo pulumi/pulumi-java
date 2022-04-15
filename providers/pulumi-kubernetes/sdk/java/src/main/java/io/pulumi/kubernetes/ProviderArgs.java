@@ -26,7 +26,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
@@ -37,7 +37,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context == null ? Codegen.empty() : this.context;
     }
 
@@ -49,7 +49,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDryRun", json=true)
       private final @Nullable Output<Boolean> enableDryRun;
 
-    public Output<Boolean> getEnableDryRun() {
+    public Output<Boolean> enableDryRun() {
         return this.enableDryRun == null ? Codegen.empty() : this.enableDryRun;
     }
 
@@ -61,7 +61,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableReplaceCRD", json=true)
       private final @Nullable Output<Boolean> enableReplaceCRD;
 
-    public Output<Boolean> getEnableReplaceCRD() {
+    public Output<Boolean> enableReplaceCRD() {
         return this.enableReplaceCRD == null ? Codegen.empty() : this.enableReplaceCRD;
     }
 
@@ -72,7 +72,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="helmReleaseSettings", json=true)
       private final @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
 
-    public Output<HelmReleaseSettingsArgs> getHelmReleaseSettings() {
+    public Output<HelmReleaseSettingsArgs> helmReleaseSettings() {
         return this.helmReleaseSettings == null ? Codegen.empty() : this.helmReleaseSettings;
     }
 
@@ -83,7 +83,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeClientSettings", json=true)
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
-    public Output<KubeClientSettingsArgs> getKubeClientSettings() {
+    public Output<KubeClientSettingsArgs> kubeClientSettings() {
         return this.kubeClientSettings == null ? Codegen.empty() : this.kubeClientSettings;
     }
 
@@ -94,7 +94,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kubeconfig")
       private final @Nullable Output<String> kubeconfig;
 
-    public Output<String> getKubeconfig() {
+    public Output<String> kubeconfig() {
         return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
     }
 
@@ -110,7 +110,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -128,7 +128,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="renderYamlToDirectory")
       private final @Nullable Output<String> renderYamlToDirectory;
 
-    public Output<String> getRenderYamlToDirectory() {
+    public Output<String> renderYamlToDirectory() {
         return this.renderYamlToDirectory == null ? Codegen.empty() : this.renderYamlToDirectory;
     }
 
@@ -139,7 +139,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suppressDeprecationWarnings", json=true)
       private final @Nullable Output<Boolean> suppressDeprecationWarnings;
 
-    public Output<Boolean> getSuppressDeprecationWarnings() {
+    public Output<Boolean> suppressDeprecationWarnings() {
         return this.suppressDeprecationWarnings == null ? Codegen.empty() : this.suppressDeprecationWarnings;
     }
 
@@ -150,7 +150,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suppressHelmHookWarnings", json=true)
       private final @Nullable Output<Boolean> suppressHelmHookWarnings;
 
-    public Output<Boolean> getSuppressHelmHookWarnings() {
+    public Output<Boolean> suppressHelmHookWarnings() {
         return this.suppressHelmHookWarnings == null ? Codegen.empty() : this.suppressHelmHookWarnings;
     }
 

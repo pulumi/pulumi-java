@@ -31,7 +31,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses", required=true)
       private final Output<List<String>> addresses;
 
-    public Output<List<String>> getAddresses() {
+    public Output<List<String>> addresses() {
         return this.addresses;
     }
 
@@ -42,7 +42,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<EndpointConditionsArgs> conditions;
 
-    public Output<EndpointConditionsArgs> getConditions() {
+    public Output<EndpointConditionsArgs> conditions() {
         return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
@@ -53,7 +53,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deprecatedTopology")
       private final @Nullable Output<Map<String,String>> deprecatedTopology;
 
-    public Output<Map<String,String>> getDeprecatedTopology() {
+    public Output<Map<String,String>> deprecatedTopology() {
         return this.deprecatedTopology == null ? Codegen.empty() : this.deprecatedTopology;
     }
 
@@ -64,7 +64,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hints")
       private final @Nullable Output<EndpointHintsArgs> hints;
 
-    public Output<EndpointHintsArgs> getHints() {
+    public Output<EndpointHintsArgs> hints() {
         return this.hints == null ? Codegen.empty() : this.hints;
     }
 
@@ -75,7 +75,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
@@ -86,7 +86,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
-    public Output<String> getNodeName() {
+    public Output<String> nodeName() {
         return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
@@ -97,7 +97,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Output<ObjectReferenceArgs> getTargetRef() {
+    public Output<ObjectReferenceArgs> targetRef() {
         return this.targetRef == null ? Codegen.empty() : this.targetRef;
     }
 
@@ -108,7 +108,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

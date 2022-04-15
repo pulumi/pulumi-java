@@ -27,7 +27,7 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="audience", required=true)
       private final Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience;
     }
 
@@ -38,7 +38,7 @@ public final class TokenRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> getExpirationSeconds() {
+    public Output<Integer> expirationSeconds() {
         return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 

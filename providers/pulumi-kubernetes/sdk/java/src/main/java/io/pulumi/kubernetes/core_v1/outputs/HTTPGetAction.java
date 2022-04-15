@@ -63,28 +63,28 @@ public final class HTTPGetAction {
      * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
      * 
     */
-    public Optional<String> getHost() {
+    public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Custom headers to set in the request. HTTP allows repeated headers.
      * 
     */
-    public List<HTTPHeader> getHttpHeaders() {
+    public List<HTTPHeader> httpHeaders() {
         return this.httpHeaders == null ? List.of() : this.httpHeaders;
     }
     /**
      * Path to access on the HTTP server.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
      * 
     */
-    public Either<Integer,String> getPort() {
+    public Either<Integer,String> port() {
         return this.port;
     }
     /**
@@ -95,7 +95,7 @@ public final class HTTPGetAction {
      *  - `"HTTPS"` means that the scheme used will be https://
      * 
     */
-    public Optional<String> getScheme() {
+    public Optional<String> scheme() {
         return Optional.ofNullable(this.scheme);
     }
 

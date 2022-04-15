@@ -30,7 +30,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> getMinReadySeconds() {
+    public Output<Integer> minReadySeconds() {
         return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
     }
 
@@ -41,7 +41,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paused")
       private final @Nullable Output<Boolean> paused;
 
-    public Output<Boolean> getPaused() {
+    public Output<Boolean> paused() {
         return this.paused == null ? Codegen.empty() : this.paused;
     }
 
@@ -52,7 +52,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="progressDeadlineSeconds")
       private final @Nullable Output<Integer> progressDeadlineSeconds;
 
-    public Output<Integer> getProgressDeadlineSeconds() {
+    public Output<Integer> progressDeadlineSeconds() {
         return this.progressDeadlineSeconds == null ? Codegen.empty() : this.progressDeadlineSeconds;
     }
 
@@ -63,7 +63,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
@@ -74,7 +74,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> getRevisionHistoryLimit() {
+    public Output<Integer> revisionHistoryLimit() {
         return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
     }
 
@@ -85,7 +85,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector;
     }
 
@@ -96,7 +96,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strategy")
       private final @Nullable Output<DeploymentStrategyArgs> strategy;
 
-    public Output<DeploymentStrategyArgs> getStrategy() {
+    public Output<DeploymentStrategyArgs> strategy() {
         return this.strategy == null ? Codegen.empty() : this.strategy;
     }
 
@@ -107,7 +107,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 

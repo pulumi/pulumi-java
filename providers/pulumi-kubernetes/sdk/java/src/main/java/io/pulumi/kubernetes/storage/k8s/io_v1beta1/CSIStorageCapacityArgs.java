@@ -24,7 +24,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -37,7 +37,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="capacity")
       private final @Nullable Output<String> capacity;
 
-    public Output<String> getCapacity() {
+    public Output<String> capacity() {
         return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
@@ -48,7 +48,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -61,7 +61,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maximumVolumeSize")
       private final @Nullable Output<String> maximumVolumeSize;
 
-    public Output<String> getMaximumVolumeSize() {
+    public Output<String> maximumVolumeSize() {
         return this.maximumVolumeSize == null ? Codegen.empty() : this.maximumVolumeSize;
     }
 
@@ -76,7 +76,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -87,7 +87,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nodeTopology")
       private final @Nullable Output<LabelSelectorArgs> nodeTopology;
 
-    public Output<LabelSelectorArgs> getNodeTopology() {
+    public Output<LabelSelectorArgs> nodeTopology() {
         return this.nodeTopology == null ? Codegen.empty() : this.nodeTopology;
     }
 
@@ -98,7 +98,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageClassName", required=true)
       private final Output<String> storageClassName;
 
-    public Output<String> getStorageClassName() {
+    public Output<String> storageClassName() {
         return this.storageClassName;
     }
 

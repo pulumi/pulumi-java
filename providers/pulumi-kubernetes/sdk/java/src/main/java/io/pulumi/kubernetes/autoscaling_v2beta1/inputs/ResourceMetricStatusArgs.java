@@ -27,7 +27,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="currentAverageUtilization")
       private final @Nullable Output<Integer> currentAverageUtilization;
 
-    public Output<Integer> getCurrentAverageUtilization() {
+    public Output<Integer> currentAverageUtilization() {
         return this.currentAverageUtilization == null ? Codegen.empty() : this.currentAverageUtilization;
     }
 
@@ -38,7 +38,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="currentAverageValue", required=true)
       private final Output<String> currentAverageValue;
 
-    public Output<String> getCurrentAverageValue() {
+    public Output<String> currentAverageValue() {
         return this.currentAverageValue;
     }
 
@@ -49,7 +49,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 

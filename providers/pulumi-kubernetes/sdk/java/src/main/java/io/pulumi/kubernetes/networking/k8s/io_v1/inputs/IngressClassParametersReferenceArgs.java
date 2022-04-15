@@ -26,7 +26,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="apiGroup")
       private final @Nullable Output<String> apiGroup;
 
-    public Output<String> getApiGroup() {
+    public Output<String> apiGroup() {
         return this.apiGroup == null ? Codegen.empty() : this.apiGroup;
     }
 
@@ -37,7 +37,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -48,7 +48,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -59,7 +59,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
+    public Output<String> namespace() {
         return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
@@ -70,7 +70,7 @@ public final class IngressClassParametersReferenceArgs extends io.pulumi.resourc
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope == null ? Codegen.empty() : this.scope;
     }
 

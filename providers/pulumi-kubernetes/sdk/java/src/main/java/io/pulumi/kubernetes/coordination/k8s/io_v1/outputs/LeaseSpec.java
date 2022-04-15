@@ -56,35 +56,35 @@ public final class LeaseSpec {
      * acquireTime is a time when the current lease was acquired.
      * 
     */
-    public Optional<String> getAcquireTime() {
+    public Optional<String> acquireTime() {
         return Optional.ofNullable(this.acquireTime);
     }
     /**
      * holderIdentity contains the identity of the holder of a current lease.
      * 
     */
-    public Optional<String> getHolderIdentity() {
+    public Optional<String> holderIdentity() {
         return Optional.ofNullable(this.holderIdentity);
     }
     /**
      * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
      * 
     */
-    public Optional<Integer> getLeaseDurationSeconds() {
+    public Optional<Integer> leaseDurationSeconds() {
         return Optional.ofNullable(this.leaseDurationSeconds);
     }
     /**
      * leaseTransitions is the number of transitions of a lease between holders.
      * 
     */
-    public Optional<Integer> getLeaseTransitions() {
+    public Optional<Integer> leaseTransitions() {
         return Optional.ofNullable(this.leaseTransitions);
     }
     /**
      * renewTime is a time when the current holder of a lease has last updated the lease.
      * 
     */
-    public Optional<String> getRenewTime() {
+    public Optional<String> renewTime() {
         return Optional.ofNullable(this.renewTime);
     }
 

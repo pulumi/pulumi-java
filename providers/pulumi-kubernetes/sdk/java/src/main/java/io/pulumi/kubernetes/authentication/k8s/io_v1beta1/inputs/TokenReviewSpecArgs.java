@@ -27,7 +27,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
-    public Output<List<String>> getAudiences() {
+    public Output<List<String>> audiences() {
         return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
@@ -38,7 +38,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="token")
       private final @Nullable Output<String> token;
 
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token == null ? Codegen.empty() : this.token;
     }
 

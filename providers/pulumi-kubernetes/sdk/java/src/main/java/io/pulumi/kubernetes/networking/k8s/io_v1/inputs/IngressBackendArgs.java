@@ -27,7 +27,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
-    public Output<TypedLocalObjectReferenceArgs> getResource() {
+    public Output<TypedLocalObjectReferenceArgs> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -38,7 +38,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<IngressServiceBackendArgs> service;
 
-    public Output<IngressServiceBackendArgs> getService() {
+    public Output<IngressServiceBackendArgs> service() {
         return this.service == null ? Codegen.empty() : this.service;
     }
 

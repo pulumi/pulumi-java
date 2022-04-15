@@ -40,7 +40,7 @@ public final class NamespaceStatus {
      * Represents the latest available observations of a namespace's current state.
      * 
     */
-    public List<NamespaceCondition> getConditions() {
+    public List<NamespaceCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
@@ -51,7 +51,7 @@ public final class NamespaceStatus {
      *  - `"Terminating"` means the namespace is undergoing graceful termination
      * 
     */
-    public Optional<String> getPhase() {
+    public Optional<String> phase() {
         return Optional.ofNullable(this.phase);
     }
 

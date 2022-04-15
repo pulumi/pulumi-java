@@ -28,7 +28,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configMapRef")
       private final @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
 
-    public Output<ConfigMapEnvSourceArgs> getConfigMapRef() {
+    public Output<ConfigMapEnvSourceArgs> configMapRef() {
         return this.configMapRef == null ? Codegen.empty() : this.configMapRef;
     }
 
@@ -39,7 +39,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
@@ -50,7 +50,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretRef")
       private final @Nullable Output<SecretEnvSourceArgs> secretRef;
 
-    public Output<SecretEnvSourceArgs> getSecretRef() {
+    public Output<SecretEnvSourceArgs> secretRef() {
         return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 

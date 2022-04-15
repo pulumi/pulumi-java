@@ -78,21 +78,21 @@ public final class CertificateSigningRequestSpec {
      * Extra information about the requesting user. See user.Info interface for details.
      * 
     */
-    public Map<String,List<String>> getExtra() {
+    public Map<String,List<String>> extra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * Group information about the requesting user. See user.Info interface for details.
      * 
     */
-    public List<String> getGroups() {
+    public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * Base64-encoded PKCS#10 CSR data
      * 
     */
-    public String getRequest() {
+    public String request() {
         return this.request;
     }
     /**
@@ -105,14 +105,14 @@ public final class CertificateSigningRequestSpec {
      *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
      * 
     */
-    public Optional<String> getSignerName() {
+    public Optional<String> signerName() {
         return Optional.ofNullable(this.signerName);
     }
     /**
      * UID information about the requesting user. See user.Info interface for details.
      * 
     */
-    public Optional<String> getUid() {
+    public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
@@ -120,14 +120,14 @@ public final class CertificateSigningRequestSpec {
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
      * 
     */
-    public List<String> getUsages() {
+    public List<String> usages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
      * Information about the requesting user. See user.Info interface for details.
      * 
     */
-    public Optional<String> getUsername() {
+    public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 
