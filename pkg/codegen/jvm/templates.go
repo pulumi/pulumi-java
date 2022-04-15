@@ -32,8 +32,8 @@ import java.io.InputStreamReader;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import javax.annotation.Nullable;
-import io.pulumi.core.internal.Environment;
-import io.pulumi.deployment.InvokeOptions;
+import com.pulumi.core.internal.Environment;
+import com.pulumi.deployment.InvokeOptions;
 
 public class {{ .ClassName }} {
 
@@ -148,7 +148,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.pulumi:pulumi:(,1.0]")
+    implementation("com.pulumi:pulumi:(,1.0]")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     api("com.google.guava:guava:30.1-jre") // FIXME: do we really want to expose this dep?
     api("com.google.code.gson:gson:2.8.6") // make sure we don't clash with grpc deps

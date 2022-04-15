@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.pulumi.example</groupId>
+    <groupId>com.pulumi.example</groupId>
     <artifactId>random</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -27,12 +27,12 @@
         </activation>
         <dependencies>
           <dependency>
-            <groupId>io.pulumi</groupId>
+            <groupId>com.pulumi</groupId>
             <artifactId>pulumi</artifactId>
             <version>0.0.1-SNAPSHOT</version>
           </dependency>
           <dependency>
-            <groupId>io.pulumi</groupId>
+            <groupId>com.pulumi</groupId>
             <artifactId>random</artifactId>
             <version>4.3.1</version>
           </dependency>
@@ -42,12 +42,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.pulumi</groupId>
+            <groupId>com.pulumi</groupId>
             <artifactId>pulumi</artifactId>
             <version>${env.PULUMI_JAVA_SDK_VERSION}</version>
         </dependency>
         <dependency>
-            <groupId>io.pulumi</groupId>
+            <groupId>com.pulumi</groupId>
             <artifactId>random</artifactId>
             <version>${env.PULUMI_RANDOM_PROVIDER_SDK_VERSION}</version>
         </dependency>

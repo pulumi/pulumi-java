@@ -36,9 +36,9 @@ var pulumiAwsSdkVersion = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4
 var pulumiAwsNativeSdkVersion = System.getenv("PULUMI_AWS_NATIVE_PROVIDER_SDK_VERSION") ?: "0.12.0";
 
 dependencies {
-    implementation "io.pulumi:pulumi:$pulumiJavaSdkVersion"
-    implementation "io.pulumi:aws-native:$pulumiAwsNativeSdkVersion"
-    implementation "io.pulumi:aws:$pulumiAwsSdkVersion"
+    implementation "com.pulumi:pulumi:$pulumiJavaSdkVersion"
+    implementation "com.pulumi:aws-native:$pulumiAwsNativeSdkVersion"
+    implementation "com.pulumi:aws:$pulumiAwsSdkVersion"
 }
 
 application {

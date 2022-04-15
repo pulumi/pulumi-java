@@ -31,7 +31,7 @@ introduced in places where `pulumi/pulumi` currently build-depends on
 ## Install local depedencies
 
 ```shell
-$ make install_sdk #installs io.pulumi:pulumi to local maven repository
+$ make install_sdk #installs com.pulumi:pulumi to local maven repository
 
 ```
 
@@ -42,7 +42,7 @@ $ make install_sdk #installs io.pulumi:pulumi to local maven repository
 - Update `name` in `Pulumi.yaml`.
 - Update `mainClass` in `app/build.gradle`.
 - Reference any providers your example needs in `dependencies` section of `app/build.gradle`.
-  - build and install the required provider, using something like `make provider.aws.install`, required for `implementation 'io.pulumi:aws:4.37.3'`
+  - build and install the required provider, using something like `make provider.aws.install`, required for `implementation 'com.pulumi:aws:4.37.3'`
 - Edit sources in `app/src/main`.
 
 To run the example:

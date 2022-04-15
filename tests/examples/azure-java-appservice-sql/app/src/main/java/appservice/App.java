@@ -1,45 +1,45 @@
 package appservice;
 
-import io.pulumi.Config;
-import io.pulumi.Context;
-import io.pulumi.Exports;
-import io.pulumi.Pulumi;
-import io.pulumi.asset.FileArchive;
-import io.pulumi.azurenative.insights.Component;
-import io.pulumi.azurenative.insights.ComponentArgs;
-import io.pulumi.azurenative.insights.enums.ApplicationType;
-import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.sql.Database;
-import io.pulumi.azurenative.sql.DatabaseArgs;
-import io.pulumi.azurenative.sql.Server;
-import io.pulumi.azurenative.sql.ServerArgs;
-import io.pulumi.azurenative.storage.Blob;
-import io.pulumi.azurenative.storage.BlobArgs;
-import io.pulumi.azurenative.storage.BlobContainer;
-import io.pulumi.azurenative.storage.BlobContainerArgs;
-import io.pulumi.azurenative.storage.StorageAccount;
-import io.pulumi.azurenative.storage.StorageAccountArgs;
-import io.pulumi.azurenative.storage.StorageFunctions;
-import io.pulumi.azurenative.storage.enums.HttpProtocol;
-import io.pulumi.azurenative.storage.enums.Kind;
-import io.pulumi.azurenative.storage.enums.Permissions;
-import io.pulumi.azurenative.storage.enums.PublicAccess;
-import io.pulumi.azurenative.storage.enums.SignedResource;
-import io.pulumi.azurenative.storage.enums.SkuName;
-import io.pulumi.azurenative.storage.inputs.ListStorageAccountServiceSASArgs;
-import io.pulumi.azurenative.storage.inputs.SkuArgs;
-import io.pulumi.azurenative.storage.outputs.ListStorageAccountServiceSASResult;
-import io.pulumi.azurenative.web.AppServicePlan;
-import io.pulumi.azurenative.web.AppServicePlanArgs;
-import io.pulumi.azurenative.web.WebApp;
-import io.pulumi.azurenative.web.WebAppArgs;
-import io.pulumi.azurenative.web.enums.ConnectionStringType;
-import io.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
-import io.pulumi.azurenative.web.inputs.NameValuePairArgs;
-import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
-import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
-import io.pulumi.core.Either;
-import io.pulumi.core.Output;
+import com.pulumi.Config;
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.asset.FileArchive;
+import com.pulumi.azurenative.insights.Component;
+import com.pulumi.azurenative.insights.ComponentArgs;
+import com.pulumi.azurenative.insights.enums.ApplicationType;
+import com.pulumi.azurenative.resources.ResourceGroup;
+import com.pulumi.azurenative.sql.Database;
+import com.pulumi.azurenative.sql.DatabaseArgs;
+import com.pulumi.azurenative.sql.Server;
+import com.pulumi.azurenative.sql.ServerArgs;
+import com.pulumi.azurenative.storage.Blob;
+import com.pulumi.azurenative.storage.BlobArgs;
+import com.pulumi.azurenative.storage.BlobContainer;
+import com.pulumi.azurenative.storage.BlobContainerArgs;
+import com.pulumi.azurenative.storage.StorageAccount;
+import com.pulumi.azurenative.storage.StorageAccountArgs;
+import com.pulumi.azurenative.storage.StorageFunctions;
+import com.pulumi.azurenative.storage.enums.HttpProtocol;
+import com.pulumi.azurenative.storage.enums.Kind;
+import com.pulumi.azurenative.storage.enums.Permissions;
+import com.pulumi.azurenative.storage.enums.PublicAccess;
+import com.pulumi.azurenative.storage.enums.SignedResource;
+import com.pulumi.azurenative.storage.enums.SkuName;
+import com.pulumi.azurenative.storage.inputs.ListStorageAccountServiceSASArgs;
+import com.pulumi.azurenative.storage.inputs.SkuArgs;
+import com.pulumi.azurenative.storage.outputs.ListStorageAccountServiceSASResult;
+import com.pulumi.azurenative.web.AppServicePlan;
+import com.pulumi.azurenative.web.AppServicePlanArgs;
+import com.pulumi.azurenative.web.WebApp;
+import com.pulumi.azurenative.web.WebAppArgs;
+import com.pulumi.azurenative.web.enums.ConnectionStringType;
+import com.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
+import com.pulumi.azurenative.web.inputs.NameValuePairArgs;
+import com.pulumi.azurenative.web.inputs.SiteConfigArgs;
+import com.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 
 public class App {
     public static void main(String[] args) {
@@ -92,7 +92,7 @@ public class App {
         var database = new Database("db",
                 DatabaseArgs.builder().resourceGroupName(resourceGroup.getName())
                         .serverName(sqlServer.getName())
-                        .sku(io.pulumi.azurenative.sql.inputs.SkuArgs.builder().name("S0").build())
+                        .sku(com.pulumi.azurenative.sql.inputs.SkuArgs.builder().name("S0").build())
                         .build());
 
         var appServicePlan = new AppServicePlan("asp",

@@ -9,7 +9,7 @@ import (
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
 
-const defaultBasePackage = "io.pulumi."
+const defaultBasePackage = "com.pulumi."
 
 // PropertyInfo represents a JVM language-specific info for a property.
 type PropertyInfo struct {

@@ -1,28 +1,28 @@
 package staticwebsite;
 
-import io.pulumi.Context;
-import io.pulumi.Exports;
-import io.pulumi.Pulumi;
-import io.pulumi.asset.FileAsset;
-import io.pulumi.azurenative.cdn.Endpoint;
-import io.pulumi.azurenative.cdn.EndpointArgs;
-import io.pulumi.azurenative.cdn.Profile;
-import io.pulumi.azurenative.cdn.ProfileArgs;
-import io.pulumi.azurenative.cdn.enums.QueryStringCachingBehavior;
-import io.pulumi.azurenative.cdn.inputs.DeepCreatedOriginArgs;
-import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.storage.Blob;
-import io.pulumi.azurenative.storage.BlobArgs;
-import io.pulumi.azurenative.storage.StorageAccount;
-import io.pulumi.azurenative.storage.StorageAccountArgs;
-import io.pulumi.azurenative.storage.StorageAccountStaticWebsite;
-import io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
-import io.pulumi.azurenative.storage.enums.Kind;
-import io.pulumi.azurenative.storage.enums.SkuName;
-import io.pulumi.azurenative.storage.inputs.SkuArgs;
-import io.pulumi.azurenative.storage.outputs.EndpointsResponse;
-import io.pulumi.core.Either;
-import io.pulumi.core.Output;
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.asset.FileAsset;
+import com.pulumi.azurenative.cdn.Endpoint;
+import com.pulumi.azurenative.cdn.EndpointArgs;
+import com.pulumi.azurenative.cdn.Profile;
+import com.pulumi.azurenative.cdn.ProfileArgs;
+import com.pulumi.azurenative.cdn.enums.QueryStringCachingBehavior;
+import com.pulumi.azurenative.cdn.inputs.DeepCreatedOriginArgs;
+import com.pulumi.azurenative.resources.ResourceGroup;
+import com.pulumi.azurenative.storage.Blob;
+import com.pulumi.azurenative.storage.BlobArgs;
+import com.pulumi.azurenative.storage.StorageAccount;
+import com.pulumi.azurenative.storage.StorageAccountArgs;
+import com.pulumi.azurenative.storage.StorageAccountStaticWebsite;
+import com.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
+import com.pulumi.azurenative.storage.enums.Kind;
+import com.pulumi.azurenative.storage.enums.SkuName;
+import com.pulumi.azurenative.storage.inputs.SkuArgs;
+import com.pulumi.azurenative.storage.outputs.EndpointsResponse;
+import com.pulumi.core.Either;
+import com.pulumi.core.Output;
 
 public class App {
     public static void main(String[] args) {
@@ -68,8 +68,8 @@ public class App {
         var profile = new Profile("profile",
                 ProfileArgs.builder().resourceGroupName(resourceGroup.getName())
                         .location("global")
-                        .sku(io.pulumi.azurenative.cdn.inputs.SkuArgs.builder()
-                                .name(Either.ofRight(io.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft))
+                        .sku(com.pulumi.azurenative.cdn.inputs.SkuArgs.builder()
+                                .name(Either.ofRight(com.pulumi.azurenative.cdn.enums.SkuName.Standard_Microsoft))
                                 .build()).build());
 
         var endpointOrigin = storageAccount.getPrimaryEndpoints()

@@ -1,18 +1,18 @@
 package webserver;
 
-import io.pulumi.Context;
-import io.pulumi.Exports;
-import io.pulumi.Pulumi;
-import io.pulumi.aws.ec2.Ec2Functions;
-import io.pulumi.aws.ec2.Instance;
-import io.pulumi.aws.ec2.InstanceArgs;
-import io.pulumi.aws.ec2.SecurityGroup;
-import io.pulumi.aws.ec2.SecurityGroupArgs;
-import io.pulumi.aws.ec2.inputs.GetAmiArgs;
-import io.pulumi.aws.ec2.inputs.GetAmiFilter;
-import io.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
-import io.pulumi.aws.ec2.outputs.GetAmiResult;
-import io.pulumi.core.Output;
+import com.pulumi.Context;
+import com.pulumi.Exports;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiFilter;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import com.pulumi.aws.ec2.outputs.GetAmiResult;
+import com.pulumi.core.Output;
 
 import java.util.List;
 import java.util.Map;
@@ -51,7 +51,7 @@ public class App {
 
         final var server = new Instance("web-server-www", InstanceArgs.builder()
                 .tags(Map.of("Name", "web-server-www"))
-                .instanceType(Output.ofRight(io.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
+                .instanceType(Output.ofRight(com.pulumi.aws.ec2.enums.InstanceType.T2_Micro))
                 .vpcSecurityGroupIds(group.getId().applyValue(List::of))
                 .ami(Output.of(ami))
                 .userData(userData)
