@@ -18,6 +18,8 @@ import java.util.function.Supplier;
 @InternalUse
 public interface DeploymentInternal extends Deployment {
 
+    DeploymentImpl.Config getConfig();
+
     Optional<String> getConfig(String fullKey);
 
     boolean isConfigSecret(String fullKey);
