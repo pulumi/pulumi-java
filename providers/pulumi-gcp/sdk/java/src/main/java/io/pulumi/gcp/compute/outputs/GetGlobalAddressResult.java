@@ -52,34 +52,34 @@ public final class GetGlobalAddressResult {
      * The IP of the created resource.
      * 
     */
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
     /**
      * The URI of the created resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

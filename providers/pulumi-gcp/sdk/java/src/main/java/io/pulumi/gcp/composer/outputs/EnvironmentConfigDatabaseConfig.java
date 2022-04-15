@@ -16,7 +16,7 @@ public final class EnvironmentConfigDatabaseConfig {
         this.machineType = machineType;
     }
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 

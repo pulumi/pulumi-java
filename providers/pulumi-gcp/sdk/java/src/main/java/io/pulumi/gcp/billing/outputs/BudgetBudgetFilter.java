@@ -92,7 +92,7 @@ public final class BudgetBudgetFilter {
      * account and all subaccounts, if they exist.
      * 
     */
-    public List<String> getCreditTypes() {
+    public List<String> creditTypes() {
         return this.creditTypes == null ? List.of() : this.creditTypes;
     }
     /**
@@ -102,7 +102,7 @@ public final class BudgetBudgetFilter {
      * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
      * 
     */
-    public Optional<String> getCreditTypesTreatment() {
+    public Optional<String> creditTypesTreatment() {
         return Optional.ofNullable(this.creditTypesTreatment);
     }
     /**
@@ -110,7 +110,7 @@ public final class BudgetBudgetFilter {
      * this set of labeled resources should be included in the budget.
      * 
     */
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
@@ -121,7 +121,7 @@ public final class BudgetBudgetFilter {
      * the usage occurred on.
      * 
     */
-    public List<String> getProjects() {
+    public List<String> projects() {
         return this.projects == null ? List.of() : this.projects;
     }
     /**
@@ -133,7 +133,7 @@ public final class BudgetBudgetFilter {
      * https://cloud.google.com/billing/v1/how-tos/catalog-api.
      * 
     */
-    public List<String> getServices() {
+    public List<String> services() {
         return this.services == null ? List.of() : this.services;
     }
     /**
@@ -145,7 +145,7 @@ public final class BudgetBudgetFilter {
      * account and all subaccounts, if they exist.
      * 
     */
-    public List<String> getSubaccounts() {
+    public List<String> subaccounts() {
         return this.subaccounts == null ? List.of() : this.subaccounts;
     }
 

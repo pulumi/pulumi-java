@@ -23,7 +23,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -42,7 +42,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customFeatures")
       private final @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> getCustomFeatures() {
+    public Output<List<String>> customFeatures() {
         return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
     }
 
@@ -53,7 +53,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -64,7 +64,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledFeatures")
       private final @Nullable Output<List<String>> enabledFeatures;
 
-    public Output<List<String>> getEnabledFeatures() {
+    public Output<List<String>> enabledFeatures() {
         return this.enabledFeatures == null ? Codegen.empty() : this.enabledFeatures;
     }
 
@@ -75,7 +75,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -89,7 +89,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTlsVersion")
       private final @Nullable Output<String> minTlsVersion;
 
-    public Output<String> getMinTlsVersion() {
+    public Output<String> minTlsVersion() {
         return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
@@ -106,7 +106,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -125,7 +125,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
+    public Output<String> profile() {
         return this.profile == null ? Codegen.empty() : this.profile;
     }
 
@@ -137,7 +137,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -148,7 +148,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 

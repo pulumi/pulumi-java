@@ -30,7 +30,7 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends io.pulumi.resourc
     @Import(name="combiningFunction")
       private final @Nullable Output<String> combiningFunction;
 
-    public Output<String> getCombiningFunction() {
+    public Output<String> combiningFunction() {
         return this.combiningFunction == null ? Codegen.empty() : this.combiningFunction;
     }
 
@@ -42,7 +42,7 @@ public final class AccessLevelsAccessLevelBasicGetArgs extends io.pulumi.resourc
     @Import(name="conditions", required=true)
       private final Output<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions;
 
-    public Output<List<AccessLevelsAccessLevelBasicConditionGetArgs>> getConditions() {
+    public Output<List<AccessLevelsAccessLevelBasicConditionGetArgs>> conditions() {
         return this.conditions;
     }
 

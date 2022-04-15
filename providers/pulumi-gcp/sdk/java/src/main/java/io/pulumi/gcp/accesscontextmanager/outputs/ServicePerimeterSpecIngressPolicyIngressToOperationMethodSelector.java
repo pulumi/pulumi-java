@@ -39,7 +39,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperationMethodSele
      * then ALL methods and permissions are allowed.
      * 
     */
-    public Optional<String> getMethod() {
+    public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
@@ -47,7 +47,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperationMethodSele
      * corresponding `serviceName` in `ApiOperation`.
      * 
     */
-    public Optional<String> getPermission() {
+    public Optional<String> permission() {
         return Optional.ofNullable(this.permission);
     }
 

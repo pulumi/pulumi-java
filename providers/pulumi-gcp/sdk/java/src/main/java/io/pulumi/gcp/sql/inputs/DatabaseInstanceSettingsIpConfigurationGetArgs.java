@@ -25,14 +25,14 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
     @Import(name="allocatedIpRange")
       private final @Nullable Output<String> allocatedIpRange;
 
-    public Output<String> getAllocatedIpRange() {
+    public Output<String> allocatedIpRange() {
         return this.allocatedIpRange == null ? Codegen.empty() : this.allocatedIpRange;
     }
 
     @Import(name="authorizedNetworks")
       private final @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> authorizedNetworks;
 
-    public Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> getAuthorizedNetworks() {
+    public Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkGetArgs>> authorizedNetworks() {
         return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
     }
 
@@ -45,7 +45,7 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
     @Import(name="ipv4Enabled")
       private final @Nullable Output<Boolean> ipv4Enabled;
 
-    public Output<Boolean> getIpv4Enabled() {
+    public Output<Boolean> ipv4Enabled() {
         return this.ipv4Enabled == null ? Codegen.empty() : this.ipv4Enabled;
     }
 
@@ -60,7 +60,7 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
     @Import(name="privateNetwork")
       private final @Nullable Output<String> privateNetwork;
 
-    public Output<String> getPrivateNetwork() {
+    public Output<String> privateNetwork() {
         return this.privateNetwork == null ? Codegen.empty() : this.privateNetwork;
     }
 
@@ -71,7 +71,7 @@ public final class DatabaseInstanceSettingsIpConfigurationGetArgs extends io.pul
     @Import(name="requireSsl")
       private final @Nullable Output<Boolean> requireSsl;
 
-    public Output<Boolean> getRequireSsl() {
+    public Output<Boolean> requireSsl() {
         return this.requireSsl == null ? Codegen.empty() : this.requireSsl;
     }
 

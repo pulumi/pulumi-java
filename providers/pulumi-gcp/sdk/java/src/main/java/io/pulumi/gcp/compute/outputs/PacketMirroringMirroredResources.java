@@ -46,7 +46,7 @@ public final class PacketMirroringMirroredResources {
      * Structure is documented below.
      * 
     */
-    public List<PacketMirroringMirroredResourcesInstance> getInstances() {
+    public List<PacketMirroringMirroredResourcesInstance> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
@@ -54,14 +54,14 @@ public final class PacketMirroringMirroredResources {
      * Structure is documented below.
      * 
     */
-    public List<PacketMirroringMirroredResourcesSubnetwork> getSubnetworks() {
+    public List<PacketMirroringMirroredResourcesSubnetwork> subnetworks() {
         return this.subnetworks == null ? List.of() : this.subnetworks;
     }
     /**
      * All instances with these tags will be mirrored.
      * 
     */
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -26,7 +26,7 @@ public final class SloBasicSliAvailability {
      * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

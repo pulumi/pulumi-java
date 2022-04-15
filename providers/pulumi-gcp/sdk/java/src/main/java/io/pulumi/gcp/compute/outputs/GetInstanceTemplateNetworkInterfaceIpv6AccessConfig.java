@@ -32,10 +32,10 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig {
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
-    public String getExternalIpv6() {
+    public String externalIpv6() {
         return this.externalIpv6;
     }
-    public String getExternalIpv6PrefixLength() {
+    public String externalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength;
     }
     /**
@@ -44,10 +44,10 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig {
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
     */
-    public String getNetworkTier() {
+    public String networkTier() {
         return this.networkTier;
     }
-    public String getPublicPtrDomainName() {
+    public String publicPtrDomainName() {
         return this.publicPtrDomainName;
     }
 

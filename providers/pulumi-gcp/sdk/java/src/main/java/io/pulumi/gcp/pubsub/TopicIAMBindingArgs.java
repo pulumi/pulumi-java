@@ -20,14 +20,14 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="condition")
       private final @Nullable Output<TopicIAMBindingConditionArgs> condition;
 
-    public Output<TopicIAMBindingConditionArgs> getCondition() {
+    public Output<TopicIAMBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -39,7 +39,7 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -52,7 +52,7 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -63,7 +63,7 @@ public final class TopicIAMBindingArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

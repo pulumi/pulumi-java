@@ -86,7 +86,7 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      * supplied in the request. The value must be between 1 and 255 characters.
      * 
     */
-    public Optional<String> getHostRedirect() {
+    public Optional<String> hostRedirect() {
         return Optional.ofNullable(this.hostRedirect);
     }
     /**
@@ -96,7 +96,7 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      * true for TargetHttpsProxy is not permitted. The default is set to false.
      * 
     */
-    public Optional<Boolean> getHttpsRedirect() {
+    public Optional<Boolean> httpsRedirect() {
         return Optional.ofNullable(this.httpsRedirect);
     }
     /**
@@ -107,7 +107,7 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      * characters.
      * 
     */
-    public Optional<String> getPathRedirect() {
+    public Optional<String> pathRedirect() {
         return Optional.ofNullable(this.pathRedirect);
     }
     /**
@@ -118,7 +118,7 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      * the redirect. The value must be between 1 and 1024 characters.
      * 
     */
-    public Optional<String> getPrefixRedirect() {
+    public Optional<String> prefixRedirect() {
         return Optional.ofNullable(this.prefixRedirect);
     }
     /**
@@ -132,7 +132,7 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      *   the request method will be retained.
      * 
     */
-    public Optional<String> getRedirectResponseCode() {
+    public Optional<String> redirectResponseCode() {
         return Optional.ofNullable(this.redirectResponseCode);
     }
     /**
@@ -142,7 +142,7 @@ public final class URLMapPathMatcherDefaultUrlRedirect {
      * This field is required to ensure an empty block is not set. The normal default value is false.
      * 
     */
-    public Boolean getStripQuery() {
+    public Boolean stripQuery() {
         return this.stripQuery;
     }
 

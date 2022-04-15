@@ -45,7 +45,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
      * 
      */
-    public Output<String> getBucketId() {
+    public Output<String> bucketId() {
         return this.bucketId;
     }
     /**
@@ -59,7 +59,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return Describes this bucket.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +73,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The parent resource that contains the logging bucket.
      * 
      */
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -87,7 +87,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState;
     }
     /**
@@ -101,7 +101,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The location of the bucket.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +115,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The resource name of the bucket. For example: "folders/my-folder-id/locations/my-location/buckets/my-bucket-id"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +129,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * @return Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
 

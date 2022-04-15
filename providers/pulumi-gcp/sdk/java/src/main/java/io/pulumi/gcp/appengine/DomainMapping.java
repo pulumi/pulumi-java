@@ -57,7 +57,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return Relative name of the domain serving the application. Example: example.com.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -71,7 +71,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * @return Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +91,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Possible values are `STRICT` and `OVERRIDE`.
      * 
      */
-    public Output</* @Nullable */ String> getOverrideStrategy() {
+    public Output</* @Nullable */ String> overrideStrategy() {
         return this.overrideStrategy;
     }
     /**
@@ -107,7 +107,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -123,7 +123,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * configuration in order to serve the application via this domain mapping.
      * 
      */
-    public Output<List<DomainMappingResourceRecord>> getResourceRecords() {
+    public Output<List<DomainMappingResourceRecord>> resourceRecords() {
         return this.resourceRecords;
     }
     /**
@@ -139,7 +139,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DomainMappingSslSettings> getSslSettings() {
+    public Output</* @Nullable */ DomainMappingSslSettings> sslSettings() {
         return this.sslSettings;
     }
 

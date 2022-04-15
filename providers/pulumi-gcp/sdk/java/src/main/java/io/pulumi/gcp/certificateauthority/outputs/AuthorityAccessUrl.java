@@ -23,10 +23,10 @@ public final class AuthorityAccessUrl {
         this.crlAccessUrls = crlAccessUrls;
     }
 
-    public Optional<String> getCaCertificateAccessUrl() {
+    public Optional<String> caCertificateAccessUrl() {
         return Optional.ofNullable(this.caCertificateAccessUrl);
     }
-    public List<String> getCrlAccessUrls() {
+    public List<String> crlAccessUrls() {
         return this.crlAccessUrls == null ? List.of() : this.crlAccessUrls;
     }
 

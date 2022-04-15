@@ -31,7 +31,7 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
     @Import(name="publicKeyId", required=true)
       private final Output<String> publicKeyId;
 
-    public Output<String> getPublicKeyId() {
+    public Output<String> publicKeyId() {
         return this.publicKeyId;
     }
 
@@ -48,7 +48,7 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
     @Import(name="signature")
       private final @Nullable Output<String> signature;
 
-    public Output<String> getSignature() {
+    public Output<String> signature() {
         return this.signature == null ? Codegen.empty() : this.signature;
     }
 

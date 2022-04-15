@@ -30,7 +30,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="allUpdatesRule")
       private final @Nullable Output<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
 
-    public Output<BudgetAllUpdatesRuleGetArgs> getAllUpdatesRule() {
+    public Output<BudgetAllUpdatesRuleGetArgs> allUpdatesRule() {
         return this.allUpdatesRule == null ? Codegen.empty() : this.allUpdatesRule;
     }
 
@@ -42,7 +42,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="amount")
       private final @Nullable Output<BudgetAmountGetArgs> amount;
 
-    public Output<BudgetAmountGetArgs> getAmount() {
+    public Output<BudgetAmountGetArgs> amount() {
         return this.amount == null ? Codegen.empty() : this.amount;
     }
 
@@ -53,7 +53,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
@@ -66,7 +66,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="budgetFilter")
       private final @Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter;
 
-    public Output<BudgetBudgetFilterGetArgs> getBudgetFilter() {
+    public Output<BudgetBudgetFilterGetArgs> budgetFilter() {
         return this.budgetFilter == null ? Codegen.empty() : this.budgetFilter;
     }
 
@@ -77,7 +77,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -89,7 +89,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -103,7 +103,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholdRules")
       private final @Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules;
 
-    public Output<List<BudgetThresholdRuleGetArgs>> getThresholdRules() {
+    public Output<List<BudgetThresholdRuleGetArgs>> thresholdRules() {
         return this.thresholdRules == null ? Codegen.empty() : this.thresholdRules;
     }
 

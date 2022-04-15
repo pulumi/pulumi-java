@@ -25,7 +25,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
 
-    public Output<InstanceIAMBindingConditionGetArgs> getCondition() {
+    public Output<InstanceIAMBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -36,7 +36,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -47,14 +47,14 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -66,7 +66,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -79,7 +79,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -92,7 +92,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

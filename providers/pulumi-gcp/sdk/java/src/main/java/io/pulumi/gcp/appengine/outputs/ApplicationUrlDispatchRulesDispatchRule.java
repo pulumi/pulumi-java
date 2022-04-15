@@ -45,7 +45,7 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      * Defaults to matching all domains: "*".
      * 
     */
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
@@ -53,7 +53,7 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      * The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
     */
-    public String getPath() {
+    public String path() {
         return this.path;
     }
     /**
@@ -61,7 +61,7 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      * The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
     */
-    public String getService() {
+    public String service() {
         return this.service;
     }
 

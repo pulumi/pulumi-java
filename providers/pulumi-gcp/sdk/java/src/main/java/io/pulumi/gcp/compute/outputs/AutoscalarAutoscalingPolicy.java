@@ -132,7 +132,7 @@ public final class AutoscalarAutoscalingPolicy {
      * and time the startup process.
      * 
     */
-    public Optional<Integer> getCooldownPeriod() {
+    public Optional<Integer> cooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
     /**
@@ -142,7 +142,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<AutoscalarAutoscalingPolicyCpuUtilization> getCpuUtilization() {
+    public Optional<AutoscalarAutoscalingPolicyCpuUtilization> cpuUtilization() {
         return Optional.ofNullable(this.cpuUtilization);
     }
     /**
@@ -150,7 +150,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<AutoscalarAutoscalingPolicyLoadBalancingUtilization> getLoadBalancingUtilization() {
+    public Optional<AutoscalarAutoscalingPolicyLoadBalancingUtilization> loadBalancingUtilization() {
         return Optional.ofNullable(this.loadBalancingUtilization);
     }
     /**
@@ -160,7 +160,7 @@ public final class AutoscalarAutoscalingPolicy {
      * of replicas.
      * 
     */
-    public Integer getMaxReplicas() {
+    public Integer maxReplicas() {
         return this.maxReplicas;
     }
     /**
@@ -168,7 +168,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Structure is documented below.
      * 
     */
-    public List<AutoscalarAutoscalingPolicyMetric> getMetrics() {
+    public List<AutoscalarAutoscalingPolicyMetric> metrics() {
         return this.metrics == null ? List.of() : this.metrics;
     }
     /**
@@ -178,7 +178,7 @@ public final class AutoscalarAutoscalingPolicy {
      * allowed.
      * 
     */
-    public Integer getMinReplicas() {
+    public Integer minReplicas() {
         return this.minReplicas;
     }
     /**
@@ -187,7 +187,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Possible values are `OFF`, `ONLY_UP`, and `ON`.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
@@ -196,7 +196,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<AutoscalarAutoscalingPolicyScaleDownControl> getScaleDownControl() {
+    public Optional<AutoscalarAutoscalingPolicyScaleDownControl> scaleDownControl() {
         return Optional.ofNullable(this.scaleDownControl);
     }
     /**
@@ -205,7 +205,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<AutoscalarAutoscalingPolicyScaleInControl> getScaleInControl() {
+    public Optional<AutoscalarAutoscalingPolicyScaleInControl> scaleInControl() {
         return Optional.ofNullable(this.scaleInControl);
     }
     /**
@@ -213,7 +213,7 @@ public final class AutoscalarAutoscalingPolicy {
      * Structure is documented below.
      * 
     */
-    public List<AutoscalarAutoscalingPolicyScalingSchedule> getScalingSchedules() {
+    public List<AutoscalarAutoscalingPolicyScalingSchedule> scalingSchedules() {
         return this.scalingSchedules == null ? List.of() : this.scalingSchedules;
     }
 

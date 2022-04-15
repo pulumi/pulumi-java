@@ -47,7 +47,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy> getCdnPolicy() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy> cdnPolicy() {
         return Optional.ofNullable(this.cdnPolicy);
     }
     /**
@@ -55,7 +55,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy> getCorsPolicy() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy> corsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
     /**
@@ -63,7 +63,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction {
      * Structure is documented below.
      * 
     */
-    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite> getUrlRewrite() {
+    public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite> urlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
 

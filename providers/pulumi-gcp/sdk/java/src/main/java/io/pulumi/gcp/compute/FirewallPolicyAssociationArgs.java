@@ -22,7 +22,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="attachmentTarget", required=true)
       private final Output<String> attachmentTarget;
 
-    public Output<String> getAttachmentTarget() {
+    public Output<String> attachmentTarget() {
         return this.attachmentTarget;
     }
 
@@ -33,7 +33,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="firewallPolicy", required=true)
       private final Output<String> firewallPolicy;
 
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
 
@@ -44,7 +44,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

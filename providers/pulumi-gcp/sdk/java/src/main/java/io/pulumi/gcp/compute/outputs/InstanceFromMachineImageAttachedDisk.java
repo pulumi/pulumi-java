@@ -34,22 +34,22 @@ public final class InstanceFromMachineImageAttachedDisk {
         this.source = source;
     }
 
-    public Optional<String> getDeviceName() {
+    public Optional<String> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
-    public Optional<String> getDiskEncryptionKeyRaw() {
+    public Optional<String> diskEncryptionKeyRaw() {
         return Optional.ofNullable(this.diskEncryptionKeyRaw);
     }
-    public Optional<String> getDiskEncryptionKeySha256() {
+    public Optional<String> diskEncryptionKeySha256() {
         return Optional.ofNullable(this.diskEncryptionKeySha256);
     }
-    public Optional<String> getKmsKeySelfLink() {
+    public Optional<String> kmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

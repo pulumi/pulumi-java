@@ -23,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
     @Import(name="acceleratorCount")
       private final @Nullable Output<Integer> acceleratorCount;
 
-    public Output<Integer> getAcceleratorCount() {
+    public Output<Integer> acceleratorCount() {
         return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
     }
 
@@ -34,7 +34,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
     @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
-    public Output<String> getAcceleratorType() {
+    public Output<String> acceleratorType() {
         return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 

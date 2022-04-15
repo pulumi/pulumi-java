@@ -24,7 +24,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="age")
       private final @Nullable Output<Integer> age;
 
-    public Output<Integer> getAge() {
+    public Output<Integer> age() {
         return this.age == null ? Codegen.empty() : this.age;
     }
 
@@ -35,7 +35,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="createdBefore")
       private final @Nullable Output<String> createdBefore;
 
-    public Output<String> getCreatedBefore() {
+    public Output<String> createdBefore() {
         return this.createdBefore == null ? Codegen.empty() : this.createdBefore;
     }
 
@@ -46,7 +46,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="customTimeBefore")
       private final @Nullable Output<String> customTimeBefore;
 
-    public Output<String> getCustomTimeBefore() {
+    public Output<String> customTimeBefore() {
         return this.customTimeBefore == null ? Codegen.empty() : this.customTimeBefore;
     }
 
@@ -57,7 +57,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="daysSinceCustomTime")
       private final @Nullable Output<Integer> daysSinceCustomTime;
 
-    public Output<Integer> getDaysSinceCustomTime() {
+    public Output<Integer> daysSinceCustomTime() {
         return this.daysSinceCustomTime == null ? Codegen.empty() : this.daysSinceCustomTime;
     }
 
@@ -68,7 +68,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="daysSinceNoncurrentTime")
       private final @Nullable Output<Integer> daysSinceNoncurrentTime;
 
-    public Output<Integer> getDaysSinceNoncurrentTime() {
+    public Output<Integer> daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime == null ? Codegen.empty() : this.daysSinceNoncurrentTime;
     }
 
@@ -79,7 +79,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="matchesStorageClasses")
       private final @Nullable Output<List<String>> matchesStorageClasses;
 
-    public Output<List<String>> getMatchesStorageClasses() {
+    public Output<List<String>> matchesStorageClasses() {
         return this.matchesStorageClasses == null ? Codegen.empty() : this.matchesStorageClasses;
     }
 
@@ -90,7 +90,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="noncurrentTimeBefore")
       private final @Nullable Output<String> noncurrentTimeBefore;
 
-    public Output<String> getNoncurrentTimeBefore() {
+    public Output<String> noncurrentTimeBefore() {
         return this.noncurrentTimeBefore == null ? Codegen.empty() : this.noncurrentTimeBefore;
     }
 
@@ -101,7 +101,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="numNewerVersions")
       private final @Nullable Output<Integer> numNewerVersions;
 
-    public Output<Integer> getNumNewerVersions() {
+    public Output<Integer> numNewerVersions() {
         return this.numNewerVersions == null ? Codegen.empty() : this.numNewerVersions;
     }
 
@@ -112,7 +112,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
     @Import(name="withState")
       private final @Nullable Output<String> withState;
 
-    public Output<String> getWithState() {
+    public Output<String> withState() {
         return this.withState == null ? Codegen.empty() : this.withState;
     }
 

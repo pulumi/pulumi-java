@@ -71,19 +71,19 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
     @Export(name="apiConfig", type=String.class, parameters={})
     private Output<String> apiConfig;
 
-    public Output<String> getApiConfig() {
+    public Output<String> apiConfig() {
         return this.apiConfig;
     }
     @Export(name="condition", type=ApiConfigIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ApiConfigIamMemberCondition> condition;
 
-    public Output</* @Nullable */ ApiConfigIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ ApiConfigIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -97,13 +97,13 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -119,7 +119,7 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -137,7 +137,7 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

@@ -50,7 +50,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Description of the environment.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -64,7 +64,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Display name of the environment.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -78,7 +78,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the environment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -94,7 +94,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 

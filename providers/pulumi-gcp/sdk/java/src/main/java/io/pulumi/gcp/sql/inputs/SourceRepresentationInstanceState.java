@@ -24,7 +24,7 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
     @Import(name="databaseVersion")
       private final @Nullable Output<String> databaseVersion;
 
-    public Output<String> getDatabaseVersion() {
+    public Output<String> databaseVersion() {
         return this.databaseVersion == null ? Codegen.empty() : this.databaseVersion;
     }
 
@@ -35,7 +35,7 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -46,7 +46,7 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -70,7 +70,7 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -82,7 +82,7 @@ public final class SourceRepresentationInstanceState extends io.pulumi.resources
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 

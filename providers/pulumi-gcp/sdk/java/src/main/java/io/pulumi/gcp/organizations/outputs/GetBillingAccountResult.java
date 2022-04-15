@@ -48,34 +48,34 @@ public final class GetBillingAccountResult {
         this.projectIds = projectIds;
     }
 
-    public Optional<String> getBillingAccount() {
+    public Optional<String> billingAccount() {
         return Optional.ofNullable(this.billingAccount);
     }
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Boolean getOpen() {
+    public Boolean open() {
         return this.open;
     }
     /**
      * The IDs of any projects associated with the billing account.
      * 
     */
-    public List<String> getProjectIds() {
+    public List<String> projectIds() {
         return this.projectIds;
     }
 

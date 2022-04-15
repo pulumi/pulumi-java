@@ -53,37 +53,37 @@ public final class EnvironmentConfigNodeConfig {
         this.zone = zone;
     }
 
-    public Optional<Integer> getDiskSizeGb() {
+    public Optional<Integer> diskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
-    public Optional<Boolean> getEnableIpMasqAgent() {
+    public Optional<Boolean> enableIpMasqAgent() {
         return Optional.ofNullable(this.enableIpMasqAgent);
     }
-    public Optional<EnvironmentConfigNodeConfigIpAllocationPolicy> getIpAllocationPolicy() {
+    public Optional<EnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicy() {
         return Optional.ofNullable(this.ipAllocationPolicy);
     }
-    public Optional<String> getMachineType() {
+    public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
-    public Optional<Integer> getMaxPodsPerNode() {
+    public Optional<Integer> maxPodsPerNode() {
         return Optional.ofNullable(this.maxPodsPerNode);
     }
-    public Optional<String> getNetwork() {
+    public Optional<String> network() {
         return Optional.ofNullable(this.network);
     }
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
-    public Optional<String> getServiceAccount() {
+    public Optional<String> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
-    public Optional<String> getSubnetwork() {
+    public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

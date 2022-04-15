@@ -24,7 +24,7 @@ public final class EngineModelDefaultVersion {
      * The name specified for the version when it was created.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

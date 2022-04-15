@@ -25,70 +25,70 @@ public final class GetClusterAddonsConfig extends io.pulumi.resources.InvokeArgs
     @Import(name="cloudrunConfigs", required=true)
       private final List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs;
 
-    public List<GetClusterAddonsConfigCloudrunConfig> getCloudrunConfigs() {
+    public List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs() {
         return this.cloudrunConfigs;
     }
 
     @Import(name="configConnectorConfigs", required=true)
       private final List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs;
 
-    public List<GetClusterAddonsConfigConfigConnectorConfig> getConfigConnectorConfigs() {
+    public List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs() {
         return this.configConnectorConfigs;
     }
 
     @Import(name="dnsCacheConfigs", required=true)
       private final List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs;
 
-    public List<GetClusterAddonsConfigDnsCacheConfig> getDnsCacheConfigs() {
+    public List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs() {
         return this.dnsCacheConfigs;
     }
 
     @Import(name="gcePersistentDiskCsiDriverConfigs", required=true)
       private final List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs;
 
-    public List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> getGcePersistentDiskCsiDriverConfigs() {
+    public List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs() {
         return this.gcePersistentDiskCsiDriverConfigs;
     }
 
     @Import(name="gcpFilestoreCsiDriverConfigs", required=true)
       private final List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs;
 
-    public List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> getGcpFilestoreCsiDriverConfigs() {
+    public List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs() {
         return this.gcpFilestoreCsiDriverConfigs;
     }
 
     @Import(name="horizontalPodAutoscalings", required=true)
       private final List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings;
 
-    public List<GetClusterAddonsConfigHorizontalPodAutoscaling> getHorizontalPodAutoscalings() {
+    public List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings() {
         return this.horizontalPodAutoscalings;
     }
 
     @Import(name="httpLoadBalancings", required=true)
       private final List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings;
 
-    public List<GetClusterAddonsConfigHttpLoadBalancing> getHttpLoadBalancings() {
+    public List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings() {
         return this.httpLoadBalancings;
     }
 
     @Import(name="istioConfigs", required=true)
       private final List<GetClusterAddonsConfigIstioConfig> istioConfigs;
 
-    public List<GetClusterAddonsConfigIstioConfig> getIstioConfigs() {
+    public List<GetClusterAddonsConfigIstioConfig> istioConfigs() {
         return this.istioConfigs;
     }
 
     @Import(name="kalmConfigs", required=true)
       private final List<GetClusterAddonsConfigKalmConfig> kalmConfigs;
 
-    public List<GetClusterAddonsConfigKalmConfig> getKalmConfigs() {
+    public List<GetClusterAddonsConfigKalmConfig> kalmConfigs() {
         return this.kalmConfigs;
     }
 
     @Import(name="networkPolicyConfigs", required=true)
       private final List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs;
 
-    public List<GetClusterAddonsConfigNetworkPolicyConfig> getNetworkPolicyConfigs() {
+    public List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs() {
         return this.networkPolicyConfigs;
     }
 

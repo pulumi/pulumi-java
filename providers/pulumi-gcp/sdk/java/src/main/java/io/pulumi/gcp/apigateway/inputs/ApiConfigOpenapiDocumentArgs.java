@@ -22,7 +22,7 @@ public final class ApiConfigOpenapiDocumentArgs extends io.pulumi.resources.Reso
     @Import(name="document", required=true)
       private final Output<ApiConfigOpenapiDocumentDocumentArgs> document;
 
-    public Output<ApiConfigOpenapiDocumentDocumentArgs> getDocument() {
+    public Output<ApiConfigOpenapiDocumentDocumentArgs> document() {
         return this.document;
     }
 

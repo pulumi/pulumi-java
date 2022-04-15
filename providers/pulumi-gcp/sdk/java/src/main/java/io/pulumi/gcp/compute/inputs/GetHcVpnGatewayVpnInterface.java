@@ -16,21 +16,21 @@ public final class GetHcVpnGatewayVpnInterface extends io.pulumi.resources.Invok
     @Import(name="id", required=true)
       private final Integer id;
 
-    public Integer getId() {
+    public Integer id() {
         return this.id;
     }
 
     @Import(name="interconnectAttachment", required=true)
       private final String interconnectAttachment;
 
-    public String getInterconnectAttachment() {
+    public String interconnectAttachment() {
         return this.interconnectAttachment;
     }
 
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 

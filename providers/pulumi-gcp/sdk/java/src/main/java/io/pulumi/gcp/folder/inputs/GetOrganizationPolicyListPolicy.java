@@ -19,28 +19,28 @@ public final class GetOrganizationPolicyListPolicy extends io.pulumi.resources.I
     @Import(name="allows", required=true)
       private final List<GetOrganizationPolicyListPolicyAllow> allows;
 
-    public List<GetOrganizationPolicyListPolicyAllow> getAllows() {
+    public List<GetOrganizationPolicyListPolicyAllow> allows() {
         return this.allows;
     }
 
     @Import(name="denies", required=true)
       private final List<GetOrganizationPolicyListPolicyDeny> denies;
 
-    public List<GetOrganizationPolicyListPolicyDeny> getDenies() {
+    public List<GetOrganizationPolicyListPolicyDeny> denies() {
         return this.denies;
     }
 
     @Import(name="inheritFromParent", required=true)
       private final Boolean inheritFromParent;
 
-    public Boolean getInheritFromParent() {
+    public Boolean inheritFromParent() {
         return this.inheritFromParent;
     }
 
     @Import(name="suggestedValue", required=true)
       private final String suggestedValue;
 
-    public String getSuggestedValue() {
+    public String suggestedValue() {
         return this.suggestedValue;
     }
 

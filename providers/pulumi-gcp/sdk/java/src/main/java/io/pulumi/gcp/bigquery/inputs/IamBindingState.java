@@ -25,14 +25,14 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<IamBindingConditionGetArgs> condition;
 
-    public Output<IamBindingConditionGetArgs> getCondition() {
+    public Output<IamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
@@ -43,14 +43,14 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -62,7 +62,7 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -75,14 +75,14 @@ public final class IamBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 

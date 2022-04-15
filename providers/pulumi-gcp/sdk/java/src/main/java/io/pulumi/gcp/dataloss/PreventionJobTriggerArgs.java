@@ -25,7 +25,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="inspectJob")
       private final @Nullable Output<PreventionJobTriggerInspectJobArgs> inspectJob;
 
-    public Output<PreventionJobTriggerInspectJobArgs> getInspectJob() {
+    public Output<PreventionJobTriggerInspectJobArgs> inspectJob() {
         return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
     }
 
@@ -60,7 +60,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -73,7 +73,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -85,7 +85,7 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     @Import(name="triggers", required=true)
       private final Output<List<PreventionJobTriggerTriggerArgs>> triggers;
 
-    public Output<List<PreventionJobTriggerTriggerArgs>> getTriggers() {
+    public Output<List<PreventionJobTriggerTriggerArgs>> triggers() {
         return this.triggers;
     }
 

@@ -38,7 +38,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay> getFixedDelay() {
+    public Optional<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay> fixedDelay() {
         return Optional.ofNullable(this.fixedDelay);
     }
     /**
@@ -46,7 +46,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
      * The value must be between 0.0 and 100.0 inclusive.
      * 
     */
-    public Optional<Double> getPercentage() {
+    public Optional<Double> percentage() {
         return Optional.ofNullable(this.percentage);
     }
 

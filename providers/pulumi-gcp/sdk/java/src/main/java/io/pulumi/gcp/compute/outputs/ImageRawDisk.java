@@ -54,7 +54,7 @@ public final class ImageRawDisk {
      * Possible values are `TAR`.
      * 
     */
-    public Optional<String> getContainerType() {
+    public Optional<String> containerType() {
         return Optional.ofNullable(this.containerType);
     }
     /**
@@ -62,7 +62,7 @@ public final class ImageRawDisk {
      * This is provided by the client when the disk image is created.
      * 
     */
-    public Optional<String> getSha1() {
+    public Optional<String> sha1() {
         return Optional.ofNullable(this.sha1);
     }
     /**
@@ -71,7 +71,7 @@ public final class ImageRawDisk {
      * but not both.
      * 
     */
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

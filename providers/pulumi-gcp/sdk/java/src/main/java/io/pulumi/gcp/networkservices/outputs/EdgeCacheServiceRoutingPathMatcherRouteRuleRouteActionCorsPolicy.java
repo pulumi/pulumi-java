@@ -78,21 +78,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * This translates to the Access-Control-Allow-Credentials response header.
      * 
     */
-    public Optional<Boolean> getAllowCredentials() {
+    public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers response header.
      * 
     */
-    public List<String> getAllowHeaders() {
+    public List<String> allowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Methods response header.
      * 
     */
-    public List<String> getAllowMethods() {
+    public List<String> allowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
     /**
@@ -100,21 +100,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * This translates to the Access-Control-Allow-Origin response header.
      * 
     */
-    public List<String> getAllowOrigins() {
+    public List<String> allowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
     /**
      * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
      * 
     */
-    public Optional<Boolean> getDisabled() {
+    public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers response header.
      * 
     */
-    public List<String> getExposeHeaders() {
+    public List<String> exposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
     /**
@@ -125,7 +125,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
     */
-    public String getMaxAge() {
+    public String maxAge() {
         return this.maxAge;
     }
 

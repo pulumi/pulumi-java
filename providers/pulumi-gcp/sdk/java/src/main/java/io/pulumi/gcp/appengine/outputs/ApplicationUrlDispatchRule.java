@@ -25,13 +25,13 @@ public final class ApplicationUrlDispatchRule {
         this.service = service;
     }
 
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
-    public Optional<String> getService() {
+    public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
 

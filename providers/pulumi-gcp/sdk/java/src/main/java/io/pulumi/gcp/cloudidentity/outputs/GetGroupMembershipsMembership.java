@@ -54,40 +54,40 @@ public final class GetGroupMembershipsMembership {
         this.updateTime = updateTime;
     }
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
      * 
     */
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
-    public List<GetGroupMembershipsMembershipMemberKey> getMemberKeys() {
+    public List<GetGroupMembershipsMembershipMemberKey> memberKeys() {
         return this.memberKeys;
     }
     /**
      * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public List<GetGroupMembershipsMembershipPreferredMemberKey> getPreferredMemberKeys() {
+    public List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys() {
         return this.preferredMemberKeys;
     }
     /**
      * The MembershipRoles that apply to the Membership. Structure is documented below.
      * 
     */
-    public List<GetGroupMembershipsMembershipRole> getRoles() {
+    public List<GetGroupMembershipsMembershipRole> roles() {
         return this.roles;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
 

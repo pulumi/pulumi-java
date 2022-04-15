@@ -23,7 +23,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -36,7 +36,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -47,7 +47,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -59,7 +59,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -77,7 +77,7 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 

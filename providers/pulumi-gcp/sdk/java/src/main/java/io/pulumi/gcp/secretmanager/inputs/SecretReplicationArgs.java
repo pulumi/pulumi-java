@@ -23,7 +23,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="automatic")
       private final @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> getAutomatic() {
+    public Output<Boolean> automatic() {
         return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
@@ -35,7 +35,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userManaged")
       private final @Nullable Output<SecretReplicationUserManagedArgs> userManaged;
 
-    public Output<SecretReplicationUserManagedArgs> getUserManaged() {
+    public Output<SecretReplicationUserManagedArgs> userManaged() {
         return this.userManaged == null ? Codegen.empty() : this.userManaged;
     }
 

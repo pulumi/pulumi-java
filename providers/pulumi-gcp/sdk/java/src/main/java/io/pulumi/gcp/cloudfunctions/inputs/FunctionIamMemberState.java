@@ -19,49 +19,49 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
-    public Output<String> getCloudFunction() {
+    public Output<String> cloudFunction() {
         return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     @Import(name="condition")
       private final @Nullable Output<FunctionIamMemberConditionGetArgs> condition;
 
-    public Output<FunctionIamMemberConditionGetArgs> getCondition() {
+    public Output<FunctionIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

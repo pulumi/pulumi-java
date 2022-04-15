@@ -22,7 +22,7 @@ public final class DeviceCredentialPublicKeyGetArgs extends io.pulumi.resources.
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -33,7 +33,7 @@ public final class DeviceCredentialPublicKeyGetArgs extends io.pulumi.resources.
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 

@@ -50,7 +50,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * reside.
      * 
      */
-    public Output<String> getManagedZone() {
+    public Output<String> managedZone() {
         return this.managedZone;
     }
     /**
@@ -64,7 +64,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The DNS name this record set will apply to.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -80,7 +80,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -100,7 +100,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * string (e.g. "first255characters\"\"morecharacters").
      * 
      */
-    public Output<List<String>> getRrdatas() {
+    public Output<List<String>> rrdatas() {
         return this.rrdatas;
     }
     /**
@@ -114,7 +114,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The time-to-live of this record set (seconds).
      * 
      */
-    public Output</* @Nullable */ Integer> getTtl() {
+    public Output</* @Nullable */ Integer> ttl() {
         return this.ttl;
     }
     /**
@@ -128,7 +128,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @return The DNS record set type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

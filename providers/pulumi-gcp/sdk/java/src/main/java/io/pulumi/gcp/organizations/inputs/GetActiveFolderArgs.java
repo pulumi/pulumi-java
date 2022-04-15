@@ -19,7 +19,7 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
       private final String displayName;
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
 
@@ -30,7 +30,7 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parent", required=true)
       private final String parent;
 
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
 

@@ -76,14 +76,14 @@ public final class ClusterClusterConfigMasterConfig {
      * The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
      * 
     */
-    public List<ClusterClusterConfigMasterConfigAccelerator> getAccelerators() {
+    public List<ClusterClusterConfigMasterConfigAccelerator> accelerators() {
         return this.accelerators == null ? List.of() : this.accelerators;
     }
     /**
      * Disk Config
      * 
     */
-    public Optional<ClusterClusterConfigMasterConfigDiskConfig> getDiskConfig() {
+    public Optional<ClusterClusterConfigMasterConfigDiskConfig> diskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
     /**
@@ -91,10 +91,10 @@ public final class ClusterClusterConfigMasterConfig {
      * for more information.
      * 
     */
-    public Optional<String> getImageUri() {
+    public Optional<String> imageUri() {
         return Optional.ofNullable(this.imageUri);
     }
-    public List<String> getInstanceNames() {
+    public List<String> instanceNames() {
         return this.instanceNames == null ? List.of() : this.instanceNames;
     }
     /**
@@ -103,7 +103,7 @@ public final class ClusterClusterConfigMasterConfig {
      * computed value (currently `n1-standard-4`).
      * 
     */
-    public Optional<String> getMachineType() {
+    public Optional<String> machineType() {
         return Optional.ofNullable(this.machineType);
     }
     /**
@@ -113,7 +113,7 @@ public final class ClusterClusterConfigMasterConfig {
      * for details about which CPU families are available (and defaulted) for each zone.
      * 
     */
-    public Optional<String> getMinCpuPlatform() {
+    public Optional<String> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
@@ -121,7 +121,7 @@ public final class ClusterClusterConfigMasterConfig {
      * Defaults to 0.
      * 
     */
-    public Optional<Integer> getNumInstances() {
+    public Optional<Integer> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
 

@@ -43,14 +43,14 @@ public final class GCPolicyMaxAge {
      * 
     */
     @Deprecated /* Deprecated in favor of duration */
-    public Optional<Integer> getDays() {
+    public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
      * 
     */
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
 

@@ -18,7 +18,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="gcpServiceAccountEmail")
       private final @Nullable Output<String> gcpServiceAccountEmail;
 
-    public Output<String> getGcpServiceAccountEmail() {
+    public Output<String> gcpServiceAccountEmail() {
         return this.gcpServiceAccountEmail == null ? Codegen.empty() : this.gcpServiceAccountEmail;
     }
 
@@ -29,7 +29,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
-    public Output<String> getHttpsProxy() {
+    public Output<String> httpsProxy() {
         return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
     }
 
@@ -40,7 +40,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="policyDir")
       private final @Nullable Output<String> policyDir;
 
-    public Output<String> getPolicyDir() {
+    public Output<String> policyDir() {
         return this.policyDir == null ? Codegen.empty() : this.policyDir;
     }
 
@@ -51,7 +51,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="secretType")
       private final @Nullable Output<String> secretType;
 
-    public Output<String> getSecretType() {
+    public Output<String> secretType() {
         return this.secretType == null ? Codegen.empty() : this.secretType;
     }
 
@@ -62,7 +62,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="syncBranch")
       private final @Nullable Output<String> syncBranch;
 
-    public Output<String> getSyncBranch() {
+    public Output<String> syncBranch() {
         return this.syncBranch == null ? Codegen.empty() : this.syncBranch;
     }
 
@@ -73,7 +73,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="syncRepo")
       private final @Nullable Output<String> syncRepo;
 
-    public Output<String> getSyncRepo() {
+    public Output<String> syncRepo() {
         return this.syncRepo == null ? Codegen.empty() : this.syncRepo;
     }
 
@@ -84,7 +84,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="syncRev")
       private final @Nullable Output<String> syncRev;
 
-    public Output<String> getSyncRev() {
+    public Output<String> syncRev() {
         return this.syncRev == null ? Codegen.empty() : this.syncRev;
     }
 
@@ -95,7 +95,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     @Import(name="syncWaitSecs")
       private final @Nullable Output<String> syncWaitSecs;
 
-    public Output<String> getSyncWaitSecs() {
+    public Output<String> syncWaitSecs() {
         return this.syncWaitSecs == null ? Codegen.empty() : this.syncWaitSecs;
     }
 

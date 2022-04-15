@@ -28,7 +28,7 @@ public final class PreventionJobTriggerTrigger {
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionJobTriggerTriggerSchedule> getSchedule() {
+    public Optional<PreventionJobTriggerTriggerSchedule> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 

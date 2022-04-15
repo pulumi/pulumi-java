@@ -23,14 +23,14 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditLogConfigs", required=true)
       private final Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
     @Import(name="folder", required=true)
       private final Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
 
@@ -41,7 +41,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

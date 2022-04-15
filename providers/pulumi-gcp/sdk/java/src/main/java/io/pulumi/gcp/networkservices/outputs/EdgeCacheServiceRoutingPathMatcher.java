@@ -44,14 +44,14 @@ public final class EdgeCacheServiceRoutingPathMatcher {
      * A human-readable description of the resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -59,7 +59,7 @@ public final class EdgeCacheServiceRoutingPathMatcher {
      * Structure is documented below.
      * 
     */
-    public List<EdgeCacheServiceRoutingPathMatcherRouteRule> getRouteRules() {
+    public List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules() {
         return this.routeRules;
     }
 

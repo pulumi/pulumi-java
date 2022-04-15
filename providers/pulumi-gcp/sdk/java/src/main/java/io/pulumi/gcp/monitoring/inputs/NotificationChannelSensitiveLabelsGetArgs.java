@@ -23,7 +23,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
-    public Output<String> getAuthToken() {
+    public Output<String> authToken() {
         return this.authToken == null ? Codegen.empty() : this.authToken;
     }
 
@@ -35,7 +35,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password == null ? Codegen.empty() : this.password;
     }
 
@@ -47,7 +47,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
     @Import(name="serviceKey")
       private final @Nullable Output<String> serviceKey;
 
-    public Output<String> getServiceKey() {
+    public Output<String> serviceKey() {
         return this.serviceKey == null ? Codegen.empty() : this.serviceKey;
     }
 

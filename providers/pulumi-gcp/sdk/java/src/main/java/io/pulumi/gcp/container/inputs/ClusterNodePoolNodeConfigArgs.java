@@ -35,7 +35,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> getBootDiskKmsKey() {
+    public Output<String> bootDiskKmsKey() {
         return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
     }
 
@@ -47,7 +47,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
@@ -59,7 +59,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
-    public Output<String> getDiskType() {
+    public Output<String> diskType() {
         return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
@@ -70,7 +70,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="ephemeralStorageConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
 
-    public Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> getEphemeralStorageConfig() {
+    public Output<ClusterNodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig() {
         return this.ephemeralStorageConfig == null ? Codegen.empty() : this.ephemeralStorageConfig;
     }
 
@@ -86,7 +86,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="gcfsConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
 
-    public Output<ClusterNodePoolNodeConfigGcfsConfigArgs> getGcfsConfig() {
+    public Output<ClusterNodePoolNodeConfigGcfsConfigArgs> gcfsConfig() {
         return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
     }
 
@@ -98,7 +98,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
 
-    public Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> getGuestAccelerators() {
+    public Output<List<ClusterNodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators() {
         return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
     }
 
@@ -110,7 +110,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
+    public Output<String> imageType() {
         return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
@@ -122,7 +122,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="kubeletConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
 
-    public Output<ClusterNodePoolNodeConfigKubeletConfigArgs> getKubeletConfig() {
+    public Output<ClusterNodePoolNodeConfigKubeletConfigArgs> kubeletConfig() {
         return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
     }
 
@@ -134,7 +134,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -147,7 +147,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="linuxNodeConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
 
-    public Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> getLinuxNodeConfig() {
+    public Output<ClusterNodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig() {
         return this.linuxNodeConfig == null ? Codegen.empty() : this.linuxNodeConfig;
     }
 
@@ -158,7 +158,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> getLocalSsdCount() {
+    public Output<Integer> localSsdCount() {
         return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
     }
 
@@ -171,7 +171,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
@@ -186,7 +186,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -201,7 +201,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
@@ -212,7 +212,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="nodeGroup")
       private final @Nullable Output<String> nodeGroup;
 
-    public Output<String> getNodeGroup() {
+    public Output<String> nodeGroup() {
         return this.nodeGroup == null ? Codegen.empty() : this.nodeGroup;
     }
 
@@ -225,7 +225,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
+    public Output<List<String>> oauthScopes() {
         return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
@@ -238,7 +238,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> getPreemptible() {
+    public Output<Boolean> preemptible() {
         return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
@@ -250,7 +250,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="sandboxConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
 
-    public Output<ClusterNodePoolNodeConfigSandboxConfigArgs> getSandboxConfig() {
+    public Output<ClusterNodePoolNodeConfigSandboxConfigArgs> sandboxConfig() {
         return this.sandboxConfig == null ? Codegen.empty() : this.sandboxConfig;
     }
 
@@ -262,7 +262,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
@@ -273,7 +273,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+    public Output<ClusterNodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
@@ -286,7 +286,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="spot")
       private final @Nullable Output<Boolean> spot;
 
-    public Output<Boolean> getSpot() {
+    public Output<Boolean> spot() {
         return this.spot == null ? Codegen.empty() : this.spot;
     }
 
@@ -298,7 +298,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
@@ -316,7 +316,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="taints")
       private final @Nullable Output<List<ClusterNodePoolNodeConfigTaintArgs>> taints;
 
-    public Output<List<ClusterNodePoolNodeConfigTaintArgs>> getTaints() {
+    public Output<List<ClusterNodePoolNodeConfigTaintArgs>> taints() {
         return this.taints == null ? Codegen.empty() : this.taints;
     }
 
@@ -328,7 +328,7 @@ public final class ClusterNodePoolNodeConfigArgs extends io.pulumi.resources.Res
     @Import(name="workloadMetadataConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
 
-    public Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> getWorkloadMetadataConfig() {
+    public Output<ClusterNodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig() {
         return this.workloadMetadataConfig == null ? Codegen.empty() : this.workloadMetadataConfig;
     }
 

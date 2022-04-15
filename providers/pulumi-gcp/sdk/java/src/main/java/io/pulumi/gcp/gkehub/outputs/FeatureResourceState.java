@@ -23,10 +23,10 @@ public final class FeatureResourceState {
         this.state = state;
     }
 
-    public Optional<Boolean> getHasResources() {
+    public Optional<Boolean> hasResources() {
         return Optional.ofNullable(this.hasResources);
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

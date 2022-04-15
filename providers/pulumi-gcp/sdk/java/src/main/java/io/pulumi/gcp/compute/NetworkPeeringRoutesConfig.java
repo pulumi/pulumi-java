@@ -58,7 +58,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * @return Whether to export the custom routes to the peer network.
      * 
      */
-    public Output<Boolean> getExportCustomRoutes() {
+    public Output<Boolean> exportCustomRoutes() {
         return this.exportCustomRoutes;
     }
     /**
@@ -72,7 +72,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * @return Whether to import the custom routes to the peer network.
      * 
      */
-    public Output<Boolean> getImportCustomRoutes() {
+    public Output<Boolean> importCustomRoutes() {
         return this.importCustomRoutes;
     }
     /**
@@ -86,7 +86,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * @return The name of the primary network for the peering.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -100,7 +100,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * @return Name of the peering.
      * 
      */
-    public Output<String> getPeering() {
+    public Output<String> peering() {
         return this.peering;
     }
     /**
@@ -116,7 +116,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

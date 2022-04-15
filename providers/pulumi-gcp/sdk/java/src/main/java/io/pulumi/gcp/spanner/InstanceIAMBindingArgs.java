@@ -20,7 +20,7 @@ public final class InstanceIAMBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<InstanceIAMBindingConditionArgs> condition;
 
-    public Output<InstanceIAMBindingConditionArgs> getCondition() {
+    public Output<InstanceIAMBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,14 +31,14 @@ public final class InstanceIAMBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceIAMBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class InstanceIAMBindingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

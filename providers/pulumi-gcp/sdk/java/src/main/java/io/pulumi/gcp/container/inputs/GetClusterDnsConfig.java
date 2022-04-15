@@ -15,21 +15,21 @@ public final class GetClusterDnsConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="clusterDns", required=true)
       private final String clusterDns;
 
-    public String getClusterDns() {
+    public String clusterDns() {
         return this.clusterDns;
     }
 
     @Import(name="clusterDnsDomain", required=true)
       private final String clusterDnsDomain;
 
-    public String getClusterDnsDomain() {
+    public String clusterDnsDomain() {
         return this.clusterDnsDomain;
     }
 
     @Import(name="clusterDnsScope", required=true)
       private final String clusterDnsScope;
 
-    public String getClusterDnsScope() {
+    public String clusterDnsScope() {
         return this.clusterDnsScope;
     }
 

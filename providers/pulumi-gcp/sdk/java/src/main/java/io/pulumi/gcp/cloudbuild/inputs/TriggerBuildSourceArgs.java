@@ -24,7 +24,7 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="repoSource")
       private final @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
 
-    public Output<TriggerBuildSourceRepoSourceArgs> getRepoSource() {
+    public Output<TriggerBuildSourceRepoSourceArgs> repoSource() {
         return this.repoSource == null ? Codegen.empty() : this.repoSource;
     }
 
@@ -36,7 +36,7 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="storageSource")
       private final @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
 
-    public Output<TriggerBuildSourceStorageSourceArgs> getStorageSource() {
+    public Output<TriggerBuildSourceStorageSourceArgs> storageSource() {
         return this.storageSource == null ? Codegen.empty() : this.storageSource;
     }
 

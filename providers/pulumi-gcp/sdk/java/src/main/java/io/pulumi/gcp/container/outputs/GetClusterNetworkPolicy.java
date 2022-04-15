@@ -21,10 +21,10 @@ public final class GetClusterNetworkPolicy {
         this.provider = provider;
     }
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getProvider() {
+    public String provider() {
         return this.provider;
     }
 

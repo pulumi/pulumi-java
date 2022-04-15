@@ -26,7 +26,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="bytesLimitPerFile")
       private final @Nullable Output<Integer> bytesLimitPerFile;
 
-    public Output<Integer> getBytesLimitPerFile() {
+    public Output<Integer> bytesLimitPerFile() {
         return this.bytesLimitPerFile == null ? Codegen.empty() : this.bytesLimitPerFile;
     }
 
@@ -38,7 +38,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="bytesLimitPerFilePercent")
       private final @Nullable Output<Integer> bytesLimitPerFilePercent;
 
-    public Output<Integer> getBytesLimitPerFilePercent() {
+    public Output<Integer> bytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent == null ? Codegen.empty() : this.bytesLimitPerFilePercent;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="fileSet", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs> fileSet;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs> getFileSet() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs> fileSet() {
         return this.fileSet;
     }
 
@@ -64,7 +64,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="fileTypes")
       private final @Nullable Output<List<String>> fileTypes;
 
-    public Output<List<String>> getFileTypes() {
+    public Output<List<String>> fileTypes() {
         return this.fileTypes == null ? Codegen.empty() : this.fileTypes;
     }
 
@@ -76,7 +76,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="filesLimitPercent")
       private final @Nullable Output<Integer> filesLimitPercent;
 
-    public Output<Integer> getFilesLimitPercent() {
+    public Output<Integer> filesLimitPercent() {
         return this.filesLimitPercent == null ? Codegen.empty() : this.filesLimitPercent;
     }
 
@@ -89,7 +89,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     @Import(name="sampleMethod")
       private final @Nullable Output<String> sampleMethod;
 
-    public Output<String> getSampleMethod() {
+    public Output<String> sampleMethod() {
         return this.sampleMethod == null ? Codegen.empty() : this.sampleMethod;
     }
 

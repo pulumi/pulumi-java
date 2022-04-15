@@ -47,7 +47,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
      * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
      * 
     */
-    public Optional<String> getMinimumVersion() {
+    public Optional<String> minimumVersion() {
         return Optional.ofNullable(this.minimumVersion);
     }
     /**
@@ -55,14 +55,14 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
      * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
      * 
     */
-    public String getOsType() {
+    public String osType() {
         return this.osType;
     }
     /**
      * If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access.
      * 
     */
-    public Optional<Boolean> getRequireVerifiedChromeOs() {
+    public Optional<Boolean> requireVerifiedChromeOs() {
         return Optional.ofNullable(this.requireVerifiedChromeOs);
     }
 

@@ -21,7 +21,7 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cpuCount", required=true)
       private final Output<Integer> cpuCount;
 
-    public Output<Integer> getCpuCount() {
+    public Output<Integer> cpuCount() {
         return this.cpuCount;
     }
 
@@ -32,7 +32,7 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="memorySizeMb", required=true)
       private final Output<Integer> memorySizeMb;
 
-    public Output<Integer> getMemorySizeMb() {
+    public Output<Integer> memorySizeMb() {
         return this.memorySizeMb;
     }
 

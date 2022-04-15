@@ -63,7 +63,7 @@ public final class AccessLevelsAccessLevel {
      * Structure is documented below.
      * 
     */
-    public Optional<AccessLevelsAccessLevelBasic> getBasic() {
+    public Optional<AccessLevelsAccessLevelBasic> basic() {
         return Optional.ofNullable(this.basic);
     }
     /**
@@ -72,14 +72,14 @@ public final class AccessLevelsAccessLevel {
      * Structure is documented below.
      * 
     */
-    public Optional<AccessLevelsAccessLevelCustom> getCustom() {
+    public Optional<AccessLevelsAccessLevelCustom> custom() {
         return Optional.ofNullable(this.custom);
     }
     /**
      * Description of the expression
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -88,14 +88,14 @@ public final class AccessLevelsAccessLevel {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Title for the expression, i.e. a short string describing its purpose.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

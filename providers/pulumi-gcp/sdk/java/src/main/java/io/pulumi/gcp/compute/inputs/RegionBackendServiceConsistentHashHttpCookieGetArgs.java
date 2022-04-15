@@ -23,7 +23,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends i
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -34,7 +34,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends i
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -46,7 +46,7 @@ public final class RegionBackendServiceConsistentHashHttpCookieGetArgs extends i
     @Import(name="ttl")
       private final @Nullable Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs> ttl;
 
-    public Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs> getTtl() {
+    public Output<RegionBackendServiceConsistentHashHttpCookieTtlGetArgs> ttl() {
         return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 

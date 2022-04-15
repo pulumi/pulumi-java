@@ -28,7 +28,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends io.pulumi.
     @Import(name="range", required=true)
       private final Output<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range;
 
-    public Output<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> getRange() {
+    public Output<SloWindowsBasedSliMetricMeanInRangeRangeGetArgs> range() {
         return this.range;
     }
 
@@ -45,7 +45,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeGetArgs extends io.pulumi.
     @Import(name="timeSeries", required=true)
       private final Output<String> timeSeries;
 
-    public Output<String> getTimeSeries() {
+    public Output<String> timeSeries() {
         return this.timeSeries;
     }
 

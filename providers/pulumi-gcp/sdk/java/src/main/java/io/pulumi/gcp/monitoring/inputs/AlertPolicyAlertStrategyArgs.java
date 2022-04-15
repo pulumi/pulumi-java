@@ -23,7 +23,7 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     @Import(name="autoClose")
       private final @Nullable Output<String> autoClose;
 
-    public Output<String> getAutoClose() {
+    public Output<String> autoClose() {
         return this.autoClose == null ? Codegen.empty() : this.autoClose;
     }
 
@@ -36,7 +36,7 @@ public final class AlertPolicyAlertStrategyArgs extends io.pulumi.resources.Reso
     @Import(name="notificationRateLimit")
       private final @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
 
-    public Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> getNotificationRateLimit() {
+    public Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit() {
         return this.notificationRateLimit == null ? Codegen.empty() : this.notificationRateLimit;
     }
 

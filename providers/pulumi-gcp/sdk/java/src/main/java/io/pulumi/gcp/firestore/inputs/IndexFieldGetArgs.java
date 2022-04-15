@@ -24,7 +24,7 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arrayConfig")
       private final @Nullable Output<String> arrayConfig;
 
-    public Output<String> getArrayConfig() {
+    public Output<String> arrayConfig() {
         return this.arrayConfig == null ? Codegen.empty() : this.arrayConfig;
     }
 
@@ -35,7 +35,7 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
-    public Output<String> getFieldPath() {
+    public Output<String> fieldPath() {
         return this.fieldPath == null ? Codegen.empty() : this.fieldPath;
     }
 
@@ -48,7 +48,7 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order")
       private final @Nullable Output<String> order;
 
-    public Output<String> getOrder() {
+    public Output<String> order() {
         return this.order == null ? Codegen.empty() : this.order;
     }
 

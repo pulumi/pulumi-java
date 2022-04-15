@@ -15,7 +15,7 @@ public final class GetSecretReplicationUserManagedReplicaCustomerManagedEncrypti
     @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 

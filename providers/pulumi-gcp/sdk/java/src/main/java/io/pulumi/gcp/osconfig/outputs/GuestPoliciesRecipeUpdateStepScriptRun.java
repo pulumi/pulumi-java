@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRun {
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
     */
-    public List<Integer> getAllowedExitCodes() {
+    public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes == null ? List.of() : this.allowedExitCodes;
     }
     /**
@@ -54,14 +54,14 @@ public final class GuestPoliciesRecipeUpdateStepScriptRun {
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
     */
-    public Optional<String> getInterpreter() {
+    public Optional<String> interpreter() {
         return Optional.ofNullable(this.interpreter);
     }
     /**
      * The shell script to be executed.
      * 
     */
-    public String getScript() {
+    public String script() {
         return this.script;
     }
 

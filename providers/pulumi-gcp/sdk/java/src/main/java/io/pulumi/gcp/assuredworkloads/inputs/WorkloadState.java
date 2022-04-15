@@ -27,7 +27,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
@@ -38,7 +38,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="complianceRegime")
       private final @Nullable Output<String> complianceRegime;
 
-    public Output<String> getComplianceRegime() {
+    public Output<String> complianceRegime() {
         return this.complianceRegime == null ? Codegen.empty() : this.complianceRegime;
     }
 
@@ -49,7 +49,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -60,7 +60,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -71,7 +71,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsSettings")
       private final @Nullable Output<WorkloadKmsSettingsGetArgs> kmsSettings;
 
-    public Output<WorkloadKmsSettingsGetArgs> getKmsSettings() {
+    public Output<WorkloadKmsSettingsGetArgs> kmsSettings() {
         return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
     }
 
@@ -82,7 +82,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -93,7 +93,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -104,7 +104,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="organization")
       private final @Nullable Output<String> organization;
 
-    public Output<String> getOrganization() {
+    public Output<String> organization() {
         return this.organization == null ? Codegen.empty() : this.organization;
     }
 
@@ -126,7 +126,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="provisionedResourcesParent")
       private final @Nullable Output<String> provisionedResourcesParent;
 
-    public Output<String> getProvisionedResourcesParent() {
+    public Output<String> provisionedResourcesParent() {
         return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
     }
 
@@ -137,7 +137,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSettings")
       private final @Nullable Output<List<WorkloadResourceSettingGetArgs>> resourceSettings;
 
-    public Output<List<WorkloadResourceSettingGetArgs>> getResourceSettings() {
+    public Output<List<WorkloadResourceSettingGetArgs>> resourceSettings() {
         return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 
@@ -149,7 +149,7 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources")
       private final @Nullable Output<List<WorkloadResourceGetArgs>> resources;
 
-    public Output<List<WorkloadResourceGetArgs>> getResources() {
+    public Output<List<WorkloadResourceGetArgs>> resources() {
         return this.resources == null ? Codegen.empty() : this.resources;
     }
 

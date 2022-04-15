@@ -24,14 +24,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
     @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
-    public Output<String> getImageVersion() {
+    public Output<String> imageVersion() {
         return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
     }
 
     @Import(name="optionalComponents")
       private final @Nullable Output<List<String>> optionalComponents;
 
-    public Output<List<String>> getOptionalComponents() {
+    public Output<List<String>> optionalComponents() {
         return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
     }
 
@@ -42,7 +42,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGe
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties == null ? Codegen.empty() : this.properties;
     }
 

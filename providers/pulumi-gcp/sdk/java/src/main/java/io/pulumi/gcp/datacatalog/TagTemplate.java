@@ -50,7 +50,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return The display name for this template.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -66,7 +66,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<TagTemplateField>> getFields() {
+    public Output<List<TagTemplateField>> fields() {
         return this.fields;
     }
     /**
@@ -80,7 +80,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDelete() {
+    public Output</* @Nullable */ Boolean> forceDelete() {
         return this.forceDelete;
     }
     /**
@@ -96,7 +96,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +112,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -126,7 +126,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return Template location region.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -140,7 +140,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * @return The id of the tag template to create.
      * 
      */
-    public Output<String> getTagTemplateId() {
+    public Output<String> tagTemplateId() {
         return this.tagTemplateId;
     }
 

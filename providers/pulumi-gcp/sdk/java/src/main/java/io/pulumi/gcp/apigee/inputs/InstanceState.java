@@ -22,7 +22,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -34,7 +34,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKeyName")
       private final @Nullable Output<String> diskEncryptionKeyName;
 
-    public Output<String> getDiskEncryptionKeyName() {
+    public Output<String> diskEncryptionKeyName() {
         return this.diskEncryptionKeyName == null ? Codegen.empty() : this.diskEncryptionKeyName;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -56,7 +56,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -73,7 +73,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
-    public Output<String> getIpRange() {
+    public Output<String> ipRange() {
         return this.ipRange == null ? Codegen.empty() : this.ipRange;
     }
 
@@ -86,7 +86,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -97,7 +97,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -109,7 +109,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
@@ -121,7 +121,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="peeringCidrRange")
       private final @Nullable Output<String> peeringCidrRange;
 
-    public Output<String> getPeeringCidrRange() {
+    public Output<String> peeringCidrRange() {
         return this.peeringCidrRange == null ? Codegen.empty() : this.peeringCidrRange;
     }
 
@@ -132,7 +132,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<String> port;
 
-    public Output<String> getPort() {
+    public Output<String> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 

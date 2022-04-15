@@ -44,7 +44,7 @@ public final class TenantInboundSamlConfigSpConfig {
      * Callback URI where responses from IDP are handled. Must start with `https://`.
      * 
     */
-    public String getCallbackUri() {
+    public String callbackUri() {
         return this.callbackUri;
     }
     /**
@@ -53,14 +53,14 @@ public final class TenantInboundSamlConfigSpConfig {
      * Structure is documented below.
      * 
     */
-    public List<TenantInboundSamlConfigSpConfigSpCertificate> getSpCertificates() {
+    public List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates() {
         return this.spCertificates == null ? List.of() : this.spCertificates;
     }
     /**
      * Unique identifier for all SAML entities.
      * 
     */
-    public String getSpEntityId() {
+    public String spEntityId() {
         return this.spEntityId;
     }
 

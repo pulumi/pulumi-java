@@ -23,7 +23,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="algorithm", required=true)
       private final String algorithm;
 
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
 
@@ -34,7 +34,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="creationTime", required=true)
       private final String creationTime;
 
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
 
@@ -45,7 +45,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -56,7 +56,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="digests", required=true)
       private final List<GetKeysZoneSigningKeyDigest> digests;
 
-    public List<GetKeysZoneSigningKeyDigest> getDigests() {
+    public List<GetKeysZoneSigningKeyDigest> digests() {
         return this.digests;
     }
 
@@ -67,7 +67,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
       private final String id;
 
-    public String getId() {
+    public String id() {
         return this.id;
     }
 
@@ -78,7 +78,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="isActive", required=true)
       private final Boolean isActive;
 
-    public Boolean getIsActive() {
+    public Boolean isActive() {
         return this.isActive;
     }
 
@@ -89,7 +89,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="keyLength", required=true)
       private final Integer keyLength;
 
-    public Integer getKeyLength() {
+    public Integer keyLength() {
         return this.keyLength;
     }
 
@@ -100,7 +100,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="keyTag", required=true)
       private final Integer keyTag;
 
-    public Integer getKeyTag() {
+    public Integer keyTag() {
         return this.keyTag;
     }
 
@@ -111,7 +111,7 @@ public final class GetKeysZoneSigningKey extends io.pulumi.resources.InvokeArgs 
     @Import(name="publicKey", required=true)
       private final String publicKey;
 
-    public String getPublicKey() {
+    public String publicKey() {
         return this.publicKey;
     }
 

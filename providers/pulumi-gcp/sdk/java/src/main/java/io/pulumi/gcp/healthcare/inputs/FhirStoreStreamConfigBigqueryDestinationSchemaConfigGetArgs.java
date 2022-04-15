@@ -26,7 +26,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
     @Import(name="recursiveStructureDepth", required=true)
       private final Output<Integer> recursiveStructureDepth;
 
-    public Output<Integer> getRecursiveStructureDepth() {
+    public Output<Integer> recursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
 
@@ -41,7 +41,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
     @Import(name="schemaType")
       private final @Nullable Output<String> schemaType;
 
-    public Output<String> getSchemaType() {
+    public Output<String> schemaType() {
         return this.schemaType == null ? Codegen.empty() : this.schemaType;
     }
 

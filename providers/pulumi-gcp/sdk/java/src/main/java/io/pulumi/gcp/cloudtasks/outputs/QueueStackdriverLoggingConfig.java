@@ -28,7 +28,7 @@ public final class QueueStackdriverLoggingConfig {
      * default and means that no operations are logged.
      * 
     */
-    public Double getSamplingRatio() {
+    public Double samplingRatio() {
         return this.samplingRatio;
     }
 

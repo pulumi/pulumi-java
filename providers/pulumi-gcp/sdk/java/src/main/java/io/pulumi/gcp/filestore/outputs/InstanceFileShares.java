@@ -46,14 +46,14 @@ public final class InstanceFileShares {
      * for the standard tier, or 2560 GiB for the premium tier.
      * 
     */
-    public Integer getCapacityGb() {
+    public Integer capacityGb() {
         return this.capacityGb;
     }
     /**
      * The name of the fileshare (16 characters or less)
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -61,7 +61,7 @@ public final class InstanceFileShares {
      * Structure is documented below.
      * 
     */
-    public List<InstanceFileSharesNfsExportOption> getNfsExportOptions() {
+    public List<InstanceFileSharesNfsExportOption> nfsExportOptions() {
         return this.nfsExportOptions == null ? List.of() : this.nfsExportOptions;
     }
 

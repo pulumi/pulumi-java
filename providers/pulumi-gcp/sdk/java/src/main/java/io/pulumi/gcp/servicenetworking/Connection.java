@@ -48,13 +48,13 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Name of VPC network connected with service producers using VPC peering.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     @Export(name="peering", type=String.class, parameters={})
     private Output<String> peering;
 
-    public Output<String> getPeering() {
+    public Output<String> peering() {
         return this.peering;
     }
     /**
@@ -72,7 +72,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * is already established will not reallocate already provisioned service producer subnetworks.
      * 
      */
-    public Output<List<String>> getReservedPeeringRanges() {
+    public Output<List<String>> reservedPeeringRanges() {
         return this.reservedPeeringRanges;
     }
     /**
@@ -90,7 +90,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * 'servicenetworking.googleapis.com'.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

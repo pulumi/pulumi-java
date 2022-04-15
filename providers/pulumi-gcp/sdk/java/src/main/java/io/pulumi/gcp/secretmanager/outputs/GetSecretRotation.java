@@ -20,10 +20,10 @@ public final class GetSecretRotation {
         this.rotationPeriod = rotationPeriod;
     }
 
-    public String getNextRotationTime() {
+    public String nextRotationTime() {
         return this.nextRotationTime;
     }
-    public String getRotationPeriod() {
+    public String rotationPeriod() {
         return this.rotationPeriod;
     }
 

@@ -23,13 +23,13 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
-    public String getExclusionName() {
+    public String exclusionName() {
         return this.exclusionName;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

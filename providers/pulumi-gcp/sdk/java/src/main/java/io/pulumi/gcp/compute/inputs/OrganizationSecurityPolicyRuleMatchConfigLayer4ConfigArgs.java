@@ -27,7 +27,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs ext
     @Import(name="ipProtocol", required=true)
       private final Output<String> ipProtocol;
 
-    public Output<String> getIpProtocol() {
+    public Output<String> ipProtocol() {
         return this.ipProtocol;
     }
 
@@ -43,7 +43,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs ext
     @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> getPorts() {
+    public Output<List<String>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

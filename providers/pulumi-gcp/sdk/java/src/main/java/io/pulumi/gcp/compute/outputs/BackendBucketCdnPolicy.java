@@ -94,14 +94,14 @@ public final class BackendBucketCdnPolicy {
      * Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
      * 
     */
-    public Optional<String> getCacheMode() {
+    public Optional<String> cacheMode() {
         return Optional.ofNullable(this.cacheMode);
     }
     /**
      * Specifies the maximum allowed TTL for cached content served by this origin.
      * 
     */
-    public Optional<Integer> getClientTtl() {
+    public Optional<Integer> clientTtl() {
         return Optional.ofNullable(this.clientTtl);
     }
     /**
@@ -109,21 +109,21 @@ public final class BackendBucketCdnPolicy {
      * that do not have an existing valid TTL (max-age or s-max-age).
      * 
     */
-    public Optional<Integer> getDefaultTtl() {
+    public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * Specifies the maximum allowed TTL for cached content served by this origin.
      * 
     */
-    public Optional<Integer> getMaxTtl() {
+    public Optional<Integer> maxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
     /**
      * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
      * 
     */
-    public Optional<Boolean> getNegativeCaching() {
+    public Optional<Boolean> negativeCaching() {
         return Optional.ofNullable(this.negativeCaching);
     }
     /**
@@ -132,14 +132,14 @@ public final class BackendBucketCdnPolicy {
      * Structure is documented below.
      * 
     */
-    public List<BackendBucketCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
+    public List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies() {
         return this.negativeCachingPolicies == null ? List.of() : this.negativeCachingPolicies;
     }
     /**
      * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
      * 
     */
-    public Optional<Integer> getServeWhileStale() {
+    public Optional<Integer> serveWhileStale() {
         return Optional.ofNullable(this.serveWhileStale);
     }
     /**
@@ -153,7 +153,7 @@ public final class BackendBucketCdnPolicy {
      * header. The actual headers served in responses will not be altered.
      * 
     */
-    public Optional<Integer> getSignedUrlCacheMaxAgeSec() {
+    public Optional<Integer> signedUrlCacheMaxAgeSec() {
         return Optional.ofNullable(this.signedUrlCacheMaxAgeSec);
     }
 

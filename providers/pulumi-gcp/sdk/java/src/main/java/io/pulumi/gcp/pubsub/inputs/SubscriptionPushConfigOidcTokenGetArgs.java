@@ -27,7 +27,7 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience == null ? Codegen.empty() : this.audience;
     }
 
@@ -41,7 +41,7 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
     @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 

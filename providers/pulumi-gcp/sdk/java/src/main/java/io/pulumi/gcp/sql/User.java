@@ -50,7 +50,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
      * 
      */
-    public Output</* @Nullable */ String> getDeletionPolicy() {
+    public Output</* @Nullable */ String> deletionPolicy() {
         return this.deletionPolicy;
     }
     /**
@@ -68,7 +68,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Can be an IP address. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
     /**
@@ -84,7 +84,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * forces a new resource to be created.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -100,7 +100,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * to be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +116,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * instances this is a Required field.
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -132,7 +132,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -150,7 +150,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

@@ -23,7 +23,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
@@ -34,7 +34,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
+    public Output<String> clientSecret() {
         return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
@@ -45,7 +45,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -66,7 +66,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     @Import(name="idpId")
       private final @Nullable Output<String> idpId;
 
-    public Output<String> getIdpId() {
+    public Output<String> idpId() {
         return this.idpId == null ? Codegen.empty() : this.idpId;
     }
 
@@ -77,7 +77,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -89,7 +89,7 @@ public final class DefaultSupportedIdpConfigState extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

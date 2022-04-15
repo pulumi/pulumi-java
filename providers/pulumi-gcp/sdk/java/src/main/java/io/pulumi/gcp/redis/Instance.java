@@ -72,7 +72,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [locationId].
      * 
      */
-    public Output<String> getAlternativeLocationId() {
+    public Output<String> alternativeLocationId() {
         return this.alternativeLocationId;
     }
     /**
@@ -90,7 +90,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Default value is "false" meaning AUTH is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAuthEnabled() {
+    public Output</* @Nullable */ Boolean> authEnabled() {
         return this.authEnabled;
     }
     /**
@@ -104,7 +104,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return AUTH String set on the instance. This field will only be populated if auth_enabled is true.
      * 
      */
-    public Output<String> getAuthString() {
+    public Output<String> authString() {
         return this.authString;
     }
     /**
@@ -122,7 +122,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * will be used.
      * 
      */
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
@@ -140,7 +140,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
      */
-    public Output</* @Nullable */ String> getConnectMode() {
+    public Output</* @Nullable */ String> connectMode() {
         return this.connectMode;
     }
     /**
@@ -160,7 +160,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * resolution and up to nine fractional digits.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -178,7 +178,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [alternativeLocationId] and can change after a failover event.
      * 
      */
-    public Output<String> getCurrentLocationId() {
+    public Output<String> currentLocationId() {
         return this.currentLocationId;
     }
     /**
@@ -192,7 +192,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return An arbitrary and optional user-provided name for the instance.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -206,7 +206,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
      * 
      */
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
     /**
@@ -220,7 +220,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -242,7 +242,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * be different from [locationId].
      * 
      */
-    public Output<String> getLocationId() {
+    public Output<String> locationId() {
         return this.locationId;
     }
     /**
@@ -258,7 +258,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceMaintenancePolicy> getMaintenancePolicy() {
+    public Output</* @Nullable */ InstanceMaintenancePolicy> maintenancePolicy() {
         return this.maintenancePolicy;
     }
     /**
@@ -274,7 +274,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceMaintenanceSchedule> getMaintenanceSchedule() {
+    public Output</* @Nullable */ InstanceMaintenanceSchedule> maintenanceSchedule() {
         return this.maintenanceSchedule;
     }
     /**
@@ -288,7 +288,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Redis memory size in GiB.
      * 
      */
-    public Output<Integer> getMemorySizeGb() {
+    public Output<Integer> memorySizeGb() {
         return this.memorySizeGb;
     }
     /**
@@ -302,7 +302,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The ID of the instance or a fully qualified identifier for the instance.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -316,7 +316,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Output only. Info per node.
      * 
      */
-    public Output<List<InstanceNode>> getNodes() {
+    public Output<List<InstanceNode>> nodes() {
         return this.nodes;
     }
     /**
@@ -334,7 +334,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * operation.
      * 
      */
-    public Output<String> getPersistenceIamIdentity() {
+    public Output<String> persistenceIamIdentity() {
         return this.persistenceIamIdentity;
     }
     /**
@@ -348,7 +348,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The port number of the exposed Redis endpoint.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -364,7 +364,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -382,7 +382,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * requests must target 'host'.
      * 
      */
-    public Output<String> getReadEndpoint() {
+    public Output<String> readEndpoint() {
         return this.readEndpoint;
     }
     /**
@@ -398,7 +398,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 'port'.
      * 
      */
-    public Output<Integer> getReadEndpointPort() {
+    public Output<Integer> readEndpointPort() {
         return this.readEndpointPort;
     }
     /**
@@ -420,7 +420,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * "READ_REPLICAS_DISABLED" Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
      * 
      */
-    public Output</* @Nullable */ String> getReadReplicasMode() {
+    public Output</* @Nullable */ String> readReplicasMode() {
         return this.readReplicasMode;
     }
     /**
@@ -438,7 +438,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getRedisConfigs() {
+    public Output</* @Nullable */ Map<String,String>> redisConfigs() {
         return this.redisConfigs;
     }
     /**
@@ -456,7 +456,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * at the top for the latest valid values.
      * 
      */
-    public Output<String> getRedisVersion() {
+    public Output<String> redisVersion() {
         return this.redisVersion;
     }
     /**
@@ -470,7 +470,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the Redis region of the instance.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -488,7 +488,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is 1. The valid value for basic tier is 0 and the default is also 0.
      * 
      */
-    public Output<Integer> getReplicaCount() {
+    public Output<Integer> replicaCount() {
         return this.replicaCount;
     }
     /**
@@ -510,7 +510,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * network.
      * 
      */
-    public Output<String> getReservedIpRange() {
+    public Output<String> reservedIpRange() {
         return this.reservedIpRange;
     }
     /**
@@ -524,7 +524,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return List of server CA certificates for the instance.
      * 
      */
-    public Output<List<InstanceServerCaCert>> getServerCaCerts() {
+    public Output<List<InstanceServerCaCert>> serverCaCerts() {
         return this.serverCaCerts;
     }
     /**
@@ -546,7 +546,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      *   Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
-    public Output</* @Nullable */ String> getTier() {
+    public Output</* @Nullable */ String> tier() {
         return this.tier;
     }
     /**
@@ -566,7 +566,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
-    public Output</* @Nullable */ String> getTransitEncryptionMode() {
+    public Output</* @Nullable */ String> transitEncryptionMode() {
         return this.transitEncryptionMode;
     }
 

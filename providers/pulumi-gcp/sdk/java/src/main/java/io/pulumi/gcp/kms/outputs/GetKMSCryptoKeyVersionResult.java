@@ -71,48 +71,48 @@ public final class GetKMSCryptoKeyVersionResult {
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
      * 
     */
-    public String getAlgorithm() {
+    public String algorithm() {
         return this.algorithm;
     }
-    public String getCryptoKey() {
+    public String cryptoKey() {
         return this.cryptoKey;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protection_level reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
      * 
     */
-    public String getProtectionLevel() {
+    public String protectionLevel() {
         return this.protectionLevel;
     }
     /**
      * If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
      * 
     */
-    public List<GetKMSCryptoKeyVersionPublicKey> getPublicKeys() {
+    public List<GetKMSCryptoKeyVersionPublicKey> publicKeys() {
         return this.publicKeys;
     }
     /**
      * The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
      * 
     */
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Optional<Integer> getVersion() {
+    public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }
 

@@ -75,17 +75,17 @@ public final class RouterStatusBestRoute {
         this.tags = tags;
     }
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public String getDestRange() {
+    public String destRange() {
         return this.destRange;
     }
     /**
      * The name of the router.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -93,31 +93,31 @@ public final class RouterStatusBestRoute {
      * network of this subnetwork.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
-    public String getNextHopGateway() {
+    public String nextHopGateway() {
         return this.nextHopGateway;
     }
-    public String getNextHopIlb() {
+    public String nextHopIlb() {
         return this.nextHopIlb;
     }
-    public String getNextHopInstance() {
+    public String nextHopInstance() {
         return this.nextHopInstance;
     }
-    public String getNextHopInstanceZone() {
+    public String nextHopInstanceZone() {
         return this.nextHopInstanceZone;
     }
-    public String getNextHopIp() {
+    public String nextHopIp() {
         return this.nextHopIp;
     }
-    public String getNextHopNetwork() {
+    public String nextHopNetwork() {
         return this.nextHopNetwork;
     }
-    public String getNextHopVpnTunnel() {
+    public String nextHopVpnTunnel() {
         return this.nextHopVpnTunnel;
     }
-    public Integer getPriority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
@@ -125,13 +125,13 @@ public final class RouterStatusBestRoute {
      * belongs. If it is not provided, the provider project is used.
      * 
     */
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 

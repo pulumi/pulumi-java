@@ -39,7 +39,7 @@ public final class CaPoolPublishingOptions {
      * X.509 extension will not be written in issued certificates.
      * 
     */
-    public Boolean getPublishCaCert() {
+    public Boolean publishCaCert() {
         return this.publishCaCert;
     }
     /**
@@ -49,7 +49,7 @@ public final class CaPoolPublishingOptions {
      * also rebuilt shortly after a certificate is revoked.
      * 
     */
-    public Boolean getPublishCrl() {
+    public Boolean publishCrl() {
         return this.publishCrl;
     }
 

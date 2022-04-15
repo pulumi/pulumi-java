@@ -25,35 +25,35 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     @Import(name="aiaIssuingCertificateUrls")
       private final @Nullable Output<List<String>> aiaIssuingCertificateUrls;
 
-    public Output<List<String>> getAiaIssuingCertificateUrls() {
+    public Output<List<String>> aiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls == null ? Codegen.empty() : this.aiaIssuingCertificateUrls;
     }
 
     @Import(name="authorityKeyIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds;
 
-    public Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> getAuthorityKeyIds() {
+    public Output<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds() {
         return this.authorityKeyIds == null ? Codegen.empty() : this.authorityKeyIds;
     }
 
     @Import(name="certFingerprints")
       private final @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints;
 
-    public Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> getCertFingerprints() {
+    public Output<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints() {
         return this.certFingerprints == null ? Codegen.empty() : this.certFingerprints;
     }
 
     @Import(name="configValues")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueArgs>> getConfigValues() {
+    public Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues() {
         return this.configValues == null ? Codegen.empty() : this.configValues;
     }
 
     @Import(name="crlDistributionPoints")
       private final @Nullable Output<List<String>> crlDistributionPoints;
 
-    public Output<List<String>> getCrlDistributionPoints() {
+    public Output<List<String>> crlDistributionPoints() {
         return this.crlDistributionPoints == null ? Codegen.empty() : this.crlDistributionPoints;
     }
 
@@ -65,21 +65,21 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     @Import(name="publicKeys")
       private final @Nullable Output<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys;
 
-    public Output<List<CertificateCertificateDescriptionPublicKeyArgs>> getPublicKeys() {
+    public Output<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys() {
         return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
     @Import(name="subjectDescriptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions;
 
-    public Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> getSubjectDescriptions() {
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions() {
         return this.subjectDescriptions == null ? Codegen.empty() : this.subjectDescriptions;
     }
 
     @Import(name="subjectKeyIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds;
 
-    public Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> getSubjectKeyIds() {
+    public Output<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds() {
         return this.subjectKeyIds == null ? Codegen.empty() : this.subjectKeyIds;
     }
 

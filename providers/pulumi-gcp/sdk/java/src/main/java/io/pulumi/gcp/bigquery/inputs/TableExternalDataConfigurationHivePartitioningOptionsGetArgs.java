@@ -30,7 +30,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -43,7 +43,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
     @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
-    public Output<Boolean> getRequirePartitionFilter() {
+    public Output<Boolean> requirePartitionFilter() {
         return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
@@ -61,7 +61,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsGetArgs 
     @Import(name="sourceUriPrefix")
       private final @Nullable Output<String> sourceUriPrefix;
 
-    public Output<String> getSourceUriPrefix() {
+    public Output<String> sourceUriPrefix() {
         return this.sourceUriPrefix == null ? Codegen.empty() : this.sourceUriPrefix;
     }
 

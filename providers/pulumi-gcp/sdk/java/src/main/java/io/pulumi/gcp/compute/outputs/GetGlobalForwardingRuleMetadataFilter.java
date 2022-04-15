@@ -22,10 +22,10 @@ public final class GetGlobalForwardingRuleMetadataFilter {
         this.filterMatchCriteria = filterMatchCriteria;
     }
 
-    public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {
+    public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels() {
         return this.filterLabels;
     }
-    public String getFilterMatchCriteria() {
+    public String filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 

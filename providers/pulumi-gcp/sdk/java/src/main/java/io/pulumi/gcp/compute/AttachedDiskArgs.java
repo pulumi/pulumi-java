@@ -26,7 +26,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
@@ -37,7 +37,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disk", required=true)
       private final Output<String> disk;
 
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
 
@@ -51,7 +51,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
@@ -64,7 +64,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode == null ? Codegen.empty() : this.mode;
     }
 
@@ -76,7 +76,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -88,7 +88,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

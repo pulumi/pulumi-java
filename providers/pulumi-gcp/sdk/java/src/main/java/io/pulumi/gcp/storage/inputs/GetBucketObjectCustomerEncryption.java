@@ -15,14 +15,14 @@ public final class GetBucketObjectCustomerEncryption extends io.pulumi.resources
     @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
 
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
     @Import(name="encryptionKey", required=true)
       private final String encryptionKey;
 
-    public String getEncryptionKey() {
+    public String encryptionKey() {
         return this.encryptionKey;
     }
 

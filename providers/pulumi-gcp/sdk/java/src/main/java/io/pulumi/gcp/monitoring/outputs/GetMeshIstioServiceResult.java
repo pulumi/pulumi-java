@@ -49,35 +49,35 @@ public final class GetMeshIstioServiceResult {
         this.telemetries = telemetries;
     }
 
-    public String getDisplayName() {
+    public String displayName() {
         return this.displayName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getMeshUid() {
+    public String meshUid() {
         return this.meshUid;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public String getServiceId() {
+    public String serviceId() {
         return this.serviceId;
     }
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
-    public String getServiceNamespace() {
+    public String serviceNamespace() {
         return this.serviceNamespace;
     }
-    public List<GetMeshIstioServiceTelemetry> getTelemetries() {
+    public List<GetMeshIstioServiceTelemetry> telemetries() {
         return this.telemetries;
     }
 

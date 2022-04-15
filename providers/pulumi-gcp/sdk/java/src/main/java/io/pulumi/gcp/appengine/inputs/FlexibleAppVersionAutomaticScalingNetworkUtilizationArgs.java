@@ -22,7 +22,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     @Import(name="targetReceivedBytesPerSecond")
       private final @Nullable Output<Integer> targetReceivedBytesPerSecond;
 
-    public Output<Integer> getTargetReceivedBytesPerSecond() {
+    public Output<Integer> targetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond == null ? Codegen.empty() : this.targetReceivedBytesPerSecond;
     }
 
@@ -33,7 +33,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     @Import(name="targetReceivedPacketsPerSecond")
       private final @Nullable Output<Integer> targetReceivedPacketsPerSecond;
 
-    public Output<Integer> getTargetReceivedPacketsPerSecond() {
+    public Output<Integer> targetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond == null ? Codegen.empty() : this.targetReceivedPacketsPerSecond;
     }
 
@@ -44,7 +44,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     @Import(name="targetSentBytesPerSecond")
       private final @Nullable Output<Integer> targetSentBytesPerSecond;
 
-    public Output<Integer> getTargetSentBytesPerSecond() {
+    public Output<Integer> targetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond == null ? Codegen.empty() : this.targetSentBytesPerSecond;
     }
 
@@ -55,7 +55,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs exte
     @Import(name="targetSentPacketsPerSecond")
       private final @Nullable Output<Integer> targetSentPacketsPerSecond;
 
-    public Output<Integer> getTargetSentPacketsPerSecond() {
+    public Output<Integer> targetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond == null ? Codegen.empty() : this.targetSentPacketsPerSecond;
     }
 

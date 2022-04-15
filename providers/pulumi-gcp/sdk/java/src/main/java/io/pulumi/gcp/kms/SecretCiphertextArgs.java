@@ -23,7 +23,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="additionalAuthenticatedData")
       private final @Nullable Output<String> additionalAuthenticatedData;
 
-    public Output<String> getAdditionalAuthenticatedData() {
+    public Output<String> additionalAuthenticatedData() {
         return this.additionalAuthenticatedData == null ? Codegen.empty() : this.additionalAuthenticatedData;
     }
 
@@ -35,7 +35,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cryptoKey", required=true)
       private final Output<String> cryptoKey;
 
-    public Output<String> getCryptoKey() {
+    public Output<String> cryptoKey() {
         return this.cryptoKey;
     }
 
@@ -47,7 +47,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="plaintext", required=true)
       private final Output<String> plaintext;
 
-    public Output<String> getPlaintext() {
+    public Output<String> plaintext() {
         return this.plaintext;
     }
 

@@ -23,7 +23,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -34,7 +34,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -46,7 +46,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretData", required=true)
       private final Output<String> secretData;
 
-    public Output<String> getSecretData() {
+    public Output<String> secretData() {
         return this.secretData;
     }
 

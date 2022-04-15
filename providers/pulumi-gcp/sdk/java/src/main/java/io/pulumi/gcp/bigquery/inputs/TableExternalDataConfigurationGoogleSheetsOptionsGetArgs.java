@@ -24,7 +24,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
+    public Output<String> range() {
         return this.range == null ? Codegen.empty() : this.range;
     }
 
@@ -37,7 +37,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
     @Import(name="skipLeadingRows")
       private final @Nullable Output<Integer> skipLeadingRows;
 
-    public Output<Integer> getSkipLeadingRows() {
+    public Output<Integer> skipLeadingRows() {
         return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
     }
 

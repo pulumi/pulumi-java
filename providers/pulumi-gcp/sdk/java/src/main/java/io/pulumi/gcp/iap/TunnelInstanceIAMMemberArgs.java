@@ -24,7 +24,7 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<TunnelInstanceIAMMemberConditionArgs> condition;
 
-    public Output<TunnelInstanceIAMMemberConditionArgs> getCondition() {
+    public Output<TunnelInstanceIAMMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -35,14 +35,14 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -54,7 +54,7 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -67,14 +67,14 @@ public final class TunnelInstanceIAMMemberArgs extends io.pulumi.resources.Resou
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

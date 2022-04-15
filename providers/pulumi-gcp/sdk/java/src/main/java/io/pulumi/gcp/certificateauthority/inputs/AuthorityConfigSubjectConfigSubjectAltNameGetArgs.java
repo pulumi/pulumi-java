@@ -23,7 +23,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
     @Import(name="dnsNames")
       private final @Nullable Output<List<String>> dnsNames;
 
-    public Output<List<String>> getDnsNames() {
+    public Output<List<String>> dnsNames() {
         return this.dnsNames == null ? Codegen.empty() : this.dnsNames;
     }
 
@@ -34,7 +34,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
     @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
-    public Output<List<String>> getEmailAddresses() {
+    public Output<List<String>> emailAddresses() {
         return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
     }
 
@@ -45,7 +45,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
+    public Output<List<String>> ipAddresses() {
         return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
@@ -56,7 +56,7 @@ public final class AuthorityConfigSubjectConfigSubjectAltNameGetArgs extends io.
     @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
+    public Output<List<String>> uris() {
         return this.uris == null ? Codegen.empty() : this.uris;
     }
 

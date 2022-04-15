@@ -57,7 +57,7 @@ public final class EntryGcsFilesetSpec {
      * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
      * 
     */
-    public List<String> getFilePatterns() {
+    public List<String> filePatterns() {
         return this.filePatterns;
     }
     /**
@@ -66,7 +66,7 @@ public final class EntryGcsFilesetSpec {
      * Structure is documented below.
      * 
     */
-    public List<EntryGcsFilesetSpecSampleGcsFileSpec> getSampleGcsFileSpecs() {
+    public List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs() {
         return this.sampleGcsFileSpecs == null ? List.of() : this.sampleGcsFileSpecs;
     }
 

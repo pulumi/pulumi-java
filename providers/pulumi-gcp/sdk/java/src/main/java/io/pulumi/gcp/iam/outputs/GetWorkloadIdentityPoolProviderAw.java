@@ -16,7 +16,7 @@ public final class GetWorkloadIdentityPoolProviderAw {
         this.accountId = accountId;
     }
 
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 

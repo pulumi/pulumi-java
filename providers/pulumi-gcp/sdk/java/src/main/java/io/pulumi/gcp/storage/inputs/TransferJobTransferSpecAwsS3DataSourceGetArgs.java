@@ -23,7 +23,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     @Import(name="awsAccessKey")
       private final @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey;
 
-    public Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> getAwsAccessKey() {
+    public Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey() {
         return this.awsAccessKey == null ? Codegen.empty() : this.awsAccessKey;
     }
 
@@ -34,7 +34,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -45,7 +45,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends io.pulu
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 

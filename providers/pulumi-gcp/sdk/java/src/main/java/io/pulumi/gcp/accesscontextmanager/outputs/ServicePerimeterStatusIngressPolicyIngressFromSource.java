@@ -53,7 +53,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
      * If * is specified, then all IngressSources will be allowed.
      * 
     */
-    public Optional<String> getAccessLevel() {
+    public Optional<String> accessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
     /**
@@ -65,7 +65,7 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
      * of allowing all Google Cloud resources only is not supported.
      * 
     */
-    public Optional<String> getResource() {
+    public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }
 

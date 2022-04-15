@@ -27,7 +27,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
@@ -38,7 +38,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization", required=true)
       private final Output<AwsClusterAuthorizationArgs> authorization;
 
-    public Output<AwsClusterAuthorizationArgs> getAuthorization() {
+    public Output<AwsClusterAuthorizationArgs> authorization() {
         return this.authorization;
     }
 
@@ -49,7 +49,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsRegion", required=true)
       private final Output<String> awsRegion;
 
-    public Output<String> getAwsRegion() {
+    public Output<String> awsRegion() {
         return this.awsRegion;
     }
 
@@ -60,7 +60,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="controlPlane", required=true)
       private final Output<AwsClusterControlPlaneArgs> controlPlane;
 
-    public Output<AwsClusterControlPlaneArgs> getControlPlane() {
+    public Output<AwsClusterControlPlaneArgs> controlPlane() {
         return this.controlPlane;
     }
 
@@ -71,7 +71,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -82,7 +82,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleet", required=true)
       private final Output<AwsClusterFleetArgs> fleet;
 
-    public Output<AwsClusterFleetArgs> getFleet() {
+    public Output<AwsClusterFleetArgs> fleet() {
         return this.fleet;
     }
 
@@ -93,7 +93,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -104,7 +104,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -115,7 +115,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networking", required=true)
       private final Output<AwsClusterNetworkingArgs> networking;
 
-    public Output<AwsClusterNetworkingArgs> getNetworking() {
+    public Output<AwsClusterNetworkingArgs> networking() {
         return this.networking;
     }
 
@@ -126,7 +126,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

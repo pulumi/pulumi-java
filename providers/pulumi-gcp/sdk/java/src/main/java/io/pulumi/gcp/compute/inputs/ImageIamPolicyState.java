@@ -22,7 +22,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -33,7 +33,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
+    public Output<String> image() {
         return this.image == null ? Codegen.empty() : this.image;
     }
 
@@ -45,7 +45,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
@@ -57,7 +57,7 @@ public final class ImageIamPolicyState extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

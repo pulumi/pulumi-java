@@ -24,13 +24,13 @@ public final class GetResourcePolicyGroupPlacementPolicy {
         this.vmCount = vmCount;
     }
 
-    public Integer getAvailabilityDomainCount() {
+    public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
     }
-    public String getCollocation() {
+    public String collocation() {
         return this.collocation;
     }
-    public Integer getVmCount() {
+    public Integer vmCount() {
         return this.vmCount;
     }
 

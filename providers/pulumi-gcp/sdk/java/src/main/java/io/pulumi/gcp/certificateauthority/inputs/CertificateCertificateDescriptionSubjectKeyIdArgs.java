@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 

@@ -36,25 +36,25 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig {
         this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
     }
 
-    public String getCloudComposerConnectionSubnetwork() {
+    public String cloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork;
     }
-    public String getCloudComposerNetworkIpv4CidrBlock() {
+    public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
-    public String getCloudSqlIpv4CidrBlock() {
+    public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
-    public Boolean getEnablePrivateEndpoint() {
+    public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
-    public Boolean getEnablePrivatelyUsedPublicIps() {
+    public Boolean enablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps;
     }
-    public String getMasterIpv4CidrBlock() {
+    public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
-    public String getWebServerIpv4CidrBlock() {
+    public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
     }
 

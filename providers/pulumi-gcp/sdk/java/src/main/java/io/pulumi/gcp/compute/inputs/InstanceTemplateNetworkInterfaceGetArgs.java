@@ -32,7 +32,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="accessConfigs")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
 
-    public Output<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> getAccessConfigs() {
+    public Output<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> accessConfigs() {
         return this.accessConfigs == null ? Codegen.empty() : this.accessConfigs;
     }
 
@@ -45,7 +45,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="aliasIpRanges")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
 
-    public Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> getAliasIpRanges() {
+    public Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges() {
         return this.aliasIpRanges == null ? Codegen.empty() : this.aliasIpRanges;
     }
 
@@ -58,14 +58,14 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="ipv6AccessConfigs")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
 
-    public Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> getIpv6AccessConfigs() {
+    public Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Codegen.empty() : this.ipv6AccessConfigs;
     }
 
     @Import(name="ipv6AccessType")
       private final @Nullable Output<String> ipv6AccessType;
 
-    public Output<String> getIpv6AccessType() {
+    public Output<String> ipv6AccessType() {
         return this.ipv6AccessType == null ? Codegen.empty() : this.ipv6AccessType;
     }
 
@@ -77,7 +77,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -90,7 +90,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
@@ -102,7 +102,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="networkIp")
       private final @Nullable Output<String> networkIp;
 
-    public Output<String> getNetworkIp() {
+    public Output<String> networkIp() {
         return this.networkIp == null ? Codegen.empty() : this.networkIp;
     }
 
@@ -113,7 +113,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
-    public Output<String> getNicType() {
+    public Output<String> nicType() {
         return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
@@ -124,7 +124,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="queueCount")
       private final @Nullable Output<Integer> queueCount;
 
-    public Output<Integer> getQueueCount() {
+    public Output<Integer> queueCount() {
         return this.queueCount == null ? Codegen.empty() : this.queueCount;
     }
 
@@ -135,7 +135,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="stackType")
       private final @Nullable Output<String> stackType;
 
-    public Output<String> getStackType() {
+    public Output<String> stackType() {
         return this.stackType == null ? Codegen.empty() : this.stackType;
     }
 
@@ -148,7 +148,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
@@ -160,7 +160,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
     @Import(name="subnetworkProject")
       private final @Nullable Output<String> subnetworkProject;
 
-    public Output<String> getSubnetworkProject() {
+    public Output<String> subnetworkProject() {
         return this.subnetworkProject == null ? Codegen.empty() : this.subnetworkProject;
     }
 

@@ -55,7 +55,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * the size of the node pool to the current cluster usage. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodePoolAutoscaling> getAutoscaling() {
+    public Output</* @Nullable */ NodePoolAutoscaling> autoscaling() {
         return this.autoscaling;
     }
     /**
@@ -69,7 +69,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     /**
@@ -95,7 +95,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * ignore subsqeuent changes to this field.
      * 
      */
-    public Output<Integer> getInitialNodeCount() {
+    public Output<Integer> initialNodeCount() {
         return this.initialNodeCount;
     }
     /**
@@ -109,7 +109,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The resource URLs of the managed instance groups associated with this node pool.
      * 
      */
-    public Output<List<String>> getInstanceGroupUrls() {
+    public Output<List<String>> instanceGroupUrls() {
         return this.instanceGroupUrls;
     }
     /**
@@ -123,7 +123,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return The location (region or zone) of the cluster.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -137,7 +137,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @return List of instance group URLs which have been assigned to this node pool.
      * 
      */
-    public Output<List<String>> getManagedInstanceGroupUrls() {
+    public Output<List<String>> managedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls;
     }
     /**
@@ -153,7 +153,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * auto-upgrade is configured. Structure is documented below.
      * 
      */
-    public Output<NodePoolManagement> getManagement() {
+    public Output<NodePoolManagement> management() {
         return this.management;
     }
     /**
@@ -175,7 +175,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * for more information.
      * 
      */
-    public Output<Integer> getMaxPodsPerNode() {
+    public Output<Integer> maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
     /**
@@ -191,7 +191,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * auto-generate a unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -207,7 +207,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -223,7 +223,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * gcp.container.Cluster for schema.
      * 
      */
-    public Output<NodePoolNetworkConfig> getNetworkConfig() {
+    public Output<NodePoolNetworkConfig> networkConfig() {
         return this.networkConfig;
     }
     /**
@@ -239,7 +239,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * gcp.container.Cluster for schema.
      * 
      */
-    public Output<NodePoolNodeConfig> getNodeConfig() {
+    public Output<NodePoolNodeConfig> nodeConfig() {
         return this.nodeConfig;
     }
     /**
@@ -255,7 +255,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * update the number of nodes per instance group but should not be used alongside `autoscaling`.
      * 
      */
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -275,13 +275,13 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * `node_locations` will be used.
      * 
      */
-    public Output<List<String>> getNodeLocations() {
+    public Output<List<String>> nodeLocations() {
         return this.nodeLocations;
     }
     @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
     /**
@@ -297,7 +297,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * the provider-configured project will be used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -315,7 +315,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
      * 
      */
-    public Output<NodePoolUpgradeSettings> getUpgradeSettings() {
+    public Output<NodePoolUpgradeSettings> upgradeSettings() {
         return this.upgradeSettings;
     }
     /**
@@ -339,7 +339,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

@@ -22,7 +22,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -33,7 +33,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain == null ? Codegen.empty() : this.domain;
     }
 
@@ -44,7 +44,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email == null ? Codegen.empty() : this.email;
     }
 
@@ -69,7 +69,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
     @Import(name="entity")
       private final @Nullable Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity == null ? Codegen.empty() : this.entity;
     }
 
@@ -81,7 +81,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

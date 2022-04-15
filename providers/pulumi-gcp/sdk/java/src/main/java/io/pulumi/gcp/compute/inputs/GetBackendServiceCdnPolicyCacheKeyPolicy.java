@@ -17,35 +17,35 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy extends io.pulumi.re
     @Import(name="includeHost", required=true)
       private final Boolean includeHost;
 
-    public Boolean getIncludeHost() {
+    public Boolean includeHost() {
         return this.includeHost;
     }
 
     @Import(name="includeProtocol", required=true)
       private final Boolean includeProtocol;
 
-    public Boolean getIncludeProtocol() {
+    public Boolean includeProtocol() {
         return this.includeProtocol;
     }
 
     @Import(name="includeQueryString", required=true)
       private final Boolean includeQueryString;
 
-    public Boolean getIncludeQueryString() {
+    public Boolean includeQueryString() {
         return this.includeQueryString;
     }
 
     @Import(name="queryStringBlacklists", required=true)
       private final List<String> queryStringBlacklists;
 
-    public List<String> getQueryStringBlacklists() {
+    public List<String> queryStringBlacklists() {
         return this.queryStringBlacklists;
     }
 
     @Import(name="queryStringWhitelists", required=true)
       private final List<String> queryStringWhitelists;
 
-    public List<String> getQueryStringWhitelists() {
+    public List<String> queryStringWhitelists() {
         return this.queryStringWhitelists;
     }
 

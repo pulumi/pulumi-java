@@ -120,91 +120,91 @@ public final class AwsClusterControlPlane {
      * Required. Authentication configuration for management of AWS resources.
      * 
     */
-    public AwsClusterControlPlaneAwsServicesAuthentication getAwsServicesAuthentication() {
+    public AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication() {
         return this.awsServicesAuthentication;
     }
     /**
      * Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
      * 
     */
-    public AwsClusterControlPlaneConfigEncryption getConfigEncryption() {
+    public AwsClusterControlPlaneConfigEncryption configEncryption() {
         return this.configEncryption;
     }
     /**
      * Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
      * 
     */
-    public AwsClusterControlPlaneDatabaseEncryption getDatabaseEncryption() {
+    public AwsClusterControlPlaneDatabaseEncryption databaseEncryption() {
         return this.databaseEncryption;
     }
     /**
      * Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
      * 
     */
-    public String getIamInstanceProfile() {
+    public String iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
      * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
      * 
     */
-    public Optional<String> getInstanceType() {
+    public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
      * 
     */
-    public Optional<AwsClusterControlPlaneMainVolume> getMainVolume() {
+    public Optional<AwsClusterControlPlaneMainVolume> mainVolume() {
         return Optional.ofNullable(this.mainVolume);
     }
     /**
      * Proxy configuration for outbound HTTP(S) traffic.
      * 
     */
-    public Optional<AwsClusterControlPlaneProxyConfig> getProxyConfig() {
+    public Optional<AwsClusterControlPlaneProxyConfig> proxyConfig() {
         return Optional.ofNullable(this.proxyConfig);
     }
     /**
      * Optional. Configuration related to the root volume provisioned for each control plane replica. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
      * 
     */
-    public Optional<AwsClusterControlPlaneRootVolume> getRootVolume() {
+    public Optional<AwsClusterControlPlaneRootVolume> rootVolume() {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
      * Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
      * 
     */
-    public List<String> getSecurityGroupIds() {
+    public List<String> securityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * Optional. SSH configuration for how to access the underlying control plane machines.
      * 
     */
-    public Optional<AwsClusterControlPlaneSshConfig> getSshConfig() {
+    public Optional<AwsClusterControlPlaneSshConfig> sshConfig() {
         return Optional.ofNullable(this.sshConfig);
     }
     /**
      * Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
      * 
     */
-    public List<String> getSubnetIds() {
+    public List<String> subnetIds() {
         return this.subnetIds;
     }
     /**
      * Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

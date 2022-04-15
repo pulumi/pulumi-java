@@ -19,21 +19,21 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
     @Import(name="gpuPartitionSize")
       private final @Nullable Output<String> gpuPartitionSize;
 
-    public Output<String> getGpuPartitionSize() {
+    public Output<String> gpuPartitionSize() {
         return this.gpuPartitionSize == null ? Codegen.empty() : this.gpuPartitionSize;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

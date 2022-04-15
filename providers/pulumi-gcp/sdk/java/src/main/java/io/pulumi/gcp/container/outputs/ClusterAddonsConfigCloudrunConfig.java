@@ -38,7 +38,7 @@ public final class ClusterAddonsConfigCloudrunConfig {
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
     /**
@@ -46,7 +46,7 @@ public final class ClusterAddonsConfigCloudrunConfig {
      * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
      * 
     */
-    public Optional<String> getLoadBalancerType() {
+    public Optional<String> loadBalancerType() {
         return Optional.ofNullable(this.loadBalancerType);
     }
 

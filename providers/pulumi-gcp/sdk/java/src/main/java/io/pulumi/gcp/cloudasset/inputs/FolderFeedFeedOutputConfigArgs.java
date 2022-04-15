@@ -22,7 +22,7 @@ public final class FolderFeedFeedOutputConfigArgs extends io.pulumi.resources.Re
     @Import(name="pubsubDestination", required=true)
       private final Output<FolderFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 
-    public Output<FolderFeedFeedOutputConfigPubsubDestinationArgs> getPubsubDestination() {
+    public Output<FolderFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
 

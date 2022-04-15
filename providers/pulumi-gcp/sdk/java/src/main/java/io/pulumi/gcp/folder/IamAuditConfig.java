@@ -28,7 +28,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The configuration for logging of each type of permission. This can be specified multiple times.
      * 
      */
-    public Output<List<IamAuditConfigAuditLogConfig>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
@@ -42,13 +42,13 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return The etag of iam policy
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -62,7 +62,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * @return Service which will be enabled for audit logging. The special value allServices covers all services.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 

@@ -22,10 +22,10 @@ public final class IamAuditConfigAuditLogConfig {
         this.logType = logType;
     }
 
-    public List<String> getExemptedMembers() {
+    public List<String> exemptedMembers() {
         return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
     }
-    public String getLogType() {
+    public String logType() {
         return this.logType;
     }
 

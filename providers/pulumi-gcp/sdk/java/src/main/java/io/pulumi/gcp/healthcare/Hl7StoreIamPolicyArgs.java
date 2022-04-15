@@ -24,7 +24,7 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hl7V2StoreId", required=true)
       private final Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
@@ -36,7 +36,7 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

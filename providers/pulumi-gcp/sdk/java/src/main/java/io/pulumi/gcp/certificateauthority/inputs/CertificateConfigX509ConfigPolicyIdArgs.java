@@ -22,7 +22,7 @@ public final class CertificateConfigX509ConfigPolicyIdArgs extends io.pulumi.res
     @Import(name="objectIdPaths", required=true)
       private final Output<List<Integer>> objectIdPaths;
 
-    public Output<List<Integer>> getObjectIdPaths() {
+    public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 

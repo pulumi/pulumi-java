@@ -20,10 +20,10 @@ public final class GetBucketObjectCustomerEncryption {
         this.encryptionKey = encryptionKey;
     }
 
-    public String getEncryptionAlgorithm() {
+    public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
-    public String getEncryptionKey() {
+    public String encryptionKey() {
         return this.encryptionKey;
     }
 

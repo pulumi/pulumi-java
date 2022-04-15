@@ -49,21 +49,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig 
      * Optional. The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
     */
-    public Optional<String> getAutoDeleteTime() {
+    public Optional<String> autoDeleteTime() {
         return Optional.ofNullable(this.autoDeleteTime);
     }
     /**
      * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
     */
-    public Optional<String> getAutoDeleteTtl() {
+    public Optional<String> autoDeleteTtl() {
         return Optional.ofNullable(this.autoDeleteTtl);
     }
     /**
      * Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json).
      * 
     */
-    public Optional<String> getIdleDeleteTtl() {
+    public Optional<String> idleDeleteTtl() {
         return Optional.ofNullable(this.idleDeleteTtl);
     }
     /**
@@ -71,7 +71,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig 
      * Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
     */
-    public Optional<String> getIdleStartTime() {
+    public Optional<String> idleStartTime() {
         return Optional.ofNullable(this.idleStartTime);
     }
 

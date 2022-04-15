@@ -27,7 +27,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
     @Import(name="dictionary")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs> dictionary;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs> getDictionary() {
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs> dictionary() {
         return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
@@ -39,7 +39,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
     @Import(name="exclusionType")
       private final @Nullable Output<String> exclusionType;
 
-    public Output<String> getExclusionType() {
+    public Output<String> exclusionType() {
         return this.exclusionType == null ? Codegen.empty() : this.exclusionType;
     }
 
@@ -54,7 +54,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
     @Import(name="infoType", required=true)
       private final Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs> infoType;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs> getInfoType() {
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs> infoType() {
         return this.infoType;
     }
 
@@ -68,7 +68,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
     @Import(name="likelihood")
       private final @Nullable Output<String> likelihood;
 
-    public Output<String> getLikelihood() {
+    public Output<String> likelihood() {
         return this.likelihood == null ? Codegen.empty() : this.likelihood;
     }
 
@@ -80,7 +80,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
     @Import(name="regex")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs> regex;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs> getRegex() {
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs> regex() {
         return this.regex == null ? Codegen.empty() : this.regex;
     }
 
@@ -92,7 +92,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
     @Import(name="storedType")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs> storedType;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs> getStoredType() {
+    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs> storedType() {
         return this.storedType == null ? Codegen.empty() : this.storedType;
     }
 

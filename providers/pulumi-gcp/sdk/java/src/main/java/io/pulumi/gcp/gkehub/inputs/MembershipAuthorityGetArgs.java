@@ -17,7 +17,7 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
-    public Output<String> getIssuer() {
+    public Output<String> issuer() {
         return this.issuer;
     }
 

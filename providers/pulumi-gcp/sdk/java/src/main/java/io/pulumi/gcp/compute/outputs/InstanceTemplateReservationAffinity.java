@@ -37,14 +37,14 @@ public final class InstanceTemplateReservationAffinity {
      * Structure is documented below.
      * 
     */
-    public Optional<InstanceTemplateReservationAffinitySpecificReservation> getSpecificReservation() {
+    public Optional<InstanceTemplateReservationAffinitySpecificReservation> specificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

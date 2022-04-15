@@ -57,7 +57,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelBasic> getBasic() {
+    public Output</* @Nullable */ AccessLevelBasic> basic() {
         return this.basic;
     }
     /**
@@ -75,7 +75,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelCustom> getCustom() {
+    public Output</* @Nullable */ AccessLevelCustom> custom() {
         return this.custom;
     }
     /**
@@ -89,7 +89,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Description of the expression
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -107,7 +107,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -123,7 +123,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -137,7 +137,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Title for the expression, i.e. a short string describing its purpose.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 

@@ -68,7 +68,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatasetIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DatasetIamBindingCondition> condition;
 
-    public Output</* @Nullable */ DatasetIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ DatasetIamBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -88,7 +88,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -102,13 +102,13 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -126,7 +126,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

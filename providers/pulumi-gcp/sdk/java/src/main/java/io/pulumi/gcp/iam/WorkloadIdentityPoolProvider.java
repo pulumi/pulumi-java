@@ -80,7 +80,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      *   value of `admins`:
      * 
      */
-    public Output</* @Nullable */ String> getAttributeCondition() {
+    public Output</* @Nullable */ String> attributeCondition() {
         return this.attributeCondition;
     }
     /**
@@ -166,7 +166,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      *   incoming credential to the `subject` attribute on a Google token.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAttributeMapping() {
+    public Output</* @Nullable */ Map<String,String>> attributeMapping() {
         return this.attributeMapping;
     }
     /**
@@ -182,7 +182,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WorkloadIdentityPoolProviderAws> getAws() {
+    public Output</* @Nullable */ WorkloadIdentityPoolProviderAws> aws() {
         return this.aws;
     }
     /**
@@ -196,7 +196,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * @return A description for the provider. Cannot exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -212,7 +212,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * However, existing tokens still grant access.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisabled() {
+    public Output</* @Nullable */ Boolean> disabled() {
         return this.disabled;
     }
     /**
@@ -226,7 +226,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * @return A display name for the provider. Cannot exceed 32 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -242,7 +242,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -258,7 +258,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WorkloadIdentityPoolProviderOidc> getOidc() {
+    public Output</* @Nullable */ WorkloadIdentityPoolProviderOidc> oidc() {
         return this.oidc;
     }
     /**
@@ -274,7 +274,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -294,7 +294,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -312,7 +312,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    public Output<String> getWorkloadIdentityPoolId() {
+    public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
     /**
@@ -330,7 +330,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    public Output<String> getWorkloadIdentityPoolProviderId() {
+    public Output<String> workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
 

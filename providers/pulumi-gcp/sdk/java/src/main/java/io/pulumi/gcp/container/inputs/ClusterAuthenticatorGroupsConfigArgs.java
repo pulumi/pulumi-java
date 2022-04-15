@@ -21,7 +21,7 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
     @Import(name="securityGroup", required=true)
       private final Output<String> securityGroup;
 
-    public Output<String> getSecurityGroup() {
+    public Output<String> securityGroup() {
         return this.securityGroup;
     }
 

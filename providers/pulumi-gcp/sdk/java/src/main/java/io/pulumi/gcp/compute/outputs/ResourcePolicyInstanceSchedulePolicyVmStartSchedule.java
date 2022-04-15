@@ -24,7 +24,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartSchedule {
      * Specifies the frequency for the operation, using the unix-cron format.
      * 
     */
-    public String getSchedule() {
+    public String schedule() {
         return this.schedule;
     }
 

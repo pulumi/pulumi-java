@@ -59,7 +59,7 @@ public final class RoutineArgument {
      * Possible values are `FIXED_TYPE` and `ANY_TYPE`.
      * 
     */
-    public Optional<String> getArgumentKind() {
+    public Optional<String> argumentKind() {
         return Optional.ofNullable(this.argumentKind);
     }
     /**
@@ -72,7 +72,7 @@ public final class RoutineArgument {
      * the schema as returned by the API.
      * 
     */
-    public Optional<String> getDataType() {
+    public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
@@ -80,14 +80,14 @@ public final class RoutineArgument {
      * Possible values are `IN`, `OUT`, and `INOUT`.
      * 
     */
-    public Optional<String> getMode() {
+    public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of this argument. Can be absent for function return argument.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

@@ -35,14 +35,14 @@ public final class CertificateTemplatePassthroughExtensions {
      * Optional. Describes custom X.509 extensions.
      * 
     */
-    public List<CertificateTemplatePassthroughExtensionsAdditionalExtension> getAdditionalExtensions() {
+    public List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions() {
         return this.additionalExtensions == null ? List.of() : this.additionalExtensions;
     }
     /**
      * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
      * 
     */
-    public List<String> getKnownExtensions() {
+    public List<String> knownExtensions() {
         return this.knownExtensions == null ? List.of() : this.knownExtensions;
     }
 

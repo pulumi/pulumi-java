@@ -28,7 +28,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="additionalExtensions")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
+    public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions() {
         return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
@@ -40,7 +40,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> getAiaOcspServers() {
+    public Output<List<String>> aiaOcspServers() {
         return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
@@ -52,7 +52,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="caOptions", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> getCaOptions() {
+    public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions() {
         return this.caOptions;
     }
 
@@ -64,7 +64,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="keyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> getKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage() {
         return this.keyUsage;
     }
 
@@ -76,7 +76,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     @Import(name="policyIds")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
 
-    public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> getPolicyIds() {
+    public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds() {
         return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 

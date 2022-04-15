@@ -38,7 +38,7 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      * Structure is documented below.
      * 
     */
-    public Optional<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve> getEllipticCurve() {
+    public Optional<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve> ellipticCurve() {
         return Optional.ofNullable(this.ellipticCurve);
     }
     /**
@@ -46,7 +46,7 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      * Structure is documented below.
      * 
     */
-    public Optional<CaPoolIssuancePolicyAllowedKeyTypeRsa> getRsa() {
+    public Optional<CaPoolIssuancePolicyAllowedKeyTypeRsa> rsa() {
         return Optional.ofNullable(this.rsa);
     }
 

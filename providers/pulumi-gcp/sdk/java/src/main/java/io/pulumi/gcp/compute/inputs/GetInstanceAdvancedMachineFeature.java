@@ -16,14 +16,14 @@ public final class GetInstanceAdvancedMachineFeature extends io.pulumi.resources
     @Import(name="enableNestedVirtualization", required=true)
       private final Boolean enableNestedVirtualization;
 
-    public Boolean getEnableNestedVirtualization() {
+    public Boolean enableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
 
     @Import(name="threadsPerCore", required=true)
       private final Integer threadsPerCore;
 
-    public Integer getThreadsPerCore() {
+    public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
 

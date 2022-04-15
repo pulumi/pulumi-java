@@ -18,7 +18,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -32,13 +32,13 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

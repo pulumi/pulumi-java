@@ -27,7 +27,7 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
     @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> dailyMaintenanceWindow;
 
-    public Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> getDailyMaintenanceWindow() {
+    public Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> dailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
     }
 
@@ -38,7 +38,7 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
     @Import(name="maintenanceExclusions")
       private final @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions;
 
-    public Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> getMaintenanceExclusions() {
+    public Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions() {
         return this.maintenanceExclusions == null ? Codegen.empty() : this.maintenanceExclusions;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
     @Import(name="recurringWindow")
       private final @Nullable Output<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow;
 
-    public Output<ClusterMaintenancePolicyRecurringWindowGetArgs> getRecurringWindow() {
+    public Output<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow() {
         return this.recurringWindow == null ? Codegen.empty() : this.recurringWindow;
     }
 

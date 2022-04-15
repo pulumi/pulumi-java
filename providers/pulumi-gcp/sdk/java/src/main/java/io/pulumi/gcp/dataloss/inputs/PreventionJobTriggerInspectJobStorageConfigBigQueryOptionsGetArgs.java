@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGet
     @Import(name="tableReference", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> getTableReference() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceGetArgs> tableReference() {
         return this.tableReference;
     }
 

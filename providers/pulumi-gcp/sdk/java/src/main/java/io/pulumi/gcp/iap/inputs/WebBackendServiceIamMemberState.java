@@ -24,7 +24,7 @@ public final class WebBackendServiceIamMemberState extends io.pulumi.resources.R
     @Import(name="condition")
       private final @Nullable Output<WebBackendServiceIamMemberConditionGetArgs> condition;
 
-    public Output<WebBackendServiceIamMemberConditionGetArgs> getCondition() {
+    public Output<WebBackendServiceIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -35,14 +35,14 @@ public final class WebBackendServiceIamMemberState extends io.pulumi.resources.R
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -54,7 +54,7 @@ public final class WebBackendServiceIamMemberState extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -67,7 +67,7 @@ public final class WebBackendServiceIamMemberState extends io.pulumi.resources.R
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
@@ -78,7 +78,7 @@ public final class WebBackendServiceIamMemberState extends io.pulumi.resources.R
     @Import(name="webBackendService")
       private final @Nullable Output<String> webBackendService;
 
-    public Output<String> getWebBackendService() {
+    public Output<String> webBackendService() {
         return this.webBackendService == null ? Codegen.empty() : this.webBackendService;
     }
 

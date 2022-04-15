@@ -23,7 +23,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -34,7 +34,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -45,7 +45,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -56,7 +56,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespacedName")
       private final @Nullable Output<String> namespacedName;
 
-    public Output<String> getNamespacedName() {
+    public Output<String> namespacedName() {
         return this.namespacedName == null ? Codegen.empty() : this.namespacedName;
     }
 
@@ -67,7 +67,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent == null ? Codegen.empty() : this.parent;
     }
 
@@ -79,7 +79,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
@@ -91,7 +91,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

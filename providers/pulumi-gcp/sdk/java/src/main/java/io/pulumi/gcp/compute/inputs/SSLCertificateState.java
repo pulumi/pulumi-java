@@ -26,7 +26,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
@@ -37,7 +37,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> getCertificateId() {
+    public Output<Integer> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -48,7 +48,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
@@ -59,7 +59,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -76,7 +76,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -88,7 +88,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
@@ -100,7 +100,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
@@ -112,7 +112,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -123,7 +123,7 @@ public final class SSLCertificateState extends io.pulumi.resources.ResourceArgs 
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 

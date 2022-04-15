@@ -23,7 +23,7 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
@@ -34,7 +34,7 @@ public final class TriggerTransportPubsubGetArgs extends io.pulumi.resources.Res
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic == null ? Codegen.empty() : this.topic;
     }
 

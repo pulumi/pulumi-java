@@ -36,7 +36,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The actual certificate data for this client certificate.
      * 
      */
-    public Output<String> getCert() {
+    public Output<String> cert() {
         return this.cert;
     }
     /**
@@ -50,7 +50,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The serial number extracted from the certificate data.
      * 
      */
-    public Output<String> getCertSerialNumber() {
+    public Output<String> certSerialNumber() {
         return this.certSerialNumber;
     }
     /**
@@ -66,7 +66,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getCommonName() {
+    public Output<String> commonName() {
         return this.commonName;
     }
     /**
@@ -82,7 +82,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * for example 2012-11-15T16:19:00.094Z.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -98,7 +98,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * for example 2012-11-15T16:19:00.094Z.
      * 
      */
-    public Output<String> getExpirationTime() {
+    public Output<String> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -114,7 +114,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * forces a new resource to be created.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -128,7 +128,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The private key associated with the client certificate.
      * 
      */
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -144,7 +144,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -158,7 +158,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The CA cert of the server this client cert was generated from.
      * 
      */
-    public Output<String> getServerCaCert() {
+    public Output<String> serverCaCert() {
         return this.serverCaCert;
     }
     /**
@@ -172,7 +172,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * @return The SHA1 Fingerprint of the certificate.
      * 
      */
-    public Output<String> getSha1Fingerprint() {
+    public Output<String> sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 

@@ -50,7 +50,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * @return A textual description for the organization security policy.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -64,7 +64,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * @return A textual name of the security policy.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -78,7 +78,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * @return Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -94,7 +94,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Format: organizations/{organization_id} or folders/{folder_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -108,7 +108,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * @return The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    public Output<String> getPolicyId() {
+    public Output<String> policyId() {
         return this.policyId;
     }
     /**
@@ -130,7 +130,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Possible values are `FIREWALL`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

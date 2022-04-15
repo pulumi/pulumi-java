@@ -54,7 +54,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * @return The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -68,7 +68,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the flow.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -90,7 +90,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<CxFlowEventHandler>> getEventHandlers() {
+    public Output<List<CxFlowEventHandler>> eventHandlers() {
         return this.eventHandlers;
     }
     /**
@@ -114,7 +114,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> getLanguageCode() {
+    public Output</* @Nullable */ String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -130,7 +130,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * The unique identifier of this event handler.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +146,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CxFlowNluSettings> getNluSettings() {
+    public Output</* @Nullable */ CxFlowNluSettings> nluSettings() {
         return this.nluSettings;
     }
     /**
@@ -162,7 +162,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    public Output</* @Nullable */ String> getParent() {
+    public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
@@ -182,7 +182,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTransitionRouteGroups() {
+    public Output</* @Nullable */ List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups;
     }
     /**
@@ -200,7 +200,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
-    public Output</* @Nullable */ List<CxFlowTransitionRoute>> getTransitionRoutes() {
+    public Output</* @Nullable */ List<CxFlowTransitionRoute>> transitionRoutes() {
         return this.transitionRoutes;
     }
 

@@ -70,7 +70,7 @@ public final class HealthCheckGrpcHealthCheck {
      *   The grpcServiceName can only be ASCII.
      * 
     */
-    public Optional<String> getGrpcServiceName() {
+    public Optional<String> grpcServiceName() {
         return Optional.ofNullable(this.grpcServiceName);
     }
     /**
@@ -79,7 +79,7 @@ public final class HealthCheckGrpcHealthCheck {
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
     */
-    public Optional<Integer> getPort() {
+    public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
@@ -87,7 +87,7 @@ public final class HealthCheckGrpcHealthCheck {
      * port_name are defined, port takes precedence.
      * 
     */
-    public Optional<String> getPortName() {
+    public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }
     /**
@@ -104,7 +104,7 @@ public final class HealthCheckGrpcHealthCheck {
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
     */
-    public Optional<String> getPortSpecification() {
+    public Optional<String> portSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
 

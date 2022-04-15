@@ -26,13 +26,13 @@ public final class GetEnvironmentConfigWorkloadsConfig {
         this.workers = workers;
     }
 
-    public List<GetEnvironmentConfigWorkloadsConfigScheduler> getSchedulers() {
+    public List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers() {
         return this.schedulers;
     }
-    public List<GetEnvironmentConfigWorkloadsConfigWebServer> getWebServers() {
+    public List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers() {
         return this.webServers;
     }
-    public List<GetEnvironmentConfigWorkloadsConfigWorker> getWorkers() {
+    public List<GetEnvironmentConfigWorkloadsConfigWorker> workers() {
         return this.workers;
     }
 

@@ -24,7 +24,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -35,7 +35,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
     @Import(name="config", required=true)
       private final Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> getConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config() {
         return this.config;
     }
 
@@ -46,7 +46,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 

@@ -61,7 +61,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * @return URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
      */
-    public Output<List<AuthorityAccessUrl>> getAccessUrls() {
+    public Output<List<AuthorityAccessUrl>> accessUrls() {
         return this.accessUrls;
     }
     /**
@@ -75,7 +75,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * @return The user provided Resource ID for this Certificate Authority.
      * 
      */
-    public Output<String> getCertificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
     /**
@@ -91,7 +91,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<AuthorityConfig> getConfig() {
+    public Output<AuthorityConfig> config() {
         return this.config;
     }
     /**
@@ -107,7 +107,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -129,7 +129,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * created.
      * 
      */
-    public Output</* @Nullable */ String> getGcsBucket() {
+    public Output</* @Nullable */ String> gcsBucket() {
         return this.gcsBucket;
     }
     /**
@@ -145,7 +145,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Use with care. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreActiveCertificatesOnDeletion() {
+    public Output</* @Nullable */ Boolean> ignoreActiveCertificatesOnDeletion() {
         return this.ignoreActiveCertificatesOnDeletion;
     }
     /**
@@ -165,7 +165,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<AuthorityKeySpec> getKeySpec() {
+    public Output<AuthorityKeySpec> keySpec() {
         return this.keySpec;
     }
     /**
@@ -183,7 +183,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -201,7 +201,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    public Output</* @Nullable */ String> getLifetime() {
+    public Output</* @Nullable */ String> lifetime() {
         return this.lifetime;
     }
     /**
@@ -217,7 +217,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * running `gcloud privateca locations list`.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -231,7 +231,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * @return The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -249,7 +249,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * current CertificateAuthority's certificate.
      * 
      */
-    public Output<List<String>> getPemCaCertificates() {
+    public Output<List<String>> pemCaCertificates() {
         return this.pemCaCertificates;
     }
     /**
@@ -263,7 +263,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * @return The name of the CaPool this Certificate Authority belongs to.
      * 
      */
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool;
     }
     /**
@@ -279,7 +279,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -293,7 +293,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * @return The State for this CertificateAuthority.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -317,7 +317,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -333,7 +333,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 

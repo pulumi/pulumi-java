@@ -18,14 +18,14 @@ public final class ClusterNodePoolManagementArgs extends io.pulumi.resources.Res
     @Import(name="autoRepair")
       private final @Nullable Output<Boolean> autoRepair;
 
-    public Output<Boolean> getAutoRepair() {
+    public Output<Boolean> autoRepair() {
         return this.autoRepair == null ? Codegen.empty() : this.autoRepair;
     }
 
     @Import(name="autoUpgrade")
       private final @Nullable Output<Boolean> autoUpgrade;
 
-    public Output<Boolean> getAutoUpgrade() {
+    public Output<Boolean> autoUpgrade() {
         return this.autoUpgrade == null ? Codegen.empty() : this.autoUpgrade;
     }
 

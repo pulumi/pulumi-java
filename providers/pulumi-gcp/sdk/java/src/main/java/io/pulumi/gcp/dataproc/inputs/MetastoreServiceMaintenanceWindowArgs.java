@@ -23,7 +23,7 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
     @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
-    public Output<String> getDayOfWeek() {
+    public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -34,7 +34,7 @@ public final class MetastoreServiceMaintenanceWindowArgs extends io.pulumi.resou
     @Import(name="hourOfDay", required=true)
       private final Output<Integer> hourOfDay;
 
-    public Output<Integer> getHourOfDay() {
+    public Output<Integer> hourOfDay() {
         return this.hourOfDay;
     }
 

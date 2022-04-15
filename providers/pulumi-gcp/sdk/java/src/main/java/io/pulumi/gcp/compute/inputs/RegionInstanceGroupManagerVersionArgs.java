@@ -23,7 +23,7 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
     @Import(name="instanceTemplate", required=true)
       private final Output<String> instanceTemplate;
 
-    public Output<String> getInstanceTemplate() {
+    public Output<String> instanceTemplate() {
         return this.instanceTemplate;
     }
 
@@ -34,7 +34,7 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -45,7 +45,7 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
     @Import(name="targetSize")
       private final @Nullable Output<RegionInstanceGroupManagerVersionTargetSizeArgs> targetSize;
 
-    public Output<RegionInstanceGroupManagerVersionTargetSizeArgs> getTargetSize() {
+    public Output<RegionInstanceGroupManagerVersionTargetSizeArgs> targetSize() {
         return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 

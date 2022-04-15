@@ -44,7 +44,7 @@ public final class EntityTypeEntity {
      * * This collection must contain exactly one synonym equal to value.
      * 
     */
-    public List<String> getSynonyms() {
+    public List<String> synonyms() {
         return this.synonyms;
     }
     /**
@@ -56,7 +56,7 @@ public final class EntityTypeEntity {
      * * A string that can contain references to other entity types (with or without aliases).
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

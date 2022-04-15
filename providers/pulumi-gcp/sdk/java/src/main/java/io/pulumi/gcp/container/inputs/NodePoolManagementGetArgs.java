@@ -22,7 +22,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
     @Import(name="autoRepair")
       private final @Nullable Output<Boolean> autoRepair;
 
-    public Output<Boolean> getAutoRepair() {
+    public Output<Boolean> autoRepair() {
         return this.autoRepair == null ? Codegen.empty() : this.autoRepair;
     }
 
@@ -33,7 +33,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
     @Import(name="autoUpgrade")
       private final @Nullable Output<Boolean> autoUpgrade;
 
-    public Output<Boolean> getAutoUpgrade() {
+    public Output<Boolean> autoUpgrade() {
         return this.autoUpgrade == null ? Codegen.empty() : this.autoUpgrade;
     }
 

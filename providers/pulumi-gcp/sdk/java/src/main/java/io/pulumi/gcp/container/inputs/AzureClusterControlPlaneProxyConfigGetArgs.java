@@ -21,7 +21,7 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
     @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -32,7 +32,7 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 

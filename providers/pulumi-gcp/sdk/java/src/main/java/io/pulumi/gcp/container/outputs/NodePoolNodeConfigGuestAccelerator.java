@@ -26,13 +26,13 @@ public final class NodePoolNodeConfigGuestAccelerator {
         this.type = type;
     }
 
-    public Integer getCount() {
+    public Integer count() {
         return this.count;
     }
-    public Optional<String> getGpuPartitionSize() {
+    public Optional<String> gpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

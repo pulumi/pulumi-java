@@ -19,14 +19,14 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
     @Import(name="specificReservation")
       private final @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation;
 
-    public Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
+    public Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation() {
         return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

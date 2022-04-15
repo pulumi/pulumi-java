@@ -24,7 +24,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> getCertificateId() {
+    public Output<Integer> certificateId() {
         return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
@@ -35,7 +35,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -47,7 +47,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="managed")
       private final @Nullable Output<MangedSslCertificateManagedArgs> managed;
 
-    public Output<MangedSslCertificateManagedArgs> getManaged() {
+    public Output<MangedSslCertificateManagedArgs> managed() {
         return this.managed == null ? Codegen.empty() : this.managed;
     }
 
@@ -62,14 +62,14 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -81,7 +81,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 

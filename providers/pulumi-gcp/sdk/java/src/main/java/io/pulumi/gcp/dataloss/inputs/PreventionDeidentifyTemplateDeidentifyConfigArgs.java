@@ -22,7 +22,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends io.p
     @Import(name="infoTypeTransformations", required=true)
       private final Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> getInfoTypeTransformations() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
 

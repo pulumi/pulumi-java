@@ -25,7 +25,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance == null ? Codegen.empty() : this.instance;
     }
 
@@ -38,7 +38,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="networkEndpointGroup")
       private final @Nullable Output<String> networkEndpointGroup;
 
-    public Output<String> getNetworkEndpointGroup() {
+    public Output<String> networkEndpointGroup() {
         return this.networkEndpointGroup == null ? Codegen.empty() : this.networkEndpointGroup;
     }
 
@@ -60,7 +60,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port == null ? Codegen.empty() : this.port;
     }
 
@@ -72,7 +72,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -83,7 +83,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

@@ -34,14 +34,14 @@ public final class PatchDeploymentRolloutDisruptionBudget {
      * Specifies a fixed value.
      * 
     */
-    public Optional<Integer> getFixed() {
+    public Optional<Integer> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
      * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
     */
-    public Optional<Integer> getPercentage() {
+    public Optional<Integer> percentage() {
         return Optional.ofNullable(this.percentage);
     }
 

@@ -24,7 +24,7 @@ public final class EnterpriseKeyAndroidSettingsGetArgs extends io.pulumi.resourc
     @Import(name="allowAllPackageNames")
       private final @Nullable Output<Boolean> allowAllPackageNames;
 
-    public Output<Boolean> getAllowAllPackageNames() {
+    public Output<Boolean> allowAllPackageNames() {
         return this.allowAllPackageNames == null ? Codegen.empty() : this.allowAllPackageNames;
     }
 
@@ -35,7 +35,7 @@ public final class EnterpriseKeyAndroidSettingsGetArgs extends io.pulumi.resourc
     @Import(name="allowedPackageNames")
       private final @Nullable Output<List<String>> allowedPackageNames;
 
-    public Output<List<String>> getAllowedPackageNames() {
+    public Output<List<String>> allowedPackageNames() {
         return this.allowedPackageNames == null ? Codegen.empty() : this.allowedPackageNames;
     }
 

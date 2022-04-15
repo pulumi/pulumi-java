@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     @Import(name="infoTypes", required=true)
       private final Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeGetArgs>> infoTypes() {
         return this.infoTypes;
     }
 

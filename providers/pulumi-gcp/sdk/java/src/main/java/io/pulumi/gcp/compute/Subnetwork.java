@@ -84,7 +84,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -102,7 +102,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * creation time.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -116,7 +116,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return The range of external IPv6 addresses that are owned by this subnetwork.
      * 
      */
-    public Output<String> getExternalIpv6Prefix() {
+    public Output<String> externalIpv6Prefix() {
         return this.externalIpv6Prefix;
     }
     /**
@@ -134,7 +134,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -148,7 +148,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return The gateway address for default routes to reach destination addresses outside this subnetwork.
      * 
      */
-    public Output<String> getGatewayAddress() {
+    public Output<String> gatewayAddress() {
         return this.gatewayAddress;
     }
     /**
@@ -168,7 +168,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * secondary IP ranges within a network. Only IPv4 is supported.
      * 
      */
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -188,7 +188,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`.
      * 
      */
-    public Output</* @Nullable */ String> getIpv6AccessType() {
+    public Output</* @Nullable */ String> ipv6AccessType() {
         return this.ipv6AccessType;
     }
     /**
@@ -202,7 +202,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return The range of internal IPv6 addresses that are owned by this subnetwork.
      * 
      */
-    public Output<String> getIpv6CidrRange() {
+    public Output<String> ipv6CidrRange() {
         return this.ipv6CidrRange;
     }
     /**
@@ -222,7 +222,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubnetworkLogConfig> getLogConfig() {
+    public Output</* @Nullable */ SubnetworkLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -248,7 +248,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -264,7 +264,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * Only networks that are in the distributed mode can have subnetworks.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -280,7 +280,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * access Google APIs and services by using Private Google Access.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPrivateIpGoogleAccess() {
+    public Output</* @Nullable */ Boolean> privateIpGoogleAccess() {
         return this.privateIpGoogleAccess;
     }
     /**
@@ -294,7 +294,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return The private IPv6 google access type for the VMs in this subnet.
      * 
      */
-    public Output<String> getPrivateIpv6GoogleAccess() {
+    public Output<String> privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
     }
     /**
@@ -310,7 +310,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -330,7 +330,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the `role` field.
      * 
      */
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose;
     }
     /**
@@ -344,7 +344,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return The GCP region for this subnetwork.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -368,7 +368,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * Possible values are `ACTIVE` and `BACKUP`.
      * 
      */
-    public Output</* @Nullable */ String> getRole() {
+    public Output</* @Nullable */ String> role() {
         return this.role;
     }
     /**
@@ -390,7 +390,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<SubnetworkSecondaryIpRange>> getSecondaryIpRanges() {
+    public Output<List<SubnetworkSecondaryIpRange>> secondaryIpRanges() {
         return this.secondaryIpRanges;
     }
     /**
@@ -404,7 +404,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -422,7 +422,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
      * Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
      * 
      */
-    public Output<String> getStackType() {
+    public Output<String> stackType() {
         return this.stackType;
     }
 

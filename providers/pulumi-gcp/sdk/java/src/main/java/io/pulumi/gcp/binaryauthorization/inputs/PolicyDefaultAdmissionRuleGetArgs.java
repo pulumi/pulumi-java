@@ -24,7 +24,7 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="enforcementMode", required=true)
       private final Output<String> enforcementMode;
 
-    public Output<String> getEnforcementMode() {
+    public Output<String> enforcementMode() {
         return this.enforcementMode;
     }
 
@@ -36,7 +36,7 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="evaluationMode", required=true)
       private final Output<String> evaluationMode;
 
-    public Output<String> getEvaluationMode() {
+    public Output<String> evaluationMode() {
         return this.evaluationMode;
     }
 
@@ -54,7 +54,7 @@ public final class PolicyDefaultAdmissionRuleGetArgs extends io.pulumi.resources
     @Import(name="requireAttestationsBies")
       private final @Nullable Output<List<String>> requireAttestationsBies;
 
-    public Output<List<String>> getRequireAttestationsBies() {
+    public Output<List<String>> requireAttestationsBies() {
         return this.requireAttestationsBies == null ? Codegen.empty() : this.requireAttestationsBies;
     }
 

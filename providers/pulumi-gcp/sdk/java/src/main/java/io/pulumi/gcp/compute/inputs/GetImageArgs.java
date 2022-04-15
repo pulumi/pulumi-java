@@ -21,14 +21,14 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="family")
       private final @Nullable String family;
 
-    public Optional<String> getFamily() {
+    public Optional<String> family() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
     @Import(name="filter")
       private final @Nullable String filter;
 
-    public Optional<String> getFilter() {
+    public Optional<String> filter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
@@ -39,7 +39,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -52,7 +52,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="project")
       private final @Nullable String project;
 
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 

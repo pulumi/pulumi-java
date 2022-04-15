@@ -76,7 +76,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * the provider's project setting will be used as a fallback.
      * 
      */
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
     /**
@@ -90,7 +90,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -106,7 +106,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

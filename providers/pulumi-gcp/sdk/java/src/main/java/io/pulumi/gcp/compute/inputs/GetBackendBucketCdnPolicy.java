@@ -19,56 +19,56 @@ public final class GetBackendBucketCdnPolicy extends io.pulumi.resources.InvokeA
     @Import(name="cacheMode", required=true)
       private final String cacheMode;
 
-    public String getCacheMode() {
+    public String cacheMode() {
         return this.cacheMode;
     }
 
     @Import(name="clientTtl", required=true)
       private final Integer clientTtl;
 
-    public Integer getClientTtl() {
+    public Integer clientTtl() {
         return this.clientTtl;
     }
 
     @Import(name="defaultTtl", required=true)
       private final Integer defaultTtl;
 
-    public Integer getDefaultTtl() {
+    public Integer defaultTtl() {
         return this.defaultTtl;
     }
 
     @Import(name="maxTtl", required=true)
       private final Integer maxTtl;
 
-    public Integer getMaxTtl() {
+    public Integer maxTtl() {
         return this.maxTtl;
     }
 
     @Import(name="negativeCaching", required=true)
       private final Boolean negativeCaching;
 
-    public Boolean getNegativeCaching() {
+    public Boolean negativeCaching() {
         return this.negativeCaching;
     }
 
     @Import(name="negativeCachingPolicies", required=true)
       private final List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies;
 
-    public List<GetBackendBucketCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
+    public List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies() {
         return this.negativeCachingPolicies;
     }
 
     @Import(name="serveWhileStale", required=true)
       private final Integer serveWhileStale;
 
-    public Integer getServeWhileStale() {
+    public Integer serveWhileStale() {
         return this.serveWhileStale;
     }
 
     @Import(name="signedUrlCacheMaxAgeSec", required=true)
       private final Integer signedUrlCacheMaxAgeSec;
 
-    public Integer getSignedUrlCacheMaxAgeSec() {
+    public Integer signedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec;
     }
 

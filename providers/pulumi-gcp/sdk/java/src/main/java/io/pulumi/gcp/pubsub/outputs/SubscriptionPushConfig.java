@@ -81,7 +81,7 @@ public final class SubscriptionPushConfig {
      * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
      * 
     */
-    public Map<String,String> getAttributes() {
+    public Map<String,String> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
     /**
@@ -90,7 +90,7 @@ public final class SubscriptionPushConfig {
      * Structure is documented below.
      * 
     */
-    public Optional<SubscriptionPushConfigOidcToken> getOidcToken() {
+    public Optional<SubscriptionPushConfigOidcToken> oidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
     /**
@@ -99,7 +99,7 @@ public final class SubscriptionPushConfig {
      * "https://example.com/push".
      * 
     */
-    public String getPushEndpoint() {
+    public String pushEndpoint() {
         return this.pushEndpoint;
     }
 

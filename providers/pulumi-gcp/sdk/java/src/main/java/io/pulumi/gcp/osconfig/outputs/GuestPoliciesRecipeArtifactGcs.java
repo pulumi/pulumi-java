@@ -46,7 +46,7 @@ public final class GuestPoliciesRecipeArtifactGcs {
      * this value would be my-bucket.
      * 
     */
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
@@ -54,7 +54,7 @@ public final class GuestPoliciesRecipeArtifactGcs {
      * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
      * 
     */
-    public Optional<Integer> getGeneration() {
+    public Optional<Integer> generation() {
         return Optional.ofNullable(this.generation);
     }
     /**
@@ -62,7 +62,7 @@ public final class GuestPoliciesRecipeArtifactGcs {
      * this value would be foo/bar.
      * 
     */
-    public Optional<String> getObject() {
+    public Optional<String> object() {
         return Optional.ofNullable(this.object);
     }
 

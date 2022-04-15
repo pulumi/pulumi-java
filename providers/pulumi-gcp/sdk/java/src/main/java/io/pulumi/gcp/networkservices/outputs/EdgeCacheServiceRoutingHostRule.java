@@ -45,7 +45,7 @@ public final class EdgeCacheServiceRoutingHostRule {
      * A human-readable description of the resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -55,14 +55,14 @@ public final class EdgeCacheServiceRoutingHostRule {
      * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
      * 
     */
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
     /**
      * The name of the pathMatcher associated with this hostRule.
      * 
     */
-    public String getPathMatcher() {
+    public String pathMatcher() {
         return this.pathMatcher;
     }
 

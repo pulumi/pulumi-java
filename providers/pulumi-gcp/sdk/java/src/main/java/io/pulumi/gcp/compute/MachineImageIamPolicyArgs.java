@@ -22,7 +22,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="machineImage", required=true)
       private final Output<String> machineImage;
 
-    public Output<String> getMachineImage() {
+    public Output<String> machineImage() {
         return this.machineImage;
     }
 
@@ -34,7 +34,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -46,7 +46,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

@@ -21,7 +21,7 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
     @Import(name="instance", required=true)
       private final String instance;
 
-    public String getInstance() {
+    public String instance() {
         return this.instance;
     }
 
@@ -32,7 +32,7 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
     @Import(name="namedPorts", required=true)
       private final List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
 
-    public List<GetRegionInstanceGroupInstanceNamedPort> getNamedPorts() {
+    public List<GetRegionInstanceGroupInstanceNamedPort> namedPorts() {
         return this.namedPorts;
     }
 
@@ -43,7 +43,7 @@ public final class GetRegionInstanceGroupInstance extends io.pulumi.resources.In
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

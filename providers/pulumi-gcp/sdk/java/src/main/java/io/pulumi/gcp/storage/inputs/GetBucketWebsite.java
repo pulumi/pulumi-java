@@ -15,14 +15,14 @@ public final class GetBucketWebsite extends io.pulumi.resources.InvokeArgs {
     @Import(name="mainPageSuffix", required=true)
       private final String mainPageSuffix;
 
-    public String getMainPageSuffix() {
+    public String mainPageSuffix() {
         return this.mainPageSuffix;
     }
 
     @Import(name="notFoundPage", required=true)
       private final String notFoundPage;
 
-    public String getNotFoundPage() {
+    public String notFoundPage() {
         return this.notFoundPage;
     }
 

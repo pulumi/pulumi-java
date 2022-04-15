@@ -26,7 +26,7 @@ public final class CxPageEntryFulfillmentMessage {
      * A collection of text responses.
      * 
     */
-    public Optional<CxPageEntryFulfillmentMessageText> getText() {
+    public Optional<CxPageEntryFulfillmentMessageText> text() {
         return Optional.ofNullable(this.text);
     }
 

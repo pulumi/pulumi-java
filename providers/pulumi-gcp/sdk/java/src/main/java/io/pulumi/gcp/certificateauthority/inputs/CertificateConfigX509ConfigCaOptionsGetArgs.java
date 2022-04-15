@@ -23,7 +23,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
     @Import(name="isCa")
       private final @Nullable Output<Boolean> isCa;
 
-    public Output<Boolean> getIsCa() {
+    public Output<Boolean> isCa() {
         return this.isCa == null ? Codegen.empty() : this.isCa;
     }
 
@@ -35,7 +35,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
     @Import(name="maxIssuerPathLength")
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Output<Integer> getMaxIssuerPathLength() {
+    public Output<Integer> maxIssuerPathLength() {
         return this.maxIssuerPathLength == null ? Codegen.empty() : this.maxIssuerPathLength;
     }
 
@@ -47,7 +47,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
     @Import(name="nonCa")
       private final @Nullable Output<Boolean> nonCa;
 
-    public Output<Boolean> getNonCa() {
+    public Output<Boolean> nonCa() {
         return this.nonCa == null ? Codegen.empty() : this.nonCa;
     }
 
@@ -60,7 +60,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
     @Import(name="zeroMaxIssuerPathLength")
       private final @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
-    public Output<Boolean> getZeroMaxIssuerPathLength() {
+    public Output<Boolean> zeroMaxIssuerPathLength() {
         return this.zeroMaxIssuerPathLength == null ? Codegen.empty() : this.zeroMaxIssuerPathLength;
     }
 

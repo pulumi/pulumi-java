@@ -16,7 +16,7 @@ public final class GetSecretTopic {
         this.name = name;
     }
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

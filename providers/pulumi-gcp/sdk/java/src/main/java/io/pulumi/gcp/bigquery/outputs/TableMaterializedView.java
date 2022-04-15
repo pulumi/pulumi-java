@@ -46,14 +46,14 @@ public final class TableMaterializedView {
      * The default value is true.
      * 
     */
-    public Optional<Boolean> getEnableRefresh() {
+    public Optional<Boolean> enableRefresh() {
         return Optional.ofNullable(this.enableRefresh);
     }
     /**
      * A query whose result is persisted.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
@@ -61,7 +61,7 @@ public final class TableMaterializedView {
      * The default value is 1800000
      * 
     */
-    public Optional<Integer> getRefreshIntervalMs() {
+    public Optional<Integer> refreshIntervalMs() {
         return Optional.ofNullable(this.refreshIntervalMs);
     }
 

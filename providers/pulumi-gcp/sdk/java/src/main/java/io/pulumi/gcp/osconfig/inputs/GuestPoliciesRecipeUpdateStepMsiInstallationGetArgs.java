@@ -24,7 +24,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs extends i
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> getAllowedExitCodes() {
+    public Output<List<Integer>> allowedExitCodes() {
         return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
@@ -35,7 +35,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs extends i
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -46,7 +46,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs extends i
     @Import(name="flags")
       private final @Nullable Output<List<String>> flags;
 
-    public Output<List<String>> getFlags() {
+    public Output<List<String>> flags() {
         return this.flags == null ? Codegen.empty() : this.flags;
     }
 

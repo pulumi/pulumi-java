@@ -25,13 +25,13 @@ public final class InstanceFromMachineImageNetworkInterfaceAccessConfig {
         this.publicPtrDomainName = publicPtrDomainName;
     }
 
-    public Optional<String> getNatIp() {
+    public Optional<String> natIp() {
         return Optional.ofNullable(this.natIp);
     }
-    public Optional<String> getNetworkTier() {
+    public Optional<String> networkTier() {
         return Optional.ofNullable(this.networkTier);
     }
-    public Optional<String> getPublicPtrDomainName() {
+    public Optional<String> publicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }
 

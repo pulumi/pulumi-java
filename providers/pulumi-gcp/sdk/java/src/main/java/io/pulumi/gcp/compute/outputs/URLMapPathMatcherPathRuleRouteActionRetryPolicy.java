@@ -61,7 +61,7 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
      * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
      * 
     */
-    public Optional<Integer> getNumRetries() {
+    public Optional<Integer> numRetries() {
         return Optional.ofNullable(this.numRetries);
     }
     /**
@@ -71,7 +71,7 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout> getPerTryTimeout() {
+    public Optional<URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout> perTryTimeout() {
         return Optional.ofNullable(this.perTryTimeout);
     }
     /**
@@ -92,7 +92,7 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
      * * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
      * 
     */
-    public List<String> getRetryConditions() {
+    public List<String> retryConditions() {
         return this.retryConditions == null ? List.of() : this.retryConditions;
     }
 

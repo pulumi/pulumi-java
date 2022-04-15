@@ -24,7 +24,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
     @Import(name="enableHttpPortAccess")
       private final @Nullable Output<Boolean> enableHttpPortAccess;
 
-    public Output<Boolean> getEnableHttpPortAccess() {
+    public Output<Boolean> enableHttpPortAccess() {
         return this.enableHttpPortAccess == null ? Codegen.empty() : this.enableHttpPortAccess;
     }
 
@@ -36,7 +36,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
     @Import(name="httpPorts")
       private final @Nullable Output<Map<String,String>> httpPorts;
 
-    public Output<Map<String,String>> getHttpPorts() {
+    public Output<Map<String,String>> httpPorts() {
         return this.httpPorts == null ? Codegen.empty() : this.httpPorts;
     }
 

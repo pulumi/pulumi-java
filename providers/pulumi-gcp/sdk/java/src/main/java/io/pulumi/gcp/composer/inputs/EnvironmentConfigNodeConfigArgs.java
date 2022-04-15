@@ -22,77 +22,77 @@ public final class EnvironmentConfigNodeConfigArgs extends io.pulumi.resources.R
     @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     @Import(name="enableIpMasqAgent")
       private final @Nullable Output<Boolean> enableIpMasqAgent;
 
-    public Output<Boolean> getEnableIpMasqAgent() {
+    public Output<Boolean> enableIpMasqAgent() {
         return this.enableIpMasqAgent == null ? Codegen.empty() : this.enableIpMasqAgent;
     }
 
     @Import(name="ipAllocationPolicy")
       private final @Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy;
 
-    public Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> getIpAllocationPolicy() {
+    public Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy() {
         return this.ipAllocationPolicy == null ? Codegen.empty() : this.ipAllocationPolicy;
     }
 
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
-    public Output<Integer> getMaxPodsPerNode() {
+    public Output<Integer> maxPodsPerNode() {
         return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
     }
 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> getOauthScopes() {
+    public Output<List<String>> oauthScopes() {
         return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
+    public Output<String> serviceAccount() {
         return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

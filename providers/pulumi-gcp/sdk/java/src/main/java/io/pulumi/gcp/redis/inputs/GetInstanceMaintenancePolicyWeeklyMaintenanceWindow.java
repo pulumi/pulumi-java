@@ -17,21 +17,21 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow extends i
     @Import(name="day", required=true)
       private final String day;
 
-    public String getDay() {
+    public String day() {
         return this.day;
     }
 
     @Import(name="duration", required=true)
       private final String duration;
 
-    public String getDuration() {
+    public String duration() {
         return this.duration;
     }
 
     @Import(name="startTimes", required=true)
       private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
 
-    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> getStartTimes() {
+    public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes() {
         return this.startTimes;
     }
 

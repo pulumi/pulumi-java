@@ -19,7 +19,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     @Import(name="keyUsageOptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> getKeyUsageOptions() {
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions() {
         return this.keyUsageOptions == null ? Codegen.empty() : this.keyUsageOptions;
     }
 

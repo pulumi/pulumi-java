@@ -20,10 +20,10 @@ public final class GetDatabaseInstanceClone {
         this.sourceInstanceName = sourceInstanceName;
     }
 
-    public String getPointInTime() {
+    public String pointInTime() {
         return this.pointInTime;
     }
-    public String getSourceInstanceName() {
+    public String sourceInstanceName() {
         return this.sourceInstanceName;
     }
 

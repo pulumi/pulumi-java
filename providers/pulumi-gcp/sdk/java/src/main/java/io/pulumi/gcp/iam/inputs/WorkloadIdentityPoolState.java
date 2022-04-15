@@ -23,7 +23,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -36,7 +36,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -47,7 +47,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -59,7 +59,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -71,7 +71,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -86,7 +86,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -99,7 +99,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     @Import(name="workloadIdentityPoolId")
       private final @Nullable Output<String> workloadIdentityPoolId;
 
-    public Output<String> getWorkloadIdentityPoolId() {
+    public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId == null ? Codegen.empty() : this.workloadIdentityPoolId;
     }
 

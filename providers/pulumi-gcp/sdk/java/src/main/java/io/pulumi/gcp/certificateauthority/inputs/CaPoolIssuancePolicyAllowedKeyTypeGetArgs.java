@@ -24,7 +24,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends io.pulumi.r
     @Import(name="ellipticCurve")
       private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve;
 
-    public Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> getEllipticCurve() {
+    public Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve() {
         return this.ellipticCurve == null ? Codegen.empty() : this.ellipticCurve;
     }
 
@@ -36,7 +36,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends io.pulumi.r
     @Import(name="rsa")
       private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa;
 
-    public Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> getRsa() {
+    public Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa() {
         return this.rsa == null ? Codegen.empty() : this.rsa;
     }
 

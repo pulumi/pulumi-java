@@ -70,7 +70,7 @@ public class Hl7StoreIamPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the HL7v2 store's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +90,7 @@ public class Hl7StoreIamPolicy extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
     /**
@@ -106,7 +106,7 @@ public class Hl7StoreIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 

@@ -35,7 +35,7 @@ public final class TopicMessageStoragePolicy {
      * and is not a valid configuration.
      * 
     */
-    public List<String> getAllowedPersistenceRegions() {
+    public List<String> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 

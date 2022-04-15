@@ -26,7 +26,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -39,7 +39,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -51,7 +51,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -77,7 +77,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="perimeterType")
       private final @Nullable Output<String> perimeterType;
 
-    public Output<String> getPerimeterType() {
+    public Output<String> perimeterType() {
         return this.perimeterType == null ? Codegen.empty() : this.perimeterType;
     }
 
@@ -92,7 +92,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="spec")
       private final @Nullable Output<ServicePerimeterSpecArgs> spec;
 
-    public Output<ServicePerimeterSpecArgs> getSpec() {
+    public Output<ServicePerimeterSpecArgs> spec() {
         return this.spec == null ? Codegen.empty() : this.spec;
     }
 
@@ -106,7 +106,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<ServicePerimeterStatusArgs> status;
 
-    public Output<ServicePerimeterStatusArgs> getStatus() {
+    public Output<ServicePerimeterStatusArgs> status() {
         return this.status == null ? Codegen.empty() : this.status;
     }
 
@@ -117,7 +117,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -136,7 +136,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="useExplicitDryRunSpec")
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
-    public Output<Boolean> getUseExplicitDryRunSpec() {
+    public Output<Boolean> useExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec == null ? Codegen.empty() : this.useExplicitDryRunSpec;
     }
 

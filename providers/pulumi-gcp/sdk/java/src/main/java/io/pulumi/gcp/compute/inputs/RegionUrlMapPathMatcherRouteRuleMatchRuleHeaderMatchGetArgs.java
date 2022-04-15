@@ -26,7 +26,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
-    public Output<String> getExactMatch() {
+    public Output<String> exactMatch() {
         return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
@@ -37,7 +37,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
-    public Output<String> getHeaderName() {
+    public Output<String> headerName() {
         return this.headerName;
     }
 
@@ -50,7 +50,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="invertMatch")
       private final @Nullable Output<Boolean> invertMatch;
 
-    public Output<Boolean> getInvertMatch() {
+    public Output<Boolean> invertMatch() {
         return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
     }
 
@@ -63,7 +63,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
-    public Output<String> getPrefixMatch() {
+    public Output<String> prefixMatch() {
         return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
@@ -76,7 +76,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> getPresentMatch() {
+    public Output<Boolean> presentMatch() {
         return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
@@ -96,7 +96,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="rangeMatch")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> rangeMatch;
 
-    public Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> getRangeMatch() {
+    public Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> rangeMatch() {
         return this.rangeMatch == null ? Codegen.empty() : this.rangeMatch;
     }
 
@@ -110,7 +110,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
+    public Output<String> regexMatch() {
         return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 
@@ -123,7 +123,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
     @Import(name="suffixMatch")
       private final @Nullable Output<String> suffixMatch;
 
-    public Output<String> getSuffixMatch() {
+    public Output<String> suffixMatch() {
         return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
     }
 

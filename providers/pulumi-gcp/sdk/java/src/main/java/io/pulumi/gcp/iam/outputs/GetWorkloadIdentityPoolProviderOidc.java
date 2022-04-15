@@ -21,10 +21,10 @@ public final class GetWorkloadIdentityPoolProviderOidc {
         this.issuerUri = issuerUri;
     }
 
-    public List<String> getAllowedAudiences() {
+    public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
-    public String getIssuerUri() {
+    public String issuerUri() {
         return this.issuerUri;
     }
 

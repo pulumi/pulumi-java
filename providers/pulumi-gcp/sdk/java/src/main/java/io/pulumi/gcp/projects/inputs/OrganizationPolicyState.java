@@ -26,7 +26,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="booleanPolicy")
       private final @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
 
-    public Output<OrganizationPolicyBooleanPolicyGetArgs> getBooleanPolicy() {
+    public Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy() {
         return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
     }
 
@@ -37,7 +37,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="constraint")
       private final @Nullable Output<String> constraint;
 
-    public Output<String> getConstraint() {
+    public Output<String> constraint() {
         return this.constraint == null ? Codegen.empty() : this.constraint;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -59,7 +59,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="listPolicy")
       private final @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
 
-    public Output<OrganizationPolicyListPolicyGetArgs> getListPolicy() {
+    public Output<OrganizationPolicyListPolicyGetArgs> listPolicy() {
         return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
     }
 
@@ -70,7 +70,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -81,7 +81,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="restorePolicy")
       private final @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
 
-    public Output<OrganizationPolicyRestorePolicyGetArgs> getRestorePolicy() {
+    public Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy() {
         return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
@@ -92,7 +92,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
@@ -103,7 +103,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version == null ? Codegen.empty() : this.version;
     }
 

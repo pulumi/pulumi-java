@@ -18,14 +18,14 @@ public final class DeviceStateGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;
 
-    public Output<String> getBinaryData() {
+    public Output<String> binaryData() {
         return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

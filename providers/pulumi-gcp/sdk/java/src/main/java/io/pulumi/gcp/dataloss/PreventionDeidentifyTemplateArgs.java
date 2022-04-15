@@ -24,7 +24,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     @Import(name="deidentifyConfig", required=true)
       private final Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> getDeidentifyConfig() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig() {
         return this.deidentifyConfig;
     }
 
@@ -35,7 +35,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -46,7 +46,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -61,7 +61,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 

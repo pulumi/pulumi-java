@@ -19,7 +19,7 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="brand", required=true)
       private final String brand;
 
-    public String getBrand() {
+    public String brand() {
         return this.brand;
     }
 
@@ -30,7 +30,7 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="clientId", required=true)
       private final String clientId;
 
-    public String getClientId() {
+    public String clientId() {
         return this.clientId;
     }
 

@@ -29,105 +29,105 @@ public final class EnvironmentConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="airflowUri")
       private final @Nullable Output<String> airflowUri;
 
-    public Output<String> getAirflowUri() {
+    public Output<String> airflowUri() {
         return this.airflowUri == null ? Codegen.empty() : this.airflowUri;
     }
 
     @Import(name="dagGcsPrefix")
       private final @Nullable Output<String> dagGcsPrefix;
 
-    public Output<String> getDagGcsPrefix() {
+    public Output<String> dagGcsPrefix() {
         return this.dagGcsPrefix == null ? Codegen.empty() : this.dagGcsPrefix;
     }
 
     @Import(name="databaseConfig")
       private final @Nullable Output<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig;
 
-    public Output<EnvironmentConfigDatabaseConfigGetArgs> getDatabaseConfig() {
+    public Output<EnvironmentConfigDatabaseConfigGetArgs> databaseConfig() {
         return this.databaseConfig == null ? Codegen.empty() : this.databaseConfig;
     }
 
     @Import(name="encryptionConfig")
       private final @Nullable Output<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<EnvironmentConfigEncryptionConfigGetArgs> getEncryptionConfig() {
+    public Output<EnvironmentConfigEncryptionConfigGetArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="environmentSize")
       private final @Nullable Output<String> environmentSize;
 
-    public Output<String> getEnvironmentSize() {
+    public Output<String> environmentSize() {
         return this.environmentSize == null ? Codegen.empty() : this.environmentSize;
     }
 
     @Import(name="gkeCluster")
       private final @Nullable Output<String> gkeCluster;
 
-    public Output<String> getGkeCluster() {
+    public Output<String> gkeCluster() {
         return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
     }
 
     @Import(name="maintenanceWindow")
       private final @Nullable Output<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow;
 
-    public Output<EnvironmentConfigMaintenanceWindowGetArgs> getMaintenanceWindow() {
+    public Output<EnvironmentConfigMaintenanceWindowGetArgs> maintenanceWindow() {
         return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     @Import(name="masterAuthorizedNetworksConfig")
       private final @Nullable Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig;
 
-    public Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> getMasterAuthorizedNetworksConfig() {
+    public Output<EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs> masterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig == null ? Codegen.empty() : this.masterAuthorizedNetworksConfig;
     }
 
     @Import(name="nodeConfig")
       private final @Nullable Output<EnvironmentConfigNodeConfigGetArgs> nodeConfig;
 
-    public Output<EnvironmentConfigNodeConfigGetArgs> getNodeConfig() {
+    public Output<EnvironmentConfigNodeConfigGetArgs> nodeConfig() {
         return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
     }
 
     @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> getNodeCount() {
+    public Output<Integer> nodeCount() {
         return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
     @Import(name="privateEnvironmentConfig")
       private final @Nullable Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig;
 
-    public Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> getPrivateEnvironmentConfig() {
+    public Output<EnvironmentConfigPrivateEnvironmentConfigGetArgs> privateEnvironmentConfig() {
         return this.privateEnvironmentConfig == null ? Codegen.empty() : this.privateEnvironmentConfig;
     }
 
     @Import(name="softwareConfig")
       private final @Nullable Output<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig;
 
-    public Output<EnvironmentConfigSoftwareConfigGetArgs> getSoftwareConfig() {
+    public Output<EnvironmentConfigSoftwareConfigGetArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
     @Import(name="webServerConfig")
       private final @Nullable Output<EnvironmentConfigWebServerConfigGetArgs> webServerConfig;
 
-    public Output<EnvironmentConfigWebServerConfigGetArgs> getWebServerConfig() {
+    public Output<EnvironmentConfigWebServerConfigGetArgs> webServerConfig() {
         return this.webServerConfig == null ? Codegen.empty() : this.webServerConfig;
     }
 
     @Import(name="webServerNetworkAccessControl")
       private final @Nullable Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl;
 
-    public Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> getWebServerNetworkAccessControl() {
+    public Output<EnvironmentConfigWebServerNetworkAccessControlGetArgs> webServerNetworkAccessControl() {
         return this.webServerNetworkAccessControl == null ? Codegen.empty() : this.webServerNetworkAccessControl;
     }
 
     @Import(name="workloadsConfig")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig;
 
-    public Output<EnvironmentConfigWorkloadsConfigGetArgs> getWorkloadsConfig() {
+    public Output<EnvironmentConfigWorkloadsConfigGetArgs> workloadsConfig() {
         return this.workloadsConfig == null ? Codegen.empty() : this.workloadsConfig;
     }
 

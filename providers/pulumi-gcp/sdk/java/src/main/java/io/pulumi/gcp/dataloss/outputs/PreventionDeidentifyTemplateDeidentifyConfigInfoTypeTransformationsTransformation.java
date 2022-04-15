@@ -40,7 +40,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType> getInfoTypes() {
+    public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType> infoTypes() {
         return this.infoTypes == null ? List.of() : this.infoTypes;
     }
     /**
@@ -48,7 +48,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation getPrimitiveTransformation() {
+    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation primitiveTransformation() {
         return this.primitiveTransformation;
     }
 

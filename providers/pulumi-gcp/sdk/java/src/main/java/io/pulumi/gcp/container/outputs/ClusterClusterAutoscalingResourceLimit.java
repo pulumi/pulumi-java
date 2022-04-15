@@ -44,14 +44,14 @@ public final class ClusterClusterAutoscalingResourceLimit {
      * Maximum amount of the resource in the cluster.
      * 
     */
-    public Optional<Integer> getMaximum() {
+    public Optional<Integer> maximum() {
         return Optional.ofNullable(this.maximum);
     }
     /**
      * Minimum amount of the resource in the cluster.
      * 
     */
-    public Optional<Integer> getMinimum() {
+    public Optional<Integer> minimum() {
         return Optional.ofNullable(this.minimum);
     }
     /**
@@ -60,7 +60,7 @@ public final class ClusterClusterAutoscalingResourceLimit {
      * for a list of types.
      * 
     */
-    public String getPropResourceType() {
+    public String resourceType() {
         return this.resourceType;
     }
 

@@ -32,7 +32,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
     @Import(name="day", required=true)
       private final Output<String> day;
 
-    public Output<String> getDay() {
+    public Output<String> day() {
         return this.day;
     }
 
@@ -47,7 +47,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
     @Import(name="duration")
       private final @Nullable Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration == null ? Codegen.empty() : this.duration;
     }
 
@@ -61,7 +61,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs exten
     @Import(name="startTime", required=true)
       private final Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> startTime;
 
-    public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> getStartTime() {
+    public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetArgs> startTime() {
         return this.startTime;
     }
 

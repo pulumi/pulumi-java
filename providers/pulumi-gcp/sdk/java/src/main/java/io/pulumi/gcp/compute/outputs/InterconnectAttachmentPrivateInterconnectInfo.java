@@ -18,7 +18,7 @@ public final class InterconnectAttachmentPrivateInterconnectInfo {
         this.tag8021q = tag8021q;
     }
 
-    public Optional<Integer> getTag8021q() {
+    public Optional<Integer> tag8021q() {
         return Optional.ofNullable(this.tag8021q);
     }
 

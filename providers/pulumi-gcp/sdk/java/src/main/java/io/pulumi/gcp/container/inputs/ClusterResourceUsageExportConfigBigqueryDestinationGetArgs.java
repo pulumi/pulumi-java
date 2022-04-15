@@ -17,7 +17,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationGetArgs ex
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 

@@ -38,7 +38,7 @@ public final class TriggerWebhookConfig {
      * Structure is documented below.
      * 
     */
-    public String getSecret() {
+    public String secret() {
         return this.secret;
     }
     /**
@@ -47,7 +47,7 @@ public final class TriggerWebhookConfig {
      * Only populated on get requests.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

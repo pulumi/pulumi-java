@@ -32,16 +32,16 @@ public final class DomainMappingStatus {
         this.resourceRecords = resourceRecords;
     }
 
-    public List<DomainMappingStatusCondition> getConditions() {
+    public List<DomainMappingStatusCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
-    public Optional<String> getMappedRouteName() {
+    public Optional<String> mappedRouteName() {
         return Optional.ofNullable(this.mappedRouteName);
     }
-    public Optional<Integer> getObservedGeneration() {
+    public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
-    public List<DomainMappingStatusResourceRecord> getResourceRecords() {
+    public List<DomainMappingStatusResourceRecord> resourceRecords() {
         return this.resourceRecords == null ? List.of() : this.resourceRecords;
     }
 

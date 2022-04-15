@@ -25,7 +25,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyU
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
     */
-    public List<Integer> getObjectIdPaths() {
+    public List<Integer> objectIdPaths() {
         return this.objectIdPaths;
     }
 

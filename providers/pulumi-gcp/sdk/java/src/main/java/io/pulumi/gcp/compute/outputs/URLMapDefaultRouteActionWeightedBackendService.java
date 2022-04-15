@@ -52,7 +52,7 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
     */
-    public Optional<String> getBackendService() {
+    public Optional<String> backendService() {
         return Optional.ofNullable(this.backendService);
     }
     /**
@@ -63,7 +63,7 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
      * Structure is documented below.
      * 
     */
-    public Optional<URLMapDefaultRouteActionWeightedBackendServiceHeaderAction> getHeaderAction() {
+    public Optional<URLMapDefaultRouteActionWeightedBackendServiceHeaderAction> headerAction() {
         return Optional.ofNullable(this.headerAction);
     }
     /**
@@ -75,7 +75,7 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
      * The value must be between 0 and 1000
      * 
     */
-    public Optional<Integer> getWeight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 

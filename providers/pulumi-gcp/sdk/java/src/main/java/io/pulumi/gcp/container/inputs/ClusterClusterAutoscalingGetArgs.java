@@ -27,7 +27,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     @Import(name="autoProvisioningDefaults")
       private final @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
 
-    public Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> getAutoProvisioningDefaults() {
+    public Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults() {
         return this.autoProvisioningDefaults == null ? Codegen.empty() : this.autoProvisioningDefaults;
     }
 
@@ -41,7 +41,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     @Import(name="autoscalingProfile")
       private final @Nullable Output<String> autoscalingProfile;
 
-    public Output<String> getAutoscalingProfile() {
+    public Output<String> autoscalingProfile() {
         return this.autoscalingProfile == null ? Codegen.empty() : this.autoscalingProfile;
     }
 
@@ -53,7 +53,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -67,7 +67,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     @Import(name="resourceLimits")
       private final @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
-    public Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> getResourceLimits() {
+    public Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits() {
         return this.resourceLimits == null ? Codegen.empty() : this.resourceLimits;
     }
 

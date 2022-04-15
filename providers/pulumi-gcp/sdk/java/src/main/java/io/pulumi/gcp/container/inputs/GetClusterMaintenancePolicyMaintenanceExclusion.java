@@ -15,21 +15,21 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion extends io.pu
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
     @Import(name="exclusionName", required=true)
       private final String exclusionName;
 
-    public String getExclusionName() {
+    public String exclusionName() {
         return this.exclusionName;
     }
 
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

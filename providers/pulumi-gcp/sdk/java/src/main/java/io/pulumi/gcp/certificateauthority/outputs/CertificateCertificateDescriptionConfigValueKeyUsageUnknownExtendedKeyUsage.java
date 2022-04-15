@@ -18,7 +18,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
         this.obectIds = obectIds;
     }
 
-    public List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> getObectIds() {
+    public List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds() {
         return this.obectIds == null ? List.of() : this.obectIds;
     }
 

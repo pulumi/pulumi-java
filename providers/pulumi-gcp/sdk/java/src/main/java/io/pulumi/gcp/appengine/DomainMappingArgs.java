@@ -23,7 +23,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -37,7 +37,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
-    public Output<String> getOverrideStrategy() {
+    public Output<String> overrideStrategy() {
         return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
     }
 
@@ -49,7 +49,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -61,7 +61,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslSettings")
       private final @Nullable Output<DomainMappingSslSettingsArgs> sslSettings;
 
-    public Output<DomainMappingSslSettingsArgs> getSslSettings() {
+    public Output<DomainMappingSslSettingsArgs> sslSettings() {
         return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
     }
 

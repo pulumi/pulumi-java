@@ -36,7 +36,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="autoscalingConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> getAutoscalingConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig() {
         return this.autoscalingConfig == null ? Codegen.empty() : this.autoscalingConfig;
     }
 
@@ -47,7 +47,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="encryptionConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> getEncryptionConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig() {
         return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
@@ -58,7 +58,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="endpointConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> getEndpointConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig() {
         return this.endpointConfig == null ? Codegen.empty() : this.endpointConfig;
     }
 
@@ -69,7 +69,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="gceClusterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> getGceClusterConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig() {
         return this.gceClusterConfig == null ? Codegen.empty() : this.gceClusterConfig;
     }
 
@@ -80,7 +80,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="gkeClusterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> getGkeClusterConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig() {
         return this.gkeClusterConfig == null ? Codegen.empty() : this.gkeClusterConfig;
     }
 
@@ -91,7 +91,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="initializationActions")
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions;
 
-    public Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> getInitializationActions() {
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions() {
         return this.initializationActions == null ? Codegen.empty() : this.initializationActions;
     }
 
@@ -102,7 +102,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="lifecycleConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> getLifecycleConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig() {
         return this.lifecycleConfig == null ? Codegen.empty() : this.lifecycleConfig;
     }
 
@@ -113,7 +113,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="masterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> getMasterConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig() {
         return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
     }
 
@@ -124,7 +124,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="metastoreConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> getMetastoreConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig() {
         return this.metastoreConfig == null ? Codegen.empty() : this.metastoreConfig;
     }
 
@@ -135,7 +135,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="secondaryWorkerConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> getSecondaryWorkerConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Codegen.empty() : this.secondaryWorkerConfig;
     }
 
@@ -146,7 +146,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="securityConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> getSecurityConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig() {
         return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 
@@ -157,7 +157,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="softwareConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> getSoftwareConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig() {
         return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
@@ -168,7 +168,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="stagingBucket")
       private final @Nullable Output<String> stagingBucket;
 
-    public Output<String> getStagingBucket() {
+    public Output<String> stagingBucket() {
         return this.stagingBucket == null ? Codegen.empty() : this.stagingBucket;
     }
 
@@ -179,7 +179,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="tempBucket")
       private final @Nullable Output<String> tempBucket;
 
-    public Output<String> getTempBucket() {
+    public Output<String> tempBucket() {
         return this.tempBucket == null ? Codegen.empty() : this.tempBucket;
     }
 
@@ -190,7 +190,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     @Import(name="workerConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> getWorkerConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig() {
         return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 

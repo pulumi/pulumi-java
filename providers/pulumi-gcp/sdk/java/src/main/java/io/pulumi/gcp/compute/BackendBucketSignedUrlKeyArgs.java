@@ -22,7 +22,7 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     @Import(name="backendBucket", required=true)
       private final Output<String> backendBucket;
 
-    public Output<String> getBackendBucket() {
+    public Output<String> backendBucket() {
         return this.backendBucket;
     }
 
@@ -35,7 +35,7 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     @Import(name="keyValue", required=true)
       private final Output<String> keyValue;
 
-    public Output<String> getKeyValue() {
+    public Output<String> keyValue() {
         return this.keyValue;
     }
 
@@ -46,7 +46,7 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -58,7 +58,7 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

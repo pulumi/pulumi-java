@@ -89,64 +89,64 @@ public final class GetInstanceNetworkInterface {
      * instance can be accessed via the Internet. Structure documented below.
      * 
     */
-    public List<GetInstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
+    public List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs() {
         return this.accessConfigs;
     }
     /**
      * An array of alias IP ranges for this network interface. Structure documented below.
      * 
     */
-    public List<GetInstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
+    public List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges() {
         return this.aliasIpRanges;
     }
-    public List<GetInstanceNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
+    public List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
-    public String getIpv6AccessType() {
+    public String ipv6AccessType() {
         return this.ipv6AccessType;
     }
     /**
      * The name of the instance. One of `name` or `self_link` must be provided.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The name or self_link of the network attached to this interface.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * The private IP address assigned to the instance.
      * 
     */
-    public String getNetworkIp() {
+    public String networkIp() {
         return this.networkIp;
     }
-    public String getNicType() {
+    public String nicType() {
         return this.nicType;
     }
-    public Integer getQueueCount() {
+    public Integer queueCount() {
         return this.queueCount;
     }
-    public String getStackType() {
+    public String stackType() {
         return this.stackType;
     }
     /**
      * The name or self_link of the subnetwork attached to this interface.
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
     /**
      * The project in which the subnetwork belongs.
      * 
     */
-    public String getSubnetworkProject() {
+    public String subnetworkProject() {
         return this.subnetworkProject;
     }
 

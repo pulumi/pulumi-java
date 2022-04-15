@@ -21,7 +21,7 @@ public final class InstanceTemplateNetworkPerformanceConfigGetArgs extends io.pu
     @Import(name="totalEgressBandwidthTier", required=true)
       private final Output<String> totalEgressBandwidthTier;
 
-    public Output<String> getTotalEgressBandwidthTier() {
+    public Output<String> totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

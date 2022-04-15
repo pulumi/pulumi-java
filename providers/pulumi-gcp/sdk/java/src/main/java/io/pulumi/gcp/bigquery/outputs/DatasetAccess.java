@@ -75,14 +75,14 @@ public final class DatasetAccess {
      * domain specified will be granted the specified access
      * 
     */
-    public Optional<String> getDomain() {
+    public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * An email address of a Google Group to grant access to.
      * 
     */
-    public Optional<String> getGroupByEmail() {
+    public Optional<String> groupByEmail() {
         return Optional.ofNullable(this.groupByEmail);
     }
     /**
@@ -93,14 +93,14 @@ public final class DatasetAccess {
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
     */
-    public Optional<String> getRole() {
+    public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }
     /**
      * A special group to grant access to. Possible values include:
      * 
     */
-    public Optional<String> getSpecialGroup() {
+    public Optional<String> specialGroup() {
         return Optional.ofNullable(this.specialGroup);
     }
     /**
@@ -108,7 +108,7 @@ public final class DatasetAccess {
      * fred@example.com
      * 
     */
-    public Optional<String> getUserByEmail() {
+    public Optional<String> userByEmail() {
         return Optional.ofNullable(this.userByEmail);
     }
     /**
@@ -120,7 +120,7 @@ public final class DatasetAccess {
      * Structure is documented below.
      * 
     */
-    public Optional<DatasetAccessView> getView() {
+    public Optional<DatasetAccessView> view() {
         return Optional.ofNullable(this.view);
     }
 

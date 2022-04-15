@@ -49,28 +49,28 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
      * Credentials used to authenticate API requests to Azure block.
      * 
     */
-    public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials getAzureCredentials() {
+    public TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials() {
         return this.azureCredentials;
     }
     /**
      * The container to transfer from the Azure Storage account.`
      * 
     */
-    public String getContainer() {
+    public String container() {
         return this.container;
     }
     /**
      * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
      * 
     */
-    public Optional<String> getPath() {
+    public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The name of the Azure Storage account.
      * 
     */
-    public String getStorageAccount() {
+    public String storageAccount() {
         return this.storageAccount;
     }
 

@@ -21,7 +21,7 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends io.pulumi.r
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 

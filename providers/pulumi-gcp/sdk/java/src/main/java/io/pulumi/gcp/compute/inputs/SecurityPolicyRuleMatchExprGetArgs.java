@@ -22,7 +22,7 @@ public final class SecurityPolicyRuleMatchExprGetArgs extends io.pulumi.resource
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 

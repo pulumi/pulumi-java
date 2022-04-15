@@ -32,7 +32,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="autoHealingPolicies")
       private final @Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies;
 
-    public Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> getAutoHealingPolicies() {
+    public Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies() {
         return this.autoHealingPolicies == null ? Codegen.empty() : this.autoHealingPolicies;
     }
 
@@ -48,7 +48,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
 
-    public Output<String> getBaseInstanceName() {
+    public Output<String> baseInstanceName() {
         return this.baseInstanceName == null ? Codegen.empty() : this.baseInstanceName;
     }
 
@@ -60,7 +60,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -71,7 +71,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="distributionPolicyTargetShape")
       private final @Nullable Output<String> distributionPolicyTargetShape;
 
-    public Output<String> getDistributionPolicyTargetShape() {
+    public Output<String> distributionPolicyTargetShape() {
         return this.distributionPolicyTargetShape == null ? Codegen.empty() : this.distributionPolicyTargetShape;
     }
 
@@ -83,7 +83,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="distributionPolicyZones")
       private final @Nullable Output<List<String>> distributionPolicyZones;
 
-    public Output<List<String>> getDistributionPolicyZones() {
+    public Output<List<String>> distributionPolicyZones() {
         return this.distributionPolicyZones == null ? Codegen.empty() : this.distributionPolicyZones;
     }
 
@@ -94,7 +94,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
@@ -105,7 +105,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="instanceGroup")
       private final @Nullable Output<String> instanceGroup;
 
-    public Output<String> getInstanceGroup() {
+    public Output<String> instanceGroup() {
         return this.instanceGroup == null ? Codegen.empty() : this.instanceGroup;
     }
 
@@ -116,7 +116,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -128,7 +128,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="namedPorts")
       private final @Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts;
 
-    public Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> getNamedPorts() {
+    public Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts() {
         return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
     }
 
@@ -140,7 +140,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -151,7 +151,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -162,7 +162,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
@@ -173,7 +173,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="statefulDisks")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks;
 
-    public Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> getStatefulDisks() {
+    public Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks() {
         return this.statefulDisks == null ? Codegen.empty() : this.statefulDisks;
     }
 
@@ -184,7 +184,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="statuses")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses;
 
-    public Output<List<RegionInstanceGroupManagerStatusGetArgs>> getStatuses() {
+    public Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses() {
         return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
@@ -197,7 +197,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
-    public Output<List<String>> getTargetPools() {
+    public Output<List<String>> targetPools() {
         return this.targetPools == null ? Codegen.empty() : this.targetPools;
     }
 
@@ -208,7 +208,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
-    public Output<Integer> getTargetSize() {
+    public Output<Integer> targetSize() {
         return this.targetSize == null ? Codegen.empty() : this.targetSize;
     }
 
@@ -219,7 +219,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="updatePolicy")
       private final @Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy;
 
-    public Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> getUpdatePolicy() {
+    public Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy() {
         return this.updatePolicy == null ? Codegen.empty() : this.updatePolicy;
     }
 
@@ -232,7 +232,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="versions")
       private final @Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions;
 
-    public Output<List<RegionInstanceGroupManagerVersionGetArgs>> getVersions() {
+    public Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions() {
         return this.versions == null ? Codegen.empty() : this.versions;
     }
 
@@ -245,7 +245,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="waitForInstances")
       private final @Nullable Output<Boolean> waitForInstances;
 
-    public Output<Boolean> getWaitForInstances() {
+    public Output<Boolean> waitForInstances() {
         return this.waitForInstances == null ? Codegen.empty() : this.waitForInstances;
     }
 
@@ -259,7 +259,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
     @Import(name="waitForInstancesStatus")
       private final @Nullable Output<String> waitForInstancesStatus;
 
-    public Output<String> getWaitForInstancesStatus() {
+    public Output<String> waitForInstancesStatus() {
         return this.waitForInstancesStatus == null ? Codegen.empty() : this.waitForInstancesStatus;
     }
 

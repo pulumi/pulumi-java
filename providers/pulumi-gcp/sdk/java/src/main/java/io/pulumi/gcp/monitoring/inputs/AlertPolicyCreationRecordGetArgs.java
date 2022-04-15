@@ -18,14 +18,14 @@ public final class AlertPolicyCreationRecordGetArgs extends io.pulumi.resources.
     @Import(name="mutateTime")
       private final @Nullable Output<String> mutateTime;
 
-    public Output<String> getMutateTime() {
+    public Output<String> mutateTime() {
         return this.mutateTime == null ? Codegen.empty() : this.mutateTime;
     }
 
     @Import(name="mutatedBy")
       private final @Nullable Output<String> mutatedBy;
 
-    public Output<String> getMutatedBy() {
+    public Output<String> mutatedBy() {
         return this.mutatedBy == null ? Codegen.empty() : this.mutatedBy;
     }
 

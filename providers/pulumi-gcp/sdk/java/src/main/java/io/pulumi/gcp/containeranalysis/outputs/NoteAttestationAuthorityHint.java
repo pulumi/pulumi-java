@@ -26,7 +26,7 @@ public final class NoteAttestationAuthorityHint {
      * example "qa".
      * 
     */
-    public String getHumanReadableName() {
+    public String humanReadableName() {
         return this.humanReadableName;
     }
 

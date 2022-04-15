@@ -26,7 +26,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="enableAutoPopulationOfTimespanConfig")
       private final @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
 
-    public Output<Boolean> getEnableAutoPopulationOfTimespanConfig() {
+    public Output<Boolean> enableAutoPopulationOfTimespanConfig() {
         return this.enableAutoPopulationOfTimespanConfig == null ? Codegen.empty() : this.enableAutoPopulationOfTimespanConfig;
     }
 
@@ -37,7 +37,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
@@ -48,7 +48,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
@@ -60,7 +60,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
     @Import(name="timestampField", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> getTimestampField() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField() {
         return this.timestampField;
     }
 

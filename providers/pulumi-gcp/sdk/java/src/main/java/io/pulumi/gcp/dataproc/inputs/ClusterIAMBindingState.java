@@ -24,14 +24,14 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
     @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     @Import(name="condition")
       private final @Nullable Output<ClusterIAMBindingConditionGetArgs> condition;
 
-    public Output<ClusterIAMBindingConditionGetArgs> getCondition() {
+    public Output<ClusterIAMBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -42,14 +42,14 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -61,7 +61,7 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -73,7 +73,7 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region == null ? Codegen.empty() : this.region;
     }
 
@@ -86,7 +86,7 @@ public final class ClusterIAMBindingState extends io.pulumi.resources.ResourceAr
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

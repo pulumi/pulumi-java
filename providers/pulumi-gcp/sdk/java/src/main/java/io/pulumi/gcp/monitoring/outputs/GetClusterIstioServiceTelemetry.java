@@ -16,7 +16,7 @@ public final class GetClusterIstioServiceTelemetry {
         this.resourceName = resourceName;
     }
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

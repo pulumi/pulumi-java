@@ -46,7 +46,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * Structure is documented below.
      * 
     */
-    public List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector> getMethodSelectors() {
+    public List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector> methodSelectors() {
         return this.methodSelectors == null ? List.of() : this.methodSelectors;
     }
     /**
@@ -55,7 +55,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * field set to `*` will allow all methods AND permissions for all services.
      * 
     */
-    public Optional<String> getServiceName() {
+    public Optional<String> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
 

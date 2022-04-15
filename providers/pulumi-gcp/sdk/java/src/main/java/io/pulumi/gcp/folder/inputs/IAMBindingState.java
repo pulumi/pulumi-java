@@ -20,7 +20,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<IAMBindingConditionGetArgs> condition;
 
-    public Output<IAMBindingConditionGetArgs> getCondition() {
+    public Output<IAMBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,7 +31,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -42,7 +42,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
@@ -59,7 +59,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -72,7 +72,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

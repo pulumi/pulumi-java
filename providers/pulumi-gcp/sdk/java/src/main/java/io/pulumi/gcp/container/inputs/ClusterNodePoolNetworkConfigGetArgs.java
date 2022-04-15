@@ -23,7 +23,7 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
     @Import(name="createPodRange")
       private final @Nullable Output<Boolean> createPodRange;
 
-    public Output<Boolean> getCreatePodRange() {
+    public Output<Boolean> createPodRange() {
         return this.createPodRange == null ? Codegen.empty() : this.createPodRange;
     }
 
@@ -34,7 +34,7 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
     @Import(name="podIpv4CidrBlock")
       private final @Nullable Output<String> podIpv4CidrBlock;
 
-    public Output<String> getPodIpv4CidrBlock() {
+    public Output<String> podIpv4CidrBlock() {
         return this.podIpv4CidrBlock == null ? Codegen.empty() : this.podIpv4CidrBlock;
     }
 
@@ -45,7 +45,7 @@ public final class ClusterNodePoolNetworkConfigGetArgs extends io.pulumi.resourc
     @Import(name="podRange", required=true)
       private final Output<String> podRange;
 
-    public Output<String> getPodRange() {
+    public Output<String> podRange() {
         return this.podRange;
     }
 

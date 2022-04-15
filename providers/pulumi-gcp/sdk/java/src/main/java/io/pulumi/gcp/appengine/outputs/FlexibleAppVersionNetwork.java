@@ -61,28 +61,28 @@ public final class FlexibleAppVersionNetwork {
      * List of ports, or port pairs, to forward from the virtual machine to the application container.
      * 
     */
-    public List<String> getForwardedPorts() {
+    public List<String> forwardedPorts() {
         return this.forwardedPorts == null ? List.of() : this.forwardedPorts;
     }
     /**
      * Tag to apply to the instance during creation.
      * 
     */
-    public Optional<String> getInstanceTag() {
+    public Optional<String> instanceTag() {
         return Optional.ofNullable(this.instanceTag);
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Enable session affinity.
      * 
     */
-    public Optional<Boolean> getSessionAffinity() {
+    public Optional<Boolean> sessionAffinity() {
         return Optional.ofNullable(this.sessionAffinity);
     }
     /**
@@ -93,7 +93,7 @@ public final class FlexibleAppVersionNetwork {
      * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
      * 
     */
-    public Optional<String> getSubnetwork() {
+    public Optional<String> subnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
 

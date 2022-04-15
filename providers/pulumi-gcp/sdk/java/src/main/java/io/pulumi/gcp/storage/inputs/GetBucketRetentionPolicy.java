@@ -16,14 +16,14 @@ public final class GetBucketRetentionPolicy extends io.pulumi.resources.InvokeAr
     @Import(name="isLocked", required=true)
       private final Boolean isLocked;
 
-    public Boolean getIsLocked() {
+    public Boolean isLocked() {
         return this.isLocked;
     }
 
     @Import(name="retentionPeriod", required=true)
       private final Integer retentionPeriod;
 
-    public Integer getRetentionPeriod() {
+    public Integer retentionPeriod() {
         return this.retentionPeriod;
     }
 

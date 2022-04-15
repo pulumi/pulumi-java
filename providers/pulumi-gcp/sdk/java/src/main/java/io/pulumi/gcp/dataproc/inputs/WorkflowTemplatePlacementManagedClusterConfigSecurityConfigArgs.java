@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigAr
     @Import(name="kerberosConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> getKerberosConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig() {
         return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 

@@ -21,7 +21,7 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
     @Import(name="fixedNodeCount", required=true)
       private final Output<Integer> fixedNodeCount;
 
-    public Output<Integer> getFixedNodeCount() {
+    public Output<Integer> fixedNodeCount() {
         return this.fixedNodeCount;
     }
 

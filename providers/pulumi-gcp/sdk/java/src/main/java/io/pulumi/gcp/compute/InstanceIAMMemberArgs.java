@@ -24,7 +24,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<InstanceIAMMemberConditionArgs> condition;
 
-    public Output<InstanceIAMMemberConditionArgs> getCondition() {
+    public Output<InstanceIAMMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -35,14 +35,14 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
+    public Output<String> instanceName() {
         return this.instanceName;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -54,7 +54,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -67,7 +67,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -80,7 +80,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone == null ? Codegen.empty() : this.zone;
     }
 

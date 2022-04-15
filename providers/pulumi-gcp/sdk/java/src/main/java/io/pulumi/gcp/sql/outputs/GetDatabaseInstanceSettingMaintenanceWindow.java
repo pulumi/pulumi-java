@@ -24,13 +24,13 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
         this.updateTrack = updateTrack;
     }
 
-    public Integer getDay() {
+    public Integer day() {
         return this.day;
     }
-    public Integer getHour() {
+    public Integer hour() {
         return this.hour;
     }
-    public String getUpdateTrack() {
+    public String updateTrack() {
         return this.updateTrack;
     }
 

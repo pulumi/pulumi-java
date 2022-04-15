@@ -18,21 +18,21 @@ public final class GetEnvironmentConfigWorkloadsConfig extends io.pulumi.resourc
     @Import(name="schedulers", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
 
-    public List<GetEnvironmentConfigWorkloadsConfigScheduler> getSchedulers() {
+    public List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers() {
         return this.schedulers;
     }
 
     @Import(name="webServers", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
 
-    public List<GetEnvironmentConfigWorkloadsConfigWebServer> getWebServers() {
+    public List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers() {
         return this.webServers;
     }
 
     @Import(name="workers", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
-    public List<GetEnvironmentConfigWorkloadsConfigWorker> getWorkers() {
+    public List<GetEnvironmentConfigWorkloadsConfigWorker> workers() {
         return this.workers;
     }
 

@@ -22,10 +22,10 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
         this.enabled = enabled;
     }
 
-    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
+    public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks() {
         return this.cidrBlocks;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

@@ -19,42 +19,42 @@ public final class GetServiceTemplateSpec extends io.pulumi.resources.InvokeArgs
     @Import(name="containerConcurrency", required=true)
       private final Integer containerConcurrency;
 
-    public Integer getContainerConcurrency() {
+    public Integer containerConcurrency() {
         return this.containerConcurrency;
     }
 
     @Import(name="containers", required=true)
       private final List<GetServiceTemplateSpecContainer> containers;
 
-    public List<GetServiceTemplateSpecContainer> getContainers() {
+    public List<GetServiceTemplateSpecContainer> containers() {
         return this.containers;
     }
 
     @Import(name="serviceAccountName", required=true)
       private final String serviceAccountName;
 
-    public String getServiceAccountName() {
+    public String serviceAccountName() {
         return this.serviceAccountName;
     }
 
     @Import(name="servingState", required=true)
       private final String servingState;
 
-    public String getServingState() {
+    public String servingState() {
         return this.servingState;
     }
 
     @Import(name="timeoutSeconds", required=true)
       private final Integer timeoutSeconds;
 
-    public Integer getTimeoutSeconds() {
+    public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
 
     @Import(name="volumes", required=true)
       private final List<GetServiceTemplateSpecVolume> volumes;
 
-    public List<GetServiceTemplateSpecVolume> getVolumes() {
+    public List<GetServiceTemplateSpecVolume> volumes() {
         return this.volumes;
     }
 

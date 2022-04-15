@@ -56,7 +56,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<AccessLevelsAccessLevel>> getAccessLevels() {
+    public Output</* @Nullable */ List<AccessLevelsAccessLevel>> accessLevels() {
         return this.accessLevels;
     }
     /**
@@ -72,7 +72,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 

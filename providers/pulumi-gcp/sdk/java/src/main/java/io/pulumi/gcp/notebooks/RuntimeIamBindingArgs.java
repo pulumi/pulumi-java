@@ -20,7 +20,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<RuntimeIamBindingConditionArgs> condition;
 
-    public Output<RuntimeIamBindingConditionArgs> getCondition() {
+    public Output<RuntimeIamBindingConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,14 +31,14 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -50,7 +50,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -63,7 +63,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -74,7 +74,7 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="runtimeName", required=true)
       private final Output<String> runtimeName;
 
-    public Output<String> getRuntimeName() {
+    public Output<String> runtimeName() {
         return this.runtimeName;
     }
 

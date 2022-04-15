@@ -17,21 +17,21 @@ public final class NodePoolNodeConfigTaintArgs extends io.pulumi.resources.Resou
     @Import(name="effect", required=true)
       private final Output<String> effect;
 
-    public Output<String> getEffect() {
+    public Output<String> effect() {
         return this.effect;
     }
 
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

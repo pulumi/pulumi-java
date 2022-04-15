@@ -26,7 +26,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -37,7 +37,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
@@ -49,7 +49,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
 
-    public Output<List<FulfillmentFeatureGetArgs>> getFeatures() {
+    public Output<List<FulfillmentFeatureGetArgs>> features() {
         return this.features == null ? Codegen.empty() : this.features;
     }
 
@@ -61,7 +61,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
       private final @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
 
-    public Output<FulfillmentGenericWebServiceGetArgs> getGenericWebService() {
+    public Output<FulfillmentGenericWebServiceGetArgs> genericWebService() {
         return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
@@ -73,7 +73,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -85,7 +85,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

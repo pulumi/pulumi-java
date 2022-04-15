@@ -28,7 +28,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessUrls")
       private final @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
-    public Output<List<AuthorityAccessUrlGetArgs>> getAccessUrls() {
+    public Output<List<AuthorityAccessUrlGetArgs>> accessUrls() {
         return this.accessUrls == null ? Codegen.empty() : this.accessUrls;
     }
 
@@ -39,7 +39,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityId")
       private final @Nullable Output<String> certificateAuthorityId;
 
-    public Output<String> getCertificateAuthorityId() {
+    public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId == null ? Codegen.empty() : this.certificateAuthorityId;
     }
 
@@ -51,7 +51,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<AuthorityConfigGetArgs> config;
 
-    public Output<AuthorityConfigGetArgs> getConfig() {
+    public Output<AuthorityConfigGetArgs> config() {
         return this.config == null ? Codegen.empty() : this.config;
     }
 
@@ -63,7 +63,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
@@ -78,7 +78,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
 
-    public Output<String> getGcsBucket() {
+    public Output<String> gcsBucket() {
         return this.gcsBucket == null ? Codegen.empty() : this.gcsBucket;
     }
 
@@ -90,7 +90,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreActiveCertificatesOnDeletion")
       private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
-    public Output<Boolean> getIgnoreActiveCertificatesOnDeletion() {
+    public Output<Boolean> ignoreActiveCertificatesOnDeletion() {
         return this.ignoreActiveCertificatesOnDeletion == null ? Codegen.empty() : this.ignoreActiveCertificatesOnDeletion;
     }
 
@@ -104,7 +104,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keySpec")
       private final @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
 
-    public Output<AuthorityKeySpecGetArgs> getKeySpec() {
+    public Output<AuthorityKeySpecGetArgs> keySpec() {
         return this.keySpec == null ? Codegen.empty() : this.keySpec;
     }
 
@@ -117,7 +117,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -130,7 +130,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
@@ -142,7 +142,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -153,7 +153,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -166,7 +166,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pemCaCertificates")
       private final @Nullable Output<List<String>> pemCaCertificates;
 
-    public Output<List<String>> getPemCaCertificates() {
+    public Output<List<String>> pemCaCertificates() {
         return this.pemCaCertificates == null ? Codegen.empty() : this.pemCaCertificates;
     }
 
@@ -177,7 +177,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pool")
       private final @Nullable Output<String> pool;
 
-    public Output<String> getPool() {
+    public Output<String> pool() {
         return this.pool == null ? Codegen.empty() : this.pool;
     }
 
@@ -189,7 +189,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -200,7 +200,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state == null ? Codegen.empty() : this.state;
     }
 
@@ -216,7 +216,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -228,7 +228,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 

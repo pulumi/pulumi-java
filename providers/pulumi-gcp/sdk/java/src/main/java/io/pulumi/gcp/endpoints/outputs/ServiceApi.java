@@ -30,16 +30,16 @@ public final class ServiceApi {
         this.version = version;
     }
 
-    public List<ServiceApiMethod> getMethods() {
+    public List<ServiceApiMethod> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public Optional<String> getSyntax() {
+    public Optional<String> syntax() {
         return Optional.ofNullable(this.syntax);
     }
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

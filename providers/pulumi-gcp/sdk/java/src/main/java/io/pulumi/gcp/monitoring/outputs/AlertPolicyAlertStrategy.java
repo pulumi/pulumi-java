@@ -37,7 +37,7 @@ public final class AlertPolicyAlertStrategy {
      * If an alert policy that was active has no data for this long, any open incidents will close.
      * 
     */
-    public Optional<String> getAutoClose() {
+    public Optional<String> autoClose() {
         return Optional.ofNullable(this.autoClose);
     }
     /**
@@ -46,7 +46,7 @@ public final class AlertPolicyAlertStrategy {
      * Structure is documented below.
      * 
     */
-    public Optional<AlertPolicyAlertStrategyNotificationRateLimit> getNotificationRateLimit() {
+    public Optional<AlertPolicyAlertStrategyNotificationRateLimit> notificationRateLimit() {
         return Optional.ofNullable(this.notificationRateLimit);
     }
 

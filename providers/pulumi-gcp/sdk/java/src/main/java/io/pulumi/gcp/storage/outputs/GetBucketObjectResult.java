@@ -133,7 +133,7 @@ public final class GetBucketObjectResult {
         this.temporaryHold = temporaryHold;
     }
 
-    public Optional<String> getBucket() {
+    public Optional<String> bucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
@@ -141,97 +141,97 @@ public final class GetBucketObjectResult {
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
     */
-    public String getCacheControl() {
+    public String cacheControl() {
         return this.cacheControl;
     }
-    public String getContent() {
+    public String content() {
         return this.content;
     }
     /**
      * (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
     */
-    public String getContentDisposition() {
+    public String contentDisposition() {
         return this.contentDisposition;
     }
     /**
      * (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
     */
-    public String getContentEncoding() {
+    public String contentEncoding() {
         return this.contentEncoding;
     }
     /**
      * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
     */
-    public String getContentLanguage() {
+    public String contentLanguage() {
         return this.contentLanguage;
     }
     /**
      * (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
      * 
     */
-    public String getContentType() {
+    public String contentType() {
         return this.contentType;
     }
     /**
      * (Computed) Base 64 CRC32 hash of the uploaded data.
      * 
     */
-    public String getCrc32c() {
+    public String crc32c() {
         return this.crc32c;
     }
-    public List<GetBucketObjectCustomerEncryption> getCustomerEncryptions() {
+    public List<GetBucketObjectCustomerEncryption> customerEncryptions() {
         return this.customerEncryptions;
     }
-    public String getDetectMd5hash() {
+    public String detectMd5hash() {
         return this.detectMd5hash;
     }
-    public Boolean getEventBasedHold() {
+    public Boolean eventBasedHold() {
         return this.eventBasedHold;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * (Computed) Base 64 MD5 hash of the uploaded data.
      * 
     */
-    public String getMd5hash() {
+    public String md5hash() {
         return this.md5hash;
     }
     /**
      * (Computed) A url reference to download this object.
      * 
     */
-    public String getMediaLink() {
+    public String mediaLink() {
         return this.mediaLink;
     }
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
-    public String getOutputName() {
+    public String outputName() {
         return this.outputName;
     }
     /**
      * (Computed) A url reference to this object.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public String getSource() {
+    public String source() {
         return this.source;
     }
     /**
@@ -240,10 +240,10 @@ public final class GetBucketObjectResult {
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
     */
-    public String getStorageClass() {
+    public String storageClass() {
         return this.storageClass;
     }
-    public Boolean getTemporaryHold() {
+    public Boolean temporaryHold() {
         return this.temporaryHold;
     }
 

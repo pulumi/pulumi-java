@@ -35,7 +35,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
      * 1 and 1024 characters, inclusive.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -43,7 +43,7 @@ public final class GlobalForwardingRuleMetadataFilterFilterLabel {
      * length of 1024 characters.
      * 
     */
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 

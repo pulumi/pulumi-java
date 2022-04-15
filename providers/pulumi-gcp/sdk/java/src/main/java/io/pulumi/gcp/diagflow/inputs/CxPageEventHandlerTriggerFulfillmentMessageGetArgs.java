@@ -22,7 +22,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageGetArgs extends io
     @Import(name="text")
       private final @Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> getText() {
+    public Output<CxPageEventHandlerTriggerFulfillmentMessageTextGetArgs> text() {
         return this.text == null ? Codegen.empty() : this.text;
     }
 

@@ -25,7 +25,7 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
     @Import(name="configOverrides")
       private final @Nullable Output<Map<String,String>> configOverrides;
 
-    public Output<Map<String,String>> getConfigOverrides() {
+    public Output<Map<String,String>> configOverrides() {
         return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
     }
 
@@ -37,7 +37,7 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
     @Import(name="kerberosConfig")
       private final @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig;
 
-    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> getKerberosConfig() {
+    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig() {
         return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
@@ -48,7 +48,7 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 

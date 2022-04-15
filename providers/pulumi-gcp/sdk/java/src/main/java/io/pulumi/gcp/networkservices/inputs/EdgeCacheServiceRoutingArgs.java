@@ -24,7 +24,7 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     @Import(name="hostRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules;
 
-    public Output<List<EdgeCacheServiceRoutingHostRuleArgs>> getHostRules() {
+    public Output<List<EdgeCacheServiceRoutingHostRuleArgs>> hostRules() {
         return this.hostRules;
     }
 
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingArgs extends io.pulumi.resources.Resou
     @Import(name="pathMatchers", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers;
 
-    public Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> getPathMatchers() {
+    public Output<List<EdgeCacheServiceRoutingPathMatcherArgs>> pathMatchers() {
         return this.pathMatchers;
     }
 

@@ -42,7 +42,7 @@ public final class NodeTemplateNodeTypeFlexibility {
      * Number of virtual CPUs to use.
      * 
     */
-    public Optional<String> getCpus() {
+    public Optional<String> cpus() {
         return Optional.ofNullable(this.cpus);
     }
     /**
@@ -50,14 +50,14 @@ public final class NodeTemplateNodeTypeFlexibility {
      * Use local SSD
      * 
     */
-    public Optional<String> getLocalSsd() {
+    public Optional<String> localSsd() {
         return Optional.ofNullable(this.localSsd);
     }
     /**
      * Physical memory available to the node, defined in MB.
      * 
     */
-    public Optional<String> getMemory() {
+    public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }
 

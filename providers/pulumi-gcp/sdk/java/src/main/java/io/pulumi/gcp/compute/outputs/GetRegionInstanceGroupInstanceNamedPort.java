@@ -33,14 +33,14 @@ public final class GetRegionInstanceGroupInstanceNamedPort {
      * The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Integer port number
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

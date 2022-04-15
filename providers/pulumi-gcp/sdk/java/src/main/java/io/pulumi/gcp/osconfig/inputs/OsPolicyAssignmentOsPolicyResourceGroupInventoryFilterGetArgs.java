@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs
     @Import(name="osShortName", required=true)
       private final Output<String> osShortName;
 
-    public Output<String> getOsShortName() {
+    public Output<String> osShortName() {
         return this.osShortName;
     }
 
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
+    public Output<String> osVersion() {
         return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 

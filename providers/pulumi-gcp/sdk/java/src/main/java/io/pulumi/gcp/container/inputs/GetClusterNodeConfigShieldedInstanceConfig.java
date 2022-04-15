@@ -15,14 +15,14 @@ public final class GetClusterNodeConfigShieldedInstanceConfig extends io.pulumi.
     @Import(name="enableIntegrityMonitoring", required=true)
       private final Boolean enableIntegrityMonitoring;
 
-    public Boolean getEnableIntegrityMonitoring() {
+    public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
 
     @Import(name="enableSecureBoot", required=true)
       private final Boolean enableSecureBoot;
 
-    public Boolean getEnableSecureBoot() {
+    public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
     }
 

@@ -26,7 +26,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="api")
       private final @Nullable Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api == null ? Codegen.empty() : this.api;
     }
 
@@ -37,7 +37,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiConfigId")
       private final @Nullable Output<String> apiConfigId;
 
-    public Output<String> getApiConfigId() {
+    public Output<String> apiConfigId() {
         return this.apiConfigId == null ? Codegen.empty() : this.apiConfigId;
     }
 
@@ -49,7 +49,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiConfigIdPrefix")
       private final @Nullable Output<String> apiConfigIdPrefix;
 
-    public Output<String> getApiConfigIdPrefix() {
+    public Output<String> apiConfigIdPrefix() {
         return this.apiConfigIdPrefix == null ? Codegen.empty() : this.apiConfigIdPrefix;
     }
 
@@ -60,7 +60,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -73,7 +73,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
       private final @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig;
 
-    public Output<ApiConfigGatewayConfigGetArgs> getGatewayConfig() {
+    public Output<ApiConfigGatewayConfigGetArgs> gatewayConfig() {
         return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
     }
 
@@ -84,7 +84,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -95,7 +95,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -107,7 +107,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="openapiDocuments")
       private final @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
 
-    public Output<List<ApiConfigOpenapiDocumentGetArgs>> getOpenapiDocuments() {
+    public Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments() {
         return this.openapiDocuments == null ? Codegen.empty() : this.openapiDocuments;
     }
 
@@ -119,7 +119,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -130,7 +130,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceConfigId")
       private final @Nullable Output<String> serviceConfigId;
 
-    public Output<String> getServiceConfigId() {
+    public Output<String> serviceConfigId() {
         return this.serviceConfigId == null ? Codegen.empty() : this.serviceConfigId;
     }
 

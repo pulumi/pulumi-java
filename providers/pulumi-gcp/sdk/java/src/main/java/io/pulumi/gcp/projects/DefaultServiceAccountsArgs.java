@@ -22,7 +22,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -33,7 +33,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -47,7 +47,7 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     @Import(name="restorePolicy")
       private final @Nullable Output<String> restorePolicy;
 
-    public Output<String> getRestorePolicy() {
+    public Output<String> restorePolicy() {
         return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 

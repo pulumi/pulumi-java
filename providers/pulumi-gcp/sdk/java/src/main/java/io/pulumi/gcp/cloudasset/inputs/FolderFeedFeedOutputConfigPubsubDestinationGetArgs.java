@@ -21,7 +21,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationGetArgs extends io
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 

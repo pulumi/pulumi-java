@@ -26,7 +26,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
     @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -37,7 +37,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
     @Import(name="kmsKeyVersion")
       private final @Nullable Output<String> kmsKeyVersion;
 
-    public Output<String> getKmsKeyVersion() {
+    public Output<String> kmsKeyVersion() {
         return this.kmsKeyVersion == null ? Codegen.empty() : this.kmsKeyVersion;
     }
 

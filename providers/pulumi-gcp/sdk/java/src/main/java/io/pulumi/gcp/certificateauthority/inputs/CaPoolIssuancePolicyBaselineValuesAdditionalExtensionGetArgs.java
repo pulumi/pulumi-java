@@ -24,7 +24,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs 
     @Import(name="critical", required=true)
       private final Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical;
     }
 
@@ -36,7 +36,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs 
     @Import(name="objectId", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs> objectId;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs> getObjectId() {
+    public Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdGetArgs> objectId() {
         return this.objectId;
     }
 
@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs 
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 

@@ -23,28 +23,28 @@ public final class InstanceFromMachineImageNetworkInterfaceArgs extends io.pulum
     @Import(name="accessConfigs")
       private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigArgs>> accessConfigs;
 
-    public Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigArgs>> getAccessConfigs() {
+    public Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigArgs>> accessConfigs() {
         return this.accessConfigs == null ? Codegen.empty() : this.accessConfigs;
     }
 
     @Import(name="aliasIpRanges")
       private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges;
 
-    public Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs>> getAliasIpRanges() {
+    public Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs>> aliasIpRanges() {
         return this.aliasIpRanges == null ? Codegen.empty() : this.aliasIpRanges;
     }
 
     @Import(name="ipv6AccessConfigs")
       private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs;
 
-    public Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs>> getIpv6AccessConfigs() {
+    public Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs>> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Codegen.empty() : this.ipv6AccessConfigs;
     }
 
     @Import(name="ipv6AccessType")
       private final @Nullable Output<String> ipv6AccessType;
 
-    public Output<String> getIpv6AccessType() {
+    public Output<String> ipv6AccessType() {
         return this.ipv6AccessType == null ? Codegen.empty() : this.ipv6AccessType;
     }
 
@@ -56,56 +56,56 @@ public final class InstanceFromMachineImageNetworkInterfaceArgs extends io.pulum
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="networkIp")
       private final @Nullable Output<String> networkIp;
 
-    public Output<String> getNetworkIp() {
+    public Output<String> networkIp() {
         return this.networkIp == null ? Codegen.empty() : this.networkIp;
     }
 
     @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
-    public Output<String> getNicType() {
+    public Output<String> nicType() {
         return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
     @Import(name="queueCount")
       private final @Nullable Output<Integer> queueCount;
 
-    public Output<Integer> getQueueCount() {
+    public Output<Integer> queueCount() {
         return this.queueCount == null ? Codegen.empty() : this.queueCount;
     }
 
     @Import(name="stackType")
       private final @Nullable Output<String> stackType;
 
-    public Output<String> getStackType() {
+    public Output<String> stackType() {
         return this.stackType == null ? Codegen.empty() : this.stackType;
     }
 
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
-    public Output<String> getSubnetwork() {
+    public Output<String> subnetwork() {
         return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     @Import(name="subnetworkProject")
       private final @Nullable Output<String> subnetworkProject;
 
-    public Output<String> getSubnetworkProject() {
+    public Output<String> subnetworkProject() {
         return this.subnetworkProject == null ? Codegen.empty() : this.subnetworkProject;
     }
 

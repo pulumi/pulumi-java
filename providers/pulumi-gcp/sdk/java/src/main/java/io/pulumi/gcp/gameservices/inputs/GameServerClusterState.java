@@ -24,7 +24,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
@@ -37,7 +37,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="connectionInfo")
       private final @Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo;
 
-    public Output<GameServerClusterConnectionInfoGetArgs> getConnectionInfo() {
+    public Output<GameServerClusterConnectionInfoGetArgs> connectionInfo() {
         return this.connectionInfo == null ? Codegen.empty() : this.connectionInfo;
     }
 
@@ -48,7 +48,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -60,7 +60,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -71,7 +71,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
@@ -84,7 +84,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -96,7 +96,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -107,7 +107,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     @Import(name="realmId")
       private final @Nullable Output<String> realmId;
 
-    public Output<String> getRealmId() {
+    public Output<String> realmId() {
         return this.realmId == null ? Codegen.empty() : this.realmId;
     }
 

@@ -19,28 +19,28 @@ public final class AccountIamMemberArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="condition")
       private final @Nullable Output<AccountIamMemberConditionArgs> condition;
 
-    public Output<AccountIamMemberConditionArgs> getCondition() {
+    public Output<AccountIamMemberConditionArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 

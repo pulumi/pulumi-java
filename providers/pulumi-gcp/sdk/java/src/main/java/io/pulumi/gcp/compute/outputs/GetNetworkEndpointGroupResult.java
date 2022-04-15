@@ -82,61 +82,61 @@ public final class GetNetworkEndpointGroupResult {
      * The NEG default port.
      * 
     */
-    public Integer getDefaultPort() {
+    public Integer defaultPort() {
         return this.defaultPort;
     }
     /**
      * The NEG description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The network to which all network endpoints in the NEG belong.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
      * Type of network endpoints in this network endpoint group.
      * 
     */
-    public String getNetworkEndpointType() {
+    public String networkEndpointType() {
         return this.networkEndpointType;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public Optional<String> getSelfLink() {
+    public Optional<String> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
     /**
      * Number of network endpoints in the network endpoint group.
      * 
     */
-    public Integer getSize() {
+    public Integer size() {
         return this.size;
     }
     /**
      * subnetwork to which all network endpoints in the NEG belong.
      * 
     */
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
-    public Optional<String> getZone() {
+    public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
 

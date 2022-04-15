@@ -55,7 +55,7 @@ public class RegionDiskResourcePolicyAttachment extends io.pulumi.resources.Cust
      * @return The name of the regional disk in which the resource policies are attached to.
      * 
      */
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
     /**
@@ -71,7 +71,7 @@ public class RegionDiskResourcePolicyAttachment extends io.pulumi.resources.Cust
      * creation. Do not specify the self link.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +87,7 @@ public class RegionDiskResourcePolicyAttachment extends io.pulumi.resources.Cust
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -101,7 +101,7 @@ public class RegionDiskResourcePolicyAttachment extends io.pulumi.resources.Cust
      * @return A reference to the region where the disk resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 

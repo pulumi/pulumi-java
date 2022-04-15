@@ -30,7 +30,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allUpdatesRule")
       private final @Nullable Output<BudgetAllUpdatesRuleArgs> allUpdatesRule;
 
-    public Output<BudgetAllUpdatesRuleArgs> getAllUpdatesRule() {
+    public Output<BudgetAllUpdatesRuleArgs> allUpdatesRule() {
         return this.allUpdatesRule == null ? Codegen.empty() : this.allUpdatesRule;
     }
 
@@ -42,7 +42,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="amount", required=true)
       private final Output<BudgetAmountArgs> amount;
 
-    public Output<BudgetAmountArgs> getAmount() {
+    public Output<BudgetAmountArgs> amount() {
         return this.amount;
     }
 
@@ -53,7 +53,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount", required=true)
       private final Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
 
@@ -66,7 +66,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="budgetFilter")
       private final @Nullable Output<BudgetBudgetFilterArgs> budgetFilter;
 
-    public Output<BudgetBudgetFilterArgs> getBudgetFilter() {
+    public Output<BudgetBudgetFilterArgs> budgetFilter() {
         return this.budgetFilter == null ? Codegen.empty() : this.budgetFilter;
     }
 
@@ -77,7 +77,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -91,7 +91,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thresholdRules", required=true)
       private final Output<List<BudgetThresholdRuleArgs>> thresholdRules;
 
-    public Output<List<BudgetThresholdRuleArgs>> getThresholdRules() {
+    public Output<List<BudgetThresholdRuleArgs>> thresholdRules() {
         return this.thresholdRules;
     }
 

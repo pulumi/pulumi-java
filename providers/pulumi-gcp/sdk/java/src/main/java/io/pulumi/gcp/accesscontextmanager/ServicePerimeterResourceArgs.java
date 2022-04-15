@@ -21,7 +21,7 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
     @Import(name="perimeterName", required=true)
       private final Output<String> perimeterName;
 
-    public Output<String> getPerimeterName() {
+    public Output<String> perimeterName() {
         return this.perimeterName;
     }
 
@@ -34,7 +34,7 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 

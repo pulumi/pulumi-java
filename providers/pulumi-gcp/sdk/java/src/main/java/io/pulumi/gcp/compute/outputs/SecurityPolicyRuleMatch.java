@@ -51,7 +51,7 @@ public final class SecurityPolicyRuleMatch {
      * Structure is documented below.
      * 
     */
-    public Optional<SecurityPolicyRuleMatchConfig> getConfig() {
+    public Optional<SecurityPolicyRuleMatchConfig> config() {
         return Optional.ofNullable(this.config);
     }
     /**
@@ -60,7 +60,7 @@ public final class SecurityPolicyRuleMatch {
      * Structure is documented below.
      * 
     */
-    public Optional<SecurityPolicyRuleMatchExpr> getExpr() {
+    public Optional<SecurityPolicyRuleMatchExpr> expr() {
         return Optional.ofNullable(this.expr);
     }
     /**
@@ -69,7 +69,7 @@ public final class SecurityPolicyRuleMatch {
      * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
      * 
     */
-    public Optional<String> getVersionedExpr() {
+    public Optional<String> versionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }
 

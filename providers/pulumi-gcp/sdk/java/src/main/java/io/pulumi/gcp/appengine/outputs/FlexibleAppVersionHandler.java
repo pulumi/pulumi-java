@@ -82,7 +82,7 @@ public final class FlexibleAppVersionHandler {
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
     */
-    public Optional<String> getAuthFailAction() {
+    public Optional<String> authFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
     /**
@@ -91,7 +91,7 @@ public final class FlexibleAppVersionHandler {
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
     */
-    public Optional<String> getLogin() {
+    public Optional<String> login() {
         return Optional.ofNullable(this.login);
     }
     /**
@@ -99,14 +99,14 @@ public final class FlexibleAppVersionHandler {
      * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
      * 
     */
-    public Optional<String> getRedirectHttpResponseCode() {
+    public Optional<String> redirectHttpResponseCode() {
         return Optional.ofNullable(this.redirectHttpResponseCode);
     }
     /**
      * Path to the script from the application root directory.
      * 
     */
-    public Optional<FlexibleAppVersionHandlerScript> getScript() {
+    public Optional<FlexibleAppVersionHandlerScript> script() {
         return Optional.ofNullable(this.script);
     }
     /**
@@ -114,7 +114,7 @@ public final class FlexibleAppVersionHandler {
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
     */
-    public Optional<String> getSecurityLevel() {
+    public Optional<String> securityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
     /**
@@ -123,7 +123,7 @@ public final class FlexibleAppVersionHandler {
      * Structure is documented below.
      * 
     */
-    public Optional<FlexibleAppVersionHandlerStaticFiles> getStaticFiles() {
+    public Optional<FlexibleAppVersionHandlerStaticFiles> staticFiles() {
         return Optional.ofNullable(this.staticFiles);
     }
     /**
@@ -131,7 +131,7 @@ public final class FlexibleAppVersionHandler {
      * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
     */
-    public Optional<String> getUrlRegex() {
+    public Optional<String> urlRegex() {
         return Optional.ofNullable(this.urlRegex);
     }
 

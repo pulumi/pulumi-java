@@ -24,14 +24,14 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="caPool")
       private final @Nullable Output<String> caPool;
 
-    public Output<String> getCaPool() {
+    public Output<String> caPool() {
         return this.caPool == null ? Codegen.empty() : this.caPool;
     }
 
     @Import(name="condition")
       private final @Nullable Output<CaPoolIamBindingConditionGetArgs> condition;
 
-    public Output<CaPoolIamBindingConditionGetArgs> getCondition() {
+    public Output<CaPoolIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -42,7 +42,7 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
@@ -55,14 +55,14 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -74,7 +74,7 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -87,7 +87,7 @@ public final class CaPoolIamBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

@@ -19,35 +19,35 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
     @Import(name="condition")
       private final @Nullable Output<IAMMemberConditionGetArgs> condition;
 
-    public Output<IAMMemberConditionGetArgs> getCondition() {
+    public Output<IAMMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

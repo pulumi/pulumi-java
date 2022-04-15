@@ -68,7 +68,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
      * 
      */
-    public Output</* @Nullable */ InstanceAdvancedMachineFeatures> getAdvancedMachineFeatures() {
+    public Output</* @Nullable */ InstanceAdvancedMachineFeatures> advancedMachineFeatures() {
         return this.advancedMachineFeatures;
     }
     /**
@@ -84,7 +84,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowStoppingForUpdate() {
+    public Output</* @Nullable */ Boolean> allowStoppingForUpdate() {
         return this.allowStoppingForUpdate;
     }
     /**
@@ -98,7 +98,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceAttachedDisk>> getAttachedDisks() {
+    public Output</* @Nullable */ List<InstanceAttachedDisk>> attachedDisks() {
         return this.attachedDisks;
     }
     /**
@@ -114,7 +114,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<InstanceBootDisk> getBootDisk() {
+    public Output<InstanceBootDisk> bootDisk() {
         return this.bootDisk;
     }
     /**
@@ -132,7 +132,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * This defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCanIpForward() {
+    public Output</* @Nullable */ Boolean> canIpForward() {
         return this.canIpForward;
     }
     /**
@@ -146,7 +146,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
      */
-    public Output<InstanceConfidentialInstanceConfig> getConfidentialInstanceConfig() {
+    public Output<InstanceConfidentialInstanceConfig> confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
     }
     /**
@@ -160,7 +160,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The CPU platform used by this instance.
      * 
      */
-    public Output<String> getCpuPlatform() {
+    public Output<String> cpuPlatform() {
         return this.cpuPlatform;
     }
     /**
@@ -174,7 +174,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Current status of the instance.
      * 
      */
-    public Output<String> getCurrentStatus() {
+    public Output<String> currentStatus() {
         return this.currentStatus;
     }
     /**
@@ -190,7 +190,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -204,7 +204,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A brief description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -220,7 +220,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * `"RUNNING"` or `"TERMINATED"`.
      * 
      */
-    public Output</* @Nullable */ String> getDesiredStatus() {
+    public Output</* @Nullable */ String> desiredStatus() {
         return this.desiredStatus;
     }
     /**
@@ -236,7 +236,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDisplay() {
+    public Output</* @Nullable */ Boolean> enableDisplay() {
         return this.enableDisplay;
     }
     /**
@@ -252,7 +252,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
      * 
      */
-    public Output<List<InstanceGuestAccelerator>> getGuestAccelerators() {
+    public Output<List<InstanceGuestAccelerator>> guestAccelerators() {
         return this.guestAccelerators;
     }
     /**
@@ -270,7 +270,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -284,7 +284,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The server-assigned unique identifier of this instance.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -298,7 +298,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the labels.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -312,7 +312,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A map of key/value label pairs to assign to the instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -326,7 +326,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The machine type to create.
      * 
      */
-    public Output<String> getMachineType() {
+    public Output<String> machineType() {
         return this.machineType;
     }
     /**
@@ -344,7 +344,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Add them to your config in order to keep them attached to your instance.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -358,7 +358,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the metadata.
      * 
      */
-    public Output<String> getMetadataFingerprint() {
+    public Output<String> metadataFingerprint() {
         return this.metadataFingerprint;
     }
     /**
@@ -390,7 +390,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is desired, you will need to modify your state file.
      * 
      */
-    public Output</* @Nullable */ String> getMetadataStartupScript() {
+    public Output</* @Nullable */ String> metadataStartupScript() {
         return this.metadataStartupScript;
     }
     /**
@@ -408,7 +408,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Output<String> getMinCpuPlatform() {
+    public Output<String> minCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
@@ -424,7 +424,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -440,7 +440,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * be specified multiple times. Structure is documented below.
      * 
      */
-    public Output<List<InstanceNetworkInterface>> getNetworkInterfaces() {
+    public Output<List<InstanceNetworkInterface>> networkInterfaces() {
         return this.networkInterfaces;
     }
     /**
@@ -462,7 +462,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in order for this setting to take effect.
      * 
      */
-    public Output</* @Nullable */ InstanceNetworkPerformanceConfig> getNetworkPerformanceConfig() {
+    public Output</* @Nullable */ InstanceNetworkPerformanceConfig> networkPerformanceConfig() {
         return this.networkPerformanceConfig;
     }
     /**
@@ -478,7 +478,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -494,7 +494,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<InstanceReservationAffinity> getReservationAffinity() {
+    public Output<InstanceReservationAffinity> reservationAffinity() {
         return this.reservationAffinity;
     }
     /**
@@ -508,7 +508,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
      * 
      */
-    public Output</* @Nullable */ String> getResourcePolicies() {
+    public Output</* @Nullable */ String> resourcePolicies() {
         return this.resourcePolicies;
     }
     /**
@@ -524,7 +524,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * this configuration option are detailed below.
      * 
      */
-    public Output<InstanceScheduling> getScheduling() {
+    public Output<InstanceScheduling> scheduling() {
         return this.scheduling;
     }
     /**
@@ -540,7 +540,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * specified multiple times for multiple scratch disks. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<InstanceScratchDisk>> getScratchDisks() {
+    public Output</* @Nullable */ List<InstanceScratchDisk>> scratchDisks() {
         return this.scratchDisks;
     }
     /**
@@ -554,7 +554,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -572,7 +572,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Output</* @Nullable */ InstanceServiceAccount> getServiceAccount() {
+    public Output</* @Nullable */ InstanceServiceAccount> serviceAccount() {
         return this.serviceAccount;
     }
     /**
@@ -590,7 +590,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    public Output<InstanceShieldedInstanceConfig> getShieldedInstanceConfig() {
+    public Output<InstanceShieldedInstanceConfig> shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
@@ -604,7 +604,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return A list of network tags to attach to the instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -618,7 +618,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The unique fingerprint of the tags.
      * 
      */
-    public Output<String> getTagsFingerprint() {
+    public Output<String> tagsFingerprint() {
         return this.tagsFingerprint;
     }
     /**
@@ -632,7 +632,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The zone that the machine should be created in. If it is not provided, the provider zone is used.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

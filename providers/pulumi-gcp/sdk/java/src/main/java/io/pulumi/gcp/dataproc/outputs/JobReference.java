@@ -18,7 +18,7 @@ public final class JobReference {
         this.jobId = jobId;
     }
 
-    public Optional<String> getJobId() {
+    public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
 

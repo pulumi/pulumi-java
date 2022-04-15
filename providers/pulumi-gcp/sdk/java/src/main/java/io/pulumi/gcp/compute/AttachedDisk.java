@@ -64,7 +64,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * the instance.
      * 
      */
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
     /**
@@ -78,7 +78,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * @return `name` or `self_link` of the disk that will be attached.
      * 
      */
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
     /**
@@ -98,7 +98,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * as properties on the resource or provider.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -116,7 +116,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * READ_WRITE mode.
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -132,7 +132,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `self_link` the project defined in the link will take precedence.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -148,7 +148,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `self_link` the zone defined in the link will take precedence.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 

@@ -23,7 +23,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -35,7 +35,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -46,7 +46,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryGroup", required=true)
       private final Output<String> entryGroup;
 
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
 
@@ -57,7 +57,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryId", required=true)
       private final Output<String> entryId;
 
-    public Output<String> getEntryId() {
+    public Output<String> entryId() {
         return this.entryId;
     }
 
@@ -69,7 +69,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsFilesetSpec")
       private final @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
 
-    public Output<EntryGcsFilesetSpecArgs> getGcsFilesetSpec() {
+    public Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec() {
         return this.gcsFilesetSpec == null ? Codegen.empty() : this.gcsFilesetSpec;
     }
 
@@ -85,7 +85,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedResource")
       private final @Nullable Output<String> linkedResource;
 
-    public Output<String> getLinkedResource() {
+    public Output<String> linkedResource() {
         return this.linkedResource == null ? Codegen.empty() : this.linkedResource;
     }
 
@@ -99,7 +99,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema == null ? Codegen.empty() : this.schema;
     }
 
@@ -112,7 +112,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type == null ? Codegen.empty() : this.type;
     }
 
@@ -125,7 +125,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedSystem")
       private final @Nullable Output<String> userSpecifiedSystem;
 
-    public Output<String> getUserSpecifiedSystem() {
+    public Output<String> userSpecifiedSystem() {
         return this.userSpecifiedSystem == null ? Codegen.empty() : this.userSpecifiedSystem;
     }
 
@@ -140,7 +140,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedType")
       private final @Nullable Output<String> userSpecifiedType;
 
-    public Output<String> getUserSpecifiedType() {
+    public Output<String> userSpecifiedType() {
         return this.userSpecifiedType == null ? Codegen.empty() : this.userSpecifiedType;
     }
 

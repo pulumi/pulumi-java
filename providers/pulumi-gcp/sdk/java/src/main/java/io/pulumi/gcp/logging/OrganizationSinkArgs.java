@@ -26,7 +26,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bigqueryOptions")
       private final @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
 
-    public Output<OrganizationSinkBigqueryOptionsArgs> getBigqueryOptions() {
+    public Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions() {
         return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
@@ -37,7 +37,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description == null ? Codegen.empty() : this.description;
     }
 
@@ -51,7 +51,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="destination", required=true)
       private final Output<String> destination;
 
-    public Output<String> getDestination() {
+    public Output<String> destination() {
         return this.destination;
     }
 
@@ -62,7 +62,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
+    public Output<Boolean> disabled() {
         return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
@@ -73,7 +73,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="exclusions")
       private final @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
 
-    public Output<List<OrganizationSinkExclusionArgs>> getExclusions() {
+    public Output<List<OrganizationSinkExclusionArgs>> exclusions() {
         return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
@@ -85,7 +85,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter == null ? Codegen.empty() : this.filter;
     }
 
@@ -97,7 +97,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="includeChildren")
       private final @Nullable Output<Boolean> includeChildren;
 
-    public Output<Boolean> getIncludeChildren() {
+    public Output<Boolean> includeChildren() {
         return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
     }
 
@@ -108,7 +108,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -119,7 +119,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 

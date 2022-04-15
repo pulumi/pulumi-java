@@ -19,7 +19,7 @@ public final class GetInstanceScratchDisk extends io.pulumi.resources.InvokeArgs
     @Import(name="interface", required=true)
       private final String interface_;
 
-    public String getInterface_() {
+    public String interface_() {
         return this.interface_;
     }
 

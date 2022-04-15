@@ -37,17 +37,17 @@ public final class GetGroupsResult {
      * The list of groups under the provided customer or namespace. Structure is documented below.
      * 
     */
-    public List<GetGroupsGroup> getGroups() {
+    public List<GetGroupsGroup> groups() {
         return this.groups;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getParent() {
+    public String parent() {
         return this.parent;
     }
 

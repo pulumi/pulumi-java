@@ -40,7 +40,7 @@ public final class NoteAttestationAuthority {
      * Structure is documented below.
      * 
     */
-    public NoteAttestationAuthorityHint getHint() {
+    public NoteAttestationAuthorityHint hint() {
         return this.hint;
     }
 

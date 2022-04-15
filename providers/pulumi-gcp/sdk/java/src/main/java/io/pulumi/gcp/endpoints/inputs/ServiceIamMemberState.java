@@ -19,7 +19,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<ServiceIamMemberConditionGetArgs> condition;
 
-    public Output<ServiceIamMemberConditionGetArgs> getCondition() {
+    public Output<ServiceIamMemberConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -30,14 +30,14 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member == null ? Codegen.empty() : this.member;
     }
 
@@ -50,14 +50,14 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 

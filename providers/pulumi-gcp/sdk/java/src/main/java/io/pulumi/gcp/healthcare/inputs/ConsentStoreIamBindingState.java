@@ -20,7 +20,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamBindingConditionGetArgs> condition;
 
-    public Output<ConsentStoreIamBindingConditionGetArgs> getCondition() {
+    public Output<ConsentStoreIamBindingConditionGetArgs> condition() {
         return this.condition == null ? Codegen.empty() : this.condition;
     }
 
@@ -31,7 +31,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="consentStoreId")
       private final @Nullable Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId == null ? Codegen.empty() : this.consentStoreId;
     }
 
@@ -44,7 +44,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
@@ -55,14 +55,14 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members == null ? Codegen.empty() : this.members;
     }
 
@@ -75,7 +75,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role == null ? Codegen.empty() : this.role;
     }
 

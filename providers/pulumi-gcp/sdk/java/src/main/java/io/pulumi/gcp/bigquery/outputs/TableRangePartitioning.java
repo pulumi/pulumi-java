@@ -36,7 +36,7 @@ public final class TableRangePartitioning {
      * partition.
      * 
     */
-    public String getField() {
+    public String field() {
         return this.field;
     }
     /**
@@ -44,7 +44,7 @@ public final class TableRangePartitioning {
      * Structure is documented below.
      * 
     */
-    public TableRangePartitioningRange getRange() {
+    public TableRangePartitioningRange range() {
         return this.range;
     }
 

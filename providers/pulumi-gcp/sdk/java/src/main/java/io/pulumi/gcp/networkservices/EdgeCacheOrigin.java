@@ -52,7 +52,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +72,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * A reference to a Topic resource.
      * 
      */
-    public Output</* @Nullable */ String> getFailoverOrigin() {
+    public Output</* @Nullable */ String> failoverOrigin() {
         return this.failoverOrigin;
     }
     /**
@@ -86,7 +86,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * @return Set of label tags associated with the EdgeCache resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -114,7 +114,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Defaults to 1. Must be a value greater than 0 and less than 4.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxAttempts() {
+    public Output</* @Nullable */ Integer> maxAttempts() {
         return this.maxAttempts;
     }
     /**
@@ -132,7 +132,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * and all following characters must be a dash, underscore, letter or digit.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -152,7 +152,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
      * 
      */
-    public Output<String> getOriginAddress() {
+    public Output<String> originAddress() {
         return this.originAddress;
     }
     /**
@@ -168,7 +168,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -184,7 +184,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -202,7 +202,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Possible values are `HTTP2`, `HTTPS`, and `HTTP`.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -240,7 +240,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      *   Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
      * 
      */
-    public Output<List<String>> getRetryConditions() {
+    public Output<List<String>> retryConditions() {
         return this.retryConditions;
     }
     /**
@@ -256,7 +256,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ EdgeCacheOriginTimeout> getTimeout() {
+    public Output</* @Nullable */ EdgeCacheOriginTimeout> timeout() {
         return this.timeout;
     }
 

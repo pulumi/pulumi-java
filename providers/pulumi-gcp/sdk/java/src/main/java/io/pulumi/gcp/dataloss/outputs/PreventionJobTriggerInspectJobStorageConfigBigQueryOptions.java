@@ -26,7 +26,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
      * Structure is documented below.
      * 
     */
-    public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference getTableReference() {
+    public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference() {
         return this.tableReference;
     }
 

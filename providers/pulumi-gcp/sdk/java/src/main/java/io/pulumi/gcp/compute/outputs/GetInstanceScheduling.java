@@ -53,13 +53,13 @@ public final class GetInstanceScheduling {
      * restarted if it was terminated by Compute Engine (not a user).
      * 
     */
-    public Boolean getAutomaticRestart() {
+    public Boolean automaticRestart() {
         return this.automaticRestart;
     }
-    public Integer getMinNodeCpus() {
+    public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
-    public List<GetInstanceSchedulingNodeAffinity> getNodeAffinities() {
+    public List<GetInstanceSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities;
     }
     /**
@@ -68,14 +68,14 @@ public final class GetInstanceScheduling {
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
      * 
     */
-    public String getOnHostMaintenance() {
+    public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
      * Whether the instance is preemptible.
      * 
     */
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 

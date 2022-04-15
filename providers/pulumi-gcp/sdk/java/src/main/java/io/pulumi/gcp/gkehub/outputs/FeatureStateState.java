@@ -25,13 +25,13 @@ public final class FeatureStateState {
         this.updateTime = updateTime;
     }
 
-    public Optional<String> getCode() {
+    public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public Optional<String> getUpdateTime() {
+    public Optional<String> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
 

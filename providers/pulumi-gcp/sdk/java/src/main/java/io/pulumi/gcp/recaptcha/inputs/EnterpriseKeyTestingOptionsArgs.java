@@ -23,7 +23,7 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
     @Import(name="testingChallenge")
       private final @Nullable Output<String> testingChallenge;
 
-    public Output<String> getTestingChallenge() {
+    public Output<String> testingChallenge() {
         return this.testingChallenge == null ? Codegen.empty() : this.testingChallenge;
     }
 
@@ -34,7 +34,7 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
     @Import(name="testingScore")
       private final @Nullable Output<Double> testingScore;
 
-    public Output<Double> getTestingScore() {
+    public Output<Double> testingScore() {
         return this.testingScore == null ? Codegen.empty() : this.testingScore;
     }
 

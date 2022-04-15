@@ -24,7 +24,7 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
@@ -36,7 +36,7 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
     @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
-    public Output<Integer> getGeneration() {
+    public Output<Integer> generation() {
         return this.generation == null ? Codegen.empty() : this.generation;
     }
 
@@ -48,7 +48,7 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
     @Import(name="object")
       private final @Nullable Output<String> object;
 
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object == null ? Codegen.empty() : this.object;
     }
 

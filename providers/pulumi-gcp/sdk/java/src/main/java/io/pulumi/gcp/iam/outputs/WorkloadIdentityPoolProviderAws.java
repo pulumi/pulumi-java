@@ -24,7 +24,7 @@ public final class WorkloadIdentityPoolProviderAws {
      * The AWS account ID.
      * 
     */
-    public String getAccountId() {
+    public String accountId() {
         return this.accountId;
     }
 

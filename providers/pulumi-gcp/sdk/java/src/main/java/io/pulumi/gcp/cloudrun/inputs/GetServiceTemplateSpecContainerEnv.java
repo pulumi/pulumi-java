@@ -21,21 +21,21 @@ public final class GetServiceTemplateSpecContainerEnv extends io.pulumi.resource
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
       private final String value;
 
-    public String getValue() {
+    public String value() {
         return this.value;
     }
 
     @Import(name="valueFroms", required=true)
       private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
 
-    public List<GetServiceTemplateSpecContainerEnvValueFrom> getValueFroms() {
+    public List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms() {
         return this.valueFroms;
     }
 

@@ -22,7 +22,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
     @Import(name="cloudSecret", required=true)
       private final Output<String> cloudSecret;
 
-    public Output<String> getCloudSecret() {
+    public Output<String> cloudSecret() {
         return this.cloudSecret;
     }
 

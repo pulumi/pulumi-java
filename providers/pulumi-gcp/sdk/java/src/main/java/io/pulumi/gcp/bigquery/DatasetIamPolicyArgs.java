@@ -22,7 +22,7 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -34,7 +34,7 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -46,7 +46,7 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 

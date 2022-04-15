@@ -23,13 +23,13 @@ public final class GetNotificationChannelSensitiveLabel {
         this.serviceKey = serviceKey;
     }
 
-    public String getAuthToken() {
+    public String authToken() {
         return this.authToken;
     }
-    public String getPassword() {
+    public String password() {
         return this.password;
     }
-    public String getServiceKey() {
+    public String serviceKey() {
         return this.serviceKey;
     }
 

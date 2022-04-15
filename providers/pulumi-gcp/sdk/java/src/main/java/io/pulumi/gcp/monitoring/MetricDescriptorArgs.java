@@ -25,7 +25,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -36,7 +36,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -48,7 +48,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="labels")
       private final @Nullable Output<List<MetricDescriptorLabelArgs>> labels;
 
-    public Output<List<MetricDescriptorLabelArgs>> getLabels() {
+    public Output<List<MetricDescriptorLabelArgs>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -60,7 +60,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="launchStage")
       private final @Nullable Output<String> launchStage;
 
-    public Output<String> getLaunchStage() {
+    public Output<String> launchStage() {
         return this.launchStage == null ? Codegen.empty() : this.launchStage;
     }
 
@@ -72,7 +72,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metadata")
       private final @Nullable Output<MetricDescriptorMetadataArgs> metadata;
 
-    public Output<MetricDescriptorMetadataArgs> getMetadata() {
+    public Output<MetricDescriptorMetadataArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -84,7 +84,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metricKind", required=true)
       private final Output<String> metricKind;
 
-    public Output<String> getMetricKind() {
+    public Output<String> metricKind() {
         return this.metricKind;
     }
 
@@ -96,7 +96,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -107,7 +107,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -134,7 +134,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="unit")
       private final @Nullable Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit == null ? Codegen.empty() : this.unit;
     }
 
@@ -147,7 +147,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="valueType", required=true)
       private final Output<String> valueType;
 
-    public Output<String> getValueType() {
+    public Output<String> valueType() {
         return this.valueType;
     }
 

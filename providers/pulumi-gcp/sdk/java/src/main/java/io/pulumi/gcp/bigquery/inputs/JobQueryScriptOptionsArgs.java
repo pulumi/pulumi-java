@@ -24,7 +24,7 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="keyResultStatement")
       private final @Nullable Output<String> keyResultStatement;
 
-    public Output<String> getKeyResultStatement() {
+    public Output<String> keyResultStatement() {
         return this.keyResultStatement == null ? Codegen.empty() : this.keyResultStatement;
     }
 
@@ -35,7 +35,7 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="statementByteBudget")
       private final @Nullable Output<String> statementByteBudget;
 
-    public Output<String> getStatementByteBudget() {
+    public Output<String> statementByteBudget() {
         return this.statementByteBudget == null ? Codegen.empty() : this.statementByteBudget;
     }
 
@@ -46,7 +46,7 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
     @Import(name="statementTimeoutMs")
       private final @Nullable Output<String> statementTimeoutMs;
 
-    public Output<String> getStatementTimeoutMs() {
+    public Output<String> statementTimeoutMs() {
         return this.statementTimeoutMs == null ? Codegen.empty() : this.statementTimeoutMs;
     }
 

@@ -18,7 +18,7 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
     @Import(name="deployedUrl")
       private final @Nullable Output<String> deployedUrl;
 
-    public Output<String> getDeployedUrl() {
+    public Output<String> deployedUrl() {
         return this.deployedUrl == null ? Codegen.empty() : this.deployedUrl;
     }
 
@@ -29,7 +29,7 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 

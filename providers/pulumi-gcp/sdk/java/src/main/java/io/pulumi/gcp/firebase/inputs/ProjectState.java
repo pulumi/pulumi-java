@@ -22,7 +22,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
@@ -34,7 +34,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project == null ? Codegen.empty() : this.project;
     }
 
@@ -45,7 +45,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 

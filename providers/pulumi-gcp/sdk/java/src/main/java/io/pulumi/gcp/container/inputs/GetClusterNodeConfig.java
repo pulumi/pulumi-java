@@ -28,168 +28,168 @@ public final class GetClusterNodeConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="bootDiskKmsKey", required=true)
       private final String bootDiskKmsKey;
 
-    public String getBootDiskKmsKey() {
+    public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
 
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
     @Import(name="diskType", required=true)
       private final String diskType;
 
-    public String getDiskType() {
+    public String diskType() {
         return this.diskType;
     }
 
     @Import(name="ephemeralStorageConfigs", required=true)
       private final List<GetClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
 
-    public List<GetClusterNodeConfigEphemeralStorageConfig> getEphemeralStorageConfigs() {
+    public List<GetClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs() {
         return this.ephemeralStorageConfigs;
     }
 
     @Import(name="gcfsConfigs", required=true)
       private final List<GetClusterNodeConfigGcfsConfig> gcfsConfigs;
 
-    public List<GetClusterNodeConfigGcfsConfig> getGcfsConfigs() {
+    public List<GetClusterNodeConfigGcfsConfig> gcfsConfigs() {
         return this.gcfsConfigs;
     }
 
     @Import(name="guestAccelerators", required=true)
       private final List<GetClusterNodeConfigGuestAccelerator> guestAccelerators;
 
-    public List<GetClusterNodeConfigGuestAccelerator> getGuestAccelerators() {
+    public List<GetClusterNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
 
     @Import(name="imageType", required=true)
       private final String imageType;
 
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
 
     @Import(name="kubeletConfigs", required=true)
       private final List<GetClusterNodeConfigKubeletConfig> kubeletConfigs;
 
-    public List<GetClusterNodeConfigKubeletConfig> getKubeletConfigs() {
+    public List<GetClusterNodeConfigKubeletConfig> kubeletConfigs() {
         return this.kubeletConfigs;
     }
 
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="linuxNodeConfigs", required=true)
       private final List<GetClusterNodeConfigLinuxNodeConfig> linuxNodeConfigs;
 
-    public List<GetClusterNodeConfigLinuxNodeConfig> getLinuxNodeConfigs() {
+    public List<GetClusterNodeConfigLinuxNodeConfig> linuxNodeConfigs() {
         return this.linuxNodeConfigs;
     }
 
     @Import(name="localSsdCount", required=true)
       private final Integer localSsdCount;
 
-    public Integer getLocalSsdCount() {
+    public Integer localSsdCount() {
         return this.localSsdCount;
     }
 
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
     @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata;
     }
 
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
     @Import(name="nodeGroup", required=true)
       private final String nodeGroup;
 
-    public String getNodeGroup() {
+    public String nodeGroup() {
         return this.nodeGroup;
     }
 
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
     @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
-    public Boolean getPreemptible() {
+    public Boolean preemptible() {
         return this.preemptible;
     }
 
     @Import(name="sandboxConfigs", required=true)
       private final List<GetClusterNodeConfigSandboxConfig> sandboxConfigs;
 
-    public List<GetClusterNodeConfigSandboxConfig> getSandboxConfigs() {
+    public List<GetClusterNodeConfigSandboxConfig> sandboxConfigs() {
         return this.sandboxConfigs;
     }
 
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
     @Import(name="shieldedInstanceConfigs", required=true)
       private final List<GetClusterNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs;
 
-    public List<GetClusterNodeConfigShieldedInstanceConfig> getShieldedInstanceConfigs() {
+    public List<GetClusterNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
 
     @Import(name="spot", required=true)
       private final Boolean spot;
 
-    public Boolean getSpot() {
+    public Boolean spot() {
         return this.spot;
     }
 
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 
     @Import(name="taints", required=true)
       private final List<GetClusterNodeConfigTaint> taints;
 
-    public List<GetClusterNodeConfigTaint> getTaints() {
+    public List<GetClusterNodeConfigTaint> taints() {
         return this.taints;
     }
 
     @Import(name="workloadMetadataConfigs", required=true)
       private final List<GetClusterNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs;
 
-    public List<GetClusterNodeConfigWorkloadMetadataConfig> getWorkloadMetadataConfigs() {
+    public List<GetClusterNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs() {
         return this.workloadMetadataConfigs;
     }
 

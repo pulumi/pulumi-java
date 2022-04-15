@@ -59,7 +59,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
      * 
      */
-    public Output</* @Nullable */ String> getFqdn() {
+    public Output</* @Nullable */ String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -73,7 +73,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return The global network endpoint group this endpoint is part of.
      * 
      */
-    public Output<String> getGlobalNetworkEndpointGroup() {
+    public Output<String> globalNetworkEndpointGroup() {
         return this.globalNetworkEndpointGroup;
     }
     /**
@@ -87,7 +87,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return IPv4 address external endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getIpAddress() {
+    public Output</* @Nullable */ String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -101,7 +101,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @return Port number of the external endpoint.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -117,7 +117,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

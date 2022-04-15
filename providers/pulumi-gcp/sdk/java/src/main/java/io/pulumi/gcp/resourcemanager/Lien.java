@@ -41,7 +41,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @return Time of creation
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -55,7 +55,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @return A system-generated unique identifier for this Lien.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +73,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * 200 characters.
      * 
      */
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin;
     }
     /**
@@ -93,7 +93,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * prefix (e.g. "projects/my-project-name").
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -109,7 +109,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * on a resource. Maximum length of 200 characters.
      * 
      */
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
     /**
@@ -131,7 +131,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * e.g. ['resourcemanager.projects.delete']
      * 
      */
-    public Output<List<String>> getRestrictions() {
+    public Output<List<String>> restrictions() {
         return this.restrictions;
     }
 

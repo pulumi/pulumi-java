@@ -22,7 +22,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="bucket", required=true)
       private final String bucket;
 
-    public String getBucket() {
+    public String bucket() {
         return this.bucket;
     }
 
@@ -35,7 +35,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="contentMd5")
       private final @Nullable String contentMd5;
 
-    public Optional<String> getContentMd5() {
+    public Optional<String> contentMd5() {
         return this.contentMd5 == null ? Optional.empty() : Optional.ofNullable(this.contentMd5);
     }
 
@@ -46,7 +46,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="contentType")
       private final @Nullable String contentType;
 
-    public Optional<String> getContentType() {
+    public Optional<String> contentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
@@ -58,7 +58,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="credentials")
       private final @Nullable String credentials;
 
-    public Optional<String> getCredentials() {
+    public Optional<String> credentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
@@ -70,7 +70,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="duration")
       private final @Nullable String duration;
 
-    public Optional<String> getDuration() {
+    public Optional<String> duration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
     }
 
@@ -82,7 +82,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="extensionHeaders")
       private final @Nullable Map<String,String> extensionHeaders;
 
-    public Map<String,String> getExtensionHeaders() {
+    public Map<String,String> extensionHeaders() {
         return this.extensionHeaders == null ? Map.of() : this.extensionHeaders;
     }
 
@@ -93,7 +93,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="httpMethod")
       private final @Nullable String httpMethod;
 
-    public Optional<String> getHttpMethod() {
+    public Optional<String> httpMethod() {
         return this.httpMethod == null ? Optional.empty() : Optional.ofNullable(this.httpMethod);
     }
 
@@ -104,7 +104,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 

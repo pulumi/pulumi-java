@@ -24,7 +24,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="featurestore", required=true)
       private final Output<String> featurestore;
 
-    public Output<String> getFeaturestore() {
+    public Output<String> featurestore() {
         return this.featurestore;
     }
 
@@ -35,7 +35,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels == null ? Codegen.empty() : this.labels;
     }
 
@@ -48,7 +48,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="monitoringConfig")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> getMonitoringConfig() {
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig() {
         return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
     }
 
@@ -59,7 +59,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 

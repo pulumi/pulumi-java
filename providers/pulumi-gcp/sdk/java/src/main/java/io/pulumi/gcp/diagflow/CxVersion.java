@@ -55,7 +55,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -69,7 +69,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * @return The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -83,7 +83,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the version. Limit of 64 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -99,7 +99,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * upon version creation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +113,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * @return The NLU settings of the flow at version creation.
      * 
      */
-    public Output<List<CxVersionNluSetting>> getNluSettings() {
+    public Output<List<CxVersionNluSetting>> nluSettings() {
         return this.nluSettings;
     }
     /**
@@ -129,7 +129,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    public Output</* @Nullable */ String> getParent() {
+    public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
@@ -145,7 +145,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * has succeeded and this version is ready to serve. * FAILED: Version training failed.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 

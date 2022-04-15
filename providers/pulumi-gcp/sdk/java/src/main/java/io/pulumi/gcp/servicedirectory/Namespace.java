@@ -60,7 +60,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * be no longer than 63 characters.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -78,7 +78,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * `gcloud beta service-directory locations list`.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -92,7 +92,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @return The resource name for the namespace in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -108,7 +108,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * lowercase letters or the hyphen character.
      * 
      */
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
     /**
@@ -124,7 +124,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 

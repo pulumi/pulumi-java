@@ -37,7 +37,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
     @Import(name="connectionPersistenceOnUnhealthyBackends")
       private final @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
 
-    public Output<String> getConnectionPersistenceOnUnhealthyBackends() {
+    public Output<String> connectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends == null ? Codegen.empty() : this.connectionPersistenceOnUnhealthyBackends;
     }
 
@@ -51,7 +51,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
     @Import(name="idleTimeoutSec")
       private final @Nullable Output<Integer> idleTimeoutSec;
 
-    public Output<Integer> getIdleTimeoutSec() {
+    public Output<Integer> idleTimeoutSec() {
         return this.idleTimeoutSec == null ? Codegen.empty() : this.idleTimeoutSec;
     }
 
@@ -68,7 +68,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
     @Import(name="trackingMode")
       private final @Nullable Output<String> trackingMode;
 
-    public Output<String> getTrackingMode() {
+    public Output<String> trackingMode() {
         return this.trackingMode == null ? Codegen.empty() : this.trackingMode;
     }
 

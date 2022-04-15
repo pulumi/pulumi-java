@@ -21,10 +21,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule
         this.startTime = startTime;
     }
 
-    public Integer getHoursInCycle() {
+    public Integer hoursInCycle() {
         return this.hoursInCycle;
     }
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 

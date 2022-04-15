@@ -49,7 +49,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * specified.
      * 
      */
-    public Output</* @Nullable */ String> getInterconnectAttachment() {
+    public Output</* @Nullable */ String> interconnectAttachment() {
         return this.interconnectAttachment;
     }
     /**
@@ -65,7 +65,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
      * 
      */
-    public Output</* @Nullable */ String> getIpRange() {
+    public Output</* @Nullable */ String> ipRange() {
         return this.ipRange;
     }
     /**
@@ -81,7 +81,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * this forces a new interface to be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +97,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used. Changing this forces a new interface to be created.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -115,7 +115,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * created.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -131,7 +131,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * Changing this forces a new interface to be created.
      * 
      */
-    public Output<String> getRouter() {
+    public Output<String> router() {
         return this.router;
     }
     /**
@@ -149,7 +149,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
      * 
      */
-    public Output</* @Nullable */ String> getVpnTunnel() {
+    public Output</* @Nullable */ String> vpnTunnel() {
         return this.vpnTunnel;
     }
 

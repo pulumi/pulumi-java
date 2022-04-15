@@ -44,7 +44,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @return Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
      * 
      */
-    public Output<String> getAccessLevels() {
+    public Output<String> accessLevels() {
         return this.accessLevels;
     }
     /**
@@ -58,7 +58,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @return Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
      * 
      */
-    public Output<String> getGroupKey() {
+    public Output<String> groupKey() {
         return this.groupKey;
     }
     /**
@@ -76,7 +76,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +90,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @return Required. ID of the parent organization.
      * 
      */
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 

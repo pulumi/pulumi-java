@@ -22,7 +22,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metadata", required=true)
       private final Output<String> metadata;
 
-    public Output<String> getMetadata() {
+    public Output<String> metadata() {
         return this.metadata;
     }
 

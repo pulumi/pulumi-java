@@ -24,7 +24,7 @@ public final class InstanceConfidentialInstanceConfig {
      * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
      * 
     */
-    public Boolean getEnableConfidentialCompute() {
+    public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 
