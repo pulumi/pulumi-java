@@ -36,22 +36,22 @@ public final class Foo {
         this.f = f;
     }
 
-    public Boolean getA() {
+    public Boolean a() {
         return this.a;
     }
-    public Optional<Boolean> getB() {
+    public Optional<Boolean> b() {
         return Optional.ofNullable(this.b);
     }
-    public Integer getC() {
+    public Integer c() {
         return this.c;
     }
-    public Optional<Integer> getD() {
+    public Optional<Integer> d() {
         return Optional.ofNullable(this.d);
     }
-    public String getE() {
+    public String e() {
         return this.e;
     }
-    public Optional<String> getF() {
+    public Optional<String> f() {
         return Optional.ofNullable(this.f);
     }
 

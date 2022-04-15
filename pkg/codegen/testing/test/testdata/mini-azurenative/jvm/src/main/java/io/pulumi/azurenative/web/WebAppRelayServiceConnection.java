@@ -17,7 +17,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
     @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
-    public Output</* @Nullable */ String> getPropResourceType() {
+    public Output</* @Nullable */ String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -31,7 +31,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

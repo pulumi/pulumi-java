@@ -18,7 +18,7 @@ public final class OutputOnlyObjectType {
         this.foo = foo;
     }
 
-    public Optional<String> getFoo() {
+    public Optional<String> foo() {
         return Optional.ofNullable(this.foo);
     }
 

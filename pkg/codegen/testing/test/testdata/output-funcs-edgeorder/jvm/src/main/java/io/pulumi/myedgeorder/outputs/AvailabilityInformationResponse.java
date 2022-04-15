@@ -39,21 +39,21 @@ public final class AvailabilityInformationResponse {
      * Current availability stage of the product. Availability stage
      * 
     */
-    public String getAvailabilityStage() {
+    public String availabilityStage() {
         return this.availabilityStage;
     }
     /**
      * Reason why the product is disabled.
      * 
     */
-    public String getDisabledReason() {
+    public String disabledReason() {
         return this.disabledReason;
     }
     /**
      * Message for why the product is disabled.
      * 
     */
-    public String getDisabledReasonMessage() {
+    public String disabledReasonMessage() {
         return this.disabledReasonMessage;
     }
 

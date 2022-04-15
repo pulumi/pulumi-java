@@ -23,21 +23,21 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bar")
       private final @Nullable Output<String> bar;
 
-    public Output<String> getBar() {
+    public Output<String> bar() {
         return this.bar == null ? Codegen.empty() : this.bar;
     }
 
     @Import(name="configs")
       private final @Nullable Output<List<ConfigMapArgs>> configs;
 
-    public Output<List<ConfigMapArgs>> getConfigs() {
+    public Output<List<ConfigMapArgs>> configs() {
         return this.configs == null ? Codegen.empty() : this.configs;
     }
 
     @Import(name="foo")
       private final @Nullable Output<Resource> foo;
 
-    public Output<Resource> getFoo() {
+    public Output<Resource> foo() {
         return this.foo == null ? Codegen.empty() : this.foo;
     }
 
@@ -48,7 +48,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="others")
       private final @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
 
-    public Output<List<List<SomeOtherObjectArgs>>> getOthers() {
+    public Output<List<List<SomeOtherObjectArgs>>> others() {
         return this.others == null ? Codegen.empty() : this.others;
     }
 
@@ -59,7 +59,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stillOthers")
       private final @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
-    public Output<Map<String,List<SomeOtherObjectArgs>>> getStillOthers() {
+    public Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers() {
         return this.stillOthers == null ? Codegen.empty() : this.stillOthers;
     }
 

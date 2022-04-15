@@ -16,7 +16,7 @@ public class Rec extends io.pulumi.resources.CustomResource {
     @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
-    public Output</* @Nullable */ Rec> getRec() {
+    public Output</* @Nullable */ Rec> rec() {
         return this.rec;
     }
 

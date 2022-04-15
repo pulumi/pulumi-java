@@ -18,7 +18,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thing")
       private final @Nullable Output<TopLevelArgs> thing;
 
-    public Output<TopLevelArgs> getThing() {
+    public Output<TopLevelArgs> thing() {
         return this.thing == null ? Codegen.empty() : this.thing;
     }
 

@@ -44,27 +44,27 @@ public final class Object {
         this.stillOthers = stillOthers;
     }
 
-    public Optional<String> getBar() {
+    public Optional<String> bar() {
         return Optional.ofNullable(this.bar);
     }
-    public List<ConfigMap> getConfigs() {
+    public List<ConfigMap> configs() {
         return this.configs == null ? List.of() : this.configs;
     }
-    public Optional<Resource> getFoo() {
+    public Optional<Resource> foo() {
         return Optional.ofNullable(this.foo);
     }
     /**
      * List of lists of other objects
      * 
     */
-    public List<List<SomeOtherObject>> getOthers() {
+    public List<List<SomeOtherObject>> others() {
         return this.others == null ? List.of() : this.others;
     }
     /**
      * Mapping from string to list of some other object
      * 
     */
-    public Map<String,List<SomeOtherObject>> getStillOthers() {
+    public Map<String,List<SomeOtherObject>> stillOthers() {
         return this.stillOthers == null ? Map.of() : this.stillOthers;
     }
 

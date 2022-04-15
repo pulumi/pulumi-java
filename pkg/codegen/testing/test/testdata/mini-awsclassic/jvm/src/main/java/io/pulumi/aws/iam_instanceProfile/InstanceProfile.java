@@ -26,7 +26,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * @return Name of the role to add to the profile.
      * 
      */
-    public Output</* @Nullable */ String> getRole() {
+    public Output</* @Nullable */ String> role() {
         return this.role;
     }
 

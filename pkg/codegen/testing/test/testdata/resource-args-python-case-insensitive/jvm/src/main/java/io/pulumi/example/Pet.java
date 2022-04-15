@@ -17,7 +17,7 @@ public class Pet extends io.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
 

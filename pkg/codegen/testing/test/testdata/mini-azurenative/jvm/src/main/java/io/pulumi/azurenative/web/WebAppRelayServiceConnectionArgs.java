@@ -18,7 +18,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 

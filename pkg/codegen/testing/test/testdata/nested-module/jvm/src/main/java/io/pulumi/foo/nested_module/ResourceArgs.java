@@ -18,7 +18,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bar")
       private final @Nullable Output<String> bar;
 
-    public Output<String> getBar() {
+    public Output<String> bar() {
         return this.bar == null ? Codegen.empty() : this.bar;
     }
 

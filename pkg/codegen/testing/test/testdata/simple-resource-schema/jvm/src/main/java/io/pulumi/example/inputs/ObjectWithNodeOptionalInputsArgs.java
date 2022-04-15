@@ -19,14 +19,14 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     @Import(name="bar")
       private final @Nullable Output<Integer> bar;
 
-    public Output<Integer> getBar() {
+    public Output<Integer> bar() {
         return this.bar == null ? Codegen.empty() : this.bar;
     }
 
     @Import(name="foo", required=true)
       private final Output<String> foo;
 
-    public Output<String> getFoo() {
+    public Output<String> foo() {
         return this.foo;
     }
 

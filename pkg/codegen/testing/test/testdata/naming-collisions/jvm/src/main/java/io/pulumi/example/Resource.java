@@ -17,7 +17,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
     @Export(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
-    public Output</* @Nullable */ String> getBar() {
+    public Output</* @Nullable */ String> bar() {
         return this.bar;
     }
 
