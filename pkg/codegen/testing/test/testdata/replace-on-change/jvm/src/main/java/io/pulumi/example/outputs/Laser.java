@@ -27,13 +27,13 @@ public final class Laser {
         this.light = light;
     }
 
-    public Optional<Cat> getAnimal() {
+    public Optional<Cat> animal() {
         return Optional.ofNullable(this.animal);
     }
-    public Optional<Boolean> getBatteries() {
+    public Optional<Boolean> batteries() {
         return Optional.ofNullable(this.batteries);
     }
-    public Optional<Double> getLight() {
+    public Optional<Double> light() {
         return Optional.ofNullable(this.light);
     }
 

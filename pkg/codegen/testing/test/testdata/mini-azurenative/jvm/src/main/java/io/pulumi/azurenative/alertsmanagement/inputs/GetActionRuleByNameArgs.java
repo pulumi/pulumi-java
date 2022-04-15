@@ -19,7 +19,7 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
     @Import(name="actionRuleName", required=true)
       private final String actionRuleName;
 
-    public String getActionRuleName() {
+    public String actionRuleName() {
         return this.actionRuleName;
     }
 
@@ -30,7 +30,7 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -23,7 +23,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
     @Import(name="availabilityStage", required=true)
       private final String availabilityStage;
 
-    public String getAvailabilityStage() {
+    public String availabilityStage() {
         return this.availabilityStage;
     }
 
@@ -34,7 +34,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
     @Import(name="disabledReason", required=true)
       private final String disabledReason;
 
-    public String getDisabledReason() {
+    public String disabledReason() {
         return this.disabledReason;
     }
 
@@ -45,7 +45,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
     @Import(name="disabledReasonMessage", required=true)
       private final String disabledReasonMessage;
 
-    public String getDisabledReasonMessage() {
+    public String disabledReasonMessage() {
         return this.disabledReasonMessage;
     }
 

@@ -25,7 +25,7 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="billingInfoUrl", required=true)
       private final String billingInfoUrl;
 
-    public String getBillingInfoUrl() {
+    public String billingInfoUrl() {
         return this.billingInfoUrl;
     }
 
@@ -36,7 +36,7 @@ public final class CostInformationResponse extends io.pulumi.resources.InvokeArg
     @Import(name="billingMeterDetails", required=true)
       private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
-    public List<BillingMeterDetailsResponse> getBillingMeterDetails() {
+    public List<BillingMeterDetailsResponse> billingMeterDetails() {
         return this.billingMeterDetails;
     }
 

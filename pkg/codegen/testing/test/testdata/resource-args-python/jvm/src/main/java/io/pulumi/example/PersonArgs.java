@@ -20,14 +20,14 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="pets")
       private final @Nullable Output<List<PetArgs>> pets;
 
-    public Output<List<PetArgs>> getPets() {
+    public Output<List<PetArgs>> pets() {
         return this.pets == null ? Codegen.empty() : this.pets;
     }
 

@@ -49,28 +49,28 @@ public final class BillingMeterDetailsResponse {
      * Frequency of recurrence
      * 
     */
-    public String getFrequency() {
+    public String frequency() {
         return this.frequency;
     }
     /**
      * Represents MeterDetails
      * 
     */
-    public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> getMeterDetails() {
+    public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails() {
         return this.meterDetails;
     }
     /**
      * Represents Metering type (eg one-time or recurrent)
      * 
     */
-    public String getMeteringType() {
+    public String meteringType() {
         return this.meteringType;
     }
     /**
      * Represents Billing type name
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

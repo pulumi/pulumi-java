@@ -17,7 +17,7 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
     @Export(name="thing", type=TopLevel.class, parameters={})
     private Output</* @Nullable */ TopLevel> thing;
 
-    public Output</* @Nullable */ TopLevel> getThing() {
+    public Output</* @Nullable */ TopLevel> thing() {
         return this.thing;
     }
 

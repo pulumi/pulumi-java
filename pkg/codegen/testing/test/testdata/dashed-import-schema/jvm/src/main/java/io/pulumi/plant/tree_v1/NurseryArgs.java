@@ -26,7 +26,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizes")
       private final @Nullable Output<Map<String,TreeSize>> sizes;
 
-    public Output<Map<String,TreeSize>> getSizes() {
+    public Output<Map<String,TreeSize>> sizes() {
         return this.sizes == null ? Codegen.empty() : this.sizes;
     }
 
@@ -37,7 +37,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="varieties", required=true)
       private final Output<List<RubberTreeVariety>> varieties;
 
-    public Output<List<RubberTreeVariety>> getVarieties() {
+    public Output<List<RubberTreeVariety>> varieties() {
         return this.varieties;
     }
 

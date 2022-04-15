@@ -25,7 +25,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="billingType", required=true)
       private final String billingType;
 
-    public String getBillingType() {
+    public String billingType() {
         return this.billingType;
     }
 
@@ -36,7 +36,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="chargingType", required=true)
       private final String chargingType;
 
-    public String getChargingType() {
+    public String chargingType() {
         return this.chargingType;
     }
 
@@ -47,7 +47,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="multiplier", required=true)
       private final Double multiplier;
 
-    public Double getMultiplier() {
+    public Double multiplier() {
         return this.multiplier;
     }
 
@@ -58,7 +58,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="productId", required=true)
       private final String productId;
 
-    public String getProductId() {
+    public String productId() {
         return this.productId;
     }
 
@@ -69,7 +69,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="skuId", required=true)
       private final String skuId;
 
-    public String getSkuId() {
+    public String skuId() {
         return this.skuId;
     }
 
@@ -80,7 +80,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="termId", required=true)
       private final String termId;
 
-    public String getTermId() {
+    public String termId() {
         return this.termId;
     }
 

@@ -25,70 +25,70 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="a", required=true)
       private final Boolean a;
 
-    public Boolean getA() {
+    public Boolean a() {
         return this.a;
     }
 
     @Import(name="b")
       private final @Nullable Boolean b;
 
-    public Optional<Boolean> getB() {
+    public Optional<Boolean> b() {
         return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
     @Import(name="bar")
       private final @Nullable Foo bar;
 
-    public Optional<Foo> getBar() {
+    public Optional<Foo> bar() {
         return this.bar == null ? Optional.empty() : Optional.ofNullable(this.bar);
     }
 
     @Import(name="baz")
       private final @Nullable List<Foo> baz;
 
-    public List<Foo> getBaz() {
+    public List<Foo> baz() {
         return this.baz == null ? List.of() : this.baz;
     }
 
     @Import(name="bazMap")
       private final @Nullable Map<String,Foo> bazMap;
 
-    public Map<String,Foo> getBazMap() {
+    public Map<String,Foo> bazMap() {
         return this.bazMap == null ? Map.of() : this.bazMap;
     }
 
     @Import(name="c", required=true)
       private final Integer c;
 
-    public Integer getC() {
+    public Integer c() {
         return this.c;
     }
 
     @Import(name="d")
       private final @Nullable Integer d;
 
-    public Optional<Integer> getD() {
+    public Optional<Integer> d() {
         return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
     @Import(name="e", required=true)
       private final String e;
 
-    public String getE() {
+    public String e() {
         return this.e;
     }
 
     @Import(name="f")
       private final @Nullable String f;
 
-    public Optional<String> getF() {
+    public Optional<String> f() {
         return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
     }
 
     @Import(name="foo")
       private final @Nullable Output<FooArgs> foo;
 
-    public Output<FooArgs> getFoo() {
+    public Output<FooArgs> foo() {
         return this.foo == null ? Codegen.empty() : this.foo;
     }
 

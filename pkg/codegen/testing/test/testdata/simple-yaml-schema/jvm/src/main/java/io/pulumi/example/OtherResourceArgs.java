@@ -21,14 +21,14 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bar")
       private final @Nullable List<String> bar;
 
-    public List<String> getBar() {
+    public List<String> bar() {
         return this.bar == null ? List.of() : this.bar;
     }
 
     @Import(name="foo")
       private final @Nullable Output<Resource> foo;
 
-    public Output<Resource> getFoo() {
+    public Output<Resource> foo() {
         return this.foo == null ? Codegen.empty() : this.foo;
     }
 

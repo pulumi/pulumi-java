@@ -21,55 +21,55 @@ public class Component extends io.pulumi.resources.ComponentResource {
     @Export(name="a", type=Boolean.class, parameters={})
     private Output<Boolean> a;
 
-    public Output<Boolean> getA() {
+    public Output<Boolean> a() {
         return this.a;
     }
     @Export(name="b", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> b;
 
-    public Output</* @Nullable */ Boolean> getB() {
+    public Output</* @Nullable */ Boolean> b() {
         return this.b;
     }
     @Export(name="bar", type=Foo.class, parameters={})
     private Output</* @Nullable */ Foo> bar;
 
-    public Output</* @Nullable */ Foo> getBar() {
+    public Output</* @Nullable */ Foo> bar() {
         return this.bar;
     }
     @Export(name="baz", type=List.class, parameters={Foo.class})
     private Output</* @Nullable */ List<Foo>> baz;
 
-    public Output</* @Nullable */ List<Foo>> getBaz() {
+    public Output</* @Nullable */ List<Foo>> baz() {
         return this.baz;
     }
     @Export(name="c", type=Integer.class, parameters={})
     private Output<Integer> c;
 
-    public Output<Integer> getC() {
+    public Output<Integer> c() {
         return this.c;
     }
     @Export(name="d", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> d;
 
-    public Output</* @Nullable */ Integer> getD() {
+    public Output</* @Nullable */ Integer> d() {
         return this.d;
     }
     @Export(name="e", type=String.class, parameters={})
     private Output<String> e;
 
-    public Output<String> getE() {
+    public Output<String> e() {
         return this.e;
     }
     @Export(name="f", type=String.class, parameters={})
     private Output</* @Nullable */ String> f;
 
-    public Output</* @Nullable */ String> getF() {
+    public Output</* @Nullable */ String> f() {
         return this.f;
     }
     @Export(name="foo", type=Foo.class, parameters={})
     private Output</* @Nullable */ Foo> foo;
 
-    public Output</* @Nullable */ Foo> getFoo() {
+    public Output</* @Nullable */ Foo> foo() {
         return this.foo;
     }
 

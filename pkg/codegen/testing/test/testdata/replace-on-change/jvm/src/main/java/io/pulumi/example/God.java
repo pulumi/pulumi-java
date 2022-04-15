@@ -17,7 +17,7 @@ public class God extends io.pulumi.resources.CustomResource {
     @Export(name="backwards", type=Dog.class, parameters={})
     private Output</* @Nullable */ Dog> backwards;
 
-    public Output</* @Nullable */ Dog> getBackwards() {
+    public Output</* @Nullable */ Dog> backwards() {
         return this.backwards;
     }
 
