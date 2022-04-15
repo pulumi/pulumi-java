@@ -567,7 +567,7 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	w := ctx.writer
 	fprintf(w, "\n")
 
-	// TODO: proper support for large constructors
+	// TODO: Converter support for jumbo constructors [pulumi/pulumi-jvm#390]
 	props := pt.properties
 	isJumbo := false
 	if len(props) > 250 {
