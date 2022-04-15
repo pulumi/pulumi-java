@@ -28,7 +28,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="running")
       private final @Nullable Output<ContainerStateRunningArgs> running;
 
-    public Output<ContainerStateRunningArgs> getRunning() {
+    public Output<ContainerStateRunningArgs> running() {
         return this.running == null ? Codegen.empty() : this.running;
     }
 
@@ -39,7 +39,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminated")
       private final @Nullable Output<ContainerStateTerminatedArgs> terminated;
 
-    public Output<ContainerStateTerminatedArgs> getTerminated() {
+    public Output<ContainerStateTerminatedArgs> terminated() {
         return this.terminated == null ? Codegen.empty() : this.terminated;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="waiting")
       private final @Nullable Output<ContainerStateWaitingArgs> waiting;
 
-    public Output<ContainerStateWaitingArgs> getWaiting() {
+    public Output<ContainerStateWaitingArgs> waiting() {
         return this.waiting == null ? Codegen.empty() : this.waiting;
     }
 

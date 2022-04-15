@@ -29,7 +29,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="policies")
       private final @Nullable Output<List<HPAScalingPolicyArgs>> policies;
 
-    public Output<List<HPAScalingPolicyArgs>> getPolicies() {
+    public Output<List<HPAScalingPolicyArgs>> policies() {
         return this.policies == null ? Codegen.empty() : this.policies;
     }
 
@@ -40,7 +40,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="selectPolicy")
       private final @Nullable Output<String> selectPolicy;
 
-    public Output<String> getSelectPolicy() {
+    public Output<String> selectPolicy() {
         return this.selectPolicy == null ? Codegen.empty() : this.selectPolicy;
     }
 
@@ -51,7 +51,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="stabilizationWindowSeconds")
       private final @Nullable Output<Integer> stabilizationWindowSeconds;
 
-    public Output<Integer> getStabilizationWindowSeconds() {
+    public Output<Integer> stabilizationWindowSeconds() {
         return this.stabilizationWindowSeconds == null ? Codegen.empty() : this.stabilizationWindowSeconds;
     }
 

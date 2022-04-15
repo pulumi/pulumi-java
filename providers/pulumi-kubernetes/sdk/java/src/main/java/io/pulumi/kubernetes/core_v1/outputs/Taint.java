@@ -58,28 +58,28 @@ public final class Taint {
      *  - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
      * 
     */
-    public String getEffect() {
+    public String effect() {
         return this.effect;
     }
     /**
      * Required. The taint key to be applied to a node.
      * 
     */
-    public String getKey() {
+    public String key() {
         return this.key;
     }
     /**
      * TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
      * 
     */
-    public Optional<String> getTimeAdded() {
+    public Optional<String> timeAdded() {
         return Optional.ofNullable(this.timeAdded);
     }
     /**
      * The taint value corresponding to the taint key.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

@@ -39,7 +39,7 @@ public final class NodeAddress {
      * The node address.
      * 
     */
-    public String getAddress() {
+    public String address() {
         return this.address;
     }
     /**
@@ -53,7 +53,7 @@ public final class NodeAddress {
      *  - `"InternalIP"` identifies an IP address which is assigned to one of the node's network interfaces. Every node should have at least one address of this type. An internal IP is normally expected to be reachable from every other node, but may not be visible to hosts outside the cluster. By default it is assumed that kube-apiserver can reach node internal IPs, though it is possible to configure clusters where this is not the case. NodeInternalIP is the default type of node IP, and does not necessarily imply that the IP is ONLY reachable internally. If a node has multiple internal IPs, no specific semantics are assigned to the additional IPs.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

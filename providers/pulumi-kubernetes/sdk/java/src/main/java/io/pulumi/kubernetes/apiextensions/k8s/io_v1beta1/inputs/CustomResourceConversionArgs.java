@@ -28,7 +28,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     @Import(name="conversionReviewVersions")
       private final @Nullable Output<List<String>> conversionReviewVersions;
 
-    public Output<List<String>> getConversionReviewVersions() {
+    public Output<List<String>> conversionReviewVersions() {
         return this.conversionReviewVersions == null ? Codegen.empty() : this.conversionReviewVersions;
     }
 
@@ -40,7 +40,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     @Import(name="strategy", required=true)
       private final Output<String> strategy;
 
-    public Output<String> getStrategy() {
+    public Output<String> strategy() {
         return this.strategy;
     }
 
@@ -51,7 +51,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     @Import(name="webhookClientConfig")
       private final @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
 
-    public Output<WebhookClientConfigArgs> getWebhookClientConfig() {
+    public Output<WebhookClientConfigArgs> webhookClientConfig() {
         return this.webhookClientConfig == null ? Codegen.empty() : this.webhookClientConfig;
     }
 

@@ -70,14 +70,14 @@ public final class Toleration {
      *  - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
      * 
     */
-    public Optional<String> getEffect() {
+    public Optional<String> effect() {
         return Optional.ofNullable(this.effect);
     }
     /**
      * Key is the taint key that the toleration applies to. Empty means match all taint keys. If the key is empty, operator must be Exists; this combination means to match all values and all keys.
      * 
     */
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
@@ -88,21 +88,21 @@ public final class Toleration {
      *  - `"Exists"`
      * 
     */
-    public Optional<String> getOperator() {
+    public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * TolerationSeconds represents the period of time the toleration (which must be of effect NoExecute, otherwise this field is ignored) tolerates the taint. By default, it is not set, which means tolerate the taint forever (do not evict). Zero and negative values will be treated as 0 (evict immediately) by the system.
      * 
     */
-    public Optional<Integer> getTolerationSeconds() {
+    public Optional<Integer> tolerationSeconds() {
         return Optional.ofNullable(this.tolerationSeconds);
     }
     /**
      * Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string.
      * 
     */
-    public Optional<String> getValue() {
+    public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
 

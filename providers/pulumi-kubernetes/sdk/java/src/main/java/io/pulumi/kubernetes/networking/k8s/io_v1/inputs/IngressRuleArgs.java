@@ -34,14 +34,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
     @Import(name="http")
       private final @Nullable Output<HTTPIngressRuleValueArgs> http;
 
-    public Output<HTTPIngressRuleValueArgs> getHttp() {
+    public Output<HTTPIngressRuleValueArgs> http() {
         return this.http == null ? Codegen.empty() : this.http;
     }
 

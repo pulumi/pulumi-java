@@ -41,21 +41,21 @@ public final class CrossVersionObjectReference {
      * API version of the referent
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

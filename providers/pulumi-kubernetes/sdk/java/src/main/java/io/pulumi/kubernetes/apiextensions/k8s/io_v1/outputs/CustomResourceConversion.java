@@ -37,14 +37,14 @@ public final class CustomResourceConversion {
      *   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.
      * 
     */
-    public String getStrategy() {
+    public String strategy() {
         return this.strategy;
     }
     /**
      * webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.
      * 
     */
-    public Optional<WebhookConversion> getWebhook() {
+    public Optional<WebhookConversion> webhook() {
         return Optional.ofNullable(this.webhook);
     }
 

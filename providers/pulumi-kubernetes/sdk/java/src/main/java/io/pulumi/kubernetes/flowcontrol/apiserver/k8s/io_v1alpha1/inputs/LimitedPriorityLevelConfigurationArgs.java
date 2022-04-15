@@ -33,7 +33,7 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     @Import(name="assuredConcurrencyShares")
       private final @Nullable Output<Integer> assuredConcurrencyShares;
 
-    public Output<Integer> getAssuredConcurrencyShares() {
+    public Output<Integer> assuredConcurrencyShares() {
         return this.assuredConcurrencyShares == null ? Codegen.empty() : this.assuredConcurrencyShares;
     }
 
@@ -44,7 +44,7 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     @Import(name="limitResponse")
       private final @Nullable Output<LimitResponseArgs> limitResponse;
 
-    public Output<LimitResponseArgs> getLimitResponse() {
+    public Output<LimitResponseArgs> limitResponse() {
         return this.limitResponse == null ? Codegen.empty() : this.limitResponse;
     }
 

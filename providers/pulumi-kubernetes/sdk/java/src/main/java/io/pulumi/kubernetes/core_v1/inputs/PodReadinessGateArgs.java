@@ -31,7 +31,7 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
-    public Output<String> getConditionType() {
+    public Output<String> conditionType() {
         return this.conditionType;
     }
 

@@ -26,7 +26,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     @Import(name="podAffinityTerm", required=true)
       private final Output<PodAffinityTermArgs> podAffinityTerm;
 
-    public Output<PodAffinityTermArgs> getPodAffinityTerm() {
+    public Output<PodAffinityTermArgs> podAffinityTerm() {
         return this.podAffinityTerm;
     }
 
@@ -37,7 +37,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 

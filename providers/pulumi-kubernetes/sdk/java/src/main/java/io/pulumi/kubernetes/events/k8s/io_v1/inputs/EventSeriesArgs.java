@@ -26,7 +26,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -37,7 +37,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastObservedTime", required=true)
       private final Output<String> lastObservedTime;
 
-    public Output<String> getLastObservedTime() {
+    public Output<String> lastObservedTime() {
         return this.lastObservedTime;
     }
 

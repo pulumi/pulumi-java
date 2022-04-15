@@ -31,7 +31,7 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="items")
       private final @Nullable Output<List<KeyToPathArgs>> items;
 
-    public Output<List<KeyToPathArgs>> getItems() {
+    public Output<List<KeyToPathArgs>> items() {
         return this.items == null ? Codegen.empty() : this.items;
     }
 
@@ -42,7 +42,7 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -53,7 +53,7 @@ public final class SecretProjectionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> getOptional() {
+    public Output<Boolean> optional() {
         return this.optional == null ? Codegen.empty() : this.optional;
     }
 

@@ -24,7 +24,7 @@ public final class LocalSubjectAccessReviewArgs extends io.pulumi.resources.Reso
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -35,14 +35,14 @@ public final class LocalSubjectAccessReviewArgs extends io.pulumi.resources.Reso
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -53,7 +53,7 @@ public final class LocalSubjectAccessReviewArgs extends io.pulumi.resources.Reso
     @Import(name="spec", required=true)
       private final Output<SubjectAccessReviewSpecArgs> spec;
 
-    public Output<SubjectAccessReviewSpecArgs> getSpec() {
+    public Output<SubjectAccessReviewSpecArgs> spec() {
         return this.spec;
     }
 

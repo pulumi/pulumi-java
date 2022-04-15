@@ -29,7 +29,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> getMinReadySeconds() {
+    public Output<Integer> minReadySeconds() {
         return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
     }
 
@@ -40,7 +40,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
-    public Output<Integer> getRevisionHistoryLimit() {
+    public Output<Integer> revisionHistoryLimit() {
         return this.revisionHistoryLimit == null ? Codegen.empty() : this.revisionHistoryLimit;
     }
 
@@ -51,7 +51,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector;
     }
 
@@ -62,7 +62,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> getTemplate() {
+    public Output<PodTemplateSpecArgs> template() {
         return this.template;
     }
 
@@ -73,7 +73,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateStrategy")
       private final @Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy;
 
-    public Output<DaemonSetUpdateStrategyArgs> getUpdateStrategy() {
+    public Output<DaemonSetUpdateStrategyArgs> updateStrategy() {
         return this.updateStrategy == null ? Codegen.empty() : this.updateStrategy;
     }
 

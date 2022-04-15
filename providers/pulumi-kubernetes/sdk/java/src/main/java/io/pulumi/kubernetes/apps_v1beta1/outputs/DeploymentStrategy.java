@@ -35,14 +35,14 @@ public final class DeploymentStrategy {
      * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
      * 
     */
-    public Optional<RollingUpdateDeployment> getRollingUpdate() {
+    public Optional<RollingUpdateDeployment> rollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
     /**
      * Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

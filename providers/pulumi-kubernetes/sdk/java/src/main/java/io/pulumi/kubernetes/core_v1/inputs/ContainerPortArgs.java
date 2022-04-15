@@ -27,7 +27,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
 
-    public Output<Integer> getContainerPort() {
+    public Output<Integer> containerPort() {
         return this.containerPort;
     }
 
@@ -38,7 +38,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostIP")
       private final @Nullable Output<String> hostIP;
 
-    public Output<String> getHostIP() {
+    public Output<String> hostIP() {
         return this.hostIP == null ? Codegen.empty() : this.hostIP;
     }
 
@@ -49,7 +49,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPort")
       private final @Nullable Output<Integer> hostPort;
 
-    public Output<Integer> getHostPort() {
+    public Output<Integer> hostPort() {
         return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
@@ -60,7 +60,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name == null ? Codegen.empty() : this.name;
     }
 
@@ -76,7 +76,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 

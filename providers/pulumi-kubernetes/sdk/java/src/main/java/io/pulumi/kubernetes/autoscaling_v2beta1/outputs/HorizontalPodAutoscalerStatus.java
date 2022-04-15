@@ -66,42 +66,42 @@ public final class HorizontalPodAutoscalerStatus {
      * conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.
      * 
     */
-    public List<HorizontalPodAutoscalerCondition> getConditions() {
+    public List<HorizontalPodAutoscalerCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * currentMetrics is the last read state of the metrics used by this autoscaler.
      * 
     */
-    public List<MetricStatus> getCurrentMetrics() {
+    public List<MetricStatus> currentMetrics() {
         return this.currentMetrics == null ? List.of() : this.currentMetrics;
     }
     /**
      * currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler.
      * 
     */
-    public Integer getCurrentReplicas() {
+    public Integer currentReplicas() {
         return this.currentReplicas;
     }
     /**
      * desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler.
      * 
     */
-    public Integer getDesiredReplicas() {
+    public Integer desiredReplicas() {
         return this.desiredReplicas;
     }
     /**
      * lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed.
      * 
     */
-    public Optional<String> getLastScaleTime() {
+    public Optional<String> lastScaleTime() {
         return Optional.ofNullable(this.lastScaleTime);
     }
     /**
      * observedGeneration is the most recent generation observed by this autoscaler.
      * 
     */
-    public Optional<Integer> getObservedGeneration() {
+    public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
 

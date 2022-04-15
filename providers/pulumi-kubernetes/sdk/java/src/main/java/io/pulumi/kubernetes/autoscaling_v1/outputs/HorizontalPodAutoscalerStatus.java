@@ -56,35 +56,35 @@ public final class HorizontalPodAutoscalerStatus {
      * current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU.
      * 
     */
-    public Optional<Integer> getCurrentCPUUtilizationPercentage() {
+    public Optional<Integer> currentCPUUtilizationPercentage() {
         return Optional.ofNullable(this.currentCPUUtilizationPercentage);
     }
     /**
      * current number of replicas of pods managed by this autoscaler.
      * 
     */
-    public Integer getCurrentReplicas() {
+    public Integer currentReplicas() {
         return this.currentReplicas;
     }
     /**
      * desired number of replicas of pods managed by this autoscaler.
      * 
     */
-    public Integer getDesiredReplicas() {
+    public Integer desiredReplicas() {
         return this.desiredReplicas;
     }
     /**
      * last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed.
      * 
     */
-    public Optional<String> getLastScaleTime() {
+    public Optional<String> lastScaleTime() {
         return Optional.ofNullable(this.lastScaleTime);
     }
     /**
      * most recent generation observed by this autoscaler.
      * 
     */
-    public Optional<Integer> getObservedGeneration() {
+    public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
 

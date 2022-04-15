@@ -31,7 +31,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressType", required=true)
       private final Output<String> addressType;
 
-    public Output<String> getAddressType() {
+    public Output<String> addressType() {
         return this.addressType;
     }
 
@@ -42,7 +42,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -53,7 +53,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoints", required=true)
       private final Output<List<EndpointArgs>> endpoints;
 
-    public Output<List<EndpointArgs>> getEndpoints() {
+    public Output<List<EndpointArgs>> endpoints() {
         return this.endpoints;
     }
 
@@ -64,7 +64,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -75,7 +75,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -86,7 +86,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<EndpointPortArgs>> ports;
 
-    public Output<List<EndpointPortArgs>> getPorts() {
+    public Output<List<EndpointPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

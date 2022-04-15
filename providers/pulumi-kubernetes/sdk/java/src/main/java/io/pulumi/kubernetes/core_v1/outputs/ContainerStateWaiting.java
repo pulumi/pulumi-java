@@ -34,14 +34,14 @@ public final class ContainerStateWaiting {
      * Message regarding why the container is not yet running.
      * 
     */
-    public Optional<String> getMessage() {
+    public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
      * (brief) reason the container is not yet running.
      * 
     */
-    public Optional<String> getReason() {
+    public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
 

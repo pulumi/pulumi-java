@@ -36,7 +36,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.
      * 
      */
-    public Output</* @Nullable */ String> getAction() {
+    public Output</* @Nullable */ String> action() {
         return this.action;
     }
     /**
@@ -50,7 +50,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -64,7 +64,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    public Output</* @Nullable */ Integer> getDeprecatedCount() {
+    public Output</* @Nullable */ Integer> deprecatedCount() {
         return this.deprecatedCount;
     }
     /**
@@ -78,7 +78,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    public Output</* @Nullable */ String> getDeprecatedFirstTimestamp() {
+    public Output</* @Nullable */ String> deprecatedFirstTimestamp() {
         return this.deprecatedFirstTimestamp;
     }
     /**
@@ -92,7 +92,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    public Output</* @Nullable */ String> getDeprecatedLastTimestamp() {
+    public Output</* @Nullable */ String> deprecatedLastTimestamp() {
         return this.deprecatedLastTimestamp;
     }
     /**
@@ -106,7 +106,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    public Output</* @Nullable */ EventSource> getDeprecatedSource() {
+    public Output</* @Nullable */ EventSource> deprecatedSource() {
         return this.deprecatedSource;
     }
     /**
@@ -120,7 +120,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return eventTime is the time when this Event was first observed. It is required.
      * 
      */
-    public Output<String> getEventTime() {
+    public Output<String> eventTime() {
         return this.eventTime;
     }
     /**
@@ -134,7 +134,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -148,7 +148,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -162,7 +162,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
      * 
      */
-    public Output</* @Nullable */ String> getNote() {
+    public Output</* @Nullable */ String> note() {
         return this.note;
     }
     /**
@@ -176,7 +176,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return reason is why the action was taken. It is human-readable. This field can have at most 128 characters.
      * 
      */
-    public Output</* @Nullable */ String> getReason() {
+    public Output</* @Nullable */ String> reason() {
         return this.reason;
     }
     /**
@@ -190,7 +190,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
      */
-    public Output</* @Nullable */ ObjectReference> getRegarding() {
+    public Output</* @Nullable */ ObjectReference> regarding() {
         return this.regarding;
     }
     /**
@@ -204,7 +204,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
      * 
      */
-    public Output</* @Nullable */ ObjectReference> getRelated() {
+    public Output</* @Nullable */ ObjectReference> related() {
         return this.related;
     }
     /**
@@ -218,7 +218,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
      * 
      */
-    public Output</* @Nullable */ String> getReportingController() {
+    public Output</* @Nullable */ String> reportingController() {
         return this.reportingController;
     }
     /**
@@ -232,7 +232,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
      * 
      */
-    public Output</* @Nullable */ String> getReportingInstance() {
+    public Output</* @Nullable */ String> reportingInstance() {
         return this.reportingInstance;
     }
     /**
@@ -246,7 +246,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return series is data about the Event series this event represents or nil if it's a singleton Event.
      * 
      */
-    public Output</* @Nullable */ EventSeries> getSeries() {
+    public Output</* @Nullable */ EventSeries> series() {
         return this.series;
     }
     /**
@@ -260,7 +260,7 @@ public class Event extends io.pulumi.resources.CustomResource {
      * @return type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 

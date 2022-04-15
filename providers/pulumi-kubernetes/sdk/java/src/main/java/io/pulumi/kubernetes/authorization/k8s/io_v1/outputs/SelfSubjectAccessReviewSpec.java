@@ -35,14 +35,14 @@ public final class SelfSubjectAccessReviewSpec {
      * NonResourceAttributes describes information for a non-resource access request
      * 
     */
-    public Optional<NonResourceAttributes> getNonResourceAttributes() {
+    public Optional<NonResourceAttributes> nonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
     /**
      * ResourceAuthorizationAttributes describes information for a resource access request
      * 
     */
-    public Optional<ResourceAttributes> getResourceAttributes() {
+    public Optional<ResourceAttributes> resourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
 

@@ -30,7 +30,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host == null ? Codegen.empty() : this.host;
     }
 
@@ -41,7 +41,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpHeaders")
       private final @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
 
-    public Output<List<HTTPHeaderArgs>> getHttpHeaders() {
+    public Output<List<HTTPHeaderArgs>> httpHeaders() {
         return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
     }
 
@@ -52,7 +52,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path == null ? Codegen.empty() : this.path;
     }
 
@@ -63,7 +63,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Either<Integer,String>> port;
 
-    public Output<Either<Integer,String>> getPort() {
+    public Output<Either<Integer,String>> port() {
         return this.port;
     }
 
@@ -78,7 +78,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheme")
       private final @Nullable Output<String> scheme;
 
-    public Output<String> getScheme() {
+    public Output<String> scheme() {
         return this.scheme == null ? Codegen.empty() : this.scheme;
     }
 

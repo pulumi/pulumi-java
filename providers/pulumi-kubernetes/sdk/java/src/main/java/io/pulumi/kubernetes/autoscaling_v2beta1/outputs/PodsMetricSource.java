@@ -42,21 +42,21 @@ public final class PodsMetricSource {
      * metricName is the name of the metric in question
      * 
     */
-    public String getMetricName() {
+    public String metricName() {
         return this.metricName;
     }
     /**
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
      * 
     */
-    public Optional<LabelSelector> getSelector() {
+    public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity)
      * 
     */
-    public String getTargetAverageValue() {
+    public String targetAverageValue() {
         return this.targetAverageValue;
     }
 

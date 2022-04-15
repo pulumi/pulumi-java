@@ -27,7 +27,7 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
+    public Output<List<String>> command() {
         return this.command == null ? Codegen.empty() : this.command;
     }
 

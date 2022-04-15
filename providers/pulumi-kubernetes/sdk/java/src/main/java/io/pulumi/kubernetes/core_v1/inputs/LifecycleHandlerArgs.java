@@ -28,7 +28,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="exec")
       private final @Nullable Output<ExecActionArgs> exec;
 
-    public Output<ExecActionArgs> getExec() {
+    public Output<ExecActionArgs> exec() {
         return this.exec == null ? Codegen.empty() : this.exec;
     }
 
@@ -39,7 +39,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="httpGet")
       private final @Nullable Output<HTTPGetActionArgs> httpGet;
 
-    public Output<HTTPGetActionArgs> getHttpGet() {
+    public Output<HTTPGetActionArgs> httpGet() {
         return this.httpGet == null ? Codegen.empty() : this.httpGet;
     }
 
@@ -50,7 +50,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tcpSocket")
       private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
-    public Output<TCPSocketActionArgs> getTcpSocket() {
+    public Output<TCPSocketActionArgs> tcpSocket() {
         return this.tcpSocket == null ? Codegen.empty() : this.tcpSocket;
     }
 

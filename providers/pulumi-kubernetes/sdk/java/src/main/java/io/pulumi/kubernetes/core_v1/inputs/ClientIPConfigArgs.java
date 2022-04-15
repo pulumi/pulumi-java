@@ -26,7 +26,7 @@ public final class ClientIPConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
+    public Output<Integer> timeoutSeconds() {
         return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 

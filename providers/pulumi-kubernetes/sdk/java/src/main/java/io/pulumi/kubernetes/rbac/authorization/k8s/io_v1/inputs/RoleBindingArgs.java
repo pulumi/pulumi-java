@@ -30,7 +30,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -41,7 +41,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind == null ? Codegen.empty() : this.kind;
     }
 
@@ -52,7 +52,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
+    public Output<ObjectMetaArgs> metadata() {
         return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
@@ -63,7 +63,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleRef", required=true)
       private final Output<RoleRefArgs> roleRef;
 
-    public Output<RoleRefArgs> getRoleRef() {
+    public Output<RoleRefArgs> roleRef() {
         return this.roleRef;
     }
 
@@ -74,7 +74,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subjects")
       private final @Nullable Output<List<SubjectArgs>> subjects;
 
-    public Output<List<SubjectArgs>> getSubjects() {
+    public Output<List<SubjectArgs>> subjects() {
         return this.subjects == null ? Codegen.empty() : this.subjects;
     }
 

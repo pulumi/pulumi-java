@@ -34,7 +34,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -48,7 +48,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -62,7 +62,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata.
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -76,7 +76,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return RoleRef can reference a Role in the current namespace or a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
      * 
      */
-    public Output<RoleRef> getRoleRef() {
+    public Output<RoleRef> roleRef() {
         return this.roleRef;
     }
     /**
@@ -90,7 +90,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @return Subjects holds references to the objects the role applies to.
      * 
      */
-    public Output</* @Nullable */ List<Subject>> getSubjects() {
+    public Output</* @Nullable */ List<Subject>> subjects() {
         return this.subjects;
     }
 

@@ -26,7 +26,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
     @Import(name="medium")
       private final @Nullable Output<String> medium;
 
-    public Output<String> getMedium() {
+    public Output<String> medium() {
         return this.medium == null ? Codegen.empty() : this.medium;
     }
 
@@ -37,7 +37,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
     @Import(name="sizeLimit")
       private final @Nullable Output<String> sizeLimit;
 
-    public Output<String> getSizeLimit() {
+    public Output<String> sizeLimit() {
         return this.sizeLimit == null ? Codegen.empty() : this.sizeLimit;
     }
 

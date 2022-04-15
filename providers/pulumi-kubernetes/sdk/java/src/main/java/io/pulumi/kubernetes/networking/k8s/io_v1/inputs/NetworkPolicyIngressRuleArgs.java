@@ -28,7 +28,7 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
     @Import(name="from")
       private final @Nullable Output<List<NetworkPolicyPeerArgs>> from;
 
-    public Output<List<NetworkPolicyPeerArgs>> getFrom() {
+    public Output<List<NetworkPolicyPeerArgs>> from() {
         return this.from == null ? Codegen.empty() : this.from;
     }
 
@@ -39,7 +39,7 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
     @Import(name="ports")
       private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
-    public Output<List<NetworkPolicyPortArgs>> getPorts() {
+    public Output<List<NetworkPolicyPortArgs>> ports() {
         return this.ports == null ? Codegen.empty() : this.ports;
     }
 

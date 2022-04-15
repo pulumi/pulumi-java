@@ -28,7 +28,7 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
     @Import(name="ranges")
       private final @Nullable Output<List<IDRangeArgs>> ranges;
 
-    public Output<List<IDRangeArgs>> getRanges() {
+    public Output<List<IDRangeArgs>> ranges() {
         return this.ranges == null ? Codegen.empty() : this.ranges;
     }
 
@@ -39,7 +39,7 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
     @Import(name="rule", required=true)
       private final Output<String> rule;
 
-    public Output<String> getRule() {
+    public Output<String> rule() {
         return this.rule;
     }
 

@@ -29,7 +29,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
     @Import(name="attachError")
       private final @Nullable Output<VolumeErrorArgs> attachError;
 
-    public Output<VolumeErrorArgs> getAttachError() {
+    public Output<VolumeErrorArgs> attachError() {
         return this.attachError == null ? Codegen.empty() : this.attachError;
     }
 
@@ -40,7 +40,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
     @Import(name="attached", required=true)
       private final Output<Boolean> attached;
 
-    public Output<Boolean> getAttached() {
+    public Output<Boolean> attached() {
         return this.attached;
     }
 
@@ -51,7 +51,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
     @Import(name="attachmentMetadata")
       private final @Nullable Output<Map<String,String>> attachmentMetadata;
 
-    public Output<Map<String,String>> getAttachmentMetadata() {
+    public Output<Map<String,String>> attachmentMetadata() {
         return this.attachmentMetadata == null ? Codegen.empty() : this.attachmentMetadata;
     }
 
@@ -62,7 +62,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
     @Import(name="detachError")
       private final @Nullable Output<VolumeErrorArgs> detachError;
 
-    public Output<VolumeErrorArgs> getDetachError() {
+    public Output<VolumeErrorArgs> detachError() {
         return this.detachError == null ? Codegen.empty() : this.detachError;
     }
 

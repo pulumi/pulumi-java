@@ -32,14 +32,14 @@ public final class VolumeDevice {
      * devicePath is the path inside of the container that the device will be mapped to.
      * 
     */
-    public String getDevicePath() {
+    public String devicePath() {
         return this.devicePath;
     }
     /**
      * name must match the name of a persistentVolumeClaim in the pod
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

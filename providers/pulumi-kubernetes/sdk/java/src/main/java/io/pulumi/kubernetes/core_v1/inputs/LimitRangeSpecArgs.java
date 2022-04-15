@@ -26,7 +26,7 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limits", required=true)
       private final Output<List<LimitRangeItemArgs>> limits;
 
-    public Output<List<LimitRangeItemArgs>> getLimits() {
+    public Output<List<LimitRangeItemArgs>> limits() {
         return this.limits;
     }
 

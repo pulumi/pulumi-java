@@ -41,21 +41,21 @@ public final class ResourceFieldSelector {
      * Container name: required for volumes, optional for env vars
      * 
     */
-    public Optional<String> getContainerName() {
+    public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Specifies the output format of the exposed resources, defaults to "1"
      * 
     */
-    public Optional<String> getDivisor() {
+    public Optional<String> divisor() {
         return Optional.ofNullable(this.divisor);
     }
     /**
      * Required: resource to select
      * 
     */
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 

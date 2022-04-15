@@ -31,7 +31,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<EnvVarArgs>> env;
 
-    public Output<List<EnvVarArgs>> getEnv() {
+    public Output<List<EnvVarArgs>> env() {
         return this.env == null ? Codegen.empty() : this.env;
     }
 
@@ -42,7 +42,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envFrom")
       private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
-    public Output<List<EnvFromSourceArgs>> getEnvFrom() {
+    public Output<List<EnvFromSourceArgs>> envFrom() {
         return this.envFrom == null ? Codegen.empty() : this.envFrom;
     }
 
@@ -53,7 +53,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> getSelector() {
+    public Output<LabelSelectorArgs> selector() {
         return this.selector == null ? Codegen.empty() : this.selector;
     }
 
@@ -64,7 +64,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> getVolumeMounts() {
+    public Output<List<VolumeMountArgs>> volumeMounts() {
         return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
     }
 
@@ -75,7 +75,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
+    public Output<List<VolumeArgs>> volumes() {
         return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 

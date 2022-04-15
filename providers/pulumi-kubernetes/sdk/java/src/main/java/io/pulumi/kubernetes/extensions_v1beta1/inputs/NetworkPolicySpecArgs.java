@@ -30,7 +30,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="egress")
       private final @Nullable Output<List<NetworkPolicyEgressRuleArgs>> egress;
 
-    public Output<List<NetworkPolicyEgressRuleArgs>> getEgress() {
+    public Output<List<NetworkPolicyEgressRuleArgs>> egress() {
         return this.egress == null ? Codegen.empty() : this.egress;
     }
 
@@ -41,7 +41,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ingress")
       private final @Nullable Output<List<NetworkPolicyIngressRuleArgs>> ingress;
 
-    public Output<List<NetworkPolicyIngressRuleArgs>> getIngress() {
+    public Output<List<NetworkPolicyIngressRuleArgs>> ingress() {
         return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
@@ -52,7 +52,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="podSelector", required=true)
       private final Output<LabelSelectorArgs> podSelector;
 
-    public Output<LabelSelectorArgs> getPodSelector() {
+    public Output<LabelSelectorArgs> podSelector() {
         return this.podSelector;
     }
 
@@ -63,7 +63,7 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyTypes")
       private final @Nullable Output<List<String>> policyTypes;
 
-    public Output<List<String>> getPolicyTypes() {
+    public Output<List<String>> policyTypes() {
         return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
     }
 

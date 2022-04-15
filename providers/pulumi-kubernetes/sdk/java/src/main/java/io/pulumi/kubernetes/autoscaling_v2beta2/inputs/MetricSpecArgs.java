@@ -31,7 +31,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerResource")
       private final @Nullable Output<ContainerResourceMetricSourceArgs> containerResource;
 
-    public Output<ContainerResourceMetricSourceArgs> getContainerResource() {
+    public Output<ContainerResourceMetricSourceArgs> containerResource() {
         return this.containerResource == null ? Codegen.empty() : this.containerResource;
     }
 
@@ -42,7 +42,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="external")
       private final @Nullable Output<ExternalMetricSourceArgs> external;
 
-    public Output<ExternalMetricSourceArgs> getExternal() {
+    public Output<ExternalMetricSourceArgs> external() {
         return this.external == null ? Codegen.empty() : this.external;
     }
 
@@ -53,7 +53,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="object")
       private final @Nullable Output<ObjectMetricSourceArgs> object;
 
-    public Output<ObjectMetricSourceArgs> getObject() {
+    public Output<ObjectMetricSourceArgs> object() {
         return this.object == null ? Codegen.empty() : this.object;
     }
 
@@ -64,7 +64,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pods")
       private final @Nullable Output<PodsMetricSourceArgs> pods;
 
-    public Output<PodsMetricSourceArgs> getPods() {
+    public Output<PodsMetricSourceArgs> pods() {
         return this.pods == null ? Codegen.empty() : this.pods;
     }
 
@@ -75,7 +75,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource")
       private final @Nullable Output<ResourceMetricSourceArgs> resource;
 
-    public Output<ResourceMetricSourceArgs> getResource() {
+    public Output<ResourceMetricSourceArgs> resource() {
         return this.resource == null ? Codegen.empty() : this.resource;
     }
 
@@ -86,7 +86,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

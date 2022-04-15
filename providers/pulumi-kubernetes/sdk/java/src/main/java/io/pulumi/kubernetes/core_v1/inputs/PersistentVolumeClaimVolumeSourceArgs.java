@@ -27,7 +27,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
     @Import(name="claimName", required=true)
       private final Output<String> claimName;
 
-    public Output<String> getClaimName() {
+    public Output<String> claimName() {
         return this.claimName;
     }
 
@@ -38,7 +38,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 

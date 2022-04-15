@@ -26,7 +26,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
-    public Output<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 
@@ -37,7 +37,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;
 
-    public Output<MetricTargetArgs> getTarget() {
+    public Output<MetricTargetArgs> target() {
         return this.target;
     }
 

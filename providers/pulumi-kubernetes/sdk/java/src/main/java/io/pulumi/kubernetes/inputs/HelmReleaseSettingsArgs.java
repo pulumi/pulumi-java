@@ -27,7 +27,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver == null ? Codegen.empty() : this.driver;
     }
 
@@ -38,7 +38,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="pluginsPath")
       private final @Nullable Output<String> pluginsPath;
 
-    public Output<String> getPluginsPath() {
+    public Output<String> pluginsPath() {
         return this.pluginsPath == null ? Codegen.empty() : this.pluginsPath;
     }
 
@@ -49,7 +49,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="registryConfigPath")
       private final @Nullable Output<String> registryConfigPath;
 
-    public Output<String> getRegistryConfigPath() {
+    public Output<String> registryConfigPath() {
         return this.registryConfigPath == null ? Codegen.empty() : this.registryConfigPath;
     }
 
@@ -60,7 +60,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="repositoryCache")
       private final @Nullable Output<String> repositoryCache;
 
-    public Output<String> getRepositoryCache() {
+    public Output<String> repositoryCache() {
         return this.repositoryCache == null ? Codegen.empty() : this.repositoryCache;
     }
 
@@ -71,7 +71,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="repositoryConfigPath")
       private final @Nullable Output<String> repositoryConfigPath;
 
-    public Output<String> getRepositoryConfigPath() {
+    public Output<String> repositoryConfigPath() {
         return this.repositoryConfigPath == null ? Codegen.empty() : this.repositoryConfigPath;
     }
 

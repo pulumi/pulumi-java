@@ -26,7 +26,7 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastProbeTime")
       private final @Nullable Output<String> lastProbeTime;
 
-    public Output<String> getLastProbeTime() {
+    public Output<String> lastProbeTime() {
         return this.lastProbeTime == null ? Codegen.empty() : this.lastProbeTime;
     }
 
@@ -37,7 +37,7 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
-    public Output<String> getLastTransitionTime() {
+    public Output<String> lastTransitionTime() {
         return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
     }
 
@@ -48,7 +48,7 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message == null ? Codegen.empty() : this.message;
     }
 
@@ -59,7 +59,7 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason == null ? Codegen.empty() : this.reason;
     }
 
@@ -70,7 +70,7 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -86,7 +86,7 @@ public final class JobConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 

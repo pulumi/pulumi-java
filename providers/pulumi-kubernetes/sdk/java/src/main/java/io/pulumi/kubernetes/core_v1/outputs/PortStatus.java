@@ -53,14 +53,14 @@ public final class PortStatus {
      *   format foo.example.com/CamelCase.
      * 
     */
-    public Optional<String> getError() {
+    public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Port is the port number of the service port of which status is recorded here
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
     /**
@@ -72,7 +72,7 @@ public final class PortStatus {
      *  - `"UDP"` is the UDP protocol.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
 

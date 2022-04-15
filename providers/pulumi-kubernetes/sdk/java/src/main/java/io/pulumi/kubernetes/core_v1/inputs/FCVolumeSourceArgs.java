@@ -29,7 +29,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
+    public Output<String> fsType() {
         return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
@@ -40,7 +40,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lun")
       private final @Nullable Output<Integer> lun;
 
-    public Output<Integer> getLun() {
+    public Output<Integer> lun() {
         return this.lun == null ? Codegen.empty() : this.lun;
     }
 
@@ -51,7 +51,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
+    public Output<Boolean> readOnly() {
         return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
@@ -62,7 +62,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetWWNs")
       private final @Nullable Output<List<String>> targetWWNs;
 
-    public Output<List<String>> getTargetWWNs() {
+    public Output<List<String>> targetWWNs() {
         return this.targetWWNs == null ? Codegen.empty() : this.targetWWNs;
     }
 
@@ -73,7 +73,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="wwids")
       private final @Nullable Output<List<String>> wwids;
 
-    public Output<List<String>> getWwids() {
+    public Output<List<String>> wwids() {
         return this.wwids == null ? Codegen.empty() : this.wwids;
     }
 

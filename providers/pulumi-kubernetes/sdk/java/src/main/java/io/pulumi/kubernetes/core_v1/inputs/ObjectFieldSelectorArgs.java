@@ -26,7 +26,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
+    public Output<String> apiVersion() {
         return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
@@ -37,7 +37,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
     @Import(name="fieldPath", required=true)
       private final Output<String> fieldPath;
 
-    public Output<String> getFieldPath() {
+    public Output<String> fieldPath() {
         return this.fieldPath;
     }
 
